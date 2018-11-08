@@ -64,25 +64,25 @@ namespace Conductor.Pier.Api
         ApiResponse<TransacaoOnUsResponse> AutorizarUsingPOSTWithHttpInfo (AutorizacaoOnUsRequest autorizacaoOnUsRequest);
         
         /// <summary>
-        /// {{{transacao_on_us_resource_autorizar}}}
+        /// {{{transacao_on_us_resource_autorizar_por_idcartao}}}
         /// </summary>
         /// <remarks>
-        /// {{{transacao_on_us_resource_autorizar_notes}}}
+        /// {{{transacao_on_us_resource_autorizar_por_idcartao_notes}}}
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">{{{transacao_on_us_resource_autorizar_param_id_cartao}}}</param>
+        /// <param name="id">{{{transacao_on_us_resource_autorizar_por_idcartao_param_id_cartao}}}</param>
         /// <param name="transacaoOnUsPorIdCartaoRequest">transacaoOnUsPorIdCartaoRequest</param>
         /// <returns>TransacaoOnUsResponse</returns>
         TransacaoOnUsResponse AutorizarUsingPOST1 (long? id, TransacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest);
   
         /// <summary>
-        /// {{{transacao_on_us_resource_autorizar}}}
+        /// {{{transacao_on_us_resource_autorizar_por_idcartao}}}
         /// </summary>
         /// <remarks>
-        /// {{{transacao_on_us_resource_autorizar_notes}}}
+        /// {{{transacao_on_us_resource_autorizar_por_idcartao_notes}}}
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">{{{transacao_on_us_resource_autorizar_param_id_cartao}}}</param>
+        /// <param name="id">{{{transacao_on_us_resource_autorizar_por_idcartao_param_id_cartao}}}</param>
         /// <param name="transacaoOnUsPorIdCartaoRequest">transacaoOnUsPorIdCartaoRequest</param>
         /// <returns>ApiResponse of TransacaoOnUsResponse</returns>
         ApiResponse<TransacaoOnUsResponse> AutorizarUsingPOST1WithHttpInfo (long? id, TransacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest);
@@ -270,25 +270,25 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<TransacaoOnUsResponse>> AutorizarUsingPOSTAsyncWithHttpInfo (AutorizacaoOnUsRequest autorizacaoOnUsRequest);
         
         /// <summary>
-        /// {{{transacao_on_us_resource_autorizar}}}
+        /// {{{transacao_on_us_resource_autorizar_por_idcartao}}}
         /// </summary>
         /// <remarks>
-        /// {{{transacao_on_us_resource_autorizar_notes}}}
+        /// {{{transacao_on_us_resource_autorizar_por_idcartao_notes}}}
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">{{{transacao_on_us_resource_autorizar_param_id_cartao}}}</param>
+        /// <param name="id">{{{transacao_on_us_resource_autorizar_por_idcartao_param_id_cartao}}}</param>
         /// <param name="transacaoOnUsPorIdCartaoRequest">transacaoOnUsPorIdCartaoRequest</param>
         /// <returns>Task of TransacaoOnUsResponse</returns>
         System.Threading.Tasks.Task<TransacaoOnUsResponse> AutorizarUsingPOST1Async (long? id, TransacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest);
 
         /// <summary>
-        /// {{{transacao_on_us_resource_autorizar}}}
+        /// {{{transacao_on_us_resource_autorizar_por_idcartao}}}
         /// </summary>
         /// <remarks>
-        /// {{{transacao_on_us_resource_autorizar_notes}}}
+        /// {{{transacao_on_us_resource_autorizar_por_idcartao_notes}}}
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">{{{transacao_on_us_resource_autorizar_param_id_cartao}}}</param>
+        /// <param name="id">{{{transacao_on_us_resource_autorizar_por_idcartao_param_id_cartao}}}</param>
         /// <param name="transacaoOnUsPorIdCartaoRequest">transacaoOnUsPorIdCartaoRequest</param>
         /// <returns>Task of ApiResponse (TransacaoOnUsResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<TransacaoOnUsResponse>> AutorizarUsingPOST1AsyncWithHttpInfo (long? id, TransacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest);
@@ -870,10 +870,10 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// {{{transacao_on_us_resource_autorizar}}} {{{transacao_on_us_resource_autorizar_notes}}}
+        /// {{{transacao_on_us_resource_autorizar_por_idcartao}}} {{{transacao_on_us_resource_autorizar_por_idcartao_notes}}}
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">{{{transacao_on_us_resource_autorizar_param_id_cartao}}}</param> 
+        /// <param name="id">{{{transacao_on_us_resource_autorizar_por_idcartao_param_id_cartao}}}</param> 
         /// <param name="transacaoOnUsPorIdCartaoRequest">transacaoOnUsPorIdCartaoRequest</param> 
         /// <returns>TransacaoOnUsResponse</returns>
         public TransacaoOnUsResponse AutorizarUsingPOST1 (long? id, TransacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest)
@@ -883,10 +883,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// {{{transacao_on_us_resource_autorizar}}} {{{transacao_on_us_resource_autorizar_notes}}}
+        /// {{{transacao_on_us_resource_autorizar_por_idcartao}}} {{{transacao_on_us_resource_autorizar_por_idcartao_notes}}}
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">{{{transacao_on_us_resource_autorizar_param_id_cartao}}}</param> 
+        /// <param name="id">{{{transacao_on_us_resource_autorizar_por_idcartao_param_id_cartao}}}</param> 
         /// <param name="transacaoOnUsPorIdCartaoRequest">transacaoOnUsPorIdCartaoRequest</param> 
         /// <returns>ApiResponse of TransacaoOnUsResponse</returns>
         public ApiResponse< TransacaoOnUsResponse > AutorizarUsingPOST1WithHttpInfo (long? id, TransacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest)
@@ -963,10 +963,10 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// {{{transacao_on_us_resource_autorizar}}} {{{transacao_on_us_resource_autorizar_notes}}}
+        /// {{{transacao_on_us_resource_autorizar_por_idcartao}}} {{{transacao_on_us_resource_autorizar_por_idcartao_notes}}}
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">{{{transacao_on_us_resource_autorizar_param_id_cartao}}}</param>
+        /// <param name="id">{{{transacao_on_us_resource_autorizar_por_idcartao_param_id_cartao}}}</param>
         /// <param name="transacaoOnUsPorIdCartaoRequest">transacaoOnUsPorIdCartaoRequest</param>
         /// <returns>Task of TransacaoOnUsResponse</returns>
         public async System.Threading.Tasks.Task<TransacaoOnUsResponse> AutorizarUsingPOST1Async (long? id, TransacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest)
@@ -977,10 +977,10 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// {{{transacao_on_us_resource_autorizar}}} {{{transacao_on_us_resource_autorizar_notes}}}
+        /// {{{transacao_on_us_resource_autorizar_por_idcartao}}} {{{transacao_on_us_resource_autorizar_por_idcartao_notes}}}
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">{{{transacao_on_us_resource_autorizar_param_id_cartao}}}</param>
+        /// <param name="id">{{{transacao_on_us_resource_autorizar_por_idcartao_param_id_cartao}}}</param>
         /// <param name="transacaoOnUsPorIdCartaoRequest">transacaoOnUsPorIdCartaoRequest</param>
         /// <returns>Task of ApiResponse (TransacaoOnUsResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<TransacaoOnUsResponse>> AutorizarUsingPOST1AsyncWithHttpInfo (long? id, TransacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest)

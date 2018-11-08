@@ -15,12 +15,12 @@ namespace Conductor.Pier.Model
     /// {{{endereco_response_description}}}
     /// </summary>
     [DataContract]
-    public partial class EnderecoNacionalResponse :  IEquatable<EnderecoNacionalResponse>
+    public partial class EnderecoResponseValue :  IEquatable<EnderecoResponseValue>
     { 
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="EnderecoNacionalResponse" /> class.
-        /// Initializes a new instance of the <see cref="EnderecoNacionalResponse" />class.
+        /// Initializes a new instance of the <see cref="EnderecoResponseValue" /> class.
+        /// Initializes a new instance of the <see cref="EnderecoResponseValue" />class.
         /// </summary>
         /// <param name="Cep">{{{endereco_response_cep_value}}}.</param>
         /// <param name="Endereco">{{{endereco_response_endereco_value}}}.</param>
@@ -28,7 +28,7 @@ namespace Conductor.Pier.Model
         /// <param name="Cidade">{{{endereco_response_cidade_value}}}.</param>
         /// <param name="Uf">{{{endereco_response_uf_value}}}.</param>
 
-        public EnderecoNacionalResponse(string Cep = null, string Endereco = null, string Bairro = null, string Cidade = null, string Uf = null)
+        public EnderecoResponseValue(string Cep = null, string Endereco = null, string Bairro = null, string Cidade = null, string Uf = null)
         {
             this.Cep = Cep;
             this.Endereco = Endereco;
@@ -81,7 +81,7 @@ namespace Conductor.Pier.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class EnderecoNacionalResponse {\n");
+            sb.Append("class EnderecoResponseValue {\n");
             sb.Append("  Cep: ").Append(Cep).Append("\n");
             sb.Append("  Endereco: ").Append(Endereco).Append("\n");
             sb.Append("  Bairro: ").Append(Bairro).Append("\n");
@@ -109,15 +109,15 @@ namespace Conductor.Pier.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as EnderecoNacionalResponse);
+            return this.Equals(obj as EnderecoResponseValue);
         }
 
         /// <summary>
-        /// Returns true if EnderecoNacionalResponse instances are equal
+        /// Returns true if EnderecoResponseValue instances are equal
         /// </summary>
-        /// <param name="other">Instance of EnderecoNacionalResponse to be compared</param>
+        /// <param name="other">Instance of EnderecoResponseValue to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(EnderecoNacionalResponse other)
+        public bool Equals(EnderecoResponseValue other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

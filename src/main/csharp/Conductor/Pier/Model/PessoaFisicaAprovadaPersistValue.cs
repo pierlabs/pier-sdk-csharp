@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{pessoa_fisica_aprovada_persist_description}}}
+    /// 
     /// </summary>
     [DataContract]
     public partial class PessoaFisicaAprovadaPersistValue :  IEquatable<PessoaFisicaAprovadaPersistValue>
@@ -56,8 +56,20 @@ namespace Conductor.Pier.Model
         /// <param name="EnderecoReferencia1">{{{pessoa_fisica_aprovada_persist_endereco_referencia_1_value}}}.</param>
         /// <param name="NomeReferencia2">{{{pessoa_fisica_aprovada_persist_nome_referencia_2_value}}}.</param>
         /// <param name="EnderecoReferencia2">{{{pessoa_fisica_aprovada_persist_endereco_referencia_2_value}}}.</param>
+        /// <param name="ImpedidoFinanciamento">{{{pessoa_fisica_aprovada_persist_impedido_de_financiamento_value}}}.</param>
+        /// <param name="FuncaoAtiva">{{{pessoa_fisica_aprovada_persist_funcao_ativa_value}}}.</param>
+        /// <param name="NaturalidadeCidade">{{{pessoa_fisica_aprovada_persist_naturalidade_Cidade_value}}}.</param>
+        /// <param name="NaturalidadeEstado">{{{pessoa_fisica_aprovada_persist_naturalidade_Estado_value}}}.</param>
+        /// <param name="GrauInstrucao">{{{pessoa_fisica_aprovada_persist_grau_Instrucao_value}}}.</param>
+        /// <param name="NumeroDependentes">{{{pessoa_fisica_aprovada_persist_numero_Dependentes_value}}}.</param>
+        /// <param name="NomePai">{{{pessoa_fisica_aprovada_persist_nome_Pai_value}}}.</param>
+        /// <param name="ChequeEspecial">{{{pessoa_fisica_aprovada_persist_cheque_Especial_value}}}.</param>
+        /// <param name="NumeroBanco">{{{pessoa_fisica_aprovada_persist_numero_Banco_value}}}.</param>
+        /// <param name="Matricula">{{{pessoa_fisica_aprovada_persist_matricula_value}}}.</param>
+        /// <param name="ResponsavelDigitacao">{{{pessoa_fisica_aprovada_persist_responsavelDigitacao_value}}}.</param>
+        /// <param name="IdPromotorVenda">{{{pessoa_fisica_aprovada_persist_idPromotorVenda_value}}}.</param>
 
-        public PessoaFisicaAprovadaPersistValue(string Nome = null, string NomeMae = null, string DataNascimento = null, string Sexo = null, string Cpf = null, string NumeroIdentidade = null, string OrgaoExpedidorIdentidade = null, string UnidadeFederativaIdentidade = null, string DataEmissaoIdentidade = null, long? IdEstadoCivil = null, string IdProfissao = null, long? IdNaturezaOcupacao = null, long? IdNacionalidade = null, long? IdOrigemComercial = null, long? IdProduto = null, int? NumeroAgencia = null, string NumeroContaCorrente = null, string Email = null, int? DiaVencimento = null, string NomeImpresso = null, string NomeEmpresa = null, double? ValorRenda = null, string CanalEntrada = null, int? ValorPontuacao = null, List<TelefonePessoaAprovadaPersistValue> Telefones = null, List<EnderecoAprovadoPersistValue> Enderecos = null, double? LimiteGlobal = null, double? LimiteMaximo = null, double? LimiteParcelas = null, double? LimiteConsignado = null, string NomeReferencia1 = null, string EnderecoReferencia1 = null, string NomeReferencia2 = null, string EnderecoReferencia2 = null)
+        public PessoaFisicaAprovadaPersistValue(string Nome = null, string NomeMae = null, string DataNascimento = null, string Sexo = null, string Cpf = null, string NumeroIdentidade = null, string OrgaoExpedidorIdentidade = null, string UnidadeFederativaIdentidade = null, string DataEmissaoIdentidade = null, long? IdEstadoCivil = null, string IdProfissao = null, long? IdNaturezaOcupacao = null, long? IdNacionalidade = null, long? IdOrigemComercial = null, long? IdProduto = null, int? NumeroAgencia = null, string NumeroContaCorrente = null, string Email = null, int? DiaVencimento = null, string NomeImpresso = null, string NomeEmpresa = null, double? ValorRenda = null, string CanalEntrada = null, int? ValorPontuacao = null, List<TelefonePessoaAprovadaPersistValue> Telefones = null, List<EnderecoAprovadoPersistValue> Enderecos = null, double? LimiteGlobal = null, double? LimiteMaximo = null, double? LimiteParcelas = null, double? LimiteConsignado = null, string NomeReferencia1 = null, string EnderecoReferencia1 = null, string NomeReferencia2 = null, string EnderecoReferencia2 = null, bool? ImpedidoFinanciamento = null, string FuncaoAtiva = null, string NaturalidadeCidade = null, string NaturalidadeEstado = null, int? GrauInstrucao = null, int? NumeroDependentes = null, string NomePai = null, int? ChequeEspecial = null, int? NumeroBanco = null, string Matricula = null, string ResponsavelDigitacao = null, int? IdPromotorVenda = null)
         {
             // to ensure "Nome" is required (not null)
             if (Nome == null)
@@ -173,6 +185,18 @@ namespace Conductor.Pier.Model
             this.EnderecoReferencia1 = EnderecoReferencia1;
             this.NomeReferencia2 = NomeReferencia2;
             this.EnderecoReferencia2 = EnderecoReferencia2;
+            this.ImpedidoFinanciamento = ImpedidoFinanciamento;
+            this.FuncaoAtiva = FuncaoAtiva;
+            this.NaturalidadeCidade = NaturalidadeCidade;
+            this.NaturalidadeEstado = NaturalidadeEstado;
+            this.GrauInstrucao = GrauInstrucao;
+            this.NumeroDependentes = NumeroDependentes;
+            this.NomePai = NomePai;
+            this.ChequeEspecial = ChequeEspecial;
+            this.NumeroBanco = NumeroBanco;
+            this.Matricula = Matricula;
+            this.ResponsavelDigitacao = ResponsavelDigitacao;
+            this.IdPromotorVenda = IdPromotorVenda;
             
         }
         
@@ -416,6 +440,90 @@ namespace Conductor.Pier.Model
         public string EnderecoReferencia2 { get; set; }
     
         /// <summary>
+        /// {{{pessoa_fisica_aprovada_persist_impedido_de_financiamento_value}}}
+        /// </summary>
+        /// <value>{{{pessoa_fisica_aprovada_persist_impedido_de_financiamento_value}}}</value>
+        [DataMember(Name="impedidoFinanciamento", EmitDefaultValue=false)]
+        public bool? ImpedidoFinanciamento { get; set; }
+    
+        /// <summary>
+        /// {{{pessoa_fisica_aprovada_persist_funcao_ativa_value}}}
+        /// </summary>
+        /// <value>{{{pessoa_fisica_aprovada_persist_funcao_ativa_value}}}</value>
+        [DataMember(Name="funcaoAtiva", EmitDefaultValue=false)]
+        public string FuncaoAtiva { get; set; }
+    
+        /// <summary>
+        /// {{{pessoa_fisica_aprovada_persist_naturalidade_Cidade_value}}}
+        /// </summary>
+        /// <value>{{{pessoa_fisica_aprovada_persist_naturalidade_Cidade_value}}}</value>
+        [DataMember(Name="naturalidadeCidade", EmitDefaultValue=false)]
+        public string NaturalidadeCidade { get; set; }
+    
+        /// <summary>
+        /// {{{pessoa_fisica_aprovada_persist_naturalidade_Estado_value}}}
+        /// </summary>
+        /// <value>{{{pessoa_fisica_aprovada_persist_naturalidade_Estado_value}}}</value>
+        [DataMember(Name="naturalidadeEstado", EmitDefaultValue=false)]
+        public string NaturalidadeEstado { get; set; }
+    
+        /// <summary>
+        /// {{{pessoa_fisica_aprovada_persist_grau_Instrucao_value}}}
+        /// </summary>
+        /// <value>{{{pessoa_fisica_aprovada_persist_grau_Instrucao_value}}}</value>
+        [DataMember(Name="grauInstrucao", EmitDefaultValue=false)]
+        public int? GrauInstrucao { get; set; }
+    
+        /// <summary>
+        /// {{{pessoa_fisica_aprovada_persist_numero_Dependentes_value}}}
+        /// </summary>
+        /// <value>{{{pessoa_fisica_aprovada_persist_numero_Dependentes_value}}}</value>
+        [DataMember(Name="numeroDependentes", EmitDefaultValue=false)]
+        public int? NumeroDependentes { get; set; }
+    
+        /// <summary>
+        /// {{{pessoa_fisica_aprovada_persist_nome_Pai_value}}}
+        /// </summary>
+        /// <value>{{{pessoa_fisica_aprovada_persist_nome_Pai_value}}}</value>
+        [DataMember(Name="nomePai", EmitDefaultValue=false)]
+        public string NomePai { get; set; }
+    
+        /// <summary>
+        /// {{{pessoa_fisica_aprovada_persist_cheque_Especial_value}}}
+        /// </summary>
+        /// <value>{{{pessoa_fisica_aprovada_persist_cheque_Especial_value}}}</value>
+        [DataMember(Name="chequeEspecial", EmitDefaultValue=false)]
+        public int? ChequeEspecial { get; set; }
+    
+        /// <summary>
+        /// {{{pessoa_fisica_aprovada_persist_numero_Banco_value}}}
+        /// </summary>
+        /// <value>{{{pessoa_fisica_aprovada_persist_numero_Banco_value}}}</value>
+        [DataMember(Name="numeroBanco", EmitDefaultValue=false)]
+        public int? NumeroBanco { get; set; }
+    
+        /// <summary>
+        /// {{{pessoa_fisica_aprovada_persist_matricula_value}}}
+        /// </summary>
+        /// <value>{{{pessoa_fisica_aprovada_persist_matricula_value}}}</value>
+        [DataMember(Name="matricula", EmitDefaultValue=false)]
+        public string Matricula { get; set; }
+    
+        /// <summary>
+        /// {{{pessoa_fisica_aprovada_persist_responsavelDigitacao_value}}}
+        /// </summary>
+        /// <value>{{{pessoa_fisica_aprovada_persist_responsavelDigitacao_value}}}</value>
+        [DataMember(Name="responsavelDigitacao", EmitDefaultValue=false)]
+        public string ResponsavelDigitacao { get; set; }
+    
+        /// <summary>
+        /// {{{pessoa_fisica_aprovada_persist_idPromotorVenda_value}}}
+        /// </summary>
+        /// <value>{{{pessoa_fisica_aprovada_persist_idPromotorVenda_value}}}</value>
+        [DataMember(Name="idPromotorVenda", EmitDefaultValue=false)]
+        public int? IdPromotorVenda { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -457,6 +565,18 @@ namespace Conductor.Pier.Model
             sb.Append("  EnderecoReferencia1: ").Append(EnderecoReferencia1).Append("\n");
             sb.Append("  NomeReferencia2: ").Append(NomeReferencia2).Append("\n");
             sb.Append("  EnderecoReferencia2: ").Append(EnderecoReferencia2).Append("\n");
+            sb.Append("  ImpedidoFinanciamento: ").Append(ImpedidoFinanciamento).Append("\n");
+            sb.Append("  FuncaoAtiva: ").Append(FuncaoAtiva).Append("\n");
+            sb.Append("  NaturalidadeCidade: ").Append(NaturalidadeCidade).Append("\n");
+            sb.Append("  NaturalidadeEstado: ").Append(NaturalidadeEstado).Append("\n");
+            sb.Append("  GrauInstrucao: ").Append(GrauInstrucao).Append("\n");
+            sb.Append("  NumeroDependentes: ").Append(NumeroDependentes).Append("\n");
+            sb.Append("  NomePai: ").Append(NomePai).Append("\n");
+            sb.Append("  ChequeEspecial: ").Append(ChequeEspecial).Append("\n");
+            sb.Append("  NumeroBanco: ").Append(NumeroBanco).Append("\n");
+            sb.Append("  Matricula: ").Append(Matricula).Append("\n");
+            sb.Append("  ResponsavelDigitacao: ").Append(ResponsavelDigitacao).Append("\n");
+            sb.Append("  IdPromotorVenda: ").Append(IdPromotorVenda).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -663,6 +783,66 @@ namespace Conductor.Pier.Model
                     this.EnderecoReferencia2 == other.EnderecoReferencia2 ||
                     this.EnderecoReferencia2 != null &&
                     this.EnderecoReferencia2.Equals(other.EnderecoReferencia2)
+                ) && 
+                (
+                    this.ImpedidoFinanciamento == other.ImpedidoFinanciamento ||
+                    this.ImpedidoFinanciamento != null &&
+                    this.ImpedidoFinanciamento.Equals(other.ImpedidoFinanciamento)
+                ) && 
+                (
+                    this.FuncaoAtiva == other.FuncaoAtiva ||
+                    this.FuncaoAtiva != null &&
+                    this.FuncaoAtiva.Equals(other.FuncaoAtiva)
+                ) && 
+                (
+                    this.NaturalidadeCidade == other.NaturalidadeCidade ||
+                    this.NaturalidadeCidade != null &&
+                    this.NaturalidadeCidade.Equals(other.NaturalidadeCidade)
+                ) && 
+                (
+                    this.NaturalidadeEstado == other.NaturalidadeEstado ||
+                    this.NaturalidadeEstado != null &&
+                    this.NaturalidadeEstado.Equals(other.NaturalidadeEstado)
+                ) && 
+                (
+                    this.GrauInstrucao == other.GrauInstrucao ||
+                    this.GrauInstrucao != null &&
+                    this.GrauInstrucao.Equals(other.GrauInstrucao)
+                ) && 
+                (
+                    this.NumeroDependentes == other.NumeroDependentes ||
+                    this.NumeroDependentes != null &&
+                    this.NumeroDependentes.Equals(other.NumeroDependentes)
+                ) && 
+                (
+                    this.NomePai == other.NomePai ||
+                    this.NomePai != null &&
+                    this.NomePai.Equals(other.NomePai)
+                ) && 
+                (
+                    this.ChequeEspecial == other.ChequeEspecial ||
+                    this.ChequeEspecial != null &&
+                    this.ChequeEspecial.Equals(other.ChequeEspecial)
+                ) && 
+                (
+                    this.NumeroBanco == other.NumeroBanco ||
+                    this.NumeroBanco != null &&
+                    this.NumeroBanco.Equals(other.NumeroBanco)
+                ) && 
+                (
+                    this.Matricula == other.Matricula ||
+                    this.Matricula != null &&
+                    this.Matricula.Equals(other.Matricula)
+                ) && 
+                (
+                    this.ResponsavelDigitacao == other.ResponsavelDigitacao ||
+                    this.ResponsavelDigitacao != null &&
+                    this.ResponsavelDigitacao.Equals(other.ResponsavelDigitacao)
+                ) && 
+                (
+                    this.IdPromotorVenda == other.IdPromotorVenda ||
+                    this.IdPromotorVenda != null &&
+                    this.IdPromotorVenda.Equals(other.IdPromotorVenda)
                 );
         }
 
@@ -779,6 +959,42 @@ namespace Conductor.Pier.Model
                 
                 if (this.EnderecoReferencia2 != null)
                     hash = hash * 59 + this.EnderecoReferencia2.GetHashCode();
+                
+                if (this.ImpedidoFinanciamento != null)
+                    hash = hash * 59 + this.ImpedidoFinanciamento.GetHashCode();
+                
+                if (this.FuncaoAtiva != null)
+                    hash = hash * 59 + this.FuncaoAtiva.GetHashCode();
+                
+                if (this.NaturalidadeCidade != null)
+                    hash = hash * 59 + this.NaturalidadeCidade.GetHashCode();
+                
+                if (this.NaturalidadeEstado != null)
+                    hash = hash * 59 + this.NaturalidadeEstado.GetHashCode();
+                
+                if (this.GrauInstrucao != null)
+                    hash = hash * 59 + this.GrauInstrucao.GetHashCode();
+                
+                if (this.NumeroDependentes != null)
+                    hash = hash * 59 + this.NumeroDependentes.GetHashCode();
+                
+                if (this.NomePai != null)
+                    hash = hash * 59 + this.NomePai.GetHashCode();
+                
+                if (this.ChequeEspecial != null)
+                    hash = hash * 59 + this.ChequeEspecial.GetHashCode();
+                
+                if (this.NumeroBanco != null)
+                    hash = hash * 59 + this.NumeroBanco.GetHashCode();
+                
+                if (this.Matricula != null)
+                    hash = hash * 59 + this.Matricula.GetHashCode();
+                
+                if (this.ResponsavelDigitacao != null)
+                    hash = hash * 59 + this.ResponsavelDigitacao.GetHashCode();
+                
+                if (this.IdPromotorVenda != null)
+                    hash = hash * 59 + this.IdPromotorVenda.GetHashCode();
                 
                 return hash;
             }

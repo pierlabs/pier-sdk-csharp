@@ -26,7 +26,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="codigo">{{{parametro_emissor_recurso_pesquisa_codigo_param}}}</param>
         /// <returns>ParametroEmissorResponse</returns>
-        ParametroEmissorResponse ConsultarUsingGET25 (string codigo);
+        ParametroEmissorResponse ConsultarUsingGET26 (string codigo);
   
         /// <summary>
         /// {{{parametro_emissor_recurso}}}
@@ -37,39 +37,39 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="codigo">{{{parametro_emissor_recurso_pesquisa_codigo_param}}}</param>
         /// <returns>ApiResponse of ParametroEmissorResponse</returns>
-        ApiResponse<ParametroEmissorResponse> ConsultarUsingGET25WithHttpInfo (string codigo);
+        ApiResponse<ParametroEmissorResponse> ConsultarUsingGET26WithHttpInfo (string codigo);
         
         /// <summary>
-        /// {{{parametro_produto_recurso}}}
+        /// {{{parametro_produto_listar}}}
         /// </summary>
         /// <remarks>
-        /// {{{parametro_produto_recurso_notas}}}
+        /// {{{parametro_produto_listar_notas}}}
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
-        /// <param name="id">{{{parametro_produto_request_id_value}}} (optional)</param>
-        /// <param name="codigo">{{{parametro_produto_request_codigo_value}}} (optional)</param>
-        /// <param name="tipo">{{{parametro_produto_request_tipo_value}}} (optional)</param>
-        /// <param name="idProduto">{{{parametro_produto_request_id_produto_value}}} (optional)</param>
+        /// <param name="id">{{{parametro_produto_dto_id_value}}} (optional)</param>
+        /// <param name="codigo">{{{parametro_produto_dto_codigo_value}}} (optional)</param>
+        /// <param name="tipo">{{{parametro_produto_dto_tipo_value}}} (optional)</param>
+        /// <param name="idProduto">{{{parametro_produto_dto_id_produto_value}}} (optional)</param>
         /// <returns>PageParametroProdutoResponse</returns>
         PageParametroProdutoResponse ListarParametrosProdutoUsingGET (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string codigo = null, string tipo = null, long? idProduto = null);
   
         /// <summary>
-        /// {{{parametro_produto_recurso}}}
+        /// {{{parametro_produto_listar}}}
         /// </summary>
         /// <remarks>
-        /// {{{parametro_produto_recurso_notas}}}
+        /// {{{parametro_produto_listar_notas}}}
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
-        /// <param name="id">{{{parametro_produto_request_id_value}}} (optional)</param>
-        /// <param name="codigo">{{{parametro_produto_request_codigo_value}}} (optional)</param>
-        /// <param name="tipo">{{{parametro_produto_request_tipo_value}}} (optional)</param>
-        /// <param name="idProduto">{{{parametro_produto_request_id_produto_value}}} (optional)</param>
+        /// <param name="id">{{{parametro_produto_dto_id_value}}} (optional)</param>
+        /// <param name="codigo">{{{parametro_produto_dto_codigo_value}}} (optional)</param>
+        /// <param name="tipo">{{{parametro_produto_dto_tipo_value}}} (optional)</param>
+        /// <param name="idProduto">{{{parametro_produto_dto_id_produto_value}}} (optional)</param>
         /// <returns>ApiResponse of PageParametroProdutoResponse</returns>
         ApiResponse<PageParametroProdutoResponse> ListarParametrosProdutoUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string codigo = null, string tipo = null, long? idProduto = null);
         
@@ -86,7 +86,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="codigo">{{{parametro_emissor_recurso_pesquisa_codigo_param}}}</param>
         /// <returns>Task of ParametroEmissorResponse</returns>
-        System.Threading.Tasks.Task<ParametroEmissorResponse> ConsultarUsingGET25Async (string codigo);
+        System.Threading.Tasks.Task<ParametroEmissorResponse> ConsultarUsingGET26Async (string codigo);
 
         /// <summary>
         /// {{{parametro_emissor_recurso}}}
@@ -97,39 +97,39 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="codigo">{{{parametro_emissor_recurso_pesquisa_codigo_param}}}</param>
         /// <returns>Task of ApiResponse (ParametroEmissorResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ParametroEmissorResponse>> ConsultarUsingGET25AsyncWithHttpInfo (string codigo);
+        System.Threading.Tasks.Task<ApiResponse<ParametroEmissorResponse>> ConsultarUsingGET26AsyncWithHttpInfo (string codigo);
         
         /// <summary>
-        /// {{{parametro_produto_recurso}}}
+        /// {{{parametro_produto_listar}}}
         /// </summary>
         /// <remarks>
-        /// {{{parametro_produto_recurso_notas}}}
+        /// {{{parametro_produto_listar_notas}}}
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
-        /// <param name="id">{{{parametro_produto_request_id_value}}} (optional)</param>
-        /// <param name="codigo">{{{parametro_produto_request_codigo_value}}} (optional)</param>
-        /// <param name="tipo">{{{parametro_produto_request_tipo_value}}} (optional)</param>
-        /// <param name="idProduto">{{{parametro_produto_request_id_produto_value}}} (optional)</param>
+        /// <param name="id">{{{parametro_produto_dto_id_value}}} (optional)</param>
+        /// <param name="codigo">{{{parametro_produto_dto_codigo_value}}} (optional)</param>
+        /// <param name="tipo">{{{parametro_produto_dto_tipo_value}}} (optional)</param>
+        /// <param name="idProduto">{{{parametro_produto_dto_id_produto_value}}} (optional)</param>
         /// <returns>Task of PageParametroProdutoResponse</returns>
         System.Threading.Tasks.Task<PageParametroProdutoResponse> ListarParametrosProdutoUsingGETAsync (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string codigo = null, string tipo = null, long? idProduto = null);
 
         /// <summary>
-        /// {{{parametro_produto_recurso}}}
+        /// {{{parametro_produto_listar}}}
         /// </summary>
         /// <remarks>
-        /// {{{parametro_produto_recurso_notas}}}
+        /// {{{parametro_produto_listar_notas}}}
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
-        /// <param name="id">{{{parametro_produto_request_id_value}}} (optional)</param>
-        /// <param name="codigo">{{{parametro_produto_request_codigo_value}}} (optional)</param>
-        /// <param name="tipo">{{{parametro_produto_request_tipo_value}}} (optional)</param>
-        /// <param name="idProduto">{{{parametro_produto_request_id_produto_value}}} (optional)</param>
+        /// <param name="id">{{{parametro_produto_dto_id_value}}} (optional)</param>
+        /// <param name="codigo">{{{parametro_produto_dto_codigo_value}}} (optional)</param>
+        /// <param name="tipo">{{{parametro_produto_dto_tipo_value}}} (optional)</param>
+        /// <param name="idProduto">{{{parametro_produto_dto_id_produto_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageParametroProdutoResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<PageParametroProdutoResponse>> ListarParametrosProdutoUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string codigo = null, string tipo = null, long? idProduto = null);
         
@@ -231,9 +231,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="codigo">{{{parametro_emissor_recurso_pesquisa_codigo_param}}}</param> 
         /// <returns>ParametroEmissorResponse</returns>
-        public ParametroEmissorResponse ConsultarUsingGET25 (string codigo)
+        public ParametroEmissorResponse ConsultarUsingGET26 (string codigo)
         {
-             ApiResponse<ParametroEmissorResponse> localVarResponse = ConsultarUsingGET25WithHttpInfo(codigo);
+             ApiResponse<ParametroEmissorResponse> localVarResponse = ConsultarUsingGET26WithHttpInfo(codigo);
              return localVarResponse.Data;
         }
 
@@ -243,12 +243,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="codigo">{{{parametro_emissor_recurso_pesquisa_codigo_param}}}</param> 
         /// <returns>ApiResponse of ParametroEmissorResponse</returns>
-        public ApiResponse< ParametroEmissorResponse > ConsultarUsingGET25WithHttpInfo (string codigo)
+        public ApiResponse< ParametroEmissorResponse > ConsultarUsingGET26WithHttpInfo (string codigo)
         {
             
             // verify the required parameter 'codigo' is set
             if (codigo == null)
-                throw new ApiException(400, "Missing required parameter 'codigo' when calling GlobaltagparametroApi->ConsultarUsingGET25");
+                throw new ApiException(400, "Missing required parameter 'codigo' when calling GlobaltagparametroApi->ConsultarUsingGET26");
             
     
             var localVarPath = "/api/parametros-emissor/{codigo}";
@@ -294,9 +294,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET25: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET26: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET25: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET26: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<ParametroEmissorResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -311,9 +311,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="codigo">{{{parametro_emissor_recurso_pesquisa_codigo_param}}}</param>
         /// <returns>Task of ParametroEmissorResponse</returns>
-        public async System.Threading.Tasks.Task<ParametroEmissorResponse> ConsultarUsingGET25Async (string codigo)
+        public async System.Threading.Tasks.Task<ParametroEmissorResponse> ConsultarUsingGET26Async (string codigo)
         {
-             ApiResponse<ParametroEmissorResponse> localVarResponse = await ConsultarUsingGET25AsyncWithHttpInfo(codigo);
+             ApiResponse<ParametroEmissorResponse> localVarResponse = await ConsultarUsingGET26AsyncWithHttpInfo(codigo);
              return localVarResponse.Data;
 
         }
@@ -324,10 +324,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="codigo">{{{parametro_emissor_recurso_pesquisa_codigo_param}}}</param>
         /// <returns>Task of ApiResponse (ParametroEmissorResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ParametroEmissorResponse>> ConsultarUsingGET25AsyncWithHttpInfo (string codigo)
+        public async System.Threading.Tasks.Task<ApiResponse<ParametroEmissorResponse>> ConsultarUsingGET26AsyncWithHttpInfo (string codigo)
         {
             // verify the required parameter 'codigo' is set
-            if (codigo == null) throw new ApiException(400, "Missing required parameter 'codigo' when calling ConsultarUsingGET25");
+            if (codigo == null) throw new ApiException(400, "Missing required parameter 'codigo' when calling ConsultarUsingGET26");
             
     
             var localVarPath = "/api/parametros-emissor/{codigo}";
@@ -373,9 +373,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET25: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET26: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET25: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET26: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<ParametroEmissorResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -384,16 +384,16 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// {{{parametro_produto_recurso}}} {{{parametro_produto_recurso_notas}}}
+        /// {{{parametro_produto_listar}}} {{{parametro_produto_listar_notas}}}
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param> 
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param> 
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param> 
-        /// <param name="id">{{{parametro_produto_request_id_value}}} (optional)</param> 
-        /// <param name="codigo">{{{parametro_produto_request_codigo_value}}} (optional)</param> 
-        /// <param name="tipo">{{{parametro_produto_request_tipo_value}}} (optional)</param> 
-        /// <param name="idProduto">{{{parametro_produto_request_id_produto_value}}} (optional)</param> 
+        /// <param name="id">{{{parametro_produto_dto_id_value}}} (optional)</param> 
+        /// <param name="codigo">{{{parametro_produto_dto_codigo_value}}} (optional)</param> 
+        /// <param name="tipo">{{{parametro_produto_dto_tipo_value}}} (optional)</param> 
+        /// <param name="idProduto">{{{parametro_produto_dto_id_produto_value}}} (optional)</param> 
         /// <returns>PageParametroProdutoResponse</returns>
         public PageParametroProdutoResponse ListarParametrosProdutoUsingGET (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string codigo = null, string tipo = null, long? idProduto = null)
         {
@@ -402,16 +402,16 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// {{{parametro_produto_recurso}}} {{{parametro_produto_recurso_notas}}}
+        /// {{{parametro_produto_listar}}} {{{parametro_produto_listar_notas}}}
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param> 
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param> 
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param> 
-        /// <param name="id">{{{parametro_produto_request_id_value}}} (optional)</param> 
-        /// <param name="codigo">{{{parametro_produto_request_codigo_value}}} (optional)</param> 
-        /// <param name="tipo">{{{parametro_produto_request_tipo_value}}} (optional)</param> 
-        /// <param name="idProduto">{{{parametro_produto_request_id_produto_value}}} (optional)</param> 
+        /// <param name="id">{{{parametro_produto_dto_id_value}}} (optional)</param> 
+        /// <param name="codigo">{{{parametro_produto_dto_codigo_value}}} (optional)</param> 
+        /// <param name="tipo">{{{parametro_produto_dto_tipo_value}}} (optional)</param> 
+        /// <param name="idProduto">{{{parametro_produto_dto_id_produto_value}}} (optional)</param> 
         /// <returns>ApiResponse of PageParametroProdutoResponse</returns>
         public ApiResponse< PageParametroProdutoResponse > ListarParametrosProdutoUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string codigo = null, string tipo = null, long? idProduto = null)
         {
@@ -478,16 +478,16 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// {{{parametro_produto_recurso}}} {{{parametro_produto_recurso_notas}}}
+        /// {{{parametro_produto_listar}}} {{{parametro_produto_listar_notas}}}
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
-        /// <param name="id">{{{parametro_produto_request_id_value}}} (optional)</param>
-        /// <param name="codigo">{{{parametro_produto_request_codigo_value}}} (optional)</param>
-        /// <param name="tipo">{{{parametro_produto_request_tipo_value}}} (optional)</param>
-        /// <param name="idProduto">{{{parametro_produto_request_id_produto_value}}} (optional)</param>
+        /// <param name="id">{{{parametro_produto_dto_id_value}}} (optional)</param>
+        /// <param name="codigo">{{{parametro_produto_dto_codigo_value}}} (optional)</param>
+        /// <param name="tipo">{{{parametro_produto_dto_tipo_value}}} (optional)</param>
+        /// <param name="idProduto">{{{parametro_produto_dto_id_produto_value}}} (optional)</param>
         /// <returns>Task of PageParametroProdutoResponse</returns>
         public async System.Threading.Tasks.Task<PageParametroProdutoResponse> ListarParametrosProdutoUsingGETAsync (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string codigo = null, string tipo = null, long? idProduto = null)
         {
@@ -497,16 +497,16 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// {{{parametro_produto_recurso}}} {{{parametro_produto_recurso_notas}}}
+        /// {{{parametro_produto_listar}}} {{{parametro_produto_listar_notas}}}
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
-        /// <param name="id">{{{parametro_produto_request_id_value}}} (optional)</param>
-        /// <param name="codigo">{{{parametro_produto_request_codigo_value}}} (optional)</param>
-        /// <param name="tipo">{{{parametro_produto_request_tipo_value}}} (optional)</param>
-        /// <param name="idProduto">{{{parametro_produto_request_id_produto_value}}} (optional)</param>
+        /// <param name="id">{{{parametro_produto_dto_id_value}}} (optional)</param>
+        /// <param name="codigo">{{{parametro_produto_dto_codigo_value}}} (optional)</param>
+        /// <param name="tipo">{{{parametro_produto_dto_tipo_value}}} (optional)</param>
+        /// <param name="idProduto">{{{parametro_produto_dto_id_produto_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageParametroProdutoResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<PageParametroProdutoResponse>> ListarParametrosProdutoUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string codigo = null, string tipo = null, long? idProduto = null)
         {

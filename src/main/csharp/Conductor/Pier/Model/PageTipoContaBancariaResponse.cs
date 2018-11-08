@@ -12,15 +12,15 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{page_compra_contestada_transacao_response_description}}}
+    /// {{{page_conta_response_description}}}
     /// </summary>
     [DataContract]
-    public partial class PageCompraContestadaTransacaoResponse :  IEquatable<PageCompraContestadaTransacaoResponse>
+    public partial class PageTipoContaBancariaResponse :  IEquatable<PageTipoContaBancariaResponse>
     { 
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="PageCompraContestadaTransacaoResponse" /> class.
-        /// Initializes a new instance of the <see cref="PageCompraContestadaTransacaoResponse" />class.
+        /// Initializes a new instance of the <see cref="PageTipoContaBancariaResponse" /> class.
+        /// Initializes a new instance of the <see cref="PageTipoContaBancariaResponse" />class.
         /// </summary>
         /// <param name="Content">Content.</param>
         /// <param name="First">First.</param>
@@ -37,7 +37,7 @@ namespace Conductor.Pier.Model
         /// <param name="TotalElements">TotalElements.</param>
         /// <param name="TotalPages">TotalPages.</param>
 
-        public PageCompraContestadaTransacaoResponse(List<CompraContestadaTransacaoResponse> Content = null, bool? First = null, bool? FirstPage = null, bool? HasContent = null, bool? HasNextPage = null, bool? HasPreviousPage = null, bool? Last = null, int? NextPage = null, int? Number = null, int? NumberOfElements = null, int? PreviousPage = null, int? Size = null, long? TotalElements = null, int? TotalPages = null)
+        public PageTipoContaBancariaResponse(List<TipoContaBancariaResponse> Content = null, bool? First = null, bool? FirstPage = null, bool? HasContent = null, bool? HasNextPage = null, bool? HasPreviousPage = null, bool? Last = null, int? NextPage = null, int? Number = null, int? NumberOfElements = null, int? PreviousPage = null, int? Size = null, long? TotalElements = null, int? TotalPages = null)
         {
             this.Content = Content;
             this.First = First;
@@ -61,7 +61,7 @@ namespace Conductor.Pier.Model
         /// Gets or Sets Content
         /// </summary>
         [DataMember(Name="content", EmitDefaultValue=false)]
-        public List<CompraContestadaTransacaoResponse> Content { get; set; }
+        public List<TipoContaBancariaResponse> Content { get; set; }
     
         /// <summary>
         /// Gets or Sets First
@@ -148,7 +148,7 @@ namespace Conductor.Pier.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class PageCompraContestadaTransacaoResponse {\n");
+            sb.Append("class PageTipoContaBancariaResponse {\n");
             sb.Append("  Content: ").Append(Content).Append("\n");
             sb.Append("  First: ").Append(First).Append("\n");
             sb.Append("  FirstPage: ").Append(FirstPage).Append("\n");
@@ -185,15 +185,15 @@ namespace Conductor.Pier.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as PageCompraContestadaTransacaoResponse);
+            return this.Equals(obj as PageTipoContaBancariaResponse);
         }
 
         /// <summary>
-        /// Returns true if PageCompraContestadaTransacaoResponse instances are equal
+        /// Returns true if PageTipoContaBancariaResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of PageCompraContestadaTransacaoResponse to be compared</param>
+        /// <param name="other">Instance of PageTipoContaBancariaResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(PageCompraContestadaTransacaoResponse other)
+        public bool Equals(PageTipoContaBancariaResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

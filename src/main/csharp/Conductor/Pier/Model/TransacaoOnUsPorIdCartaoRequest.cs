@@ -26,11 +26,12 @@ namespace Conductor.Pier.Model
         /// <param name="CodigoProcessamento">{{{transacao_on_us_por_id_cartao_request_codigo_processamento_value}}} (required).</param>
         /// <param name="ValorTransacao">{{{transacao_on_us_por_id_cartao_request_valor_transacao_value}}} (required).</param>
         /// <param name="NumeroEstabelecimento">{{{transacao_on_us_por_id_cartao_request_numero_estabelecimento_value}}} (required).</param>
+        /// <param name="NomeEstabelecimento">{{{transacao_on_us_por_id_cartao_request_nome_estabelecimento_value}}}.</param>
         /// <param name="DataHoraTerminal">{{{transacao_on_us_por_id_cartao_request_data_hora_terminal_value}}} (required).</param>
         /// <param name="TerminalRequisitante">{{{transacao_on_us_por_id_cartao_request_terminal_requisitante_value}}} (required).</param>
         /// <param name="NumeroParcelas">{{{transacao_on_us_por_id_cartao_request_numero_parcelas_value}}} (required).</param>
 
-        public TransacaoOnUsPorIdCartaoRequest(string NsuOrigem = null, string CodigoProcessamento = null, double? ValorTransacao = null, long? NumeroEstabelecimento = null, string DataHoraTerminal = null, string TerminalRequisitante = null, long? NumeroParcelas = null)
+        public TransacaoOnUsPorIdCartaoRequest(string NsuOrigem = null, string CodigoProcessamento = null, double? ValorTransacao = null, long? NumeroEstabelecimento = null, string NomeEstabelecimento = null, string DataHoraTerminal = null, string TerminalRequisitante = null, long? NumeroParcelas = null)
         {
             // to ensure "NsuOrigem" is required (not null)
             if (NsuOrigem == null)
@@ -95,6 +96,7 @@ namespace Conductor.Pier.Model
             {
                 this.NumeroParcelas = NumeroParcelas;
             }
+            this.NomeEstabelecimento = NomeEstabelecimento;
             
         }
         
@@ -126,6 +128,13 @@ namespace Conductor.Pier.Model
         /// <value>{{{transacao_on_us_por_id_cartao_request_numero_estabelecimento_value}}}</value>
         [DataMember(Name="numeroEstabelecimento", EmitDefaultValue=false)]
         public long? NumeroEstabelecimento { get; set; }
+    
+        /// <summary>
+        /// {{{transacao_on_us_por_id_cartao_request_nome_estabelecimento_value}}}
+        /// </summary>
+        /// <value>{{{transacao_on_us_por_id_cartao_request_nome_estabelecimento_value}}}</value>
+        [DataMember(Name="nomeEstabelecimento", EmitDefaultValue=false)]
+        public string NomeEstabelecimento { get; set; }
     
         /// <summary>
         /// {{{transacao_on_us_por_id_cartao_request_data_hora_terminal_value}}}
@@ -160,6 +169,7 @@ namespace Conductor.Pier.Model
             sb.Append("  CodigoProcessamento: ").Append(CodigoProcessamento).Append("\n");
             sb.Append("  ValorTransacao: ").Append(ValorTransacao).Append("\n");
             sb.Append("  NumeroEstabelecimento: ").Append(NumeroEstabelecimento).Append("\n");
+            sb.Append("  NomeEstabelecimento: ").Append(NomeEstabelecimento).Append("\n");
             sb.Append("  DataHoraTerminal: ").Append(DataHoraTerminal).Append("\n");
             sb.Append("  TerminalRequisitante: ").Append(TerminalRequisitante).Append("\n");
             sb.Append("  NumeroParcelas: ").Append(NumeroParcelas).Append("\n");
@@ -221,6 +231,11 @@ namespace Conductor.Pier.Model
                     this.NumeroEstabelecimento.Equals(other.NumeroEstabelecimento)
                 ) && 
                 (
+                    this.NomeEstabelecimento == other.NomeEstabelecimento ||
+                    this.NomeEstabelecimento != null &&
+                    this.NomeEstabelecimento.Equals(other.NomeEstabelecimento)
+                ) && 
+                (
                     this.DataHoraTerminal == other.DataHoraTerminal ||
                     this.DataHoraTerminal != null &&
                     this.DataHoraTerminal.Equals(other.DataHoraTerminal)
@@ -260,6 +275,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.NumeroEstabelecimento != null)
                     hash = hash * 59 + this.NumeroEstabelecimento.GetHashCode();
+                
+                if (this.NomeEstabelecimento != null)
+                    hash = hash * 59 + this.NomeEstabelecimento.GetHashCode();
                 
                 if (this.DataHoraTerminal != null)
                     hash = hash * 59 + this.DataHoraTerminal.GetHashCode();

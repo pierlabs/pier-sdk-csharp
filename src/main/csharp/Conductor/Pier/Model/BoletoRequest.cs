@@ -26,8 +26,9 @@ namespace Conductor.Pier.Model
         /// <param name="TipoBoleto">{{{boleto_request_tipo_boleto_value}}} (required).</param>
         /// <param name="Valor">{{{boleto_request_valor_value}}} (required).</param>
         /// <param name="DataVencimento">{{{boleto_request_data_vencimento_value}}} (required).</param>
+        /// <param name="IdConvenio">{{{boleto_request_id_convenio_value}}}.</param>
 
-        public BoletoRequest(long? IdConta = null, long? TipoBoleto = null, double? Valor = null, string DataVencimento = null)
+        public BoletoRequest(long? IdConta = null, long? TipoBoleto = null, double? Valor = null, string DataVencimento = null, long? IdConvenio = null)
         {
             // to ensure "IdConta" is required (not null)
             if (IdConta == null)
@@ -65,6 +66,7 @@ namespace Conductor.Pier.Model
             {
                 this.DataVencimento = DataVencimento;
             }
+            this.IdConvenio = IdConvenio;
             
         }
         
@@ -98,6 +100,13 @@ namespace Conductor.Pier.Model
         public string DataVencimento { get; set; }
     
         /// <summary>
+        /// {{{boleto_request_id_convenio_value}}}
+        /// </summary>
+        /// <value>{{{boleto_request_id_convenio_value}}}</value>
+        [DataMember(Name="idConvenio", EmitDefaultValue=false)]
+        public long? IdConvenio { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -109,6 +118,7 @@ namespace Conductor.Pier.Model
             sb.Append("  TipoBoleto: ").Append(TipoBoleto).Append("\n");
             sb.Append("  Valor: ").Append(Valor).Append("\n");
             sb.Append("  DataVencimento: ").Append(DataVencimento).Append("\n");
+            sb.Append("  IdConvenio: ").Append(IdConvenio).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -165,6 +175,11 @@ namespace Conductor.Pier.Model
                     this.DataVencimento == other.DataVencimento ||
                     this.DataVencimento != null &&
                     this.DataVencimento.Equals(other.DataVencimento)
+                ) && 
+                (
+                    this.IdConvenio == other.IdConvenio ||
+                    this.IdConvenio != null &&
+                    this.IdConvenio.Equals(other.IdConvenio)
                 );
         }
 
@@ -191,6 +206,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.DataVencimento != null)
                     hash = hash * 59 + this.DataVencimento.GetHashCode();
+                
+                if (this.IdConvenio != null)
+                    hash = hash * 59 + this.IdConvenio.GetHashCode();
                 
                 return hash;
             }

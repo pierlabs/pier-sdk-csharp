@@ -12,15 +12,15 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{page_page_compra_contestada_cartao_response_description}}}
+    /// {{{page_documento_credito_response_description}}}
     /// </summary>
     [DataContract]
-    public partial class PageCompraContestadaCartaoResponse :  IEquatable<PageCompraContestadaCartaoResponse>
+    public partial class PageDocumentoCreditoResponse :  IEquatable<PageDocumentoCreditoResponse>
     { 
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="PageCompraContestadaCartaoResponse" /> class.
-        /// Initializes a new instance of the <see cref="PageCompraContestadaCartaoResponse" />class.
+        /// Initializes a new instance of the <see cref="PageDocumentoCreditoResponse" /> class.
+        /// Initializes a new instance of the <see cref="PageDocumentoCreditoResponse" />class.
         /// </summary>
         /// <param name="Content">Content.</param>
         /// <param name="First">First.</param>
@@ -37,7 +37,7 @@ namespace Conductor.Pier.Model
         /// <param name="TotalElements">TotalElements.</param>
         /// <param name="TotalPages">TotalPages.</param>
 
-        public PageCompraContestadaCartaoResponse(List<CompraContestadaCartaoResponse> Content = null, bool? First = null, bool? FirstPage = null, bool? HasContent = null, bool? HasNextPage = null, bool? HasPreviousPage = null, bool? Last = null, int? NextPage = null, int? Number = null, int? NumberOfElements = null, int? PreviousPage = null, int? Size = null, long? TotalElements = null, int? TotalPages = null)
+        public PageDocumentoCreditoResponse(List<CdtDocumentoCredito> Content = null, bool? First = null, bool? FirstPage = null, bool? HasContent = null, bool? HasNextPage = null, bool? HasPreviousPage = null, bool? Last = null, int? NextPage = null, int? Number = null, int? NumberOfElements = null, int? PreviousPage = null, int? Size = null, long? TotalElements = null, int? TotalPages = null)
         {
             this.Content = Content;
             this.First = First;
@@ -61,7 +61,7 @@ namespace Conductor.Pier.Model
         /// Gets or Sets Content
         /// </summary>
         [DataMember(Name="content", EmitDefaultValue=false)]
-        public List<CompraContestadaCartaoResponse> Content { get; set; }
+        public List<CdtDocumentoCredito> Content { get; set; }
     
         /// <summary>
         /// Gets or Sets First
@@ -148,7 +148,7 @@ namespace Conductor.Pier.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class PageCompraContestadaCartaoResponse {\n");
+            sb.Append("class PageDocumentoCreditoResponse {\n");
             sb.Append("  Content: ").Append(Content).Append("\n");
             sb.Append("  First: ").Append(First).Append("\n");
             sb.Append("  FirstPage: ").Append(FirstPage).Append("\n");
@@ -185,15 +185,15 @@ namespace Conductor.Pier.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as PageCompraContestadaCartaoResponse);
+            return this.Equals(obj as PageDocumentoCreditoResponse);
         }
 
         /// <summary>
-        /// Returns true if PageCompraContestadaCartaoResponse instances are equal
+        /// Returns true if PageDocumentoCreditoResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of PageCompraContestadaCartaoResponse to be compared</param>
+        /// <param name="other">Instance of PageDocumentoCreditoResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(PageCompraContestadaCartaoResponse other)
+        public bool Equals(PageDocumentoCreditoResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

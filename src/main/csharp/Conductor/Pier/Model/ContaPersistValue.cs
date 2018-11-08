@@ -35,8 +35,12 @@ namespace Conductor.Pier.Model
         /// <param name="LimiteParcelas">{{{conta_persist_limite_parcelas_value}}} (required).</param>
         /// <param name="LimiteConsignado">{{{conta_persist_limite_consignado_value}}} (required).</param>
         /// <param name="FlagFaturaPorEmail">{{{conta_persist_flag_fatura_por_email_value}}} (required).</param>
+        /// <param name="FuncaoAtiva">{{{conta_persist_funcao_ativa_value}}}.</param>
+        /// <param name="Matricula">{{{pessoa_fisica_aprovada_persist_matricula_value}}}.</param>
+        /// <param name="ResponsavelDigitacao">{{{pessoa_fisica_aprovada_persist_responsavelDigitacao_value}}}.</param>
+        /// <param name="IdPromotorVenda">{{{pessoa_fisica_aprovada_persist_idPromotorVenda_value}}}.</param>
 
-        public ContaPersistValue(long? IdPessoa = null, long? IdOrigemComercial = null, long? IdProduto = null, int? DiaVencimento = null, double? ValorRenda = null, string CanalEntrada = null, int? ValorPontuacao = null, long? IdEnderecoCorrespondencia = null, double? LimiteGlobal = null, double? LimiteMaximo = null, double? LimiteParcelas = null, double? LimiteConsignado = null, int? FlagFaturaPorEmail = null)
+        public ContaPersistValue(long? IdPessoa = null, long? IdOrigemComercial = null, long? IdProduto = null, int? DiaVencimento = null, double? ValorRenda = null, string CanalEntrada = null, int? ValorPontuacao = null, long? IdEnderecoCorrespondencia = null, double? LimiteGlobal = null, double? LimiteMaximo = null, double? LimiteParcelas = null, double? LimiteConsignado = null, int? FlagFaturaPorEmail = null, string FuncaoAtiva = null, string Matricula = null, string ResponsavelDigitacao = null, int? IdPromotorVenda = null)
         {
             // to ensure "IdPessoa" is required (not null)
             if (IdPessoa == null)
@@ -147,6 +151,10 @@ namespace Conductor.Pier.Model
                 this.FlagFaturaPorEmail = FlagFaturaPorEmail;
             }
             this.CanalEntrada = CanalEntrada;
+            this.FuncaoAtiva = FuncaoAtiva;
+            this.Matricula = Matricula;
+            this.ResponsavelDigitacao = ResponsavelDigitacao;
+            this.IdPromotorVenda = IdPromotorVenda;
             
         }
         
@@ -243,6 +251,34 @@ namespace Conductor.Pier.Model
         public int? FlagFaturaPorEmail { get; set; }
     
         /// <summary>
+        /// {{{conta_persist_funcao_ativa_value}}}
+        /// </summary>
+        /// <value>{{{conta_persist_funcao_ativa_value}}}</value>
+        [DataMember(Name="funcaoAtiva", EmitDefaultValue=false)]
+        public string FuncaoAtiva { get; set; }
+    
+        /// <summary>
+        /// {{{pessoa_fisica_aprovada_persist_matricula_value}}}
+        /// </summary>
+        /// <value>{{{pessoa_fisica_aprovada_persist_matricula_value}}}</value>
+        [DataMember(Name="matricula", EmitDefaultValue=false)]
+        public string Matricula { get; set; }
+    
+        /// <summary>
+        /// {{{pessoa_fisica_aprovada_persist_responsavelDigitacao_value}}}
+        /// </summary>
+        /// <value>{{{pessoa_fisica_aprovada_persist_responsavelDigitacao_value}}}</value>
+        [DataMember(Name="responsavelDigitacao", EmitDefaultValue=false)]
+        public string ResponsavelDigitacao { get; set; }
+    
+        /// <summary>
+        /// {{{pessoa_fisica_aprovada_persist_idPromotorVenda_value}}}
+        /// </summary>
+        /// <value>{{{pessoa_fisica_aprovada_persist_idPromotorVenda_value}}}</value>
+        [DataMember(Name="idPromotorVenda", EmitDefaultValue=false)]
+        public int? IdPromotorVenda { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -263,6 +299,10 @@ namespace Conductor.Pier.Model
             sb.Append("  LimiteParcelas: ").Append(LimiteParcelas).Append("\n");
             sb.Append("  LimiteConsignado: ").Append(LimiteConsignado).Append("\n");
             sb.Append("  FlagFaturaPorEmail: ").Append(FlagFaturaPorEmail).Append("\n");
+            sb.Append("  FuncaoAtiva: ").Append(FuncaoAtiva).Append("\n");
+            sb.Append("  Matricula: ").Append(Matricula).Append("\n");
+            sb.Append("  ResponsavelDigitacao: ").Append(ResponsavelDigitacao).Append("\n");
+            sb.Append("  IdPromotorVenda: ").Append(IdPromotorVenda).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -364,6 +404,26 @@ namespace Conductor.Pier.Model
                     this.FlagFaturaPorEmail == other.FlagFaturaPorEmail ||
                     this.FlagFaturaPorEmail != null &&
                     this.FlagFaturaPorEmail.Equals(other.FlagFaturaPorEmail)
+                ) && 
+                (
+                    this.FuncaoAtiva == other.FuncaoAtiva ||
+                    this.FuncaoAtiva != null &&
+                    this.FuncaoAtiva.Equals(other.FuncaoAtiva)
+                ) && 
+                (
+                    this.Matricula == other.Matricula ||
+                    this.Matricula != null &&
+                    this.Matricula.Equals(other.Matricula)
+                ) && 
+                (
+                    this.ResponsavelDigitacao == other.ResponsavelDigitacao ||
+                    this.ResponsavelDigitacao != null &&
+                    this.ResponsavelDigitacao.Equals(other.ResponsavelDigitacao)
+                ) && 
+                (
+                    this.IdPromotorVenda == other.IdPromotorVenda ||
+                    this.IdPromotorVenda != null &&
+                    this.IdPromotorVenda.Equals(other.IdPromotorVenda)
                 );
         }
 
@@ -417,6 +477,18 @@ namespace Conductor.Pier.Model
                 
                 if (this.FlagFaturaPorEmail != null)
                     hash = hash * 59 + this.FlagFaturaPorEmail.GetHashCode();
+                
+                if (this.FuncaoAtiva != null)
+                    hash = hash * 59 + this.FuncaoAtiva.GetHashCode();
+                
+                if (this.Matricula != null)
+                    hash = hash * 59 + this.Matricula.GetHashCode();
+                
+                if (this.ResponsavelDigitacao != null)
+                    hash = hash * 59 + this.ResponsavelDigitacao.GetHashCode();
+                
+                if (this.IdPromotorVenda != null)
+                    hash = hash * 59 + this.IdPromotorVenda.GetHashCode();
                 
                 return hash;
             }

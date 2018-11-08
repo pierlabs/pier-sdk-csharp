@@ -30,9 +30,10 @@ namespace Conductor.Pier.Api
         /// <param name="idConta">{{{ajuste_financeiro_persist_id_conta_value}}}</param>
         /// <param name="login">login (optional)</param>
         /// <param name="identificadorExterno">{{{ajuste_financeiro_persist_identificador_externo_value}}} (optional)</param>
-        /// <param name="idTransacaoOriginal">{{{ajuste_persist_id_transacao_original}}} (optional)</param>
+        /// <param name="idTransacaoOriginal">{{{ajuste_fincanceiro_persist_id_transacao_original}}} (optional)</param>
+        /// <param name="idEstabelecimento">{{{ajuste_fincanceiro_persist_id_estabelecimento_value}}} (optional)</param>
         /// <returns>AjusteFinanceiroResponse</returns>
-        AjusteFinanceiroResponse AjustarContaUsingPOST (long? idTipoAjuste, string dataAjuste, double? valorAjuste, long? idConta, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null);
+        AjusteFinanceiroResponse AjustarContaUsingPOST (long? idTipoAjuste, string dataAjuste, double? valorAjuste, long? idConta, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null);
   
         /// <summary>
         /// {{{ajuste_financeiro_resource_ajustar_conta}}}
@@ -47,9 +48,10 @@ namespace Conductor.Pier.Api
         /// <param name="idConta">{{{ajuste_financeiro_persist_id_conta_value}}}</param>
         /// <param name="login">login (optional)</param>
         /// <param name="identificadorExterno">{{{ajuste_financeiro_persist_identificador_externo_value}}} (optional)</param>
-        /// <param name="idTransacaoOriginal">{{{ajuste_persist_id_transacao_original}}} (optional)</param>
+        /// <param name="idTransacaoOriginal">{{{ajuste_fincanceiro_persist_id_transacao_original}}} (optional)</param>
+        /// <param name="idEstabelecimento">{{{ajuste_fincanceiro_persist_id_estabelecimento_value}}} (optional)</param>
         /// <returns>ApiResponse of AjusteFinanceiroResponse</returns>
-        ApiResponse<AjusteFinanceiroResponse> AjustarContaUsingPOSTWithHttpInfo (long? idTipoAjuste, string dataAjuste, double? valorAjuste, long? idConta, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null);
+        ApiResponse<AjusteFinanceiroResponse> AjustarContaUsingPOSTWithHttpInfo (long? idTipoAjuste, string dataAjuste, double? valorAjuste, long? idConta, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null);
         
         /// <summary>
         /// {{{ajuste_financeiro_resource_consultar}}}
@@ -126,9 +128,10 @@ namespace Conductor.Pier.Api
         /// <param name="idConta">{{{ajuste_financeiro_persist_id_conta_value}}}</param>
         /// <param name="login">login (optional)</param>
         /// <param name="identificadorExterno">{{{ajuste_financeiro_persist_identificador_externo_value}}} (optional)</param>
-        /// <param name="idTransacaoOriginal">{{{ajuste_persist_id_transacao_original}}} (optional)</param>
+        /// <param name="idTransacaoOriginal">{{{ajuste_fincanceiro_persist_id_transacao_original}}} (optional)</param>
+        /// <param name="idEstabelecimento">{{{ajuste_fincanceiro_persist_id_estabelecimento_value}}} (optional)</param>
         /// <returns>Task of AjusteFinanceiroResponse</returns>
-        System.Threading.Tasks.Task<AjusteFinanceiroResponse> AjustarContaUsingPOSTAsync (long? idTipoAjuste, string dataAjuste, double? valorAjuste, long? idConta, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null);
+        System.Threading.Tasks.Task<AjusteFinanceiroResponse> AjustarContaUsingPOSTAsync (long? idTipoAjuste, string dataAjuste, double? valorAjuste, long? idConta, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null);
 
         /// <summary>
         /// {{{ajuste_financeiro_resource_ajustar_conta}}}
@@ -143,9 +146,10 @@ namespace Conductor.Pier.Api
         /// <param name="idConta">{{{ajuste_financeiro_persist_id_conta_value}}}</param>
         /// <param name="login">login (optional)</param>
         /// <param name="identificadorExterno">{{{ajuste_financeiro_persist_identificador_externo_value}}} (optional)</param>
-        /// <param name="idTransacaoOriginal">{{{ajuste_persist_id_transacao_original}}} (optional)</param>
+        /// <param name="idTransacaoOriginal">{{{ajuste_fincanceiro_persist_id_transacao_original}}} (optional)</param>
+        /// <param name="idEstabelecimento">{{{ajuste_fincanceiro_persist_id_estabelecimento_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (AjusteFinanceiroResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AjusteFinanceiroResponse>> AjustarContaUsingPOSTAsyncWithHttpInfo (long? idTipoAjuste, string dataAjuste, double? valorAjuste, long? idConta, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null);
+        System.Threading.Tasks.Task<ApiResponse<AjusteFinanceiroResponse>> AjustarContaUsingPOSTAsyncWithHttpInfo (long? idTipoAjuste, string dataAjuste, double? valorAjuste, long? idConta, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null);
         
         /// <summary>
         /// {{{ajuste_financeiro_resource_consultar}}}
@@ -307,11 +311,12 @@ namespace Conductor.Pier.Api
         /// <param name="idConta">{{{ajuste_financeiro_persist_id_conta_value}}}</param> 
         /// <param name="login">login (optional)</param> 
         /// <param name="identificadorExterno">{{{ajuste_financeiro_persist_identificador_externo_value}}} (optional)</param> 
-        /// <param name="idTransacaoOriginal">{{{ajuste_persist_id_transacao_original}}} (optional)</param> 
+        /// <param name="idTransacaoOriginal">{{{ajuste_fincanceiro_persist_id_transacao_original}}} (optional)</param> 
+        /// <param name="idEstabelecimento">{{{ajuste_fincanceiro_persist_id_estabelecimento_value}}} (optional)</param> 
         /// <returns>AjusteFinanceiroResponse</returns>
-        public AjusteFinanceiroResponse AjustarContaUsingPOST (long? idTipoAjuste, string dataAjuste, double? valorAjuste, long? idConta, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null)
+        public AjusteFinanceiroResponse AjustarContaUsingPOST (long? idTipoAjuste, string dataAjuste, double? valorAjuste, long? idConta, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null)
         {
-             ApiResponse<AjusteFinanceiroResponse> localVarResponse = AjustarContaUsingPOSTWithHttpInfo(idTipoAjuste, dataAjuste, valorAjuste, idConta, login, identificadorExterno, idTransacaoOriginal);
+             ApiResponse<AjusteFinanceiroResponse> localVarResponse = AjustarContaUsingPOSTWithHttpInfo(idTipoAjuste, dataAjuste, valorAjuste, idConta, login, identificadorExterno, idTransacaoOriginal, idEstabelecimento);
              return localVarResponse.Data;
         }
 
@@ -325,9 +330,10 @@ namespace Conductor.Pier.Api
         /// <param name="idConta">{{{ajuste_financeiro_persist_id_conta_value}}}</param> 
         /// <param name="login">login (optional)</param> 
         /// <param name="identificadorExterno">{{{ajuste_financeiro_persist_identificador_externo_value}}} (optional)</param> 
-        /// <param name="idTransacaoOriginal">{{{ajuste_persist_id_transacao_original}}} (optional)</param> 
+        /// <param name="idTransacaoOriginal">{{{ajuste_fincanceiro_persist_id_transacao_original}}} (optional)</param> 
+        /// <param name="idEstabelecimento">{{{ajuste_fincanceiro_persist_id_estabelecimento_value}}} (optional)</param> 
         /// <returns>ApiResponse of AjusteFinanceiroResponse</returns>
-        public ApiResponse< AjusteFinanceiroResponse > AjustarContaUsingPOSTWithHttpInfo (long? idTipoAjuste, string dataAjuste, double? valorAjuste, long? idConta, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null)
+        public ApiResponse< AjusteFinanceiroResponse > AjustarContaUsingPOSTWithHttpInfo (long? idTipoAjuste, string dataAjuste, double? valorAjuste, long? idConta, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null)
         {
             
             // verify the required parameter 'idTipoAjuste' is set
@@ -380,6 +386,7 @@ namespace Conductor.Pier.Api
             if (identificadorExterno != null) localVarQueryParams.Add("identificadorExterno", Configuration.ApiClient.ParameterToString(identificadorExterno)); // query parameter
             if (idConta != null) localVarQueryParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // query parameter
             if (idTransacaoOriginal != null) localVarQueryParams.Add("idTransacaoOriginal", Configuration.ApiClient.ParameterToString(idTransacaoOriginal)); // query parameter
+            if (idEstabelecimento != null) localVarQueryParams.Add("idEstabelecimento", Configuration.ApiClient.ParameterToString(idEstabelecimento)); // query parameter
             
             if (login != null) localVarHeaderParams.Add("login", Configuration.ApiClient.ParameterToString(login)); // header parameter
             
@@ -417,11 +424,12 @@ namespace Conductor.Pier.Api
         /// <param name="idConta">{{{ajuste_financeiro_persist_id_conta_value}}}</param>
         /// <param name="login">login (optional)</param>
         /// <param name="identificadorExterno">{{{ajuste_financeiro_persist_identificador_externo_value}}} (optional)</param>
-        /// <param name="idTransacaoOriginal">{{{ajuste_persist_id_transacao_original}}} (optional)</param>
+        /// <param name="idTransacaoOriginal">{{{ajuste_fincanceiro_persist_id_transacao_original}}} (optional)</param>
+        /// <param name="idEstabelecimento">{{{ajuste_fincanceiro_persist_id_estabelecimento_value}}} (optional)</param>
         /// <returns>Task of AjusteFinanceiroResponse</returns>
-        public async System.Threading.Tasks.Task<AjusteFinanceiroResponse> AjustarContaUsingPOSTAsync (long? idTipoAjuste, string dataAjuste, double? valorAjuste, long? idConta, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null)
+        public async System.Threading.Tasks.Task<AjusteFinanceiroResponse> AjustarContaUsingPOSTAsync (long? idTipoAjuste, string dataAjuste, double? valorAjuste, long? idConta, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null)
         {
-             ApiResponse<AjusteFinanceiroResponse> localVarResponse = await AjustarContaUsingPOSTAsyncWithHttpInfo(idTipoAjuste, dataAjuste, valorAjuste, idConta, login, identificadorExterno, idTransacaoOriginal);
+             ApiResponse<AjusteFinanceiroResponse> localVarResponse = await AjustarContaUsingPOSTAsyncWithHttpInfo(idTipoAjuste, dataAjuste, valorAjuste, idConta, login, identificadorExterno, idTransacaoOriginal, idEstabelecimento);
              return localVarResponse.Data;
 
         }
@@ -436,9 +444,10 @@ namespace Conductor.Pier.Api
         /// <param name="idConta">{{{ajuste_financeiro_persist_id_conta_value}}}</param>
         /// <param name="login">login (optional)</param>
         /// <param name="identificadorExterno">{{{ajuste_financeiro_persist_identificador_externo_value}}} (optional)</param>
-        /// <param name="idTransacaoOriginal">{{{ajuste_persist_id_transacao_original}}} (optional)</param>
+        /// <param name="idTransacaoOriginal">{{{ajuste_fincanceiro_persist_id_transacao_original}}} (optional)</param>
+        /// <param name="idEstabelecimento">{{{ajuste_fincanceiro_persist_id_estabelecimento_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (AjusteFinanceiroResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AjusteFinanceiroResponse>> AjustarContaUsingPOSTAsyncWithHttpInfo (long? idTipoAjuste, string dataAjuste, double? valorAjuste, long? idConta, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null)
+        public async System.Threading.Tasks.Task<ApiResponse<AjusteFinanceiroResponse>> AjustarContaUsingPOSTAsyncWithHttpInfo (long? idTipoAjuste, string dataAjuste, double? valorAjuste, long? idConta, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null)
         {
             // verify the required parameter 'idTipoAjuste' is set
             if (idTipoAjuste == null) throw new ApiException(400, "Missing required parameter 'idTipoAjuste' when calling AjustarContaUsingPOST");
@@ -483,6 +492,7 @@ namespace Conductor.Pier.Api
             if (identificadorExterno != null) localVarQueryParams.Add("identificadorExterno", Configuration.ApiClient.ParameterToString(identificadorExterno)); // query parameter
             if (idConta != null) localVarQueryParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // query parameter
             if (idTransacaoOriginal != null) localVarQueryParams.Add("idTransacaoOriginal", Configuration.ApiClient.ParameterToString(idTransacaoOriginal)); // query parameter
+            if (idEstabelecimento != null) localVarQueryParams.Add("idEstabelecimento", Configuration.ApiClient.ParameterToString(idEstabelecimento)); // query parameter
             
             if (login != null) localVarHeaderParams.Add("login", Configuration.ApiClient.ParameterToString(login)); // header parameter
             

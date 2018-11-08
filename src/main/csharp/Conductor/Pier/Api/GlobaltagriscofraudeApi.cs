@@ -26,7 +26,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{risco_fraude_resource_consultar_param_id_risco_fraude}}}</param>
         /// <returns>RiscoFraudeDetalhadoResponse</returns>
-        RiscoFraudeDetalhadoResponse ConsultarUsingGET31 (long? id);
+        RiscoFraudeDetalhadoResponse ConsultarUsingGET32 (long? id);
   
         /// <summary>
         /// {{{risco_fraude_resource_consultar}}}
@@ -37,7 +37,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{risco_fraude_resource_consultar_param_id_risco_fraude}}}</param>
         /// <returns>ApiResponse of RiscoFraudeDetalhadoResponse</returns>
-        ApiResponse<RiscoFraudeDetalhadoResponse> ConsultarUsingGET31WithHttpInfo (long? id);
+        ApiResponse<RiscoFraudeDetalhadoResponse> ConsultarUsingGET32WithHttpInfo (long? id);
         
         /// <summary>
         /// {{{risco_fraude_resource_listar_tipos_resolucao}}}
@@ -46,7 +46,7 @@ namespace Conductor.Pier.Api
         /// {{{risco_fraude_resource_listar_tipos_resolucao_notes}}}
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="page">{{{pagable_page_value}}} (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>TipoResolucaoResponse</returns>
         TipoResolucaoResponse ListarTiposResolucaoUsingGET (int? page = null, int? limit = null);
@@ -58,7 +58,7 @@ namespace Conductor.Pier.Api
         /// {{{risco_fraude_resource_listar_tipos_resolucao_notes}}}
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="page">{{{pagable_page_value}}} (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>ApiResponse of TipoResolucaoResponse</returns>
         ApiResponse<TipoResolucaoResponse> ListarTiposResolucaoUsingGETWithHttpInfo (int? page = null, int? limit = null);
@@ -142,7 +142,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{risco_fraude_resource_consultar_param_id_risco_fraude}}}</param>
         /// <returns>Task of RiscoFraudeDetalhadoResponse</returns>
-        System.Threading.Tasks.Task<RiscoFraudeDetalhadoResponse> ConsultarUsingGET31Async (long? id);
+        System.Threading.Tasks.Task<RiscoFraudeDetalhadoResponse> ConsultarUsingGET32Async (long? id);
 
         /// <summary>
         /// {{{risco_fraude_resource_consultar}}}
@@ -153,7 +153,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{risco_fraude_resource_consultar_param_id_risco_fraude}}}</param>
         /// <returns>Task of ApiResponse (RiscoFraudeDetalhadoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RiscoFraudeDetalhadoResponse>> ConsultarUsingGET31AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<RiscoFraudeDetalhadoResponse>> ConsultarUsingGET32AsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// {{{risco_fraude_resource_listar_tipos_resolucao}}}
@@ -162,7 +162,7 @@ namespace Conductor.Pier.Api
         /// {{{risco_fraude_resource_listar_tipos_resolucao_notes}}}
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="page">{{{pagable_page_value}}} (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of TipoResolucaoResponse</returns>
         System.Threading.Tasks.Task<TipoResolucaoResponse> ListarTiposResolucaoUsingGETAsync (int? page = null, int? limit = null);
@@ -174,7 +174,7 @@ namespace Conductor.Pier.Api
         /// {{{risco_fraude_resource_listar_tipos_resolucao_notes}}}
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="page">{{{pagable_page_value}}} (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of ApiResponse (TipoResolucaoResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<TipoResolucaoResponse>> ListarTiposResolucaoUsingGETAsyncWithHttpInfo (int? page = null, int? limit = null);
@@ -343,9 +343,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{risco_fraude_resource_consultar_param_id_risco_fraude}}}</param> 
         /// <returns>RiscoFraudeDetalhadoResponse</returns>
-        public RiscoFraudeDetalhadoResponse ConsultarUsingGET31 (long? id)
+        public RiscoFraudeDetalhadoResponse ConsultarUsingGET32 (long? id)
         {
-             ApiResponse<RiscoFraudeDetalhadoResponse> localVarResponse = ConsultarUsingGET31WithHttpInfo(id);
+             ApiResponse<RiscoFraudeDetalhadoResponse> localVarResponse = ConsultarUsingGET32WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -355,12 +355,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{risco_fraude_resource_consultar_param_id_risco_fraude}}}</param> 
         /// <returns>ApiResponse of RiscoFraudeDetalhadoResponse</returns>
-        public ApiResponse< RiscoFraudeDetalhadoResponse > ConsultarUsingGET31WithHttpInfo (long? id)
+        public ApiResponse< RiscoFraudeDetalhadoResponse > ConsultarUsingGET32WithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagriscofraudeApi->ConsultarUsingGET31");
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagriscofraudeApi->ConsultarUsingGET32");
             
     
             var localVarPath = "/api/riscos-fraudes/{id}";
@@ -406,9 +406,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET31: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET32: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET31: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET32: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<RiscoFraudeDetalhadoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -423,9 +423,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{risco_fraude_resource_consultar_param_id_risco_fraude}}}</param>
         /// <returns>Task of RiscoFraudeDetalhadoResponse</returns>
-        public async System.Threading.Tasks.Task<RiscoFraudeDetalhadoResponse> ConsultarUsingGET31Async (long? id)
+        public async System.Threading.Tasks.Task<RiscoFraudeDetalhadoResponse> ConsultarUsingGET32Async (long? id)
         {
-             ApiResponse<RiscoFraudeDetalhadoResponse> localVarResponse = await ConsultarUsingGET31AsyncWithHttpInfo(id);
+             ApiResponse<RiscoFraudeDetalhadoResponse> localVarResponse = await ConsultarUsingGET32AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -436,10 +436,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{risco_fraude_resource_consultar_param_id_risco_fraude}}}</param>
         /// <returns>Task of ApiResponse (RiscoFraudeDetalhadoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RiscoFraudeDetalhadoResponse>> ConsultarUsingGET31AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<RiscoFraudeDetalhadoResponse>> ConsultarUsingGET32AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET31");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET32");
             
     
             var localVarPath = "/api/riscos-fraudes/{id}";
@@ -485,9 +485,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET31: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET32: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET31: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET32: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<RiscoFraudeDetalhadoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -499,7 +499,7 @@ namespace Conductor.Pier.Api
         /// {{{risco_fraude_resource_listar_tipos_resolucao}}} {{{risco_fraude_resource_listar_tipos_resolucao_notes}}}
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="page">{{{pagable_page_value}}} (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
         /// <returns>TipoResolucaoResponse</returns>
         public TipoResolucaoResponse ListarTiposResolucaoUsingGET (int? page = null, int? limit = null)
@@ -512,7 +512,7 @@ namespace Conductor.Pier.Api
         /// {{{risco_fraude_resource_listar_tipos_resolucao}}} {{{risco_fraude_resource_listar_tipos_resolucao_notes}}}
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param> 
+        /// <param name="page">{{{pagable_page_value}}} (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
         /// <returns>ApiResponse of TipoResolucaoResponse</returns>
         public ApiResponse< TipoResolucaoResponse > ListarTiposResolucaoUsingGETWithHttpInfo (int? page = null, int? limit = null)
@@ -578,7 +578,7 @@ namespace Conductor.Pier.Api
         /// {{{risco_fraude_resource_listar_tipos_resolucao}}} {{{risco_fraude_resource_listar_tipos_resolucao_notes}}}
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="page">{{{pagable_page_value}}} (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of TipoResolucaoResponse</returns>
         public async System.Threading.Tasks.Task<TipoResolucaoResponse> ListarTiposResolucaoUsingGETAsync (int? page = null, int? limit = null)
@@ -592,7 +592,7 @@ namespace Conductor.Pier.Api
         /// {{{risco_fraude_resource_listar_tipos_resolucao}}} {{{risco_fraude_resource_listar_tipos_resolucao_notes}}}
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="page">P\u00E1gina solicitada (Default = 0) (optional)</param>
+        /// <param name="page">{{{pagable_page_value}}} (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of ApiResponse (TipoResolucaoResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<TipoResolucaoResponse>> ListarTiposResolucaoUsingGETAsyncWithHttpInfo (int? page = null, int? limit = null)

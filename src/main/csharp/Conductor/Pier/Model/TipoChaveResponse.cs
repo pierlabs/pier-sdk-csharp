@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{Bin_response_description}}}
+    /// {{{tipo_chave_response_description}}}
     /// </summary>
     [DataContract]
     public partial class TipoChaveResponse :  IEquatable<TipoChaveResponse>

@@ -19,9 +19,9 @@ namespace Conductor.Pier.Model
     { 
     
         /// <summary>
-        /// {{{parametro_produto_response_tipo_origem_transacao_value}}}
+        /// {{{parametro_produto_dto_tipo_origem_transacao_value}}}
         /// </summary>
-        /// <value>{{{parametro_produto_response_tipo_origem_transacao_value}}}</value>
+        /// <value>{{{parametro_produto_dto_tipo_origem_transacao_value}}}</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum TipoOrigemTransacaoEnum {
             
@@ -34,9 +34,9 @@ namespace Conductor.Pier.Model
 
     
         /// <summary>
-        /// {{{parametro_produto_response_tipo_origem_transacao_value}}}
+        /// {{{parametro_produto_dto_tipo_origem_transacao_value}}}
         /// </summary>
-        /// <value>{{{parametro_produto_response_tipo_origem_transacao_value}}}</value>
+        /// <value>{{{parametro_produto_dto_tipo_origem_transacao_value}}}</value>
         [DataMember(Name="tipoOrigemTransacao", EmitDefaultValue=false)]
         public TipoOrigemTransacaoEnum? TipoOrigemTransacao { get; set; }
     
@@ -44,105 +44,57 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="ParametroProdutoResponse" /> class.
         /// Initializes a new instance of the <see cref="ParametroProdutoResponse" />class.
         /// </summary>
-        /// <param name="Id">{{{parametro_produto_response_id_value}}} (required).</param>
-        /// <param name="IdProduto">{{{parametro_produto_response_id_produto_value}}} (required).</param>
-        /// <param name="TipoOrigemTransacao">{{{parametro_produto_response_tipo_origem_transacao_value}}} (required).</param>
-        /// <param name="Descricao">{{{parametro_produto_response_descricao_value}}} (required).</param>
-        /// <param name="ValorParametro">{{{parametro_produto_response_valor_parametro_value}}} (required).</param>
-        /// <param name="DataValidade">{{{parametro_produto_response_data_validade_value}}} (required).</param>
+        /// <param name="Id">{{{parametro_produto_dto_id_value}}}.</param>
+        /// <param name="IdProduto">{{{parametro_produto_dto_id_produto_value}}}.</param>
+        /// <param name="TipoOrigemTransacao">{{{parametro_produto_dto_tipo_origem_transacao_value}}}.</param>
+        /// <param name="Descricao">{{{parametro_produto_dto_descricao_value}}}.</param>
+        /// <param name="ValorParametro">{{{parametro_produto_dto_valor_parametro_value}}}.</param>
+        /// <param name="DataValidade">{{{parametro_produto_dto_data_validade_value}}}.</param>
 
         public ParametroProdutoResponse(long? Id = null, long? IdProduto = null, TipoOrigemTransacaoEnum? TipoOrigemTransacao = null, string Descricao = null, double? ValorParametro = null, string DataValidade = null)
         {
-            // to ensure "Id" is required (not null)
-            if (Id == null)
-            {
-                throw new InvalidDataException("Id is a required property for ParametroProdutoResponse and cannot be null");
-            }
-            else
-            {
-                this.Id = Id;
-            }
-            // to ensure "IdProduto" is required (not null)
-            if (IdProduto == null)
-            {
-                throw new InvalidDataException("IdProduto is a required property for ParametroProdutoResponse and cannot be null");
-            }
-            else
-            {
-                this.IdProduto = IdProduto;
-            }
-            // to ensure "TipoOrigemTransacao" is required (not null)
-            if (TipoOrigemTransacao == null)
-            {
-                throw new InvalidDataException("TipoOrigemTransacao is a required property for ParametroProdutoResponse and cannot be null");
-            }
-            else
-            {
-                this.TipoOrigemTransacao = TipoOrigemTransacao;
-            }
-            // to ensure "Descricao" is required (not null)
-            if (Descricao == null)
-            {
-                throw new InvalidDataException("Descricao is a required property for ParametroProdutoResponse and cannot be null");
-            }
-            else
-            {
-                this.Descricao = Descricao;
-            }
-            // to ensure "ValorParametro" is required (not null)
-            if (ValorParametro == null)
-            {
-                throw new InvalidDataException("ValorParametro is a required property for ParametroProdutoResponse and cannot be null");
-            }
-            else
-            {
-                this.ValorParametro = ValorParametro;
-            }
-            // to ensure "DataValidade" is required (not null)
-            if (DataValidade == null)
-            {
-                throw new InvalidDataException("DataValidade is a required property for ParametroProdutoResponse and cannot be null");
-            }
-            else
-            {
-                this.DataValidade = DataValidade;
-            }
+            this.Id = Id;
+            this.IdProduto = IdProduto;
+            this.TipoOrigemTransacao = TipoOrigemTransacao;
+            this.Descricao = Descricao;
+            this.ValorParametro = ValorParametro;
+            this.DataValidade = DataValidade;
             
         }
         
     
         /// <summary>
-        /// {{{parametro_produto_response_id_value}}}
+        /// {{{parametro_produto_dto_id_value}}}
         /// </summary>
-        /// <value>{{{parametro_produto_response_id_value}}}</value>
+        /// <value>{{{parametro_produto_dto_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{parametro_produto_response_id_produto_value}}}
+        /// {{{parametro_produto_dto_id_produto_value}}}
         /// </summary>
-        /// <value>{{{parametro_produto_response_id_produto_value}}}</value>
+        /// <value>{{{parametro_produto_dto_id_produto_value}}}</value>
         [DataMember(Name="idProduto", EmitDefaultValue=false)]
         public long? IdProduto { get; set; }
     
         /// <summary>
-        /// {{{parametro_produto_response_descricao_value}}}
+        /// {{{parametro_produto_dto_descricao_value}}}
         /// </summary>
-        /// <value>{{{parametro_produto_response_descricao_value}}}</value>
+        /// <value>{{{parametro_produto_dto_descricao_value}}}</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     
         /// <summary>
-        /// {{{parametro_produto_response_valor_parametro_value}}}
+        /// {{{parametro_produto_dto_valor_parametro_value}}}
         /// </summary>
-        /// <value>{{{parametro_produto_response_valor_parametro_value}}}</value>
+        /// <value>{{{parametro_produto_dto_valor_parametro_value}}}</value>
         [DataMember(Name="valorParametro", EmitDefaultValue=false)]
         public double? ValorParametro { get; set; }
     
         /// <summary>
-        /// {{{parametro_produto_response_data_validade_value}}}
+        /// {{{parametro_produto_dto_data_validade_value}}}
         /// </summary>
-        /// <value>{{{parametro_produto_response_data_validade_value}}}</value>
+        /// <value>{{{parametro_produto_dto_data_validade_value}}}</value>
         [DataMember(Name="dataValidade", EmitDefaultValue=false)]
         public string DataValidade { get; set; }
     

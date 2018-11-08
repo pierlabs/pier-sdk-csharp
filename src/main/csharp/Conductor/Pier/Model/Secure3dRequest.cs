@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{request_secure_3d_description}}}
+    /// {{{secure_3d_request_description}}}
     /// </summary>
     [DataContract]
     public partial class Secure3dRequest :  IEquatable<Secure3dRequest>
@@ -22,8 +22,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="Secure3dRequest" /> class.
         /// Initializes a new instance of the <see cref="Secure3dRequest" />class.
         /// </summary>
-        /// <param name="IdCartao">{{{id_cartao_3d_secure}}}.</param>
-        /// <param name="Otp">{{{id_cartao_3d_secure}}}.</param>
+        /// <param name="IdCartao">{{{secure_3d_request_id_cartao}}}.</param>
+        /// <param name="Otp">{{{secure_3d_request_otp_3d_secure}}}.</param>
 
         public Secure3dRequest(long? IdCartao = null, string Otp = null)
         {
@@ -34,16 +34,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{id_cartao_3d_secure}}}
+        /// {{{secure_3d_request_id_cartao}}}
         /// </summary>
-        /// <value>{{{id_cartao_3d_secure}}}</value>
+        /// <value>{{{secure_3d_request_id_cartao}}}</value>
         [DataMember(Name="idCartao", EmitDefaultValue=false)]
         public long? IdCartao { get; set; }
     
         /// <summary>
-        /// {{{id_cartao_3d_secure}}}
+        /// {{{secure_3d_request_otp_3d_secure}}}
         /// </summary>
-        /// <value>{{{id_cartao_3d_secure}}}</value>
+        /// <value>{{{secure_3d_request_otp_3d_secure}}}</value>
         [DataMember(Name="otp", EmitDefaultValue=false)]
         public string Otp { get; set; }
     

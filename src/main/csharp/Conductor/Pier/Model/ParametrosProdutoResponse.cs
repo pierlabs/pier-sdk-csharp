@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{parametros_produto_response_description}}}
+    /// {{{parametro_produto_response_description}}}
     /// </summary>
     [DataContract]
     public partial class ParametrosProdutoResponse :  IEquatable<ParametrosProdutoResponse>
@@ -22,57 +22,75 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="ParametrosProdutoResponse" /> class.
         /// Initializes a new instance of the <see cref="ParametrosProdutoResponse" />class.
         /// </summary>
-        /// <param name="Codigo">{{{parametro_produto_resposta_codigo_value}}}.</param>
-        /// <param name="Descricao">{{{parametro_produto_resposta_descricao_value}}}.</param>
-        /// <param name="ValorParametro">{{{parametro_produto_resposta_valor_parametro_value}}}.</param>
-        /// <param name="DataValidade">{{{parametro_produto_resposta_data_validade_value}}}.</param>
-        /// <param name="Tipo">{{{parametro_produto_resposta_tipo_value}}}.</param>
+        /// <param name="Id">{{{parametro_produto_dto_id_value}}}.</param>
+        /// <param name="Codigo">{{{parametro_produto_dto_codigo_value}}}.</param>
+        /// <param name="Descricao">{{{parametro_produto_dto_descricao_value}}}.</param>
+        /// <param name="ValorParametro">{{{parametro_produto_dto_valor_parametro_value}}}.</param>
+        /// <param name="DataValidade">{{{parametro_produto_dto_data_validade_value}}}.</param>
+        /// <param name="Tipo">{{{parametro_produto_dto_tipo_value}}}.</param>
+        /// <param name="IdProduto">{{{parametro_produto_dto_id_produto_value}}}.</param>
 
-        public ParametrosProdutoResponse(string Codigo = null, string Descricao = null, string ValorParametro = null, string DataValidade = null, string Tipo = null)
+        public ParametrosProdutoResponse(long? Id = null, string Codigo = null, string Descricao = null, string ValorParametro = null, string DataValidade = null, string Tipo = null, long? IdProduto = null)
         {
+            this.Id = Id;
             this.Codigo = Codigo;
             this.Descricao = Descricao;
             this.ValorParametro = ValorParametro;
             this.DataValidade = DataValidade;
             this.Tipo = Tipo;
+            this.IdProduto = IdProduto;
             
         }
         
     
         /// <summary>
-        /// {{{parametro_produto_resposta_codigo_value}}}
+        /// {{{parametro_produto_dto_id_value}}}
         /// </summary>
-        /// <value>{{{parametro_produto_resposta_codigo_value}}}</value>
+        /// <value>{{{parametro_produto_dto_id_value}}}</value>
+        [DataMember(Name="id", EmitDefaultValue=false)]
+        public long? Id { get; set; }
+    
+        /// <summary>
+        /// {{{parametro_produto_dto_codigo_value}}}
+        /// </summary>
+        /// <value>{{{parametro_produto_dto_codigo_value}}}</value>
         [DataMember(Name="codigo", EmitDefaultValue=false)]
         public string Codigo { get; set; }
     
         /// <summary>
-        /// {{{parametro_produto_resposta_descricao_value}}}
+        /// {{{parametro_produto_dto_descricao_value}}}
         /// </summary>
-        /// <value>{{{parametro_produto_resposta_descricao_value}}}</value>
+        /// <value>{{{parametro_produto_dto_descricao_value}}}</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     
         /// <summary>
-        /// {{{parametro_produto_resposta_valor_parametro_value}}}
+        /// {{{parametro_produto_dto_valor_parametro_value}}}
         /// </summary>
-        /// <value>{{{parametro_produto_resposta_valor_parametro_value}}}</value>
+        /// <value>{{{parametro_produto_dto_valor_parametro_value}}}</value>
         [DataMember(Name="valorParametro", EmitDefaultValue=false)]
         public string ValorParametro { get; set; }
     
         /// <summary>
-        /// {{{parametro_produto_resposta_data_validade_value}}}
+        /// {{{parametro_produto_dto_data_validade_value}}}
         /// </summary>
-        /// <value>{{{parametro_produto_resposta_data_validade_value}}}</value>
+        /// <value>{{{parametro_produto_dto_data_validade_value}}}</value>
         [DataMember(Name="dataValidade", EmitDefaultValue=false)]
         public string DataValidade { get; set; }
     
         /// <summary>
-        /// {{{parametro_produto_resposta_tipo_value}}}
+        /// {{{parametro_produto_dto_tipo_value}}}
         /// </summary>
-        /// <value>{{{parametro_produto_resposta_tipo_value}}}</value>
+        /// <value>{{{parametro_produto_dto_tipo_value}}}</value>
         [DataMember(Name="tipo", EmitDefaultValue=false)]
         public string Tipo { get; set; }
+    
+        /// <summary>
+        /// {{{parametro_produto_dto_id_produto_value}}}
+        /// </summary>
+        /// <value>{{{parametro_produto_dto_id_produto_value}}}</value>
+        [DataMember(Name="idProduto", EmitDefaultValue=false)]
+        public long? IdProduto { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -82,11 +100,13 @@ namespace Conductor.Pier.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ParametrosProdutoResponse {\n");
+            sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Codigo: ").Append(Codigo).Append("\n");
             sb.Append("  Descricao: ").Append(Descricao).Append("\n");
             sb.Append("  ValorParametro: ").Append(ValorParametro).Append("\n");
             sb.Append("  DataValidade: ").Append(DataValidade).Append("\n");
             sb.Append("  Tipo: ").Append(Tipo).Append("\n");
+            sb.Append("  IdProduto: ").Append(IdProduto).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -125,6 +145,11 @@ namespace Conductor.Pier.Model
 
             return 
                 (
+                    this.Id == other.Id ||
+                    this.Id != null &&
+                    this.Id.Equals(other.Id)
+                ) && 
+                (
                     this.Codigo == other.Codigo ||
                     this.Codigo != null &&
                     this.Codigo.Equals(other.Codigo)
@@ -148,6 +173,11 @@ namespace Conductor.Pier.Model
                     this.Tipo == other.Tipo ||
                     this.Tipo != null &&
                     this.Tipo.Equals(other.Tipo)
+                ) && 
+                (
+                    this.IdProduto == other.IdProduto ||
+                    this.IdProduto != null &&
+                    this.IdProduto.Equals(other.IdProduto)
                 );
         }
 
@@ -163,6 +193,9 @@ namespace Conductor.Pier.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
+                if (this.Id != null)
+                    hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Codigo != null)
                     hash = hash * 59 + this.Codigo.GetHashCode();
                 
@@ -177,6 +210,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.Tipo != null)
                     hash = hash * 59 + this.Tipo.GetHashCode();
+                
+                if (this.IdProduto != null)
+                    hash = hash * 59 + this.IdProduto.GetHashCode();
                 
                 return hash;
             }

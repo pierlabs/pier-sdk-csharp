@@ -12,15 +12,15 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{endereco_aprovado_response_description}}}
+    /// 
     /// </summary>
     [DataContract]
-    public partial class EnderecoAprovadoResponse :  IEquatable<EnderecoAprovadoResponse>
+    public partial class EnderecoAprovadoResponseValue :  IEquatable<EnderecoAprovadoResponseValue>
     { 
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="EnderecoAprovadoResponse" /> class.
-        /// Initializes a new instance of the <see cref="EnderecoAprovadoResponse" />class.
+        /// Initializes a new instance of the <see cref="EnderecoAprovadoResponseValue" /> class.
+        /// Initializes a new instance of the <see cref="EnderecoAprovadoResponseValue" />class.
         /// </summary>
         /// <param name="Id">{{{endereco_aprovado_response_id_value}}}.</param>
         /// <param name="IdTipoEndereco">{{{endereco_aprovado_response_id_tipo_endereco_value}}}.</param>
@@ -34,8 +34,10 @@ namespace Conductor.Pier.Model
         /// <param name="Uf">{{{endereco_aprovado_response_uf_value}}}.</param>
         /// <param name="Pais">{{{endereco_aprovado_response_pais_value}}}.</param>
         /// <param name="EnderecoCorrespondencia">{{{endereco_aprovado_response_endereco_correspondencia_value}}}.</param>
+        /// <param name="TempoResidenciaAnos">{{{endereco_aprovado_response_tempo_Residencia_Anos_value}}}.</param>
+        /// <param name="TempoResidenciaMeses">{{{endereco_aprovado_response_tempo_Residencia_Meses_value}}}.</param>
 
-        public EnderecoAprovadoResponse(long? Id = null, long? IdTipoEndereco = null, string Cep = null, string Logradouro = null, int? Numero = null, string Complemento = null, string PontoReferencia = null, string Bairro = null, string Cidade = null, string Uf = null, string Pais = null, bool? EnderecoCorrespondencia = null)
+        public EnderecoAprovadoResponseValue(long? Id = null, long? IdTipoEndereco = null, string Cep = null, string Logradouro = null, int? Numero = null, string Complemento = null, string PontoReferencia = null, string Bairro = null, string Cidade = null, string Uf = null, string Pais = null, bool? EnderecoCorrespondencia = null, int? TempoResidenciaAnos = null, int? TempoResidenciaMeses = null)
         {
             this.Id = Id;
             this.IdTipoEndereco = IdTipoEndereco;
@@ -49,6 +51,8 @@ namespace Conductor.Pier.Model
             this.Uf = Uf;
             this.Pais = Pais;
             this.EnderecoCorrespondencia = EnderecoCorrespondencia;
+            this.TempoResidenciaAnos = TempoResidenciaAnos;
+            this.TempoResidenciaMeses = TempoResidenciaMeses;
             
         }
         
@@ -138,13 +142,27 @@ namespace Conductor.Pier.Model
         public bool? EnderecoCorrespondencia { get; set; }
     
         /// <summary>
+        /// {{{endereco_aprovado_response_tempo_Residencia_Anos_value}}}
+        /// </summary>
+        /// <value>{{{endereco_aprovado_response_tempo_Residencia_Anos_value}}}</value>
+        [DataMember(Name="tempoResidenciaAnos", EmitDefaultValue=false)]
+        public int? TempoResidenciaAnos { get; set; }
+    
+        /// <summary>
+        /// {{{endereco_aprovado_response_tempo_Residencia_Meses_value}}}
+        /// </summary>
+        /// <value>{{{endereco_aprovado_response_tempo_Residencia_Meses_value}}}</value>
+        [DataMember(Name="tempoResidenciaMeses", EmitDefaultValue=false)]
+        public int? TempoResidenciaMeses { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class EnderecoAprovadoResponse {\n");
+            sb.Append("class EnderecoAprovadoResponseValue {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  IdTipoEndereco: ").Append(IdTipoEndereco).Append("\n");
             sb.Append("  Cep: ").Append(Cep).Append("\n");
@@ -157,6 +175,8 @@ namespace Conductor.Pier.Model
             sb.Append("  Uf: ").Append(Uf).Append("\n");
             sb.Append("  Pais: ").Append(Pais).Append("\n");
             sb.Append("  EnderecoCorrespondencia: ").Append(EnderecoCorrespondencia).Append("\n");
+            sb.Append("  TempoResidenciaAnos: ").Append(TempoResidenciaAnos).Append("\n");
+            sb.Append("  TempoResidenciaMeses: ").Append(TempoResidenciaMeses).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -179,15 +199,15 @@ namespace Conductor.Pier.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as EnderecoAprovadoResponse);
+            return this.Equals(obj as EnderecoAprovadoResponseValue);
         }
 
         /// <summary>
-        /// Returns true if EnderecoAprovadoResponse instances are equal
+        /// Returns true if EnderecoAprovadoResponseValue instances are equal
         /// </summary>
-        /// <param name="other">Instance of EnderecoAprovadoResponse to be compared</param>
+        /// <param name="other">Instance of EnderecoAprovadoResponseValue to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(EnderecoAprovadoResponse other)
+        public bool Equals(EnderecoAprovadoResponseValue other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -253,6 +273,16 @@ namespace Conductor.Pier.Model
                     this.EnderecoCorrespondencia == other.EnderecoCorrespondencia ||
                     this.EnderecoCorrespondencia != null &&
                     this.EnderecoCorrespondencia.Equals(other.EnderecoCorrespondencia)
+                ) && 
+                (
+                    this.TempoResidenciaAnos == other.TempoResidenciaAnos ||
+                    this.TempoResidenciaAnos != null &&
+                    this.TempoResidenciaAnos.Equals(other.TempoResidenciaAnos)
+                ) && 
+                (
+                    this.TempoResidenciaMeses == other.TempoResidenciaMeses ||
+                    this.TempoResidenciaMeses != null &&
+                    this.TempoResidenciaMeses.Equals(other.TempoResidenciaMeses)
                 );
         }
 
@@ -303,6 +333,12 @@ namespace Conductor.Pier.Model
                 
                 if (this.EnderecoCorrespondencia != null)
                     hash = hash * 59 + this.EnderecoCorrespondencia.GetHashCode();
+                
+                if (this.TempoResidenciaAnos != null)
+                    hash = hash * 59 + this.TempoResidenciaAnos.GetHashCode();
+                
+                if (this.TempoResidenciaMeses != null)
+                    hash = hash * 59 + this.TempoResidenciaMeses.GetHashCode();
                 
                 return hash;
             }

@@ -42,6 +42,7 @@ namespace Conductor.Pier.Model
         /// <param name="GrupoMCC">{{{transacao_nao_processada_response_grupo_mcc_value}}}.</param>
         /// <param name="IdConta">{{{transacao_nao_processada_response_id_conta_value}}}.</param>
         /// <param name="IdEstabelecimento">{{{transacao_nao_processada_response_id_estabelecimento_value}}}.</param>
+        /// <param name="IdEventoAjuste">{{{transacao_nao_processada_response_id_evento_ajuste_value}}}.</param>
         /// <param name="IdTipoTransacaoNaoProcessada">{{{transacao_nao_processada_response_id_tipo_transacao_nao_processada_value}}}.</param>
         /// <param name="IdTransacaoEstorno">{{{transacao_nao_processada_response_id_transacao_estorno_value}}}.</param>
         /// <param name="LocalidadeEstabelecimento">{{{transacao_nao_processada_response_localidade_estabelecimento_value}}}.</param>
@@ -57,7 +58,7 @@ namespace Conductor.Pier.Model
         /// <param name="ValorEntrada">{{{transacao_nao_processada_response_valor_entrada_value}}}.</param>
         /// <param name="ValorUSD">{{{transacao_nao_processada_response_valor_usd_value}}}.</param>
 
-        public TransacaoProcessadaNaoProcessadaResponse(string CartaoMascarado = null, string CodigoAutorizacao = null, long? CodigoMCC = null, string CodigoMoedaDestino = null, string CodigoMoedaOrigem = null, string CodigoReferencia = null, string CodigoTerminal = null, double? CotacaoUSD = null, string DataCotacaoUSD = null, string DataFaturamento = null, string DataOrigem = null, string DataVencimentoReal = null, string DescricaoAbreviada = null, string DescricaoTipoTransacaoNaoProcessada = null, int? FlagCredito = null, int? FlagFaturado = null, string GrupoDescricaoMCC = null, long? GrupoMCC = null, long? IdConta = null, long? IdEstabelecimento = null, long? IdTipoTransacaoNaoProcessada = null, long? IdTransacaoEstorno = null, string LocalidadeEstabelecimento = null, string ModoEntradaTransacao = null, string NomeEstabelecimento = null, string NomeFantasiaEstabelecimento = null, string NomePortador = null, long? Parcela = null, long? Plano = null, int? Status = null, double? TaxaEmbarque = null, double? ValorBRL = null, double? ValorEntrada = null, double? ValorUSD = null)
+        public TransacaoProcessadaNaoProcessadaResponse(string CartaoMascarado = null, string CodigoAutorizacao = null, long? CodigoMCC = null, string CodigoMoedaDestino = null, string CodigoMoedaOrigem = null, string CodigoReferencia = null, string CodigoTerminal = null, double? CotacaoUSD = null, string DataCotacaoUSD = null, string DataFaturamento = null, string DataOrigem = null, string DataVencimentoReal = null, string DescricaoAbreviada = null, string DescricaoTipoTransacaoNaoProcessada = null, int? FlagCredito = null, int? FlagFaturado = null, string GrupoDescricaoMCC = null, long? GrupoMCC = null, long? IdConta = null, long? IdEstabelecimento = null, long? IdEventoAjuste = null, long? IdTipoTransacaoNaoProcessada = null, long? IdTransacaoEstorno = null, string LocalidadeEstabelecimento = null, string ModoEntradaTransacao = null, string NomeEstabelecimento = null, string NomeFantasiaEstabelecimento = null, string NomePortador = null, long? Parcela = null, long? Plano = null, int? Status = null, double? TaxaEmbarque = null, double? ValorBRL = null, double? ValorEntrada = null, double? ValorUSD = null)
         {
             this.CartaoMascarado = CartaoMascarado;
             this.CodigoAutorizacao = CodigoAutorizacao;
@@ -79,6 +80,7 @@ namespace Conductor.Pier.Model
             this.GrupoMCC = GrupoMCC;
             this.IdConta = IdConta;
             this.IdEstabelecimento = IdEstabelecimento;
+            this.IdEventoAjuste = IdEventoAjuste;
             this.IdTipoTransacaoNaoProcessada = IdTipoTransacaoNaoProcessada;
             this.IdTransacaoEstorno = IdTransacaoEstorno;
             this.LocalidadeEstabelecimento = LocalidadeEstabelecimento;
@@ -238,6 +240,13 @@ namespace Conductor.Pier.Model
         public long? IdEstabelecimento { get; set; }
     
         /// <summary>
+        /// {{{transacao_nao_processada_response_id_evento_ajuste_value}}}
+        /// </summary>
+        /// <value>{{{transacao_nao_processada_response_id_evento_ajuste_value}}}</value>
+        [DataMember(Name="idEventoAjuste", EmitDefaultValue=false)]
+        public long? IdEventoAjuste { get; set; }
+    
+        /// <summary>
         /// {{{transacao_nao_processada_response_id_tipo_transacao_nao_processada_value}}}
         /// </summary>
         /// <value>{{{transacao_nao_processada_response_id_tipo_transacao_nao_processada_value}}}</value>
@@ -363,6 +372,7 @@ namespace Conductor.Pier.Model
             sb.Append("  GrupoMCC: ").Append(GrupoMCC).Append("\n");
             sb.Append("  IdConta: ").Append(IdConta).Append("\n");
             sb.Append("  IdEstabelecimento: ").Append(IdEstabelecimento).Append("\n");
+            sb.Append("  IdEventoAjuste: ").Append(IdEventoAjuste).Append("\n");
             sb.Append("  IdTipoTransacaoNaoProcessada: ").Append(IdTipoTransacaoNaoProcessada).Append("\n");
             sb.Append("  IdTransacaoEstorno: ").Append(IdTransacaoEstorno).Append("\n");
             sb.Append("  LocalidadeEstabelecimento: ").Append(LocalidadeEstabelecimento).Append("\n");
@@ -515,6 +525,11 @@ namespace Conductor.Pier.Model
                     this.IdEstabelecimento.Equals(other.IdEstabelecimento)
                 ) && 
                 (
+                    this.IdEventoAjuste == other.IdEventoAjuste ||
+                    this.IdEventoAjuste != null &&
+                    this.IdEventoAjuste.Equals(other.IdEventoAjuste)
+                ) && 
+                (
                     this.IdTipoTransacaoNaoProcessada == other.IdTipoTransacaoNaoProcessada ||
                     this.IdTipoTransacaoNaoProcessada != null &&
                     this.IdTipoTransacaoNaoProcessada.Equals(other.IdTipoTransacaoNaoProcessada)
@@ -657,6 +672,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.IdEstabelecimento != null)
                     hash = hash * 59 + this.IdEstabelecimento.GetHashCode();
+                
+                if (this.IdEventoAjuste != null)
+                    hash = hash * 59 + this.IdEventoAjuste.GetHashCode();
                 
                 if (this.IdTipoTransacaoNaoProcessada != null)
                     hash = hash * 59 + this.IdTipoTransacaoNaoProcessada.GetHashCode();

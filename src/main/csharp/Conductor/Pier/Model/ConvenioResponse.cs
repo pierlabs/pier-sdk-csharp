@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Objeto Conv\u00EAnio
+    /// {{{convenio_response_description}}}
     /// </summary>
     [DataContract]
     public partial class ConvenioResponse :  IEquatable<ConvenioResponse>
@@ -22,26 +22,26 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="ConvenioResponse" /> class.
         /// Initializes a new instance of the <see cref="ConvenioResponse" />class.
         /// </summary>
-        /// <param name="Id">Id do conv\u00EAnio..</param>
-        /// <param name="Banco">Identifica\u00E7\u00E3o do banco..</param>
-        /// <param name="Agencia">N\u00FAmero da ag\u00EAncia..</param>
-        /// <param name="ContaCorrente">Conta corrente..</param>
-        /// <param name="Especie">C\u00F3digo do tipo de esp\u00E9cie do documento..</param>
-        /// <param name="NumeroConvenio">C\u00F3digo de identifica\u00E7\u00E3o do conv\u00EAnio..</param>
-        /// <param name="Carteira">C\u00F3digo da carteira de cobran\u00E7a..</param>
-        /// <param name="CodigoCedente">C\u00F3digo do cedente..</param>
-        /// <param name="EspecieTipo">Tipo de esp\u00E9cie de t\u00EDtulo de cr\u00E9dito..</param>
-        /// <param name="EspecieDocumento">Esp\u00E9cie do documento..</param>
-        /// <param name="Aceite">Indica se o pagador assinou o documento de cobran\u00E7a que originou o boleto. O padr\u00E3o \u00E9 usar \&quot;N\&quot;..</param>
-        /// <param name="Instrucoes">Instru\u00E7\u00F5es para pagamento..</param>
-        /// <param name="LocalPagamento1">Local preferencial onde pode ser efetuado o pagamento..</param>
-        /// <param name="LocalPagamento2">Local para pagamento (campo adicional)..</param>
-        /// <param name="EnderecoCobrancaEmissor">Endere\u00E7o de cobran\u00E7a do emissor..</param>
-        /// <param name="NomeBeneficiario">Nome do benefici\u00E1rio/cedente da cobran\u00E7a..</param>
-        /// <param name="CnpjBeneficiario">CNPJ do benefici\u00E1rio/cedente da cobran\u00E7a..</param>
-        /// <param name="Operador">Usu\u00E1rio responsavel pelo cadastro e/ou altera\u00E7\u00E3o do conv\u00EAnio..</param>
-        /// <param name="Data">Data de cadastro/altera\u00E7\u00E3o do conv\u00EAnio..</param>
-        /// <param name="Maquina">M\u00E1quina pela qual foi realizado o cadastro ou altera\u00E7\u00E3o..</param>
+        /// <param name="Id">{{{convenio_response_id_convenio}}}.</param>
+        /// <param name="Banco">{{{convenio_response_banco_value}}}.</param>
+        /// <param name="Agencia">{{{convenio_response_agencia_value}}}.</param>
+        /// <param name="ContaCorrente">{{{convenio_response_conta_corrente_value}}}.</param>
+        /// <param name="Especie">{{{convenio_response_especie_value}}}.</param>
+        /// <param name="NumeroConvenio">{{{convenio_response_numero_convenio_value}}}.</param>
+        /// <param name="Carteira">{{{convenio_response_carteira_value}}}.</param>
+        /// <param name="CodigoCedente">{{{convenio_response_codigo_cedente_value}}}.</param>
+        /// <param name="EspecieTipo">{{{convenio_response_especie_tipo_value}}}.</param>
+        /// <param name="EspecieDocumento">{{{convenio_response_especie_documento_value}}}.</param>
+        /// <param name="Aceite">{{{convenio_response_aceite_value}}}.</param>
+        /// <param name="Instrucoes">{{{convenio_response_instrucoes_value}}}.</param>
+        /// <param name="LocalPagamento1">{{{convenio_response_local_pagamento1_value}}}.</param>
+        /// <param name="LocalPagamento2">{{{convenio_response_local_pagamento2_value}}}.</param>
+        /// <param name="EnderecoCobrancaEmissor">{{{convenio_response_endereco_cobranca_emissor_value}}}.</param>
+        /// <param name="NomeBeneficiario">{{{convenio_response_nome_beneficiario_emissor_value}}}.</param>
+        /// <param name="CnpjBeneficiario">{{{convenio_response_cnpj_beneficiario_emissor_value}}}.</param>
+        /// <param name="Operador">{{{convenio_response_operador_value}}}.</param>
+        /// <param name="Data">{{{convenio_response_data_value}}}.</param>
+        /// <param name="Maquina">{{{convenio_response_maquina_value}}}.</param>
 
         public ConvenioResponse(long? Id = null, long? Banco = null, long? Agencia = null, string ContaCorrente = null, string Especie = null, double? NumeroConvenio = null, long? Carteira = null, string CodigoCedente = null, string EspecieTipo = null, string EspecieDocumento = null, string Aceite = null, string Instrucoes = null, string LocalPagamento1 = null, string LocalPagamento2 = null, string EnderecoCobrancaEmissor = null, string NomeBeneficiario = null, string CnpjBeneficiario = null, string Operador = null, string Data = null, string Maquina = null)
         {
@@ -70,142 +70,142 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Id do conv\u00EAnio.
+        /// {{{convenio_response_id_convenio}}}
         /// </summary>
-        /// <value>Id do conv\u00EAnio.</value>
+        /// <value>{{{convenio_response_id_convenio}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Identifica\u00E7\u00E3o do banco.
+        /// {{{convenio_response_banco_value}}}
         /// </summary>
-        /// <value>Identifica\u00E7\u00E3o do banco.</value>
+        /// <value>{{{convenio_response_banco_value}}}</value>
         [DataMember(Name="banco", EmitDefaultValue=false)]
         public long? Banco { get; set; }
     
         /// <summary>
-        /// N\u00FAmero da ag\u00EAncia.
+        /// {{{convenio_response_agencia_value}}}
         /// </summary>
-        /// <value>N\u00FAmero da ag\u00EAncia.</value>
+        /// <value>{{{convenio_response_agencia_value}}}</value>
         [DataMember(Name="agencia", EmitDefaultValue=false)]
         public long? Agencia { get; set; }
     
         /// <summary>
-        /// Conta corrente.
+        /// {{{convenio_response_conta_corrente_value}}}
         /// </summary>
-        /// <value>Conta corrente.</value>
+        /// <value>{{{convenio_response_conta_corrente_value}}}</value>
         [DataMember(Name="contaCorrente", EmitDefaultValue=false)]
         public string ContaCorrente { get; set; }
     
         /// <summary>
-        /// C\u00F3digo do tipo de esp\u00E9cie do documento.
+        /// {{{convenio_response_especie_value}}}
         /// </summary>
-        /// <value>C\u00F3digo do tipo de esp\u00E9cie do documento.</value>
+        /// <value>{{{convenio_response_especie_value}}}</value>
         [DataMember(Name="especie", EmitDefaultValue=false)]
         public string Especie { get; set; }
     
         /// <summary>
-        /// C\u00F3digo de identifica\u00E7\u00E3o do conv\u00EAnio.
+        /// {{{convenio_response_numero_convenio_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do conv\u00EAnio.</value>
+        /// <value>{{{convenio_response_numero_convenio_value}}}</value>
         [DataMember(Name="numeroConvenio", EmitDefaultValue=false)]
         public double? NumeroConvenio { get; set; }
     
         /// <summary>
-        /// C\u00F3digo da carteira de cobran\u00E7a.
+        /// {{{convenio_response_carteira_value}}}
         /// </summary>
-        /// <value>C\u00F3digo da carteira de cobran\u00E7a.</value>
+        /// <value>{{{convenio_response_carteira_value}}}</value>
         [DataMember(Name="carteira", EmitDefaultValue=false)]
         public long? Carteira { get; set; }
     
         /// <summary>
-        /// C\u00F3digo do cedente.
+        /// {{{convenio_response_codigo_cedente_value}}}
         /// </summary>
-        /// <value>C\u00F3digo do cedente.</value>
+        /// <value>{{{convenio_response_codigo_cedente_value}}}</value>
         [DataMember(Name="codigoCedente", EmitDefaultValue=false)]
         public string CodigoCedente { get; set; }
     
         /// <summary>
-        /// Tipo de esp\u00E9cie de t\u00EDtulo de cr\u00E9dito.
+        /// {{{convenio_response_especie_tipo_value}}}
         /// </summary>
-        /// <value>Tipo de esp\u00E9cie de t\u00EDtulo de cr\u00E9dito.</value>
+        /// <value>{{{convenio_response_especie_tipo_value}}}</value>
         [DataMember(Name="especieTipo", EmitDefaultValue=false)]
         public string EspecieTipo { get; set; }
     
         /// <summary>
-        /// Esp\u00E9cie do documento.
+        /// {{{convenio_response_especie_documento_value}}}
         /// </summary>
-        /// <value>Esp\u00E9cie do documento.</value>
+        /// <value>{{{convenio_response_especie_documento_value}}}</value>
         [DataMember(Name="especieDocumento", EmitDefaultValue=false)]
         public string EspecieDocumento { get; set; }
     
         /// <summary>
-        /// Indica se o pagador assinou o documento de cobran\u00E7a que originou o boleto. O padr\u00E3o \u00E9 usar \&quot;N\&quot;.
+        /// {{{convenio_response_aceite_value}}}
         /// </summary>
-        /// <value>Indica se o pagador assinou o documento de cobran\u00E7a que originou o boleto. O padr\u00E3o \u00E9 usar \&quot;N\&quot;.</value>
+        /// <value>{{{convenio_response_aceite_value}}}</value>
         [DataMember(Name="aceite", EmitDefaultValue=false)]
         public string Aceite { get; set; }
     
         /// <summary>
-        /// Instru\u00E7\u00F5es para pagamento.
+        /// {{{convenio_response_instrucoes_value}}}
         /// </summary>
-        /// <value>Instru\u00E7\u00F5es para pagamento.</value>
+        /// <value>{{{convenio_response_instrucoes_value}}}</value>
         [DataMember(Name="instrucoes", EmitDefaultValue=false)]
         public string Instrucoes { get; set; }
     
         /// <summary>
-        /// Local preferencial onde pode ser efetuado o pagamento.
+        /// {{{convenio_response_local_pagamento1_value}}}
         /// </summary>
-        /// <value>Local preferencial onde pode ser efetuado o pagamento.</value>
+        /// <value>{{{convenio_response_local_pagamento1_value}}}</value>
         [DataMember(Name="localPagamento1", EmitDefaultValue=false)]
         public string LocalPagamento1 { get; set; }
     
         /// <summary>
-        /// Local para pagamento (campo adicional).
+        /// {{{convenio_response_local_pagamento2_value}}}
         /// </summary>
-        /// <value>Local para pagamento (campo adicional).</value>
+        /// <value>{{{convenio_response_local_pagamento2_value}}}</value>
         [DataMember(Name="localPagamento2", EmitDefaultValue=false)]
         public string LocalPagamento2 { get; set; }
     
         /// <summary>
-        /// Endere\u00E7o de cobran\u00E7a do emissor.
+        /// {{{convenio_response_endereco_cobranca_emissor_value}}}
         /// </summary>
-        /// <value>Endere\u00E7o de cobran\u00E7a do emissor.</value>
+        /// <value>{{{convenio_response_endereco_cobranca_emissor_value}}}</value>
         [DataMember(Name="enderecoCobrancaEmissor", EmitDefaultValue=false)]
         public string EnderecoCobrancaEmissor { get; set; }
     
         /// <summary>
-        /// Nome do benefici\u00E1rio/cedente da cobran\u00E7a.
+        /// {{{convenio_response_nome_beneficiario_emissor_value}}}
         /// </summary>
-        /// <value>Nome do benefici\u00E1rio/cedente da cobran\u00E7a.</value>
+        /// <value>{{{convenio_response_nome_beneficiario_emissor_value}}}</value>
         [DataMember(Name="nomeBeneficiario", EmitDefaultValue=false)]
         public string NomeBeneficiario { get; set; }
     
         /// <summary>
-        /// CNPJ do benefici\u00E1rio/cedente da cobran\u00E7a.
+        /// {{{convenio_response_cnpj_beneficiario_emissor_value}}}
         /// </summary>
-        /// <value>CNPJ do benefici\u00E1rio/cedente da cobran\u00E7a.</value>
+        /// <value>{{{convenio_response_cnpj_beneficiario_emissor_value}}}</value>
         [DataMember(Name="cnpjBeneficiario", EmitDefaultValue=false)]
         public string CnpjBeneficiario { get; set; }
     
         /// <summary>
-        /// Usu\u00E1rio responsavel pelo cadastro e/ou altera\u00E7\u00E3o do conv\u00EAnio.
+        /// {{{convenio_response_operador_value}}}
         /// </summary>
-        /// <value>Usu\u00E1rio responsavel pelo cadastro e/ou altera\u00E7\u00E3o do conv\u00EAnio.</value>
+        /// <value>{{{convenio_response_operador_value}}}</value>
         [DataMember(Name="operador", EmitDefaultValue=false)]
         public string Operador { get; set; }
     
         /// <summary>
-        /// Data de cadastro/altera\u00E7\u00E3o do conv\u00EAnio.
+        /// {{{convenio_response_data_value}}}
         /// </summary>
-        /// <value>Data de cadastro/altera\u00E7\u00E3o do conv\u00EAnio.</value>
+        /// <value>{{{convenio_response_data_value}}}</value>
         [DataMember(Name="data", EmitDefaultValue=false)]
         public string Data { get; set; }
     
         /// <summary>
-        /// M\u00E1quina pela qual foi realizado o cadastro ou altera\u00E7\u00E3o.
+        /// {{{convenio_response_maquina_value}}}
         /// </summary>
-        /// <value>M\u00E1quina pela qual foi realizado o cadastro ou altera\u00E7\u00E3o.</value>
+        /// <value>{{{convenio_response_maquina_value}}}</value>
         [DataMember(Name="maquina", EmitDefaultValue=false)]
         public string Maquina { get; set; }
     

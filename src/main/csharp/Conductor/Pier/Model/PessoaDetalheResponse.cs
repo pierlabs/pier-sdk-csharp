@@ -34,12 +34,19 @@ namespace Conductor.Pier.Model
         /// <param name="Email">{{{pessoa_detalhe_response_email_value}}}.</param>
         /// <param name="NomeEmpresa">{{{pessoa_detalhe_response_nome_empresa_value}}}.</param>
         /// <param name="NomeReferencia1">{{{pessoa_detalhe_response_nome_referencia_1_value}}}.</param>
-        /// <param name="Salario">{{{pessoa_detalhe_response_salario_value}}}.</param>
         /// <param name="EnderecoReferencia1">{{{pessoa_detalhe_response_endereco_referencia_1_value}}}.</param>
         /// <param name="NomeReferencia2">{{{pessoa_detalhe_response_nome_referencia_2_value}}}.</param>
         /// <param name="EnderecoReferencia2">{{{pessoa_detalhe_response_endereco_referencia_2_value}}}.</param>
+        /// <param name="Salario">{{{pessoa_detalhe_response_salario_value}}}.</param>
+        /// <param name="ImpedidoFinanciamento">{{{pessoa_detalhe_response_impedido_de_financiamento_value}}}.</param>
+        /// <param name="NaturalidadeCidade">{{{pessoa_detalhe_response_naturalidade_Cidade_value}}}.</param>
+        /// <param name="NaturalidadeEstado">{{{pessoa_detalhe_response_naturalidade_Estado_value}}}.</param>
+        /// <param name="GrauInstrucao">{{{pessoa_detalhe_response_grau_Instrucao_value}}}.</param>
+        /// <param name="NumeroDependentes">{{{pessoa_detalhe_response_numero_Dependentes_value}}}.</param>
+        /// <param name="NomePai">{{{pessoa_detalhe_response_nome_Pai_value}}}.</param>
+        /// <param name="ChequeEspecial">{{{pessoa_detalhe_response_cheque_Especial_value}}}.</param>
 
-        public PessoaDetalheResponse(long? IdPessoa = null, string NomeMae = null, long? IdEstadoCivil = null, string IdProfissao = null, long? IdNaturezaOcupacao = null, long? IdNacionalidade = null, int? NumeroBanco = null, int? NumeroAgencia = null, string NumeroContaCorrente = null, string Email = null, string NomeEmpresa = null, string NomeReferencia1 = null, double? Salario = null, string EnderecoReferencia1 = null, string NomeReferencia2 = null, string EnderecoReferencia2 = null)
+        public PessoaDetalheResponse(long? IdPessoa = null, string NomeMae = null, long? IdEstadoCivil = null, string IdProfissao = null, long? IdNaturezaOcupacao = null, long? IdNacionalidade = null, int? NumeroBanco = null, int? NumeroAgencia = null, string NumeroContaCorrente = null, string Email = null, string NomeEmpresa = null, string NomeReferencia1 = null, string EnderecoReferencia1 = null, string NomeReferencia2 = null, string EnderecoReferencia2 = null, double? Salario = null, bool? ImpedidoFinanciamento = null, string NaturalidadeCidade = null, string NaturalidadeEstado = null, int? GrauInstrucao = null, int? NumeroDependentes = null, string NomePai = null, int? ChequeEspecial = null)
         {
             this.IdPessoa = IdPessoa;
             this.NomeMae = NomeMae;
@@ -53,10 +60,17 @@ namespace Conductor.Pier.Model
             this.Email = Email;
             this.NomeEmpresa = NomeEmpresa;
             this.NomeReferencia1 = NomeReferencia1;
-            this.Salario = Salario;
             this.EnderecoReferencia1 = EnderecoReferencia1;
             this.NomeReferencia2 = NomeReferencia2;
             this.EnderecoReferencia2 = EnderecoReferencia2;
+            this.Salario = Salario;
+            this.ImpedidoFinanciamento = ImpedidoFinanciamento;
+            this.NaturalidadeCidade = NaturalidadeCidade;
+            this.NaturalidadeEstado = NaturalidadeEstado;
+            this.GrauInstrucao = GrauInstrucao;
+            this.NumeroDependentes = NumeroDependentes;
+            this.NomePai = NomePai;
+            this.ChequeEspecial = ChequeEspecial;
             
         }
         
@@ -146,13 +160,6 @@ namespace Conductor.Pier.Model
         public string NomeReferencia1 { get; set; }
     
         /// <summary>
-        /// {{{pessoa_detalhe_response_salario_value}}}
-        /// </summary>
-        /// <value>{{{pessoa_detalhe_response_salario_value}}}</value>
-        [DataMember(Name="salario", EmitDefaultValue=false)]
-        public double? Salario { get; set; }
-    
-        /// <summary>
         /// {{{pessoa_detalhe_response_endereco_referencia_1_value}}}
         /// </summary>
         /// <value>{{{pessoa_detalhe_response_endereco_referencia_1_value}}}</value>
@@ -174,6 +181,62 @@ namespace Conductor.Pier.Model
         public string EnderecoReferencia2 { get; set; }
     
         /// <summary>
+        /// {{{pessoa_detalhe_response_salario_value}}}
+        /// </summary>
+        /// <value>{{{pessoa_detalhe_response_salario_value}}}</value>
+        [DataMember(Name="salario", EmitDefaultValue=false)]
+        public double? Salario { get; set; }
+    
+        /// <summary>
+        /// {{{pessoa_detalhe_response_impedido_de_financiamento_value}}}
+        /// </summary>
+        /// <value>{{{pessoa_detalhe_response_impedido_de_financiamento_value}}}</value>
+        [DataMember(Name="impedidoFinanciamento", EmitDefaultValue=false)]
+        public bool? ImpedidoFinanciamento { get; set; }
+    
+        /// <summary>
+        /// {{{pessoa_detalhe_response_naturalidade_Cidade_value}}}
+        /// </summary>
+        /// <value>{{{pessoa_detalhe_response_naturalidade_Cidade_value}}}</value>
+        [DataMember(Name="naturalidadeCidade", EmitDefaultValue=false)]
+        public string NaturalidadeCidade { get; set; }
+    
+        /// <summary>
+        /// {{{pessoa_detalhe_response_naturalidade_Estado_value}}}
+        /// </summary>
+        /// <value>{{{pessoa_detalhe_response_naturalidade_Estado_value}}}</value>
+        [DataMember(Name="naturalidadeEstado", EmitDefaultValue=false)]
+        public string NaturalidadeEstado { get; set; }
+    
+        /// <summary>
+        /// {{{pessoa_detalhe_response_grau_Instrucao_value}}}
+        /// </summary>
+        /// <value>{{{pessoa_detalhe_response_grau_Instrucao_value}}}</value>
+        [DataMember(Name="grauInstrucao", EmitDefaultValue=false)]
+        public int? GrauInstrucao { get; set; }
+    
+        /// <summary>
+        /// {{{pessoa_detalhe_response_numero_Dependentes_value}}}
+        /// </summary>
+        /// <value>{{{pessoa_detalhe_response_numero_Dependentes_value}}}</value>
+        [DataMember(Name="numeroDependentes", EmitDefaultValue=false)]
+        public int? NumeroDependentes { get; set; }
+    
+        /// <summary>
+        /// {{{pessoa_detalhe_response_nome_Pai_value}}}
+        /// </summary>
+        /// <value>{{{pessoa_detalhe_response_nome_Pai_value}}}</value>
+        [DataMember(Name="nomePai", EmitDefaultValue=false)]
+        public string NomePai { get; set; }
+    
+        /// <summary>
+        /// {{{pessoa_detalhe_response_cheque_Especial_value}}}
+        /// </summary>
+        /// <value>{{{pessoa_detalhe_response_cheque_Especial_value}}}</value>
+        [DataMember(Name="chequeEspecial", EmitDefaultValue=false)]
+        public int? ChequeEspecial { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -193,10 +256,17 @@ namespace Conductor.Pier.Model
             sb.Append("  Email: ").Append(Email).Append("\n");
             sb.Append("  NomeEmpresa: ").Append(NomeEmpresa).Append("\n");
             sb.Append("  NomeReferencia1: ").Append(NomeReferencia1).Append("\n");
-            sb.Append("  Salario: ").Append(Salario).Append("\n");
             sb.Append("  EnderecoReferencia1: ").Append(EnderecoReferencia1).Append("\n");
             sb.Append("  NomeReferencia2: ").Append(NomeReferencia2).Append("\n");
             sb.Append("  EnderecoReferencia2: ").Append(EnderecoReferencia2).Append("\n");
+            sb.Append("  Salario: ").Append(Salario).Append("\n");
+            sb.Append("  ImpedidoFinanciamento: ").Append(ImpedidoFinanciamento).Append("\n");
+            sb.Append("  NaturalidadeCidade: ").Append(NaturalidadeCidade).Append("\n");
+            sb.Append("  NaturalidadeEstado: ").Append(NaturalidadeEstado).Append("\n");
+            sb.Append("  GrauInstrucao: ").Append(GrauInstrucao).Append("\n");
+            sb.Append("  NumeroDependentes: ").Append(NumeroDependentes).Append("\n");
+            sb.Append("  NomePai: ").Append(NomePai).Append("\n");
+            sb.Append("  ChequeEspecial: ").Append(ChequeEspecial).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -295,11 +365,6 @@ namespace Conductor.Pier.Model
                     this.NomeReferencia1.Equals(other.NomeReferencia1)
                 ) && 
                 (
-                    this.Salario == other.Salario ||
-                    this.Salario != null &&
-                    this.Salario.Equals(other.Salario)
-                ) && 
-                (
                     this.EnderecoReferencia1 == other.EnderecoReferencia1 ||
                     this.EnderecoReferencia1 != null &&
                     this.EnderecoReferencia1.Equals(other.EnderecoReferencia1)
@@ -313,6 +378,46 @@ namespace Conductor.Pier.Model
                     this.EnderecoReferencia2 == other.EnderecoReferencia2 ||
                     this.EnderecoReferencia2 != null &&
                     this.EnderecoReferencia2.Equals(other.EnderecoReferencia2)
+                ) && 
+                (
+                    this.Salario == other.Salario ||
+                    this.Salario != null &&
+                    this.Salario.Equals(other.Salario)
+                ) && 
+                (
+                    this.ImpedidoFinanciamento == other.ImpedidoFinanciamento ||
+                    this.ImpedidoFinanciamento != null &&
+                    this.ImpedidoFinanciamento.Equals(other.ImpedidoFinanciamento)
+                ) && 
+                (
+                    this.NaturalidadeCidade == other.NaturalidadeCidade ||
+                    this.NaturalidadeCidade != null &&
+                    this.NaturalidadeCidade.Equals(other.NaturalidadeCidade)
+                ) && 
+                (
+                    this.NaturalidadeEstado == other.NaturalidadeEstado ||
+                    this.NaturalidadeEstado != null &&
+                    this.NaturalidadeEstado.Equals(other.NaturalidadeEstado)
+                ) && 
+                (
+                    this.GrauInstrucao == other.GrauInstrucao ||
+                    this.GrauInstrucao != null &&
+                    this.GrauInstrucao.Equals(other.GrauInstrucao)
+                ) && 
+                (
+                    this.NumeroDependentes == other.NumeroDependentes ||
+                    this.NumeroDependentes != null &&
+                    this.NumeroDependentes.Equals(other.NumeroDependentes)
+                ) && 
+                (
+                    this.NomePai == other.NomePai ||
+                    this.NomePai != null &&
+                    this.NomePai.Equals(other.NomePai)
+                ) && 
+                (
+                    this.ChequeEspecial == other.ChequeEspecial ||
+                    this.ChequeEspecial != null &&
+                    this.ChequeEspecial.Equals(other.ChequeEspecial)
                 );
         }
 
@@ -364,9 +469,6 @@ namespace Conductor.Pier.Model
                 if (this.NomeReferencia1 != null)
                     hash = hash * 59 + this.NomeReferencia1.GetHashCode();
                 
-                if (this.Salario != null)
-                    hash = hash * 59 + this.Salario.GetHashCode();
-                
                 if (this.EnderecoReferencia1 != null)
                     hash = hash * 59 + this.EnderecoReferencia1.GetHashCode();
                 
@@ -375,6 +477,30 @@ namespace Conductor.Pier.Model
                 
                 if (this.EnderecoReferencia2 != null)
                     hash = hash * 59 + this.EnderecoReferencia2.GetHashCode();
+                
+                if (this.Salario != null)
+                    hash = hash * 59 + this.Salario.GetHashCode();
+                
+                if (this.ImpedidoFinanciamento != null)
+                    hash = hash * 59 + this.ImpedidoFinanciamento.GetHashCode();
+                
+                if (this.NaturalidadeCidade != null)
+                    hash = hash * 59 + this.NaturalidadeCidade.GetHashCode();
+                
+                if (this.NaturalidadeEstado != null)
+                    hash = hash * 59 + this.NaturalidadeEstado.GetHashCode();
+                
+                if (this.GrauInstrucao != null)
+                    hash = hash * 59 + this.GrauInstrucao.GetHashCode();
+                
+                if (this.NumeroDependentes != null)
+                    hash = hash * 59 + this.NumeroDependentes.GetHashCode();
+                
+                if (this.NomePai != null)
+                    hash = hash * 59 + this.NomePai.GetHashCode();
+                
+                if (this.ChequeEspecial != null)
+                    hash = hash * 59 + this.ChequeEspecial.GetHashCode();
                 
                 return hash;
             }

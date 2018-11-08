@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{endereco_aprovado_persist_description}}}
+    /// 
     /// </summary>
     [DataContract]
     public partial class EnderecoAprovadoPersistValue :  IEquatable<EnderecoAprovadoPersistValue>
@@ -33,8 +33,10 @@ namespace Conductor.Pier.Model
         /// <param name="Uf">{{{endereco_aprovado_persist_uf_value}}} (required).</param>
         /// <param name="Pais">{{{endereco_aprovado_persist_pais_value}}}.</param>
         /// <param name="EnderecoCorrespondencia">{{{endereco_aprovado_persist_endereco_correspondencia_value}}} (required).</param>
+        /// <param name="TempoResidenciaAnos">{{{endereco_aprovado_persist_tempo_residencia_anos_value}}}.</param>
+        /// <param name="TempoResidenciaMeses">{{{endereco_aprovado_persist_tempo_residencia_meses_value}}}.</param>
 
-        public EnderecoAprovadoPersistValue(long? IdTipoEndereco = null, string Cep = null, string Logradouro = null, int? Numero = null, string Complemento = null, string PontoReferencia = null, string Bairro = null, string Cidade = null, string Uf = null, string Pais = null, bool? EnderecoCorrespondencia = null)
+        public EnderecoAprovadoPersistValue(long? IdTipoEndereco = null, string Cep = null, string Logradouro = null, int? Numero = null, string Complemento = null, string PontoReferencia = null, string Bairro = null, string Cidade = null, string Uf = null, string Pais = null, bool? EnderecoCorrespondencia = null, int? TempoResidenciaAnos = null, int? TempoResidenciaMeses = null)
         {
             // to ensure "IdTipoEndereco" is required (not null)
             if (IdTipoEndereco == null)
@@ -79,6 +81,8 @@ namespace Conductor.Pier.Model
             this.PontoReferencia = PontoReferencia;
             this.Bairro = Bairro;
             this.Pais = Pais;
+            this.TempoResidenciaAnos = TempoResidenciaAnos;
+            this.TempoResidenciaMeses = TempoResidenciaMeses;
             
         }
         
@@ -161,6 +165,20 @@ namespace Conductor.Pier.Model
         public bool? EnderecoCorrespondencia { get; set; }
     
         /// <summary>
+        /// {{{endereco_aprovado_persist_tempo_residencia_anos_value}}}
+        /// </summary>
+        /// <value>{{{endereco_aprovado_persist_tempo_residencia_anos_value}}}</value>
+        [DataMember(Name="tempoResidenciaAnos", EmitDefaultValue=false)]
+        public int? TempoResidenciaAnos { get; set; }
+    
+        /// <summary>
+        /// {{{endereco_aprovado_persist_tempo_residencia_meses_value}}}
+        /// </summary>
+        /// <value>{{{endereco_aprovado_persist_tempo_residencia_meses_value}}}</value>
+        [DataMember(Name="tempoResidenciaMeses", EmitDefaultValue=false)]
+        public int? TempoResidenciaMeses { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -179,6 +197,8 @@ namespace Conductor.Pier.Model
             sb.Append("  Uf: ").Append(Uf).Append("\n");
             sb.Append("  Pais: ").Append(Pais).Append("\n");
             sb.Append("  EnderecoCorrespondencia: ").Append(EnderecoCorrespondencia).Append("\n");
+            sb.Append("  TempoResidenciaAnos: ").Append(TempoResidenciaAnos).Append("\n");
+            sb.Append("  TempoResidenciaMeses: ").Append(TempoResidenciaMeses).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -270,6 +290,16 @@ namespace Conductor.Pier.Model
                     this.EnderecoCorrespondencia == other.EnderecoCorrespondencia ||
                     this.EnderecoCorrespondencia != null &&
                     this.EnderecoCorrespondencia.Equals(other.EnderecoCorrespondencia)
+                ) && 
+                (
+                    this.TempoResidenciaAnos == other.TempoResidenciaAnos ||
+                    this.TempoResidenciaAnos != null &&
+                    this.TempoResidenciaAnos.Equals(other.TempoResidenciaAnos)
+                ) && 
+                (
+                    this.TempoResidenciaMeses == other.TempoResidenciaMeses ||
+                    this.TempoResidenciaMeses != null &&
+                    this.TempoResidenciaMeses.Equals(other.TempoResidenciaMeses)
                 );
         }
 
@@ -317,6 +347,12 @@ namespace Conductor.Pier.Model
                 
                 if (this.EnderecoCorrespondencia != null)
                     hash = hash * 59 + this.EnderecoCorrespondencia.GetHashCode();
+                
+                if (this.TempoResidenciaAnos != null)
+                    hash = hash * 59 + this.TempoResidenciaAnos.GetHashCode();
+                
+                if (this.TempoResidenciaMeses != null)
+                    hash = hash * 59 + this.TempoResidenciaMeses.GetHashCode();
                 
                 return hash;
             }

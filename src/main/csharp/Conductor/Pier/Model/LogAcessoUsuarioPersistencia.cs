@@ -19,9 +19,9 @@ namespace Conductor.Pier.Model
     { 
     
         /// <summary>
-        /// {{{log_acesso_usuario_persistencia_status_log_acesso}}}
+        /// {{{log_acesso_usuario_persistencia_status_log_acesso_descricao}}}
         /// </summary>
-        /// <value>{{{log_acesso_usuario_persistencia_status_log_acesso}}}</value>
+        /// <value>{{{log_acesso_usuario_persistencia_status_log_acesso_descricao}}}</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum StatusEnum {
             
@@ -43,9 +43,9 @@ namespace Conductor.Pier.Model
 
     
         /// <summary>
-        /// {{{log_acesso_usuario_persistencia_status_log_acesso}}}
+        /// {{{log_acesso_usuario_persistencia_status_log_acesso_descricao}}}
         /// </summary>
-        /// <value>{{{log_acesso_usuario_persistencia_status_log_acesso}}}</value>
+        /// <value>{{{log_acesso_usuario_persistencia_status_log_acesso_descricao}}}</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
     
@@ -57,11 +57,11 @@ namespace Conductor.Pier.Model
         /// <param name="Login">{{{log_acesso_usuario_persistencia_login_descricao}}} (required).</param>
         /// <param name="Mensagem">{{{log_acesso_usuario_persistencia_message_descricao}}}.</param>
         /// <param name="VersaoAPP">{{{log_acesso_usuario_persistencia_versao_app_descricao}}}.</param>
-        /// <param name="Device">{{{log_acesso_usuario_persistencia_versao_app_descricao}}}.</param>
+        /// <param name="Device">{{{log_acesso_usuario_persistencia_device_descricao}}}.</param>
         /// <param name="SenhaOK">{{{log_acesso_usuario_persistencia_senha_ok_descricao}}}.</param>
         /// <param name="TentativasIncorretas">{{{log_acesso_usuario_persistencia_tentativas_incorretas_descricao}}}.</param>
         /// <param name="IdPlataforma">{{{log_acesso_usuario_persistencia_id_plataforma_descricao}}}.</param>
-        /// <param name="Status">{{{log_acesso_usuario_persistencia_status_log_acesso}}}.</param>
+        /// <param name="Status">{{{log_acesso_usuario_persistencia_status_log_acesso_descricao}}}.</param>
 
         public LogAcessoUsuarioPersistencia(long? IdUsuario = null, string Login = null, string Mensagem = null, string VersaoAPP = null, string Device = null, int? SenhaOK = null, long? TentativasIncorretas = null, long? IdPlataforma = null, StatusEnum? Status = null)
         {
@@ -123,9 +123,9 @@ namespace Conductor.Pier.Model
         public string VersaoAPP { get; set; }
     
         /// <summary>
-        /// {{{log_acesso_usuario_persistencia_versao_app_descricao}}}
+        /// {{{log_acesso_usuario_persistencia_device_descricao}}}
         /// </summary>
-        /// <value>{{{log_acesso_usuario_persistencia_versao_app_descricao}}}</value>
+        /// <value>{{{log_acesso_usuario_persistencia_device_descricao}}}</value>
         [DataMember(Name="device", EmitDefaultValue=false)]
         public string Device { get; set; }
     

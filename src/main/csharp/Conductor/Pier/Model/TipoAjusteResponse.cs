@@ -24,12 +24,14 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <param name="Id">{{{tipo_ajuste_response_id_value}}}.</param>
         /// <param name="Descricao">{{{tipo_ajuste_response_descricao_value}}}.</param>
+        /// <param name="FlagPagamentoLojista">{{{tipo_ajuste_response_flag_pagamento_lojista_value}}}.</param>
         /// <param name="Transacoes">{{{tipo_ajuste_response_transacoes_value}}}.</param>
 
-        public TipoAjusteResponse(long? Id = null, string Descricao = null, List<TipoTransacaoAjusteResponse> Transacoes = null)
+        public TipoAjusteResponse(long? Id = null, string Descricao = null, bool? FlagPagamentoLojista = null, List<TipoTransacaoAjusteResponse> Transacoes = null)
         {
             this.Id = Id;
             this.Descricao = Descricao;
+            this.FlagPagamentoLojista = FlagPagamentoLojista;
             this.Transacoes = Transacoes;
             
         }
@@ -50,6 +52,13 @@ namespace Conductor.Pier.Model
         public string Descricao { get; set; }
     
         /// <summary>
+        /// {{{tipo_ajuste_response_flag_pagamento_lojista_value}}}
+        /// </summary>
+        /// <value>{{{tipo_ajuste_response_flag_pagamento_lojista_value}}}</value>
+        [DataMember(Name="flagPagamentoLojista", EmitDefaultValue=false)]
+        public bool? FlagPagamentoLojista { get; set; }
+    
+        /// <summary>
         /// {{{tipo_ajuste_response_transacoes_value}}}
         /// </summary>
         /// <value>{{{tipo_ajuste_response_transacoes_value}}}</value>
@@ -66,6 +75,7 @@ namespace Conductor.Pier.Model
             sb.Append("class TipoAjusteResponse {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Descricao: ").Append(Descricao).Append("\n");
+            sb.Append("  FlagPagamentoLojista: ").Append(FlagPagamentoLojista).Append("\n");
             sb.Append("  Transacoes: ").Append(Transacoes).Append("\n");
             
             sb.Append("}\n");
@@ -115,6 +125,11 @@ namespace Conductor.Pier.Model
                     this.Descricao.Equals(other.Descricao)
                 ) && 
                 (
+                    this.FlagPagamentoLojista == other.FlagPagamentoLojista ||
+                    this.FlagPagamentoLojista != null &&
+                    this.FlagPagamentoLojista.Equals(other.FlagPagamentoLojista)
+                ) && 
+                (
                     this.Transacoes == other.Transacoes ||
                     this.Transacoes != null &&
                     this.Transacoes.SequenceEqual(other.Transacoes)
@@ -138,6 +153,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.Descricao != null)
                     hash = hash * 59 + this.Descricao.GetHashCode();
+                
+                if (this.FlagPagamentoLojista != null)
+                    hash = hash * 59 + this.FlagPagamentoLojista.GetHashCode();
                 
                 if (this.Transacoes != null)
                     hash = hash * 59 + this.Transacoes.GetHashCode();

@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{parametro_emissor_resposta_descricao}}}
+    /// {{{parametro_emissor_resposta_description}}}
     /// </summary>
     [DataContract]
     public partial class ParametroEmissorResponse :  IEquatable<ParametroEmissorResponse>
@@ -24,7 +24,7 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <param name="Codigo">{{{parametro_emissor_resposta_codigo_descricao}}}.</param>
         /// <param name="DataValidade">{{{parametro_emissor_resposta_data_validade_descricao}}}.</param>
-        /// <param name="Descricao">{{{parametro_emissor_resposta_descricao_descricao}}}.</param>
+        /// <param name="Descricao">{{{parametro_emissor_resposta_descricao_description}}}.</param>
         /// <param name="Tipo">{{{parametro_emissor_resposta_tipo_descricao}}}.</param>
         /// <param name="ValorParametro">{{{parametro_emissor_resposta_valor_parametro_descricao}}}.</param>
 
@@ -54,9 +54,9 @@ namespace Conductor.Pier.Model
         public string DataValidade { get; set; }
     
         /// <summary>
-        /// {{{parametro_emissor_resposta_descricao_descricao}}}
+        /// {{{parametro_emissor_resposta_descricao_description}}}
         /// </summary>
-        /// <value>{{{parametro_emissor_resposta_descricao_descricao}}}</value>
+        /// <value>{{{parametro_emissor_resposta_descricao_description}}}</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     

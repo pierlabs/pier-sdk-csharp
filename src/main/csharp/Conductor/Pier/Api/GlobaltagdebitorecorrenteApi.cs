@@ -80,7 +80,7 @@ namespace Conductor.Pier.Api
         /// <param name="ativo">{{{conta_debito_recorrente_request_ativo_value}}} (optional)</param>
         /// <param name="dataHoraUltimoPagamento">{{{conta_debito_recorrente_request_data_hora_ultimo_pagamento_value}}} (optional)</param>
         /// <returns>PageContaDebitoRecorrenteResponse</returns>
-        PageContaDebitoRecorrenteResponse ListarUsingGET16 (long? idConta = null, long? idTipoDebitoRecorrente = null, List<string> sort = null, int? page = null, int? limit = null, string dataHoraInicio = null, string dataHoraFim = null, bool? ativo = null, string dataHoraUltimoPagamento = null);
+        PageContaDebitoRecorrenteResponse ListarUsingGET14 (long? idConta = null, long? idTipoDebitoRecorrente = null, List<string> sort = null, int? page = null, int? limit = null, string dataHoraInicio = null, string dataHoraFim = null, bool? ativo = null, string dataHoraUltimoPagamento = null);
   
         /// <summary>
         /// {{{conta_debito_recorrente_resource_listar}}}
@@ -99,7 +99,7 @@ namespace Conductor.Pier.Api
         /// <param name="ativo">{{{conta_debito_recorrente_request_ativo_value}}} (optional)</param>
         /// <param name="dataHoraUltimoPagamento">{{{conta_debito_recorrente_request_data_hora_ultimo_pagamento_value}}} (optional)</param>
         /// <returns>ApiResponse of PageContaDebitoRecorrenteResponse</returns>
-        ApiResponse<PageContaDebitoRecorrenteResponse> ListarUsingGET16WithHttpInfo (long? idConta = null, long? idTipoDebitoRecorrente = null, List<string> sort = null, int? page = null, int? limit = null, string dataHoraInicio = null, string dataHoraFim = null, bool? ativo = null, string dataHoraUltimoPagamento = null);
+        ApiResponse<PageContaDebitoRecorrenteResponse> ListarUsingGET14WithHttpInfo (long? idConta = null, long? idTipoDebitoRecorrente = null, List<string> sort = null, int? page = null, int? limit = null, string dataHoraInicio = null, string dataHoraFim = null, bool? ativo = null, string dataHoraUltimoPagamento = null);
         
         /// <summary>
         /// {{{tipo_debito_recorrente_resource_listar}}}
@@ -116,7 +116,7 @@ namespace Conductor.Pier.Api
         /// <param name="valor">{{{tipo_debito_recorrente_request_valor_value}}} (optional)</param>
         /// <param name="flagAtivo">{{{tipo_debito_recorrente_request_flag_ativo_value}}} (optional)</param>
         /// <returns>PageTipoDebitoRecorrenteResponse</returns>
-        PageTipoDebitoRecorrenteResponse ListarUsingGET48 (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, double? valor = null, bool? flagAtivo = null);
+        PageTipoDebitoRecorrenteResponse ListarUsingGET50 (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, double? valor = null, bool? flagAtivo = null);
   
         /// <summary>
         /// {{{tipo_debito_recorrente_resource_listar}}}
@@ -133,7 +133,7 @@ namespace Conductor.Pier.Api
         /// <param name="valor">{{{tipo_debito_recorrente_request_valor_value}}} (optional)</param>
         /// <param name="flagAtivo">{{{tipo_debito_recorrente_request_flag_ativo_value}}} (optional)</param>
         /// <returns>ApiResponse of PageTipoDebitoRecorrenteResponse</returns>
-        ApiResponse<PageTipoDebitoRecorrenteResponse> ListarUsingGET48WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, double? valor = null, bool? flagAtivo = null);
+        ApiResponse<PageTipoDebitoRecorrenteResponse> ListarUsingGET50WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, double? valor = null, bool? flagAtivo = null);
         
         #endregion Synchronous Operations
         
@@ -202,7 +202,7 @@ namespace Conductor.Pier.Api
         /// <param name="ativo">{{{conta_debito_recorrente_request_ativo_value}}} (optional)</param>
         /// <param name="dataHoraUltimoPagamento">{{{conta_debito_recorrente_request_data_hora_ultimo_pagamento_value}}} (optional)</param>
         /// <returns>Task of PageContaDebitoRecorrenteResponse</returns>
-        System.Threading.Tasks.Task<PageContaDebitoRecorrenteResponse> ListarUsingGET16Async (long? idConta = null, long? idTipoDebitoRecorrente = null, List<string> sort = null, int? page = null, int? limit = null, string dataHoraInicio = null, string dataHoraFim = null, bool? ativo = null, string dataHoraUltimoPagamento = null);
+        System.Threading.Tasks.Task<PageContaDebitoRecorrenteResponse> ListarUsingGET14Async (long? idConta = null, long? idTipoDebitoRecorrente = null, List<string> sort = null, int? page = null, int? limit = null, string dataHoraInicio = null, string dataHoraFim = null, bool? ativo = null, string dataHoraUltimoPagamento = null);
 
         /// <summary>
         /// {{{conta_debito_recorrente_resource_listar}}}
@@ -221,7 +221,7 @@ namespace Conductor.Pier.Api
         /// <param name="ativo">{{{conta_debito_recorrente_request_ativo_value}}} (optional)</param>
         /// <param name="dataHoraUltimoPagamento">{{{conta_debito_recorrente_request_data_hora_ultimo_pagamento_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageContaDebitoRecorrenteResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageContaDebitoRecorrenteResponse>> ListarUsingGET16AsyncWithHttpInfo (long? idConta = null, long? idTipoDebitoRecorrente = null, List<string> sort = null, int? page = null, int? limit = null, string dataHoraInicio = null, string dataHoraFim = null, bool? ativo = null, string dataHoraUltimoPagamento = null);
+        System.Threading.Tasks.Task<ApiResponse<PageContaDebitoRecorrenteResponse>> ListarUsingGET14AsyncWithHttpInfo (long? idConta = null, long? idTipoDebitoRecorrente = null, List<string> sort = null, int? page = null, int? limit = null, string dataHoraInicio = null, string dataHoraFim = null, bool? ativo = null, string dataHoraUltimoPagamento = null);
         
         /// <summary>
         /// {{{tipo_debito_recorrente_resource_listar}}}
@@ -238,7 +238,7 @@ namespace Conductor.Pier.Api
         /// <param name="valor">{{{tipo_debito_recorrente_request_valor_value}}} (optional)</param>
         /// <param name="flagAtivo">{{{tipo_debito_recorrente_request_flag_ativo_value}}} (optional)</param>
         /// <returns>Task of PageTipoDebitoRecorrenteResponse</returns>
-        System.Threading.Tasks.Task<PageTipoDebitoRecorrenteResponse> ListarUsingGET48Async (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, double? valor = null, bool? flagAtivo = null);
+        System.Threading.Tasks.Task<PageTipoDebitoRecorrenteResponse> ListarUsingGET50Async (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, double? valor = null, bool? flagAtivo = null);
 
         /// <summary>
         /// {{{tipo_debito_recorrente_resource_listar}}}
@@ -255,7 +255,7 @@ namespace Conductor.Pier.Api
         /// <param name="valor">{{{tipo_debito_recorrente_request_valor_value}}} (optional)</param>
         /// <param name="flagAtivo">{{{tipo_debito_recorrente_request_flag_ativo_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageTipoDebitoRecorrenteResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageTipoDebitoRecorrenteResponse>> ListarUsingGET48AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, double? valor = null, bool? flagAtivo = null);
+        System.Threading.Tasks.Task<ApiResponse<PageTipoDebitoRecorrenteResponse>> ListarUsingGET50AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, double? valor = null, bool? flagAtivo = null);
         
         #endregion Asynchronous Operations
         
@@ -715,9 +715,9 @@ namespace Conductor.Pier.Api
         /// <param name="ativo">{{{conta_debito_recorrente_request_ativo_value}}} (optional)</param> 
         /// <param name="dataHoraUltimoPagamento">{{{conta_debito_recorrente_request_data_hora_ultimo_pagamento_value}}} (optional)</param> 
         /// <returns>PageContaDebitoRecorrenteResponse</returns>
-        public PageContaDebitoRecorrenteResponse ListarUsingGET16 (long? idConta = null, long? idTipoDebitoRecorrente = null, List<string> sort = null, int? page = null, int? limit = null, string dataHoraInicio = null, string dataHoraFim = null, bool? ativo = null, string dataHoraUltimoPagamento = null)
+        public PageContaDebitoRecorrenteResponse ListarUsingGET14 (long? idConta = null, long? idTipoDebitoRecorrente = null, List<string> sort = null, int? page = null, int? limit = null, string dataHoraInicio = null, string dataHoraFim = null, bool? ativo = null, string dataHoraUltimoPagamento = null)
         {
-             ApiResponse<PageContaDebitoRecorrenteResponse> localVarResponse = ListarUsingGET16WithHttpInfo(idConta, idTipoDebitoRecorrente, sort, page, limit, dataHoraInicio, dataHoraFim, ativo, dataHoraUltimoPagamento);
+             ApiResponse<PageContaDebitoRecorrenteResponse> localVarResponse = ListarUsingGET14WithHttpInfo(idConta, idTipoDebitoRecorrente, sort, page, limit, dataHoraInicio, dataHoraFim, ativo, dataHoraUltimoPagamento);
              return localVarResponse.Data;
         }
 
@@ -735,7 +735,7 @@ namespace Conductor.Pier.Api
         /// <param name="ativo">{{{conta_debito_recorrente_request_ativo_value}}} (optional)</param> 
         /// <param name="dataHoraUltimoPagamento">{{{conta_debito_recorrente_request_data_hora_ultimo_pagamento_value}}} (optional)</param> 
         /// <returns>ApiResponse of PageContaDebitoRecorrenteResponse</returns>
-        public ApiResponse< PageContaDebitoRecorrenteResponse > ListarUsingGET16WithHttpInfo (long? idConta = null, long? idTipoDebitoRecorrente = null, List<string> sort = null, int? page = null, int? limit = null, string dataHoraInicio = null, string dataHoraFim = null, bool? ativo = null, string dataHoraUltimoPagamento = null)
+        public ApiResponse< PageContaDebitoRecorrenteResponse > ListarUsingGET14WithHttpInfo (long? idConta = null, long? idTipoDebitoRecorrente = null, List<string> sort = null, int? page = null, int? limit = null, string dataHoraInicio = null, string dataHoraFim = null, bool? ativo = null, string dataHoraUltimoPagamento = null)
         {
             
     
@@ -790,9 +790,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET16: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET14: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET16: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET14: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageContaDebitoRecorrenteResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -815,9 +815,9 @@ namespace Conductor.Pier.Api
         /// <param name="ativo">{{{conta_debito_recorrente_request_ativo_value}}} (optional)</param>
         /// <param name="dataHoraUltimoPagamento">{{{conta_debito_recorrente_request_data_hora_ultimo_pagamento_value}}} (optional)</param>
         /// <returns>Task of PageContaDebitoRecorrenteResponse</returns>
-        public async System.Threading.Tasks.Task<PageContaDebitoRecorrenteResponse> ListarUsingGET16Async (long? idConta = null, long? idTipoDebitoRecorrente = null, List<string> sort = null, int? page = null, int? limit = null, string dataHoraInicio = null, string dataHoraFim = null, bool? ativo = null, string dataHoraUltimoPagamento = null)
+        public async System.Threading.Tasks.Task<PageContaDebitoRecorrenteResponse> ListarUsingGET14Async (long? idConta = null, long? idTipoDebitoRecorrente = null, List<string> sort = null, int? page = null, int? limit = null, string dataHoraInicio = null, string dataHoraFim = null, bool? ativo = null, string dataHoraUltimoPagamento = null)
         {
-             ApiResponse<PageContaDebitoRecorrenteResponse> localVarResponse = await ListarUsingGET16AsyncWithHttpInfo(idConta, idTipoDebitoRecorrente, sort, page, limit, dataHoraInicio, dataHoraFim, ativo, dataHoraUltimoPagamento);
+             ApiResponse<PageContaDebitoRecorrenteResponse> localVarResponse = await ListarUsingGET14AsyncWithHttpInfo(idConta, idTipoDebitoRecorrente, sort, page, limit, dataHoraInicio, dataHoraFim, ativo, dataHoraUltimoPagamento);
              return localVarResponse.Data;
 
         }
@@ -836,7 +836,7 @@ namespace Conductor.Pier.Api
         /// <param name="ativo">{{{conta_debito_recorrente_request_ativo_value}}} (optional)</param>
         /// <param name="dataHoraUltimoPagamento">{{{conta_debito_recorrente_request_data_hora_ultimo_pagamento_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageContaDebitoRecorrenteResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageContaDebitoRecorrenteResponse>> ListarUsingGET16AsyncWithHttpInfo (long? idConta = null, long? idTipoDebitoRecorrente = null, List<string> sort = null, int? page = null, int? limit = null, string dataHoraInicio = null, string dataHoraFim = null, bool? ativo = null, string dataHoraUltimoPagamento = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageContaDebitoRecorrenteResponse>> ListarUsingGET14AsyncWithHttpInfo (long? idConta = null, long? idTipoDebitoRecorrente = null, List<string> sort = null, int? page = null, int? limit = null, string dataHoraInicio = null, string dataHoraFim = null, bool? ativo = null, string dataHoraUltimoPagamento = null)
         {
             
     
@@ -891,9 +891,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET16: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET14: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET16: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET14: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageContaDebitoRecorrenteResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -913,9 +913,9 @@ namespace Conductor.Pier.Api
         /// <param name="valor">{{{tipo_debito_recorrente_request_valor_value}}} (optional)</param> 
         /// <param name="flagAtivo">{{{tipo_debito_recorrente_request_flag_ativo_value}}} (optional)</param> 
         /// <returns>PageTipoDebitoRecorrenteResponse</returns>
-        public PageTipoDebitoRecorrenteResponse ListarUsingGET48 (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, double? valor = null, bool? flagAtivo = null)
+        public PageTipoDebitoRecorrenteResponse ListarUsingGET50 (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, double? valor = null, bool? flagAtivo = null)
         {
-             ApiResponse<PageTipoDebitoRecorrenteResponse> localVarResponse = ListarUsingGET48WithHttpInfo(sort, page, limit, id, descricao, valor, flagAtivo);
+             ApiResponse<PageTipoDebitoRecorrenteResponse> localVarResponse = ListarUsingGET50WithHttpInfo(sort, page, limit, id, descricao, valor, flagAtivo);
              return localVarResponse.Data;
         }
 
@@ -931,7 +931,7 @@ namespace Conductor.Pier.Api
         /// <param name="valor">{{{tipo_debito_recorrente_request_valor_value}}} (optional)</param> 
         /// <param name="flagAtivo">{{{tipo_debito_recorrente_request_flag_ativo_value}}} (optional)</param> 
         /// <returns>ApiResponse of PageTipoDebitoRecorrenteResponse</returns>
-        public ApiResponse< PageTipoDebitoRecorrenteResponse > ListarUsingGET48WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, double? valor = null, bool? flagAtivo = null)
+        public ApiResponse< PageTipoDebitoRecorrenteResponse > ListarUsingGET50WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, double? valor = null, bool? flagAtivo = null)
         {
             
     
@@ -984,9 +984,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET48: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET50: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET48: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET50: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageTipoDebitoRecorrenteResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1007,9 +1007,9 @@ namespace Conductor.Pier.Api
         /// <param name="valor">{{{tipo_debito_recorrente_request_valor_value}}} (optional)</param>
         /// <param name="flagAtivo">{{{tipo_debito_recorrente_request_flag_ativo_value}}} (optional)</param>
         /// <returns>Task of PageTipoDebitoRecorrenteResponse</returns>
-        public async System.Threading.Tasks.Task<PageTipoDebitoRecorrenteResponse> ListarUsingGET48Async (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, double? valor = null, bool? flagAtivo = null)
+        public async System.Threading.Tasks.Task<PageTipoDebitoRecorrenteResponse> ListarUsingGET50Async (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, double? valor = null, bool? flagAtivo = null)
         {
-             ApiResponse<PageTipoDebitoRecorrenteResponse> localVarResponse = await ListarUsingGET48AsyncWithHttpInfo(sort, page, limit, id, descricao, valor, flagAtivo);
+             ApiResponse<PageTipoDebitoRecorrenteResponse> localVarResponse = await ListarUsingGET50AsyncWithHttpInfo(sort, page, limit, id, descricao, valor, flagAtivo);
              return localVarResponse.Data;
 
         }
@@ -1026,7 +1026,7 @@ namespace Conductor.Pier.Api
         /// <param name="valor">{{{tipo_debito_recorrente_request_valor_value}}} (optional)</param>
         /// <param name="flagAtivo">{{{tipo_debito_recorrente_request_flag_ativo_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageTipoDebitoRecorrenteResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageTipoDebitoRecorrenteResponse>> ListarUsingGET48AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, double? valor = null, bool? flagAtivo = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageTipoDebitoRecorrenteResponse>> ListarUsingGET50AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, double? valor = null, bool? flagAtivo = null)
         {
             
     
@@ -1079,9 +1079,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET48: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET50: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET48: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET50: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageTipoDebitoRecorrenteResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

@@ -12,15 +12,37 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{pessoa_fisica_aprovada_response_description}}}
+    /// 
     /// </summary>
     [DataContract]
-    public partial class PessoaFisicaAprovadaResponse :  IEquatable<PessoaFisicaAprovadaResponse>
+    public partial class PessoaFisicaAprovadaResponseValue :  IEquatable<PessoaFisicaAprovadaResponseValue>
     { 
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="PessoaFisicaAprovadaResponse" /> class.
-        /// Initializes a new instance of the <see cref="PessoaFisicaAprovadaResponse" />class.
+        /// {{{conta_response_funcao_ativa_value}}}
+        /// </summary>
+        /// <value>{{{conta_response_funcao_ativa_value}}}</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum FuncaoAtivaEnum {
+            
+            [EnumMember(Value = "DEBITO_CREDITO")]
+            DebitoCredito,
+            
+            [EnumMember(Value = "CREDITO")]
+            Credito
+        }
+
+    
+        /// <summary>
+        /// {{{conta_response_funcao_ativa_value}}}
+        /// </summary>
+        /// <value>{{{conta_response_funcao_ativa_value}}}</value>
+        [DataMember(Name="funcaoAtiva", EmitDefaultValue=false)]
+        public FuncaoAtivaEnum? FuncaoAtiva { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PessoaFisicaAprovadaResponseValue" /> class.
+        /// Initializes a new instance of the <see cref="PessoaFisicaAprovadaResponseValue" />class.
         /// </summary>
         /// <param name="Id">{{{pessoa_fisica_aprovada_response_id_value}}}.</param>
         /// <param name="Nome">{{{pessoa_fisica_aprovada_response_nome_value}}} (required).</param>
@@ -52,19 +74,31 @@ namespace Conductor.Pier.Model
         /// <param name="Enderecos">{{{pessoa_fisica_aprovada_response_enderecos_value}}} (required).</param>
         /// <param name="LimiteGlobal">{{{pessoa_fisica_aprovada_response_limite_global_value}}} (required).</param>
         /// <param name="LimiteMaximo">{{{pessoa_fisica_aprovada_response_limite_maximo_value}}} (required).</param>
-        /// <param name="EnderecoReferencia1">{{{pessoa_fisica_aprovada_response_endereco_referencia_1_value}}}.</param>
-        /// <param name="EnderecoReferencia2">{{{pessoa_fisica_aprovada_response_endereco_referencia_2_value}}}.</param>
         /// <param name="LimiteParcelas">{{{pessoa_fisica_aprovada_response_limite_parcelas_value}}} (required).</param>
-        /// <param name="NomeReferencia1">{{{pessoa_fisica_aprovada_response_nome_referencia_1_value}}}.</param>
-        /// <param name="NomeReferencia2">{{{pessoa_fisica_aprovada_response_nome_referencia_2_value}}}.</param>
         /// <param name="LimiteConsignado">{{{pessoa_fisica_aprovada_response_limite_consignado_value}}} (required).</param>
+        /// <param name="ImpedidoFinanciamento">{{{pessoa_fisica_aprovada_response_impedido_de_financiamento_value}}}.</param>
+        /// <param name="NomeReferencia1">{{{pessoa_fisica_aprovada_response_nome_referencia_1_value}}}.</param>
+        /// <param name="EnderecoReferencia1">{{{pessoa_fisica_aprovada_response_endereco_referencia_1_value}}}.</param>
+        /// <param name="NomeReferencia2">{{{pessoa_fisica_aprovada_response_nome_referencia_2_value}}}.</param>
+        /// <param name="EnderecoReferencia2">{{{pessoa_fisica_aprovada_response_endereco_referencia_2_value}}}.</param>
+        /// <param name="FuncaoAtiva">{{{conta_response_funcao_ativa_value}}}.</param>
+        /// <param name="Matricula">{{{pessoa_fisica_aprovada_response_matricula_value}}}.</param>
+        /// <param name="ResponsavelDigitacao">{{{pessoa_fisica_aprovada_persist_responsavelDigitacao_value}}}.</param>
+        /// <param name="IdPromotorVenda">{{{pessoa_fisica_aprovada_persist_idPromotorVenda_value}}}.</param>
+        /// <param name="NaturalidadeCidade">{{{pessoa_fisica_aprovada_response_naturalidade_Cidade_value}}}.</param>
+        /// <param name="NaturalidadeEstado">{{{pessoa_fisica_aprovada_response_naturalidade_Estado_value}}}.</param>
+        /// <param name="GrauInstrucao">{{{pessoa_fisica_aprovada_response_grau_Instrucao_value}}}.</param>
+        /// <param name="NumeroDependentes">A{{{pessoa_fisica_aprovada_response_numero_Dependentes_value}}}.</param>
+        /// <param name="NomePai">{{{pessoa_fisica_aprovada_response_nome_Pai_value}}}.</param>
+        /// <param name="ChequeEspecial">{{{pessoa_fisica_aprovada_response_cheque_Especial_value}}}.</param>
+        /// <param name="NumeroBanco">{{{pessoa_fisica_aprovada_response_numero_Banco_value}}}.</param>
 
-        public PessoaFisicaAprovadaResponse(long? Id = null, string Nome = null, string NomeMae = null, string DataNascimento = null, string Sexo = null, string Cpf = null, string NumeroIdentidade = null, string OrgaoExpedidorIdentidade = null, string UnidadeFederativaIdentidade = null, string DataEmissaoIdentidade = null, long? IdEstadoCivil = null, string IdProfissao = null, long? IdNaturezaOcupacao = null, long? IdNacionalidade = null, long? IdOrigemComercial = null, long? IdProduto = null, int? NumeroAgencia = null, string NumeroContaCorrente = null, string Email = null, int? DiaVencimento = null, string NomeImpresso = null, string NomeEmpresa = null, long? IdConta = null, long? IdProposta = null, string CanalEntrada = null, int? ValorPontuacao = null, List<TelefonePessoaAprovadaResponse> Telefones = null, List<EnderecoAprovadoResponse> Enderecos = null, double? LimiteGlobal = null, double? LimiteMaximo = null, string EnderecoReferencia1 = null, string EnderecoReferencia2 = null, double? LimiteParcelas = null, string NomeReferencia1 = null, string NomeReferencia2 = null, double? LimiteConsignado = null)
+        public PessoaFisicaAprovadaResponseValue(long? Id = null, string Nome = null, string NomeMae = null, string DataNascimento = null, string Sexo = null, string Cpf = null, string NumeroIdentidade = null, string OrgaoExpedidorIdentidade = null, string UnidadeFederativaIdentidade = null, string DataEmissaoIdentidade = null, long? IdEstadoCivil = null, string IdProfissao = null, long? IdNaturezaOcupacao = null, long? IdNacionalidade = null, long? IdOrigemComercial = null, long? IdProduto = null, int? NumeroAgencia = null, string NumeroContaCorrente = null, string Email = null, int? DiaVencimento = null, string NomeImpresso = null, string NomeEmpresa = null, long? IdConta = null, long? IdProposta = null, string CanalEntrada = null, int? ValorPontuacao = null, List<TelefonePessoaAprovadaResponse> Telefones = null, List<EnderecoAprovadoResponseValue> Enderecos = null, double? LimiteGlobal = null, double? LimiteMaximo = null, double? LimiteParcelas = null, double? LimiteConsignado = null, bool? ImpedidoFinanciamento = null, string NomeReferencia1 = null, string EnderecoReferencia1 = null, string NomeReferencia2 = null, string EnderecoReferencia2 = null, FuncaoAtivaEnum? FuncaoAtiva = null, string Matricula = null, string ResponsavelDigitacao = null, int? IdPromotorVenda = null, string NaturalidadeCidade = null, string NaturalidadeEstado = null, int? GrauInstrucao = null, int? NumeroDependentes = null, string NomePai = null, int? ChequeEspecial = null, int? NumeroBanco = null)
         {
             // to ensure "Nome" is required (not null)
             if (Nome == null)
             {
-                throw new InvalidDataException("Nome is a required property for PessoaFisicaAprovadaResponse and cannot be null");
+                throw new InvalidDataException("Nome is a required property for PessoaFisicaAprovadaResponseValue and cannot be null");
             }
             else
             {
@@ -73,7 +107,7 @@ namespace Conductor.Pier.Model
             // to ensure "Cpf" is required (not null)
             if (Cpf == null)
             {
-                throw new InvalidDataException("Cpf is a required property for PessoaFisicaAprovadaResponse and cannot be null");
+                throw new InvalidDataException("Cpf is a required property for PessoaFisicaAprovadaResponseValue and cannot be null");
             }
             else
             {
@@ -82,7 +116,7 @@ namespace Conductor.Pier.Model
             // to ensure "IdOrigemComercial" is required (not null)
             if (IdOrigemComercial == null)
             {
-                throw new InvalidDataException("IdOrigemComercial is a required property for PessoaFisicaAprovadaResponse and cannot be null");
+                throw new InvalidDataException("IdOrigemComercial is a required property for PessoaFisicaAprovadaResponseValue and cannot be null");
             }
             else
             {
@@ -91,7 +125,7 @@ namespace Conductor.Pier.Model
             // to ensure "IdProduto" is required (not null)
             if (IdProduto == null)
             {
-                throw new InvalidDataException("IdProduto is a required property for PessoaFisicaAprovadaResponse and cannot be null");
+                throw new InvalidDataException("IdProduto is a required property for PessoaFisicaAprovadaResponseValue and cannot be null");
             }
             else
             {
@@ -100,7 +134,7 @@ namespace Conductor.Pier.Model
             // to ensure "DiaVencimento" is required (not null)
             if (DiaVencimento == null)
             {
-                throw new InvalidDataException("DiaVencimento is a required property for PessoaFisicaAprovadaResponse and cannot be null");
+                throw new InvalidDataException("DiaVencimento is a required property for PessoaFisicaAprovadaResponseValue and cannot be null");
             }
             else
             {
@@ -109,7 +143,7 @@ namespace Conductor.Pier.Model
             // to ensure "Enderecos" is required (not null)
             if (Enderecos == null)
             {
-                throw new InvalidDataException("Enderecos is a required property for PessoaFisicaAprovadaResponse and cannot be null");
+                throw new InvalidDataException("Enderecos is a required property for PessoaFisicaAprovadaResponseValue and cannot be null");
             }
             else
             {
@@ -118,7 +152,7 @@ namespace Conductor.Pier.Model
             // to ensure "LimiteGlobal" is required (not null)
             if (LimiteGlobal == null)
             {
-                throw new InvalidDataException("LimiteGlobal is a required property for PessoaFisicaAprovadaResponse and cannot be null");
+                throw new InvalidDataException("LimiteGlobal is a required property for PessoaFisicaAprovadaResponseValue and cannot be null");
             }
             else
             {
@@ -127,7 +161,7 @@ namespace Conductor.Pier.Model
             // to ensure "LimiteMaximo" is required (not null)
             if (LimiteMaximo == null)
             {
-                throw new InvalidDataException("LimiteMaximo is a required property for PessoaFisicaAprovadaResponse and cannot be null");
+                throw new InvalidDataException("LimiteMaximo is a required property for PessoaFisicaAprovadaResponseValue and cannot be null");
             }
             else
             {
@@ -136,7 +170,7 @@ namespace Conductor.Pier.Model
             // to ensure "LimiteParcelas" is required (not null)
             if (LimiteParcelas == null)
             {
-                throw new InvalidDataException("LimiteParcelas is a required property for PessoaFisicaAprovadaResponse and cannot be null");
+                throw new InvalidDataException("LimiteParcelas is a required property for PessoaFisicaAprovadaResponseValue and cannot be null");
             }
             else
             {
@@ -145,7 +179,7 @@ namespace Conductor.Pier.Model
             // to ensure "LimiteConsignado" is required (not null)
             if (LimiteConsignado == null)
             {
-                throw new InvalidDataException("LimiteConsignado is a required property for PessoaFisicaAprovadaResponse and cannot be null");
+                throw new InvalidDataException("LimiteConsignado is a required property for PessoaFisicaAprovadaResponseValue and cannot be null");
             }
             else
             {
@@ -173,10 +207,22 @@ namespace Conductor.Pier.Model
             this.CanalEntrada = CanalEntrada;
             this.ValorPontuacao = ValorPontuacao;
             this.Telefones = Telefones;
-            this.EnderecoReferencia1 = EnderecoReferencia1;
-            this.EnderecoReferencia2 = EnderecoReferencia2;
+            this.ImpedidoFinanciamento = ImpedidoFinanciamento;
             this.NomeReferencia1 = NomeReferencia1;
+            this.EnderecoReferencia1 = EnderecoReferencia1;
             this.NomeReferencia2 = NomeReferencia2;
+            this.EnderecoReferencia2 = EnderecoReferencia2;
+            this.FuncaoAtiva = FuncaoAtiva;
+            this.Matricula = Matricula;
+            this.ResponsavelDigitacao = ResponsavelDigitacao;
+            this.IdPromotorVenda = IdPromotorVenda;
+            this.NaturalidadeCidade = NaturalidadeCidade;
+            this.NaturalidadeEstado = NaturalidadeEstado;
+            this.GrauInstrucao = GrauInstrucao;
+            this.NumeroDependentes = NumeroDependentes;
+            this.NomePai = NomePai;
+            this.ChequeEspecial = ChequeEspecial;
+            this.NumeroBanco = NumeroBanco;
             
         }
         
@@ -375,7 +421,7 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>{{{pessoa_fisica_aprovada_response_enderecos_value}}}</value>
         [DataMember(Name="enderecos", EmitDefaultValue=false)]
-        public List<EnderecoAprovadoResponse> Enderecos { get; set; }
+        public List<EnderecoAprovadoResponseValue> Enderecos { get; set; }
     
         /// <summary>
         /// {{{pessoa_fisica_aprovada_response_limite_global_value}}}
@@ -392,39 +438,11 @@ namespace Conductor.Pier.Model
         public double? LimiteMaximo { get; set; }
     
         /// <summary>
-        /// {{{pessoa_fisica_aprovada_response_endereco_referencia_1_value}}}
-        /// </summary>
-        /// <value>{{{pessoa_fisica_aprovada_response_endereco_referencia_1_value}}}</value>
-        [DataMember(Name="enderecoReferencia1", EmitDefaultValue=false)]
-        public string EnderecoReferencia1 { get; set; }
-    
-        /// <summary>
-        /// {{{pessoa_fisica_aprovada_response_endereco_referencia_2_value}}}
-        /// </summary>
-        /// <value>{{{pessoa_fisica_aprovada_response_endereco_referencia_2_value}}}</value>
-        [DataMember(Name="enderecoReferencia2", EmitDefaultValue=false)]
-        public string EnderecoReferencia2 { get; set; }
-    
-        /// <summary>
         /// {{{pessoa_fisica_aprovada_response_limite_parcelas_value}}}
         /// </summary>
         /// <value>{{{pessoa_fisica_aprovada_response_limite_parcelas_value}}}</value>
         [DataMember(Name="limiteParcelas", EmitDefaultValue=false)]
         public double? LimiteParcelas { get; set; }
-    
-        /// <summary>
-        /// {{{pessoa_fisica_aprovada_response_nome_referencia_1_value}}}
-        /// </summary>
-        /// <value>{{{pessoa_fisica_aprovada_response_nome_referencia_1_value}}}</value>
-        [DataMember(Name="nomeReferencia1", EmitDefaultValue=false)]
-        public string NomeReferencia1 { get; set; }
-    
-        /// <summary>
-        /// {{{pessoa_fisica_aprovada_response_nome_referencia_2_value}}}
-        /// </summary>
-        /// <value>{{{pessoa_fisica_aprovada_response_nome_referencia_2_value}}}</value>
-        [DataMember(Name="nomeReferencia2", EmitDefaultValue=false)]
-        public string NomeReferencia2 { get; set; }
     
         /// <summary>
         /// {{{pessoa_fisica_aprovada_response_limite_consignado_value}}}
@@ -434,13 +452,118 @@ namespace Conductor.Pier.Model
         public double? LimiteConsignado { get; set; }
     
         /// <summary>
+        /// {{{pessoa_fisica_aprovada_response_impedido_de_financiamento_value}}}
+        /// </summary>
+        /// <value>{{{pessoa_fisica_aprovada_response_impedido_de_financiamento_value}}}</value>
+        [DataMember(Name="impedidoFinanciamento", EmitDefaultValue=false)]
+        public bool? ImpedidoFinanciamento { get; set; }
+    
+        /// <summary>
+        /// {{{pessoa_fisica_aprovada_response_nome_referencia_1_value}}}
+        /// </summary>
+        /// <value>{{{pessoa_fisica_aprovada_response_nome_referencia_1_value}}}</value>
+        [DataMember(Name="nomeReferencia1", EmitDefaultValue=false)]
+        public string NomeReferencia1 { get; set; }
+    
+        /// <summary>
+        /// {{{pessoa_fisica_aprovada_response_endereco_referencia_1_value}}}
+        /// </summary>
+        /// <value>{{{pessoa_fisica_aprovada_response_endereco_referencia_1_value}}}</value>
+        [DataMember(Name="enderecoReferencia1", EmitDefaultValue=false)]
+        public string EnderecoReferencia1 { get; set; }
+    
+        /// <summary>
+        /// {{{pessoa_fisica_aprovada_response_nome_referencia_2_value}}}
+        /// </summary>
+        /// <value>{{{pessoa_fisica_aprovada_response_nome_referencia_2_value}}}</value>
+        [DataMember(Name="nomeReferencia2", EmitDefaultValue=false)]
+        public string NomeReferencia2 { get; set; }
+    
+        /// <summary>
+        /// {{{pessoa_fisica_aprovada_response_endereco_referencia_2_value}}}
+        /// </summary>
+        /// <value>{{{pessoa_fisica_aprovada_response_endereco_referencia_2_value}}}</value>
+        [DataMember(Name="enderecoReferencia2", EmitDefaultValue=false)]
+        public string EnderecoReferencia2 { get; set; }
+    
+        /// <summary>
+        /// {{{pessoa_fisica_aprovada_response_matricula_value}}}
+        /// </summary>
+        /// <value>{{{pessoa_fisica_aprovada_response_matricula_value}}}</value>
+        [DataMember(Name="matricula", EmitDefaultValue=false)]
+        public string Matricula { get; set; }
+    
+        /// <summary>
+        /// {{{pessoa_fisica_aprovada_persist_responsavelDigitacao_value}}}
+        /// </summary>
+        /// <value>{{{pessoa_fisica_aprovada_persist_responsavelDigitacao_value}}}</value>
+        [DataMember(Name="responsavelDigitacao", EmitDefaultValue=false)]
+        public string ResponsavelDigitacao { get; set; }
+    
+        /// <summary>
+        /// {{{pessoa_fisica_aprovada_persist_idPromotorVenda_value}}}
+        /// </summary>
+        /// <value>{{{pessoa_fisica_aprovada_persist_idPromotorVenda_value}}}</value>
+        [DataMember(Name="idPromotorVenda", EmitDefaultValue=false)]
+        public int? IdPromotorVenda { get; set; }
+    
+        /// <summary>
+        /// {{{pessoa_fisica_aprovada_response_naturalidade_Cidade_value}}}
+        /// </summary>
+        /// <value>{{{pessoa_fisica_aprovada_response_naturalidade_Cidade_value}}}</value>
+        [DataMember(Name="naturalidadeCidade", EmitDefaultValue=false)]
+        public string NaturalidadeCidade { get; set; }
+    
+        /// <summary>
+        /// {{{pessoa_fisica_aprovada_response_naturalidade_Estado_value}}}
+        /// </summary>
+        /// <value>{{{pessoa_fisica_aprovada_response_naturalidade_Estado_value}}}</value>
+        [DataMember(Name="naturalidadeEstado", EmitDefaultValue=false)]
+        public string NaturalidadeEstado { get; set; }
+    
+        /// <summary>
+        /// {{{pessoa_fisica_aprovada_response_grau_Instrucao_value}}}
+        /// </summary>
+        /// <value>{{{pessoa_fisica_aprovada_response_grau_Instrucao_value}}}</value>
+        [DataMember(Name="grauInstrucao", EmitDefaultValue=false)]
+        public int? GrauInstrucao { get; set; }
+    
+        /// <summary>
+        /// A{{{pessoa_fisica_aprovada_response_numero_Dependentes_value}}}
+        /// </summary>
+        /// <value>A{{{pessoa_fisica_aprovada_response_numero_Dependentes_value}}}</value>
+        [DataMember(Name="numeroDependentes", EmitDefaultValue=false)]
+        public int? NumeroDependentes { get; set; }
+    
+        /// <summary>
+        /// {{{pessoa_fisica_aprovada_response_nome_Pai_value}}}
+        /// </summary>
+        /// <value>{{{pessoa_fisica_aprovada_response_nome_Pai_value}}}</value>
+        [DataMember(Name="nomePai", EmitDefaultValue=false)]
+        public string NomePai { get; set; }
+    
+        /// <summary>
+        /// {{{pessoa_fisica_aprovada_response_cheque_Especial_value}}}
+        /// </summary>
+        /// <value>{{{pessoa_fisica_aprovada_response_cheque_Especial_value}}}</value>
+        [DataMember(Name="chequeEspecial", EmitDefaultValue=false)]
+        public int? ChequeEspecial { get; set; }
+    
+        /// <summary>
+        /// {{{pessoa_fisica_aprovada_response_numero_Banco_value}}}
+        /// </summary>
+        /// <value>{{{pessoa_fisica_aprovada_response_numero_Banco_value}}}</value>
+        [DataMember(Name="numeroBanco", EmitDefaultValue=false)]
+        public int? NumeroBanco { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class PessoaFisicaAprovadaResponse {\n");
+            sb.Append("class PessoaFisicaAprovadaResponseValue {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Nome: ").Append(Nome).Append("\n");
             sb.Append("  NomeMae: ").Append(NomeMae).Append("\n");
@@ -471,12 +594,24 @@ namespace Conductor.Pier.Model
             sb.Append("  Enderecos: ").Append(Enderecos).Append("\n");
             sb.Append("  LimiteGlobal: ").Append(LimiteGlobal).Append("\n");
             sb.Append("  LimiteMaximo: ").Append(LimiteMaximo).Append("\n");
-            sb.Append("  EnderecoReferencia1: ").Append(EnderecoReferencia1).Append("\n");
-            sb.Append("  EnderecoReferencia2: ").Append(EnderecoReferencia2).Append("\n");
             sb.Append("  LimiteParcelas: ").Append(LimiteParcelas).Append("\n");
-            sb.Append("  NomeReferencia1: ").Append(NomeReferencia1).Append("\n");
-            sb.Append("  NomeReferencia2: ").Append(NomeReferencia2).Append("\n");
             sb.Append("  LimiteConsignado: ").Append(LimiteConsignado).Append("\n");
+            sb.Append("  ImpedidoFinanciamento: ").Append(ImpedidoFinanciamento).Append("\n");
+            sb.Append("  NomeReferencia1: ").Append(NomeReferencia1).Append("\n");
+            sb.Append("  EnderecoReferencia1: ").Append(EnderecoReferencia1).Append("\n");
+            sb.Append("  NomeReferencia2: ").Append(NomeReferencia2).Append("\n");
+            sb.Append("  EnderecoReferencia2: ").Append(EnderecoReferencia2).Append("\n");
+            sb.Append("  FuncaoAtiva: ").Append(FuncaoAtiva).Append("\n");
+            sb.Append("  Matricula: ").Append(Matricula).Append("\n");
+            sb.Append("  ResponsavelDigitacao: ").Append(ResponsavelDigitacao).Append("\n");
+            sb.Append("  IdPromotorVenda: ").Append(IdPromotorVenda).Append("\n");
+            sb.Append("  NaturalidadeCidade: ").Append(NaturalidadeCidade).Append("\n");
+            sb.Append("  NaturalidadeEstado: ").Append(NaturalidadeEstado).Append("\n");
+            sb.Append("  GrauInstrucao: ").Append(GrauInstrucao).Append("\n");
+            sb.Append("  NumeroDependentes: ").Append(NumeroDependentes).Append("\n");
+            sb.Append("  NomePai: ").Append(NomePai).Append("\n");
+            sb.Append("  ChequeEspecial: ").Append(ChequeEspecial).Append("\n");
+            sb.Append("  NumeroBanco: ").Append(NumeroBanco).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -499,15 +634,15 @@ namespace Conductor.Pier.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as PessoaFisicaAprovadaResponse);
+            return this.Equals(obj as PessoaFisicaAprovadaResponseValue);
         }
 
         /// <summary>
-        /// Returns true if PessoaFisicaAprovadaResponse instances are equal
+        /// Returns true if PessoaFisicaAprovadaResponseValue instances are equal
         /// </summary>
-        /// <param name="other">Instance of PessoaFisicaAprovadaResponse to be compared</param>
+        /// <param name="other">Instance of PessoaFisicaAprovadaResponseValue to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(PessoaFisicaAprovadaResponse other)
+        public bool Equals(PessoaFisicaAprovadaResponseValue other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -665,19 +800,19 @@ namespace Conductor.Pier.Model
                     this.LimiteMaximo.Equals(other.LimiteMaximo)
                 ) && 
                 (
-                    this.EnderecoReferencia1 == other.EnderecoReferencia1 ||
-                    this.EnderecoReferencia1 != null &&
-                    this.EnderecoReferencia1.Equals(other.EnderecoReferencia1)
-                ) && 
-                (
-                    this.EnderecoReferencia2 == other.EnderecoReferencia2 ||
-                    this.EnderecoReferencia2 != null &&
-                    this.EnderecoReferencia2.Equals(other.EnderecoReferencia2)
-                ) && 
-                (
                     this.LimiteParcelas == other.LimiteParcelas ||
                     this.LimiteParcelas != null &&
                     this.LimiteParcelas.Equals(other.LimiteParcelas)
+                ) && 
+                (
+                    this.LimiteConsignado == other.LimiteConsignado ||
+                    this.LimiteConsignado != null &&
+                    this.LimiteConsignado.Equals(other.LimiteConsignado)
+                ) && 
+                (
+                    this.ImpedidoFinanciamento == other.ImpedidoFinanciamento ||
+                    this.ImpedidoFinanciamento != null &&
+                    this.ImpedidoFinanciamento.Equals(other.ImpedidoFinanciamento)
                 ) && 
                 (
                     this.NomeReferencia1 == other.NomeReferencia1 ||
@@ -685,14 +820,74 @@ namespace Conductor.Pier.Model
                     this.NomeReferencia1.Equals(other.NomeReferencia1)
                 ) && 
                 (
+                    this.EnderecoReferencia1 == other.EnderecoReferencia1 ||
+                    this.EnderecoReferencia1 != null &&
+                    this.EnderecoReferencia1.Equals(other.EnderecoReferencia1)
+                ) && 
+                (
                     this.NomeReferencia2 == other.NomeReferencia2 ||
                     this.NomeReferencia2 != null &&
                     this.NomeReferencia2.Equals(other.NomeReferencia2)
                 ) && 
                 (
-                    this.LimiteConsignado == other.LimiteConsignado ||
-                    this.LimiteConsignado != null &&
-                    this.LimiteConsignado.Equals(other.LimiteConsignado)
+                    this.EnderecoReferencia2 == other.EnderecoReferencia2 ||
+                    this.EnderecoReferencia2 != null &&
+                    this.EnderecoReferencia2.Equals(other.EnderecoReferencia2)
+                ) && 
+                (
+                    this.FuncaoAtiva == other.FuncaoAtiva ||
+                    this.FuncaoAtiva != null &&
+                    this.FuncaoAtiva.Equals(other.FuncaoAtiva)
+                ) && 
+                (
+                    this.Matricula == other.Matricula ||
+                    this.Matricula != null &&
+                    this.Matricula.Equals(other.Matricula)
+                ) && 
+                (
+                    this.ResponsavelDigitacao == other.ResponsavelDigitacao ||
+                    this.ResponsavelDigitacao != null &&
+                    this.ResponsavelDigitacao.Equals(other.ResponsavelDigitacao)
+                ) && 
+                (
+                    this.IdPromotorVenda == other.IdPromotorVenda ||
+                    this.IdPromotorVenda != null &&
+                    this.IdPromotorVenda.Equals(other.IdPromotorVenda)
+                ) && 
+                (
+                    this.NaturalidadeCidade == other.NaturalidadeCidade ||
+                    this.NaturalidadeCidade != null &&
+                    this.NaturalidadeCidade.Equals(other.NaturalidadeCidade)
+                ) && 
+                (
+                    this.NaturalidadeEstado == other.NaturalidadeEstado ||
+                    this.NaturalidadeEstado != null &&
+                    this.NaturalidadeEstado.Equals(other.NaturalidadeEstado)
+                ) && 
+                (
+                    this.GrauInstrucao == other.GrauInstrucao ||
+                    this.GrauInstrucao != null &&
+                    this.GrauInstrucao.Equals(other.GrauInstrucao)
+                ) && 
+                (
+                    this.NumeroDependentes == other.NumeroDependentes ||
+                    this.NumeroDependentes != null &&
+                    this.NumeroDependentes.Equals(other.NumeroDependentes)
+                ) && 
+                (
+                    this.NomePai == other.NomePai ||
+                    this.NomePai != null &&
+                    this.NomePai.Equals(other.NomePai)
+                ) && 
+                (
+                    this.ChequeEspecial == other.ChequeEspecial ||
+                    this.ChequeEspecial != null &&
+                    this.ChequeEspecial.Equals(other.ChequeEspecial)
+                ) && 
+                (
+                    this.NumeroBanco == other.NumeroBanco ||
+                    this.NumeroBanco != null &&
+                    this.NumeroBanco.Equals(other.NumeroBanco)
                 );
         }
 
@@ -798,23 +993,59 @@ namespace Conductor.Pier.Model
                 if (this.LimiteMaximo != null)
                     hash = hash * 59 + this.LimiteMaximo.GetHashCode();
                 
-                if (this.EnderecoReferencia1 != null)
-                    hash = hash * 59 + this.EnderecoReferencia1.GetHashCode();
-                
-                if (this.EnderecoReferencia2 != null)
-                    hash = hash * 59 + this.EnderecoReferencia2.GetHashCode();
-                
                 if (this.LimiteParcelas != null)
                     hash = hash * 59 + this.LimiteParcelas.GetHashCode();
+                
+                if (this.LimiteConsignado != null)
+                    hash = hash * 59 + this.LimiteConsignado.GetHashCode();
+                
+                if (this.ImpedidoFinanciamento != null)
+                    hash = hash * 59 + this.ImpedidoFinanciamento.GetHashCode();
                 
                 if (this.NomeReferencia1 != null)
                     hash = hash * 59 + this.NomeReferencia1.GetHashCode();
                 
+                if (this.EnderecoReferencia1 != null)
+                    hash = hash * 59 + this.EnderecoReferencia1.GetHashCode();
+                
                 if (this.NomeReferencia2 != null)
                     hash = hash * 59 + this.NomeReferencia2.GetHashCode();
                 
-                if (this.LimiteConsignado != null)
-                    hash = hash * 59 + this.LimiteConsignado.GetHashCode();
+                if (this.EnderecoReferencia2 != null)
+                    hash = hash * 59 + this.EnderecoReferencia2.GetHashCode();
+                
+                if (this.FuncaoAtiva != null)
+                    hash = hash * 59 + this.FuncaoAtiva.GetHashCode();
+                
+                if (this.Matricula != null)
+                    hash = hash * 59 + this.Matricula.GetHashCode();
+                
+                if (this.ResponsavelDigitacao != null)
+                    hash = hash * 59 + this.ResponsavelDigitacao.GetHashCode();
+                
+                if (this.IdPromotorVenda != null)
+                    hash = hash * 59 + this.IdPromotorVenda.GetHashCode();
+                
+                if (this.NaturalidadeCidade != null)
+                    hash = hash * 59 + this.NaturalidadeCidade.GetHashCode();
+                
+                if (this.NaturalidadeEstado != null)
+                    hash = hash * 59 + this.NaturalidadeEstado.GetHashCode();
+                
+                if (this.GrauInstrucao != null)
+                    hash = hash * 59 + this.GrauInstrucao.GetHashCode();
+                
+                if (this.NumeroDependentes != null)
+                    hash = hash * 59 + this.NumeroDependentes.GetHashCode();
+                
+                if (this.NomePai != null)
+                    hash = hash * 59 + this.NomePai.GetHashCode();
+                
+                if (this.ChequeEspecial != null)
+                    hash = hash * 59 + this.ChequeEspecial.GetHashCode();
+                
+                if (this.NumeroBanco != null)
+                    hash = hash * 59 + this.NumeroBanco.GetHashCode();
                 
                 return hash;
             }

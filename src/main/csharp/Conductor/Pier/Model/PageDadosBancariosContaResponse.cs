@@ -12,15 +12,15 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{page_aplicacao_response_description}}}
+    /// {{{page_dados_bancarios_conta_response_description}}}
     /// </summary>
     [DataContract]
-    public partial class PageAplicacaoResponse :  IEquatable<PageAplicacaoResponse>
+    public partial class PageDadosBancariosContaResponse :  IEquatable<PageDadosBancariosContaResponse>
     { 
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="PageAplicacaoResponse" /> class.
-        /// Initializes a new instance of the <see cref="PageAplicacaoResponse" />class.
+        /// Initializes a new instance of the <see cref="PageDadosBancariosContaResponse" /> class.
+        /// Initializes a new instance of the <see cref="PageDadosBancariosContaResponse" />class.
         /// </summary>
         /// <param name="Content">Content.</param>
         /// <param name="First">First.</param>
@@ -37,7 +37,7 @@ namespace Conductor.Pier.Model
         /// <param name="TotalElements">TotalElements.</param>
         /// <param name="TotalPages">TotalPages.</param>
 
-        public PageAplicacaoResponse(List<AplicacaoResponse> Content = null, bool? First = null, bool? FirstPage = null, bool? HasContent = null, bool? HasNextPage = null, bool? HasPreviousPage = null, bool? Last = null, int? NextPage = null, int? Number = null, int? NumberOfElements = null, int? PreviousPage = null, int? Size = null, long? TotalElements = null, int? TotalPages = null)
+        public PageDadosBancariosContaResponse(List<DadosBancariosContaResponse> Content = null, bool? First = null, bool? FirstPage = null, bool? HasContent = null, bool? HasNextPage = null, bool? HasPreviousPage = null, bool? Last = null, int? NextPage = null, int? Number = null, int? NumberOfElements = null, int? PreviousPage = null, int? Size = null, long? TotalElements = null, int? TotalPages = null)
         {
             this.Content = Content;
             this.First = First;
@@ -61,7 +61,7 @@ namespace Conductor.Pier.Model
         /// Gets or Sets Content
         /// </summary>
         [DataMember(Name="content", EmitDefaultValue=false)]
-        public List<AplicacaoResponse> Content { get; set; }
+        public List<DadosBancariosContaResponse> Content { get; set; }
     
         /// <summary>
         /// Gets or Sets First
@@ -148,7 +148,7 @@ namespace Conductor.Pier.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class PageAplicacaoResponse {\n");
+            sb.Append("class PageDadosBancariosContaResponse {\n");
             sb.Append("  Content: ").Append(Content).Append("\n");
             sb.Append("  First: ").Append(First).Append("\n");
             sb.Append("  FirstPage: ").Append(FirstPage).Append("\n");
@@ -185,15 +185,15 @@ namespace Conductor.Pier.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as PageAplicacaoResponse);
+            return this.Equals(obj as PageDadosBancariosContaResponse);
         }
 
         /// <summary>
-        /// Returns true if PageAplicacaoResponse instances are equal
+        /// Returns true if PageDadosBancariosContaResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of PageAplicacaoResponse to be compared</param>
+        /// <param name="other">Instance of PageDadosBancariosContaResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(PageAplicacaoResponse other)
+        public bool Equals(PageDadosBancariosContaResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

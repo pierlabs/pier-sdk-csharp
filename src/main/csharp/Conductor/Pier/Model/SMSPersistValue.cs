@@ -50,9 +50,9 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="SMSPersistValue" /> class.
         /// Initializes a new instance of the <see cref="SMSPersistValue" />class.
         /// </summary>
-        /// <param name="Nsu">{{{s_m_s_persist_nsu_value}}} (required).</param>
-        /// <param name="IdPessoa">{{{s_m_s_persist_id_pessoa_value}}} (required).</param>
-        /// <param name="IdConta">{{{s_m_s_persist_id_conta_value}}} (required).</param>
+        /// <param name="Nsu">{{{s_m_s_persist_nsu_value}}}.</param>
+        /// <param name="IdPessoa">{{{s_m_s_persist_id_pessoa_value}}}.</param>
+        /// <param name="IdConta">{{{s_m_s_persist_id_conta_value}}}.</param>
         /// <param name="Celular">{{{s_m_s_persist_celular_value}}} (required).</param>
         /// <param name="Conteudo">{{{s_m_s_persist_conteudo_value}}} (required).</param>
         /// <param name="DataAgendamento">{{{s_m_s_persist_data_agendamento_value}}}.</param>
@@ -60,33 +60,6 @@ namespace Conductor.Pier.Model
 
         public SMSPersistValue(long? Nsu = null, long? IdPessoa = null, long? IdConta = null, string Celular = null, string Conteudo = null, string DataAgendamento = null, TipoEventoEnum? TipoEvento = null)
         {
-            // to ensure "Nsu" is required (not null)
-            if (Nsu == null)
-            {
-                throw new InvalidDataException("Nsu is a required property for SMSPersistValue and cannot be null");
-            }
-            else
-            {
-                this.Nsu = Nsu;
-            }
-            // to ensure "IdPessoa" is required (not null)
-            if (IdPessoa == null)
-            {
-                throw new InvalidDataException("IdPessoa is a required property for SMSPersistValue and cannot be null");
-            }
-            else
-            {
-                this.IdPessoa = IdPessoa;
-            }
-            // to ensure "IdConta" is required (not null)
-            if (IdConta == null)
-            {
-                throw new InvalidDataException("IdConta is a required property for SMSPersistValue and cannot be null");
-            }
-            else
-            {
-                this.IdConta = IdConta;
-            }
             // to ensure "Celular" is required (not null)
             if (Celular == null)
             {
@@ -114,6 +87,9 @@ namespace Conductor.Pier.Model
             {
                 this.TipoEvento = TipoEvento;
             }
+            this.Nsu = Nsu;
+            this.IdPessoa = IdPessoa;
+            this.IdConta = IdConta;
             this.DataAgendamento = DataAgendamento;
             
         }

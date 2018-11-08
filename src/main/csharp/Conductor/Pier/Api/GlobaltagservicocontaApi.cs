@@ -18,6 +18,30 @@ namespace Conductor.Pier.Api
         #region Synchronous Operations
         
         /// <summary>
+        /// {{{servico_conta_resource_aderir_pacote_tarifa}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{servico_conta_resource_aderir_pacote_tarifa_notes}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{servico_conta_resource_aderir_pacote_tarifa_param_id}}}</param>
+        /// <param name="adesaoPacoteTarifaPersist">adesaoPacoteTarifaPersist</param>
+        /// <returns>AdesaoPacoteTarifaResponse</returns>
+        AdesaoPacoteTarifaResponse AderirPacoteTarifaUsingPOST (long? id, AdesaoPacoteTarifaPersistencia adesaoPacoteTarifaPersist);
+  
+        /// <summary>
+        /// {{{servico_conta_resource_aderir_pacote_tarifa}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{servico_conta_resource_aderir_pacote_tarifa_notes}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{servico_conta_resource_aderir_pacote_tarifa_param_id}}}</param>
+        /// <param name="adesaoPacoteTarifaPersist">adesaoPacoteTarifaPersist</param>
+        /// <returns>ApiResponse of AdesaoPacoteTarifaResponse</returns>
+        ApiResponse<AdesaoPacoteTarifaResponse> AderirPacoteTarifaUsingPOSTWithHttpInfo (long? id, AdesaoPacoteTarifaPersistencia adesaoPacoteTarifaPersist);
+        
+        /// <summary>
         /// {{{conta_resource_ativar_anuidade}}}
         /// </summary>
         /// <remarks>
@@ -100,6 +124,28 @@ namespace Conductor.Pier.Api
         ApiResponse<Object> DesativarEnvioFaturaEmailUsingPOSTWithHttpInfo (long? id);
         
         /// <summary>
+        /// {{{servico_conta_resource_desativar}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{servico_conta_resource_desativar}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{servico_conta_resource_param_id}}}</param>
+        /// <returns>Object</returns>
+        Object DesativarUsingDELETE (long? id);
+  
+        /// <summary>
+        /// {{{servico_conta_resource_desativar}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{servico_conta_resource_desativar}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{servico_conta_resource_param_id}}}</param>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> DesativarUsingDELETEWithHttpInfo (long? id);
+        
+        /// <summary>
         /// {{{anuidade_resource_listar_anuidades}}}
         /// </summary>
         /// <remarks>
@@ -155,7 +201,7 @@ namespace Conductor.Pier.Api
         /// {{{tipo_servico_resource_listar_tipo_servico}}}
         /// </summary>
         /// <remarks>
-        /// {{{tipo_servico_resource_listar_tipo_servico}}}
+        /// {{{tipo_servico_resource_listar_tipo_servico_notes}}}
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
@@ -168,7 +214,7 @@ namespace Conductor.Pier.Api
         /// {{{tipo_servico_resource_listar_tipo_servico}}}
         /// </summary>
         /// <remarks>
-        /// {{{tipo_servico_resource_listar_tipo_servico}}}
+        /// {{{tipo_servico_resource_listar_tipo_servico_notes}}}
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
@@ -177,9 +223,85 @@ namespace Conductor.Pier.Api
         /// <returns>ApiResponse of PageTipoServicoResponse</returns>
         ApiResponse<PageTipoServicoResponse> ListarTipoServicoUsingGETWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
         
+        /// <summary>
+        /// {{{servico_conta_resource_listar_servico_conta}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{servico_conta_resource_listar_servico_conta}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
+        /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
+        /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
+        /// <param name="idConta">{{{servico_conta_request_id_conta_value}}} (optional)</param>
+        /// <param name="idTipoServico">{{{servico_conta_request_id_tipo_servico_value}}} (optional)</param>
+        /// <returns>PageServicoContaResponse</returns>
+        PageServicoContaResponse ListarUsingGET41 (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idTipoServico = null);
+  
+        /// <summary>
+        /// {{{servico_conta_resource_listar_servico_conta}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{servico_conta_resource_listar_servico_conta}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
+        /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
+        /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
+        /// <param name="idConta">{{{servico_conta_request_id_conta_value}}} (optional)</param>
+        /// <param name="idTipoServico">{{{servico_conta_request_id_tipo_servico_value}}} (optional)</param>
+        /// <returns>ApiResponse of PageServicoContaResponse</returns>
+        ApiResponse<PageServicoContaResponse> ListarUsingGET41WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idTipoServico = null);
+        
+        /// <summary>
+        /// {{{servico_conta_resource_salvar}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{servico_conta_resource_salvar}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="servicoContaPersist">servicoContaPersist</param>
+        /// <returns>Object</returns>
+        Object SalvarUsingPOST24 (ServicoContaPersistValue servicoContaPersist);
+  
+        /// <summary>
+        /// {{{servico_conta_resource_salvar}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{servico_conta_resource_salvar}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="servicoContaPersist">servicoContaPersist</param>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> SalvarUsingPOST24WithHttpInfo (ServicoContaPersistValue servicoContaPersist);
+        
         #endregion Synchronous Operations
         
         #region Asynchronous Operations
+        
+        /// <summary>
+        /// {{{servico_conta_resource_aderir_pacote_tarifa}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{servico_conta_resource_aderir_pacote_tarifa_notes}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{servico_conta_resource_aderir_pacote_tarifa_param_id}}}</param>
+        /// <param name="adesaoPacoteTarifaPersist">adesaoPacoteTarifaPersist</param>
+        /// <returns>Task of AdesaoPacoteTarifaResponse</returns>
+        System.Threading.Tasks.Task<AdesaoPacoteTarifaResponse> AderirPacoteTarifaUsingPOSTAsync (long? id, AdesaoPacoteTarifaPersistencia adesaoPacoteTarifaPersist);
+
+        /// <summary>
+        /// {{{servico_conta_resource_aderir_pacote_tarifa}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{servico_conta_resource_aderir_pacote_tarifa_notes}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{servico_conta_resource_aderir_pacote_tarifa_param_id}}}</param>
+        /// <param name="adesaoPacoteTarifaPersist">adesaoPacoteTarifaPersist</param>
+        /// <returns>Task of ApiResponse (AdesaoPacoteTarifaResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AdesaoPacoteTarifaResponse>> AderirPacoteTarifaUsingPOSTAsyncWithHttpInfo (long? id, AdesaoPacoteTarifaPersistencia adesaoPacoteTarifaPersist);
         
         /// <summary>
         /// {{{conta_resource_ativar_anuidade}}}
@@ -264,6 +386,28 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<Object>> DesativarEnvioFaturaEmailUsingPOSTAsyncWithHttpInfo (long? id);
         
         /// <summary>
+        /// {{{servico_conta_resource_desativar}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{servico_conta_resource_desativar}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{servico_conta_resource_param_id}}}</param>
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> DesativarUsingDELETEAsync (long? id);
+
+        /// <summary>
+        /// {{{servico_conta_resource_desativar}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{servico_conta_resource_desativar}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{servico_conta_resource_param_id}}}</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DesativarUsingDELETEAsyncWithHttpInfo (long? id);
+        
+        /// <summary>
         /// {{{anuidade_resource_listar_anuidades}}}
         /// </summary>
         /// <remarks>
@@ -319,7 +463,7 @@ namespace Conductor.Pier.Api
         /// {{{tipo_servico_resource_listar_tipo_servico}}}
         /// </summary>
         /// <remarks>
-        /// {{{tipo_servico_resource_listar_tipo_servico}}}
+        /// {{{tipo_servico_resource_listar_tipo_servico_notes}}}
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
@@ -332,7 +476,7 @@ namespace Conductor.Pier.Api
         /// {{{tipo_servico_resource_listar_tipo_servico}}}
         /// </summary>
         /// <remarks>
-        /// {{{tipo_servico_resource_listar_tipo_servico}}}
+        /// {{{tipo_servico_resource_listar_tipo_servico_notes}}}
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
@@ -340,6 +484,58 @@ namespace Conductor.Pier.Api
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageTipoServicoResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<PageTipoServicoResponse>> ListarTipoServicoUsingGETAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
+        
+        /// <summary>
+        /// {{{servico_conta_resource_listar_servico_conta}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{servico_conta_resource_listar_servico_conta}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
+        /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
+        /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
+        /// <param name="idConta">{{{servico_conta_request_id_conta_value}}} (optional)</param>
+        /// <param name="idTipoServico">{{{servico_conta_request_id_tipo_servico_value}}} (optional)</param>
+        /// <returns>Task of PageServicoContaResponse</returns>
+        System.Threading.Tasks.Task<PageServicoContaResponse> ListarUsingGET41Async (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idTipoServico = null);
+
+        /// <summary>
+        /// {{{servico_conta_resource_listar_servico_conta}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{servico_conta_resource_listar_servico_conta}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
+        /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
+        /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
+        /// <param name="idConta">{{{servico_conta_request_id_conta_value}}} (optional)</param>
+        /// <param name="idTipoServico">{{{servico_conta_request_id_tipo_servico_value}}} (optional)</param>
+        /// <returns>Task of ApiResponse (PageServicoContaResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PageServicoContaResponse>> ListarUsingGET41AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idTipoServico = null);
+        
+        /// <summary>
+        /// {{{servico_conta_resource_salvar}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{servico_conta_resource_salvar}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="servicoContaPersist">servicoContaPersist</param>
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> SalvarUsingPOST24Async (ServicoContaPersistValue servicoContaPersist);
+
+        /// <summary>
+        /// {{{servico_conta_resource_salvar}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{servico_conta_resource_salvar}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="servicoContaPersist">servicoContaPersist</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> SalvarUsingPOST24AsyncWithHttpInfo (ServicoContaPersistValue servicoContaPersist);
         
         #endregion Asynchronous Operations
         
@@ -432,6 +628,188 @@ namespace Conductor.Pier.Api
             this.Configuration.AddDefaultHeader(key, value);
         }
    
+        
+        /// <summary>
+        /// {{{servico_conta_resource_aderir_pacote_tarifa}}} {{{servico_conta_resource_aderir_pacote_tarifa_notes}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{servico_conta_resource_aderir_pacote_tarifa_param_id}}}</param> 
+        /// <param name="adesaoPacoteTarifaPersist">adesaoPacoteTarifaPersist</param> 
+        /// <returns>AdesaoPacoteTarifaResponse</returns>
+        public AdesaoPacoteTarifaResponse AderirPacoteTarifaUsingPOST (long? id, AdesaoPacoteTarifaPersistencia adesaoPacoteTarifaPersist)
+        {
+             ApiResponse<AdesaoPacoteTarifaResponse> localVarResponse = AderirPacoteTarifaUsingPOSTWithHttpInfo(id, adesaoPacoteTarifaPersist);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// {{{servico_conta_resource_aderir_pacote_tarifa}}} {{{servico_conta_resource_aderir_pacote_tarifa_notes}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{servico_conta_resource_aderir_pacote_tarifa_param_id}}}</param> 
+        /// <param name="adesaoPacoteTarifaPersist">adesaoPacoteTarifaPersist</param> 
+        /// <returns>ApiResponse of AdesaoPacoteTarifaResponse</returns>
+        public ApiResponse< AdesaoPacoteTarifaResponse > AderirPacoteTarifaUsingPOSTWithHttpInfo (long? id, AdesaoPacoteTarifaPersistencia adesaoPacoteTarifaPersist)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagservicocontaApi->AderirPacoteTarifaUsingPOST");
+            
+            // verify the required parameter 'adesaoPacoteTarifaPersist' is set
+            if (adesaoPacoteTarifaPersist == null)
+                throw new ApiException(400, "Missing required parameter 'adesaoPacoteTarifaPersist' when calling GlobaltagservicocontaApi->AderirPacoteTarifaUsingPOST");
+            
+    
+            var localVarPath = "/api/contas/{id}/adesoes-pacotes-tarifas";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            if (adesaoPacoteTarifaPersist.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(adesaoPacoteTarifaPersist); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = adesaoPacoteTarifaPersist; // byte array
+            }
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling AderirPacoteTarifaUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling AderirPacoteTarifaUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<AdesaoPacoteTarifaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AdesaoPacoteTarifaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AdesaoPacoteTarifaResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// {{{servico_conta_resource_aderir_pacote_tarifa}}} {{{servico_conta_resource_aderir_pacote_tarifa_notes}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{servico_conta_resource_aderir_pacote_tarifa_param_id}}}</param>
+        /// <param name="adesaoPacoteTarifaPersist">adesaoPacoteTarifaPersist</param>
+        /// <returns>Task of AdesaoPacoteTarifaResponse</returns>
+        public async System.Threading.Tasks.Task<AdesaoPacoteTarifaResponse> AderirPacoteTarifaUsingPOSTAsync (long? id, AdesaoPacoteTarifaPersistencia adesaoPacoteTarifaPersist)
+        {
+             ApiResponse<AdesaoPacoteTarifaResponse> localVarResponse = await AderirPacoteTarifaUsingPOSTAsyncWithHttpInfo(id, adesaoPacoteTarifaPersist);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// {{{servico_conta_resource_aderir_pacote_tarifa}}} {{{servico_conta_resource_aderir_pacote_tarifa_notes}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{servico_conta_resource_aderir_pacote_tarifa_param_id}}}</param>
+        /// <param name="adesaoPacoteTarifaPersist">adesaoPacoteTarifaPersist</param>
+        /// <returns>Task of ApiResponse (AdesaoPacoteTarifaResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AdesaoPacoteTarifaResponse>> AderirPacoteTarifaUsingPOSTAsyncWithHttpInfo (long? id, AdesaoPacoteTarifaPersistencia adesaoPacoteTarifaPersist)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AderirPacoteTarifaUsingPOST");
+            // verify the required parameter 'adesaoPacoteTarifaPersist' is set
+            if (adesaoPacoteTarifaPersist == null) throw new ApiException(400, "Missing required parameter 'adesaoPacoteTarifaPersist' when calling AderirPacoteTarifaUsingPOST");
+            
+    
+            var localVarPath = "/api/contas/{id}/adesoes-pacotes-tarifas";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            if (adesaoPacoteTarifaPersist.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(adesaoPacoteTarifaPersist); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = adesaoPacoteTarifaPersist; // byte array
+            }
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling AderirPacoteTarifaUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling AderirPacoteTarifaUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AdesaoPacoteTarifaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AdesaoPacoteTarifaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AdesaoPacoteTarifaResponse)));
+            
+        }
         
         /// <summary>
         /// {{{conta_resource_ativar_anuidade}}} {{{conta_resource_ativar_anuidade_notes}}}
@@ -962,6 +1340,164 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
+        /// {{{servico_conta_resource_desativar}}} {{{servico_conta_resource_desativar}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{servico_conta_resource_param_id}}}</param> 
+        /// <returns>Object</returns>
+        public Object DesativarUsingDELETE (long? id)
+        {
+             ApiResponse<Object> localVarResponse = DesativarUsingDELETEWithHttpInfo(id);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// {{{servico_conta_resource_desativar}}} {{{servico_conta_resource_desativar}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{servico_conta_resource_param_id}}}</param> 
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > DesativarUsingDELETEWithHttpInfo (long? id)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagservicocontaApi->DesativarUsingDELETE");
+            
+    
+            var localVarPath = "/api/contas/servicos/{id}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DesativarUsingDELETE: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DesativarUsingDELETE: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+            
+        }
+
+        
+        /// <summary>
+        /// {{{servico_conta_resource_desativar}}} {{{servico_conta_resource_desativar}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{servico_conta_resource_param_id}}}</param>
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> DesativarUsingDELETEAsync (long? id)
+        {
+             ApiResponse<Object> localVarResponse = await DesativarUsingDELETEAsyncWithHttpInfo(id);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// {{{servico_conta_resource_desativar}}} {{{servico_conta_resource_desativar}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{servico_conta_resource_param_id}}}</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DesativarUsingDELETEAsyncWithHttpInfo (long? id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling DesativarUsingDELETE");
+            
+    
+            var localVarPath = "/api/contas/servicos/{id}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DesativarUsingDELETE: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DesativarUsingDELETE: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+            
+        }
+        
+        /// <summary>
         /// {{{anuidade_resource_listar_anuidades}}} {{{anuidade_resource_listar_anuidades_notes}}}
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1290,7 +1826,7 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// {{{tipo_servico_resource_listar_tipo_servico}}} {{{tipo_servico_resource_listar_tipo_servico}}}
+        /// {{{tipo_servico_resource_listar_tipo_servico}}} {{{tipo_servico_resource_listar_tipo_servico_notes}}}
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param> 
@@ -1304,7 +1840,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// {{{tipo_servico_resource_listar_tipo_servico}}} {{{tipo_servico_resource_listar_tipo_servico}}}
+        /// {{{tipo_servico_resource_listar_tipo_servico}}} {{{tipo_servico_resource_listar_tipo_servico_notes}}}
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param> 
@@ -1372,7 +1908,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// {{{tipo_servico_resource_listar_tipo_servico}}} {{{tipo_servico_resource_listar_tipo_servico}}}
+        /// {{{tipo_servico_resource_listar_tipo_servico}}} {{{tipo_servico_resource_listar_tipo_servico_notes}}}
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
@@ -1387,7 +1923,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// {{{tipo_servico_resource_listar_tipo_servico}}} {{{tipo_servico_resource_listar_tipo_servico}}}
+        /// {{{tipo_servico_resource_listar_tipo_servico}}} {{{tipo_servico_resource_listar_tipo_servico_notes}}}
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
@@ -1450,6 +1986,352 @@ namespace Conductor.Pier.Api
             return new ApiResponse<PageTipoServicoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (PageTipoServicoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageTipoServicoResponse)));
+            
+        }
+        
+        /// <summary>
+        /// {{{servico_conta_resource_listar_servico_conta}}} {{{servico_conta_resource_listar_servico_conta}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param> 
+        /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param> 
+        /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param> 
+        /// <param name="idConta">{{{servico_conta_request_id_conta_value}}} (optional)</param> 
+        /// <param name="idTipoServico">{{{servico_conta_request_id_tipo_servico_value}}} (optional)</param> 
+        /// <returns>PageServicoContaResponse</returns>
+        public PageServicoContaResponse ListarUsingGET41 (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idTipoServico = null)
+        {
+             ApiResponse<PageServicoContaResponse> localVarResponse = ListarUsingGET41WithHttpInfo(sort, page, limit, idConta, idTipoServico);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// {{{servico_conta_resource_listar_servico_conta}}} {{{servico_conta_resource_listar_servico_conta}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param> 
+        /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param> 
+        /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param> 
+        /// <param name="idConta">{{{servico_conta_request_id_conta_value}}} (optional)</param> 
+        /// <param name="idTipoServico">{{{servico_conta_request_id_tipo_servico_value}}} (optional)</param> 
+        /// <returns>ApiResponse of PageServicoContaResponse</returns>
+        public ApiResponse< PageServicoContaResponse > ListarUsingGET41WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idTipoServico = null)
+        {
+            
+    
+            var localVarPath = "/api/contas/servicos";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (idConta != null) localVarQueryParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // query parameter
+            if (idTipoServico != null) localVarQueryParams.Add("idTipoServico", Configuration.ApiClient.ParameterToString(idTipoServico)); // query parameter
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET41: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET41: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<PageServicoContaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageServicoContaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageServicoContaResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// {{{servico_conta_resource_listar_servico_conta}}} {{{servico_conta_resource_listar_servico_conta}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
+        /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
+        /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
+        /// <param name="idConta">{{{servico_conta_request_id_conta_value}}} (optional)</param>
+        /// <param name="idTipoServico">{{{servico_conta_request_id_tipo_servico_value}}} (optional)</param>
+        /// <returns>Task of PageServicoContaResponse</returns>
+        public async System.Threading.Tasks.Task<PageServicoContaResponse> ListarUsingGET41Async (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idTipoServico = null)
+        {
+             ApiResponse<PageServicoContaResponse> localVarResponse = await ListarUsingGET41AsyncWithHttpInfo(sort, page, limit, idConta, idTipoServico);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// {{{servico_conta_resource_listar_servico_conta}}} {{{servico_conta_resource_listar_servico_conta}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">{{{global_menssagem_sort_sort}}} (optional)</param>
+        /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
+        /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
+        /// <param name="idConta">{{{servico_conta_request_id_conta_value}}} (optional)</param>
+        /// <param name="idTipoServico">{{{servico_conta_request_id_tipo_servico_value}}} (optional)</param>
+        /// <returns>Task of ApiResponse (PageServicoContaResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PageServicoContaResponse>> ListarUsingGET41AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idTipoServico = null)
+        {
+            
+    
+            var localVarPath = "/api/contas/servicos";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (idConta != null) localVarQueryParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // query parameter
+            if (idTipoServico != null) localVarQueryParams.Add("idTipoServico", Configuration.ApiClient.ParameterToString(idTipoServico)); // query parameter
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET41: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET41: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PageServicoContaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageServicoContaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageServicoContaResponse)));
+            
+        }
+        
+        /// <summary>
+        /// {{{servico_conta_resource_salvar}}} {{{servico_conta_resource_salvar}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="servicoContaPersist">servicoContaPersist</param> 
+        /// <returns>Object</returns>
+        public Object SalvarUsingPOST24 (ServicoContaPersistValue servicoContaPersist)
+        {
+             ApiResponse<Object> localVarResponse = SalvarUsingPOST24WithHttpInfo(servicoContaPersist);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// {{{servico_conta_resource_salvar}}} {{{servico_conta_resource_salvar}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="servicoContaPersist">servicoContaPersist</param> 
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > SalvarUsingPOST24WithHttpInfo (ServicoContaPersistValue servicoContaPersist)
+        {
+            
+            // verify the required parameter 'servicoContaPersist' is set
+            if (servicoContaPersist == null)
+                throw new ApiException(400, "Missing required parameter 'servicoContaPersist' when calling GlobaltagservicocontaApi->SalvarUsingPOST24");
+            
+    
+            var localVarPath = "/api/contas/servicos";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            if (servicoContaPersist.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(servicoContaPersist); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = servicoContaPersist; // byte array
+            }
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST24: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST24: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+            
+        }
+
+        
+        /// <summary>
+        /// {{{servico_conta_resource_salvar}}} {{{servico_conta_resource_salvar}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="servicoContaPersist">servicoContaPersist</param>
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> SalvarUsingPOST24Async (ServicoContaPersistValue servicoContaPersist)
+        {
+             ApiResponse<Object> localVarResponse = await SalvarUsingPOST24AsyncWithHttpInfo(servicoContaPersist);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// {{{servico_conta_resource_salvar}}} {{{servico_conta_resource_salvar}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="servicoContaPersist">servicoContaPersist</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> SalvarUsingPOST24AsyncWithHttpInfo (ServicoContaPersistValue servicoContaPersist)
+        {
+            // verify the required parameter 'servicoContaPersist' is set
+            if (servicoContaPersist == null) throw new ApiException(400, "Missing required parameter 'servicoContaPersist' when calling SalvarUsingPOST24");
+            
+    
+            var localVarPath = "/api/contas/servicos";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            if (servicoContaPersist.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(servicoContaPersist); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = servicoContaPersist; // byte array
+            }
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST24: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST24: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
             
         }
         

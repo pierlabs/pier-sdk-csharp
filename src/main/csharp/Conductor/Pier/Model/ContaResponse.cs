@@ -19,6 +19,28 @@ namespace Conductor.Pier.Model
     { 
     
         /// <summary>
+        /// {{{conta_response_funcao_ativa_value}}}
+        /// </summary>
+        /// <value>{{{conta_response_funcao_ativa_value}}}</value>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum FuncaoAtivaEnum {
+            
+            [EnumMember(Value = "DEBITO_CREDITO")]
+            DebitoCredito,
+            
+            [EnumMember(Value = "CREDITO")]
+            Credito
+        }
+
+    
+        /// <summary>
+        /// {{{conta_response_funcao_ativa_value}}}
+        /// </summary>
+        /// <value>{{{conta_response_funcao_ativa_value}}}</value>
+        [DataMember(Name="funcaoAtiva", EmitDefaultValue=false)]
+        public FuncaoAtivaEnum? FuncaoAtiva { get; set; }
+    
+        /// <summary>
         /// Initializes a new instance of the <see cref="ContaResponse" /> class.
         /// Initializes a new instance of the <see cref="ContaResponse" />class.
         /// </summary>
@@ -33,8 +55,10 @@ namespace Conductor.Pier.Model
         /// <param name="DataCadastro">{{{conta_response_data_cadastro_value}}}.</param>
         /// <param name="DataUltimaAlteracaoVencimento">{{{conta_response_data_ultima_alteracao_vencimento_value}}}.</param>
         /// <param name="ValorRenda">{{{conta_response_valor_renda_value}}}.</param>
+        /// <param name="IdProposta">{{{conta_response_id_proposta}}}.</param>
+        /// <param name="FuncaoAtiva">{{{conta_response_funcao_ativa_value}}}.</param>
 
-        public ContaResponse(long? Id = null, long? IdProduto = null, long? IdOrigemComercial = null, long? IdPessoa = null, long? IdStatusConta = null, int? DiaVencimento = null, int? MelhorDiaCompra = null, string DataStatusConta = null, string DataCadastro = null, string DataUltimaAlteracaoVencimento = null, double? ValorRenda = null)
+        public ContaResponse(long? Id = null, long? IdProduto = null, long? IdOrigemComercial = null, long? IdPessoa = null, long? IdStatusConta = null, int? DiaVencimento = null, int? MelhorDiaCompra = null, string DataStatusConta = null, string DataCadastro = null, string DataUltimaAlteracaoVencimento = null, double? ValorRenda = null, long? IdProposta = null, FuncaoAtivaEnum? FuncaoAtiva = null)
         {
             this.Id = Id;
             this.IdProduto = IdProduto;
@@ -47,6 +71,8 @@ namespace Conductor.Pier.Model
             this.DataCadastro = DataCadastro;
             this.DataUltimaAlteracaoVencimento = DataUltimaAlteracaoVencimento;
             this.ValorRenda = ValorRenda;
+            this.IdProposta = IdProposta;
+            this.FuncaoAtiva = FuncaoAtiva;
             
         }
         
@@ -129,6 +155,13 @@ namespace Conductor.Pier.Model
         public double? ValorRenda { get; set; }
     
         /// <summary>
+        /// {{{conta_response_id_proposta}}}
+        /// </summary>
+        /// <value>{{{conta_response_id_proposta}}}</value>
+        [DataMember(Name="idProposta", EmitDefaultValue=false)]
+        public long? IdProposta { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -147,6 +180,8 @@ namespace Conductor.Pier.Model
             sb.Append("  DataCadastro: ").Append(DataCadastro).Append("\n");
             sb.Append("  DataUltimaAlteracaoVencimento: ").Append(DataUltimaAlteracaoVencimento).Append("\n");
             sb.Append("  ValorRenda: ").Append(ValorRenda).Append("\n");
+            sb.Append("  IdProposta: ").Append(IdProposta).Append("\n");
+            sb.Append("  FuncaoAtiva: ").Append(FuncaoAtiva).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -238,6 +273,16 @@ namespace Conductor.Pier.Model
                     this.ValorRenda == other.ValorRenda ||
                     this.ValorRenda != null &&
                     this.ValorRenda.Equals(other.ValorRenda)
+                ) && 
+                (
+                    this.IdProposta == other.IdProposta ||
+                    this.IdProposta != null &&
+                    this.IdProposta.Equals(other.IdProposta)
+                ) && 
+                (
+                    this.FuncaoAtiva == other.FuncaoAtiva ||
+                    this.FuncaoAtiva != null &&
+                    this.FuncaoAtiva.Equals(other.FuncaoAtiva)
                 );
         }
 
@@ -285,6 +330,12 @@ namespace Conductor.Pier.Model
                 
                 if (this.ValorRenda != null)
                     hash = hash * 59 + this.ValorRenda.GetHashCode();
+                
+                if (this.IdProposta != null)
+                    hash = hash * 59 + this.IdProposta.GetHashCode();
+                
+                if (this.FuncaoAtiva != null)
+                    hash = hash * 59 + this.FuncaoAtiva.GetHashCode();
                 
                 return hash;
             }

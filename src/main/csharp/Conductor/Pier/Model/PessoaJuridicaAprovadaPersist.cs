@@ -45,8 +45,9 @@ namespace Conductor.Pier.Model
         /// <param name="LimiteGlobal">{{{pessoa_juridica_aprovada_persist_limite_global_value}}} (required).</param>
         /// <param name="LimiteMaximo">{{{pessoa_juridica_aprovada_persist_limite_maximo_value}}} (required).</param>
         /// <param name="LimiteParcelas">{{{pessoa_juridica_aprovada_persist_limite_parcelas_value}}} (required).</param>
+        /// <param name="ImpedidoFinanciamento">{{{pessoa_juridica_aprovada_persist_impedido_de_financiamento_value}}}.</param>
 
-        public PessoaJuridicaAprovadaPersist(string RazaoSocial = null, string NomeFantasia = null, string Cnpj = null, string InscricaoEstadual = null, string DataAberturaEmpresa = null, long? IdOrigemComercial = null, long? IdProduto = null, int? NumeroBanco = null, int? NumeroAgencia = null, string NumeroContaCorrente = null, string Email = null, int? DiaVencimento = null, string NomeImpresso = null, double? ValorRenda = null, string CanalEntrada = null, int? ValorPontuacao = null, List<TelefonePessoaAprovadaPersistValue> Telefones = null, List<EnderecoAprovadoPersistValue> Enderecos = null, List<SocioAprovadoPersistValue> Socios = null, List<ReferenciaComercialAprovadoPersistValue> ReferenciasComerciais = null, double? LimiteGlobal = null, double? LimiteMaximo = null, double? LimiteParcelas = null)
+        public PessoaJuridicaAprovadaPersist(string RazaoSocial = null, string NomeFantasia = null, string Cnpj = null, string InscricaoEstadual = null, string DataAberturaEmpresa = null, long? IdOrigemComercial = null, long? IdProduto = null, int? NumeroBanco = null, int? NumeroAgencia = null, string NumeroContaCorrente = null, string Email = null, int? DiaVencimento = null, string NomeImpresso = null, double? ValorRenda = null, string CanalEntrada = null, int? ValorPontuacao = null, List<TelefonePessoaAprovadaPersistValue> Telefones = null, List<EnderecoAprovadoPersistValue> Enderecos = null, List<SocioAprovadoPersistValue> Socios = null, List<ReferenciaComercialAprovadoPersistValue> ReferenciasComerciais = null, double? LimiteGlobal = null, double? LimiteMaximo = null, double? LimiteParcelas = null, bool? ImpedidoFinanciamento = null)
         {
             // to ensure "RazaoSocial" is required (not null)
             if (RazaoSocial == null)
@@ -151,6 +152,7 @@ namespace Conductor.Pier.Model
             this.Telefones = Telefones;
             this.Socios = Socios;
             this.ReferenciasComerciais = ReferenciasComerciais;
+            this.ImpedidoFinanciamento = ImpedidoFinanciamento;
             
         }
         
@@ -317,6 +319,13 @@ namespace Conductor.Pier.Model
         public double? LimiteParcelas { get; set; }
     
         /// <summary>
+        /// {{{pessoa_juridica_aprovada_persist_impedido_de_financiamento_value}}}
+        /// </summary>
+        /// <value>{{{pessoa_juridica_aprovada_persist_impedido_de_financiamento_value}}}</value>
+        [DataMember(Name="impedidoFinanciamento", EmitDefaultValue=false)]
+        public bool? ImpedidoFinanciamento { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -347,6 +356,7 @@ namespace Conductor.Pier.Model
             sb.Append("  LimiteGlobal: ").Append(LimiteGlobal).Append("\n");
             sb.Append("  LimiteMaximo: ").Append(LimiteMaximo).Append("\n");
             sb.Append("  LimiteParcelas: ").Append(LimiteParcelas).Append("\n");
+            sb.Append("  ImpedidoFinanciamento: ").Append(ImpedidoFinanciamento).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -498,6 +508,11 @@ namespace Conductor.Pier.Model
                     this.LimiteParcelas == other.LimiteParcelas ||
                     this.LimiteParcelas != null &&
                     this.LimiteParcelas.Equals(other.LimiteParcelas)
+                ) && 
+                (
+                    this.ImpedidoFinanciamento == other.ImpedidoFinanciamento ||
+                    this.ImpedidoFinanciamento != null &&
+                    this.ImpedidoFinanciamento.Equals(other.ImpedidoFinanciamento)
                 );
         }
 
@@ -581,6 +596,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.LimiteParcelas != null)
                     hash = hash * 59 + this.LimiteParcelas.GetHashCode();
+                
+                if (this.ImpedidoFinanciamento != null)
+                    hash = hash * 59 + this.ImpedidoFinanciamento.GetHashCode();
                 
                 return hash;
             }

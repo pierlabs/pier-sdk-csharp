@@ -26,6 +26,7 @@ namespace Conductor.Pier.Model
         /// <param name="NumeroParcelas">{{{autorizacao_on_us_request_numero_parcelas_value}}} (required).</param>
         /// <param name="CodigoProcessamento">{{{transacao_on_us_request_codigo_processamento_value}}} (required).</param>
         /// <param name="CodigoSegurancaCartao">{{{autorizacao_on_us_request_codigo_seguranca_cartao_value}}}.</param>
+        /// <param name="NomeEstabelecimento">{{{autorizacao_on_us_request_nome_estabelecimento_value}}}.</param>
         /// <param name="ValorTransacao">{{{transacao_on_us_request_valor_transacao_value}}} (required).</param>
         /// <param name="NumeroRealCartao">{{{transacao_on_us_request_numero_real_cartao_value}}} (required).</param>
         /// <param name="DataValidadeCartao">{{{transacao_on_us_request_data_validade_cartao_value}}} (required).</param>
@@ -33,7 +34,7 @@ namespace Conductor.Pier.Model
         /// <param name="DataHoraTerminal">{{{transacao_on_us_request_data_hora_terminal_value}}} (required).</param>
         /// <param name="TerminalRequisitante">{{{transacao_on_us_request_terminal_requisitante_value}}} (required).</param>
 
-        public AutorizacaoOnUsRequest(string NsuOrigem = null, long? NumeroParcelas = null, string CodigoProcessamento = null, string CodigoSegurancaCartao = null, double? ValorTransacao = null, string NumeroRealCartao = null, string DataValidadeCartao = null, long? NumeroEstabelecimento = null, string DataHoraTerminal = null, string TerminalRequisitante = null)
+        public AutorizacaoOnUsRequest(string NsuOrigem = null, long? NumeroParcelas = null, string CodigoProcessamento = null, string CodigoSegurancaCartao = null, string NomeEstabelecimento = null, double? ValorTransacao = null, string NumeroRealCartao = null, string DataValidadeCartao = null, long? NumeroEstabelecimento = null, string DataHoraTerminal = null, string TerminalRequisitante = null)
         {
             // to ensure "NsuOrigem" is required (not null)
             if (NsuOrigem == null)
@@ -117,6 +118,7 @@ namespace Conductor.Pier.Model
                 this.TerminalRequisitante = TerminalRequisitante;
             }
             this.CodigoSegurancaCartao = CodigoSegurancaCartao;
+            this.NomeEstabelecimento = NomeEstabelecimento;
             
         }
         
@@ -148,6 +150,13 @@ namespace Conductor.Pier.Model
         /// <value>{{{autorizacao_on_us_request_codigo_seguranca_cartao_value}}}</value>
         [DataMember(Name="codigoSegurancaCartao", EmitDefaultValue=false)]
         public string CodigoSegurancaCartao { get; set; }
+    
+        /// <summary>
+        /// {{{autorizacao_on_us_request_nome_estabelecimento_value}}}
+        /// </summary>
+        /// <value>{{{autorizacao_on_us_request_nome_estabelecimento_value}}}</value>
+        [DataMember(Name="nomeEstabelecimento", EmitDefaultValue=false)]
+        public string NomeEstabelecimento { get; set; }
     
         /// <summary>
         /// {{{transacao_on_us_request_valor_transacao_value}}}
@@ -203,6 +212,7 @@ namespace Conductor.Pier.Model
             sb.Append("  NumeroParcelas: ").Append(NumeroParcelas).Append("\n");
             sb.Append("  CodigoProcessamento: ").Append(CodigoProcessamento).Append("\n");
             sb.Append("  CodigoSegurancaCartao: ").Append(CodigoSegurancaCartao).Append("\n");
+            sb.Append("  NomeEstabelecimento: ").Append(NomeEstabelecimento).Append("\n");
             sb.Append("  ValorTransacao: ").Append(ValorTransacao).Append("\n");
             sb.Append("  NumeroRealCartao: ").Append(NumeroRealCartao).Append("\n");
             sb.Append("  DataValidadeCartao: ").Append(DataValidadeCartao).Append("\n");
@@ -267,6 +277,11 @@ namespace Conductor.Pier.Model
                     this.CodigoSegurancaCartao.Equals(other.CodigoSegurancaCartao)
                 ) && 
                 (
+                    this.NomeEstabelecimento == other.NomeEstabelecimento ||
+                    this.NomeEstabelecimento != null &&
+                    this.NomeEstabelecimento.Equals(other.NomeEstabelecimento)
+                ) && 
+                (
                     this.ValorTransacao == other.ValorTransacao ||
                     this.ValorTransacao != null &&
                     this.ValorTransacao.Equals(other.ValorTransacao)
@@ -321,6 +336,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.CodigoSegurancaCartao != null)
                     hash = hash * 59 + this.CodigoSegurancaCartao.GetHashCode();
+                
+                if (this.NomeEstabelecimento != null)
+                    hash = hash * 59 + this.NomeEstabelecimento.GetHashCode();
                 
                 if (this.ValorTransacao != null)
                     hash = hash * 59 + this.ValorTransacao.GetHashCode();

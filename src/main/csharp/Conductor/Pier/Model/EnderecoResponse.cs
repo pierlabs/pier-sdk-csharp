@@ -22,6 +22,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="EnderecoResponse" /> class.
         /// Initializes a new instance of the <see cref="EnderecoResponse" />class.
         /// </summary>
+        /// <param name="TempoResidenciaAnos">{{{endereco_response_tempo_residencia_anos_value}}}.</param>
+        /// <param name="TempoResidenciaMeses">{{{endereco_response_tempo_residencia_meses_value}}}.</param>
         /// <param name="Id">{{{endereco_response_id_value}}}.</param>
         /// <param name="IdPessoa">{{{endereco_response_id_pessoa_value}}}.</param>
         /// <param name="IdTipoEndereco">{{{endereco_response_id_tipo_endereco_value}}}.</param>
@@ -38,8 +40,10 @@ namespace Conductor.Pier.Model
         /// <param name="DataUltimaAtualizacao">{{{endereco_response_data_ultima_atualizacao_value}}}.</param>
         /// <param name="FlagCorrespondencia">{{{endereco_response_flag_correspondencia_value}}}.</param>
 
-        public EnderecoResponse(long? Id = null, long? IdPessoa = null, long? IdTipoEndereco = null, string Cep = null, string Logradouro = null, int? Numero = null, string Complemento = null, string PontoReferencia = null, string Bairro = null, string Cidade = null, string Uf = null, string Pais = null, string DataInclusao = null, string DataUltimaAtualizacao = null, bool? FlagCorrespondencia = null)
+        public EnderecoResponse(int? TempoResidenciaAnos = null, int? TempoResidenciaMeses = null, long? Id = null, long? IdPessoa = null, long? IdTipoEndereco = null, string Cep = null, string Logradouro = null, int? Numero = null, string Complemento = null, string PontoReferencia = null, string Bairro = null, string Cidade = null, string Uf = null, string Pais = null, string DataInclusao = null, string DataUltimaAtualizacao = null, bool? FlagCorrespondencia = null)
         {
+            this.TempoResidenciaAnos = TempoResidenciaAnos;
+            this.TempoResidenciaMeses = TempoResidenciaMeses;
             this.Id = Id;
             this.IdPessoa = IdPessoa;
             this.IdTipoEndereco = IdTipoEndereco;
@@ -58,6 +62,20 @@ namespace Conductor.Pier.Model
             
         }
         
+    
+        /// <summary>
+        /// {{{endereco_response_tempo_residencia_anos_value}}}
+        /// </summary>
+        /// <value>{{{endereco_response_tempo_residencia_anos_value}}}</value>
+        [DataMember(Name="tempoResidenciaAnos", EmitDefaultValue=false)]
+        public int? TempoResidenciaAnos { get; set; }
+    
+        /// <summary>
+        /// {{{endereco_response_tempo_residencia_meses_value}}}
+        /// </summary>
+        /// <value>{{{endereco_response_tempo_residencia_meses_value}}}</value>
+        [DataMember(Name="tempoResidenciaMeses", EmitDefaultValue=false)]
+        public int? TempoResidenciaMeses { get; set; }
     
         /// <summary>
         /// {{{endereco_response_id_value}}}
@@ -172,6 +190,8 @@ namespace Conductor.Pier.Model
         {
             var sb = new StringBuilder();
             sb.Append("class EnderecoResponse {\n");
+            sb.Append("  TempoResidenciaAnos: ").Append(TempoResidenciaAnos).Append("\n");
+            sb.Append("  TempoResidenciaMeses: ").Append(TempoResidenciaMeses).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  IdPessoa: ").Append(IdPessoa).Append("\n");
             sb.Append("  IdTipoEndereco: ").Append(IdTipoEndereco).Append("\n");
@@ -224,6 +244,16 @@ namespace Conductor.Pier.Model
                 return false;
 
             return 
+                (
+                    this.TempoResidenciaAnos == other.TempoResidenciaAnos ||
+                    this.TempoResidenciaAnos != null &&
+                    this.TempoResidenciaAnos.Equals(other.TempoResidenciaAnos)
+                ) && 
+                (
+                    this.TempoResidenciaMeses == other.TempoResidenciaMeses ||
+                    this.TempoResidenciaMeses != null &&
+                    this.TempoResidenciaMeses.Equals(other.TempoResidenciaMeses)
+                ) && 
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
@@ -312,6 +342,12 @@ namespace Conductor.Pier.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
+                if (this.TempoResidenciaAnos != null)
+                    hash = hash * 59 + this.TempoResidenciaAnos.GetHashCode();
+                
+                if (this.TempoResidenciaMeses != null)
+                    hash = hash * 59 + this.TempoResidenciaMeses.GetHashCode();
                 
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
