@@ -27,7 +27,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{boleto_resource_consultar_param_id}}}</param>
         /// <param name="zeraValorCodigoBarras">{{{boleto_resource_consultar_param_zera_valor_codigo_barras}}} (optional)</param>
         /// <returns>BoletoResponse</returns>
-        BoletoResponse ConsultarUsingGET31 (long? id, bool? zeraValorCodigoBarras = null);
+        BoletoResponse ConsultarUsingGET32 (long? id, bool? zeraValorCodigoBarras = null);
   
         /// <summary>
         /// {{{boleto_resource_consultar}}}
@@ -39,7 +39,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{boleto_resource_consultar_param_id}}}</param>
         /// <param name="zeraValorCodigoBarras">{{{boleto_resource_consultar_param_zera_valor_codigo_barras}}} (optional)</param>
         /// <returns>ApiResponse of BoletoResponse</returns>
-        ApiResponse<BoletoResponse> ConsultarUsingGET31WithHttpInfo (long? id, bool? zeraValorCodigoBarras = null);
+        ApiResponse<BoletoResponse> ConsultarUsingGET32WithHttpInfo (long? id, bool? zeraValorCodigoBarras = null);
         
         /// <summary>
         /// {{{boleto_resource_enviar_boleto_email}}}
@@ -209,7 +209,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{boleto_resource_consultar_param_id}}}</param>
         /// <param name="zeraValorCodigoBarras">{{{boleto_resource_consultar_param_zera_valor_codigo_barras}}} (optional)</param>
         /// <returns>Task of BoletoResponse</returns>
-        System.Threading.Tasks.Task<BoletoResponse> ConsultarUsingGET31Async (long? id, bool? zeraValorCodigoBarras = null);
+        System.Threading.Tasks.Task<BoletoResponse> ConsultarUsingGET32Async (long? id, bool? zeraValorCodigoBarras = null);
 
         /// <summary>
         /// {{{boleto_resource_consultar}}}
@@ -221,7 +221,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{boleto_resource_consultar_param_id}}}</param>
         /// <param name="zeraValorCodigoBarras">{{{boleto_resource_consultar_param_zera_valor_codigo_barras}}} (optional)</param>
         /// <returns>Task of ApiResponse (BoletoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BoletoResponse>> ConsultarUsingGET31AsyncWithHttpInfo (long? id, bool? zeraValorCodigoBarras = null);
+        System.Threading.Tasks.Task<ApiResponse<BoletoResponse>> ConsultarUsingGET32AsyncWithHttpInfo (long? id, bool? zeraValorCodigoBarras = null);
         
         /// <summary>
         /// {{{boleto_resource_enviar_boleto_email}}}
@@ -476,9 +476,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{boleto_resource_consultar_param_id}}}</param> 
         /// <param name="zeraValorCodigoBarras">{{{boleto_resource_consultar_param_zera_valor_codigo_barras}}} (optional)</param> 
         /// <returns>BoletoResponse</returns>
-        public BoletoResponse ConsultarUsingGET31 (long? id, bool? zeraValorCodigoBarras = null)
+        public BoletoResponse ConsultarUsingGET32 (long? id, bool? zeraValorCodigoBarras = null)
         {
-             ApiResponse<BoletoResponse> localVarResponse = ConsultarUsingGET31WithHttpInfo(id, zeraValorCodigoBarras);
+             ApiResponse<BoletoResponse> localVarResponse = ConsultarUsingGET32WithHttpInfo(id, zeraValorCodigoBarras);
              return localVarResponse.Data;
         }
 
@@ -489,12 +489,12 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{boleto_resource_consultar_param_id}}}</param> 
         /// <param name="zeraValorCodigoBarras">{{{boleto_resource_consultar_param_zera_valor_codigo_barras}}} (optional)</param> 
         /// <returns>ApiResponse of BoletoResponse</returns>
-        public ApiResponse< BoletoResponse > ConsultarUsingGET31WithHttpInfo (long? id, bool? zeraValorCodigoBarras = null)
+        public ApiResponse< BoletoResponse > ConsultarUsingGET32WithHttpInfo (long? id, bool? zeraValorCodigoBarras = null)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagboletoApi->ConsultarUsingGET31");
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagboletoApi->ConsultarUsingGET32");
             
     
             var localVarPath = "/api/boletos/{id}";
@@ -541,9 +541,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET31: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET32: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET31: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET32: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<BoletoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -559,9 +559,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{boleto_resource_consultar_param_id}}}</param>
         /// <param name="zeraValorCodigoBarras">{{{boleto_resource_consultar_param_zera_valor_codigo_barras}}} (optional)</param>
         /// <returns>Task of BoletoResponse</returns>
-        public async System.Threading.Tasks.Task<BoletoResponse> ConsultarUsingGET31Async (long? id, bool? zeraValorCodigoBarras = null)
+        public async System.Threading.Tasks.Task<BoletoResponse> ConsultarUsingGET32Async (long? id, bool? zeraValorCodigoBarras = null)
         {
-             ApiResponse<BoletoResponse> localVarResponse = await ConsultarUsingGET31AsyncWithHttpInfo(id, zeraValorCodigoBarras);
+             ApiResponse<BoletoResponse> localVarResponse = await ConsultarUsingGET32AsyncWithHttpInfo(id, zeraValorCodigoBarras);
              return localVarResponse.Data;
 
         }
@@ -573,10 +573,10 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{boleto_resource_consultar_param_id}}}</param>
         /// <param name="zeraValorCodigoBarras">{{{boleto_resource_consultar_param_zera_valor_codigo_barras}}} (optional)</param>
         /// <returns>Task of ApiResponse (BoletoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<BoletoResponse>> ConsultarUsingGET31AsyncWithHttpInfo (long? id, bool? zeraValorCodigoBarras = null)
+        public async System.Threading.Tasks.Task<ApiResponse<BoletoResponse>> ConsultarUsingGET32AsyncWithHttpInfo (long? id, bool? zeraValorCodigoBarras = null)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET31");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET32");
             
     
             var localVarPath = "/api/boletos/{id}";
@@ -623,9 +623,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET31: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET32: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET31: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET32: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<BoletoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

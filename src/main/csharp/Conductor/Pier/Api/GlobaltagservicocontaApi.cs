@@ -262,7 +262,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="servicoContaPersist">servicoContaPersist</param>
         /// <returns>Object</returns>
-        Object SalvarUsingPOST24 (ServicoContaPersistValue servicoContaPersist);
+        Object SalvarUsingPOST25 (ServicoContaPersistValue servicoContaPersist);
   
         /// <summary>
         /// {{{servico_conta_resource_salvar}}}
@@ -273,7 +273,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="servicoContaPersist">servicoContaPersist</param>
         /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> SalvarUsingPOST24WithHttpInfo (ServicoContaPersistValue servicoContaPersist);
+        ApiResponse<Object> SalvarUsingPOST25WithHttpInfo (ServicoContaPersistValue servicoContaPersist);
         
         #endregion Synchronous Operations
         
@@ -524,7 +524,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="servicoContaPersist">servicoContaPersist</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> SalvarUsingPOST24Async (ServicoContaPersistValue servicoContaPersist);
+        System.Threading.Tasks.Task<Object> SalvarUsingPOST25Async (ServicoContaPersistValue servicoContaPersist);
 
         /// <summary>
         /// {{{servico_conta_resource_salvar}}}
@@ -535,7 +535,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="servicoContaPersist">servicoContaPersist</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> SalvarUsingPOST24AsyncWithHttpInfo (ServicoContaPersistValue servicoContaPersist);
+        System.Threading.Tasks.Task<ApiResponse<Object>> SalvarUsingPOST25AsyncWithHttpInfo (ServicoContaPersistValue servicoContaPersist);
         
         #endregion Asynchronous Operations
         
@@ -2171,9 +2171,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="servicoContaPersist">servicoContaPersist</param> 
         /// <returns>Object</returns>
-        public Object SalvarUsingPOST24 (ServicoContaPersistValue servicoContaPersist)
+        public Object SalvarUsingPOST25 (ServicoContaPersistValue servicoContaPersist)
         {
-             ApiResponse<Object> localVarResponse = SalvarUsingPOST24WithHttpInfo(servicoContaPersist);
+             ApiResponse<Object> localVarResponse = SalvarUsingPOST25WithHttpInfo(servicoContaPersist);
              return localVarResponse.Data;
         }
 
@@ -2183,12 +2183,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="servicoContaPersist">servicoContaPersist</param> 
         /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > SalvarUsingPOST24WithHttpInfo (ServicoContaPersistValue servicoContaPersist)
+        public ApiResponse< Object > SalvarUsingPOST25WithHttpInfo (ServicoContaPersistValue servicoContaPersist)
         {
             
             // verify the required parameter 'servicoContaPersist' is set
             if (servicoContaPersist == null)
-                throw new ApiException(400, "Missing required parameter 'servicoContaPersist' when calling GlobaltagservicocontaApi->SalvarUsingPOST24");
+                throw new ApiException(400, "Missing required parameter 'servicoContaPersist' when calling GlobaltagservicocontaApi->SalvarUsingPOST25");
             
     
             var localVarPath = "/api/contas/servicos";
@@ -2240,9 +2240,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST24: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST25: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST24: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST25: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2257,9 +2257,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="servicoContaPersist">servicoContaPersist</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> SalvarUsingPOST24Async (ServicoContaPersistValue servicoContaPersist)
+        public async System.Threading.Tasks.Task<Object> SalvarUsingPOST25Async (ServicoContaPersistValue servicoContaPersist)
         {
-             ApiResponse<Object> localVarResponse = await SalvarUsingPOST24AsyncWithHttpInfo(servicoContaPersist);
+             ApiResponse<Object> localVarResponse = await SalvarUsingPOST25AsyncWithHttpInfo(servicoContaPersist);
              return localVarResponse.Data;
 
         }
@@ -2270,10 +2270,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="servicoContaPersist">servicoContaPersist</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> SalvarUsingPOST24AsyncWithHttpInfo (ServicoContaPersistValue servicoContaPersist)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> SalvarUsingPOST25AsyncWithHttpInfo (ServicoContaPersistValue servicoContaPersist)
         {
             // verify the required parameter 'servicoContaPersist' is set
-            if (servicoContaPersist == null) throw new ApiException(400, "Missing required parameter 'servicoContaPersist' when calling SalvarUsingPOST24");
+            if (servicoContaPersist == null) throw new ApiException(400, "Missing required parameter 'servicoContaPersist' when calling SalvarUsingPOST25");
             
     
             var localVarPath = "/api/contas/servicos";
@@ -2325,9 +2325,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST24: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST25: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST24: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST25: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

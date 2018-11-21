@@ -64,7 +64,7 @@ namespace Conductor.Pier.Api
         /// <param name="categoria">{{{faq_persist_categoria_value}}} (optional)</param>
         /// <param name="status">{{{faq_persist_status_value}}} (optional)</param>
         /// <returns>FaqResponse</returns>
-        FaqResponse AlterarUsingPUT7 (long? id, string pergunta, string resposta, int? relevancia = null, string plataforma = null, string categoria = null, string status = null);
+        FaqResponse AlterarUsingPUT8 (long? id, string pergunta, string resposta, int? relevancia = null, string plataforma = null, string categoria = null, string status = null);
   
         /// <summary>
         /// {{{faq_resource_alterar}}}
@@ -81,7 +81,7 @@ namespace Conductor.Pier.Api
         /// <param name="categoria">{{{faq_persist_categoria_value}}} (optional)</param>
         /// <param name="status">{{{faq_persist_status_value}}} (optional)</param>
         /// <returns>ApiResponse of FaqResponse</returns>
-        ApiResponse<FaqResponse> AlterarUsingPUT7WithHttpInfo (long? id, string pergunta, string resposta, int? relevancia = null, string plataforma = null, string categoria = null, string status = null);
+        ApiResponse<FaqResponse> AlterarUsingPUT8WithHttpInfo (long? id, string pergunta, string resposta, int? relevancia = null, string plataforma = null, string categoria = null, string status = null);
         
         /// <summary>
         /// {{{faq_resource_consultar}}}
@@ -92,7 +92,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{faq_resource_consultar_param_id_faq}}}</param>
         /// <returns>FaqResponse</returns>
-        FaqResponse ConsultarUsingGET19 (long? id);
+        FaqResponse ConsultarUsingGET20 (long? id);
   
         /// <summary>
         /// {{{faq_resource_consultar}}}
@@ -103,7 +103,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{faq_resource_consultar_param_id_faq}}}</param>
         /// <returns>ApiResponse of FaqResponse</returns>
-        ApiResponse<FaqResponse> ConsultarUsingGET19WithHttpInfo (long? id);
+        ApiResponse<FaqResponse> ConsultarUsingGET20WithHttpInfo (long? id);
         
         /// <summary>
         /// {{{faq_resource_listar}}}
@@ -196,7 +196,7 @@ namespace Conductor.Pier.Api
         /// <param name="categoria">{{{faq_persist_categoria_value}}} (optional)</param>
         /// <param name="status">{{{faq_persist_status_value}}} (optional)</param>
         /// <returns>Task of FaqResponse</returns>
-        System.Threading.Tasks.Task<FaqResponse> AlterarUsingPUT7Async (long? id, string pergunta, string resposta, int? relevancia = null, string plataforma = null, string categoria = null, string status = null);
+        System.Threading.Tasks.Task<FaqResponse> AlterarUsingPUT8Async (long? id, string pergunta, string resposta, int? relevancia = null, string plataforma = null, string categoria = null, string status = null);
 
         /// <summary>
         /// {{{faq_resource_alterar}}}
@@ -213,7 +213,7 @@ namespace Conductor.Pier.Api
         /// <param name="categoria">{{{faq_persist_categoria_value}}} (optional)</param>
         /// <param name="status">{{{faq_persist_status_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (FaqResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FaqResponse>> AlterarUsingPUT7AsyncWithHttpInfo (long? id, string pergunta, string resposta, int? relevancia = null, string plataforma = null, string categoria = null, string status = null);
+        System.Threading.Tasks.Task<ApiResponse<FaqResponse>> AlterarUsingPUT8AsyncWithHttpInfo (long? id, string pergunta, string resposta, int? relevancia = null, string plataforma = null, string categoria = null, string status = null);
         
         /// <summary>
         /// {{{faq_resource_consultar}}}
@@ -224,7 +224,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{faq_resource_consultar_param_id_faq}}}</param>
         /// <returns>Task of FaqResponse</returns>
-        System.Threading.Tasks.Task<FaqResponse> ConsultarUsingGET19Async (long? id);
+        System.Threading.Tasks.Task<FaqResponse> ConsultarUsingGET20Async (long? id);
 
         /// <summary>
         /// {{{faq_resource_consultar}}}
@@ -235,7 +235,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{faq_resource_consultar_param_id_faq}}}</param>
         /// <returns>Task of ApiResponse (FaqResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FaqResponse>> ConsultarUsingGET19AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<FaqResponse>> ConsultarUsingGET20AsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// {{{faq_resource_listar}}}
@@ -575,9 +575,9 @@ namespace Conductor.Pier.Api
         /// <param name="categoria">{{{faq_persist_categoria_value}}} (optional)</param> 
         /// <param name="status">{{{faq_persist_status_value}}} (optional)</param> 
         /// <returns>FaqResponse</returns>
-        public FaqResponse AlterarUsingPUT7 (long? id, string pergunta, string resposta, int? relevancia = null, string plataforma = null, string categoria = null, string status = null)
+        public FaqResponse AlterarUsingPUT8 (long? id, string pergunta, string resposta, int? relevancia = null, string plataforma = null, string categoria = null, string status = null)
         {
-             ApiResponse<FaqResponse> localVarResponse = AlterarUsingPUT7WithHttpInfo(id, pergunta, resposta, relevancia, plataforma, categoria, status);
+             ApiResponse<FaqResponse> localVarResponse = AlterarUsingPUT8WithHttpInfo(id, pergunta, resposta, relevancia, plataforma, categoria, status);
              return localVarResponse.Data;
         }
 
@@ -593,20 +593,20 @@ namespace Conductor.Pier.Api
         /// <param name="categoria">{{{faq_persist_categoria_value}}} (optional)</param> 
         /// <param name="status">{{{faq_persist_status_value}}} (optional)</param> 
         /// <returns>ApiResponse of FaqResponse</returns>
-        public ApiResponse< FaqResponse > AlterarUsingPUT7WithHttpInfo (long? id, string pergunta, string resposta, int? relevancia = null, string plataforma = null, string categoria = null, string status = null)
+        public ApiResponse< FaqResponse > AlterarUsingPUT8WithHttpInfo (long? id, string pergunta, string resposta, int? relevancia = null, string plataforma = null, string categoria = null, string status = null)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagfaqApi->AlterarUsingPUT7");
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagfaqApi->AlterarUsingPUT8");
             
             // verify the required parameter 'pergunta' is set
             if (pergunta == null)
-                throw new ApiException(400, "Missing required parameter 'pergunta' when calling GlobaltagfaqApi->AlterarUsingPUT7");
+                throw new ApiException(400, "Missing required parameter 'pergunta' when calling GlobaltagfaqApi->AlterarUsingPUT8");
             
             // verify the required parameter 'resposta' is set
             if (resposta == null)
-                throw new ApiException(400, "Missing required parameter 'resposta' when calling GlobaltagfaqApi->AlterarUsingPUT7");
+                throw new ApiException(400, "Missing required parameter 'resposta' when calling GlobaltagfaqApi->AlterarUsingPUT8");
             
     
             var localVarPath = "/api/faqs/{id}";
@@ -658,9 +658,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling AlterarUsingPUT7: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarUsingPUT8: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling AlterarUsingPUT7: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarUsingPUT8: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<FaqResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -681,9 +681,9 @@ namespace Conductor.Pier.Api
         /// <param name="categoria">{{{faq_persist_categoria_value}}} (optional)</param>
         /// <param name="status">{{{faq_persist_status_value}}} (optional)</param>
         /// <returns>Task of FaqResponse</returns>
-        public async System.Threading.Tasks.Task<FaqResponse> AlterarUsingPUT7Async (long? id, string pergunta, string resposta, int? relevancia = null, string plataforma = null, string categoria = null, string status = null)
+        public async System.Threading.Tasks.Task<FaqResponse> AlterarUsingPUT8Async (long? id, string pergunta, string resposta, int? relevancia = null, string plataforma = null, string categoria = null, string status = null)
         {
-             ApiResponse<FaqResponse> localVarResponse = await AlterarUsingPUT7AsyncWithHttpInfo(id, pergunta, resposta, relevancia, plataforma, categoria, status);
+             ApiResponse<FaqResponse> localVarResponse = await AlterarUsingPUT8AsyncWithHttpInfo(id, pergunta, resposta, relevancia, plataforma, categoria, status);
              return localVarResponse.Data;
 
         }
@@ -700,14 +700,14 @@ namespace Conductor.Pier.Api
         /// <param name="categoria">{{{faq_persist_categoria_value}}} (optional)</param>
         /// <param name="status">{{{faq_persist_status_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (FaqResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<FaqResponse>> AlterarUsingPUT7AsyncWithHttpInfo (long? id, string pergunta, string resposta, int? relevancia = null, string plataforma = null, string categoria = null, string status = null)
+        public async System.Threading.Tasks.Task<ApiResponse<FaqResponse>> AlterarUsingPUT8AsyncWithHttpInfo (long? id, string pergunta, string resposta, int? relevancia = null, string plataforma = null, string categoria = null, string status = null)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AlterarUsingPUT7");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AlterarUsingPUT8");
             // verify the required parameter 'pergunta' is set
-            if (pergunta == null) throw new ApiException(400, "Missing required parameter 'pergunta' when calling AlterarUsingPUT7");
+            if (pergunta == null) throw new ApiException(400, "Missing required parameter 'pergunta' when calling AlterarUsingPUT8");
             // verify the required parameter 'resposta' is set
-            if (resposta == null) throw new ApiException(400, "Missing required parameter 'resposta' when calling AlterarUsingPUT7");
+            if (resposta == null) throw new ApiException(400, "Missing required parameter 'resposta' when calling AlterarUsingPUT8");
             
     
             var localVarPath = "/api/faqs/{id}";
@@ -759,9 +759,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling AlterarUsingPUT7: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarUsingPUT8: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling AlterarUsingPUT7: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarUsingPUT8: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<FaqResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -775,9 +775,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{faq_resource_consultar_param_id_faq}}}</param> 
         /// <returns>FaqResponse</returns>
-        public FaqResponse ConsultarUsingGET19 (long? id)
+        public FaqResponse ConsultarUsingGET20 (long? id)
         {
-             ApiResponse<FaqResponse> localVarResponse = ConsultarUsingGET19WithHttpInfo(id);
+             ApiResponse<FaqResponse> localVarResponse = ConsultarUsingGET20WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -787,12 +787,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{faq_resource_consultar_param_id_faq}}}</param> 
         /// <returns>ApiResponse of FaqResponse</returns>
-        public ApiResponse< FaqResponse > ConsultarUsingGET19WithHttpInfo (long? id)
+        public ApiResponse< FaqResponse > ConsultarUsingGET20WithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagfaqApi->ConsultarUsingGET19");
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagfaqApi->ConsultarUsingGET20");
             
     
             var localVarPath = "/api/faqs/{id}";
@@ -838,9 +838,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET19: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET20: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET19: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET20: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<FaqResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -855,9 +855,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{faq_resource_consultar_param_id_faq}}}</param>
         /// <returns>Task of FaqResponse</returns>
-        public async System.Threading.Tasks.Task<FaqResponse> ConsultarUsingGET19Async (long? id)
+        public async System.Threading.Tasks.Task<FaqResponse> ConsultarUsingGET20Async (long? id)
         {
-             ApiResponse<FaqResponse> localVarResponse = await ConsultarUsingGET19AsyncWithHttpInfo(id);
+             ApiResponse<FaqResponse> localVarResponse = await ConsultarUsingGET20AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -868,10 +868,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{faq_resource_consultar_param_id_faq}}}</param>
         /// <returns>Task of ApiResponse (FaqResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<FaqResponse>> ConsultarUsingGET19AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<FaqResponse>> ConsultarUsingGET20AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET19");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET20");
             
     
             var localVarPath = "/api/faqs/{id}";
@@ -917,9 +917,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET19: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET20: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET19: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET20: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<FaqResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

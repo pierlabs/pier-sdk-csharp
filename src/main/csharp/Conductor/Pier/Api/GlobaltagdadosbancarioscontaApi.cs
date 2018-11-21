@@ -27,7 +27,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{dados_bancarios_conta_resource_alterar_param_id_dadosBancariosConta}}}</param>
         /// <param name="update">update</param>
         /// <returns>DadosBancariosContaResponse</returns>
-        DadosBancariosContaResponse AlterarUsingPUT4 (long? id, DadosBancariosContaUpdate update);
+        DadosBancariosContaResponse AlterarUsingPUT5 (long? id, DadosBancariosContaUpdate update);
   
         /// <summary>
         /// {{{dados_bancarios_conta_resource_alterar}}}
@@ -39,7 +39,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{dados_bancarios_conta_resource_alterar_param_id_dadosBancariosConta}}}</param>
         /// <param name="update">update</param>
         /// <returns>ApiResponse of DadosBancariosContaResponse</returns>
-        ApiResponse<DadosBancariosContaResponse> AlterarUsingPUT4WithHttpInfo (long? id, DadosBancariosContaUpdate update);
+        ApiResponse<DadosBancariosContaResponse> AlterarUsingPUT5WithHttpInfo (long? id, DadosBancariosContaUpdate update);
         
         /// <summary>
         /// {{{dados_bancarios_conta_resource_consultar}}}
@@ -50,7 +50,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{dados_bancarios_conta_consultar_param_id}}}</param>
         /// <returns>DadosBancariosContaResponse</returns>
-        DadosBancariosContaResponse ConsultarUsingGET14 (long? id);
+        DadosBancariosContaResponse ConsultarUsingGET15 (long? id);
   
         /// <summary>
         /// {{{dados_bancarios_conta_resource_consultar}}}
@@ -61,7 +61,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{dados_bancarios_conta_consultar_param_id}}}</param>
         /// <returns>ApiResponse of DadosBancariosContaResponse</returns>
-        ApiResponse<DadosBancariosContaResponse> ConsultarUsingGET14WithHttpInfo (long? id);
+        ApiResponse<DadosBancariosContaResponse> ConsultarUsingGET15WithHttpInfo (long? id);
         
         /// <summary>
         /// {{{tipo_conta_bancaria_resource_consultar}}}
@@ -72,7 +72,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{tipo_conta_bancaria_resource_consultar_param_id}}}</param>
         /// <returns>CdtTipoContaBancaria</returns>
-        CdtTipoContaBancaria ConsultarUsingGET40 (long? id);
+        CdtTipoContaBancaria ConsultarUsingGET41 (long? id);
   
         /// <summary>
         /// {{{tipo_conta_bancaria_resource_consultar}}}
@@ -83,7 +83,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{tipo_conta_bancaria_resource_consultar_param_id}}}</param>
         /// <returns>ApiResponse of CdtTipoContaBancaria</returns>
-        ApiResponse<CdtTipoContaBancaria> ConsultarUsingGET40WithHttpInfo (long? id);
+        ApiResponse<CdtTipoContaBancaria> ConsultarUsingGET41WithHttpInfo (long? id);
         
         /// <summary>
         /// {{{dados_bancarios_conta_resource_consultarPage}}}
@@ -160,7 +160,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dadosBancariosContaPersist">dadosBancariosContaPersist</param>
         /// <returns>DadosBancariosContaResponse</returns>
-        DadosBancariosContaResponse SalvarUsingPOST9 (DadosBancariosContaPersist dadosBancariosContaPersist);
+        DadosBancariosContaResponse SalvarUsingPOST10 (DadosBancariosContaPersist dadosBancariosContaPersist);
   
         /// <summary>
         /// {{{dados_bancarios_conta_resource_salvar}}}
@@ -171,7 +171,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dadosBancariosContaPersist">dadosBancariosContaPersist</param>
         /// <returns>ApiResponse of DadosBancariosContaResponse</returns>
-        ApiResponse<DadosBancariosContaResponse> SalvarUsingPOST9WithHttpInfo (DadosBancariosContaPersist dadosBancariosContaPersist);
+        ApiResponse<DadosBancariosContaResponse> SalvarUsingPOST10WithHttpInfo (DadosBancariosContaPersist dadosBancariosContaPersist);
         
         #endregion Synchronous Operations
         
@@ -187,7 +187,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{dados_bancarios_conta_resource_alterar_param_id_dadosBancariosConta}}}</param>
         /// <param name="update">update</param>
         /// <returns>Task of DadosBancariosContaResponse</returns>
-        System.Threading.Tasks.Task<DadosBancariosContaResponse> AlterarUsingPUT4Async (long? id, DadosBancariosContaUpdate update);
+        System.Threading.Tasks.Task<DadosBancariosContaResponse> AlterarUsingPUT5Async (long? id, DadosBancariosContaUpdate update);
 
         /// <summary>
         /// {{{dados_bancarios_conta_resource_alterar}}}
@@ -199,7 +199,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{dados_bancarios_conta_resource_alterar_param_id_dadosBancariosConta}}}</param>
         /// <param name="update">update</param>
         /// <returns>Task of ApiResponse (DadosBancariosContaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DadosBancariosContaResponse>> AlterarUsingPUT4AsyncWithHttpInfo (long? id, DadosBancariosContaUpdate update);
+        System.Threading.Tasks.Task<ApiResponse<DadosBancariosContaResponse>> AlterarUsingPUT5AsyncWithHttpInfo (long? id, DadosBancariosContaUpdate update);
         
         /// <summary>
         /// {{{dados_bancarios_conta_resource_consultar}}}
@@ -210,7 +210,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{dados_bancarios_conta_consultar_param_id}}}</param>
         /// <returns>Task of DadosBancariosContaResponse</returns>
-        System.Threading.Tasks.Task<DadosBancariosContaResponse> ConsultarUsingGET14Async (long? id);
+        System.Threading.Tasks.Task<DadosBancariosContaResponse> ConsultarUsingGET15Async (long? id);
 
         /// <summary>
         /// {{{dados_bancarios_conta_resource_consultar}}}
@@ -221,7 +221,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{dados_bancarios_conta_consultar_param_id}}}</param>
         /// <returns>Task of ApiResponse (DadosBancariosContaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DadosBancariosContaResponse>> ConsultarUsingGET14AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<DadosBancariosContaResponse>> ConsultarUsingGET15AsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// {{{tipo_conta_bancaria_resource_consultar}}}
@@ -232,7 +232,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{tipo_conta_bancaria_resource_consultar_param_id}}}</param>
         /// <returns>Task of CdtTipoContaBancaria</returns>
-        System.Threading.Tasks.Task<CdtTipoContaBancaria> ConsultarUsingGET40Async (long? id);
+        System.Threading.Tasks.Task<CdtTipoContaBancaria> ConsultarUsingGET41Async (long? id);
 
         /// <summary>
         /// {{{tipo_conta_bancaria_resource_consultar}}}
@@ -243,7 +243,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{tipo_conta_bancaria_resource_consultar_param_id}}}</param>
         /// <returns>Task of ApiResponse (CdtTipoContaBancaria)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CdtTipoContaBancaria>> ConsultarUsingGET40AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<CdtTipoContaBancaria>> ConsultarUsingGET41AsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// {{{dados_bancarios_conta_resource_consultarPage}}}
@@ -320,7 +320,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dadosBancariosContaPersist">dadosBancariosContaPersist</param>
         /// <returns>Task of DadosBancariosContaResponse</returns>
-        System.Threading.Tasks.Task<DadosBancariosContaResponse> SalvarUsingPOST9Async (DadosBancariosContaPersist dadosBancariosContaPersist);
+        System.Threading.Tasks.Task<DadosBancariosContaResponse> SalvarUsingPOST10Async (DadosBancariosContaPersist dadosBancariosContaPersist);
 
         /// <summary>
         /// {{{dados_bancarios_conta_resource_salvar}}}
@@ -331,7 +331,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dadosBancariosContaPersist">dadosBancariosContaPersist</param>
         /// <returns>Task of ApiResponse (DadosBancariosContaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DadosBancariosContaResponse>> SalvarUsingPOST9AsyncWithHttpInfo (DadosBancariosContaPersist dadosBancariosContaPersist);
+        System.Threading.Tasks.Task<ApiResponse<DadosBancariosContaResponse>> SalvarUsingPOST10AsyncWithHttpInfo (DadosBancariosContaPersist dadosBancariosContaPersist);
         
         #endregion Asynchronous Operations
         
@@ -432,9 +432,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{dados_bancarios_conta_resource_alterar_param_id_dadosBancariosConta}}}</param> 
         /// <param name="update">update</param> 
         /// <returns>DadosBancariosContaResponse</returns>
-        public DadosBancariosContaResponse AlterarUsingPUT4 (long? id, DadosBancariosContaUpdate update)
+        public DadosBancariosContaResponse AlterarUsingPUT5 (long? id, DadosBancariosContaUpdate update)
         {
-             ApiResponse<DadosBancariosContaResponse> localVarResponse = AlterarUsingPUT4WithHttpInfo(id, update);
+             ApiResponse<DadosBancariosContaResponse> localVarResponse = AlterarUsingPUT5WithHttpInfo(id, update);
              return localVarResponse.Data;
         }
 
@@ -445,16 +445,16 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{dados_bancarios_conta_resource_alterar_param_id_dadosBancariosConta}}}</param> 
         /// <param name="update">update</param> 
         /// <returns>ApiResponse of DadosBancariosContaResponse</returns>
-        public ApiResponse< DadosBancariosContaResponse > AlterarUsingPUT4WithHttpInfo (long? id, DadosBancariosContaUpdate update)
+        public ApiResponse< DadosBancariosContaResponse > AlterarUsingPUT5WithHttpInfo (long? id, DadosBancariosContaUpdate update)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagdadosbancarioscontaApi->AlterarUsingPUT4");
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagdadosbancarioscontaApi->AlterarUsingPUT5");
             
             // verify the required parameter 'update' is set
             if (update == null)
-                throw new ApiException(400, "Missing required parameter 'update' when calling GlobaltagdadosbancarioscontaApi->AlterarUsingPUT4");
+                throw new ApiException(400, "Missing required parameter 'update' when calling GlobaltagdadosbancarioscontaApi->AlterarUsingPUT5");
             
     
             var localVarPath = "/api/dados-bancarios-conta/{id}";
@@ -507,9 +507,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling AlterarUsingPUT4: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarUsingPUT5: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling AlterarUsingPUT4: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarUsingPUT5: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<DadosBancariosContaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -525,9 +525,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{dados_bancarios_conta_resource_alterar_param_id_dadosBancariosConta}}}</param>
         /// <param name="update">update</param>
         /// <returns>Task of DadosBancariosContaResponse</returns>
-        public async System.Threading.Tasks.Task<DadosBancariosContaResponse> AlterarUsingPUT4Async (long? id, DadosBancariosContaUpdate update)
+        public async System.Threading.Tasks.Task<DadosBancariosContaResponse> AlterarUsingPUT5Async (long? id, DadosBancariosContaUpdate update)
         {
-             ApiResponse<DadosBancariosContaResponse> localVarResponse = await AlterarUsingPUT4AsyncWithHttpInfo(id, update);
+             ApiResponse<DadosBancariosContaResponse> localVarResponse = await AlterarUsingPUT5AsyncWithHttpInfo(id, update);
              return localVarResponse.Data;
 
         }
@@ -539,12 +539,12 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{dados_bancarios_conta_resource_alterar_param_id_dadosBancariosConta}}}</param>
         /// <param name="update">update</param>
         /// <returns>Task of ApiResponse (DadosBancariosContaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DadosBancariosContaResponse>> AlterarUsingPUT4AsyncWithHttpInfo (long? id, DadosBancariosContaUpdate update)
+        public async System.Threading.Tasks.Task<ApiResponse<DadosBancariosContaResponse>> AlterarUsingPUT5AsyncWithHttpInfo (long? id, DadosBancariosContaUpdate update)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AlterarUsingPUT4");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AlterarUsingPUT5");
             // verify the required parameter 'update' is set
-            if (update == null) throw new ApiException(400, "Missing required parameter 'update' when calling AlterarUsingPUT4");
+            if (update == null) throw new ApiException(400, "Missing required parameter 'update' when calling AlterarUsingPUT5");
             
     
             var localVarPath = "/api/dados-bancarios-conta/{id}";
@@ -597,9 +597,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling AlterarUsingPUT4: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarUsingPUT5: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling AlterarUsingPUT4: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarUsingPUT5: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<DadosBancariosContaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -613,9 +613,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{dados_bancarios_conta_consultar_param_id}}}</param> 
         /// <returns>DadosBancariosContaResponse</returns>
-        public DadosBancariosContaResponse ConsultarUsingGET14 (long? id)
+        public DadosBancariosContaResponse ConsultarUsingGET15 (long? id)
         {
-             ApiResponse<DadosBancariosContaResponse> localVarResponse = ConsultarUsingGET14WithHttpInfo(id);
+             ApiResponse<DadosBancariosContaResponse> localVarResponse = ConsultarUsingGET15WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -625,12 +625,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{dados_bancarios_conta_consultar_param_id}}}</param> 
         /// <returns>ApiResponse of DadosBancariosContaResponse</returns>
-        public ApiResponse< DadosBancariosContaResponse > ConsultarUsingGET14WithHttpInfo (long? id)
+        public ApiResponse< DadosBancariosContaResponse > ConsultarUsingGET15WithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagdadosbancarioscontaApi->ConsultarUsingGET14");
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagdadosbancarioscontaApi->ConsultarUsingGET15");
             
     
             var localVarPath = "/api/dados-bancarios-conta/{id}";
@@ -676,9 +676,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET14: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET15: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET14: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET15: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<DadosBancariosContaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -693,9 +693,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{dados_bancarios_conta_consultar_param_id}}}</param>
         /// <returns>Task of DadosBancariosContaResponse</returns>
-        public async System.Threading.Tasks.Task<DadosBancariosContaResponse> ConsultarUsingGET14Async (long? id)
+        public async System.Threading.Tasks.Task<DadosBancariosContaResponse> ConsultarUsingGET15Async (long? id)
         {
-             ApiResponse<DadosBancariosContaResponse> localVarResponse = await ConsultarUsingGET14AsyncWithHttpInfo(id);
+             ApiResponse<DadosBancariosContaResponse> localVarResponse = await ConsultarUsingGET15AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -706,10 +706,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{dados_bancarios_conta_consultar_param_id}}}</param>
         /// <returns>Task of ApiResponse (DadosBancariosContaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DadosBancariosContaResponse>> ConsultarUsingGET14AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<DadosBancariosContaResponse>> ConsultarUsingGET15AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET14");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET15");
             
     
             var localVarPath = "/api/dados-bancarios-conta/{id}";
@@ -755,9 +755,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET14: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET15: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET14: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET15: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<DadosBancariosContaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -771,9 +771,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{tipo_conta_bancaria_resource_consultar_param_id}}}</param> 
         /// <returns>CdtTipoContaBancaria</returns>
-        public CdtTipoContaBancaria ConsultarUsingGET40 (long? id)
+        public CdtTipoContaBancaria ConsultarUsingGET41 (long? id)
         {
-             ApiResponse<CdtTipoContaBancaria> localVarResponse = ConsultarUsingGET40WithHttpInfo(id);
+             ApiResponse<CdtTipoContaBancaria> localVarResponse = ConsultarUsingGET41WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -783,12 +783,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{tipo_conta_bancaria_resource_consultar_param_id}}}</param> 
         /// <returns>ApiResponse of CdtTipoContaBancaria</returns>
-        public ApiResponse< CdtTipoContaBancaria > ConsultarUsingGET40WithHttpInfo (long? id)
+        public ApiResponse< CdtTipoContaBancaria > ConsultarUsingGET41WithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagdadosbancarioscontaApi->ConsultarUsingGET40");
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagdadosbancarioscontaApi->ConsultarUsingGET41");
             
     
             var localVarPath = "/api/dados-bancarios-conta/tipos-contas-bancarias/{id}";
@@ -834,9 +834,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET40: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET41: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET40: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET41: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<CdtTipoContaBancaria>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -851,9 +851,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{tipo_conta_bancaria_resource_consultar_param_id}}}</param>
         /// <returns>Task of CdtTipoContaBancaria</returns>
-        public async System.Threading.Tasks.Task<CdtTipoContaBancaria> ConsultarUsingGET40Async (long? id)
+        public async System.Threading.Tasks.Task<CdtTipoContaBancaria> ConsultarUsingGET41Async (long? id)
         {
-             ApiResponse<CdtTipoContaBancaria> localVarResponse = await ConsultarUsingGET40AsyncWithHttpInfo(id);
+             ApiResponse<CdtTipoContaBancaria> localVarResponse = await ConsultarUsingGET41AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -864,10 +864,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{tipo_conta_bancaria_resource_consultar_param_id}}}</param>
         /// <returns>Task of ApiResponse (CdtTipoContaBancaria)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CdtTipoContaBancaria>> ConsultarUsingGET40AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<CdtTipoContaBancaria>> ConsultarUsingGET41AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET40");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET41");
             
     
             var localVarPath = "/api/dados-bancarios-conta/tipos-contas-bancarias/{id}";
@@ -913,9 +913,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET40: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET41: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET40: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET41: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<CdtTipoContaBancaria>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1299,9 +1299,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dadosBancariosContaPersist">dadosBancariosContaPersist</param> 
         /// <returns>DadosBancariosContaResponse</returns>
-        public DadosBancariosContaResponse SalvarUsingPOST9 (DadosBancariosContaPersist dadosBancariosContaPersist)
+        public DadosBancariosContaResponse SalvarUsingPOST10 (DadosBancariosContaPersist dadosBancariosContaPersist)
         {
-             ApiResponse<DadosBancariosContaResponse> localVarResponse = SalvarUsingPOST9WithHttpInfo(dadosBancariosContaPersist);
+             ApiResponse<DadosBancariosContaResponse> localVarResponse = SalvarUsingPOST10WithHttpInfo(dadosBancariosContaPersist);
              return localVarResponse.Data;
         }
 
@@ -1311,12 +1311,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dadosBancariosContaPersist">dadosBancariosContaPersist</param> 
         /// <returns>ApiResponse of DadosBancariosContaResponse</returns>
-        public ApiResponse< DadosBancariosContaResponse > SalvarUsingPOST9WithHttpInfo (DadosBancariosContaPersist dadosBancariosContaPersist)
+        public ApiResponse< DadosBancariosContaResponse > SalvarUsingPOST10WithHttpInfo (DadosBancariosContaPersist dadosBancariosContaPersist)
         {
             
             // verify the required parameter 'dadosBancariosContaPersist' is set
             if (dadosBancariosContaPersist == null)
-                throw new ApiException(400, "Missing required parameter 'dadosBancariosContaPersist' when calling GlobaltagdadosbancarioscontaApi->SalvarUsingPOST9");
+                throw new ApiException(400, "Missing required parameter 'dadosBancariosContaPersist' when calling GlobaltagdadosbancarioscontaApi->SalvarUsingPOST10");
             
     
             var localVarPath = "/api/dados-bancarios-conta";
@@ -1368,9 +1368,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST9: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST10: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST9: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST10: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<DadosBancariosContaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1385,9 +1385,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dadosBancariosContaPersist">dadosBancariosContaPersist</param>
         /// <returns>Task of DadosBancariosContaResponse</returns>
-        public async System.Threading.Tasks.Task<DadosBancariosContaResponse> SalvarUsingPOST9Async (DadosBancariosContaPersist dadosBancariosContaPersist)
+        public async System.Threading.Tasks.Task<DadosBancariosContaResponse> SalvarUsingPOST10Async (DadosBancariosContaPersist dadosBancariosContaPersist)
         {
-             ApiResponse<DadosBancariosContaResponse> localVarResponse = await SalvarUsingPOST9AsyncWithHttpInfo(dadosBancariosContaPersist);
+             ApiResponse<DadosBancariosContaResponse> localVarResponse = await SalvarUsingPOST10AsyncWithHttpInfo(dadosBancariosContaPersist);
              return localVarResponse.Data;
 
         }
@@ -1398,10 +1398,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dadosBancariosContaPersist">dadosBancariosContaPersist</param>
         /// <returns>Task of ApiResponse (DadosBancariosContaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DadosBancariosContaResponse>> SalvarUsingPOST9AsyncWithHttpInfo (DadosBancariosContaPersist dadosBancariosContaPersist)
+        public async System.Threading.Tasks.Task<ApiResponse<DadosBancariosContaResponse>> SalvarUsingPOST10AsyncWithHttpInfo (DadosBancariosContaPersist dadosBancariosContaPersist)
         {
             // verify the required parameter 'dadosBancariosContaPersist' is set
-            if (dadosBancariosContaPersist == null) throw new ApiException(400, "Missing required parameter 'dadosBancariosContaPersist' when calling SalvarUsingPOST9");
+            if (dadosBancariosContaPersist == null) throw new ApiException(400, "Missing required parameter 'dadosBancariosContaPersist' when calling SalvarUsingPOST10");
             
     
             var localVarPath = "/api/dados-bancarios-conta";
@@ -1453,9 +1453,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST9: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST10: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST9: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST10: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<DadosBancariosContaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

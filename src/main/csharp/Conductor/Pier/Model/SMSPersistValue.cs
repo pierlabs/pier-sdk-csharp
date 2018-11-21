@@ -35,7 +35,58 @@ namespace Conductor.Pier.Model
             Outros,
             
             [EnumMember(Value = "OTP_3D_SECURE")]
-            Otp3dSecure
+            Otp3dSecure,
+            
+            [EnumMember(Value = "PAGAMENTO")]
+            Pagamento,
+            
+            [EnumMember(Value = "TRANSACAO_COMPRA_AUTORIZADO")]
+            TransacaoCompraAutorizado,
+            
+            [EnumMember(Value = "TRANSACAO_COMPRA_NAO_AUTORIZADO")]
+            TransacaoCompraNaoAutorizado,
+            
+            [EnumMember(Value = "TRANSACAO_SAQUE_AUTORIZADO")]
+            TransacaoSaqueAutorizado,
+            
+            [EnumMember(Value = "TRANSACAO_SAQUE_NAO_AUTORIZADO")]
+            TransacaoSaqueNaoAutorizado,
+            
+            [EnumMember(Value = "TRANSACAO_PAGAMENTO_AUTORIZADO")]
+            TransacaoPagamentoAutorizado,
+            
+            [EnumMember(Value = "TRANSACAO_PAGAMENTO_NAO_AUTORIZADO")]
+            TransacaoPagamentoNaoAutorizado,
+            
+            [EnumMember(Value = "TRANSACAO_ADVICE")]
+            TransacaoAdvice,
+            
+            [EnumMember(Value = "TRANSACAO_ERRO")]
+            TransacaoErro,
+            
+            [EnumMember(Value = "TRANSACAO_SIMULACAO")]
+            TransacaoSimulacao,
+            
+            [EnumMember(Value = "TRANSACAO_SENHA_CHIP")]
+            TransacaoSenhaChip,
+            
+            [EnumMember(Value = "TRANSACAO_CONSULTA_SALDO")]
+            TransacaoConsultaSaldo,
+            
+            [EnumMember(Value = "TRANSACAO_CONSULTA_STATUS_CONTA")]
+            TransacaoConsultaStatusConta,
+            
+            [EnumMember(Value = "TRANSACAO_DESFAZIMENTO")]
+            TransacaoDesfazimento,
+            
+            [EnumMember(Value = "TRANSACAO_CANCELAMENTO")]
+            TransacaoCancelamento,
+            
+            [EnumMember(Value = "TRANSACAO_RESPOSTA_SONDA")]
+            TransacaoRespostaSonda,
+            
+            [EnumMember(Value = "TRANSACAO_TOKEN")]
+            TransacaoToken
         }
 
     

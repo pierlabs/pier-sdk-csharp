@@ -25,12 +25,14 @@ namespace Conductor.Pier.Model
         /// <param name="Id">{{{proposta_response_id_value}}}.</param>
         /// <param name="Status">{{{proposta_response_status_value}}}.</param>
         /// <param name="DataCadastramento">{{{proposta_response_data_cadastramento_value}}}.</param>
+        /// <param name="DataAprovacaoNegacaoPendencia">{{{proposta_response_data_aprovacaoNegacaoPendencia_value}}}.</param>
 
-        public PropostaResponse(long? Id = null, int? Status = null, string DataCadastramento = null)
+        public PropostaResponse(long? Id = null, int? Status = null, string DataCadastramento = null, string DataAprovacaoNegacaoPendencia = null)
         {
             this.Id = Id;
             this.Status = Status;
             this.DataCadastramento = DataCadastramento;
+            this.DataAprovacaoNegacaoPendencia = DataAprovacaoNegacaoPendencia;
             
         }
         
@@ -57,6 +59,13 @@ namespace Conductor.Pier.Model
         public string DataCadastramento { get; set; }
     
         /// <summary>
+        /// {{{proposta_response_data_aprovacaoNegacaoPendencia_value}}}
+        /// </summary>
+        /// <value>{{{proposta_response_data_aprovacaoNegacaoPendencia_value}}}</value>
+        [DataMember(Name="dataAprovacaoNegacaoPendencia", EmitDefaultValue=false)]
+        public string DataAprovacaoNegacaoPendencia { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -67,6 +76,7 @@ namespace Conductor.Pier.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  DataCadastramento: ").Append(DataCadastramento).Append("\n");
+            sb.Append("  DataAprovacaoNegacaoPendencia: ").Append(DataAprovacaoNegacaoPendencia).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -118,6 +128,11 @@ namespace Conductor.Pier.Model
                     this.DataCadastramento == other.DataCadastramento ||
                     this.DataCadastramento != null &&
                     this.DataCadastramento.Equals(other.DataCadastramento)
+                ) && 
+                (
+                    this.DataAprovacaoNegacaoPendencia == other.DataAprovacaoNegacaoPendencia ||
+                    this.DataAprovacaoNegacaoPendencia != null &&
+                    this.DataAprovacaoNegacaoPendencia.Equals(other.DataAprovacaoNegacaoPendencia)
                 );
         }
 
@@ -141,6 +156,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.DataCadastramento != null)
                     hash = hash * 59 + this.DataCadastramento.GetHashCode();
+                
+                if (this.DataAprovacaoNegacaoPendencia != null)
+                    hash = hash * 59 + this.DataAprovacaoNegacaoPendencia.GetHashCode();
                 
                 return hash;
             }

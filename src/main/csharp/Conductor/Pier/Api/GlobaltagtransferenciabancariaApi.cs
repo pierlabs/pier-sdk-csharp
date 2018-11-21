@@ -188,7 +188,7 @@ namespace Conductor.Pier.Api
         /// <param name="idTransferencia">{{{transferencia_bancaria_resource_consultar_param_id_evento}}}</param>
         /// <param name="idContaBancariaDestino">{{{transferencia_bancaria_resource_consultar_param_id_conta_portador}}} (optional)</param>
         /// <returns>TransferenciaBancariaResponse</returns>
-        TransferenciaBancariaResponse ConsultarUsingGET46 (long? id, long? idTransferencia, long? idContaBancariaDestino = null);
+        TransferenciaBancariaResponse ConsultarUsingGET47 (long? id, long? idTransferencia, long? idContaBancariaDestino = null);
   
         /// <summary>
         /// {{{transferencia_bancaria_resource_consultar}}}
@@ -201,7 +201,7 @@ namespace Conductor.Pier.Api
         /// <param name="idTransferencia">{{{transferencia_bancaria_resource_consultar_param_id_evento}}}</param>
         /// <param name="idContaBancariaDestino">{{{transferencia_bancaria_resource_consultar_param_id_conta_portador}}} (optional)</param>
         /// <returns>ApiResponse of TransferenciaBancariaResponse</returns>
-        ApiResponse<TransferenciaBancariaResponse> ConsultarUsingGET46WithHttpInfo (long? id, long? idTransferencia, long? idContaBancariaDestino = null);
+        ApiResponse<TransferenciaBancariaResponse> ConsultarUsingGET47WithHttpInfo (long? id, long? idTransferencia, long? idContaBancariaDestino = null);
         
         /// <summary>
         /// {{{transferencia_bancaria_resource_listar_transferencia_bancaria}}}
@@ -602,7 +602,7 @@ namespace Conductor.Pier.Api
         /// <param name="idTransferencia">{{{transferencia_bancaria_resource_consultar_param_id_evento}}}</param>
         /// <param name="idContaBancariaDestino">{{{transferencia_bancaria_resource_consultar_param_id_conta_portador}}} (optional)</param>
         /// <returns>Task of TransferenciaBancariaResponse</returns>
-        System.Threading.Tasks.Task<TransferenciaBancariaResponse> ConsultarUsingGET46Async (long? id, long? idTransferencia, long? idContaBancariaDestino = null);
+        System.Threading.Tasks.Task<TransferenciaBancariaResponse> ConsultarUsingGET47Async (long? id, long? idTransferencia, long? idContaBancariaDestino = null);
 
         /// <summary>
         /// {{{transferencia_bancaria_resource_consultar}}}
@@ -615,7 +615,7 @@ namespace Conductor.Pier.Api
         /// <param name="idTransferencia">{{{transferencia_bancaria_resource_consultar_param_id_evento}}}</param>
         /// <param name="idContaBancariaDestino">{{{transferencia_bancaria_resource_consultar_param_id_conta_portador}}} (optional)</param>
         /// <returns>Task of ApiResponse (TransferenciaBancariaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TransferenciaBancariaResponse>> ConsultarUsingGET46AsyncWithHttpInfo (long? id, long? idTransferencia, long? idContaBancariaDestino = null);
+        System.Threading.Tasks.Task<ApiResponse<TransferenciaBancariaResponse>> ConsultarUsingGET47AsyncWithHttpInfo (long? id, long? idTransferencia, long? idContaBancariaDestino = null);
         
         /// <summary>
         /// {{{transferencia_bancaria_resource_listar_transferencia_bancaria}}}
@@ -2107,9 +2107,9 @@ namespace Conductor.Pier.Api
         /// <param name="idTransferencia">{{{transferencia_bancaria_resource_consultar_param_id_evento}}}</param> 
         /// <param name="idContaBancariaDestino">{{{transferencia_bancaria_resource_consultar_param_id_conta_portador}}} (optional)</param> 
         /// <returns>TransferenciaBancariaResponse</returns>
-        public TransferenciaBancariaResponse ConsultarUsingGET46 (long? id, long? idTransferencia, long? idContaBancariaDestino = null)
+        public TransferenciaBancariaResponse ConsultarUsingGET47 (long? id, long? idTransferencia, long? idContaBancariaDestino = null)
         {
-             ApiResponse<TransferenciaBancariaResponse> localVarResponse = ConsultarUsingGET46WithHttpInfo(id, idTransferencia, idContaBancariaDestino);
+             ApiResponse<TransferenciaBancariaResponse> localVarResponse = ConsultarUsingGET47WithHttpInfo(id, idTransferencia, idContaBancariaDestino);
              return localVarResponse.Data;
         }
 
@@ -2121,16 +2121,16 @@ namespace Conductor.Pier.Api
         /// <param name="idTransferencia">{{{transferencia_bancaria_resource_consultar_param_id_evento}}}</param> 
         /// <param name="idContaBancariaDestino">{{{transferencia_bancaria_resource_consultar_param_id_conta_portador}}} (optional)</param> 
         /// <returns>ApiResponse of TransferenciaBancariaResponse</returns>
-        public ApiResponse< TransferenciaBancariaResponse > ConsultarUsingGET46WithHttpInfo (long? id, long? idTransferencia, long? idContaBancariaDestino = null)
+        public ApiResponse< TransferenciaBancariaResponse > ConsultarUsingGET47WithHttpInfo (long? id, long? idTransferencia, long? idContaBancariaDestino = null)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagtransferenciabancariaApi->ConsultarUsingGET46");
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagtransferenciabancariaApi->ConsultarUsingGET47");
             
             // verify the required parameter 'idTransferencia' is set
             if (idTransferencia == null)
-                throw new ApiException(400, "Missing required parameter 'idTransferencia' when calling GlobaltagtransferenciabancariaApi->ConsultarUsingGET46");
+                throw new ApiException(400, "Missing required parameter 'idTransferencia' when calling GlobaltagtransferenciabancariaApi->ConsultarUsingGET47");
             
     
             var localVarPath = "/api/contas/{id}/transferencias-creditos-contas-bancarias/{id_transferencia}";
@@ -2178,9 +2178,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET46: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET47: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET46: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET47: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<TransferenciaBancariaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2197,9 +2197,9 @@ namespace Conductor.Pier.Api
         /// <param name="idTransferencia">{{{transferencia_bancaria_resource_consultar_param_id_evento}}}</param>
         /// <param name="idContaBancariaDestino">{{{transferencia_bancaria_resource_consultar_param_id_conta_portador}}} (optional)</param>
         /// <returns>Task of TransferenciaBancariaResponse</returns>
-        public async System.Threading.Tasks.Task<TransferenciaBancariaResponse> ConsultarUsingGET46Async (long? id, long? idTransferencia, long? idContaBancariaDestino = null)
+        public async System.Threading.Tasks.Task<TransferenciaBancariaResponse> ConsultarUsingGET47Async (long? id, long? idTransferencia, long? idContaBancariaDestino = null)
         {
-             ApiResponse<TransferenciaBancariaResponse> localVarResponse = await ConsultarUsingGET46AsyncWithHttpInfo(id, idTransferencia, idContaBancariaDestino);
+             ApiResponse<TransferenciaBancariaResponse> localVarResponse = await ConsultarUsingGET47AsyncWithHttpInfo(id, idTransferencia, idContaBancariaDestino);
              return localVarResponse.Data;
 
         }
@@ -2212,12 +2212,12 @@ namespace Conductor.Pier.Api
         /// <param name="idTransferencia">{{{transferencia_bancaria_resource_consultar_param_id_evento}}}</param>
         /// <param name="idContaBancariaDestino">{{{transferencia_bancaria_resource_consultar_param_id_conta_portador}}} (optional)</param>
         /// <returns>Task of ApiResponse (TransferenciaBancariaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TransferenciaBancariaResponse>> ConsultarUsingGET46AsyncWithHttpInfo (long? id, long? idTransferencia, long? idContaBancariaDestino = null)
+        public async System.Threading.Tasks.Task<ApiResponse<TransferenciaBancariaResponse>> ConsultarUsingGET47AsyncWithHttpInfo (long? id, long? idTransferencia, long? idContaBancariaDestino = null)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET46");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET47");
             // verify the required parameter 'idTransferencia' is set
-            if (idTransferencia == null) throw new ApiException(400, "Missing required parameter 'idTransferencia' when calling ConsultarUsingGET46");
+            if (idTransferencia == null) throw new ApiException(400, "Missing required parameter 'idTransferencia' when calling ConsultarUsingGET47");
             
     
             var localVarPath = "/api/contas/{id}/transferencias-creditos-contas-bancarias/{id_transferencia}";
@@ -2265,9 +2265,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET46: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET47: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET46: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET47: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<TransferenciaBancariaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

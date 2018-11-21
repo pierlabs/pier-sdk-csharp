@@ -86,7 +86,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inscricaoPersist">inscricaoPersist</param>
         /// <returns>List&lt;InscricaoAPNResponse&gt;</returns>
-        List<InscricaoAPNResponse> SalvarUsingPOST14 (InscricaoApnPersistencia inscricaoPersist);
+        List<InscricaoAPNResponse> SalvarUsingPOST15 (InscricaoApnPersistencia inscricaoPersist);
   
         /// <summary>
         /// {{{inscricao_apn_recurso_salvar}}}
@@ -97,7 +97,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inscricaoPersist">inscricaoPersist</param>
         /// <returns>ApiResponse of List&lt;InscricaoAPNResponse&gt;</returns>
-        ApiResponse<List<InscricaoAPNResponse>> SalvarUsingPOST14WithHttpInfo (InscricaoApnPersistencia inscricaoPersist);
+        ApiResponse<List<InscricaoAPNResponse>> SalvarUsingPOST15WithHttpInfo (InscricaoApnPersistencia inscricaoPersist);
         
         #endregion Synchronous Operations
         
@@ -172,7 +172,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inscricaoPersist">inscricaoPersist</param>
         /// <returns>Task of List&lt;InscricaoAPNResponse&gt;</returns>
-        System.Threading.Tasks.Task<List<InscricaoAPNResponse>> SalvarUsingPOST14Async (InscricaoApnPersistencia inscricaoPersist);
+        System.Threading.Tasks.Task<List<InscricaoAPNResponse>> SalvarUsingPOST15Async (InscricaoApnPersistencia inscricaoPersist);
 
         /// <summary>
         /// {{{inscricao_apn_recurso_salvar}}}
@@ -183,7 +183,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inscricaoPersist">inscricaoPersist</param>
         /// <returns>Task of ApiResponse (List&lt;InscricaoAPNResponse&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<InscricaoAPNResponse>>> SalvarUsingPOST14AsyncWithHttpInfo (InscricaoApnPersistencia inscricaoPersist);
+        System.Threading.Tasks.Task<ApiResponse<List<InscricaoAPNResponse>>> SalvarUsingPOST15AsyncWithHttpInfo (InscricaoApnPersistencia inscricaoPersist);
         
         #endregion Asynchronous Operations
         
@@ -641,9 +641,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inscricaoPersist">inscricaoPersist</param> 
         /// <returns>List&lt;InscricaoAPNResponse&gt;</returns>
-        public List<InscricaoAPNResponse> SalvarUsingPOST14 (InscricaoApnPersistencia inscricaoPersist)
+        public List<InscricaoAPNResponse> SalvarUsingPOST15 (InscricaoApnPersistencia inscricaoPersist)
         {
-             ApiResponse<List<InscricaoAPNResponse>> localVarResponse = SalvarUsingPOST14WithHttpInfo(inscricaoPersist);
+             ApiResponse<List<InscricaoAPNResponse>> localVarResponse = SalvarUsingPOST15WithHttpInfo(inscricaoPersist);
              return localVarResponse.Data;
         }
 
@@ -653,12 +653,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inscricaoPersist">inscricaoPersist</param> 
         /// <returns>ApiResponse of List&lt;InscricaoAPNResponse&gt;</returns>
-        public ApiResponse< List<InscricaoAPNResponse> > SalvarUsingPOST14WithHttpInfo (InscricaoApnPersistencia inscricaoPersist)
+        public ApiResponse< List<InscricaoAPNResponse> > SalvarUsingPOST15WithHttpInfo (InscricaoApnPersistencia inscricaoPersist)
         {
             
             // verify the required parameter 'inscricaoPersist' is set
             if (inscricaoPersist == null)
-                throw new ApiException(400, "Missing required parameter 'inscricaoPersist' when calling GlobaltaginscricaoapnApi->SalvarUsingPOST14");
+                throw new ApiException(400, "Missing required parameter 'inscricaoPersist' when calling GlobaltaginscricaoapnApi->SalvarUsingPOST15");
             
     
             var localVarPath = "/api/inscricoes-apn";
@@ -710,9 +710,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST14: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST15: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST14: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST15: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<List<InscricaoAPNResponse>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -727,9 +727,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inscricaoPersist">inscricaoPersist</param>
         /// <returns>Task of List&lt;InscricaoAPNResponse&gt;</returns>
-        public async System.Threading.Tasks.Task<List<InscricaoAPNResponse>> SalvarUsingPOST14Async (InscricaoApnPersistencia inscricaoPersist)
+        public async System.Threading.Tasks.Task<List<InscricaoAPNResponse>> SalvarUsingPOST15Async (InscricaoApnPersistencia inscricaoPersist)
         {
-             ApiResponse<List<InscricaoAPNResponse>> localVarResponse = await SalvarUsingPOST14AsyncWithHttpInfo(inscricaoPersist);
+             ApiResponse<List<InscricaoAPNResponse>> localVarResponse = await SalvarUsingPOST15AsyncWithHttpInfo(inscricaoPersist);
              return localVarResponse.Data;
 
         }
@@ -740,10 +740,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inscricaoPersist">inscricaoPersist</param>
         /// <returns>Task of ApiResponse (List&lt;InscricaoAPNResponse&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<InscricaoAPNResponse>>> SalvarUsingPOST14AsyncWithHttpInfo (InscricaoApnPersistencia inscricaoPersist)
+        public async System.Threading.Tasks.Task<ApiResponse<List<InscricaoAPNResponse>>> SalvarUsingPOST15AsyncWithHttpInfo (InscricaoApnPersistencia inscricaoPersist)
         {
             // verify the required parameter 'inscricaoPersist' is set
-            if (inscricaoPersist == null) throw new ApiException(400, "Missing required parameter 'inscricaoPersist' when calling SalvarUsingPOST14");
+            if (inscricaoPersist == null) throw new ApiException(400, "Missing required parameter 'inscricaoPersist' when calling SalvarUsingPOST15");
             
     
             var localVarPath = "/api/inscricoes-apn";
@@ -795,9 +795,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST14: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST15: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST14: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST15: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<List<InscricaoAPNResponse>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

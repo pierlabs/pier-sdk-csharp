@@ -70,7 +70,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{status_conta_resource_consultar_param_id}}}</param>
         /// <returns>StatusContaResponse</returns>
-        StatusContaResponse ConsultarUsingGET33 (long? id);
+        StatusContaResponse ConsultarUsingGET34 (long? id);
   
         /// <summary>
         /// {{{status_conta_resource_consultar}}}
@@ -81,7 +81,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{status_conta_resource_consultar_param_id}}}</param>
         /// <returns>ApiResponse of StatusContaResponse</returns>
-        ApiResponse<StatusContaResponse> ConsultarUsingGET33WithHttpInfo (long? id);
+        ApiResponse<StatusContaResponse> ConsultarUsingGET34WithHttpInfo (long? id);
         
         /// <summary>
         /// {{{status_impressao_resource_consultar}}}
@@ -92,7 +92,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{status_impressao_resource_consultar_param_id}}}</param>
         /// <returns>StatusImpressaoResponse</returns>
-        StatusImpressaoResponse ConsultarUsingGET34 (long? id);
+        StatusImpressaoResponse ConsultarUsingGET35 (long? id);
   
         /// <summary>
         /// {{{status_impressao_resource_consultar}}}
@@ -103,7 +103,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{status_impressao_resource_consultar_param_id}}}</param>
         /// <returns>ApiResponse of StatusImpressaoResponse</returns>
-        ApiResponse<StatusImpressaoResponse> ConsultarUsingGET34WithHttpInfo (long? id);
+        ApiResponse<StatusImpressaoResponse> ConsultarUsingGET35WithHttpInfo (long? id);
         
         /// <summary>
         /// {{{estagio_cartao_resource_listar_estagios_cartoes}}}
@@ -334,7 +334,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{status_conta_resource_consultar_param_id}}}</param>
         /// <returns>Task of StatusContaResponse</returns>
-        System.Threading.Tasks.Task<StatusContaResponse> ConsultarUsingGET33Async (long? id);
+        System.Threading.Tasks.Task<StatusContaResponse> ConsultarUsingGET34Async (long? id);
 
         /// <summary>
         /// {{{status_conta_resource_consultar}}}
@@ -345,7 +345,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{status_conta_resource_consultar_param_id}}}</param>
         /// <returns>Task of ApiResponse (StatusContaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<StatusContaResponse>> ConsultarUsingGET33AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<StatusContaResponse>> ConsultarUsingGET34AsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// {{{status_impressao_resource_consultar}}}
@@ -356,7 +356,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{status_impressao_resource_consultar_param_id}}}</param>
         /// <returns>Task of StatusImpressaoResponse</returns>
-        System.Threading.Tasks.Task<StatusImpressaoResponse> ConsultarUsingGET34Async (long? id);
+        System.Threading.Tasks.Task<StatusImpressaoResponse> ConsultarUsingGET35Async (long? id);
 
         /// <summary>
         /// {{{status_impressao_resource_consultar}}}
@@ -367,7 +367,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{status_impressao_resource_consultar_param_id}}}</param>
         /// <returns>Task of ApiResponse (StatusImpressaoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<StatusImpressaoResponse>> ConsultarUsingGET34AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<StatusImpressaoResponse>> ConsultarUsingGET35AsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// {{{estagio_cartao_resource_listar_estagios_cartoes}}}
@@ -955,9 +955,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{status_conta_resource_consultar_param_id}}}</param> 
         /// <returns>StatusContaResponse</returns>
-        public StatusContaResponse ConsultarUsingGET33 (long? id)
+        public StatusContaResponse ConsultarUsingGET34 (long? id)
         {
-             ApiResponse<StatusContaResponse> localVarResponse = ConsultarUsingGET33WithHttpInfo(id);
+             ApiResponse<StatusContaResponse> localVarResponse = ConsultarUsingGET34WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -967,12 +967,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{status_conta_resource_consultar_param_id}}}</param> 
         /// <returns>ApiResponse of StatusContaResponse</returns>
-        public ApiResponse< StatusContaResponse > ConsultarUsingGET33WithHttpInfo (long? id)
+        public ApiResponse< StatusContaResponse > ConsultarUsingGET34WithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagstatusparametroApi->ConsultarUsingGET33");
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagstatusparametroApi->ConsultarUsingGET34");
             
     
             var localVarPath = "/api/status-contas/{id}";
@@ -1018,9 +1018,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET33: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET34: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET33: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET34: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<StatusContaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1035,9 +1035,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{status_conta_resource_consultar_param_id}}}</param>
         /// <returns>Task of StatusContaResponse</returns>
-        public async System.Threading.Tasks.Task<StatusContaResponse> ConsultarUsingGET33Async (long? id)
+        public async System.Threading.Tasks.Task<StatusContaResponse> ConsultarUsingGET34Async (long? id)
         {
-             ApiResponse<StatusContaResponse> localVarResponse = await ConsultarUsingGET33AsyncWithHttpInfo(id);
+             ApiResponse<StatusContaResponse> localVarResponse = await ConsultarUsingGET34AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -1048,10 +1048,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{status_conta_resource_consultar_param_id}}}</param>
         /// <returns>Task of ApiResponse (StatusContaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<StatusContaResponse>> ConsultarUsingGET33AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<StatusContaResponse>> ConsultarUsingGET34AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET33");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET34");
             
     
             var localVarPath = "/api/status-contas/{id}";
@@ -1097,9 +1097,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET33: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET34: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET33: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET34: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<StatusContaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1113,9 +1113,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{status_impressao_resource_consultar_param_id}}}</param> 
         /// <returns>StatusImpressaoResponse</returns>
-        public StatusImpressaoResponse ConsultarUsingGET34 (long? id)
+        public StatusImpressaoResponse ConsultarUsingGET35 (long? id)
         {
-             ApiResponse<StatusImpressaoResponse> localVarResponse = ConsultarUsingGET34WithHttpInfo(id);
+             ApiResponse<StatusImpressaoResponse> localVarResponse = ConsultarUsingGET35WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -1125,12 +1125,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{status_impressao_resource_consultar_param_id}}}</param> 
         /// <returns>ApiResponse of StatusImpressaoResponse</returns>
-        public ApiResponse< StatusImpressaoResponse > ConsultarUsingGET34WithHttpInfo (long? id)
+        public ApiResponse< StatusImpressaoResponse > ConsultarUsingGET35WithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagstatusparametroApi->ConsultarUsingGET34");
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagstatusparametroApi->ConsultarUsingGET35");
             
     
             var localVarPath = "/api/status-impressoes/{id}";
@@ -1176,9 +1176,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET34: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET35: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET34: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET35: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<StatusImpressaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1193,9 +1193,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{status_impressao_resource_consultar_param_id}}}</param>
         /// <returns>Task of StatusImpressaoResponse</returns>
-        public async System.Threading.Tasks.Task<StatusImpressaoResponse> ConsultarUsingGET34Async (long? id)
+        public async System.Threading.Tasks.Task<StatusImpressaoResponse> ConsultarUsingGET35Async (long? id)
         {
-             ApiResponse<StatusImpressaoResponse> localVarResponse = await ConsultarUsingGET34AsyncWithHttpInfo(id);
+             ApiResponse<StatusImpressaoResponse> localVarResponse = await ConsultarUsingGET35AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -1206,10 +1206,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{status_impressao_resource_consultar_param_id}}}</param>
         /// <returns>Task of ApiResponse (StatusImpressaoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<StatusImpressaoResponse>> ConsultarUsingGET34AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<StatusImpressaoResponse>> ConsultarUsingGET35AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET34");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET35");
             
     
             var localVarPath = "/api/status-impressoes/{id}";
@@ -1255,9 +1255,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET34: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET35: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET34: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET35: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<StatusImpressaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
