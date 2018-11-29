@@ -18,6 +18,30 @@ namespace Conductor.Pier.Api
         #region Synchronous Operations
         
         /// <summary>
+        /// {{{proposta_resource_atualizar_parcial}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{proposta_resource_atualizar_parcial_notes}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{proposta_resource_atualizar_parcial_param_id}}}</param>
+        /// <param name="propostaParcialUpdate">propostaParcialUpdate</param>
+        /// <returns>PropostaResponse</returns>
+        PropostaResponse AlterarParcialUsingPATCH (long? id, PropostaParcialUpdate propostaParcialUpdate);
+  
+        /// <summary>
+        /// {{{proposta_resource_atualizar_parcial}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{proposta_resource_atualizar_parcial_notes}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{proposta_resource_atualizar_parcial_param_id}}}</param>
+        /// <param name="propostaParcialUpdate">propostaParcialUpdate</param>
+        /// <returns>ApiResponse of PropostaResponse</returns>
+        ApiResponse<PropostaResponse> AlterarParcialUsingPATCHWithHttpInfo (long? id, PropostaParcialUpdate propostaParcialUpdate);
+        
+        /// <summary>
         /// {{{proposta_resource_alterar_status}}}
         /// </summary>
         /// <remarks>
@@ -240,6 +264,30 @@ namespace Conductor.Pier.Api
         #endregion Synchronous Operations
         
         #region Asynchronous Operations
+        
+        /// <summary>
+        /// {{{proposta_resource_atualizar_parcial}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{proposta_resource_atualizar_parcial_notes}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{proposta_resource_atualizar_parcial_param_id}}}</param>
+        /// <param name="propostaParcialUpdate">propostaParcialUpdate</param>
+        /// <returns>Task of PropostaResponse</returns>
+        System.Threading.Tasks.Task<PropostaResponse> AlterarParcialUsingPATCHAsync (long? id, PropostaParcialUpdate propostaParcialUpdate);
+
+        /// <summary>
+        /// {{{proposta_resource_atualizar_parcial}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{proposta_resource_atualizar_parcial_notes}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{proposta_resource_atualizar_parcial_param_id}}}</param>
+        /// <param name="propostaParcialUpdate">propostaParcialUpdate</param>
+        /// <returns>Task of ApiResponse (PropostaResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PropostaResponse>> AlterarParcialUsingPATCHAsyncWithHttpInfo (long? id, PropostaParcialUpdate propostaParcialUpdate);
         
         /// <summary>
         /// {{{proposta_resource_alterar_status}}}
@@ -552,6 +600,188 @@ namespace Conductor.Pier.Api
             this.Configuration.AddDefaultHeader(key, value);
         }
    
+        
+        /// <summary>
+        /// {{{proposta_resource_atualizar_parcial}}} {{{proposta_resource_atualizar_parcial_notes}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{proposta_resource_atualizar_parcial_param_id}}}</param> 
+        /// <param name="propostaParcialUpdate">propostaParcialUpdate</param> 
+        /// <returns>PropostaResponse</returns>
+        public PropostaResponse AlterarParcialUsingPATCH (long? id, PropostaParcialUpdate propostaParcialUpdate)
+        {
+             ApiResponse<PropostaResponse> localVarResponse = AlterarParcialUsingPATCHWithHttpInfo(id, propostaParcialUpdate);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// {{{proposta_resource_atualizar_parcial}}} {{{proposta_resource_atualizar_parcial_notes}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{proposta_resource_atualizar_parcial_param_id}}}</param> 
+        /// <param name="propostaParcialUpdate">propostaParcialUpdate</param> 
+        /// <returns>ApiResponse of PropostaResponse</returns>
+        public ApiResponse< PropostaResponse > AlterarParcialUsingPATCHWithHttpInfo (long? id, PropostaParcialUpdate propostaParcialUpdate)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagpropostaApi->AlterarParcialUsingPATCH");
+            
+            // verify the required parameter 'propostaParcialUpdate' is set
+            if (propostaParcialUpdate == null)
+                throw new ApiException(400, "Missing required parameter 'propostaParcialUpdate' when calling GlobaltagpropostaApi->AlterarParcialUsingPATCH");
+            
+    
+            var localVarPath = "/api/propostas/{id}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            if (propostaParcialUpdate.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(propostaParcialUpdate); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = propostaParcialUpdate; // byte array
+            }
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling AlterarParcialUsingPATCH: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling AlterarParcialUsingPATCH: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<PropostaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PropostaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PropostaResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// {{{proposta_resource_atualizar_parcial}}} {{{proposta_resource_atualizar_parcial_notes}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{proposta_resource_atualizar_parcial_param_id}}}</param>
+        /// <param name="propostaParcialUpdate">propostaParcialUpdate</param>
+        /// <returns>Task of PropostaResponse</returns>
+        public async System.Threading.Tasks.Task<PropostaResponse> AlterarParcialUsingPATCHAsync (long? id, PropostaParcialUpdate propostaParcialUpdate)
+        {
+             ApiResponse<PropostaResponse> localVarResponse = await AlterarParcialUsingPATCHAsyncWithHttpInfo(id, propostaParcialUpdate);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// {{{proposta_resource_atualizar_parcial}}} {{{proposta_resource_atualizar_parcial_notes}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{proposta_resource_atualizar_parcial_param_id}}}</param>
+        /// <param name="propostaParcialUpdate">propostaParcialUpdate</param>
+        /// <returns>Task of ApiResponse (PropostaResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PropostaResponse>> AlterarParcialUsingPATCHAsyncWithHttpInfo (long? id, PropostaParcialUpdate propostaParcialUpdate)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AlterarParcialUsingPATCH");
+            // verify the required parameter 'propostaParcialUpdate' is set
+            if (propostaParcialUpdate == null) throw new ApiException(400, "Missing required parameter 'propostaParcialUpdate' when calling AlterarParcialUsingPATCH");
+            
+    
+            var localVarPath = "/api/propostas/{id}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            if (propostaParcialUpdate.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(propostaParcialUpdate); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = propostaParcialUpdate; // byte array
+            }
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling AlterarParcialUsingPATCH: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling AlterarParcialUsingPATCH: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PropostaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PropostaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PropostaResponse)));
+            
+        }
         
         /// <summary>
         /// {{{proposta_resource_alterar_status}}} {{{proposta_resource_alterar_status_notes}}}

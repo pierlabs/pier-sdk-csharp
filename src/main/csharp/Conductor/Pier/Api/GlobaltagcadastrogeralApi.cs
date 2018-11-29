@@ -75,7 +75,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{tipo_operacao_resource_alterar_param_id}}}</param>
         /// <param name="tipoOperacaoParcialUpdate">tipoOperacaoParcialUpdate</param>
         /// <returns>TipoOperacaoResponse</returns>
-        TipoOperacaoResponse AlterarParcialUsingPATCH (long? id, TipoOperacaoParcialUpdate tipoOperacaoParcialUpdate);
+        TipoOperacaoResponse AlterarParcialUsingPATCH1 (long? id, TipoOperacaoParcialUpdate tipoOperacaoParcialUpdate);
   
         /// <summary>
         /// {{{tipo_operacao_resource_alterar}}}
@@ -87,7 +87,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{tipo_operacao_resource_alterar_param_id}}}</param>
         /// <param name="tipoOperacaoParcialUpdate">tipoOperacaoParcialUpdate</param>
         /// <returns>ApiResponse of TipoOperacaoResponse</returns>
-        ApiResponse<TipoOperacaoResponse> AlterarParcialUsingPATCHWithHttpInfo (long? id, TipoOperacaoParcialUpdate tipoOperacaoParcialUpdate);
+        ApiResponse<TipoOperacaoResponse> AlterarParcialUsingPATCH1WithHttpInfo (long? id, TipoOperacaoParcialUpdate tipoOperacaoParcialUpdate);
         
         /// <summary>
         /// {{{campanha_resource_alterar}}}
@@ -1299,7 +1299,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{tipo_operacao_resource_alterar_param_id}}}</param>
         /// <param name="tipoOperacaoParcialUpdate">tipoOperacaoParcialUpdate</param>
         /// <returns>Task of TipoOperacaoResponse</returns>
-        System.Threading.Tasks.Task<TipoOperacaoResponse> AlterarParcialUsingPATCHAsync (long? id, TipoOperacaoParcialUpdate tipoOperacaoParcialUpdate);
+        System.Threading.Tasks.Task<TipoOperacaoResponse> AlterarParcialUsingPATCH1Async (long? id, TipoOperacaoParcialUpdate tipoOperacaoParcialUpdate);
 
         /// <summary>
         /// {{{tipo_operacao_resource_alterar}}}
@@ -1311,7 +1311,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{tipo_operacao_resource_alterar_param_id}}}</param>
         /// <param name="tipoOperacaoParcialUpdate">tipoOperacaoParcialUpdate</param>
         /// <returns>Task of ApiResponse (TipoOperacaoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TipoOperacaoResponse>> AlterarParcialUsingPATCHAsyncWithHttpInfo (long? id, TipoOperacaoParcialUpdate tipoOperacaoParcialUpdate);
+        System.Threading.Tasks.Task<ApiResponse<TipoOperacaoResponse>> AlterarParcialUsingPATCH1AsyncWithHttpInfo (long? id, TipoOperacaoParcialUpdate tipoOperacaoParcialUpdate);
         
         /// <summary>
         /// {{{campanha_resource_alterar}}}
@@ -2924,9 +2924,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{tipo_operacao_resource_alterar_param_id}}}</param> 
         /// <param name="tipoOperacaoParcialUpdate">tipoOperacaoParcialUpdate</param> 
         /// <returns>TipoOperacaoResponse</returns>
-        public TipoOperacaoResponse AlterarParcialUsingPATCH (long? id, TipoOperacaoParcialUpdate tipoOperacaoParcialUpdate)
+        public TipoOperacaoResponse AlterarParcialUsingPATCH1 (long? id, TipoOperacaoParcialUpdate tipoOperacaoParcialUpdate)
         {
-             ApiResponse<TipoOperacaoResponse> localVarResponse = AlterarParcialUsingPATCHWithHttpInfo(id, tipoOperacaoParcialUpdate);
+             ApiResponse<TipoOperacaoResponse> localVarResponse = AlterarParcialUsingPATCH1WithHttpInfo(id, tipoOperacaoParcialUpdate);
              return localVarResponse.Data;
         }
 
@@ -2937,16 +2937,16 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{tipo_operacao_resource_alterar_param_id}}}</param> 
         /// <param name="tipoOperacaoParcialUpdate">tipoOperacaoParcialUpdate</param> 
         /// <returns>ApiResponse of TipoOperacaoResponse</returns>
-        public ApiResponse< TipoOperacaoResponse > AlterarParcialUsingPATCHWithHttpInfo (long? id, TipoOperacaoParcialUpdate tipoOperacaoParcialUpdate)
+        public ApiResponse< TipoOperacaoResponse > AlterarParcialUsingPATCH1WithHttpInfo (long? id, TipoOperacaoParcialUpdate tipoOperacaoParcialUpdate)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagcadastrogeralApi->AlterarParcialUsingPATCH");
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagcadastrogeralApi->AlterarParcialUsingPATCH1");
             
             // verify the required parameter 'tipoOperacaoParcialUpdate' is set
             if (tipoOperacaoParcialUpdate == null)
-                throw new ApiException(400, "Missing required parameter 'tipoOperacaoParcialUpdate' when calling GlobaltagcadastrogeralApi->AlterarParcialUsingPATCH");
+                throw new ApiException(400, "Missing required parameter 'tipoOperacaoParcialUpdate' when calling GlobaltagcadastrogeralApi->AlterarParcialUsingPATCH1");
             
     
             var localVarPath = "/api/tipos-operacoes/{id}";
@@ -2999,9 +2999,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling AlterarParcialUsingPATCH: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarParcialUsingPATCH1: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling AlterarParcialUsingPATCH: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarParcialUsingPATCH1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<TipoOperacaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3017,9 +3017,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{tipo_operacao_resource_alterar_param_id}}}</param>
         /// <param name="tipoOperacaoParcialUpdate">tipoOperacaoParcialUpdate</param>
         /// <returns>Task of TipoOperacaoResponse</returns>
-        public async System.Threading.Tasks.Task<TipoOperacaoResponse> AlterarParcialUsingPATCHAsync (long? id, TipoOperacaoParcialUpdate tipoOperacaoParcialUpdate)
+        public async System.Threading.Tasks.Task<TipoOperacaoResponse> AlterarParcialUsingPATCH1Async (long? id, TipoOperacaoParcialUpdate tipoOperacaoParcialUpdate)
         {
-             ApiResponse<TipoOperacaoResponse> localVarResponse = await AlterarParcialUsingPATCHAsyncWithHttpInfo(id, tipoOperacaoParcialUpdate);
+             ApiResponse<TipoOperacaoResponse> localVarResponse = await AlterarParcialUsingPATCH1AsyncWithHttpInfo(id, tipoOperacaoParcialUpdate);
              return localVarResponse.Data;
 
         }
@@ -3031,12 +3031,12 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{tipo_operacao_resource_alterar_param_id}}}</param>
         /// <param name="tipoOperacaoParcialUpdate">tipoOperacaoParcialUpdate</param>
         /// <returns>Task of ApiResponse (TipoOperacaoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TipoOperacaoResponse>> AlterarParcialUsingPATCHAsyncWithHttpInfo (long? id, TipoOperacaoParcialUpdate tipoOperacaoParcialUpdate)
+        public async System.Threading.Tasks.Task<ApiResponse<TipoOperacaoResponse>> AlterarParcialUsingPATCH1AsyncWithHttpInfo (long? id, TipoOperacaoParcialUpdate tipoOperacaoParcialUpdate)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AlterarParcialUsingPATCH");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AlterarParcialUsingPATCH1");
             // verify the required parameter 'tipoOperacaoParcialUpdate' is set
-            if (tipoOperacaoParcialUpdate == null) throw new ApiException(400, "Missing required parameter 'tipoOperacaoParcialUpdate' when calling AlterarParcialUsingPATCH");
+            if (tipoOperacaoParcialUpdate == null) throw new ApiException(400, "Missing required parameter 'tipoOperacaoParcialUpdate' when calling AlterarParcialUsingPATCH1");
             
     
             var localVarPath = "/api/tipos-operacoes/{id}";
@@ -3089,9 +3089,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling AlterarParcialUsingPATCH: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarParcialUsingPATCH1: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling AlterarParcialUsingPATCH: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarParcialUsingPATCH1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<TipoOperacaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

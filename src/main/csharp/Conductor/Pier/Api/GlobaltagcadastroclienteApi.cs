@@ -200,8 +200,9 @@ namespace Conductor.Pier.Api
         /// <param name="pais">{{{endereco_persist_pais_value}}} (optional)</param>
         /// <param name="tempoResidenciaAnos">{{{endereco_persist_tempo_residencia_anos_value}}} (optional)</param>
         /// <param name="tempoResidenciaMeses">{{{endereco_persist_tempo_residencia_meses_value}}} (optional)</param>
+        /// <param name="aplicativoAlteracao">{{{endereco_persist_aplicativo_alteracao_value}}} (optional)</param>
         /// <returns>EnderecoResponse</returns>
-        EnderecoResponse AlterarUsingPUT6 (long? id, long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null);
+        EnderecoResponse AlterarUsingPUT6 (long? id, long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null, string aplicativoAlteracao = null);
   
         /// <summary>
         /// {{{endereco_resource_alterar}}}
@@ -224,8 +225,9 @@ namespace Conductor.Pier.Api
         /// <param name="pais">{{{endereco_persist_pais_value}}} (optional)</param>
         /// <param name="tempoResidenciaAnos">{{{endereco_persist_tempo_residencia_anos_value}}} (optional)</param>
         /// <param name="tempoResidenciaMeses">{{{endereco_persist_tempo_residencia_meses_value}}} (optional)</param>
+        /// <param name="aplicativoAlteracao">{{{endereco_persist_aplicativo_alteracao_value}}} (optional)</param>
         /// <returns>ApiResponse of EnderecoResponse</returns>
-        ApiResponse<EnderecoResponse> AlterarUsingPUT6WithHttpInfo (long? id, long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null);
+        ApiResponse<EnderecoResponse> AlterarUsingPUT6WithHttpInfo (long? id, long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null, string aplicativoAlteracao = null);
         
         /// <summary>
         /// {{{conta_pessoa_resource_atribuir_assinatura_cliente}}}
@@ -907,8 +909,9 @@ namespace Conductor.Pier.Api
         /// <param name="pais">{{{endereco_persist_pais_value}}} (optional)</param>
         /// <param name="tempoResidenciaAnos">{{{endereco_persist_tempo_residencia_anos_value}}} (optional)</param>
         /// <param name="tempoResidenciaMeses">{{{endereco_persist_tempo_residencia_meses_value}}} (optional)</param>
+        /// <param name="aplicativoAlteracao">{{{endereco_persist_aplicativo_alteracao_value}}} (optional)</param>
         /// <returns>EnderecoResponse</returns>
-        EnderecoResponse SalvarUsingPOST14 (long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null);
+        EnderecoResponse SalvarUsingPOST14 (long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null, string aplicativoAlteracao = null);
   
         /// <summary>
         /// {{{endereco_resource_salvar}}}
@@ -930,8 +933,9 @@ namespace Conductor.Pier.Api
         /// <param name="pais">{{{endereco_persist_pais_value}}} (optional)</param>
         /// <param name="tempoResidenciaAnos">{{{endereco_persist_tempo_residencia_anos_value}}} (optional)</param>
         /// <param name="tempoResidenciaMeses">{{{endereco_persist_tempo_residencia_meses_value}}} (optional)</param>
+        /// <param name="aplicativoAlteracao">{{{endereco_persist_aplicativo_alteracao_value}}} (optional)</param>
         /// <returns>ApiResponse of EnderecoResponse</returns>
-        ApiResponse<EnderecoResponse> SalvarUsingPOST14WithHttpInfo (long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null);
+        ApiResponse<EnderecoResponse> SalvarUsingPOST14WithHttpInfo (long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null, string aplicativoAlteracao = null);
         
         /// <summary>
         /// {{{integracao_emissor_resource_salvar}}}
@@ -1278,8 +1282,9 @@ namespace Conductor.Pier.Api
         /// <param name="pais">{{{endereco_persist_pais_value}}} (optional)</param>
         /// <param name="tempoResidenciaAnos">{{{endereco_persist_tempo_residencia_anos_value}}} (optional)</param>
         /// <param name="tempoResidenciaMeses">{{{endereco_persist_tempo_residencia_meses_value}}} (optional)</param>
+        /// <param name="aplicativoAlteracao">{{{endereco_persist_aplicativo_alteracao_value}}} (optional)</param>
         /// <returns>Task of EnderecoResponse</returns>
-        System.Threading.Tasks.Task<EnderecoResponse> AlterarUsingPUT6Async (long? id, long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null);
+        System.Threading.Tasks.Task<EnderecoResponse> AlterarUsingPUT6Async (long? id, long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null, string aplicativoAlteracao = null);
 
         /// <summary>
         /// {{{endereco_resource_alterar}}}
@@ -1302,8 +1307,9 @@ namespace Conductor.Pier.Api
         /// <param name="pais">{{{endereco_persist_pais_value}}} (optional)</param>
         /// <param name="tempoResidenciaAnos">{{{endereco_persist_tempo_residencia_anos_value}}} (optional)</param>
         /// <param name="tempoResidenciaMeses">{{{endereco_persist_tempo_residencia_meses_value}}} (optional)</param>
+        /// <param name="aplicativoAlteracao">{{{endereco_persist_aplicativo_alteracao_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (EnderecoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EnderecoResponse>> AlterarUsingPUT6AsyncWithHttpInfo (long? id, long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null);
+        System.Threading.Tasks.Task<ApiResponse<EnderecoResponse>> AlterarUsingPUT6AsyncWithHttpInfo (long? id, long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null, string aplicativoAlteracao = null);
         
         /// <summary>
         /// {{{conta_pessoa_resource_atribuir_assinatura_cliente}}}
@@ -1985,8 +1991,9 @@ namespace Conductor.Pier.Api
         /// <param name="pais">{{{endereco_persist_pais_value}}} (optional)</param>
         /// <param name="tempoResidenciaAnos">{{{endereco_persist_tempo_residencia_anos_value}}} (optional)</param>
         /// <param name="tempoResidenciaMeses">{{{endereco_persist_tempo_residencia_meses_value}}} (optional)</param>
+        /// <param name="aplicativoAlteracao">{{{endereco_persist_aplicativo_alteracao_value}}} (optional)</param>
         /// <returns>Task of EnderecoResponse</returns>
-        System.Threading.Tasks.Task<EnderecoResponse> SalvarUsingPOST14Async (long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null);
+        System.Threading.Tasks.Task<EnderecoResponse> SalvarUsingPOST14Async (long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null, string aplicativoAlteracao = null);
 
         /// <summary>
         /// {{{endereco_resource_salvar}}}
@@ -2008,8 +2015,9 @@ namespace Conductor.Pier.Api
         /// <param name="pais">{{{endereco_persist_pais_value}}} (optional)</param>
         /// <param name="tempoResidenciaAnos">{{{endereco_persist_tempo_residencia_anos_value}}} (optional)</param>
         /// <param name="tempoResidenciaMeses">{{{endereco_persist_tempo_residencia_meses_value}}} (optional)</param>
+        /// <param name="aplicativoAlteracao">{{{endereco_persist_aplicativo_alteracao_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (EnderecoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EnderecoResponse>> SalvarUsingPOST14AsyncWithHttpInfo (long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null);
+        System.Threading.Tasks.Task<ApiResponse<EnderecoResponse>> SalvarUsingPOST14AsyncWithHttpInfo (long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null, string aplicativoAlteracao = null);
         
         /// <summary>
         /// {{{integracao_emissor_resource_salvar}}}
@@ -3175,10 +3183,11 @@ namespace Conductor.Pier.Api
         /// <param name="pais">{{{endereco_persist_pais_value}}} (optional)</param> 
         /// <param name="tempoResidenciaAnos">{{{endereco_persist_tempo_residencia_anos_value}}} (optional)</param> 
         /// <param name="tempoResidenciaMeses">{{{endereco_persist_tempo_residencia_meses_value}}} (optional)</param> 
+        /// <param name="aplicativoAlteracao">{{{endereco_persist_aplicativo_alteracao_value}}} (optional)</param> 
         /// <returns>EnderecoResponse</returns>
-        public EnderecoResponse AlterarUsingPUT6 (long? id, long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null)
+        public EnderecoResponse AlterarUsingPUT6 (long? id, long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null, string aplicativoAlteracao = null)
         {
-             ApiResponse<EnderecoResponse> localVarResponse = AlterarUsingPUT6WithHttpInfo(id, idPessoa, idTipoEndereco, cep, logradouro, numero, complemento, pontoReferencia, bairro, cidade, uf, pais, tempoResidenciaAnos, tempoResidenciaMeses);
+             ApiResponse<EnderecoResponse> localVarResponse = AlterarUsingPUT6WithHttpInfo(id, idPessoa, idTipoEndereco, cep, logradouro, numero, complemento, pontoReferencia, bairro, cidade, uf, pais, tempoResidenciaAnos, tempoResidenciaMeses, aplicativoAlteracao);
              return localVarResponse.Data;
         }
 
@@ -3200,8 +3209,9 @@ namespace Conductor.Pier.Api
         /// <param name="pais">{{{endereco_persist_pais_value}}} (optional)</param> 
         /// <param name="tempoResidenciaAnos">{{{endereco_persist_tempo_residencia_anos_value}}} (optional)</param> 
         /// <param name="tempoResidenciaMeses">{{{endereco_persist_tempo_residencia_meses_value}}} (optional)</param> 
+        /// <param name="aplicativoAlteracao">{{{endereco_persist_aplicativo_alteracao_value}}} (optional)</param> 
         /// <returns>ApiResponse of EnderecoResponse</returns>
-        public ApiResponse< EnderecoResponse > AlterarUsingPUT6WithHttpInfo (long? id, long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null)
+        public ApiResponse< EnderecoResponse > AlterarUsingPUT6WithHttpInfo (long? id, long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null, string aplicativoAlteracao = null)
         {
             
             // verify the required parameter 'id' is set
@@ -3250,6 +3260,7 @@ namespace Conductor.Pier.Api
             if (pais != null) localVarQueryParams.Add("pais", Configuration.ApiClient.ParameterToString(pais)); // query parameter
             if (tempoResidenciaAnos != null) localVarQueryParams.Add("tempoResidenciaAnos", Configuration.ApiClient.ParameterToString(tempoResidenciaAnos)); // query parameter
             if (tempoResidenciaMeses != null) localVarQueryParams.Add("tempoResidenciaMeses", Configuration.ApiClient.ParameterToString(tempoResidenciaMeses)); // query parameter
+            if (aplicativoAlteracao != null) localVarQueryParams.Add("aplicativoAlteracao", Configuration.ApiClient.ParameterToString(aplicativoAlteracao)); // query parameter
             
             
             
@@ -3294,10 +3305,11 @@ namespace Conductor.Pier.Api
         /// <param name="pais">{{{endereco_persist_pais_value}}} (optional)</param>
         /// <param name="tempoResidenciaAnos">{{{endereco_persist_tempo_residencia_anos_value}}} (optional)</param>
         /// <param name="tempoResidenciaMeses">{{{endereco_persist_tempo_residencia_meses_value}}} (optional)</param>
+        /// <param name="aplicativoAlteracao">{{{endereco_persist_aplicativo_alteracao_value}}} (optional)</param>
         /// <returns>Task of EnderecoResponse</returns>
-        public async System.Threading.Tasks.Task<EnderecoResponse> AlterarUsingPUT6Async (long? id, long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null)
+        public async System.Threading.Tasks.Task<EnderecoResponse> AlterarUsingPUT6Async (long? id, long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null, string aplicativoAlteracao = null)
         {
-             ApiResponse<EnderecoResponse> localVarResponse = await AlterarUsingPUT6AsyncWithHttpInfo(id, idPessoa, idTipoEndereco, cep, logradouro, numero, complemento, pontoReferencia, bairro, cidade, uf, pais, tempoResidenciaAnos, tempoResidenciaMeses);
+             ApiResponse<EnderecoResponse> localVarResponse = await AlterarUsingPUT6AsyncWithHttpInfo(id, idPessoa, idTipoEndereco, cep, logradouro, numero, complemento, pontoReferencia, bairro, cidade, uf, pais, tempoResidenciaAnos, tempoResidenciaMeses, aplicativoAlteracao);
              return localVarResponse.Data;
 
         }
@@ -3320,8 +3332,9 @@ namespace Conductor.Pier.Api
         /// <param name="pais">{{{endereco_persist_pais_value}}} (optional)</param>
         /// <param name="tempoResidenciaAnos">{{{endereco_persist_tempo_residencia_anos_value}}} (optional)</param>
         /// <param name="tempoResidenciaMeses">{{{endereco_persist_tempo_residencia_meses_value}}} (optional)</param>
+        /// <param name="aplicativoAlteracao">{{{endereco_persist_aplicativo_alteracao_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (EnderecoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EnderecoResponse>> AlterarUsingPUT6AsyncWithHttpInfo (long? id, long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null)
+        public async System.Threading.Tasks.Task<ApiResponse<EnderecoResponse>> AlterarUsingPUT6AsyncWithHttpInfo (long? id, long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null, string aplicativoAlteracao = null)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AlterarUsingPUT6");
@@ -3368,6 +3381,7 @@ namespace Conductor.Pier.Api
             if (pais != null) localVarQueryParams.Add("pais", Configuration.ApiClient.ParameterToString(pais)); // query parameter
             if (tempoResidenciaAnos != null) localVarQueryParams.Add("tempoResidenciaAnos", Configuration.ApiClient.ParameterToString(tempoResidenciaAnos)); // query parameter
             if (tempoResidenciaMeses != null) localVarQueryParams.Add("tempoResidenciaMeses", Configuration.ApiClient.ParameterToString(tempoResidenciaMeses)); // query parameter
+            if (aplicativoAlteracao != null) localVarQueryParams.Add("aplicativoAlteracao", Configuration.ApiClient.ParameterToString(aplicativoAlteracao)); // query parameter
             
             
             
@@ -7620,10 +7634,11 @@ namespace Conductor.Pier.Api
         /// <param name="pais">{{{endereco_persist_pais_value}}} (optional)</param> 
         /// <param name="tempoResidenciaAnos">{{{endereco_persist_tempo_residencia_anos_value}}} (optional)</param> 
         /// <param name="tempoResidenciaMeses">{{{endereco_persist_tempo_residencia_meses_value}}} (optional)</param> 
+        /// <param name="aplicativoAlteracao">{{{endereco_persist_aplicativo_alteracao_value}}} (optional)</param> 
         /// <returns>EnderecoResponse</returns>
-        public EnderecoResponse SalvarUsingPOST14 (long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null)
+        public EnderecoResponse SalvarUsingPOST14 (long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null, string aplicativoAlteracao = null)
         {
-             ApiResponse<EnderecoResponse> localVarResponse = SalvarUsingPOST14WithHttpInfo(idPessoa, idTipoEndereco, cep, logradouro, numero, complemento, pontoReferencia, bairro, cidade, uf, pais, tempoResidenciaAnos, tempoResidenciaMeses);
+             ApiResponse<EnderecoResponse> localVarResponse = SalvarUsingPOST14WithHttpInfo(idPessoa, idTipoEndereco, cep, logradouro, numero, complemento, pontoReferencia, bairro, cidade, uf, pais, tempoResidenciaAnos, tempoResidenciaMeses, aplicativoAlteracao);
              return localVarResponse.Data;
         }
 
@@ -7644,8 +7659,9 @@ namespace Conductor.Pier.Api
         /// <param name="pais">{{{endereco_persist_pais_value}}} (optional)</param> 
         /// <param name="tempoResidenciaAnos">{{{endereco_persist_tempo_residencia_anos_value}}} (optional)</param> 
         /// <param name="tempoResidenciaMeses">{{{endereco_persist_tempo_residencia_meses_value}}} (optional)</param> 
+        /// <param name="aplicativoAlteracao">{{{endereco_persist_aplicativo_alteracao_value}}} (optional)</param> 
         /// <returns>ApiResponse of EnderecoResponse</returns>
-        public ApiResponse< EnderecoResponse > SalvarUsingPOST14WithHttpInfo (long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null)
+        public ApiResponse< EnderecoResponse > SalvarUsingPOST14WithHttpInfo (long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null, string aplicativoAlteracao = null)
         {
             
     
@@ -7689,6 +7705,7 @@ namespace Conductor.Pier.Api
             if (pais != null) localVarQueryParams.Add("pais", Configuration.ApiClient.ParameterToString(pais)); // query parameter
             if (tempoResidenciaAnos != null) localVarQueryParams.Add("tempoResidenciaAnos", Configuration.ApiClient.ParameterToString(tempoResidenciaAnos)); // query parameter
             if (tempoResidenciaMeses != null) localVarQueryParams.Add("tempoResidenciaMeses", Configuration.ApiClient.ParameterToString(tempoResidenciaMeses)); // query parameter
+            if (aplicativoAlteracao != null) localVarQueryParams.Add("aplicativoAlteracao", Configuration.ApiClient.ParameterToString(aplicativoAlteracao)); // query parameter
             
             
             
@@ -7732,10 +7749,11 @@ namespace Conductor.Pier.Api
         /// <param name="pais">{{{endereco_persist_pais_value}}} (optional)</param>
         /// <param name="tempoResidenciaAnos">{{{endereco_persist_tempo_residencia_anos_value}}} (optional)</param>
         /// <param name="tempoResidenciaMeses">{{{endereco_persist_tempo_residencia_meses_value}}} (optional)</param>
+        /// <param name="aplicativoAlteracao">{{{endereco_persist_aplicativo_alteracao_value}}} (optional)</param>
         /// <returns>Task of EnderecoResponse</returns>
-        public async System.Threading.Tasks.Task<EnderecoResponse> SalvarUsingPOST14Async (long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null)
+        public async System.Threading.Tasks.Task<EnderecoResponse> SalvarUsingPOST14Async (long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null, string aplicativoAlteracao = null)
         {
-             ApiResponse<EnderecoResponse> localVarResponse = await SalvarUsingPOST14AsyncWithHttpInfo(idPessoa, idTipoEndereco, cep, logradouro, numero, complemento, pontoReferencia, bairro, cidade, uf, pais, tempoResidenciaAnos, tempoResidenciaMeses);
+             ApiResponse<EnderecoResponse> localVarResponse = await SalvarUsingPOST14AsyncWithHttpInfo(idPessoa, idTipoEndereco, cep, logradouro, numero, complemento, pontoReferencia, bairro, cidade, uf, pais, tempoResidenciaAnos, tempoResidenciaMeses, aplicativoAlteracao);
              return localVarResponse.Data;
 
         }
@@ -7757,8 +7775,9 @@ namespace Conductor.Pier.Api
         /// <param name="pais">{{{endereco_persist_pais_value}}} (optional)</param>
         /// <param name="tempoResidenciaAnos">{{{endereco_persist_tempo_residencia_anos_value}}} (optional)</param>
         /// <param name="tempoResidenciaMeses">{{{endereco_persist_tempo_residencia_meses_value}}} (optional)</param>
+        /// <param name="aplicativoAlteracao">{{{endereco_persist_aplicativo_alteracao_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (EnderecoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EnderecoResponse>> SalvarUsingPOST14AsyncWithHttpInfo (long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null)
+        public async System.Threading.Tasks.Task<ApiResponse<EnderecoResponse>> SalvarUsingPOST14AsyncWithHttpInfo (long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null, string aplicativoAlteracao = null)
         {
             
     
@@ -7802,6 +7821,7 @@ namespace Conductor.Pier.Api
             if (pais != null) localVarQueryParams.Add("pais", Configuration.ApiClient.ParameterToString(pais)); // query parameter
             if (tempoResidenciaAnos != null) localVarQueryParams.Add("tempoResidenciaAnos", Configuration.ApiClient.ParameterToString(tempoResidenciaAnos)); // query parameter
             if (tempoResidenciaMeses != null) localVarQueryParams.Add("tempoResidenciaMeses", Configuration.ApiClient.ParameterToString(tempoResidenciaMeses)); // query parameter
+            if (aplicativoAlteracao != null) localVarQueryParams.Add("aplicativoAlteracao", Configuration.ApiClient.ParameterToString(aplicativoAlteracao)); // query parameter
             
             
             

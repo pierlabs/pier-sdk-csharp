@@ -356,6 +356,30 @@ namespace Conductor.Pier.Api
         ApiResponse<DividaClienteResponse> ConsultarDividaAtualizadaClienteUsingGETWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, long? idEscritorioCobranca = null);
         
         /// <summary>
+        /// {{{transacoes_correntes_resource_consultar_processada}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{transacoes_correntes_resource_consultar_processada_notes}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{transacoes_correntes_resource_consultar_processada_param_id}}}</param>
+        /// <param name="idTransacao">{{{transacoes_correntes_resource_consultar_processada_param_id_transacao}}}</param>
+        /// <returns>TransacoesCorrentesResponse</returns>
+        TransacoesCorrentesResponse ConsultarProcessadaUsingGET (long? id, long? idTransacao);
+  
+        /// <summary>
+        /// {{{transacoes_correntes_resource_consultar_processada}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{transacoes_correntes_resource_consultar_processada_notes}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{transacoes_correntes_resource_consultar_processada_param_id}}}</param>
+        /// <param name="idTransacao">{{{transacoes_correntes_resource_consultar_processada_param_id_transacao}}}</param>
+        /// <returns>ApiResponse of TransacoesCorrentesResponse</returns>
+        ApiResponse<TransacoesCorrentesResponse> ConsultarProcessadaUsingGETWithHttpInfo (long? id, long? idTransacao);
+        
+        /// <summary>
         /// {{{conta_resource_consultar_taxas_tarifas}}}
         /// </summary>
         /// <remarks>
@@ -1436,6 +1460,30 @@ namespace Conductor.Pier.Api
         /// <param name="idEscritorioCobranca">{{{divida_cliente_request_id_escritorio_cobranca_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (DividaClienteResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<DividaClienteResponse>> ConsultarDividaAtualizadaClienteUsingGETAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, long? idEscritorioCobranca = null);
+        
+        /// <summary>
+        /// {{{transacoes_correntes_resource_consultar_processada}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{transacoes_correntes_resource_consultar_processada_notes}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{transacoes_correntes_resource_consultar_processada_param_id}}}</param>
+        /// <param name="idTransacao">{{{transacoes_correntes_resource_consultar_processada_param_id_transacao}}}</param>
+        /// <returns>Task of TransacoesCorrentesResponse</returns>
+        System.Threading.Tasks.Task<TransacoesCorrentesResponse> ConsultarProcessadaUsingGETAsync (long? id, long? idTransacao);
+
+        /// <summary>
+        /// {{{transacoes_correntes_resource_consultar_processada}}}
+        /// </summary>
+        /// <remarks>
+        /// {{{transacoes_correntes_resource_consultar_processada_notes}}}
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{transacoes_correntes_resource_consultar_processada_param_id}}}</param>
+        /// <param name="idTransacao">{{{transacoes_correntes_resource_consultar_processada_param_id_transacao}}}</param>
+        /// <returns>Task of ApiResponse (TransacoesCorrentesResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TransacoesCorrentesResponse>> ConsultarProcessadaUsingGETAsyncWithHttpInfo (long? id, long? idTransacao);
         
         /// <summary>
         /// {{{conta_resource_consultar_taxas_tarifas}}}
@@ -4560,6 +4608,176 @@ namespace Conductor.Pier.Api
             return new ApiResponse<DividaClienteResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (DividaClienteResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DividaClienteResponse)));
+            
+        }
+        
+        /// <summary>
+        /// {{{transacoes_correntes_resource_consultar_processada}}} {{{transacoes_correntes_resource_consultar_processada_notes}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{transacoes_correntes_resource_consultar_processada_param_id}}}</param> 
+        /// <param name="idTransacao">{{{transacoes_correntes_resource_consultar_processada_param_id_transacao}}}</param> 
+        /// <returns>TransacoesCorrentesResponse</returns>
+        public TransacoesCorrentesResponse ConsultarProcessadaUsingGET (long? id, long? idTransacao)
+        {
+             ApiResponse<TransacoesCorrentesResponse> localVarResponse = ConsultarProcessadaUsingGETWithHttpInfo(id, idTransacao);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// {{{transacoes_correntes_resource_consultar_processada}}} {{{transacoes_correntes_resource_consultar_processada_notes}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{transacoes_correntes_resource_consultar_processada_param_id}}}</param> 
+        /// <param name="idTransacao">{{{transacoes_correntes_resource_consultar_processada_param_id_transacao}}}</param> 
+        /// <returns>ApiResponse of TransacoesCorrentesResponse</returns>
+        public ApiResponse< TransacoesCorrentesResponse > ConsultarProcessadaUsingGETWithHttpInfo (long? id, long? idTransacao)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagcontaApi->ConsultarProcessadaUsingGET");
+            
+            // verify the required parameter 'idTransacao' is set
+            if (idTransacao == null)
+                throw new ApiException(400, "Missing required parameter 'idTransacao' when calling GlobaltagcontaApi->ConsultarProcessadaUsingGET");
+            
+    
+            var localVarPath = "/api/contas/{id}/transacoes-processadas/{idTransacao}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (idTransacao != null) localVarPathParams.Add("idTransacao", Configuration.ApiClient.ParameterToString(idTransacao)); // path parameter
+            
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarProcessadaUsingGET: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarProcessadaUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<TransacoesCorrentesResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (TransacoesCorrentesResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TransacoesCorrentesResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// {{{transacoes_correntes_resource_consultar_processada}}} {{{transacoes_correntes_resource_consultar_processada_notes}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{transacoes_correntes_resource_consultar_processada_param_id}}}</param>
+        /// <param name="idTransacao">{{{transacoes_correntes_resource_consultar_processada_param_id_transacao}}}</param>
+        /// <returns>Task of TransacoesCorrentesResponse</returns>
+        public async System.Threading.Tasks.Task<TransacoesCorrentesResponse> ConsultarProcessadaUsingGETAsync (long? id, long? idTransacao)
+        {
+             ApiResponse<TransacoesCorrentesResponse> localVarResponse = await ConsultarProcessadaUsingGETAsyncWithHttpInfo(id, idTransacao);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// {{{transacoes_correntes_resource_consultar_processada}}} {{{transacoes_correntes_resource_consultar_processada_notes}}}
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">{{{transacoes_correntes_resource_consultar_processada_param_id}}}</param>
+        /// <param name="idTransacao">{{{transacoes_correntes_resource_consultar_processada_param_id_transacao}}}</param>
+        /// <returns>Task of ApiResponse (TransacoesCorrentesResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<TransacoesCorrentesResponse>> ConsultarProcessadaUsingGETAsyncWithHttpInfo (long? id, long? idTransacao)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarProcessadaUsingGET");
+            // verify the required parameter 'idTransacao' is set
+            if (idTransacao == null) throw new ApiException(400, "Missing required parameter 'idTransacao' when calling ConsultarProcessadaUsingGET");
+            
+    
+            var localVarPath = "/api/contas/{id}/transacoes-processadas/{idTransacao}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (idTransacao != null) localVarPathParams.Add("idTransacao", Configuration.ApiClient.ParameterToString(idTransacao)); // path parameter
+            
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarProcessadaUsingGET: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarProcessadaUsingGET: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TransacoesCorrentesResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (TransacoesCorrentesResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TransacoesCorrentesResponse)));
             
         }
         
