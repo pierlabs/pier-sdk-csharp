@@ -424,7 +424,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{pessoa_detalhe_resource_consultar_param_id}}}</param>
         /// <returns>PessoaDetalheResponse</returns>
-        PessoaDetalheResponse ConsultarUsingGET28 (long? id);
+        PessoaDetalheResponse ConsultarUsingGET29 (long? id);
   
         /// <summary>
         /// {{{pessoa_detalhe_resource_consultar}}}
@@ -435,7 +435,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{pessoa_detalhe_resource_consultar_param_id}}}</param>
         /// <returns>ApiResponse of PessoaDetalheResponse</returns>
-        ApiResponse<PessoaDetalheResponse> ConsultarUsingGET28WithHttpInfo (long? id);
+        ApiResponse<PessoaDetalheResponse> ConsultarUsingGET29WithHttpInfo (long? id);
         
         /// <summary>
         /// {{{pessoa_resource_consultar}}}
@@ -446,7 +446,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{pessoa_resource_consultar_param_id}}}</param>
         /// <returns>PessoaResponse</returns>
-        PessoaResponse ConsultarUsingGET29 (long? id);
+        PessoaResponse ConsultarUsingGET30 (long? id);
   
         /// <summary>
         /// {{{pessoa_resource_consultar}}}
@@ -457,7 +457,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{pessoa_resource_consultar_param_id}}}</param>
         /// <returns>ApiResponse of PessoaResponse</returns>
-        ApiResponse<PessoaResponse> ConsultarUsingGET29WithHttpInfo (long? id);
+        ApiResponse<PessoaResponse> ConsultarUsingGET30WithHttpInfo (long? id);
         
         /// <summary>
         /// {{{telefone_resource_consultar}}}
@@ -468,7 +468,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{telefone_resource_consultar_param_id}}}</param>
         /// <returns>TelefoneResponse</returns>
-        TelefoneResponse ConsultarUsingGET37 (long? id);
+        TelefoneResponse ConsultarUsingGET38 (long? id);
   
         /// <summary>
         /// {{{telefone_resource_consultar}}}
@@ -479,7 +479,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{telefone_resource_consultar_param_id}}}</param>
         /// <returns>ApiResponse of TelefoneResponse</returns>
-        ApiResponse<TelefoneResponse> ConsultarUsingGET37WithHttpInfo (long? id);
+        ApiResponse<TelefoneResponse> ConsultarUsingGET38WithHttpInfo (long? id);
         
         /// <summary>
         /// {{{adicional_resource_inativar}}}
@@ -698,7 +698,7 @@ namespace Conductor.Pier.Api
         /// <param name="chequeEspecial">{{{pessoa_detalhe_request_cheque_Especial_value}}} (optional)</param>
         /// <param name="impedidoFinanciamento">{{{pessoa_detalhe_request_impedido_de_financiamento_value}}} (optional)</param>
         /// <returns>PagePessoaDetalheResponse</returns>
-        PagePessoaDetalheResponse ListarUsingGET32 (List<string> sort = null, int? page = null, int? limit = null, long? idPessoa = null, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null);
+        PagePessoaDetalheResponse ListarUsingGET33 (List<string> sort = null, int? page = null, int? limit = null, long? idPessoa = null, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null);
   
         /// <summary>
         /// {{{pessoa_detalhe_resource_listar}}}
@@ -729,7 +729,7 @@ namespace Conductor.Pier.Api
         /// <param name="chequeEspecial">{{{pessoa_detalhe_request_cheque_Especial_value}}} (optional)</param>
         /// <param name="impedidoFinanciamento">{{{pessoa_detalhe_request_impedido_de_financiamento_value}}} (optional)</param>
         /// <returns>ApiResponse of PagePessoaDetalheResponse</returns>
-        ApiResponse<PagePessoaDetalheResponse> ListarUsingGET32WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idPessoa = null, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null);
+        ApiResponse<PagePessoaDetalheResponse> ListarUsingGET33WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idPessoa = null, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null);
         
         /// <summary>
         /// {{{pessoa_resource_listar}}}
@@ -753,7 +753,7 @@ namespace Conductor.Pier.Api
         /// <param name="unidadeFederativaIdentidade">{{{pessoa_request_unidade_federativa_identidade_value}}} (optional)</param>
         /// <param name="dataEmissaoIdentidade">{{{pessoa_request_data_emissao_identidade_value}}} (optional)</param>
         /// <returns>PagePessoaResponse</returns>
-        PagePessoaResponse ListarUsingGET33 (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, string tipo = null, string cpf = null, string cnpj = null, string dataNascimento = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null);
+        PagePessoaResponse ListarUsingGET34 (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, string tipo = null, string cpf = null, string cnpj = null, string dataNascimento = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null);
   
         /// <summary>
         /// {{{pessoa_resource_listar}}}
@@ -777,7 +777,7 @@ namespace Conductor.Pier.Api
         /// <param name="unidadeFederativaIdentidade">{{{pessoa_request_unidade_federativa_identidade_value}}} (optional)</param>
         /// <param name="dataEmissaoIdentidade">{{{pessoa_request_data_emissao_identidade_value}}} (optional)</param>
         /// <returns>ApiResponse of PagePessoaResponse</returns>
-        ApiResponse<PagePessoaResponse> ListarUsingGET33WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, string tipo = null, string cpf = null, string cnpj = null, string dataNascimento = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null);
+        ApiResponse<PagePessoaResponse> ListarUsingGET34WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, string tipo = null, string cpf = null, string cnpj = null, string dataNascimento = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null);
         
         /// <summary>
         /// {{{telefone_resource_listar}}}
@@ -797,7 +797,7 @@ namespace Conductor.Pier.Api
         /// <param name="ramal">{{{telefone_request_ramal_value}}} (optional)</param>
         /// <param name="status">{{{telefone_request_status_value}}} (optional)</param>
         /// <returns>PageTelefoneResponse</returns>
-        PageTelefoneResponse ListarUsingGET46 (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idTipoTelefone = null, long? idPessoa = null, string ddd = null, string telefone = null, string ramal = null, int? status = null);
+        PageTelefoneResponse ListarUsingGET47 (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idTipoTelefone = null, long? idPessoa = null, string ddd = null, string telefone = null, string ramal = null, int? status = null);
   
         /// <summary>
         /// {{{telefone_resource_listar}}}
@@ -817,7 +817,7 @@ namespace Conductor.Pier.Api
         /// <param name="ramal">{{{telefone_request_ramal_value}}} (optional)</param>
         /// <param name="status">{{{telefone_request_status_value}}} (optional)</param>
         /// <returns>ApiResponse of PageTelefoneResponse</returns>
-        ApiResponse<PageTelefoneResponse> ListarUsingGET46WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idTipoTelefone = null, long? idPessoa = null, string ddd = null, string telefone = null, string ramal = null, int? status = null);
+        ApiResponse<PageTelefoneResponse> ListarUsingGET47WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idTipoTelefone = null, long? idPessoa = null, string ddd = null, string telefone = null, string ramal = null, int? status = null);
         
         /// <summary>
         /// {{{conta_pessoa_resource_salvar_pessoa_fisica_aprovada}}}
@@ -1502,7 +1502,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{pessoa_detalhe_resource_consultar_param_id}}}</param>
         /// <returns>Task of PessoaDetalheResponse</returns>
-        System.Threading.Tasks.Task<PessoaDetalheResponse> ConsultarUsingGET28Async (long? id);
+        System.Threading.Tasks.Task<PessoaDetalheResponse> ConsultarUsingGET29Async (long? id);
 
         /// <summary>
         /// {{{pessoa_detalhe_resource_consultar}}}
@@ -1513,7 +1513,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{pessoa_detalhe_resource_consultar_param_id}}}</param>
         /// <returns>Task of ApiResponse (PessoaDetalheResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PessoaDetalheResponse>> ConsultarUsingGET28AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<PessoaDetalheResponse>> ConsultarUsingGET29AsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// {{{pessoa_resource_consultar}}}
@@ -1524,7 +1524,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{pessoa_resource_consultar_param_id}}}</param>
         /// <returns>Task of PessoaResponse</returns>
-        System.Threading.Tasks.Task<PessoaResponse> ConsultarUsingGET29Async (long? id);
+        System.Threading.Tasks.Task<PessoaResponse> ConsultarUsingGET30Async (long? id);
 
         /// <summary>
         /// {{{pessoa_resource_consultar}}}
@@ -1535,7 +1535,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{pessoa_resource_consultar_param_id}}}</param>
         /// <returns>Task of ApiResponse (PessoaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PessoaResponse>> ConsultarUsingGET29AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<PessoaResponse>> ConsultarUsingGET30AsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// {{{telefone_resource_consultar}}}
@@ -1546,7 +1546,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{telefone_resource_consultar_param_id}}}</param>
         /// <returns>Task of TelefoneResponse</returns>
-        System.Threading.Tasks.Task<TelefoneResponse> ConsultarUsingGET37Async (long? id);
+        System.Threading.Tasks.Task<TelefoneResponse> ConsultarUsingGET38Async (long? id);
 
         /// <summary>
         /// {{{telefone_resource_consultar}}}
@@ -1557,7 +1557,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{telefone_resource_consultar_param_id}}}</param>
         /// <returns>Task of ApiResponse (TelefoneResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TelefoneResponse>> ConsultarUsingGET37AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<TelefoneResponse>> ConsultarUsingGET38AsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// {{{adicional_resource_inativar}}}
@@ -1776,7 +1776,7 @@ namespace Conductor.Pier.Api
         /// <param name="chequeEspecial">{{{pessoa_detalhe_request_cheque_Especial_value}}} (optional)</param>
         /// <param name="impedidoFinanciamento">{{{pessoa_detalhe_request_impedido_de_financiamento_value}}} (optional)</param>
         /// <returns>Task of PagePessoaDetalheResponse</returns>
-        System.Threading.Tasks.Task<PagePessoaDetalheResponse> ListarUsingGET32Async (List<string> sort = null, int? page = null, int? limit = null, long? idPessoa = null, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null);
+        System.Threading.Tasks.Task<PagePessoaDetalheResponse> ListarUsingGET33Async (List<string> sort = null, int? page = null, int? limit = null, long? idPessoa = null, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null);
 
         /// <summary>
         /// {{{pessoa_detalhe_resource_listar}}}
@@ -1807,7 +1807,7 @@ namespace Conductor.Pier.Api
         /// <param name="chequeEspecial">{{{pessoa_detalhe_request_cheque_Especial_value}}} (optional)</param>
         /// <param name="impedidoFinanciamento">{{{pessoa_detalhe_request_impedido_de_financiamento_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (PagePessoaDetalheResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PagePessoaDetalheResponse>> ListarUsingGET32AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idPessoa = null, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null);
+        System.Threading.Tasks.Task<ApiResponse<PagePessoaDetalheResponse>> ListarUsingGET33AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idPessoa = null, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null);
         
         /// <summary>
         /// {{{pessoa_resource_listar}}}
@@ -1831,7 +1831,7 @@ namespace Conductor.Pier.Api
         /// <param name="unidadeFederativaIdentidade">{{{pessoa_request_unidade_federativa_identidade_value}}} (optional)</param>
         /// <param name="dataEmissaoIdentidade">{{{pessoa_request_data_emissao_identidade_value}}} (optional)</param>
         /// <returns>Task of PagePessoaResponse</returns>
-        System.Threading.Tasks.Task<PagePessoaResponse> ListarUsingGET33Async (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, string tipo = null, string cpf = null, string cnpj = null, string dataNascimento = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null);
+        System.Threading.Tasks.Task<PagePessoaResponse> ListarUsingGET34Async (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, string tipo = null, string cpf = null, string cnpj = null, string dataNascimento = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null);
 
         /// <summary>
         /// {{{pessoa_resource_listar}}}
@@ -1855,7 +1855,7 @@ namespace Conductor.Pier.Api
         /// <param name="unidadeFederativaIdentidade">{{{pessoa_request_unidade_federativa_identidade_value}}} (optional)</param>
         /// <param name="dataEmissaoIdentidade">{{{pessoa_request_data_emissao_identidade_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (PagePessoaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PagePessoaResponse>> ListarUsingGET33AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, string tipo = null, string cpf = null, string cnpj = null, string dataNascimento = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null);
+        System.Threading.Tasks.Task<ApiResponse<PagePessoaResponse>> ListarUsingGET34AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, string tipo = null, string cpf = null, string cnpj = null, string dataNascimento = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null);
         
         /// <summary>
         /// {{{telefone_resource_listar}}}
@@ -1875,7 +1875,7 @@ namespace Conductor.Pier.Api
         /// <param name="ramal">{{{telefone_request_ramal_value}}} (optional)</param>
         /// <param name="status">{{{telefone_request_status_value}}} (optional)</param>
         /// <returns>Task of PageTelefoneResponse</returns>
-        System.Threading.Tasks.Task<PageTelefoneResponse> ListarUsingGET46Async (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idTipoTelefone = null, long? idPessoa = null, string ddd = null, string telefone = null, string ramal = null, int? status = null);
+        System.Threading.Tasks.Task<PageTelefoneResponse> ListarUsingGET47Async (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idTipoTelefone = null, long? idPessoa = null, string ddd = null, string telefone = null, string ramal = null, int? status = null);
 
         /// <summary>
         /// {{{telefone_resource_listar}}}
@@ -1895,7 +1895,7 @@ namespace Conductor.Pier.Api
         /// <param name="ramal">{{{telefone_request_ramal_value}}} (optional)</param>
         /// <param name="status">{{{telefone_request_status_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageTelefoneResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageTelefoneResponse>> ListarUsingGET46AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idTipoTelefone = null, long? idPessoa = null, string ddd = null, string telefone = null, string ramal = null, int? status = null);
+        System.Threading.Tasks.Task<ApiResponse<PageTelefoneResponse>> ListarUsingGET47AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idTipoTelefone = null, long? idPessoa = null, string ddd = null, string telefone = null, string ramal = null, int? status = null);
         
         /// <summary>
         /// {{{conta_pessoa_resource_salvar_pessoa_fisica_aprovada}}}
@@ -4789,9 +4789,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{pessoa_detalhe_resource_consultar_param_id}}}</param> 
         /// <returns>PessoaDetalheResponse</returns>
-        public PessoaDetalheResponse ConsultarUsingGET28 (long? id)
+        public PessoaDetalheResponse ConsultarUsingGET29 (long? id)
         {
-             ApiResponse<PessoaDetalheResponse> localVarResponse = ConsultarUsingGET28WithHttpInfo(id);
+             ApiResponse<PessoaDetalheResponse> localVarResponse = ConsultarUsingGET29WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -4801,12 +4801,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{pessoa_detalhe_resource_consultar_param_id}}}</param> 
         /// <returns>ApiResponse of PessoaDetalheResponse</returns>
-        public ApiResponse< PessoaDetalheResponse > ConsultarUsingGET28WithHttpInfo (long? id)
+        public ApiResponse< PessoaDetalheResponse > ConsultarUsingGET29WithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagcadastroclienteApi->ConsultarUsingGET28");
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagcadastroclienteApi->ConsultarUsingGET29");
             
     
             var localVarPath = "/api/pessoas-detalhes/{id}";
@@ -4852,9 +4852,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET28: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET29: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET28: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET29: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PessoaDetalheResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4869,9 +4869,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{pessoa_detalhe_resource_consultar_param_id}}}</param>
         /// <returns>Task of PessoaDetalheResponse</returns>
-        public async System.Threading.Tasks.Task<PessoaDetalheResponse> ConsultarUsingGET28Async (long? id)
+        public async System.Threading.Tasks.Task<PessoaDetalheResponse> ConsultarUsingGET29Async (long? id)
         {
-             ApiResponse<PessoaDetalheResponse> localVarResponse = await ConsultarUsingGET28AsyncWithHttpInfo(id);
+             ApiResponse<PessoaDetalheResponse> localVarResponse = await ConsultarUsingGET29AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -4882,10 +4882,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{pessoa_detalhe_resource_consultar_param_id}}}</param>
         /// <returns>Task of ApiResponse (PessoaDetalheResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PessoaDetalheResponse>> ConsultarUsingGET28AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<PessoaDetalheResponse>> ConsultarUsingGET29AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET28");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET29");
             
     
             var localVarPath = "/api/pessoas-detalhes/{id}";
@@ -4931,9 +4931,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET28: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET29: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET28: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET29: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PessoaDetalheResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4947,9 +4947,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{pessoa_resource_consultar_param_id}}}</param> 
         /// <returns>PessoaResponse</returns>
-        public PessoaResponse ConsultarUsingGET29 (long? id)
+        public PessoaResponse ConsultarUsingGET30 (long? id)
         {
-             ApiResponse<PessoaResponse> localVarResponse = ConsultarUsingGET29WithHttpInfo(id);
+             ApiResponse<PessoaResponse> localVarResponse = ConsultarUsingGET30WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -4959,12 +4959,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{pessoa_resource_consultar_param_id}}}</param> 
         /// <returns>ApiResponse of PessoaResponse</returns>
-        public ApiResponse< PessoaResponse > ConsultarUsingGET29WithHttpInfo (long? id)
+        public ApiResponse< PessoaResponse > ConsultarUsingGET30WithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagcadastroclienteApi->ConsultarUsingGET29");
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagcadastroclienteApi->ConsultarUsingGET30");
             
     
             var localVarPath = "/api/pessoas/{id}";
@@ -5010,9 +5010,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET29: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET30: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET29: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET30: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PessoaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5027,9 +5027,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{pessoa_resource_consultar_param_id}}}</param>
         /// <returns>Task of PessoaResponse</returns>
-        public async System.Threading.Tasks.Task<PessoaResponse> ConsultarUsingGET29Async (long? id)
+        public async System.Threading.Tasks.Task<PessoaResponse> ConsultarUsingGET30Async (long? id)
         {
-             ApiResponse<PessoaResponse> localVarResponse = await ConsultarUsingGET29AsyncWithHttpInfo(id);
+             ApiResponse<PessoaResponse> localVarResponse = await ConsultarUsingGET30AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -5040,10 +5040,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{pessoa_resource_consultar_param_id}}}</param>
         /// <returns>Task of ApiResponse (PessoaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PessoaResponse>> ConsultarUsingGET29AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<PessoaResponse>> ConsultarUsingGET30AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET29");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET30");
             
     
             var localVarPath = "/api/pessoas/{id}";
@@ -5089,9 +5089,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET29: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET30: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET29: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET30: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PessoaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5105,9 +5105,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{telefone_resource_consultar_param_id}}}</param> 
         /// <returns>TelefoneResponse</returns>
-        public TelefoneResponse ConsultarUsingGET37 (long? id)
+        public TelefoneResponse ConsultarUsingGET38 (long? id)
         {
-             ApiResponse<TelefoneResponse> localVarResponse = ConsultarUsingGET37WithHttpInfo(id);
+             ApiResponse<TelefoneResponse> localVarResponse = ConsultarUsingGET38WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -5117,12 +5117,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{telefone_resource_consultar_param_id}}}</param> 
         /// <returns>ApiResponse of TelefoneResponse</returns>
-        public ApiResponse< TelefoneResponse > ConsultarUsingGET37WithHttpInfo (long? id)
+        public ApiResponse< TelefoneResponse > ConsultarUsingGET38WithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagcadastroclienteApi->ConsultarUsingGET37");
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagcadastroclienteApi->ConsultarUsingGET38");
             
     
             var localVarPath = "/api/telefones/{id}";
@@ -5168,9 +5168,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET37: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET38: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET37: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET38: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<TelefoneResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5185,9 +5185,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{telefone_resource_consultar_param_id}}}</param>
         /// <returns>Task of TelefoneResponse</returns>
-        public async System.Threading.Tasks.Task<TelefoneResponse> ConsultarUsingGET37Async (long? id)
+        public async System.Threading.Tasks.Task<TelefoneResponse> ConsultarUsingGET38Async (long? id)
         {
-             ApiResponse<TelefoneResponse> localVarResponse = await ConsultarUsingGET37AsyncWithHttpInfo(id);
+             ApiResponse<TelefoneResponse> localVarResponse = await ConsultarUsingGET38AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -5198,10 +5198,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{telefone_resource_consultar_param_id}}}</param>
         /// <returns>Task of ApiResponse (TelefoneResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TelefoneResponse>> ConsultarUsingGET37AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<TelefoneResponse>> ConsultarUsingGET38AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET37");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET38");
             
     
             var localVarPath = "/api/telefones/{id}";
@@ -5247,9 +5247,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET37: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET38: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET37: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET38: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<TelefoneResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6399,9 +6399,9 @@ namespace Conductor.Pier.Api
         /// <param name="chequeEspecial">{{{pessoa_detalhe_request_cheque_Especial_value}}} (optional)</param> 
         /// <param name="impedidoFinanciamento">{{{pessoa_detalhe_request_impedido_de_financiamento_value}}} (optional)</param> 
         /// <returns>PagePessoaDetalheResponse</returns>
-        public PagePessoaDetalheResponse ListarUsingGET32 (List<string> sort = null, int? page = null, int? limit = null, long? idPessoa = null, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null)
+        public PagePessoaDetalheResponse ListarUsingGET33 (List<string> sort = null, int? page = null, int? limit = null, long? idPessoa = null, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null)
         {
-             ApiResponse<PagePessoaDetalheResponse> localVarResponse = ListarUsingGET32WithHttpInfo(sort, page, limit, idPessoa, nomeMae, idEstadoCivil, idProfissao, idNaturezaOcupacao, idNacionalidade, numeroBanco, numeroAgencia, numeroContaCorrente, email, nomeEmpresa, naturalidadeCidade, naturalidadeEstado, grauInstrucao, numeroDependentes, nomePai, chequeEspecial, impedidoFinanciamento);
+             ApiResponse<PagePessoaDetalheResponse> localVarResponse = ListarUsingGET33WithHttpInfo(sort, page, limit, idPessoa, nomeMae, idEstadoCivil, idProfissao, idNaturezaOcupacao, idNacionalidade, numeroBanco, numeroAgencia, numeroContaCorrente, email, nomeEmpresa, naturalidadeCidade, naturalidadeEstado, grauInstrucao, numeroDependentes, nomePai, chequeEspecial, impedidoFinanciamento);
              return localVarResponse.Data;
         }
 
@@ -6431,7 +6431,7 @@ namespace Conductor.Pier.Api
         /// <param name="chequeEspecial">{{{pessoa_detalhe_request_cheque_Especial_value}}} (optional)</param> 
         /// <param name="impedidoFinanciamento">{{{pessoa_detalhe_request_impedido_de_financiamento_value}}} (optional)</param> 
         /// <returns>ApiResponse of PagePessoaDetalheResponse</returns>
-        public ApiResponse< PagePessoaDetalheResponse > ListarUsingGET32WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idPessoa = null, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null)
+        public ApiResponse< PagePessoaDetalheResponse > ListarUsingGET33WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idPessoa = null, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null)
         {
             
     
@@ -6498,9 +6498,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET32: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET33: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET32: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET33: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PagePessoaDetalheResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6535,9 +6535,9 @@ namespace Conductor.Pier.Api
         /// <param name="chequeEspecial">{{{pessoa_detalhe_request_cheque_Especial_value}}} (optional)</param>
         /// <param name="impedidoFinanciamento">{{{pessoa_detalhe_request_impedido_de_financiamento_value}}} (optional)</param>
         /// <returns>Task of PagePessoaDetalheResponse</returns>
-        public async System.Threading.Tasks.Task<PagePessoaDetalheResponse> ListarUsingGET32Async (List<string> sort = null, int? page = null, int? limit = null, long? idPessoa = null, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null)
+        public async System.Threading.Tasks.Task<PagePessoaDetalheResponse> ListarUsingGET33Async (List<string> sort = null, int? page = null, int? limit = null, long? idPessoa = null, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null)
         {
-             ApiResponse<PagePessoaDetalheResponse> localVarResponse = await ListarUsingGET32AsyncWithHttpInfo(sort, page, limit, idPessoa, nomeMae, idEstadoCivil, idProfissao, idNaturezaOcupacao, idNacionalidade, numeroBanco, numeroAgencia, numeroContaCorrente, email, nomeEmpresa, naturalidadeCidade, naturalidadeEstado, grauInstrucao, numeroDependentes, nomePai, chequeEspecial, impedidoFinanciamento);
+             ApiResponse<PagePessoaDetalheResponse> localVarResponse = await ListarUsingGET33AsyncWithHttpInfo(sort, page, limit, idPessoa, nomeMae, idEstadoCivil, idProfissao, idNaturezaOcupacao, idNacionalidade, numeroBanco, numeroAgencia, numeroContaCorrente, email, nomeEmpresa, naturalidadeCidade, naturalidadeEstado, grauInstrucao, numeroDependentes, nomePai, chequeEspecial, impedidoFinanciamento);
              return localVarResponse.Data;
 
         }
@@ -6568,7 +6568,7 @@ namespace Conductor.Pier.Api
         /// <param name="chequeEspecial">{{{pessoa_detalhe_request_cheque_Especial_value}}} (optional)</param>
         /// <param name="impedidoFinanciamento">{{{pessoa_detalhe_request_impedido_de_financiamento_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (PagePessoaDetalheResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PagePessoaDetalheResponse>> ListarUsingGET32AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idPessoa = null, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PagePessoaDetalheResponse>> ListarUsingGET33AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idPessoa = null, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null)
         {
             
     
@@ -6635,9 +6635,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET32: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET33: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET32: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET33: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PagePessoaDetalheResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6664,9 +6664,9 @@ namespace Conductor.Pier.Api
         /// <param name="unidadeFederativaIdentidade">{{{pessoa_request_unidade_federativa_identidade_value}}} (optional)</param> 
         /// <param name="dataEmissaoIdentidade">{{{pessoa_request_data_emissao_identidade_value}}} (optional)</param> 
         /// <returns>PagePessoaResponse</returns>
-        public PagePessoaResponse ListarUsingGET33 (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, string tipo = null, string cpf = null, string cnpj = null, string dataNascimento = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null)
+        public PagePessoaResponse ListarUsingGET34 (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, string tipo = null, string cpf = null, string cnpj = null, string dataNascimento = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null)
         {
-             ApiResponse<PagePessoaResponse> localVarResponse = ListarUsingGET33WithHttpInfo(sort, page, limit, id, nome, tipo, cpf, cnpj, dataNascimento, sexo, numeroIdentidade, orgaoExpedidorIdentidade, unidadeFederativaIdentidade, dataEmissaoIdentidade);
+             ApiResponse<PagePessoaResponse> localVarResponse = ListarUsingGET34WithHttpInfo(sort, page, limit, id, nome, tipo, cpf, cnpj, dataNascimento, sexo, numeroIdentidade, orgaoExpedidorIdentidade, unidadeFederativaIdentidade, dataEmissaoIdentidade);
              return localVarResponse.Data;
         }
 
@@ -6689,7 +6689,7 @@ namespace Conductor.Pier.Api
         /// <param name="unidadeFederativaIdentidade">{{{pessoa_request_unidade_federativa_identidade_value}}} (optional)</param> 
         /// <param name="dataEmissaoIdentidade">{{{pessoa_request_data_emissao_identidade_value}}} (optional)</param> 
         /// <returns>ApiResponse of PagePessoaResponse</returns>
-        public ApiResponse< PagePessoaResponse > ListarUsingGET33WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, string tipo = null, string cpf = null, string cnpj = null, string dataNascimento = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null)
+        public ApiResponse< PagePessoaResponse > ListarUsingGET34WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, string tipo = null, string cpf = null, string cnpj = null, string dataNascimento = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null)
         {
             
     
@@ -6749,9 +6749,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET33: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET34: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET33: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET34: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PagePessoaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6779,9 +6779,9 @@ namespace Conductor.Pier.Api
         /// <param name="unidadeFederativaIdentidade">{{{pessoa_request_unidade_federativa_identidade_value}}} (optional)</param>
         /// <param name="dataEmissaoIdentidade">{{{pessoa_request_data_emissao_identidade_value}}} (optional)</param>
         /// <returns>Task of PagePessoaResponse</returns>
-        public async System.Threading.Tasks.Task<PagePessoaResponse> ListarUsingGET33Async (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, string tipo = null, string cpf = null, string cnpj = null, string dataNascimento = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null)
+        public async System.Threading.Tasks.Task<PagePessoaResponse> ListarUsingGET34Async (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, string tipo = null, string cpf = null, string cnpj = null, string dataNascimento = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null)
         {
-             ApiResponse<PagePessoaResponse> localVarResponse = await ListarUsingGET33AsyncWithHttpInfo(sort, page, limit, id, nome, tipo, cpf, cnpj, dataNascimento, sexo, numeroIdentidade, orgaoExpedidorIdentidade, unidadeFederativaIdentidade, dataEmissaoIdentidade);
+             ApiResponse<PagePessoaResponse> localVarResponse = await ListarUsingGET34AsyncWithHttpInfo(sort, page, limit, id, nome, tipo, cpf, cnpj, dataNascimento, sexo, numeroIdentidade, orgaoExpedidorIdentidade, unidadeFederativaIdentidade, dataEmissaoIdentidade);
              return localVarResponse.Data;
 
         }
@@ -6805,7 +6805,7 @@ namespace Conductor.Pier.Api
         /// <param name="unidadeFederativaIdentidade">{{{pessoa_request_unidade_federativa_identidade_value}}} (optional)</param>
         /// <param name="dataEmissaoIdentidade">{{{pessoa_request_data_emissao_identidade_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (PagePessoaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PagePessoaResponse>> ListarUsingGET33AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, string tipo = null, string cpf = null, string cnpj = null, string dataNascimento = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PagePessoaResponse>> ListarUsingGET34AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, string tipo = null, string cpf = null, string cnpj = null, string dataNascimento = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null)
         {
             
     
@@ -6865,9 +6865,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET33: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET34: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET33: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET34: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PagePessoaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6890,9 +6890,9 @@ namespace Conductor.Pier.Api
         /// <param name="ramal">{{{telefone_request_ramal_value}}} (optional)</param> 
         /// <param name="status">{{{telefone_request_status_value}}} (optional)</param> 
         /// <returns>PageTelefoneResponse</returns>
-        public PageTelefoneResponse ListarUsingGET46 (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idTipoTelefone = null, long? idPessoa = null, string ddd = null, string telefone = null, string ramal = null, int? status = null)
+        public PageTelefoneResponse ListarUsingGET47 (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idTipoTelefone = null, long? idPessoa = null, string ddd = null, string telefone = null, string ramal = null, int? status = null)
         {
-             ApiResponse<PageTelefoneResponse> localVarResponse = ListarUsingGET46WithHttpInfo(sort, page, limit, id, idTipoTelefone, idPessoa, ddd, telefone, ramal, status);
+             ApiResponse<PageTelefoneResponse> localVarResponse = ListarUsingGET47WithHttpInfo(sort, page, limit, id, idTipoTelefone, idPessoa, ddd, telefone, ramal, status);
              return localVarResponse.Data;
         }
 
@@ -6911,7 +6911,7 @@ namespace Conductor.Pier.Api
         /// <param name="ramal">{{{telefone_request_ramal_value}}} (optional)</param> 
         /// <param name="status">{{{telefone_request_status_value}}} (optional)</param> 
         /// <returns>ApiResponse of PageTelefoneResponse</returns>
-        public ApiResponse< PageTelefoneResponse > ListarUsingGET46WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idTipoTelefone = null, long? idPessoa = null, string ddd = null, string telefone = null, string ramal = null, int? status = null)
+        public ApiResponse< PageTelefoneResponse > ListarUsingGET47WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idTipoTelefone = null, long? idPessoa = null, string ddd = null, string telefone = null, string ramal = null, int? status = null)
         {
             
     
@@ -6967,9 +6967,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET46: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET47: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET46: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET47: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageTelefoneResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6993,9 +6993,9 @@ namespace Conductor.Pier.Api
         /// <param name="ramal">{{{telefone_request_ramal_value}}} (optional)</param>
         /// <param name="status">{{{telefone_request_status_value}}} (optional)</param>
         /// <returns>Task of PageTelefoneResponse</returns>
-        public async System.Threading.Tasks.Task<PageTelefoneResponse> ListarUsingGET46Async (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idTipoTelefone = null, long? idPessoa = null, string ddd = null, string telefone = null, string ramal = null, int? status = null)
+        public async System.Threading.Tasks.Task<PageTelefoneResponse> ListarUsingGET47Async (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idTipoTelefone = null, long? idPessoa = null, string ddd = null, string telefone = null, string ramal = null, int? status = null)
         {
-             ApiResponse<PageTelefoneResponse> localVarResponse = await ListarUsingGET46AsyncWithHttpInfo(sort, page, limit, id, idTipoTelefone, idPessoa, ddd, telefone, ramal, status);
+             ApiResponse<PageTelefoneResponse> localVarResponse = await ListarUsingGET47AsyncWithHttpInfo(sort, page, limit, id, idTipoTelefone, idPessoa, ddd, telefone, ramal, status);
              return localVarResponse.Data;
 
         }
@@ -7015,7 +7015,7 @@ namespace Conductor.Pier.Api
         /// <param name="ramal">{{{telefone_request_ramal_value}}} (optional)</param>
         /// <param name="status">{{{telefone_request_status_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageTelefoneResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageTelefoneResponse>> ListarUsingGET46AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idTipoTelefone = null, long? idPessoa = null, string ddd = null, string telefone = null, string ramal = null, int? status = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageTelefoneResponse>> ListarUsingGET47AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idTipoTelefone = null, long? idPessoa = null, string ddd = null, string telefone = null, string ramal = null, int? status = null)
         {
             
     
@@ -7071,9 +7071,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET46: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET47: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET46: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET47: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageTelefoneResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

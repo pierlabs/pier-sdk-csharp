@@ -15,12 +15,12 @@ namespace Conductor.Pier.Model
     /// {{{adesao_pacote_tarifa_persistencia_descricao}}}
     /// </summary>
     [DataContract]
-    public partial class AdesaoPacoteTarifaPersistencia :  IEquatable<AdesaoPacoteTarifaPersistencia>
+    public partial class AdesaoPacoteTarifaPersist :  IEquatable<AdesaoPacoteTarifaPersist>
     { 
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="AdesaoPacoteTarifaPersistencia" /> class.
-        /// Initializes a new instance of the <see cref="AdesaoPacoteTarifaPersistencia" />class.
+        /// Initializes a new instance of the <see cref="AdesaoPacoteTarifaPersist" /> class.
+        /// Initializes a new instance of the <see cref="AdesaoPacoteTarifaPersist" />class.
         /// </summary>
         /// <param name="IdPacoteTarifa">{{{adesao_pacote_tarifa_persistencia_id_pacote_tarefa_descricao}}} (required).</param>
         /// <param name="Ciclo">{{{adesao_pacote_tarifa_persistencia_ciclo_descricao}}}.</param>
@@ -37,12 +37,12 @@ namespace Conductor.Pier.Model
         /// <param name="TarifaManutencaoCobrada">{{{adesao_pacote_tarifa_persistencia_tarifa_manutencao_cobrada_descricao}}}.</param>
         /// <param name="CobraTarifa">{{{adesao_pacote_tarifa_persistencia_cobra_tarifa_descricao}}}.</param>
 
-        public AdesaoPacoteTarifaPersistencia(long? IdPacoteTarifa = null, int? Ciclo = null, string DataHoraAtivacao = null, string DataHoraDesativacao = null, string DataFimCiclo = null, int? RecargaCelularUtilizado = null, int? BilheteUnicoUtilizado = null, int? PagamentoContaUtilizado = null, int? SaqueUtilizado = null, int? TransferenciaUtilizado = null, int? BoletoUtilizado = null, int? AplicacaoUtilizado = null, bool? TarifaManutencaoCobrada = null, bool? CobraTarifa = null)
+        public AdesaoPacoteTarifaPersist(long? IdPacoteTarifa = null, int? Ciclo = null, string DataHoraAtivacao = null, string DataHoraDesativacao = null, string DataFimCiclo = null, int? RecargaCelularUtilizado = null, int? BilheteUnicoUtilizado = null, int? PagamentoContaUtilizado = null, int? SaqueUtilizado = null, int? TransferenciaUtilizado = null, int? BoletoUtilizado = null, int? AplicacaoUtilizado = null, bool? TarifaManutencaoCobrada = null, bool? CobraTarifa = null)
         {
             // to ensure "IdPacoteTarifa" is required (not null)
             if (IdPacoteTarifa == null)
             {
-                throw new InvalidDataException("IdPacoteTarifa is a required property for AdesaoPacoteTarifaPersistencia and cannot be null");
+                throw new InvalidDataException("IdPacoteTarifa is a required property for AdesaoPacoteTarifaPersist and cannot be null");
             }
             else
             {
@@ -51,7 +51,7 @@ namespace Conductor.Pier.Model
             // to ensure "RecargaCelularUtilizado" is required (not null)
             if (RecargaCelularUtilizado == null)
             {
-                throw new InvalidDataException("RecargaCelularUtilizado is a required property for AdesaoPacoteTarifaPersistencia and cannot be null");
+                throw new InvalidDataException("RecargaCelularUtilizado is a required property for AdesaoPacoteTarifaPersist and cannot be null");
             }
             else
             {
@@ -60,7 +60,7 @@ namespace Conductor.Pier.Model
             // to ensure "BilheteUnicoUtilizado" is required (not null)
             if (BilheteUnicoUtilizado == null)
             {
-                throw new InvalidDataException("BilheteUnicoUtilizado is a required property for AdesaoPacoteTarifaPersistencia and cannot be null");
+                throw new InvalidDataException("BilheteUnicoUtilizado is a required property for AdesaoPacoteTarifaPersist and cannot be null");
             }
             else
             {
@@ -69,7 +69,7 @@ namespace Conductor.Pier.Model
             // to ensure "PagamentoContaUtilizado" is required (not null)
             if (PagamentoContaUtilizado == null)
             {
-                throw new InvalidDataException("PagamentoContaUtilizado is a required property for AdesaoPacoteTarifaPersistencia and cannot be null");
+                throw new InvalidDataException("PagamentoContaUtilizado is a required property for AdesaoPacoteTarifaPersist and cannot be null");
             }
             else
             {
@@ -78,7 +78,7 @@ namespace Conductor.Pier.Model
             // to ensure "SaqueUtilizado" is required (not null)
             if (SaqueUtilizado == null)
             {
-                throw new InvalidDataException("SaqueUtilizado is a required property for AdesaoPacoteTarifaPersistencia and cannot be null");
+                throw new InvalidDataException("SaqueUtilizado is a required property for AdesaoPacoteTarifaPersist and cannot be null");
             }
             else
             {
@@ -87,7 +87,7 @@ namespace Conductor.Pier.Model
             // to ensure "TransferenciaUtilizado" is required (not null)
             if (TransferenciaUtilizado == null)
             {
-                throw new InvalidDataException("TransferenciaUtilizado is a required property for AdesaoPacoteTarifaPersistencia and cannot be null");
+                throw new InvalidDataException("TransferenciaUtilizado is a required property for AdesaoPacoteTarifaPersist and cannot be null");
             }
             else
             {
@@ -96,7 +96,7 @@ namespace Conductor.Pier.Model
             // to ensure "BoletoUtilizado" is required (not null)
             if (BoletoUtilizado == null)
             {
-                throw new InvalidDataException("BoletoUtilizado is a required property for AdesaoPacoteTarifaPersistencia and cannot be null");
+                throw new InvalidDataException("BoletoUtilizado is a required property for AdesaoPacoteTarifaPersist and cannot be null");
             }
             else
             {
@@ -105,7 +105,7 @@ namespace Conductor.Pier.Model
             // to ensure "AplicacaoUtilizado" is required (not null)
             if (AplicacaoUtilizado == null)
             {
-                throw new InvalidDataException("AplicacaoUtilizado is a required property for AdesaoPacoteTarifaPersistencia and cannot be null");
+                throw new InvalidDataException("AplicacaoUtilizado is a required property for AdesaoPacoteTarifaPersist and cannot be null");
             }
             else
             {
@@ -226,7 +226,7 @@ namespace Conductor.Pier.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class AdesaoPacoteTarifaPersistencia {\n");
+            sb.Append("class AdesaoPacoteTarifaPersist {\n");
             sb.Append("  IdPacoteTarifa: ").Append(IdPacoteTarifa).Append("\n");
             sb.Append("  Ciclo: ").Append(Ciclo).Append("\n");
             sb.Append("  DataHoraAtivacao: ").Append(DataHoraAtivacao).Append("\n");
@@ -263,15 +263,15 @@ namespace Conductor.Pier.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as AdesaoPacoteTarifaPersistencia);
+            return this.Equals(obj as AdesaoPacoteTarifaPersist);
         }
 
         /// <summary>
-        /// Returns true if AdesaoPacoteTarifaPersistencia instances are equal
+        /// Returns true if AdesaoPacoteTarifaPersist instances are equal
         /// </summary>
-        /// <param name="other">Instance of AdesaoPacoteTarifaPersistencia to be compared</param>
+        /// <param name="other">Instance of AdesaoPacoteTarifaPersist to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(AdesaoPacoteTarifaPersistencia other)
+        public bool Equals(AdesaoPacoteTarifaPersist other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

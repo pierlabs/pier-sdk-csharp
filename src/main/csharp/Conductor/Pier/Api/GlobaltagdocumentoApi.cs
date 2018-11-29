@@ -118,7 +118,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{tipo_template_resource_consultar_param_id}}}</param>
         /// <returns>TipoTemplateResponse</returns>
-        TipoTemplateResponse ConsultarUsingGET46 (long? id);
+        TipoTemplateResponse ConsultarUsingGET47 (long? id);
   
         /// <summary>
         /// {{{tipo_template_resource_consultar}}}
@@ -129,7 +129,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{tipo_template_resource_consultar_param_id}}}</param>
         /// <returns>ApiResponse of TipoTemplateResponse</returns>
-        ApiResponse<TipoTemplateResponse> ConsultarUsingGET46WithHttpInfo (long? id);
+        ApiResponse<TipoTemplateResponse> ConsultarUsingGET47WithHttpInfo (long? id);
         
         /// <summary>
         /// {{{documento_resource_integrar}}}
@@ -224,7 +224,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <returns>PageTipoTemplateResponse</returns>
-        PageTipoTemplateResponse ListarUsingGET54 (List<string> sort = null, int? page = null, int? limit = null);
+        PageTipoTemplateResponse ListarUsingGET55 (List<string> sort = null, int? page = null, int? limit = null);
   
         /// <summary>
         /// {{{tipo_template_resource_listar}}}
@@ -237,7 +237,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <returns>ApiResponse of PageTipoTemplateResponse</returns>
-        ApiResponse<PageTipoTemplateResponse> ListarUsingGET54WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
+        ApiResponse<PageTipoTemplateResponse> ListarUsingGET55WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
         
         /// <summary>
         /// {{{documento_resource_salvar}}}
@@ -410,7 +410,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{tipo_template_resource_consultar_param_id}}}</param>
         /// <returns>Task of TipoTemplateResponse</returns>
-        System.Threading.Tasks.Task<TipoTemplateResponse> ConsultarUsingGET46Async (long? id);
+        System.Threading.Tasks.Task<TipoTemplateResponse> ConsultarUsingGET47Async (long? id);
 
         /// <summary>
         /// {{{tipo_template_resource_consultar}}}
@@ -421,7 +421,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{tipo_template_resource_consultar_param_id}}}</param>
         /// <returns>Task of ApiResponse (TipoTemplateResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TipoTemplateResponse>> ConsultarUsingGET46AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<TipoTemplateResponse>> ConsultarUsingGET47AsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// {{{documento_resource_integrar}}}
@@ -516,7 +516,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <returns>Task of PageTipoTemplateResponse</returns>
-        System.Threading.Tasks.Task<PageTipoTemplateResponse> ListarUsingGET54Async (List<string> sort = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<PageTipoTemplateResponse> ListarUsingGET55Async (List<string> sort = null, int? page = null, int? limit = null);
 
         /// <summary>
         /// {{{tipo_template_resource_listar}}}
@@ -529,7 +529,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageTipoTemplateResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageTipoTemplateResponse>> ListarUsingGET54AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<ApiResponse<PageTipoTemplateResponse>> ListarUsingGET55AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
         
         /// <summary>
         /// {{{documento_resource_salvar}}}
@@ -1375,9 +1375,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{tipo_template_resource_consultar_param_id}}}</param> 
         /// <returns>TipoTemplateResponse</returns>
-        public TipoTemplateResponse ConsultarUsingGET46 (long? id)
+        public TipoTemplateResponse ConsultarUsingGET47 (long? id)
         {
-             ApiResponse<TipoTemplateResponse> localVarResponse = ConsultarUsingGET46WithHttpInfo(id);
+             ApiResponse<TipoTemplateResponse> localVarResponse = ConsultarUsingGET47WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -1387,12 +1387,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{tipo_template_resource_consultar_param_id}}}</param> 
         /// <returns>ApiResponse of TipoTemplateResponse</returns>
-        public ApiResponse< TipoTemplateResponse > ConsultarUsingGET46WithHttpInfo (long? id)
+        public ApiResponse< TipoTemplateResponse > ConsultarUsingGET47WithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagdocumentoApi->ConsultarUsingGET46");
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagdocumentoApi->ConsultarUsingGET47");
             
     
             var localVarPath = "/api/tipos-templates/{id}";
@@ -1438,9 +1438,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET46: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET47: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET46: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET47: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<TipoTemplateResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1455,9 +1455,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{tipo_template_resource_consultar_param_id}}}</param>
         /// <returns>Task of TipoTemplateResponse</returns>
-        public async System.Threading.Tasks.Task<TipoTemplateResponse> ConsultarUsingGET46Async (long? id)
+        public async System.Threading.Tasks.Task<TipoTemplateResponse> ConsultarUsingGET47Async (long? id)
         {
-             ApiResponse<TipoTemplateResponse> localVarResponse = await ConsultarUsingGET46AsyncWithHttpInfo(id);
+             ApiResponse<TipoTemplateResponse> localVarResponse = await ConsultarUsingGET47AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -1468,10 +1468,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{tipo_template_resource_consultar_param_id}}}</param>
         /// <returns>Task of ApiResponse (TipoTemplateResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TipoTemplateResponse>> ConsultarUsingGET46AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<TipoTemplateResponse>> ConsultarUsingGET47AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET46");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET47");
             
     
             var localVarPath = "/api/tipos-templates/{id}";
@@ -1517,9 +1517,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET46: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET47: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET46: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET47: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<TipoTemplateResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2057,9 +2057,9 @@ namespace Conductor.Pier.Api
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param> 
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param> 
         /// <returns>PageTipoTemplateResponse</returns>
-        public PageTipoTemplateResponse ListarUsingGET54 (List<string> sort = null, int? page = null, int? limit = null)
+        public PageTipoTemplateResponse ListarUsingGET55 (List<string> sort = null, int? page = null, int? limit = null)
         {
-             ApiResponse<PageTipoTemplateResponse> localVarResponse = ListarUsingGET54WithHttpInfo(sort, page, limit);
+             ApiResponse<PageTipoTemplateResponse> localVarResponse = ListarUsingGET55WithHttpInfo(sort, page, limit);
              return localVarResponse.Data;
         }
 
@@ -2071,7 +2071,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param> 
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param> 
         /// <returns>ApiResponse of PageTipoTemplateResponse</returns>
-        public ApiResponse< PageTipoTemplateResponse > ListarUsingGET54WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
+        public ApiResponse< PageTipoTemplateResponse > ListarUsingGET55WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
         {
             
     
@@ -2120,9 +2120,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET54: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET55: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET54: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET55: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageTipoTemplateResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2139,9 +2139,9 @@ namespace Conductor.Pier.Api
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <returns>Task of PageTipoTemplateResponse</returns>
-        public async System.Threading.Tasks.Task<PageTipoTemplateResponse> ListarUsingGET54Async (List<string> sort = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<PageTipoTemplateResponse> ListarUsingGET55Async (List<string> sort = null, int? page = null, int? limit = null)
         {
-             ApiResponse<PageTipoTemplateResponse> localVarResponse = await ListarUsingGET54AsyncWithHttpInfo(sort, page, limit);
+             ApiResponse<PageTipoTemplateResponse> localVarResponse = await ListarUsingGET55AsyncWithHttpInfo(sort, page, limit);
              return localVarResponse.Data;
 
         }
@@ -2154,7 +2154,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageTipoTemplateResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageTipoTemplateResponse>> ListarUsingGET54AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageTipoTemplateResponse>> ListarUsingGET55AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
         {
             
     
@@ -2203,9 +2203,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET54: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET55: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET54: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET55: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageTipoTemplateResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

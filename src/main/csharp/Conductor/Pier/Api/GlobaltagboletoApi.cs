@@ -27,7 +27,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{boleto_resource_consultar_param_id}}}</param>
         /// <param name="zeraValorCodigoBarras">{{{boleto_resource_consultar_param_zera_valor_codigo_barras}}} (optional)</param>
         /// <returns>BoletoResponse</returns>
-        BoletoResponse ConsultarUsingGET32 (long? id, bool? zeraValorCodigoBarras = null);
+        BoletoResponse ConsultarUsingGET33 (long? id, bool? zeraValorCodigoBarras = null);
   
         /// <summary>
         /// {{{boleto_resource_consultar}}}
@@ -39,7 +39,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{boleto_resource_consultar_param_id}}}</param>
         /// <param name="zeraValorCodigoBarras">{{{boleto_resource_consultar_param_zera_valor_codigo_barras}}} (optional)</param>
         /// <returns>ApiResponse of BoletoResponse</returns>
-        ApiResponse<BoletoResponse> ConsultarUsingGET32WithHttpInfo (long? id, bool? zeraValorCodigoBarras = null);
+        ApiResponse<BoletoResponse> ConsultarUsingGET33WithHttpInfo (long? id, bool? zeraValorCodigoBarras = null);
         
         /// <summary>
         /// {{{boleto_resource_enviar_boleto_email}}}
@@ -74,7 +74,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="boletoRequest">boletoRequest</param>
         /// <returns>BoletoResponse</returns>
-        BoletoResponse GerarBoletoUsingPOST (BoletoRequest boletoRequest);
+        BoletoResponse GerarBoletoUsingPOST1 (BoletoRequest boletoRequest);
   
         /// <summary>
         /// {{{boleto_resource_gerar_boleto}}}
@@ -85,7 +85,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="boletoRequest">boletoRequest</param>
         /// <returns>ApiResponse of BoletoResponse</returns>
-        ApiResponse<BoletoResponse> GerarBoletoUsingPOSTWithHttpInfo (BoletoRequest boletoRequest);
+        ApiResponse<BoletoResponse> GerarBoletoUsingPOST1WithHttpInfo (BoletoRequest boletoRequest);
         
         /// <summary>
         /// {{{boleto_resource_historico_status_boleto}}}
@@ -131,7 +131,7 @@ namespace Conductor.Pier.Api
         /// <param name="idTipoBoleto">{{{boleto_listar_request_id_tipo_boleto_value}}} (optional)</param>
         /// <param name="nossoNumero">{{{boleto_listar_request_nosso_numero_value}}} (optional)</param>
         /// <returns>PageBoletoListarResponse</returns>
-        PageBoletoListarResponse ListarUsingGET39 (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, string dataVencimento = null, double? valorBoleto = null, long? idTipoBoleto = null, long? nossoNumero = null);
+        PageBoletoListarResponse ListarUsingGET40 (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, string dataVencimento = null, double? valorBoleto = null, long? idTipoBoleto = null, long? nossoNumero = null);
   
         /// <summary>
         /// {{{boleto_resource_listar}}}
@@ -149,7 +149,7 @@ namespace Conductor.Pier.Api
         /// <param name="idTipoBoleto">{{{boleto_listar_request_id_tipo_boleto_value}}} (optional)</param>
         /// <param name="nossoNumero">{{{boleto_listar_request_nosso_numero_value}}} (optional)</param>
         /// <returns>ApiResponse of PageBoletoListarResponse</returns>
-        ApiResponse<PageBoletoListarResponse> ListarUsingGET39WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, string dataVencimento = null, double? valorBoleto = null, long? idTipoBoleto = null, long? nossoNumero = null);
+        ApiResponse<PageBoletoListarResponse> ListarUsingGET40WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, string dataVencimento = null, double? valorBoleto = null, long? idTipoBoleto = null, long? nossoNumero = null);
         
         /// <summary>
         /// {{{registro_cobranca_resource_registrar_boleto}}}
@@ -209,7 +209,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{boleto_resource_consultar_param_id}}}</param>
         /// <param name="zeraValorCodigoBarras">{{{boleto_resource_consultar_param_zera_valor_codigo_barras}}} (optional)</param>
         /// <returns>Task of BoletoResponse</returns>
-        System.Threading.Tasks.Task<BoletoResponse> ConsultarUsingGET32Async (long? id, bool? zeraValorCodigoBarras = null);
+        System.Threading.Tasks.Task<BoletoResponse> ConsultarUsingGET33Async (long? id, bool? zeraValorCodigoBarras = null);
 
         /// <summary>
         /// {{{boleto_resource_consultar}}}
@@ -221,7 +221,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{boleto_resource_consultar_param_id}}}</param>
         /// <param name="zeraValorCodigoBarras">{{{boleto_resource_consultar_param_zera_valor_codigo_barras}}} (optional)</param>
         /// <returns>Task of ApiResponse (BoletoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BoletoResponse>> ConsultarUsingGET32AsyncWithHttpInfo (long? id, bool? zeraValorCodigoBarras = null);
+        System.Threading.Tasks.Task<ApiResponse<BoletoResponse>> ConsultarUsingGET33AsyncWithHttpInfo (long? id, bool? zeraValorCodigoBarras = null);
         
         /// <summary>
         /// {{{boleto_resource_enviar_boleto_email}}}
@@ -256,7 +256,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="boletoRequest">boletoRequest</param>
         /// <returns>Task of BoletoResponse</returns>
-        System.Threading.Tasks.Task<BoletoResponse> GerarBoletoUsingPOSTAsync (BoletoRequest boletoRequest);
+        System.Threading.Tasks.Task<BoletoResponse> GerarBoletoUsingPOST1Async (BoletoRequest boletoRequest);
 
         /// <summary>
         /// {{{boleto_resource_gerar_boleto}}}
@@ -267,7 +267,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="boletoRequest">boletoRequest</param>
         /// <returns>Task of ApiResponse (BoletoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BoletoResponse>> GerarBoletoUsingPOSTAsyncWithHttpInfo (BoletoRequest boletoRequest);
+        System.Threading.Tasks.Task<ApiResponse<BoletoResponse>> GerarBoletoUsingPOST1AsyncWithHttpInfo (BoletoRequest boletoRequest);
         
         /// <summary>
         /// {{{boleto_resource_historico_status_boleto}}}
@@ -313,7 +313,7 @@ namespace Conductor.Pier.Api
         /// <param name="idTipoBoleto">{{{boleto_listar_request_id_tipo_boleto_value}}} (optional)</param>
         /// <param name="nossoNumero">{{{boleto_listar_request_nosso_numero_value}}} (optional)</param>
         /// <returns>Task of PageBoletoListarResponse</returns>
-        System.Threading.Tasks.Task<PageBoletoListarResponse> ListarUsingGET39Async (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, string dataVencimento = null, double? valorBoleto = null, long? idTipoBoleto = null, long? nossoNumero = null);
+        System.Threading.Tasks.Task<PageBoletoListarResponse> ListarUsingGET40Async (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, string dataVencimento = null, double? valorBoleto = null, long? idTipoBoleto = null, long? nossoNumero = null);
 
         /// <summary>
         /// {{{boleto_resource_listar}}}
@@ -331,7 +331,7 @@ namespace Conductor.Pier.Api
         /// <param name="idTipoBoleto">{{{boleto_listar_request_id_tipo_boleto_value}}} (optional)</param>
         /// <param name="nossoNumero">{{{boleto_listar_request_nosso_numero_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageBoletoListarResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageBoletoListarResponse>> ListarUsingGET39AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, string dataVencimento = null, double? valorBoleto = null, long? idTipoBoleto = null, long? nossoNumero = null);
+        System.Threading.Tasks.Task<ApiResponse<PageBoletoListarResponse>> ListarUsingGET40AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, string dataVencimento = null, double? valorBoleto = null, long? idTipoBoleto = null, long? nossoNumero = null);
         
         /// <summary>
         /// {{{registro_cobranca_resource_registrar_boleto}}}
@@ -476,9 +476,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{boleto_resource_consultar_param_id}}}</param> 
         /// <param name="zeraValorCodigoBarras">{{{boleto_resource_consultar_param_zera_valor_codigo_barras}}} (optional)</param> 
         /// <returns>BoletoResponse</returns>
-        public BoletoResponse ConsultarUsingGET32 (long? id, bool? zeraValorCodigoBarras = null)
+        public BoletoResponse ConsultarUsingGET33 (long? id, bool? zeraValorCodigoBarras = null)
         {
-             ApiResponse<BoletoResponse> localVarResponse = ConsultarUsingGET32WithHttpInfo(id, zeraValorCodigoBarras);
+             ApiResponse<BoletoResponse> localVarResponse = ConsultarUsingGET33WithHttpInfo(id, zeraValorCodigoBarras);
              return localVarResponse.Data;
         }
 
@@ -489,12 +489,12 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{boleto_resource_consultar_param_id}}}</param> 
         /// <param name="zeraValorCodigoBarras">{{{boleto_resource_consultar_param_zera_valor_codigo_barras}}} (optional)</param> 
         /// <returns>ApiResponse of BoletoResponse</returns>
-        public ApiResponse< BoletoResponse > ConsultarUsingGET32WithHttpInfo (long? id, bool? zeraValorCodigoBarras = null)
+        public ApiResponse< BoletoResponse > ConsultarUsingGET33WithHttpInfo (long? id, bool? zeraValorCodigoBarras = null)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagboletoApi->ConsultarUsingGET32");
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagboletoApi->ConsultarUsingGET33");
             
     
             var localVarPath = "/api/boletos/{id}";
@@ -541,9 +541,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET32: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET33: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET32: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET33: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<BoletoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -559,9 +559,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{boleto_resource_consultar_param_id}}}</param>
         /// <param name="zeraValorCodigoBarras">{{{boleto_resource_consultar_param_zera_valor_codigo_barras}}} (optional)</param>
         /// <returns>Task of BoletoResponse</returns>
-        public async System.Threading.Tasks.Task<BoletoResponse> ConsultarUsingGET32Async (long? id, bool? zeraValorCodigoBarras = null)
+        public async System.Threading.Tasks.Task<BoletoResponse> ConsultarUsingGET33Async (long? id, bool? zeraValorCodigoBarras = null)
         {
-             ApiResponse<BoletoResponse> localVarResponse = await ConsultarUsingGET32AsyncWithHttpInfo(id, zeraValorCodigoBarras);
+             ApiResponse<BoletoResponse> localVarResponse = await ConsultarUsingGET33AsyncWithHttpInfo(id, zeraValorCodigoBarras);
              return localVarResponse.Data;
 
         }
@@ -573,10 +573,10 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{boleto_resource_consultar_param_id}}}</param>
         /// <param name="zeraValorCodigoBarras">{{{boleto_resource_consultar_param_zera_valor_codigo_barras}}} (optional)</param>
         /// <returns>Task of ApiResponse (BoletoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<BoletoResponse>> ConsultarUsingGET32AsyncWithHttpInfo (long? id, bool? zeraValorCodigoBarras = null)
+        public async System.Threading.Tasks.Task<ApiResponse<BoletoResponse>> ConsultarUsingGET33AsyncWithHttpInfo (long? id, bool? zeraValorCodigoBarras = null)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET32");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET33");
             
     
             var localVarPath = "/api/boletos/{id}";
@@ -623,9 +623,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET32: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET33: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET32: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET33: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<BoletoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -821,9 +821,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="boletoRequest">boletoRequest</param> 
         /// <returns>BoletoResponse</returns>
-        public BoletoResponse GerarBoletoUsingPOST (BoletoRequest boletoRequest)
+        public BoletoResponse GerarBoletoUsingPOST1 (BoletoRequest boletoRequest)
         {
-             ApiResponse<BoletoResponse> localVarResponse = GerarBoletoUsingPOSTWithHttpInfo(boletoRequest);
+             ApiResponse<BoletoResponse> localVarResponse = GerarBoletoUsingPOST1WithHttpInfo(boletoRequest);
              return localVarResponse.Data;
         }
 
@@ -833,12 +833,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="boletoRequest">boletoRequest</param> 
         /// <returns>ApiResponse of BoletoResponse</returns>
-        public ApiResponse< BoletoResponse > GerarBoletoUsingPOSTWithHttpInfo (BoletoRequest boletoRequest)
+        public ApiResponse< BoletoResponse > GerarBoletoUsingPOST1WithHttpInfo (BoletoRequest boletoRequest)
         {
             
             // verify the required parameter 'boletoRequest' is set
             if (boletoRequest == null)
-                throw new ApiException(400, "Missing required parameter 'boletoRequest' when calling GlobaltagboletoApi->GerarBoletoUsingPOST");
+                throw new ApiException(400, "Missing required parameter 'boletoRequest' when calling GlobaltagboletoApi->GerarBoletoUsingPOST1");
             
     
             var localVarPath = "/api/boletos";
@@ -890,9 +890,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GerarBoletoUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GerarBoletoUsingPOST1: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GerarBoletoUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GerarBoletoUsingPOST1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<BoletoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -907,9 +907,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="boletoRequest">boletoRequest</param>
         /// <returns>Task of BoletoResponse</returns>
-        public async System.Threading.Tasks.Task<BoletoResponse> GerarBoletoUsingPOSTAsync (BoletoRequest boletoRequest)
+        public async System.Threading.Tasks.Task<BoletoResponse> GerarBoletoUsingPOST1Async (BoletoRequest boletoRequest)
         {
-             ApiResponse<BoletoResponse> localVarResponse = await GerarBoletoUsingPOSTAsyncWithHttpInfo(boletoRequest);
+             ApiResponse<BoletoResponse> localVarResponse = await GerarBoletoUsingPOST1AsyncWithHttpInfo(boletoRequest);
              return localVarResponse.Data;
 
         }
@@ -920,10 +920,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="boletoRequest">boletoRequest</param>
         /// <returns>Task of ApiResponse (BoletoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<BoletoResponse>> GerarBoletoUsingPOSTAsyncWithHttpInfo (BoletoRequest boletoRequest)
+        public async System.Threading.Tasks.Task<ApiResponse<BoletoResponse>> GerarBoletoUsingPOST1AsyncWithHttpInfo (BoletoRequest boletoRequest)
         {
             // verify the required parameter 'boletoRequest' is set
-            if (boletoRequest == null) throw new ApiException(400, "Missing required parameter 'boletoRequest' when calling GerarBoletoUsingPOST");
+            if (boletoRequest == null) throw new ApiException(400, "Missing required parameter 'boletoRequest' when calling GerarBoletoUsingPOST1");
             
     
             var localVarPath = "/api/boletos";
@@ -975,9 +975,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GerarBoletoUsingPOST: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GerarBoletoUsingPOST1: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GerarBoletoUsingPOST: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GerarBoletoUsingPOST1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<BoletoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1174,9 +1174,9 @@ namespace Conductor.Pier.Api
         /// <param name="idTipoBoleto">{{{boleto_listar_request_id_tipo_boleto_value}}} (optional)</param> 
         /// <param name="nossoNumero">{{{boleto_listar_request_nosso_numero_value}}} (optional)</param> 
         /// <returns>PageBoletoListarResponse</returns>
-        public PageBoletoListarResponse ListarUsingGET39 (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, string dataVencimento = null, double? valorBoleto = null, long? idTipoBoleto = null, long? nossoNumero = null)
+        public PageBoletoListarResponse ListarUsingGET40 (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, string dataVencimento = null, double? valorBoleto = null, long? idTipoBoleto = null, long? nossoNumero = null)
         {
-             ApiResponse<PageBoletoListarResponse> localVarResponse = ListarUsingGET39WithHttpInfo(sort, page, limit, idConta, dataVencimento, valorBoleto, idTipoBoleto, nossoNumero);
+             ApiResponse<PageBoletoListarResponse> localVarResponse = ListarUsingGET40WithHttpInfo(sort, page, limit, idConta, dataVencimento, valorBoleto, idTipoBoleto, nossoNumero);
              return localVarResponse.Data;
         }
 
@@ -1193,7 +1193,7 @@ namespace Conductor.Pier.Api
         /// <param name="idTipoBoleto">{{{boleto_listar_request_id_tipo_boleto_value}}} (optional)</param> 
         /// <param name="nossoNumero">{{{boleto_listar_request_nosso_numero_value}}} (optional)</param> 
         /// <returns>ApiResponse of PageBoletoListarResponse</returns>
-        public ApiResponse< PageBoletoListarResponse > ListarUsingGET39WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, string dataVencimento = null, double? valorBoleto = null, long? idTipoBoleto = null, long? nossoNumero = null)
+        public ApiResponse< PageBoletoListarResponse > ListarUsingGET40WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, string dataVencimento = null, double? valorBoleto = null, long? idTipoBoleto = null, long? nossoNumero = null)
         {
             
     
@@ -1247,9 +1247,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET39: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET40: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET39: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET40: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageBoletoListarResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1271,9 +1271,9 @@ namespace Conductor.Pier.Api
         /// <param name="idTipoBoleto">{{{boleto_listar_request_id_tipo_boleto_value}}} (optional)</param>
         /// <param name="nossoNumero">{{{boleto_listar_request_nosso_numero_value}}} (optional)</param>
         /// <returns>Task of PageBoletoListarResponse</returns>
-        public async System.Threading.Tasks.Task<PageBoletoListarResponse> ListarUsingGET39Async (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, string dataVencimento = null, double? valorBoleto = null, long? idTipoBoleto = null, long? nossoNumero = null)
+        public async System.Threading.Tasks.Task<PageBoletoListarResponse> ListarUsingGET40Async (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, string dataVencimento = null, double? valorBoleto = null, long? idTipoBoleto = null, long? nossoNumero = null)
         {
-             ApiResponse<PageBoletoListarResponse> localVarResponse = await ListarUsingGET39AsyncWithHttpInfo(sort, page, limit, idConta, dataVencimento, valorBoleto, idTipoBoleto, nossoNumero);
+             ApiResponse<PageBoletoListarResponse> localVarResponse = await ListarUsingGET40AsyncWithHttpInfo(sort, page, limit, idConta, dataVencimento, valorBoleto, idTipoBoleto, nossoNumero);
              return localVarResponse.Data;
 
         }
@@ -1291,7 +1291,7 @@ namespace Conductor.Pier.Api
         /// <param name="idTipoBoleto">{{{boleto_listar_request_id_tipo_boleto_value}}} (optional)</param>
         /// <param name="nossoNumero">{{{boleto_listar_request_nosso_numero_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageBoletoListarResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageBoletoListarResponse>> ListarUsingGET39AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, string dataVencimento = null, double? valorBoleto = null, long? idTipoBoleto = null, long? nossoNumero = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageBoletoListarResponse>> ListarUsingGET40AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, string dataVencimento = null, double? valorBoleto = null, long? idTipoBoleto = null, long? nossoNumero = null)
         {
             
     
@@ -1345,9 +1345,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET39: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET40: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET39: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET40: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageBoletoListarResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

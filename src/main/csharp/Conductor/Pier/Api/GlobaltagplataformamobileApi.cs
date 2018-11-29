@@ -53,7 +53,7 @@ namespace Conductor.Pier.Api
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <param name="nome">{{{plataforma_mobile_request_nome_value}}} (optional)</param>
         /// <returns>PagePlataformaMobileResponse</returns>
-        PagePlataformaMobileResponse ListarUsingGET34 (List<string> sort = null, int? page = null, int? limit = null, string nome = null);
+        PagePlataformaMobileResponse ListarUsingGET35 (List<string> sort = null, int? page = null, int? limit = null, string nome = null);
   
         /// <summary>
         /// {{{plataforma_mobile_resource_listar}}}
@@ -67,7 +67,7 @@ namespace Conductor.Pier.Api
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <param name="nome">{{{plataforma_mobile_request_nome_value}}} (optional)</param>
         /// <returns>ApiResponse of PagePlataformaMobileResponse</returns>
-        ApiResponse<PagePlataformaMobileResponse> ListarUsingGET34WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null);
+        ApiResponse<PagePlataformaMobileResponse> ListarUsingGET35WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null);
         
         /// <summary>
         /// {{{plataforma_mobile_resource_salvar}}}
@@ -131,7 +131,7 @@ namespace Conductor.Pier.Api
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <param name="nome">{{{plataforma_mobile_request_nome_value}}} (optional)</param>
         /// <returns>Task of PagePlataformaMobileResponse</returns>
-        System.Threading.Tasks.Task<PagePlataformaMobileResponse> ListarUsingGET34Async (List<string> sort = null, int? page = null, int? limit = null, string nome = null);
+        System.Threading.Tasks.Task<PagePlataformaMobileResponse> ListarUsingGET35Async (List<string> sort = null, int? page = null, int? limit = null, string nome = null);
 
         /// <summary>
         /// {{{plataforma_mobile_resource_listar}}}
@@ -145,7 +145,7 @@ namespace Conductor.Pier.Api
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <param name="nome">{{{plataforma_mobile_request_nome_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (PagePlataformaMobileResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PagePlataformaMobileResponse>> ListarUsingGET34AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null);
+        System.Threading.Tasks.Task<ApiResponse<PagePlataformaMobileResponse>> ListarUsingGET35AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null);
         
         /// <summary>
         /// {{{plataforma_mobile_resource_salvar}}}
@@ -452,9 +452,9 @@ namespace Conductor.Pier.Api
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param> 
         /// <param name="nome">{{{plataforma_mobile_request_nome_value}}} (optional)</param> 
         /// <returns>PagePlataformaMobileResponse</returns>
-        public PagePlataformaMobileResponse ListarUsingGET34 (List<string> sort = null, int? page = null, int? limit = null, string nome = null)
+        public PagePlataformaMobileResponse ListarUsingGET35 (List<string> sort = null, int? page = null, int? limit = null, string nome = null)
         {
-             ApiResponse<PagePlataformaMobileResponse> localVarResponse = ListarUsingGET34WithHttpInfo(sort, page, limit, nome);
+             ApiResponse<PagePlataformaMobileResponse> localVarResponse = ListarUsingGET35WithHttpInfo(sort, page, limit, nome);
              return localVarResponse.Data;
         }
 
@@ -467,7 +467,7 @@ namespace Conductor.Pier.Api
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param> 
         /// <param name="nome">{{{plataforma_mobile_request_nome_value}}} (optional)</param> 
         /// <returns>ApiResponse of PagePlataformaMobileResponse</returns>
-        public ApiResponse< PagePlataformaMobileResponse > ListarUsingGET34WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null)
+        public ApiResponse< PagePlataformaMobileResponse > ListarUsingGET35WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null)
         {
             
     
@@ -517,9 +517,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET34: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET35: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET34: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET35: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PagePlataformaMobileResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -537,9 +537,9 @@ namespace Conductor.Pier.Api
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <param name="nome">{{{plataforma_mobile_request_nome_value}}} (optional)</param>
         /// <returns>Task of PagePlataformaMobileResponse</returns>
-        public async System.Threading.Tasks.Task<PagePlataformaMobileResponse> ListarUsingGET34Async (List<string> sort = null, int? page = null, int? limit = null, string nome = null)
+        public async System.Threading.Tasks.Task<PagePlataformaMobileResponse> ListarUsingGET35Async (List<string> sort = null, int? page = null, int? limit = null, string nome = null)
         {
-             ApiResponse<PagePlataformaMobileResponse> localVarResponse = await ListarUsingGET34AsyncWithHttpInfo(sort, page, limit, nome);
+             ApiResponse<PagePlataformaMobileResponse> localVarResponse = await ListarUsingGET35AsyncWithHttpInfo(sort, page, limit, nome);
              return localVarResponse.Data;
 
         }
@@ -553,7 +553,7 @@ namespace Conductor.Pier.Api
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <param name="nome">{{{plataforma_mobile_request_nome_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (PagePlataformaMobileResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PagePlataformaMobileResponse>> ListarUsingGET34AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PagePlataformaMobileResponse>> ListarUsingGET35AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null)
         {
             
     
@@ -603,9 +603,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET34: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET35: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET34: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET35: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PagePlataformaMobileResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

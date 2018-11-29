@@ -461,7 +461,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{transferencia_resource_consultar_param_id_conta}}}</param>
         /// <param name="idTransferencia">{{{transferencia_resource_consultar_param_id_transferencia}}}</param>
         /// <returns>TransferenciaDetalheResponse</returns>
-        TransferenciaDetalheResponse ConsultarUsingGET48 (long? id, long? idTransferencia);
+        TransferenciaDetalheResponse ConsultarUsingGET49 (long? id, long? idTransferencia);
   
         /// <summary>
         /// {{{transferencia_resource_consultar}}}
@@ -473,7 +473,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{transferencia_resource_consultar_param_id_conta}}}</param>
         /// <param name="idTransferencia">{{{transferencia_resource_consultar_param_id_transferencia}}}</param>
         /// <returns>ApiResponse of TransferenciaDetalheResponse</returns>
-        ApiResponse<TransferenciaDetalheResponse> ConsultarUsingGET48WithHttpInfo (long? id, long? idTransferencia);
+        ApiResponse<TransferenciaDetalheResponse> ConsultarUsingGET49WithHttpInfo (long? id, long? idTransferencia);
         
         /// <summary>
         /// {{{conta_resource_cadastrar_conta_multiapp}}}
@@ -884,7 +884,7 @@ namespace Conductor.Pier.Api
         /// <param name="codigoMCC">{{{transacoes_processadas_request_codigo_mcc}}} (optional)</param>
         /// <param name="grupoMCC">{{{transacoes_processadas_request_grupo_mcc}}} (optional)</param>
         /// <returns>PageTransacaoProcessadaNaoProcessadaResponse</returns>
-        PageTransacaoProcessadaNaoProcessadaResponse ListarUsingGET55 (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null, long? idTipoTransacao = null, bool? flagCredito = null, bool? flagFaturado = null, bool? flagProcessada = null, int? status = null, int? plano = null, long? codigoMCC = null, long? grupoMCC = null);
+        PageTransacaoProcessadaNaoProcessadaResponse ListarUsingGET56 (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null, long? idTipoTransacao = null, bool? flagCredito = null, bool? flagFaturado = null, bool? flagProcessada = null, int? status = null, int? plano = null, long? codigoMCC = null, long? grupoMCC = null);
   
         /// <summary>
         /// {{{transacoes_correntes_resource_listar_nao_processadas_e_processadas}}}
@@ -909,7 +909,7 @@ namespace Conductor.Pier.Api
         /// <param name="codigoMCC">{{{transacoes_processadas_request_codigo_mcc}}} (optional)</param>
         /// <param name="grupoMCC">{{{transacoes_processadas_request_grupo_mcc}}} (optional)</param>
         /// <returns>ApiResponse of PageTransacaoProcessadaNaoProcessadaResponse</returns>
-        ApiResponse<PageTransacaoProcessadaNaoProcessadaResponse> ListarUsingGET55WithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null, long? idTipoTransacao = null, bool? flagCredito = null, bool? flagFaturado = null, bool? flagProcessada = null, int? status = null, int? plano = null, long? codigoMCC = null, long? grupoMCC = null);
+        ApiResponse<PageTransacaoProcessadaNaoProcessadaResponse> ListarUsingGET56WithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null, long? idTipoTransacao = null, bool? flagCredito = null, bool? flagFaturado = null, bool? flagProcessada = null, int? status = null, int? plano = null, long? codigoMCC = null, long? grupoMCC = null);
         
         /// <summary>
         /// {{{transferencia_resource_listar}}}
@@ -928,7 +928,7 @@ namespace Conductor.Pier.Api
         /// <param name="valorTransferencia">{{{transferencia_request_valor_transferencia_value}}} (optional)</param>
         /// <param name="dataTransferencia">{{{transferencia_request_data_transferencia_value}}} (optional)</param>
         /// <returns>PageTransferenciaResponse</returns>
-        PageTransferenciaResponse ListarUsingGET57 (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idTransferencia = null, long? idContaOrigem = null, long? idContaDestino = null, double? valorTransferencia = null, string dataTransferencia = null);
+        PageTransferenciaResponse ListarUsingGET58 (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idTransferencia = null, long? idContaOrigem = null, long? idContaDestino = null, double? valorTransferencia = null, string dataTransferencia = null);
   
         /// <summary>
         /// {{{transferencia_resource_listar}}}
@@ -947,7 +947,7 @@ namespace Conductor.Pier.Api
         /// <param name="valorTransferencia">{{{transferencia_request_valor_transferencia_value}}} (optional)</param>
         /// <param name="dataTransferencia">{{{transferencia_request_data_transferencia_value}}} (optional)</param>
         /// <returns>ApiResponse of PageTransferenciaResponse</returns>
-        ApiResponse<PageTransferenciaResponse> ListarUsingGET57WithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idTransferencia = null, long? idContaOrigem = null, long? idContaDestino = null, double? valorTransferencia = null, string dataTransferencia = null);
+        ApiResponse<PageTransferenciaResponse> ListarUsingGET58WithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idTransferencia = null, long? idContaOrigem = null, long? idContaDestino = null, double? valorTransferencia = null, string dataTransferencia = null);
         
         /// <summary>
         /// {{{conta_resource_reativar}}}
@@ -1543,7 +1543,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{transferencia_resource_consultar_param_id_conta}}}</param>
         /// <param name="idTransferencia">{{{transferencia_resource_consultar_param_id_transferencia}}}</param>
         /// <returns>Task of TransferenciaDetalheResponse</returns>
-        System.Threading.Tasks.Task<TransferenciaDetalheResponse> ConsultarUsingGET48Async (long? id, long? idTransferencia);
+        System.Threading.Tasks.Task<TransferenciaDetalheResponse> ConsultarUsingGET49Async (long? id, long? idTransferencia);
 
         /// <summary>
         /// {{{transferencia_resource_consultar}}}
@@ -1555,7 +1555,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{transferencia_resource_consultar_param_id_conta}}}</param>
         /// <param name="idTransferencia">{{{transferencia_resource_consultar_param_id_transferencia}}}</param>
         /// <returns>Task of ApiResponse (TransferenciaDetalheResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TransferenciaDetalheResponse>> ConsultarUsingGET48AsyncWithHttpInfo (long? id, long? idTransferencia);
+        System.Threading.Tasks.Task<ApiResponse<TransferenciaDetalheResponse>> ConsultarUsingGET49AsyncWithHttpInfo (long? id, long? idTransferencia);
         
         /// <summary>
         /// {{{conta_resource_cadastrar_conta_multiapp}}}
@@ -1966,7 +1966,7 @@ namespace Conductor.Pier.Api
         /// <param name="codigoMCC">{{{transacoes_processadas_request_codigo_mcc}}} (optional)</param>
         /// <param name="grupoMCC">{{{transacoes_processadas_request_grupo_mcc}}} (optional)</param>
         /// <returns>Task of PageTransacaoProcessadaNaoProcessadaResponse</returns>
-        System.Threading.Tasks.Task<PageTransacaoProcessadaNaoProcessadaResponse> ListarUsingGET55Async (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null, long? idTipoTransacao = null, bool? flagCredito = null, bool? flagFaturado = null, bool? flagProcessada = null, int? status = null, int? plano = null, long? codigoMCC = null, long? grupoMCC = null);
+        System.Threading.Tasks.Task<PageTransacaoProcessadaNaoProcessadaResponse> ListarUsingGET56Async (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null, long? idTipoTransacao = null, bool? flagCredito = null, bool? flagFaturado = null, bool? flagProcessada = null, int? status = null, int? plano = null, long? codigoMCC = null, long? grupoMCC = null);
 
         /// <summary>
         /// {{{transacoes_correntes_resource_listar_nao_processadas_e_processadas}}}
@@ -1991,7 +1991,7 @@ namespace Conductor.Pier.Api
         /// <param name="codigoMCC">{{{transacoes_processadas_request_codigo_mcc}}} (optional)</param>
         /// <param name="grupoMCC">{{{transacoes_processadas_request_grupo_mcc}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageTransacaoProcessadaNaoProcessadaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageTransacaoProcessadaNaoProcessadaResponse>> ListarUsingGET55AsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null, long? idTipoTransacao = null, bool? flagCredito = null, bool? flagFaturado = null, bool? flagProcessada = null, int? status = null, int? plano = null, long? codigoMCC = null, long? grupoMCC = null);
+        System.Threading.Tasks.Task<ApiResponse<PageTransacaoProcessadaNaoProcessadaResponse>> ListarUsingGET56AsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null, long? idTipoTransacao = null, bool? flagCredito = null, bool? flagFaturado = null, bool? flagProcessada = null, int? status = null, int? plano = null, long? codigoMCC = null, long? grupoMCC = null);
         
         /// <summary>
         /// {{{transferencia_resource_listar}}}
@@ -2010,7 +2010,7 @@ namespace Conductor.Pier.Api
         /// <param name="valorTransferencia">{{{transferencia_request_valor_transferencia_value}}} (optional)</param>
         /// <param name="dataTransferencia">{{{transferencia_request_data_transferencia_value}}} (optional)</param>
         /// <returns>Task of PageTransferenciaResponse</returns>
-        System.Threading.Tasks.Task<PageTransferenciaResponse> ListarUsingGET57Async (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idTransferencia = null, long? idContaOrigem = null, long? idContaDestino = null, double? valorTransferencia = null, string dataTransferencia = null);
+        System.Threading.Tasks.Task<PageTransferenciaResponse> ListarUsingGET58Async (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idTransferencia = null, long? idContaOrigem = null, long? idContaDestino = null, double? valorTransferencia = null, string dataTransferencia = null);
 
         /// <summary>
         /// {{{transferencia_resource_listar}}}
@@ -2029,7 +2029,7 @@ namespace Conductor.Pier.Api
         /// <param name="valorTransferencia">{{{transferencia_request_valor_transferencia_value}}} (optional)</param>
         /// <param name="dataTransferencia">{{{transferencia_request_data_transferencia_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageTransferenciaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageTransferenciaResponse>> ListarUsingGET57AsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idTransferencia = null, long? idContaOrigem = null, long? idContaDestino = null, double? valorTransferencia = null, string dataTransferencia = null);
+        System.Threading.Tasks.Task<ApiResponse<PageTransferenciaResponse>> ListarUsingGET58AsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idTransferencia = null, long? idContaOrigem = null, long? idContaDestino = null, double? valorTransferencia = null, string dataTransferencia = null);
         
         /// <summary>
         /// {{{conta_resource_reativar}}}
@@ -5232,9 +5232,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{transferencia_resource_consultar_param_id_conta}}}</param> 
         /// <param name="idTransferencia">{{{transferencia_resource_consultar_param_id_transferencia}}}</param> 
         /// <returns>TransferenciaDetalheResponse</returns>
-        public TransferenciaDetalheResponse ConsultarUsingGET48 (long? id, long? idTransferencia)
+        public TransferenciaDetalheResponse ConsultarUsingGET49 (long? id, long? idTransferencia)
         {
-             ApiResponse<TransferenciaDetalheResponse> localVarResponse = ConsultarUsingGET48WithHttpInfo(id, idTransferencia);
+             ApiResponse<TransferenciaDetalheResponse> localVarResponse = ConsultarUsingGET49WithHttpInfo(id, idTransferencia);
              return localVarResponse.Data;
         }
 
@@ -5245,16 +5245,16 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{transferencia_resource_consultar_param_id_conta}}}</param> 
         /// <param name="idTransferencia">{{{transferencia_resource_consultar_param_id_transferencia}}}</param> 
         /// <returns>ApiResponse of TransferenciaDetalheResponse</returns>
-        public ApiResponse< TransferenciaDetalheResponse > ConsultarUsingGET48WithHttpInfo (long? id, long? idTransferencia)
+        public ApiResponse< TransferenciaDetalheResponse > ConsultarUsingGET49WithHttpInfo (long? id, long? idTransferencia)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagcontaApi->ConsultarUsingGET48");
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagcontaApi->ConsultarUsingGET49");
             
             // verify the required parameter 'idTransferencia' is set
             if (idTransferencia == null)
-                throw new ApiException(400, "Missing required parameter 'idTransferencia' when calling GlobaltagcontaApi->ConsultarUsingGET48");
+                throw new ApiException(400, "Missing required parameter 'idTransferencia' when calling GlobaltagcontaApi->ConsultarUsingGET49");
             
     
             var localVarPath = "/api/contas/{id}/transferencias-creditos-cartoes/{id_transferencia}";
@@ -5301,9 +5301,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET48: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET49: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET48: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET49: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<TransferenciaDetalheResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5319,9 +5319,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{transferencia_resource_consultar_param_id_conta}}}</param>
         /// <param name="idTransferencia">{{{transferencia_resource_consultar_param_id_transferencia}}}</param>
         /// <returns>Task of TransferenciaDetalheResponse</returns>
-        public async System.Threading.Tasks.Task<TransferenciaDetalheResponse> ConsultarUsingGET48Async (long? id, long? idTransferencia)
+        public async System.Threading.Tasks.Task<TransferenciaDetalheResponse> ConsultarUsingGET49Async (long? id, long? idTransferencia)
         {
-             ApiResponse<TransferenciaDetalheResponse> localVarResponse = await ConsultarUsingGET48AsyncWithHttpInfo(id, idTransferencia);
+             ApiResponse<TransferenciaDetalheResponse> localVarResponse = await ConsultarUsingGET49AsyncWithHttpInfo(id, idTransferencia);
              return localVarResponse.Data;
 
         }
@@ -5333,12 +5333,12 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{transferencia_resource_consultar_param_id_conta}}}</param>
         /// <param name="idTransferencia">{{{transferencia_resource_consultar_param_id_transferencia}}}</param>
         /// <returns>Task of ApiResponse (TransferenciaDetalheResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TransferenciaDetalheResponse>> ConsultarUsingGET48AsyncWithHttpInfo (long? id, long? idTransferencia)
+        public async System.Threading.Tasks.Task<ApiResponse<TransferenciaDetalheResponse>> ConsultarUsingGET49AsyncWithHttpInfo (long? id, long? idTransferencia)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET48");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET49");
             // verify the required parameter 'idTransferencia' is set
-            if (idTransferencia == null) throw new ApiException(400, "Missing required parameter 'idTransferencia' when calling ConsultarUsingGET48");
+            if (idTransferencia == null) throw new ApiException(400, "Missing required parameter 'idTransferencia' when calling ConsultarUsingGET49");
             
     
             var localVarPath = "/api/contas/{id}/transferencias-creditos-cartoes/{id_transferencia}";
@@ -5385,9 +5385,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET48: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET49: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET48: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET49: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<TransferenciaDetalheResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -7903,9 +7903,9 @@ namespace Conductor.Pier.Api
         /// <param name="codigoMCC">{{{transacoes_processadas_request_codigo_mcc}}} (optional)</param> 
         /// <param name="grupoMCC">{{{transacoes_processadas_request_grupo_mcc}}} (optional)</param> 
         /// <returns>PageTransacaoProcessadaNaoProcessadaResponse</returns>
-        public PageTransacaoProcessadaNaoProcessadaResponse ListarUsingGET55 (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null, long? idTipoTransacao = null, bool? flagCredito = null, bool? flagFaturado = null, bool? flagProcessada = null, int? status = null, int? plano = null, long? codigoMCC = null, long? grupoMCC = null)
+        public PageTransacaoProcessadaNaoProcessadaResponse ListarUsingGET56 (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null, long? idTipoTransacao = null, bool? flagCredito = null, bool? flagFaturado = null, bool? flagProcessada = null, int? status = null, int? plano = null, long? codigoMCC = null, long? grupoMCC = null)
         {
-             ApiResponse<PageTransacaoProcessadaNaoProcessadaResponse> localVarResponse = ListarUsingGET55WithHttpInfo(id, sort, page, limit, dataVencimento, dataInicio, dataFim, idTipoTransacao, flagCredito, flagFaturado, flagProcessada, status, plano, codigoMCC, grupoMCC);
+             ApiResponse<PageTransacaoProcessadaNaoProcessadaResponse> localVarResponse = ListarUsingGET56WithHttpInfo(id, sort, page, limit, dataVencimento, dataInicio, dataFim, idTipoTransacao, flagCredito, flagFaturado, flagProcessada, status, plano, codigoMCC, grupoMCC);
              return localVarResponse.Data;
         }
 
@@ -7929,12 +7929,12 @@ namespace Conductor.Pier.Api
         /// <param name="codigoMCC">{{{transacoes_processadas_request_codigo_mcc}}} (optional)</param> 
         /// <param name="grupoMCC">{{{transacoes_processadas_request_grupo_mcc}}} (optional)</param> 
         /// <returns>ApiResponse of PageTransacaoProcessadaNaoProcessadaResponse</returns>
-        public ApiResponse< PageTransacaoProcessadaNaoProcessadaResponse > ListarUsingGET55WithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null, long? idTipoTransacao = null, bool? flagCredito = null, bool? flagFaturado = null, bool? flagProcessada = null, int? status = null, int? plano = null, long? codigoMCC = null, long? grupoMCC = null)
+        public ApiResponse< PageTransacaoProcessadaNaoProcessadaResponse > ListarUsingGET56WithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null, long? idTipoTransacao = null, bool? flagCredito = null, bool? flagFaturado = null, bool? flagProcessada = null, int? status = null, int? plano = null, long? codigoMCC = null, long? grupoMCC = null)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagcontaApi->ListarUsingGET55");
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagcontaApi->ListarUsingGET56");
             
     
             var localVarPath = "/api/contas/{id}/transacoes";
@@ -7994,9 +7994,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET55: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET56: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET55: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET56: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageTransacaoProcessadaNaoProcessadaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -8025,9 +8025,9 @@ namespace Conductor.Pier.Api
         /// <param name="codigoMCC">{{{transacoes_processadas_request_codigo_mcc}}} (optional)</param>
         /// <param name="grupoMCC">{{{transacoes_processadas_request_grupo_mcc}}} (optional)</param>
         /// <returns>Task of PageTransacaoProcessadaNaoProcessadaResponse</returns>
-        public async System.Threading.Tasks.Task<PageTransacaoProcessadaNaoProcessadaResponse> ListarUsingGET55Async (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null, long? idTipoTransacao = null, bool? flagCredito = null, bool? flagFaturado = null, bool? flagProcessada = null, int? status = null, int? plano = null, long? codigoMCC = null, long? grupoMCC = null)
+        public async System.Threading.Tasks.Task<PageTransacaoProcessadaNaoProcessadaResponse> ListarUsingGET56Async (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null, long? idTipoTransacao = null, bool? flagCredito = null, bool? flagFaturado = null, bool? flagProcessada = null, int? status = null, int? plano = null, long? codigoMCC = null, long? grupoMCC = null)
         {
-             ApiResponse<PageTransacaoProcessadaNaoProcessadaResponse> localVarResponse = await ListarUsingGET55AsyncWithHttpInfo(id, sort, page, limit, dataVencimento, dataInicio, dataFim, idTipoTransacao, flagCredito, flagFaturado, flagProcessada, status, plano, codigoMCC, grupoMCC);
+             ApiResponse<PageTransacaoProcessadaNaoProcessadaResponse> localVarResponse = await ListarUsingGET56AsyncWithHttpInfo(id, sort, page, limit, dataVencimento, dataInicio, dataFim, idTipoTransacao, flagCredito, flagFaturado, flagProcessada, status, plano, codigoMCC, grupoMCC);
              return localVarResponse.Data;
 
         }
@@ -8052,10 +8052,10 @@ namespace Conductor.Pier.Api
         /// <param name="codigoMCC">{{{transacoes_processadas_request_codigo_mcc}}} (optional)</param>
         /// <param name="grupoMCC">{{{transacoes_processadas_request_grupo_mcc}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageTransacaoProcessadaNaoProcessadaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageTransacaoProcessadaNaoProcessadaResponse>> ListarUsingGET55AsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null, long? idTipoTransacao = null, bool? flagCredito = null, bool? flagFaturado = null, bool? flagProcessada = null, int? status = null, int? plano = null, long? codigoMCC = null, long? grupoMCC = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageTransacaoProcessadaNaoProcessadaResponse>> ListarUsingGET56AsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null, long? idTipoTransacao = null, bool? flagCredito = null, bool? flagFaturado = null, bool? flagProcessada = null, int? status = null, int? plano = null, long? codigoMCC = null, long? grupoMCC = null)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ListarUsingGET55");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ListarUsingGET56");
             
     
             var localVarPath = "/api/contas/{id}/transacoes";
@@ -8115,9 +8115,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET55: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET56: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET55: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET56: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageTransacaoProcessadaNaoProcessadaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -8139,9 +8139,9 @@ namespace Conductor.Pier.Api
         /// <param name="valorTransferencia">{{{transferencia_request_valor_transferencia_value}}} (optional)</param> 
         /// <param name="dataTransferencia">{{{transferencia_request_data_transferencia_value}}} (optional)</param> 
         /// <returns>PageTransferenciaResponse</returns>
-        public PageTransferenciaResponse ListarUsingGET57 (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idTransferencia = null, long? idContaOrigem = null, long? idContaDestino = null, double? valorTransferencia = null, string dataTransferencia = null)
+        public PageTransferenciaResponse ListarUsingGET58 (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idTransferencia = null, long? idContaOrigem = null, long? idContaDestino = null, double? valorTransferencia = null, string dataTransferencia = null)
         {
-             ApiResponse<PageTransferenciaResponse> localVarResponse = ListarUsingGET57WithHttpInfo(id, sort, page, limit, idTransferencia, idContaOrigem, idContaDestino, valorTransferencia, dataTransferencia);
+             ApiResponse<PageTransferenciaResponse> localVarResponse = ListarUsingGET58WithHttpInfo(id, sort, page, limit, idTransferencia, idContaOrigem, idContaDestino, valorTransferencia, dataTransferencia);
              return localVarResponse.Data;
         }
 
@@ -8159,12 +8159,12 @@ namespace Conductor.Pier.Api
         /// <param name="valorTransferencia">{{{transferencia_request_valor_transferencia_value}}} (optional)</param> 
         /// <param name="dataTransferencia">{{{transferencia_request_data_transferencia_value}}} (optional)</param> 
         /// <returns>ApiResponse of PageTransferenciaResponse</returns>
-        public ApiResponse< PageTransferenciaResponse > ListarUsingGET57WithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idTransferencia = null, long? idContaOrigem = null, long? idContaDestino = null, double? valorTransferencia = null, string dataTransferencia = null)
+        public ApiResponse< PageTransferenciaResponse > ListarUsingGET58WithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idTransferencia = null, long? idContaOrigem = null, long? idContaDestino = null, double? valorTransferencia = null, string dataTransferencia = null)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagcontaApi->ListarUsingGET57");
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagcontaApi->ListarUsingGET58");
             
     
             var localVarPath = "/api/contas/{id}/transferencias-creditos-cartoes";
@@ -8218,9 +8218,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET57: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET58: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET57: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET58: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageTransferenciaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -8243,9 +8243,9 @@ namespace Conductor.Pier.Api
         /// <param name="valorTransferencia">{{{transferencia_request_valor_transferencia_value}}} (optional)</param>
         /// <param name="dataTransferencia">{{{transferencia_request_data_transferencia_value}}} (optional)</param>
         /// <returns>Task of PageTransferenciaResponse</returns>
-        public async System.Threading.Tasks.Task<PageTransferenciaResponse> ListarUsingGET57Async (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idTransferencia = null, long? idContaOrigem = null, long? idContaDestino = null, double? valorTransferencia = null, string dataTransferencia = null)
+        public async System.Threading.Tasks.Task<PageTransferenciaResponse> ListarUsingGET58Async (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idTransferencia = null, long? idContaOrigem = null, long? idContaDestino = null, double? valorTransferencia = null, string dataTransferencia = null)
         {
-             ApiResponse<PageTransferenciaResponse> localVarResponse = await ListarUsingGET57AsyncWithHttpInfo(id, sort, page, limit, idTransferencia, idContaOrigem, idContaDestino, valorTransferencia, dataTransferencia);
+             ApiResponse<PageTransferenciaResponse> localVarResponse = await ListarUsingGET58AsyncWithHttpInfo(id, sort, page, limit, idTransferencia, idContaOrigem, idContaDestino, valorTransferencia, dataTransferencia);
              return localVarResponse.Data;
 
         }
@@ -8264,10 +8264,10 @@ namespace Conductor.Pier.Api
         /// <param name="valorTransferencia">{{{transferencia_request_valor_transferencia_value}}} (optional)</param>
         /// <param name="dataTransferencia">{{{transferencia_request_data_transferencia_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageTransferenciaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageTransferenciaResponse>> ListarUsingGET57AsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idTransferencia = null, long? idContaOrigem = null, long? idContaDestino = null, double? valorTransferencia = null, string dataTransferencia = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageTransferenciaResponse>> ListarUsingGET58AsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idTransferencia = null, long? idContaOrigem = null, long? idContaDestino = null, double? valorTransferencia = null, string dataTransferencia = null)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ListarUsingGET57");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ListarUsingGET58");
             
     
             var localVarPath = "/api/contas/{id}/transferencias-creditos-cartoes";
@@ -8321,9 +8321,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET57: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET58: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET57: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET58: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageTransferenciaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

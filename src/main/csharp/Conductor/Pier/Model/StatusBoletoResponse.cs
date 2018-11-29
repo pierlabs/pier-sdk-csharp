@@ -22,8 +22,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="StatusBoletoResponse" /> class.
         /// Initializes a new instance of the <see cref="StatusBoletoResponse" />class.
         /// </summary>
-        /// <param name="Status">Status.</param>
-        /// <param name="Data">Data.</param>
+        /// <param name="Status">{{{status_boleto_dto_status_value}}}.</param>
+        /// <param name="Data">{{{status_boleto_dto_data_value}}}.</param>
 
         public StatusBoletoResponse(string Status = null, string Data = null)
         {
@@ -34,14 +34,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Gets or Sets Status
+        /// {{{status_boleto_dto_status_value}}}
         /// </summary>
+        /// <value>{{{status_boleto_dto_status_value}}}</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public string Status { get; set; }
     
         /// <summary>
-        /// Gets or Sets Data
+        /// {{{status_boleto_dto_data_value}}}
         /// </summary>
+        /// <value>{{{status_boleto_dto_data_value}}}</value>
         [DataMember(Name="data", EmitDefaultValue=false)]
         public string Data { get; set; }
     

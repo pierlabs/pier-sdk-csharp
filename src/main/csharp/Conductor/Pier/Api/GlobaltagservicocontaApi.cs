@@ -27,7 +27,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{servico_conta_resource_aderir_pacote_tarifa_param_id}}}</param>
         /// <param name="adesaoPacoteTarifaPersist">adesaoPacoteTarifaPersist</param>
         /// <returns>AdesaoPacoteTarifaResponse</returns>
-        AdesaoPacoteTarifaResponse AderirPacoteTarifaUsingPOST (long? id, AdesaoPacoteTarifaPersistencia adesaoPacoteTarifaPersist);
+        AdesaoPacoteTarifaResponse AderirPacoteTarifaUsingPOST (long? id, AdesaoPacoteTarifaPersist adesaoPacoteTarifaPersist);
   
         /// <summary>
         /// {{{servico_conta_resource_aderir_pacote_tarifa}}}
@@ -39,7 +39,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{servico_conta_resource_aderir_pacote_tarifa_param_id}}}</param>
         /// <param name="adesaoPacoteTarifaPersist">adesaoPacoteTarifaPersist</param>
         /// <returns>ApiResponse of AdesaoPacoteTarifaResponse</returns>
-        ApiResponse<AdesaoPacoteTarifaResponse> AderirPacoteTarifaUsingPOSTWithHttpInfo (long? id, AdesaoPacoteTarifaPersistencia adesaoPacoteTarifaPersist);
+        ApiResponse<AdesaoPacoteTarifaResponse> AderirPacoteTarifaUsingPOSTWithHttpInfo (long? id, AdesaoPacoteTarifaPersist adesaoPacoteTarifaPersist);
         
         /// <summary>
         /// {{{conta_resource_ativar_anuidade}}}
@@ -236,7 +236,7 @@ namespace Conductor.Pier.Api
         /// <param name="idConta">{{{servico_conta_request_id_conta_value}}} (optional)</param>
         /// <param name="idTipoServico">{{{servico_conta_request_id_tipo_servico_value}}} (optional)</param>
         /// <returns>PageServicoContaResponse</returns>
-        PageServicoContaResponse ListarUsingGET41 (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idTipoServico = null);
+        PageServicoContaResponse ListarUsingGET42 (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idTipoServico = null);
   
         /// <summary>
         /// {{{servico_conta_resource_listar_servico_conta}}}
@@ -251,7 +251,7 @@ namespace Conductor.Pier.Api
         /// <param name="idConta">{{{servico_conta_request_id_conta_value}}} (optional)</param>
         /// <param name="idTipoServico">{{{servico_conta_request_id_tipo_servico_value}}} (optional)</param>
         /// <returns>ApiResponse of PageServicoContaResponse</returns>
-        ApiResponse<PageServicoContaResponse> ListarUsingGET41WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idTipoServico = null);
+        ApiResponse<PageServicoContaResponse> ListarUsingGET42WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idTipoServico = null);
         
         /// <summary>
         /// {{{servico_conta_resource_salvar}}}
@@ -289,7 +289,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{servico_conta_resource_aderir_pacote_tarifa_param_id}}}</param>
         /// <param name="adesaoPacoteTarifaPersist">adesaoPacoteTarifaPersist</param>
         /// <returns>Task of AdesaoPacoteTarifaResponse</returns>
-        System.Threading.Tasks.Task<AdesaoPacoteTarifaResponse> AderirPacoteTarifaUsingPOSTAsync (long? id, AdesaoPacoteTarifaPersistencia adesaoPacoteTarifaPersist);
+        System.Threading.Tasks.Task<AdesaoPacoteTarifaResponse> AderirPacoteTarifaUsingPOSTAsync (long? id, AdesaoPacoteTarifaPersist adesaoPacoteTarifaPersist);
 
         /// <summary>
         /// {{{servico_conta_resource_aderir_pacote_tarifa}}}
@@ -301,7 +301,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{servico_conta_resource_aderir_pacote_tarifa_param_id}}}</param>
         /// <param name="adesaoPacoteTarifaPersist">adesaoPacoteTarifaPersist</param>
         /// <returns>Task of ApiResponse (AdesaoPacoteTarifaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AdesaoPacoteTarifaResponse>> AderirPacoteTarifaUsingPOSTAsyncWithHttpInfo (long? id, AdesaoPacoteTarifaPersistencia adesaoPacoteTarifaPersist);
+        System.Threading.Tasks.Task<ApiResponse<AdesaoPacoteTarifaResponse>> AderirPacoteTarifaUsingPOSTAsyncWithHttpInfo (long? id, AdesaoPacoteTarifaPersist adesaoPacoteTarifaPersist);
         
         /// <summary>
         /// {{{conta_resource_ativar_anuidade}}}
@@ -498,7 +498,7 @@ namespace Conductor.Pier.Api
         /// <param name="idConta">{{{servico_conta_request_id_conta_value}}} (optional)</param>
         /// <param name="idTipoServico">{{{servico_conta_request_id_tipo_servico_value}}} (optional)</param>
         /// <returns>Task of PageServicoContaResponse</returns>
-        System.Threading.Tasks.Task<PageServicoContaResponse> ListarUsingGET41Async (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idTipoServico = null);
+        System.Threading.Tasks.Task<PageServicoContaResponse> ListarUsingGET42Async (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idTipoServico = null);
 
         /// <summary>
         /// {{{servico_conta_resource_listar_servico_conta}}}
@@ -513,7 +513,7 @@ namespace Conductor.Pier.Api
         /// <param name="idConta">{{{servico_conta_request_id_conta_value}}} (optional)</param>
         /// <param name="idTipoServico">{{{servico_conta_request_id_tipo_servico_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageServicoContaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageServicoContaResponse>> ListarUsingGET41AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idTipoServico = null);
+        System.Threading.Tasks.Task<ApiResponse<PageServicoContaResponse>> ListarUsingGET42AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idTipoServico = null);
         
         /// <summary>
         /// {{{servico_conta_resource_salvar}}}
@@ -636,7 +636,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{servico_conta_resource_aderir_pacote_tarifa_param_id}}}</param> 
         /// <param name="adesaoPacoteTarifaPersist">adesaoPacoteTarifaPersist</param> 
         /// <returns>AdesaoPacoteTarifaResponse</returns>
-        public AdesaoPacoteTarifaResponse AderirPacoteTarifaUsingPOST (long? id, AdesaoPacoteTarifaPersistencia adesaoPacoteTarifaPersist)
+        public AdesaoPacoteTarifaResponse AderirPacoteTarifaUsingPOST (long? id, AdesaoPacoteTarifaPersist adesaoPacoteTarifaPersist)
         {
              ApiResponse<AdesaoPacoteTarifaResponse> localVarResponse = AderirPacoteTarifaUsingPOSTWithHttpInfo(id, adesaoPacoteTarifaPersist);
              return localVarResponse.Data;
@@ -649,7 +649,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{servico_conta_resource_aderir_pacote_tarifa_param_id}}}</param> 
         /// <param name="adesaoPacoteTarifaPersist">adesaoPacoteTarifaPersist</param> 
         /// <returns>ApiResponse of AdesaoPacoteTarifaResponse</returns>
-        public ApiResponse< AdesaoPacoteTarifaResponse > AderirPacoteTarifaUsingPOSTWithHttpInfo (long? id, AdesaoPacoteTarifaPersistencia adesaoPacoteTarifaPersist)
+        public ApiResponse< AdesaoPacoteTarifaResponse > AderirPacoteTarifaUsingPOSTWithHttpInfo (long? id, AdesaoPacoteTarifaPersist adesaoPacoteTarifaPersist)
         {
             
             // verify the required parameter 'id' is set
@@ -729,7 +729,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{servico_conta_resource_aderir_pacote_tarifa_param_id}}}</param>
         /// <param name="adesaoPacoteTarifaPersist">adesaoPacoteTarifaPersist</param>
         /// <returns>Task of AdesaoPacoteTarifaResponse</returns>
-        public async System.Threading.Tasks.Task<AdesaoPacoteTarifaResponse> AderirPacoteTarifaUsingPOSTAsync (long? id, AdesaoPacoteTarifaPersistencia adesaoPacoteTarifaPersist)
+        public async System.Threading.Tasks.Task<AdesaoPacoteTarifaResponse> AderirPacoteTarifaUsingPOSTAsync (long? id, AdesaoPacoteTarifaPersist adesaoPacoteTarifaPersist)
         {
              ApiResponse<AdesaoPacoteTarifaResponse> localVarResponse = await AderirPacoteTarifaUsingPOSTAsyncWithHttpInfo(id, adesaoPacoteTarifaPersist);
              return localVarResponse.Data;
@@ -743,7 +743,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{servico_conta_resource_aderir_pacote_tarifa_param_id}}}</param>
         /// <param name="adesaoPacoteTarifaPersist">adesaoPacoteTarifaPersist</param>
         /// <returns>Task of ApiResponse (AdesaoPacoteTarifaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AdesaoPacoteTarifaResponse>> AderirPacoteTarifaUsingPOSTAsyncWithHttpInfo (long? id, AdesaoPacoteTarifaPersistencia adesaoPacoteTarifaPersist)
+        public async System.Threading.Tasks.Task<ApiResponse<AdesaoPacoteTarifaResponse>> AderirPacoteTarifaUsingPOSTAsyncWithHttpInfo (long? id, AdesaoPacoteTarifaPersist adesaoPacoteTarifaPersist)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AderirPacoteTarifaUsingPOST");
@@ -1999,9 +1999,9 @@ namespace Conductor.Pier.Api
         /// <param name="idConta">{{{servico_conta_request_id_conta_value}}} (optional)</param> 
         /// <param name="idTipoServico">{{{servico_conta_request_id_tipo_servico_value}}} (optional)</param> 
         /// <returns>PageServicoContaResponse</returns>
-        public PageServicoContaResponse ListarUsingGET41 (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idTipoServico = null)
+        public PageServicoContaResponse ListarUsingGET42 (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idTipoServico = null)
         {
-             ApiResponse<PageServicoContaResponse> localVarResponse = ListarUsingGET41WithHttpInfo(sort, page, limit, idConta, idTipoServico);
+             ApiResponse<PageServicoContaResponse> localVarResponse = ListarUsingGET42WithHttpInfo(sort, page, limit, idConta, idTipoServico);
              return localVarResponse.Data;
         }
 
@@ -2015,7 +2015,7 @@ namespace Conductor.Pier.Api
         /// <param name="idConta">{{{servico_conta_request_id_conta_value}}} (optional)</param> 
         /// <param name="idTipoServico">{{{servico_conta_request_id_tipo_servico_value}}} (optional)</param> 
         /// <returns>ApiResponse of PageServicoContaResponse</returns>
-        public ApiResponse< PageServicoContaResponse > ListarUsingGET41WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idTipoServico = null)
+        public ApiResponse< PageServicoContaResponse > ListarUsingGET42WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idTipoServico = null)
         {
             
     
@@ -2066,9 +2066,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET41: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET42: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET41: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET42: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageServicoContaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2087,9 +2087,9 @@ namespace Conductor.Pier.Api
         /// <param name="idConta">{{{servico_conta_request_id_conta_value}}} (optional)</param>
         /// <param name="idTipoServico">{{{servico_conta_request_id_tipo_servico_value}}} (optional)</param>
         /// <returns>Task of PageServicoContaResponse</returns>
-        public async System.Threading.Tasks.Task<PageServicoContaResponse> ListarUsingGET41Async (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idTipoServico = null)
+        public async System.Threading.Tasks.Task<PageServicoContaResponse> ListarUsingGET42Async (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idTipoServico = null)
         {
-             ApiResponse<PageServicoContaResponse> localVarResponse = await ListarUsingGET41AsyncWithHttpInfo(sort, page, limit, idConta, idTipoServico);
+             ApiResponse<PageServicoContaResponse> localVarResponse = await ListarUsingGET42AsyncWithHttpInfo(sort, page, limit, idConta, idTipoServico);
              return localVarResponse.Data;
 
         }
@@ -2104,7 +2104,7 @@ namespace Conductor.Pier.Api
         /// <param name="idConta">{{{servico_conta_request_id_conta_value}}} (optional)</param>
         /// <param name="idTipoServico">{{{servico_conta_request_id_tipo_servico_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageServicoContaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageServicoContaResponse>> ListarUsingGET41AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idTipoServico = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageServicoContaResponse>> ListarUsingGET42AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idTipoServico = null)
         {
             
     
@@ -2155,9 +2155,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET41: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET42: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET41: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET42: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageServicoContaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

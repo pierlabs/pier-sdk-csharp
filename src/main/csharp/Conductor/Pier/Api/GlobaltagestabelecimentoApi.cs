@@ -392,7 +392,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{telefone_estabelecimento_resource_consultar_param_id}}}</param>
         /// <returns>TelefoneEstabelecimentoResponse</returns>
-        TelefoneEstabelecimentoResponse ConsultarUsingGET36 (long? id);
+        TelefoneEstabelecimentoResponse ConsultarUsingGET37 (long? id);
   
         /// <summary>
         /// {{{telefone_estabelecimento_resource_consultar}}}
@@ -403,7 +403,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{telefone_estabelecimento_resource_consultar_param_id}}}</param>
         /// <returns>ApiResponse of TelefoneEstabelecimentoResponse</returns>
-        ApiResponse<TelefoneEstabelecimentoResponse> ConsultarUsingGET36WithHttpInfo (long? id);
+        ApiResponse<TelefoneEstabelecimentoResponse> ConsultarUsingGET37WithHttpInfo (long? id);
         
         /// <summary>
         /// {{{terminal_resource_consultar}}}
@@ -414,7 +414,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{terminal_resource_consultar_param_id}}}</param>
         /// <returns>TerminalResponse</returns>
-        TerminalResponse ConsultarUsingGET38 (long? id);
+        TerminalResponse ConsultarUsingGET39 (long? id);
   
         /// <summary>
         /// {{{terminal_resource_consultar}}}
@@ -425,7 +425,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{terminal_resource_consultar_param_id}}}</param>
         /// <returns>ApiResponse of TerminalResponse</returns>
-        ApiResponse<TerminalResponse> ConsultarUsingGET38WithHttpInfo (long? id);
+        ApiResponse<TerminalResponse> ConsultarUsingGET39WithHttpInfo (long? id);
         
         /// <summary>
         /// {{{vinculo_estabelecimento_adquirente_resource_consultar}}}
@@ -436,7 +436,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{vinculo_estabelecimento_adquirente_resource_consultar_param_id}}}</param>
         /// <returns>VinculoEstabelecimentoAdquirenteResponse</returns>
-        VinculoEstabelecimentoAdquirenteResponse ConsultarUsingGET50 (long? id);
+        VinculoEstabelecimentoAdquirenteResponse ConsultarUsingGET51 (long? id);
   
         /// <summary>
         /// {{{vinculo_estabelecimento_adquirente_resource_consultar}}}
@@ -447,7 +447,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{vinculo_estabelecimento_adquirente_resource_consultar_param_id}}}</param>
         /// <returns>ApiResponse of VinculoEstabelecimentoAdquirenteResponse</returns>
-        ApiResponse<VinculoEstabelecimentoAdquirenteResponse> ConsultarUsingGET50WithHttpInfo (long? id);
+        ApiResponse<VinculoEstabelecimentoAdquirenteResponse> ConsultarUsingGET51WithHttpInfo (long? id);
         
         /// <summary>
         /// {{{vinculo_estabelecimento_adquirente_resource_desabilitar_vinculo}}}
@@ -1111,7 +1111,7 @@ namespace Conductor.Pier.Api
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <param name="idEstabelecimento">{{{telefone_estabelecimento_request_id_estabelecimento_value}}} (optional)</param>
         /// <returns>PageTelefoneEstabelecimentoResponse</returns>
-        PageTelefoneEstabelecimentoResponse ListarUsingGET45 (List<string> sort = null, int? page = null, int? limit = null, long? idEstabelecimento = null);
+        PageTelefoneEstabelecimentoResponse ListarUsingGET46 (List<string> sort = null, int? page = null, int? limit = null, long? idEstabelecimento = null);
   
         /// <summary>
         /// {{{telefone_estabelecimento_resource_listar}}}
@@ -1125,7 +1125,7 @@ namespace Conductor.Pier.Api
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <param name="idEstabelecimento">{{{telefone_estabelecimento_request_id_estabelecimento_value}}} (optional)</param>
         /// <returns>ApiResponse of PageTelefoneEstabelecimentoResponse</returns>
-        ApiResponse<PageTelefoneEstabelecimentoResponse> ListarUsingGET45WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idEstabelecimento = null);
+        ApiResponse<PageTelefoneEstabelecimentoResponse> ListarUsingGET46WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idEstabelecimento = null);
         
         /// <summary>
         /// {{{terminal_resource_listar}}}
@@ -1142,7 +1142,7 @@ namespace Conductor.Pier.Api
         /// <param name="numeroEstabelecimento">{{{terminal_request_numero_estabelecimento_value}}} (optional)</param>
         /// <param name="idEstabelecimento">{{{terminal_request_id_estabelecimento_value}}} (optional)</param>
         /// <returns>PageTerminalResponse</returns>
-        PageTerminalResponse ListarUsingGET47 (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string terminal = null, long? numeroEstabelecimento = null, long? idEstabelecimento = null);
+        PageTerminalResponse ListarUsingGET48 (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string terminal = null, long? numeroEstabelecimento = null, long? idEstabelecimento = null);
   
         /// <summary>
         /// {{{terminal_resource_listar}}}
@@ -1159,7 +1159,7 @@ namespace Conductor.Pier.Api
         /// <param name="numeroEstabelecimento">{{{terminal_request_numero_estabelecimento_value}}} (optional)</param>
         /// <param name="idEstabelecimento">{{{terminal_request_id_estabelecimento_value}}} (optional)</param>
         /// <returns>ApiResponse of PageTerminalResponse</returns>
-        ApiResponse<PageTerminalResponse> ListarUsingGET47WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string terminal = null, long? numeroEstabelecimento = null, long? idEstabelecimento = null);
+        ApiResponse<PageTerminalResponse> ListarUsingGET48WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string terminal = null, long? numeroEstabelecimento = null, long? idEstabelecimento = null);
         
         /// <summary>
         /// {{{vinculo_estabelecimento_adquirente_resource_listar}}}
@@ -1175,7 +1175,7 @@ namespace Conductor.Pier.Api
         /// <param name="idEstabelecimento">{{{vinculo_estabelecimento_adquirente_request_id_estabelecimento_value}}} (optional)</param>
         /// <param name="codigoEstabelecimentoAdquirente">{{{vinculo_estabelecimento_adquirente_request_codigo_estabelecimento_adquirente_value}}} (optional)</param>
         /// <returns>PageVinculoEstabelecimentoAdquirenteResponse</returns>
-        PageVinculoEstabelecimentoAdquirenteResponse ListarUsingGET60 (List<string> sort = null, int? page = null, int? limit = null, long? idAdquirente = null, long? idEstabelecimento = null, string codigoEstabelecimentoAdquirente = null);
+        PageVinculoEstabelecimentoAdquirenteResponse ListarUsingGET61 (List<string> sort = null, int? page = null, int? limit = null, long? idAdquirente = null, long? idEstabelecimento = null, string codigoEstabelecimentoAdquirente = null);
   
         /// <summary>
         /// {{{vinculo_estabelecimento_adquirente_resource_listar}}}
@@ -1191,7 +1191,7 @@ namespace Conductor.Pier.Api
         /// <param name="idEstabelecimento">{{{vinculo_estabelecimento_adquirente_request_id_estabelecimento_value}}} (optional)</param>
         /// <param name="codigoEstabelecimentoAdquirente">{{{vinculo_estabelecimento_adquirente_request_codigo_estabelecimento_adquirente_value}}} (optional)</param>
         /// <returns>ApiResponse of PageVinculoEstabelecimentoAdquirenteResponse</returns>
-        ApiResponse<PageVinculoEstabelecimentoAdquirenteResponse> ListarUsingGET60WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idAdquirente = null, long? idEstabelecimento = null, string codigoEstabelecimentoAdquirente = null);
+        ApiResponse<PageVinculoEstabelecimentoAdquirenteResponse> ListarUsingGET61WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idAdquirente = null, long? idEstabelecimento = null, string codigoEstabelecimentoAdquirente = null);
         
         /// <summary>
         /// {{{vinculo_operacao_resource_listar}}}
@@ -1208,7 +1208,7 @@ namespace Conductor.Pier.Api
         /// <param name="idOperacao">{{{vinculo_operacao_request_id_operacao_value}}} (optional)</param>
         /// <param name="codigoMCC">{{{vinculo_operacao_request_codigo_m_c_c_value}}} (optional)</param>
         /// <returns>PageVinculoOperacaoResponse</returns>
-        PageVinculoOperacaoResponse ListarUsingGET61 (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOperacao = null, int? codigoMCC = null);
+        PageVinculoOperacaoResponse ListarUsingGET62 (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOperacao = null, int? codigoMCC = null);
   
         /// <summary>
         /// {{{vinculo_operacao_resource_listar}}}
@@ -1225,7 +1225,7 @@ namespace Conductor.Pier.Api
         /// <param name="idOperacao">{{{vinculo_operacao_request_id_operacao_value}}} (optional)</param>
         /// <param name="codigoMCC">{{{vinculo_operacao_request_codigo_m_c_c_value}}} (optional)</param>
         /// <returns>ApiResponse of PageVinculoOperacaoResponse</returns>
-        ApiResponse<PageVinculoOperacaoResponse> ListarUsingGET61WithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOperacao = null, int? codigoMCC = null);
+        ApiResponse<PageVinculoOperacaoResponse> ListarUsingGET62WithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOperacao = null, int? codigoMCC = null);
         
         /// <summary>
         /// {{{maquineta_resource_salvar}}}
@@ -1716,7 +1716,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{telefone_estabelecimento_resource_consultar_param_id}}}</param>
         /// <returns>Task of TelefoneEstabelecimentoResponse</returns>
-        System.Threading.Tasks.Task<TelefoneEstabelecimentoResponse> ConsultarUsingGET36Async (long? id);
+        System.Threading.Tasks.Task<TelefoneEstabelecimentoResponse> ConsultarUsingGET37Async (long? id);
 
         /// <summary>
         /// {{{telefone_estabelecimento_resource_consultar}}}
@@ -1727,7 +1727,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{telefone_estabelecimento_resource_consultar_param_id}}}</param>
         /// <returns>Task of ApiResponse (TelefoneEstabelecimentoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TelefoneEstabelecimentoResponse>> ConsultarUsingGET36AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<TelefoneEstabelecimentoResponse>> ConsultarUsingGET37AsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// {{{terminal_resource_consultar}}}
@@ -1738,7 +1738,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{terminal_resource_consultar_param_id}}}</param>
         /// <returns>Task of TerminalResponse</returns>
-        System.Threading.Tasks.Task<TerminalResponse> ConsultarUsingGET38Async (long? id);
+        System.Threading.Tasks.Task<TerminalResponse> ConsultarUsingGET39Async (long? id);
 
         /// <summary>
         /// {{{terminal_resource_consultar}}}
@@ -1749,7 +1749,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{terminal_resource_consultar_param_id}}}</param>
         /// <returns>Task of ApiResponse (TerminalResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TerminalResponse>> ConsultarUsingGET38AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<TerminalResponse>> ConsultarUsingGET39AsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// {{{vinculo_estabelecimento_adquirente_resource_consultar}}}
@@ -1760,7 +1760,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{vinculo_estabelecimento_adquirente_resource_consultar_param_id}}}</param>
         /// <returns>Task of VinculoEstabelecimentoAdquirenteResponse</returns>
-        System.Threading.Tasks.Task<VinculoEstabelecimentoAdquirenteResponse> ConsultarUsingGET50Async (long? id);
+        System.Threading.Tasks.Task<VinculoEstabelecimentoAdquirenteResponse> ConsultarUsingGET51Async (long? id);
 
         /// <summary>
         /// {{{vinculo_estabelecimento_adquirente_resource_consultar}}}
@@ -1771,7 +1771,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{vinculo_estabelecimento_adquirente_resource_consultar_param_id}}}</param>
         /// <returns>Task of ApiResponse (VinculoEstabelecimentoAdquirenteResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<VinculoEstabelecimentoAdquirenteResponse>> ConsultarUsingGET50AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<VinculoEstabelecimentoAdquirenteResponse>> ConsultarUsingGET51AsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// {{{vinculo_estabelecimento_adquirente_resource_desabilitar_vinculo}}}
@@ -2435,7 +2435,7 @@ namespace Conductor.Pier.Api
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <param name="idEstabelecimento">{{{telefone_estabelecimento_request_id_estabelecimento_value}}} (optional)</param>
         /// <returns>Task of PageTelefoneEstabelecimentoResponse</returns>
-        System.Threading.Tasks.Task<PageTelefoneEstabelecimentoResponse> ListarUsingGET45Async (List<string> sort = null, int? page = null, int? limit = null, long? idEstabelecimento = null);
+        System.Threading.Tasks.Task<PageTelefoneEstabelecimentoResponse> ListarUsingGET46Async (List<string> sort = null, int? page = null, int? limit = null, long? idEstabelecimento = null);
 
         /// <summary>
         /// {{{telefone_estabelecimento_resource_listar}}}
@@ -2449,7 +2449,7 @@ namespace Conductor.Pier.Api
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <param name="idEstabelecimento">{{{telefone_estabelecimento_request_id_estabelecimento_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageTelefoneEstabelecimentoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageTelefoneEstabelecimentoResponse>> ListarUsingGET45AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idEstabelecimento = null);
+        System.Threading.Tasks.Task<ApiResponse<PageTelefoneEstabelecimentoResponse>> ListarUsingGET46AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idEstabelecimento = null);
         
         /// <summary>
         /// {{{terminal_resource_listar}}}
@@ -2466,7 +2466,7 @@ namespace Conductor.Pier.Api
         /// <param name="numeroEstabelecimento">{{{terminal_request_numero_estabelecimento_value}}} (optional)</param>
         /// <param name="idEstabelecimento">{{{terminal_request_id_estabelecimento_value}}} (optional)</param>
         /// <returns>Task of PageTerminalResponse</returns>
-        System.Threading.Tasks.Task<PageTerminalResponse> ListarUsingGET47Async (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string terminal = null, long? numeroEstabelecimento = null, long? idEstabelecimento = null);
+        System.Threading.Tasks.Task<PageTerminalResponse> ListarUsingGET48Async (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string terminal = null, long? numeroEstabelecimento = null, long? idEstabelecimento = null);
 
         /// <summary>
         /// {{{terminal_resource_listar}}}
@@ -2483,7 +2483,7 @@ namespace Conductor.Pier.Api
         /// <param name="numeroEstabelecimento">{{{terminal_request_numero_estabelecimento_value}}} (optional)</param>
         /// <param name="idEstabelecimento">{{{terminal_request_id_estabelecimento_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageTerminalResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageTerminalResponse>> ListarUsingGET47AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string terminal = null, long? numeroEstabelecimento = null, long? idEstabelecimento = null);
+        System.Threading.Tasks.Task<ApiResponse<PageTerminalResponse>> ListarUsingGET48AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string terminal = null, long? numeroEstabelecimento = null, long? idEstabelecimento = null);
         
         /// <summary>
         /// {{{vinculo_estabelecimento_adquirente_resource_listar}}}
@@ -2499,7 +2499,7 @@ namespace Conductor.Pier.Api
         /// <param name="idEstabelecimento">{{{vinculo_estabelecimento_adquirente_request_id_estabelecimento_value}}} (optional)</param>
         /// <param name="codigoEstabelecimentoAdquirente">{{{vinculo_estabelecimento_adquirente_request_codigo_estabelecimento_adquirente_value}}} (optional)</param>
         /// <returns>Task of PageVinculoEstabelecimentoAdquirenteResponse</returns>
-        System.Threading.Tasks.Task<PageVinculoEstabelecimentoAdquirenteResponse> ListarUsingGET60Async (List<string> sort = null, int? page = null, int? limit = null, long? idAdquirente = null, long? idEstabelecimento = null, string codigoEstabelecimentoAdquirente = null);
+        System.Threading.Tasks.Task<PageVinculoEstabelecimentoAdquirenteResponse> ListarUsingGET61Async (List<string> sort = null, int? page = null, int? limit = null, long? idAdquirente = null, long? idEstabelecimento = null, string codigoEstabelecimentoAdquirente = null);
 
         /// <summary>
         /// {{{vinculo_estabelecimento_adquirente_resource_listar}}}
@@ -2515,7 +2515,7 @@ namespace Conductor.Pier.Api
         /// <param name="idEstabelecimento">{{{vinculo_estabelecimento_adquirente_request_id_estabelecimento_value}}} (optional)</param>
         /// <param name="codigoEstabelecimentoAdquirente">{{{vinculo_estabelecimento_adquirente_request_codigo_estabelecimento_adquirente_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageVinculoEstabelecimentoAdquirenteResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageVinculoEstabelecimentoAdquirenteResponse>> ListarUsingGET60AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idAdquirente = null, long? idEstabelecimento = null, string codigoEstabelecimentoAdquirente = null);
+        System.Threading.Tasks.Task<ApiResponse<PageVinculoEstabelecimentoAdquirenteResponse>> ListarUsingGET61AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idAdquirente = null, long? idEstabelecimento = null, string codigoEstabelecimentoAdquirente = null);
         
         /// <summary>
         /// {{{vinculo_operacao_resource_listar}}}
@@ -2532,7 +2532,7 @@ namespace Conductor.Pier.Api
         /// <param name="idOperacao">{{{vinculo_operacao_request_id_operacao_value}}} (optional)</param>
         /// <param name="codigoMCC">{{{vinculo_operacao_request_codigo_m_c_c_value}}} (optional)</param>
         /// <returns>Task of PageVinculoOperacaoResponse</returns>
-        System.Threading.Tasks.Task<PageVinculoOperacaoResponse> ListarUsingGET61Async (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOperacao = null, int? codigoMCC = null);
+        System.Threading.Tasks.Task<PageVinculoOperacaoResponse> ListarUsingGET62Async (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOperacao = null, int? codigoMCC = null);
 
         /// <summary>
         /// {{{vinculo_operacao_resource_listar}}}
@@ -2549,7 +2549,7 @@ namespace Conductor.Pier.Api
         /// <param name="idOperacao">{{{vinculo_operacao_request_id_operacao_value}}} (optional)</param>
         /// <param name="codigoMCC">{{{vinculo_operacao_request_codigo_m_c_c_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageVinculoOperacaoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageVinculoOperacaoResponse>> ListarUsingGET61AsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOperacao = null, int? codigoMCC = null);
+        System.Threading.Tasks.Task<ApiResponse<PageVinculoOperacaoResponse>> ListarUsingGET62AsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOperacao = null, int? codigoMCC = null);
         
         /// <summary>
         /// {{{maquineta_resource_salvar}}}
@@ -5491,9 +5491,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{telefone_estabelecimento_resource_consultar_param_id}}}</param> 
         /// <returns>TelefoneEstabelecimentoResponse</returns>
-        public TelefoneEstabelecimentoResponse ConsultarUsingGET36 (long? id)
+        public TelefoneEstabelecimentoResponse ConsultarUsingGET37 (long? id)
         {
-             ApiResponse<TelefoneEstabelecimentoResponse> localVarResponse = ConsultarUsingGET36WithHttpInfo(id);
+             ApiResponse<TelefoneEstabelecimentoResponse> localVarResponse = ConsultarUsingGET37WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -5503,12 +5503,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{telefone_estabelecimento_resource_consultar_param_id}}}</param> 
         /// <returns>ApiResponse of TelefoneEstabelecimentoResponse</returns>
-        public ApiResponse< TelefoneEstabelecimentoResponse > ConsultarUsingGET36WithHttpInfo (long? id)
+        public ApiResponse< TelefoneEstabelecimentoResponse > ConsultarUsingGET37WithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagestabelecimentoApi->ConsultarUsingGET36");
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagestabelecimentoApi->ConsultarUsingGET37");
             
     
             var localVarPath = "/api/telefones-estabelecimentos/{id}";
@@ -5554,9 +5554,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET36: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET37: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET36: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET37: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<TelefoneEstabelecimentoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5571,9 +5571,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{telefone_estabelecimento_resource_consultar_param_id}}}</param>
         /// <returns>Task of TelefoneEstabelecimentoResponse</returns>
-        public async System.Threading.Tasks.Task<TelefoneEstabelecimentoResponse> ConsultarUsingGET36Async (long? id)
+        public async System.Threading.Tasks.Task<TelefoneEstabelecimentoResponse> ConsultarUsingGET37Async (long? id)
         {
-             ApiResponse<TelefoneEstabelecimentoResponse> localVarResponse = await ConsultarUsingGET36AsyncWithHttpInfo(id);
+             ApiResponse<TelefoneEstabelecimentoResponse> localVarResponse = await ConsultarUsingGET37AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -5584,10 +5584,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{telefone_estabelecimento_resource_consultar_param_id}}}</param>
         /// <returns>Task of ApiResponse (TelefoneEstabelecimentoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TelefoneEstabelecimentoResponse>> ConsultarUsingGET36AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<TelefoneEstabelecimentoResponse>> ConsultarUsingGET37AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET36");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET37");
             
     
             var localVarPath = "/api/telefones-estabelecimentos/{id}";
@@ -5633,9 +5633,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET36: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET37: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET36: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET37: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<TelefoneEstabelecimentoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5649,9 +5649,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{terminal_resource_consultar_param_id}}}</param> 
         /// <returns>TerminalResponse</returns>
-        public TerminalResponse ConsultarUsingGET38 (long? id)
+        public TerminalResponse ConsultarUsingGET39 (long? id)
         {
-             ApiResponse<TerminalResponse> localVarResponse = ConsultarUsingGET38WithHttpInfo(id);
+             ApiResponse<TerminalResponse> localVarResponse = ConsultarUsingGET39WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -5661,12 +5661,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{terminal_resource_consultar_param_id}}}</param> 
         /// <returns>ApiResponse of TerminalResponse</returns>
-        public ApiResponse< TerminalResponse > ConsultarUsingGET38WithHttpInfo (long? id)
+        public ApiResponse< TerminalResponse > ConsultarUsingGET39WithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagestabelecimentoApi->ConsultarUsingGET38");
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagestabelecimentoApi->ConsultarUsingGET39");
             
     
             var localVarPath = "/api/terminais/{id}";
@@ -5712,9 +5712,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET38: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET39: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET38: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET39: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<TerminalResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5729,9 +5729,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{terminal_resource_consultar_param_id}}}</param>
         /// <returns>Task of TerminalResponse</returns>
-        public async System.Threading.Tasks.Task<TerminalResponse> ConsultarUsingGET38Async (long? id)
+        public async System.Threading.Tasks.Task<TerminalResponse> ConsultarUsingGET39Async (long? id)
         {
-             ApiResponse<TerminalResponse> localVarResponse = await ConsultarUsingGET38AsyncWithHttpInfo(id);
+             ApiResponse<TerminalResponse> localVarResponse = await ConsultarUsingGET39AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -5742,10 +5742,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{terminal_resource_consultar_param_id}}}</param>
         /// <returns>Task of ApiResponse (TerminalResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TerminalResponse>> ConsultarUsingGET38AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<TerminalResponse>> ConsultarUsingGET39AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET38");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET39");
             
     
             var localVarPath = "/api/terminais/{id}";
@@ -5791,9 +5791,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET38: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET39: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET38: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET39: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<TerminalResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5807,9 +5807,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{vinculo_estabelecimento_adquirente_resource_consultar_param_id}}}</param> 
         /// <returns>VinculoEstabelecimentoAdquirenteResponse</returns>
-        public VinculoEstabelecimentoAdquirenteResponse ConsultarUsingGET50 (long? id)
+        public VinculoEstabelecimentoAdquirenteResponse ConsultarUsingGET51 (long? id)
         {
-             ApiResponse<VinculoEstabelecimentoAdquirenteResponse> localVarResponse = ConsultarUsingGET50WithHttpInfo(id);
+             ApiResponse<VinculoEstabelecimentoAdquirenteResponse> localVarResponse = ConsultarUsingGET51WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -5819,12 +5819,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{vinculo_estabelecimento_adquirente_resource_consultar_param_id}}}</param> 
         /// <returns>ApiResponse of VinculoEstabelecimentoAdquirenteResponse</returns>
-        public ApiResponse< VinculoEstabelecimentoAdquirenteResponse > ConsultarUsingGET50WithHttpInfo (long? id)
+        public ApiResponse< VinculoEstabelecimentoAdquirenteResponse > ConsultarUsingGET51WithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagestabelecimentoApi->ConsultarUsingGET50");
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagestabelecimentoApi->ConsultarUsingGET51");
             
     
             var localVarPath = "/api/adquirentes-estabelecimento/{id}";
@@ -5870,9 +5870,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET50: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET51: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET50: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET51: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<VinculoEstabelecimentoAdquirenteResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5887,9 +5887,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{vinculo_estabelecimento_adquirente_resource_consultar_param_id}}}</param>
         /// <returns>Task of VinculoEstabelecimentoAdquirenteResponse</returns>
-        public async System.Threading.Tasks.Task<VinculoEstabelecimentoAdquirenteResponse> ConsultarUsingGET50Async (long? id)
+        public async System.Threading.Tasks.Task<VinculoEstabelecimentoAdquirenteResponse> ConsultarUsingGET51Async (long? id)
         {
-             ApiResponse<VinculoEstabelecimentoAdquirenteResponse> localVarResponse = await ConsultarUsingGET50AsyncWithHttpInfo(id);
+             ApiResponse<VinculoEstabelecimentoAdquirenteResponse> localVarResponse = await ConsultarUsingGET51AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -5900,10 +5900,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{vinculo_estabelecimento_adquirente_resource_consultar_param_id}}}</param>
         /// <returns>Task of ApiResponse (VinculoEstabelecimentoAdquirenteResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<VinculoEstabelecimentoAdquirenteResponse>> ConsultarUsingGET50AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<VinculoEstabelecimentoAdquirenteResponse>> ConsultarUsingGET51AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET50");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET51");
             
     
             var localVarPath = "/api/adquirentes-estabelecimento/{id}";
@@ -5949,9 +5949,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET50: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET51: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET50: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET51: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<VinculoEstabelecimentoAdquirenteResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -9526,9 +9526,9 @@ namespace Conductor.Pier.Api
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param> 
         /// <param name="idEstabelecimento">{{{telefone_estabelecimento_request_id_estabelecimento_value}}} (optional)</param> 
         /// <returns>PageTelefoneEstabelecimentoResponse</returns>
-        public PageTelefoneEstabelecimentoResponse ListarUsingGET45 (List<string> sort = null, int? page = null, int? limit = null, long? idEstabelecimento = null)
+        public PageTelefoneEstabelecimentoResponse ListarUsingGET46 (List<string> sort = null, int? page = null, int? limit = null, long? idEstabelecimento = null)
         {
-             ApiResponse<PageTelefoneEstabelecimentoResponse> localVarResponse = ListarUsingGET45WithHttpInfo(sort, page, limit, idEstabelecimento);
+             ApiResponse<PageTelefoneEstabelecimentoResponse> localVarResponse = ListarUsingGET46WithHttpInfo(sort, page, limit, idEstabelecimento);
              return localVarResponse.Data;
         }
 
@@ -9541,7 +9541,7 @@ namespace Conductor.Pier.Api
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param> 
         /// <param name="idEstabelecimento">{{{telefone_estabelecimento_request_id_estabelecimento_value}}} (optional)</param> 
         /// <returns>ApiResponse of PageTelefoneEstabelecimentoResponse</returns>
-        public ApiResponse< PageTelefoneEstabelecimentoResponse > ListarUsingGET45WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idEstabelecimento = null)
+        public ApiResponse< PageTelefoneEstabelecimentoResponse > ListarUsingGET46WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idEstabelecimento = null)
         {
             
     
@@ -9591,9 +9591,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET45: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET46: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET45: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET46: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageTelefoneEstabelecimentoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -9611,9 +9611,9 @@ namespace Conductor.Pier.Api
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <param name="idEstabelecimento">{{{telefone_estabelecimento_request_id_estabelecimento_value}}} (optional)</param>
         /// <returns>Task of PageTelefoneEstabelecimentoResponse</returns>
-        public async System.Threading.Tasks.Task<PageTelefoneEstabelecimentoResponse> ListarUsingGET45Async (List<string> sort = null, int? page = null, int? limit = null, long? idEstabelecimento = null)
+        public async System.Threading.Tasks.Task<PageTelefoneEstabelecimentoResponse> ListarUsingGET46Async (List<string> sort = null, int? page = null, int? limit = null, long? idEstabelecimento = null)
         {
-             ApiResponse<PageTelefoneEstabelecimentoResponse> localVarResponse = await ListarUsingGET45AsyncWithHttpInfo(sort, page, limit, idEstabelecimento);
+             ApiResponse<PageTelefoneEstabelecimentoResponse> localVarResponse = await ListarUsingGET46AsyncWithHttpInfo(sort, page, limit, idEstabelecimento);
              return localVarResponse.Data;
 
         }
@@ -9627,7 +9627,7 @@ namespace Conductor.Pier.Api
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <param name="idEstabelecimento">{{{telefone_estabelecimento_request_id_estabelecimento_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageTelefoneEstabelecimentoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageTelefoneEstabelecimentoResponse>> ListarUsingGET45AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idEstabelecimento = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageTelefoneEstabelecimentoResponse>> ListarUsingGET46AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idEstabelecimento = null)
         {
             
     
@@ -9677,9 +9677,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET45: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET46: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET45: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET46: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageTelefoneEstabelecimentoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -9699,9 +9699,9 @@ namespace Conductor.Pier.Api
         /// <param name="numeroEstabelecimento">{{{terminal_request_numero_estabelecimento_value}}} (optional)</param> 
         /// <param name="idEstabelecimento">{{{terminal_request_id_estabelecimento_value}}} (optional)</param> 
         /// <returns>PageTerminalResponse</returns>
-        public PageTerminalResponse ListarUsingGET47 (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string terminal = null, long? numeroEstabelecimento = null, long? idEstabelecimento = null)
+        public PageTerminalResponse ListarUsingGET48 (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string terminal = null, long? numeroEstabelecimento = null, long? idEstabelecimento = null)
         {
-             ApiResponse<PageTerminalResponse> localVarResponse = ListarUsingGET47WithHttpInfo(sort, page, limit, id, terminal, numeroEstabelecimento, idEstabelecimento);
+             ApiResponse<PageTerminalResponse> localVarResponse = ListarUsingGET48WithHttpInfo(sort, page, limit, id, terminal, numeroEstabelecimento, idEstabelecimento);
              return localVarResponse.Data;
         }
 
@@ -9717,7 +9717,7 @@ namespace Conductor.Pier.Api
         /// <param name="numeroEstabelecimento">{{{terminal_request_numero_estabelecimento_value}}} (optional)</param> 
         /// <param name="idEstabelecimento">{{{terminal_request_id_estabelecimento_value}}} (optional)</param> 
         /// <returns>ApiResponse of PageTerminalResponse</returns>
-        public ApiResponse< PageTerminalResponse > ListarUsingGET47WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string terminal = null, long? numeroEstabelecimento = null, long? idEstabelecimento = null)
+        public ApiResponse< PageTerminalResponse > ListarUsingGET48WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string terminal = null, long? numeroEstabelecimento = null, long? idEstabelecimento = null)
         {
             
     
@@ -9770,9 +9770,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET47: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET48: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET47: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET48: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageTerminalResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -9793,9 +9793,9 @@ namespace Conductor.Pier.Api
         /// <param name="numeroEstabelecimento">{{{terminal_request_numero_estabelecimento_value}}} (optional)</param>
         /// <param name="idEstabelecimento">{{{terminal_request_id_estabelecimento_value}}} (optional)</param>
         /// <returns>Task of PageTerminalResponse</returns>
-        public async System.Threading.Tasks.Task<PageTerminalResponse> ListarUsingGET47Async (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string terminal = null, long? numeroEstabelecimento = null, long? idEstabelecimento = null)
+        public async System.Threading.Tasks.Task<PageTerminalResponse> ListarUsingGET48Async (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string terminal = null, long? numeroEstabelecimento = null, long? idEstabelecimento = null)
         {
-             ApiResponse<PageTerminalResponse> localVarResponse = await ListarUsingGET47AsyncWithHttpInfo(sort, page, limit, id, terminal, numeroEstabelecimento, idEstabelecimento);
+             ApiResponse<PageTerminalResponse> localVarResponse = await ListarUsingGET48AsyncWithHttpInfo(sort, page, limit, id, terminal, numeroEstabelecimento, idEstabelecimento);
              return localVarResponse.Data;
 
         }
@@ -9812,7 +9812,7 @@ namespace Conductor.Pier.Api
         /// <param name="numeroEstabelecimento">{{{terminal_request_numero_estabelecimento_value}}} (optional)</param>
         /// <param name="idEstabelecimento">{{{terminal_request_id_estabelecimento_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageTerminalResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageTerminalResponse>> ListarUsingGET47AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string terminal = null, long? numeroEstabelecimento = null, long? idEstabelecimento = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageTerminalResponse>> ListarUsingGET48AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string terminal = null, long? numeroEstabelecimento = null, long? idEstabelecimento = null)
         {
             
     
@@ -9865,9 +9865,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET47: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET48: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET47: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET48: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageTerminalResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -9886,9 +9886,9 @@ namespace Conductor.Pier.Api
         /// <param name="idEstabelecimento">{{{vinculo_estabelecimento_adquirente_request_id_estabelecimento_value}}} (optional)</param> 
         /// <param name="codigoEstabelecimentoAdquirente">{{{vinculo_estabelecimento_adquirente_request_codigo_estabelecimento_adquirente_value}}} (optional)</param> 
         /// <returns>PageVinculoEstabelecimentoAdquirenteResponse</returns>
-        public PageVinculoEstabelecimentoAdquirenteResponse ListarUsingGET60 (List<string> sort = null, int? page = null, int? limit = null, long? idAdquirente = null, long? idEstabelecimento = null, string codigoEstabelecimentoAdquirente = null)
+        public PageVinculoEstabelecimentoAdquirenteResponse ListarUsingGET61 (List<string> sort = null, int? page = null, int? limit = null, long? idAdquirente = null, long? idEstabelecimento = null, string codigoEstabelecimentoAdquirente = null)
         {
-             ApiResponse<PageVinculoEstabelecimentoAdquirenteResponse> localVarResponse = ListarUsingGET60WithHttpInfo(sort, page, limit, idAdquirente, idEstabelecimento, codigoEstabelecimentoAdquirente);
+             ApiResponse<PageVinculoEstabelecimentoAdquirenteResponse> localVarResponse = ListarUsingGET61WithHttpInfo(sort, page, limit, idAdquirente, idEstabelecimento, codigoEstabelecimentoAdquirente);
              return localVarResponse.Data;
         }
 
@@ -9903,7 +9903,7 @@ namespace Conductor.Pier.Api
         /// <param name="idEstabelecimento">{{{vinculo_estabelecimento_adquirente_request_id_estabelecimento_value}}} (optional)</param> 
         /// <param name="codigoEstabelecimentoAdquirente">{{{vinculo_estabelecimento_adquirente_request_codigo_estabelecimento_adquirente_value}}} (optional)</param> 
         /// <returns>ApiResponse of PageVinculoEstabelecimentoAdquirenteResponse</returns>
-        public ApiResponse< PageVinculoEstabelecimentoAdquirenteResponse > ListarUsingGET60WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idAdquirente = null, long? idEstabelecimento = null, string codigoEstabelecimentoAdquirente = null)
+        public ApiResponse< PageVinculoEstabelecimentoAdquirenteResponse > ListarUsingGET61WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idAdquirente = null, long? idEstabelecimento = null, string codigoEstabelecimentoAdquirente = null)
         {
             
     
@@ -9955,9 +9955,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET60: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET61: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET60: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET61: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageVinculoEstabelecimentoAdquirenteResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -9977,9 +9977,9 @@ namespace Conductor.Pier.Api
         /// <param name="idEstabelecimento">{{{vinculo_estabelecimento_adquirente_request_id_estabelecimento_value}}} (optional)</param>
         /// <param name="codigoEstabelecimentoAdquirente">{{{vinculo_estabelecimento_adquirente_request_codigo_estabelecimento_adquirente_value}}} (optional)</param>
         /// <returns>Task of PageVinculoEstabelecimentoAdquirenteResponse</returns>
-        public async System.Threading.Tasks.Task<PageVinculoEstabelecimentoAdquirenteResponse> ListarUsingGET60Async (List<string> sort = null, int? page = null, int? limit = null, long? idAdquirente = null, long? idEstabelecimento = null, string codigoEstabelecimentoAdquirente = null)
+        public async System.Threading.Tasks.Task<PageVinculoEstabelecimentoAdquirenteResponse> ListarUsingGET61Async (List<string> sort = null, int? page = null, int? limit = null, long? idAdquirente = null, long? idEstabelecimento = null, string codigoEstabelecimentoAdquirente = null)
         {
-             ApiResponse<PageVinculoEstabelecimentoAdquirenteResponse> localVarResponse = await ListarUsingGET60AsyncWithHttpInfo(sort, page, limit, idAdquirente, idEstabelecimento, codigoEstabelecimentoAdquirente);
+             ApiResponse<PageVinculoEstabelecimentoAdquirenteResponse> localVarResponse = await ListarUsingGET61AsyncWithHttpInfo(sort, page, limit, idAdquirente, idEstabelecimento, codigoEstabelecimentoAdquirente);
              return localVarResponse.Data;
 
         }
@@ -9995,7 +9995,7 @@ namespace Conductor.Pier.Api
         /// <param name="idEstabelecimento">{{{vinculo_estabelecimento_adquirente_request_id_estabelecimento_value}}} (optional)</param>
         /// <param name="codigoEstabelecimentoAdquirente">{{{vinculo_estabelecimento_adquirente_request_codigo_estabelecimento_adquirente_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageVinculoEstabelecimentoAdquirenteResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageVinculoEstabelecimentoAdquirenteResponse>> ListarUsingGET60AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idAdquirente = null, long? idEstabelecimento = null, string codigoEstabelecimentoAdquirente = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageVinculoEstabelecimentoAdquirenteResponse>> ListarUsingGET61AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idAdquirente = null, long? idEstabelecimento = null, string codigoEstabelecimentoAdquirente = null)
         {
             
     
@@ -10047,9 +10047,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET60: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET61: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET60: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET61: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageVinculoEstabelecimentoAdquirenteResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -10069,9 +10069,9 @@ namespace Conductor.Pier.Api
         /// <param name="idOperacao">{{{vinculo_operacao_request_id_operacao_value}}} (optional)</param> 
         /// <param name="codigoMCC">{{{vinculo_operacao_request_codigo_m_c_c_value}}} (optional)</param> 
         /// <returns>PageVinculoOperacaoResponse</returns>
-        public PageVinculoOperacaoResponse ListarUsingGET61 (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOperacao = null, int? codigoMCC = null)
+        public PageVinculoOperacaoResponse ListarUsingGET62 (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOperacao = null, int? codigoMCC = null)
         {
-             ApiResponse<PageVinculoOperacaoResponse> localVarResponse = ListarUsingGET61WithHttpInfo(id, sort, page, limit, idProduto, idOperacao, codigoMCC);
+             ApiResponse<PageVinculoOperacaoResponse> localVarResponse = ListarUsingGET62WithHttpInfo(id, sort, page, limit, idProduto, idOperacao, codigoMCC);
              return localVarResponse.Data;
         }
 
@@ -10087,12 +10087,12 @@ namespace Conductor.Pier.Api
         /// <param name="idOperacao">{{{vinculo_operacao_request_id_operacao_value}}} (optional)</param> 
         /// <param name="codigoMCC">{{{vinculo_operacao_request_codigo_m_c_c_value}}} (optional)</param> 
         /// <returns>ApiResponse of PageVinculoOperacaoResponse</returns>
-        public ApiResponse< PageVinculoOperacaoResponse > ListarUsingGET61WithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOperacao = null, int? codigoMCC = null)
+        public ApiResponse< PageVinculoOperacaoResponse > ListarUsingGET62WithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOperacao = null, int? codigoMCC = null)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagestabelecimentoApi->ListarUsingGET61");
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagestabelecimentoApi->ListarUsingGET62");
             
     
             var localVarPath = "/api/estabelecimentos/{id}/operacoes";
@@ -10144,9 +10144,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET61: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET62: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET61: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET62: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageVinculoOperacaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -10167,9 +10167,9 @@ namespace Conductor.Pier.Api
         /// <param name="idOperacao">{{{vinculo_operacao_request_id_operacao_value}}} (optional)</param>
         /// <param name="codigoMCC">{{{vinculo_operacao_request_codigo_m_c_c_value}}} (optional)</param>
         /// <returns>Task of PageVinculoOperacaoResponse</returns>
-        public async System.Threading.Tasks.Task<PageVinculoOperacaoResponse> ListarUsingGET61Async (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOperacao = null, int? codigoMCC = null)
+        public async System.Threading.Tasks.Task<PageVinculoOperacaoResponse> ListarUsingGET62Async (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOperacao = null, int? codigoMCC = null)
         {
-             ApiResponse<PageVinculoOperacaoResponse> localVarResponse = await ListarUsingGET61AsyncWithHttpInfo(id, sort, page, limit, idProduto, idOperacao, codigoMCC);
+             ApiResponse<PageVinculoOperacaoResponse> localVarResponse = await ListarUsingGET62AsyncWithHttpInfo(id, sort, page, limit, idProduto, idOperacao, codigoMCC);
              return localVarResponse.Data;
 
         }
@@ -10186,10 +10186,10 @@ namespace Conductor.Pier.Api
         /// <param name="idOperacao">{{{vinculo_operacao_request_id_operacao_value}}} (optional)</param>
         /// <param name="codigoMCC">{{{vinculo_operacao_request_codigo_m_c_c_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageVinculoOperacaoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageVinculoOperacaoResponse>> ListarUsingGET61AsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOperacao = null, int? codigoMCC = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageVinculoOperacaoResponse>> ListarUsingGET62AsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOperacao = null, int? codigoMCC = null)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ListarUsingGET61");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ListarUsingGET62");
             
     
             var localVarPath = "/api/estabelecimentos/{id}/operacoes";
@@ -10241,9 +10241,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET61: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET62: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET61: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET62: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageVinculoOperacaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
