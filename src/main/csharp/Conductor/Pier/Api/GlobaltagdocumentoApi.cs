@@ -27,7 +27,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{tipo_template_resource_alterar_param_id}}}</param>
         /// <param name="persist">persist</param>
         /// <returns>TipoTemplateResponse</returns>
-        TipoTemplateResponse AlterarUsingPUT20 (long? id, TipoTemplateRequest persist);
+        TipoTemplateResponse AlterarUsingPUT21 (long? id, TipoTemplateRequest persist);
   
         /// <summary>
         /// {{{tipo_template_resource_alterar}}}
@@ -39,7 +39,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{tipo_template_resource_alterar_param_id}}}</param>
         /// <param name="persist">persist</param>
         /// <returns>ApiResponse of TipoTemplateResponse</returns>
-        ApiResponse<TipoTemplateResponse> AlterarUsingPUT20WithHttpInfo (long? id, TipoTemplateRequest persist);
+        ApiResponse<TipoTemplateResponse> AlterarUsingPUT21WithHttpInfo (long? id, TipoTemplateRequest persist);
         
         /// <summary>
         /// {{{documento_template_resource_atualizar}}}
@@ -118,7 +118,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{tipo_template_resource_consultar_param_id}}}</param>
         /// <returns>TipoTemplateResponse</returns>
-        TipoTemplateResponse ConsultarUsingGET47 (long? id);
+        TipoTemplateResponse ConsultarUsingGET48 (long? id);
   
         /// <summary>
         /// {{{tipo_template_resource_consultar}}}
@@ -129,7 +129,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{tipo_template_resource_consultar_param_id}}}</param>
         /// <returns>ApiResponse of TipoTemplateResponse</returns>
-        ApiResponse<TipoTemplateResponse> ConsultarUsingGET47WithHttpInfo (long? id);
+        ApiResponse<TipoTemplateResponse> ConsultarUsingGET48WithHttpInfo (long? id);
         
         /// <summary>
         /// {{{documento_resource_integrar}}}
@@ -224,7 +224,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <returns>PageTipoTemplateResponse</returns>
-        PageTipoTemplateResponse ListarUsingGET55 (List<string> sort = null, int? page = null, int? limit = null);
+        PageTipoTemplateResponse ListarUsingGET56 (List<string> sort = null, int? page = null, int? limit = null);
   
         /// <summary>
         /// {{{tipo_template_resource_listar}}}
@@ -237,7 +237,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <returns>ApiResponse of PageTipoTemplateResponse</returns>
-        ApiResponse<PageTipoTemplateResponse> ListarUsingGET55WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
+        ApiResponse<PageTipoTemplateResponse> ListarUsingGET56WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
         
         /// <summary>
         /// {{{documento_resource_salvar}}}
@@ -292,7 +292,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>TipoTemplateResponse</returns>
-        TipoTemplateResponse SalvarUsingPOST30 (TipoTemplateRequest persist);
+        TipoTemplateResponse SalvarUsingPOST31 (TipoTemplateRequest persist);
   
         /// <summary>
         /// {{{tipo_template_resource_salvar}}}
@@ -303,7 +303,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>ApiResponse of TipoTemplateResponse</returns>
-        ApiResponse<TipoTemplateResponse> SalvarUsingPOST30WithHttpInfo (TipoTemplateRequest persist);
+        ApiResponse<TipoTemplateResponse> SalvarUsingPOST31WithHttpInfo (TipoTemplateRequest persist);
         
         #endregion Synchronous Operations
         
@@ -319,7 +319,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{tipo_template_resource_alterar_param_id}}}</param>
         /// <param name="persist">persist</param>
         /// <returns>Task of TipoTemplateResponse</returns>
-        System.Threading.Tasks.Task<TipoTemplateResponse> AlterarUsingPUT20Async (long? id, TipoTemplateRequest persist);
+        System.Threading.Tasks.Task<TipoTemplateResponse> AlterarUsingPUT21Async (long? id, TipoTemplateRequest persist);
 
         /// <summary>
         /// {{{tipo_template_resource_alterar}}}
@@ -331,7 +331,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{tipo_template_resource_alterar_param_id}}}</param>
         /// <param name="persist">persist</param>
         /// <returns>Task of ApiResponse (TipoTemplateResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TipoTemplateResponse>> AlterarUsingPUT20AsyncWithHttpInfo (long? id, TipoTemplateRequest persist);
+        System.Threading.Tasks.Task<ApiResponse<TipoTemplateResponse>> AlterarUsingPUT21AsyncWithHttpInfo (long? id, TipoTemplateRequest persist);
         
         /// <summary>
         /// {{{documento_template_resource_atualizar}}}
@@ -410,7 +410,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{tipo_template_resource_consultar_param_id}}}</param>
         /// <returns>Task of TipoTemplateResponse</returns>
-        System.Threading.Tasks.Task<TipoTemplateResponse> ConsultarUsingGET47Async (long? id);
+        System.Threading.Tasks.Task<TipoTemplateResponse> ConsultarUsingGET48Async (long? id);
 
         /// <summary>
         /// {{{tipo_template_resource_consultar}}}
@@ -421,7 +421,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{tipo_template_resource_consultar_param_id}}}</param>
         /// <returns>Task of ApiResponse (TipoTemplateResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TipoTemplateResponse>> ConsultarUsingGET47AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<TipoTemplateResponse>> ConsultarUsingGET48AsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// {{{documento_resource_integrar}}}
@@ -516,7 +516,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <returns>Task of PageTipoTemplateResponse</returns>
-        System.Threading.Tasks.Task<PageTipoTemplateResponse> ListarUsingGET55Async (List<string> sort = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<PageTipoTemplateResponse> ListarUsingGET56Async (List<string> sort = null, int? page = null, int? limit = null);
 
         /// <summary>
         /// {{{tipo_template_resource_listar}}}
@@ -529,7 +529,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageTipoTemplateResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageTipoTemplateResponse>> ListarUsingGET55AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<ApiResponse<PageTipoTemplateResponse>> ListarUsingGET56AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
         
         /// <summary>
         /// {{{documento_resource_salvar}}}
@@ -584,7 +584,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>Task of TipoTemplateResponse</returns>
-        System.Threading.Tasks.Task<TipoTemplateResponse> SalvarUsingPOST30Async (TipoTemplateRequest persist);
+        System.Threading.Tasks.Task<TipoTemplateResponse> SalvarUsingPOST31Async (TipoTemplateRequest persist);
 
         /// <summary>
         /// {{{tipo_template_resource_salvar}}}
@@ -595,7 +595,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>Task of ApiResponse (TipoTemplateResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TipoTemplateResponse>> SalvarUsingPOST30AsyncWithHttpInfo (TipoTemplateRequest persist);
+        System.Threading.Tasks.Task<ApiResponse<TipoTemplateResponse>> SalvarUsingPOST31AsyncWithHttpInfo (TipoTemplateRequest persist);
         
         #endregion Asynchronous Operations
         
@@ -696,9 +696,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{tipo_template_resource_alterar_param_id}}}</param> 
         /// <param name="persist">persist</param> 
         /// <returns>TipoTemplateResponse</returns>
-        public TipoTemplateResponse AlterarUsingPUT20 (long? id, TipoTemplateRequest persist)
+        public TipoTemplateResponse AlterarUsingPUT21 (long? id, TipoTemplateRequest persist)
         {
-             ApiResponse<TipoTemplateResponse> localVarResponse = AlterarUsingPUT20WithHttpInfo(id, persist);
+             ApiResponse<TipoTemplateResponse> localVarResponse = AlterarUsingPUT21WithHttpInfo(id, persist);
              return localVarResponse.Data;
         }
 
@@ -709,16 +709,16 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{tipo_template_resource_alterar_param_id}}}</param> 
         /// <param name="persist">persist</param> 
         /// <returns>ApiResponse of TipoTemplateResponse</returns>
-        public ApiResponse< TipoTemplateResponse > AlterarUsingPUT20WithHttpInfo (long? id, TipoTemplateRequest persist)
+        public ApiResponse< TipoTemplateResponse > AlterarUsingPUT21WithHttpInfo (long? id, TipoTemplateRequest persist)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagdocumentoApi->AlterarUsingPUT20");
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagdocumentoApi->AlterarUsingPUT21");
             
             // verify the required parameter 'persist' is set
             if (persist == null)
-                throw new ApiException(400, "Missing required parameter 'persist' when calling GlobaltagdocumentoApi->AlterarUsingPUT20");
+                throw new ApiException(400, "Missing required parameter 'persist' when calling GlobaltagdocumentoApi->AlterarUsingPUT21");
             
     
             var localVarPath = "/api/tipos-templates/{id}";
@@ -771,9 +771,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling AlterarUsingPUT20: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarUsingPUT21: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling AlterarUsingPUT20: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarUsingPUT21: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<TipoTemplateResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -789,9 +789,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{tipo_template_resource_alterar_param_id}}}</param>
         /// <param name="persist">persist</param>
         /// <returns>Task of TipoTemplateResponse</returns>
-        public async System.Threading.Tasks.Task<TipoTemplateResponse> AlterarUsingPUT20Async (long? id, TipoTemplateRequest persist)
+        public async System.Threading.Tasks.Task<TipoTemplateResponse> AlterarUsingPUT21Async (long? id, TipoTemplateRequest persist)
         {
-             ApiResponse<TipoTemplateResponse> localVarResponse = await AlterarUsingPUT20AsyncWithHttpInfo(id, persist);
+             ApiResponse<TipoTemplateResponse> localVarResponse = await AlterarUsingPUT21AsyncWithHttpInfo(id, persist);
              return localVarResponse.Data;
 
         }
@@ -803,12 +803,12 @@ namespace Conductor.Pier.Api
         /// <param name="id">{{{tipo_template_resource_alterar_param_id}}}</param>
         /// <param name="persist">persist</param>
         /// <returns>Task of ApiResponse (TipoTemplateResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TipoTemplateResponse>> AlterarUsingPUT20AsyncWithHttpInfo (long? id, TipoTemplateRequest persist)
+        public async System.Threading.Tasks.Task<ApiResponse<TipoTemplateResponse>> AlterarUsingPUT21AsyncWithHttpInfo (long? id, TipoTemplateRequest persist)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AlterarUsingPUT20");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AlterarUsingPUT21");
             // verify the required parameter 'persist' is set
-            if (persist == null) throw new ApiException(400, "Missing required parameter 'persist' when calling AlterarUsingPUT20");
+            if (persist == null) throw new ApiException(400, "Missing required parameter 'persist' when calling AlterarUsingPUT21");
             
     
             var localVarPath = "/api/tipos-templates/{id}";
@@ -861,9 +861,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling AlterarUsingPUT20: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarUsingPUT21: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling AlterarUsingPUT20: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarUsingPUT21: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<TipoTemplateResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1375,9 +1375,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{tipo_template_resource_consultar_param_id}}}</param> 
         /// <returns>TipoTemplateResponse</returns>
-        public TipoTemplateResponse ConsultarUsingGET47 (long? id)
+        public TipoTemplateResponse ConsultarUsingGET48 (long? id)
         {
-             ApiResponse<TipoTemplateResponse> localVarResponse = ConsultarUsingGET47WithHttpInfo(id);
+             ApiResponse<TipoTemplateResponse> localVarResponse = ConsultarUsingGET48WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -1387,12 +1387,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{tipo_template_resource_consultar_param_id}}}</param> 
         /// <returns>ApiResponse of TipoTemplateResponse</returns>
-        public ApiResponse< TipoTemplateResponse > ConsultarUsingGET47WithHttpInfo (long? id)
+        public ApiResponse< TipoTemplateResponse > ConsultarUsingGET48WithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagdocumentoApi->ConsultarUsingGET47");
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagdocumentoApi->ConsultarUsingGET48");
             
     
             var localVarPath = "/api/tipos-templates/{id}";
@@ -1438,9 +1438,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET47: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET48: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET47: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET48: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<TipoTemplateResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1455,9 +1455,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{tipo_template_resource_consultar_param_id}}}</param>
         /// <returns>Task of TipoTemplateResponse</returns>
-        public async System.Threading.Tasks.Task<TipoTemplateResponse> ConsultarUsingGET47Async (long? id)
+        public async System.Threading.Tasks.Task<TipoTemplateResponse> ConsultarUsingGET48Async (long? id)
         {
-             ApiResponse<TipoTemplateResponse> localVarResponse = await ConsultarUsingGET47AsyncWithHttpInfo(id);
+             ApiResponse<TipoTemplateResponse> localVarResponse = await ConsultarUsingGET48AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -1468,10 +1468,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{tipo_template_resource_consultar_param_id}}}</param>
         /// <returns>Task of ApiResponse (TipoTemplateResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TipoTemplateResponse>> ConsultarUsingGET47AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<TipoTemplateResponse>> ConsultarUsingGET48AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET47");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET48");
             
     
             var localVarPath = "/api/tipos-templates/{id}";
@@ -1517,9 +1517,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET47: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET48: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET47: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET48: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<TipoTemplateResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2057,9 +2057,9 @@ namespace Conductor.Pier.Api
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param> 
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param> 
         /// <returns>PageTipoTemplateResponse</returns>
-        public PageTipoTemplateResponse ListarUsingGET55 (List<string> sort = null, int? page = null, int? limit = null)
+        public PageTipoTemplateResponse ListarUsingGET56 (List<string> sort = null, int? page = null, int? limit = null)
         {
-             ApiResponse<PageTipoTemplateResponse> localVarResponse = ListarUsingGET55WithHttpInfo(sort, page, limit);
+             ApiResponse<PageTipoTemplateResponse> localVarResponse = ListarUsingGET56WithHttpInfo(sort, page, limit);
              return localVarResponse.Data;
         }
 
@@ -2071,7 +2071,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param> 
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param> 
         /// <returns>ApiResponse of PageTipoTemplateResponse</returns>
-        public ApiResponse< PageTipoTemplateResponse > ListarUsingGET55WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
+        public ApiResponse< PageTipoTemplateResponse > ListarUsingGET56WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
         {
             
     
@@ -2120,9 +2120,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET55: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET56: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET55: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET56: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageTipoTemplateResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2139,9 +2139,9 @@ namespace Conductor.Pier.Api
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <returns>Task of PageTipoTemplateResponse</returns>
-        public async System.Threading.Tasks.Task<PageTipoTemplateResponse> ListarUsingGET55Async (List<string> sort = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<PageTipoTemplateResponse> ListarUsingGET56Async (List<string> sort = null, int? page = null, int? limit = null)
         {
-             ApiResponse<PageTipoTemplateResponse> localVarResponse = await ListarUsingGET55AsyncWithHttpInfo(sort, page, limit);
+             ApiResponse<PageTipoTemplateResponse> localVarResponse = await ListarUsingGET56AsyncWithHttpInfo(sort, page, limit);
              return localVarResponse.Data;
 
         }
@@ -2154,7 +2154,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">{{{global_menssagem_sort_page_value}}} (optional)</param>
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageTipoTemplateResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageTipoTemplateResponse>> ListarUsingGET55AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageTipoTemplateResponse>> ListarUsingGET56AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
         {
             
     
@@ -2203,9 +2203,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET55: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET56: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET55: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET56: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageTipoTemplateResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2559,9 +2559,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param> 
         /// <returns>TipoTemplateResponse</returns>
-        public TipoTemplateResponse SalvarUsingPOST30 (TipoTemplateRequest persist)
+        public TipoTemplateResponse SalvarUsingPOST31 (TipoTemplateRequest persist)
         {
-             ApiResponse<TipoTemplateResponse> localVarResponse = SalvarUsingPOST30WithHttpInfo(persist);
+             ApiResponse<TipoTemplateResponse> localVarResponse = SalvarUsingPOST31WithHttpInfo(persist);
              return localVarResponse.Data;
         }
 
@@ -2571,12 +2571,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param> 
         /// <returns>ApiResponse of TipoTemplateResponse</returns>
-        public ApiResponse< TipoTemplateResponse > SalvarUsingPOST30WithHttpInfo (TipoTemplateRequest persist)
+        public ApiResponse< TipoTemplateResponse > SalvarUsingPOST31WithHttpInfo (TipoTemplateRequest persist)
         {
             
             // verify the required parameter 'persist' is set
             if (persist == null)
-                throw new ApiException(400, "Missing required parameter 'persist' when calling GlobaltagdocumentoApi->SalvarUsingPOST30");
+                throw new ApiException(400, "Missing required parameter 'persist' when calling GlobaltagdocumentoApi->SalvarUsingPOST31");
             
     
             var localVarPath = "/api/tipos-templates";
@@ -2628,9 +2628,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST30: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST31: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST30: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST31: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<TipoTemplateResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2645,9 +2645,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>Task of TipoTemplateResponse</returns>
-        public async System.Threading.Tasks.Task<TipoTemplateResponse> SalvarUsingPOST30Async (TipoTemplateRequest persist)
+        public async System.Threading.Tasks.Task<TipoTemplateResponse> SalvarUsingPOST31Async (TipoTemplateRequest persist)
         {
-             ApiResponse<TipoTemplateResponse> localVarResponse = await SalvarUsingPOST30AsyncWithHttpInfo(persist);
+             ApiResponse<TipoTemplateResponse> localVarResponse = await SalvarUsingPOST31AsyncWithHttpInfo(persist);
              return localVarResponse.Data;
 
         }
@@ -2658,10 +2658,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>Task of ApiResponse (TipoTemplateResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TipoTemplateResponse>> SalvarUsingPOST30AsyncWithHttpInfo (TipoTemplateRequest persist)
+        public async System.Threading.Tasks.Task<ApiResponse<TipoTemplateResponse>> SalvarUsingPOST31AsyncWithHttpInfo (TipoTemplateRequest persist)
         {
             // verify the required parameter 'persist' is set
-            if (persist == null) throw new ApiException(400, "Missing required parameter 'persist' when calling SalvarUsingPOST30");
+            if (persist == null) throw new ApiException(400, "Missing required parameter 'persist' when calling SalvarUsingPOST31");
             
     
             var localVarPath = "/api/tipos-templates";
@@ -2713,9 +2713,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST30: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST31: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST30: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST31: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<TipoTemplateResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

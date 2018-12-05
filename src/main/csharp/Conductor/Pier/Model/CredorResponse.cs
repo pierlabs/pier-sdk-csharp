@@ -103,10 +103,24 @@ namespace Conductor.Pier.Model
         /// <param name="Periodicidade">{{{credor_response_periodicidade_value}}}.</param>
         /// <param name="IdPessoaJuridica">{{{credor_response_id_pessoa_juridica_value}}}.</param>
         /// <param name="FlagEscritorioCobranca">{{{credor_response_flag_escritorio_cobranca_value}}}.</param>
-        /// <param name="EscritoriosCobranca">{{{credor_response_escritorio_cobranca_value}}}.</param>
+        /// <param name="Prefixo">{{{credor_response_prefixo_value}}}.</param>
+        /// <param name="Ativo">{{{credor_response_ativo_value}}}.</param>
         /// <param name="TelefonesEscritoriosCobranca">{{{credor_response_telefone_escritorio_cobranca_value}}}.</param>
+        /// <param name="NomeContato">{{{credor_response_nome_contato_value}}}.</param>
+        /// <param name="Email">{{{credor_response_email_value}}}.</param>
+        /// <param name="NomeLogradouro">{{{credor_response_nome_logradouro_value}}}.</param>
+        /// <param name="NumeroEndereco">{{{credor_response_numero_endereco_value}}}.</param>
+        /// <param name="ComplementoEndereco">{{{credor_response_complemento_endereco_value}}}.</param>
+        /// <param name="Bairro">{{{credor_response_bairro_value}}}.</param>
+        /// <param name="Cidade">{{{credor_response_cidade_value}}}.</param>
+        /// <param name="Cep">{{{credor_response_cep_value}}}.</param>
+        /// <param name="Uf">{{{credor_response_uf_value}}}.</param>
+        /// <param name="Responsavel">{{{credor_response_responsavel_value}}}.</param>
+        /// <param name="FlagSegundaViaAcordo">{{{credor_response_flag_segunda_via_acordo_value}}}.</param>
+        /// <param name="ValorMinimoParcela">{{{credor_response_valor_minimo_parcela_value}}}.</param>
+        /// <param name="DescontoMaximo">{{{credor_response_desconto_maximo_value}}}.</param>
 
-        public CredorResponse(long? Id = null, string NomeCredor = null, int? DiaPagamentoSemanal = null, int? DiaPagamentoMensal = null, int? DiaPagamentoDecendialPrimeiro = null, int? DiaPagamentoDecendialSegundo = null, int? DiaPagamentoDecendialTerceiro = null, int? DiaPagamentoQuinzenalPrimeiro = null, int? DiaPagamentoQuinzenalSegundo = null, int? Banco = null, int? Agencia = null, string DigitoAgencia = null, string ContaCorrente = null, string DigitoContaCorrente = null, bool? CredorBanco = null, double? PercentualRAV = null, RecebeRAVEnum? RecebeRAV = null, double? PercentualMultiplica = null, double? TaxaAdministrativa = null, double? TaxaBanco = null, double? LimiteRAV = null, long? IdCredorRAV = null, PeriodicidadeEnum? Periodicidade = null, long? IdPessoaJuridica = null, bool? FlagEscritorioCobranca = null, EscritorioCobrancaDTO EscritoriosCobranca = null, List<TelefoneEscritorioCobrancaDTO> TelefonesEscritoriosCobranca = null)
+        public CredorResponse(long? Id = null, string NomeCredor = null, int? DiaPagamentoSemanal = null, int? DiaPagamentoMensal = null, int? DiaPagamentoDecendialPrimeiro = null, int? DiaPagamentoDecendialSegundo = null, int? DiaPagamentoDecendialTerceiro = null, int? DiaPagamentoQuinzenalPrimeiro = null, int? DiaPagamentoQuinzenalSegundo = null, int? Banco = null, int? Agencia = null, string DigitoAgencia = null, string ContaCorrente = null, string DigitoContaCorrente = null, bool? CredorBanco = null, double? PercentualRAV = null, RecebeRAVEnum? RecebeRAV = null, double? PercentualMultiplica = null, double? TaxaAdministrativa = null, double? TaxaBanco = null, double? LimiteRAV = null, long? IdCredorRAV = null, PeriodicidadeEnum? Periodicidade = null, long? IdPessoaJuridica = null, bool? FlagEscritorioCobranca = null, string Prefixo = null, bool? Ativo = null, List<TelefoneEscritorioCobrancaDTO> TelefonesEscritoriosCobranca = null, string NomeContato = null, string Email = null, string NomeLogradouro = null, int? NumeroEndereco = null, string ComplementoEndereco = null, string Bairro = null, string Cidade = null, string Cep = null, string Uf = null, string Responsavel = null, int? FlagSegundaViaAcordo = null, double? ValorMinimoParcela = null, double? DescontoMaximo = null)
         {
             this.Id = Id;
             this.NomeCredor = NomeCredor;
@@ -133,8 +147,22 @@ namespace Conductor.Pier.Model
             this.Periodicidade = Periodicidade;
             this.IdPessoaJuridica = IdPessoaJuridica;
             this.FlagEscritorioCobranca = FlagEscritorioCobranca;
-            this.EscritoriosCobranca = EscritoriosCobranca;
+            this.Prefixo = Prefixo;
+            this.Ativo = Ativo;
             this.TelefonesEscritoriosCobranca = TelefonesEscritoriosCobranca;
+            this.NomeContato = NomeContato;
+            this.Email = Email;
+            this.NomeLogradouro = NomeLogradouro;
+            this.NumeroEndereco = NumeroEndereco;
+            this.ComplementoEndereco = ComplementoEndereco;
+            this.Bairro = Bairro;
+            this.Cidade = Cidade;
+            this.Cep = Cep;
+            this.Uf = Uf;
+            this.Responsavel = Responsavel;
+            this.FlagSegundaViaAcordo = FlagSegundaViaAcordo;
+            this.ValorMinimoParcela = ValorMinimoParcela;
+            this.DescontoMaximo = DescontoMaximo;
             
         }
         
@@ -301,11 +329,18 @@ namespace Conductor.Pier.Model
         public bool? FlagEscritorioCobranca { get; set; }
     
         /// <summary>
-        /// {{{credor_response_escritorio_cobranca_value}}}
+        /// {{{credor_response_prefixo_value}}}
         /// </summary>
-        /// <value>{{{credor_response_escritorio_cobranca_value}}}</value>
-        [DataMember(Name="escritoriosCobranca", EmitDefaultValue=false)]
-        public EscritorioCobrancaDTO EscritoriosCobranca { get; set; }
+        /// <value>{{{credor_response_prefixo_value}}}</value>
+        [DataMember(Name="prefixo", EmitDefaultValue=false)]
+        public string Prefixo { get; set; }
+    
+        /// <summary>
+        /// {{{credor_response_ativo_value}}}
+        /// </summary>
+        /// <value>{{{credor_response_ativo_value}}}</value>
+        [DataMember(Name="ativo", EmitDefaultValue=false)]
+        public bool? Ativo { get; set; }
     
         /// <summary>
         /// {{{credor_response_telefone_escritorio_cobranca_value}}}
@@ -313,6 +348,97 @@ namespace Conductor.Pier.Model
         /// <value>{{{credor_response_telefone_escritorio_cobranca_value}}}</value>
         [DataMember(Name="telefonesEscritoriosCobranca", EmitDefaultValue=false)]
         public List<TelefoneEscritorioCobrancaDTO> TelefonesEscritoriosCobranca { get; set; }
+    
+        /// <summary>
+        /// {{{credor_response_nome_contato_value}}}
+        /// </summary>
+        /// <value>{{{credor_response_nome_contato_value}}}</value>
+        [DataMember(Name="nomeContato", EmitDefaultValue=false)]
+        public string NomeContato { get; set; }
+    
+        /// <summary>
+        /// {{{credor_response_email_value}}}
+        /// </summary>
+        /// <value>{{{credor_response_email_value}}}</value>
+        [DataMember(Name="email", EmitDefaultValue=false)]
+        public string Email { get; set; }
+    
+        /// <summary>
+        /// {{{credor_response_nome_logradouro_value}}}
+        /// </summary>
+        /// <value>{{{credor_response_nome_logradouro_value}}}</value>
+        [DataMember(Name="nomeLogradouro", EmitDefaultValue=false)]
+        public string NomeLogradouro { get; set; }
+    
+        /// <summary>
+        /// {{{credor_response_numero_endereco_value}}}
+        /// </summary>
+        /// <value>{{{credor_response_numero_endereco_value}}}</value>
+        [DataMember(Name="numeroEndereco", EmitDefaultValue=false)]
+        public int? NumeroEndereco { get; set; }
+    
+        /// <summary>
+        /// {{{credor_response_complemento_endereco_value}}}
+        /// </summary>
+        /// <value>{{{credor_response_complemento_endereco_value}}}</value>
+        [DataMember(Name="complementoEndereco", EmitDefaultValue=false)]
+        public string ComplementoEndereco { get; set; }
+    
+        /// <summary>
+        /// {{{credor_response_bairro_value}}}
+        /// </summary>
+        /// <value>{{{credor_response_bairro_value}}}</value>
+        [DataMember(Name="bairro", EmitDefaultValue=false)]
+        public string Bairro { get; set; }
+    
+        /// <summary>
+        /// {{{credor_response_cidade_value}}}
+        /// </summary>
+        /// <value>{{{credor_response_cidade_value}}}</value>
+        [DataMember(Name="cidade", EmitDefaultValue=false)]
+        public string Cidade { get; set; }
+    
+        /// <summary>
+        /// {{{credor_response_cep_value}}}
+        /// </summary>
+        /// <value>{{{credor_response_cep_value}}}</value>
+        [DataMember(Name="cep", EmitDefaultValue=false)]
+        public string Cep { get; set; }
+    
+        /// <summary>
+        /// {{{credor_response_uf_value}}}
+        /// </summary>
+        /// <value>{{{credor_response_uf_value}}}</value>
+        [DataMember(Name="uf", EmitDefaultValue=false)]
+        public string Uf { get; set; }
+    
+        /// <summary>
+        /// {{{credor_response_responsavel_value}}}
+        /// </summary>
+        /// <value>{{{credor_response_responsavel_value}}}</value>
+        [DataMember(Name="responsavel", EmitDefaultValue=false)]
+        public string Responsavel { get; set; }
+    
+        /// <summary>
+        /// {{{credor_response_flag_segunda_via_acordo_value}}}
+        /// </summary>
+        /// <value>{{{credor_response_flag_segunda_via_acordo_value}}}</value>
+        [DataMember(Name="flagSegundaViaAcordo", EmitDefaultValue=false)]
+        public int? FlagSegundaViaAcordo { get; set; }
+    
+        /// <summary>
+        /// {{{credor_response_valor_minimo_parcela_value}}}
+        /// </summary>
+        /// <value>{{{credor_response_valor_minimo_parcela_value}}}</value>
+        [DataMember(Name="valorMinimoParcela", EmitDefaultValue=false)]
+        public double? ValorMinimoParcela { get; set; }
+    
+        /// <summary>
+        /// {{{credor_response_desconto_maximo_value}}}
+        /// </summary>
+        /// <value>{{{credor_response_desconto_maximo_value}}}</value>
+        [DataMember(Name="descontoMaximo", EmitDefaultValue=false)]
+        public double? DescontoMaximo { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -347,8 +473,22 @@ namespace Conductor.Pier.Model
             sb.Append("  Periodicidade: ").Append(Periodicidade).Append("\n");
             sb.Append("  IdPessoaJuridica: ").Append(IdPessoaJuridica).Append("\n");
             sb.Append("  FlagEscritorioCobranca: ").Append(FlagEscritorioCobranca).Append("\n");
-            sb.Append("  EscritoriosCobranca: ").Append(EscritoriosCobranca).Append("\n");
+            sb.Append("  Prefixo: ").Append(Prefixo).Append("\n");
+            sb.Append("  Ativo: ").Append(Ativo).Append("\n");
             sb.Append("  TelefonesEscritoriosCobranca: ").Append(TelefonesEscritoriosCobranca).Append("\n");
+            sb.Append("  NomeContato: ").Append(NomeContato).Append("\n");
+            sb.Append("  Email: ").Append(Email).Append("\n");
+            sb.Append("  NomeLogradouro: ").Append(NomeLogradouro).Append("\n");
+            sb.Append("  NumeroEndereco: ").Append(NumeroEndereco).Append("\n");
+            sb.Append("  ComplementoEndereco: ").Append(ComplementoEndereco).Append("\n");
+            sb.Append("  Bairro: ").Append(Bairro).Append("\n");
+            sb.Append("  Cidade: ").Append(Cidade).Append("\n");
+            sb.Append("  Cep: ").Append(Cep).Append("\n");
+            sb.Append("  Uf: ").Append(Uf).Append("\n");
+            sb.Append("  Responsavel: ").Append(Responsavel).Append("\n");
+            sb.Append("  FlagSegundaViaAcordo: ").Append(FlagSegundaViaAcordo).Append("\n");
+            sb.Append("  ValorMinimoParcela: ").Append(ValorMinimoParcela).Append("\n");
+            sb.Append("  DescontoMaximo: ").Append(DescontoMaximo).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -512,14 +652,84 @@ namespace Conductor.Pier.Model
                     this.FlagEscritorioCobranca.Equals(other.FlagEscritorioCobranca)
                 ) && 
                 (
-                    this.EscritoriosCobranca == other.EscritoriosCobranca ||
-                    this.EscritoriosCobranca != null &&
-                    this.EscritoriosCobranca.Equals(other.EscritoriosCobranca)
+                    this.Prefixo == other.Prefixo ||
+                    this.Prefixo != null &&
+                    this.Prefixo.Equals(other.Prefixo)
+                ) && 
+                (
+                    this.Ativo == other.Ativo ||
+                    this.Ativo != null &&
+                    this.Ativo.Equals(other.Ativo)
                 ) && 
                 (
                     this.TelefonesEscritoriosCobranca == other.TelefonesEscritoriosCobranca ||
                     this.TelefonesEscritoriosCobranca != null &&
                     this.TelefonesEscritoriosCobranca.SequenceEqual(other.TelefonesEscritoriosCobranca)
+                ) && 
+                (
+                    this.NomeContato == other.NomeContato ||
+                    this.NomeContato != null &&
+                    this.NomeContato.Equals(other.NomeContato)
+                ) && 
+                (
+                    this.Email == other.Email ||
+                    this.Email != null &&
+                    this.Email.Equals(other.Email)
+                ) && 
+                (
+                    this.NomeLogradouro == other.NomeLogradouro ||
+                    this.NomeLogradouro != null &&
+                    this.NomeLogradouro.Equals(other.NomeLogradouro)
+                ) && 
+                (
+                    this.NumeroEndereco == other.NumeroEndereco ||
+                    this.NumeroEndereco != null &&
+                    this.NumeroEndereco.Equals(other.NumeroEndereco)
+                ) && 
+                (
+                    this.ComplementoEndereco == other.ComplementoEndereco ||
+                    this.ComplementoEndereco != null &&
+                    this.ComplementoEndereco.Equals(other.ComplementoEndereco)
+                ) && 
+                (
+                    this.Bairro == other.Bairro ||
+                    this.Bairro != null &&
+                    this.Bairro.Equals(other.Bairro)
+                ) && 
+                (
+                    this.Cidade == other.Cidade ||
+                    this.Cidade != null &&
+                    this.Cidade.Equals(other.Cidade)
+                ) && 
+                (
+                    this.Cep == other.Cep ||
+                    this.Cep != null &&
+                    this.Cep.Equals(other.Cep)
+                ) && 
+                (
+                    this.Uf == other.Uf ||
+                    this.Uf != null &&
+                    this.Uf.Equals(other.Uf)
+                ) && 
+                (
+                    this.Responsavel == other.Responsavel ||
+                    this.Responsavel != null &&
+                    this.Responsavel.Equals(other.Responsavel)
+                ) && 
+                (
+                    this.FlagSegundaViaAcordo == other.FlagSegundaViaAcordo ||
+                    this.FlagSegundaViaAcordo != null &&
+                    this.FlagSegundaViaAcordo.Equals(other.FlagSegundaViaAcordo)
+                ) && 
+                (
+                    this.ValorMinimoParcela == other.ValorMinimoParcela ||
+                    this.ValorMinimoParcela != null &&
+                    this.ValorMinimoParcela.Equals(other.ValorMinimoParcela)
+                ) && 
+                (
+                    this.DescontoMaximo == other.DescontoMaximo ||
+                    this.DescontoMaximo != null &&
+                    this.DescontoMaximo.Equals(other.DescontoMaximo)
                 );
         }
 
@@ -610,11 +820,53 @@ namespace Conductor.Pier.Model
                 if (this.FlagEscritorioCobranca != null)
                     hash = hash * 59 + this.FlagEscritorioCobranca.GetHashCode();
                 
-                if (this.EscritoriosCobranca != null)
-                    hash = hash * 59 + this.EscritoriosCobranca.GetHashCode();
+                if (this.Prefixo != null)
+                    hash = hash * 59 + this.Prefixo.GetHashCode();
+                
+                if (this.Ativo != null)
+                    hash = hash * 59 + this.Ativo.GetHashCode();
                 
                 if (this.TelefonesEscritoriosCobranca != null)
                     hash = hash * 59 + this.TelefonesEscritoriosCobranca.GetHashCode();
+                
+                if (this.NomeContato != null)
+                    hash = hash * 59 + this.NomeContato.GetHashCode();
+                
+                if (this.Email != null)
+                    hash = hash * 59 + this.Email.GetHashCode();
+                
+                if (this.NomeLogradouro != null)
+                    hash = hash * 59 + this.NomeLogradouro.GetHashCode();
+                
+                if (this.NumeroEndereco != null)
+                    hash = hash * 59 + this.NumeroEndereco.GetHashCode();
+                
+                if (this.ComplementoEndereco != null)
+                    hash = hash * 59 + this.ComplementoEndereco.GetHashCode();
+                
+                if (this.Bairro != null)
+                    hash = hash * 59 + this.Bairro.GetHashCode();
+                
+                if (this.Cidade != null)
+                    hash = hash * 59 + this.Cidade.GetHashCode();
+                
+                if (this.Cep != null)
+                    hash = hash * 59 + this.Cep.GetHashCode();
+                
+                if (this.Uf != null)
+                    hash = hash * 59 + this.Uf.GetHashCode();
+                
+                if (this.Responsavel != null)
+                    hash = hash * 59 + this.Responsavel.GetHashCode();
+                
+                if (this.FlagSegundaViaAcordo != null)
+                    hash = hash * 59 + this.FlagSegundaViaAcordo.GetHashCode();
+                
+                if (this.ValorMinimoParcela != null)
+                    hash = hash * 59 + this.ValorMinimoParcela.GetHashCode();
+                
+                if (this.DescontoMaximo != null)
+                    hash = hash * 59 + this.DescontoMaximo.GetHashCode();
                 
                 return hash;
             }

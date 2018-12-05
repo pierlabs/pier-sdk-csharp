@@ -22,22 +22,13 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TelefoneEscritorioCobrancaDTO" /> class.
         /// Initializes a new instance of the <see cref="TelefoneEscritorioCobrancaDTO" />class.
         /// </summary>
-        /// <param name="IdCredor">{{{telefone_escritorio_cobranca_d_t_o_id_credor_value}}} (required).</param>
+        /// <param name="Id">{{{telefone_escritorio_cobranca_d_t_o_id}}}.</param>
         /// <param name="Ddd">{{{telefone_escritorio_cobranca_d_t_o_ddd_value}}} (required).</param>
         /// <param name="Telefone">{{{telefone_escritorio_cobranca_d_t_o_telefone_value}}} (required).</param>
         /// <param name="Ramal">{{{telefone_escritorio_cobranca_d_t_o_ramal_value}}}.</param>
 
-        public TelefoneEscritorioCobrancaDTO(long? IdCredor = null, string Ddd = null, string Telefone = null, string Ramal = null)
+        public TelefoneEscritorioCobrancaDTO(long? Id = null, string Ddd = null, string Telefone = null, string Ramal = null)
         {
-            // to ensure "IdCredor" is required (not null)
-            if (IdCredor == null)
-            {
-                throw new InvalidDataException("IdCredor is a required property for TelefoneEscritorioCobrancaDTO and cannot be null");
-            }
-            else
-            {
-                this.IdCredor = IdCredor;
-            }
             // to ensure "Ddd" is required (not null)
             if (Ddd == null)
             {
@@ -56,17 +47,18 @@ namespace Conductor.Pier.Model
             {
                 this.Telefone = Telefone;
             }
+            this.Id = Id;
             this.Ramal = Ramal;
             
         }
         
     
         /// <summary>
-        /// {{{telefone_escritorio_cobranca_d_t_o_id_credor_value}}}
+        /// {{{telefone_escritorio_cobranca_d_t_o_id}}}
         /// </summary>
-        /// <value>{{{telefone_escritorio_cobranca_d_t_o_id_credor_value}}}</value>
-        [DataMember(Name="idCredor", EmitDefaultValue=false)]
-        public long? IdCredor { get; set; }
+        /// <value>{{{telefone_escritorio_cobranca_d_t_o_id}}}</value>
+        [DataMember(Name="id", EmitDefaultValue=false)]
+        public long? Id { get; set; }
     
         /// <summary>
         /// {{{telefone_escritorio_cobranca_d_t_o_ddd_value}}}
@@ -97,7 +89,7 @@ namespace Conductor.Pier.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TelefoneEscritorioCobrancaDTO {\n");
-            sb.Append("  IdCredor: ").Append(IdCredor).Append("\n");
+            sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Ddd: ").Append(Ddd).Append("\n");
             sb.Append("  Telefone: ").Append(Telefone).Append("\n");
             sb.Append("  Ramal: ").Append(Ramal).Append("\n");
@@ -139,9 +131,9 @@ namespace Conductor.Pier.Model
 
             return 
                 (
-                    this.IdCredor == other.IdCredor ||
-                    this.IdCredor != null &&
-                    this.IdCredor.Equals(other.IdCredor)
+                    this.Id == other.Id ||
+                    this.Id != null &&
+                    this.Id.Equals(other.Id)
                 ) && 
                 (
                     this.Ddd == other.Ddd ||
@@ -172,8 +164,8 @@ namespace Conductor.Pier.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.IdCredor != null)
-                    hash = hash * 59 + this.IdCredor.GetHashCode();
+                if (this.Id != null)
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Ddd != null)
                     hash = hash * 59 + this.Ddd.GetHashCode();

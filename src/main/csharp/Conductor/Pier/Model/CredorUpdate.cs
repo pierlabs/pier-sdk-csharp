@@ -78,7 +78,7 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="CredorUpdate" /> class.
         /// Initializes a new instance of the <see cref="CredorUpdate" />class.
         /// </summary>
-        /// <param name="TelefoneEscritorioCobranca">{{{credor_update_telefones_escritorio_cobranca_value}}}.</param>
+        /// <param name="TelefonesEscritoriosCobranca">{{{credor_update_telefones_escritorio_cobranca_value}}}.</param>
         /// <param name="NomeCredor">{{{credor_update_nome_credor_value}}}.</param>
         /// <param name="DiaPagamentoSemanal">{{{credor_update_pagamento_semanal_value}}}.</param>
         /// <param name="DiaPagamentoMensal">{{{credor_update_pagamento_mensal_value}}}.</param>
@@ -119,7 +119,7 @@ namespace Conductor.Pier.Model
         /// <param name="ValorMinimoParcela">{{{credor_update_valor_minimo_parcela_value}}}.</param>
         /// <param name="DescontoMaximo">{{{credor_update_desconto_maximo_value}}}.</param>
 
-        public CredorUpdate(List<TelefoneEscritorioCobrancaDTO> TelefoneEscritorioCobranca = null, string NomeCredor = null, int? DiaPagamentoSemanal = null, int? DiaPagamentoMensal = null, int? DiaPagamentoDecendialPrimeiro = null, int? DiaPagamentoDecendialSegundo = null, int? DiaPagamentoDecendialTerceiro = null, int? DiaPagamentoQuinzenalPrimeiro = null, int? DiaPagamentoQuinzenalSegundo = null, int? Banco = null, int? Agencia = null, string DigitoAgencia = null, string ContaCorrente = null, string DigitoContaCorrente = null, bool? CredorBanco = null, double? PercentualRAV = null, RecebeRAVEnum? RecebeRAV = null, double? PercentualMultiplica = null, double? TaxaAdministrativa = null, double? TaxaBanco = null, double? LimiteRAV = null, long? IdCredorRAV = null, PeriodicidadeEnum? Periodicidade = null, long? IdPessoaJuridica = null, bool? FlagEscritorioCobranca = null, string Prefixo = null, bool? Ativo = null, string NomeContato = null, string Email = null, string NomeLogradouro = null, int? NumeroEndereco = null, string ComplementoEndereco = null, string Bairro = null, string Cidade = null, string Cep = null, string Uf = null, string Responsavel = null, int? FlagSegundaViaAcordo = null, double? ValorMinimoParcela = null, double? DescontoMaximo = null)
+        public CredorUpdate(List<TelefoneEscritorioCobrancaDTO> TelefonesEscritoriosCobranca = null, string NomeCredor = null, int? DiaPagamentoSemanal = null, int? DiaPagamentoMensal = null, int? DiaPagamentoDecendialPrimeiro = null, int? DiaPagamentoDecendialSegundo = null, int? DiaPagamentoDecendialTerceiro = null, int? DiaPagamentoQuinzenalPrimeiro = null, int? DiaPagamentoQuinzenalSegundo = null, int? Banco = null, int? Agencia = null, string DigitoAgencia = null, string ContaCorrente = null, string DigitoContaCorrente = null, bool? CredorBanco = null, double? PercentualRAV = null, RecebeRAVEnum? RecebeRAV = null, double? PercentualMultiplica = null, double? TaxaAdministrativa = null, double? TaxaBanco = null, double? LimiteRAV = null, long? IdCredorRAV = null, PeriodicidadeEnum? Periodicidade = null, long? IdPessoaJuridica = null, bool? FlagEscritorioCobranca = null, string Prefixo = null, bool? Ativo = null, string NomeContato = null, string Email = null, string NomeLogradouro = null, int? NumeroEndereco = null, string ComplementoEndereco = null, string Bairro = null, string Cidade = null, string Cep = null, string Uf = null, string Responsavel = null, int? FlagSegundaViaAcordo = null, double? ValorMinimoParcela = null, double? DescontoMaximo = null)
         {
             // to ensure "PercentualRAV" is required (not null)
             if (PercentualRAV == null)
@@ -166,7 +166,7 @@ namespace Conductor.Pier.Model
             {
                 this.IdPessoaJuridica = IdPessoaJuridica;
             }
-            this.TelefoneEscritorioCobranca = TelefoneEscritorioCobranca;
+            this.TelefonesEscritoriosCobranca = TelefonesEscritoriosCobranca;
             this.NomeCredor = NomeCredor;
             this.DiaPagamentoSemanal = DiaPagamentoSemanal;
             this.DiaPagamentoMensal = DiaPagamentoMensal;
@@ -209,8 +209,8 @@ namespace Conductor.Pier.Model
         /// {{{credor_update_telefones_escritorio_cobranca_value}}}
         /// </summary>
         /// <value>{{{credor_update_telefones_escritorio_cobranca_value}}}</value>
-        [DataMember(Name="telefoneEscritorioCobranca", EmitDefaultValue=false)]
-        public List<TelefoneEscritorioCobrancaDTO> TelefoneEscritorioCobranca { get; set; }
+        [DataMember(Name="telefonesEscritoriosCobranca", EmitDefaultValue=false)]
+        public List<TelefoneEscritorioCobrancaDTO> TelefonesEscritoriosCobranca { get; set; }
     
         /// <summary>
         /// {{{credor_update_nome_credor_value}}}
@@ -479,7 +479,7 @@ namespace Conductor.Pier.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CredorUpdate {\n");
-            sb.Append("  TelefoneEscritorioCobranca: ").Append(TelefoneEscritorioCobranca).Append("\n");
+            sb.Append("  TelefonesEscritoriosCobranca: ").Append(TelefonesEscritoriosCobranca).Append("\n");
             sb.Append("  NomeCredor: ").Append(NomeCredor).Append("\n");
             sb.Append("  DiaPagamentoSemanal: ").Append(DiaPagamentoSemanal).Append("\n");
             sb.Append("  DiaPagamentoMensal: ").Append(DiaPagamentoMensal).Append("\n");
@@ -557,9 +557,9 @@ namespace Conductor.Pier.Model
 
             return 
                 (
-                    this.TelefoneEscritorioCobranca == other.TelefoneEscritorioCobranca ||
-                    this.TelefoneEscritorioCobranca != null &&
-                    this.TelefoneEscritorioCobranca.SequenceEqual(other.TelefoneEscritorioCobranca)
+                    this.TelefonesEscritoriosCobranca == other.TelefonesEscritoriosCobranca ||
+                    this.TelefonesEscritoriosCobranca != null &&
+                    this.TelefonesEscritoriosCobranca.SequenceEqual(other.TelefonesEscritoriosCobranca)
                 ) && 
                 (
                     this.NomeCredor == other.NomeCredor ||
@@ -770,8 +770,8 @@ namespace Conductor.Pier.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.TelefoneEscritorioCobranca != null)
-                    hash = hash * 59 + this.TelefoneEscritorioCobranca.GetHashCode();
+                if (this.TelefonesEscritoriosCobranca != null)
+                    hash = hash * 59 + this.TelefonesEscritoriosCobranca.GetHashCode();
                 
                 if (this.NomeCredor != null)
                     hash = hash * 59 + this.NomeCredor.GetHashCode();

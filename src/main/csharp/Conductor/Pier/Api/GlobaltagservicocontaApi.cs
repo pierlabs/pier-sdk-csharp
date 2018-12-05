@@ -236,7 +236,7 @@ namespace Conductor.Pier.Api
         /// <param name="idConta">{{{servico_conta_request_id_conta_value}}} (optional)</param>
         /// <param name="idTipoServico">{{{servico_conta_request_id_tipo_servico_value}}} (optional)</param>
         /// <returns>PageServicoContaResponse</returns>
-        PageServicoContaResponse ListarUsingGET42 (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idTipoServico = null);
+        PageServicoContaResponse ListarUsingGET43 (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idTipoServico = null);
   
         /// <summary>
         /// {{{servico_conta_resource_listar_servico_conta}}}
@@ -251,7 +251,7 @@ namespace Conductor.Pier.Api
         /// <param name="idConta">{{{servico_conta_request_id_conta_value}}} (optional)</param>
         /// <param name="idTipoServico">{{{servico_conta_request_id_tipo_servico_value}}} (optional)</param>
         /// <returns>ApiResponse of PageServicoContaResponse</returns>
-        ApiResponse<PageServicoContaResponse> ListarUsingGET42WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idTipoServico = null);
+        ApiResponse<PageServicoContaResponse> ListarUsingGET43WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idTipoServico = null);
         
         /// <summary>
         /// {{{servico_conta_resource_salvar}}}
@@ -262,7 +262,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="servicoContaPersist">servicoContaPersist</param>
         /// <returns>Object</returns>
-        Object SalvarUsingPOST25 (ServicoContaPersistValue servicoContaPersist);
+        Object SalvarUsingPOST26 (ServicoContaPersistValue servicoContaPersist);
   
         /// <summary>
         /// {{{servico_conta_resource_salvar}}}
@@ -273,7 +273,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="servicoContaPersist">servicoContaPersist</param>
         /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> SalvarUsingPOST25WithHttpInfo (ServicoContaPersistValue servicoContaPersist);
+        ApiResponse<Object> SalvarUsingPOST26WithHttpInfo (ServicoContaPersistValue servicoContaPersist);
         
         #endregion Synchronous Operations
         
@@ -498,7 +498,7 @@ namespace Conductor.Pier.Api
         /// <param name="idConta">{{{servico_conta_request_id_conta_value}}} (optional)</param>
         /// <param name="idTipoServico">{{{servico_conta_request_id_tipo_servico_value}}} (optional)</param>
         /// <returns>Task of PageServicoContaResponse</returns>
-        System.Threading.Tasks.Task<PageServicoContaResponse> ListarUsingGET42Async (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idTipoServico = null);
+        System.Threading.Tasks.Task<PageServicoContaResponse> ListarUsingGET43Async (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idTipoServico = null);
 
         /// <summary>
         /// {{{servico_conta_resource_listar_servico_conta}}}
@@ -513,7 +513,7 @@ namespace Conductor.Pier.Api
         /// <param name="idConta">{{{servico_conta_request_id_conta_value}}} (optional)</param>
         /// <param name="idTipoServico">{{{servico_conta_request_id_tipo_servico_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageServicoContaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageServicoContaResponse>> ListarUsingGET42AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idTipoServico = null);
+        System.Threading.Tasks.Task<ApiResponse<PageServicoContaResponse>> ListarUsingGET43AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idTipoServico = null);
         
         /// <summary>
         /// {{{servico_conta_resource_salvar}}}
@@ -524,7 +524,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="servicoContaPersist">servicoContaPersist</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> SalvarUsingPOST25Async (ServicoContaPersistValue servicoContaPersist);
+        System.Threading.Tasks.Task<Object> SalvarUsingPOST26Async (ServicoContaPersistValue servicoContaPersist);
 
         /// <summary>
         /// {{{servico_conta_resource_salvar}}}
@@ -535,7 +535,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="servicoContaPersist">servicoContaPersist</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> SalvarUsingPOST25AsyncWithHttpInfo (ServicoContaPersistValue servicoContaPersist);
+        System.Threading.Tasks.Task<ApiResponse<Object>> SalvarUsingPOST26AsyncWithHttpInfo (ServicoContaPersistValue servicoContaPersist);
         
         #endregion Asynchronous Operations
         
@@ -1999,9 +1999,9 @@ namespace Conductor.Pier.Api
         /// <param name="idConta">{{{servico_conta_request_id_conta_value}}} (optional)</param> 
         /// <param name="idTipoServico">{{{servico_conta_request_id_tipo_servico_value}}} (optional)</param> 
         /// <returns>PageServicoContaResponse</returns>
-        public PageServicoContaResponse ListarUsingGET42 (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idTipoServico = null)
+        public PageServicoContaResponse ListarUsingGET43 (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idTipoServico = null)
         {
-             ApiResponse<PageServicoContaResponse> localVarResponse = ListarUsingGET42WithHttpInfo(sort, page, limit, idConta, idTipoServico);
+             ApiResponse<PageServicoContaResponse> localVarResponse = ListarUsingGET43WithHttpInfo(sort, page, limit, idConta, idTipoServico);
              return localVarResponse.Data;
         }
 
@@ -2015,7 +2015,7 @@ namespace Conductor.Pier.Api
         /// <param name="idConta">{{{servico_conta_request_id_conta_value}}} (optional)</param> 
         /// <param name="idTipoServico">{{{servico_conta_request_id_tipo_servico_value}}} (optional)</param> 
         /// <returns>ApiResponse of PageServicoContaResponse</returns>
-        public ApiResponse< PageServicoContaResponse > ListarUsingGET42WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idTipoServico = null)
+        public ApiResponse< PageServicoContaResponse > ListarUsingGET43WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idTipoServico = null)
         {
             
     
@@ -2066,9 +2066,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET42: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET43: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET42: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET43: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageServicoContaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2087,9 +2087,9 @@ namespace Conductor.Pier.Api
         /// <param name="idConta">{{{servico_conta_request_id_conta_value}}} (optional)</param>
         /// <param name="idTipoServico">{{{servico_conta_request_id_tipo_servico_value}}} (optional)</param>
         /// <returns>Task of PageServicoContaResponse</returns>
-        public async System.Threading.Tasks.Task<PageServicoContaResponse> ListarUsingGET42Async (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idTipoServico = null)
+        public async System.Threading.Tasks.Task<PageServicoContaResponse> ListarUsingGET43Async (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idTipoServico = null)
         {
-             ApiResponse<PageServicoContaResponse> localVarResponse = await ListarUsingGET42AsyncWithHttpInfo(sort, page, limit, idConta, idTipoServico);
+             ApiResponse<PageServicoContaResponse> localVarResponse = await ListarUsingGET43AsyncWithHttpInfo(sort, page, limit, idConta, idTipoServico);
              return localVarResponse.Data;
 
         }
@@ -2104,7 +2104,7 @@ namespace Conductor.Pier.Api
         /// <param name="idConta">{{{servico_conta_request_id_conta_value}}} (optional)</param>
         /// <param name="idTipoServico">{{{servico_conta_request_id_tipo_servico_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (PageServicoContaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageServicoContaResponse>> ListarUsingGET42AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idTipoServico = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageServicoContaResponse>> ListarUsingGET43AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idTipoServico = null)
         {
             
     
@@ -2155,9 +2155,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET42: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET43: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET42: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET43: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageServicoContaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2171,9 +2171,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="servicoContaPersist">servicoContaPersist</param> 
         /// <returns>Object</returns>
-        public Object SalvarUsingPOST25 (ServicoContaPersistValue servicoContaPersist)
+        public Object SalvarUsingPOST26 (ServicoContaPersistValue servicoContaPersist)
         {
-             ApiResponse<Object> localVarResponse = SalvarUsingPOST25WithHttpInfo(servicoContaPersist);
+             ApiResponse<Object> localVarResponse = SalvarUsingPOST26WithHttpInfo(servicoContaPersist);
              return localVarResponse.Data;
         }
 
@@ -2183,12 +2183,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="servicoContaPersist">servicoContaPersist</param> 
         /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > SalvarUsingPOST25WithHttpInfo (ServicoContaPersistValue servicoContaPersist)
+        public ApiResponse< Object > SalvarUsingPOST26WithHttpInfo (ServicoContaPersistValue servicoContaPersist)
         {
             
             // verify the required parameter 'servicoContaPersist' is set
             if (servicoContaPersist == null)
-                throw new ApiException(400, "Missing required parameter 'servicoContaPersist' when calling GlobaltagservicocontaApi->SalvarUsingPOST25");
+                throw new ApiException(400, "Missing required parameter 'servicoContaPersist' when calling GlobaltagservicocontaApi->SalvarUsingPOST26");
             
     
             var localVarPath = "/api/contas/servicos";
@@ -2240,9 +2240,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST25: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST26: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST25: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST26: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2257,9 +2257,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="servicoContaPersist">servicoContaPersist</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> SalvarUsingPOST25Async (ServicoContaPersistValue servicoContaPersist)
+        public async System.Threading.Tasks.Task<Object> SalvarUsingPOST26Async (ServicoContaPersistValue servicoContaPersist)
         {
-             ApiResponse<Object> localVarResponse = await SalvarUsingPOST25AsyncWithHttpInfo(servicoContaPersist);
+             ApiResponse<Object> localVarResponse = await SalvarUsingPOST26AsyncWithHttpInfo(servicoContaPersist);
              return localVarResponse.Data;
 
         }
@@ -2270,10 +2270,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="servicoContaPersist">servicoContaPersist</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> SalvarUsingPOST25AsyncWithHttpInfo (ServicoContaPersistValue servicoContaPersist)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> SalvarUsingPOST26AsyncWithHttpInfo (ServicoContaPersistValue servicoContaPersist)
         {
             // verify the required parameter 'servicoContaPersist' is set
-            if (servicoContaPersist == null) throw new ApiException(400, "Missing required parameter 'servicoContaPersist' when calling SalvarUsingPOST25");
+            if (servicoContaPersist == null) throw new ApiException(400, "Missing required parameter 'servicoContaPersist' when calling SalvarUsingPOST26");
             
     
             var localVarPath = "/api/contas/servicos";
@@ -2325,9 +2325,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST25: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST26: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST25: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarUsingPOST26: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

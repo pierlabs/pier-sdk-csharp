@@ -72,7 +72,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{tipo_conta_bancaria_resource_consultar_param_id}}}</param>
         /// <returns>CdtTipoContaBancaria</returns>
-        CdtTipoContaBancaria ConsultarUsingGET42 (long? id);
+        CdtTipoContaBancaria ConsultarUsingGET43 (long? id);
   
         /// <summary>
         /// {{{tipo_conta_bancaria_resource_consultar}}}
@@ -83,7 +83,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{tipo_conta_bancaria_resource_consultar_param_id}}}</param>
         /// <returns>ApiResponse of CdtTipoContaBancaria</returns>
-        ApiResponse<CdtTipoContaBancaria> ConsultarUsingGET42WithHttpInfo (long? id);
+        ApiResponse<CdtTipoContaBancaria> ConsultarUsingGET43WithHttpInfo (long? id);
         
         /// <summary>
         /// {{{dados_bancarios_conta_resource_consultarPage}}}
@@ -135,7 +135,7 @@ namespace Conductor.Pier.Api
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <param name="descricao">{{{tipo_conta_bancaria_request_descricao_value}}} (optional)</param>
         /// <returns>CdtTipoContaBancaria</returns>
-        CdtTipoContaBancaria ListarUsingGET50 (List<string> sort = null, int? page = null, int? limit = null, string descricao = null);
+        CdtTipoContaBancaria ListarUsingGET51 (List<string> sort = null, int? page = null, int? limit = null, string descricao = null);
   
         /// <summary>
         /// {{{tipo_conta_bancaria_resource_listar}}}
@@ -149,7 +149,7 @@ namespace Conductor.Pier.Api
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <param name="descricao">{{{tipo_conta_bancaria_request_descricao_value}}} (optional)</param>
         /// <returns>ApiResponse of CdtTipoContaBancaria</returns>
-        ApiResponse<CdtTipoContaBancaria> ListarUsingGET50WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string descricao = null);
+        ApiResponse<CdtTipoContaBancaria> ListarUsingGET51WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string descricao = null);
         
         /// <summary>
         /// {{{dados_bancarios_conta_resource_salvar}}}
@@ -232,7 +232,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{tipo_conta_bancaria_resource_consultar_param_id}}}</param>
         /// <returns>Task of CdtTipoContaBancaria</returns>
-        System.Threading.Tasks.Task<CdtTipoContaBancaria> ConsultarUsingGET42Async (long? id);
+        System.Threading.Tasks.Task<CdtTipoContaBancaria> ConsultarUsingGET43Async (long? id);
 
         /// <summary>
         /// {{{tipo_conta_bancaria_resource_consultar}}}
@@ -243,7 +243,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{tipo_conta_bancaria_resource_consultar_param_id}}}</param>
         /// <returns>Task of ApiResponse (CdtTipoContaBancaria)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CdtTipoContaBancaria>> ConsultarUsingGET42AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<CdtTipoContaBancaria>> ConsultarUsingGET43AsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// {{{dados_bancarios_conta_resource_consultarPage}}}
@@ -295,7 +295,7 @@ namespace Conductor.Pier.Api
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <param name="descricao">{{{tipo_conta_bancaria_request_descricao_value}}} (optional)</param>
         /// <returns>Task of CdtTipoContaBancaria</returns>
-        System.Threading.Tasks.Task<CdtTipoContaBancaria> ListarUsingGET50Async (List<string> sort = null, int? page = null, int? limit = null, string descricao = null);
+        System.Threading.Tasks.Task<CdtTipoContaBancaria> ListarUsingGET51Async (List<string> sort = null, int? page = null, int? limit = null, string descricao = null);
 
         /// <summary>
         /// {{{tipo_conta_bancaria_resource_listar}}}
@@ -309,7 +309,7 @@ namespace Conductor.Pier.Api
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <param name="descricao">{{{tipo_conta_bancaria_request_descricao_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (CdtTipoContaBancaria)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CdtTipoContaBancaria>> ListarUsingGET50AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string descricao = null);
+        System.Threading.Tasks.Task<ApiResponse<CdtTipoContaBancaria>> ListarUsingGET51AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string descricao = null);
         
         /// <summary>
         /// {{{dados_bancarios_conta_resource_salvar}}}
@@ -771,9 +771,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{tipo_conta_bancaria_resource_consultar_param_id}}}</param> 
         /// <returns>CdtTipoContaBancaria</returns>
-        public CdtTipoContaBancaria ConsultarUsingGET42 (long? id)
+        public CdtTipoContaBancaria ConsultarUsingGET43 (long? id)
         {
-             ApiResponse<CdtTipoContaBancaria> localVarResponse = ConsultarUsingGET42WithHttpInfo(id);
+             ApiResponse<CdtTipoContaBancaria> localVarResponse = ConsultarUsingGET43WithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -783,12 +783,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{tipo_conta_bancaria_resource_consultar_param_id}}}</param> 
         /// <returns>ApiResponse of CdtTipoContaBancaria</returns>
-        public ApiResponse< CdtTipoContaBancaria > ConsultarUsingGET42WithHttpInfo (long? id)
+        public ApiResponse< CdtTipoContaBancaria > ConsultarUsingGET43WithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagdadosbancarioscontaApi->ConsultarUsingGET42");
+                throw new ApiException(400, "Missing required parameter 'id' when calling GlobaltagdadosbancarioscontaApi->ConsultarUsingGET43");
             
     
             var localVarPath = "/api/dados-bancarios-conta/tipos-contas-bancarias/{id}";
@@ -834,9 +834,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET42: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET43: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET42: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET43: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<CdtTipoContaBancaria>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -851,9 +851,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{tipo_conta_bancaria_resource_consultar_param_id}}}</param>
         /// <returns>Task of CdtTipoContaBancaria</returns>
-        public async System.Threading.Tasks.Task<CdtTipoContaBancaria> ConsultarUsingGET42Async (long? id)
+        public async System.Threading.Tasks.Task<CdtTipoContaBancaria> ConsultarUsingGET43Async (long? id)
         {
-             ApiResponse<CdtTipoContaBancaria> localVarResponse = await ConsultarUsingGET42AsyncWithHttpInfo(id);
+             ApiResponse<CdtTipoContaBancaria> localVarResponse = await ConsultarUsingGET43AsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -864,10 +864,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">{{{tipo_conta_bancaria_resource_consultar_param_id}}}</param>
         /// <returns>Task of ApiResponse (CdtTipoContaBancaria)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CdtTipoContaBancaria>> ConsultarUsingGET42AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<CdtTipoContaBancaria>> ConsultarUsingGET43AsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET42");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarUsingGET43");
             
     
             var localVarPath = "/api/dados-bancarios-conta/tipos-contas-bancarias/{id}";
@@ -913,9 +913,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET42: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET43: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET42: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarUsingGET43: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<CdtTipoContaBancaria>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1132,9 +1132,9 @@ namespace Conductor.Pier.Api
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param> 
         /// <param name="descricao">{{{tipo_conta_bancaria_request_descricao_value}}} (optional)</param> 
         /// <returns>CdtTipoContaBancaria</returns>
-        public CdtTipoContaBancaria ListarUsingGET50 (List<string> sort = null, int? page = null, int? limit = null, string descricao = null)
+        public CdtTipoContaBancaria ListarUsingGET51 (List<string> sort = null, int? page = null, int? limit = null, string descricao = null)
         {
-             ApiResponse<CdtTipoContaBancaria> localVarResponse = ListarUsingGET50WithHttpInfo(sort, page, limit, descricao);
+             ApiResponse<CdtTipoContaBancaria> localVarResponse = ListarUsingGET51WithHttpInfo(sort, page, limit, descricao);
              return localVarResponse.Data;
         }
 
@@ -1147,7 +1147,7 @@ namespace Conductor.Pier.Api
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param> 
         /// <param name="descricao">{{{tipo_conta_bancaria_request_descricao_value}}} (optional)</param> 
         /// <returns>ApiResponse of CdtTipoContaBancaria</returns>
-        public ApiResponse< CdtTipoContaBancaria > ListarUsingGET50WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string descricao = null)
+        public ApiResponse< CdtTipoContaBancaria > ListarUsingGET51WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string descricao = null)
         {
             
     
@@ -1197,9 +1197,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET50: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET51: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET50: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET51: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<CdtTipoContaBancaria>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1217,9 +1217,9 @@ namespace Conductor.Pier.Api
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <param name="descricao">{{{tipo_conta_bancaria_request_descricao_value}}} (optional)</param>
         /// <returns>Task of CdtTipoContaBancaria</returns>
-        public async System.Threading.Tasks.Task<CdtTipoContaBancaria> ListarUsingGET50Async (List<string> sort = null, int? page = null, int? limit = null, string descricao = null)
+        public async System.Threading.Tasks.Task<CdtTipoContaBancaria> ListarUsingGET51Async (List<string> sort = null, int? page = null, int? limit = null, string descricao = null)
         {
-             ApiResponse<CdtTipoContaBancaria> localVarResponse = await ListarUsingGET50AsyncWithHttpInfo(sort, page, limit, descricao);
+             ApiResponse<CdtTipoContaBancaria> localVarResponse = await ListarUsingGET51AsyncWithHttpInfo(sort, page, limit, descricao);
              return localVarResponse.Data;
 
         }
@@ -1233,7 +1233,7 @@ namespace Conductor.Pier.Api
         /// <param name="limit">{{{global_menssagem_sort_limit}}} (optional)</param>
         /// <param name="descricao">{{{tipo_conta_bancaria_request_descricao_value}}} (optional)</param>
         /// <returns>Task of ApiResponse (CdtTipoContaBancaria)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CdtTipoContaBancaria>> ListarUsingGET50AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string descricao = null)
+        public async System.Threading.Tasks.Task<ApiResponse<CdtTipoContaBancaria>> ListarUsingGET51AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string descricao = null)
         {
             
     
@@ -1283,9 +1283,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET50: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET51: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET50: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarUsingGET51: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<CdtTipoContaBancaria>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
