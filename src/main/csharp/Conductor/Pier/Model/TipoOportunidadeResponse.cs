@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{tipo_oportunidade_response_description}}}
+    /// Response Representation of the TypeOpportunity resource
     /// </summary>
     [DataContract]
     public partial class TipoOportunidadeResponse :  IEquatable<TipoOportunidadeResponse>
@@ -22,9 +22,9 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TipoOportunidadeResponse" /> class.
         /// Initializes a new instance of the <see cref="TipoOportunidadeResponse" />class.
         /// </summary>
-        /// <param name="Id">{{{tipo_oportunidade_response_id_value}}} (required).</param>
-        /// <param name="Descricao">{{{tipo_oportunidade_response_descricao_value}}} (required).</param>
-        /// <param name="FlagAtivo">{{{tipo_oportunidade_response_flag_ativo_value}}} (required).</param>
+        /// <param name="Id">Identifier Code of the TypeOpportunity (required).</param>
+        /// <param name="Descricao">Description of the TypeOpportunity (required).</param>
+        /// <param name="FlagAtivo">Flag that represents if the opportunity type is active (required).</param>
 
         public TipoOportunidadeResponse(long? Id = null, string Descricao = null, bool? FlagAtivo = null)
         {
@@ -60,23 +60,23 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{tipo_oportunidade_response_id_value}}}
+        /// Identifier Code of the TypeOpportunity
         /// </summary>
-        /// <value>{{{tipo_oportunidade_response_id_value}}}</value>
+        /// <value>Identifier Code of the TypeOpportunity</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{tipo_oportunidade_response_descricao_value}}}
+        /// Description of the TypeOpportunity
         /// </summary>
-        /// <value>{{{tipo_oportunidade_response_descricao_value}}}</value>
+        /// <value>Description of the TypeOpportunity</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     
         /// <summary>
-        /// {{{tipo_oportunidade_response_flag_ativo_value}}}
+        /// Flag that represents if the opportunity type is active
         /// </summary>
-        /// <value>{{{tipo_oportunidade_response_flag_ativo_value}}}</value>
+        /// <value>Flag that represents if the opportunity type is active</value>
         [DataMember(Name="flagAtivo", EmitDefaultValue=false)]
         public bool? FlagAtivo { get; set; }
     

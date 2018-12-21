@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{plano_campanha_response_description}}}
+    /// Response representation of the campaign plan resource
     /// </summary>
     [DataContract]
     public partial class PlanoCampanhaResponse :  IEquatable<PlanoCampanhaResponse>
@@ -22,10 +22,10 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="PlanoCampanhaResponse" /> class.
         /// Initializes a new instance of the <see cref="PlanoCampanhaResponse" />class.
         /// </summary>
-        /// <param name="Id">{{{plano_campanha_response_id_value}}}.</param>
-        /// <param name="Parcelas">{{{plano_campanha_response_parcelas_value}}}.</param>
-        /// <param name="Taxa">{{{plano_campanha_response_taxa_value}}}.</param>
-        /// <param name="Usuario">{{{plano_campanha_response_usuario_value}}}.</param>
+        /// <param name="Id">Identifier of the Campaign plan.</param>
+        /// <param name="Parcelas">Quantity of the parcels.</param>
+        /// <param name="Taxa">Interest taxes.</param>
+        /// <param name="Usuario">Username.</param>
 
         public PlanoCampanhaResponse(long? Id = null, int? Parcelas = null, double? Taxa = null, string Usuario = null)
         {
@@ -38,30 +38,30 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{plano_campanha_response_id_value}}}
+        /// Identifier of the Campaign plan
         /// </summary>
-        /// <value>{{{plano_campanha_response_id_value}}}</value>
+        /// <value>Identifier of the Campaign plan</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{plano_campanha_response_parcelas_value}}}
+        /// Quantity of the parcels
         /// </summary>
-        /// <value>{{{plano_campanha_response_parcelas_value}}}</value>
+        /// <value>Quantity of the parcels</value>
         [DataMember(Name="parcelas", EmitDefaultValue=false)]
         public int? Parcelas { get; set; }
     
         /// <summary>
-        /// {{{plano_campanha_response_taxa_value}}}
+        /// Interest taxes
         /// </summary>
-        /// <value>{{{plano_campanha_response_taxa_value}}}</value>
+        /// <value>Interest taxes</value>
         [DataMember(Name="taxa", EmitDefaultValue=false)]
         public double? Taxa { get; set; }
     
         /// <summary>
-        /// {{{plano_campanha_response_usuario_value}}}
+        /// Username
         /// </summary>
-        /// <value>{{{plano_campanha_response_usuario_value}}}</value>
+        /// <value>Username</value>
         [DataMember(Name="usuario", EmitDefaultValue=false)]
         public string Usuario { get; set; }
     

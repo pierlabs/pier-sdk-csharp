@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{vinculo_operacao_response_description}}}
+    /// ObjectLinkedOperation
     /// </summary>
     [DataContract]
     public partial class VinculoOperacaoResponse :  IEquatable<VinculoOperacaoResponse>
@@ -22,10 +22,10 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="VinculoOperacaoResponse" /> class.
         /// Initializes a new instance of the <see cref="VinculoOperacaoResponse" />class.
         /// </summary>
-        /// <param name="IdProduto">{{{vinculo_operacao_response_id_produto_value}}}.</param>
-        /// <param name="IdOperacao">{{{vinculo_operacao_response_id_operacao_value}}}.</param>
-        /// <param name="CodigoProcessamento">{{{vinculo_operacao_response_codigo_processamento_value}}}.</param>
-        /// <param name="CodigoMCC">{{{vinculo_operacao_response_codigo_m_c_c_value}}}.</param>
+        /// <param name="IdProduto">Identification Code of the Product (id).</param>
+        /// <param name="IdOperacao">Identification Code of the Operation (id).</param>
+        /// <param name="CodigoProcessamento">Processing Code.</param>
+        /// <param name="CodigoMCC">MCC code.</param>
 
         public VinculoOperacaoResponse(long? IdProduto = null, long? IdOperacao = null, string CodigoProcessamento = null, int? CodigoMCC = null)
         {
@@ -38,30 +38,30 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{vinculo_operacao_response_id_produto_value}}}
+        /// Identification Code of the Product (id)
         /// </summary>
-        /// <value>{{{vinculo_operacao_response_id_produto_value}}}</value>
+        /// <value>Identification Code of the Product (id)</value>
         [DataMember(Name="idProduto", EmitDefaultValue=false)]
         public long? IdProduto { get; set; }
     
         /// <summary>
-        /// {{{vinculo_operacao_response_id_operacao_value}}}
+        /// Identification Code of the Operation (id)
         /// </summary>
-        /// <value>{{{vinculo_operacao_response_id_operacao_value}}}</value>
+        /// <value>Identification Code of the Operation (id)</value>
         [DataMember(Name="idOperacao", EmitDefaultValue=false)]
         public long? IdOperacao { get; set; }
     
         /// <summary>
-        /// {{{vinculo_operacao_response_codigo_processamento_value}}}
+        /// Processing Code
         /// </summary>
-        /// <value>{{{vinculo_operacao_response_codigo_processamento_value}}}</value>
+        /// <value>Processing Code</value>
         [DataMember(Name="codigoProcessamento", EmitDefaultValue=false)]
         public string CodigoProcessamento { get; set; }
     
         /// <summary>
-        /// {{{vinculo_operacao_response_codigo_m_c_c_value}}}
+        /// MCC code
         /// </summary>
-        /// <value>{{{vinculo_operacao_response_codigo_m_c_c_value}}}</value>
+        /// <value>MCC code</value>
         [DataMember(Name="codigoMCC", EmitDefaultValue=false)]
         public int? CodigoMCC { get; set; }
     

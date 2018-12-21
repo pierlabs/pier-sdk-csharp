@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{aviso_viagem_response_description}}}
+    /// Response representation of the travel notification resource
     /// </summary>
     [DataContract]
     public partial class AvisoViagemResponse :  IEquatable<AvisoViagemResponse>
@@ -22,12 +22,12 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="AvisoViagemResponse" /> class.
         /// Initializes a new instance of the <see cref="AvisoViagemResponse" />class.
         /// </summary>
-        /// <param name="Id">{{{aviso_viagem_response_id_value}}}.</param>
-        /// <param name="IdCartao">{{{aviso_viagem_response_id_cartao_value}}}.</param>
-        /// <param name="CodigoPais">{{{aviso_viagem_response_codigo_pais_value}}}.</param>
-        /// <param name="DataInicio">{{{aviso_viagem_response_data_inicio_value}}}.</param>
-        /// <param name="DataFim">{{{aviso_viagem_response_data_fim_value}}}.</param>
-        /// <param name="FlagAtivo">{{{aviso_viagem_response_flag_ativo_value}}}.</param>
+        /// <param name="Id">Unique identifier Code of the travel notification in the base (id).</param>
+        /// <param name="IdCartao">Identifier Code of the card in the base (id).</param>
+        /// <param name="CodigoPais">Identifier Code of the country in the base (id).</param>
+        /// <param name="DataInicio">Beginning date of the travel notification.</param>
+        /// <param name="DataFim">Ending date of the travel notification.</param>
+        /// <param name="FlagAtivo">Identify if the travel notification is active or not.</param>
 
         public AvisoViagemResponse(long? Id = null, long? IdCartao = null, string CodigoPais = null, string DataInicio = null, string DataFim = null, int? FlagAtivo = null)
         {
@@ -42,44 +42,44 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{aviso_viagem_response_id_value}}}
+        /// Unique identifier Code of the travel notification in the base (id)
         /// </summary>
-        /// <value>{{{aviso_viagem_response_id_value}}}</value>
+        /// <value>Unique identifier Code of the travel notification in the base (id)</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{aviso_viagem_response_id_cartao_value}}}
+        /// Identifier Code of the card in the base (id)
         /// </summary>
-        /// <value>{{{aviso_viagem_response_id_cartao_value}}}</value>
+        /// <value>Identifier Code of the card in the base (id)</value>
         [DataMember(Name="idCartao", EmitDefaultValue=false)]
         public long? IdCartao { get; set; }
     
         /// <summary>
-        /// {{{aviso_viagem_response_codigo_pais_value}}}
+        /// Identifier Code of the country in the base (id)
         /// </summary>
-        /// <value>{{{aviso_viagem_response_codigo_pais_value}}}</value>
+        /// <value>Identifier Code of the country in the base (id)</value>
         [DataMember(Name="codigoPais", EmitDefaultValue=false)]
         public string CodigoPais { get; set; }
     
         /// <summary>
-        /// {{{aviso_viagem_response_data_inicio_value}}}
+        /// Beginning date of the travel notification
         /// </summary>
-        /// <value>{{{aviso_viagem_response_data_inicio_value}}}</value>
+        /// <value>Beginning date of the travel notification</value>
         [DataMember(Name="dataInicio", EmitDefaultValue=false)]
         public string DataInicio { get; set; }
     
         /// <summary>
-        /// {{{aviso_viagem_response_data_fim_value}}}
+        /// Ending date of the travel notification
         /// </summary>
-        /// <value>{{{aviso_viagem_response_data_fim_value}}}</value>
+        /// <value>Ending date of the travel notification</value>
         [DataMember(Name="dataFim", EmitDefaultValue=false)]
         public string DataFim { get; set; }
     
         /// <summary>
-        /// {{{aviso_viagem_response_flag_ativo_value}}}
+        /// Identify if the travel notification is active or not
         /// </summary>
-        /// <value>{{{aviso_viagem_response_flag_ativo_value}}}</value>
+        /// <value>Identify if the travel notification is active or not</value>
         [DataMember(Name="flagAtivo", EmitDefaultValue=false)]
         public int? FlagAtivo { get; set; }
     

@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{promotor_response_description}}}
+    /// Object Prosecutor
     /// </summary>
     [DataContract]
     public partial class PromotorResponse :  IEquatable<PromotorResponse>
@@ -22,11 +22,11 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="PromotorResponse" /> class.
         /// Initializes a new instance of the <see cref="PromotorResponse" />class.
         /// </summary>
-        /// <param name="Id">{{{promotor_response_id_value}}}.</param>
-        /// <param name="Nome">{{{promotor_response_nome_value}}}.</param>
-        /// <param name="DataCadastro">{{{promotor_response_data_cadastro_value}}}.</param>
-        /// <param name="IdEstabelecimento">{{{promotor_response_id_estabelecimento_value}}}.</param>
-        /// <param name="IdUsuario">{{{promotor_response_id_usuario_value}}}.</param>
+        /// <param name="Id">Identification Code of the Prosecutor (id).</param>
+        /// <param name="Nome">Prosecutor Name.</param>
+        /// <param name="DataCadastro">Inclusion date.</param>
+        /// <param name="IdEstabelecimento">Identification Code of the Merchant.</param>
+        /// <param name="IdUsuario">Identification Code of the user.</param>
 
         public PromotorResponse(long? Id = null, string Nome = null, string DataCadastro = null, long? IdEstabelecimento = null, long? IdUsuario = null)
         {
@@ -40,37 +40,37 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{promotor_response_id_value}}}
+        /// Identification Code of the Prosecutor (id)
         /// </summary>
-        /// <value>{{{promotor_response_id_value}}}</value>
+        /// <value>Identification Code of the Prosecutor (id)</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{promotor_response_nome_value}}}
+        /// Prosecutor Name
         /// </summary>
-        /// <value>{{{promotor_response_nome_value}}}</value>
+        /// <value>Prosecutor Name</value>
         [DataMember(Name="nome", EmitDefaultValue=false)]
         public string Nome { get; set; }
     
         /// <summary>
-        /// {{{promotor_response_data_cadastro_value}}}
+        /// Inclusion date
         /// </summary>
-        /// <value>{{{promotor_response_data_cadastro_value}}}</value>
+        /// <value>Inclusion date</value>
         [DataMember(Name="dataCadastro", EmitDefaultValue=false)]
         public string DataCadastro { get; set; }
     
         /// <summary>
-        /// {{{promotor_response_id_estabelecimento_value}}}
+        /// Identification Code of the Merchant
         /// </summary>
-        /// <value>{{{promotor_response_id_estabelecimento_value}}}</value>
+        /// <value>Identification Code of the Merchant</value>
         [DataMember(Name="idEstabelecimento", EmitDefaultValue=false)]
         public long? IdEstabelecimento { get; set; }
     
         /// <summary>
-        /// {{{promotor_response_id_usuario_value}}}
+        /// Identification Code of the user
         /// </summary>
-        /// <value>{{{promotor_response_id_usuario_value}}}</value>
+        /// <value>Identification Code of the user</value>
         [DataMember(Name="idUsuario", EmitDefaultValue=false)]
         public long? IdUsuario { get; set; }
     

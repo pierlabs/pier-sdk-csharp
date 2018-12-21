@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{pacote_tarifa_resposta}}}
+    /// Representation of an fee package tariff
     /// </summary>
     [DataContract]
     public partial class PacoteTarifaResponse :  IEquatable<PacoteTarifaResponse>
@@ -22,16 +22,16 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="PacoteTarifaResponse" /> class.
         /// Initializes a new instance of the <see cref="PacoteTarifaResponse" />class.
         /// </summary>
-        /// <param name="Descricao">{{{pacote_tarifa_resposta_descricao_descricao}}}.</param>
-        /// <param name="Id">{{{pacote_tarifa_resposta_id_descricao}}}.</param>
-        /// <param name="QuantidadeAplicacoes">{{{pacote_tarifa_resposta_quantidade_aplicacoes_descricao}}}.</param>
-        /// <param name="QuantidadeBilheteUnico">{{{pacote_tarifa_resposta_quantidade_bilhete_unico_descricao}}}.</param>
-        /// <param name="QuantidadeBoleto">{{{pacote_tarifa_resposta_quantidade_boleto_descricao}}}.</param>
-        /// <param name="QuantidadeRecargaCelular">{{{pacote_tarifa_resposta_quantidade_recarga_celular_descricao}}}.</param>
-        /// <param name="QuantidadeSaque">{{{pacote_tarifa_resposta_quantidade_saque_descricao}}}.</param>
-        /// <param name="QuantidadeTaxaPagamentoConta">{{{pacote_tarifa_resposta_quantidade_taxa_pagamento_conta_descricao}}}.</param>
-        /// <param name="QuantidadeTransferencia">{{{pacote_tarifa_resposta_quantidade_transferencia_descricao}}}.</param>
-        /// <param name="ValorTarifa">{{{pacote_tarifa_resposta_valor_tarifa_descricao}}}.</param>
+        /// <param name="Descricao">The description of the fee.</param>
+        /// <param name="Id">Fee package id.</param>
+        /// <param name="QuantidadeAplicacoes">Application amount.</param>
+        /// <param name="QuantidadeBilheteUnico">Unique ticket amount.</param>
+        /// <param name="QuantidadeBoleto">Chage ticket amount.</param>
+        /// <param name="QuantidadeRecargaCelular">Cellphone recharge amount.</param>
+        /// <param name="QuantidadeSaque">Cash out amount.</param>
+        /// <param name="QuantidadeTaxaPagamentoConta">Payment tax account amount.</param>
+        /// <param name="QuantidadeTransferencia">Transfer amount.</param>
+        /// <param name="ValorTarifa">Tax value.</param>
 
         public PacoteTarifaResponse(string Descricao = null, long? Id = null, int? QuantidadeAplicacoes = null, int? QuantidadeBilheteUnico = null, int? QuantidadeBoleto = null, int? QuantidadeRecargaCelular = null, int? QuantidadeSaque = null, int? QuantidadeTaxaPagamentoConta = null, int? QuantidadeTransferencia = null, double? ValorTarifa = null)
         {
@@ -50,72 +50,72 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{pacote_tarifa_resposta_descricao_descricao}}}
+        /// The description of the fee
         /// </summary>
-        /// <value>{{{pacote_tarifa_resposta_descricao_descricao}}}</value>
+        /// <value>The description of the fee</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     
         /// <summary>
-        /// {{{pacote_tarifa_resposta_id_descricao}}}
+        /// Fee package id
         /// </summary>
-        /// <value>{{{pacote_tarifa_resposta_id_descricao}}}</value>
+        /// <value>Fee package id</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{pacote_tarifa_resposta_quantidade_aplicacoes_descricao}}}
+        /// Application amount
         /// </summary>
-        /// <value>{{{pacote_tarifa_resposta_quantidade_aplicacoes_descricao}}}</value>
+        /// <value>Application amount</value>
         [DataMember(Name="quantidadeAplicacoes", EmitDefaultValue=false)]
         public int? QuantidadeAplicacoes { get; set; }
     
         /// <summary>
-        /// {{{pacote_tarifa_resposta_quantidade_bilhete_unico_descricao}}}
+        /// Unique ticket amount
         /// </summary>
-        /// <value>{{{pacote_tarifa_resposta_quantidade_bilhete_unico_descricao}}}</value>
+        /// <value>Unique ticket amount</value>
         [DataMember(Name="quantidadeBilheteUnico", EmitDefaultValue=false)]
         public int? QuantidadeBilheteUnico { get; set; }
     
         /// <summary>
-        /// {{{pacote_tarifa_resposta_quantidade_boleto_descricao}}}
+        /// Chage ticket amount
         /// </summary>
-        /// <value>{{{pacote_tarifa_resposta_quantidade_boleto_descricao}}}</value>
+        /// <value>Chage ticket amount</value>
         [DataMember(Name="quantidadeBoleto", EmitDefaultValue=false)]
         public int? QuantidadeBoleto { get; set; }
     
         /// <summary>
-        /// {{{pacote_tarifa_resposta_quantidade_recarga_celular_descricao}}}
+        /// Cellphone recharge amount
         /// </summary>
-        /// <value>{{{pacote_tarifa_resposta_quantidade_recarga_celular_descricao}}}</value>
+        /// <value>Cellphone recharge amount</value>
         [DataMember(Name="quantidadeRecargaCelular", EmitDefaultValue=false)]
         public int? QuantidadeRecargaCelular { get; set; }
     
         /// <summary>
-        /// {{{pacote_tarifa_resposta_quantidade_saque_descricao}}}
+        /// Cash out amount
         /// </summary>
-        /// <value>{{{pacote_tarifa_resposta_quantidade_saque_descricao}}}</value>
+        /// <value>Cash out amount</value>
         [DataMember(Name="quantidadeSaque", EmitDefaultValue=false)]
         public int? QuantidadeSaque { get; set; }
     
         /// <summary>
-        /// {{{pacote_tarifa_resposta_quantidade_taxa_pagamento_conta_descricao}}}
+        /// Payment tax account amount
         /// </summary>
-        /// <value>{{{pacote_tarifa_resposta_quantidade_taxa_pagamento_conta_descricao}}}</value>
+        /// <value>Payment tax account amount</value>
         [DataMember(Name="quantidadeTaxaPagamentoConta", EmitDefaultValue=false)]
         public int? QuantidadeTaxaPagamentoConta { get; set; }
     
         /// <summary>
-        /// {{{pacote_tarifa_resposta_quantidade_transferencia_descricao}}}
+        /// Transfer amount
         /// </summary>
-        /// <value>{{{pacote_tarifa_resposta_quantidade_transferencia_descricao}}}</value>
+        /// <value>Transfer amount</value>
         [DataMember(Name="quantidadeTransferencia", EmitDefaultValue=false)]
         public int? QuantidadeTransferencia { get; set; }
     
         /// <summary>
-        /// {{{pacote_tarifa_resposta_valor_tarifa_descricao}}}
+        /// Tax value
         /// </summary>
-        /// <value>{{{pacote_tarifa_resposta_valor_tarifa_descricao}}}</value>
+        /// <value>Tax value</value>
         [DataMember(Name="valorTarifa", EmitDefaultValue=false)]
         public double? ValorTarifa { get; set; }
     

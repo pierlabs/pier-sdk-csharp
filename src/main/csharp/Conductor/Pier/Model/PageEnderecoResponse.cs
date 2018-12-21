@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{page_endereco_response_description}}}
+    /// List of Addresses
     /// </summary>
     [DataContract]
     public partial class PageEnderecoResponse :  IEquatable<PageEnderecoResponse>

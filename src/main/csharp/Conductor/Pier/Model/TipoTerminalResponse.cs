@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{tipo_terminal_response_description}}}
+    /// ObjecttypeTerminal
     /// </summary>
     [DataContract]
     public partial class TipoTerminalResponse :  IEquatable<TipoTerminalResponse>
@@ -22,8 +22,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TipoTerminalResponse" /> class.
         /// Initializes a new instance of the <see cref="TipoTerminalResponse" />class.
         /// </summary>
-        /// <param name="Id">{{{tipo_terminal_response_id_value}}}.</param>
-        /// <param name="DescricaoTerminal">{{{tipo_terminal_response_descricao_terminal_value}}}.</param>
+        /// <param name="Id">Identification Code of the Terminal Type (id).</param>
+        /// <param name="DescricaoTerminal">Description of the Terminal Type.</param>
 
         public TipoTerminalResponse(long? Id = null, string DescricaoTerminal = null)
         {
@@ -34,16 +34,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{tipo_terminal_response_id_value}}}
+        /// Identification Code of the Terminal Type (id)
         /// </summary>
-        /// <value>{{{tipo_terminal_response_id_value}}}</value>
+        /// <value>Identification Code of the Terminal Type (id)</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{tipo_terminal_response_descricao_terminal_value}}}
+        /// Description of the Terminal Type
         /// </summary>
-        /// <value>{{{tipo_terminal_response_descricao_terminal_value}}}</value>
+        /// <value>Description of the Terminal Type</value>
         [DataMember(Name="descricaoTerminal", EmitDefaultValue=false)]
         public string DescricaoTerminal { get; set; }
     

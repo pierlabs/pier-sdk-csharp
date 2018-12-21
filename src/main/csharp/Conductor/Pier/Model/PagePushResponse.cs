@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{page_push_response_description}}}
+    /// List of the Push
     /// </summary>
     [DataContract]
     public partial class PagePushResponse :  IEquatable<PagePushResponse>

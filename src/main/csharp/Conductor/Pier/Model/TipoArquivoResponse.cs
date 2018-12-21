@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{tipo_arquivo_response_description}}}
+    /// Object Response of the file type
     /// </summary>
     [DataContract]
     public partial class TipoArquivoResponse :  IEquatable<TipoArquivoResponse>
@@ -22,9 +22,9 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TipoArquivoResponse" /> class.
         /// Initializes a new instance of the <see cref="TipoArquivoResponse" />class.
         /// </summary>
-        /// <param name="Id">{{{tipo_arquivo_response_id_value}}}.</param>
-        /// <param name="Nome">{{{tipo_arquivo_response_nome_value}}}.</param>
-        /// <param name="Descricao">{{{tipo_arquivo_response_descricao_value}}}.</param>
+        /// <param name="Id">Identification Code of the File Type.</param>
+        /// <param name="Nome">Name of the File Type.</param>
+        /// <param name="Descricao">Description of the File Type.</param>
 
         public TipoArquivoResponse(long? Id = null, string Nome = null, string Descricao = null)
         {
@@ -36,23 +36,23 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{tipo_arquivo_response_id_value}}}
+        /// Identification Code of the File Type
         /// </summary>
-        /// <value>{{{tipo_arquivo_response_id_value}}}</value>
+        /// <value>Identification Code of the File Type</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{tipo_arquivo_response_nome_value}}}
+        /// Name of the File Type
         /// </summary>
-        /// <value>{{{tipo_arquivo_response_nome_value}}}</value>
+        /// <value>Name of the File Type</value>
         [DataMember(Name="nome", EmitDefaultValue=false)]
         public string Nome { get; set; }
     
         /// <summary>
-        /// {{{tipo_arquivo_response_descricao_value}}}
+        /// Description of the File Type
         /// </summary>
-        /// <value>{{{tipo_arquivo_response_descricao_value}}}</value>
+        /// <value>Description of the File Type</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     

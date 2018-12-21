@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{cartao_embossing_request_description}}}
+    /// Request Parameters of the embossing card creation
     /// </summary>
     [DataContract]
     public partial class CartaoEmbossingRequest :  IEquatable<CartaoEmbossingRequest>
@@ -22,8 +22,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="CartaoEmbossingRequest" /> class.
         /// Initializes a new instance of the <see cref="CartaoEmbossingRequest" />class.
         /// </summary>
-        /// <param name="IdPessoa">{{{cartao_embossing_request_id_pessoa_value}}}.</param>
-        /// <param name="IdTipoPlastico">{{{cartao_embossing_request_id_tipo_plastico_value}}}.</param>
+        /// <param name="IdPessoa">Identification Code of the Person which the card belongs (id).</param>
+        /// <param name="IdTipoPlastico">Identification Code of TypePlastic (id).</param>
 
         public CartaoEmbossingRequest(long? IdPessoa = null, long? IdTipoPlastico = null)
         {
@@ -34,16 +34,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{cartao_embossing_request_id_pessoa_value}}}
+        /// Identification Code of the Person which the card belongs (id)
         /// </summary>
-        /// <value>{{{cartao_embossing_request_id_pessoa_value}}}</value>
+        /// <value>Identification Code of the Person which the card belongs (id)</value>
         [DataMember(Name="id_pessoa", EmitDefaultValue=false)]
         public long? IdPessoa { get; set; }
     
         /// <summary>
-        /// {{{cartao_embossing_request_id_tipo_plastico_value}}}
+        /// Identification Code of TypePlastic (id)
         /// </summary>
-        /// <value>{{{cartao_embossing_request_id_tipo_plastico_value}}}</value>
+        /// <value>Identification Code of TypePlastic (id)</value>
         [DataMember(Name="id_tipo_plastico", EmitDefaultValue=false)]
         public long? IdTipoPlastico { get; set; }
     

@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{documento_proposta_persist_description}}}
+    /// DocumentoProposta persist representation
     /// </summary>
     [DataContract]
     public partial class DocumentoPropostaPersist :  IEquatable<DocumentoPropostaPersist>
@@ -22,19 +22,19 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="DocumentoPropostaPersist" /> class.
         /// Initializes a new instance of the <see cref="DocumentoPropostaPersist" />class.
         /// </summary>
-        /// <param name="IdProposta">{{{documento_proposta_persist_id_proposta_value}}} (required).</param>
-        /// <param name="IdDocumentosCredito">{{{documento_proposta_persist_id_tipo_documento_value}}} (required).</param>
-        /// <param name="IdStatusDocumentosCredito">{{{documento_proposta_persist_id_status_documento_credito_value}}} (required).</param>
-        /// <param name="IdCondicoesDocumentosCredito">{{{documento_proposta_persist_id_condicao_documento_credito_value}}}.</param>
-        /// <param name="IdTipoDocumentoCredito">{{{documento_proposta_persist_id_tipo_documento_credito_value}}}.</param>
-        /// <param name="IdPessoaFisica">{{{documento_proposta_persist_id_pessoa_fisica_value}}}.</param>
-        /// <param name="IdLogAtendimento">{{{documento_proposta_persist_id_log_atendimento_value}}}.</param>
-        /// <param name="Responsavel">{{{documento_proposta_persist_responsavel_value}}} (required).</param>
-        /// <param name="FlagDocumentoDigitalizado">{{{documento_proposta_persist_flag_documento_digitalizado_value}}} (required).</param>
-        /// <param name="DocumentoDigitalizado">{{{documento_proposta_persist_documento_digitalizado_value}}}.</param>
-        /// <param name="SeqAnaliseCondicao">{{{documento_proposta_persist_seq_analise_condicao_value}}}.</param>
-        /// <param name="Observacao">{{{documento_proposta_persist_observacao_value}}}.</param>
-        /// <param name="DataStatus">{{{documento_proposta_persist_data_status_value}}} (required).</param>
+        /// <param name="IdProposta">Idenfitication code of the proposal (required).</param>
+        /// <param name="IdDocumentosCredito">Idenfitication code of the type of document (required).</param>
+        /// <param name="IdStatusDocumentosCredito">Idenfitication code of credit document status (required).</param>
+        /// <param name="IdCondicoesDocumentosCredito">Idenfitication code of credit credit condition.</param>
+        /// <param name="IdTipoDocumentoCredito">Idenfitication code of credit document type.</param>
+        /// <param name="IdPessoaFisica">Idenfitication code of person.</param>
+        /// <param name="IdLogAtendimento">Idenfitication code of log.</param>
+        /// <param name="Responsavel">Responsible (required).</param>
+        /// <param name="FlagDocumentoDigitalizado">Flag for digitalization of the document (required).</param>
+        /// <param name="DocumentoDigitalizado">Name of the digital document.</param>
+        /// <param name="SeqAnaliseCondicao">Analytical Sequence code.</param>
+        /// <param name="Observacao">Note.</param>
+        /// <param name="DataStatus">Status Date (required).</param>
 
         public DocumentoPropostaPersist(long? IdProposta = null, long? IdDocumentosCredito = null, long? IdStatusDocumentosCredito = null, long? IdCondicoesDocumentosCredito = null, long? IdTipoDocumentoCredito = null, long? IdPessoaFisica = null, long? IdLogAtendimento = null, string Responsavel = null, int? FlagDocumentoDigitalizado = null, string DocumentoDigitalizado = null, long? SeqAnaliseCondicao = null, string Observacao = null, string DataStatus = null)
         {
@@ -104,93 +104,93 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{documento_proposta_persist_id_proposta_value}}}
+        /// Idenfitication code of the proposal
         /// </summary>
-        /// <value>{{{documento_proposta_persist_id_proposta_value}}}</value>
+        /// <value>Idenfitication code of the proposal</value>
         [DataMember(Name="idProposta", EmitDefaultValue=false)]
         public long? IdProposta { get; set; }
     
         /// <summary>
-        /// {{{documento_proposta_persist_id_tipo_documento_value}}}
+        /// Idenfitication code of the type of document
         /// </summary>
-        /// <value>{{{documento_proposta_persist_id_tipo_documento_value}}}</value>
+        /// <value>Idenfitication code of the type of document</value>
         [DataMember(Name="idDocumentosCredito", EmitDefaultValue=false)]
         public long? IdDocumentosCredito { get; set; }
     
         /// <summary>
-        /// {{{documento_proposta_persist_id_status_documento_credito_value}}}
+        /// Idenfitication code of credit document status
         /// </summary>
-        /// <value>{{{documento_proposta_persist_id_status_documento_credito_value}}}</value>
+        /// <value>Idenfitication code of credit document status</value>
         [DataMember(Name="idStatusDocumentosCredito", EmitDefaultValue=false)]
         public long? IdStatusDocumentosCredito { get; set; }
     
         /// <summary>
-        /// {{{documento_proposta_persist_id_condicao_documento_credito_value}}}
+        /// Idenfitication code of credit credit condition
         /// </summary>
-        /// <value>{{{documento_proposta_persist_id_condicao_documento_credito_value}}}</value>
+        /// <value>Idenfitication code of credit credit condition</value>
         [DataMember(Name="idCondicoesDocumentosCredito", EmitDefaultValue=false)]
         public long? IdCondicoesDocumentosCredito { get; set; }
     
         /// <summary>
-        /// {{{documento_proposta_persist_id_tipo_documento_credito_value}}}
+        /// Idenfitication code of credit document type
         /// </summary>
-        /// <value>{{{documento_proposta_persist_id_tipo_documento_credito_value}}}</value>
+        /// <value>Idenfitication code of credit document type</value>
         [DataMember(Name="idTipoDocumentoCredito", EmitDefaultValue=false)]
         public long? IdTipoDocumentoCredito { get; set; }
     
         /// <summary>
-        /// {{{documento_proposta_persist_id_pessoa_fisica_value}}}
+        /// Idenfitication code of person
         /// </summary>
-        /// <value>{{{documento_proposta_persist_id_pessoa_fisica_value}}}</value>
+        /// <value>Idenfitication code of person</value>
         [DataMember(Name="idPessoaFisica", EmitDefaultValue=false)]
         public long? IdPessoaFisica { get; set; }
     
         /// <summary>
-        /// {{{documento_proposta_persist_id_log_atendimento_value}}}
+        /// Idenfitication code of log
         /// </summary>
-        /// <value>{{{documento_proposta_persist_id_log_atendimento_value}}}</value>
+        /// <value>Idenfitication code of log</value>
         [DataMember(Name="idLogAtendimento", EmitDefaultValue=false)]
         public long? IdLogAtendimento { get; set; }
     
         /// <summary>
-        /// {{{documento_proposta_persist_responsavel_value}}}
+        /// Responsible
         /// </summary>
-        /// <value>{{{documento_proposta_persist_responsavel_value}}}</value>
+        /// <value>Responsible</value>
         [DataMember(Name="responsavel", EmitDefaultValue=false)]
         public string Responsavel { get; set; }
     
         /// <summary>
-        /// {{{documento_proposta_persist_flag_documento_digitalizado_value}}}
+        /// Flag for digitalization of the document
         /// </summary>
-        /// <value>{{{documento_proposta_persist_flag_documento_digitalizado_value}}}</value>
+        /// <value>Flag for digitalization of the document</value>
         [DataMember(Name="flagDocumentoDigitalizado", EmitDefaultValue=false)]
         public int? FlagDocumentoDigitalizado { get; set; }
     
         /// <summary>
-        /// {{{documento_proposta_persist_documento_digitalizado_value}}}
+        /// Name of the digital document
         /// </summary>
-        /// <value>{{{documento_proposta_persist_documento_digitalizado_value}}}</value>
+        /// <value>Name of the digital document</value>
         [DataMember(Name="documentoDigitalizado", EmitDefaultValue=false)]
         public string DocumentoDigitalizado { get; set; }
     
         /// <summary>
-        /// {{{documento_proposta_persist_seq_analise_condicao_value}}}
+        /// Analytical Sequence code
         /// </summary>
-        /// <value>{{{documento_proposta_persist_seq_analise_condicao_value}}}</value>
+        /// <value>Analytical Sequence code</value>
         [DataMember(Name="seqAnaliseCondicao", EmitDefaultValue=false)]
         public long? SeqAnaliseCondicao { get; set; }
     
         /// <summary>
-        /// {{{documento_proposta_persist_observacao_value}}}
+        /// Note
         /// </summary>
-        /// <value>{{{documento_proposta_persist_observacao_value}}}</value>
+        /// <value>Note</value>
         [DataMember(Name="observacao", EmitDefaultValue=false)]
         public string Observacao { get; set; }
     
         /// <summary>
-        /// {{{documento_proposta_persist_data_status_value}}}
+        /// Status Date
         /// </summary>
-        /// <value>{{{documento_proposta_persist_data_status_value}}}</value>
+        /// <value>Status Date</value>
         [DataMember(Name="dataStatus", EmitDefaultValue=false)]
         public string DataStatus { get; set; }
     

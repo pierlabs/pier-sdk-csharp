@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{boleto_request_description}}}
+    /// Request Parameters of a Bank Slip
     /// </summary>
     [DataContract]
     public partial class BoletoRequest :  IEquatable<BoletoRequest>
@@ -22,11 +22,11 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="BoletoRequest" /> class.
         /// Initializes a new instance of the <see cref="BoletoRequest" />class.
         /// </summary>
-        /// <param name="IdConta">{{{boleto_request_id_conta_value}}} (required).</param>
-        /// <param name="TipoBoleto">{{{boleto_request_tipo_boleto_value}}} (required).</param>
-        /// <param name="Valor">{{{boleto_request_valor_value}}} (required).</param>
-        /// <param name="DataVencimento">{{{boleto_request_data_vencimento_value}}} (required).</param>
-        /// <param name="IdConvenio">{{{boleto_request_id_convenio_value}}}.</param>
+        /// <param name="IdConta">Account ID code (id) (required).</param>
+        /// <param name="TipoBoleto">Identification Code of the type of BAnk slip (id) (required).</param>
+        /// <param name="Valor">Value of Ticket (required).</param>
+        /// <param name="DataVencimento">Due Date (required).</param>
+        /// <param name="IdConvenio">Covenant Code from the Charging.</param>
 
         public BoletoRequest(long? IdConta = null, long? TipoBoleto = null, double? Valor = null, string DataVencimento = null, long? IdConvenio = null)
         {
@@ -72,37 +72,37 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{boleto_request_id_conta_value}}}
+        /// Account ID code (id)
         /// </summary>
-        /// <value>{{{boleto_request_id_conta_value}}}</value>
+        /// <value>Account ID code (id)</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// {{{boleto_request_tipo_boleto_value}}}
+        /// Identification Code of the type of BAnk slip (id)
         /// </summary>
-        /// <value>{{{boleto_request_tipo_boleto_value}}}</value>
+        /// <value>Identification Code of the type of BAnk slip (id)</value>
         [DataMember(Name="tipoBoleto", EmitDefaultValue=false)]
         public long? TipoBoleto { get; set; }
     
         /// <summary>
-        /// {{{boleto_request_valor_value}}}
+        /// Value of Ticket
         /// </summary>
-        /// <value>{{{boleto_request_valor_value}}}</value>
+        /// <value>Value of Ticket</value>
         [DataMember(Name="valor", EmitDefaultValue=false)]
         public double? Valor { get; set; }
     
         /// <summary>
-        /// {{{boleto_request_data_vencimento_value}}}
+        /// Due Date
         /// </summary>
-        /// <value>{{{boleto_request_data_vencimento_value}}}</value>
+        /// <value>Due Date</value>
         [DataMember(Name="dataVencimento", EmitDefaultValue=false)]
         public string DataVencimento { get; set; }
     
         /// <summary>
-        /// {{{boleto_request_id_convenio_value}}}
+        /// Covenant Code from the Charging
         /// </summary>
-        /// <value>{{{boleto_request_id_convenio_value}}}</value>
+        /// <value>Covenant Code from the Charging</value>
         [DataMember(Name="idConvenio", EmitDefaultValue=false)]
         public long? IdConvenio { get; set; }
     

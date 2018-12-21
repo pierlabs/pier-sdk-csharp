@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{terminal_response_description}}}
+    /// ObjectTerminal
     /// </summary>
     [DataContract]
     public partial class TerminalResponse :  IEquatable<TerminalResponse>
@@ -22,12 +22,12 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TerminalResponse" /> class.
         /// Initializes a new instance of the <see cref="TerminalResponse" />class.
         /// </summary>
-        /// <param name="Id">{{{terminal_response_id_value}}}.</param>
-        /// <param name="Terminal">{{{terminal_response_terminal_value}}}.</param>
-        /// <param name="NumeroEstabelecimento">{{{terminal_response_numero_estabelecimento_value}}}.</param>
-        /// <param name="IdEstabelecimento">{{{terminal_response_id_estabelecimento_value}}}.</param>
-        /// <param name="FlagConsultaExtrato">{{{terminal_response_flag_consulta_extrato_value}}}.</param>
-        /// <param name="FlagTerminalVirtual">{{{terminal_response_flag_terminal_virtual_value}}}.</param>
+        /// <param name="Id">Identification Code of the Terminal (id).</param>
+        /// <param name="Terminal">Unique number of the terminal.</param>
+        /// <param name="NumeroEstabelecimento">Merchant Number which the terminal belongs.</param>
+        /// <param name="IdEstabelecimento">Identification number of the Merchant which the terminal belongs.</param>
+        /// <param name="FlagConsultaExtrato">Flag indicating if the terminal is physical or virtual, being: (true: Yes), (false: No)).</param>
+        /// <param name="FlagTerminalVirtual">Flag indicating if the terminal allows to retrieve the bank statement, being: (true: Yes), (false: No).</param>
 
         public TerminalResponse(long? Id = null, string Terminal = null, long? NumeroEstabelecimento = null, long? IdEstabelecimento = null, bool? FlagConsultaExtrato = null, bool? FlagTerminalVirtual = null)
         {
@@ -42,44 +42,44 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{terminal_response_id_value}}}
+        /// Identification Code of the Terminal (id)
         /// </summary>
-        /// <value>{{{terminal_response_id_value}}}</value>
+        /// <value>Identification Code of the Terminal (id)</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{terminal_response_terminal_value}}}
+        /// Unique number of the terminal
         /// </summary>
-        /// <value>{{{terminal_response_terminal_value}}}</value>
+        /// <value>Unique number of the terminal</value>
         [DataMember(Name="terminal", EmitDefaultValue=false)]
         public string Terminal { get; set; }
     
         /// <summary>
-        /// {{{terminal_response_numero_estabelecimento_value}}}
+        /// Merchant Number which the terminal belongs
         /// </summary>
-        /// <value>{{{terminal_response_numero_estabelecimento_value}}}</value>
+        /// <value>Merchant Number which the terminal belongs</value>
         [DataMember(Name="numeroEstabelecimento", EmitDefaultValue=false)]
         public long? NumeroEstabelecimento { get; set; }
     
         /// <summary>
-        /// {{{terminal_response_id_estabelecimento_value}}}
+        /// Identification number of the Merchant which the terminal belongs
         /// </summary>
-        /// <value>{{{terminal_response_id_estabelecimento_value}}}</value>
+        /// <value>Identification number of the Merchant which the terminal belongs</value>
         [DataMember(Name="idEstabelecimento", EmitDefaultValue=false)]
         public long? IdEstabelecimento { get; set; }
     
         /// <summary>
-        /// {{{terminal_response_flag_consulta_extrato_value}}}
+        /// Flag indicating if the terminal is physical or virtual, being: (true: Yes), (false: No))
         /// </summary>
-        /// <value>{{{terminal_response_flag_consulta_extrato_value}}}</value>
+        /// <value>Flag indicating if the terminal is physical or virtual, being: (true: Yes), (false: No))</value>
         [DataMember(Name="flagConsultaExtrato", EmitDefaultValue=false)]
         public bool? FlagConsultaExtrato { get; set; }
     
         /// <summary>
-        /// {{{terminal_response_flag_terminal_virtual_value}}}
+        /// Flag indicating if the terminal allows to retrieve the bank statement, being: (true: Yes), (false: No)
         /// </summary>
-        /// <value>{{{terminal_response_flag_terminal_virtual_value}}}</value>
+        /// <value>Flag indicating if the terminal allows to retrieve the bank statement, being: (true: Yes), (false: No)</value>
         [DataMember(Name="flagTerminalVirtual", EmitDefaultValue=false)]
         public bool? FlagTerminalVirtual { get; set; }
     

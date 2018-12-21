@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{acordo_detalhe_response_description}}}
+    /// Object Detailed Agreement
     /// </summary>
     [DataContract]
     public partial class AcordoDetalheResponse :  IEquatable<AcordoDetalheResponse>
@@ -22,23 +22,23 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="AcordoDetalheResponse" /> class.
         /// Initializes a new instance of the <see cref="AcordoDetalheResponse" />class.
         /// </summary>
-        /// <param name="Id">{{{acordo_response_id_value}}}.</param>
-        /// <param name="IdConta">{{{acordo_response_id_conta_value}}}.</param>
-        /// <param name="StatusAcordo">{{{acordo_response_status_acordo_value}}}.</param>
-        /// <param name="ValorAcordo">{{{acordo_response_valor_acordo_value}}}.</param>
-        /// <param name="DataAcordo">{{{acordo_response_data_acordo_value}}}.</param>
-        /// <param name="QuantidadeParcelas">{{{acordo_response_quantidade_parcelas_value}}}.</param>
-        /// <param name="SaldoAtualFinal">{{{acordo_response_saldo_atual_final_value}}}.</param>
-        /// <param name="DiasEmAtraso">{{{acordo_response_dias_em_atraso_value}}}.</param>
-        /// <param name="StatusConta">{{{acordo_detalhe_response_status_conta_value}}}.</param>
-        /// <param name="AssessoriaAtual">{{{acordo_detalhe_response_assessoria_atual_value}}}.</param>
-        /// <param name="TotalPagamentos">{{{acordo_detalhe_response_total_pagamentos_value}}}.</param>
-        /// <param name="DataVencimentoCobranca">{{{acordo_detalhe_response_data_vencimento_cobranca_value}}}.</param>
-        /// <param name="DataQuebraAcordo">{{{acordo_detalhe_response_data_quebra_acordo_value}}}.</param>
-        /// <param name="ValorParcela1">{{{acordo_detalhe_response_valor_parcela1_value}}}.</param>
-        /// <param name="ValorParcelaN">{{{acordo_detalhe_response_valor_parcela_n_value}}}.</param>
-        /// <param name="ParcelaPedida">{{{acordo_detalhe_response_parcela_pedida_value}}}.</param>
-        /// <param name="VencimentoParcelaPedida">{{{acordo_detalhe_response_vencimento_parcela_pedida_value}}}.</param>
+        /// <param name="Id">Identification Code of the agreement (id).</param>
+        /// <param name="IdConta">Identification Code of the account.</param>
+        /// <param name="StatusAcordo">Status of the agreement.</param>
+        /// <param name="ValorAcordo">Value of the Agreement.</param>
+        /// <param name="DataAcordo">Date and time of the agreement.</param>
+        /// <param name="QuantidadeParcelas">Quantity of parcels of the agreement.</param>
+        /// <param name="SaldoAtualFinal">Current final balance.</param>
+        /// <param name="DiasEmAtraso">Days in Arrears.</param>
+        /// <param name="StatusConta">Status of the account.</param>
+        /// <param name="AssessoriaAtual">Current Advisory.</param>
+        /// <param name="TotalPagamentos">Total of the payments.</param>
+        /// <param name="DataVencimentoCobranca">Expiration date of the Collection.</param>
+        /// <param name="DataQuebraAcordo">Date of the Breach agreement.</param>
+        /// <param name="ValorParcela1">Value of the parcel 1.</param>
+        /// <param name="ValorParcelaN">Value of the parcel N.</param>
+        /// <param name="ParcelaPedida">Lost parcel.</param>
+        /// <param name="VencimentoParcelaPedida">Expiration date of the lost parcel.</param>
 
         public AcordoDetalheResponse(long? Id = null, long? IdConta = null, long? StatusAcordo = null, double? ValorAcordo = null, string DataAcordo = null, int? QuantidadeParcelas = null, double? SaldoAtualFinal = null, int? DiasEmAtraso = null, long? StatusConta = null, string AssessoriaAtual = null, double? TotalPagamentos = null, string DataVencimentoCobranca = null, string DataQuebraAcordo = null, double? ValorParcela1 = null, double? ValorParcelaN = null, int? ParcelaPedida = null, string VencimentoParcelaPedida = null)
         {
@@ -64,121 +64,121 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{acordo_response_id_value}}}
+        /// Identification Code of the agreement (id)
         /// </summary>
-        /// <value>{{{acordo_response_id_value}}}</value>
+        /// <value>Identification Code of the agreement (id)</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{acordo_response_id_conta_value}}}
+        /// Identification Code of the account
         /// </summary>
-        /// <value>{{{acordo_response_id_conta_value}}}</value>
+        /// <value>Identification Code of the account</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// {{{acordo_response_status_acordo_value}}}
+        /// Status of the agreement
         /// </summary>
-        /// <value>{{{acordo_response_status_acordo_value}}}</value>
+        /// <value>Status of the agreement</value>
         [DataMember(Name="statusAcordo", EmitDefaultValue=false)]
         public long? StatusAcordo { get; set; }
     
         /// <summary>
-        /// {{{acordo_response_valor_acordo_value}}}
+        /// Value of the Agreement
         /// </summary>
-        /// <value>{{{acordo_response_valor_acordo_value}}}</value>
+        /// <value>Value of the Agreement</value>
         [DataMember(Name="valorAcordo", EmitDefaultValue=false)]
         public double? ValorAcordo { get; set; }
     
         /// <summary>
-        /// {{{acordo_response_data_acordo_value}}}
+        /// Date and time of the agreement
         /// </summary>
-        /// <value>{{{acordo_response_data_acordo_value}}}</value>
+        /// <value>Date and time of the agreement</value>
         [DataMember(Name="dataAcordo", EmitDefaultValue=false)]
         public string DataAcordo { get; set; }
     
         /// <summary>
-        /// {{{acordo_response_quantidade_parcelas_value}}}
+        /// Quantity of parcels of the agreement
         /// </summary>
-        /// <value>{{{acordo_response_quantidade_parcelas_value}}}</value>
+        /// <value>Quantity of parcels of the agreement</value>
         [DataMember(Name="quantidadeParcelas", EmitDefaultValue=false)]
         public int? QuantidadeParcelas { get; set; }
     
         /// <summary>
-        /// {{{acordo_response_saldo_atual_final_value}}}
+        /// Current final balance
         /// </summary>
-        /// <value>{{{acordo_response_saldo_atual_final_value}}}</value>
+        /// <value>Current final balance</value>
         [DataMember(Name="saldoAtualFinal", EmitDefaultValue=false)]
         public double? SaldoAtualFinal { get; set; }
     
         /// <summary>
-        /// {{{acordo_response_dias_em_atraso_value}}}
+        /// Days in Arrears
         /// </summary>
-        /// <value>{{{acordo_response_dias_em_atraso_value}}}</value>
+        /// <value>Days in Arrears</value>
         [DataMember(Name="diasEmAtraso", EmitDefaultValue=false)]
         public int? DiasEmAtraso { get; set; }
     
         /// <summary>
-        /// {{{acordo_detalhe_response_status_conta_value}}}
+        /// Status of the account
         /// </summary>
-        /// <value>{{{acordo_detalhe_response_status_conta_value}}}</value>
+        /// <value>Status of the account</value>
         [DataMember(Name="statusConta", EmitDefaultValue=false)]
         public long? StatusConta { get; set; }
     
         /// <summary>
-        /// {{{acordo_detalhe_response_assessoria_atual_value}}}
+        /// Current Advisory
         /// </summary>
-        /// <value>{{{acordo_detalhe_response_assessoria_atual_value}}}</value>
+        /// <value>Current Advisory</value>
         [DataMember(Name="assessoriaAtual", EmitDefaultValue=false)]
         public string AssessoriaAtual { get; set; }
     
         /// <summary>
-        /// {{{acordo_detalhe_response_total_pagamentos_value}}}
+        /// Total of the payments
         /// </summary>
-        /// <value>{{{acordo_detalhe_response_total_pagamentos_value}}}</value>
+        /// <value>Total of the payments</value>
         [DataMember(Name="totalPagamentos", EmitDefaultValue=false)]
         public double? TotalPagamentos { get; set; }
     
         /// <summary>
-        /// {{{acordo_detalhe_response_data_vencimento_cobranca_value}}}
+        /// Expiration date of the Collection
         /// </summary>
-        /// <value>{{{acordo_detalhe_response_data_vencimento_cobranca_value}}}</value>
+        /// <value>Expiration date of the Collection</value>
         [DataMember(Name="dataVencimentoCobranca", EmitDefaultValue=false)]
         public string DataVencimentoCobranca { get; set; }
     
         /// <summary>
-        /// {{{acordo_detalhe_response_data_quebra_acordo_value}}}
+        /// Date of the Breach agreement
         /// </summary>
-        /// <value>{{{acordo_detalhe_response_data_quebra_acordo_value}}}</value>
+        /// <value>Date of the Breach agreement</value>
         [DataMember(Name="dataQuebraAcordo", EmitDefaultValue=false)]
         public string DataQuebraAcordo { get; set; }
     
         /// <summary>
-        /// {{{acordo_detalhe_response_valor_parcela1_value}}}
+        /// Value of the parcel 1
         /// </summary>
-        /// <value>{{{acordo_detalhe_response_valor_parcela1_value}}}</value>
+        /// <value>Value of the parcel 1</value>
         [DataMember(Name="valorParcela1", EmitDefaultValue=false)]
         public double? ValorParcela1 { get; set; }
     
         /// <summary>
-        /// {{{acordo_detalhe_response_valor_parcela_n_value}}}
+        /// Value of the parcel N
         /// </summary>
-        /// <value>{{{acordo_detalhe_response_valor_parcela_n_value}}}</value>
+        /// <value>Value of the parcel N</value>
         [DataMember(Name="valorParcelaN", EmitDefaultValue=false)]
         public double? ValorParcelaN { get; set; }
     
         /// <summary>
-        /// {{{acordo_detalhe_response_parcela_pedida_value}}}
+        /// Lost parcel
         /// </summary>
-        /// <value>{{{acordo_detalhe_response_parcela_pedida_value}}}</value>
+        /// <value>Lost parcel</value>
         [DataMember(Name="parcelaPedida", EmitDefaultValue=false)]
         public int? ParcelaPedida { get; set; }
     
         /// <summary>
-        /// {{{acordo_detalhe_response_vencimento_parcela_pedida_value}}}
+        /// Expiration date of the lost parcel
         /// </summary>
-        /// <value>{{{acordo_detalhe_response_vencimento_parcela_pedida_value}}}</value>
+        /// <value>Expiration date of the lost parcel</value>
         [DataMember(Name="vencimentoParcelaPedida", EmitDefaultValue=false)]
         public string VencimentoParcelaPedida { get; set; }
     

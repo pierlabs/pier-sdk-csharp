@@ -12,16 +12,16 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{estabelecimento_update_description}}}
+    /// Request Parameters of a Merchant
     /// </summary>
     [DataContract]
     public partial class EstabelecimentoUpdate :  IEquatable<EstabelecimentoUpdate>
     { 
     
         /// <summary>
-        /// {{{estabelecimento_update_tipo_pagamento_value}}}
+        /// Regime type of the merchant payment
         /// </summary>
-        /// <value>{{{estabelecimento_update_tipo_pagamento_value}}}</value>
+        /// <value>Regime type of the merchant payment</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum TipoPagamentoEnum {
             
@@ -34,9 +34,9 @@ namespace Conductor.Pier.Model
 
     
         /// <summary>
-        /// {{{estabelecimento_update_tipo_pagamento_value}}}
+        /// Regime type of the merchant payment
         /// </summary>
-        /// <value>{{{estabelecimento_update_tipo_pagamento_value}}}</value>
+        /// <value>Regime type of the merchant payment</value>
         [DataMember(Name="tipoPagamento", EmitDefaultValue=false)]
         public TipoPagamentoEnum? TipoPagamento { get; set; }
     
@@ -44,41 +44,41 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="EstabelecimentoUpdate" /> class.
         /// Initializes a new instance of the <see cref="EstabelecimentoUpdate" />class.
         /// </summary>
-        /// <param name="FlagMatriz">{{{estabelecimento_update_flag_matriz_value}}}.</param>
-        /// <param name="Nome">{{{estabelecimento_update_nome_value}}}.</param>
-        /// <param name="Descricao">{{{estabelecimento_update_descricao_value}}}.</param>
-        /// <param name="NomeFantasia">{{{estabelecimento_update_nome_fantasia_value}}}.</param>
-        /// <param name="Cep">{{{estabelecimento_update_cep_value}}}.</param>
-        /// <param name="NomeLogradouro">{{{estabelecimento_update_nome_logradouro_value}}}.</param>
-        /// <param name="NumeroEndereco">{{{estabelecimento_update_numero_endereco_value}}}.</param>
-        /// <param name="Bairro">{{{estabelecimento_update_bairro_value}}}.</param>
-        /// <param name="Cidade">{{{estabelecimento_update_cidade_value}}}.</param>
-        /// <param name="Complemento">{{{estabelecimento_update_complemento_value}}}.</param>
-        /// <param name="Uf">{{{estabelecimento_update_uf_value}}}.</param>
-        /// <param name="Cep2">{{{estabelecimento_update_cep2_value}}}.</param>
-        /// <param name="NomeLogradouro2">{{{estabelecimento_update_nome_logradouro2_value}}}.</param>
-        /// <param name="NumeroEndereco2">{{{estabelecimento_update_numero_endereco2_value}}}.</param>
-        /// <param name="Bairro2">{{{estabelecimento_update_bairro2_value}}}.</param>
-        /// <param name="Cidade2">{{{estabelecimento_update_cidade2_value}}}.</param>
-        /// <param name="Complemento2">{{{estabelecimento_update_complemento2_value}}}.</param>
-        /// <param name="Uf2">{{{estabelecimento_update_uf2_value}}}.</param>
-        /// <param name="Obs">{{{estabelecimento_update_obs_value}}}.</param>
-        /// <param name="Contato">{{{estabelecimento_update_contato_value}}}.</param>
-        /// <param name="Email">{{{estabelecimento_update_email_value}}}.</param>
-        /// <param name="FlagArquivoSecrFazenda">{{{estabelecimento_update_flag_arquivo_secr_fazenda_value}}}.</param>
-        /// <param name="FlagCartaoDigitado">{{{estabelecimento_update_flag_cartao_digitado_value}}}.</param>
-        /// <param name="Inativo">{{{estabelecimento_update_inativo_value}}}.</param>
-        /// <param name="IdMoeda">{{{estabelecimento_update_id_moeda_value}}}.</param>
-        /// <param name="IdPais">{{{estabelecimento_update_id_pais_value}}}.</param>
-        /// <param name="AssociadoSPCBrasil">{{{estabelecimento_update_associado_s_p_c_brasil_value}}}.</param>
-        /// <param name="Mcc">{{{estabelecimento_update_mcc_value}}}.</param>
-        /// <param name="IdTipoEstabelecimento">{{{estabelecimento_update_id_tipo_estabelecimento_value}}}.</param>
-        /// <param name="Correspondencia">{{{estabelecimento_update_correspondencia_value}}}.</param>
-        /// <param name="CargoContato">{{{estabelecimento_update_cargo_contato_value}}}.</param>
-        /// <param name="TipoPagamento">{{{estabelecimento_update_tipo_pagamento_value}}}.</param>
-        /// <param name="Consulta">{{{estabelecimento_update_consulta_value}}}.</param>
-        /// <param name="Consulta2">{{{estabelecimento_update_consulta2_value}}}.</param>
-        /// <param name="Consulta3">{{{estabelecimento_update_consulta3_value}}}.</param>
+        /// <param name="FlagMatriz">Indicate if it is headquarters or Branch.</param>
+        /// <param name="Nome">Merchant Name.</param>
+        /// <param name="Descricao">Merchant Social Reason.</param>
+        /// <param name="NomeFantasia">Commercial Title of the Merchant.</param>
+        /// <param name="Cep">Merchant CEP.</param>
+        /// <param name="NomeLogradouro">Name of the street.</param>
+        /// <param name="NumeroEndereco">Address Number.</param>
+        /// <param name="Bairro">Neighborhood address.</param>
+        /// <param name="Cidade">Address City Name.</param>
+        /// <param name="Complemento">Complementary descriptions referring to the address.</param>
+        /// <param name="Uf">Acronym of the Federal Unity Identification of the address.</param>
+        /// <param name="Cep2">Merchant CEP.</param>
+        /// <param name="NomeLogradouro2">Street Name.</param>
+        /// <param name="NumeroEndereco2">Address Number.</param>
+        /// <param name="Bairro2">Neighborhood address.</param>
+        /// <param name="Cidade2">Address City Name.</param>
+        /// <param name="Complemento2">Complementary Descriptions refering to the address.</param>
+        /// <param name="Uf2">Acronym of the Federal Unity Address identification.</param>
+        /// <param name="Obs">Specific Details to the merchant register.</param>
+        /// <param name="Contato">Name of the person to contact with the Merchant.</param>
+        /// <param name="Email">E-mail of the person to contact with the Merchant.</param>
+        /// <param name="FlagArquivoSecrFazenda">Indicate if the merchant will be included in the register file for the State Treasury Secretary.</param>
+        /// <param name="FlagCartaoDigitado">Indicate if the merchant can originate transactions without the reading of the magnetic stripe or the card chip.</param>
+        /// <param name="Inativo">Indicate if the merchant is inactive.</param>
+        /// <param name="IdMoeda">Identifier Code of the Currency.</param>
+        /// <param name="IdPais">Identifier of the country.</param>
+        /// <param name="AssociadoSPCBrasil">Number of the associated to the SPCBrasil.</param>
+        /// <param name="Mcc">Merchant Category Code.</param>
+        /// <param name="IdTipoEstabelecimento">Identification Code of the Merchant Type.</param>
+        /// <param name="Correspondencia">Indicator which address the mails are sent, where 1 is ORIGIN and 2 MAIL ADDRESS.</param>
+        /// <param name="CargoContato">Occupation of the Merchant Contact.</param>
+        /// <param name="TipoPagamento">Regime type of the merchant payment.</param>
+        /// <param name="Consulta">Retrieve the register number one.</param>
+        /// <param name="Consulta2">Retrieve the register number two.</param>
+        /// <param name="Consulta3">Retrieve the register number three.</param>
 
         public EstabelecimentoUpdate(int? FlagMatriz = null, string Nome = null, string Descricao = null, string NomeFantasia = null, string Cep = null, string NomeLogradouro = null, int? NumeroEndereco = null, string Bairro = null, string Cidade = null, string Complemento = null, string Uf = null, string Cep2 = null, string NomeLogradouro2 = null, int? NumeroEndereco2 = null, string Bairro2 = null, string Cidade2 = null, string Complemento2 = null, string Uf2 = null, string Obs = null, string Contato = null, string Email = null, int? FlagArquivoSecrFazenda = null, int? FlagCartaoDigitado = null, int? Inativo = null, long? IdMoeda = null, long? IdPais = null, int? AssociadoSPCBrasil = null, long? Mcc = null, long? IdTipoEstabelecimento = null, int? Correspondencia = null, string CargoContato = null, TipoPagamentoEnum? TipoPagamento = null, ConsultaCadastroEstabelecimentoDTO Consulta = null, ConsultaCadastroEstabelecimentoDTO Consulta2 = null, ConsultaCadastroEstabelecimentoDTO Consulta3 = null)
         {
@@ -122,240 +122,240 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{estabelecimento_update_flag_matriz_value}}}
+        /// Indicate if it is headquarters or Branch
         /// </summary>
-        /// <value>{{{estabelecimento_update_flag_matriz_value}}}</value>
+        /// <value>Indicate if it is headquarters or Branch</value>
         [DataMember(Name="flagMatriz", EmitDefaultValue=false)]
         public int? FlagMatriz { get; set; }
     
         /// <summary>
-        /// {{{estabelecimento_update_nome_value}}}
+        /// Merchant Name
         /// </summary>
-        /// <value>{{{estabelecimento_update_nome_value}}}</value>
+        /// <value>Merchant Name</value>
         [DataMember(Name="nome", EmitDefaultValue=false)]
         public string Nome { get; set; }
     
         /// <summary>
-        /// {{{estabelecimento_update_descricao_value}}}
+        /// Merchant Social Reason
         /// </summary>
-        /// <value>{{{estabelecimento_update_descricao_value}}}</value>
+        /// <value>Merchant Social Reason</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     
         /// <summary>
-        /// {{{estabelecimento_update_nome_fantasia_value}}}
+        /// Commercial Title of the Merchant
         /// </summary>
-        /// <value>{{{estabelecimento_update_nome_fantasia_value}}}</value>
+        /// <value>Commercial Title of the Merchant</value>
         [DataMember(Name="nomeFantasia", EmitDefaultValue=false)]
         public string NomeFantasia { get; set; }
     
         /// <summary>
-        /// {{{estabelecimento_update_cep_value}}}
+        /// Merchant CEP
         /// </summary>
-        /// <value>{{{estabelecimento_update_cep_value}}}</value>
+        /// <value>Merchant CEP</value>
         [DataMember(Name="cep", EmitDefaultValue=false)]
         public string Cep { get; set; }
     
         /// <summary>
-        /// {{{estabelecimento_update_nome_logradouro_value}}}
+        /// Name of the street
         /// </summary>
-        /// <value>{{{estabelecimento_update_nome_logradouro_value}}}</value>
+        /// <value>Name of the street</value>
         [DataMember(Name="nomeLogradouro", EmitDefaultValue=false)]
         public string NomeLogradouro { get; set; }
     
         /// <summary>
-        /// {{{estabelecimento_update_numero_endereco_value}}}
+        /// Address Number
         /// </summary>
-        /// <value>{{{estabelecimento_update_numero_endereco_value}}}</value>
+        /// <value>Address Number</value>
         [DataMember(Name="numeroEndereco", EmitDefaultValue=false)]
         public int? NumeroEndereco { get; set; }
     
         /// <summary>
-        /// {{{estabelecimento_update_bairro_value}}}
+        /// Neighborhood address
         /// </summary>
-        /// <value>{{{estabelecimento_update_bairro_value}}}</value>
+        /// <value>Neighborhood address</value>
         [DataMember(Name="bairro", EmitDefaultValue=false)]
         public string Bairro { get; set; }
     
         /// <summary>
-        /// {{{estabelecimento_update_cidade_value}}}
+        /// Address City Name
         /// </summary>
-        /// <value>{{{estabelecimento_update_cidade_value}}}</value>
+        /// <value>Address City Name</value>
         [DataMember(Name="cidade", EmitDefaultValue=false)]
         public string Cidade { get; set; }
     
         /// <summary>
-        /// {{{estabelecimento_update_complemento_value}}}
+        /// Complementary descriptions referring to the address
         /// </summary>
-        /// <value>{{{estabelecimento_update_complemento_value}}}</value>
+        /// <value>Complementary descriptions referring to the address</value>
         [DataMember(Name="complemento", EmitDefaultValue=false)]
         public string Complemento { get; set; }
     
         /// <summary>
-        /// {{{estabelecimento_update_uf_value}}}
+        /// Acronym of the Federal Unity Identification of the address
         /// </summary>
-        /// <value>{{{estabelecimento_update_uf_value}}}</value>
+        /// <value>Acronym of the Federal Unity Identification of the address</value>
         [DataMember(Name="uf", EmitDefaultValue=false)]
         public string Uf { get; set; }
     
         /// <summary>
-        /// {{{estabelecimento_update_cep2_value}}}
+        /// Merchant CEP
         /// </summary>
-        /// <value>{{{estabelecimento_update_cep2_value}}}</value>
+        /// <value>Merchant CEP</value>
         [DataMember(Name="cep2", EmitDefaultValue=false)]
         public string Cep2 { get; set; }
     
         /// <summary>
-        /// {{{estabelecimento_update_nome_logradouro2_value}}}
+        /// Street Name
         /// </summary>
-        /// <value>{{{estabelecimento_update_nome_logradouro2_value}}}</value>
+        /// <value>Street Name</value>
         [DataMember(Name="nomeLogradouro2", EmitDefaultValue=false)]
         public string NomeLogradouro2 { get; set; }
     
         /// <summary>
-        /// {{{estabelecimento_update_numero_endereco2_value}}}
+        /// Address Number
         /// </summary>
-        /// <value>{{{estabelecimento_update_numero_endereco2_value}}}</value>
+        /// <value>Address Number</value>
         [DataMember(Name="numeroEndereco2", EmitDefaultValue=false)]
         public int? NumeroEndereco2 { get; set; }
     
         /// <summary>
-        /// {{{estabelecimento_update_bairro2_value}}}
+        /// Neighborhood address
         /// </summary>
-        /// <value>{{{estabelecimento_update_bairro2_value}}}</value>
+        /// <value>Neighborhood address</value>
         [DataMember(Name="bairro2", EmitDefaultValue=false)]
         public string Bairro2 { get; set; }
     
         /// <summary>
-        /// {{{estabelecimento_update_cidade2_value}}}
+        /// Address City Name
         /// </summary>
-        /// <value>{{{estabelecimento_update_cidade2_value}}}</value>
+        /// <value>Address City Name</value>
         [DataMember(Name="cidade2", EmitDefaultValue=false)]
         public string Cidade2 { get; set; }
     
         /// <summary>
-        /// {{{estabelecimento_update_complemento2_value}}}
+        /// Complementary Descriptions refering to the address
         /// </summary>
-        /// <value>{{{estabelecimento_update_complemento2_value}}}</value>
+        /// <value>Complementary Descriptions refering to the address</value>
         [DataMember(Name="complemento2", EmitDefaultValue=false)]
         public string Complemento2 { get; set; }
     
         /// <summary>
-        /// {{{estabelecimento_update_uf2_value}}}
+        /// Acronym of the Federal Unity Address identification
         /// </summary>
-        /// <value>{{{estabelecimento_update_uf2_value}}}</value>
+        /// <value>Acronym of the Federal Unity Address identification</value>
         [DataMember(Name="uf2", EmitDefaultValue=false)]
         public string Uf2 { get; set; }
     
         /// <summary>
-        /// {{{estabelecimento_update_obs_value}}}
+        /// Specific Details to the merchant register
         /// </summary>
-        /// <value>{{{estabelecimento_update_obs_value}}}</value>
+        /// <value>Specific Details to the merchant register</value>
         [DataMember(Name="obs", EmitDefaultValue=false)]
         public string Obs { get; set; }
     
         /// <summary>
-        /// {{{estabelecimento_update_contato_value}}}
+        /// Name of the person to contact with the Merchant
         /// </summary>
-        /// <value>{{{estabelecimento_update_contato_value}}}</value>
+        /// <value>Name of the person to contact with the Merchant</value>
         [DataMember(Name="contato", EmitDefaultValue=false)]
         public string Contato { get; set; }
     
         /// <summary>
-        /// {{{estabelecimento_update_email_value}}}
+        /// E-mail of the person to contact with the Merchant
         /// </summary>
-        /// <value>{{{estabelecimento_update_email_value}}}</value>
+        /// <value>E-mail of the person to contact with the Merchant</value>
         [DataMember(Name="email", EmitDefaultValue=false)]
         public string Email { get; set; }
     
         /// <summary>
-        /// {{{estabelecimento_update_flag_arquivo_secr_fazenda_value}}}
+        /// Indicate if the merchant will be included in the register file for the State Treasury Secretary
         /// </summary>
-        /// <value>{{{estabelecimento_update_flag_arquivo_secr_fazenda_value}}}</value>
+        /// <value>Indicate if the merchant will be included in the register file for the State Treasury Secretary</value>
         [DataMember(Name="flagArquivoSecrFazenda", EmitDefaultValue=false)]
         public int? FlagArquivoSecrFazenda { get; set; }
     
         /// <summary>
-        /// {{{estabelecimento_update_flag_cartao_digitado_value}}}
+        /// Indicate if the merchant can originate transactions without the reading of the magnetic stripe or the card chip
         /// </summary>
-        /// <value>{{{estabelecimento_update_flag_cartao_digitado_value}}}</value>
+        /// <value>Indicate if the merchant can originate transactions without the reading of the magnetic stripe or the card chip</value>
         [DataMember(Name="flagCartaoDigitado", EmitDefaultValue=false)]
         public int? FlagCartaoDigitado { get; set; }
     
         /// <summary>
-        /// {{{estabelecimento_update_inativo_value}}}
+        /// Indicate if the merchant is inactive
         /// </summary>
-        /// <value>{{{estabelecimento_update_inativo_value}}}</value>
+        /// <value>Indicate if the merchant is inactive</value>
         [DataMember(Name="inativo", EmitDefaultValue=false)]
         public int? Inativo { get; set; }
     
         /// <summary>
-        /// {{{estabelecimento_update_id_moeda_value}}}
+        /// Identifier Code of the Currency
         /// </summary>
-        /// <value>{{{estabelecimento_update_id_moeda_value}}}</value>
+        /// <value>Identifier Code of the Currency</value>
         [DataMember(Name="idMoeda", EmitDefaultValue=false)]
         public long? IdMoeda { get; set; }
     
         /// <summary>
-        /// {{{estabelecimento_update_id_pais_value}}}
+        /// Identifier of the country
         /// </summary>
-        /// <value>{{{estabelecimento_update_id_pais_value}}}</value>
+        /// <value>Identifier of the country</value>
         [DataMember(Name="idPais", EmitDefaultValue=false)]
         public long? IdPais { get; set; }
     
         /// <summary>
-        /// {{{estabelecimento_update_associado_s_p_c_brasil_value}}}
+        /// Number of the associated to the SPCBrasil
         /// </summary>
-        /// <value>{{{estabelecimento_update_associado_s_p_c_brasil_value}}}</value>
+        /// <value>Number of the associated to the SPCBrasil</value>
         [DataMember(Name="associadoSPCBrasil", EmitDefaultValue=false)]
         public int? AssociadoSPCBrasil { get; set; }
     
         /// <summary>
-        /// {{{estabelecimento_update_mcc_value}}}
+        /// Merchant Category Code
         /// </summary>
-        /// <value>{{{estabelecimento_update_mcc_value}}}</value>
+        /// <value>Merchant Category Code</value>
         [DataMember(Name="mcc", EmitDefaultValue=false)]
         public long? Mcc { get; set; }
     
         /// <summary>
-        /// {{{estabelecimento_update_id_tipo_estabelecimento_value}}}
+        /// Identification Code of the Merchant Type
         /// </summary>
-        /// <value>{{{estabelecimento_update_id_tipo_estabelecimento_value}}}</value>
+        /// <value>Identification Code of the Merchant Type</value>
         [DataMember(Name="idTipoEstabelecimento", EmitDefaultValue=false)]
         public long? IdTipoEstabelecimento { get; set; }
     
         /// <summary>
-        /// {{{estabelecimento_update_correspondencia_value}}}
+        /// Indicator which address the mails are sent, where 1 is ORIGIN and 2 MAIL ADDRESS
         /// </summary>
-        /// <value>{{{estabelecimento_update_correspondencia_value}}}</value>
+        /// <value>Indicator which address the mails are sent, where 1 is ORIGIN and 2 MAIL ADDRESS</value>
         [DataMember(Name="correspondencia", EmitDefaultValue=false)]
         public int? Correspondencia { get; set; }
     
         /// <summary>
-        /// {{{estabelecimento_update_cargo_contato_value}}}
+        /// Occupation of the Merchant Contact
         /// </summary>
-        /// <value>{{{estabelecimento_update_cargo_contato_value}}}</value>
+        /// <value>Occupation of the Merchant Contact</value>
         [DataMember(Name="cargoContato", EmitDefaultValue=false)]
         public string CargoContato { get; set; }
     
         /// <summary>
-        /// {{{estabelecimento_update_consulta_value}}}
+        /// Retrieve the register number one
         /// </summary>
-        /// <value>{{{estabelecimento_update_consulta_value}}}</value>
+        /// <value>Retrieve the register number one</value>
         [DataMember(Name="consulta", EmitDefaultValue=false)]
         public ConsultaCadastroEstabelecimentoDTO Consulta { get; set; }
     
         /// <summary>
-        /// {{{estabelecimento_update_consulta2_value}}}
+        /// Retrieve the register number two
         /// </summary>
-        /// <value>{{{estabelecimento_update_consulta2_value}}}</value>
+        /// <value>Retrieve the register number two</value>
         [DataMember(Name="consulta2", EmitDefaultValue=false)]
         public ConsultaCadastroEstabelecimentoDTO Consulta2 { get; set; }
     
         /// <summary>
-        /// {{{estabelecimento_update_consulta3_value}}}
+        /// Retrieve the register number three
         /// </summary>
-        /// <value>{{{estabelecimento_update_consulta3_value}}}</value>
+        /// <value>Retrieve the register number three</value>
         [DataMember(Name="consulta3", EmitDefaultValue=false)]
         public ConsultaCadastroEstabelecimentoDTO Consulta3 { get; set; }
     

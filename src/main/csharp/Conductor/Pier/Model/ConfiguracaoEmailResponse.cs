@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{configuracao_email_response_description}}}
+    /// Object EMAIL Configuration
     /// </summary>
     [DataContract]
     public partial class ConfiguracaoEmailResponse :  IEquatable<ConfiguracaoEmailResponse>
@@ -22,19 +22,19 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="ConfiguracaoEmailResponse" /> class.
         /// Initializes a new instance of the <see cref="ConfiguracaoEmailResponse" />class.
         /// </summary>
-        /// <param name="Id">{{{configuracao_email_response_id_value}}}.</param>
-        /// <param name="Host">{{{configuracao_email_response_host_value}}}.</param>
-        /// <param name="Port">{{{configuracao_email_response_port_value}}}.</param>
-        /// <param name="PortTLSSTARTTLS">{{{configuracao_email_response_port_t_l_s_s_t_a_r_t_t_l_s_value}}}.</param>
-        /// <param name="PortSSL">{{{configuracao_email_response_port_s_s_l_value}}}.</param>
-        /// <param name="Protocolo">{{{configuracao_email_response_protocolo_value}}}.</param>
-        /// <param name="RequerAutenticacao">{{{configuracao_email_response_requer_autenticacao_value}}}.</param>
-        /// <param name="RequerSSL">{{{configuracao_email_response_requer_s_s_l_value}}}.</param>
-        /// <param name="RequerTLS">{{{configuracao_email_response_requer_t_l_s_value}}}.</param>
-        /// <param name="Usuario">{{{configuracao_email_response_usuario_value}}}.</param>
-        /// <param name="Senha">{{{configuracao_email_response_senha_value}}}.</param>
-        /// <param name="DataInclusao">{{{configuracao_email_response_data_inclusao_value}}}.</param>
-        /// <param name="DataAlteracao">{{{configuracao_email_response_data_alteracao_value}}}.</param>
+        /// <param name="Id">Id of the EMAIL Configuration.</param>
+        /// <param name="Host">IP (Host) of the e-mail server.</param>
+        /// <param name="Port">Door used by the e-mail server.</param>
+        /// <param name="PortTLSSTARTTLS">Door used by the server TLS/STARTTLS.</param>
+        /// <param name="PortSSL">Door used by the server SSL.</param>
+        /// <param name="Protocolo">Protocol of communication used by the email service (Ex: smtp).</param>
+        /// <param name="RequerAutenticacao">The e-mail service requires authentication.</param>
+        /// <param name="RequerSSL">The service of email requieres SSL.</param>
+        /// <param name="RequerTLS">the e-mail service requires TLS.</param>
+        /// <param name="Usuario">User of the e-mail service.</param>
+        /// <param name="Senha">Password of user of the e-mail service.</param>
+        /// <param name="DataInclusao">Date of inlcusion.</param>
+        /// <param name="DataAlteracao">Date of update.</param>
 
         public ConfiguracaoEmailResponse(long? Id = null, string Host = null, string Port = null, string PortTLSSTARTTLS = null, string PortSSL = null, string Protocolo = null, bool? RequerAutenticacao = null, bool? RequerSSL = null, bool? RequerTLS = null, string Usuario = null, string Senha = null, string DataInclusao = null, string DataAlteracao = null)
         {
@@ -56,93 +56,93 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{configuracao_email_response_id_value}}}
+        /// Id of the EMAIL Configuration
         /// </summary>
-        /// <value>{{{configuracao_email_response_id_value}}}</value>
+        /// <value>Id of the EMAIL Configuration</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{configuracao_email_response_host_value}}}
+        /// IP (Host) of the e-mail server
         /// </summary>
-        /// <value>{{{configuracao_email_response_host_value}}}</value>
+        /// <value>IP (Host) of the e-mail server</value>
         [DataMember(Name="host", EmitDefaultValue=false)]
         public string Host { get; set; }
     
         /// <summary>
-        /// {{{configuracao_email_response_port_value}}}
+        /// Door used by the e-mail server
         /// </summary>
-        /// <value>{{{configuracao_email_response_port_value}}}</value>
+        /// <value>Door used by the e-mail server</value>
         [DataMember(Name="port", EmitDefaultValue=false)]
         public string Port { get; set; }
     
         /// <summary>
-        /// {{{configuracao_email_response_port_t_l_s_s_t_a_r_t_t_l_s_value}}}
+        /// Door used by the server TLS/STARTTLS
         /// </summary>
-        /// <value>{{{configuracao_email_response_port_t_l_s_s_t_a_r_t_t_l_s_value}}}</value>
+        /// <value>Door used by the server TLS/STARTTLS</value>
         [DataMember(Name="portTLSSTARTTLS", EmitDefaultValue=false)]
         public string PortTLSSTARTTLS { get; set; }
     
         /// <summary>
-        /// {{{configuracao_email_response_port_s_s_l_value}}}
+        /// Door used by the server SSL
         /// </summary>
-        /// <value>{{{configuracao_email_response_port_s_s_l_value}}}</value>
+        /// <value>Door used by the server SSL</value>
         [DataMember(Name="portSSL", EmitDefaultValue=false)]
         public string PortSSL { get; set; }
     
         /// <summary>
-        /// {{{configuracao_email_response_protocolo_value}}}
+        /// Protocol of communication used by the email service (Ex: smtp)
         /// </summary>
-        /// <value>{{{configuracao_email_response_protocolo_value}}}</value>
+        /// <value>Protocol of communication used by the email service (Ex: smtp)</value>
         [DataMember(Name="protocolo", EmitDefaultValue=false)]
         public string Protocolo { get; set; }
     
         /// <summary>
-        /// {{{configuracao_email_response_requer_autenticacao_value}}}
+        /// The e-mail service requires authentication
         /// </summary>
-        /// <value>{{{configuracao_email_response_requer_autenticacao_value}}}</value>
+        /// <value>The e-mail service requires authentication</value>
         [DataMember(Name="requerAutenticacao", EmitDefaultValue=false)]
         public bool? RequerAutenticacao { get; set; }
     
         /// <summary>
-        /// {{{configuracao_email_response_requer_s_s_l_value}}}
+        /// The service of email requieres SSL
         /// </summary>
-        /// <value>{{{configuracao_email_response_requer_s_s_l_value}}}</value>
+        /// <value>The service of email requieres SSL</value>
         [DataMember(Name="requerSSL", EmitDefaultValue=false)]
         public bool? RequerSSL { get; set; }
     
         /// <summary>
-        /// {{{configuracao_email_response_requer_t_l_s_value}}}
+        /// the e-mail service requires TLS
         /// </summary>
-        /// <value>{{{configuracao_email_response_requer_t_l_s_value}}}</value>
+        /// <value>the e-mail service requires TLS</value>
         [DataMember(Name="requerTLS", EmitDefaultValue=false)]
         public bool? RequerTLS { get; set; }
     
         /// <summary>
-        /// {{{configuracao_email_response_usuario_value}}}
+        /// User of the e-mail service
         /// </summary>
-        /// <value>{{{configuracao_email_response_usuario_value}}}</value>
+        /// <value>User of the e-mail service</value>
         [DataMember(Name="usuario", EmitDefaultValue=false)]
         public string Usuario { get; set; }
     
         /// <summary>
-        /// {{{configuracao_email_response_senha_value}}}
+        /// Password of user of the e-mail service
         /// </summary>
-        /// <value>{{{configuracao_email_response_senha_value}}}</value>
+        /// <value>Password of user of the e-mail service</value>
         [DataMember(Name="senha", EmitDefaultValue=false)]
         public string Senha { get; set; }
     
         /// <summary>
-        /// {{{configuracao_email_response_data_inclusao_value}}}
+        /// Date of inlcusion
         /// </summary>
-        /// <value>{{{configuracao_email_response_data_inclusao_value}}}</value>
+        /// <value>Date of inlcusion</value>
         [DataMember(Name="dataInclusao", EmitDefaultValue=false)]
         public string DataInclusao { get; set; }
     
         /// <summary>
-        /// {{{configuracao_email_response_data_alteracao_value}}}
+        /// Date of update
         /// </summary>
-        /// <value>{{{configuracao_email_response_data_alteracao_value}}}</value>
+        /// <value>Date of update</value>
         [DataMember(Name="dataAlteracao", EmitDefaultValue=false)]
         public string DataAlteracao { get; set; }
     

@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{entidade_response_description}}}
+    /// Objeto de Resposta da Entidade
     /// </summary>
     [DataContract]
     public partial class EntidadeResponse :  IEquatable<EntidadeResponse>
@@ -22,9 +22,9 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="EntidadeResponse" /> class.
         /// Initializes a new instance of the <see cref="EntidadeResponse" />class.
         /// </summary>
-        /// <param name="Id">{{{entidade_response_id_value}}}.</param>
-        /// <param name="Descricao">{{{entidade_response_descricao_value}}}.</param>
-        /// <param name="FlagAtivo">{{{entidade_response_flag_ativo_value}}}.</param>
+        /// <param name="Id">Identification Code of the entity.</param>
+        /// <param name="Descricao">Entity Description.</param>
+        /// <param name="FlagAtivo">Flag that indicates if the  Entity is active.</param>
 
         public EntidadeResponse(long? Id = null, string Descricao = null, bool? FlagAtivo = null)
         {
@@ -36,23 +36,23 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{entidade_response_id_value}}}
+        /// Identification Code of the entity
         /// </summary>
-        /// <value>{{{entidade_response_id_value}}}</value>
+        /// <value>Identification Code of the entity</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{entidade_response_descricao_value}}}
+        /// Entity Description
         /// </summary>
-        /// <value>{{{entidade_response_descricao_value}}}</value>
+        /// <value>Entity Description</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     
         /// <summary>
-        /// {{{entidade_response_flag_ativo_value}}}
+        /// Flag that indicates if the  Entity is active
         /// </summary>
-        /// <value>{{{entidade_response_flag_ativo_value}}}</value>
+        /// <value>Flag that indicates if the  Entity is active</value>
         [DataMember(Name="flagAtivo", EmitDefaultValue=false)]
         public bool? FlagAtivo { get; set; }
     

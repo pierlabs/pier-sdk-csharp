@@ -12,16 +12,16 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{taxa_antecipacao_request_description}}}
+    /// Object Request of the Antecipation Taxe
     /// </summary>
     [DataContract]
     public partial class TaxaAntecipacaoRequest :  IEquatable<TaxaAntecipacaoRequest>
     { 
     
         /// <summary>
-        /// {{{taxa_antecipacao_request_tipo_transacao_value}}}
+        /// Code that identifies if a parameter refers to a trnsaction On-Us or Off-Us
         /// </summary>
-        /// <value>{{{taxa_antecipacao_request_tipo_transacao_value}}}</value>
+        /// <value>Code that identifies if a parameter refers to a trnsaction On-Us or Off-Us</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum TipoTransacaoEnum {
             
@@ -34,9 +34,9 @@ namespace Conductor.Pier.Model
 
     
         /// <summary>
-        /// {{{taxa_antecipacao_request_tipo_transacao_value}}}
+        /// Code that identifies if a parameter refers to a trnsaction On-Us or Off-Us
         /// </summary>
-        /// <value>{{{taxa_antecipacao_request_tipo_transacao_value}}}</value>
+        /// <value>Code that identifies if a parameter refers to a trnsaction On-Us or Off-Us</value>
         [DataMember(Name="tipoTransacao", EmitDefaultValue=false)]
         public TipoTransacaoEnum? TipoTransacao { get; set; }
     
@@ -44,8 +44,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TaxaAntecipacaoRequest" /> class.
         /// Initializes a new instance of the <see cref="TaxaAntecipacaoRequest" />class.
         /// </summary>
-        /// <param name="TipoTransacao">{{{taxa_antecipacao_request_tipo_transacao_value}}}.</param>
-        /// <param name="ValorTaxa">{{{taxa_antecipacao_request_valor_taxa_value}}}.</param>
+        /// <param name="TipoTransacao">Code that identifies if a parameter refers to a trnsaction On-Us or Off-Us.</param>
+        /// <param name="ValorTaxa">Value of the Antecipation Taxe.</param>
 
         public TaxaAntecipacaoRequest(TipoTransacaoEnum? TipoTransacao = null, double? ValorTaxa = null)
         {
@@ -56,9 +56,9 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{taxa_antecipacao_request_valor_taxa_value}}}
+        /// Value of the Antecipation Taxe
         /// </summary>
-        /// <value>{{{taxa_antecipacao_request_valor_taxa_value}}}</value>
+        /// <value>Value of the Antecipation Taxe</value>
         [DataMember(Name="valorTaxa", EmitDefaultValue=false)]
         public double? ValorTaxa { get; set; }
     

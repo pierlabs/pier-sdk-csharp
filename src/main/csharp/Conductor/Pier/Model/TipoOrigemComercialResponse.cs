@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{tipo_origem_comercial_response_description}}}
+    /// Respose onject of the commercial origin types resource
     /// </summary>
     [DataContract]
     public partial class TipoOrigemComercialResponse :  IEquatable<TipoOrigemComercialResponse>
@@ -22,8 +22,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TipoOrigemComercialResponse" /> class.
         /// Initializes a new instance of the <see cref="TipoOrigemComercialResponse" />class.
         /// </summary>
-        /// <param name="Id">{{{tipo_origem_comercial_response_id_value}}}.</param>
-        /// <param name="Nome">{{{tipo_origem_comercial_response_nome_value}}}.</param>
+        /// <param name="Id">Identification Code of the Commercial Origin Type.</param>
+        /// <param name="Nome">Name of the commercial origin type.</param>
 
         public TipoOrigemComercialResponse(long? Id = null, string Nome = null)
         {
@@ -34,16 +34,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{tipo_origem_comercial_response_id_value}}}
+        /// Identification Code of the Commercial Origin Type
         /// </summary>
-        /// <value>{{{tipo_origem_comercial_response_id_value}}}</value>
+        /// <value>Identification Code of the Commercial Origin Type</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{tipo_origem_comercial_response_nome_value}}}
+        /// Name of the commercial origin type
         /// </summary>
-        /// <value>{{{tipo_origem_comercial_response_nome_value}}}</value>
+        /// <value>Name of the commercial origin type</value>
         [DataMember(Name="nome", EmitDefaultValue=false)]
         public string Nome { get; set; }
     

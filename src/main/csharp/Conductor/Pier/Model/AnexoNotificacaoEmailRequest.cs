@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{anexo_notificacao_email_request_description}}}
+    /// Representation of the attached document for a notification
     /// </summary>
     [DataContract]
     public partial class AnexoNotificacaoEmailRequest :  IEquatable<AnexoNotificacaoEmailRequest>
@@ -22,7 +22,7 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="AnexoNotificacaoEmailRequest" /> class.
         /// Initializes a new instance of the <see cref="AnexoNotificacaoEmailRequest" />class.
         /// </summary>
-        /// <param name="IdDocumento">{{{anexo_notificacao_email_request_id_documento_value}}}.</param>
+        /// <param name="IdDocumento">ID of the Document will be attached to the notification.</param>
 
         public AnexoNotificacaoEmailRequest(long? IdDocumento = null)
         {
@@ -32,9 +32,9 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{anexo_notificacao_email_request_id_documento_value}}}
+        /// ID of the Document will be attached to the notification
         /// </summary>
-        /// <value>{{{anexo_notificacao_email_request_id_documento_value}}}</value>
+        /// <value>ID of the Document will be attached to the notification</value>
         [DataMember(Name="idDocumento", EmitDefaultValue=false)]
         public long? IdDocumento { get; set; }
     

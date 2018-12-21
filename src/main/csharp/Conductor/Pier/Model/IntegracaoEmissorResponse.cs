@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{integracao_emissor_response_description}}}
+    /// Response of the integration register inclusion resource
     /// </summary>
     [DataContract]
     public partial class IntegracaoEmissorResponse :  IEquatable<IntegracaoEmissorResponse>
@@ -22,12 +22,12 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="IntegracaoEmissorResponse" /> class.
         /// Initializes a new instance of the <see cref="IntegracaoEmissorResponse" />class.
         /// </summary>
-        /// <param name="Id">{{{integracao_emissor_response_id_value}}}.</param>
-        /// <param name="IdConta">{{{integracao_emissor_response_id_conta_value}}}.</param>
-        /// <param name="IdArquivo">{{{integracao_emissor_response_id_arquivo_value}}}.</param>
-        /// <param name="Status">{{{integracao_emissor_response_status_value}}}.</param>
-        /// <param name="DataInclusao">{{{integracao_emissor_response_data_inclusao_value}}}.</param>
-        /// <param name="DataAlteracao">{{{integracao_emissor_response_data_alteracao_value}}}.</param>
+        /// <param name="Id">Identification Code of the registetr in the IntegrationIssuer table.</param>
+        /// <param name="IdConta">Identification Code of the Account.</param>
+        /// <param name="IdArquivo">Identification Code of the file.</param>
+        /// <param name="Status">Register Status.</param>
+        /// <param name="DataInclusao">Date of the resgister inclusion.</param>
+        /// <param name="DataAlteracao">Date of the last update of the register.</param>
 
         public IntegracaoEmissorResponse(long? Id = null, long? IdConta = null, long? IdArquivo = null, string Status = null, string DataInclusao = null, string DataAlteracao = null)
         {
@@ -42,44 +42,44 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{integracao_emissor_response_id_value}}}
+        /// Identification Code of the registetr in the IntegrationIssuer table
         /// </summary>
-        /// <value>{{{integracao_emissor_response_id_value}}}</value>
+        /// <value>Identification Code of the registetr in the IntegrationIssuer table</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{integracao_emissor_response_id_conta_value}}}
+        /// Identification Code of the Account
         /// </summary>
-        /// <value>{{{integracao_emissor_response_id_conta_value}}}</value>
+        /// <value>Identification Code of the Account</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// {{{integracao_emissor_response_id_arquivo_value}}}
+        /// Identification Code of the file
         /// </summary>
-        /// <value>{{{integracao_emissor_response_id_arquivo_value}}}</value>
+        /// <value>Identification Code of the file</value>
         [DataMember(Name="idArquivo", EmitDefaultValue=false)]
         public long? IdArquivo { get; set; }
     
         /// <summary>
-        /// {{{integracao_emissor_response_status_value}}}
+        /// Register Status
         /// </summary>
-        /// <value>{{{integracao_emissor_response_status_value}}}</value>
+        /// <value>Register Status</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public string Status { get; set; }
     
         /// <summary>
-        /// {{{integracao_emissor_response_data_inclusao_value}}}
+        /// Date of the resgister inclusion
         /// </summary>
-        /// <value>{{{integracao_emissor_response_data_inclusao_value}}}</value>
+        /// <value>Date of the resgister inclusion</value>
         [DataMember(Name="dataInclusao", EmitDefaultValue=false)]
         public string DataInclusao { get; set; }
     
         /// <summary>
-        /// {{{integracao_emissor_response_data_alteracao_value}}}
+        /// Date of the last update of the register
         /// </summary>
-        /// <value>{{{integracao_emissor_response_data_alteracao_value}}}</value>
+        /// <value>Date of the last update of the register</value>
         [DataMember(Name="dataAlteracao", EmitDefaultValue=false)]
         public string DataAlteracao { get; set; }
     

@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{produto_pacote_tarifa_response_descricao}}}
+    /// Resource response listing product tariff packages
     /// </summary>
     [DataContract]
     public partial class ProdutoPacoteTarifaResponse :  IEquatable<ProdutoPacoteTarifaResponse>
@@ -22,10 +22,10 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="ProdutoPacoteTarifaResponse" /> class.
         /// Initializes a new instance of the <see cref="ProdutoPacoteTarifaResponse" />class.
         /// </summary>
-        /// <param name="FlagDefault">{{{produto_pacote_tarifa_response_flag_default_descricao}}}.</param>
-        /// <param name="Id">{{{produto_pacote_tarifa_response_id_descricao}}}.</param>
-        /// <param name="IdPacoteTarifa">{{{produto_pacote_tarifa_response_id_pacote_tarifa_descricao}}}.</param>
-        /// <param name="IdProduto">{{{produto_pacote_tarifa_response_id_produto_descricao}}}.</param>
+        /// <param name="FlagDefault">Default flag.</param>
+        /// <param name="Id">Rate Package Product Id.</param>
+        /// <param name="IdPacoteTarifa">Rate Package Id.</param>
+        /// <param name="IdProduto">Product id.</param>
 
         public ProdutoPacoteTarifaResponse(bool? FlagDefault = null, long? Id = null, long? IdPacoteTarifa = null, long? IdProduto = null)
         {
@@ -38,30 +38,30 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{produto_pacote_tarifa_response_flag_default_descricao}}}
+        /// Default flag
         /// </summary>
-        /// <value>{{{produto_pacote_tarifa_response_flag_default_descricao}}}</value>
+        /// <value>Default flag</value>
         [DataMember(Name="flagDefault", EmitDefaultValue=false)]
         public bool? FlagDefault { get; set; }
     
         /// <summary>
-        /// {{{produto_pacote_tarifa_response_id_descricao}}}
+        /// Rate Package Product Id
         /// </summary>
-        /// <value>{{{produto_pacote_tarifa_response_id_descricao}}}</value>
+        /// <value>Rate Package Product Id</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{produto_pacote_tarifa_response_id_pacote_tarifa_descricao}}}
+        /// Rate Package Id
         /// </summary>
-        /// <value>{{{produto_pacote_tarifa_response_id_pacote_tarifa_descricao}}}</value>
+        /// <value>Rate Package Id</value>
         [DataMember(Name="idPacoteTarifa", EmitDefaultValue=false)]
         public long? IdPacoteTarifa { get; set; }
     
         /// <summary>
-        /// {{{produto_pacote_tarifa_response_id_produto_descricao}}}
+        /// Product id
         /// </summary>
-        /// <value>{{{produto_pacote_tarifa_response_id_produto_descricao}}}</value>
+        /// <value>Product id</value>
         [DataMember(Name="idProduto", EmitDefaultValue=false)]
         public long? IdProduto { get; set; }
     

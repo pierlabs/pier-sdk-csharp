@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{tipo_template_request_description}}}
+    /// Representation of the template type
     /// </summary>
     [DataContract]
     public partial class TipoTemplateRequest :  IEquatable<TipoTemplateRequest>
@@ -22,9 +22,9 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TipoTemplateRequest" /> class.
         /// Initializes a new instance of the <see cref="TipoTemplateRequest" />class.
         /// </summary>
-        /// <param name="Nome">{{{tipo_template_request_nome_value}}}.</param>
-        /// <param name="Descricao">{{{tipo_template_request_descricao_value}}}.</param>
-        /// <param name="Sigla">{{{tipo_template_request_sigla_value}}}.</param>
+        /// <param name="Nome">Name of the type of template.</param>
+        /// <param name="Descricao">Description of the type of template.</param>
+        /// <param name="Sigla">Acronym of the type of template.</param>
 
         public TipoTemplateRequest(string Nome = null, string Descricao = null, string Sigla = null)
         {
@@ -36,23 +36,23 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{tipo_template_request_nome_value}}}
+        /// Name of the type of template
         /// </summary>
-        /// <value>{{{tipo_template_request_nome_value}}}</value>
+        /// <value>Name of the type of template</value>
         [DataMember(Name="nome", EmitDefaultValue=false)]
         public string Nome { get; set; }
     
         /// <summary>
-        /// {{{tipo_template_request_descricao_value}}}
+        /// Description of the type of template
         /// </summary>
-        /// <value>{{{tipo_template_request_descricao_value}}}</value>
+        /// <value>Description of the type of template</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     
         /// <summary>
-        /// {{{tipo_template_request_sigla_value}}}
+        /// Acronym of the type of template
         /// </summary>
-        /// <value>{{{tipo_template_request_sigla_value}}}</value>
+        /// <value>Acronym of the type of template</value>
         [DataMember(Name="sigla", EmitDefaultValue=false)]
         public string Sigla { get; set; }
     

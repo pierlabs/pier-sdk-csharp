@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{banco_response_description}}}
+    /// Object Bank
     /// </summary>
     [DataContract]
     public partial class BancoResponse :  IEquatable<BancoResponse>
@@ -22,10 +22,10 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="BancoResponse" /> class.
         /// Initializes a new instance of the <see cref="BancoResponse" />class.
         /// </summary>
-        /// <param name="Id">{{{banco_response_id_value}}}.</param>
-        /// <param name="Nome">{{{banco_response_nome_value}}}.</param>
-        /// <param name="Descricao">{{{banco_response_descricao_value}}}.</param>
-        /// <param name="DigitoBanco">{{{banco_response_digito_banco_value}}}.</param>
+        /// <param name="Id">Identification Code of the Bank (id).</param>
+        /// <param name="Nome">Name of the Bank.</param>
+        /// <param name="Descricao">Description of the bank.</param>
+        /// <param name="DigitoBanco">Digit of the bank.</param>
 
         public BancoResponse(long? Id = null, string Nome = null, string Descricao = null, string DigitoBanco = null)
         {
@@ -38,30 +38,30 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{banco_response_id_value}}}
+        /// Identification Code of the Bank (id)
         /// </summary>
-        /// <value>{{{banco_response_id_value}}}</value>
+        /// <value>Identification Code of the Bank (id)</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{banco_response_nome_value}}}
+        /// Name of the Bank
         /// </summary>
-        /// <value>{{{banco_response_nome_value}}}</value>
+        /// <value>Name of the Bank</value>
         [DataMember(Name="nome", EmitDefaultValue=false)]
         public string Nome { get; set; }
     
         /// <summary>
-        /// {{{banco_response_descricao_value}}}
+        /// Description of the bank
         /// </summary>
-        /// <value>{{{banco_response_descricao_value}}}</value>
+        /// <value>Description of the bank</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     
         /// <summary>
-        /// {{{banco_response_digito_banco_value}}}
+        /// Digit of the bank
         /// </summary>
-        /// <value>{{{banco_response_digito_banco_value}}}</value>
+        /// <value>Digit of the bank</value>
         [DataMember(Name="digitoBanco", EmitDefaultValue=false)]
         public string DigitoBanco { get; set; }
     

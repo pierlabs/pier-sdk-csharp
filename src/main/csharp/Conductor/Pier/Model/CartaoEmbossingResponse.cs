@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{cartao_embossing_response_description}}}
+    /// Object Card to Print
     /// </summary>
     [DataContract]
     public partial class CartaoEmbossingResponse :  IEquatable<CartaoEmbossingResponse>
@@ -22,16 +22,16 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="CartaoEmbossingResponse" /> class.
         /// Initializes a new instance of the <see cref="CartaoEmbossingResponse" />class.
         /// </summary>
-        /// <param name="FlagVirtual">{{{cartao_embossing_response_flag_virtual_value}}}.</param>
-        /// <param name="IdConta">{{{cartao_embossing_response_id_conta_value}}}.</param>
-        /// <param name="IdPessoa">{{{cartao_embossing_response_id_pessoa_value}}}.</param>
-        /// <param name="IdCartao">{{{cartao_embossing_response_id_cartao_value}}}.</param>
-        /// <param name="IdBandeira">{{{cartao_embossing_response_id_bandeira_value}}}.</param>
-        /// <param name="IdTipoCartao">{{{cartao_embossing_response_id_tipo_cartao_value}}}.</param>
-        /// <param name="DataGeracao">{{{cartao_embossing_response_data_geracao_value}}}.</param>
-        /// <param name="DataValidade">{{{cartao_embossing_response_data_validade_value}}}.</param>
-        /// <param name="NomeOrigemComercial">{{{cartao_embossing_response_nome_origem_comercial_value}}}.</param>
-        /// <param name="Cpf">{{{cartao_embossing_response_cpf_value}}}.</param>
+        /// <param name="FlagVirtual">Show the status that informs if the card is virtual.</param>
+        /// <param name="IdConta">Show the Identification Code of the Account (id) which the created card belongs.</param>
+        /// <param name="IdPessoa">Show the Identification Code of the Person (id) cardholder of the card created.</param>
+        /// <param name="IdCartao">Show the identification Code of the Card (id) which was created.</param>
+        /// <param name="IdBandeira">Show the identification code of the flag (id) which the card belongs, when it is flagged.</param>
+        /// <param name="IdTipoCartao">Show the identification Code of the Card type (id) attributed to the card.</param>
+        /// <param name="DataGeracao">Show the date of issue of the card.</param>
+        /// <param name="DataValidade">Show the expiration date of the Card.</param>
+        /// <param name="NomeOrigemComercial">Show the name of the Commercial Origin that the register was made of the holder which the Card belongs.</param>
+        /// <param name="Cpf">Show the CPF of the Cardholder.</param>
 
         public CartaoEmbossingResponse(int? FlagVirtual = null, long? IdConta = null, long? IdPessoa = null, long? IdCartao = null, long? IdBandeira = null, long? IdTipoCartao = null, string DataGeracao = null, string DataValidade = null, string NomeOrigemComercial = null, string Cpf = null)
         {
@@ -50,72 +50,72 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{cartao_embossing_response_flag_virtual_value}}}
+        /// Show the status that informs if the card is virtual
         /// </summary>
-        /// <value>{{{cartao_embossing_response_flag_virtual_value}}}</value>
+        /// <value>Show the status that informs if the card is virtual</value>
         [DataMember(Name="flagVirtual", EmitDefaultValue=false)]
         public int? FlagVirtual { get; set; }
     
         /// <summary>
-        /// {{{cartao_embossing_response_id_conta_value}}}
+        /// Show the Identification Code of the Account (id) which the created card belongs
         /// </summary>
-        /// <value>{{{cartao_embossing_response_id_conta_value}}}</value>
+        /// <value>Show the Identification Code of the Account (id) which the created card belongs</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// {{{cartao_embossing_response_id_pessoa_value}}}
+        /// Show the Identification Code of the Person (id) cardholder of the card created
         /// </summary>
-        /// <value>{{{cartao_embossing_response_id_pessoa_value}}}</value>
+        /// <value>Show the Identification Code of the Person (id) cardholder of the card created</value>
         [DataMember(Name="idPessoa", EmitDefaultValue=false)]
         public long? IdPessoa { get; set; }
     
         /// <summary>
-        /// {{{cartao_embossing_response_id_cartao_value}}}
+        /// Show the identification Code of the Card (id) which was created
         /// </summary>
-        /// <value>{{{cartao_embossing_response_id_cartao_value}}}</value>
+        /// <value>Show the identification Code of the Card (id) which was created</value>
         [DataMember(Name="idCartao", EmitDefaultValue=false)]
         public long? IdCartao { get; set; }
     
         /// <summary>
-        /// {{{cartao_embossing_response_id_bandeira_value}}}
+        /// Show the identification code of the flag (id) which the card belongs, when it is flagged
         /// </summary>
-        /// <value>{{{cartao_embossing_response_id_bandeira_value}}}</value>
+        /// <value>Show the identification code of the flag (id) which the card belongs, when it is flagged</value>
         [DataMember(Name="idBandeira", EmitDefaultValue=false)]
         public long? IdBandeira { get; set; }
     
         /// <summary>
-        /// {{{cartao_embossing_response_id_tipo_cartao_value}}}
+        /// Show the identification Code of the Card type (id) attributed to the card
         /// </summary>
-        /// <value>{{{cartao_embossing_response_id_tipo_cartao_value}}}</value>
+        /// <value>Show the identification Code of the Card type (id) attributed to the card</value>
         [DataMember(Name="idTipoCartao", EmitDefaultValue=false)]
         public long? IdTipoCartao { get; set; }
     
         /// <summary>
-        /// {{{cartao_embossing_response_data_geracao_value}}}
+        /// Show the date of issue of the card
         /// </summary>
-        /// <value>{{{cartao_embossing_response_data_geracao_value}}}</value>
+        /// <value>Show the date of issue of the card</value>
         [DataMember(Name="dataGeracao", EmitDefaultValue=false)]
         public string DataGeracao { get; set; }
     
         /// <summary>
-        /// {{{cartao_embossing_response_data_validade_value}}}
+        /// Show the expiration date of the Card
         /// </summary>
-        /// <value>{{{cartao_embossing_response_data_validade_value}}}</value>
+        /// <value>Show the expiration date of the Card</value>
         [DataMember(Name="dataValidade", EmitDefaultValue=false)]
         public string DataValidade { get; set; }
     
         /// <summary>
-        /// {{{cartao_embossing_response_nome_origem_comercial_value}}}
+        /// Show the name of the Commercial Origin that the register was made of the holder which the Card belongs
         /// </summary>
-        /// <value>{{{cartao_embossing_response_nome_origem_comercial_value}}}</value>
+        /// <value>Show the name of the Commercial Origin that the register was made of the holder which the Card belongs</value>
         [DataMember(Name="nomeOrigemComercial", EmitDefaultValue=false)]
         public string NomeOrigemComercial { get; set; }
     
         /// <summary>
-        /// {{{cartao_embossing_response_cpf_value}}}
+        /// Show the CPF of the Cardholder
         /// </summary>
-        /// <value>{{{cartao_embossing_response_cpf_value}}}</value>
+        /// <value>Show the CPF of the Cardholder</value>
         [DataMember(Name="cpf", EmitDefaultValue=false)]
         public string Cpf { get; set; }
     

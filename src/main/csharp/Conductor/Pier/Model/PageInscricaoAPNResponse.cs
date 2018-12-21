@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{page_inscricao_apn_resposta_descricao}}}
+    /// Subscription list
     /// </summary>
     [DataContract]
     public partial class PageInscricaoAPNResponse :  IEquatable<PageInscricaoAPNResponse>

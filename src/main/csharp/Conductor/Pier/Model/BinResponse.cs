@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{bin_response_description}}}
+    /// Bin response
     /// </summary>
     [DataContract]
     public partial class BinResponse :  IEquatable<BinResponse>
@@ -22,7 +22,7 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="BinResponse" /> class.
         /// Initializes a new instance of the <see cref="BinResponse" />class.
         /// </summary>
-        /// <param name="Id">{{{bin_response_id_value}}}.</param>
+        /// <param name="Id">Bin id.</param>
 
         public BinResponse(long? Id = null)
         {
@@ -32,9 +32,9 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{bin_response_id_value}}}
+        /// Bin id
         /// </summary>
-        /// <value>{{{bin_response_id_value}}}</value>
+        /// <value>Bin id</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     

@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{cartao_impressao_provisorio_response_description}}}
+    /// Object Provisory Card
     /// </summary>
     [DataContract]
     public partial class CartaoImpressaoProvisorioResponse :  IEquatable<CartaoImpressaoProvisorioResponse>
@@ -23,12 +23,12 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="CartaoImpressaoProvisorioResponse" />class.
         /// </summary>
         /// <param name="FlagVirtual">FlagVirtual.</param>
-        /// <param name="IdConta">{{{cartao_impressao_provisorio_response_id_conta_value}}}.</param>
-        /// <param name="IdPessoa">{{{cartao_impressao_provisorio_response_id_pessoa_value}}}.</param>
-        /// <param name="IdCartao">{{{cartao_impressao_provisorio_response_id_cartao_value}}}.</param>
-        /// <param name="NumeroCartao">{{{cartao_impressao_provisorio_response_numero_cartao_value}}}.</param>
-        /// <param name="NomePlastico">{{{cartao_impressao_provisorio_response_nome_plastico_value}}}.</param>
-        /// <param name="DataValidade">{{{cartao_impressao_provisorio_response_data_validade_value}}}.</param>
+        /// <param name="IdConta">Show the identification code of the account (id) which the created card belongs.</param>
+        /// <param name="IdPessoa">Show the Identification Code of the Person (id) cardholder of the card created.</param>
+        /// <param name="IdCartao">Show the Identification Code of the Card (id) that was created.</param>
+        /// <param name="NumeroCartao">Show the card number.</param>
+        /// <param name="NomePlastico">Show the name of the Cardholder.</param>
+        /// <param name="DataValidade">Show the expiration date of the card.</param>
 
         public CartaoImpressaoProvisorioResponse(int? FlagVirtual = null, long? IdConta = null, long? IdPessoa = null, long? IdCartao = null, string NumeroCartao = null, string NomePlastico = null, string DataValidade = null)
         {
@@ -50,44 +50,44 @@ namespace Conductor.Pier.Model
         public int? FlagVirtual { get; set; }
     
         /// <summary>
-        /// {{{cartao_impressao_provisorio_response_id_conta_value}}}
+        /// Show the identification code of the account (id) which the created card belongs
         /// </summary>
-        /// <value>{{{cartao_impressao_provisorio_response_id_conta_value}}}</value>
+        /// <value>Show the identification code of the account (id) which the created card belongs</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// {{{cartao_impressao_provisorio_response_id_pessoa_value}}}
+        /// Show the Identification Code of the Person (id) cardholder of the card created
         /// </summary>
-        /// <value>{{{cartao_impressao_provisorio_response_id_pessoa_value}}}</value>
+        /// <value>Show the Identification Code of the Person (id) cardholder of the card created</value>
         [DataMember(Name="idPessoa", EmitDefaultValue=false)]
         public long? IdPessoa { get; set; }
     
         /// <summary>
-        /// {{{cartao_impressao_provisorio_response_id_cartao_value}}}
+        /// Show the Identification Code of the Card (id) that was created
         /// </summary>
-        /// <value>{{{cartao_impressao_provisorio_response_id_cartao_value}}}</value>
+        /// <value>Show the Identification Code of the Card (id) that was created</value>
         [DataMember(Name="idCartao", EmitDefaultValue=false)]
         public long? IdCartao { get; set; }
     
         /// <summary>
-        /// {{{cartao_impressao_provisorio_response_numero_cartao_value}}}
+        /// Show the card number
         /// </summary>
-        /// <value>{{{cartao_impressao_provisorio_response_numero_cartao_value}}}</value>
+        /// <value>Show the card number</value>
         [DataMember(Name="numeroCartao", EmitDefaultValue=false)]
         public string NumeroCartao { get; set; }
     
         /// <summary>
-        /// {{{cartao_impressao_provisorio_response_nome_plastico_value}}}
+        /// Show the name of the Cardholder
         /// </summary>
-        /// <value>{{{cartao_impressao_provisorio_response_nome_plastico_value}}}</value>
+        /// <value>Show the name of the Cardholder</value>
         [DataMember(Name="nomePlastico", EmitDefaultValue=false)]
         public string NomePlastico { get; set; }
     
         /// <summary>
-        /// {{{cartao_impressao_provisorio_response_data_validade_value}}}
+        /// Show the expiration date of the card
         /// </summary>
-        /// <value>{{{cartao_impressao_provisorio_response_data_validade_value}}}</value>
+        /// <value>Show the expiration date of the card</value>
         [DataMember(Name="dataValidade", EmitDefaultValue=false)]
         public string DataValidade { get; set; }
     

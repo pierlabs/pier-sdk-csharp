@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{page_status_oportunidade_response_description}}}
+    /// List of the status opportunity
     /// </summary>
     [DataContract]
     public partial class PageStatusOportunidadeResponse :  IEquatable<PageStatusOportunidadeResponse>

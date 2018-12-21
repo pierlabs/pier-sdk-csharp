@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{page_relatorio_movimentos_controle_processos_response_description}}}
+    /// Representation of page to report query
     /// </summary>
     [DataContract]
     public partial class PageRelatorioMovimentosControleProcessos :  IEquatable<PageRelatorioMovimentosControleProcessos>

@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{maquineta_persist_description}}}
+    /// Object POS
     /// </summary>
     [DataContract]
     public partial class MaquinetaPersist :  IEquatable<MaquinetaPersist>
@@ -22,10 +22,10 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="MaquinetaPersist" /> class.
         /// Initializes a new instance of the <see cref="MaquinetaPersist" />class.
         /// </summary>
-        /// <param name="IdTerminal">{{{maquineta_persist_id_terminal_value}}} (required).</param>
-        /// <param name="IdTipoMaquineta">{{{maquineta_persist_id_tipo_maquineta_value}}} (required).</param>
-        /// <param name="Valor">{{{maquineta_persist_valor_value}}} (required).</param>
-        /// <param name="DataHoraImplantacao">{{{maquineta_persist_data_hora_implantacao_value}}} (required).</param>
+        /// <param name="IdTerminal">Identification Code of the Terminal (id) (required).</param>
+        /// <param name="IdTipoMaquineta">Identification Code of the POS type (id) (required).</param>
+        /// <param name="Valor">Value of the POS maintenance (required).</param>
+        /// <param name="DataHoraImplantacao">Deploy date of the POS, Insert in the format yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39; (required).</param>
 
         public MaquinetaPersist(long? IdTerminal = null, long? IdTipoMaquineta = null, double? Valor = null, string DataHoraImplantacao = null)
         {
@@ -70,30 +70,30 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{maquineta_persist_id_terminal_value}}}
+        /// Identification Code of the Terminal (id)
         /// </summary>
-        /// <value>{{{maquineta_persist_id_terminal_value}}}</value>
+        /// <value>Identification Code of the Terminal (id)</value>
         [DataMember(Name="idTerminal", EmitDefaultValue=false)]
         public long? IdTerminal { get; set; }
     
         /// <summary>
-        /// {{{maquineta_persist_id_tipo_maquineta_value}}}
+        /// Identification Code of the POS type (id)
         /// </summary>
-        /// <value>{{{maquineta_persist_id_tipo_maquineta_value}}}</value>
+        /// <value>Identification Code of the POS type (id)</value>
         [DataMember(Name="idTipoMaquineta", EmitDefaultValue=false)]
         public long? IdTipoMaquineta { get; set; }
     
         /// <summary>
-        /// {{{maquineta_persist_valor_value}}}
+        /// Value of the POS maintenance
         /// </summary>
-        /// <value>{{{maquineta_persist_valor_value}}}</value>
+        /// <value>Value of the POS maintenance</value>
         [DataMember(Name="valor", EmitDefaultValue=false)]
         public double? Valor { get; set; }
     
         /// <summary>
-        /// {{{maquineta_persist_data_hora_implantacao_value}}}
+        /// Deploy date of the POS, Insert in the format yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;
         /// </summary>
-        /// <value>{{{maquineta_persist_data_hora_implantacao_value}}}</value>
+        /// <value>Deploy date of the POS, Insert in the format yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;</value>
         [DataMember(Name="dataHoraImplantacao", EmitDefaultValue=false)]
         public string DataHoraImplantacao { get; set; }
     

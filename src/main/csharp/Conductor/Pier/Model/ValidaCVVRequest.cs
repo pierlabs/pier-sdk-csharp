@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{valida_c_v_v_request_description}}}
+    /// Request Representation of the CVV validation
     /// </summary>
     [DataContract]
     public partial class ValidaCVVRequest :  IEquatable<ValidaCVVRequest>
@@ -22,8 +22,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="ValidaCVVRequest" /> class.
         /// Initializes a new instance of the <see cref="ValidaCVVRequest" />class.
         /// </summary>
-        /// <param name="IdChaveCriptografia">{{{valida_c_v_v_request_id_chave_criptografia_value}}}.</param>
-        /// <param name="Cvv">{{{valida_c_v_v_request_cvv_value}}}.</param>
+        /// <param name="IdChaveCriptografia">Identification Code of the encrypted key.</param>
+        /// <param name="Cvv">Value of the Card Checking (CVV).</param>
 
         public ValidaCVVRequest(long? IdChaveCriptografia = null, string Cvv = null)
         {
@@ -34,16 +34,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{valida_c_v_v_request_id_chave_criptografia_value}}}
+        /// Identification Code of the encrypted key
         /// </summary>
-        /// <value>{{{valida_c_v_v_request_id_chave_criptografia_value}}}</value>
+        /// <value>Identification Code of the encrypted key</value>
         [DataMember(Name="idChaveCriptografia", EmitDefaultValue=false)]
         public long? IdChaveCriptografia { get; set; }
     
         /// <summary>
-        /// {{{valida_c_v_v_request_cvv_value}}}
+        /// Value of the Card Checking (CVV)
         /// </summary>
-        /// <value>{{{valida_c_v_v_request_cvv_value}}}</value>
+        /// <value>Value of the Card Checking (CVV)</value>
         [DataMember(Name="cvv", EmitDefaultValue=false)]
         public string Cvv { get; set; }
     

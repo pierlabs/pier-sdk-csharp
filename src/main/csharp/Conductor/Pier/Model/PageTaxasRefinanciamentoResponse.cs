@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{page_taxas_refinanciamento_response_description}}}
+    /// Lista das taxas e tarifas
     /// </summary>
     [DataContract]
     public partial class PageTaxasRefinanciamentoResponse :  IEquatable<PageTaxasRefinanciamentoResponse>

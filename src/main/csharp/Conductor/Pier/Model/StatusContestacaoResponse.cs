@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{status_contestacao_response_description}}}
+    /// Return of the contested status list
     /// </summary>
     [DataContract]
     public partial class StatusContestacaoResponse :  IEquatable<StatusContestacaoResponse>
@@ -22,8 +22,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="StatusContestacaoResponse" /> class.
         /// Initializes a new instance of the <see cref="StatusContestacaoResponse" />class.
         /// </summary>
-        /// <param name="IdStatusContestacao">{{{status_contestacao_request_idstatuscontestacao_value}}}.</param>
-        /// <param name="Descricao">{{{status_contestacao_response_descricao_value}}}.</param>
+        /// <param name="IdStatusContestacao">Id of status contestation.</param>
+        /// <param name="Descricao">Contested Status description.</param>
 
         public StatusContestacaoResponse(long? IdStatusContestacao = null, string Descricao = null)
         {
@@ -34,16 +34,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{status_contestacao_request_idstatuscontestacao_value}}}
+        /// Id of status contestation
         /// </summary>
-        /// <value>{{{status_contestacao_request_idstatuscontestacao_value}}}</value>
+        /// <value>Id of status contestation</value>
         [DataMember(Name="idStatusContestacao", EmitDefaultValue=false)]
         public long? IdStatusContestacao { get; set; }
     
         /// <summary>
-        /// {{{status_contestacao_response_descricao_value}}}
+        /// Contested Status description
         /// </summary>
-        /// <value>{{{status_contestacao_response_descricao_value}}}</value>
+        /// <value>Contested Status description</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     

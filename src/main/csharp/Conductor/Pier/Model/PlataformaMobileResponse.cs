@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{plataforma_mobile_response_description}}}
+    /// Platform Mobile
     /// </summary>
     [DataContract]
     public partial class PlataformaMobileResponse :  IEquatable<PlataformaMobileResponse>
@@ -22,8 +22,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="PlataformaMobileResponse" /> class.
         /// Initializes a new instance of the <see cref="PlataformaMobileResponse" />class.
         /// </summary>
-        /// <param name="Id">{{{plataforma_mobile_response_id_value}}}.</param>
-        /// <param name="Nome">{{{plataforma_mobile_response_nome_value}}}.</param>
+        /// <param name="Id">Identifier of the Platform.</param>
+        /// <param name="Nome">Platform Name.</param>
 
         public PlataformaMobileResponse(long? Id = null, string Nome = null)
         {
@@ -34,16 +34,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{plataforma_mobile_response_id_value}}}
+        /// Identifier of the Platform
         /// </summary>
-        /// <value>{{{plataforma_mobile_response_id_value}}}</value>
+        /// <value>Identifier of the Platform</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{plataforma_mobile_response_nome_value}}}
+        /// Platform Name
         /// </summary>
-        /// <value>{{{plataforma_mobile_response_nome_value}}}</value>
+        /// <value>Platform Name</value>
         [DataMember(Name="nome", EmitDefaultValue=false)]
         public string Nome { get; set; }
     

@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{plano_parcelamento_response_description}}}
+    /// Response Representa??o of the installment plan resource
     /// </summary>
     [DataContract]
     public partial class PlanoParcelamentoResponse :  IEquatable<PlanoParcelamentoResponse>
@@ -22,26 +22,26 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="PlanoParcelamentoResponse" /> class.
         /// Initializes a new instance of the <see cref="PlanoParcelamentoResponse" />class.
         /// </summary>
-        /// <param name="Id">{{{plano_parcelamento_response_id_value}}}.</param>
-        /// <param name="DataFechamentoFatura">{{{plano_parcelamento_response_data_fechamento_fatura_value}}}.</param>
-        /// <param name="DataVencimentoPadrao">{{{plano_parcelamento_response_data_vencimento_padrao_value}}}.</param>
-        /// <param name="ValorTotalFatura">{{{plano_parcelamento_response_valor_total_fatura_value}}}.</param>
-        /// <param name="QuantidadeParcelas">{{{plano_parcelamento_response_quantidade_parcelas_value}}}.</param>
-        /// <param name="ValorParcela">{{{plano_parcelamento_response_valor_parcela_value}}}.</param>
-        /// <param name="ValorEntrada">{{{plano_parcelamento_response_valor_entrada_value}}}.</param>
-        /// <param name="TaxaRefinanciamento">{{{plano_parcelamento_response_taxa_refinanciamento_value}}}.</param>
-        /// <param name="CustoEfetivoTotal">{{{plano_parcelamento_response_custo_efetivo_total_value}}}.</param>
-        /// <param name="ValorTotalRefinanciamento">{{{plano_parcelamento_response_valor_total_refinanciamento_value}}}.</param>
-        /// <param name="ValorIOF">{{{plano_parcelamento_response_valor_i_o_f_value}}}.</param>
-        /// <param name="ValorTAC">{{{plano_parcelamento_response_valor_t_a_c_value}}}.</param>
-        /// <param name="StatusAdesao">{{{plano_parcelamento_response_status_adesao_value}}}.</param>
-        /// <param name="DataInclusao">{{{plano_parcelamento_response_data_inclusao_value}}}.</param>
-        /// <param name="DataProcessamentoAdesao">{{{plano_parcelamento_response_data_processamento_adesao_value}}}.</param>
-        /// <param name="IdConta">{{{plano_parcelamento_response_id_conta_value}}}.</param>
-        /// <param name="IdServicoTipo">{{{plano_parcelamento_response_id_servico_tipo_value}}}.</param>
-        /// <param name="DescricaoServicoTipo">{{{plano_parcelamento_response_descricao_servico_tipo_value}}}.</param>
-        /// <param name="ComEntrada">{{{plano_parcelamento_response_com_entrada_value}}}.</param>
-        /// <param name="NomeCampanha">{{{plano_parcelamento_response_nome_campanha_value}}}.</param>
+        /// <param name="Id">Identifier of the Installment.</param>
+        /// <param name="DataFechamentoFatura">date of the Closing invoice.</param>
+        /// <param name="DataVencimentoPadrao">Standard Expiration Date.</param>
+        /// <param name="ValorTotalFatura">Total value of the invoice.</param>
+        /// <param name="QuantidadeParcelas">Quantity of parcels.</param>
+        /// <param name="ValorParcela">Parcel Value.</param>
+        /// <param name="ValorEntrada">entrance value.</param>
+        /// <param name="TaxaRefinanciamento">Refinancing Taxes.</param>
+        /// <param name="CustoEfetivoTotal">Total acquisition cost.</param>
+        /// <param name="ValorTotalRefinanciamento">Total value of the refinancing.</param>
+        /// <param name="ValorIOF">Value of the IOF.</param>
+        /// <param name="ValorTAC">TAC value.</param>
+        /// <param name="StatusAdesao">Status of the Accession.</param>
+        /// <param name="DataInclusao">Inclusion date.</param>
+        /// <param name="DataProcessamentoAdesao">Processing date of the Accession.</param>
+        /// <param name="IdConta">Identifier of the Account.</param>
+        /// <param name="IdServicoTipo">Identification Code of the Service type.</param>
+        /// <param name="DescricaoServicoTipo">Description of the service type.</param>
+        /// <param name="ComEntrada">Indicate if the invoice was with an entrance.</param>
+        /// <param name="NomeCampanha">Campaign Name.</param>
 
         public PlanoParcelamentoResponse(long? Id = null, string DataFechamentoFatura = null, string DataVencimentoPadrao = null, double? ValorTotalFatura = null, int? QuantidadeParcelas = null, double? ValorParcela = null, double? ValorEntrada = null, double? TaxaRefinanciamento = null, double? CustoEfetivoTotal = null, double? ValorTotalRefinanciamento = null, double? ValorIOF = null, double? ValorTAC = null, int? StatusAdesao = null, string DataInclusao = null, string DataProcessamentoAdesao = null, long? IdConta = null, long? IdServicoTipo = null, string DescricaoServicoTipo = null, bool? ComEntrada = null, string NomeCampanha = null)
         {
@@ -70,142 +70,142 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{plano_parcelamento_response_id_value}}}
+        /// Identifier of the Installment
         /// </summary>
-        /// <value>{{{plano_parcelamento_response_id_value}}}</value>
+        /// <value>Identifier of the Installment</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{plano_parcelamento_response_data_fechamento_fatura_value}}}
+        /// date of the Closing invoice
         /// </summary>
-        /// <value>{{{plano_parcelamento_response_data_fechamento_fatura_value}}}</value>
+        /// <value>date of the Closing invoice</value>
         [DataMember(Name="dataFechamentoFatura", EmitDefaultValue=false)]
         public string DataFechamentoFatura { get; set; }
     
         /// <summary>
-        /// {{{plano_parcelamento_response_data_vencimento_padrao_value}}}
+        /// Standard Expiration Date
         /// </summary>
-        /// <value>{{{plano_parcelamento_response_data_vencimento_padrao_value}}}</value>
+        /// <value>Standard Expiration Date</value>
         [DataMember(Name="dataVencimentoPadrao", EmitDefaultValue=false)]
         public string DataVencimentoPadrao { get; set; }
     
         /// <summary>
-        /// {{{plano_parcelamento_response_valor_total_fatura_value}}}
+        /// Total value of the invoice
         /// </summary>
-        /// <value>{{{plano_parcelamento_response_valor_total_fatura_value}}}</value>
+        /// <value>Total value of the invoice</value>
         [DataMember(Name="valorTotalFatura", EmitDefaultValue=false)]
         public double? ValorTotalFatura { get; set; }
     
         /// <summary>
-        /// {{{plano_parcelamento_response_quantidade_parcelas_value}}}
+        /// Quantity of parcels
         /// </summary>
-        /// <value>{{{plano_parcelamento_response_quantidade_parcelas_value}}}</value>
+        /// <value>Quantity of parcels</value>
         [DataMember(Name="quantidadeParcelas", EmitDefaultValue=false)]
         public int? QuantidadeParcelas { get; set; }
     
         /// <summary>
-        /// {{{plano_parcelamento_response_valor_parcela_value}}}
+        /// Parcel Value
         /// </summary>
-        /// <value>{{{plano_parcelamento_response_valor_parcela_value}}}</value>
+        /// <value>Parcel Value</value>
         [DataMember(Name="valorParcela", EmitDefaultValue=false)]
         public double? ValorParcela { get; set; }
     
         /// <summary>
-        /// {{{plano_parcelamento_response_valor_entrada_value}}}
+        /// entrance value
         /// </summary>
-        /// <value>{{{plano_parcelamento_response_valor_entrada_value}}}</value>
+        /// <value>entrance value</value>
         [DataMember(Name="valorEntrada", EmitDefaultValue=false)]
         public double? ValorEntrada { get; set; }
     
         /// <summary>
-        /// {{{plano_parcelamento_response_taxa_refinanciamento_value}}}
+        /// Refinancing Taxes
         /// </summary>
-        /// <value>{{{plano_parcelamento_response_taxa_refinanciamento_value}}}</value>
+        /// <value>Refinancing Taxes</value>
         [DataMember(Name="taxaRefinanciamento", EmitDefaultValue=false)]
         public double? TaxaRefinanciamento { get; set; }
     
         /// <summary>
-        /// {{{plano_parcelamento_response_custo_efetivo_total_value}}}
+        /// Total acquisition cost
         /// </summary>
-        /// <value>{{{plano_parcelamento_response_custo_efetivo_total_value}}}</value>
+        /// <value>Total acquisition cost</value>
         [DataMember(Name="custoEfetivoTotal", EmitDefaultValue=false)]
         public double? CustoEfetivoTotal { get; set; }
     
         /// <summary>
-        /// {{{plano_parcelamento_response_valor_total_refinanciamento_value}}}
+        /// Total value of the refinancing
         /// </summary>
-        /// <value>{{{plano_parcelamento_response_valor_total_refinanciamento_value}}}</value>
+        /// <value>Total value of the refinancing</value>
         [DataMember(Name="valorTotalRefinanciamento", EmitDefaultValue=false)]
         public double? ValorTotalRefinanciamento { get; set; }
     
         /// <summary>
-        /// {{{plano_parcelamento_response_valor_i_o_f_value}}}
+        /// Value of the IOF
         /// </summary>
-        /// <value>{{{plano_parcelamento_response_valor_i_o_f_value}}}</value>
+        /// <value>Value of the IOF</value>
         [DataMember(Name="valorIOF", EmitDefaultValue=false)]
         public double? ValorIOF { get; set; }
     
         /// <summary>
-        /// {{{plano_parcelamento_response_valor_t_a_c_value}}}
+        /// TAC value
         /// </summary>
-        /// <value>{{{plano_parcelamento_response_valor_t_a_c_value}}}</value>
+        /// <value>TAC value</value>
         [DataMember(Name="valorTAC", EmitDefaultValue=false)]
         public double? ValorTAC { get; set; }
     
         /// <summary>
-        /// {{{plano_parcelamento_response_status_adesao_value}}}
+        /// Status of the Accession
         /// </summary>
-        /// <value>{{{plano_parcelamento_response_status_adesao_value}}}</value>
+        /// <value>Status of the Accession</value>
         [DataMember(Name="statusAdesao", EmitDefaultValue=false)]
         public int? StatusAdesao { get; set; }
     
         /// <summary>
-        /// {{{plano_parcelamento_response_data_inclusao_value}}}
+        /// Inclusion date
         /// </summary>
-        /// <value>{{{plano_parcelamento_response_data_inclusao_value}}}</value>
+        /// <value>Inclusion date</value>
         [DataMember(Name="dataInclusao", EmitDefaultValue=false)]
         public string DataInclusao { get; set; }
     
         /// <summary>
-        /// {{{plano_parcelamento_response_data_processamento_adesao_value}}}
+        /// Processing date of the Accession
         /// </summary>
-        /// <value>{{{plano_parcelamento_response_data_processamento_adesao_value}}}</value>
+        /// <value>Processing date of the Accession</value>
         [DataMember(Name="dataProcessamentoAdesao", EmitDefaultValue=false)]
         public string DataProcessamentoAdesao { get; set; }
     
         /// <summary>
-        /// {{{plano_parcelamento_response_id_conta_value}}}
+        /// Identifier of the Account
         /// </summary>
-        /// <value>{{{plano_parcelamento_response_id_conta_value}}}</value>
+        /// <value>Identifier of the Account</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// {{{plano_parcelamento_response_id_servico_tipo_value}}}
+        /// Identification Code of the Service type
         /// </summary>
-        /// <value>{{{plano_parcelamento_response_id_servico_tipo_value}}}</value>
+        /// <value>Identification Code of the Service type</value>
         [DataMember(Name="idServicoTipo", EmitDefaultValue=false)]
         public long? IdServicoTipo { get; set; }
     
         /// <summary>
-        /// {{{plano_parcelamento_response_descricao_servico_tipo_value}}}
+        /// Description of the service type
         /// </summary>
-        /// <value>{{{plano_parcelamento_response_descricao_servico_tipo_value}}}</value>
+        /// <value>Description of the service type</value>
         [DataMember(Name="descricaoServicoTipo", EmitDefaultValue=false)]
         public string DescricaoServicoTipo { get; set; }
     
         /// <summary>
-        /// {{{plano_parcelamento_response_com_entrada_value}}}
+        /// Indicate if the invoice was with an entrance
         /// </summary>
-        /// <value>{{{plano_parcelamento_response_com_entrada_value}}}</value>
+        /// <value>Indicate if the invoice was with an entrance</value>
         [DataMember(Name="comEntrada", EmitDefaultValue=false)]
         public bool? ComEntrada { get; set; }
     
         /// <summary>
-        /// {{{plano_parcelamento_response_nome_campanha_value}}}
+        /// Campaign Name
         /// </summary>
-        /// <value>{{{plano_parcelamento_response_nome_campanha_value}}}</value>
+        /// <value>Campaign Name</value>
         [DataMember(Name="nomeCampanha", EmitDefaultValue=false)]
         public string NomeCampanha { get; set; }
     

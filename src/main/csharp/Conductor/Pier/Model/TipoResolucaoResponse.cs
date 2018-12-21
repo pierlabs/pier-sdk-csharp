@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{tipo_resolucao_response_description}}}
+    /// Object of the answer of the resolution type
     /// </summary>
     [DataContract]
     public partial class TipoResolucaoResponse :  IEquatable<TipoResolucaoResponse>
@@ -22,8 +22,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TipoResolucaoResponse" /> class.
         /// Initializes a new instance of the <see cref="TipoResolucaoResponse" />class.
         /// </summary>
-        /// <param name="Id">{{{tipo_resolucao_response_id_value}}}.</param>
-        /// <param name="Descricao">{{{tipo_resolucao_response_descricao_value}}}.</param>
+        /// <param name="Id">Identification Code of the type of resolution.</param>
+        /// <param name="Descricao">Description of the type of resolution.</param>
 
         public TipoResolucaoResponse(long? Id = null, string Descricao = null)
         {
@@ -34,16 +34,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{tipo_resolucao_response_id_value}}}
+        /// Identification Code of the type of resolution
         /// </summary>
-        /// <value>{{{tipo_resolucao_response_id_value}}}</value>
+        /// <value>Identification Code of the type of resolution</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{tipo_resolucao_response_descricao_value}}}
+        /// Description of the type of resolution
         /// </summary>
-        /// <value>{{{tipo_resolucao_response_descricao_value}}}</value>
+        /// <value>Description of the type of resolution</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     

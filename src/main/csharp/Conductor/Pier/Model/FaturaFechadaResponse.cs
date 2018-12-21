@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{fatura_fechada_response_description}}}
+    /// Invoice
     /// </summary>
     [DataContract]
     public partial class FaturaFechadaResponse :  IEquatable<FaturaFechadaResponse>
@@ -22,34 +22,34 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="FaturaFechadaResponse" /> class.
         /// Initializes a new instance of the <see cref="FaturaFechadaResponse" />class.
         /// </summary>
-        /// <param name="Id">{{{fatura_fechada_response_id_value}}}.</param>
-        /// <param name="IdConta">{{{fatura_fechada_response_id_conta_value}}}.</param>
-        /// <param name="FlagEmiteFatura">{{{fatura_fechada_response_flag_emite_fatura_value}}}.</param>
-        /// <param name="DataVencimentoFatura">{{{fatura_fechada_response_data_vencimento_fatura_value}}}.</param>
-        /// <param name="ValorTotalFatura">{{{fatura_fechada_response_valor_total_fatura_value}}}.</param>
-        /// <param name="ValorFaturaAnterior">{{{fatura_fechada_response_valor_fatura_anterior_value}}}.</param>
-        /// <param name="ValorPagamentoMinimo">{{{fatura_fechada_response_valor_pagamento_minimo_value}}}.</param>
-        /// <param name="TotalComprasNacionais">{{{fatura_fechada_response_total_compras_nacionais_value}}}.</param>
-        /// <param name="TotalComprasInternacionas">{{{fatura_fechada_response_total_compras_internacionas_value}}}.</param>
-        /// <param name="TotalSaquesNacionais">{{{fatura_fechada_response_total_saques_nacionais_value}}}.</param>
-        /// <param name="TotalSaquesInternacionais">{{{fatura_fechada_response_total_saques_internacionais_value}}}.</param>
-        /// <param name="TotalDebitosNacionais">{{{fatura_fechada_response_total_debitos_nacionais_value}}}.</param>
-        /// <param name="TotalDebitosRecorrentes">{{{fatura_fechada_response_total_debitos_recorrentes_value}}}.</param>
-        /// <param name="TotalDebitosInternacionais">{{{fatura_fechada_response_total_debitos_internacionais_value}}}.</param>
-        /// <param name="TotalDebitosDiversosNacionais">{{{fatura_fechada_response_total_debitos_diversos_nacionais_value}}}.</param>
-        /// <param name="TotalDebitosOpcionais">{{{fatura_fechada_response_total_debitos_opcionais_value}}}.</param>
-        /// <param name="TotalPagamentos">{{{fatura_fechada_response_total_pagamentos_value}}}.</param>
-        /// <param name="TotalCreditosNacionais">{{{fatura_fechada_response_total_creditos_nacionais_value}}}.</param>
-        /// <param name="TotalAjustes">{{{fatura_fechada_response_total_ajustes_value}}}.</param>
-        /// <param name="TotalTarifas">{{{fatura_fechada_response_total_tarifas_value}}}.</param>
-        /// <param name="TotalMulta">{{{fatura_fechada_response_total_multa_value}}}.</param>
-        /// <param name="TotalJuros">{{{fatura_fechada_response_total_juros_value}}}.</param>
-        /// <param name="TaxaRotativo">{{{fatura_fechada_response_taxa_rotativo_value}}}.</param>
-        /// <param name="TaxaSaque">{{{fatura_fechada_response_taxa_saque_value}}}.</param>
-        /// <param name="TaxaMaximaProximoPeriodo">{{{fatura_fechada_response_taxa_maxima_proximo_periodo_value}}}.</param>
-        /// <param name="TotalServicos">{{{fatura_fechada_response_total_servicos_value}}} (required).</param>
-        /// <param name="TotalParceladoNacionais">{{{fatura_fechada_response_total_parcelado_nacionais_value}}} (required).</param>
-        /// <param name="TotalParceladoInternacionais">{{{fatura_fechada_response_total_parcelado_internacionais_value}}} (required).</param>
+        /// <param name="Id">Identifier Code of the invoice.</param>
+        /// <param name="IdConta">Identifier code of the account.</param>
+        /// <param name="FlagEmiteFatura">Identifier Code of the account which the invoice refers to.</param>
+        /// <param name="DataVencimentoFatura">Expiration date of the invoice.</param>
+        /// <param name="ValorTotalFatura">Value for the total payment of the invoice.</param>
+        /// <param name="ValorFaturaAnterior">Total value of the previous invoice.</param>
+        /// <param name="ValorPagamentoMinimo">Minimum value for payment of the invoice.</param>
+        /// <param name="TotalComprasNacionais">Total value of the national shops launched in the invoice.</param>
+        /// <param name="TotalComprasInternacionas">Total value of the internatitional shops launched in the invoice.</param>
+        /// <param name="TotalSaquesNacionais">Total value of the national Withdrawals launched in the invoice.</param>
+        /// <param name="TotalSaquesInternacionais">Total value of the international Withdrawals launched in the invoice.</param>
+        /// <param name="TotalDebitosNacionais">Total Value of the national debits launched in the invoice.</param>
+        /// <param name="TotalDebitosRecorrentes">Total Value of the recurrent debits launched in the invoice.</param>
+        /// <param name="TotalDebitosInternacionais">Total value of the international debits launched in the invoice.</param>
+        /// <param name="TotalDebitosDiversosNacionais">Total Value of the Several National Debits launched in the invoice.</param>
+        /// <param name="TotalDebitosOpcionais">Total value of the Several Optional Debits launched in the invoice.</param>
+        /// <param name="TotalPagamentos">total value of the payments launched in the invoice.</param>
+        /// <param name="TotalCreditosNacionais">Total value of the national credits launched in the invoice.</param>
+        /// <param name="TotalAjustes">Total value of the adjustments launched in the invoice.</param>
+        /// <param name="TotalTarifas">Total value of the fees launched in the invoice.</param>
+        /// <param name="TotalMulta">Total Value of the fine launched in the invoice.</param>
+        /// <param name="TotalJuros">Total value of the interest launched in the invoice.</param>
+        /// <param name="TaxaRotativo">Percentage value of the revolving interest taxes.</param>
+        /// <param name="TaxaSaque">Percentage value of the Withdrawal taxe.</param>
+        /// <param name="TaxaMaximaProximoPeriodo">Maximum percentage value of the charges for the next period.</param>
+        /// <param name="TotalServicos">Show the sum of all the charged insurances in the invoice of the client (required).</param>
+        /// <param name="TotalParceladoNacionais">Show the sum of all parceled values + national shops (required).</param>
+        /// <param name="TotalParceladoInternacionais">Show the sum of all the parceled values + international shops (required).</param>
 
         public FaturaFechadaResponse(long? Id = null, long? IdConta = null, int? FlagEmiteFatura = null, string DataVencimentoFatura = null, double? ValorTotalFatura = null, double? ValorFaturaAnterior = null, double? ValorPagamentoMinimo = null, double? TotalComprasNacionais = null, double? TotalComprasInternacionas = null, double? TotalSaquesNacionais = null, double? TotalSaquesInternacionais = null, double? TotalDebitosNacionais = null, double? TotalDebitosRecorrentes = null, double? TotalDebitosInternacionais = null, double? TotalDebitosDiversosNacionais = null, double? TotalDebitosOpcionais = null, double? TotalPagamentos = null, double? TotalCreditosNacionais = null, double? TotalAjustes = null, double? TotalTarifas = null, double? TotalMulta = null, double? TotalJuros = null, double? TaxaRotativo = null, double? TaxaSaque = null, double? TaxaMaximaProximoPeriodo = null, double? TotalServicos = null, double? TotalParceladoNacionais = null, double? TotalParceladoInternacionais = null)
         {
@@ -110,198 +110,198 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{fatura_fechada_response_id_value}}}
+        /// Identifier Code of the invoice
         /// </summary>
-        /// <value>{{{fatura_fechada_response_id_value}}}</value>
+        /// <value>Identifier Code of the invoice</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{fatura_fechada_response_id_conta_value}}}
+        /// Identifier code of the account
         /// </summary>
-        /// <value>{{{fatura_fechada_response_id_conta_value}}}</value>
+        /// <value>Identifier code of the account</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// {{{fatura_fechada_response_flag_emite_fatura_value}}}
+        /// Identifier Code of the account which the invoice refers to
         /// </summary>
-        /// <value>{{{fatura_fechada_response_flag_emite_fatura_value}}}</value>
+        /// <value>Identifier Code of the account which the invoice refers to</value>
         [DataMember(Name="flagEmiteFatura", EmitDefaultValue=false)]
         public int? FlagEmiteFatura { get; set; }
     
         /// <summary>
-        /// {{{fatura_fechada_response_data_vencimento_fatura_value}}}
+        /// Expiration date of the invoice
         /// </summary>
-        /// <value>{{{fatura_fechada_response_data_vencimento_fatura_value}}}</value>
+        /// <value>Expiration date of the invoice</value>
         [DataMember(Name="dataVencimentoFatura", EmitDefaultValue=false)]
         public string DataVencimentoFatura { get; set; }
     
         /// <summary>
-        /// {{{fatura_fechada_response_valor_total_fatura_value}}}
+        /// Value for the total payment of the invoice
         /// </summary>
-        /// <value>{{{fatura_fechada_response_valor_total_fatura_value}}}</value>
+        /// <value>Value for the total payment of the invoice</value>
         [DataMember(Name="valorTotalFatura", EmitDefaultValue=false)]
         public double? ValorTotalFatura { get; set; }
     
         /// <summary>
-        /// {{{fatura_fechada_response_valor_fatura_anterior_value}}}
+        /// Total value of the previous invoice
         /// </summary>
-        /// <value>{{{fatura_fechada_response_valor_fatura_anterior_value}}}</value>
+        /// <value>Total value of the previous invoice</value>
         [DataMember(Name="valorFaturaAnterior", EmitDefaultValue=false)]
         public double? ValorFaturaAnterior { get; set; }
     
         /// <summary>
-        /// {{{fatura_fechada_response_valor_pagamento_minimo_value}}}
+        /// Minimum value for payment of the invoice
         /// </summary>
-        /// <value>{{{fatura_fechada_response_valor_pagamento_minimo_value}}}</value>
+        /// <value>Minimum value for payment of the invoice</value>
         [DataMember(Name="valorPagamentoMinimo", EmitDefaultValue=false)]
         public double? ValorPagamentoMinimo { get; set; }
     
         /// <summary>
-        /// {{{fatura_fechada_response_total_compras_nacionais_value}}}
+        /// Total value of the national shops launched in the invoice
         /// </summary>
-        /// <value>{{{fatura_fechada_response_total_compras_nacionais_value}}}</value>
+        /// <value>Total value of the national shops launched in the invoice</value>
         [DataMember(Name="totalComprasNacionais", EmitDefaultValue=false)]
         public double? TotalComprasNacionais { get; set; }
     
         /// <summary>
-        /// {{{fatura_fechada_response_total_compras_internacionas_value}}}
+        /// Total value of the internatitional shops launched in the invoice
         /// </summary>
-        /// <value>{{{fatura_fechada_response_total_compras_internacionas_value}}}</value>
+        /// <value>Total value of the internatitional shops launched in the invoice</value>
         [DataMember(Name="totalComprasInternacionas", EmitDefaultValue=false)]
         public double? TotalComprasInternacionas { get; set; }
     
         /// <summary>
-        /// {{{fatura_fechada_response_total_saques_nacionais_value}}}
+        /// Total value of the national Withdrawals launched in the invoice
         /// </summary>
-        /// <value>{{{fatura_fechada_response_total_saques_nacionais_value}}}</value>
+        /// <value>Total value of the national Withdrawals launched in the invoice</value>
         [DataMember(Name="totalSaquesNacionais", EmitDefaultValue=false)]
         public double? TotalSaquesNacionais { get; set; }
     
         /// <summary>
-        /// {{{fatura_fechada_response_total_saques_internacionais_value}}}
+        /// Total value of the international Withdrawals launched in the invoice
         /// </summary>
-        /// <value>{{{fatura_fechada_response_total_saques_internacionais_value}}}</value>
+        /// <value>Total value of the international Withdrawals launched in the invoice</value>
         [DataMember(Name="totalSaquesInternacionais", EmitDefaultValue=false)]
         public double? TotalSaquesInternacionais { get; set; }
     
         /// <summary>
-        /// {{{fatura_fechada_response_total_debitos_nacionais_value}}}
+        /// Total Value of the national debits launched in the invoice
         /// </summary>
-        /// <value>{{{fatura_fechada_response_total_debitos_nacionais_value}}}</value>
+        /// <value>Total Value of the national debits launched in the invoice</value>
         [DataMember(Name="totalDebitosNacionais", EmitDefaultValue=false)]
         public double? TotalDebitosNacionais { get; set; }
     
         /// <summary>
-        /// {{{fatura_fechada_response_total_debitos_recorrentes_value}}}
+        /// Total Value of the recurrent debits launched in the invoice
         /// </summary>
-        /// <value>{{{fatura_fechada_response_total_debitos_recorrentes_value}}}</value>
+        /// <value>Total Value of the recurrent debits launched in the invoice</value>
         [DataMember(Name="totalDebitosRecorrentes", EmitDefaultValue=false)]
         public double? TotalDebitosRecorrentes { get; set; }
     
         /// <summary>
-        /// {{{fatura_fechada_response_total_debitos_internacionais_value}}}
+        /// Total value of the international debits launched in the invoice
         /// </summary>
-        /// <value>{{{fatura_fechada_response_total_debitos_internacionais_value}}}</value>
+        /// <value>Total value of the international debits launched in the invoice</value>
         [DataMember(Name="totalDebitosInternacionais", EmitDefaultValue=false)]
         public double? TotalDebitosInternacionais { get; set; }
     
         /// <summary>
-        /// {{{fatura_fechada_response_total_debitos_diversos_nacionais_value}}}
+        /// Total Value of the Several National Debits launched in the invoice
         /// </summary>
-        /// <value>{{{fatura_fechada_response_total_debitos_diversos_nacionais_value}}}</value>
+        /// <value>Total Value of the Several National Debits launched in the invoice</value>
         [DataMember(Name="totalDebitosDiversosNacionais", EmitDefaultValue=false)]
         public double? TotalDebitosDiversosNacionais { get; set; }
     
         /// <summary>
-        /// {{{fatura_fechada_response_total_debitos_opcionais_value}}}
+        /// Total value of the Several Optional Debits launched in the invoice
         /// </summary>
-        /// <value>{{{fatura_fechada_response_total_debitos_opcionais_value}}}</value>
+        /// <value>Total value of the Several Optional Debits launched in the invoice</value>
         [DataMember(Name="totalDebitosOpcionais", EmitDefaultValue=false)]
         public double? TotalDebitosOpcionais { get; set; }
     
         /// <summary>
-        /// {{{fatura_fechada_response_total_pagamentos_value}}}
+        /// total value of the payments launched in the invoice
         /// </summary>
-        /// <value>{{{fatura_fechada_response_total_pagamentos_value}}}</value>
+        /// <value>total value of the payments launched in the invoice</value>
         [DataMember(Name="totalPagamentos", EmitDefaultValue=false)]
         public double? TotalPagamentos { get; set; }
     
         /// <summary>
-        /// {{{fatura_fechada_response_total_creditos_nacionais_value}}}
+        /// Total value of the national credits launched in the invoice
         /// </summary>
-        /// <value>{{{fatura_fechada_response_total_creditos_nacionais_value}}}</value>
+        /// <value>Total value of the national credits launched in the invoice</value>
         [DataMember(Name="totalCreditosNacionais", EmitDefaultValue=false)]
         public double? TotalCreditosNacionais { get; set; }
     
         /// <summary>
-        /// {{{fatura_fechada_response_total_ajustes_value}}}
+        /// Total value of the adjustments launched in the invoice
         /// </summary>
-        /// <value>{{{fatura_fechada_response_total_ajustes_value}}}</value>
+        /// <value>Total value of the adjustments launched in the invoice</value>
         [DataMember(Name="totalAjustes", EmitDefaultValue=false)]
         public double? TotalAjustes { get; set; }
     
         /// <summary>
-        /// {{{fatura_fechada_response_total_tarifas_value}}}
+        /// Total value of the fees launched in the invoice
         /// </summary>
-        /// <value>{{{fatura_fechada_response_total_tarifas_value}}}</value>
+        /// <value>Total value of the fees launched in the invoice</value>
         [DataMember(Name="totalTarifas", EmitDefaultValue=false)]
         public double? TotalTarifas { get; set; }
     
         /// <summary>
-        /// {{{fatura_fechada_response_total_multa_value}}}
+        /// Total Value of the fine launched in the invoice
         /// </summary>
-        /// <value>{{{fatura_fechada_response_total_multa_value}}}</value>
+        /// <value>Total Value of the fine launched in the invoice</value>
         [DataMember(Name="totalMulta", EmitDefaultValue=false)]
         public double? TotalMulta { get; set; }
     
         /// <summary>
-        /// {{{fatura_fechada_response_total_juros_value}}}
+        /// Total value of the interest launched in the invoice
         /// </summary>
-        /// <value>{{{fatura_fechada_response_total_juros_value}}}</value>
+        /// <value>Total value of the interest launched in the invoice</value>
         [DataMember(Name="totalJuros", EmitDefaultValue=false)]
         public double? TotalJuros { get; set; }
     
         /// <summary>
-        /// {{{fatura_fechada_response_taxa_rotativo_value}}}
+        /// Percentage value of the revolving interest taxes
         /// </summary>
-        /// <value>{{{fatura_fechada_response_taxa_rotativo_value}}}</value>
+        /// <value>Percentage value of the revolving interest taxes</value>
         [DataMember(Name="taxaRotativo", EmitDefaultValue=false)]
         public double? TaxaRotativo { get; set; }
     
         /// <summary>
-        /// {{{fatura_fechada_response_taxa_saque_value}}}
+        /// Percentage value of the Withdrawal taxe
         /// </summary>
-        /// <value>{{{fatura_fechada_response_taxa_saque_value}}}</value>
+        /// <value>Percentage value of the Withdrawal taxe</value>
         [DataMember(Name="taxaSaque", EmitDefaultValue=false)]
         public double? TaxaSaque { get; set; }
     
         /// <summary>
-        /// {{{fatura_fechada_response_taxa_maxima_proximo_periodo_value}}}
+        /// Maximum percentage value of the charges for the next period
         /// </summary>
-        /// <value>{{{fatura_fechada_response_taxa_maxima_proximo_periodo_value}}}</value>
+        /// <value>Maximum percentage value of the charges for the next period</value>
         [DataMember(Name="taxaMaximaProximoPeriodo", EmitDefaultValue=false)]
         public double? TaxaMaximaProximoPeriodo { get; set; }
     
         /// <summary>
-        /// {{{fatura_fechada_response_total_servicos_value}}}
+        /// Show the sum of all the charged insurances in the invoice of the client
         /// </summary>
-        /// <value>{{{fatura_fechada_response_total_servicos_value}}}</value>
+        /// <value>Show the sum of all the charged insurances in the invoice of the client</value>
         [DataMember(Name="totalServicos", EmitDefaultValue=false)]
         public double? TotalServicos { get; set; }
     
         /// <summary>
-        /// {{{fatura_fechada_response_total_parcelado_nacionais_value}}}
+        /// Show the sum of all parceled values + national shops
         /// </summary>
-        /// <value>{{{fatura_fechada_response_total_parcelado_nacionais_value}}}</value>
+        /// <value>Show the sum of all parceled values + national shops</value>
         [DataMember(Name="totalParceladoNacionais", EmitDefaultValue=false)]
         public double? TotalParceladoNacionais { get; set; }
     
         /// <summary>
-        /// {{{fatura_fechada_response_total_parcelado_internacionais_value}}}
+        /// Show the sum of all the parceled values + international shops
         /// </summary>
-        /// <value>{{{fatura_fechada_response_total_parcelado_internacionais_value}}}</value>
+        /// <value>Show the sum of all the parceled values + international shops</value>
         [DataMember(Name="totalParceladoInternacionais", EmitDefaultValue=false)]
         public double? TotalParceladoInternacionais { get; set; }
     

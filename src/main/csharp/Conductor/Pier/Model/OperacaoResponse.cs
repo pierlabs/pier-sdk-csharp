@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{operacao_response_description}}}
+    /// Response Representation of the operation resource
     /// </summary>
     [DataContract]
     public partial class OperacaoResponse :  IEquatable<OperacaoResponse>
@@ -22,15 +22,15 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="OperacaoResponse" /> class.
         /// Initializes a new instance of the <see cref="OperacaoResponse" />class.
         /// </summary>
-        /// <param name="IdOperacao">{{{operacao_response_id_operacao_value}}}.</param>
-        /// <param name="CodigoProcessamento">{{{operacao_response_codigo_processamento_value}}}.</param>
-        /// <param name="CodigoProcessamentoCancelamento">{{{operacao_response_codigo_processamento_cancelamento_value}}}.</param>
-        /// <param name="NomeOperacao">{{{operacao_response_nome_operacao_value}}}.</param>
-        /// <param name="FlagCobraJuros">{{{operacao_response_flag_cobra_juros_value}}}.</param>
-        /// <param name="FlagCobraTarifa">{{{operacao_response_flag_cobra_tarifa_value}}}.</param>
-        /// <param name="Carencia">{{{operacao_response_carencia_value}}}.</param>
-        /// <param name="FlagPermitirParcelamento">{{{operacao_response_flag_permitir_parcelamento_value}}}.</param>
-        /// <param name="FlagManterTaxaJurosNoRotativo">{{{operacao_response_flag_manter_taxa_juros_no_rotativo_value}}}.</param>
+        /// <param name="IdOperacao">Code that identifies the operation.</param>
+        /// <param name="CodigoProcessamento">Processing Code used in transaction with the authorizer.</param>
+        /// <param name="CodigoProcessamentoCancelamento">Processing Code used to cancel transactions in the authorizer.</param>
+        /// <param name="NomeOperacao">Operation name.</param>
+        /// <param name="FlagCobraJuros">Flag indicative for the charge of interest.</param>
+        /// <param name="FlagCobraTarifa">Flag indicative for the charge of taxes.</param>
+        /// <param name="Carencia">Quantity of months for the Lack.</param>
+        /// <param name="FlagPermitirParcelamento">Allow parceled transactions.</param>
+        /// <param name="FlagManterTaxaJurosNoRotativo">Boolean that signals to all transactions of this operation type must use the purchase interest rate as the due balance interest rate.</param>
 
         public OperacaoResponse(long? IdOperacao = null, string CodigoProcessamento = null, string CodigoProcessamentoCancelamento = null, string NomeOperacao = null, bool? FlagCobraJuros = null, bool? FlagCobraTarifa = null, int? Carencia = null, bool? FlagPermitirParcelamento = null, bool? FlagManterTaxaJurosNoRotativo = null)
         {
@@ -48,65 +48,65 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{operacao_response_id_operacao_value}}}
+        /// Code that identifies the operation
         /// </summary>
-        /// <value>{{{operacao_response_id_operacao_value}}}</value>
+        /// <value>Code that identifies the operation</value>
         [DataMember(Name="idOperacao", EmitDefaultValue=false)]
         public long? IdOperacao { get; set; }
     
         /// <summary>
-        /// {{{operacao_response_codigo_processamento_value}}}
+        /// Processing Code used in transaction with the authorizer
         /// </summary>
-        /// <value>{{{operacao_response_codigo_processamento_value}}}</value>
+        /// <value>Processing Code used in transaction with the authorizer</value>
         [DataMember(Name="codigoProcessamento", EmitDefaultValue=false)]
         public string CodigoProcessamento { get; set; }
     
         /// <summary>
-        /// {{{operacao_response_codigo_processamento_cancelamento_value}}}
+        /// Processing Code used to cancel transactions in the authorizer
         /// </summary>
-        /// <value>{{{operacao_response_codigo_processamento_cancelamento_value}}}</value>
+        /// <value>Processing Code used to cancel transactions in the authorizer</value>
         [DataMember(Name="codigoProcessamentoCancelamento", EmitDefaultValue=false)]
         public string CodigoProcessamentoCancelamento { get; set; }
     
         /// <summary>
-        /// {{{operacao_response_nome_operacao_value}}}
+        /// Operation name
         /// </summary>
-        /// <value>{{{operacao_response_nome_operacao_value}}}</value>
+        /// <value>Operation name</value>
         [DataMember(Name="nomeOperacao", EmitDefaultValue=false)]
         public string NomeOperacao { get; set; }
     
         /// <summary>
-        /// {{{operacao_response_flag_cobra_juros_value}}}
+        /// Flag indicative for the charge of interest
         /// </summary>
-        /// <value>{{{operacao_response_flag_cobra_juros_value}}}</value>
+        /// <value>Flag indicative for the charge of interest</value>
         [DataMember(Name="flagCobraJuros", EmitDefaultValue=false)]
         public bool? FlagCobraJuros { get; set; }
     
         /// <summary>
-        /// {{{operacao_response_flag_cobra_tarifa_value}}}
+        /// Flag indicative for the charge of taxes
         /// </summary>
-        /// <value>{{{operacao_response_flag_cobra_tarifa_value}}}</value>
+        /// <value>Flag indicative for the charge of taxes</value>
         [DataMember(Name="flagCobraTarifa", EmitDefaultValue=false)]
         public bool? FlagCobraTarifa { get; set; }
     
         /// <summary>
-        /// {{{operacao_response_carencia_value}}}
+        /// Quantity of months for the Lack
         /// </summary>
-        /// <value>{{{operacao_response_carencia_value}}}</value>
+        /// <value>Quantity of months for the Lack</value>
         [DataMember(Name="carencia", EmitDefaultValue=false)]
         public int? Carencia { get; set; }
     
         /// <summary>
-        /// {{{operacao_response_flag_permitir_parcelamento_value}}}
+        /// Allow parceled transactions
         /// </summary>
-        /// <value>{{{operacao_response_flag_permitir_parcelamento_value}}}</value>
+        /// <value>Allow parceled transactions</value>
         [DataMember(Name="flagPermitirParcelamento", EmitDefaultValue=false)]
         public bool? FlagPermitirParcelamento { get; set; }
     
         /// <summary>
-        /// {{{operacao_response_flag_manter_taxa_juros_no_rotativo_value}}}
+        /// Boolean that signals to all transactions of this operation type must use the purchase interest rate as the due balance interest rate
         /// </summary>
-        /// <value>{{{operacao_response_flag_manter_taxa_juros_no_rotativo_value}}}</value>
+        /// <value>Boolean that signals to all transactions of this operation type must use the purchase interest rate as the due balance interest rate</value>
         [DataMember(Name="flagManterTaxaJurosNoRotativo", EmitDefaultValue=false)]
         public bool? FlagManterTaxaJurosNoRotativo { get; set; }
     

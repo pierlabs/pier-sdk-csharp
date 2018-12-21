@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{fatura_consignada_response_description}}}
+    /// Consignated Invoice
     /// </summary>
     [DataContract]
     public partial class FaturaConsignadaResponse :  IEquatable<FaturaConsignadaResponse>
@@ -22,34 +22,34 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="FaturaConsignadaResponse" /> class.
         /// Initializes a new instance of the <see cref="FaturaConsignadaResponse" />class.
         /// </summary>
-        /// <param name="Id">{{{fatura_consignada_response_id_value}}}.</param>
-        /// <param name="IdConta">{{{fatura_consignada_response_id_conta_value}}}.</param>
-        /// <param name="FlagEmiteFatura">{{{fatura_consignada_response_flag_emite_fatura_value}}}.</param>
-        /// <param name="DataVencimentoFatura">{{{fatura_consignada_response_data_vencimento_fatura_value}}}.</param>
-        /// <param name="ValorTotalFatura">{{{fatura_consignada_response_valor_total_fatura_value}}}.</param>
-        /// <param name="ValorFaturaAnterior">{{{fatura_consignada_response_valor_fatura_anterior_value}}}.</param>
-        /// <param name="ValorPagamentoMinimo">{{{fatura_consignada_response_valor_pagamento_minimo_value}}}.</param>
-        /// <param name="ValorPagamentoConsignado">{{{fatura_consignada_response_valor_pagamento_consignado_value}}}.</param>
-        /// <param name="ValorPagamentoComplementar">{{{fatura_consignada_response_valor_pagamento_complementar_value}}}.</param>
-        /// <param name="TotalComprasNacionais">{{{fatura_consignada_response_total_compras_nacionais_value}}}.</param>
-        /// <param name="TotalComprasInternacionas">{{{fatura_consignada_response_total_compras_internacionas_value}}}.</param>
-        /// <param name="TotalSaquesNacionais">{{{fatura_consignada_response_total_saques_nacionais_value}}}.</param>
-        /// <param name="TotalSaquesInternacionais">{{{fatura_consignada_response_total_saques_internacionais_value}}}.</param>
-        /// <param name="TotalDebitosNacionais">{{{fatura_consignada_response_total_debitos_nacionais_value}}}.</param>
-        /// <param name="TotalDebitosRecorrentes">{{{fatura_consignada_response_total_debitos_recorrentes_value}}}.</param>
-        /// <param name="TotalDebitosInternacionais">{{{fatura_consignada_response_total_debitos_internacionais_value}}}.</param>
-        /// <param name="TotalDebitosDiversosNacionais">{{{fatura_consignada_response_total_debitos_diversos_nacionais_value}}}.</param>
-        /// <param name="TotalDebitosOpcionais">{{{fatura_consignada_response_total_debitos_opcionais_value}}}.</param>
-        /// <param name="TotalPagamentos">{{{fatura_consignada_response_total_pagamentos_value}}}.</param>
-        /// <param name="TotalCreditosNacionais">{{{fatura_consignada_response_total_creditos_nacionais_value}}}.</param>
-        /// <param name="TotalAjustes">{{{fatura_consignada_response_total_ajustes_value}}}.</param>
-        /// <param name="TotalTarifas">{{{fatura_consignada_response_total_tarifas_value}}}.</param>
-        /// <param name="TotalMulta">{{{fatura_consignada_response_total_multa_value}}}.</param>
-        /// <param name="TotalJuros">{{{fatura_consignada_response_total_juros_value}}}.</param>
-        /// <param name="TaxaRotativo">{{{fatura_consignada_response_taxa_rotativo_value}}}.</param>
-        /// <param name="TaxaSaque">{{{fatura_consignada_response_taxa_saque_value}}}.</param>
-        /// <param name="TaxaMaximaProximoPeriodo">{{{fatura_consignada_response_taxa_maxima_proximo_periodo_value}}}.</param>
-        /// <param name="TotalServicos">{{{fatura_consignada_response_total_servicos_value}}} (required).</param>
+        /// <param name="Id">Identifier Code of the Invoice.</param>
+        /// <param name="IdConta">Identifier Code of the Account (id).</param>
+        /// <param name="FlagEmiteFatura">Identifier Code of the account which the invoice refers to.</param>
+        /// <param name="DataVencimentoFatura">Expiration date of the invoice.</param>
+        /// <param name="ValorTotalFatura">Value for total payment of the invoice.</param>
+        /// <param name="ValorFaturaAnterior">Total Value of the Previous invoice.</param>
+        /// <param name="ValorPagamentoMinimo">Minimu payment for the payment of the invoice.</param>
+        /// <param name="ValorPagamentoConsignado">Invoice paid value through the discount in payroll.</param>
+        /// <param name="ValorPagamentoComplementar">Additional Value to consider the minimum payment of the invoice.</param>
+        /// <param name="TotalComprasNacionais">Total Value of the national shops launched in the invoice.</param>
+        /// <param name="TotalComprasInternacionas">Total Value of the international shops launched in the invoice.</param>
+        /// <param name="TotalSaquesNacionais">Total Value of the National Withdrawals launched in the invoice.</param>
+        /// <param name="TotalSaquesInternacionais">Total value of the international Withdrawals launched in the invoice.</param>
+        /// <param name="TotalDebitosNacionais">Total Value of the National Debits launched in the invoice.</param>
+        /// <param name="TotalDebitosRecorrentes">Total Value of the recurrent debits launched in the invoice.</param>
+        /// <param name="TotalDebitosInternacionais">Total value of international debits launched in the invoice.</param>
+        /// <param name="TotalDebitosDiversosNacionais">Total VAlue of the Several National Debits launched in the invoice.</param>
+        /// <param name="TotalDebitosOpcionais">Total Value of the several optional debits launched in the invoice.</param>
+        /// <param name="TotalPagamentos">Total Value of the payments launched in the invoice.</param>
+        /// <param name="TotalCreditosNacionais">Total Value of the national credits launched in the invoice.</param>
+        /// <param name="TotalAjustes">total value of the adjustments launched in the invoice.</param>
+        /// <param name="TotalTarifas">Total value of the fees launched in the invoice.</param>
+        /// <param name="TotalMulta">Total value of the fine launched in the invoice.</param>
+        /// <param name="TotalJuros">Total Value of the interest launched in the invoice.</param>
+        /// <param name="TaxaRotativo">Percentage value of the revolving interest taxe.</param>
+        /// <param name="TaxaSaque">Percentage value of the Withdrawal taxe.</param>
+        /// <param name="TaxaMaximaProximoPeriodo">Maximum percentage value of the charges to the next period.</param>
+        /// <param name="TotalServicos">Show the sum of all the charges in the invoice of the client (required).</param>
 
         public FaturaConsignadaResponse(long? Id = null, long? IdConta = null, int? FlagEmiteFatura = null, string DataVencimentoFatura = null, double? ValorTotalFatura = null, double? ValorFaturaAnterior = null, double? ValorPagamentoMinimo = null, double? ValorPagamentoConsignado = null, double? ValorPagamentoComplementar = null, double? TotalComprasNacionais = null, double? TotalComprasInternacionas = null, double? TotalSaquesNacionais = null, double? TotalSaquesInternacionais = null, double? TotalDebitosNacionais = null, double? TotalDebitosRecorrentes = null, double? TotalDebitosInternacionais = null, double? TotalDebitosDiversosNacionais = null, double? TotalDebitosOpcionais = null, double? TotalPagamentos = null, double? TotalCreditosNacionais = null, double? TotalAjustes = null, double? TotalTarifas = null, double? TotalMulta = null, double? TotalJuros = null, double? TaxaRotativo = null, double? TaxaSaque = null, double? TaxaMaximaProximoPeriodo = null, double? TotalServicos = null)
         {
@@ -94,198 +94,198 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{fatura_consignada_response_id_value}}}
+        /// Identifier Code of the Invoice
         /// </summary>
-        /// <value>{{{fatura_consignada_response_id_value}}}</value>
+        /// <value>Identifier Code of the Invoice</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{fatura_consignada_response_id_conta_value}}}
+        /// Identifier Code of the Account (id)
         /// </summary>
-        /// <value>{{{fatura_consignada_response_id_conta_value}}}</value>
+        /// <value>Identifier Code of the Account (id)</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// {{{fatura_consignada_response_flag_emite_fatura_value}}}
+        /// Identifier Code of the account which the invoice refers to
         /// </summary>
-        /// <value>{{{fatura_consignada_response_flag_emite_fatura_value}}}</value>
+        /// <value>Identifier Code of the account which the invoice refers to</value>
         [DataMember(Name="flagEmiteFatura", EmitDefaultValue=false)]
         public int? FlagEmiteFatura { get; set; }
     
         /// <summary>
-        /// {{{fatura_consignada_response_data_vencimento_fatura_value}}}
+        /// Expiration date of the invoice
         /// </summary>
-        /// <value>{{{fatura_consignada_response_data_vencimento_fatura_value}}}</value>
+        /// <value>Expiration date of the invoice</value>
         [DataMember(Name="dataVencimentoFatura", EmitDefaultValue=false)]
         public string DataVencimentoFatura { get; set; }
     
         /// <summary>
-        /// {{{fatura_consignada_response_valor_total_fatura_value}}}
+        /// Value for total payment of the invoice
         /// </summary>
-        /// <value>{{{fatura_consignada_response_valor_total_fatura_value}}}</value>
+        /// <value>Value for total payment of the invoice</value>
         [DataMember(Name="valorTotalFatura", EmitDefaultValue=false)]
         public double? ValorTotalFatura { get; set; }
     
         /// <summary>
-        /// {{{fatura_consignada_response_valor_fatura_anterior_value}}}
+        /// Total Value of the Previous invoice
         /// </summary>
-        /// <value>{{{fatura_consignada_response_valor_fatura_anterior_value}}}</value>
+        /// <value>Total Value of the Previous invoice</value>
         [DataMember(Name="valorFaturaAnterior", EmitDefaultValue=false)]
         public double? ValorFaturaAnterior { get; set; }
     
         /// <summary>
-        /// {{{fatura_consignada_response_valor_pagamento_minimo_value}}}
+        /// Minimu payment for the payment of the invoice
         /// </summary>
-        /// <value>{{{fatura_consignada_response_valor_pagamento_minimo_value}}}</value>
+        /// <value>Minimu payment for the payment of the invoice</value>
         [DataMember(Name="valorPagamentoMinimo", EmitDefaultValue=false)]
         public double? ValorPagamentoMinimo { get; set; }
     
         /// <summary>
-        /// {{{fatura_consignada_response_valor_pagamento_consignado_value}}}
+        /// Invoice paid value through the discount in payroll
         /// </summary>
-        /// <value>{{{fatura_consignada_response_valor_pagamento_consignado_value}}}</value>
+        /// <value>Invoice paid value through the discount in payroll</value>
         [DataMember(Name="valorPagamentoConsignado", EmitDefaultValue=false)]
         public double? ValorPagamentoConsignado { get; set; }
     
         /// <summary>
-        /// {{{fatura_consignada_response_valor_pagamento_complementar_value}}}
+        /// Additional Value to consider the minimum payment of the invoice
         /// </summary>
-        /// <value>{{{fatura_consignada_response_valor_pagamento_complementar_value}}}</value>
+        /// <value>Additional Value to consider the minimum payment of the invoice</value>
         [DataMember(Name="valorPagamentoComplementar", EmitDefaultValue=false)]
         public double? ValorPagamentoComplementar { get; set; }
     
         /// <summary>
-        /// {{{fatura_consignada_response_total_compras_nacionais_value}}}
+        /// Total Value of the national shops launched in the invoice
         /// </summary>
-        /// <value>{{{fatura_consignada_response_total_compras_nacionais_value}}}</value>
+        /// <value>Total Value of the national shops launched in the invoice</value>
         [DataMember(Name="totalComprasNacionais", EmitDefaultValue=false)]
         public double? TotalComprasNacionais { get; set; }
     
         /// <summary>
-        /// {{{fatura_consignada_response_total_compras_internacionas_value}}}
+        /// Total Value of the international shops launched in the invoice
         /// </summary>
-        /// <value>{{{fatura_consignada_response_total_compras_internacionas_value}}}</value>
+        /// <value>Total Value of the international shops launched in the invoice</value>
         [DataMember(Name="totalComprasInternacionas", EmitDefaultValue=false)]
         public double? TotalComprasInternacionas { get; set; }
     
         /// <summary>
-        /// {{{fatura_consignada_response_total_saques_nacionais_value}}}
+        /// Total Value of the National Withdrawals launched in the invoice
         /// </summary>
-        /// <value>{{{fatura_consignada_response_total_saques_nacionais_value}}}</value>
+        /// <value>Total Value of the National Withdrawals launched in the invoice</value>
         [DataMember(Name="totalSaquesNacionais", EmitDefaultValue=false)]
         public double? TotalSaquesNacionais { get; set; }
     
         /// <summary>
-        /// {{{fatura_consignada_response_total_saques_internacionais_value}}}
+        /// Total value of the international Withdrawals launched in the invoice
         /// </summary>
-        /// <value>{{{fatura_consignada_response_total_saques_internacionais_value}}}</value>
+        /// <value>Total value of the international Withdrawals launched in the invoice</value>
         [DataMember(Name="totalSaquesInternacionais", EmitDefaultValue=false)]
         public double? TotalSaquesInternacionais { get; set; }
     
         /// <summary>
-        /// {{{fatura_consignada_response_total_debitos_nacionais_value}}}
+        /// Total Value of the National Debits launched in the invoice
         /// </summary>
-        /// <value>{{{fatura_consignada_response_total_debitos_nacionais_value}}}</value>
+        /// <value>Total Value of the National Debits launched in the invoice</value>
         [DataMember(Name="totalDebitosNacionais", EmitDefaultValue=false)]
         public double? TotalDebitosNacionais { get; set; }
     
         /// <summary>
-        /// {{{fatura_consignada_response_total_debitos_recorrentes_value}}}
+        /// Total Value of the recurrent debits launched in the invoice
         /// </summary>
-        /// <value>{{{fatura_consignada_response_total_debitos_recorrentes_value}}}</value>
+        /// <value>Total Value of the recurrent debits launched in the invoice</value>
         [DataMember(Name="totalDebitosRecorrentes", EmitDefaultValue=false)]
         public double? TotalDebitosRecorrentes { get; set; }
     
         /// <summary>
-        /// {{{fatura_consignada_response_total_debitos_internacionais_value}}}
+        /// Total value of international debits launched in the invoice
         /// </summary>
-        /// <value>{{{fatura_consignada_response_total_debitos_internacionais_value}}}</value>
+        /// <value>Total value of international debits launched in the invoice</value>
         [DataMember(Name="totalDebitosInternacionais", EmitDefaultValue=false)]
         public double? TotalDebitosInternacionais { get; set; }
     
         /// <summary>
-        /// {{{fatura_consignada_response_total_debitos_diversos_nacionais_value}}}
+        /// Total VAlue of the Several National Debits launched in the invoice
         /// </summary>
-        /// <value>{{{fatura_consignada_response_total_debitos_diversos_nacionais_value}}}</value>
+        /// <value>Total VAlue of the Several National Debits launched in the invoice</value>
         [DataMember(Name="totalDebitosDiversosNacionais", EmitDefaultValue=false)]
         public double? TotalDebitosDiversosNacionais { get; set; }
     
         /// <summary>
-        /// {{{fatura_consignada_response_total_debitos_opcionais_value}}}
+        /// Total Value of the several optional debits launched in the invoice
         /// </summary>
-        /// <value>{{{fatura_consignada_response_total_debitos_opcionais_value}}}</value>
+        /// <value>Total Value of the several optional debits launched in the invoice</value>
         [DataMember(Name="totalDebitosOpcionais", EmitDefaultValue=false)]
         public double? TotalDebitosOpcionais { get; set; }
     
         /// <summary>
-        /// {{{fatura_consignada_response_total_pagamentos_value}}}
+        /// Total Value of the payments launched in the invoice
         /// </summary>
-        /// <value>{{{fatura_consignada_response_total_pagamentos_value}}}</value>
+        /// <value>Total Value of the payments launched in the invoice</value>
         [DataMember(Name="totalPagamentos", EmitDefaultValue=false)]
         public double? TotalPagamentos { get; set; }
     
         /// <summary>
-        /// {{{fatura_consignada_response_total_creditos_nacionais_value}}}
+        /// Total Value of the national credits launched in the invoice
         /// </summary>
-        /// <value>{{{fatura_consignada_response_total_creditos_nacionais_value}}}</value>
+        /// <value>Total Value of the national credits launched in the invoice</value>
         [DataMember(Name="totalCreditosNacionais", EmitDefaultValue=false)]
         public double? TotalCreditosNacionais { get; set; }
     
         /// <summary>
-        /// {{{fatura_consignada_response_total_ajustes_value}}}
+        /// total value of the adjustments launched in the invoice
         /// </summary>
-        /// <value>{{{fatura_consignada_response_total_ajustes_value}}}</value>
+        /// <value>total value of the adjustments launched in the invoice</value>
         [DataMember(Name="totalAjustes", EmitDefaultValue=false)]
         public double? TotalAjustes { get; set; }
     
         /// <summary>
-        /// {{{fatura_consignada_response_total_tarifas_value}}}
+        /// Total value of the fees launched in the invoice
         /// </summary>
-        /// <value>{{{fatura_consignada_response_total_tarifas_value}}}</value>
+        /// <value>Total value of the fees launched in the invoice</value>
         [DataMember(Name="totalTarifas", EmitDefaultValue=false)]
         public double? TotalTarifas { get; set; }
     
         /// <summary>
-        /// {{{fatura_consignada_response_total_multa_value}}}
+        /// Total value of the fine launched in the invoice
         /// </summary>
-        /// <value>{{{fatura_consignada_response_total_multa_value}}}</value>
+        /// <value>Total value of the fine launched in the invoice</value>
         [DataMember(Name="totalMulta", EmitDefaultValue=false)]
         public double? TotalMulta { get; set; }
     
         /// <summary>
-        /// {{{fatura_consignada_response_total_juros_value}}}
+        /// Total Value of the interest launched in the invoice
         /// </summary>
-        /// <value>{{{fatura_consignada_response_total_juros_value}}}</value>
+        /// <value>Total Value of the interest launched in the invoice</value>
         [DataMember(Name="totalJuros", EmitDefaultValue=false)]
         public double? TotalJuros { get; set; }
     
         /// <summary>
-        /// {{{fatura_consignada_response_taxa_rotativo_value}}}
+        /// Percentage value of the revolving interest taxe
         /// </summary>
-        /// <value>{{{fatura_consignada_response_taxa_rotativo_value}}}</value>
+        /// <value>Percentage value of the revolving interest taxe</value>
         [DataMember(Name="taxaRotativo", EmitDefaultValue=false)]
         public double? TaxaRotativo { get; set; }
     
         /// <summary>
-        /// {{{fatura_consignada_response_taxa_saque_value}}}
+        /// Percentage value of the Withdrawal taxe
         /// </summary>
-        /// <value>{{{fatura_consignada_response_taxa_saque_value}}}</value>
+        /// <value>Percentage value of the Withdrawal taxe</value>
         [DataMember(Name="taxaSaque", EmitDefaultValue=false)]
         public double? TaxaSaque { get; set; }
     
         /// <summary>
-        /// {{{fatura_consignada_response_taxa_maxima_proximo_periodo_value}}}
+        /// Maximum percentage value of the charges to the next period
         /// </summary>
-        /// <value>{{{fatura_consignada_response_taxa_maxima_proximo_periodo_value}}}</value>
+        /// <value>Maximum percentage value of the charges to the next period</value>
         [DataMember(Name="taxaMaximaProximoPeriodo", EmitDefaultValue=false)]
         public double? TaxaMaximaProximoPeriodo { get; set; }
     
         /// <summary>
-        /// {{{fatura_consignada_response_total_servicos_value}}}
+        /// Show the sum of all the charges in the invoice of the client
         /// </summary>
-        /// <value>{{{fatura_consignada_response_total_servicos_value}}}</value>
+        /// <value>Show the sum of all the charges in the invoice of the client</value>
         [DataMember(Name="totalServicos", EmitDefaultValue=false)]
         public double? TotalServicos { get; set; }
     

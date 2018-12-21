@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{page_fantasia_basica_response_description}}}
+    /// Response Representation of the basic fantasy resource
     /// </summary>
     [DataContract]
     public partial class PageFantasiaBasicaResponse :  IEquatable<PageFantasiaBasicaResponse>

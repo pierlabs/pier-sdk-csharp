@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{servico_conta_response_description}}}
+    /// Response Service Account Object
     /// </summary>
     [DataContract]
     public partial class ServicoContaResponse :  IEquatable<ServicoContaResponse>
@@ -22,15 +22,15 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="ServicoContaResponse" /> class.
         /// Initializes a new instance of the <see cref="ServicoContaResponse" />class.
         /// </summary>
-        /// <param name="Id">{{{servico_conta_response_id_value}}}.</param>
-        /// <param name="IdConta">{{{servico_conta_response_id_conta_value}}}.</param>
-        /// <param name="IdTipoServico">{{{servico_conta_response_id_tipo_servico_value}}}.</param>
-        /// <param name="DataAtivacao">{{{servico_conta_response_data_ativacao_value}}}.</param>
-        /// <param name="IdUsuarioAtivacao">{{{servico_conta_response_id_usuario_ativou_value}}}.</param>
-        /// <param name="IdPlataformaAtivacao">{{{servico_conta_response_id_plataforma_ativou_value}}}.</param>
-        /// <param name="DataCancelamento">{{{servico_conta_response_data_cancelou_value}}}.</param>
-        /// <param name="IdUsuarioCancelamento">{{{servico_conta_response_id_usuario_cancelou_value}}}.</param>
-        /// <param name="IdPlataformaCancelamento">{{{servico_conta_response_id_plataforma_cancelou_value}}}.</param>
+        /// <param name="Id">Account Service Identifier.</param>
+        /// <param name="IdConta">Account Identifier.</param>
+        /// <param name="IdTipoServico">Service Type Identifier.</param>
+        /// <param name="DataAtivacao">Service activation date.</param>
+        /// <param name="IdUsuarioAtivacao">User activated the service.</param>
+        /// <param name="IdPlataformaAtivacao">Platform activated service.</param>
+        /// <param name="DataCancelamento">Service cancellation date.</param>
+        /// <param name="IdUsuarioCancelamento">User canceled service.</param>
+        /// <param name="IdPlataformaCancelamento">Platform canceled service.</param>
 
         public ServicoContaResponse(long? Id = null, long? IdConta = null, long? IdTipoServico = null, string DataAtivacao = null, long? IdUsuarioAtivacao = null, long? IdPlataformaAtivacao = null, string DataCancelamento = null, long? IdUsuarioCancelamento = null, long? IdPlataformaCancelamento = null)
         {
@@ -48,65 +48,65 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{servico_conta_response_id_value}}}
+        /// Account Service Identifier
         /// </summary>
-        /// <value>{{{servico_conta_response_id_value}}}</value>
+        /// <value>Account Service Identifier</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{servico_conta_response_id_conta_value}}}
+        /// Account Identifier
         /// </summary>
-        /// <value>{{{servico_conta_response_id_conta_value}}}</value>
+        /// <value>Account Identifier</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// {{{servico_conta_response_id_tipo_servico_value}}}
+        /// Service Type Identifier
         /// </summary>
-        /// <value>{{{servico_conta_response_id_tipo_servico_value}}}</value>
+        /// <value>Service Type Identifier</value>
         [DataMember(Name="idTipoServico", EmitDefaultValue=false)]
         public long? IdTipoServico { get; set; }
     
         /// <summary>
-        /// {{{servico_conta_response_data_ativacao_value}}}
+        /// Service activation date
         /// </summary>
-        /// <value>{{{servico_conta_response_data_ativacao_value}}}</value>
+        /// <value>Service activation date</value>
         [DataMember(Name="dataAtivacao", EmitDefaultValue=false)]
         public string DataAtivacao { get; set; }
     
         /// <summary>
-        /// {{{servico_conta_response_id_usuario_ativou_value}}}
+        /// User activated the service
         /// </summary>
-        /// <value>{{{servico_conta_response_id_usuario_ativou_value}}}</value>
+        /// <value>User activated the service</value>
         [DataMember(Name="idUsuarioAtivacao", EmitDefaultValue=false)]
         public long? IdUsuarioAtivacao { get; set; }
     
         /// <summary>
-        /// {{{servico_conta_response_id_plataforma_ativou_value}}}
+        /// Platform activated service
         /// </summary>
-        /// <value>{{{servico_conta_response_id_plataforma_ativou_value}}}</value>
+        /// <value>Platform activated service</value>
         [DataMember(Name="idPlataformaAtivacao", EmitDefaultValue=false)]
         public long? IdPlataformaAtivacao { get; set; }
     
         /// <summary>
-        /// {{{servico_conta_response_data_cancelou_value}}}
+        /// Service cancellation date
         /// </summary>
-        /// <value>{{{servico_conta_response_data_cancelou_value}}}</value>
+        /// <value>Service cancellation date</value>
         [DataMember(Name="dataCancelamento", EmitDefaultValue=false)]
         public string DataCancelamento { get; set; }
     
         /// <summary>
-        /// {{{servico_conta_response_id_usuario_cancelou_value}}}
+        /// User canceled service
         /// </summary>
-        /// <value>{{{servico_conta_response_id_usuario_cancelou_value}}}</value>
+        /// <value>User canceled service</value>
         [DataMember(Name="idUsuarioCancelamento", EmitDefaultValue=false)]
         public long? IdUsuarioCancelamento { get; set; }
     
         /// <summary>
-        /// {{{servico_conta_response_id_plataforma_cancelou_value}}}
+        /// Platform canceled service
         /// </summary>
-        /// <value>{{{servico_conta_response_id_plataforma_cancelou_value}}}</value>
+        /// <value>Platform canceled service</value>
         [DataMember(Name="idPlataformaCancelamento", EmitDefaultValue=false)]
         public long? IdPlataformaCancelamento { get; set; }
     

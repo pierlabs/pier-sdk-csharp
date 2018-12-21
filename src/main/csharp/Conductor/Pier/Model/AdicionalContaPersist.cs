@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{adicional_conta_persist_description}}}
+    /// Representation of the entry of the additional registration feature
     /// </summary>
     [DataContract]
     public partial class AdicionalContaPersist :  IEquatable<AdicionalContaPersist>
@@ -22,13 +22,13 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="AdicionalContaPersist" /> class.
         /// Initializes a new instance of the <see cref="AdicionalContaPersist" />class.
         /// </summary>
-        /// <param name="IdPessoa">{{{adicional_conta_persist_id_pessoa_value}}} (required).</param>
-        /// <param name="NomeImpresso">{{{adicional_conta_persist_nome_impresso_value}}}.</param>
-        /// <param name="IdEstadoCivil">{{{adicional_conta_persist_id_estado_civil_value}}}.</param>
-        /// <param name="IdProfissao">{{{adicional_conta_persist_id_profissao_value}}}.</param>
-        /// <param name="IdNacionalidade">{{{adicional_conta_persist_id_nacionalidade_value}}}.</param>
-        /// <param name="IdParentesco">{{{adicional_conta_persist_id_parentesco_value}}}.</param>
-        /// <param name="Email">{{{adicional_conta_persist_email_value}}}.</param>
+        /// <param name="IdPessoa">Id of the person who will be the additional account (required).</param>
+        /// <param name="NomeImpresso">Name of the Additional that will be recorded on the Card.</param>
+        /// <param name="IdEstadoCivil">Additional Civil Status Identification Code.</param>
+        /// <param name="IdProfissao">Professional Identification Code of Additional.</param>
+        /// <param name="IdNacionalidade">Nationality Identification Code of Additional.</param>
+        /// <param name="IdParentesco">Identification Code of the Relationship of the Additional with the Holder.</param>
+        /// <param name="Email">Email of Additional.</param>
 
         public AdicionalContaPersist(long? IdPessoa = null, string NomeImpresso = null, long? IdEstadoCivil = null, long? IdProfissao = null, long? IdNacionalidade = null, long? IdParentesco = null, string Email = null)
         {
@@ -52,51 +52,51 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{adicional_conta_persist_id_pessoa_value}}}
+        /// Id of the person who will be the additional account
         /// </summary>
-        /// <value>{{{adicional_conta_persist_id_pessoa_value}}}</value>
+        /// <value>Id of the person who will be the additional account</value>
         [DataMember(Name="idPessoa", EmitDefaultValue=false)]
         public long? IdPessoa { get; set; }
     
         /// <summary>
-        /// {{{adicional_conta_persist_nome_impresso_value}}}
+        /// Name of the Additional that will be recorded on the Card
         /// </summary>
-        /// <value>{{{adicional_conta_persist_nome_impresso_value}}}</value>
+        /// <value>Name of the Additional that will be recorded on the Card</value>
         [DataMember(Name="nomeImpresso", EmitDefaultValue=false)]
         public string NomeImpresso { get; set; }
     
         /// <summary>
-        /// {{{adicional_conta_persist_id_estado_civil_value}}}
+        /// Additional Civil Status Identification Code
         /// </summary>
-        /// <value>{{{adicional_conta_persist_id_estado_civil_value}}}</value>
+        /// <value>Additional Civil Status Identification Code</value>
         [DataMember(Name="idEstadoCivil", EmitDefaultValue=false)]
         public long? IdEstadoCivil { get; set; }
     
         /// <summary>
-        /// {{{adicional_conta_persist_id_profissao_value}}}
+        /// Professional Identification Code of Additional
         /// </summary>
-        /// <value>{{{adicional_conta_persist_id_profissao_value}}}</value>
+        /// <value>Professional Identification Code of Additional</value>
         [DataMember(Name="idProfissao", EmitDefaultValue=false)]
         public long? IdProfissao { get; set; }
     
         /// <summary>
-        /// {{{adicional_conta_persist_id_nacionalidade_value}}}
+        /// Nationality Identification Code of Additional
         /// </summary>
-        /// <value>{{{adicional_conta_persist_id_nacionalidade_value}}}</value>
+        /// <value>Nationality Identification Code of Additional</value>
         [DataMember(Name="idNacionalidade", EmitDefaultValue=false)]
         public long? IdNacionalidade { get; set; }
     
         /// <summary>
-        /// {{{adicional_conta_persist_id_parentesco_value}}}
+        /// Identification Code of the Relationship of the Additional with the Holder
         /// </summary>
-        /// <value>{{{adicional_conta_persist_id_parentesco_value}}}</value>
+        /// <value>Identification Code of the Relationship of the Additional with the Holder</value>
         [DataMember(Name="idParentesco", EmitDefaultValue=false)]
         public long? IdParentesco { get; set; }
     
         /// <summary>
-        /// {{{adicional_conta_persist_email_value}}}
+        /// Email of Additional
         /// </summary>
-        /// <value>{{{adicional_conta_persist_email_value}}}</value>
+        /// <value>Email of Additional</value>
         [DataMember(Name="email", EmitDefaultValue=false)]
         public string Email { get; set; }
     

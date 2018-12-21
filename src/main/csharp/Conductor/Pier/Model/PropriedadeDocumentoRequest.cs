@@ -12,16 +12,16 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{propriedade_documento_request_description}}}
+    /// Object that encapsulate the properties of document detailing
     /// </summary>
     [DataContract]
     public partial class PropriedadeDocumentoRequest :  IEquatable<PropriedadeDocumentoRequest>
     { 
     
         /// <summary>
-        /// {{{propriedade_documento_request_detalhes_tipo_value}}}
+        /// Type of the property of document
         /// </summary>
-        /// <value>{{{propriedade_documento_request_detalhes_tipo_value}}}</value>
+        /// <value>Type of the property of document</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum DetalhesTipoEnum {
             
@@ -37,9 +37,9 @@ namespace Conductor.Pier.Model
 
     
         /// <summary>
-        /// {{{propriedade_documento_request_detalhes_tipo_value}}}
+        /// Type of the property of document
         /// </summary>
-        /// <value>{{{propriedade_documento_request_detalhes_tipo_value}}}</value>
+        /// <value>Type of the property of document</value>
         [DataMember(Name="detalhesTipo", EmitDefaultValue=false)]
         public DetalhesTipoEnum? DetalhesTipo { get; set; }
     
@@ -47,10 +47,10 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="PropriedadeDocumentoRequest" /> class.
         /// Initializes a new instance of the <see cref="PropriedadeDocumentoRequest" />class.
         /// </summary>
-        /// <param name="Chave">{{{propriedade_documento_request_chave_value}}}.</param>
-        /// <param name="Valor">{{{propriedade_documento_request_valor_value}}}.</param>
-        /// <param name="DetalhesTipo">{{{propriedade_documento_request_detalhes_tipo_value}}}.</param>
-        /// <param name="FlagIndice">{{{propriedade_documento_request_flag_indice_value}}}.</param>
+        /// <param name="Chave">Value of the property of document.</param>
+        /// <param name="Valor">Value of the property of document.</param>
+        /// <param name="DetalhesTipo">Type of the property of document.</param>
+        /// <param name="FlagIndice">Atrributed to what indicates if the parameter is an index (default =false).</param>
 
         public PropriedadeDocumentoRequest(string Chave = null, string Valor = null, DetalhesTipoEnum? DetalhesTipo = null, bool? FlagIndice = null)
         {
@@ -63,23 +63,23 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{propriedade_documento_request_chave_value}}}
+        /// Value of the property of document
         /// </summary>
-        /// <value>{{{propriedade_documento_request_chave_value}}}</value>
+        /// <value>Value of the property of document</value>
         [DataMember(Name="chave", EmitDefaultValue=false)]
         public string Chave { get; set; }
     
         /// <summary>
-        /// {{{propriedade_documento_request_valor_value}}}
+        /// Value of the property of document
         /// </summary>
-        /// <value>{{{propriedade_documento_request_valor_value}}}</value>
+        /// <value>Value of the property of document</value>
         [DataMember(Name="valor", EmitDefaultValue=false)]
         public string Valor { get; set; }
     
         /// <summary>
-        /// {{{propriedade_documento_request_flag_indice_value}}}
+        /// Atrributed to what indicates if the parameter is an index (default =false)
         /// </summary>
-        /// <value>{{{propriedade_documento_request_flag_indice_value}}}</value>
+        /// <value>Atrributed to what indicates if the parameter is an index (default =false)</value>
         [DataMember(Name="flagIndice", EmitDefaultValue=false)]
         public bool? FlagIndice { get; set; }
     

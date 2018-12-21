@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{detalhes_fatura_consignada_response_description}}}
+    /// Object containing the details of a consignate invoice
     /// </summary>
     [DataContract]
     public partial class DetalhesFaturaConsignadaResponse :  IEquatable<DetalhesFaturaConsignadaResponse>
@@ -22,8 +22,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="DetalhesFaturaConsignadaResponse" /> class.
         /// Initializes a new instance of the <see cref="DetalhesFaturaConsignadaResponse" />class.
         /// </summary>
-        /// <param name="FaturaConsignadaResponse">{{{detalhes_fatura_consignada_response_fatura_consignada_response_value}}}.</param>
-        /// <param name="Transacoes">{{{detalhes_fatura_consignada_response_transacoes_value}}}.</param>
+        /// <param name="FaturaConsignadaResponse">Show the details of the invoice.</param>
+        /// <param name="Transacoes">Show the transactions related to the invoice.</param>
 
         public DetalhesFaturaConsignadaResponse(FaturaConsignadaResponse FaturaConsignadaResponse = null, List<TransacoesCorrentesResponse> Transacoes = null)
         {
@@ -34,16 +34,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{detalhes_fatura_consignada_response_fatura_consignada_response_value}}}
+        /// Show the details of the invoice
         /// </summary>
-        /// <value>{{{detalhes_fatura_consignada_response_fatura_consignada_response_value}}}</value>
+        /// <value>Show the details of the invoice</value>
         [DataMember(Name="faturaConsignadaResponse", EmitDefaultValue=false)]
         public FaturaConsignadaResponse FaturaConsignadaResponse { get; set; }
     
         /// <summary>
-        /// {{{detalhes_fatura_consignada_response_transacoes_value}}}
+        /// Show the transactions related to the invoice
         /// </summary>
-        /// <value>{{{detalhes_fatura_consignada_response_transacoes_value}}}</value>
+        /// <value>Show the transactions related to the invoice</value>
         [DataMember(Name="transacoes", EmitDefaultValue=false)]
         public List<TransacoesCorrentesResponse> Transacoes { get; set; }
     

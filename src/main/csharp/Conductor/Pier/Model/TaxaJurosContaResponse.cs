@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{taxa_juros_conta_response_description}}}
+    /// Representation of the interest rate response
     /// </summary>
     [DataContract]
     public partial class TaxaJurosContaResponse :  IEquatable<TaxaJurosContaResponse>
@@ -22,9 +22,9 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TaxaJurosContaResponse" /> class.
         /// Initializes a new instance of the <see cref="TaxaJurosContaResponse" />class.
         /// </summary>
-        /// <param name="IdConta">{{{taxa_juros_conta_response_id_conta_value}}}.</param>
-        /// <param name="IdTabelaJuros">{{{taxa_juros_conta_response_id_tabela_juros_value}}}.</param>
-        /// <param name="TaxasJuros">{{{taxa_juros_conta_response_taxas_juros_value}}}.</param>
+        /// <param name="IdConta">id_conta.</param>
+        /// <param name="IdTabelaJuros">Interest rate identification code.</param>
+        /// <param name="TaxasJuros">Listing of interest rates.</param>
 
         public TaxaJurosContaResponse(long? IdConta = null, long? IdTabelaJuros = null, List<TaxaJurosContaListaResponse> TaxasJuros = null)
         {
@@ -36,23 +36,23 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{taxa_juros_conta_response_id_conta_value}}}
+        /// id_conta
         /// </summary>
-        /// <value>{{{taxa_juros_conta_response_id_conta_value}}}</value>
+        /// <value>id_conta</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// {{{taxa_juros_conta_response_id_tabela_juros_value}}}
+        /// Interest rate identification code
         /// </summary>
-        /// <value>{{{taxa_juros_conta_response_id_tabela_juros_value}}}</value>
+        /// <value>Interest rate identification code</value>
         [DataMember(Name="idTabelaJuros", EmitDefaultValue=false)]
         public long? IdTabelaJuros { get; set; }
     
         /// <summary>
-        /// {{{taxa_juros_conta_response_taxas_juros_value}}}
+        /// Listing of interest rates
         /// </summary>
-        /// <value>{{{taxa_juros_conta_response_taxas_juros_value}}}</value>
+        /// <value>Listing of interest rates</value>
         [DataMember(Name="taxasJuros", EmitDefaultValue=false)]
         public List<TaxaJurosContaListaResponse> TaxasJuros { get; set; }
     

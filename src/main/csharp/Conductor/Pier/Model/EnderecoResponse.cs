@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{endereco_response_description}}}
+    /// Object Address
     /// </summary>
     [DataContract]
     public partial class EnderecoResponse :  IEquatable<EnderecoResponse>
@@ -22,23 +22,23 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="EnderecoResponse" /> class.
         /// Initializes a new instance of the <see cref="EnderecoResponse" />class.
         /// </summary>
-        /// <param name="TempoResidenciaAnos">{{{endereco_response_tempo_residencia_anos_value}}}.</param>
-        /// <param name="TempoResidenciaMeses">{{{endereco_response_tempo_residencia_meses_value}}}.</param>
-        /// <param name="Id">{{{endereco_response_id_value}}}.</param>
-        /// <param name="IdPessoa">{{{endereco_response_id_pessoa_value}}}.</param>
-        /// <param name="IdTipoEndereco">{{{endereco_response_id_tipo_endereco_value}}}.</param>
-        /// <param name="Cep">{{{endereco_response_cep_value}}}.</param>
-        /// <param name="Logradouro">{{{endereco_response_logradouro_value}}}.</param>
-        /// <param name="Numero">{{{endereco_response_numero_value}}}.</param>
-        /// <param name="Complemento">{{{endereco_response_complemento_value}}}.</param>
-        /// <param name="PontoReferencia">{{{endereco_response_ponto_referencia_value}}}.</param>
-        /// <param name="Bairro">{{{endereco_response_bairro_value}}}.</param>
-        /// <param name="Cidade">{{{endereco_response_cidade_value}}}.</param>
-        /// <param name="Uf">{{{endereco_response_uf_value}}}.</param>
-        /// <param name="Pais">{{{endereco_response_pais_value}}}.</param>
-        /// <param name="DataInclusao">{{{endereco_response_data_inclusao_value}}}.</param>
-        /// <param name="DataUltimaAtualizacao">{{{endereco_response_data_ultima_atualizacao_value}}}.</param>
-        /// <param name="FlagCorrespondencia">{{{endereco_response_flag_correspondencia_value}}}.</param>
+        /// <param name="TempoResidenciaAnos">Displays the number of years spent living in the residence.</param>
+        /// <param name="TempoResidenciaMeses">Displays the number of months spent living in the residence.</param>
+        /// <param name="Id">Identification Code of the address (id).</param>
+        /// <param name="IdPessoa">Identification Code of the Person which the address belongs (id).</param>
+        /// <param name="IdTipoEndereco">Identification Code of the address (id).</param>
+        /// <param name="Cep">Show the Zipcode in format &#39;58800000&#39;.</param>
+        /// <param name="Logradouro">Show the name of the Street.</param>
+        /// <param name="Numero">Show the address number.</param>
+        /// <param name="Complemento">Show the complementary descriptions referring to the address.</param>
+        /// <param name="PontoReferencia">Show the description of the landmark.</param>
+        /// <param name="Bairro">Show the name of the neighborhood.</param>
+        /// <param name="Cidade">Show the name of the city.</param>
+        /// <param name="Uf">Show the acronym of the Federal Unity.</param>
+        /// <param name="Pais">Show the name of the country.</param>
+        /// <param name="DataInclusao">Show the date tat was registered the address.</param>
+        /// <param name="DataUltimaAtualizacao">Date that was made the last update in this address. When there isn&#39;t change, it will have the same information that the field dateInclusion.</param>
+        /// <param name="FlagCorrespondencia">Displays the flag that informs if the address is the correspondence.</param>
 
         public EnderecoResponse(int? TempoResidenciaAnos = null, int? TempoResidenciaMeses = null, long? Id = null, long? IdPessoa = null, long? IdTipoEndereco = null, string Cep = null, string Logradouro = null, int? Numero = null, string Complemento = null, string PontoReferencia = null, string Bairro = null, string Cidade = null, string Uf = null, string Pais = null, string DataInclusao = null, string DataUltimaAtualizacao = null, bool? FlagCorrespondencia = null)
         {
@@ -64,121 +64,121 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{endereco_response_tempo_residencia_anos_value}}}
+        /// Displays the number of years spent living in the residence
         /// </summary>
-        /// <value>{{{endereco_response_tempo_residencia_anos_value}}}</value>
+        /// <value>Displays the number of years spent living in the residence</value>
         [DataMember(Name="tempoResidenciaAnos", EmitDefaultValue=false)]
         public int? TempoResidenciaAnos { get; set; }
     
         /// <summary>
-        /// {{{endereco_response_tempo_residencia_meses_value}}}
+        /// Displays the number of months spent living in the residence
         /// </summary>
-        /// <value>{{{endereco_response_tempo_residencia_meses_value}}}</value>
+        /// <value>Displays the number of months spent living in the residence</value>
         [DataMember(Name="tempoResidenciaMeses", EmitDefaultValue=false)]
         public int? TempoResidenciaMeses { get; set; }
     
         /// <summary>
-        /// {{{endereco_response_id_value}}}
+        /// Identification Code of the address (id)
         /// </summary>
-        /// <value>{{{endereco_response_id_value}}}</value>
+        /// <value>Identification Code of the address (id)</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{endereco_response_id_pessoa_value}}}
+        /// Identification Code of the Person which the address belongs (id)
         /// </summary>
-        /// <value>{{{endereco_response_id_pessoa_value}}}</value>
+        /// <value>Identification Code of the Person which the address belongs (id)</value>
         [DataMember(Name="idPessoa", EmitDefaultValue=false)]
         public long? IdPessoa { get; set; }
     
         /// <summary>
-        /// {{{endereco_response_id_tipo_endereco_value}}}
+        /// Identification Code of the address (id)
         /// </summary>
-        /// <value>{{{endereco_response_id_tipo_endereco_value}}}</value>
+        /// <value>Identification Code of the address (id)</value>
         [DataMember(Name="idTipoEndereco", EmitDefaultValue=false)]
         public long? IdTipoEndereco { get; set; }
     
         /// <summary>
-        /// {{{endereco_response_cep_value}}}
+        /// Show the Zipcode in format &#39;58800000&#39;
         /// </summary>
-        /// <value>{{{endereco_response_cep_value}}}</value>
+        /// <value>Show the Zipcode in format &#39;58800000&#39;</value>
         [DataMember(Name="cep", EmitDefaultValue=false)]
         public string Cep { get; set; }
     
         /// <summary>
-        /// {{{endereco_response_logradouro_value}}}
+        /// Show the name of the Street
         /// </summary>
-        /// <value>{{{endereco_response_logradouro_value}}}</value>
+        /// <value>Show the name of the Street</value>
         [DataMember(Name="logradouro", EmitDefaultValue=false)]
         public string Logradouro { get; set; }
     
         /// <summary>
-        /// {{{endereco_response_numero_value}}}
+        /// Show the address number
         /// </summary>
-        /// <value>{{{endereco_response_numero_value}}}</value>
+        /// <value>Show the address number</value>
         [DataMember(Name="numero", EmitDefaultValue=false)]
         public int? Numero { get; set; }
     
         /// <summary>
-        /// {{{endereco_response_complemento_value}}}
+        /// Show the complementary descriptions referring to the address
         /// </summary>
-        /// <value>{{{endereco_response_complemento_value}}}</value>
+        /// <value>Show the complementary descriptions referring to the address</value>
         [DataMember(Name="complemento", EmitDefaultValue=false)]
         public string Complemento { get; set; }
     
         /// <summary>
-        /// {{{endereco_response_ponto_referencia_value}}}
+        /// Show the description of the landmark
         /// </summary>
-        /// <value>{{{endereco_response_ponto_referencia_value}}}</value>
+        /// <value>Show the description of the landmark</value>
         [DataMember(Name="pontoReferencia", EmitDefaultValue=false)]
         public string PontoReferencia { get; set; }
     
         /// <summary>
-        /// {{{endereco_response_bairro_value}}}
+        /// Show the name of the neighborhood
         /// </summary>
-        /// <value>{{{endereco_response_bairro_value}}}</value>
+        /// <value>Show the name of the neighborhood</value>
         [DataMember(Name="bairro", EmitDefaultValue=false)]
         public string Bairro { get; set; }
     
         /// <summary>
-        /// {{{endereco_response_cidade_value}}}
+        /// Show the name of the city
         /// </summary>
-        /// <value>{{{endereco_response_cidade_value}}}</value>
+        /// <value>Show the name of the city</value>
         [DataMember(Name="cidade", EmitDefaultValue=false)]
         public string Cidade { get; set; }
     
         /// <summary>
-        /// {{{endereco_response_uf_value}}}
+        /// Show the acronym of the Federal Unity
         /// </summary>
-        /// <value>{{{endereco_response_uf_value}}}</value>
+        /// <value>Show the acronym of the Federal Unity</value>
         [DataMember(Name="uf", EmitDefaultValue=false)]
         public string Uf { get; set; }
     
         /// <summary>
-        /// {{{endereco_response_pais_value}}}
+        /// Show the name of the country
         /// </summary>
-        /// <value>{{{endereco_response_pais_value}}}</value>
+        /// <value>Show the name of the country</value>
         [DataMember(Name="pais", EmitDefaultValue=false)]
         public string Pais { get; set; }
     
         /// <summary>
-        /// {{{endereco_response_data_inclusao_value}}}
+        /// Show the date tat was registered the address
         /// </summary>
-        /// <value>{{{endereco_response_data_inclusao_value}}}</value>
+        /// <value>Show the date tat was registered the address</value>
         [DataMember(Name="dataInclusao", EmitDefaultValue=false)]
         public string DataInclusao { get; set; }
     
         /// <summary>
-        /// {{{endereco_response_data_ultima_atualizacao_value}}}
+        /// Date that was made the last update in this address. When there isn&#39;t change, it will have the same information that the field dateInclusion
         /// </summary>
-        /// <value>{{{endereco_response_data_ultima_atualizacao_value}}}</value>
+        /// <value>Date that was made the last update in this address. When there isn&#39;t change, it will have the same information that the field dateInclusion</value>
         [DataMember(Name="dataUltimaAtualizacao", EmitDefaultValue=false)]
         public string DataUltimaAtualizacao { get; set; }
     
         /// <summary>
-        /// {{{endereco_response_flag_correspondencia_value}}}
+        /// Displays the flag that informs if the address is the correspondence
         /// </summary>
-        /// <value>{{{endereco_response_flag_correspondencia_value}}}</value>
+        /// <value>Displays the flag that informs if the address is the correspondence</value>
         [DataMember(Name="flagCorrespondencia", EmitDefaultValue=false)]
         public bool? FlagCorrespondencia { get; set; }
     

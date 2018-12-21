@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{atendimento_cliente_response_description}}}
+    /// Object AttendanceClient
     /// </summary>
     [DataContract]
     public partial class AtendimentoClienteResponse :  IEquatable<AtendimentoClienteResponse>
@@ -22,20 +22,20 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="AtendimentoClienteResponse" /> class.
         /// Initializes a new instance of the <see cref="AtendimentoClienteResponse" />class.
         /// </summary>
-        /// <param name="IdAtendimento">{{{atendimento_cliente_response_id_atendimento_value}}}.</param>
-        /// <param name="IdConta">{{{atendimento_cliente_response_id_conta_value}}}.</param>
-        /// <param name="IdTipoAtendimento">{{{atendimento_cliente_response_id_tipo_atendimento_value}}}.</param>
-        /// <param name="DescricaoTipoAtendimento">{{{atendimento_cliente_response_descricao_tipo_atendimento_value}}}.</param>
-        /// <param name="ConteudoAtendimento">{{{atendimento_cliente_response_conteudo_atendimento_value}}}.</param>
-        /// <param name="DetalhesAtendimento">{{{atendimento_cliente_response_detalhes_atendimento_value}}}.</param>
-        /// <param name="NomeAtendente">{{{atendimento_cliente_response_nome_atendente_value}}}.</param>
-        /// <param name="NomeSistema">{{{atendimento_cliente_response_nome_sistema_value}}}.</param>
-        /// <param name="DataHoraInicioAtendimento">{{{atendimento_cliente_response_data_hora_inicio_atendimento_value}}}.</param>
-        /// <param name="DataHoraFimAtendimento">{{{atendimento_cliente_response_data_hora_fim_atendimento_value}}}.</param>
-        /// <param name="DataAtendimento">{{{atendimento_cliente_response_data_atendimento_value}}}.</param>
-        /// <param name="DataAgendamento">{{{atendimento_cliente_response_data_agendamento_value}}}.</param>
-        /// <param name="DataProcessamento">{{{atendimento_cliente_response_data_processamento_value}}}.</param>
-        /// <param name="FlagProcessamento">{{{atendimento_cliente_response_flag_processamento_value}}}.</param>
+        /// <param name="IdAtendimento">Identification Code of the Attendance (id).</param>
+        /// <param name="IdConta">Identification Code of the account which the attendance is associated.</param>
+        /// <param name="IdTipoAtendimento">Identification Code of the type of attendance (id).</param>
+        /// <param name="DescricaoTipoAtendimento">Show the description of the Type of Attendance.</param>
+        /// <param name="ConteudoAtendimento">Show the information that were used to retrieve, register or update information related to the Attendance.</param>
+        /// <param name="DetalhesAtendimento">Show the details launched by the system or by the attendant during the attendance.</param>
+        /// <param name="NomeAtendente">Show the name of the Attendant that registered the Attendance.</param>
+        /// <param name="NomeSistema">Show the name of the System, Server, Module or Method REST that originated the register of the Attendance.</param>
+        /// <param name="DataHoraInicioAtendimento">Show the date and time which the attendance was begun. Whe it is used, it serves to measure the performance of the attendances.</param>
+        /// <param name="DataHoraFimAtendimento">Show the date and time which the attendance was begun. When it is used, it serves to measure the performance of the attendances.</param>
+        /// <param name="DataAtendimento">Present the date and time which the attendance was made.</param>
+        /// <param name="DataAgendamento">When it is used, according to the type of attendance, show the date and time for the processing or the date to return the Attendance.</param>
+        /// <param name="DataProcessamento">When it is used, show the date and time which the request registered in the attendance.</param>
+        /// <param name="FlagProcessamento">when applicable, according to the indication if the resquest processing has been made.</param>
 
         public AtendimentoClienteResponse(long? IdAtendimento = null, long? IdConta = null, long? IdTipoAtendimento = null, string DescricaoTipoAtendimento = null, string ConteudoAtendimento = null, string DetalhesAtendimento = null, string NomeAtendente = null, string NomeSistema = null, string DataHoraInicioAtendimento = null, string DataHoraFimAtendimento = null, string DataAtendimento = null, string DataAgendamento = null, string DataProcessamento = null, int? FlagProcessamento = null)
         {
@@ -58,100 +58,100 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{atendimento_cliente_response_id_atendimento_value}}}
+        /// Identification Code of the Attendance (id)
         /// </summary>
-        /// <value>{{{atendimento_cliente_response_id_atendimento_value}}}</value>
+        /// <value>Identification Code of the Attendance (id)</value>
         [DataMember(Name="idAtendimento", EmitDefaultValue=false)]
         public long? IdAtendimento { get; set; }
     
         /// <summary>
-        /// {{{atendimento_cliente_response_id_conta_value}}}
+        /// Identification Code of the account which the attendance is associated
         /// </summary>
-        /// <value>{{{atendimento_cliente_response_id_conta_value}}}</value>
+        /// <value>Identification Code of the account which the attendance is associated</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// {{{atendimento_cliente_response_id_tipo_atendimento_value}}}
+        /// Identification Code of the type of attendance (id)
         /// </summary>
-        /// <value>{{{atendimento_cliente_response_id_tipo_atendimento_value}}}</value>
+        /// <value>Identification Code of the type of attendance (id)</value>
         [DataMember(Name="idTipoAtendimento", EmitDefaultValue=false)]
         public long? IdTipoAtendimento { get; set; }
     
         /// <summary>
-        /// {{{atendimento_cliente_response_descricao_tipo_atendimento_value}}}
+        /// Show the description of the Type of Attendance
         /// </summary>
-        /// <value>{{{atendimento_cliente_response_descricao_tipo_atendimento_value}}}</value>
+        /// <value>Show the description of the Type of Attendance</value>
         [DataMember(Name="descricaoTipoAtendimento", EmitDefaultValue=false)]
         public string DescricaoTipoAtendimento { get; set; }
     
         /// <summary>
-        /// {{{atendimento_cliente_response_conteudo_atendimento_value}}}
+        /// Show the information that were used to retrieve, register or update information related to the Attendance
         /// </summary>
-        /// <value>{{{atendimento_cliente_response_conteudo_atendimento_value}}}</value>
+        /// <value>Show the information that were used to retrieve, register or update information related to the Attendance</value>
         [DataMember(Name="conteudoAtendimento", EmitDefaultValue=false)]
         public string ConteudoAtendimento { get; set; }
     
         /// <summary>
-        /// {{{atendimento_cliente_response_detalhes_atendimento_value}}}
+        /// Show the details launched by the system or by the attendant during the attendance
         /// </summary>
-        /// <value>{{{atendimento_cliente_response_detalhes_atendimento_value}}}</value>
+        /// <value>Show the details launched by the system or by the attendant during the attendance</value>
         [DataMember(Name="detalhesAtendimento", EmitDefaultValue=false)]
         public string DetalhesAtendimento { get; set; }
     
         /// <summary>
-        /// {{{atendimento_cliente_response_nome_atendente_value}}}
+        /// Show the name of the Attendant that registered the Attendance
         /// </summary>
-        /// <value>{{{atendimento_cliente_response_nome_atendente_value}}}</value>
+        /// <value>Show the name of the Attendant that registered the Attendance</value>
         [DataMember(Name="nomeAtendente", EmitDefaultValue=false)]
         public string NomeAtendente { get; set; }
     
         /// <summary>
-        /// {{{atendimento_cliente_response_nome_sistema_value}}}
+        /// Show the name of the System, Server, Module or Method REST that originated the register of the Attendance
         /// </summary>
-        /// <value>{{{atendimento_cliente_response_nome_sistema_value}}}</value>
+        /// <value>Show the name of the System, Server, Module or Method REST that originated the register of the Attendance</value>
         [DataMember(Name="nomeSistema", EmitDefaultValue=false)]
         public string NomeSistema { get; set; }
     
         /// <summary>
-        /// {{{atendimento_cliente_response_data_hora_inicio_atendimento_value}}}
+        /// Show the date and time which the attendance was begun. Whe it is used, it serves to measure the performance of the attendances
         /// </summary>
-        /// <value>{{{atendimento_cliente_response_data_hora_inicio_atendimento_value}}}</value>
+        /// <value>Show the date and time which the attendance was begun. Whe it is used, it serves to measure the performance of the attendances</value>
         [DataMember(Name="dataHoraInicioAtendimento", EmitDefaultValue=false)]
         public string DataHoraInicioAtendimento { get; set; }
     
         /// <summary>
-        /// {{{atendimento_cliente_response_data_hora_fim_atendimento_value}}}
+        /// Show the date and time which the attendance was begun. When it is used, it serves to measure the performance of the attendances
         /// </summary>
-        /// <value>{{{atendimento_cliente_response_data_hora_fim_atendimento_value}}}</value>
+        /// <value>Show the date and time which the attendance was begun. When it is used, it serves to measure the performance of the attendances</value>
         [DataMember(Name="dataHoraFimAtendimento", EmitDefaultValue=false)]
         public string DataHoraFimAtendimento { get; set; }
     
         /// <summary>
-        /// {{{atendimento_cliente_response_data_atendimento_value}}}
+        /// Present the date and time which the attendance was made
         /// </summary>
-        /// <value>{{{atendimento_cliente_response_data_atendimento_value}}}</value>
+        /// <value>Present the date and time which the attendance was made</value>
         [DataMember(Name="dataAtendimento", EmitDefaultValue=false)]
         public string DataAtendimento { get; set; }
     
         /// <summary>
-        /// {{{atendimento_cliente_response_data_agendamento_value}}}
+        /// When it is used, according to the type of attendance, show the date and time for the processing or the date to return the Attendance
         /// </summary>
-        /// <value>{{{atendimento_cliente_response_data_agendamento_value}}}</value>
+        /// <value>When it is used, according to the type of attendance, show the date and time for the processing or the date to return the Attendance</value>
         [DataMember(Name="dataAgendamento", EmitDefaultValue=false)]
         public string DataAgendamento { get; set; }
     
         /// <summary>
-        /// {{{atendimento_cliente_response_data_processamento_value}}}
+        /// When it is used, show the date and time which the request registered in the attendance
         /// </summary>
-        /// <value>{{{atendimento_cliente_response_data_processamento_value}}}</value>
+        /// <value>When it is used, show the date and time which the request registered in the attendance</value>
         [DataMember(Name="dataProcessamento", EmitDefaultValue=false)]
         public string DataProcessamento { get; set; }
     
         /// <summary>
-        /// {{{atendimento_cliente_response_flag_processamento_value}}}
+        /// when applicable, according to the indication if the resquest processing has been made
         /// </summary>
-        /// <value>{{{atendimento_cliente_response_flag_processamento_value}}}</value>
+        /// <value>when applicable, according to the indication if the resquest processing has been made</value>
         [DataMember(Name="flagProcessamento", EmitDefaultValue=false)]
         public int? FlagProcessamento { get; set; }
     

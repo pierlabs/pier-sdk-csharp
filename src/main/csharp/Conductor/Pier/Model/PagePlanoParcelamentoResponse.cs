@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{page_plano_parcelamento_response_description}}}
+    /// Response Representation of the insntallment plan resource
     /// </summary>
     [DataContract]
     public partial class PagePlanoParcelamentoResponse :  IEquatable<PagePlanoParcelamentoResponse>

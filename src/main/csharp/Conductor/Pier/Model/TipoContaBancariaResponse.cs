@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{tipo_conta_bancaria_response_description}}}
+    /// Response object for bank account types
     /// </summary>
     [DataContract]
     public partial class TipoContaBancariaResponse :  IEquatable<TipoContaBancariaResponse>
@@ -22,8 +22,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TipoContaBancariaResponse" /> class.
         /// Initializes a new instance of the <see cref="TipoContaBancariaResponse" />class.
         /// </summary>
-        /// <param name="Id">{{{tipo_conta_bancaria_response_id_value}}}.</param>
-        /// <param name="Descricao">{{{tipo_conta_bancaria_response_descricao_value}}}.</param>
+        /// <param name="Id">Bank Account Type Identifier.</param>
+        /// <param name="Descricao">Description of bank account type.</param>
 
         public TipoContaBancariaResponse(long? Id = null, string Descricao = null)
         {
@@ -34,16 +34,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{tipo_conta_bancaria_response_id_value}}}
+        /// Bank Account Type Identifier
         /// </summary>
-        /// <value>{{{tipo_conta_bancaria_response_id_value}}}</value>
+        /// <value>Bank Account Type Identifier</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{tipo_conta_bancaria_response_descricao_value}}}
+        /// Description of bank account type
         /// </summary>
-        /// <value>{{{tipo_conta_bancaria_response_descricao_value}}}</value>
+        /// <value>Description of bank account type</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     

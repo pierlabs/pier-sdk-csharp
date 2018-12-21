@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{lancamento_fatura_response_description}}}
+    /// Future Invoice
     /// </summary>
     [DataContract]
     public partial class LancamentoFaturaResponse :  IEquatable<LancamentoFaturaResponse>
@@ -22,31 +22,31 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="LancamentoFaturaResponse" /> class.
         /// Initializes a new instance of the <see cref="LancamentoFaturaResponse" />class.
         /// </summary>
-        /// <param name="IdTransacao">{{{lancamento_fatura_response_id_transacao_value}}}.</param>
-        /// <param name="DescricaoTipoTransacao">{{{lancamento_fatura_response_descricao_tipo_transacao_value}}}.</param>
-        /// <param name="IdTipoEvento">{{{lancamento_fatura_response_id_tipo_evento_value}}}.</param>
-        /// <param name="DescricaoTipoEvento">{{{lancamento_fatura_response_descricao_tipo_evento_value}}}.</param>
-        /// <param name="IdEvento">{{{lancamento_fatura_response_id_evento_value}}}.</param>
-        /// <param name="IdConta">{{{lancamento_fatura_response_id_conta_value}}}.</param>
-        /// <param name="Complemento">{{{lancamento_fatura_response_complemento_value}}}.</param>
-        /// <param name="ValorBRL">{{{lancamento_fatura_response_valor_b_r_l_value}}}.</param>
-        /// <param name="ValorUSD">{{{lancamento_fatura_response_valor_u_s_d_value}}}.</param>
-        /// <param name="NumeroParcela">{{{lancamento_fatura_response_numero_parcela_value}}}.</param>
-        /// <param name="QuantidadeParcelas">{{{lancamento_fatura_response_quantidade_parcelas_value}}}.</param>
-        /// <param name="DataHoraTransacao">{{{lancamento_fatura_response_data_hora_transacao_value}}}.</param>
-        /// <param name="NomeEstabelecimento">{{{lancamento_fatura_response_nome_estabelecimento_value}}}.</param>
-        /// <param name="DescricaoEstabelecimento">{{{lancamento_fatura_response_descricao_estabelecimento_value}}}.</param>
-        /// <param name="NomeFantasiaEstabelecimento">{{{lancamento_fatura_response_nome_fantasia_estabelecimento_value}}}.</param>
-        /// <param name="FlagCredito">{{{lancamento_fatura_response_flag_credito_value}}}.</param>
-        /// <param name="IdMCC">{{{lancamento_fatura_response_id_m_c_c_value}}}.</param>
-        /// <param name="IdGrupoMCC">{{{lancamento_fatura_response_id_grupo_m_c_c_value}}}.</param>
-        /// <param name="DescricaoGrupoMCC">{{{lancamento_fatura_response_descricao_grupo_m_c_c_value}}}.</param>
-        /// <param name="Titular">{{{lancamento_fatura_response_titular_value}}}.</param>
-        /// <param name="NomePortador">{{{lancamento_fatura_response_nome_portador_value}}}.</param>
-        /// <param name="NumeroCartaoMascarado">{{{lancamento_fatura_response_numero_cartao_mascarado_value}}}.</param>
-        /// <param name="FlagSolicitouContestacao">{{{lancamento_fatura_response_flag_solicitou_contestacao_value}}}.</param>
-        /// <param name="ValorTaxaEmbarque">{{{lancamento_fatura_response_valor_taxa_embarque_value}}}.</param>
-        /// <param name="DescricaoAbreviada">{{{lancamento_fatura_response_descricao_abreviada_value}}}.</param>
+        /// <param name="IdTransacao">Identification Code of the transaction.</param>
+        /// <param name="DescricaoTipoTransacao">Description of the transaction type.</param>
+        /// <param name="IdTipoEvento">Identifier Code of the event type.</param>
+        /// <param name="DescricaoTipoEvento">Description of the event type.</param>
+        /// <param name="IdEvento">Identifier Code of the event.</param>
+        /// <param name="IdConta">Identification Code of the Account.</param>
+        /// <param name="Complemento">Complementary Description of the event.</param>
+        /// <param name="ValorBRL">Value in reais.</param>
+        /// <param name="ValorUSD">value in dollar.</param>
+        /// <param name="NumeroParcela">Number of the parcels.</param>
+        /// <param name="QuantidadeParcelas">Quantity of parcels.</param>
+        /// <param name="DataHoraTransacao">Transaction date.</param>
+        /// <param name="NomeEstabelecimento">Merchant Name.</param>
+        /// <param name="DescricaoEstabelecimento">Merchant Description.</param>
+        /// <param name="NomeFantasiaEstabelecimento">Fantasy Name of the Merchant.</param>
+        /// <param name="FlagCredito">Flag that indicates if the launch is of credit.</param>
+        /// <param name="IdMCC">Identifier Code of the MCC (Merchant Category Codes).</param>
+        /// <param name="IdGrupoMCC">Identifier Code of the Group MCC.</param>
+        /// <param name="DescricaoGrupoMCC">Description of the group MCC.</param>
+        /// <param name="Titular">Indicate if the the cardholder is the holder of the account.</param>
+        /// <param name="NomePortador">Printed name on the card.</param>
+        /// <param name="NumeroCartaoMascarado">Card number masked.</param>
+        /// <param name="FlagSolicitouContestacao">Flag that indicates if the client requested the contest of the transaction.</param>
+        /// <param name="ValorTaxaEmbarque">Value of the Boarding taxe.</param>
+        /// <param name="DescricaoAbreviada">Description abbreviated of the transaction.</param>
 
         public LancamentoFaturaResponse(long? IdTransacao = null, string DescricaoTipoTransacao = null, long? IdTipoEvento = null, string DescricaoTipoEvento = null, long? IdEvento = null, long? IdConta = null, string Complemento = null, double? ValorBRL = null, double? ValorUSD = null, int? NumeroParcela = null, int? QuantidadeParcelas = null, string DataHoraTransacao = null, string NomeEstabelecimento = null, string DescricaoEstabelecimento = null, string NomeFantasiaEstabelecimento = null, bool? FlagCredito = null, long? IdMCC = null, long? IdGrupoMCC = null, string DescricaoGrupoMCC = null, bool? Titular = null, string NomePortador = null, string NumeroCartaoMascarado = null, bool? FlagSolicitouContestacao = null, double? ValorTaxaEmbarque = null, string DescricaoAbreviada = null)
         {
@@ -80,177 +80,177 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{lancamento_fatura_response_id_transacao_value}}}
+        /// Identification Code of the transaction
         /// </summary>
-        /// <value>{{{lancamento_fatura_response_id_transacao_value}}}</value>
+        /// <value>Identification Code of the transaction</value>
         [DataMember(Name="idTransacao", EmitDefaultValue=false)]
         public long? IdTransacao { get; set; }
     
         /// <summary>
-        /// {{{lancamento_fatura_response_descricao_tipo_transacao_value}}}
+        /// Description of the transaction type
         /// </summary>
-        /// <value>{{{lancamento_fatura_response_descricao_tipo_transacao_value}}}</value>
+        /// <value>Description of the transaction type</value>
         [DataMember(Name="descricaoTipoTransacao", EmitDefaultValue=false)]
         public string DescricaoTipoTransacao { get; set; }
     
         /// <summary>
-        /// {{{lancamento_fatura_response_id_tipo_evento_value}}}
+        /// Identifier Code of the event type
         /// </summary>
-        /// <value>{{{lancamento_fatura_response_id_tipo_evento_value}}}</value>
+        /// <value>Identifier Code of the event type</value>
         [DataMember(Name="idTipoEvento", EmitDefaultValue=false)]
         public long? IdTipoEvento { get; set; }
     
         /// <summary>
-        /// {{{lancamento_fatura_response_descricao_tipo_evento_value}}}
+        /// Description of the event type
         /// </summary>
-        /// <value>{{{lancamento_fatura_response_descricao_tipo_evento_value}}}</value>
+        /// <value>Description of the event type</value>
         [DataMember(Name="descricaoTipoEvento", EmitDefaultValue=false)]
         public string DescricaoTipoEvento { get; set; }
     
         /// <summary>
-        /// {{{lancamento_fatura_response_id_evento_value}}}
+        /// Identifier Code of the event
         /// </summary>
-        /// <value>{{{lancamento_fatura_response_id_evento_value}}}</value>
+        /// <value>Identifier Code of the event</value>
         [DataMember(Name="idEvento", EmitDefaultValue=false)]
         public long? IdEvento { get; set; }
     
         /// <summary>
-        /// {{{lancamento_fatura_response_id_conta_value}}}
+        /// Identification Code of the Account
         /// </summary>
-        /// <value>{{{lancamento_fatura_response_id_conta_value}}}</value>
+        /// <value>Identification Code of the Account</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// {{{lancamento_fatura_response_complemento_value}}}
+        /// Complementary Description of the event
         /// </summary>
-        /// <value>{{{lancamento_fatura_response_complemento_value}}}</value>
+        /// <value>Complementary Description of the event</value>
         [DataMember(Name="complemento", EmitDefaultValue=false)]
         public string Complemento { get; set; }
     
         /// <summary>
-        /// {{{lancamento_fatura_response_valor_b_r_l_value}}}
+        /// Value in reais
         /// </summary>
-        /// <value>{{{lancamento_fatura_response_valor_b_r_l_value}}}</value>
+        /// <value>Value in reais</value>
         [DataMember(Name="valorBRL", EmitDefaultValue=false)]
         public double? ValorBRL { get; set; }
     
         /// <summary>
-        /// {{{lancamento_fatura_response_valor_u_s_d_value}}}
+        /// value in dollar
         /// </summary>
-        /// <value>{{{lancamento_fatura_response_valor_u_s_d_value}}}</value>
+        /// <value>value in dollar</value>
         [DataMember(Name="valorUSD", EmitDefaultValue=false)]
         public double? ValorUSD { get; set; }
     
         /// <summary>
-        /// {{{lancamento_fatura_response_numero_parcela_value}}}
+        /// Number of the parcels
         /// </summary>
-        /// <value>{{{lancamento_fatura_response_numero_parcela_value}}}</value>
+        /// <value>Number of the parcels</value>
         [DataMember(Name="numeroParcela", EmitDefaultValue=false)]
         public int? NumeroParcela { get; set; }
     
         /// <summary>
-        /// {{{lancamento_fatura_response_quantidade_parcelas_value}}}
+        /// Quantity of parcels
         /// </summary>
-        /// <value>{{{lancamento_fatura_response_quantidade_parcelas_value}}}</value>
+        /// <value>Quantity of parcels</value>
         [DataMember(Name="quantidadeParcelas", EmitDefaultValue=false)]
         public int? QuantidadeParcelas { get; set; }
     
         /// <summary>
-        /// {{{lancamento_fatura_response_data_hora_transacao_value}}}
+        /// Transaction date
         /// </summary>
-        /// <value>{{{lancamento_fatura_response_data_hora_transacao_value}}}</value>
+        /// <value>Transaction date</value>
         [DataMember(Name="dataHoraTransacao", EmitDefaultValue=false)]
         public string DataHoraTransacao { get; set; }
     
         /// <summary>
-        /// {{{lancamento_fatura_response_nome_estabelecimento_value}}}
+        /// Merchant Name
         /// </summary>
-        /// <value>{{{lancamento_fatura_response_nome_estabelecimento_value}}}</value>
+        /// <value>Merchant Name</value>
         [DataMember(Name="nomeEstabelecimento", EmitDefaultValue=false)]
         public string NomeEstabelecimento { get; set; }
     
         /// <summary>
-        /// {{{lancamento_fatura_response_descricao_estabelecimento_value}}}
+        /// Merchant Description
         /// </summary>
-        /// <value>{{{lancamento_fatura_response_descricao_estabelecimento_value}}}</value>
+        /// <value>Merchant Description</value>
         [DataMember(Name="descricaoEstabelecimento", EmitDefaultValue=false)]
         public string DescricaoEstabelecimento { get; set; }
     
         /// <summary>
-        /// {{{lancamento_fatura_response_nome_fantasia_estabelecimento_value}}}
+        /// Fantasy Name of the Merchant
         /// </summary>
-        /// <value>{{{lancamento_fatura_response_nome_fantasia_estabelecimento_value}}}</value>
+        /// <value>Fantasy Name of the Merchant</value>
         [DataMember(Name="nomeFantasiaEstabelecimento", EmitDefaultValue=false)]
         public string NomeFantasiaEstabelecimento { get; set; }
     
         /// <summary>
-        /// {{{lancamento_fatura_response_flag_credito_value}}}
+        /// Flag that indicates if the launch is of credit
         /// </summary>
-        /// <value>{{{lancamento_fatura_response_flag_credito_value}}}</value>
+        /// <value>Flag that indicates if the launch is of credit</value>
         [DataMember(Name="flagCredito", EmitDefaultValue=false)]
         public bool? FlagCredito { get; set; }
     
         /// <summary>
-        /// {{{lancamento_fatura_response_id_m_c_c_value}}}
+        /// Identifier Code of the MCC (Merchant Category Codes)
         /// </summary>
-        /// <value>{{{lancamento_fatura_response_id_m_c_c_value}}}</value>
+        /// <value>Identifier Code of the MCC (Merchant Category Codes)</value>
         [DataMember(Name="idMCC", EmitDefaultValue=false)]
         public long? IdMCC { get; set; }
     
         /// <summary>
-        /// {{{lancamento_fatura_response_id_grupo_m_c_c_value}}}
+        /// Identifier Code of the Group MCC
         /// </summary>
-        /// <value>{{{lancamento_fatura_response_id_grupo_m_c_c_value}}}</value>
+        /// <value>Identifier Code of the Group MCC</value>
         [DataMember(Name="idGrupoMCC", EmitDefaultValue=false)]
         public long? IdGrupoMCC { get; set; }
     
         /// <summary>
-        /// {{{lancamento_fatura_response_descricao_grupo_m_c_c_value}}}
+        /// Description of the group MCC
         /// </summary>
-        /// <value>{{{lancamento_fatura_response_descricao_grupo_m_c_c_value}}}</value>
+        /// <value>Description of the group MCC</value>
         [DataMember(Name="descricaoGrupoMCC", EmitDefaultValue=false)]
         public string DescricaoGrupoMCC { get; set; }
     
         /// <summary>
-        /// {{{lancamento_fatura_response_titular_value}}}
+        /// Indicate if the the cardholder is the holder of the account
         /// </summary>
-        /// <value>{{{lancamento_fatura_response_titular_value}}}</value>
+        /// <value>Indicate if the the cardholder is the holder of the account</value>
         [DataMember(Name="titular", EmitDefaultValue=false)]
         public bool? Titular { get; set; }
     
         /// <summary>
-        /// {{{lancamento_fatura_response_nome_portador_value}}}
+        /// Printed name on the card
         /// </summary>
-        /// <value>{{{lancamento_fatura_response_nome_portador_value}}}</value>
+        /// <value>Printed name on the card</value>
         [DataMember(Name="nomePortador", EmitDefaultValue=false)]
         public string NomePortador { get; set; }
     
         /// <summary>
-        /// {{{lancamento_fatura_response_numero_cartao_mascarado_value}}}
+        /// Card number masked
         /// </summary>
-        /// <value>{{{lancamento_fatura_response_numero_cartao_mascarado_value}}}</value>
+        /// <value>Card number masked</value>
         [DataMember(Name="numeroCartaoMascarado", EmitDefaultValue=false)]
         public string NumeroCartaoMascarado { get; set; }
     
         /// <summary>
-        /// {{{lancamento_fatura_response_flag_solicitou_contestacao_value}}}
+        /// Flag that indicates if the client requested the contest of the transaction
         /// </summary>
-        /// <value>{{{lancamento_fatura_response_flag_solicitou_contestacao_value}}}</value>
+        /// <value>Flag that indicates if the client requested the contest of the transaction</value>
         [DataMember(Name="flagSolicitouContestacao", EmitDefaultValue=false)]
         public bool? FlagSolicitouContestacao { get; set; }
     
         /// <summary>
-        /// {{{lancamento_fatura_response_valor_taxa_embarque_value}}}
+        /// Value of the Boarding taxe
         /// </summary>
-        /// <value>{{{lancamento_fatura_response_valor_taxa_embarque_value}}}</value>
+        /// <value>Value of the Boarding taxe</value>
         [DataMember(Name="valorTaxaEmbarque", EmitDefaultValue=false)]
         public double? ValorTaxaEmbarque { get; set; }
     
         /// <summary>
-        /// {{{lancamento_fatura_response_descricao_abreviada_value}}}
+        /// Description abbreviated of the transaction
         /// </summary>
-        /// <value>{{{lancamento_fatura_response_descricao_abreviada_value}}}</value>
+        /// <value>Description abbreviated of the transaction</value>
         [DataMember(Name="descricaoAbreviada", EmitDefaultValue=false)]
         public string DescricaoAbreviada { get; set; }
     

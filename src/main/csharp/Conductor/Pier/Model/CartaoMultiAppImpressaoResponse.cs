@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{cartao_impressao_multiapp_response_description}}}
+    /// Result of two cards created associated
     /// </summary>
     [DataContract]
     public partial class CartaoMultiAppImpressaoResponse :  IEquatable<CartaoMultiAppImpressaoResponse>
@@ -22,8 +22,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="CartaoMultiAppImpressaoResponse" /> class.
         /// Initializes a new instance of the <see cref="CartaoMultiAppImpressaoResponse" />class.
         /// </summary>
-        /// <param name="CartaoPai">{{{cartao_impressao_multiapp_response_cartao_pai_value}}}.</param>
-        /// <param name="Cartao">{{{cartao_impressao_multiapp_response_cartao_filho_value}}}.</param>
+        /// <param name="CartaoPai">Primary card.</param>
+        /// <param name="Cartao">Secondary card.</param>
 
         public CartaoMultiAppImpressaoResponse(CartaoImpressaoResponse CartaoPai = null, CartaoImpressaoResponse Cartao = null)
         {
@@ -34,16 +34,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{cartao_impressao_multiapp_response_cartao_pai_value}}}
+        /// Primary card
         /// </summary>
-        /// <value>{{{cartao_impressao_multiapp_response_cartao_pai_value}}}</value>
+        /// <value>Primary card</value>
         [DataMember(Name="cartaoPai", EmitDefaultValue=false)]
         public CartaoImpressaoResponse CartaoPai { get; set; }
     
         /// <summary>
-        /// {{{cartao_impressao_multiapp_response_cartao_filho_value}}}
+        /// Secondary card
         /// </summary>
-        /// <value>{{{cartao_impressao_multiapp_response_cartao_filho_value}}}</value>
+        /// <value>Secondary card</value>
         [DataMember(Name="cartao", EmitDefaultValue=false)]
         public CartaoImpressaoResponse Cartao { get; set; }
     

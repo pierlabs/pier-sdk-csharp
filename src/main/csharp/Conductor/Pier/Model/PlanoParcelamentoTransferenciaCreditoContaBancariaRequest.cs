@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{plano_parcelamento_transferencia_credito_conta_bancaria_request_description}}}
+    /// Credit Transfer bank account request
     /// </summary>
     [DataContract]
     public partial class PlanoParcelamentoTransferenciaCreditoContaBancariaRequest :  IEquatable<PlanoParcelamentoTransferenciaCreditoContaBancariaRequest>
@@ -22,9 +22,9 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="PlanoParcelamentoTransferenciaCreditoContaBancariaRequest" /> class.
         /// Initializes a new instance of the <see cref="PlanoParcelamentoTransferenciaCreditoContaBancariaRequest" />class.
         /// </summary>
-        /// <param name="IdCartao">{{{plano_parcelamento_transferencia_credito_conta_bancaria_request_id_cartao_value}}} (required).</param>
-        /// <param name="ValorTransacao">{{{plano_parcelamento_transferencia_credito_conta_bancaria_request_valor_transacao_value}}} (required).</param>
-        /// <param name="NumeroMesesCarencia">{{{plano_parcelamento_transferencia_credito_conta_bancaria_request_numero_meses_carencia_value}}} (required).</param>
+        /// <param name="IdCartao">Identification Card of the Card (required).</param>
+        /// <param name="ValorTransacao">Value of transaction with two decimal places for the cents (required).</param>
+        /// <param name="NumeroMesesCarencia">Represent the number of months given as shortage (required).</param>
 
         public PlanoParcelamentoTransferenciaCreditoContaBancariaRequest(long? IdCartao = null, double? ValorTransacao = null, int? NumeroMesesCarencia = null)
         {
@@ -60,23 +60,23 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{plano_parcelamento_transferencia_credito_conta_bancaria_request_id_cartao_value}}}
+        /// Identification Card of the Card
         /// </summary>
-        /// <value>{{{plano_parcelamento_transferencia_credito_conta_bancaria_request_id_cartao_value}}}</value>
+        /// <value>Identification Card of the Card</value>
         [DataMember(Name="idCartao", EmitDefaultValue=false)]
         public long? IdCartao { get; set; }
     
         /// <summary>
-        /// {{{plano_parcelamento_transferencia_credito_conta_bancaria_request_valor_transacao_value}}}
+        /// Value of transaction with two decimal places for the cents
         /// </summary>
-        /// <value>{{{plano_parcelamento_transferencia_credito_conta_bancaria_request_valor_transacao_value}}}</value>
+        /// <value>Value of transaction with two decimal places for the cents</value>
         [DataMember(Name="valorTransacao", EmitDefaultValue=false)]
         public double? ValorTransacao { get; set; }
     
         /// <summary>
-        /// {{{plano_parcelamento_transferencia_credito_conta_bancaria_request_numero_meses_carencia_value}}}
+        /// Represent the number of months given as shortage
         /// </summary>
-        /// <value>{{{plano_parcelamento_transferencia_credito_conta_bancaria_request_numero_meses_carencia_value}}}</value>
+        /// <value>Represent the number of months given as shortage</value>
         [DataMember(Name="numeroMesesCarencia", EmitDefaultValue=false)]
         public int? NumeroMesesCarencia { get; set; }
     

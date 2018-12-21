@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{status_impressao_response_description}}}
+    /// Representation of the Printing Status resource
     /// </summary>
     [DataContract]
     public partial class StatusImpressaoResponse :  IEquatable<StatusImpressaoResponse>
@@ -22,8 +22,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="StatusImpressaoResponse" /> class.
         /// Initializes a new instance of the <see cref="StatusImpressaoResponse" />class.
         /// </summary>
-        /// <param name="Id">{{{status_impressao_response_id_value}}}.</param>
-        /// <param name="Nome">{{{status_impressao_response_nome_value}}}.</param>
+        /// <param name="Id">Id of the card stage.</param>
+        /// <param name="Nome">Name of the printing status.</param>
 
         public StatusImpressaoResponse(long? Id = null, string Nome = null)
         {
@@ -34,16 +34,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{status_impressao_response_id_value}}}
+        /// Id of the card stage
         /// </summary>
-        /// <value>{{{status_impressao_response_id_value}}}</value>
+        /// <value>Id of the card stage</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{status_impressao_response_nome_value}}}
+        /// Name of the printing status
         /// </summary>
-        /// <value>{{{status_impressao_response_nome_value}}}</value>
+        /// <value>Name of the printing status</value>
         [DataMember(Name="nome", EmitDefaultValue=false)]
         public string Nome { get; set; }
     

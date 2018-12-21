@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{tipo_operacao_persist_description}}}
+    /// Operation type object, containing only properties that can be changed
     /// </summary>
     [DataContract]
     public partial class TipoOperacaoParcialUpdate :  IEquatable<TipoOperacaoParcialUpdate>
@@ -22,7 +22,7 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TipoOperacaoParcialUpdate" /> class.
         /// Initializes a new instance of the <see cref="TipoOperacaoParcialUpdate" />class.
         /// </summary>
-        /// <param name="FlagManterTaxaJurosNoRotativo">{{{tipo_operacao_persist_flag_manter_taxa_juros_no_rotativo_value}}}.</param>
+        /// <param name="FlagManterTaxaJurosNoRotativo">Boolean that signals to all transactions of this operation type must use the purchase interest rate as the due balance interest rate.</param>
 
         public TipoOperacaoParcialUpdate(bool? FlagManterTaxaJurosNoRotativo = null)
         {
@@ -32,9 +32,9 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{tipo_operacao_persist_flag_manter_taxa_juros_no_rotativo_value}}}
+        /// Boolean that signals to all transactions of this operation type must use the purchase interest rate as the due balance interest rate
         /// </summary>
-        /// <value>{{{tipo_operacao_persist_flag_manter_taxa_juros_no_rotativo_value}}}</value>
+        /// <value>Boolean that signals to all transactions of this operation type must use the purchase interest rate as the due balance interest rate</value>
         [DataMember(Name="flagManterTaxaJurosNoRotativo", EmitDefaultValue=false)]
         public bool? FlagManterTaxaJurosNoRotativo { get; set; }
     

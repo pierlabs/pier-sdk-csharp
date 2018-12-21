@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{maquineta_update_description}}}
+    /// Request Parameters to update POS
     /// </summary>
     [DataContract]
     public partial class MaquinetaUpdate :  IEquatable<MaquinetaUpdate>
@@ -22,10 +22,10 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="MaquinetaUpdate" /> class.
         /// Initializes a new instance of the <see cref="MaquinetaUpdate" />class.
         /// </summary>
-        /// <param name="IdTerminal">{{{maquineta_update_id_terminal_value}}} (required).</param>
-        /// <param name="IdTipoMaquineta">{{{maquineta_update_id_tipo_maquineta_value}}} (required).</param>
-        /// <param name="Valor">{{{maquineta_update_valor_value}}} (required).</param>
-        /// <param name="DataHoraImplantacao">{{{maquineta_update_data_hora_implantacao_value}}} (required).</param>
+        /// <param name="IdTerminal">Identification Code of the Terminal (id) (required).</param>
+        /// <param name="IdTipoMaquineta">Identification Code of the POS type (id) (required).</param>
+        /// <param name="Valor">Value of Maintenance of the POS (required).</param>
+        /// <param name="DataHoraImplantacao">Date of the POS deploy (required).</param>
 
         public MaquinetaUpdate(long? IdTerminal = null, long? IdTipoMaquineta = null, double? Valor = null, string DataHoraImplantacao = null)
         {
@@ -70,30 +70,30 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{maquineta_update_id_terminal_value}}}
+        /// Identification Code of the Terminal (id)
         /// </summary>
-        /// <value>{{{maquineta_update_id_terminal_value}}}</value>
+        /// <value>Identification Code of the Terminal (id)</value>
         [DataMember(Name="idTerminal", EmitDefaultValue=false)]
         public long? IdTerminal { get; set; }
     
         /// <summary>
-        /// {{{maquineta_update_id_tipo_maquineta_value}}}
+        /// Identification Code of the POS type (id)
         /// </summary>
-        /// <value>{{{maquineta_update_id_tipo_maquineta_value}}}</value>
+        /// <value>Identification Code of the POS type (id)</value>
         [DataMember(Name="idTipoMaquineta", EmitDefaultValue=false)]
         public long? IdTipoMaquineta { get; set; }
     
         /// <summary>
-        /// {{{maquineta_update_valor_value}}}
+        /// Value of Maintenance of the POS
         /// </summary>
-        /// <value>{{{maquineta_update_valor_value}}}</value>
+        /// <value>Value of Maintenance of the POS</value>
         [DataMember(Name="valor", EmitDefaultValue=false)]
         public double? Valor { get; set; }
     
         /// <summary>
-        /// {{{maquineta_update_data_hora_implantacao_value}}}
+        /// Date of the POS deploy
         /// </summary>
-        /// <value>{{{maquineta_update_data_hora_implantacao_value}}}</value>
+        /// <value>Date of the POS deploy</value>
         [DataMember(Name="dataHoraImplantacao", EmitDefaultValue=false)]
         public string DataHoraImplantacao { get; set; }
     

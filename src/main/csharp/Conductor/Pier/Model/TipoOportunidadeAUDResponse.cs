@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{tipo_oportunidade_a_u_d_response_description}}}
+    /// Response representation of the TypeOpportunityAUD resource
     /// </summary>
     [DataContract]
     public partial class TipoOportunidadeAUDResponse :  IEquatable<TipoOportunidadeAUDResponse>
@@ -22,12 +22,12 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TipoOportunidadeAUDResponse" /> class.
         /// Initializes a new instance of the <see cref="TipoOportunidadeAUDResponse" />class.
         /// </summary>
-        /// <param name="Rev">{{{tipo_oportunidade_a_u_d_response_rev_value}}}.</param>
-        /// <param name="RevType">{{{tipo_oportunidade_a_u_d_response_rev_type_value}}}.</param>
-        /// <param name="RevDate">{{{tipo_oportunidade_a_u_d_response_rev_date_value}}}.</param>
-        /// <param name="Id">{{{tipo_oportunidade_a_u_d_response_id_value}}}.</param>
-        /// <param name="Descricao">{{{tipo_oportunidade_a_u_d_response_descricao_value}}}.</param>
-        /// <param name="FlagAtivo">{{{tipo_oportunidade_a_u_d_response_flag_ativo_value}}}.</param>
+        /// <param name="Rev">Identifier code of the auditorial of the opportunity types.</param>
+        /// <param name="RevType">Code that represents the type of action made in theh resource of opportunity types.</param>
+        /// <param name="RevDate">Action date of the resource of opportunity types.</param>
+        /// <param name="Id">Identifier Code of the opportunity type which was made the action.</param>
+        /// <param name="Descricao">Description of the opportunity type which was made the action.</param>
+        /// <param name="FlagAtivo">Attributed that represent if the opportunity type is active.</param>
 
         public TipoOportunidadeAUDResponse(long? Rev = null, long? RevType = null, string RevDate = null, long? Id = null, string Descricao = null, bool? FlagAtivo = null)
         {
@@ -42,44 +42,44 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{tipo_oportunidade_a_u_d_response_rev_value}}}
+        /// Identifier code of the auditorial of the opportunity types
         /// </summary>
-        /// <value>{{{tipo_oportunidade_a_u_d_response_rev_value}}}</value>
+        /// <value>Identifier code of the auditorial of the opportunity types</value>
         [DataMember(Name="rev", EmitDefaultValue=false)]
         public long? Rev { get; set; }
     
         /// <summary>
-        /// {{{tipo_oportunidade_a_u_d_response_rev_type_value}}}
+        /// Code that represents the type of action made in theh resource of opportunity types
         /// </summary>
-        /// <value>{{{tipo_oportunidade_a_u_d_response_rev_type_value}}}</value>
+        /// <value>Code that represents the type of action made in theh resource of opportunity types</value>
         [DataMember(Name="revType", EmitDefaultValue=false)]
         public long? RevType { get; set; }
     
         /// <summary>
-        /// {{{tipo_oportunidade_a_u_d_response_rev_date_value}}}
+        /// Action date of the resource of opportunity types
         /// </summary>
-        /// <value>{{{tipo_oportunidade_a_u_d_response_rev_date_value}}}</value>
+        /// <value>Action date of the resource of opportunity types</value>
         [DataMember(Name="revDate", EmitDefaultValue=false)]
         public string RevDate { get; set; }
     
         /// <summary>
-        /// {{{tipo_oportunidade_a_u_d_response_id_value}}}
+        /// Identifier Code of the opportunity type which was made the action
         /// </summary>
-        /// <value>{{{tipo_oportunidade_a_u_d_response_id_value}}}</value>
+        /// <value>Identifier Code of the opportunity type which was made the action</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{tipo_oportunidade_a_u_d_response_descricao_value}}}
+        /// Description of the opportunity type which was made the action
         /// </summary>
-        /// <value>{{{tipo_oportunidade_a_u_d_response_descricao_value}}}</value>
+        /// <value>Description of the opportunity type which was made the action</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     
         /// <summary>
-        /// {{{tipo_oportunidade_a_u_d_response_flag_ativo_value}}}
+        /// Attributed that represent if the opportunity type is active
         /// </summary>
-        /// <value>{{{tipo_oportunidade_a_u_d_response_flag_ativo_value}}}</value>
+        /// <value>Attributed that represent if the opportunity type is active</value>
         [DataMember(Name="flagAtivo", EmitDefaultValue=false)]
         public bool? FlagAtivo { get; set; }
     

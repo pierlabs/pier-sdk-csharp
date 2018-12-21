@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{page_transacao_processada_nao_processada_response_description}}}
+    /// List of Processed and Unprocessed Transactions
     /// </summary>
     [DataContract]
     public partial class PageTransacaoProcessadaNaoProcessadaResponse :  IEquatable<PageTransacaoProcessadaNaoProcessadaResponse>

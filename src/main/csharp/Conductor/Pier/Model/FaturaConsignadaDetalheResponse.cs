@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{fatura_consignada_detalhe_response_description}}}
+    /// Consignated Invoice detail
     /// </summary>
     [DataContract]
     public partial class FaturaConsignadaDetalheResponse :  IEquatable<FaturaConsignadaDetalheResponse>
@@ -22,54 +22,54 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="FaturaConsignadaDetalheResponse" /> class.
         /// Initializes a new instance of the <see cref="FaturaConsignadaDetalheResponse" />class.
         /// </summary>
-        /// <param name="Id">{{{fatura_consignada_detalhe_response_id_value}}}.</param>
-        /// <param name="IdConta">{{{fatura_consignada_detalhe_response_id_conta_value}}}.</param>
-        /// <param name="LimiteGlobal">{{{fatura_consignada_detalhe_response_limite_global_value}}} (required).</param>
-        /// <param name="FlagEmiteFatura">{{{fatura_consignada_detalhe_response_flag_emite_fatura_value}}}.</param>
-        /// <param name="LimiteCompra">{{{fatura_consignada_detalhe_response_limite_compra_value}}} (required).</param>
-        /// <param name="DataVencimentoFatura">{{{fatura_consignada_detalhe_response_data_vencimento_fatura_value}}}.</param>
-        /// <param name="LimiteParcelado">{{{fatura_consignada_detalhe_response_limite_parcelado_value}}} (required).</param>
-        /// <param name="LimiteParcelas">{{{fatura_consignada_detalhe_response_limite_parcelas_value}}} (required).</param>
-        /// <param name="ValorTotalFatura">{{{fatura_consignada_detalhe_response_valor_total_fatura_value}}}.</param>
-        /// <param name="ValorFaturaAnterior">{{{fatura_consignada_detalhe_response_valor_fatura_anterior_value}}}.</param>
-        /// <param name="ValorPagamentoMinimo">{{{fatura_consignada_detalhe_response_valor_pagamento_minimo_value}}}.</param>
-        /// <param name="ValorPagamentoConsignado">{{{fatura_consignada_detalhe_response_valor_pagamento_consignado_value}}}.</param>
-        /// <param name="LimiteSaqueGlobal">{{{fatura_consignada_detalhe_response_limite_saque_global_value}}} (required).</param>
-        /// <param name="ValorPagamentoComplementar">{{{fatura_consignada_detalhe_response_valor_pagamento_complementar_value}}}.</param>
-        /// <param name="LimiteSaquePeriodo">{{{fatura_consignada_detalhe_response_limite_saque_periodo_value}}} (required).</param>
-        /// <param name="TotalComprasNacionais">{{{fatura_consignada_detalhe_response_total_compras_nacionais_value}}}.</param>
-        /// <param name="LimiteConsignado">{{{fatura_consignada_detalhe_response_limite_consignado_value}}} (required).</param>
-        /// <param name="TotalComprasInternacionas">{{{fatura_consignada_detalhe_response_total_compras_internacionas_value}}}.</param>
-        /// <param name="LimiteInternacionalCompra">{{{fatura_consignada_detalhe_response_limite_internacional_compra_value}}} (required).</param>
-        /// <param name="TotalSaquesNacionais">{{{fatura_consignada_detalhe_response_total_saques_nacionais_value}}}.</param>
-        /// <param name="LimiteInternacionalParcelado">{{{fatura_consignada_detalhe_response_limite_internacional_parcelado_value}}} (required).</param>
-        /// <param name="TotalSaquesInternacionais">{{{fatura_consignada_detalhe_response_total_saques_internacionais_value}}}.</param>
-        /// <param name="LimiteInternacionalParcelas">{{{fatura_consignada_detalhe_response_limite_internacional_parcelas_value}}} (required).</param>
-        /// <param name="TotalDebitosNacionais">{{{fatura_consignada_detalhe_response_total_debitos_nacionais_value}}}.</param>
-        /// <param name="LimiteInternacionalSaqueGlobal">{{{fatura_consignada_detalhe_response_limite_internacional_saque_global_value}}} (required).</param>
-        /// <param name="TotalDebitosRecorrentes">{{{fatura_consignada_detalhe_response_total_debitos_recorrentes_value}}}.</param>
-        /// <param name="LimiteInternacionalSaquePeriodo">{{{fatura_consignada_detalhe_response_limite_internacional_saque_periodo_value}}} (required).</param>
-        /// <param name="TotalDebitosInternacionais">{{{fatura_consignada_detalhe_response_total_debitos_internacionais_value}}}.</param>
-        /// <param name="SaldoDisponivelGlobal">{{{fatura_consignada_detalhe_response_saldo_disponivel_global_value}}} (required).</param>
-        /// <param name="TotalDebitosDiversosNacionais">{{{fatura_consignada_detalhe_response_total_debitos_diversos_nacionais_value}}}.</param>
-        /// <param name="SaldoDisponivelCompra">{{{fatura_consignada_detalhe_response_saldo_disponivel_compra_value}}} (required).</param>
-        /// <param name="TotalDebitosOpcionais">{{{fatura_consignada_detalhe_response_total_debitos_opcionais_value}}}.</param>
-        /// <param name="SaldoDisponivelParcelado">{{{fatura_consignada_detalhe_response_saldo_disponivel_parcelado_value}}} (required).</param>
-        /// <param name="TotalPagamentos">{{{fatura_consignada_detalhe_response_total_pagamentos_value}}}.</param>
-        /// <param name="SaldoDisponivelParcelas">{{{fatura_consignada_detalhe_response_saldo_disponivel_parcelas_value}}} (required).</param>
-        /// <param name="TotalCreditosNacionais">{{{fatura_consignada_detalhe_response_total_creditos_nacionais_value}}}.</param>
-        /// <param name="TotalAjustes">{{{fatura_consignada_detalhe_response_total_ajustes_value}}}.</param>
-        /// <param name="TotalTarifas">{{{fatura_consignada_detalhe_response_total_tarifas_value}}}.</param>
-        /// <param name="TotalMulta">{{{fatura_consignada_detalhe_response_total_multa_value}}}.</param>
-        /// <param name="SaldoDisponivelSaque">{{{fatura_consignada_detalhe_response_saldo_disponivel_saque_value}}} (required).</param>
-        /// <param name="TotalJuros">{{{fatura_consignada_detalhe_response_total_juros_value}}}.</param>
-        /// <param name="SaldoPontosFidelidade">{{{fatura_consignada_detalhe_response_saldo_pontos_fidelidade_value}}} (required).</param>
-        /// <param name="TaxaRotativo">{{{fatura_consignada_detalhe_response_taxa_rotativo_value}}}.</param>
-        /// <param name="SaldoDisponivelCompraInternacional">{{{fatura_consignada_detalhe_response_saldo_disponivel_compra_internacional_value}}} (required).</param>
-        /// <param name="TaxaSaque">{{{fatura_consignada_detalhe_response_taxa_saque_value}}}.</param>
-        /// <param name="SaldoDisponivelSaqueInternacional">{{{fatura_consignada_detalhe_response_saldo_disponivel_saque_internacional_value}}} (required).</param>
-        /// <param name="TaxaMaximaProximoPeriodo">{{{fatura_consignada_detalhe_response_taxa_maxima_proximo_periodo_value}}}.</param>
-        /// <param name="TotalServicos">{{{fatura_consignada_detalhe_response_total_servicos_value}}} (required).</param>
+        /// <param name="Id">Identifier Code of the invoice.</param>
+        /// <param name="IdConta">Identifier Code of the Account (id).</param>
+        /// <param name="LimiteGlobal">show the limit credit value that the cardholder has (required).</param>
+        /// <param name="FlagEmiteFatura">Identifier Code of the account which the invoice refers to.</param>
+        /// <param name="LimiteCompra">When it is used by the issuer, this field shows the limit credit value that the cardholder has to use exclusively in National Purchases (required).</param>
+        /// <param name="DataVencimentoFatura">Expiration date of the invoice.</param>
+        /// <param name="LimiteParcelado">When it is used by the issuer, this field presents the limit credit value that the cardholder has to make transactions of parceled shops (required).</param>
+        /// <param name="LimiteParcelas">When it is used by the issuer, this field shows the limit credit value that the cardholder can accumulate since the suum of the shop parcels that they were made in this modality (required).</param>
+        /// <param name="ValorTotalFatura">Value for total payment of the invoice.</param>
+        /// <param name="ValorFaturaAnterior">Total Value of the previous invoice.</param>
+        /// <param name="ValorPagamentoMinimo">Minimum value for the invoice payment.</param>
+        /// <param name="ValorPagamentoConsignado">Invoice value paid through the discount in payroll.</param>
+        /// <param name="LimiteSaqueGlobal">When it is used by the issuer, this field presents the limit credit value that the cardholder can use to make National Withdrawal Transactions (required).</param>
+        /// <param name="ValorPagamentoComplementar">Additional Value to consider the minimum payment of the invoice.</param>
+        /// <param name="LimiteSaquePeriodo">When it is used by the issuer, this field presents the limit credit value that the cardholder can use to National Withdrawal Transactions inside of each billing cycle (required).</param>
+        /// <param name="TotalComprasNacionais">Total value of the national shops launched in the invoice.</param>
+        /// <param name="LimiteConsignado">when it is used by the issuer, this field presents the value of the credit margin that can be used to be charged as a consignated form (discount in payroll) in the wage/expiration (required).</param>
+        /// <param name="TotalComprasInternacionas">Total value of the international shops launched in the invoice.</param>
+        /// <param name="LimiteInternacionalCompra">When it is used by the issuer, this field presents the limit credit value that the cardholder can use for International Shops (required).</param>
+        /// <param name="TotalSaquesNacionais">Total Value of the National Withdrawals launched in the invoice.</param>
+        /// <param name="LimiteInternacionalParcelado">When it is used by the issuer, this field presents the limit credit value that the cardholder has to make International transactions of parceled shops (required).</param>
+        /// <param name="TotalSaquesInternacionais">Total value of the international withdrawals launched in the invoice.</param>
+        /// <param name="LimiteInternacionalParcelas">When it is used by the issuer, this field presents the limit credit value that the cardholder can accumulate since the sum of parcels of the international shops that they were made in this modality (required).</param>
+        /// <param name="TotalDebitosNacionais">Total Value of the national debits launched in the invoice.</param>
+        /// <param name="LimiteInternacionalSaqueGlobal">When it is used by the issuer, this field shows the credit value that the cardholder can use to make International withdrawal transactions (required).</param>
+        /// <param name="TotalDebitosRecorrentes">Total Value of the recurrent values launched in the invoice.</param>
+        /// <param name="LimiteInternacionalSaquePeriodo">Whenn it is used by the issuer, this field presents the limit credit value that the cardholder can use to make National withdrawal Transactions inside of each billing cycle (required).</param>
+        /// <param name="TotalDebitosInternacionais">Total value of the international debits launched in the invoice.</param>
+        /// <param name="SaldoDisponivelGlobal">Show the value of credit that the cardholder has able to make trasanction (required).</param>
+        /// <param name="TotalDebitosDiversosNacionais">Total Value of the several national debits launched in the invoice.</param>
+        /// <param name="SaldoDisponivelCompra">When it is used by the issuer, this field presents the limit credit value that the cardholder has to make transactions of National Shop (required).</param>
+        /// <param name="TotalDebitosOpcionais">Total Value of the several optional debits launched in the invoice.</param>
+        /// <param name="SaldoDisponivelParcelado">When it is used by the issuer the limitParcel modality, this field will present the credit value that the cardholder has available to make National Shop Transactions (required).</param>
+        /// <param name="TotalPagamentos">Total VAlue of the payments launched in the invoice.</param>
+        /// <param name="SaldoDisponivelParcelas">When it is used by the issuer the limitparcels modality, this field will present the credit value that the cardholder can used as a value of National parcels in a determined billing cycle (required).</param>
+        /// <param name="TotalCreditosNacionais">Total National Credit Values launched in the invoice.</param>
+        /// <param name="TotalAjustes">Total Value of the adjustments launched in the invoice.</param>
+        /// <param name="TotalTarifas">Total value of the taxes launched in the invoice.</param>
+        /// <param name="TotalMulta">Total value of the fine launched in the invoice.</param>
+        /// <param name="SaldoDisponivelSaque">When it is used by the issuer the LimitWithdrawal modality, this fiel will show the credit value that the cardholder has able to make transactions of National Withdrawal (required).</param>
+        /// <param name="TotalJuros">Total value of the interest launched in the invoice.</param>
+        /// <param name="SaldoPontosFidelidade">When it is used a fidelity program by the issuer, this field will show the current balance of the points the cardholder has (required).</param>
+        /// <param name="TaxaRotativo">Percentage value of the Revolving interest taxes.</param>
+        /// <param name="SaldoDisponivelCompraInternacional">When it is used by the issuer the limitShopInternational modality, this field will present the credit value that the cardholder has able to make International Shopping Transactions (required).</param>
+        /// <param name="TaxaSaque">Percentage Value of the withdrawal taxe.</param>
+        /// <param name="SaldoDisponivelSaqueInternacional">When it is used by the issuer the limitWithdrawalInternational modality, this field will show the credit value that the cardholder has able to make trasactions of International Withdrawal (required).</param>
+        /// <param name="TaxaMaximaProximoPeriodo">Maximum percentage value of the charge taxes for the next period.</param>
+        /// <param name="TotalServicos">Show the sum of all insurance charged in the invoice of the client (required).</param>
 
         public FaturaConsignadaDetalheResponse(long? Id = null, long? IdConta = null, double? LimiteGlobal = null, int? FlagEmiteFatura = null, double? LimiteCompra = null, string DataVencimentoFatura = null, double? LimiteParcelado = null, double? LimiteParcelas = null, double? ValorTotalFatura = null, double? ValorFaturaAnterior = null, double? ValorPagamentoMinimo = null, double? ValorPagamentoConsignado = null, double? LimiteSaqueGlobal = null, double? ValorPagamentoComplementar = null, double? LimiteSaquePeriodo = null, double? TotalComprasNacionais = null, double? LimiteConsignado = null, double? TotalComprasInternacionas = null, double? LimiteInternacionalCompra = null, double? TotalSaquesNacionais = null, double? LimiteInternacionalParcelado = null, double? TotalSaquesInternacionais = null, double? LimiteInternacionalParcelas = null, double? TotalDebitosNacionais = null, double? LimiteInternacionalSaqueGlobal = null, double? TotalDebitosRecorrentes = null, double? LimiteInternacionalSaquePeriodo = null, double? TotalDebitosInternacionais = null, double? SaldoDisponivelGlobal = null, double? TotalDebitosDiversosNacionais = null, double? SaldoDisponivelCompra = null, double? TotalDebitosOpcionais = null, double? SaldoDisponivelParcelado = null, double? TotalPagamentos = null, double? SaldoDisponivelParcelas = null, double? TotalCreditosNacionais = null, double? TotalAjustes = null, double? TotalTarifas = null, double? TotalMulta = null, double? SaldoDisponivelSaque = null, double? TotalJuros = null, double? SaldoPontosFidelidade = null, double? TaxaRotativo = null, double? SaldoDisponivelCompraInternacional = null, double? TaxaSaque = null, double? SaldoDisponivelSaqueInternacional = null, double? TaxaMaximaProximoPeriodo = null, double? TotalServicos = null)
         {
@@ -294,338 +294,338 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{fatura_consignada_detalhe_response_id_value}}}
+        /// Identifier Code of the invoice
         /// </summary>
-        /// <value>{{{fatura_consignada_detalhe_response_id_value}}}</value>
+        /// <value>Identifier Code of the invoice</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{fatura_consignada_detalhe_response_id_conta_value}}}
+        /// Identifier Code of the Account (id)
         /// </summary>
-        /// <value>{{{fatura_consignada_detalhe_response_id_conta_value}}}</value>
+        /// <value>Identifier Code of the Account (id)</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// {{{fatura_consignada_detalhe_response_limite_global_value}}}
+        /// show the limit credit value that the cardholder has
         /// </summary>
-        /// <value>{{{fatura_consignada_detalhe_response_limite_global_value}}}</value>
+        /// <value>show the limit credit value that the cardholder has</value>
         [DataMember(Name="limiteGlobal", EmitDefaultValue=false)]
         public double? LimiteGlobal { get; set; }
     
         /// <summary>
-        /// {{{fatura_consignada_detalhe_response_flag_emite_fatura_value}}}
+        /// Identifier Code of the account which the invoice refers to
         /// </summary>
-        /// <value>{{{fatura_consignada_detalhe_response_flag_emite_fatura_value}}}</value>
+        /// <value>Identifier Code of the account which the invoice refers to</value>
         [DataMember(Name="flagEmiteFatura", EmitDefaultValue=false)]
         public int? FlagEmiteFatura { get; set; }
     
         /// <summary>
-        /// {{{fatura_consignada_detalhe_response_limite_compra_value}}}
+        /// When it is used by the issuer, this field shows the limit credit value that the cardholder has to use exclusively in National Purchases
         /// </summary>
-        /// <value>{{{fatura_consignada_detalhe_response_limite_compra_value}}}</value>
+        /// <value>When it is used by the issuer, this field shows the limit credit value that the cardholder has to use exclusively in National Purchases</value>
         [DataMember(Name="limiteCompra", EmitDefaultValue=false)]
         public double? LimiteCompra { get; set; }
     
         /// <summary>
-        /// {{{fatura_consignada_detalhe_response_data_vencimento_fatura_value}}}
+        /// Expiration date of the invoice
         /// </summary>
-        /// <value>{{{fatura_consignada_detalhe_response_data_vencimento_fatura_value}}}</value>
+        /// <value>Expiration date of the invoice</value>
         [DataMember(Name="dataVencimentoFatura", EmitDefaultValue=false)]
         public string DataVencimentoFatura { get; set; }
     
         /// <summary>
-        /// {{{fatura_consignada_detalhe_response_limite_parcelado_value}}}
+        /// When it is used by the issuer, this field presents the limit credit value that the cardholder has to make transactions of parceled shops
         /// </summary>
-        /// <value>{{{fatura_consignada_detalhe_response_limite_parcelado_value}}}</value>
+        /// <value>When it is used by the issuer, this field presents the limit credit value that the cardholder has to make transactions of parceled shops</value>
         [DataMember(Name="limiteParcelado", EmitDefaultValue=false)]
         public double? LimiteParcelado { get; set; }
     
         /// <summary>
-        /// {{{fatura_consignada_detalhe_response_limite_parcelas_value}}}
+        /// When it is used by the issuer, this field shows the limit credit value that the cardholder can accumulate since the suum of the shop parcels that they were made in this modality
         /// </summary>
-        /// <value>{{{fatura_consignada_detalhe_response_limite_parcelas_value}}}</value>
+        /// <value>When it is used by the issuer, this field shows the limit credit value that the cardholder can accumulate since the suum of the shop parcels that they were made in this modality</value>
         [DataMember(Name="limiteParcelas", EmitDefaultValue=false)]
         public double? LimiteParcelas { get; set; }
     
         /// <summary>
-        /// {{{fatura_consignada_detalhe_response_valor_total_fatura_value}}}
+        /// Value for total payment of the invoice
         /// </summary>
-        /// <value>{{{fatura_consignada_detalhe_response_valor_total_fatura_value}}}</value>
+        /// <value>Value for total payment of the invoice</value>
         [DataMember(Name="valorTotalFatura", EmitDefaultValue=false)]
         public double? ValorTotalFatura { get; set; }
     
         /// <summary>
-        /// {{{fatura_consignada_detalhe_response_valor_fatura_anterior_value}}}
+        /// Total Value of the previous invoice
         /// </summary>
-        /// <value>{{{fatura_consignada_detalhe_response_valor_fatura_anterior_value}}}</value>
+        /// <value>Total Value of the previous invoice</value>
         [DataMember(Name="valorFaturaAnterior", EmitDefaultValue=false)]
         public double? ValorFaturaAnterior { get; set; }
     
         /// <summary>
-        /// {{{fatura_consignada_detalhe_response_valor_pagamento_minimo_value}}}
+        /// Minimum value for the invoice payment
         /// </summary>
-        /// <value>{{{fatura_consignada_detalhe_response_valor_pagamento_minimo_value}}}</value>
+        /// <value>Minimum value for the invoice payment</value>
         [DataMember(Name="valorPagamentoMinimo", EmitDefaultValue=false)]
         public double? ValorPagamentoMinimo { get; set; }
     
         /// <summary>
-        /// {{{fatura_consignada_detalhe_response_valor_pagamento_consignado_value}}}
+        /// Invoice value paid through the discount in payroll
         /// </summary>
-        /// <value>{{{fatura_consignada_detalhe_response_valor_pagamento_consignado_value}}}</value>
+        /// <value>Invoice value paid through the discount in payroll</value>
         [DataMember(Name="valorPagamentoConsignado", EmitDefaultValue=false)]
         public double? ValorPagamentoConsignado { get; set; }
     
         /// <summary>
-        /// {{{fatura_consignada_detalhe_response_limite_saque_global_value}}}
+        /// When it is used by the issuer, this field presents the limit credit value that the cardholder can use to make National Withdrawal Transactions
         /// </summary>
-        /// <value>{{{fatura_consignada_detalhe_response_limite_saque_global_value}}}</value>
+        /// <value>When it is used by the issuer, this field presents the limit credit value that the cardholder can use to make National Withdrawal Transactions</value>
         [DataMember(Name="limiteSaqueGlobal", EmitDefaultValue=false)]
         public double? LimiteSaqueGlobal { get; set; }
     
         /// <summary>
-        /// {{{fatura_consignada_detalhe_response_valor_pagamento_complementar_value}}}
+        /// Additional Value to consider the minimum payment of the invoice
         /// </summary>
-        /// <value>{{{fatura_consignada_detalhe_response_valor_pagamento_complementar_value}}}</value>
+        /// <value>Additional Value to consider the minimum payment of the invoice</value>
         [DataMember(Name="valorPagamentoComplementar", EmitDefaultValue=false)]
         public double? ValorPagamentoComplementar { get; set; }
     
         /// <summary>
-        /// {{{fatura_consignada_detalhe_response_limite_saque_periodo_value}}}
+        /// When it is used by the issuer, this field presents the limit credit value that the cardholder can use to National Withdrawal Transactions inside of each billing cycle
         /// </summary>
-        /// <value>{{{fatura_consignada_detalhe_response_limite_saque_periodo_value}}}</value>
+        /// <value>When it is used by the issuer, this field presents the limit credit value that the cardholder can use to National Withdrawal Transactions inside of each billing cycle</value>
         [DataMember(Name="limiteSaquePeriodo", EmitDefaultValue=false)]
         public double? LimiteSaquePeriodo { get; set; }
     
         /// <summary>
-        /// {{{fatura_consignada_detalhe_response_total_compras_nacionais_value}}}
+        /// Total value of the national shops launched in the invoice
         /// </summary>
-        /// <value>{{{fatura_consignada_detalhe_response_total_compras_nacionais_value}}}</value>
+        /// <value>Total value of the national shops launched in the invoice</value>
         [DataMember(Name="totalComprasNacionais", EmitDefaultValue=false)]
         public double? TotalComprasNacionais { get; set; }
     
         /// <summary>
-        /// {{{fatura_consignada_detalhe_response_limite_consignado_value}}}
+        /// when it is used by the issuer, this field presents the value of the credit margin that can be used to be charged as a consignated form (discount in payroll) in the wage/expiration
         /// </summary>
-        /// <value>{{{fatura_consignada_detalhe_response_limite_consignado_value}}}</value>
+        /// <value>when it is used by the issuer, this field presents the value of the credit margin that can be used to be charged as a consignated form (discount in payroll) in the wage/expiration</value>
         [DataMember(Name="limiteConsignado", EmitDefaultValue=false)]
         public double? LimiteConsignado { get; set; }
     
         /// <summary>
-        /// {{{fatura_consignada_detalhe_response_total_compras_internacionas_value}}}
+        /// Total value of the international shops launched in the invoice
         /// </summary>
-        /// <value>{{{fatura_consignada_detalhe_response_total_compras_internacionas_value}}}</value>
+        /// <value>Total value of the international shops launched in the invoice</value>
         [DataMember(Name="totalComprasInternacionas", EmitDefaultValue=false)]
         public double? TotalComprasInternacionas { get; set; }
     
         /// <summary>
-        /// {{{fatura_consignada_detalhe_response_limite_internacional_compra_value}}}
+        /// When it is used by the issuer, this field presents the limit credit value that the cardholder can use for International Shops
         /// </summary>
-        /// <value>{{{fatura_consignada_detalhe_response_limite_internacional_compra_value}}}</value>
+        /// <value>When it is used by the issuer, this field presents the limit credit value that the cardholder can use for International Shops</value>
         [DataMember(Name="limiteInternacionalCompra", EmitDefaultValue=false)]
         public double? LimiteInternacionalCompra { get; set; }
     
         /// <summary>
-        /// {{{fatura_consignada_detalhe_response_total_saques_nacionais_value}}}
+        /// Total Value of the National Withdrawals launched in the invoice
         /// </summary>
-        /// <value>{{{fatura_consignada_detalhe_response_total_saques_nacionais_value}}}</value>
+        /// <value>Total Value of the National Withdrawals launched in the invoice</value>
         [DataMember(Name="totalSaquesNacionais", EmitDefaultValue=false)]
         public double? TotalSaquesNacionais { get; set; }
     
         /// <summary>
-        /// {{{fatura_consignada_detalhe_response_limite_internacional_parcelado_value}}}
+        /// When it is used by the issuer, this field presents the limit credit value that the cardholder has to make International transactions of parceled shops
         /// </summary>
-        /// <value>{{{fatura_consignada_detalhe_response_limite_internacional_parcelado_value}}}</value>
+        /// <value>When it is used by the issuer, this field presents the limit credit value that the cardholder has to make International transactions of parceled shops</value>
         [DataMember(Name="limiteInternacionalParcelado", EmitDefaultValue=false)]
         public double? LimiteInternacionalParcelado { get; set; }
     
         /// <summary>
-        /// {{{fatura_consignada_detalhe_response_total_saques_internacionais_value}}}
+        /// Total value of the international withdrawals launched in the invoice
         /// </summary>
-        /// <value>{{{fatura_consignada_detalhe_response_total_saques_internacionais_value}}}</value>
+        /// <value>Total value of the international withdrawals launched in the invoice</value>
         [DataMember(Name="totalSaquesInternacionais", EmitDefaultValue=false)]
         public double? TotalSaquesInternacionais { get; set; }
     
         /// <summary>
-        /// {{{fatura_consignada_detalhe_response_limite_internacional_parcelas_value}}}
+        /// When it is used by the issuer, this field presents the limit credit value that the cardholder can accumulate since the sum of parcels of the international shops that they were made in this modality
         /// </summary>
-        /// <value>{{{fatura_consignada_detalhe_response_limite_internacional_parcelas_value}}}</value>
+        /// <value>When it is used by the issuer, this field presents the limit credit value that the cardholder can accumulate since the sum of parcels of the international shops that they were made in this modality</value>
         [DataMember(Name="limiteInternacionalParcelas", EmitDefaultValue=false)]
         public double? LimiteInternacionalParcelas { get; set; }
     
         /// <summary>
-        /// {{{fatura_consignada_detalhe_response_total_debitos_nacionais_value}}}
+        /// Total Value of the national debits launched in the invoice
         /// </summary>
-        /// <value>{{{fatura_consignada_detalhe_response_total_debitos_nacionais_value}}}</value>
+        /// <value>Total Value of the national debits launched in the invoice</value>
         [DataMember(Name="totalDebitosNacionais", EmitDefaultValue=false)]
         public double? TotalDebitosNacionais { get; set; }
     
         /// <summary>
-        /// {{{fatura_consignada_detalhe_response_limite_internacional_saque_global_value}}}
+        /// When it is used by the issuer, this field shows the credit value that the cardholder can use to make International withdrawal transactions
         /// </summary>
-        /// <value>{{{fatura_consignada_detalhe_response_limite_internacional_saque_global_value}}}</value>
+        /// <value>When it is used by the issuer, this field shows the credit value that the cardholder can use to make International withdrawal transactions</value>
         [DataMember(Name="limiteInternacionalSaqueGlobal", EmitDefaultValue=false)]
         public double? LimiteInternacionalSaqueGlobal { get; set; }
     
         /// <summary>
-        /// {{{fatura_consignada_detalhe_response_total_debitos_recorrentes_value}}}
+        /// Total Value of the recurrent values launched in the invoice
         /// </summary>
-        /// <value>{{{fatura_consignada_detalhe_response_total_debitos_recorrentes_value}}}</value>
+        /// <value>Total Value of the recurrent values launched in the invoice</value>
         [DataMember(Name="totalDebitosRecorrentes", EmitDefaultValue=false)]
         public double? TotalDebitosRecorrentes { get; set; }
     
         /// <summary>
-        /// {{{fatura_consignada_detalhe_response_limite_internacional_saque_periodo_value}}}
+        /// Whenn it is used by the issuer, this field presents the limit credit value that the cardholder can use to make National withdrawal Transactions inside of each billing cycle
         /// </summary>
-        /// <value>{{{fatura_consignada_detalhe_response_limite_internacional_saque_periodo_value}}}</value>
+        /// <value>Whenn it is used by the issuer, this field presents the limit credit value that the cardholder can use to make National withdrawal Transactions inside of each billing cycle</value>
         [DataMember(Name="limiteInternacionalSaquePeriodo", EmitDefaultValue=false)]
         public double? LimiteInternacionalSaquePeriodo { get; set; }
     
         /// <summary>
-        /// {{{fatura_consignada_detalhe_response_total_debitos_internacionais_value}}}
+        /// Total value of the international debits launched in the invoice
         /// </summary>
-        /// <value>{{{fatura_consignada_detalhe_response_total_debitos_internacionais_value}}}</value>
+        /// <value>Total value of the international debits launched in the invoice</value>
         [DataMember(Name="totalDebitosInternacionais", EmitDefaultValue=false)]
         public double? TotalDebitosInternacionais { get; set; }
     
         /// <summary>
-        /// {{{fatura_consignada_detalhe_response_saldo_disponivel_global_value}}}
+        /// Show the value of credit that the cardholder has able to make trasanction
         /// </summary>
-        /// <value>{{{fatura_consignada_detalhe_response_saldo_disponivel_global_value}}}</value>
+        /// <value>Show the value of credit that the cardholder has able to make trasanction</value>
         [DataMember(Name="saldoDisponivelGlobal", EmitDefaultValue=false)]
         public double? SaldoDisponivelGlobal { get; set; }
     
         /// <summary>
-        /// {{{fatura_consignada_detalhe_response_total_debitos_diversos_nacionais_value}}}
+        /// Total Value of the several national debits launched in the invoice
         /// </summary>
-        /// <value>{{{fatura_consignada_detalhe_response_total_debitos_diversos_nacionais_value}}}</value>
+        /// <value>Total Value of the several national debits launched in the invoice</value>
         [DataMember(Name="totalDebitosDiversosNacionais", EmitDefaultValue=false)]
         public double? TotalDebitosDiversosNacionais { get; set; }
     
         /// <summary>
-        /// {{{fatura_consignada_detalhe_response_saldo_disponivel_compra_value}}}
+        /// When it is used by the issuer, this field presents the limit credit value that the cardholder has to make transactions of National Shop
         /// </summary>
-        /// <value>{{{fatura_consignada_detalhe_response_saldo_disponivel_compra_value}}}</value>
+        /// <value>When it is used by the issuer, this field presents the limit credit value that the cardholder has to make transactions of National Shop</value>
         [DataMember(Name="saldoDisponivelCompra", EmitDefaultValue=false)]
         public double? SaldoDisponivelCompra { get; set; }
     
         /// <summary>
-        /// {{{fatura_consignada_detalhe_response_total_debitos_opcionais_value}}}
+        /// Total Value of the several optional debits launched in the invoice
         /// </summary>
-        /// <value>{{{fatura_consignada_detalhe_response_total_debitos_opcionais_value}}}</value>
+        /// <value>Total Value of the several optional debits launched in the invoice</value>
         [DataMember(Name="totalDebitosOpcionais", EmitDefaultValue=false)]
         public double? TotalDebitosOpcionais { get; set; }
     
         /// <summary>
-        /// {{{fatura_consignada_detalhe_response_saldo_disponivel_parcelado_value}}}
+        /// When it is used by the issuer the limitParcel modality, this field will present the credit value that the cardholder has available to make National Shop Transactions
         /// </summary>
-        /// <value>{{{fatura_consignada_detalhe_response_saldo_disponivel_parcelado_value}}}</value>
+        /// <value>When it is used by the issuer the limitParcel modality, this field will present the credit value that the cardholder has available to make National Shop Transactions</value>
         [DataMember(Name="saldoDisponivelParcelado", EmitDefaultValue=false)]
         public double? SaldoDisponivelParcelado { get; set; }
     
         /// <summary>
-        /// {{{fatura_consignada_detalhe_response_total_pagamentos_value}}}
+        /// Total VAlue of the payments launched in the invoice
         /// </summary>
-        /// <value>{{{fatura_consignada_detalhe_response_total_pagamentos_value}}}</value>
+        /// <value>Total VAlue of the payments launched in the invoice</value>
         [DataMember(Name="totalPagamentos", EmitDefaultValue=false)]
         public double? TotalPagamentos { get; set; }
     
         /// <summary>
-        /// {{{fatura_consignada_detalhe_response_saldo_disponivel_parcelas_value}}}
+        /// When it is used by the issuer the limitparcels modality, this field will present the credit value that the cardholder can used as a value of National parcels in a determined billing cycle
         /// </summary>
-        /// <value>{{{fatura_consignada_detalhe_response_saldo_disponivel_parcelas_value}}}</value>
+        /// <value>When it is used by the issuer the limitparcels modality, this field will present the credit value that the cardholder can used as a value of National parcels in a determined billing cycle</value>
         [DataMember(Name="saldoDisponivelParcelas", EmitDefaultValue=false)]
         public double? SaldoDisponivelParcelas { get; set; }
     
         /// <summary>
-        /// {{{fatura_consignada_detalhe_response_total_creditos_nacionais_value}}}
+        /// Total National Credit Values launched in the invoice
         /// </summary>
-        /// <value>{{{fatura_consignada_detalhe_response_total_creditos_nacionais_value}}}</value>
+        /// <value>Total National Credit Values launched in the invoice</value>
         [DataMember(Name="totalCreditosNacionais", EmitDefaultValue=false)]
         public double? TotalCreditosNacionais { get; set; }
     
         /// <summary>
-        /// {{{fatura_consignada_detalhe_response_total_ajustes_value}}}
+        /// Total Value of the adjustments launched in the invoice
         /// </summary>
-        /// <value>{{{fatura_consignada_detalhe_response_total_ajustes_value}}}</value>
+        /// <value>Total Value of the adjustments launched in the invoice</value>
         [DataMember(Name="totalAjustes", EmitDefaultValue=false)]
         public double? TotalAjustes { get; set; }
     
         /// <summary>
-        /// {{{fatura_consignada_detalhe_response_total_tarifas_value}}}
+        /// Total value of the taxes launched in the invoice
         /// </summary>
-        /// <value>{{{fatura_consignada_detalhe_response_total_tarifas_value}}}</value>
+        /// <value>Total value of the taxes launched in the invoice</value>
         [DataMember(Name="totalTarifas", EmitDefaultValue=false)]
         public double? TotalTarifas { get; set; }
     
         /// <summary>
-        /// {{{fatura_consignada_detalhe_response_total_multa_value}}}
+        /// Total value of the fine launched in the invoice
         /// </summary>
-        /// <value>{{{fatura_consignada_detalhe_response_total_multa_value}}}</value>
+        /// <value>Total value of the fine launched in the invoice</value>
         [DataMember(Name="totalMulta", EmitDefaultValue=false)]
         public double? TotalMulta { get; set; }
     
         /// <summary>
-        /// {{{fatura_consignada_detalhe_response_saldo_disponivel_saque_value}}}
+        /// When it is used by the issuer the LimitWithdrawal modality, this fiel will show the credit value that the cardholder has able to make transactions of National Withdrawal
         /// </summary>
-        /// <value>{{{fatura_consignada_detalhe_response_saldo_disponivel_saque_value}}}</value>
+        /// <value>When it is used by the issuer the LimitWithdrawal modality, this fiel will show the credit value that the cardholder has able to make transactions of National Withdrawal</value>
         [DataMember(Name="saldoDisponivelSaque", EmitDefaultValue=false)]
         public double? SaldoDisponivelSaque { get; set; }
     
         /// <summary>
-        /// {{{fatura_consignada_detalhe_response_total_juros_value}}}
+        /// Total value of the interest launched in the invoice
         /// </summary>
-        /// <value>{{{fatura_consignada_detalhe_response_total_juros_value}}}</value>
+        /// <value>Total value of the interest launched in the invoice</value>
         [DataMember(Name="totalJuros", EmitDefaultValue=false)]
         public double? TotalJuros { get; set; }
     
         /// <summary>
-        /// {{{fatura_consignada_detalhe_response_saldo_pontos_fidelidade_value}}}
+        /// When it is used a fidelity program by the issuer, this field will show the current balance of the points the cardholder has
         /// </summary>
-        /// <value>{{{fatura_consignada_detalhe_response_saldo_pontos_fidelidade_value}}}</value>
+        /// <value>When it is used a fidelity program by the issuer, this field will show the current balance of the points the cardholder has</value>
         [DataMember(Name="saldoPontosFidelidade", EmitDefaultValue=false)]
         public double? SaldoPontosFidelidade { get; set; }
     
         /// <summary>
-        /// {{{fatura_consignada_detalhe_response_taxa_rotativo_value}}}
+        /// Percentage value of the Revolving interest taxes
         /// </summary>
-        /// <value>{{{fatura_consignada_detalhe_response_taxa_rotativo_value}}}</value>
+        /// <value>Percentage value of the Revolving interest taxes</value>
         [DataMember(Name="taxaRotativo", EmitDefaultValue=false)]
         public double? TaxaRotativo { get; set; }
     
         /// <summary>
-        /// {{{fatura_consignada_detalhe_response_saldo_disponivel_compra_internacional_value}}}
+        /// When it is used by the issuer the limitShopInternational modality, this field will present the credit value that the cardholder has able to make International Shopping Transactions
         /// </summary>
-        /// <value>{{{fatura_consignada_detalhe_response_saldo_disponivel_compra_internacional_value}}}</value>
+        /// <value>When it is used by the issuer the limitShopInternational modality, this field will present the credit value that the cardholder has able to make International Shopping Transactions</value>
         [DataMember(Name="saldoDisponivelCompraInternacional", EmitDefaultValue=false)]
         public double? SaldoDisponivelCompraInternacional { get; set; }
     
         /// <summary>
-        /// {{{fatura_consignada_detalhe_response_taxa_saque_value}}}
+        /// Percentage Value of the withdrawal taxe
         /// </summary>
-        /// <value>{{{fatura_consignada_detalhe_response_taxa_saque_value}}}</value>
+        /// <value>Percentage Value of the withdrawal taxe</value>
         [DataMember(Name="taxaSaque", EmitDefaultValue=false)]
         public double? TaxaSaque { get; set; }
     
         /// <summary>
-        /// {{{fatura_consignada_detalhe_response_saldo_disponivel_saque_internacional_value}}}
+        /// When it is used by the issuer the limitWithdrawalInternational modality, this field will show the credit value that the cardholder has able to make trasactions of International Withdrawal
         /// </summary>
-        /// <value>{{{fatura_consignada_detalhe_response_saldo_disponivel_saque_internacional_value}}}</value>
+        /// <value>When it is used by the issuer the limitWithdrawalInternational modality, this field will show the credit value that the cardholder has able to make trasactions of International Withdrawal</value>
         [DataMember(Name="saldoDisponivelSaqueInternacional", EmitDefaultValue=false)]
         public double? SaldoDisponivelSaqueInternacional { get; set; }
     
         /// <summary>
-        /// {{{fatura_consignada_detalhe_response_taxa_maxima_proximo_periodo_value}}}
+        /// Maximum percentage value of the charge taxes for the next period
         /// </summary>
-        /// <value>{{{fatura_consignada_detalhe_response_taxa_maxima_proximo_periodo_value}}}</value>
+        /// <value>Maximum percentage value of the charge taxes for the next period</value>
         [DataMember(Name="taxaMaximaProximoPeriodo", EmitDefaultValue=false)]
         public double? TaxaMaximaProximoPeriodo { get; set; }
     
         /// <summary>
-        /// {{{fatura_consignada_detalhe_response_total_servicos_value}}}
+        /// Show the sum of all insurance charged in the invoice of the client
         /// </summary>
-        /// <value>{{{fatura_consignada_detalhe_response_total_servicos_value}}}</value>
+        /// <value>Show the sum of all insurance charged in the invoice of the client</value>
         [DataMember(Name="totalServicos", EmitDefaultValue=false)]
         public double? TotalServicos { get; set; }
     

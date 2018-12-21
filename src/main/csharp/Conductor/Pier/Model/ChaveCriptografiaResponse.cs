@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{chave_criptografia_resposta_descricao}}}
+    /// Representation Object Response for encryption key
     /// </summary>
     [DataContract]
     public partial class ChaveCriptografiaResponse :  IEquatable<ChaveCriptografiaResponse>
@@ -22,7 +22,7 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="ChaveCriptografiaResponse" /> class.
         /// Initializes a new instance of the <see cref="ChaveCriptografiaResponse" />class.
         /// </summary>
-        /// <param name="Conteudo">{{{chave_criptografia_resposta_texto_conteudo}}}.</param>
+        /// <param name="Conteudo">text.</param>
 
         public ChaveCriptografiaResponse(string Conteudo = null)
         {
@@ -32,9 +32,9 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{chave_criptografia_resposta_texto_conteudo}}}
+        /// text
         /// </summary>
-        /// <value>{{{chave_criptografia_resposta_texto_conteudo}}}</value>
+        /// <value>text</value>
         [DataMember(Name="conteudo", EmitDefaultValue=false)]
         public string Conteudo { get; set; }
     

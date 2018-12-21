@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{campanha_persist_description}}}
+    /// Campaign
     /// </summary>
     [DataContract]
     public partial class CampanhaPersist :  IEquatable<CampanhaPersist>
@@ -22,9 +22,9 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="CampanhaPersist" /> class.
         /// Initializes a new instance of the <see cref="CampanhaPersist" />class.
         /// </summary>
-        /// <param name="Nome">{{{campanha_persist_nome_value}}}.</param>
-        /// <param name="IdTipoCampanha">{{{campanha_persist_id_tipo_campanha_value}}}.</param>
-        /// <param name="PlanosCampanhas">{{{campanha_persist_planos_campanhas_value}}}.</param>
+        /// <param name="Nome">Name of the campaign.</param>
+        /// <param name="IdTipoCampanha">Identification Code of the Campaign type.</param>
+        /// <param name="PlanosCampanhas">List with the plans of the campaign.</param>
 
         public CampanhaPersist(string Nome = null, long? IdTipoCampanha = null, List<PlanoCampanhaPersist> PlanosCampanhas = null)
         {
@@ -36,23 +36,23 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{campanha_persist_nome_value}}}
+        /// Name of the campaign
         /// </summary>
-        /// <value>{{{campanha_persist_nome_value}}}</value>
+        /// <value>Name of the campaign</value>
         [DataMember(Name="nome", EmitDefaultValue=false)]
         public string Nome { get; set; }
     
         /// <summary>
-        /// {{{campanha_persist_id_tipo_campanha_value}}}
+        /// Identification Code of the Campaign type
         /// </summary>
-        /// <value>{{{campanha_persist_id_tipo_campanha_value}}}</value>
+        /// <value>Identification Code of the Campaign type</value>
         [DataMember(Name="idTipoCampanha", EmitDefaultValue=false)]
         public long? IdTipoCampanha { get; set; }
     
         /// <summary>
-        /// {{{campanha_persist_planos_campanhas_value}}}
+        /// List with the plans of the campaign
         /// </summary>
-        /// <value>{{{campanha_persist_planos_campanhas_value}}}</value>
+        /// <value>List with the plans of the campaign</value>
         [DataMember(Name="planosCampanhas", EmitDefaultValue=false)]
         public List<PlanoCampanhaPersist> PlanosCampanhas { get; set; }
     

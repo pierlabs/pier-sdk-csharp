@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{antecipacao_simulada_detalhes_response_description}}}
+    /// Response Representation of the details of Simulated Antecipation Resource
     /// </summary>
     [DataContract]
     public partial class AntecipacaoSimuladaDetalhesResponse :  IEquatable<AntecipacaoSimuladaDetalhesResponse>
@@ -22,10 +22,10 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="AntecipacaoSimuladaDetalhesResponse" /> class.
         /// Initializes a new instance of the <see cref="AntecipacaoSimuladaDetalhesResponse" />class.
         /// </summary>
-        /// <param name="QuantidadeParcelas">{{{antecipacao_simulada_detalhes_response_quantidade_parcelas_value}}}.</param>
-        /// <param name="ValorParcelas">{{{antecipacao_simulada_detalhes_response_valor_parcelas_value}}}.</param>
-        /// <param name="ValorDesconto">{{{antecipacao_simulada_detalhes_response_valor_desconto_value}}}.</param>
-        /// <param name="ValorParcelasDesconto">{{{antecipacao_simulada_detalhes_response_valor_parcelas_desconto_value}}}.</param>
+        /// <param name="QuantidadeParcelas">Quantity of parcel of the installment plan simulated.</param>
+        /// <param name="ValorParcelas">Total value of the parcel.</param>
+        /// <param name="ValorDesconto">Value of the discount for the installment plan.</param>
+        /// <param name="ValorParcelasDesconto">Total value of the parcel after the discount application.</param>
 
         public AntecipacaoSimuladaDetalhesResponse(int? QuantidadeParcelas = null, double? ValorParcelas = null, double? ValorDesconto = null, double? ValorParcelasDesconto = null)
         {
@@ -38,30 +38,30 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{antecipacao_simulada_detalhes_response_quantidade_parcelas_value}}}
+        /// Quantity of parcel of the installment plan simulated
         /// </summary>
-        /// <value>{{{antecipacao_simulada_detalhes_response_quantidade_parcelas_value}}}</value>
+        /// <value>Quantity of parcel of the installment plan simulated</value>
         [DataMember(Name="quantidadeParcelas", EmitDefaultValue=false)]
         public int? QuantidadeParcelas { get; set; }
     
         /// <summary>
-        /// {{{antecipacao_simulada_detalhes_response_valor_parcelas_value}}}
+        /// Total value of the parcel
         /// </summary>
-        /// <value>{{{antecipacao_simulada_detalhes_response_valor_parcelas_value}}}</value>
+        /// <value>Total value of the parcel</value>
         [DataMember(Name="valorParcelas", EmitDefaultValue=false)]
         public double? ValorParcelas { get; set; }
     
         /// <summary>
-        /// {{{antecipacao_simulada_detalhes_response_valor_desconto_value}}}
+        /// Value of the discount for the installment plan
         /// </summary>
-        /// <value>{{{antecipacao_simulada_detalhes_response_valor_desconto_value}}}</value>
+        /// <value>Value of the discount for the installment plan</value>
         [DataMember(Name="valorDesconto", EmitDefaultValue=false)]
         public double? ValorDesconto { get; set; }
     
         /// <summary>
-        /// {{{antecipacao_simulada_detalhes_response_valor_parcelas_desconto_value}}}
+        /// Total value of the parcel after the discount application
         /// </summary>
-        /// <value>{{{antecipacao_simulada_detalhes_response_valor_parcelas_desconto_value}}}</value>
+        /// <value>Total value of the parcel after the discount application</value>
         [DataMember(Name="valorParcelasDesconto", EmitDefaultValue=false)]
         public double? ValorParcelasDesconto { get; set; }
     

@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{tipo_campanha_response_description}}}
+    /// Response representation of the campaign type resource
     /// </summary>
     [DataContract]
     public partial class TipoCampanhaResponse :  IEquatable<TipoCampanhaResponse>
@@ -22,8 +22,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TipoCampanhaResponse" /> class.
         /// Initializes a new instance of the <see cref="TipoCampanhaResponse" />class.
         /// </summary>
-        /// <param name="Id">{{{tipo_campanha_response_id_value}}}.</param>
-        /// <param name="Descricao">{{{tipo_campanha_response_descricao_value}}}.</param>
+        /// <param name="Id">Identifier of the campaign type.</param>
+        /// <param name="Descricao">Description of the campaign type.</param>
 
         public TipoCampanhaResponse(long? Id = null, string Descricao = null)
         {
@@ -34,16 +34,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{tipo_campanha_response_id_value}}}
+        /// Identifier of the campaign type
         /// </summary>
-        /// <value>{{{tipo_campanha_response_id_value}}}</value>
+        /// <value>Identifier of the campaign type</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{tipo_campanha_response_descricao_value}}}
+        /// Description of the campaign type
         /// </summary>
-        /// <value>{{{tipo_campanha_response_descricao_value}}}</value>
+        /// <value>Description of the campaign type</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     

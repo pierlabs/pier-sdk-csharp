@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{dados_cartao_response_description}}}
+    /// Object Card Dates
     /// </summary>
     [DataContract]
     public partial class DadosCartaoResponse :  IEquatable<DadosCartaoResponse>
@@ -23,18 +23,18 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="DadosCartaoResponse" />class.
         /// </summary>
         /// <param name="FlagVirtual">FlagVirtual.</param>
-        /// <param name="NumeroCartao">{{{dados_cartao_response_numero_cartao_value}}}.</param>
-        /// <param name="DataValidade">{{{dados_cartao_response_data_validade_value}}}.</param>
-        /// <param name="Cvv2">{{{dados_cartao_response_cvv2_value}}}.</param>
-        /// <param name="NomePlastico">{{{dados_cartao_response_nome_plastico_value}}}.</param>
-        /// <param name="IdConta">{{{dados_cartao_response_id_conta_value}}}.</param>
-        /// <param name="IdCartao">{{{dados_cartao_response_id_cartao_value}}}.</param>
-        /// <param name="NumeroAgencia">{{{dados_cartao_response_numero_agencia_value}}}.</param>
-        /// <param name="NumeroContaCorente">{{{dados_cartao_response_numero_conta_corente_value}}}.</param>
-        /// <param name="IdStatusConta">{{{dados_cartao_response_id_status_conta_value}}}.</param>
-        /// <param name="StatusConta">{{{dados_cartao_response_status_conta_value}}}.</param>
-        /// <param name="IdStatusCartao">{{{dados_cartao_response_id_status_cartao_value}}}.</param>
-        /// <param name="StatusCartao">{{{dados_cartao_response_status_cartao_value}}}.</param>
+        /// <param name="NumeroCartao">Number of the Card.</param>
+        /// <param name="DataValidade">Expiration date.</param>
+        /// <param name="Cvv2">CVV2 of the card.</param>
+        /// <param name="NomePlastico">Cardholder name.</param>
+        /// <param name="IdConta">Identifier of the Cardholder.</param>
+        /// <param name="IdCartao">Identifier of the cardholder.</param>
+        /// <param name="NumeroAgencia">Show the agency number to be printed on the card, when it is applicable.</param>
+        /// <param name="NumeroContaCorente">Show the current account number to be printed on the Card, when it is applicable.</param>
+        /// <param name="IdStatusConta">Cardholder account Status.</param>
+        /// <param name="StatusConta">Description of the cardholder status.</param>
+        /// <param name="IdStatusCartao">Status of the card.</param>
+        /// <param name="StatusCartao">Description of the card status.</param>
 
         public DadosCartaoResponse(int? FlagVirtual = null, string NumeroCartao = null, string DataValidade = null, string Cvv2 = null, string NomePlastico = null, long? IdConta = null, long? IdCartao = null, int? NumeroAgencia = null, string NumeroContaCorente = null, long? IdStatusConta = null, string StatusConta = null, long? IdStatusCartao = null, string StatusCartao = null)
         {
@@ -62,86 +62,86 @@ namespace Conductor.Pier.Model
         public int? FlagVirtual { get; set; }
     
         /// <summary>
-        /// {{{dados_cartao_response_numero_cartao_value}}}
+        /// Number of the Card
         /// </summary>
-        /// <value>{{{dados_cartao_response_numero_cartao_value}}}</value>
+        /// <value>Number of the Card</value>
         [DataMember(Name="numeroCartao", EmitDefaultValue=false)]
         public string NumeroCartao { get; set; }
     
         /// <summary>
-        /// {{{dados_cartao_response_data_validade_value}}}
+        /// Expiration date
         /// </summary>
-        /// <value>{{{dados_cartao_response_data_validade_value}}}</value>
+        /// <value>Expiration date</value>
         [DataMember(Name="dataValidade", EmitDefaultValue=false)]
         public string DataValidade { get; set; }
     
         /// <summary>
-        /// {{{dados_cartao_response_cvv2_value}}}
+        /// CVV2 of the card
         /// </summary>
-        /// <value>{{{dados_cartao_response_cvv2_value}}}</value>
+        /// <value>CVV2 of the card</value>
         [DataMember(Name="cvv2", EmitDefaultValue=false)]
         public string Cvv2 { get; set; }
     
         /// <summary>
-        /// {{{dados_cartao_response_nome_plastico_value}}}
+        /// Cardholder name
         /// </summary>
-        /// <value>{{{dados_cartao_response_nome_plastico_value}}}</value>
+        /// <value>Cardholder name</value>
         [DataMember(Name="nomePlastico", EmitDefaultValue=false)]
         public string NomePlastico { get; set; }
     
         /// <summary>
-        /// {{{dados_cartao_response_id_conta_value}}}
+        /// Identifier of the Cardholder
         /// </summary>
-        /// <value>{{{dados_cartao_response_id_conta_value}}}</value>
+        /// <value>Identifier of the Cardholder</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// {{{dados_cartao_response_id_cartao_value}}}
+        /// Identifier of the cardholder
         /// </summary>
-        /// <value>{{{dados_cartao_response_id_cartao_value}}}</value>
+        /// <value>Identifier of the cardholder</value>
         [DataMember(Name="idCartao", EmitDefaultValue=false)]
         public long? IdCartao { get; set; }
     
         /// <summary>
-        /// {{{dados_cartao_response_numero_agencia_value}}}
+        /// Show the agency number to be printed on the card, when it is applicable
         /// </summary>
-        /// <value>{{{dados_cartao_response_numero_agencia_value}}}</value>
+        /// <value>Show the agency number to be printed on the card, when it is applicable</value>
         [DataMember(Name="numeroAgencia", EmitDefaultValue=false)]
         public int? NumeroAgencia { get; set; }
     
         /// <summary>
-        /// {{{dados_cartao_response_numero_conta_corente_value}}}
+        /// Show the current account number to be printed on the Card, when it is applicable
         /// </summary>
-        /// <value>{{{dados_cartao_response_numero_conta_corente_value}}}</value>
+        /// <value>Show the current account number to be printed on the Card, when it is applicable</value>
         [DataMember(Name="numeroContaCorente", EmitDefaultValue=false)]
         public string NumeroContaCorente { get; set; }
     
         /// <summary>
-        /// {{{dados_cartao_response_id_status_conta_value}}}
+        /// Cardholder account Status
         /// </summary>
-        /// <value>{{{dados_cartao_response_id_status_conta_value}}}</value>
+        /// <value>Cardholder account Status</value>
         [DataMember(Name="idStatusConta", EmitDefaultValue=false)]
         public long? IdStatusConta { get; set; }
     
         /// <summary>
-        /// {{{dados_cartao_response_status_conta_value}}}
+        /// Description of the cardholder status
         /// </summary>
-        /// <value>{{{dados_cartao_response_status_conta_value}}}</value>
+        /// <value>Description of the cardholder status</value>
         [DataMember(Name="statusConta", EmitDefaultValue=false)]
         public string StatusConta { get; set; }
     
         /// <summary>
-        /// {{{dados_cartao_response_id_status_cartao_value}}}
+        /// Status of the card
         /// </summary>
-        /// <value>{{{dados_cartao_response_id_status_cartao_value}}}</value>
+        /// <value>Status of the card</value>
         [DataMember(Name="idStatusCartao", EmitDefaultValue=false)]
         public long? IdStatusCartao { get; set; }
     
         /// <summary>
-        /// {{{dados_cartao_response_status_cartao_value}}}
+        /// Description of the card status
         /// </summary>
-        /// <value>{{{dados_cartao_response_status_cartao_value}}}</value>
+        /// <value>Description of the card status</value>
         [DataMember(Name="statusCartao", EmitDefaultValue=false)]
         public string StatusCartao { get; set; }
     

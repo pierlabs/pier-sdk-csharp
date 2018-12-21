@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{tipo_faturamento_por_conta_response_description}}}
+    /// Billing Object
     /// </summary>
     [DataContract]
     public partial class TipoFaturamentoPorContaResponse :  IEquatable<TipoFaturamentoPorContaResponse>
@@ -22,13 +22,13 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TipoFaturamentoPorContaResponse" /> class.
         /// Initializes a new instance of the <see cref="TipoFaturamentoPorContaResponse" />class.
         /// </summary>
-        /// <param name="Id">{{{tipo_faturamento_por_conta_response_id_value}}}.</param>
-        /// <param name="IdConta">{{{tipo_faturamento_por_conta_response_id_conta_value}}}.</param>
-        /// <param name="Ativo">{{{tipo_faturamento_por_conta_response_status_value}}}.</param>
-        /// <param name="IdTipoFaturamento">{{{tipo_faturamento_por_conta_response_id_tipo_faturamento_value}}}.</param>
-        /// <param name="DataHoraInclusao">{{{tipo_faturamento_por_conta_response_data_hora_inclusao_value}}}.</param>
-        /// <param name="DataHoraCancelamento">{{{tipo_faturamento_por_conta_response_data_hora_cancelamento_value}}}.</param>
-        /// <param name="ModificadoPor">{{{tipo_faturamento_por_conta_response_modificado_por_value}}}.</param>
+        /// <param name="Id">Identification Code of the billing type per account (id).</param>
+        /// <param name="IdConta">Identification Code of the related account to the billing type.</param>
+        /// <param name="Ativo">Status of the configuration that represents if the billing type per account is active or canceled.</param>
+        /// <param name="IdTipoFaturamento">Identification Code of the referenced billing type.</param>
+        /// <param name="DataHoraInclusao">Inclusion date of the configuration of the billing type per account.</param>
+        /// <param name="DataHoraCancelamento">Cancellation date of the configuration type of billing per account.</param>
+        /// <param name="ModificadoPor">Description of the responsable for the last update of the configuration.</param>
 
         public TipoFaturamentoPorContaResponse(long? Id = null, long? IdConta = null, bool? Ativo = null, long? IdTipoFaturamento = null, string DataHoraInclusao = null, string DataHoraCancelamento = null, string ModificadoPor = null)
         {
@@ -44,51 +44,51 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{tipo_faturamento_por_conta_response_id_value}}}
+        /// Identification Code of the billing type per account (id)
         /// </summary>
-        /// <value>{{{tipo_faturamento_por_conta_response_id_value}}}</value>
+        /// <value>Identification Code of the billing type per account (id)</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{tipo_faturamento_por_conta_response_id_conta_value}}}
+        /// Identification Code of the related account to the billing type
         /// </summary>
-        /// <value>{{{tipo_faturamento_por_conta_response_id_conta_value}}}</value>
+        /// <value>Identification Code of the related account to the billing type</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// {{{tipo_faturamento_por_conta_response_status_value}}}
+        /// Status of the configuration that represents if the billing type per account is active or canceled
         /// </summary>
-        /// <value>{{{tipo_faturamento_por_conta_response_status_value}}}</value>
+        /// <value>Status of the configuration that represents if the billing type per account is active or canceled</value>
         [DataMember(Name="ativo", EmitDefaultValue=false)]
         public bool? Ativo { get; set; }
     
         /// <summary>
-        /// {{{tipo_faturamento_por_conta_response_id_tipo_faturamento_value}}}
+        /// Identification Code of the referenced billing type
         /// </summary>
-        /// <value>{{{tipo_faturamento_por_conta_response_id_tipo_faturamento_value}}}</value>
+        /// <value>Identification Code of the referenced billing type</value>
         [DataMember(Name="idTipoFaturamento", EmitDefaultValue=false)]
         public long? IdTipoFaturamento { get; set; }
     
         /// <summary>
-        /// {{{tipo_faturamento_por_conta_response_data_hora_inclusao_value}}}
+        /// Inclusion date of the configuration of the billing type per account
         /// </summary>
-        /// <value>{{{tipo_faturamento_por_conta_response_data_hora_inclusao_value}}}</value>
+        /// <value>Inclusion date of the configuration of the billing type per account</value>
         [DataMember(Name="dataHoraInclusao", EmitDefaultValue=false)]
         public string DataHoraInclusao { get; set; }
     
         /// <summary>
-        /// {{{tipo_faturamento_por_conta_response_data_hora_cancelamento_value}}}
+        /// Cancellation date of the configuration type of billing per account
         /// </summary>
-        /// <value>{{{tipo_faturamento_por_conta_response_data_hora_cancelamento_value}}}</value>
+        /// <value>Cancellation date of the configuration type of billing per account</value>
         [DataMember(Name="dataHoraCancelamento", EmitDefaultValue=false)]
         public string DataHoraCancelamento { get; set; }
     
         /// <summary>
-        /// {{{tipo_faturamento_por_conta_response_modificado_por_value}}}
+        /// Description of the responsable for the last update of the configuration
         /// </summary>
-        /// <value>{{{tipo_faturamento_por_conta_response_modificado_por_value}}}</value>
+        /// <value>Description of the responsable for the last update of the configuration</value>
         [DataMember(Name="modificadoPor", EmitDefaultValue=false)]
         public string ModificadoPor { get; set; }
     

@@ -12,16 +12,16 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{notificacao_push_response_description}}}
+    /// Response Object for push notification
     /// </summary>
     [DataContract]
     public partial class NotificacaoPushResponse :  IEquatable<NotificacaoPushResponse>
     { 
     
         /// <summary>
-        /// {{{notificacao_push_response_tipo_evento_value}}}
+        /// TypeEvent name of the notification
         /// </summary>
-        /// <value>{{{notificacao_push_response_tipo_evento_value}}}</value>
+        /// <value>TypeEvent name of the notification</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum TipoEventoEnum {
             
@@ -91,9 +91,9 @@ namespace Conductor.Pier.Model
 
     
         /// <summary>
-        /// {{{notificacao_push_response_status_value}}}
+        /// Status of the notification sending
         /// </summary>
-        /// <value>{{{notificacao_push_response_status_value}}}</value>
+        /// <value>Status of the notification sending</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum StatusEnum {
             
@@ -121,9 +121,9 @@ namespace Conductor.Pier.Model
 
     
         /// <summary>
-        /// {{{notificacao_push_response_plataforma_value}}}
+        /// Name of the Operational System which was sent the Push
         /// </summary>
-        /// <value>{{{notificacao_push_response_plataforma_value}}}</value>
+        /// <value>Name of the Operational System which was sent the Push</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum PlataformaEnum {
             
@@ -139,23 +139,23 @@ namespace Conductor.Pier.Model
 
     
         /// <summary>
-        /// {{{notificacao_push_response_tipo_evento_value}}}
+        /// TypeEvent name of the notification
         /// </summary>
-        /// <value>{{{notificacao_push_response_tipo_evento_value}}}</value>
+        /// <value>TypeEvent name of the notification</value>
         [DataMember(Name="tipoEvento", EmitDefaultValue=false)]
         public TipoEventoEnum? TipoEvento { get; set; }
     
         /// <summary>
-        /// {{{notificacao_push_response_status_value}}}
+        /// Status of the notification sending
         /// </summary>
-        /// <value>{{{notificacao_push_response_status_value}}}</value>
+        /// <value>Status of the notification sending</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
     
         /// <summary>
-        /// {{{notificacao_push_response_plataforma_value}}}
+        /// Name of the Operational System which was sent the Push
         /// </summary>
-        /// <value>{{{notificacao_push_response_plataforma_value}}}</value>
+        /// <value>Name of the Operational System which was sent the Push</value>
         [DataMember(Name="plataforma", EmitDefaultValue=false)]
         public PlataformaEnum? Plataforma { get; set; }
     
@@ -163,17 +163,17 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="NotificacaoPushResponse" /> class.
         /// Initializes a new instance of the <see cref="NotificacaoPushResponse" />class.
         /// </summary>
-        /// <param name="DataEnvio">{{{notificacao_push_response_data_envio_value}}}.</param>
-        /// <param name="IdEmissor">{{{notificacao_push_response_id_emissor_value}}}.</param>
-        /// <param name="TipoEvento">{{{notificacao_push_response_tipo_evento_value}}}.</param>
-        /// <param name="Status">{{{notificacao_push_response_status_value}}}.</param>
-        /// <param name="IdPessoa">{{{notificacao_push_response_id_pessoa_value}}} (required).</param>
-        /// <param name="IdConta">{{{notificacao_push_response_id_conta_value}}} (required).</param>
-        /// <param name="TokenDispositivo">{{{notificacao_push_response_token_dispositivo_value}}} (required).</param>
-        /// <param name="Titulo">{{{notificacao_push_response_titulo_value}}} (required).</param>
-        /// <param name="Conteudo">{{{notificacao_push_response_conteudo_value}}} (required).</param>
-        /// <param name="Plataforma">{{{notificacao_push_response_plataforma_value}}}.</param>
-        /// <param name="Protocolo">{{{notificacao_push_response_protocolo_value}}}.</param>
+        /// <param name="DataEnvio">Show the date and in order the register was sent to the device.</param>
+        /// <param name="IdEmissor">Identification Code of the issuer (id).</param>
+        /// <param name="TipoEvento">TypeEvent name of the notification.</param>
+        /// <param name="Status">Status of the notification sending.</param>
+        /// <param name="IdPessoa">Identified Code of the person (required).</param>
+        /// <param name="IdConta">Identifier Code of the Account (required).</param>
+        /// <param name="TokenDispositivo">Token of the device which was destined the notificatio (device_token) (required).</param>
+        /// <param name="Titulo">Sending Notification Title (required).</param>
+        /// <param name="Conteudo">Content of the sent notification (required).</param>
+        /// <param name="Plataforma">Name of the Operational System which was sent the Push.</param>
+        /// <param name="Protocolo">Protocol number of the notification sending.</param>
 
         public NotificacaoPushResponse(string DataEnvio = null, long? IdEmissor = null, TipoEventoEnum? TipoEvento = null, StatusEnum? Status = null, long? IdPessoa = null, long? IdConta = null, string TokenDispositivo = null, string Titulo = null, string Conteudo = null, PlataformaEnum? Plataforma = null, string Protocolo = null)
         {
@@ -233,58 +233,58 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{notificacao_push_response_data_envio_value}}}
+        /// Show the date and in order the register was sent to the device
         /// </summary>
-        /// <value>{{{notificacao_push_response_data_envio_value}}}</value>
+        /// <value>Show the date and in order the register was sent to the device</value>
         [DataMember(Name="dataEnvio", EmitDefaultValue=false)]
         public string DataEnvio { get; set; }
     
         /// <summary>
-        /// {{{notificacao_push_response_id_emissor_value}}}
+        /// Identification Code of the issuer (id)
         /// </summary>
-        /// <value>{{{notificacao_push_response_id_emissor_value}}}</value>
+        /// <value>Identification Code of the issuer (id)</value>
         [DataMember(Name="idEmissor", EmitDefaultValue=false)]
         public long? IdEmissor { get; set; }
     
         /// <summary>
-        /// {{{notificacao_push_response_id_pessoa_value}}}
+        /// Identified Code of the person
         /// </summary>
-        /// <value>{{{notificacao_push_response_id_pessoa_value}}}</value>
+        /// <value>Identified Code of the person</value>
         [DataMember(Name="idPessoa", EmitDefaultValue=false)]
         public long? IdPessoa { get; set; }
     
         /// <summary>
-        /// {{{notificacao_push_response_id_conta_value}}}
+        /// Identifier Code of the Account
         /// </summary>
-        /// <value>{{{notificacao_push_response_id_conta_value}}}</value>
+        /// <value>Identifier Code of the Account</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// {{{notificacao_push_response_token_dispositivo_value}}}
+        /// Token of the device which was destined the notificatio (device_token)
         /// </summary>
-        /// <value>{{{notificacao_push_response_token_dispositivo_value}}}</value>
+        /// <value>Token of the device which was destined the notificatio (device_token)</value>
         [DataMember(Name="tokenDispositivo", EmitDefaultValue=false)]
         public string TokenDispositivo { get; set; }
     
         /// <summary>
-        /// {{{notificacao_push_response_titulo_value}}}
+        /// Sending Notification Title
         /// </summary>
-        /// <value>{{{notificacao_push_response_titulo_value}}}</value>
+        /// <value>Sending Notification Title</value>
         [DataMember(Name="titulo", EmitDefaultValue=false)]
         public string Titulo { get; set; }
     
         /// <summary>
-        /// {{{notificacao_push_response_conteudo_value}}}
+        /// Content of the sent notification
         /// </summary>
-        /// <value>{{{notificacao_push_response_conteudo_value}}}</value>
+        /// <value>Content of the sent notification</value>
         [DataMember(Name="conteudo", EmitDefaultValue=false)]
         public string Conteudo { get; set; }
     
         /// <summary>
-        /// {{{notificacao_push_response_protocolo_value}}}
+        /// Protocol number of the notification sending
         /// </summary>
-        /// <value>{{{notificacao_push_response_protocolo_value}}}</value>
+        /// <value>Protocol number of the notification sending</value>
         [DataMember(Name="protocolo", EmitDefaultValue=false)]
         public string Protocolo { get; set; }
     

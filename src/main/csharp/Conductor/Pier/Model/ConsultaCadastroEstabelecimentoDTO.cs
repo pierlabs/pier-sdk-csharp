@@ -12,16 +12,16 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{consulta_cadastro_estabelecimento_d_t_o_description}}}
+    /// Request representation of save establishment
     /// </summary>
     [DataContract]
     public partial class ConsultaCadastroEstabelecimentoDTO :  IEquatable<ConsultaCadastroEstabelecimentoDTO>
     { 
     
         /// <summary>
-        /// {{{consulta_cadastro_estabelecimento_d_t_o_status_value}}}
+        /// Retrieving status (1 - OK, 2 - NOK)
         /// </summary>
-        /// <value>{{{consulta_cadastro_estabelecimento_d_t_o_status_value}}}</value>
+        /// <value>Retrieving status (1 - OK, 2 - NOK)</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum StatusEnum {
             
@@ -34,9 +34,9 @@ namespace Conductor.Pier.Model
 
     
         /// <summary>
-        /// {{{consulta_cadastro_estabelecimento_d_t_o_tipo_entidade_value}}}
+        /// Type of the entity (1 - ACTIVE, 2 - LOCKED)
         /// </summary>
-        /// <value>{{{consulta_cadastro_estabelecimento_d_t_o_tipo_entidade_value}}}</value>
+        /// <value>Type of the entity (1 - ACTIVE, 2 - LOCKED)</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum TipoEntidadeEnum {
             
@@ -49,16 +49,16 @@ namespace Conductor.Pier.Model
 
     
         /// <summary>
-        /// {{{consulta_cadastro_estabelecimento_d_t_o_status_value}}}
+        /// Retrieving status (1 - OK, 2 - NOK)
         /// </summary>
-        /// <value>{{{consulta_cadastro_estabelecimento_d_t_o_status_value}}}</value>
+        /// <value>Retrieving status (1 - OK, 2 - NOK)</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
     
         /// <summary>
-        /// {{{consulta_cadastro_estabelecimento_d_t_o_tipo_entidade_value}}}
+        /// Type of the entity (1 - ACTIVE, 2 - LOCKED)
         /// </summary>
-        /// <value>{{{consulta_cadastro_estabelecimento_d_t_o_tipo_entidade_value}}}</value>
+        /// <value>Type of the entity (1 - ACTIVE, 2 - LOCKED)</value>
         [DataMember(Name="tipoEntidade", EmitDefaultValue=false)]
         public TipoEntidadeEnum? TipoEntidade { get; set; }
     
@@ -66,9 +66,9 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="ConsultaCadastroEstabelecimentoDTO" /> class.
         /// Initializes a new instance of the <see cref="ConsultaCadastroEstabelecimentoDTO" />class.
         /// </summary>
-        /// <param name="DataHoraConsulta">{{{consulta_cadastro_estabelecimento_d_t_o_data_hora_consulta_value}}}.</param>
-        /// <param name="Status">{{{consulta_cadastro_estabelecimento_d_t_o_status_value}}}.</param>
-        /// <param name="TipoEntidade">{{{consulta_cadastro_estabelecimento_d_t_o_tipo_entidade_value}}}.</param>
+        /// <param name="DataHoraConsulta">Date time of the register.</param>
+        /// <param name="Status">Retrieving status (1 - OK, 2 - NOK).</param>
+        /// <param name="TipoEntidade">Type of the entity (1 - ACTIVE, 2 - LOCKED).</param>
 
         public ConsultaCadastroEstabelecimentoDTO(string DataHoraConsulta = null, StatusEnum? Status = null, TipoEntidadeEnum? TipoEntidade = null)
         {
@@ -80,9 +80,9 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{consulta_cadastro_estabelecimento_d_t_o_data_hora_consulta_value}}}
+        /// Date time of the register
         /// </summary>
-        /// <value>{{{consulta_cadastro_estabelecimento_d_t_o_data_hora_consulta_value}}}</value>
+        /// <value>Date time of the register</value>
         [DataMember(Name="dataHoraConsulta", EmitDefaultValue=false)]
         public string DataHoraConsulta { get; set; }
     

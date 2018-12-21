@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{integrar_arquivo_request_description}}}
+    /// Request Object of file integration
     /// </summary>
     [DataContract]
     public partial class IntegrarArquivoRequest :  IEquatable<IntegrarArquivoRequest>
@@ -22,7 +22,7 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="IntegrarArquivoRequest" /> class.
         /// Initializes a new instance of the <see cref="IntegrarArquivoRequest" />class.
         /// </summary>
-        /// <param name="NumeroReceitaFederal">{{{integrar_arquivo_request_numero_receita_federal_value}}}.</param>
+        /// <param name="NumeroReceitaFederal">IRs number (CPF) linked to one or more files that will be sent to be integrated.</param>
 
         public IntegrarArquivoRequest(string NumeroReceitaFederal = null)
         {
@@ -32,9 +32,9 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{integrar_arquivo_request_numero_receita_federal_value}}}
+        /// IRs number (CPF) linked to one or more files that will be sent to be integrated
         /// </summary>
-        /// <value>{{{integrar_arquivo_request_numero_receita_federal_value}}}</value>
+        /// <value>IRs number (CPF) linked to one or more files that will be sent to be integrated</value>
         [DataMember(Name="numeroReceitaFederal", EmitDefaultValue=false)]
         public string NumeroReceitaFederal { get; set; }
     

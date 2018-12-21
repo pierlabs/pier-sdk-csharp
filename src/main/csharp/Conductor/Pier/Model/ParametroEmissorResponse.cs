@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{parametro_emissor_resposta_description}}}
+    /// Representation Object Response for Emissary Parameter
     /// </summary>
     [DataContract]
     public partial class ParametroEmissorResponse :  IEquatable<ParametroEmissorResponse>
@@ -22,11 +22,11 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="ParametroEmissorResponse" /> class.
         /// Initializes a new instance of the <see cref="ParametroEmissorResponse" />class.
         /// </summary>
-        /// <param name="Codigo">{{{parametro_emissor_resposta_codigo_descricao}}}.</param>
-        /// <param name="DataValidade">{{{parametro_emissor_resposta_data_validade_descricao}}}.</param>
-        /// <param name="Descricao">{{{parametro_emissor_resposta_descricao_description}}}.</param>
-        /// <param name="Tipo">{{{parametro_emissor_resposta_tipo_descricao}}}.</param>
-        /// <param name="ValorParametro">{{{parametro_emissor_resposta_valor_parametro_descricao}}}.</param>
+        /// <param name="Codigo">CParameter code.</param>
+        /// <param name="DataValidade">Parameter expiration date.</param>
+        /// <param name="Descricao">Emissary Parameter Description.</param>
+        /// <param name="Tipo">Parameter type.</param>
+        /// <param name="ValorParametro">Parameter value.</param>
 
         public ParametroEmissorResponse(string Codigo = null, string DataValidade = null, string Descricao = null, string Tipo = null, string ValorParametro = null)
         {
@@ -40,37 +40,37 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{parametro_emissor_resposta_codigo_descricao}}}
+        /// CParameter code
         /// </summary>
-        /// <value>{{{parametro_emissor_resposta_codigo_descricao}}}</value>
+        /// <value>CParameter code</value>
         [DataMember(Name="codigo", EmitDefaultValue=false)]
         public string Codigo { get; set; }
     
         /// <summary>
-        /// {{{parametro_emissor_resposta_data_validade_descricao}}}
+        /// Parameter expiration date
         /// </summary>
-        /// <value>{{{parametro_emissor_resposta_data_validade_descricao}}}</value>
+        /// <value>Parameter expiration date</value>
         [DataMember(Name="dataValidade", EmitDefaultValue=false)]
         public string DataValidade { get; set; }
     
         /// <summary>
-        /// {{{parametro_emissor_resposta_descricao_description}}}
+        /// Emissary Parameter Description
         /// </summary>
-        /// <value>{{{parametro_emissor_resposta_descricao_description}}}</value>
+        /// <value>Emissary Parameter Description</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     
         /// <summary>
-        /// {{{parametro_emissor_resposta_tipo_descricao}}}
+        /// Parameter type
         /// </summary>
-        /// <value>{{{parametro_emissor_resposta_tipo_descricao}}}</value>
+        /// <value>Parameter type</value>
         [DataMember(Name="tipo", EmitDefaultValue=false)]
         public string Tipo { get; set; }
     
         /// <summary>
-        /// {{{parametro_emissor_resposta_valor_parametro_descricao}}}
+        /// Parameter value
         /// </summary>
-        /// <value>{{{parametro_emissor_resposta_valor_parametro_descricao}}}</value>
+        /// <value>Parameter value</value>
         [DataMember(Name="valorParametro", EmitDefaultValue=false)]
         public string ValorParametro { get; set; }
     

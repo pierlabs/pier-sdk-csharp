@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{documento_template_persist_description}}}
+    /// Representation of the document template
     /// </summary>
     [DataContract]
     public partial class DocumentoTemplatePersist :  IEquatable<DocumentoTemplatePersist>
@@ -22,9 +22,9 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="DocumentoTemplatePersist" /> class.
         /// Initializes a new instance of the <see cref="DocumentoTemplatePersist" />class.
         /// </summary>
-        /// <param name="IdTipoTemplate">{{{documento_template_persist_id_tipo_template_value}}}.</param>
-        /// <param name="Template">{{{documento_template_persist_template_value}}}.</param>
-        /// <param name="Integracoes">{{{documento_template_persist_integracoes_value}}}.</param>
+        /// <param name="IdTipoTemplate">ID for the template type linked to the template.</param>
+        /// <param name="Template">Template for the content of the document.</param>
+        /// <param name="Integracoes">Integrate Configuration List.</param>
 
         public DocumentoTemplatePersist(long? IdTipoTemplate = null, string Template = null, List<ReferenciaIdPersist> Integracoes = null)
         {
@@ -36,23 +36,23 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{documento_template_persist_id_tipo_template_value}}}
+        /// ID for the template type linked to the template
         /// </summary>
-        /// <value>{{{documento_template_persist_id_tipo_template_value}}}</value>
+        /// <value>ID for the template type linked to the template</value>
         [DataMember(Name="idTipoTemplate", EmitDefaultValue=false)]
         public long? IdTipoTemplate { get; set; }
     
         /// <summary>
-        /// {{{documento_template_persist_template_value}}}
+        /// Template for the content of the document
         /// </summary>
-        /// <value>{{{documento_template_persist_template_value}}}</value>
+        /// <value>Template for the content of the document</value>
         [DataMember(Name="template", EmitDefaultValue=false)]
         public string Template { get; set; }
     
         /// <summary>
-        /// {{{documento_template_persist_integracoes_value}}}
+        /// Integrate Configuration List
         /// </summary>
-        /// <value>{{{documento_template_persist_integracoes_value}}}</value>
+        /// <value>Integrate Configuration List</value>
         [DataMember(Name="integracoes", EmitDefaultValue=false)]
         public List<ReferenciaIdPersist> Integracoes { get; set; }
     

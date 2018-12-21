@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{terminal_persist_description}}}
+    /// Object Terminal
     /// </summary>
     [DataContract]
     public partial class TerminalPersist :  IEquatable<TerminalPersist>
@@ -22,9 +22,9 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TerminalPersist" /> class.
         /// Initializes a new instance of the <see cref="TerminalPersist" />class.
         /// </summary>
-        /// <param name="IdEstabelecimento">{{{terminal_persist_id_estabelecimento_value}}} (required).</param>
-        /// <param name="FlagConsultaExtrato">{{{terminal_persist_flag_consulta_extrato_value}}} (required).</param>
-        /// <param name="FlagTerminalVirtual">{{{terminal_persist_flag_terminal_virtual_value}}} (required).</param>
+        /// <param name="IdEstabelecimento">Show the id of the Merchant (required).</param>
+        /// <param name="FlagConsultaExtrato">Flag indicating if allows to retrieve the statement, being: (true: Yes), (false: No)) (required).</param>
+        /// <param name="FlagTerminalVirtual">Flag indicating if the terminal is physical or virtual, being: (true: Yes), (false: No)) (required).</param>
 
         public TerminalPersist(long? IdEstabelecimento = null, bool? FlagConsultaExtrato = null, bool? FlagTerminalVirtual = null)
         {
@@ -60,23 +60,23 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{terminal_persist_id_estabelecimento_value}}}
+        /// Show the id of the Merchant
         /// </summary>
-        /// <value>{{{terminal_persist_id_estabelecimento_value}}}</value>
+        /// <value>Show the id of the Merchant</value>
         [DataMember(Name="idEstabelecimento", EmitDefaultValue=false)]
         public long? IdEstabelecimento { get; set; }
     
         /// <summary>
-        /// {{{terminal_persist_flag_consulta_extrato_value}}}
+        /// Flag indicating if allows to retrieve the statement, being: (true: Yes), (false: No))
         /// </summary>
-        /// <value>{{{terminal_persist_flag_consulta_extrato_value}}}</value>
+        /// <value>Flag indicating if allows to retrieve the statement, being: (true: Yes), (false: No))</value>
         [DataMember(Name="flagConsultaExtrato", EmitDefaultValue=false)]
         public bool? FlagConsultaExtrato { get; set; }
     
         /// <summary>
-        /// {{{terminal_persist_flag_terminal_virtual_value}}}
+        /// Flag indicating if the terminal is physical or virtual, being: (true: Yes), (false: No))
         /// </summary>
-        /// <value>{{{terminal_persist_flag_terminal_virtual_value}}}</value>
+        /// <value>Flag indicating if the terminal is physical or virtual, being: (true: Yes), (false: No))</value>
         [DataMember(Name="flagTerminalVirtual", EmitDefaultValue=false)]
         public bool? FlagTerminalVirtual { get; set; }
     

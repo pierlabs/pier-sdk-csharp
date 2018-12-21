@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{aplicacao_mobile_emissor_resposta_descricao}}}
+    /// Represents a mobile application response
     /// </summary>
     [DataContract]
     public partial class AplicacaoMobileEmissorResponse :  IEquatable<AplicacaoMobileEmissorResponse>
@@ -22,7 +22,7 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="AplicacaoMobileEmissorResponse" /> class.
         /// Initializes a new instance of the <see cref="AplicacaoMobileEmissorResponse" />class.
         /// </summary>
-        /// <param name="Id">{{{aplicacao_mobile_emissor_resposta_id_descricao}}}.</param>
+        /// <param name="Id">Mobile application id.</param>
 
         public AplicacaoMobileEmissorResponse(long? Id = null)
         {
@@ -32,9 +32,9 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{aplicacao_mobile_emissor_resposta_id_descricao}}}
+        /// Mobile application id
         /// </summary>
-        /// <value>{{{aplicacao_mobile_emissor_resposta_id_descricao}}}</value>
+        /// <value>Mobile application id</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     

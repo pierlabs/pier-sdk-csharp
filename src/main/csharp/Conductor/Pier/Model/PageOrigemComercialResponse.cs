@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{page_origem_comercial_response_description}}}
+    /// List the Commercial Origins
     /// </summary>
     [DataContract]
     public partial class PageOrigemComercialResponse :  IEquatable<PageOrigemComercialResponse>

@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{atribuir_assinatura_cliente_persist_description}}}
+    /// Object that represents the attribution of the client signature
     /// </summary>
     [DataContract]
     public partial class AtribuirAssinaturaClientePersist :  IEquatable<AtribuirAssinaturaClientePersist>
@@ -22,7 +22,7 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="AtribuirAssinaturaClientePersist" /> class.
         /// Initializes a new instance of the <see cref="AtribuirAssinaturaClientePersist" />class.
         /// </summary>
-        /// <param name="IdArquivo">{{{atribuir_assinatura_cliente_persist_id_arquivo_value}}}.</param>
+        /// <param name="IdArquivo">Identification Code of the File.</param>
 
         public AtribuirAssinaturaClientePersist(long? IdArquivo = null)
         {
@@ -32,9 +32,9 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{atribuir_assinatura_cliente_persist_id_arquivo_value}}}
+        /// Identification Code of the File
         /// </summary>
-        /// <value>{{{atribuir_assinatura_cliente_persist_id_arquivo_value}}}</value>
+        /// <value>Identification Code of the File</value>
         [DataMember(Name="idArquivo", EmitDefaultValue=false)]
         public long? IdArquivo { get; set; }
     

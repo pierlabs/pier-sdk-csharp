@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{configuracao_rotativo_detalhe_response_description}}}
+    /// Object account
     /// </summary>
     [DataContract]
     public partial class ConfiguracaoRotativoDetalheResponse :  IEquatable<ConfiguracaoRotativoDetalheResponse>
@@ -22,22 +22,22 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="ConfiguracaoRotativoDetalheResponse" /> class.
         /// Initializes a new instance of the <see cref="ConfiguracaoRotativoDetalheResponse" />class.
         /// </summary>
-        /// <param name="Id">{{{configuracao_rotativo_detalhe_response_id_value}}}.</param>
-        /// <param name="IdProduto">{{{configuracao_rotativo_detalhe_response_id_produto_value}}}.</param>
-        /// <param name="CompoeOfertaValorRotativo">{{{configuracao_rotativo_detalhe_response_compoe_oferta_valor_rotativo_value}}}.</param>
-        /// <param name="CompoeOfertaValorNaoFinanciavel">{{{configuracao_rotativo_detalhe_response_compoe_oferta_valor_nao_financiavel_value}}}.</param>
-        /// <param name="CompoeOfertaValorNovosLancamentos">{{{configuracao_rotativo_detalhe_response_compoe_oferta_valor_novos_lancamentos_value}}}.</param>
-        /// <param name="RecalculaParcelamentoParaEntradaMaior">{{{configuracao_rotativo_detalhe_response_recalcula_parcelamento_para_entrada_maior_value}}}.</param>
-        /// <param name="MinimoParcelasRecalculoParcelamento">{{{configuracao_rotativo_detalhe_response_minimo_parcelas_recalculo_parcelamento_value}}}.</param>
-        /// <param name="RecalculaParcelamento">{{{configuracao_rotativo_detalhe_response_recalcula_parcelamento_value}}}.</param>
-        /// <param name="NumeroMinimoOfertas">{{{configuracao_rotativo_detalhe_response_numero_minimo_ofertas_value}}}.</param>
-        /// <param name="AceitaPagamentoMaiorQueEntrada">{{{configuracao_rotativo_detalhe_response_aceita_pagamento_maior_que_entrada_value}}}.</param>
-        /// <param name="AntecipaParcelamentosAbertos">{{{configuracao_rotativo_detalhe_response_antecipa_parcelamentos_abertos_value}}}.</param>
-        /// <param name="ValorMinimoParcela">{{{configuracao_rotativo_detalhe_response_valor_minimo_parcela_value}}}.</param>
-        /// <param name="PercentualLimitarValorMinimoParcela">{{{configuracao_rotativo_detalhe_response_percentual_limitar_valor_minimo_parcela_value}}}.</param>
-        /// <param name="IdRegraCampanha">{{{configuracao_rotativo_detalhe_response_id_regra_campanha_value}}}.</param>
-        /// <param name="ParcelarApenasMinimo">{{{configuracao_rotativo_detalhe_response_parcelar_apenas_minimo_value}}}.</param>
-        /// <param name="Usuario">{{{configuracao_rotativo_detalhe_response_usuario_value}}}.</param>
+        /// <param name="Id">Identification Code of the ConfigurationRevolving (id).</param>
+        /// <param name="IdProduto">Identification Code of the Product (idProduct).</param>
+        /// <param name="CompoeOfertaValorRotativo">When it is true, indicate that the value of the revolving must have the offer of the installment.</param>
+        /// <param name="CompoeOfertaValorNaoFinanciavel">when it is true, indicate that the value not financigable must have the offer of installment.</param>
+        /// <param name="CompoeOfertaValorNovosLancamentos">when it is true, indicate that the value of new postings must have the offer of installment.</param>
+        /// <param name="RecalculaParcelamentoParaEntradaMaior">When it is true, indicate that it must recalculate the installment in case of the value paid of entrance be bigger than the value awaited.</param>
+        /// <param name="MinimoParcelasRecalculoParcelamento">Indicate the minimum of the parcels that will be obeyed in the recalculation of the installment.</param>
+        /// <param name="RecalculaParcelamento">When it is true, indicate that the installment must be recalculated in case of the value calculated of the offer be less than the value configurated minimum of the invoioce (valueMinimumParcel) and the percentage opened.</param>
+        /// <param name="NumeroMinimoOfertas">Minimum number of parcels that will be obeyed in the recalculation of the offer.</param>
+        /// <param name="AceitaPagamentoMaiorQueEntrada">when it is true, indicate the paid values between the entrance value and the invoice minimum will be obeyed for the accession to the installment.</param>
+        /// <param name="AntecipaParcelamentosAbertos">When it is true, indicate that it must include the current values of the opened installment.</param>
+        /// <param name="ValorMinimoParcela">Minimum value of the parcel that must be accepted in the offer.</param>
+        /// <param name="PercentualLimitarValorMinimoParcela">Percentage on the values of previous installment opened that must be considered to limit valueMinimumParcel.</param>
+        /// <param name="IdRegraCampanha">Identification Code of the Campaign Rule.</param>
+        /// <param name="ParcelarApenasMinimo">When it is true, indicate the installment offered will have the minimum value of the transactions.</param>
+        /// <param name="Usuario">Username.</param>
 
         public ConfiguracaoRotativoDetalheResponse(long? Id = null, long? IdProduto = null, bool? CompoeOfertaValorRotativo = null, bool? CompoeOfertaValorNaoFinanciavel = null, bool? CompoeOfertaValorNovosLancamentos = null, bool? RecalculaParcelamentoParaEntradaMaior = null, bool? MinimoParcelasRecalculoParcelamento = null, bool? RecalculaParcelamento = null, bool? NumeroMinimoOfertas = null, bool? AceitaPagamentoMaiorQueEntrada = null, bool? AntecipaParcelamentosAbertos = null, double? ValorMinimoParcela = null, double? PercentualLimitarValorMinimoParcela = null, long? IdRegraCampanha = null, bool? ParcelarApenasMinimo = null, string Usuario = null)
         {
@@ -62,114 +62,114 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{configuracao_rotativo_detalhe_response_id_value}}}
+        /// Identification Code of the ConfigurationRevolving (id)
         /// </summary>
-        /// <value>{{{configuracao_rotativo_detalhe_response_id_value}}}</value>
+        /// <value>Identification Code of the ConfigurationRevolving (id)</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{configuracao_rotativo_detalhe_response_id_produto_value}}}
+        /// Identification Code of the Product (idProduct)
         /// </summary>
-        /// <value>{{{configuracao_rotativo_detalhe_response_id_produto_value}}}</value>
+        /// <value>Identification Code of the Product (idProduct)</value>
         [DataMember(Name="idProduto", EmitDefaultValue=false)]
         public long? IdProduto { get; set; }
     
         /// <summary>
-        /// {{{configuracao_rotativo_detalhe_response_compoe_oferta_valor_rotativo_value}}}
+        /// When it is true, indicate that the value of the revolving must have the offer of the installment
         /// </summary>
-        /// <value>{{{configuracao_rotativo_detalhe_response_compoe_oferta_valor_rotativo_value}}}</value>
+        /// <value>When it is true, indicate that the value of the revolving must have the offer of the installment</value>
         [DataMember(Name="compoeOfertaValorRotativo", EmitDefaultValue=false)]
         public bool? CompoeOfertaValorRotativo { get; set; }
     
         /// <summary>
-        /// {{{configuracao_rotativo_detalhe_response_compoe_oferta_valor_nao_financiavel_value}}}
+        /// when it is true, indicate that the value not financigable must have the offer of installment
         /// </summary>
-        /// <value>{{{configuracao_rotativo_detalhe_response_compoe_oferta_valor_nao_financiavel_value}}}</value>
+        /// <value>when it is true, indicate that the value not financigable must have the offer of installment</value>
         [DataMember(Name="compoeOfertaValorNaoFinanciavel", EmitDefaultValue=false)]
         public bool? CompoeOfertaValorNaoFinanciavel { get; set; }
     
         /// <summary>
-        /// {{{configuracao_rotativo_detalhe_response_compoe_oferta_valor_novos_lancamentos_value}}}
+        /// when it is true, indicate that the value of new postings must have the offer of installment
         /// </summary>
-        /// <value>{{{configuracao_rotativo_detalhe_response_compoe_oferta_valor_novos_lancamentos_value}}}</value>
+        /// <value>when it is true, indicate that the value of new postings must have the offer of installment</value>
         [DataMember(Name="compoeOfertaValorNovosLancamentos", EmitDefaultValue=false)]
         public bool? CompoeOfertaValorNovosLancamentos { get; set; }
     
         /// <summary>
-        /// {{{configuracao_rotativo_detalhe_response_recalcula_parcelamento_para_entrada_maior_value}}}
+        /// When it is true, indicate that it must recalculate the installment in case of the value paid of entrance be bigger than the value awaited
         /// </summary>
-        /// <value>{{{configuracao_rotativo_detalhe_response_recalcula_parcelamento_para_entrada_maior_value}}}</value>
+        /// <value>When it is true, indicate that it must recalculate the installment in case of the value paid of entrance be bigger than the value awaited</value>
         [DataMember(Name="recalculaParcelamentoParaEntradaMaior", EmitDefaultValue=false)]
         public bool? RecalculaParcelamentoParaEntradaMaior { get; set; }
     
         /// <summary>
-        /// {{{configuracao_rotativo_detalhe_response_minimo_parcelas_recalculo_parcelamento_value}}}
+        /// Indicate the minimum of the parcels that will be obeyed in the recalculation of the installment
         /// </summary>
-        /// <value>{{{configuracao_rotativo_detalhe_response_minimo_parcelas_recalculo_parcelamento_value}}}</value>
+        /// <value>Indicate the minimum of the parcels that will be obeyed in the recalculation of the installment</value>
         [DataMember(Name="minimoParcelasRecalculoParcelamento", EmitDefaultValue=false)]
         public bool? MinimoParcelasRecalculoParcelamento { get; set; }
     
         /// <summary>
-        /// {{{configuracao_rotativo_detalhe_response_recalcula_parcelamento_value}}}
+        /// When it is true, indicate that the installment must be recalculated in case of the value calculated of the offer be less than the value configurated minimum of the invoioce (valueMinimumParcel) and the percentage opened
         /// </summary>
-        /// <value>{{{configuracao_rotativo_detalhe_response_recalcula_parcelamento_value}}}</value>
+        /// <value>When it is true, indicate that the installment must be recalculated in case of the value calculated of the offer be less than the value configurated minimum of the invoioce (valueMinimumParcel) and the percentage opened</value>
         [DataMember(Name="recalculaParcelamento", EmitDefaultValue=false)]
         public bool? RecalculaParcelamento { get; set; }
     
         /// <summary>
-        /// {{{configuracao_rotativo_detalhe_response_numero_minimo_ofertas_value}}}
+        /// Minimum number of parcels that will be obeyed in the recalculation of the offer
         /// </summary>
-        /// <value>{{{configuracao_rotativo_detalhe_response_numero_minimo_ofertas_value}}}</value>
+        /// <value>Minimum number of parcels that will be obeyed in the recalculation of the offer</value>
         [DataMember(Name="numeroMinimoOfertas", EmitDefaultValue=false)]
         public bool? NumeroMinimoOfertas { get; set; }
     
         /// <summary>
-        /// {{{configuracao_rotativo_detalhe_response_aceita_pagamento_maior_que_entrada_value}}}
+        /// when it is true, indicate the paid values between the entrance value and the invoice minimum will be obeyed for the accession to the installment
         /// </summary>
-        /// <value>{{{configuracao_rotativo_detalhe_response_aceita_pagamento_maior_que_entrada_value}}}</value>
+        /// <value>when it is true, indicate the paid values between the entrance value and the invoice minimum will be obeyed for the accession to the installment</value>
         [DataMember(Name="aceitaPagamentoMaiorQueEntrada", EmitDefaultValue=false)]
         public bool? AceitaPagamentoMaiorQueEntrada { get; set; }
     
         /// <summary>
-        /// {{{configuracao_rotativo_detalhe_response_antecipa_parcelamentos_abertos_value}}}
+        /// When it is true, indicate that it must include the current values of the opened installment
         /// </summary>
-        /// <value>{{{configuracao_rotativo_detalhe_response_antecipa_parcelamentos_abertos_value}}}</value>
+        /// <value>When it is true, indicate that it must include the current values of the opened installment</value>
         [DataMember(Name="antecipaParcelamentosAbertos", EmitDefaultValue=false)]
         public bool? AntecipaParcelamentosAbertos { get; set; }
     
         /// <summary>
-        /// {{{configuracao_rotativo_detalhe_response_valor_minimo_parcela_value}}}
+        /// Minimum value of the parcel that must be accepted in the offer
         /// </summary>
-        /// <value>{{{configuracao_rotativo_detalhe_response_valor_minimo_parcela_value}}}</value>
+        /// <value>Minimum value of the parcel that must be accepted in the offer</value>
         [DataMember(Name="valorMinimoParcela", EmitDefaultValue=false)]
         public double? ValorMinimoParcela { get; set; }
     
         /// <summary>
-        /// {{{configuracao_rotativo_detalhe_response_percentual_limitar_valor_minimo_parcela_value}}}
+        /// Percentage on the values of previous installment opened that must be considered to limit valueMinimumParcel
         /// </summary>
-        /// <value>{{{configuracao_rotativo_detalhe_response_percentual_limitar_valor_minimo_parcela_value}}}</value>
+        /// <value>Percentage on the values of previous installment opened that must be considered to limit valueMinimumParcel</value>
         [DataMember(Name="percentualLimitarValorMinimoParcela", EmitDefaultValue=false)]
         public double? PercentualLimitarValorMinimoParcela { get; set; }
     
         /// <summary>
-        /// {{{configuracao_rotativo_detalhe_response_id_regra_campanha_value}}}
+        /// Identification Code of the Campaign Rule
         /// </summary>
-        /// <value>{{{configuracao_rotativo_detalhe_response_id_regra_campanha_value}}}</value>
+        /// <value>Identification Code of the Campaign Rule</value>
         [DataMember(Name="idRegraCampanha", EmitDefaultValue=false)]
         public long? IdRegraCampanha { get; set; }
     
         /// <summary>
-        /// {{{configuracao_rotativo_detalhe_response_parcelar_apenas_minimo_value}}}
+        /// When it is true, indicate the installment offered will have the minimum value of the transactions
         /// </summary>
-        /// <value>{{{configuracao_rotativo_detalhe_response_parcelar_apenas_minimo_value}}}</value>
+        /// <value>When it is true, indicate the installment offered will have the minimum value of the transactions</value>
         [DataMember(Name="parcelarApenasMinimo", EmitDefaultValue=false)]
         public bool? ParcelarApenasMinimo { get; set; }
     
         /// <summary>
-        /// {{{configuracao_rotativo_detalhe_response_usuario_value}}}
+        /// Username
         /// </summary>
-        /// <value>{{{configuracao_rotativo_detalhe_response_usuario_value}}}</value>
+        /// <value>Username</value>
         [DataMember(Name="usuario", EmitDefaultValue=false)]
         public string Usuario { get; set; }
     

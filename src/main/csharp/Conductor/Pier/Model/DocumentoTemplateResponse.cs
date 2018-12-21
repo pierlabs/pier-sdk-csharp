@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{documento_template_response_description}}}
+    /// Representation of the template resource document response
     /// </summary>
     [DataContract]
     public partial class DocumentoTemplateResponse :  IEquatable<DocumentoTemplateResponse>
@@ -22,8 +22,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="DocumentoTemplateResponse" /> class.
         /// Initializes a new instance of the <see cref="DocumentoTemplateResponse" />class.
         /// </summary>
-        /// <param name="Id">{{{documento_template_response_id_value}}}.</param>
-        /// <param name="IdTipoTemplate">{{{documento_template_response_id_tipo_template_value}}}.</param>
+        /// <param name="Id">Template ID of the Document.</param>
+        /// <param name="IdTipoTemplate">ID of the Type of Template.</param>
 
         public DocumentoTemplateResponse(long? Id = null, long? IdTipoTemplate = null)
         {
@@ -34,16 +34,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{documento_template_response_id_value}}}
+        /// Template ID of the Document
         /// </summary>
-        /// <value>{{{documento_template_response_id_value}}}</value>
+        /// <value>Template ID of the Document</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{documento_template_response_id_tipo_template_value}}}
+        /// ID of the Type of Template
         /// </summary>
-        /// <value>{{{documento_template_response_id_tipo_template_value}}}</value>
+        /// <value>ID of the Type of Template</value>
         [DataMember(Name="idTipoTemplate", EmitDefaultValue=false)]
         public long? IdTipoTemplate { get; set; }
     

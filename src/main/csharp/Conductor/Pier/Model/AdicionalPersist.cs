@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{adicional_persist_description}}}
+    /// Input Representation of the additional register resource
     /// </summary>
     [DataContract]
     public partial class AdicionalPersist :  IEquatable<AdicionalPersist>
@@ -22,21 +22,21 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="AdicionalPersist" /> class.
         /// Initializes a new instance of the <see cref="AdicionalPersist" />class.
         /// </summary>
-        /// <param name="Nome">{{{adicional_persist_nome_value}}} (required).</param>
-        /// <param name="NomeImpresso">{{{adicional_persist_nome_impresso_value}}}.</param>
-        /// <param name="NumeroReceitaFederal">{{{adicional_persist_numero_receita_federal_value}}} (required).</param>
-        /// <param name="DataNascimento">{{{adicional_persist_data_nascimento_value}}}.</param>
-        /// <param name="Sexo">{{{adicional_persist_sexo_value}}}.</param>
-        /// <param name="NumeroIdentidade">{{{adicional_persist_numero_identidade_value}}}.</param>
-        /// <param name="OrgaoExpedidorIdentidade">{{{adicional_persist_orgao_expedidor_identidade_value}}}.</param>
-        /// <param name="UnidadeFederativaIdentidade">{{{adicional_persist_unidade_federativa_identidade_value}}}.</param>
-        /// <param name="DataEmissaoIdentidade">{{{adicional_persist_data_emissao_identidade_value}}}.</param>
-        /// <param name="IdEstadoCivil">{{{adicional_persist_id_estado_civil_value}}}.</param>
-        /// <param name="IdProfissao">{{{adicional_persist_id_profissao_value}}}.</param>
-        /// <param name="IdNacionalidade">{{{adicional_persist_id_nacionalidade_value}}}.</param>
-        /// <param name="IdParentesco">{{{adicional_persist_id_parentesco_value}}}.</param>
-        /// <param name="Email">{{{adicional_persist_email_value}}}.</param>
-        /// <param name="Telefones">{{{adicional_persist_telefones_value}}}.</param>
+        /// <param name="Nome">Full name of the Additional (required).</param>
+        /// <param name="NomeImpresso">Additional name that will be printed on the card.</param>
+        /// <param name="NumeroReceitaFederal">Federal Revenue Number (required).</param>
+        /// <param name="DataNascimento">Birth date of the Additional in the format yyyy-MM-dd.</param>
+        /// <param name="Sexo">Additional gender.</param>
+        /// <param name="NumeroIdentidade">Document number of the additional Identity.</param>
+        /// <param name="OrgaoExpedidorIdentidade">Name of the issuer organ of the Additional Identity Document.</param>
+        /// <param name="UnidadeFederativaIdentidade">Federative unit.</param>
+        /// <param name="DataEmissaoIdentidade">Date of issue of the Identity document of the Additional in the format yyyy-MM-dd.</param>
+        /// <param name="IdEstadoCivil">Identification Code of the Additional Marital Status.</param>
+        /// <param name="IdProfissao">Identification Code of the Additional Occupation.</param>
+        /// <param name="IdNacionalidade">Identification Code of the Additional Nationality.</param>
+        /// <param name="IdParentesco">Identification Code of the Additional Kinship with the holder.</param>
+        /// <param name="Email">Identification Code of the Additional Kinship with the holder.</param>
+        /// <param name="Telefones">Telephone list of the additional.</param>
 
         public AdicionalPersist(string Nome = null, string NomeImpresso = null, string NumeroReceitaFederal = null, string DataNascimento = null, string Sexo = null, string NumeroIdentidade = null, string OrgaoExpedidorIdentidade = null, string UnidadeFederativaIdentidade = null, string DataEmissaoIdentidade = null, long? IdEstadoCivil = null, long? IdProfissao = null, long? IdNacionalidade = null, long? IdParentesco = null, string Email = null, List<TelefoneAdicionalPersist> Telefones = null)
         {
@@ -76,107 +76,107 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{adicional_persist_nome_value}}}
+        /// Full name of the Additional
         /// </summary>
-        /// <value>{{{adicional_persist_nome_value}}}</value>
+        /// <value>Full name of the Additional</value>
         [DataMember(Name="nome", EmitDefaultValue=false)]
         public string Nome { get; set; }
     
         /// <summary>
-        /// {{{adicional_persist_nome_impresso_value}}}
+        /// Additional name that will be printed on the card
         /// </summary>
-        /// <value>{{{adicional_persist_nome_impresso_value}}}</value>
+        /// <value>Additional name that will be printed on the card</value>
         [DataMember(Name="nomeImpresso", EmitDefaultValue=false)]
         public string NomeImpresso { get; set; }
     
         /// <summary>
-        /// {{{adicional_persist_numero_receita_federal_value}}}
+        /// Federal Revenue Number
         /// </summary>
-        /// <value>{{{adicional_persist_numero_receita_federal_value}}}</value>
+        /// <value>Federal Revenue Number</value>
         [DataMember(Name="numeroReceitaFederal", EmitDefaultValue=false)]
         public string NumeroReceitaFederal { get; set; }
     
         /// <summary>
-        /// {{{adicional_persist_data_nascimento_value}}}
+        /// Birth date of the Additional in the format yyyy-MM-dd
         /// </summary>
-        /// <value>{{{adicional_persist_data_nascimento_value}}}</value>
+        /// <value>Birth date of the Additional in the format yyyy-MM-dd</value>
         [DataMember(Name="dataNascimento", EmitDefaultValue=false)]
         public string DataNascimento { get; set; }
     
         /// <summary>
-        /// {{{adicional_persist_sexo_value}}}
+        /// Additional gender
         /// </summary>
-        /// <value>{{{adicional_persist_sexo_value}}}</value>
+        /// <value>Additional gender</value>
         [DataMember(Name="sexo", EmitDefaultValue=false)]
         public string Sexo { get; set; }
     
         /// <summary>
-        /// {{{adicional_persist_numero_identidade_value}}}
+        /// Document number of the additional Identity
         /// </summary>
-        /// <value>{{{adicional_persist_numero_identidade_value}}}</value>
+        /// <value>Document number of the additional Identity</value>
         [DataMember(Name="numeroIdentidade", EmitDefaultValue=false)]
         public string NumeroIdentidade { get; set; }
     
         /// <summary>
-        /// {{{adicional_persist_orgao_expedidor_identidade_value}}}
+        /// Name of the issuer organ of the Additional Identity Document
         /// </summary>
-        /// <value>{{{adicional_persist_orgao_expedidor_identidade_value}}}</value>
+        /// <value>Name of the issuer organ of the Additional Identity Document</value>
         [DataMember(Name="orgaoExpedidorIdentidade", EmitDefaultValue=false)]
         public string OrgaoExpedidorIdentidade { get; set; }
     
         /// <summary>
-        /// {{{adicional_persist_unidade_federativa_identidade_value}}}
+        /// Federative unit
         /// </summary>
-        /// <value>{{{adicional_persist_unidade_federativa_identidade_value}}}</value>
+        /// <value>Federative unit</value>
         [DataMember(Name="unidadeFederativaIdentidade", EmitDefaultValue=false)]
         public string UnidadeFederativaIdentidade { get; set; }
     
         /// <summary>
-        /// {{{adicional_persist_data_emissao_identidade_value}}}
+        /// Date of issue of the Identity document of the Additional in the format yyyy-MM-dd
         /// </summary>
-        /// <value>{{{adicional_persist_data_emissao_identidade_value}}}</value>
+        /// <value>Date of issue of the Identity document of the Additional in the format yyyy-MM-dd</value>
         [DataMember(Name="dataEmissaoIdentidade", EmitDefaultValue=false)]
         public string DataEmissaoIdentidade { get; set; }
     
         /// <summary>
-        /// {{{adicional_persist_id_estado_civil_value}}}
+        /// Identification Code of the Additional Marital Status
         /// </summary>
-        /// <value>{{{adicional_persist_id_estado_civil_value}}}</value>
+        /// <value>Identification Code of the Additional Marital Status</value>
         [DataMember(Name="idEstadoCivil", EmitDefaultValue=false)]
         public long? IdEstadoCivil { get; set; }
     
         /// <summary>
-        /// {{{adicional_persist_id_profissao_value}}}
+        /// Identification Code of the Additional Occupation
         /// </summary>
-        /// <value>{{{adicional_persist_id_profissao_value}}}</value>
+        /// <value>Identification Code of the Additional Occupation</value>
         [DataMember(Name="idProfissao", EmitDefaultValue=false)]
         public long? IdProfissao { get; set; }
     
         /// <summary>
-        /// {{{adicional_persist_id_nacionalidade_value}}}
+        /// Identification Code of the Additional Nationality
         /// </summary>
-        /// <value>{{{adicional_persist_id_nacionalidade_value}}}</value>
+        /// <value>Identification Code of the Additional Nationality</value>
         [DataMember(Name="idNacionalidade", EmitDefaultValue=false)]
         public long? IdNacionalidade { get; set; }
     
         /// <summary>
-        /// {{{adicional_persist_id_parentesco_value}}}
+        /// Identification Code of the Additional Kinship with the holder
         /// </summary>
-        /// <value>{{{adicional_persist_id_parentesco_value}}}</value>
+        /// <value>Identification Code of the Additional Kinship with the holder</value>
         [DataMember(Name="idParentesco", EmitDefaultValue=false)]
         public long? IdParentesco { get; set; }
     
         /// <summary>
-        /// {{{adicional_persist_email_value}}}
+        /// Identification Code of the Additional Kinship with the holder
         /// </summary>
-        /// <value>{{{adicional_persist_email_value}}}</value>
+        /// <value>Identification Code of the Additional Kinship with the holder</value>
         [DataMember(Name="email", EmitDefaultValue=false)]
         public string Email { get; set; }
     
         /// <summary>
-        /// {{{adicional_persist_telefones_value}}}
+        /// Telephone list of the additional
         /// </summary>
-        /// <value>{{{adicional_persist_telefones_value}}}</value>
+        /// <value>Telephone list of the additional</value>
         [DataMember(Name="telefones", EmitDefaultValue=false)]
         public List<TelefoneAdicionalPersist> Telefones { get; set; }
     

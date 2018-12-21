@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{page_campo_codificado_descricao_response_description}}}
+    /// List of encoded fields
     /// </summary>
     [DataContract]
     public partial class PageCampoCodificadoDescricaoResponse :  IEquatable<PageCampoCodificadoDescricaoResponse>

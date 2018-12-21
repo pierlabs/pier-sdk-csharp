@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{boleto_listar_response_description}}}
+    /// Representation of bank slips response
     /// </summary>
     [DataContract]
     public partial class BoletoListarResponse :  IEquatable<BoletoListarResponse>
@@ -22,12 +22,12 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="BoletoListarResponse" /> class.
         /// Initializes a new instance of the <see cref="BoletoListarResponse" />class.
         /// </summary>
-        /// <param name="Id">{{{boleto_response_id_value}}}.</param>
-        /// <param name="IdConta">{{{boleto_response_id_conta_value}}}.</param>
-        /// <param name="NossoNumero">{{{boleto_response_nosso_numero_value}}}.</param>
-        /// <param name="DataVencimento">{{{boleto_response_data_vencimento_value}}}.</param>
-        /// <param name="ValorBoleto">{{{boleto_response_valor_boleto_value}}}.</param>
-        /// <param name="IdTipoBoleto">{{{boleto_response_id_tipo_boleto_value}}}.</param>
+        /// <param name="Id">id.</param>
+        /// <param name="IdConta">id_account.</param>
+        /// <param name="NossoNumero">Our number is the code that the beneficiary choose to keep control on the bank slip. This value serves to the identifier which bank slips were paid or not. It is recommended the use of the sequencial numbers, to create lots of bank slips, to facilitate the identification of the paid bank slips.</param>
+        /// <param name="DataVencimento">Date of the expiration.</param>
+        /// <param name="ValorBoleto">Value of the Bank slip.</param>
+        /// <param name="IdTipoBoleto">id_type_bank_slip.</param>
 
         public BoletoListarResponse(long? Id = null, long? IdConta = null, string NossoNumero = null, string DataVencimento = null, double? ValorBoleto = null, long? IdTipoBoleto = null)
         {
@@ -42,44 +42,44 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{boleto_response_id_value}}}
+        /// id
         /// </summary>
-        /// <value>{{{boleto_response_id_value}}}</value>
+        /// <value>id</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{boleto_response_id_conta_value}}}
+        /// id_account
         /// </summary>
-        /// <value>{{{boleto_response_id_conta_value}}}</value>
+        /// <value>id_account</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// {{{boleto_response_nosso_numero_value}}}
+        /// Our number is the code that the beneficiary choose to keep control on the bank slip. This value serves to the identifier which bank slips were paid or not. It is recommended the use of the sequencial numbers, to create lots of bank slips, to facilitate the identification of the paid bank slips
         /// </summary>
-        /// <value>{{{boleto_response_nosso_numero_value}}}</value>
+        /// <value>Our number is the code that the beneficiary choose to keep control on the bank slip. This value serves to the identifier which bank slips were paid or not. It is recommended the use of the sequencial numbers, to create lots of bank slips, to facilitate the identification of the paid bank slips</value>
         [DataMember(Name="nossoNumero", EmitDefaultValue=false)]
         public string NossoNumero { get; set; }
     
         /// <summary>
-        /// {{{boleto_response_data_vencimento_value}}}
+        /// Date of the expiration
         /// </summary>
-        /// <value>{{{boleto_response_data_vencimento_value}}}</value>
+        /// <value>Date of the expiration</value>
         [DataMember(Name="dataVencimento", EmitDefaultValue=false)]
         public string DataVencimento { get; set; }
     
         /// <summary>
-        /// {{{boleto_response_valor_boleto_value}}}
+        /// Value of the Bank slip
         /// </summary>
-        /// <value>{{{boleto_response_valor_boleto_value}}}</value>
+        /// <value>Value of the Bank slip</value>
         [DataMember(Name="valorBoleto", EmitDefaultValue=false)]
         public double? ValorBoleto { get; set; }
     
         /// <summary>
-        /// {{{boleto_response_id_tipo_boleto_value}}}
+        /// id_type_bank_slip
         /// </summary>
-        /// <value>{{{boleto_response_id_tipo_boleto_value}}}</value>
+        /// <value>id_type_bank_slip</value>
         [DataMember(Name="idTipoBoleto", EmitDefaultValue=false)]
         public long? IdTipoBoleto { get; set; }
     

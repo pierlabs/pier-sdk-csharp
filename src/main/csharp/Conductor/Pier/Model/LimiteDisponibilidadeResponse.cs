@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{limite_disponibilidade_response_description}}}
+    /// Limit Availability
     /// </summary>
     [DataContract]
     public partial class LimiteDisponibilidadeResponse :  IEquatable<LimiteDisponibilidadeResponse>
@@ -22,28 +22,28 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="LimiteDisponibilidadeResponse" /> class.
         /// Initializes a new instance of the <see cref="LimiteDisponibilidadeResponse" />class.
         /// </summary>
-        /// <param name="Id">{{{limite_disponibilidade_response_id_value}}}.</param>
-        /// <param name="LimiteGlobal">{{{limite_disponibilidade_response_limite_global_value}}}.</param>
-        /// <param name="LimiteCompra">{{{limite_disponibilidade_response_limite_compra_value}}}.</param>
-        /// <param name="LimiteParcelado">{{{limite_disponibilidade_response_limite_parcelado_value}}}.</param>
-        /// <param name="LimiteParcelas">{{{limite_disponibilidade_response_limite_parcelas_value}}}.</param>
-        /// <param name="LimiteSaqueGlobal">{{{limite_disponibilidade_response_limite_saque_global_value}}}.</param>
-        /// <param name="LimiteSaquePeriodo">{{{limite_disponibilidade_response_limite_saque_periodo_value}}}.</param>
-        /// <param name="LimiteConsignado">{{{limite_disponibilidade_response_limite_consignado_value}}}.</param>
-        /// <param name="LimiteInternacionalCompra">{{{limite_disponibilidade_response_limite_internacional_compra_value}}}.</param>
-        /// <param name="LimiteInternacionalParcelado">{{{limite_disponibilidade_response_limite_internacional_parcelado_value}}}.</param>
-        /// <param name="LimiteInternacionalParcelas">{{{limite_disponibilidade_response_limite_internacional_parcelas_value}}}.</param>
-        /// <param name="LimiteInternacionalSaqueGlobal">{{{limite_disponibilidade_response_limite_internacional_saque_global_value}}}.</param>
-        /// <param name="LimiteInternacionalSaquePeriodo">{{{limite_disponibilidade_response_limite_internacional_saque_periodo_value}}}.</param>
-        /// <param name="LimiteMaximo">{{{limite_disponibilidade_response_limite_maximo_value}}}.</param>
-        /// <param name="SaldoDisponivelGlobal">{{{limite_disponibilidade_response_saldo_disponivel_global_value}}}.</param>
-        /// <param name="SaldoDisponivelCompra">{{{limite_disponibilidade_response_saldo_disponivel_compra_value}}}.</param>
-        /// <param name="SaldoDisponivelParcelado">{{{limite_disponibilidade_response_saldo_disponivel_parcelado_value}}}.</param>
-        /// <param name="SaldoDisponivelParcelas">{{{limite_disponibilidade_response_saldo_disponivel_parcelas_value}}}.</param>
-        /// <param name="SaldoDisponivelSaque">{{{limite_disponibilidade_response_saldo_disponivel_saque_value}}}.</param>
-        /// <param name="SaldoPontosFidelidade">{{{limite_disponibilidade_response_saldo_pontos_fidelidade_value}}}.</param>
-        /// <param name="SaldoDisponivelCompraInternacional">{{{limite_disponibilidade_response_saldo_disponivel_compra_internacional_value}}}.</param>
-        /// <param name="SaldoDisponivelSaqueInternacional">{{{limite_disponibilidade_response_saldo_disponivel_saque_internacional_value}}}.</param>
+        /// <param name="Id">Identification Code of the Availability aand Limit (id).</param>
+        /// <param name="LimiteGlobal">Value of the Credit limit.</param>
+        /// <param name="LimiteCompra">Value of the credit limit to use in national shops.</param>
+        /// <param name="LimiteParcelado">Value of credit limit for transactions of parceled shops.</param>
+        /// <param name="LimiteParcelas">Value of accumulated credit limit of the sum of parcels that are made in this modality.</param>
+        /// <param name="LimiteSaqueGlobal">Value of the credit limit for transactions of National Withdrawal.</param>
+        /// <param name="LimiteSaquePeriodo">Value of the credit limit for transactions of National Withdrawal inside of each billing cycle.</param>
+        /// <param name="LimiteConsignado">Value of the credit margin for consignations (discount in payroll).</param>
+        /// <param name="LimiteInternacionalCompra">Value of the Credit limit to use in international shops.</param>
+        /// <param name="LimiteInternacionalParcelado">Value of the credit limit for international transactions of parceled shops.</param>
+        /// <param name="LimiteInternacionalParcelas">Value of the credit limit accumulated of the sum of international shop parcels that are made in this modality.</param>
+        /// <param name="LimiteInternacionalSaqueGlobal">Value of Credit limit for transactions of international withdrawals.</param>
+        /// <param name="LimiteInternacionalSaquePeriodo">Value of the credit limit for transactions of international Withdrawal inside of each billing cycle.</param>
+        /// <param name="LimiteMaximo">Maximum value of the credit limit to make transactions.</param>
+        /// <param name="SaldoDisponivelGlobal">Credit value available for the transactions.</param>
+        /// <param name="SaldoDisponivelCompra">Credit Value available for transactions of National shop.</param>
+        /// <param name="SaldoDisponivelParcelado">Value of the available credit for transactions of Parceled National Shop.</param>
+        /// <param name="SaldoDisponivelParcelas">Credit value available to use as the National parcel value in a determined billing cycle.</param>
+        /// <param name="SaldoDisponivelSaque">Value of the credit that the cardholder has available to make transactions of National Withdrawal.</param>
+        /// <param name="SaldoPontosFidelidade">Current Balance of the Fidelity Point Program.</param>
+        /// <param name="SaldoDisponivelCompraInternacional">Value of the available credit for transactions of international shop.</param>
+        /// <param name="SaldoDisponivelSaqueInternacional">Value of available credit for transactions of international Withdrawal.</param>
 
         public LimiteDisponibilidadeResponse(long? Id = null, double? LimiteGlobal = null, double? LimiteCompra = null, double? LimiteParcelado = null, double? LimiteParcelas = null, double? LimiteSaqueGlobal = null, double? LimiteSaquePeriodo = null, double? LimiteConsignado = null, double? LimiteInternacionalCompra = null, double? LimiteInternacionalParcelado = null, double? LimiteInternacionalParcelas = null, double? LimiteInternacionalSaqueGlobal = null, double? LimiteInternacionalSaquePeriodo = null, double? LimiteMaximo = null, double? SaldoDisponivelGlobal = null, double? SaldoDisponivelCompra = null, double? SaldoDisponivelParcelado = null, double? SaldoDisponivelParcelas = null, double? SaldoDisponivelSaque = null, double? SaldoPontosFidelidade = null, double? SaldoDisponivelCompraInternacional = null, double? SaldoDisponivelSaqueInternacional = null)
         {
@@ -74,156 +74,156 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{limite_disponibilidade_response_id_value}}}
+        /// Identification Code of the Availability aand Limit (id)
         /// </summary>
-        /// <value>{{{limite_disponibilidade_response_id_value}}}</value>
+        /// <value>Identification Code of the Availability aand Limit (id)</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{limite_disponibilidade_response_limite_global_value}}}
+        /// Value of the Credit limit
         /// </summary>
-        /// <value>{{{limite_disponibilidade_response_limite_global_value}}}</value>
+        /// <value>Value of the Credit limit</value>
         [DataMember(Name="limiteGlobal", EmitDefaultValue=false)]
         public double? LimiteGlobal { get; set; }
     
         /// <summary>
-        /// {{{limite_disponibilidade_response_limite_compra_value}}}
+        /// Value of the credit limit to use in national shops
         /// </summary>
-        /// <value>{{{limite_disponibilidade_response_limite_compra_value}}}</value>
+        /// <value>Value of the credit limit to use in national shops</value>
         [DataMember(Name="limiteCompra", EmitDefaultValue=false)]
         public double? LimiteCompra { get; set; }
     
         /// <summary>
-        /// {{{limite_disponibilidade_response_limite_parcelado_value}}}
+        /// Value of credit limit for transactions of parceled shops
         /// </summary>
-        /// <value>{{{limite_disponibilidade_response_limite_parcelado_value}}}</value>
+        /// <value>Value of credit limit for transactions of parceled shops</value>
         [DataMember(Name="limiteParcelado", EmitDefaultValue=false)]
         public double? LimiteParcelado { get; set; }
     
         /// <summary>
-        /// {{{limite_disponibilidade_response_limite_parcelas_value}}}
+        /// Value of accumulated credit limit of the sum of parcels that are made in this modality
         /// </summary>
-        /// <value>{{{limite_disponibilidade_response_limite_parcelas_value}}}</value>
+        /// <value>Value of accumulated credit limit of the sum of parcels that are made in this modality</value>
         [DataMember(Name="limiteParcelas", EmitDefaultValue=false)]
         public double? LimiteParcelas { get; set; }
     
         /// <summary>
-        /// {{{limite_disponibilidade_response_limite_saque_global_value}}}
+        /// Value of the credit limit for transactions of National Withdrawal
         /// </summary>
-        /// <value>{{{limite_disponibilidade_response_limite_saque_global_value}}}</value>
+        /// <value>Value of the credit limit for transactions of National Withdrawal</value>
         [DataMember(Name="limiteSaqueGlobal", EmitDefaultValue=false)]
         public double? LimiteSaqueGlobal { get; set; }
     
         /// <summary>
-        /// {{{limite_disponibilidade_response_limite_saque_periodo_value}}}
+        /// Value of the credit limit for transactions of National Withdrawal inside of each billing cycle
         /// </summary>
-        /// <value>{{{limite_disponibilidade_response_limite_saque_periodo_value}}}</value>
+        /// <value>Value of the credit limit for transactions of National Withdrawal inside of each billing cycle</value>
         [DataMember(Name="limiteSaquePeriodo", EmitDefaultValue=false)]
         public double? LimiteSaquePeriodo { get; set; }
     
         /// <summary>
-        /// {{{limite_disponibilidade_response_limite_consignado_value}}}
+        /// Value of the credit margin for consignations (discount in payroll)
         /// </summary>
-        /// <value>{{{limite_disponibilidade_response_limite_consignado_value}}}</value>
+        /// <value>Value of the credit margin for consignations (discount in payroll)</value>
         [DataMember(Name="limiteConsignado", EmitDefaultValue=false)]
         public double? LimiteConsignado { get; set; }
     
         /// <summary>
-        /// {{{limite_disponibilidade_response_limite_internacional_compra_value}}}
+        /// Value of the Credit limit to use in international shops
         /// </summary>
-        /// <value>{{{limite_disponibilidade_response_limite_internacional_compra_value}}}</value>
+        /// <value>Value of the Credit limit to use in international shops</value>
         [DataMember(Name="limiteInternacionalCompra", EmitDefaultValue=false)]
         public double? LimiteInternacionalCompra { get; set; }
     
         /// <summary>
-        /// {{{limite_disponibilidade_response_limite_internacional_parcelado_value}}}
+        /// Value of the credit limit for international transactions of parceled shops
         /// </summary>
-        /// <value>{{{limite_disponibilidade_response_limite_internacional_parcelado_value}}}</value>
+        /// <value>Value of the credit limit for international transactions of parceled shops</value>
         [DataMember(Name="limiteInternacionalParcelado", EmitDefaultValue=false)]
         public double? LimiteInternacionalParcelado { get; set; }
     
         /// <summary>
-        /// {{{limite_disponibilidade_response_limite_internacional_parcelas_value}}}
+        /// Value of the credit limit accumulated of the sum of international shop parcels that are made in this modality
         /// </summary>
-        /// <value>{{{limite_disponibilidade_response_limite_internacional_parcelas_value}}}</value>
+        /// <value>Value of the credit limit accumulated of the sum of international shop parcels that are made in this modality</value>
         [DataMember(Name="limiteInternacionalParcelas", EmitDefaultValue=false)]
         public double? LimiteInternacionalParcelas { get; set; }
     
         /// <summary>
-        /// {{{limite_disponibilidade_response_limite_internacional_saque_global_value}}}
+        /// Value of Credit limit for transactions of international withdrawals
         /// </summary>
-        /// <value>{{{limite_disponibilidade_response_limite_internacional_saque_global_value}}}</value>
+        /// <value>Value of Credit limit for transactions of international withdrawals</value>
         [DataMember(Name="limiteInternacionalSaqueGlobal", EmitDefaultValue=false)]
         public double? LimiteInternacionalSaqueGlobal { get; set; }
     
         /// <summary>
-        /// {{{limite_disponibilidade_response_limite_internacional_saque_periodo_value}}}
+        /// Value of the credit limit for transactions of international Withdrawal inside of each billing cycle
         /// </summary>
-        /// <value>{{{limite_disponibilidade_response_limite_internacional_saque_periodo_value}}}</value>
+        /// <value>Value of the credit limit for transactions of international Withdrawal inside of each billing cycle</value>
         [DataMember(Name="limiteInternacionalSaquePeriodo", EmitDefaultValue=false)]
         public double? LimiteInternacionalSaquePeriodo { get; set; }
     
         /// <summary>
-        /// {{{limite_disponibilidade_response_limite_maximo_value}}}
+        /// Maximum value of the credit limit to make transactions
         /// </summary>
-        /// <value>{{{limite_disponibilidade_response_limite_maximo_value}}}</value>
+        /// <value>Maximum value of the credit limit to make transactions</value>
         [DataMember(Name="limiteMaximo", EmitDefaultValue=false)]
         public double? LimiteMaximo { get; set; }
     
         /// <summary>
-        /// {{{limite_disponibilidade_response_saldo_disponivel_global_value}}}
+        /// Credit value available for the transactions
         /// </summary>
-        /// <value>{{{limite_disponibilidade_response_saldo_disponivel_global_value}}}</value>
+        /// <value>Credit value available for the transactions</value>
         [DataMember(Name="saldoDisponivelGlobal", EmitDefaultValue=false)]
         public double? SaldoDisponivelGlobal { get; set; }
     
         /// <summary>
-        /// {{{limite_disponibilidade_response_saldo_disponivel_compra_value}}}
+        /// Credit Value available for transactions of National shop
         /// </summary>
-        /// <value>{{{limite_disponibilidade_response_saldo_disponivel_compra_value}}}</value>
+        /// <value>Credit Value available for transactions of National shop</value>
         [DataMember(Name="saldoDisponivelCompra", EmitDefaultValue=false)]
         public double? SaldoDisponivelCompra { get; set; }
     
         /// <summary>
-        /// {{{limite_disponibilidade_response_saldo_disponivel_parcelado_value}}}
+        /// Value of the available credit for transactions of Parceled National Shop
         /// </summary>
-        /// <value>{{{limite_disponibilidade_response_saldo_disponivel_parcelado_value}}}</value>
+        /// <value>Value of the available credit for transactions of Parceled National Shop</value>
         [DataMember(Name="saldoDisponivelParcelado", EmitDefaultValue=false)]
         public double? SaldoDisponivelParcelado { get; set; }
     
         /// <summary>
-        /// {{{limite_disponibilidade_response_saldo_disponivel_parcelas_value}}}
+        /// Credit value available to use as the National parcel value in a determined billing cycle
         /// </summary>
-        /// <value>{{{limite_disponibilidade_response_saldo_disponivel_parcelas_value}}}</value>
+        /// <value>Credit value available to use as the National parcel value in a determined billing cycle</value>
         [DataMember(Name="saldoDisponivelParcelas", EmitDefaultValue=false)]
         public double? SaldoDisponivelParcelas { get; set; }
     
         /// <summary>
-        /// {{{limite_disponibilidade_response_saldo_disponivel_saque_value}}}
+        /// Value of the credit that the cardholder has available to make transactions of National Withdrawal
         /// </summary>
-        /// <value>{{{limite_disponibilidade_response_saldo_disponivel_saque_value}}}</value>
+        /// <value>Value of the credit that the cardholder has available to make transactions of National Withdrawal</value>
         [DataMember(Name="saldoDisponivelSaque", EmitDefaultValue=false)]
         public double? SaldoDisponivelSaque { get; set; }
     
         /// <summary>
-        /// {{{limite_disponibilidade_response_saldo_pontos_fidelidade_value}}}
+        /// Current Balance of the Fidelity Point Program
         /// </summary>
-        /// <value>{{{limite_disponibilidade_response_saldo_pontos_fidelidade_value}}}</value>
+        /// <value>Current Balance of the Fidelity Point Program</value>
         [DataMember(Name="saldoPontosFidelidade", EmitDefaultValue=false)]
         public double? SaldoPontosFidelidade { get; set; }
     
         /// <summary>
-        /// {{{limite_disponibilidade_response_saldo_disponivel_compra_internacional_value}}}
+        /// Value of the available credit for transactions of international shop
         /// </summary>
-        /// <value>{{{limite_disponibilidade_response_saldo_disponivel_compra_internacional_value}}}</value>
+        /// <value>Value of the available credit for transactions of international shop</value>
         [DataMember(Name="saldoDisponivelCompraInternacional", EmitDefaultValue=false)]
         public double? SaldoDisponivelCompraInternacional { get; set; }
     
         /// <summary>
-        /// {{{limite_disponibilidade_response_saldo_disponivel_saque_internacional_value}}}
+        /// Value of available credit for transactions of international Withdrawal
         /// </summary>
-        /// <value>{{{limite_disponibilidade_response_saldo_disponivel_saque_internacional_value}}}</value>
+        /// <value>Value of available credit for transactions of international Withdrawal</value>
         [DataMember(Name="saldoDisponivelSaqueInternacional", EmitDefaultValue=false)]
         public double? SaldoDisponivelSaqueInternacional { get; set; }
     

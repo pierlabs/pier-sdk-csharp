@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{status_boleto_dto_page_description}}}
+    /// CNAB Status List Summarized
     /// </summary>
     [DataContract]
     public partial class PageStatusBoletoResponse :  IEquatable<PageStatusBoletoResponse>

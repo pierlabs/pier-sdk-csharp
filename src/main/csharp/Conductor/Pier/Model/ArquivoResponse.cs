@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{arquivo_response_description}}}
+    /// Object Response of the file
     /// </summary>
     [DataContract]
     public partial class ArquivoResponse :  IEquatable<ArquivoResponse>
@@ -22,16 +22,16 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="ArquivoResponse" /> class.
         /// Initializes a new instance of the <see cref="ArquivoResponse" />class.
         /// </summary>
-        /// <param name="Id">{{{arquivo_response_id_value}}}.</param>
-        /// <param name="IdTipoArquivo">{{{arquivo_response_id_tipo_arquivo_value}}}.</param>
-        /// <param name="NomeTipoArquivo">{{{arquivo_response_nome_tipo_arquivo_value}}}.</param>
-        /// <param name="IdStatusArquivo">{{{arquivo_response_id_status_arquivo_value}}}.</param>
-        /// <param name="NomeStatusArquivo">{{{arquivo_response_nome_status_arquivo_value}}}.</param>
-        /// <param name="Nome">{{{arquivo_response_nome_value}}}.</param>
-        /// <param name="Extensao">{{{arquivo_response_extensao_value}}}.</param>
-        /// <param name="DataInclusao">{{{arquivo_response_data_inclusao_value}}}.</param>
-        /// <param name="DataAlteracao">{{{arquivo_response_data_alteracao_value}}}.</param>
-        /// <param name="Detalhes">{{{arquivo_response_detalhes_value}}}.</param>
+        /// <param name="Id">Identification Code of the File.</param>
+        /// <param name="IdTipoArquivo">Identification Code of the File Type.</param>
+        /// <param name="NomeTipoArquivo">Description of the type of the file.</param>
+        /// <param name="IdStatusArquivo">Identification Code of the File Staus.</param>
+        /// <param name="NomeStatusArquivo">Description of the File Status.</param>
+        /// <param name="Nome">File name.</param>
+        /// <param name="Extensao">Format/Extens of the file.</param>
+        /// <param name="DataInclusao">Date of Inclusion of the File.</param>
+        /// <param name="DataAlteracao">Date of the last update of the file.</param>
+        /// <param name="Detalhes">Details containing additional information, realted to the file.</param>
 
         public ArquivoResponse(long? Id = null, long? IdTipoArquivo = null, string NomeTipoArquivo = null, long? IdStatusArquivo = null, string NomeStatusArquivo = null, string Nome = null, string Extensao = null, string DataInclusao = null, string DataAlteracao = null, List<ArquivoParametroResponse> Detalhes = null)
         {
@@ -50,72 +50,72 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{arquivo_response_id_value}}}
+        /// Identification Code of the File
         /// </summary>
-        /// <value>{{{arquivo_response_id_value}}}</value>
+        /// <value>Identification Code of the File</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{arquivo_response_id_tipo_arquivo_value}}}
+        /// Identification Code of the File Type
         /// </summary>
-        /// <value>{{{arquivo_response_id_tipo_arquivo_value}}}</value>
+        /// <value>Identification Code of the File Type</value>
         [DataMember(Name="idTipoArquivo", EmitDefaultValue=false)]
         public long? IdTipoArquivo { get; set; }
     
         /// <summary>
-        /// {{{arquivo_response_nome_tipo_arquivo_value}}}
+        /// Description of the type of the file
         /// </summary>
-        /// <value>{{{arquivo_response_nome_tipo_arquivo_value}}}</value>
+        /// <value>Description of the type of the file</value>
         [DataMember(Name="nomeTipoArquivo", EmitDefaultValue=false)]
         public string NomeTipoArquivo { get; set; }
     
         /// <summary>
-        /// {{{arquivo_response_id_status_arquivo_value}}}
+        /// Identification Code of the File Staus
         /// </summary>
-        /// <value>{{{arquivo_response_id_status_arquivo_value}}}</value>
+        /// <value>Identification Code of the File Staus</value>
         [DataMember(Name="idStatusArquivo", EmitDefaultValue=false)]
         public long? IdStatusArquivo { get; set; }
     
         /// <summary>
-        /// {{{arquivo_response_nome_status_arquivo_value}}}
+        /// Description of the File Status
         /// </summary>
-        /// <value>{{{arquivo_response_nome_status_arquivo_value}}}</value>
+        /// <value>Description of the File Status</value>
         [DataMember(Name="nomeStatusArquivo", EmitDefaultValue=false)]
         public string NomeStatusArquivo { get; set; }
     
         /// <summary>
-        /// {{{arquivo_response_nome_value}}}
+        /// File name
         /// </summary>
-        /// <value>{{{arquivo_response_nome_value}}}</value>
+        /// <value>File name</value>
         [DataMember(Name="nome", EmitDefaultValue=false)]
         public string Nome { get; set; }
     
         /// <summary>
-        /// {{{arquivo_response_extensao_value}}}
+        /// Format/Extens of the file
         /// </summary>
-        /// <value>{{{arquivo_response_extensao_value}}}</value>
+        /// <value>Format/Extens of the file</value>
         [DataMember(Name="extensao", EmitDefaultValue=false)]
         public string Extensao { get; set; }
     
         /// <summary>
-        /// {{{arquivo_response_data_inclusao_value}}}
+        /// Date of Inclusion of the File
         /// </summary>
-        /// <value>{{{arquivo_response_data_inclusao_value}}}</value>
+        /// <value>Date of Inclusion of the File</value>
         [DataMember(Name="dataInclusao", EmitDefaultValue=false)]
         public string DataInclusao { get; set; }
     
         /// <summary>
-        /// {{{arquivo_response_data_alteracao_value}}}
+        /// Date of the last update of the file
         /// </summary>
-        /// <value>{{{arquivo_response_data_alteracao_value}}}</value>
+        /// <value>Date of the last update of the file</value>
         [DataMember(Name="dataAlteracao", EmitDefaultValue=false)]
         public string DataAlteracao { get; set; }
     
         /// <summary>
-        /// {{{arquivo_response_detalhes_value}}}
+        /// Details containing additional information, realted to the file
         /// </summary>
-        /// <value>{{{arquivo_response_detalhes_value}}}</value>
+        /// <value>Details containing additional information, realted to the file</value>
         [DataMember(Name="detalhes", EmitDefaultValue=false)]
         public List<ArquivoParametroResponse> Detalhes { get; set; }
     

@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{socio_aprovado_response_description}}}
+    /// PersonPersist
     /// </summary>
     [DataContract]
     public partial class SocioAprovadoResponse :  IEquatable<SocioAprovadoResponse>
@@ -22,20 +22,20 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="SocioAprovadoResponse" /> class.
         /// Initializes a new instance of the <see cref="SocioAprovadoResponse" />class.
         /// </summary>
-        /// <param name="Id">{{{socio_aprovado_response_id_value}}}.</param>
-        /// <param name="Nome">{{{socio_aprovado_response_nome_value}}}.</param>
-        /// <param name="Cpf">{{{socio_aprovado_response_cpf_value}}}.</param>
-        /// <param name="DataNascimento">{{{socio_aprovado_response_data_nascimento_value}}}.</param>
-        /// <param name="Sexo">{{{socio_aprovado_response_sexo_value}}}.</param>
-        /// <param name="NumeroIdentidade">{{{socio_aprovado_response_numero_identidade_value}}}.</param>
-        /// <param name="OrgaoExpedidorIdentidade">{{{socio_aprovado_response_orgao_expedidor_identidade_value}}}.</param>
-        /// <param name="UnidadeFederativaIdentidade">{{{socio_aprovado_response_unidade_federativa_identidade_value}}}.</param>
-        /// <param name="DataEmissaoIdentidade">{{{socio_aprovado_response_data_emissao_identidade_value}}}.</param>
-        /// <param name="EstadoCivil">{{{socio_aprovado_response_estado_civil_value}}}.</param>
-        /// <param name="Profissao">{{{socio_aprovado_response_profissao_value}}}.</param>
-        /// <param name="Nacionalidade">{{{socio_aprovado_response_nacionalidade_value}}}.</param>
-        /// <param name="Email">{{{socio_aprovado_response_email_value}}}.</param>
-        /// <param name="Telefones">{{{socio_aprovado_response_telefones_value}}}.</param>
+        /// <param name="Id">Identification code of the Partner (id).</param>
+        /// <param name="Nome">Show the name of the partner.</param>
+        /// <param name="Cpf">CPF number, when it is PP.</param>
+        /// <param name="DataNascimento">Birth Date of the Person, when it is PP, or the date of the Company Opening, when it is LP. This date must be informed in the format yyyy-MM-dd.</param>
+        /// <param name="Sexo">Identification code of the person sex, when it is PP, being: (&#39;M&#39;: Male), (&#39;F&#39;: Female), (&#39;O&#39;: Other), (&#39;N&#39;: Not Specified).</param>
+        /// <param name="NumeroIdentidade">Identity Number.</param>
+        /// <param name="OrgaoExpedidorIdentidade">Issuer organ of the ID document.</param>
+        /// <param name="UnidadeFederativaIdentidade">Acronym Federal Unity where was issued the Identity.</param>
+        /// <param name="DataEmissaoIdentidade">Issue date of the identity.</param>
+        /// <param name="EstadoCivil">Marital Status of the partner.</param>
+        /// <param name="Profissao">Partner occupation.</param>
+        /// <param name="Nacionalidade">Partner Nationality.</param>
+        /// <param name="Email">Email of the partner.</param>
+        /// <param name="Telefones">Inform the telephones of the partner.</param>
 
         public SocioAprovadoResponse(long? Id = null, string Nome = null, string Cpf = null, string DataNascimento = null, string Sexo = null, string NumeroIdentidade = null, string OrgaoExpedidorIdentidade = null, string UnidadeFederativaIdentidade = null, string DataEmissaoIdentidade = null, string EstadoCivil = null, string Profissao = null, string Nacionalidade = null, string Email = null, List<TelefonePessoaAprovadaResponse> Telefones = null)
         {
@@ -58,100 +58,100 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{socio_aprovado_response_id_value}}}
+        /// Identification code of the Partner (id)
         /// </summary>
-        /// <value>{{{socio_aprovado_response_id_value}}}</value>
+        /// <value>Identification code of the Partner (id)</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{socio_aprovado_response_nome_value}}}
+        /// Show the name of the partner
         /// </summary>
-        /// <value>{{{socio_aprovado_response_nome_value}}}</value>
+        /// <value>Show the name of the partner</value>
         [DataMember(Name="nome", EmitDefaultValue=false)]
         public string Nome { get; set; }
     
         /// <summary>
-        /// {{{socio_aprovado_response_cpf_value}}}
+        /// CPF number, when it is PP
         /// </summary>
-        /// <value>{{{socio_aprovado_response_cpf_value}}}</value>
+        /// <value>CPF number, when it is PP</value>
         [DataMember(Name="cpf", EmitDefaultValue=false)]
         public string Cpf { get; set; }
     
         /// <summary>
-        /// {{{socio_aprovado_response_data_nascimento_value}}}
+        /// Birth Date of the Person, when it is PP, or the date of the Company Opening, when it is LP. This date must be informed in the format yyyy-MM-dd
         /// </summary>
-        /// <value>{{{socio_aprovado_response_data_nascimento_value}}}</value>
+        /// <value>Birth Date of the Person, when it is PP, or the date of the Company Opening, when it is LP. This date must be informed in the format yyyy-MM-dd</value>
         [DataMember(Name="dataNascimento", EmitDefaultValue=false)]
         public string DataNascimento { get; set; }
     
         /// <summary>
-        /// {{{socio_aprovado_response_sexo_value}}}
+        /// Identification code of the person sex, when it is PP, being: (&#39;M&#39;: Male), (&#39;F&#39;: Female), (&#39;O&#39;: Other), (&#39;N&#39;: Not Specified)
         /// </summary>
-        /// <value>{{{socio_aprovado_response_sexo_value}}}</value>
+        /// <value>Identification code of the person sex, when it is PP, being: (&#39;M&#39;: Male), (&#39;F&#39;: Female), (&#39;O&#39;: Other), (&#39;N&#39;: Not Specified)</value>
         [DataMember(Name="sexo", EmitDefaultValue=false)]
         public string Sexo { get; set; }
     
         /// <summary>
-        /// {{{socio_aprovado_response_numero_identidade_value}}}
+        /// Identity Number
         /// </summary>
-        /// <value>{{{socio_aprovado_response_numero_identidade_value}}}</value>
+        /// <value>Identity Number</value>
         [DataMember(Name="numeroIdentidade", EmitDefaultValue=false)]
         public string NumeroIdentidade { get; set; }
     
         /// <summary>
-        /// {{{socio_aprovado_response_orgao_expedidor_identidade_value}}}
+        /// Issuer organ of the ID document
         /// </summary>
-        /// <value>{{{socio_aprovado_response_orgao_expedidor_identidade_value}}}</value>
+        /// <value>Issuer organ of the ID document</value>
         [DataMember(Name="orgaoExpedidorIdentidade", EmitDefaultValue=false)]
         public string OrgaoExpedidorIdentidade { get; set; }
     
         /// <summary>
-        /// {{{socio_aprovado_response_unidade_federativa_identidade_value}}}
+        /// Acronym Federal Unity where was issued the Identity
         /// </summary>
-        /// <value>{{{socio_aprovado_response_unidade_federativa_identidade_value}}}</value>
+        /// <value>Acronym Federal Unity where was issued the Identity</value>
         [DataMember(Name="unidadeFederativaIdentidade", EmitDefaultValue=false)]
         public string UnidadeFederativaIdentidade { get; set; }
     
         /// <summary>
-        /// {{{socio_aprovado_response_data_emissao_identidade_value}}}
+        /// Issue date of the identity
         /// </summary>
-        /// <value>{{{socio_aprovado_response_data_emissao_identidade_value}}}</value>
+        /// <value>Issue date of the identity</value>
         [DataMember(Name="dataEmissaoIdentidade", EmitDefaultValue=false)]
         public string DataEmissaoIdentidade { get; set; }
     
         /// <summary>
-        /// {{{socio_aprovado_response_estado_civil_value}}}
+        /// Marital Status of the partner
         /// </summary>
-        /// <value>{{{socio_aprovado_response_estado_civil_value}}}</value>
+        /// <value>Marital Status of the partner</value>
         [DataMember(Name="estadoCivil", EmitDefaultValue=false)]
         public string EstadoCivil { get; set; }
     
         /// <summary>
-        /// {{{socio_aprovado_response_profissao_value}}}
+        /// Partner occupation
         /// </summary>
-        /// <value>{{{socio_aprovado_response_profissao_value}}}</value>
+        /// <value>Partner occupation</value>
         [DataMember(Name="profissao", EmitDefaultValue=false)]
         public string Profissao { get; set; }
     
         /// <summary>
-        /// {{{socio_aprovado_response_nacionalidade_value}}}
+        /// Partner Nationality
         /// </summary>
-        /// <value>{{{socio_aprovado_response_nacionalidade_value}}}</value>
+        /// <value>Partner Nationality</value>
         [DataMember(Name="nacionalidade", EmitDefaultValue=false)]
         public string Nacionalidade { get; set; }
     
         /// <summary>
-        /// {{{socio_aprovado_response_email_value}}}
+        /// Email of the partner
         /// </summary>
-        /// <value>{{{socio_aprovado_response_email_value}}}</value>
+        /// <value>Email of the partner</value>
         [DataMember(Name="email", EmitDefaultValue=false)]
         public string Email { get; set; }
     
         /// <summary>
-        /// {{{socio_aprovado_response_telefones_value}}}
+        /// Inform the telephones of the partner
         /// </summary>
-        /// <value>{{{socio_aprovado_response_telefones_value}}}</value>
+        /// <value>Inform the telephones of the partner</value>
         [DataMember(Name="telefones", EmitDefaultValue=false)]
         public List<TelefonePessoaAprovadaResponse> Telefones { get; set; }
     

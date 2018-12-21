@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{aplicacao_mobile_response_description}}}
+    /// Application Mobile
     /// </summary>
     [DataContract]
     public partial class AplicacaoMobileResponse :  IEquatable<AplicacaoMobileResponse>
@@ -22,14 +22,14 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="AplicacaoMobileResponse" /> class.
         /// Initializes a new instance of the <see cref="AplicacaoMobileResponse" />class.
         /// </summary>
-        /// <param name="Id">{{{aplicacao_mobile_response_id_value}}}.</param>
-        /// <param name="IdPlataformaMobile">{{{aplicacao_mobile_response_id_plataforma_mobile_value}}}.</param>
-        /// <param name="Token">{{{aplicacao_mobile_response_token_value}}}.</param>
-        /// <param name="Cor">{{{aplicacao_mobile_response_cor_value}}}.</param>
-        /// <param name="Som">{{{aplicacao_mobile_response_som_value}}}.</param>
-        /// <param name="Icone">{{{aplicacao_mobile_response_icone_value}}}.</param>
-        /// <param name="CertificadoBase64">{{{aplicacao_mobile_response_certificado_base64_value}}}.</param>
-        /// <param name="Senha">{{{aplicacao_mobile_response_senha_value}}}.</param>
+        /// <param name="Id">Show the identifier of the application.</param>
+        /// <param name="IdPlataformaMobile">show the identifier of the platform.</param>
+        /// <param name="Token">Show the token application.</param>
+        /// <param name="Cor">Show the message color of the application.</param>
+        /// <param name="Som">show the message sound of the application.</param>
+        /// <param name="Icone">Show the message icon of the application.</param>
+        /// <param name="CertificadoBase64">Show the certificate of the application.</param>
+        /// <param name="Senha">Show the password of the application.</param>
 
         public AplicacaoMobileResponse(long? Id = null, long? IdPlataformaMobile = null, string Token = null, string Cor = null, string Som = null, string Icone = null, string CertificadoBase64 = null, string Senha = null)
         {
@@ -46,58 +46,58 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{aplicacao_mobile_response_id_value}}}
+        /// Show the identifier of the application
         /// </summary>
-        /// <value>{{{aplicacao_mobile_response_id_value}}}</value>
+        /// <value>Show the identifier of the application</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{aplicacao_mobile_response_id_plataforma_mobile_value}}}
+        /// show the identifier of the platform
         /// </summary>
-        /// <value>{{{aplicacao_mobile_response_id_plataforma_mobile_value}}}</value>
+        /// <value>show the identifier of the platform</value>
         [DataMember(Name="idPlataformaMobile", EmitDefaultValue=false)]
         public long? IdPlataformaMobile { get; set; }
     
         /// <summary>
-        /// {{{aplicacao_mobile_response_token_value}}}
+        /// Show the token application
         /// </summary>
-        /// <value>{{{aplicacao_mobile_response_token_value}}}</value>
+        /// <value>Show the token application</value>
         [DataMember(Name="token", EmitDefaultValue=false)]
         public string Token { get; set; }
     
         /// <summary>
-        /// {{{aplicacao_mobile_response_cor_value}}}
+        /// Show the message color of the application
         /// </summary>
-        /// <value>{{{aplicacao_mobile_response_cor_value}}}</value>
+        /// <value>Show the message color of the application</value>
         [DataMember(Name="cor", EmitDefaultValue=false)]
         public string Cor { get; set; }
     
         /// <summary>
-        /// {{{aplicacao_mobile_response_som_value}}}
+        /// show the message sound of the application
         /// </summary>
-        /// <value>{{{aplicacao_mobile_response_som_value}}}</value>
+        /// <value>show the message sound of the application</value>
         [DataMember(Name="som", EmitDefaultValue=false)]
         public string Som { get; set; }
     
         /// <summary>
-        /// {{{aplicacao_mobile_response_icone_value}}}
+        /// Show the message icon of the application
         /// </summary>
-        /// <value>{{{aplicacao_mobile_response_icone_value}}}</value>
+        /// <value>Show the message icon of the application</value>
         [DataMember(Name="icone", EmitDefaultValue=false)]
         public string Icone { get; set; }
     
         /// <summary>
-        /// {{{aplicacao_mobile_response_certificado_base64_value}}}
+        /// Show the certificate of the application
         /// </summary>
-        /// <value>{{{aplicacao_mobile_response_certificado_base64_value}}}</value>
+        /// <value>Show the certificate of the application</value>
         [DataMember(Name="certificadoBase64", EmitDefaultValue=false)]
         public string CertificadoBase64 { get; set; }
     
         /// <summary>
-        /// {{{aplicacao_mobile_response_senha_value}}}
+        /// Show the password of the application
         /// </summary>
-        /// <value>{{{aplicacao_mobile_response_senha_value}}}</value>
+        /// <value>Show the password of the application</value>
         [DataMember(Name="senha", EmitDefaultValue=false)]
         public string Senha { get; set; }
     

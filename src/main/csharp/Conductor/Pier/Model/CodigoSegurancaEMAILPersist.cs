@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{codigo_seguranca_e_m_a_i_l_persist_description}}}
+    /// Representation of the validate resource security code
     /// </summary>
     [DataContract]
     public partial class CodigoSegurancaEMAILPersist :  IEquatable<CodigoSegurancaEMAILPersist>
@@ -22,8 +22,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="CodigoSegurancaEMAILPersist" /> class.
         /// Initializes a new instance of the <see cref="CodigoSegurancaEMAILPersist" />class.
         /// </summary>
-        /// <param name="Email">{{{codigo_seguranca_e_m_a_i_l_persist_email_value}}}.</param>
-        /// <param name="CodigoSeguranca">{{{codigo_seguranca_e_m_a_i_l_persist_codigo_seguranca_value}}}.</param>
+        /// <param name="Email">E-mail used to sending the security code.</param>
+        /// <param name="CodigoSeguranca">Security Code.</param>
 
         public CodigoSegurancaEMAILPersist(string Email = null, string CodigoSeguranca = null)
         {
@@ -34,16 +34,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{codigo_seguranca_e_m_a_i_l_persist_email_value}}}
+        /// E-mail used to sending the security code
         /// </summary>
-        /// <value>{{{codigo_seguranca_e_m_a_i_l_persist_email_value}}}</value>
+        /// <value>E-mail used to sending the security code</value>
         [DataMember(Name="email", EmitDefaultValue=false)]
         public string Email { get; set; }
     
         /// <summary>
-        /// {{{codigo_seguranca_e_m_a_i_l_persist_codigo_seguranca_value}}}
+        /// Security Code
         /// </summary>
-        /// <value>{{{codigo_seguranca_e_m_a_i_l_persist_codigo_seguranca_value}}}</value>
+        /// <value>Security Code</value>
         [DataMember(Name="codigoSeguranca", EmitDefaultValue=false)]
         public string CodigoSeguranca { get; set; }
     

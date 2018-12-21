@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{cancelamento_transacao_on_us_request_description}}}
+    /// Request Object of Transaction Cancellation
     /// </summary>
     [DataContract]
     public partial class CancelamentoTransacaoOnUsRequest :  IEquatable<CancelamentoTransacaoOnUsRequest>
@@ -22,17 +22,17 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="CancelamentoTransacaoOnUsRequest" /> class.
         /// Initializes a new instance of the <see cref="CancelamentoTransacaoOnUsRequest" />class.
         /// </summary>
-        /// <param name="NsuAutorizacaoTransacaoCancelada">{{{cancelamento_transacao_on_us_request_nsu_autorizacao_transacao_cancelada_value}}} (required).</param>
-        /// <param name="NsuOrigem">{{{transacao_on_us_request_nsu_origem_value}}} (required).</param>
-        /// <param name="NsuOrigemTransacaoCancelada">{{{desfazimento_transacao_on_us_request_nsu_origem_transacao_cancelada_value}}} (required).</param>
-        /// <param name="CodigoProcessamento">{{{transacao_on_us_request_codigo_processamento_value}}} (required).</param>
-        /// <param name="DataHoraTransacaoCancelada">{{{desfazimento_transacao_on_us_request_data_hora_transacao_cancelada_value}}} (required).</param>
-        /// <param name="ValorTransacao">{{{transacao_on_us_request_valor_transacao_value}}} (required).</param>
-        /// <param name="NumeroRealCartao">{{{transacao_on_us_request_numero_real_cartao_value}}} (required).</param>
-        /// <param name="DataValidadeCartao">{{{transacao_on_us_request_data_validade_cartao_value}}} (required).</param>
-        /// <param name="NumeroEstabelecimento">{{{transacao_on_us_request_numero_estabelecimento_value}}} (required).</param>
-        /// <param name="DataHoraTerminal">{{{transacao_on_us_request_data_hora_terminal_value}}} (required).</param>
-        /// <param name="TerminalRequisitante">{{{transacao_on_us_request_terminal_requisitante_value}}} (required).</param>
+        /// <param name="NsuAutorizacaoTransacaoCancelada">Unique Sequel Number of HOST that identifies the transaction in the system that was authorized (required).</param>
+        /// <param name="NsuOrigem">Unique Sequel Number that identifies the transaction in the system that has originated it (required).</param>
+        /// <param name="NsuOrigemTransacaoCancelada">Unique Sequel Number that identifies the transaction in the system to be canceled (required).</param>
+        /// <param name="CodigoProcessamento">Code of Processing that identifies the Type of Transaction (required).</param>
+        /// <param name="DataHoraTransacaoCancelada">List the date and local time of the transactionto be canceled yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00 (required).</param>
+        /// <param name="ValorTransacao">Value of transaction with two decimal places for the cents (required).</param>
+        /// <param name="NumeroRealCartao">Real number of the card (required).</param>
+        /// <param name="DataValidadeCartao">Expiration date of the Card. Ex: YYMM (required).</param>
+        /// <param name="NumeroEstabelecimento">Number of the Establishment (Number+DV) (required).</param>
+        /// <param name="DataHoraTerminal">show the date and local time of the retrievement yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00 (required).</param>
+        /// <param name="TerminalRequisitante">Show the identification of the terminal applicant (required).</param>
 
         public CancelamentoTransacaoOnUsRequest(string NsuAutorizacaoTransacaoCancelada = null, string NsuOrigem = null, string NsuOrigemTransacaoCancelada = null, string CodigoProcessamento = null, string DataHoraTransacaoCancelada = null, double? ValorTransacao = null, string NumeroRealCartao = null, string DataValidadeCartao = null, long? NumeroEstabelecimento = null, string DataHoraTerminal = null, string TerminalRequisitante = null)
         {
@@ -140,79 +140,79 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{cancelamento_transacao_on_us_request_nsu_autorizacao_transacao_cancelada_value}}}
+        /// Unique Sequel Number of HOST that identifies the transaction in the system that was authorized
         /// </summary>
-        /// <value>{{{cancelamento_transacao_on_us_request_nsu_autorizacao_transacao_cancelada_value}}}</value>
+        /// <value>Unique Sequel Number of HOST that identifies the transaction in the system that was authorized</value>
         [DataMember(Name="nsuAutorizacaoTransacaoCancelada", EmitDefaultValue=false)]
         public string NsuAutorizacaoTransacaoCancelada { get; set; }
     
         /// <summary>
-        /// {{{transacao_on_us_request_nsu_origem_value}}}
+        /// Unique Sequel Number that identifies the transaction in the system that has originated it
         /// </summary>
-        /// <value>{{{transacao_on_us_request_nsu_origem_value}}}</value>
+        /// <value>Unique Sequel Number that identifies the transaction in the system that has originated it</value>
         [DataMember(Name="nsuOrigem", EmitDefaultValue=false)]
         public string NsuOrigem { get; set; }
     
         /// <summary>
-        /// {{{desfazimento_transacao_on_us_request_nsu_origem_transacao_cancelada_value}}}
+        /// Unique Sequel Number that identifies the transaction in the system to be canceled
         /// </summary>
-        /// <value>{{{desfazimento_transacao_on_us_request_nsu_origem_transacao_cancelada_value}}}</value>
+        /// <value>Unique Sequel Number that identifies the transaction in the system to be canceled</value>
         [DataMember(Name="nsuOrigemTransacaoCancelada", EmitDefaultValue=false)]
         public string NsuOrigemTransacaoCancelada { get; set; }
     
         /// <summary>
-        /// {{{transacao_on_us_request_codigo_processamento_value}}}
+        /// Code of Processing that identifies the Type of Transaction
         /// </summary>
-        /// <value>{{{transacao_on_us_request_codigo_processamento_value}}}</value>
+        /// <value>Code of Processing that identifies the Type of Transaction</value>
         [DataMember(Name="codigoProcessamento", EmitDefaultValue=false)]
         public string CodigoProcessamento { get; set; }
     
         /// <summary>
-        /// {{{desfazimento_transacao_on_us_request_data_hora_transacao_cancelada_value}}}
+        /// List the date and local time of the transactionto be canceled yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00
         /// </summary>
-        /// <value>{{{desfazimento_transacao_on_us_request_data_hora_transacao_cancelada_value}}}</value>
+        /// <value>List the date and local time of the transactionto be canceled yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00</value>
         [DataMember(Name="dataHoraTransacaoCancelada", EmitDefaultValue=false)]
         public string DataHoraTransacaoCancelada { get; set; }
     
         /// <summary>
-        /// {{{transacao_on_us_request_valor_transacao_value}}}
+        /// Value of transaction with two decimal places for the cents
         /// </summary>
-        /// <value>{{{transacao_on_us_request_valor_transacao_value}}}</value>
+        /// <value>Value of transaction with two decimal places for the cents</value>
         [DataMember(Name="valorTransacao", EmitDefaultValue=false)]
         public double? ValorTransacao { get; set; }
     
         /// <summary>
-        /// {{{transacao_on_us_request_numero_real_cartao_value}}}
+        /// Real number of the card
         /// </summary>
-        /// <value>{{{transacao_on_us_request_numero_real_cartao_value}}}</value>
+        /// <value>Real number of the card</value>
         [DataMember(Name="numeroRealCartao", EmitDefaultValue=false)]
         public string NumeroRealCartao { get; set; }
     
         /// <summary>
-        /// {{{transacao_on_us_request_data_validade_cartao_value}}}
+        /// Expiration date of the Card. Ex: YYMM
         /// </summary>
-        /// <value>{{{transacao_on_us_request_data_validade_cartao_value}}}</value>
+        /// <value>Expiration date of the Card. Ex: YYMM</value>
         [DataMember(Name="dataValidadeCartao", EmitDefaultValue=false)]
         public string DataValidadeCartao { get; set; }
     
         /// <summary>
-        /// {{{transacao_on_us_request_numero_estabelecimento_value}}}
+        /// Number of the Establishment (Number+DV)
         /// </summary>
-        /// <value>{{{transacao_on_us_request_numero_estabelecimento_value}}}</value>
+        /// <value>Number of the Establishment (Number+DV)</value>
         [DataMember(Name="numeroEstabelecimento", EmitDefaultValue=false)]
         public long? NumeroEstabelecimento { get; set; }
     
         /// <summary>
-        /// {{{transacao_on_us_request_data_hora_terminal_value}}}
+        /// show the date and local time of the retrievement yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00
         /// </summary>
-        /// <value>{{{transacao_on_us_request_data_hora_terminal_value}}}</value>
+        /// <value>show the date and local time of the retrievement yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00</value>
         [DataMember(Name="dataHoraTerminal", EmitDefaultValue=false)]
         public string DataHoraTerminal { get; set; }
     
         /// <summary>
-        /// {{{transacao_on_us_request_terminal_requisitante_value}}}
+        /// Show the identification of the terminal applicant
         /// </summary>
-        /// <value>{{{transacao_on_us_request_terminal_requisitante_value}}}</value>
+        /// <value>Show the identification of the terminal applicant</value>
         [DataMember(Name="terminalRequisitante", EmitDefaultValue=false)]
         public string TerminalRequisitante { get; set; }
     

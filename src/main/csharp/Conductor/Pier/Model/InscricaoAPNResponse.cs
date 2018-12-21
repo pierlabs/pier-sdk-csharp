@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{inscricao_apn_resposta_descricao}}}
+    /// Represents a subscription response
     /// </summary>
     [DataContract]
     public partial class InscricaoAPNResponse :  IEquatable<InscricaoAPNResponse>
@@ -22,13 +22,13 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="InscricaoAPNResponse" /> class.
         /// Initializes a new instance of the <see cref="InscricaoAPNResponse" />class.
         /// </summary>
-        /// <param name="AplicacaoMobile">{{{inscricao_apn_resposta_aplicacao_mobile_descricao}}}.</param>
-        /// <param name="Ativo">{{{inscricao_apn_resposta_ativo_descricao}}}.</param>
-        /// <param name="Cartao">{{{inscricao_apn_resposta_cartao_descricao}}}.</param>
-        /// <param name="DataCriacao">{{{inscricao_apn_resposta_data_criacao_descricao}}}.</param>
-        /// <param name="DataDesativacao">{{{inscricao_apn_resposta_data_desativacao_descricao}}}.</param>
-        /// <param name="DeviceToken">{{{inscricao_apn_resposta_device_token_descricao}}}.</param>
-        /// <param name="Id">{{{inscricao_apn_resposta_id_descricao}}}.</param>
+        /// <param name="AplicacaoMobile">Represents the mobile application associated to the subscription.</param>
+        /// <param name="Ativo">Indicates is the subscription is active.</param>
+        /// <param name="Cartao">Represents the card associated to the subscription.</param>
+        /// <param name="DataCriacao">The subscription creation date.</param>
+        /// <param name="DataDesativacao">The subscription deactivation date.</param>
+        /// <param name="DeviceToken">The device token.</param>
+        /// <param name="Id">Subscription id.</param>
 
         public InscricaoAPNResponse(AplicacaoMobileEmissorResponse AplicacaoMobile = null, bool? Ativo = null, CartaoEmissorResponse Cartao = null, string DataCriacao = null, string DataDesativacao = null, string DeviceToken = null, long? Id = null)
         {
@@ -44,51 +44,51 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{inscricao_apn_resposta_aplicacao_mobile_descricao}}}
+        /// Represents the mobile application associated to the subscription
         /// </summary>
-        /// <value>{{{inscricao_apn_resposta_aplicacao_mobile_descricao}}}</value>
+        /// <value>Represents the mobile application associated to the subscription</value>
         [DataMember(Name="aplicacaoMobile", EmitDefaultValue=false)]
         public AplicacaoMobileEmissorResponse AplicacaoMobile { get; set; }
     
         /// <summary>
-        /// {{{inscricao_apn_resposta_ativo_descricao}}}
+        /// Indicates is the subscription is active
         /// </summary>
-        /// <value>{{{inscricao_apn_resposta_ativo_descricao}}}</value>
+        /// <value>Indicates is the subscription is active</value>
         [DataMember(Name="ativo", EmitDefaultValue=false)]
         public bool? Ativo { get; set; }
     
         /// <summary>
-        /// {{{inscricao_apn_resposta_cartao_descricao}}}
+        /// Represents the card associated to the subscription
         /// </summary>
-        /// <value>{{{inscricao_apn_resposta_cartao_descricao}}}</value>
+        /// <value>Represents the card associated to the subscription</value>
         [DataMember(Name="cartao", EmitDefaultValue=false)]
         public CartaoEmissorResponse Cartao { get; set; }
     
         /// <summary>
-        /// {{{inscricao_apn_resposta_data_criacao_descricao}}}
+        /// The subscription creation date
         /// </summary>
-        /// <value>{{{inscricao_apn_resposta_data_criacao_descricao}}}</value>
+        /// <value>The subscription creation date</value>
         [DataMember(Name="dataCriacao", EmitDefaultValue=false)]
         public string DataCriacao { get; set; }
     
         /// <summary>
-        /// {{{inscricao_apn_resposta_data_desativacao_descricao}}}
+        /// The subscription deactivation date
         /// </summary>
-        /// <value>{{{inscricao_apn_resposta_data_desativacao_descricao}}}</value>
+        /// <value>The subscription deactivation date</value>
         [DataMember(Name="dataDesativacao", EmitDefaultValue=false)]
         public string DataDesativacao { get; set; }
     
         /// <summary>
-        /// {{{inscricao_apn_resposta_device_token_descricao}}}
+        /// The device token
         /// </summary>
-        /// <value>{{{inscricao_apn_resposta_device_token_descricao}}}</value>
+        /// <value>The device token</value>
         [DataMember(Name="deviceToken", EmitDefaultValue=false)]
         public string DeviceToken { get; set; }
     
         /// <summary>
-        /// {{{inscricao_apn_resposta_id_descricao}}}
+        /// Subscription id
         /// </summary>
-        /// <value>{{{inscricao_apn_resposta_id_descricao}}}</value>
+        /// <value>Subscription id</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     

@@ -12,16 +12,16 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{configuracao_registro_cobranca_response_description}}}
+    /// Response Representation of the collection register configuration resource
     /// </summary>
     [DataContract]
     public partial class ConfiguracaoRegistroCobrancaResponse :  IEquatable<ConfiguracaoRegistroCobrancaResponse>
     { 
     
         /// <summary>
-        /// {{{configuracao_registro_cobranca_response_status_value}}}
+        /// Status indicator if the configuration is active
         /// </summary>
-        /// <value>{{{configuracao_registro_cobranca_response_status_value}}}</value>
+        /// <value>Status indicator if the configuration is active</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum StatusEnum {
             
@@ -34,9 +34,9 @@ namespace Conductor.Pier.Model
 
     
         /// <summary>
-        /// {{{configuracao_registro_cobranca_persist_secret_value}}}
+        /// Secret needed for retrieving the Access Token. Used for communication with Banco do Brasil
         /// </summary>
-        /// <value>{{{configuracao_registro_cobranca_persist_secret_value}}}</value>
+        /// <value>Secret needed for retrieving the Access Token. Used for communication with Banco do Brasil</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum SecretEnum {
             
@@ -49,9 +49,9 @@ namespace Conductor.Pier.Model
 
     
         /// <summary>
-        /// {{{configuracao_registro_cobranca_persist_client_id_value}}}
+        /// ClientID needed for retrieving the Access Token. Used for communication with Banco do Brasil
         /// </summary>
-        /// <value>{{{configuracao_registro_cobranca_persist_client_id_value}}}</value>
+        /// <value>ClientID needed for retrieving the Access Token. Used for communication with Banco do Brasil</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum ClientIDEnum {
             
@@ -64,23 +64,23 @@ namespace Conductor.Pier.Model
 
     
         /// <summary>
-        /// {{{configuracao_registro_cobranca_response_status_value}}}
+        /// Status indicator if the configuration is active
         /// </summary>
-        /// <value>{{{configuracao_registro_cobranca_response_status_value}}}</value>
+        /// <value>Status indicator if the configuration is active</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
     
         /// <summary>
-        /// {{{configuracao_registro_cobranca_persist_secret_value}}}
+        /// Secret needed for retrieving the Access Token. Used for communication with Banco do Brasil
         /// </summary>
-        /// <value>{{{configuracao_registro_cobranca_persist_secret_value}}}</value>
+        /// <value>Secret needed for retrieving the Access Token. Used for communication with Banco do Brasil</value>
         [DataMember(Name="secret", EmitDefaultValue=false)]
         public SecretEnum? Secret { get; set; }
     
         /// <summary>
-        /// {{{configuracao_registro_cobranca_persist_client_id_value}}}
+        /// ClientID needed for retrieving the Access Token. Used for communication with Banco do Brasil
         /// </summary>
-        /// <value>{{{configuracao_registro_cobranca_persist_client_id_value}}}</value>
+        /// <value>ClientID needed for retrieving the Access Token. Used for communication with Banco do Brasil</value>
         [DataMember(Name="clientID", EmitDefaultValue=false)]
         public ClientIDEnum? ClientID { get; set; }
     
@@ -88,24 +88,24 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="ConfiguracaoRegistroCobrancaResponse" /> class.
         /// Initializes a new instance of the <see cref="ConfiguracaoRegistroCobrancaResponse" />class.
         /// </summary>
-        /// <param name="Id">{{{configuracao_registro_cobranca_response_id_value}}}.</param>
-        /// <param name="IdEmissor">{{{configuracao_registro_cobranca_response_id_emissor_value}}}.</param>
-        /// <param name="CodigoBanco">{{{configuracao_registro_cobranca_response_codigo_banco_value}}}.</param>
-        /// <param name="Uri">{{{configuracao_registro_cobranca_response_uri_value}}}.</param>
-        /// <param name="KeyStoreName">{{{configuracao_registro_cobranca_response_key_store_name_value}}}.</param>
-        /// <param name="KeyStorePassword">{{{configuracao_registro_cobranca_response_key_store_password_value}}}.</param>
-        /// <param name="KeystoreAlias">{{{configuracao_registro_cobranca_response_keystore_alias_value}}}.</param>
-        /// <param name="KeyStorePrivateKeyPassword">{{{configuracao_registro_cobranca_response_key_store_private_key_password_value}}}.</param>
-        /// <param name="TypeKeystore">{{{configuracao_registro_cobranca_response_type_keystore_value}}}.</param>
-        /// <param name="TrustStoreName">{{{configuracao_registro_cobranca_response_trust_store_name_value}}}.</param>
-        /// <param name="TrustStorePassword">{{{configuracao_registro_cobranca_response_trust_store_password_value}}}.</param>
-        /// <param name="TruststoreAlias">{{{configuracao_registro_cobranca_response_truststore_alias_value}}}.</param>
-        /// <param name="TypeTruststore">{{{configuracao_registro_cobranca_response_type_truststore_value}}}.</param>
-        /// <param name="UriAdicional">{{{configuracao_registro_cobranca_response_uri_adicional_value}}}.</param>
-        /// <param name="Status">{{{configuracao_registro_cobranca_response_status_value}}}.</param>
-        /// <param name="Secret">{{{configuracao_registro_cobranca_persist_secret_value}}} (required).</param>
-        /// <param name="ClientID">{{{configuracao_registro_cobranca_persist_client_id_value}}} (required).</param>
-        /// <param name="Chave">{{{configuracao_registro_cobranca_persist_chave_value}}}.</param>
+        /// <param name="Id">Identifier Code of the Configuration.</param>
+        /// <param name="IdEmissor">Code of the issuer.</param>
+        /// <param name="CodigoBanco">Code of the Bank.</param>
+        /// <param name="Uri">URL of access to the bank.</param>
+        /// <param name="KeyStoreName">Way to the digital certificate of the issuer.</param>
+        /// <param name="KeyStorePassword">Password of the digital certificate of the issuer.</param>
+        /// <param name="KeystoreAlias">Alias of digital certificate of the issuer.</param>
+        /// <param name="KeyStorePrivateKeyPassword">Key password of the digital certificate of the issuer.</param>
+        /// <param name="TypeKeystore">Type of digital certificate of the issuer.</param>
+        /// <param name="TrustStoreName">Way of the digital certificate of the bank.</param>
+        /// <param name="TrustStorePassword">Password of the digital certificate of the bank.</param>
+        /// <param name="TruststoreAlias">Alias of digital certificate of the bank.</param>
+        /// <param name="TypeTruststore">Type of the digital certificate of the bank.</param>
+        /// <param name="UriAdicional">Additional URL of access to the bank.</param>
+        /// <param name="Status">Status indicator if the configuration is active.</param>
+        /// <param name="Secret">Secret needed for retrieving the Access Token. Used for communication with Banco do Brasil (required).</param>
+        /// <param name="ClientID">ClientID needed for retrieving the Access Token. Used for communication with Banco do Brasil (required).</param>
+        /// <param name="Chave">Key needed for retrieving the Access Token. Used for communication with Itau Bank.</param>
 
         public ConfiguracaoRegistroCobrancaResponse(long? Id = null, long? IdEmissor = null, long? CodigoBanco = null, string Uri = null, string KeyStoreName = null, string KeyStorePassword = null, string KeystoreAlias = null, string KeyStorePrivateKeyPassword = null, string TypeKeystore = null, string TrustStoreName = null, string TrustStorePassword = null, string TruststoreAlias = null, string TypeTruststore = null, string UriAdicional = null, StatusEnum? Status = null, SecretEnum? Secret = null, ClientIDEnum? ClientID = null, string Chave = null)
         {
@@ -148,107 +148,107 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{configuracao_registro_cobranca_response_id_value}}}
+        /// Identifier Code of the Configuration
         /// </summary>
-        /// <value>{{{configuracao_registro_cobranca_response_id_value}}}</value>
+        /// <value>Identifier Code of the Configuration</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{configuracao_registro_cobranca_response_id_emissor_value}}}
+        /// Code of the issuer
         /// </summary>
-        /// <value>{{{configuracao_registro_cobranca_response_id_emissor_value}}}</value>
+        /// <value>Code of the issuer</value>
         [DataMember(Name="idEmissor", EmitDefaultValue=false)]
         public long? IdEmissor { get; set; }
     
         /// <summary>
-        /// {{{configuracao_registro_cobranca_response_codigo_banco_value}}}
+        /// Code of the Bank
         /// </summary>
-        /// <value>{{{configuracao_registro_cobranca_response_codigo_banco_value}}}</value>
+        /// <value>Code of the Bank</value>
         [DataMember(Name="codigoBanco", EmitDefaultValue=false)]
         public long? CodigoBanco { get; set; }
     
         /// <summary>
-        /// {{{configuracao_registro_cobranca_response_uri_value}}}
+        /// URL of access to the bank
         /// </summary>
-        /// <value>{{{configuracao_registro_cobranca_response_uri_value}}}</value>
+        /// <value>URL of access to the bank</value>
         [DataMember(Name="uri", EmitDefaultValue=false)]
         public string Uri { get; set; }
     
         /// <summary>
-        /// {{{configuracao_registro_cobranca_response_key_store_name_value}}}
+        /// Way to the digital certificate of the issuer
         /// </summary>
-        /// <value>{{{configuracao_registro_cobranca_response_key_store_name_value}}}</value>
+        /// <value>Way to the digital certificate of the issuer</value>
         [DataMember(Name="keyStoreName", EmitDefaultValue=false)]
         public string KeyStoreName { get; set; }
     
         /// <summary>
-        /// {{{configuracao_registro_cobranca_response_key_store_password_value}}}
+        /// Password of the digital certificate of the issuer
         /// </summary>
-        /// <value>{{{configuracao_registro_cobranca_response_key_store_password_value}}}</value>
+        /// <value>Password of the digital certificate of the issuer</value>
         [DataMember(Name="keyStorePassword", EmitDefaultValue=false)]
         public string KeyStorePassword { get; set; }
     
         /// <summary>
-        /// {{{configuracao_registro_cobranca_response_keystore_alias_value}}}
+        /// Alias of digital certificate of the issuer
         /// </summary>
-        /// <value>{{{configuracao_registro_cobranca_response_keystore_alias_value}}}</value>
+        /// <value>Alias of digital certificate of the issuer</value>
         [DataMember(Name="keystoreAlias", EmitDefaultValue=false)]
         public string KeystoreAlias { get; set; }
     
         /// <summary>
-        /// {{{configuracao_registro_cobranca_response_key_store_private_key_password_value}}}
+        /// Key password of the digital certificate of the issuer
         /// </summary>
-        /// <value>{{{configuracao_registro_cobranca_response_key_store_private_key_password_value}}}</value>
+        /// <value>Key password of the digital certificate of the issuer</value>
         [DataMember(Name="keyStorePrivateKeyPassword", EmitDefaultValue=false)]
         public string KeyStorePrivateKeyPassword { get; set; }
     
         /// <summary>
-        /// {{{configuracao_registro_cobranca_response_type_keystore_value}}}
+        /// Type of digital certificate of the issuer
         /// </summary>
-        /// <value>{{{configuracao_registro_cobranca_response_type_keystore_value}}}</value>
+        /// <value>Type of digital certificate of the issuer</value>
         [DataMember(Name="typeKeystore", EmitDefaultValue=false)]
         public string TypeKeystore { get; set; }
     
         /// <summary>
-        /// {{{configuracao_registro_cobranca_response_trust_store_name_value}}}
+        /// Way of the digital certificate of the bank
         /// </summary>
-        /// <value>{{{configuracao_registro_cobranca_response_trust_store_name_value}}}</value>
+        /// <value>Way of the digital certificate of the bank</value>
         [DataMember(Name="trustStoreName", EmitDefaultValue=false)]
         public string TrustStoreName { get; set; }
     
         /// <summary>
-        /// {{{configuracao_registro_cobranca_response_trust_store_password_value}}}
+        /// Password of the digital certificate of the bank
         /// </summary>
-        /// <value>{{{configuracao_registro_cobranca_response_trust_store_password_value}}}</value>
+        /// <value>Password of the digital certificate of the bank</value>
         [DataMember(Name="trustStorePassword", EmitDefaultValue=false)]
         public string TrustStorePassword { get; set; }
     
         /// <summary>
-        /// {{{configuracao_registro_cobranca_response_truststore_alias_value}}}
+        /// Alias of digital certificate of the bank
         /// </summary>
-        /// <value>{{{configuracao_registro_cobranca_response_truststore_alias_value}}}</value>
+        /// <value>Alias of digital certificate of the bank</value>
         [DataMember(Name="truststoreAlias", EmitDefaultValue=false)]
         public string TruststoreAlias { get; set; }
     
         /// <summary>
-        /// {{{configuracao_registro_cobranca_response_type_truststore_value}}}
+        /// Type of the digital certificate of the bank
         /// </summary>
-        /// <value>{{{configuracao_registro_cobranca_response_type_truststore_value}}}</value>
+        /// <value>Type of the digital certificate of the bank</value>
         [DataMember(Name="typeTruststore", EmitDefaultValue=false)]
         public string TypeTruststore { get; set; }
     
         /// <summary>
-        /// {{{configuracao_registro_cobranca_response_uri_adicional_value}}}
+        /// Additional URL of access to the bank
         /// </summary>
-        /// <value>{{{configuracao_registro_cobranca_response_uri_adicional_value}}}</value>
+        /// <value>Additional URL of access to the bank</value>
         [DataMember(Name="uriAdicional", EmitDefaultValue=false)]
         public string UriAdicional { get; set; }
     
         /// <summary>
-        /// {{{configuracao_registro_cobranca_persist_chave_value}}}
+        /// Key needed for retrieving the Access Token. Used for communication with Itau Bank
         /// </summary>
-        /// <value>{{{configuracao_registro_cobranca_persist_chave_value}}}</value>
+        /// <value>Key needed for retrieving the Access Token. Used for communication with Itau Bank</value>
         [DataMember(Name="chave", EmitDefaultValue=false)]
         public string Chave { get; set; }
     

@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{cancelamento_transacao_por_id_cartao_request_description}}}
+    /// Cancellation request object of the transaction per idCard
     /// </summary>
     [DataContract]
     public partial class CancelamentoTransacaoPorIdCartaoRequest :  IEquatable<CancelamentoTransacaoPorIdCartaoRequest>
@@ -22,17 +22,17 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="CancelamentoTransacaoPorIdCartaoRequest" /> class.
         /// Initializes a new instance of the <see cref="CancelamentoTransacaoPorIdCartaoRequest" />class.
         /// </summary>
-        /// <param name="NsuOrigem">{{{transacao_on_us_por_id_cartao_request_nsu_origem_value}}} (required).</param>
-        /// <param name="NsuOrigemTransacaoCancelada">{{{cancelamento_transacao_por_id_cartao_request_nsu_origem_transacao_cancelada_value}}} (required).</param>
-        /// <param name="CodigoProcessamento">{{{transacao_on_us_por_id_cartao_request_codigo_processamento_value}}} (required).</param>
-        /// <param name="DataHoraTransacaoCancelada">{{{cancelamento_transacao_por_id_cartao_request_data_hora_transacao_cancelada_value}}} (required).</param>
-        /// <param name="NsuAutorizacaoTransacaoCancelada">{{{cancelamento_transacao_por_id_cartao_request_nsu_autorizacao_transacao_cancelada_value}}} (required).</param>
-        /// <param name="ValorTransacao">{{{transacao_on_us_por_id_cartao_request_valor_transacao_value}}} (required).</param>
-        /// <param name="NumeroEstabelecimento">{{{transacao_on_us_por_id_cartao_request_numero_estabelecimento_value}}} (required).</param>
-        /// <param name="NomeEstabelecimento">{{{transacao_on_us_por_id_cartao_request_nome_estabelecimento_value}}}.</param>
-        /// <param name="DataHoraTerminal">{{{transacao_on_us_por_id_cartao_request_data_hora_terminal_value}}} (required).</param>
-        /// <param name="TerminalRequisitante">{{{transacao_on_us_por_id_cartao_request_terminal_requisitante_value}}} (required).</param>
-        /// <param name="NumeroParcelas">{{{transacao_on_us_por_id_cartao_request_numero_parcelas_value}}} (required).</param>
+        /// <param name="NsuOrigem">Unique Sequel Number that identifies the transaction in the system that originated it (required).</param>
+        /// <param name="NsuOrigemTransacaoCancelada">Unique Sequel Number that identifies the transaction in the system to be canceled (required).</param>
+        /// <param name="CodigoProcessamento">Code of Processing that identifies the type of transaction (required).</param>
+        /// <param name="DataHoraTransacaoCancelada">Show the date and local time of the Transaction to be canceled yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00 (required).</param>
+        /// <param name="NsuAutorizacaoTransacaoCancelada">Unique Sequel Number of HOST that identifies the transactionin the system that was authorized (required).</param>
+        /// <param name="ValorTransacao">Value of the transaction with two decimal places for the cents (required).</param>
+        /// <param name="NumeroEstabelecimento">Number of the Establishment (Number+DV) (required).</param>
+        /// <param name="NomeEstabelecimento">Establishment Name.</param>
+        /// <param name="DataHoraTerminal">Show the date and local time of the retrievement yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00 (required).</param>
+        /// <param name="TerminalRequisitante">Show the identification of the terminal applicant (required).</param>
+        /// <param name="NumeroParcelas">Number of Parcels (required).</param>
 
         public CancelamentoTransacaoPorIdCartaoRequest(string NsuOrigem = null, string NsuOrigemTransacaoCancelada = null, string CodigoProcessamento = null, string DataHoraTransacaoCancelada = null, string NsuAutorizacaoTransacaoCancelada = null, double? ValorTransacao = null, long? NumeroEstabelecimento = null, string NomeEstabelecimento = null, string DataHoraTerminal = null, string TerminalRequisitante = null, long? NumeroParcelas = null)
         {
@@ -132,79 +132,79 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{transacao_on_us_por_id_cartao_request_nsu_origem_value}}}
+        /// Unique Sequel Number that identifies the transaction in the system that originated it
         /// </summary>
-        /// <value>{{{transacao_on_us_por_id_cartao_request_nsu_origem_value}}}</value>
+        /// <value>Unique Sequel Number that identifies the transaction in the system that originated it</value>
         [DataMember(Name="nsuOrigem", EmitDefaultValue=false)]
         public string NsuOrigem { get; set; }
     
         /// <summary>
-        /// {{{cancelamento_transacao_por_id_cartao_request_nsu_origem_transacao_cancelada_value}}}
+        /// Unique Sequel Number that identifies the transaction in the system to be canceled
         /// </summary>
-        /// <value>{{{cancelamento_transacao_por_id_cartao_request_nsu_origem_transacao_cancelada_value}}}</value>
+        /// <value>Unique Sequel Number that identifies the transaction in the system to be canceled</value>
         [DataMember(Name="nsuOrigemTransacaoCancelada", EmitDefaultValue=false)]
         public string NsuOrigemTransacaoCancelada { get; set; }
     
         /// <summary>
-        /// {{{transacao_on_us_por_id_cartao_request_codigo_processamento_value}}}
+        /// Code of Processing that identifies the type of transaction
         /// </summary>
-        /// <value>{{{transacao_on_us_por_id_cartao_request_codigo_processamento_value}}}</value>
+        /// <value>Code of Processing that identifies the type of transaction</value>
         [DataMember(Name="codigoProcessamento", EmitDefaultValue=false)]
         public string CodigoProcessamento { get; set; }
     
         /// <summary>
-        /// {{{cancelamento_transacao_por_id_cartao_request_data_hora_transacao_cancelada_value}}}
+        /// Show the date and local time of the Transaction to be canceled yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00
         /// </summary>
-        /// <value>{{{cancelamento_transacao_por_id_cartao_request_data_hora_transacao_cancelada_value}}}</value>
+        /// <value>Show the date and local time of the Transaction to be canceled yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00</value>
         [DataMember(Name="dataHoraTransacaoCancelada", EmitDefaultValue=false)]
         public string DataHoraTransacaoCancelada { get; set; }
     
         /// <summary>
-        /// {{{cancelamento_transacao_por_id_cartao_request_nsu_autorizacao_transacao_cancelada_value}}}
+        /// Unique Sequel Number of HOST that identifies the transactionin the system that was authorized
         /// </summary>
-        /// <value>{{{cancelamento_transacao_por_id_cartao_request_nsu_autorizacao_transacao_cancelada_value}}}</value>
+        /// <value>Unique Sequel Number of HOST that identifies the transactionin the system that was authorized</value>
         [DataMember(Name="nsuAutorizacaoTransacaoCancelada", EmitDefaultValue=false)]
         public string NsuAutorizacaoTransacaoCancelada { get; set; }
     
         /// <summary>
-        /// {{{transacao_on_us_por_id_cartao_request_valor_transacao_value}}}
+        /// Value of the transaction with two decimal places for the cents
         /// </summary>
-        /// <value>{{{transacao_on_us_por_id_cartao_request_valor_transacao_value}}}</value>
+        /// <value>Value of the transaction with two decimal places for the cents</value>
         [DataMember(Name="valorTransacao", EmitDefaultValue=false)]
         public double? ValorTransacao { get; set; }
     
         /// <summary>
-        /// {{{transacao_on_us_por_id_cartao_request_numero_estabelecimento_value}}}
+        /// Number of the Establishment (Number+DV)
         /// </summary>
-        /// <value>{{{transacao_on_us_por_id_cartao_request_numero_estabelecimento_value}}}</value>
+        /// <value>Number of the Establishment (Number+DV)</value>
         [DataMember(Name="numeroEstabelecimento", EmitDefaultValue=false)]
         public long? NumeroEstabelecimento { get; set; }
     
         /// <summary>
-        /// {{{transacao_on_us_por_id_cartao_request_nome_estabelecimento_value}}}
+        /// Establishment Name
         /// </summary>
-        /// <value>{{{transacao_on_us_por_id_cartao_request_nome_estabelecimento_value}}}</value>
+        /// <value>Establishment Name</value>
         [DataMember(Name="nomeEstabelecimento", EmitDefaultValue=false)]
         public string NomeEstabelecimento { get; set; }
     
         /// <summary>
-        /// {{{transacao_on_us_por_id_cartao_request_data_hora_terminal_value}}}
+        /// Show the date and local time of the retrievement yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00
         /// </summary>
-        /// <value>{{{transacao_on_us_por_id_cartao_request_data_hora_terminal_value}}}</value>
+        /// <value>Show the date and local time of the retrievement yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00</value>
         [DataMember(Name="dataHoraTerminal", EmitDefaultValue=false)]
         public string DataHoraTerminal { get; set; }
     
         /// <summary>
-        /// {{{transacao_on_us_por_id_cartao_request_terminal_requisitante_value}}}
+        /// Show the identification of the terminal applicant
         /// </summary>
-        /// <value>{{{transacao_on_us_por_id_cartao_request_terminal_requisitante_value}}}</value>
+        /// <value>Show the identification of the terminal applicant</value>
         [DataMember(Name="terminalRequisitante", EmitDefaultValue=false)]
         public string TerminalRequisitante { get; set; }
     
         /// <summary>
-        /// {{{transacao_on_us_por_id_cartao_request_numero_parcelas_value}}}
+        /// Number of Parcels
         /// </summary>
-        /// <value>{{{transacao_on_us_por_id_cartao_request_numero_parcelas_value}}}</value>
+        /// <value>Number of Parcels</value>
         [DataMember(Name="numeroParcelas", EmitDefaultValue=false)]
         public long? NumeroParcelas { get; set; }
     

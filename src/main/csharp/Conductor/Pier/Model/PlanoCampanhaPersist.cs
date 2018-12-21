@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{plano_campanha_persist_description}}}
+    /// PlanCampaign
     /// </summary>
     [DataContract]
     public partial class PlanoCampanhaPersist :  IEquatable<PlanoCampanhaPersist>

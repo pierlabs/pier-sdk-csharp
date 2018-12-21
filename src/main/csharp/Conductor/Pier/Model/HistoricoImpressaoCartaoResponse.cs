@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{historico_impressao_cartao_response_description}}}
+    /// Histotic Card Printing
     /// </summary>
     [DataContract]
     public partial class HistoricoImpressaoCartaoResponse :  IEquatable<HistoricoImpressaoCartaoResponse>
@@ -22,11 +22,11 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="HistoricoImpressaoCartaoResponse" /> class.
         /// Initializes a new instance of the <see cref="HistoricoImpressaoCartaoResponse" />class.
         /// </summary>
-        /// <param name="Id">{{{historico_impressao_cartao_response_id_value}}} (required).</param>
-        /// <param name="IdCartao">{{{historico_impressao_cartao_response_id_cartao_value}}} (required).</param>
-        /// <param name="IdStatusImpressaoCartao">{{{historico_impressao_cartao_response_id_status_impressao_cartao_value}}} (required).</param>
-        /// <param name="MensagemHistorico">{{{historico_impressao_cartao_response_mensagem_historico_value}}}.</param>
-        /// <param name="DataHistorico">{{{historico_impressao_cartao_response_data_historico_value}}}.</param>
+        /// <param name="Id">Identification Code of the Printing Card Historic (id) (required).</param>
+        /// <param name="IdCartao">Identification Code of the Card (id) (required).</param>
+        /// <param name="IdStatusImpressaoCartao">Identification Code of the Printing Card Status (id) (required).</param>
+        /// <param name="MensagemHistorico">Show a message that describes the stage of the printing card process that was made.</param>
+        /// <param name="DataHistorico">Show the date that the historic register of the Printing of a Card was inserted.</param>
 
         public HistoricoImpressaoCartaoResponse(long? Id = null, long? IdCartao = null, long? IdStatusImpressaoCartao = null, string MensagemHistorico = null, string DataHistorico = null)
         {
@@ -64,37 +64,37 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{historico_impressao_cartao_response_id_value}}}
+        /// Identification Code of the Printing Card Historic (id)
         /// </summary>
-        /// <value>{{{historico_impressao_cartao_response_id_value}}}</value>
+        /// <value>Identification Code of the Printing Card Historic (id)</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{historico_impressao_cartao_response_id_cartao_value}}}
+        /// Identification Code of the Card (id)
         /// </summary>
-        /// <value>{{{historico_impressao_cartao_response_id_cartao_value}}}</value>
+        /// <value>Identification Code of the Card (id)</value>
         [DataMember(Name="idCartao", EmitDefaultValue=false)]
         public long? IdCartao { get; set; }
     
         /// <summary>
-        /// {{{historico_impressao_cartao_response_id_status_impressao_cartao_value}}}
+        /// Identification Code of the Printing Card Status (id)
         /// </summary>
-        /// <value>{{{historico_impressao_cartao_response_id_status_impressao_cartao_value}}}</value>
+        /// <value>Identification Code of the Printing Card Status (id)</value>
         [DataMember(Name="idStatusImpressaoCartao", EmitDefaultValue=false)]
         public long? IdStatusImpressaoCartao { get; set; }
     
         /// <summary>
-        /// {{{historico_impressao_cartao_response_mensagem_historico_value}}}
+        /// Show a message that describes the stage of the printing card process that was made
         /// </summary>
-        /// <value>{{{historico_impressao_cartao_response_mensagem_historico_value}}}</value>
+        /// <value>Show a message that describes the stage of the printing card process that was made</value>
         [DataMember(Name="mensagemHistorico", EmitDefaultValue=false)]
         public string MensagemHistorico { get; set; }
     
         /// <summary>
-        /// {{{historico_impressao_cartao_response_data_historico_value}}}
+        /// Show the date that the historic register of the Printing of a Card was inserted
         /// </summary>
-        /// <value>{{{historico_impressao_cartao_response_data_historico_value}}}</value>
+        /// <value>Show the date that the historic register of the Printing of a Card was inserted</value>
         [DataMember(Name="dataHistorico", EmitDefaultValue=false)]
         public string DataHistorico { get; set; }
     

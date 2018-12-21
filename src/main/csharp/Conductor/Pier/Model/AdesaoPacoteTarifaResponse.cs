@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{adesao_pacote_tarifa_resposta_descricao}}}
+    /// Representation of the Accession Fee Package Tariff
     /// </summary>
     [DataContract]
     public partial class AdesaoPacoteTarifaResponse :  IEquatable<AdesaoPacoteTarifaResponse>
@@ -22,22 +22,22 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="AdesaoPacoteTarifaResponse" /> class.
         /// Initializes a new instance of the <see cref="AdesaoPacoteTarifaResponse" />class.
         /// </summary>
-        /// <param name="AplicacaoUtilizado">{{{adesao_pacote_tarifa_resposta_aplicacao_utilizado_descricao}}}.</param>
-        /// <param name="BilheteUnicoUtilizado">{{{adesao_pacote_tarifa_resposta_bilhete_unico_utilizado_descricao}}}.</param>
-        /// <param name="BoletoUtilizado">{{{adesao_pacote_tarifa_resposta_boleto_utilizado_descricao}}}.</param>
-        /// <param name="Ciclo">{{{adesao_pacote_tarifa_resposta_ciclo_descricao}}}.</param>
-        /// <param name="CobraTarifa">{{{adesao_pacote_tarifa_resposta_cobra_tarifa_descricao}}}.</param>
-        /// <param name="DataFimCiclo">{{{adesao_pacote_tarifa_resposta_data_fim_ciclo_descricao}}}.</param>
-        /// <param name="DataHoraAtivacao">{{{adesao_pacote_tarifa_resposta_data_hora_ativacao_descricao}}}.</param>
-        /// <param name="DataHoraDesativacao">{{{adesao_pacote_tarifa_resposta_data_hora_desativacao_descricao}}}.</param>
-        /// <param name="Id">{{{adesao_pacote_tarifa_resposta_id_descricao}}}.</param>
-        /// <param name="IdConta">{{{adesao_pacote_tarifa_resposta_id_conta_descricao}}}.</param>
-        /// <param name="PacoteTarifa">{{{adesao_pacote_tarifa_resposta_pacote_tarifa_descricao}}}.</param>
-        /// <param name="PagamentoContaUtilizado">{{{adesao_pacote_tarifa_resposta_pagamento_conta_utilizado_descricao}}}.</param>
-        /// <param name="RecargaCelularUtilizado">{{{adesao_pacote_tarifa_resposta_recarga_celular_utilizado_descricao}}}.</param>
-        /// <param name="SaqueUtilizado">{{{adesao_pacote_tarifa_resposta_saque_utilizado_descricao}}}.</param>
-        /// <param name="TarifaManutencaoCobrada">{{{adesao_pacote_tarifa_resposta_tarifa_manutencao_cobrada_descricao}}}.</param>
-        /// <param name="TransferenciaUtilizado">{{{adesao_pacote_tarifa_resposta_transferencia_utilizado_descricao}}}.</param>
+        /// <param name="AplicacaoUtilizado">application used.</param>
+        /// <param name="BilheteUnicoUtilizado">single ticket used.</param>
+        /// <param name="BoletoUtilizado">ticket used.</param>
+        /// <param name="Ciclo">adhesion cycle.</param>
+        /// <param name="CobraTarifa">tariff charged.</param>
+        /// <param name="DataFimCiclo">end date of the cycle.</param>
+        /// <param name="DataHoraAtivacao">date of activation.</param>
+        /// <param name="DataHoraDesativacao">date of deactivation.</param>
+        /// <param name="Id">Adhesion id.</param>
+        /// <param name="IdConta">account id.</param>
+        /// <param name="PacoteTarifa">Rate package.</param>
+        /// <param name="PagamentoContaUtilizado">payment for the account used.</param>
+        /// <param name="RecargaCelularUtilizado">used cellular recharge.</param>
+        /// <param name="SaqueUtilizado">used service.</param>
+        /// <param name="TarifaManutencaoCobrada">maintenance charge charged.</param>
+        /// <param name="TransferenciaUtilizado">used transfer.</param>
 
         public AdesaoPacoteTarifaResponse(int? AplicacaoUtilizado = null, int? BilheteUnicoUtilizado = null, int? BoletoUtilizado = null, int? Ciclo = null, bool? CobraTarifa = null, string DataFimCiclo = null, string DataHoraAtivacao = null, string DataHoraDesativacao = null, long? Id = null, long? IdConta = null, PacoteTarifaResponse PacoteTarifa = null, int? PagamentoContaUtilizado = null, int? RecargaCelularUtilizado = null, int? SaqueUtilizado = null, bool? TarifaManutencaoCobrada = null, int? TransferenciaUtilizado = null)
         {
@@ -62,114 +62,114 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{adesao_pacote_tarifa_resposta_aplicacao_utilizado_descricao}}}
+        /// application used
         /// </summary>
-        /// <value>{{{adesao_pacote_tarifa_resposta_aplicacao_utilizado_descricao}}}</value>
+        /// <value>application used</value>
         [DataMember(Name="aplicacaoUtilizado", EmitDefaultValue=false)]
         public int? AplicacaoUtilizado { get; set; }
     
         /// <summary>
-        /// {{{adesao_pacote_tarifa_resposta_bilhete_unico_utilizado_descricao}}}
+        /// single ticket used
         /// </summary>
-        /// <value>{{{adesao_pacote_tarifa_resposta_bilhete_unico_utilizado_descricao}}}</value>
+        /// <value>single ticket used</value>
         [DataMember(Name="bilheteUnicoUtilizado", EmitDefaultValue=false)]
         public int? BilheteUnicoUtilizado { get; set; }
     
         /// <summary>
-        /// {{{adesao_pacote_tarifa_resposta_boleto_utilizado_descricao}}}
+        /// ticket used
         /// </summary>
-        /// <value>{{{adesao_pacote_tarifa_resposta_boleto_utilizado_descricao}}}</value>
+        /// <value>ticket used</value>
         [DataMember(Name="boletoUtilizado", EmitDefaultValue=false)]
         public int? BoletoUtilizado { get; set; }
     
         /// <summary>
-        /// {{{adesao_pacote_tarifa_resposta_ciclo_descricao}}}
+        /// adhesion cycle
         /// </summary>
-        /// <value>{{{adesao_pacote_tarifa_resposta_ciclo_descricao}}}</value>
+        /// <value>adhesion cycle</value>
         [DataMember(Name="ciclo", EmitDefaultValue=false)]
         public int? Ciclo { get; set; }
     
         /// <summary>
-        /// {{{adesao_pacote_tarifa_resposta_cobra_tarifa_descricao}}}
+        /// tariff charged
         /// </summary>
-        /// <value>{{{adesao_pacote_tarifa_resposta_cobra_tarifa_descricao}}}</value>
+        /// <value>tariff charged</value>
         [DataMember(Name="cobraTarifa", EmitDefaultValue=false)]
         public bool? CobraTarifa { get; set; }
     
         /// <summary>
-        /// {{{adesao_pacote_tarifa_resposta_data_fim_ciclo_descricao}}}
+        /// end date of the cycle
         /// </summary>
-        /// <value>{{{adesao_pacote_tarifa_resposta_data_fim_ciclo_descricao}}}</value>
+        /// <value>end date of the cycle</value>
         [DataMember(Name="dataFimCiclo", EmitDefaultValue=false)]
         public string DataFimCiclo { get; set; }
     
         /// <summary>
-        /// {{{adesao_pacote_tarifa_resposta_data_hora_ativacao_descricao}}}
+        /// date of activation
         /// </summary>
-        /// <value>{{{adesao_pacote_tarifa_resposta_data_hora_ativacao_descricao}}}</value>
+        /// <value>date of activation</value>
         [DataMember(Name="dataHoraAtivacao", EmitDefaultValue=false)]
         public string DataHoraAtivacao { get; set; }
     
         /// <summary>
-        /// {{{adesao_pacote_tarifa_resposta_data_hora_desativacao_descricao}}}
+        /// date of deactivation
         /// </summary>
-        /// <value>{{{adesao_pacote_tarifa_resposta_data_hora_desativacao_descricao}}}</value>
+        /// <value>date of deactivation</value>
         [DataMember(Name="dataHoraDesativacao", EmitDefaultValue=false)]
         public string DataHoraDesativacao { get; set; }
     
         /// <summary>
-        /// {{{adesao_pacote_tarifa_resposta_id_descricao}}}
+        /// Adhesion id
         /// </summary>
-        /// <value>{{{adesao_pacote_tarifa_resposta_id_descricao}}}</value>
+        /// <value>Adhesion id</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{adesao_pacote_tarifa_resposta_id_conta_descricao}}}
+        /// account id
         /// </summary>
-        /// <value>{{{adesao_pacote_tarifa_resposta_id_conta_descricao}}}</value>
+        /// <value>account id</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// {{{adesao_pacote_tarifa_resposta_pacote_tarifa_descricao}}}
+        /// Rate package
         /// </summary>
-        /// <value>{{{adesao_pacote_tarifa_resposta_pacote_tarifa_descricao}}}</value>
+        /// <value>Rate package</value>
         [DataMember(Name="pacoteTarifa", EmitDefaultValue=false)]
         public PacoteTarifaResponse PacoteTarifa { get; set; }
     
         /// <summary>
-        /// {{{adesao_pacote_tarifa_resposta_pagamento_conta_utilizado_descricao}}}
+        /// payment for the account used
         /// </summary>
-        /// <value>{{{adesao_pacote_tarifa_resposta_pagamento_conta_utilizado_descricao}}}</value>
+        /// <value>payment for the account used</value>
         [DataMember(Name="pagamentoContaUtilizado", EmitDefaultValue=false)]
         public int? PagamentoContaUtilizado { get; set; }
     
         /// <summary>
-        /// {{{adesao_pacote_tarifa_resposta_recarga_celular_utilizado_descricao}}}
+        /// used cellular recharge
         /// </summary>
-        /// <value>{{{adesao_pacote_tarifa_resposta_recarga_celular_utilizado_descricao}}}</value>
+        /// <value>used cellular recharge</value>
         [DataMember(Name="recargaCelularUtilizado", EmitDefaultValue=false)]
         public int? RecargaCelularUtilizado { get; set; }
     
         /// <summary>
-        /// {{{adesao_pacote_tarifa_resposta_saque_utilizado_descricao}}}
+        /// used service
         /// </summary>
-        /// <value>{{{adesao_pacote_tarifa_resposta_saque_utilizado_descricao}}}</value>
+        /// <value>used service</value>
         [DataMember(Name="saqueUtilizado", EmitDefaultValue=false)]
         public int? SaqueUtilizado { get; set; }
     
         /// <summary>
-        /// {{{adesao_pacote_tarifa_resposta_tarifa_manutencao_cobrada_descricao}}}
+        /// maintenance charge charged
         /// </summary>
-        /// <value>{{{adesao_pacote_tarifa_resposta_tarifa_manutencao_cobrada_descricao}}}</value>
+        /// <value>maintenance charge charged</value>
         [DataMember(Name="tarifaManutencaoCobrada", EmitDefaultValue=false)]
         public bool? TarifaManutencaoCobrada { get; set; }
     
         /// <summary>
-        /// {{{adesao_pacote_tarifa_resposta_transferencia_utilizado_descricao}}}
+        /// used transfer
         /// </summary>
-        /// <value>{{{adesao_pacote_tarifa_resposta_transferencia_utilizado_descricao}}}</value>
+        /// <value>used transfer</value>
         [DataMember(Name="transferenciaUtilizado", EmitDefaultValue=false)]
         public int? TransferenciaUtilizado { get; set; }
     

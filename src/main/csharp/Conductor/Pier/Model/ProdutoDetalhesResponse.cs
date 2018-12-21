@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{produto_detalhes_response_description}}}
+    /// ProductDetails
     /// </summary>
     [DataContract]
     public partial class ProdutoDetalhesResponse :  IEquatable<ProdutoDetalhesResponse>
@@ -22,12 +22,12 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="ProdutoDetalhesResponse" /> class.
         /// Initializes a new instance of the <see cref="ProdutoDetalhesResponse" />class.
         /// </summary>
-        /// <param name="Id">{{{produto_response_id_value}}} (required).</param>
-        /// <param name="Nome">{{{produto_response_nome_value}}} (required).</param>
-        /// <param name="Status">{{{produto_response_status_value}}} (required).</param>
-        /// <param name="IdFantasiaBasica">{{{produto_response_id_fantasia_basica_value}}}.</param>
-        /// <param name="FantasiaBasica">{{{produto_detalhes_response_fantasia_basica_value}}}.</param>
-        /// <param name="UsoExterior">{{{produto_detalhes_response_uso_exterior_value}}}.</param>
+        /// <param name="Id">Identification Code of the Product (id) (required).</param>
+        /// <param name="Nome">Name description of the product (required).</param>
+        /// <param name="Status">Represent the status of the product, where: (&#39;0&#39;: Inactive), (&#39;1&#39;: Active (required).</param>
+        /// <param name="IdFantasiaBasica">Identification Code of the Basic Fantasy (id) which the product belongs.</param>
+        /// <param name="FantasiaBasica">Description of the Basic Fantasy which the product belongs.</param>
+        /// <param name="UsoExterior">Parameter that indicates if the product is enabled to shops abroad.</param>
 
         public ProdutoDetalhesResponse(long? Id = null, string Nome = null, int? Status = null, long? IdFantasiaBasica = null, string FantasiaBasica = null, bool? UsoExterior = null)
         {
@@ -66,44 +66,44 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{produto_response_id_value}}}
+        /// Identification Code of the Product (id)
         /// </summary>
-        /// <value>{{{produto_response_id_value}}}</value>
+        /// <value>Identification Code of the Product (id)</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{produto_response_nome_value}}}
+        /// Name description of the product
         /// </summary>
-        /// <value>{{{produto_response_nome_value}}}</value>
+        /// <value>Name description of the product</value>
         [DataMember(Name="nome", EmitDefaultValue=false)]
         public string Nome { get; set; }
     
         /// <summary>
-        /// {{{produto_response_status_value}}}
+        /// Represent the status of the product, where: (&#39;0&#39;: Inactive), (&#39;1&#39;: Active
         /// </summary>
-        /// <value>{{{produto_response_status_value}}}</value>
+        /// <value>Represent the status of the product, where: (&#39;0&#39;: Inactive), (&#39;1&#39;: Active</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public int? Status { get; set; }
     
         /// <summary>
-        /// {{{produto_response_id_fantasia_basica_value}}}
+        /// Identification Code of the Basic Fantasy (id) which the product belongs
         /// </summary>
-        /// <value>{{{produto_response_id_fantasia_basica_value}}}</value>
+        /// <value>Identification Code of the Basic Fantasy (id) which the product belongs</value>
         [DataMember(Name="idFantasiaBasica", EmitDefaultValue=false)]
         public long? IdFantasiaBasica { get; set; }
     
         /// <summary>
-        /// {{{produto_detalhes_response_fantasia_basica_value}}}
+        /// Description of the Basic Fantasy which the product belongs
         /// </summary>
-        /// <value>{{{produto_detalhes_response_fantasia_basica_value}}}</value>
+        /// <value>Description of the Basic Fantasy which the product belongs</value>
         [DataMember(Name="fantasiaBasica", EmitDefaultValue=false)]
         public string FantasiaBasica { get; set; }
     
         /// <summary>
-        /// {{{produto_detalhes_response_uso_exterior_value}}}
+        /// Parameter that indicates if the product is enabled to shops abroad
         /// </summary>
-        /// <value>{{{produto_detalhes_response_uso_exterior_value}}}</value>
+        /// <value>Parameter that indicates if the product is enabled to shops abroad</value>
         [DataMember(Name="usoExterior", EmitDefaultValue=false)]
         public bool? UsoExterior { get; set; }
     

@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{operadora_response_description}}}
+    /// response Representation of the telephonic operator resource
     /// </summary>
     [DataContract]
     public partial class OperadoraResponse :  IEquatable<OperadoraResponse>
@@ -22,8 +22,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="OperadoraResponse" /> class.
         /// Initializes a new instance of the <see cref="OperadoraResponse" />class.
         /// </summary>
-        /// <param name="Id">{{{operadora_response_id_value}}}.</param>
-        /// <param name="Nome">{{{operadora_response_nome_value}}}.</param>
+        /// <param name="Id">Identifier of the operator.</param>
+        /// <param name="Nome">Operator Name.</param>
 
         public OperadoraResponse(long? Id = null, string Nome = null)
         {
@@ -34,16 +34,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{operadora_response_id_value}}}
+        /// Identifier of the operator
         /// </summary>
-        /// <value>{{{operadora_response_id_value}}}</value>
+        /// <value>Identifier of the operator</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{operadora_response_nome_value}}}
+        /// Operator Name
         /// </summary>
-        /// <value>{{{operadora_response_nome_value}}}</value>
+        /// <value>Operator Name</value>
         [DataMember(Name="nome", EmitDefaultValue=false)]
         public string Nome { get; set; }
     

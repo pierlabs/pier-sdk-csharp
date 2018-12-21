@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{controle_vencimento_response_description}}}
+    /// Object of the response of the Expirations
     /// </summary>
     [DataContract]
     public partial class ControleVencimentoResponse :  IEquatable<ControleVencimentoResponse>
@@ -22,12 +22,12 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="ControleVencimentoResponse" /> class.
         /// Initializes a new instance of the <see cref="ControleVencimentoResponse" />class.
         /// </summary>
-        /// <param name="DataVencimento">{{{controle_vencimento_response_data_vencimento_value}}}.</param>
-        /// <param name="DataPrevistaCorte">{{{controle_vencimento_response_data_prevista_corte_value}}}.</param>
-        /// <param name="DataHoraRealizacaoCorte">{{{controle_vencimento_response_data_hora_realizacao_corte_value}}}.</param>
-        /// <param name="DataPrevistaFaturamento">{{{controle_vencimento_response_data_prevista_faturamento_value}}}.</param>
-        /// <param name="DataHoraRealizacaoFaturamento">{{{controle_vencimento_response_data_hora_realizacao_faturamento_value}}}.</param>
-        /// <param name="DataRealVencimento">{{{controle_vencimento_response_data_real_vencimento_value}}}.</param>
+        /// <param name="DataVencimento">Indicate the date of expiration of the invoices.</param>
+        /// <param name="DataPrevistaCorte">Indicate the date previewed to make the cut of the invoices.</param>
+        /// <param name="DataHoraRealizacaoCorte">Indicate the date and the time that was made the Cut of the invoices.</param>
+        /// <param name="DataPrevistaFaturamento">Indicate the date previewed to make the billing.</param>
+        /// <param name="DataHoraRealizacaoFaturamento">Indicate the date and the time that was made the billing.</param>
+        /// <param name="DataRealVencimento">Indicate the useful day that will be considered as the expiration date.</param>
 
         public ControleVencimentoResponse(string DataVencimento = null, string DataPrevistaCorte = null, string DataHoraRealizacaoCorte = null, string DataPrevistaFaturamento = null, string DataHoraRealizacaoFaturamento = null, string DataRealVencimento = null)
         {
@@ -42,44 +42,44 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{controle_vencimento_response_data_vencimento_value}}}
+        /// Indicate the date of expiration of the invoices
         /// </summary>
-        /// <value>{{{controle_vencimento_response_data_vencimento_value}}}</value>
+        /// <value>Indicate the date of expiration of the invoices</value>
         [DataMember(Name="dataVencimento", EmitDefaultValue=false)]
         public string DataVencimento { get; set; }
     
         /// <summary>
-        /// {{{controle_vencimento_response_data_prevista_corte_value}}}
+        /// Indicate the date previewed to make the cut of the invoices
         /// </summary>
-        /// <value>{{{controle_vencimento_response_data_prevista_corte_value}}}</value>
+        /// <value>Indicate the date previewed to make the cut of the invoices</value>
         [DataMember(Name="dataPrevistaCorte", EmitDefaultValue=false)]
         public string DataPrevistaCorte { get; set; }
     
         /// <summary>
-        /// {{{controle_vencimento_response_data_hora_realizacao_corte_value}}}
+        /// Indicate the date and the time that was made the Cut of the invoices
         /// </summary>
-        /// <value>{{{controle_vencimento_response_data_hora_realizacao_corte_value}}}</value>
+        /// <value>Indicate the date and the time that was made the Cut of the invoices</value>
         [DataMember(Name="dataHoraRealizacaoCorte", EmitDefaultValue=false)]
         public string DataHoraRealizacaoCorte { get; set; }
     
         /// <summary>
-        /// {{{controle_vencimento_response_data_prevista_faturamento_value}}}
+        /// Indicate the date previewed to make the billing
         /// </summary>
-        /// <value>{{{controle_vencimento_response_data_prevista_faturamento_value}}}</value>
+        /// <value>Indicate the date previewed to make the billing</value>
         [DataMember(Name="dataPrevistaFaturamento", EmitDefaultValue=false)]
         public string DataPrevistaFaturamento { get; set; }
     
         /// <summary>
-        /// {{{controle_vencimento_response_data_hora_realizacao_faturamento_value}}}
+        /// Indicate the date and the time that was made the billing
         /// </summary>
-        /// <value>{{{controle_vencimento_response_data_hora_realizacao_faturamento_value}}}</value>
+        /// <value>Indicate the date and the time that was made the billing</value>
         [DataMember(Name="dataHoraRealizacaoFaturamento", EmitDefaultValue=false)]
         public string DataHoraRealizacaoFaturamento { get; set; }
     
         /// <summary>
-        /// {{{controle_vencimento_response_data_real_vencimento_value}}}
+        /// Indicate the useful day that will be considered as the expiration date
         /// </summary>
-        /// <value>{{{controle_vencimento_response_data_real_vencimento_value}}}</value>
+        /// <value>Indicate the useful day that will be considered as the expiration date</value>
         [DataMember(Name="dataRealVencimento", EmitDefaultValue=false)]
         public string DataRealVencimento { get; set; }
     

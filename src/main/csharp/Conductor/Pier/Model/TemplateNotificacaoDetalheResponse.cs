@@ -12,16 +12,16 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{template_notificacao_detalhe_response_description}}}
+    /// Object of details of the Notification Template
     /// </summary>
     [DataContract]
     public partial class TemplateNotificacaoDetalheResponse :  IEquatable<TemplateNotificacaoDetalheResponse>
     { 
     
         /// <summary>
-        /// {{{template_notificacao_response_tipo_layout_value}}}
+        /// Layout type of the e-mail
         /// </summary>
-        /// <value>{{{template_notificacao_response_tipo_layout_value}}}</value>
+        /// <value>Layout type of the e-mail</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum TipoLayoutEnum {
             
@@ -43,9 +43,9 @@ namespace Conductor.Pier.Model
 
     
         /// <summary>
-        /// {{{template_notificacao_response_tipo_notificacao_value}}}
+        /// Notification type
         /// </summary>
-        /// <value>{{{template_notificacao_response_tipo_notificacao_value}}}</value>
+        /// <value>Notification type</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum TipoNotificacaoEnum {
             
@@ -70,16 +70,16 @@ namespace Conductor.Pier.Model
 
     
         /// <summary>
-        /// {{{template_notificacao_response_tipo_layout_value}}}
+        /// Layout type of the e-mail
         /// </summary>
-        /// <value>{{{template_notificacao_response_tipo_layout_value}}}</value>
+        /// <value>Layout type of the e-mail</value>
         [DataMember(Name="tipoLayout", EmitDefaultValue=false)]
         public TipoLayoutEnum? TipoLayout { get; set; }
     
         /// <summary>
-        /// {{{template_notificacao_response_tipo_notificacao_value}}}
+        /// Notification type
         /// </summary>
-        /// <value>{{{template_notificacao_response_tipo_notificacao_value}}}</value>
+        /// <value>Notification type</value>
         [DataMember(Name="tipoNotificacao", EmitDefaultValue=false)]
         public TipoNotificacaoEnum? TipoNotificacao { get; set; }
     
@@ -87,16 +87,16 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TemplateNotificacaoDetalheResponse" /> class.
         /// Initializes a new instance of the <see cref="TemplateNotificacaoDetalheResponse" />class.
         /// </summary>
-        /// <param name="Id">{{{template_notificacao_response_id_value}}}.</param>
-        /// <param name="IdConfiguracaoEmail">{{{template_notificacao_response_id_configuracao_email_value}}}.</param>
-        /// <param name="TipoLayout">{{{template_notificacao_response_tipo_layout_value}}}.</param>
-        /// <param name="TipoNotificacao">{{{template_notificacao_response_tipo_notificacao_value}}}.</param>
-        /// <param name="TemplatePadrao">{{{template_notificacao_response_template_padrao_value}}}.</param>
-        /// <param name="Remetente">{{{template_notificacao_response_remetente_value}}}.</param>
-        /// <param name="Assunto">{{{template_notificacao_response_assunto_value}}}.</param>
-        /// <param name="DataInclusao">{{{template_notificacao_response_data_inclusao_value}}}.</param>
-        /// <param name="DataAlteracao">{{{template_notificacao_response_data_alteracao_value}}}.</param>
-        /// <param name="Conteudo">{{{template_notificacao_detalhe_response_conteudo_value}}}.</param>
+        /// <param name="Id">Identifier Code.</param>
+        /// <param name="IdConfiguracaoEmail">Identification Code of the E-mail Configuration.</param>
+        /// <param name="TipoLayout">Layout type of the e-mail.</param>
+        /// <param name="TipoNotificacao">Notification type.</param>
+        /// <param name="TemplatePadrao">Standard Template.</param>
+        /// <param name="Remetente">Sender.</param>
+        /// <param name="Assunto">Email subject.</param>
+        /// <param name="DataInclusao">Inclusion date.</param>
+        /// <param name="DataAlteracao">Update date.</param>
+        /// <param name="Conteudo">E-mail content.</param>
 
         public TemplateNotificacaoDetalheResponse(long? Id = null, long? IdConfiguracaoEmail = null, TipoLayoutEnum? TipoLayout = null, TipoNotificacaoEnum? TipoNotificacao = null, string TemplatePadrao = null, string Remetente = null, string Assunto = null, string DataInclusao = null, string DataAlteracao = null, string Conteudo = null)
         {
@@ -115,58 +115,58 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{template_notificacao_response_id_value}}}
+        /// Identifier Code
         /// </summary>
-        /// <value>{{{template_notificacao_response_id_value}}}</value>
+        /// <value>Identifier Code</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{template_notificacao_response_id_configuracao_email_value}}}
+        /// Identification Code of the E-mail Configuration
         /// </summary>
-        /// <value>{{{template_notificacao_response_id_configuracao_email_value}}}</value>
+        /// <value>Identification Code of the E-mail Configuration</value>
         [DataMember(Name="idConfiguracaoEmail", EmitDefaultValue=false)]
         public long? IdConfiguracaoEmail { get; set; }
     
         /// <summary>
-        /// {{{template_notificacao_response_template_padrao_value}}}
+        /// Standard Template
         /// </summary>
-        /// <value>{{{template_notificacao_response_template_padrao_value}}}</value>
+        /// <value>Standard Template</value>
         [DataMember(Name="templatePadrao", EmitDefaultValue=false)]
         public string TemplatePadrao { get; set; }
     
         /// <summary>
-        /// {{{template_notificacao_response_remetente_value}}}
+        /// Sender
         /// </summary>
-        /// <value>{{{template_notificacao_response_remetente_value}}}</value>
+        /// <value>Sender</value>
         [DataMember(Name="remetente", EmitDefaultValue=false)]
         public string Remetente { get; set; }
     
         /// <summary>
-        /// {{{template_notificacao_response_assunto_value}}}
+        /// Email subject
         /// </summary>
-        /// <value>{{{template_notificacao_response_assunto_value}}}</value>
+        /// <value>Email subject</value>
         [DataMember(Name="assunto", EmitDefaultValue=false)]
         public string Assunto { get; set; }
     
         /// <summary>
-        /// {{{template_notificacao_response_data_inclusao_value}}}
+        /// Inclusion date
         /// </summary>
-        /// <value>{{{template_notificacao_response_data_inclusao_value}}}</value>
+        /// <value>Inclusion date</value>
         [DataMember(Name="dataInclusao", EmitDefaultValue=false)]
         public string DataInclusao { get; set; }
     
         /// <summary>
-        /// {{{template_notificacao_response_data_alteracao_value}}}
+        /// Update date
         /// </summary>
-        /// <value>{{{template_notificacao_response_data_alteracao_value}}}</value>
+        /// <value>Update date</value>
         [DataMember(Name="dataAlteracao", EmitDefaultValue=false)]
         public string DataAlteracao { get; set; }
     
         /// <summary>
-        /// {{{template_notificacao_detalhe_response_conteudo_value}}}
+        /// E-mail content
         /// </summary>
-        /// <value>{{{template_notificacao_detalhe_response_conteudo_value}}}</value>
+        /// <value>E-mail content</value>
         [DataMember(Name="conteudo", EmitDefaultValue=false)]
         public string Conteudo { get; set; }
     

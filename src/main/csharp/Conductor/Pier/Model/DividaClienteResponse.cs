@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{divida_cliente_response_description}}}
+    /// Debt of the client
     /// </summary>
     [DataContract]
     public partial class DividaClienteResponse :  IEquatable<DividaClienteResponse>
@@ -22,23 +22,23 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="DividaClienteResponse" /> class.
         /// Initializes a new instance of the <see cref="DividaClienteResponse" />class.
         /// </summary>
-        /// <param name="Id">{{{divida_cliente_response_id_value}}}.</param>
-        /// <param name="DataVencimentoFaturaAtraso">{{{divida_cliente_response_data_vencimento_fatura_atraso_value}}}.</param>
-        /// <param name="QuantidadeDiasAtraso">{{{divida_cliente_response_quantidade_dias_atraso_value}}}.</param>
-        /// <param name="DataVencimentoAcordo">{{{divida_cliente_response_data_vencimento_acordo_value}}}.</param>
-        /// <param name="QuantidadeDiasAtrasoCorrigido">{{{divida_cliente_response_quantidade_dias_atraso_corrigido_value}}}.</param>
-        /// <param name="ValorSaldoDevedor">{{{divida_cliente_response_valor_saldo_devedor_value}}}.</param>
-        /// <param name="TaxaCorrecao">{{{divida_cliente_response_taxa_correcao_value}}}.</param>
-        /// <param name="ValorCorrecao">{{{divida_cliente_response_valor_correcao_value}}}.</param>
-        /// <param name="ValorIOF">{{{divida_cliente_response_valor_i_o_f_value}}}.</param>
-        /// <param name="ValorSaldoCorrigido">{{{divida_cliente_response_valor_saldo_corrigido_value}}}.</param>
-        /// <param name="IdStatusConta">{{{divida_cliente_response_id_status_conta_value}}}.</param>
-        /// <param name="DescricaoStatusConta">{{{divida_cliente_response_descricao_status_conta_value}}}.</param>
-        /// <param name="IdStatusAcordo">{{{divida_cliente_response_id_status_acordo_value}}}.</param>
-        /// <param name="DescricaoStatusAcordo">{{{divida_cliente_response_descricao_status_acordo_value}}}.</param>
-        /// <param name="IdEscritorioCobranca">{{{divida_cliente_response_id_escritorio_cobranca_value}}}.</param>
-        /// <param name="NomeEscritorioCobranca">{{{divida_cliente_response_nome_escritorio_cobranca_value}}}.</param>
-        /// <param name="EmailPessoaConta">{{{divida_cliente_response_email_pessoa_conta_value}}}.</param>
+        /// <param name="Id">Identification code of the account (id).</param>
+        /// <param name="DataVencimentoFaturaAtraso">Expiration date of the collection.</param>
+        /// <param name="QuantidadeDiasAtraso">Quantity of days in delay until the expiration date of the collection.</param>
+        /// <param name="DataVencimentoAcordo">Expiration date of the agreement.</param>
+        /// <param name="QuantidadeDiasAtrasoCorrigido">Quantity of days in delay until the expiration date of the agreement.</param>
+        /// <param name="ValorSaldoDevedor">Value of the debtor balande until the expiration date of the collection.</param>
+        /// <param name="TaxaCorrecao">Correction Percentage.</param>
+        /// <param name="ValorCorrecao">Value of the collection.</param>
+        /// <param name="ValorIOF">Value of the IOF debt.</param>
+        /// <param name="ValorSaldoCorrigido">Value of the debtor balance of the debt until the expiration date of the agreement.</param>
+        /// <param name="IdStatusConta">Identification code of the account status (id).</param>
+        /// <param name="DescricaoStatusConta">Description of the account status.</param>
+        /// <param name="IdStatusAcordo">Identification Code of the agreement status (id).</param>
+        /// <param name="DescricaoStatusAcordo">Description of the agreement status.</param>
+        /// <param name="IdEscritorioCobranca">Identification Code of the collection office.</param>
+        /// <param name="NomeEscritorioCobranca">Office name of the collection.</param>
+        /// <param name="EmailPessoaConta">Email of the debtor.</param>
 
         public DividaClienteResponse(long? Id = null, string DataVencimentoFaturaAtraso = null, long? QuantidadeDiasAtraso = null, string DataVencimentoAcordo = null, long? QuantidadeDiasAtrasoCorrigido = null, double? ValorSaldoDevedor = null, double? TaxaCorrecao = null, double? ValorCorrecao = null, double? ValorIOF = null, double? ValorSaldoCorrigido = null, long? IdStatusConta = null, string DescricaoStatusConta = null, long? IdStatusAcordo = null, string DescricaoStatusAcordo = null, long? IdEscritorioCobranca = null, string NomeEscritorioCobranca = null, string EmailPessoaConta = null)
         {
@@ -64,121 +64,121 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{divida_cliente_response_id_value}}}
+        /// Identification code of the account (id)
         /// </summary>
-        /// <value>{{{divida_cliente_response_id_value}}}</value>
+        /// <value>Identification code of the account (id)</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{divida_cliente_response_data_vencimento_fatura_atraso_value}}}
+        /// Expiration date of the collection
         /// </summary>
-        /// <value>{{{divida_cliente_response_data_vencimento_fatura_atraso_value}}}</value>
+        /// <value>Expiration date of the collection</value>
         [DataMember(Name="dataVencimentoFaturaAtraso", EmitDefaultValue=false)]
         public string DataVencimentoFaturaAtraso { get; set; }
     
         /// <summary>
-        /// {{{divida_cliente_response_quantidade_dias_atraso_value}}}
+        /// Quantity of days in delay until the expiration date of the collection
         /// </summary>
-        /// <value>{{{divida_cliente_response_quantidade_dias_atraso_value}}}</value>
+        /// <value>Quantity of days in delay until the expiration date of the collection</value>
         [DataMember(Name="quantidadeDiasAtraso", EmitDefaultValue=false)]
         public long? QuantidadeDiasAtraso { get; set; }
     
         /// <summary>
-        /// {{{divida_cliente_response_data_vencimento_acordo_value}}}
+        /// Expiration date of the agreement
         /// </summary>
-        /// <value>{{{divida_cliente_response_data_vencimento_acordo_value}}}</value>
+        /// <value>Expiration date of the agreement</value>
         [DataMember(Name="dataVencimentoAcordo", EmitDefaultValue=false)]
         public string DataVencimentoAcordo { get; set; }
     
         /// <summary>
-        /// {{{divida_cliente_response_quantidade_dias_atraso_corrigido_value}}}
+        /// Quantity of days in delay until the expiration date of the agreement
         /// </summary>
-        /// <value>{{{divida_cliente_response_quantidade_dias_atraso_corrigido_value}}}</value>
+        /// <value>Quantity of days in delay until the expiration date of the agreement</value>
         [DataMember(Name="quantidadeDiasAtrasoCorrigido", EmitDefaultValue=false)]
         public long? QuantidadeDiasAtrasoCorrigido { get; set; }
     
         /// <summary>
-        /// {{{divida_cliente_response_valor_saldo_devedor_value}}}
+        /// Value of the debtor balande until the expiration date of the collection
         /// </summary>
-        /// <value>{{{divida_cliente_response_valor_saldo_devedor_value}}}</value>
+        /// <value>Value of the debtor balande until the expiration date of the collection</value>
         [DataMember(Name="valorSaldoDevedor", EmitDefaultValue=false)]
         public double? ValorSaldoDevedor { get; set; }
     
         /// <summary>
-        /// {{{divida_cliente_response_taxa_correcao_value}}}
+        /// Correction Percentage
         /// </summary>
-        /// <value>{{{divida_cliente_response_taxa_correcao_value}}}</value>
+        /// <value>Correction Percentage</value>
         [DataMember(Name="taxaCorrecao", EmitDefaultValue=false)]
         public double? TaxaCorrecao { get; set; }
     
         /// <summary>
-        /// {{{divida_cliente_response_valor_correcao_value}}}
+        /// Value of the collection
         /// </summary>
-        /// <value>{{{divida_cliente_response_valor_correcao_value}}}</value>
+        /// <value>Value of the collection</value>
         [DataMember(Name="valorCorrecao", EmitDefaultValue=false)]
         public double? ValorCorrecao { get; set; }
     
         /// <summary>
-        /// {{{divida_cliente_response_valor_i_o_f_value}}}
+        /// Value of the IOF debt
         /// </summary>
-        /// <value>{{{divida_cliente_response_valor_i_o_f_value}}}</value>
+        /// <value>Value of the IOF debt</value>
         [DataMember(Name="valorIOF", EmitDefaultValue=false)]
         public double? ValorIOF { get; set; }
     
         /// <summary>
-        /// {{{divida_cliente_response_valor_saldo_corrigido_value}}}
+        /// Value of the debtor balance of the debt until the expiration date of the agreement
         /// </summary>
-        /// <value>{{{divida_cliente_response_valor_saldo_corrigido_value}}}</value>
+        /// <value>Value of the debtor balance of the debt until the expiration date of the agreement</value>
         [DataMember(Name="valorSaldoCorrigido", EmitDefaultValue=false)]
         public double? ValorSaldoCorrigido { get; set; }
     
         /// <summary>
-        /// {{{divida_cliente_response_id_status_conta_value}}}
+        /// Identification code of the account status (id)
         /// </summary>
-        /// <value>{{{divida_cliente_response_id_status_conta_value}}}</value>
+        /// <value>Identification code of the account status (id)</value>
         [DataMember(Name="idStatusConta", EmitDefaultValue=false)]
         public long? IdStatusConta { get; set; }
     
         /// <summary>
-        /// {{{divida_cliente_response_descricao_status_conta_value}}}
+        /// Description of the account status
         /// </summary>
-        /// <value>{{{divida_cliente_response_descricao_status_conta_value}}}</value>
+        /// <value>Description of the account status</value>
         [DataMember(Name="descricaoStatusConta", EmitDefaultValue=false)]
         public string DescricaoStatusConta { get; set; }
     
         /// <summary>
-        /// {{{divida_cliente_response_id_status_acordo_value}}}
+        /// Identification Code of the agreement status (id)
         /// </summary>
-        /// <value>{{{divida_cliente_response_id_status_acordo_value}}}</value>
+        /// <value>Identification Code of the agreement status (id)</value>
         [DataMember(Name="idStatusAcordo", EmitDefaultValue=false)]
         public long? IdStatusAcordo { get; set; }
     
         /// <summary>
-        /// {{{divida_cliente_response_descricao_status_acordo_value}}}
+        /// Description of the agreement status
         /// </summary>
-        /// <value>{{{divida_cliente_response_descricao_status_acordo_value}}}</value>
+        /// <value>Description of the agreement status</value>
         [DataMember(Name="descricaoStatusAcordo", EmitDefaultValue=false)]
         public string DescricaoStatusAcordo { get; set; }
     
         /// <summary>
-        /// {{{divida_cliente_response_id_escritorio_cobranca_value}}}
+        /// Identification Code of the collection office
         /// </summary>
-        /// <value>{{{divida_cliente_response_id_escritorio_cobranca_value}}}</value>
+        /// <value>Identification Code of the collection office</value>
         [DataMember(Name="idEscritorioCobranca", EmitDefaultValue=false)]
         public long? IdEscritorioCobranca { get; set; }
     
         /// <summary>
-        /// {{{divida_cliente_response_nome_escritorio_cobranca_value}}}
+        /// Office name of the collection
         /// </summary>
-        /// <value>{{{divida_cliente_response_nome_escritorio_cobranca_value}}}</value>
+        /// <value>Office name of the collection</value>
         [DataMember(Name="nomeEscritorioCobranca", EmitDefaultValue=false)]
         public string NomeEscritorioCobranca { get; set; }
     
         /// <summary>
-        /// {{{divida_cliente_response_email_pessoa_conta_value}}}
+        /// Email of the debtor
         /// </summary>
-        /// <value>{{{divida_cliente_response_email_pessoa_conta_value}}}</value>
+        /// <value>Email of the debtor</value>
         [DataMember(Name="emailPessoaConta", EmitDefaultValue=false)]
         public string EmailPessoaConta { get; set; }
     

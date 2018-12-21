@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{page_arquivo_response_description}}}
+    /// File List stored in the contingency
     /// </summary>
     [DataContract]
     public partial class PageArquivoResponse :  IEquatable<PageArquivoResponse>

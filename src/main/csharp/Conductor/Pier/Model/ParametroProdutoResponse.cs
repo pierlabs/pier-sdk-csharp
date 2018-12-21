@@ -12,16 +12,16 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{parametro_produto_response_description}}}
+    /// Product Parameter Response
     /// </summary>
     [DataContract]
     public partial class ParametroProdutoResponse :  IEquatable<ParametroProdutoResponse>
     { 
     
         /// <summary>
-        /// {{{parametro_produto_dto_tipo_origem_transacao_value}}}
+        /// Transaction Type (ON_US or OFF_US)
         /// </summary>
-        /// <value>{{{parametro_produto_dto_tipo_origem_transacao_value}}}</value>
+        /// <value>Transaction Type (ON_US or OFF_US)</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum TipoOrigemTransacaoEnum {
             
@@ -34,9 +34,9 @@ namespace Conductor.Pier.Model
 
     
         /// <summary>
-        /// {{{parametro_produto_dto_tipo_origem_transacao_value}}}
+        /// Transaction Type (ON_US or OFF_US)
         /// </summary>
-        /// <value>{{{parametro_produto_dto_tipo_origem_transacao_value}}}</value>
+        /// <value>Transaction Type (ON_US or OFF_US)</value>
         [DataMember(Name="tipoOrigemTransacao", EmitDefaultValue=false)]
         public TipoOrigemTransacaoEnum? TipoOrigemTransacao { get; set; }
     
@@ -44,12 +44,12 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="ParametroProdutoResponse" /> class.
         /// Initializes a new instance of the <see cref="ParametroProdutoResponse" />class.
         /// </summary>
-        /// <param name="Id">{{{parametro_produto_dto_id_value}}}.</param>
-        /// <param name="IdProduto">{{{parametro_produto_dto_id_produto_value}}}.</param>
-        /// <param name="TipoOrigemTransacao">{{{parametro_produto_dto_tipo_origem_transacao_value}}}.</param>
-        /// <param name="Descricao">{{{parametro_produto_dto_descricao_value}}}.</param>
-        /// <param name="ValorParametro">{{{parametro_produto_dto_valor_parametro_value}}}.</param>
-        /// <param name="DataValidade">{{{parametro_produto_dto_data_validade_value}}}.</param>
+        /// <param name="Id">Product parameter identifier.</param>
+        /// <param name="IdProduto">Product identifier.</param>
+        /// <param name="TipoOrigemTransacao">Transaction Type (ON_US or OFF_US).</param>
+        /// <param name="Descricao">Description of the product parameter.</param>
+        /// <param name="ValorParametro">Product parameter value.</param>
+        /// <param name="DataValidade">Product parameter expiration date.</param>
 
         public ParametroProdutoResponse(long? Id = null, long? IdProduto = null, TipoOrigemTransacaoEnum? TipoOrigemTransacao = null, string Descricao = null, double? ValorParametro = null, string DataValidade = null)
         {
@@ -64,37 +64,37 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{parametro_produto_dto_id_value}}}
+        /// Product parameter identifier
         /// </summary>
-        /// <value>{{{parametro_produto_dto_id_value}}}</value>
+        /// <value>Product parameter identifier</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{parametro_produto_dto_id_produto_value}}}
+        /// Product identifier
         /// </summary>
-        /// <value>{{{parametro_produto_dto_id_produto_value}}}</value>
+        /// <value>Product identifier</value>
         [DataMember(Name="idProduto", EmitDefaultValue=false)]
         public long? IdProduto { get; set; }
     
         /// <summary>
-        /// {{{parametro_produto_dto_descricao_value}}}
+        /// Description of the product parameter
         /// </summary>
-        /// <value>{{{parametro_produto_dto_descricao_value}}}</value>
+        /// <value>Description of the product parameter</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     
         /// <summary>
-        /// {{{parametro_produto_dto_valor_parametro_value}}}
+        /// Product parameter value
         /// </summary>
-        /// <value>{{{parametro_produto_dto_valor_parametro_value}}}</value>
+        /// <value>Product parameter value</value>
         [DataMember(Name="valorParametro", EmitDefaultValue=false)]
         public double? ValorParametro { get; set; }
     
         /// <summary>
-        /// {{{parametro_produto_dto_data_validade_value}}}
+        /// Product parameter expiration date
         /// </summary>
-        /// <value>{{{parametro_produto_dto_data_validade_value}}}</value>
+        /// <value>Product parameter expiration date</value>
         [DataMember(Name="dataValidade", EmitDefaultValue=false)]
         public string DataValidade { get; set; }
     

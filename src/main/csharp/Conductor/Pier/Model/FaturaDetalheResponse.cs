@@ -12,16 +12,16 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{fatura_detalhe_response_description}}}
+    /// Details of the invoice
     /// </summary>
     [DataContract]
     public partial class FaturaDetalheResponse :  IEquatable<FaturaDetalheResponse>
     { 
     
         /// <summary>
-        /// {{{fatura_response_situacao_processamento_value}}}
+        /// Processing situation of the invoice
         /// </summary>
-        /// <value>{{{fatura_response_situacao_processamento_value}}}</value>
+        /// <value>Processing situation of the invoice</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum SituacaoProcessamentoEnum {
             
@@ -37,9 +37,9 @@ namespace Conductor.Pier.Model
 
     
         /// <summary>
-        /// {{{fatura_response_situacao_processamento_value}}}
+        /// Processing situation of the invoice
         /// </summary>
-        /// <value>{{{fatura_response_situacao_processamento_value}}}</value>
+        /// <value>Processing situation of the invoice</value>
         [DataMember(Name="situacaoProcessamento", EmitDefaultValue=false)]
         public SituacaoProcessamentoEnum? SituacaoProcessamento { get; set; }
     
@@ -47,17 +47,17 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="FaturaDetalheResponse" /> class.
         /// Initializes a new instance of the <see cref="FaturaDetalheResponse" />class.
         /// </summary>
-        /// <param name="IdConta">{{{fatura_response_id_conta_value}}}.</param>
-        /// <param name="SituacaoProcessamento">{{{fatura_response_situacao_processamento_value}}}.</param>
-        /// <param name="PagamentoEfetuado">{{{fatura_response_pagamento_efetuado_value}}}.</param>
-        /// <param name="DataVencimentoFatura">{{{fatura_response_data_vencimento_fatura_value}}}.</param>
-        /// <param name="DataVencimentoReal">{{{fatura_response_data_vencimento_real_value}}}.</param>
-        /// <param name="DataFechamento">{{{fatura_response_data_fechamento_value}}}.</param>
-        /// <param name="ValorTotal">{{{fatura_response_valor_total_value}}}.</param>
-        /// <param name="ValorPagamentoMinimo">{{{fatura_response_valor_pagamento_minimo_value}}}.</param>
-        /// <param name="LancamentosFaturaResponse">{{{fatura_detalhe_response_lancamentos_fatura_response_value}}}.</param>
-        /// <param name="SaldoAnterior">{{{fatura_response_saldo_anterior_value}}}.</param>
-        /// <param name="IdBoleto">{{{fatura_response_id_boleto_value}}}.</param>
+        /// <param name="IdConta">Identification Code of the Account.</param>
+        /// <param name="SituacaoProcessamento">Processing situation of the invoice.</param>
+        /// <param name="PagamentoEfetuado">Effected Payment Status.</param>
+        /// <param name="DataVencimentoFatura">Expiration date of the invoice.</param>
+        /// <param name="DataVencimentoReal">Real expiration date of the invoice.</param>
+        /// <param name="DataFechamento">Closing date of the invoice.</param>
+        /// <param name="ValorTotal">Total value of the invoice.</param>
+        /// <param name="ValorPagamentoMinimo">Value of the minimum payment.</param>
+        /// <param name="LancamentosFaturaResponse">List the invoice launches.</param>
+        /// <param name="SaldoAnterior">Value of the previous value.</param>
+        /// <param name="IdBoleto">Identification Code of the Ticket.</param>
 
         public FaturaDetalheResponse(long? IdConta = null, SituacaoProcessamentoEnum? SituacaoProcessamento = null, bool? PagamentoEfetuado = null, string DataVencimentoFatura = null, string DataVencimentoReal = null, string DataFechamento = null, double? ValorTotal = null, double? ValorPagamentoMinimo = null, List<LancamentoFaturaResponse> LancamentosFaturaResponse = null, double? SaldoAnterior = null, long? IdBoleto = null)
         {
@@ -77,72 +77,72 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{fatura_response_id_conta_value}}}
+        /// Identification Code of the Account
         /// </summary>
-        /// <value>{{{fatura_response_id_conta_value}}}</value>
+        /// <value>Identification Code of the Account</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// {{{fatura_response_pagamento_efetuado_value}}}
+        /// Effected Payment Status
         /// </summary>
-        /// <value>{{{fatura_response_pagamento_efetuado_value}}}</value>
+        /// <value>Effected Payment Status</value>
         [DataMember(Name="pagamentoEfetuado", EmitDefaultValue=false)]
         public bool? PagamentoEfetuado { get; set; }
     
         /// <summary>
-        /// {{{fatura_response_data_vencimento_fatura_value}}}
+        /// Expiration date of the invoice
         /// </summary>
-        /// <value>{{{fatura_response_data_vencimento_fatura_value}}}</value>
+        /// <value>Expiration date of the invoice</value>
         [DataMember(Name="dataVencimentoFatura", EmitDefaultValue=false)]
         public string DataVencimentoFatura { get; set; }
     
         /// <summary>
-        /// {{{fatura_response_data_vencimento_real_value}}}
+        /// Real expiration date of the invoice
         /// </summary>
-        /// <value>{{{fatura_response_data_vencimento_real_value}}}</value>
+        /// <value>Real expiration date of the invoice</value>
         [DataMember(Name="dataVencimentoReal", EmitDefaultValue=false)]
         public string DataVencimentoReal { get; set; }
     
         /// <summary>
-        /// {{{fatura_response_data_fechamento_value}}}
+        /// Closing date of the invoice
         /// </summary>
-        /// <value>{{{fatura_response_data_fechamento_value}}}</value>
+        /// <value>Closing date of the invoice</value>
         [DataMember(Name="dataFechamento", EmitDefaultValue=false)]
         public string DataFechamento { get; set; }
     
         /// <summary>
-        /// {{{fatura_response_valor_total_value}}}
+        /// Total value of the invoice
         /// </summary>
-        /// <value>{{{fatura_response_valor_total_value}}}</value>
+        /// <value>Total value of the invoice</value>
         [DataMember(Name="valorTotal", EmitDefaultValue=false)]
         public double? ValorTotal { get; set; }
     
         /// <summary>
-        /// {{{fatura_response_valor_pagamento_minimo_value}}}
+        /// Value of the minimum payment
         /// </summary>
-        /// <value>{{{fatura_response_valor_pagamento_minimo_value}}}</value>
+        /// <value>Value of the minimum payment</value>
         [DataMember(Name="valorPagamentoMinimo", EmitDefaultValue=false)]
         public double? ValorPagamentoMinimo { get; set; }
     
         /// <summary>
-        /// {{{fatura_detalhe_response_lancamentos_fatura_response_value}}}
+        /// List the invoice launches
         /// </summary>
-        /// <value>{{{fatura_detalhe_response_lancamentos_fatura_response_value}}}</value>
+        /// <value>List the invoice launches</value>
         [DataMember(Name="lancamentosFaturaResponse", EmitDefaultValue=false)]
         public List<LancamentoFaturaResponse> LancamentosFaturaResponse { get; set; }
     
         /// <summary>
-        /// {{{fatura_response_saldo_anterior_value}}}
+        /// Value of the previous value
         /// </summary>
-        /// <value>{{{fatura_response_saldo_anterior_value}}}</value>
+        /// <value>Value of the previous value</value>
         [DataMember(Name="saldoAnterior", EmitDefaultValue=false)]
         public double? SaldoAnterior { get; set; }
     
         /// <summary>
-        /// {{{fatura_response_id_boleto_value}}}
+        /// Identification Code of the Ticket
         /// </summary>
-        /// <value>{{{fatura_response_id_boleto_value}}}</value>
+        /// <value>Identification Code of the Ticket</value>
         [DataMember(Name="idBoleto", EmitDefaultValue=false)]
         public long? IdBoleto { get; set; }
     

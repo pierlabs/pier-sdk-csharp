@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{referencia_id_persist_description}}}
+    /// Reference object representation per Id
     /// </summary>
     [DataContract]
     public partial class ReferenciaIdPersist :  IEquatable<ReferenciaIdPersist>

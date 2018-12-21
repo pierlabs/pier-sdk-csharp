@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{page_tipo_servico_response_description}}}
+    /// List the types of services
     /// </summary>
     [DataContract]
     public partial class PageTipoServicoResponse :  IEquatable<PageTipoServicoResponse>

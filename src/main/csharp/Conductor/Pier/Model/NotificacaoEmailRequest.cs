@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{notificacao_email_request_description}}}
+    /// Representation of the resource of sending a notification by email.??o do recurso para envio de uma notifica??o por email
     /// </summary>
     [DataContract]
     public partial class NotificacaoEmailRequest :  IEquatable<NotificacaoEmailRequest>
@@ -22,10 +22,10 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="NotificacaoEmailRequest" /> class.
         /// Initializes a new instance of the <see cref="NotificacaoEmailRequest" />class.
         /// </summary>
-        /// <param name="IdTemplateNotificacao">{{{notificacao_email_request_id_template_notificacao_value}}}.</param>
-        /// <param name="Destinatarios">{{{notificacao_email_request_destinatarios_value}}}.</param>
-        /// <param name="Anexos">{{{notificacao_email_request_anexos_value}}}.</param>
-        /// <param name="ParametrosConteudo">{{{notificacao_email_request_parametros_conteudo_value}}}.</param>
+        /// <param name="IdTemplateNotificacao">ID for the template of the notification.</param>
+        /// <param name="Destinatarios">List of email(s) of the addressee.</param>
+        /// <param name="Anexos">List of ids of the attaches to be sent.</param>
+        /// <param name="ParametrosConteudo">Map of parameter for the montage of the notification.</param>
 
         public NotificacaoEmailRequest(long? IdTemplateNotificacao = null, List<string> Destinatarios = null, List<AnexoNotificacaoEmailRequest> Anexos = null, Dictionary<string, Object> ParametrosConteudo = null)
         {
@@ -38,30 +38,30 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{notificacao_email_request_id_template_notificacao_value}}}
+        /// ID for the template of the notification
         /// </summary>
-        /// <value>{{{notificacao_email_request_id_template_notificacao_value}}}</value>
+        /// <value>ID for the template of the notification</value>
         [DataMember(Name="idTemplateNotificacao", EmitDefaultValue=false)]
         public long? IdTemplateNotificacao { get; set; }
     
         /// <summary>
-        /// {{{notificacao_email_request_destinatarios_value}}}
+        /// List of email(s) of the addressee
         /// </summary>
-        /// <value>{{{notificacao_email_request_destinatarios_value}}}</value>
+        /// <value>List of email(s) of the addressee</value>
         [DataMember(Name="destinatarios", EmitDefaultValue=false)]
         public List<string> Destinatarios { get; set; }
     
         /// <summary>
-        /// {{{notificacao_email_request_anexos_value}}}
+        /// List of ids of the attaches to be sent
         /// </summary>
-        /// <value>{{{notificacao_email_request_anexos_value}}}</value>
+        /// <value>List of ids of the attaches to be sent</value>
         [DataMember(Name="anexos", EmitDefaultValue=false)]
         public List<AnexoNotificacaoEmailRequest> Anexos { get; set; }
     
         /// <summary>
-        /// {{{notificacao_email_request_parametros_conteudo_value}}}
+        /// Map of parameter for the montage of the notification
         /// </summary>
-        /// <value>{{{notificacao_email_request_parametros_conteudo_value}}}</value>
+        /// <value>Map of parameter for the montage of the notification</value>
         [DataMember(Name="parametrosConteudo", EmitDefaultValue=false)]
         public Dictionary<string, Object> ParametrosConteudo { get; set; }
     

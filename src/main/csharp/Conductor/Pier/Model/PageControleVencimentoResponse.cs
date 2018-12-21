@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{page_controle_vencimento_response_description}}}
+    /// List of the Expiration
     /// </summary>
     [DataContract]
     public partial class PageControleVencimentoResponse :  IEquatable<PageControleVencimentoResponse>

@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{plano_parcelamento_emprestimo_response_description}}}
+    /// Detail of the resource response of simulating loan/refinancing
     /// </summary>
     [DataContract]
     public partial class PlanoParcelamentoEmprestimoResponse :  IEquatable<PlanoParcelamentoEmprestimoResponse>
@@ -22,11 +22,11 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="PlanoParcelamentoEmprestimoResponse" /> class.
         /// Initializes a new instance of the <see cref="PlanoParcelamentoEmprestimoResponse" />class.
         /// </summary>
-        /// <param name="NumeroParcelas">{{{plano_parcelamento_emprestimo_response_numero_parcelas_value}}}.</param>
-        /// <param name="ValorParcelas">{{{plano_parcelamento_emprestimo_response_valor_parcelas_value}}}.</param>
-        /// <param name="TaxaJuros">{{{plano_parcelamento_emprestimo_response_taxa_juros_value}}}.</param>
-        /// <param name="ValorTributosIOF">{{{plano_parcelamento_emprestimo_response_valor_tributos_i_o_f_value}}}.</param>
-        /// <param name="ValorPercentualCET">{{{plano_parcelamento_emprestimo_response_valor_percentual_c_e_t_value}}}.</param>
+        /// <param name="NumeroParcelas">Parcel numbers of the loan/financing.</param>
+        /// <param name="ValorParcelas">Parcel Value.</param>
+        /// <param name="TaxaJuros">Interest Taxes applied on the loan/financing.</param>
+        /// <param name="ValorTributosIOF">Total value estimated of the charge taxes on the Financial Operations.</param>
+        /// <param name="ValorPercentualCET">Percentage value of the Total Cost, per yeat, of the loan/financing.</param>
 
         public PlanoParcelamentoEmprestimoResponse(int? NumeroParcelas = null, double? ValorParcelas = null, double? TaxaJuros = null, double? ValorTributosIOF = null, double? ValorPercentualCET = null)
         {
@@ -40,37 +40,37 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{plano_parcelamento_emprestimo_response_numero_parcelas_value}}}
+        /// Parcel numbers of the loan/financing
         /// </summary>
-        /// <value>{{{plano_parcelamento_emprestimo_response_numero_parcelas_value}}}</value>
+        /// <value>Parcel numbers of the loan/financing</value>
         [DataMember(Name="numeroParcelas", EmitDefaultValue=false)]
         public int? NumeroParcelas { get; set; }
     
         /// <summary>
-        /// {{{plano_parcelamento_emprestimo_response_valor_parcelas_value}}}
+        /// Parcel Value
         /// </summary>
-        /// <value>{{{plano_parcelamento_emprestimo_response_valor_parcelas_value}}}</value>
+        /// <value>Parcel Value</value>
         [DataMember(Name="valorParcelas", EmitDefaultValue=false)]
         public double? ValorParcelas { get; set; }
     
         /// <summary>
-        /// {{{plano_parcelamento_emprestimo_response_taxa_juros_value}}}
+        /// Interest Taxes applied on the loan/financing
         /// </summary>
-        /// <value>{{{plano_parcelamento_emprestimo_response_taxa_juros_value}}}</value>
+        /// <value>Interest Taxes applied on the loan/financing</value>
         [DataMember(Name="taxaJuros", EmitDefaultValue=false)]
         public double? TaxaJuros { get; set; }
     
         /// <summary>
-        /// {{{plano_parcelamento_emprestimo_response_valor_tributos_i_o_f_value}}}
+        /// Total value estimated of the charge taxes on the Financial Operations
         /// </summary>
-        /// <value>{{{plano_parcelamento_emprestimo_response_valor_tributos_i_o_f_value}}}</value>
+        /// <value>Total value estimated of the charge taxes on the Financial Operations</value>
         [DataMember(Name="valorTributosIOF", EmitDefaultValue=false)]
         public double? ValorTributosIOF { get; set; }
     
         /// <summary>
-        /// {{{plano_parcelamento_emprestimo_response_valor_percentual_c_e_t_value}}}
+        /// Percentage value of the Total Cost, per yeat, of the loan/financing
         /// </summary>
-        /// <value>{{{plano_parcelamento_emprestimo_response_valor_percentual_c_e_t_value}}}</value>
+        /// <value>Percentage value of the Total Cost, per yeat, of the loan/financing</value>
         [DataMember(Name="valorPercentualCET", EmitDefaultValue=false)]
         public double? ValorPercentualCET { get; set; }
     

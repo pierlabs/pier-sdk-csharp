@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{arquivo_parametro_a_u_d_response_description}}}
+    /// Object Auditorial Response of the files parameters
     /// </summary>
     [DataContract]
     public partial class ArquivoParametroAUDResponse :  IEquatable<ArquivoParametroAUDResponse>
@@ -22,13 +22,13 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="ArquivoParametroAUDResponse" /> class.
         /// Initializes a new instance of the <see cref="ArquivoParametroAUDResponse" />class.
         /// </summary>
-        /// <param name="Rev">{{{arquivo_parametro_a_u_d_response_rev_value}}}.</param>
-        /// <param name="RevType">{{{arquivo_parametro_a_u_d_response_rev_type_value}}}.</param>
-        /// <param name="Id">{{{arquivo_parametro_a_u_d_response_id_value}}}.</param>
-        /// <param name="Parametro">{{{arquivo_parametro_a_u_d_response_parametro_value}}}.</param>
-        /// <param name="Conteudo">{{{arquivo_parametro_a_u_d_response_conteudo_value}}}.</param>
-        /// <param name="DataHoraInclusao">{{{arquivo_parametro_a_u_d_response_data_hora_inclusao_value}}}.</param>
-        /// <param name="DataHoraAlteracao">{{{arquivo_parametro_a_u_d_response_data_hora_alteracao_value}}}.</param>
+        /// <param name="Rev">Identifier of the auditorial file.</param>
+        /// <param name="RevType">Identifier of auditorail type (0 - Created, 1 - Updated, 2 - Excluded).</param>
+        /// <param name="Id">Identifier of the parameter.</param>
+        /// <param name="Parametro">Name of the parameter.</param>
+        /// <param name="Conteudo">Content of the parameter.</param>
+        /// <param name="DataHoraInclusao">Date of inclusion of the parameter.</param>
+        /// <param name="DataHoraAlteracao">Date of the update of the parameter.</param>
 
         public ArquivoParametroAUDResponse(long? Rev = null, int? RevType = null, string Id = null, string Parametro = null, string Conteudo = null, string DataHoraInclusao = null, string DataHoraAlteracao = null)
         {
@@ -44,51 +44,51 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{arquivo_parametro_a_u_d_response_rev_value}}}
+        /// Identifier of the auditorial file
         /// </summary>
-        /// <value>{{{arquivo_parametro_a_u_d_response_rev_value}}}</value>
+        /// <value>Identifier of the auditorial file</value>
         [DataMember(Name="rev", EmitDefaultValue=false)]
         public long? Rev { get; set; }
     
         /// <summary>
-        /// {{{arquivo_parametro_a_u_d_response_rev_type_value}}}
+        /// Identifier of auditorail type (0 - Created, 1 - Updated, 2 - Excluded)
         /// </summary>
-        /// <value>{{{arquivo_parametro_a_u_d_response_rev_type_value}}}</value>
+        /// <value>Identifier of auditorail type (0 - Created, 1 - Updated, 2 - Excluded)</value>
         [DataMember(Name="revType", EmitDefaultValue=false)]
         public int? RevType { get; set; }
     
         /// <summary>
-        /// {{{arquivo_parametro_a_u_d_response_id_value}}}
+        /// Identifier of the parameter
         /// </summary>
-        /// <value>{{{arquivo_parametro_a_u_d_response_id_value}}}</value>
+        /// <value>Identifier of the parameter</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
     
         /// <summary>
-        /// {{{arquivo_parametro_a_u_d_response_parametro_value}}}
+        /// Name of the parameter
         /// </summary>
-        /// <value>{{{arquivo_parametro_a_u_d_response_parametro_value}}}</value>
+        /// <value>Name of the parameter</value>
         [DataMember(Name="parametro", EmitDefaultValue=false)]
         public string Parametro { get; set; }
     
         /// <summary>
-        /// {{{arquivo_parametro_a_u_d_response_conteudo_value}}}
+        /// Content of the parameter
         /// </summary>
-        /// <value>{{{arquivo_parametro_a_u_d_response_conteudo_value}}}</value>
+        /// <value>Content of the parameter</value>
         [DataMember(Name="conteudo", EmitDefaultValue=false)]
         public string Conteudo { get; set; }
     
         /// <summary>
-        /// {{{arquivo_parametro_a_u_d_response_data_hora_inclusao_value}}}
+        /// Date of inclusion of the parameter
         /// </summary>
-        /// <value>{{{arquivo_parametro_a_u_d_response_data_hora_inclusao_value}}}</value>
+        /// <value>Date of inclusion of the parameter</value>
         [DataMember(Name="dataHoraInclusao", EmitDefaultValue=false)]
         public string DataHoraInclusao { get; set; }
     
         /// <summary>
-        /// {{{arquivo_parametro_a_u_d_response_data_hora_alteracao_value}}}
+        /// Date of the update of the parameter
         /// </summary>
-        /// <value>{{{arquivo_parametro_a_u_d_response_data_hora_alteracao_value}}}</value>
+        /// <value>Date of the update of the parameter</value>
         [DataMember(Name="dataHoraAlteracao", EmitDefaultValue=false)]
         public string DataHoraAlteracao { get; set; }
     
