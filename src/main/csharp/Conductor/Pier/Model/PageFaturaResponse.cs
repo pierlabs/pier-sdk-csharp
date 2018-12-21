@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Response representation of the installment plan resource
+    /// {{{page_fatura_response_description}}}
     /// </summary>
     [DataContract]
     public partial class PageFaturaResponse :  IEquatable<PageFaturaResponse>

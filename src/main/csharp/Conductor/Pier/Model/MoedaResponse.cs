@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Currency type
+    /// {{{moeda_response_description}}}
     /// </summary>
     [DataContract]
     public partial class MoedaResponse :  IEquatable<MoedaResponse>
@@ -22,10 +22,10 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="MoedaResponse" /> class.
         /// Initializes a new instance of the <see cref="MoedaResponse" />class.
         /// </summary>
-        /// <param name="Id">Identifier of the currency type.</param>
-        /// <param name="CodigoMoeda">Identifier Code of the currency type.</param>
-        /// <param name="Simbolo">Currency symbol.</param>
-        /// <param name="Descricao">Description of the currency type.</param>
+        /// <param name="Id">{{{moeda_response_id_value}}}.</param>
+        /// <param name="CodigoMoeda">{{{moeda_response_codigo_moeda_value}}}.</param>
+        /// <param name="Simbolo">{{{moeda_response_simbolo_value}}}.</param>
+        /// <param name="Descricao">{{{moeda_response_descricao_value}}}.</param>
 
         public MoedaResponse(long? Id = null, string CodigoMoeda = null, string Simbolo = null, string Descricao = null)
         {
@@ -38,30 +38,30 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Identifier of the currency type
+        /// {{{moeda_response_id_value}}}
         /// </summary>
-        /// <value>Identifier of the currency type</value>
+        /// <value>{{{moeda_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Identifier Code of the currency type
+        /// {{{moeda_response_codigo_moeda_value}}}
         /// </summary>
-        /// <value>Identifier Code of the currency type</value>
+        /// <value>{{{moeda_response_codigo_moeda_value}}}</value>
         [DataMember(Name="codigoMoeda", EmitDefaultValue=false)]
         public string CodigoMoeda { get; set; }
     
         /// <summary>
-        /// Currency symbol
+        /// {{{moeda_response_simbolo_value}}}
         /// </summary>
-        /// <value>Currency symbol</value>
+        /// <value>{{{moeda_response_simbolo_value}}}</value>
         [DataMember(Name="simbolo", EmitDefaultValue=false)]
         public string Simbolo { get; set; }
     
         /// <summary>
-        /// Description of the currency type
+        /// {{{moeda_response_descricao_value}}}
         /// </summary>
-        /// <value>Description of the currency type</value>
+        /// <value>{{{moeda_response_descricao_value}}}</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     

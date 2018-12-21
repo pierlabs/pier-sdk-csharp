@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// DocumentoProposta response representation
+    /// {{{documento_proposta_response_description}}}
     /// </summary>
     [DataContract]
     public partial class DocumentoPropostaResponse :  IEquatable<DocumentoPropostaResponse>
@@ -22,20 +22,20 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="DocumentoPropostaResponse" /> class.
         /// Initializes a new instance of the <see cref="DocumentoPropostaResponse" />class.
         /// </summary>
-        /// <param name="Id">Idenfitication code of the document proposal.</param>
-        /// <param name="IdProposta">Idenfitication code of the proposal.</param>
-        /// <param name="IdDocumentosCredito">Idenfitication code of the type of document.</param>
-        /// <param name="IdStatusDocumentosCredito">Idenfitication code of credit document status.</param>
-        /// <param name="IdCondicoesDocumentosCredito">Idenfitication code of credit credit condition.</param>
-        /// <param name="IdTipoDocumentoCredito">Idenfitication code of credit document type.</param>
-        /// <param name="IdPessoaFisica">Idenfitication code of person.</param>
-        /// <param name="IdLogAtendimento">Idenfitication code of log.</param>
-        /// <param name="Responsavel">Responsible.</param>
-        /// <param name="FlagDocumentoDigitalizado">Flag for digitalization of the document.</param>
-        /// <param name="DocumentoDigitalizado">Name of the digital document.</param>
-        /// <param name="SeqAnaliseCondicao">Analytical Sequence code.</param>
-        /// <param name="Observacao">Note.</param>
-        /// <param name="DataStatus">Status Date.</param>
+        /// <param name="Id">{{{documento_proposta_response_id_value}}}.</param>
+        /// <param name="IdProposta">{{{documento_proposta_response_id_proposta_value}}}.</param>
+        /// <param name="IdDocumentosCredito">{{{documento_proposta_response_id_tipo_documento_value}}}.</param>
+        /// <param name="IdStatusDocumentosCredito">{{{documento_proposta_response_id_status_documento_credito_value}}}.</param>
+        /// <param name="IdCondicoesDocumentosCredito">{{{documento_proposta_response_id_condicao_documento_credito_value}}}.</param>
+        /// <param name="IdTipoDocumentoCredito">{{{documento_proposta_response_id_tipo_documento_credito_value}}}.</param>
+        /// <param name="IdPessoaFisica">{{{documento_proposta_response_id_pessoa_fisica_value}}}.</param>
+        /// <param name="IdLogAtendimento">{{{documento_proposta_response_id_log_atendimento_value}}}.</param>
+        /// <param name="Responsavel">{{{documento_proposta_response_responsavel_value}}}.</param>
+        /// <param name="FlagDocumentoDigitalizado">{{{documento_proposta_response_flag_documento_digitalizado_value}}}.</param>
+        /// <param name="DocumentoDigitalizado">{{{documento_proposta_response_documento_digitalizado_value}}}.</param>
+        /// <param name="SeqAnaliseCondicao">{{{documento_proposta_response_seq_analise_condicao_value}}}.</param>
+        /// <param name="Observacao">{{{documento_proposta_response_observacao_value}}}.</param>
+        /// <param name="DataStatus">{{{documento_proposta_response_data_status_value}}}.</param>
 
         public DocumentoPropostaResponse(long? Id = null, long? IdProposta = null, long? IdDocumentosCredito = null, long? IdStatusDocumentosCredito = null, long? IdCondicoesDocumentosCredito = null, long? IdTipoDocumentoCredito = null, long? IdPessoaFisica = null, long? IdLogAtendimento = null, string Responsavel = null, int? FlagDocumentoDigitalizado = null, string DocumentoDigitalizado = null, long? SeqAnaliseCondicao = null, string Observacao = null, string DataStatus = null)
         {
@@ -58,100 +58,100 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Idenfitication code of the document proposal
+        /// {{{documento_proposta_response_id_value}}}
         /// </summary>
-        /// <value>Idenfitication code of the document proposal</value>
+        /// <value>{{{documento_proposta_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Idenfitication code of the proposal
+        /// {{{documento_proposta_response_id_proposta_value}}}
         /// </summary>
-        /// <value>Idenfitication code of the proposal</value>
+        /// <value>{{{documento_proposta_response_id_proposta_value}}}</value>
         [DataMember(Name="idProposta", EmitDefaultValue=false)]
         public long? IdProposta { get; set; }
     
         /// <summary>
-        /// Idenfitication code of the type of document
+        /// {{{documento_proposta_response_id_tipo_documento_value}}}
         /// </summary>
-        /// <value>Idenfitication code of the type of document</value>
+        /// <value>{{{documento_proposta_response_id_tipo_documento_value}}}</value>
         [DataMember(Name="idDocumentosCredito", EmitDefaultValue=false)]
         public long? IdDocumentosCredito { get; set; }
     
         /// <summary>
-        /// Idenfitication code of credit document status
+        /// {{{documento_proposta_response_id_status_documento_credito_value}}}
         /// </summary>
-        /// <value>Idenfitication code of credit document status</value>
+        /// <value>{{{documento_proposta_response_id_status_documento_credito_value}}}</value>
         [DataMember(Name="idStatusDocumentosCredito", EmitDefaultValue=false)]
         public long? IdStatusDocumentosCredito { get; set; }
     
         /// <summary>
-        /// Idenfitication code of credit credit condition
+        /// {{{documento_proposta_response_id_condicao_documento_credito_value}}}
         /// </summary>
-        /// <value>Idenfitication code of credit credit condition</value>
+        /// <value>{{{documento_proposta_response_id_condicao_documento_credito_value}}}</value>
         [DataMember(Name="idCondicoesDocumentosCredito", EmitDefaultValue=false)]
         public long? IdCondicoesDocumentosCredito { get; set; }
     
         /// <summary>
-        /// Idenfitication code of credit document type
+        /// {{{documento_proposta_response_id_tipo_documento_credito_value}}}
         /// </summary>
-        /// <value>Idenfitication code of credit document type</value>
+        /// <value>{{{documento_proposta_response_id_tipo_documento_credito_value}}}</value>
         [DataMember(Name="idTipoDocumentoCredito", EmitDefaultValue=false)]
         public long? IdTipoDocumentoCredito { get; set; }
     
         /// <summary>
-        /// Idenfitication code of person
+        /// {{{documento_proposta_response_id_pessoa_fisica_value}}}
         /// </summary>
-        /// <value>Idenfitication code of person</value>
+        /// <value>{{{documento_proposta_response_id_pessoa_fisica_value}}}</value>
         [DataMember(Name="idPessoaFisica", EmitDefaultValue=false)]
         public long? IdPessoaFisica { get; set; }
     
         /// <summary>
-        /// Idenfitication code of log
+        /// {{{documento_proposta_response_id_log_atendimento_value}}}
         /// </summary>
-        /// <value>Idenfitication code of log</value>
+        /// <value>{{{documento_proposta_response_id_log_atendimento_value}}}</value>
         [DataMember(Name="idLogAtendimento", EmitDefaultValue=false)]
         public long? IdLogAtendimento { get; set; }
     
         /// <summary>
-        /// Responsible
+        /// {{{documento_proposta_response_responsavel_value}}}
         /// </summary>
-        /// <value>Responsible</value>
+        /// <value>{{{documento_proposta_response_responsavel_value}}}</value>
         [DataMember(Name="responsavel", EmitDefaultValue=false)]
         public string Responsavel { get; set; }
     
         /// <summary>
-        /// Flag for digitalization of the document
+        /// {{{documento_proposta_response_flag_documento_digitalizado_value}}}
         /// </summary>
-        /// <value>Flag for digitalization of the document</value>
+        /// <value>{{{documento_proposta_response_flag_documento_digitalizado_value}}}</value>
         [DataMember(Name="flagDocumentoDigitalizado", EmitDefaultValue=false)]
         public int? FlagDocumentoDigitalizado { get; set; }
     
         /// <summary>
-        /// Name of the digital document
+        /// {{{documento_proposta_response_documento_digitalizado_value}}}
         /// </summary>
-        /// <value>Name of the digital document</value>
+        /// <value>{{{documento_proposta_response_documento_digitalizado_value}}}</value>
         [DataMember(Name="documentoDigitalizado", EmitDefaultValue=false)]
         public string DocumentoDigitalizado { get; set; }
     
         /// <summary>
-        /// Analytical Sequence code
+        /// {{{documento_proposta_response_seq_analise_condicao_value}}}
         /// </summary>
-        /// <value>Analytical Sequence code</value>
+        /// <value>{{{documento_proposta_response_seq_analise_condicao_value}}}</value>
         [DataMember(Name="seqAnaliseCondicao", EmitDefaultValue=false)]
         public long? SeqAnaliseCondicao { get; set; }
     
         /// <summary>
-        /// Note
+        /// {{{documento_proposta_response_observacao_value}}}
         /// </summary>
-        /// <value>Note</value>
+        /// <value>{{{documento_proposta_response_observacao_value}}}</value>
         [DataMember(Name="observacao", EmitDefaultValue=false)]
         public string Observacao { get; set; }
     
         /// <summary>
-        /// Status Date
+        /// {{{documento_proposta_response_data_status_value}}}
         /// </summary>
-        /// <value>Status Date</value>
+        /// <value>{{{documento_proposta_response_data_status_value}}}</value>
         [DataMember(Name="dataStatus", EmitDefaultValue=false)]
         public string DataStatus { get; set; }
     

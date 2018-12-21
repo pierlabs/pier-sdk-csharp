@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// ReferenceCommercialApprovedResponse
+    /// {{{referencia_comercial_aprovado_response_description}}}
     /// </summary>
     [DataContract]
     public partial class ReferenciaComercialAprovadoResponse :  IEquatable<ReferenciaComercialAprovadoResponse>
@@ -22,11 +22,11 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="ReferenciaComercialAprovadoResponse" /> class.
         /// Initializes a new instance of the <see cref="ReferenciaComercialAprovadoResponse" />class.
         /// </summary>
-        /// <param name="RazaoSocial">Show the full name of the social reason of the commercial reference (business name.).</param>
-        /// <param name="NomeContrato">Show the name of the responsable for the commercial reference.</param>
-        /// <param name="Ddd">Show the contact DDD number of the commercial reference.</param>
-        /// <param name="Telefone">Show the contact number of the commercial reference.</param>
-        /// <param name="Email">Show the contact email of the commercial reference.</param>
+        /// <param name="RazaoSocial">{{{referencia_comercial_aprovado_response_razao_social_value}}}.</param>
+        /// <param name="NomeContrato">{{{referencia_comercial_aprovado_response_nome_contrato_value}}}.</param>
+        /// <param name="Ddd">{{{referencia_comercial_aprovado_response_ddd_value}}}.</param>
+        /// <param name="Telefone">{{{referencia_comercial_aprovado_response_telefone_value}}}.</param>
+        /// <param name="Email">{{{referencia_comercial_aprovado_response_email_value}}}.</param>
 
         public ReferenciaComercialAprovadoResponse(string RazaoSocial = null, string NomeContrato = null, string Ddd = null, string Telefone = null, string Email = null)
         {
@@ -40,37 +40,37 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Show the full name of the social reason of the commercial reference (business name.)
+        /// {{{referencia_comercial_aprovado_response_razao_social_value}}}
         /// </summary>
-        /// <value>Show the full name of the social reason of the commercial reference (business name.)</value>
+        /// <value>{{{referencia_comercial_aprovado_response_razao_social_value}}}</value>
         [DataMember(Name="razaoSocial", EmitDefaultValue=false)]
         public string RazaoSocial { get; set; }
     
         /// <summary>
-        /// Show the name of the responsable for the commercial reference
+        /// {{{referencia_comercial_aprovado_response_nome_contrato_value}}}
         /// </summary>
-        /// <value>Show the name of the responsable for the commercial reference</value>
+        /// <value>{{{referencia_comercial_aprovado_response_nome_contrato_value}}}</value>
         [DataMember(Name="nomeContrato", EmitDefaultValue=false)]
         public string NomeContrato { get; set; }
     
         /// <summary>
-        /// Show the contact DDD number of the commercial reference
+        /// {{{referencia_comercial_aprovado_response_ddd_value}}}
         /// </summary>
-        /// <value>Show the contact DDD number of the commercial reference</value>
+        /// <value>{{{referencia_comercial_aprovado_response_ddd_value}}}</value>
         [DataMember(Name="ddd", EmitDefaultValue=false)]
         public string Ddd { get; set; }
     
         /// <summary>
-        /// Show the contact number of the commercial reference
+        /// {{{referencia_comercial_aprovado_response_telefone_value}}}
         /// </summary>
-        /// <value>Show the contact number of the commercial reference</value>
+        /// <value>{{{referencia_comercial_aprovado_response_telefone_value}}}</value>
         [DataMember(Name="telefone", EmitDefaultValue=false)]
         public string Telefone { get; set; }
     
         /// <summary>
-        /// Show the contact email of the commercial reference
+        /// {{{referencia_comercial_aprovado_response_email_value}}}
         /// </summary>
-        /// <value>Show the contact email of the commercial reference</value>
+        /// <value>{{{referencia_comercial_aprovado_response_email_value}}}</value>
         [DataMember(Name="email", EmitDefaultValue=false)]
         public string Email { get; set; }
     

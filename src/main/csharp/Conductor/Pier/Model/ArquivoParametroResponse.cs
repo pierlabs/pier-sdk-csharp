@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Object Response of the file parameter
+    /// {{{arquivo_parametro_response_description}}}
     /// </summary>
     [DataContract]
     public partial class ArquivoParametroResponse :  IEquatable<ArquivoParametroResponse>
@@ -22,9 +22,9 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="ArquivoParametroResponse" /> class.
         /// Initializes a new instance of the <see cref="ArquivoParametroResponse" />class.
         /// </summary>
-        /// <param name="Id">Identification Code of detail of the file.</param>
-        /// <param name="NomeCampo">Name that identify the details of the file (required).</param>
-        /// <param name="Conteudo">Content of nameField (required).</param>
+        /// <param name="Id">{{{arquivo_parametro_response_id_value}}}.</param>
+        /// <param name="NomeCampo">{{{arquivo_parametro_response_nome_campo_value}}} (required).</param>
+        /// <param name="Conteudo">{{{arquivo_parametro_response_conteudo_value}}} (required).</param>
 
         public ArquivoParametroResponse(long? Id = null, string NomeCampo = null, string Conteudo = null)
         {
@@ -52,23 +52,23 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Identification Code of detail of the file
+        /// {{{arquivo_parametro_response_id_value}}}
         /// </summary>
-        /// <value>Identification Code of detail of the file</value>
+        /// <value>{{{arquivo_parametro_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Name that identify the details of the file
+        /// {{{arquivo_parametro_response_nome_campo_value}}}
         /// </summary>
-        /// <value>Name that identify the details of the file</value>
+        /// <value>{{{arquivo_parametro_response_nome_campo_value}}}</value>
         [DataMember(Name="nomeCampo", EmitDefaultValue=false)]
         public string NomeCampo { get; set; }
     
         /// <summary>
-        /// Content of nameField
+        /// {{{arquivo_parametro_response_conteudo_value}}}
         /// </summary>
-        /// <value>Content of nameField</value>
+        /// <value>{{{arquivo_parametro_response_conteudo_value}}}</value>
         [DataMember(Name="conteudo", EmitDefaultValue=false)]
         public string Conteudo { get; set; }
     

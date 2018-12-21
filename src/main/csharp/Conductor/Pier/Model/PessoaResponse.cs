@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Person
+    /// {{{pessoa_response_description}}}
     /// </summary>
     [DataContract]
     public partial class PessoaResponse :  IEquatable<PessoaResponse>
@@ -22,17 +22,17 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="PessoaResponse" /> class.
         /// Initializes a new instance of the <see cref="PessoaResponse" />class.
         /// </summary>
-        /// <param name="Id">Identification Code of the Person (id) (required).</param>
-        /// <param name="Nome">Show the &#39;Full name of the PP&#39; or the &#39; Full name of the social reason (Business name)&#39; (required).</param>
-        /// <param name="Tipo">Identification Code of the Person type, being (&#39;PP&#39;: Physical Person), (&#39;PJ&#39;: Legal Person) (required).</param>
-        /// <param name="Cpf">CPF number, when it is PP.</param>
-        /// <param name="Cnpj">CNPJ number, when it is LP.</param>
-        /// <param name="DataNascimento">Birth date of the person, when it is PP, or the date of the Company Opening, when it is LP.</param>
-        /// <param name="NumeroIdentidade">Identity Number.</param>
-        /// <param name="OrgaoExpedidorIdentidade">Issuer Organ of the ID.</param>
-        /// <param name="Sexo">Identification Code of the Person sex, being: (&#39;M&#39;: Male), (&#39;F&#39;: Female), (&#39;O&#39;: Other), (&#39;N&#39;: Not Specified).</param>
-        /// <param name="UnidadeFederativaIdentidade">Acronym of the Federal Unity where was issued the Identity.</param>
-        /// <param name="DataEmissaoIdentidade">Issue date of the identity in the format yyyy-MM-dd.</param>
+        /// <param name="Id">{{{pessoa_response_id_value}}} (required).</param>
+        /// <param name="Nome">{{{pessoa_response_nome_value}}} (required).</param>
+        /// <param name="Tipo">{{{pessoa_response_tipo_value}}} (required).</param>
+        /// <param name="Cpf">{{{pessoa_response_cpf_value}}}.</param>
+        /// <param name="Cnpj">{{{pessoa_response_cnpj_value}}}.</param>
+        /// <param name="DataNascimento">{{{pessoa_response_data_nascimento_value}}}.</param>
+        /// <param name="NumeroIdentidade">{{{pessoa_response_numero_identidade_value}}}.</param>
+        /// <param name="OrgaoExpedidorIdentidade">{{{pessoa_response_orgao_expedidor_identidade_value}}}.</param>
+        /// <param name="Sexo">{{{pessoa_response_sexo_value}}}.</param>
+        /// <param name="UnidadeFederativaIdentidade">{{{pessoa_response_unidade_federativa_identidade_value}}}.</param>
+        /// <param name="DataEmissaoIdentidade">{{{pessoa_response_data_emissao_identidade_value}}}.</param>
 
         public PessoaResponse(long? Id = null, string Nome = null, string Tipo = null, string Cpf = null, string Cnpj = null, string DataNascimento = null, string NumeroIdentidade = null, string OrgaoExpedidorIdentidade = null, string Sexo = null, string UnidadeFederativaIdentidade = null, string DataEmissaoIdentidade = null)
         {
@@ -76,79 +76,79 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Identification Code of the Person (id)
+        /// {{{pessoa_response_id_value}}}
         /// </summary>
-        /// <value>Identification Code of the Person (id)</value>
+        /// <value>{{{pessoa_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Show the &#39;Full name of the PP&#39; or the &#39; Full name of the social reason (Business name)&#39;
+        /// {{{pessoa_response_nome_value}}}
         /// </summary>
-        /// <value>Show the &#39;Full name of the PP&#39; or the &#39; Full name of the social reason (Business name)&#39;</value>
+        /// <value>{{{pessoa_response_nome_value}}}</value>
         [DataMember(Name="nome", EmitDefaultValue=false)]
         public string Nome { get; set; }
     
         /// <summary>
-        /// Identification Code of the Person type, being (&#39;PP&#39;: Physical Person), (&#39;PJ&#39;: Legal Person)
+        /// {{{pessoa_response_tipo_value}}}
         /// </summary>
-        /// <value>Identification Code of the Person type, being (&#39;PP&#39;: Physical Person), (&#39;PJ&#39;: Legal Person)</value>
+        /// <value>{{{pessoa_response_tipo_value}}}</value>
         [DataMember(Name="tipo", EmitDefaultValue=false)]
         public string Tipo { get; set; }
     
         /// <summary>
-        /// CPF number, when it is PP
+        /// {{{pessoa_response_cpf_value}}}
         /// </summary>
-        /// <value>CPF number, when it is PP</value>
+        /// <value>{{{pessoa_response_cpf_value}}}</value>
         [DataMember(Name="cpf", EmitDefaultValue=false)]
         public string Cpf { get; set; }
     
         /// <summary>
-        /// CNPJ number, when it is LP
+        /// {{{pessoa_response_cnpj_value}}}
         /// </summary>
-        /// <value>CNPJ number, when it is LP</value>
+        /// <value>{{{pessoa_response_cnpj_value}}}</value>
         [DataMember(Name="cnpj", EmitDefaultValue=false)]
         public string Cnpj { get; set; }
     
         /// <summary>
-        /// Birth date of the person, when it is PP, or the date of the Company Opening, when it is LP
+        /// {{{pessoa_response_data_nascimento_value}}}
         /// </summary>
-        /// <value>Birth date of the person, when it is PP, or the date of the Company Opening, when it is LP</value>
+        /// <value>{{{pessoa_response_data_nascimento_value}}}</value>
         [DataMember(Name="dataNascimento", EmitDefaultValue=false)]
         public string DataNascimento { get; set; }
     
         /// <summary>
-        /// Identity Number
+        /// {{{pessoa_response_numero_identidade_value}}}
         /// </summary>
-        /// <value>Identity Number</value>
+        /// <value>{{{pessoa_response_numero_identidade_value}}}</value>
         [DataMember(Name="numeroIdentidade", EmitDefaultValue=false)]
         public string NumeroIdentidade { get; set; }
     
         /// <summary>
-        /// Issuer Organ of the ID
+        /// {{{pessoa_response_orgao_expedidor_identidade_value}}}
         /// </summary>
-        /// <value>Issuer Organ of the ID</value>
+        /// <value>{{{pessoa_response_orgao_expedidor_identidade_value}}}</value>
         [DataMember(Name="orgaoExpedidorIdentidade", EmitDefaultValue=false)]
         public string OrgaoExpedidorIdentidade { get; set; }
     
         /// <summary>
-        /// Identification Code of the Person sex, being: (&#39;M&#39;: Male), (&#39;F&#39;: Female), (&#39;O&#39;: Other), (&#39;N&#39;: Not Specified)
+        /// {{{pessoa_response_sexo_value}}}
         /// </summary>
-        /// <value>Identification Code of the Person sex, being: (&#39;M&#39;: Male), (&#39;F&#39;: Female), (&#39;O&#39;: Other), (&#39;N&#39;: Not Specified)</value>
+        /// <value>{{{pessoa_response_sexo_value}}}</value>
         [DataMember(Name="sexo", EmitDefaultValue=false)]
         public string Sexo { get; set; }
     
         /// <summary>
-        /// Acronym of the Federal Unity where was issued the Identity
+        /// {{{pessoa_response_unidade_federativa_identidade_value}}}
         /// </summary>
-        /// <value>Acronym of the Federal Unity where was issued the Identity</value>
+        /// <value>{{{pessoa_response_unidade_federativa_identidade_value}}}</value>
         [DataMember(Name="unidadeFederativaIdentidade", EmitDefaultValue=false)]
         public string UnidadeFederativaIdentidade { get; set; }
     
         /// <summary>
-        /// Issue date of the identity in the format yyyy-MM-dd
+        /// {{{pessoa_response_data_emissao_identidade_value}}}
         /// </summary>
-        /// <value>Issue date of the identity in the format yyyy-MM-dd</value>
+        /// <value>{{{pessoa_response_data_emissao_identidade_value}}}</value>
         [DataMember(Name="dataEmissaoIdentidade", EmitDefaultValue=false)]
         public string DataEmissaoIdentidade { get; set; }
     

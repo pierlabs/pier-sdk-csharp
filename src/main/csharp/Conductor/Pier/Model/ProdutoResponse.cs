@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Product
+    /// {{{produto_response_description}}}
     /// </summary>
     [DataContract]
     public partial class ProdutoResponse :  IEquatable<ProdutoResponse>
@@ -22,10 +22,10 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="ProdutoResponse" /> class.
         /// Initializes a new instance of the <see cref="ProdutoResponse" />class.
         /// </summary>
-        /// <param name="Id">Identification Code of the Product (id) (required).</param>
-        /// <param name="Nome">Name description of the product (required).</param>
-        /// <param name="Status">Represent the status of the product, where: (&#39;0&#39;: Inactive), (&#39;1&#39;: Active (required).</param>
-        /// <param name="IdFantasiaBasica">Identification Code of the Basic Fantasy (id) which the product belongs.</param>
+        /// <param name="Id">{{{produto_response_id_value}}} (required).</param>
+        /// <param name="Nome">{{{produto_response_nome_value}}} (required).</param>
+        /// <param name="Status">{{{produto_response_status_value}}} (required).</param>
+        /// <param name="IdFantasiaBasica">{{{produto_response_id_fantasia_basica_value}}}.</param>
 
         public ProdutoResponse(long? Id = null, string Nome = null, int? Status = null, long? IdFantasiaBasica = null)
         {
@@ -62,30 +62,30 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Identification Code of the Product (id)
+        /// {{{produto_response_id_value}}}
         /// </summary>
-        /// <value>Identification Code of the Product (id)</value>
+        /// <value>{{{produto_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Name description of the product
+        /// {{{produto_response_nome_value}}}
         /// </summary>
-        /// <value>Name description of the product</value>
+        /// <value>{{{produto_response_nome_value}}}</value>
         [DataMember(Name="nome", EmitDefaultValue=false)]
         public string Nome { get; set; }
     
         /// <summary>
-        /// Represent the status of the product, where: (&#39;0&#39;: Inactive), (&#39;1&#39;: Active
+        /// {{{produto_response_status_value}}}
         /// </summary>
-        /// <value>Represent the status of the product, where: (&#39;0&#39;: Inactive), (&#39;1&#39;: Active</value>
+        /// <value>{{{produto_response_status_value}}}</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public int? Status { get; set; }
     
         /// <summary>
-        /// Identification Code of the Basic Fantasy (id) which the product belongs
+        /// {{{produto_response_id_fantasia_basica_value}}}
         /// </summary>
-        /// <value>Identification Code of the Basic Fantasy (id) which the product belongs</value>
+        /// <value>{{{produto_response_id_fantasia_basica_value}}}</value>
         [DataMember(Name="idFantasiaBasica", EmitDefaultValue=false)]
         public long? IdFantasiaBasica { get; set; }
     

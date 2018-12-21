@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Response Representation of the Key Type
+    /// {{{tipo_chave_response_description}}}
     /// </summary>
     [DataContract]
     public partial class TipoChaveResponse :  IEquatable<TipoChaveResponse>
@@ -22,8 +22,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TipoChaveResponse" /> class.
         /// Initializes a new instance of the <see cref="TipoChaveResponse" />class.
         /// </summary>
-        /// <param name="Id">Type key id.</param>
-        /// <param name="Descricao">Type key description response.</param>
+        /// <param name="Id">{{{tipo_chave_response_id_value}}}.</param>
+        /// <param name="Descricao">{{{tipo_chave_response_descricao_value}}}.</param>
 
         public TipoChaveResponse(long? Id = null, string Descricao = null)
         {
@@ -34,16 +34,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Type key id
+        /// {{{tipo_chave_response_id_value}}}
         /// </summary>
-        /// <value>Type key id</value>
+        /// <value>{{{tipo_chave_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Type key description response
+        /// {{{tipo_chave_response_descricao_value}}}
         /// </summary>
-        /// <value>Type key description response</value>
+        /// <value>{{{tipo_chave_response_descricao_value}}}</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     

@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representation Object Response for Payment Benefit
+    /// {{{beneficio_pagamento_atraso_response_description}}}
     /// </summary>
     [DataContract]
     public partial class BeneficioPagamentoAtrasoResponse :  IEquatable<BeneficioPagamentoAtrasoResponse>
@@ -22,7 +22,7 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="BeneficioPagamentoAtrasoResponse" /> class.
         /// Initializes a new instance of the <see cref="BeneficioPagamentoAtrasoResponse" />class.
         /// </summary>
-        /// <param name="DataBeneficio">Deadline ofr payment of the invoice dealy to recieve benefit of total exemption in the penalty payment, encharge, extra interest and IOF.</param>
+        /// <param name="DataBeneficio">{{{beneficio_pagamento_atraso_response_data_beneficio_value}}}.</param>
 
         public BeneficioPagamentoAtrasoResponse(string DataBeneficio = null)
         {
@@ -32,9 +32,9 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Deadline ofr payment of the invoice dealy to recieve benefit of total exemption in the penalty payment, encharge, extra interest and IOF
+        /// {{{beneficio_pagamento_atraso_response_data_beneficio_value}}}
         /// </summary>
-        /// <value>Deadline ofr payment of the invoice dealy to recieve benefit of total exemption in the penalty payment, encharge, extra interest and IOF</value>
+        /// <value>{{{beneficio_pagamento_atraso_response_data_beneficio_value}}}</value>
         [DataMember(Name="dataBeneficio", EmitDefaultValue=false)]
         public string DataBeneficio { get; set; }
     

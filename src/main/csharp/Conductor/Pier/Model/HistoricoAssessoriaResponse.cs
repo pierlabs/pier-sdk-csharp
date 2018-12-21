@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Response Representation of the {@link HistoricAdvisoryResponse}
+    /// {{{historico_assessoria_response_description}}}
     /// </summary>
     [DataContract]
     public partial class HistoricoAssessoriaResponse :  IEquatable<HistoricoAssessoriaResponse>
@@ -22,9 +22,9 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="HistoricoAssessoriaResponse" /> class.
         /// Initializes a new instance of the <see cref="HistoricoAssessoriaResponse" />class.
         /// </summary>
-        /// <param name="DataHoraHistorico">Show the date and time of the historic.</param>
-        /// <param name="TipoHistorico">Show the type of historic can be input or output.</param>
-        /// <param name="NomeAssessoria">Show the name of the Collection Advisory related to the historic.</param>
+        /// <param name="DataHoraHistorico">{{{historico_assessoria_response_data_hora_historico_value}}}.</param>
+        /// <param name="TipoHistorico">{{{historico_assessoria_response_tipo_historico_value}}}.</param>
+        /// <param name="NomeAssessoria">{{{historico_assessoria_response_nome_assessoria_value}}}.</param>
 
         public HistoricoAssessoriaResponse(string DataHoraHistorico = null, string TipoHistorico = null, string NomeAssessoria = null)
         {
@@ -36,23 +36,23 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Show the date and time of the historic
+        /// {{{historico_assessoria_response_data_hora_historico_value}}}
         /// </summary>
-        /// <value>Show the date and time of the historic</value>
+        /// <value>{{{historico_assessoria_response_data_hora_historico_value}}}</value>
         [DataMember(Name="dataHoraHistorico", EmitDefaultValue=false)]
         public string DataHoraHistorico { get; set; }
     
         /// <summary>
-        /// Show the type of historic can be input or output
+        /// {{{historico_assessoria_response_tipo_historico_value}}}
         /// </summary>
-        /// <value>Show the type of historic can be input or output</value>
+        /// <value>{{{historico_assessoria_response_tipo_historico_value}}}</value>
         [DataMember(Name="tipoHistorico", EmitDefaultValue=false)]
         public string TipoHistorico { get; set; }
     
         /// <summary>
-        /// Show the name of the Collection Advisory related to the historic
+        /// {{{historico_assessoria_response_nome_assessoria_value}}}
         /// </summary>
-        /// <value>Show the name of the Collection Advisory related to the historic</value>
+        /// <value>{{{historico_assessoria_response_nome_assessoria_value}}}</value>
         [DataMember(Name="nomeAssessoria", EmitDefaultValue=false)]
         public string NomeAssessoria { get; set; }
     

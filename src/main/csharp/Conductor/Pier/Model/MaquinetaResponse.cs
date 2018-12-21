@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// POS response object
+    /// {{{maquineta_response_description}}}
     /// </summary>
     [DataContract]
     public partial class MaquinetaResponse :  IEquatable<MaquinetaResponse>
@@ -22,14 +22,14 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="MaquinetaResponse" /> class.
         /// Initializes a new instance of the <see cref="MaquinetaResponse" />class.
         /// </summary>
-        /// <param name="Id">Identification Code of the Card Machine.</param>
-        /// <param name="IdEstabelecimento">Identification Code of the Merchant.</param>
-        /// <param name="IdTipoMaquineta">Identification Code of the Card Machine.</param>
-        /// <param name="Valor">Maintenance valeu of the card machine.</param>
-        /// <param name="DataHoraImplantacao">Deployment date of the card machine.</param>
-        /// <param name="DataHoraCadastramento">Registerment date of the Card Machine.</param>
-        /// <param name="Terminal">Terminal number linked to the card machine.</param>
-        /// <param name="UsuarioApl">User of the application.</param>
+        /// <param name="Id">{{{maquineta_response_id_value}}}.</param>
+        /// <param name="IdEstabelecimento">{{{maquineta_response_id_estabelecimento_value}}}.</param>
+        /// <param name="IdTipoMaquineta">{{{maquineta_response_id_tipo_maquineta_value}}}.</param>
+        /// <param name="Valor">{{{maquineta_response_valor_value}}}.</param>
+        /// <param name="DataHoraImplantacao">{{{maquineta_response_data_hora_implantacao_value}}}.</param>
+        /// <param name="DataHoraCadastramento">{{{maquineta_response_data_hora_cadastramento_value}}}.</param>
+        /// <param name="Terminal">{{{maquineta_response_terminal_value}}}.</param>
+        /// <param name="UsuarioApl">{{{maquineta_response_usuario_apl_value}}}.</param>
 
         public MaquinetaResponse(long? Id = null, long? IdEstabelecimento = null, long? IdTipoMaquineta = null, double? Valor = null, string DataHoraImplantacao = null, string DataHoraCadastramento = null, string Terminal = null, string UsuarioApl = null)
         {
@@ -46,58 +46,58 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Identification Code of the Card Machine
+        /// {{{maquineta_response_id_value}}}
         /// </summary>
-        /// <value>Identification Code of the Card Machine</value>
+        /// <value>{{{maquineta_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Identification Code of the Merchant
+        /// {{{maquineta_response_id_estabelecimento_value}}}
         /// </summary>
-        /// <value>Identification Code of the Merchant</value>
+        /// <value>{{{maquineta_response_id_estabelecimento_value}}}</value>
         [DataMember(Name="idEstabelecimento", EmitDefaultValue=false)]
         public long? IdEstabelecimento { get; set; }
     
         /// <summary>
-        /// Identification Code of the Card Machine
+        /// {{{maquineta_response_id_tipo_maquineta_value}}}
         /// </summary>
-        /// <value>Identification Code of the Card Machine</value>
+        /// <value>{{{maquineta_response_id_tipo_maquineta_value}}}</value>
         [DataMember(Name="idTipoMaquineta", EmitDefaultValue=false)]
         public long? IdTipoMaquineta { get; set; }
     
         /// <summary>
-        /// Maintenance valeu of the card machine
+        /// {{{maquineta_response_valor_value}}}
         /// </summary>
-        /// <value>Maintenance valeu of the card machine</value>
+        /// <value>{{{maquineta_response_valor_value}}}</value>
         [DataMember(Name="valor", EmitDefaultValue=false)]
         public double? Valor { get; set; }
     
         /// <summary>
-        /// Deployment date of the card machine
+        /// {{{maquineta_response_data_hora_implantacao_value}}}
         /// </summary>
-        /// <value>Deployment date of the card machine</value>
+        /// <value>{{{maquineta_response_data_hora_implantacao_value}}}</value>
         [DataMember(Name="dataHoraImplantacao", EmitDefaultValue=false)]
         public string DataHoraImplantacao { get; set; }
     
         /// <summary>
-        /// Registerment date of the Card Machine
+        /// {{{maquineta_response_data_hora_cadastramento_value}}}
         /// </summary>
-        /// <value>Registerment date of the Card Machine</value>
+        /// <value>{{{maquineta_response_data_hora_cadastramento_value}}}</value>
         [DataMember(Name="dataHoraCadastramento", EmitDefaultValue=false)]
         public string DataHoraCadastramento { get; set; }
     
         /// <summary>
-        /// Terminal number linked to the card machine
+        /// {{{maquineta_response_terminal_value}}}
         /// </summary>
-        /// <value>Terminal number linked to the card machine</value>
+        /// <value>{{{maquineta_response_terminal_value}}}</value>
         [DataMember(Name="terminal", EmitDefaultValue=false)]
         public string Terminal { get; set; }
     
         /// <summary>
-        /// User of the application
+        /// {{{maquineta_response_usuario_apl_value}}}
         /// </summary>
-        /// <value>User of the application</value>
+        /// <value>{{{maquineta_response_usuario_apl_value}}}</value>
         [DataMember(Name="usuarioApl", EmitDefaultValue=false)]
         public string UsuarioApl { get; set; }
     

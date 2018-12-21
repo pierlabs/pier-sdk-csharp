@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Credit Transfer for the banking accounts
+    /// {{{transferencia_credito_conta_bancaria_response_description}}}
     /// </summary>
     [DataContract]
     public partial class TransferenciaCreditoContaBancariaResponse :  IEquatable<TransferenciaCreditoContaBancariaResponse>
@@ -22,37 +22,37 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TransferenciaCreditoContaBancariaResponse" /> class.
         /// Initializes a new instance of the <see cref="TransferenciaCreditoContaBancariaResponse" />class.
         /// </summary>
-        /// <param name="IdTransferencia">Identification Code of the Transfer.</param>
-        /// <param name="ValorCET">Total cost effective taxe.</param>
-        /// <param name="IdAutorizacao">Identification Code of the authorization.</param>
-        /// <param name="CodigoAutorizacao">Authorization Code.</param>
-        /// <param name="NsuOrigem">NSU of the origin.</param>
-        /// <param name="IdConta">Identification Code of the Account.</param>
-        /// <param name="IdCartao">Identification Code of the Card.</param>
-        /// <param name="IdOperacao">Identification Code of the type of operation.</param>
-        /// <param name="ValorCompra">Value of the transfer.</param>
-        /// <param name="ValorParcela">Value of the parcel.</param>
-        /// <param name="ValorContrato">Value of the transfer added to the Withdrawal taxe value if there is withdrawal taxe.</param>
-        /// <param name="NumeroParcelas">N?mber of parcels.</param>
-        /// <param name="ValorIOF">Value of the IOF.</param>
-        /// <param name="ValorTAC">Value of the TAC.</param>
-        /// <param name="ValorTaxaSaque">Value of the withdrawal taxe.</param>
-        /// <param name="TaxaJuros">Interest percentage.</param>
-        /// <param name="DataCompra">Date of the transfer.</param>
-        /// <param name="DataMovimento">Movement date.</param>
-        /// <param name="DataVencimentoReal">Expiration date of the invoice.</param>
-        /// <param name="DataVencimentoPadrao">Standard Expiration date of the invoice.</param>
-        /// <param name="DataAutorizacao">Date of authorization.</param>
-        /// <param name="Banco">Bank Code.</param>
-        /// <param name="NumeroAgencia">Agency number.</param>
-        /// <param name="DigitoAgencia">Digit of the Agency.</param>
-        /// <param name="NumeroConta">Account number.</param>
-        /// <param name="DigitoConta">Digit of the account.</param>
-        /// <param name="FlagContaPoupanca">Type of the Account.</param>
-        /// <param name="DocumentoFavorecido">Document of the favored.</param>
-        /// <param name="NomeFavorecido">Name of the favored.</param>
-        /// <param name="Status">Code of the Status.</param>
-        /// <param name="StatusProcessamento">Status Processing.</param>
+        /// <param name="IdTransferencia">{{{transferencia_credito_conta_bancaria_response_id_transferencia_value}}}.</param>
+        /// <param name="ValorCET">{{{transferencia_credito_conta_bancaria_response_valor_c_e_t_value}}}.</param>
+        /// <param name="IdAutorizacao">{{{transferencia_credito_conta_bancaria_response_id_autorizacao_value}}}.</param>
+        /// <param name="CodigoAutorizacao">{{{transferencia_credito_conta_bancaria_response_codigo_autorizacao_value}}}.</param>
+        /// <param name="NsuOrigem">{{{transferencia_credito_conta_bancaria_response_nsu_origem_value}}}.</param>
+        /// <param name="IdConta">{{{transferencia_credito_conta_bancaria_response_id_conta_value}}}.</param>
+        /// <param name="IdCartao">{{{transferencia_credito_conta_bancaria_response_id_cartao_value}}}.</param>
+        /// <param name="IdOperacao">{{{transferencia_credito_conta_bancaria_response_id_operacao_value}}}.</param>
+        /// <param name="ValorCompra">{{{transferencia_credito_conta_bancaria_response_valor_compra_value}}}.</param>
+        /// <param name="ValorParcela">{{{transferencia_credito_conta_bancaria_response_valor_parcela_value}}}.</param>
+        /// <param name="ValorContrato">{{{transferencia_credito_conta_bancaria_response_valor_contrato_value}}}.</param>
+        /// <param name="NumeroParcelas">{{{transferencia_credito_conta_bancaria_response_numero_parcelas_value}}}.</param>
+        /// <param name="ValorIOF">{{{transferencia_credito_conta_bancaria_response_valor_i_o_f_value}}}.</param>
+        /// <param name="ValorTAC">{{{transferencia_credito_conta_bancaria_response_valor_t_a_c_value}}}.</param>
+        /// <param name="ValorTaxaSaque">{{{transferencia_credito_conta_bancaria_response_valor_taxa_saque_value}}}.</param>
+        /// <param name="TaxaJuros">{{{transferencia_credito_conta_bancaria_response_taxa_juros_value}}}.</param>
+        /// <param name="DataCompra">{{{transferencia_credito_conta_bancaria_response_data_compra_value}}}.</param>
+        /// <param name="DataMovimento">{{{transferencia_credito_conta_bancaria_response_data_movimento_value}}}.</param>
+        /// <param name="DataVencimentoReal">{{{transferencia_credito_conta_bancaria_response_data_vencimento_real_value}}}.</param>
+        /// <param name="DataVencimentoPadrao">{{{transferencia_credito_conta_bancaria_response_data_vencimento_padrao_value}}}.</param>
+        /// <param name="DataAutorizacao">{{{transferencia_credito_conta_bancaria_response_data_autorizacao_value}}}.</param>
+        /// <param name="Banco">{{{transferencia_credito_conta_bancaria_response_banco_value}}}.</param>
+        /// <param name="NumeroAgencia">{{{transferencia_credito_conta_bancaria_response_numero_agencia_value}}}.</param>
+        /// <param name="DigitoAgencia">{{{transferencia_credito_conta_bancaria_response_digito_agencia_value}}}.</param>
+        /// <param name="NumeroConta">{{{transferencia_credito_conta_bancaria_response_numero_conta_value}}}.</param>
+        /// <param name="DigitoConta">{{{transferencia_credito_conta_bancaria_response_digito_conta_value}}}.</param>
+        /// <param name="FlagContaPoupanca">{{{transferencia_credito_conta_bancaria_response_flag_conta_poupanca_value}}}.</param>
+        /// <param name="DocumentoFavorecido">{{{transferencia_credito_conta_bancaria_response_documento_favorecido_value}}}.</param>
+        /// <param name="NomeFavorecido">{{{transferencia_credito_conta_bancaria_response_nome_favorecido_value}}}.</param>
+        /// <param name="Status">{{{transferencia_credito_conta_bancaria_response_status_value}}}.</param>
+        /// <param name="StatusProcessamento">{{{transferencia_credito_conta_bancaria_response_status_processamento_value}}}.</param>
 
         public TransferenciaCreditoContaBancariaResponse(long? IdTransferencia = null, double? ValorCET = null, long? IdAutorizacao = null, string CodigoAutorizacao = null, long? NsuOrigem = null, long? IdConta = null, long? IdCartao = null, long? IdOperacao = null, double? ValorCompra = null, double? ValorParcela = null, double? ValorContrato = null, int? NumeroParcelas = null, double? ValorIOF = null, double? ValorTAC = null, double? ValorTaxaSaque = null, double? TaxaJuros = null, string DataCompra = null, string DataMovimento = null, string DataVencimentoReal = null, string DataVencimentoPadrao = null, string DataAutorizacao = null, long? Banco = null, string NumeroAgencia = null, string DigitoAgencia = null, string NumeroConta = null, string DigitoConta = null, bool? FlagContaPoupanca = null, string DocumentoFavorecido = null, string NomeFavorecido = null, string Status = null, string StatusProcessamento = null)
         {
@@ -92,219 +92,219 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Identification Code of the Transfer
+        /// {{{transferencia_credito_conta_bancaria_response_id_transferencia_value}}}
         /// </summary>
-        /// <value>Identification Code of the Transfer</value>
+        /// <value>{{{transferencia_credito_conta_bancaria_response_id_transferencia_value}}}</value>
         [DataMember(Name="idTransferencia", EmitDefaultValue=false)]
         public long? IdTransferencia { get; set; }
     
         /// <summary>
-        /// Total cost effective taxe
+        /// {{{transferencia_credito_conta_bancaria_response_valor_c_e_t_value}}}
         /// </summary>
-        /// <value>Total cost effective taxe</value>
+        /// <value>{{{transferencia_credito_conta_bancaria_response_valor_c_e_t_value}}}</value>
         [DataMember(Name="valorCET", EmitDefaultValue=false)]
         public double? ValorCET { get; set; }
     
         /// <summary>
-        /// Identification Code of the authorization
+        /// {{{transferencia_credito_conta_bancaria_response_id_autorizacao_value}}}
         /// </summary>
-        /// <value>Identification Code of the authorization</value>
+        /// <value>{{{transferencia_credito_conta_bancaria_response_id_autorizacao_value}}}</value>
         [DataMember(Name="idAutorizacao", EmitDefaultValue=false)]
         public long? IdAutorizacao { get; set; }
     
         /// <summary>
-        /// Authorization Code
+        /// {{{transferencia_credito_conta_bancaria_response_codigo_autorizacao_value}}}
         /// </summary>
-        /// <value>Authorization Code</value>
+        /// <value>{{{transferencia_credito_conta_bancaria_response_codigo_autorizacao_value}}}</value>
         [DataMember(Name="codigoAutorizacao", EmitDefaultValue=false)]
         public string CodigoAutorizacao { get; set; }
     
         /// <summary>
-        /// NSU of the origin
+        /// {{{transferencia_credito_conta_bancaria_response_nsu_origem_value}}}
         /// </summary>
-        /// <value>NSU of the origin</value>
+        /// <value>{{{transferencia_credito_conta_bancaria_response_nsu_origem_value}}}</value>
         [DataMember(Name="nsuOrigem", EmitDefaultValue=false)]
         public long? NsuOrigem { get; set; }
     
         /// <summary>
-        /// Identification Code of the Account
+        /// {{{transferencia_credito_conta_bancaria_response_id_conta_value}}}
         /// </summary>
-        /// <value>Identification Code of the Account</value>
+        /// <value>{{{transferencia_credito_conta_bancaria_response_id_conta_value}}}</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// Identification Code of the Card
+        /// {{{transferencia_credito_conta_bancaria_response_id_cartao_value}}}
         /// </summary>
-        /// <value>Identification Code of the Card</value>
+        /// <value>{{{transferencia_credito_conta_bancaria_response_id_cartao_value}}}</value>
         [DataMember(Name="idCartao", EmitDefaultValue=false)]
         public long? IdCartao { get; set; }
     
         /// <summary>
-        /// Identification Code of the type of operation
+        /// {{{transferencia_credito_conta_bancaria_response_id_operacao_value}}}
         /// </summary>
-        /// <value>Identification Code of the type of operation</value>
+        /// <value>{{{transferencia_credito_conta_bancaria_response_id_operacao_value}}}</value>
         [DataMember(Name="idOperacao", EmitDefaultValue=false)]
         public long? IdOperacao { get; set; }
     
         /// <summary>
-        /// Value of the transfer
+        /// {{{transferencia_credito_conta_bancaria_response_valor_compra_value}}}
         /// </summary>
-        /// <value>Value of the transfer</value>
+        /// <value>{{{transferencia_credito_conta_bancaria_response_valor_compra_value}}}</value>
         [DataMember(Name="valorCompra", EmitDefaultValue=false)]
         public double? ValorCompra { get; set; }
     
         /// <summary>
-        /// Value of the parcel
+        /// {{{transferencia_credito_conta_bancaria_response_valor_parcela_value}}}
         /// </summary>
-        /// <value>Value of the parcel</value>
+        /// <value>{{{transferencia_credito_conta_bancaria_response_valor_parcela_value}}}</value>
         [DataMember(Name="valorParcela", EmitDefaultValue=false)]
         public double? ValorParcela { get; set; }
     
         /// <summary>
-        /// Value of the transfer added to the Withdrawal taxe value if there is withdrawal taxe
+        /// {{{transferencia_credito_conta_bancaria_response_valor_contrato_value}}}
         /// </summary>
-        /// <value>Value of the transfer added to the Withdrawal taxe value if there is withdrawal taxe</value>
+        /// <value>{{{transferencia_credito_conta_bancaria_response_valor_contrato_value}}}</value>
         [DataMember(Name="valorContrato", EmitDefaultValue=false)]
         public double? ValorContrato { get; set; }
     
         /// <summary>
-        /// N?mber of parcels
+        /// {{{transferencia_credito_conta_bancaria_response_numero_parcelas_value}}}
         /// </summary>
-        /// <value>N?mber of parcels</value>
+        /// <value>{{{transferencia_credito_conta_bancaria_response_numero_parcelas_value}}}</value>
         [DataMember(Name="numeroParcelas", EmitDefaultValue=false)]
         public int? NumeroParcelas { get; set; }
     
         /// <summary>
-        /// Value of the IOF
+        /// {{{transferencia_credito_conta_bancaria_response_valor_i_o_f_value}}}
         /// </summary>
-        /// <value>Value of the IOF</value>
+        /// <value>{{{transferencia_credito_conta_bancaria_response_valor_i_o_f_value}}}</value>
         [DataMember(Name="valorIOF", EmitDefaultValue=false)]
         public double? ValorIOF { get; set; }
     
         /// <summary>
-        /// Value of the TAC
+        /// {{{transferencia_credito_conta_bancaria_response_valor_t_a_c_value}}}
         /// </summary>
-        /// <value>Value of the TAC</value>
+        /// <value>{{{transferencia_credito_conta_bancaria_response_valor_t_a_c_value}}}</value>
         [DataMember(Name="valorTAC", EmitDefaultValue=false)]
         public double? ValorTAC { get; set; }
     
         /// <summary>
-        /// Value of the withdrawal taxe
+        /// {{{transferencia_credito_conta_bancaria_response_valor_taxa_saque_value}}}
         /// </summary>
-        /// <value>Value of the withdrawal taxe</value>
+        /// <value>{{{transferencia_credito_conta_bancaria_response_valor_taxa_saque_value}}}</value>
         [DataMember(Name="valorTaxaSaque", EmitDefaultValue=false)]
         public double? ValorTaxaSaque { get; set; }
     
         /// <summary>
-        /// Interest percentage
+        /// {{{transferencia_credito_conta_bancaria_response_taxa_juros_value}}}
         /// </summary>
-        /// <value>Interest percentage</value>
+        /// <value>{{{transferencia_credito_conta_bancaria_response_taxa_juros_value}}}</value>
         [DataMember(Name="taxaJuros", EmitDefaultValue=false)]
         public double? TaxaJuros { get; set; }
     
         /// <summary>
-        /// Date of the transfer
+        /// {{{transferencia_credito_conta_bancaria_response_data_compra_value}}}
         /// </summary>
-        /// <value>Date of the transfer</value>
+        /// <value>{{{transferencia_credito_conta_bancaria_response_data_compra_value}}}</value>
         [DataMember(Name="dataCompra", EmitDefaultValue=false)]
         public string DataCompra { get; set; }
     
         /// <summary>
-        /// Movement date
+        /// {{{transferencia_credito_conta_bancaria_response_data_movimento_value}}}
         /// </summary>
-        /// <value>Movement date</value>
+        /// <value>{{{transferencia_credito_conta_bancaria_response_data_movimento_value}}}</value>
         [DataMember(Name="dataMovimento", EmitDefaultValue=false)]
         public string DataMovimento { get; set; }
     
         /// <summary>
-        /// Expiration date of the invoice
+        /// {{{transferencia_credito_conta_bancaria_response_data_vencimento_real_value}}}
         /// </summary>
-        /// <value>Expiration date of the invoice</value>
+        /// <value>{{{transferencia_credito_conta_bancaria_response_data_vencimento_real_value}}}</value>
         [DataMember(Name="dataVencimentoReal", EmitDefaultValue=false)]
         public string DataVencimentoReal { get; set; }
     
         /// <summary>
-        /// Standard Expiration date of the invoice
+        /// {{{transferencia_credito_conta_bancaria_response_data_vencimento_padrao_value}}}
         /// </summary>
-        /// <value>Standard Expiration date of the invoice</value>
+        /// <value>{{{transferencia_credito_conta_bancaria_response_data_vencimento_padrao_value}}}</value>
         [DataMember(Name="dataVencimentoPadrao", EmitDefaultValue=false)]
         public string DataVencimentoPadrao { get; set; }
     
         /// <summary>
-        /// Date of authorization
+        /// {{{transferencia_credito_conta_bancaria_response_data_autorizacao_value}}}
         /// </summary>
-        /// <value>Date of authorization</value>
+        /// <value>{{{transferencia_credito_conta_bancaria_response_data_autorizacao_value}}}</value>
         [DataMember(Name="dataAutorizacao", EmitDefaultValue=false)]
         public string DataAutorizacao { get; set; }
     
         /// <summary>
-        /// Bank Code
+        /// {{{transferencia_credito_conta_bancaria_response_banco_value}}}
         /// </summary>
-        /// <value>Bank Code</value>
+        /// <value>{{{transferencia_credito_conta_bancaria_response_banco_value}}}</value>
         [DataMember(Name="banco", EmitDefaultValue=false)]
         public long? Banco { get; set; }
     
         /// <summary>
-        /// Agency number
+        /// {{{transferencia_credito_conta_bancaria_response_numero_agencia_value}}}
         /// </summary>
-        /// <value>Agency number</value>
+        /// <value>{{{transferencia_credito_conta_bancaria_response_numero_agencia_value}}}</value>
         [DataMember(Name="numeroAgencia", EmitDefaultValue=false)]
         public string NumeroAgencia { get; set; }
     
         /// <summary>
-        /// Digit of the Agency
+        /// {{{transferencia_credito_conta_bancaria_response_digito_agencia_value}}}
         /// </summary>
-        /// <value>Digit of the Agency</value>
+        /// <value>{{{transferencia_credito_conta_bancaria_response_digito_agencia_value}}}</value>
         [DataMember(Name="digitoAgencia", EmitDefaultValue=false)]
         public string DigitoAgencia { get; set; }
     
         /// <summary>
-        /// Account number
+        /// {{{transferencia_credito_conta_bancaria_response_numero_conta_value}}}
         /// </summary>
-        /// <value>Account number</value>
+        /// <value>{{{transferencia_credito_conta_bancaria_response_numero_conta_value}}}</value>
         [DataMember(Name="numeroConta", EmitDefaultValue=false)]
         public string NumeroConta { get; set; }
     
         /// <summary>
-        /// Digit of the account
+        /// {{{transferencia_credito_conta_bancaria_response_digito_conta_value}}}
         /// </summary>
-        /// <value>Digit of the account</value>
+        /// <value>{{{transferencia_credito_conta_bancaria_response_digito_conta_value}}}</value>
         [DataMember(Name="digitoConta", EmitDefaultValue=false)]
         public string DigitoConta { get; set; }
     
         /// <summary>
-        /// Type of the Account
+        /// {{{transferencia_credito_conta_bancaria_response_flag_conta_poupanca_value}}}
         /// </summary>
-        /// <value>Type of the Account</value>
+        /// <value>{{{transferencia_credito_conta_bancaria_response_flag_conta_poupanca_value}}}</value>
         [DataMember(Name="flagContaPoupanca", EmitDefaultValue=false)]
         public bool? FlagContaPoupanca { get; set; }
     
         /// <summary>
-        /// Document of the favored
+        /// {{{transferencia_credito_conta_bancaria_response_documento_favorecido_value}}}
         /// </summary>
-        /// <value>Document of the favored</value>
+        /// <value>{{{transferencia_credito_conta_bancaria_response_documento_favorecido_value}}}</value>
         [DataMember(Name="documentoFavorecido", EmitDefaultValue=false)]
         public string DocumentoFavorecido { get; set; }
     
         /// <summary>
-        /// Name of the favored
+        /// {{{transferencia_credito_conta_bancaria_response_nome_favorecido_value}}}
         /// </summary>
-        /// <value>Name of the favored</value>
+        /// <value>{{{transferencia_credito_conta_bancaria_response_nome_favorecido_value}}}</value>
         [DataMember(Name="nomeFavorecido", EmitDefaultValue=false)]
         public string NomeFavorecido { get; set; }
     
         /// <summary>
-        /// Code of the Status
+        /// {{{transferencia_credito_conta_bancaria_response_status_value}}}
         /// </summary>
-        /// <value>Code of the Status</value>
+        /// <value>{{{transferencia_credito_conta_bancaria_response_status_value}}}</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public string Status { get; set; }
     
         /// <summary>
-        /// Status Processing
+        /// {{{transferencia_credito_conta_bancaria_response_status_processamento_value}}}
         /// </summary>
-        /// <value>Status Processing</value>
+        /// <value>{{{transferencia_credito_conta_bancaria_response_status_processamento_value}}}</value>
         [DataMember(Name="statusProcessamento", EmitDefaultValue=false)]
         public string StatusProcessamento { get; set; }
     

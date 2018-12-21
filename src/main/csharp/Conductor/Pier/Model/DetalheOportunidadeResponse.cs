@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Detail representation of the resource answer opportunity
+    /// {{{detalhe_oportunidade_response_description}}}
     /// </summary>
     [DataContract]
     public partial class DetalheOportunidadeResponse :  IEquatable<DetalheOportunidadeResponse>
@@ -22,9 +22,9 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="DetalheOportunidadeResponse" /> class.
         /// Initializes a new instance of the <see cref="DetalheOportunidadeResponse" />class.
         /// </summary>
-        /// <param name="Id">Identifier of the detail.</param>
-        /// <param name="NomeCampo">Name of the Content.</param>
-        /// <param name="Conteudo">Content of the detail.</param>
+        /// <param name="Id">{{{detalhe_oportunidade_response_id_value}}}.</param>
+        /// <param name="NomeCampo">{{{detalhe_oportunidade_response_nome_campo_value}}}.</param>
+        /// <param name="Conteudo">{{{detalhe_oportunidade_response_conteudo_value}}}.</param>
 
         public DetalheOportunidadeResponse(long? Id = null, string NomeCampo = null, string Conteudo = null)
         {
@@ -36,23 +36,23 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Identifier of the detail
+        /// {{{detalhe_oportunidade_response_id_value}}}
         /// </summary>
-        /// <value>Identifier of the detail</value>
+        /// <value>{{{detalhe_oportunidade_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Name of the Content
+        /// {{{detalhe_oportunidade_response_nome_campo_value}}}
         /// </summary>
-        /// <value>Name of the Content</value>
+        /// <value>{{{detalhe_oportunidade_response_nome_campo_value}}}</value>
         [DataMember(Name="nomeCampo", EmitDefaultValue=false)]
         public string NomeCampo { get; set; }
     
         /// <summary>
-        /// Content of the detail
+        /// {{{detalhe_oportunidade_response_conteudo_value}}}
         /// </summary>
-        /// <value>Content of the detail</value>
+        /// <value>{{{detalhe_oportunidade_response_conteudo_value}}}</value>
         [DataMember(Name="conteudo", EmitDefaultValue=false)]
         public string Conteudo { get; set; }
     

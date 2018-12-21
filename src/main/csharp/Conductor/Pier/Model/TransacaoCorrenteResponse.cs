@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representation of the transaction resource
+    /// {{{transacao_corrente_response_description}}}
     /// </summary>
     [DataContract]
     public partial class TransacaoCorrenteResponse :  IEquatable<TransacaoCorrenteResponse>
@@ -23,24 +23,24 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TransacaoCorrenteResponse" />class.
         /// </summary>
         /// <param name="UltimaParcelaLancada">UltimaParcelaLancada.</param>
-        /// <param name="IdConta">Identification Code of the Account (id).</param>
-        /// <param name="IdTipoRegistro">Identification code of the transaction type (id).</param>
-        /// <param name="Ordem">Representation of the transaction order (id).</param>
-        /// <param name="IdTransacao">Identification Code of the transaction (id).</param>
-        /// <param name="Descricao">Attribute that represents the description of the transaction.</param>
-        /// <param name="Status">Attribute that represents the identifier code of the transaction status.</param>
-        /// <param name="DescricaoStatus">Attribute that represent the description of the transaction status.</param>
-        /// <param name="Valor">Attribute that represents the value of the transaction.</param>
-        /// <param name="ValorDolar">Attribute that represents the value in dollar of the transaction.</param>
-        /// <param name="QuantidadeParcelas">Attribute that represents the quantity of parcels of the transaction.</param>
-        /// <param name="ValorParcela">Attribute that represents the parcel value of the transaction.</param>
-        /// <param name="DataEvento">Attribute that represents the sending date of the transaction.</param>
-        /// <param name="Estabelecimento">Attribute that represents the merchant of the transaction.</param>
-        /// <param name="FlagCredito">Attribute that identifies if the transaction is a credit one or debit one.</param>
-        /// <param name="TipoEstabelecimento">Attribute that represents the type merchant of the transaction.</param>
-        /// <param name="IdGrupoMCC">Attribute that represents the MCC group of the transaction.</param>
-        /// <param name="FlagSolicitouContestacao">Attribute that identifier if the cardholder requested the contesting of the transaction.</param>
-        /// <param name="TipoTransacao">Attribute that identifies if the transaction is a credit one or debit one.</param>
+        /// <param name="IdConta">{{{transacao_corrente_response_id_conta_value}}}.</param>
+        /// <param name="IdTipoRegistro">{{{transacao_corrente_response_id_tipo_registro_value}}}.</param>
+        /// <param name="Ordem">{{{transacao_corrente_response_ordem_value}}}.</param>
+        /// <param name="IdTransacao">{{{transacao_corrente_response_id_transacao_value}}}.</param>
+        /// <param name="Descricao">{{{transacao_corrente_response_descricao_value}}}.</param>
+        /// <param name="Status">{{{transacao_corrente_response_status_value}}}.</param>
+        /// <param name="DescricaoStatus">{{{transacao_corrente_response_descricao_status_value}}}.</param>
+        /// <param name="Valor">{{{transacao_corrente_response_valor_value}}}.</param>
+        /// <param name="ValorDolar">{{{transacao_corrente_response_valor_dolar_value}}}.</param>
+        /// <param name="QuantidadeParcelas">{{{transacao_corrente_response_quantidade_parcelas_value}}}.</param>
+        /// <param name="ValorParcela">{{{transacao_corrente_response_valor_parcela_value}}}.</param>
+        /// <param name="DataEvento">{{{transacao_corrente_response_data_evento_value}}}.</param>
+        /// <param name="Estabelecimento">{{{transacao_corrente_response_estabelecimento_value}}}.</param>
+        /// <param name="FlagCredito">{{{transacao_corrente_response_flag_credito_value}}}.</param>
+        /// <param name="TipoEstabelecimento">{{{transacao_corrente_response_tipo_estabelecimento_value}}}.</param>
+        /// <param name="IdGrupoMCC">{{{transacao_corrente_response_id_grupo_m_c_c_value}}}.</param>
+        /// <param name="FlagSolicitouContestacao">{{{transacao_corrente_response_flag_solicitou_contestacao_value}}}.</param>
+        /// <param name="TipoTransacao">{{{transacao_corrente_response_tipo_transacao_value}}}.</param>
 
         public TransacaoCorrenteResponse(int? UltimaParcelaLancada = null, long? IdConta = null, long? IdTipoRegistro = null, int? Ordem = null, long? IdTransacao = null, string Descricao = null, int? Status = null, string DescricaoStatus = null, double? Valor = null, double? ValorDolar = null, int? QuantidadeParcelas = null, double? ValorParcela = null, string DataEvento = null, string Estabelecimento = null, int? FlagCredito = null, string TipoEstabelecimento = null, int? IdGrupoMCC = null, int? FlagSolicitouContestacao = null, int? TipoTransacao = null)
         {
@@ -74,128 +74,128 @@ namespace Conductor.Pier.Model
         public int? UltimaParcelaLancada { get; set; }
     
         /// <summary>
-        /// Identification Code of the Account (id)
+        /// {{{transacao_corrente_response_id_conta_value}}}
         /// </summary>
-        /// <value>Identification Code of the Account (id)</value>
+        /// <value>{{{transacao_corrente_response_id_conta_value}}}</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// Identification code of the transaction type (id)
+        /// {{{transacao_corrente_response_id_tipo_registro_value}}}
         /// </summary>
-        /// <value>Identification code of the transaction type (id)</value>
+        /// <value>{{{transacao_corrente_response_id_tipo_registro_value}}}</value>
         [DataMember(Name="idTipoRegistro", EmitDefaultValue=false)]
         public long? IdTipoRegistro { get; set; }
     
         /// <summary>
-        /// Representation of the transaction order (id)
+        /// {{{transacao_corrente_response_ordem_value}}}
         /// </summary>
-        /// <value>Representation of the transaction order (id)</value>
+        /// <value>{{{transacao_corrente_response_ordem_value}}}</value>
         [DataMember(Name="ordem", EmitDefaultValue=false)]
         public int? Ordem { get; set; }
     
         /// <summary>
-        /// Identification Code of the transaction (id)
+        /// {{{transacao_corrente_response_id_transacao_value}}}
         /// </summary>
-        /// <value>Identification Code of the transaction (id)</value>
+        /// <value>{{{transacao_corrente_response_id_transacao_value}}}</value>
         [DataMember(Name="idTransacao", EmitDefaultValue=false)]
         public long? IdTransacao { get; set; }
     
         /// <summary>
-        /// Attribute that represents the description of the transaction
+        /// {{{transacao_corrente_response_descricao_value}}}
         /// </summary>
-        /// <value>Attribute that represents the description of the transaction</value>
+        /// <value>{{{transacao_corrente_response_descricao_value}}}</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     
         /// <summary>
-        /// Attribute that represents the identifier code of the transaction status
+        /// {{{transacao_corrente_response_status_value}}}
         /// </summary>
-        /// <value>Attribute that represents the identifier code of the transaction status</value>
+        /// <value>{{{transacao_corrente_response_status_value}}}</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public int? Status { get; set; }
     
         /// <summary>
-        /// Attribute that represent the description of the transaction status
+        /// {{{transacao_corrente_response_descricao_status_value}}}
         /// </summary>
-        /// <value>Attribute that represent the description of the transaction status</value>
+        /// <value>{{{transacao_corrente_response_descricao_status_value}}}</value>
         [DataMember(Name="descricaoStatus", EmitDefaultValue=false)]
         public string DescricaoStatus { get; set; }
     
         /// <summary>
-        /// Attribute that represents the value of the transaction
+        /// {{{transacao_corrente_response_valor_value}}}
         /// </summary>
-        /// <value>Attribute that represents the value of the transaction</value>
+        /// <value>{{{transacao_corrente_response_valor_value}}}</value>
         [DataMember(Name="valor", EmitDefaultValue=false)]
         public double? Valor { get; set; }
     
         /// <summary>
-        /// Attribute that represents the value in dollar of the transaction
+        /// {{{transacao_corrente_response_valor_dolar_value}}}
         /// </summary>
-        /// <value>Attribute that represents the value in dollar of the transaction</value>
+        /// <value>{{{transacao_corrente_response_valor_dolar_value}}}</value>
         [DataMember(Name="valorDolar", EmitDefaultValue=false)]
         public double? ValorDolar { get; set; }
     
         /// <summary>
-        /// Attribute that represents the quantity of parcels of the transaction
+        /// {{{transacao_corrente_response_quantidade_parcelas_value}}}
         /// </summary>
-        /// <value>Attribute that represents the quantity of parcels of the transaction</value>
+        /// <value>{{{transacao_corrente_response_quantidade_parcelas_value}}}</value>
         [DataMember(Name="quantidadeParcelas", EmitDefaultValue=false)]
         public int? QuantidadeParcelas { get; set; }
     
         /// <summary>
-        /// Attribute that represents the parcel value of the transaction
+        /// {{{transacao_corrente_response_valor_parcela_value}}}
         /// </summary>
-        /// <value>Attribute that represents the parcel value of the transaction</value>
+        /// <value>{{{transacao_corrente_response_valor_parcela_value}}}</value>
         [DataMember(Name="valorParcela", EmitDefaultValue=false)]
         public double? ValorParcela { get; set; }
     
         /// <summary>
-        /// Attribute that represents the sending date of the transaction
+        /// {{{transacao_corrente_response_data_evento_value}}}
         /// </summary>
-        /// <value>Attribute that represents the sending date of the transaction</value>
+        /// <value>{{{transacao_corrente_response_data_evento_value}}}</value>
         [DataMember(Name="dataEvento", EmitDefaultValue=false)]
         public string DataEvento { get; set; }
     
         /// <summary>
-        /// Attribute that represents the merchant of the transaction
+        /// {{{transacao_corrente_response_estabelecimento_value}}}
         /// </summary>
-        /// <value>Attribute that represents the merchant of the transaction</value>
+        /// <value>{{{transacao_corrente_response_estabelecimento_value}}}</value>
         [DataMember(Name="estabelecimento", EmitDefaultValue=false)]
         public string Estabelecimento { get; set; }
     
         /// <summary>
-        /// Attribute that identifies if the transaction is a credit one or debit one
+        /// {{{transacao_corrente_response_flag_credito_value}}}
         /// </summary>
-        /// <value>Attribute that identifies if the transaction is a credit one or debit one</value>
+        /// <value>{{{transacao_corrente_response_flag_credito_value}}}</value>
         [DataMember(Name="flagCredito", EmitDefaultValue=false)]
         public int? FlagCredito { get; set; }
     
         /// <summary>
-        /// Attribute that represents the type merchant of the transaction
+        /// {{{transacao_corrente_response_tipo_estabelecimento_value}}}
         /// </summary>
-        /// <value>Attribute that represents the type merchant of the transaction</value>
+        /// <value>{{{transacao_corrente_response_tipo_estabelecimento_value}}}</value>
         [DataMember(Name="tipoEstabelecimento", EmitDefaultValue=false)]
         public string TipoEstabelecimento { get; set; }
     
         /// <summary>
-        /// Attribute that represents the MCC group of the transaction
+        /// {{{transacao_corrente_response_id_grupo_m_c_c_value}}}
         /// </summary>
-        /// <value>Attribute that represents the MCC group of the transaction</value>
+        /// <value>{{{transacao_corrente_response_id_grupo_m_c_c_value}}}</value>
         [DataMember(Name="idGrupoMCC", EmitDefaultValue=false)]
         public int? IdGrupoMCC { get; set; }
     
         /// <summary>
-        /// Attribute that identifier if the cardholder requested the contesting of the transaction
+        /// {{{transacao_corrente_response_flag_solicitou_contestacao_value}}}
         /// </summary>
-        /// <value>Attribute that identifier if the cardholder requested the contesting of the transaction</value>
+        /// <value>{{{transacao_corrente_response_flag_solicitou_contestacao_value}}}</value>
         [DataMember(Name="flagSolicitouContestacao", EmitDefaultValue=false)]
         public int? FlagSolicitouContestacao { get; set; }
     
         /// <summary>
-        /// Attribute that identifies if the transaction is a credit one or debit one
+        /// {{{transacao_corrente_response_tipo_transacao_value}}}
         /// </summary>
-        /// <value>Attribute that identifies if the transaction is a credit one or debit one</value>
+        /// <value>{{{transacao_corrente_response_tipo_transacao_value}}}</value>
         [DataMember(Name="tipoTransacao", EmitDefaultValue=false)]
         public int? TipoTransacao { get; set; }
     

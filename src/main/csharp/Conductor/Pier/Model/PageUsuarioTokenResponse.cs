@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// The list of all active tokens
+    /// {{{page_usuario_token_resposta_descricao}}}
     /// </summary>
     [DataContract]
     public partial class PageUsuarioTokenResponse :  IEquatable<PageUsuarioTokenResponse>

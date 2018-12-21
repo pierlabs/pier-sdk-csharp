@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// response Representation of the Annuity types resource
+    /// {{{page_anuidade_response_description}}}
     /// </summary>
     [DataContract]
     public partial class PageAnuidadeResponse :  IEquatable<PageAnuidadeResponse>

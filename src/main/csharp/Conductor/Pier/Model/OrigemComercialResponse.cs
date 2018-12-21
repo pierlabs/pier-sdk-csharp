@@ -12,16 +12,16 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Response Representation of the commercial origin resource
+    /// {{{origem_comercial_response_description}}}
     /// </summary>
     [DataContract]
     public partial class OrigemComercialResponse :  IEquatable<OrigemComercialResponse>
     { 
     
         /// <summary>
-        /// Person type
+        /// {{{origem_comercial_response_tipo_pessoa_value}}}
         /// </summary>
-        /// <value>Person type</value>
+        /// <value>{{{origem_comercial_response_tipo_pessoa_value}}}</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum TipoPessoaEnum {
             
@@ -34,9 +34,9 @@ namespace Conductor.Pier.Model
 
     
         /// <summary>
-        /// Person type
+        /// {{{origem_comercial_response_tipo_pessoa_value}}}
         /// </summary>
-        /// <value>Person type</value>
+        /// <value>{{{origem_comercial_response_tipo_pessoa_value}}}</value>
         [DataMember(Name="tipoPessoa", EmitDefaultValue=false)]
         public TipoPessoaEnum? TipoPessoa { get; set; }
     
@@ -44,32 +44,32 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="OrigemComercialResponse" /> class.
         /// Initializes a new instance of the <see cref="OrigemComercialResponse" />class.
         /// </summary>
-        /// <param name="Id">Identifier Code of the OriginCommercial.</param>
-        /// <param name="Nome">Name of the Commercial Origin.</param>
-        /// <param name="Descricao">Complete Description of the name of Commercial Origin.</param>
-        /// <param name="ProdutosOrigem">Products of the commercial origin.</param>
-        /// <param name="IdEstabelecimento">Identification Code of the Merchant.</param>
-        /// <param name="IdTipoOrigemComercial">Identification Code of the type of Commercial Origin.</param>
-        /// <param name="NomeTipoOrigemComercial">Name of Type of the Commercial Origin.</param>
-        /// <param name="IdGrupoOrigemComercial">Group identifier of the Commercial Origin.</param>
-        /// <param name="NomeGrupoOrigemComercial">Group Name of the Commercial Origin.</param>
-        /// <param name="Status">Indicate the status of the Commercial Origin.</param>
-        /// <param name="FlagPreAprovado">Indicate if it allows pre approval.</param>
-        /// <param name="FlagAprovacaoImediata">Indicate if it allows immediate approval.</param>
-        /// <param name="NomeFantasiaPlastico">Fantasy Name printed on plastic.</param>
-        /// <param name="FlagCartaoProvisorio">Indicate if it allows provisory card.</param>
-        /// <param name="FlagCartaoDefinitivo">Indicate if it allows definitive card.</param>
-        /// <param name="Usuario">User for the authentication.</param>
-        /// <param name="Senha">Authentication Password.</param>
-        /// <param name="FlagOrigemExterna">Indicate if it is external origin.</param>
-        /// <param name="FlagModificado">Indicate if there is modification.</param>
-        /// <param name="FlagEnviaFaturaUsuario">Indicate if it sends invoice.</param>
-        /// <param name="FlagCreditoFaturamento">Indicate if it allows the billing credit.</param>
-        /// <param name="FlagConcedeLimiteProvisorio">Indicate if it grants provisory limit.</param>
-        /// <param name="FlagDigitalizarDoc">Indicate if it digitalizes document.</param>
-        /// <param name="FlagEmbossingLoja">Indicate if it makes embossing in the store.</param>
-        /// <param name="FlagConsultaPrevia">Indicate if it makes the prior retrieve.</param>
-        /// <param name="TipoPessoa">Person type.</param>
+        /// <param name="Id">{{{origem_comercial_response_id_value}}}.</param>
+        /// <param name="Nome">{{{origem_comercial_response_nome_value}}}.</param>
+        /// <param name="Descricao">{{{origem_comercial_response_descricao_value}}}.</param>
+        /// <param name="ProdutosOrigem">{{{origem_comercial_response_produtos_origem_value}}}.</param>
+        /// <param name="IdEstabelecimento">{{{origem_comercial_response_id_estabelecimento_value}}}.</param>
+        /// <param name="IdTipoOrigemComercial">{{{origem_comercial_response_id_tipo_origem_comercial_value}}}.</param>
+        /// <param name="NomeTipoOrigemComercial">{{{origem_comercial_response_nome_tipo_origem_comercial_value}}}.</param>
+        /// <param name="IdGrupoOrigemComercial">{{{origem_comercial_response_id_grupo_origem_comercial_value}}}.</param>
+        /// <param name="NomeGrupoOrigemComercial">{{{origem_comercial_response_nome_grupo_origem_comercial_value}}}.</param>
+        /// <param name="Status">{{{origem_comercial_response_status_value}}}.</param>
+        /// <param name="FlagPreAprovado">{{{origem_comercial_response_flag_pre_aprovado_value}}}.</param>
+        /// <param name="FlagAprovacaoImediata">{{{origem_comercial_response_flag_aprovacao_imediata_value}}}.</param>
+        /// <param name="NomeFantasiaPlastico">{{{origem_comercial_response_nome_fantasia_plastico_value}}}.</param>
+        /// <param name="FlagCartaoProvisorio">{{{origem_comercial_response_flag_cartao_provisorio_value}}}.</param>
+        /// <param name="FlagCartaoDefinitivo">{{{origem_comercial_response_flag_cartao_definitivo_value}}}.</param>
+        /// <param name="Usuario">{{{origem_comercial_response_usuario_value}}}.</param>
+        /// <param name="Senha">{{{origem_comercial_response_senha_value}}}.</param>
+        /// <param name="FlagOrigemExterna">{{{origem_comercial_response_flag_origem_externa_value}}}.</param>
+        /// <param name="FlagModificado">{{{origem_comercial_response_flag_modificado_value}}}.</param>
+        /// <param name="FlagEnviaFaturaUsuario">{{{origem_comercial_response_flag_envia_fatura_usuario_value}}}.</param>
+        /// <param name="FlagCreditoFaturamento">{{{origem_comercial_response_flag_credito_faturamento_value}}}.</param>
+        /// <param name="FlagConcedeLimiteProvisorio">{{{origem_comercial_response_flag_concede_limite_provisorio_value}}}.</param>
+        /// <param name="FlagDigitalizarDoc">{{{origem_comercial_response_flag_digitalizar_doc_value}}}.</param>
+        /// <param name="FlagEmbossingLoja">{{{origem_comercial_response_flag_embossing_loja_value}}}.</param>
+        /// <param name="FlagConsultaPrevia">{{{origem_comercial_response_flag_consulta_previa_value}}}.</param>
+        /// <param name="TipoPessoa">{{{origem_comercial_response_tipo_pessoa_value}}}.</param>
 
         public OrigemComercialResponse(long? Id = null, string Nome = null, string Descricao = null, List<ProdutoOrigemResponse> ProdutosOrigem = null, long? IdEstabelecimento = null, long? IdTipoOrigemComercial = null, string NomeTipoOrigemComercial = null, long? IdGrupoOrigemComercial = null, string NomeGrupoOrigemComercial = null, int? Status = null, bool? FlagPreAprovado = null, bool? FlagAprovacaoImediata = null, string NomeFantasiaPlastico = null, bool? FlagCartaoProvisorio = null, bool? FlagCartaoDefinitivo = null, string Usuario = null, string Senha = null, bool? FlagOrigemExterna = null, bool? FlagModificado = null, bool? FlagEnviaFaturaUsuario = null, bool? FlagCreditoFaturamento = null, bool? FlagConcedeLimiteProvisorio = null, bool? FlagDigitalizarDoc = null, bool? FlagEmbossingLoja = null, bool? FlagConsultaPrevia = null, TipoPessoaEnum? TipoPessoa = null)
         {
@@ -104,177 +104,177 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Identifier Code of the OriginCommercial
+        /// {{{origem_comercial_response_id_value}}}
         /// </summary>
-        /// <value>Identifier Code of the OriginCommercial</value>
+        /// <value>{{{origem_comercial_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Name of the Commercial Origin
+        /// {{{origem_comercial_response_nome_value}}}
         /// </summary>
-        /// <value>Name of the Commercial Origin</value>
+        /// <value>{{{origem_comercial_response_nome_value}}}</value>
         [DataMember(Name="nome", EmitDefaultValue=false)]
         public string Nome { get; set; }
     
         /// <summary>
-        /// Complete Description of the name of Commercial Origin
+        /// {{{origem_comercial_response_descricao_value}}}
         /// </summary>
-        /// <value>Complete Description of the name of Commercial Origin</value>
+        /// <value>{{{origem_comercial_response_descricao_value}}}</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     
         /// <summary>
-        /// Products of the commercial origin
+        /// {{{origem_comercial_response_produtos_origem_value}}}
         /// </summary>
-        /// <value>Products of the commercial origin</value>
+        /// <value>{{{origem_comercial_response_produtos_origem_value}}}</value>
         [DataMember(Name="produtosOrigem", EmitDefaultValue=false)]
         public List<ProdutoOrigemResponse> ProdutosOrigem { get; set; }
     
         /// <summary>
-        /// Identification Code of the Merchant
+        /// {{{origem_comercial_response_id_estabelecimento_value}}}
         /// </summary>
-        /// <value>Identification Code of the Merchant</value>
+        /// <value>{{{origem_comercial_response_id_estabelecimento_value}}}</value>
         [DataMember(Name="idEstabelecimento", EmitDefaultValue=false)]
         public long? IdEstabelecimento { get; set; }
     
         /// <summary>
-        /// Identification Code of the type of Commercial Origin
+        /// {{{origem_comercial_response_id_tipo_origem_comercial_value}}}
         /// </summary>
-        /// <value>Identification Code of the type of Commercial Origin</value>
+        /// <value>{{{origem_comercial_response_id_tipo_origem_comercial_value}}}</value>
         [DataMember(Name="idTipoOrigemComercial", EmitDefaultValue=false)]
         public long? IdTipoOrigemComercial { get; set; }
     
         /// <summary>
-        /// Name of Type of the Commercial Origin
+        /// {{{origem_comercial_response_nome_tipo_origem_comercial_value}}}
         /// </summary>
-        /// <value>Name of Type of the Commercial Origin</value>
+        /// <value>{{{origem_comercial_response_nome_tipo_origem_comercial_value}}}</value>
         [DataMember(Name="nomeTipoOrigemComercial", EmitDefaultValue=false)]
         public string NomeTipoOrigemComercial { get; set; }
     
         /// <summary>
-        /// Group identifier of the Commercial Origin
+        /// {{{origem_comercial_response_id_grupo_origem_comercial_value}}}
         /// </summary>
-        /// <value>Group identifier of the Commercial Origin</value>
+        /// <value>{{{origem_comercial_response_id_grupo_origem_comercial_value}}}</value>
         [DataMember(Name="idGrupoOrigemComercial", EmitDefaultValue=false)]
         public long? IdGrupoOrigemComercial { get; set; }
     
         /// <summary>
-        /// Group Name of the Commercial Origin
+        /// {{{origem_comercial_response_nome_grupo_origem_comercial_value}}}
         /// </summary>
-        /// <value>Group Name of the Commercial Origin</value>
+        /// <value>{{{origem_comercial_response_nome_grupo_origem_comercial_value}}}</value>
         [DataMember(Name="nomeGrupoOrigemComercial", EmitDefaultValue=false)]
         public string NomeGrupoOrigemComercial { get; set; }
     
         /// <summary>
-        /// Indicate the status of the Commercial Origin
+        /// {{{origem_comercial_response_status_value}}}
         /// </summary>
-        /// <value>Indicate the status of the Commercial Origin</value>
+        /// <value>{{{origem_comercial_response_status_value}}}</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public int? Status { get; set; }
     
         /// <summary>
-        /// Indicate if it allows pre approval
+        /// {{{origem_comercial_response_flag_pre_aprovado_value}}}
         /// </summary>
-        /// <value>Indicate if it allows pre approval</value>
+        /// <value>{{{origem_comercial_response_flag_pre_aprovado_value}}}</value>
         [DataMember(Name="flagPreAprovado", EmitDefaultValue=false)]
         public bool? FlagPreAprovado { get; set; }
     
         /// <summary>
-        /// Indicate if it allows immediate approval
+        /// {{{origem_comercial_response_flag_aprovacao_imediata_value}}}
         /// </summary>
-        /// <value>Indicate if it allows immediate approval</value>
+        /// <value>{{{origem_comercial_response_flag_aprovacao_imediata_value}}}</value>
         [DataMember(Name="flagAprovacaoImediata", EmitDefaultValue=false)]
         public bool? FlagAprovacaoImediata { get; set; }
     
         /// <summary>
-        /// Fantasy Name printed on plastic
+        /// {{{origem_comercial_response_nome_fantasia_plastico_value}}}
         /// </summary>
-        /// <value>Fantasy Name printed on plastic</value>
+        /// <value>{{{origem_comercial_response_nome_fantasia_plastico_value}}}</value>
         [DataMember(Name="nomeFantasiaPlastico", EmitDefaultValue=false)]
         public string NomeFantasiaPlastico { get; set; }
     
         /// <summary>
-        /// Indicate if it allows provisory card
+        /// {{{origem_comercial_response_flag_cartao_provisorio_value}}}
         /// </summary>
-        /// <value>Indicate if it allows provisory card</value>
+        /// <value>{{{origem_comercial_response_flag_cartao_provisorio_value}}}</value>
         [DataMember(Name="flagCartaoProvisorio", EmitDefaultValue=false)]
         public bool? FlagCartaoProvisorio { get; set; }
     
         /// <summary>
-        /// Indicate if it allows definitive card
+        /// {{{origem_comercial_response_flag_cartao_definitivo_value}}}
         /// </summary>
-        /// <value>Indicate if it allows definitive card</value>
+        /// <value>{{{origem_comercial_response_flag_cartao_definitivo_value}}}</value>
         [DataMember(Name="flagCartaoDefinitivo", EmitDefaultValue=false)]
         public bool? FlagCartaoDefinitivo { get; set; }
     
         /// <summary>
-        /// User for the authentication
+        /// {{{origem_comercial_response_usuario_value}}}
         /// </summary>
-        /// <value>User for the authentication</value>
+        /// <value>{{{origem_comercial_response_usuario_value}}}</value>
         [DataMember(Name="usuario", EmitDefaultValue=false)]
         public string Usuario { get; set; }
     
         /// <summary>
-        /// Authentication Password
+        /// {{{origem_comercial_response_senha_value}}}
         /// </summary>
-        /// <value>Authentication Password</value>
+        /// <value>{{{origem_comercial_response_senha_value}}}</value>
         [DataMember(Name="senha", EmitDefaultValue=false)]
         public string Senha { get; set; }
     
         /// <summary>
-        /// Indicate if it is external origin
+        /// {{{origem_comercial_response_flag_origem_externa_value}}}
         /// </summary>
-        /// <value>Indicate if it is external origin</value>
+        /// <value>{{{origem_comercial_response_flag_origem_externa_value}}}</value>
         [DataMember(Name="flagOrigemExterna", EmitDefaultValue=false)]
         public bool? FlagOrigemExterna { get; set; }
     
         /// <summary>
-        /// Indicate if there is modification
+        /// {{{origem_comercial_response_flag_modificado_value}}}
         /// </summary>
-        /// <value>Indicate if there is modification</value>
+        /// <value>{{{origem_comercial_response_flag_modificado_value}}}</value>
         [DataMember(Name="flagModificado", EmitDefaultValue=false)]
         public bool? FlagModificado { get; set; }
     
         /// <summary>
-        /// Indicate if it sends invoice
+        /// {{{origem_comercial_response_flag_envia_fatura_usuario_value}}}
         /// </summary>
-        /// <value>Indicate if it sends invoice</value>
+        /// <value>{{{origem_comercial_response_flag_envia_fatura_usuario_value}}}</value>
         [DataMember(Name="flagEnviaFaturaUsuario", EmitDefaultValue=false)]
         public bool? FlagEnviaFaturaUsuario { get; set; }
     
         /// <summary>
-        /// Indicate if it allows the billing credit
+        /// {{{origem_comercial_response_flag_credito_faturamento_value}}}
         /// </summary>
-        /// <value>Indicate if it allows the billing credit</value>
+        /// <value>{{{origem_comercial_response_flag_credito_faturamento_value}}}</value>
         [DataMember(Name="flagCreditoFaturamento", EmitDefaultValue=false)]
         public bool? FlagCreditoFaturamento { get; set; }
     
         /// <summary>
-        /// Indicate if it grants provisory limit
+        /// {{{origem_comercial_response_flag_concede_limite_provisorio_value}}}
         /// </summary>
-        /// <value>Indicate if it grants provisory limit</value>
+        /// <value>{{{origem_comercial_response_flag_concede_limite_provisorio_value}}}</value>
         [DataMember(Name="flagConcedeLimiteProvisorio", EmitDefaultValue=false)]
         public bool? FlagConcedeLimiteProvisorio { get; set; }
     
         /// <summary>
-        /// Indicate if it digitalizes document
+        /// {{{origem_comercial_response_flag_digitalizar_doc_value}}}
         /// </summary>
-        /// <value>Indicate if it digitalizes document</value>
+        /// <value>{{{origem_comercial_response_flag_digitalizar_doc_value}}}</value>
         [DataMember(Name="flagDigitalizarDoc", EmitDefaultValue=false)]
         public bool? FlagDigitalizarDoc { get; set; }
     
         /// <summary>
-        /// Indicate if it makes embossing in the store
+        /// {{{origem_comercial_response_flag_embossing_loja_value}}}
         /// </summary>
-        /// <value>Indicate if it makes embossing in the store</value>
+        /// <value>{{{origem_comercial_response_flag_embossing_loja_value}}}</value>
         [DataMember(Name="flagEmbossingLoja", EmitDefaultValue=false)]
         public bool? FlagEmbossingLoja { get; set; }
     
         /// <summary>
-        /// Indicate if it makes the prior retrieve
+        /// {{{origem_comercial_response_flag_consulta_previa_value}}}
         /// </summary>
-        /// <value>Indicate if it makes the prior retrieve</value>
+        /// <value>{{{origem_comercial_response_flag_consulta_previa_value}}}</value>
         [DataMember(Name="flagConsultaPrevia", EmitDefaultValue=false)]
         public bool? FlagConsultaPrevia { get; set; }
     

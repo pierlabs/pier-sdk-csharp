@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// List resolutions of contestation
+    /// {{{page_tipo_resolucao_contestacao_response_description}}}
     /// </summary>
     [DataContract]
     public partial class PageTipoResolucaoContestacaoResponse :  IEquatable<PageTipoResolucaoContestacaoResponse>

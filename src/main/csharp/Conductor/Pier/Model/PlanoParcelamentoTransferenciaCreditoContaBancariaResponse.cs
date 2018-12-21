@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Installment plan for the credit transfer to bank accounts
+    /// {{{plano_parcelamento_transferencia_credito_conta_bancaria_response_description}}}
     /// </summary>
     [DataContract]
     public partial class PlanoParcelamentoTransferenciaCreditoContaBancariaResponse :  IEquatable<PlanoParcelamentoTransferenciaCreditoContaBancariaResponse>
@@ -22,11 +22,11 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="PlanoParcelamentoTransferenciaCreditoContaBancariaResponse" /> class.
         /// Initializes a new instance of the <see cref="PlanoParcelamentoTransferenciaCreditoContaBancariaResponse" />class.
         /// </summary>
-        /// <param name="NumeroMascaradoCartao">Card Number that originated the transaction in the masked format.</param>
-        /// <param name="VencimentoPrimeiraParcela">Expiration date of the first parcel.</param>
-        /// <param name="ValorTransacao">Value of teh withdrawal request.</param>
-        /// <param name="NumeroMesesCarencia">Number of the Months for Lack.</param>
-        /// <param name="Parcelas">List with the installment plans.</param>
+        /// <param name="NumeroMascaradoCartao">{{{plano_parcelamento_transferencia_credito_conta_bancaria_response_numero_mascarado_cartao_value}}}.</param>
+        /// <param name="VencimentoPrimeiraParcela">{{{plano_parcelamento_transferencia_credito_conta_bancaria_response_vencimento_primeira_parcela_value}}}.</param>
+        /// <param name="ValorTransacao">{{{plano_parcelamento_transferencia_credito_conta_bancaria_response_valor_transacao_value}}}.</param>
+        /// <param name="NumeroMesesCarencia">{{{plano_parcelamento_transferencia_credito_conta_bancaria_response_numero_meses_carencia_value}}}.</param>
+        /// <param name="Parcelas">{{{plano_parcelamento_transferencia_credito_conta_bancaria_response_parcelas_value}}}.</param>
 
         public PlanoParcelamentoTransferenciaCreditoContaBancariaResponse(string NumeroMascaradoCartao = null, string VencimentoPrimeiraParcela = null, double? ValorTransacao = null, int? NumeroMesesCarencia = null, List<ParcelamentoTransferenciaResponse> Parcelas = null)
         {
@@ -40,37 +40,37 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Card Number that originated the transaction in the masked format
+        /// {{{plano_parcelamento_transferencia_credito_conta_bancaria_response_numero_mascarado_cartao_value}}}
         /// </summary>
-        /// <value>Card Number that originated the transaction in the masked format</value>
+        /// <value>{{{plano_parcelamento_transferencia_credito_conta_bancaria_response_numero_mascarado_cartao_value}}}</value>
         [DataMember(Name="numeroMascaradoCartao", EmitDefaultValue=false)]
         public string NumeroMascaradoCartao { get; set; }
     
         /// <summary>
-        /// Expiration date of the first parcel
+        /// {{{plano_parcelamento_transferencia_credito_conta_bancaria_response_vencimento_primeira_parcela_value}}}
         /// </summary>
-        /// <value>Expiration date of the first parcel</value>
+        /// <value>{{{plano_parcelamento_transferencia_credito_conta_bancaria_response_vencimento_primeira_parcela_value}}}</value>
         [DataMember(Name="vencimentoPrimeiraParcela", EmitDefaultValue=false)]
         public string VencimentoPrimeiraParcela { get; set; }
     
         /// <summary>
-        /// Value of teh withdrawal request
+        /// {{{plano_parcelamento_transferencia_credito_conta_bancaria_response_valor_transacao_value}}}
         /// </summary>
-        /// <value>Value of teh withdrawal request</value>
+        /// <value>{{{plano_parcelamento_transferencia_credito_conta_bancaria_response_valor_transacao_value}}}</value>
         [DataMember(Name="valorTransacao", EmitDefaultValue=false)]
         public double? ValorTransacao { get; set; }
     
         /// <summary>
-        /// Number of the Months for Lack
+        /// {{{plano_parcelamento_transferencia_credito_conta_bancaria_response_numero_meses_carencia_value}}}
         /// </summary>
-        /// <value>Number of the Months for Lack</value>
+        /// <value>{{{plano_parcelamento_transferencia_credito_conta_bancaria_response_numero_meses_carencia_value}}}</value>
         [DataMember(Name="numeroMesesCarencia", EmitDefaultValue=false)]
         public int? NumeroMesesCarencia { get; set; }
     
         /// <summary>
-        /// List with the installment plans
+        /// {{{plano_parcelamento_transferencia_credito_conta_bancaria_response_parcelas_value}}}
         /// </summary>
-        /// <value>List with the installment plans</value>
+        /// <value>{{{plano_parcelamento_transferencia_credito_conta_bancaria_response_parcelas_value}}}</value>
         [DataMember(Name="parcelas", EmitDefaultValue=false)]
         public List<ParcelamentoTransferenciaResponse> Parcelas { get; set; }
     

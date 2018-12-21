@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Bank list
+    /// {{{page_banco_response_description}}}
     /// </summary>
     [DataContract]
     public partial class PageBancoResponse :  IEquatable<PageBancoResponse>

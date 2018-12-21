@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Device list
+    /// {{{page_dispositivo_response_description}}}
     /// </summary>
     [DataContract]
     public partial class PageDispositivoResponse :  IEquatable<PageDispositivoResponse>

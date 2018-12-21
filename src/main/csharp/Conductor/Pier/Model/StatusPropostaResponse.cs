@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representation of the proposal status service response
+    /// {{{status_proposta_response_description}}}
     /// </summary>
     [DataContract]
     public partial class StatusPropostaResponse :  IEquatable<StatusPropostaResponse>
@@ -22,10 +22,10 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="StatusPropostaResponse" /> class.
         /// Initializes a new instance of the <see cref="StatusPropostaResponse" />class.
         /// </summary>
-        /// <param name="Id">Proposal Identification Status Code (id).</param>
-        /// <param name="Status">Proposal Status.</param>
-        /// <param name="Descricao">Description of the proposal.</param>
-        /// <param name="FlagPermiteAlteracao">Flag that allows you to change the status of the proposal.</param>
+        /// <param name="Id">{{{status_proposta_response_id_value}}}.</param>
+        /// <param name="Status">{{{status_proposta_response_status_value}}}.</param>
+        /// <param name="Descricao">{{{status_proposta_response_descricao_value}}}.</param>
+        /// <param name="FlagPermiteAlteracao">{{{status_proposta_response_flag_permite_alteracao_value}}}.</param>
 
         public StatusPropostaResponse(long? Id = null, int? Status = null, string Descricao = null, bool? FlagPermiteAlteracao = null)
         {
@@ -38,30 +38,30 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Proposal Identification Status Code (id)
+        /// {{{status_proposta_response_id_value}}}
         /// </summary>
-        /// <value>Proposal Identification Status Code (id)</value>
+        /// <value>{{{status_proposta_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Proposal Status
+        /// {{{status_proposta_response_status_value}}}
         /// </summary>
-        /// <value>Proposal Status</value>
+        /// <value>{{{status_proposta_response_status_value}}}</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public int? Status { get; set; }
     
         /// <summary>
-        /// Description of the proposal
+        /// {{{status_proposta_response_descricao_value}}}
         /// </summary>
-        /// <value>Description of the proposal</value>
+        /// <value>{{{status_proposta_response_descricao_value}}}</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     
         /// <summary>
-        /// Flag that allows you to change the status of the proposal
+        /// {{{status_proposta_response_flag_permite_alteracao_value}}}
         /// </summary>
-        /// <value>Flag that allows you to change the status of the proposal</value>
+        /// <value>{{{status_proposta_response_flag_permite_alteracao_value}}}</value>
         [DataMember(Name="flagPermiteAlteracao", EmitDefaultValue=false)]
         public bool? FlagPermiteAlteracao { get; set; }
     

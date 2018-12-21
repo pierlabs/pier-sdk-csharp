@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Object Additionanl
+    /// {{{adicional_update_description}}}
     /// </summary>
     [DataContract]
     public partial class AdicionalUpdate :  IEquatable<AdicionalUpdate>
@@ -22,17 +22,17 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="AdicionalUpdate" /> class.
         /// Initializes a new instance of the <see cref="AdicionalUpdate" />class.
         /// </summary>
-        /// <param name="Nome">Full name of the additional (required).</param>
-        /// <param name="NomeImpresso">Additional name that will be printed on the card.</param>
-        /// <param name="NumeroReceitaFederal">Federal Revenue Number (required).</param>
-        /// <param name="DataNascimento">Birth date of the additional in the format yyyy-MM-dd.</param>
-        /// <param name="Sexo">Additional Gender.</param>
-        /// <param name="NumeroIdentidade">Identity number of the Additional.</param>
-        /// <param name="OrgaoExpedidorIdentidade">Name of the Issuer organ of the Additional Identity Document.</param>
-        /// <param name="UnidadeFederativaIdentidade">Federative unit.</param>
-        /// <param name="DataEmissaoIdentidade">Issue date of the identity document of the additional in the format yyyy-MM-dd.</param>
-        /// <param name="IdParentesco">Identification Code of the Additional Kinship with the Owner.</param>
-        /// <param name="Telefones">Additional Telephone List.</param>
+        /// <param name="Nome">{{{adicional_update_nome_value}}} (required).</param>
+        /// <param name="NomeImpresso">{{{adicional_update_nome_impresso_value}}}.</param>
+        /// <param name="NumeroReceitaFederal">{{{adicional_update_numero_receita_federal_value}}} (required).</param>
+        /// <param name="DataNascimento">{{{adicional_update_data_nascimento_value}}}.</param>
+        /// <param name="Sexo">{{{adicional_update_sexo_value}}}.</param>
+        /// <param name="NumeroIdentidade">{{{adicional_update_numero_identidade_value}}}.</param>
+        /// <param name="OrgaoExpedidorIdentidade">{{{adicional_update_orgao_expedidor_identidade_value}}}.</param>
+        /// <param name="UnidadeFederativaIdentidade">{{{adicional_update_unidade_federativa_identidade_value}}}.</param>
+        /// <param name="DataEmissaoIdentidade">{{{adicional_update_data_emissao_identidade_value}}}.</param>
+        /// <param name="IdParentesco">{{{adicional_update_id_parentesco_value}}}.</param>
+        /// <param name="Telefones">{{{adicional_update_telefones_value}}}.</param>
 
         public AdicionalUpdate(string Nome = null, string NomeImpresso = null, string NumeroReceitaFederal = null, string DataNascimento = null, string Sexo = null, string NumeroIdentidade = null, string OrgaoExpedidorIdentidade = null, string UnidadeFederativaIdentidade = null, string DataEmissaoIdentidade = null, long? IdParentesco = null, List<TelefoneAdicionalUpdate> Telefones = null)
         {
@@ -68,79 +68,79 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Full name of the additional
+        /// {{{adicional_update_nome_value}}}
         /// </summary>
-        /// <value>Full name of the additional</value>
+        /// <value>{{{adicional_update_nome_value}}}</value>
         [DataMember(Name="nome", EmitDefaultValue=false)]
         public string Nome { get; set; }
     
         /// <summary>
-        /// Additional name that will be printed on the card
+        /// {{{adicional_update_nome_impresso_value}}}
         /// </summary>
-        /// <value>Additional name that will be printed on the card</value>
+        /// <value>{{{adicional_update_nome_impresso_value}}}</value>
         [DataMember(Name="nomeImpresso", EmitDefaultValue=false)]
         public string NomeImpresso { get; set; }
     
         /// <summary>
-        /// Federal Revenue Number
+        /// {{{adicional_update_numero_receita_federal_value}}}
         /// </summary>
-        /// <value>Federal Revenue Number</value>
+        /// <value>{{{adicional_update_numero_receita_federal_value}}}</value>
         [DataMember(Name="numeroReceitaFederal", EmitDefaultValue=false)]
         public string NumeroReceitaFederal { get; set; }
     
         /// <summary>
-        /// Birth date of the additional in the format yyyy-MM-dd
+        /// {{{adicional_update_data_nascimento_value}}}
         /// </summary>
-        /// <value>Birth date of the additional in the format yyyy-MM-dd</value>
+        /// <value>{{{adicional_update_data_nascimento_value}}}</value>
         [DataMember(Name="dataNascimento", EmitDefaultValue=false)]
         public string DataNascimento { get; set; }
     
         /// <summary>
-        /// Additional Gender
+        /// {{{adicional_update_sexo_value}}}
         /// </summary>
-        /// <value>Additional Gender</value>
+        /// <value>{{{adicional_update_sexo_value}}}</value>
         [DataMember(Name="sexo", EmitDefaultValue=false)]
         public string Sexo { get; set; }
     
         /// <summary>
-        /// Identity number of the Additional
+        /// {{{adicional_update_numero_identidade_value}}}
         /// </summary>
-        /// <value>Identity number of the Additional</value>
+        /// <value>{{{adicional_update_numero_identidade_value}}}</value>
         [DataMember(Name="numeroIdentidade", EmitDefaultValue=false)]
         public string NumeroIdentidade { get; set; }
     
         /// <summary>
-        /// Name of the Issuer organ of the Additional Identity Document
+        /// {{{adicional_update_orgao_expedidor_identidade_value}}}
         /// </summary>
-        /// <value>Name of the Issuer organ of the Additional Identity Document</value>
+        /// <value>{{{adicional_update_orgao_expedidor_identidade_value}}}</value>
         [DataMember(Name="orgaoExpedidorIdentidade", EmitDefaultValue=false)]
         public string OrgaoExpedidorIdentidade { get; set; }
     
         /// <summary>
-        /// Federative unit
+        /// {{{adicional_update_unidade_federativa_identidade_value}}}
         /// </summary>
-        /// <value>Federative unit</value>
+        /// <value>{{{adicional_update_unidade_federativa_identidade_value}}}</value>
         [DataMember(Name="unidadeFederativaIdentidade", EmitDefaultValue=false)]
         public string UnidadeFederativaIdentidade { get; set; }
     
         /// <summary>
-        /// Issue date of the identity document of the additional in the format yyyy-MM-dd
+        /// {{{adicional_update_data_emissao_identidade_value}}}
         /// </summary>
-        /// <value>Issue date of the identity document of the additional in the format yyyy-MM-dd</value>
+        /// <value>{{{adicional_update_data_emissao_identidade_value}}}</value>
         [DataMember(Name="dataEmissaoIdentidade", EmitDefaultValue=false)]
         public string DataEmissaoIdentidade { get; set; }
     
         /// <summary>
-        /// Identification Code of the Additional Kinship with the Owner
+        /// {{{adicional_update_id_parentesco_value}}}
         /// </summary>
-        /// <value>Identification Code of the Additional Kinship with the Owner</value>
+        /// <value>{{{adicional_update_id_parentesco_value}}}</value>
         [DataMember(Name="idParentesco", EmitDefaultValue=false)]
         public long? IdParentesco { get; set; }
     
         /// <summary>
-        /// Additional Telephone List
+        /// {{{adicional_update_telefones_value}}}
         /// </summary>
-        /// <value>Additional Telephone List</value>
+        /// <value>{{{adicional_update_telefones_value}}}</value>
         [DataMember(Name="telefones", EmitDefaultValue=false)]
         public List<TelefoneAdicionalUpdate> Telefones { get; set; }
     

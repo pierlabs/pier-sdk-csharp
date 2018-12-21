@@ -12,16 +12,16 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representation of the user resource
+    /// {{{usuario_response_description}}}
     /// </summary>
     [DataContract]
     public partial class UsuarioResponse :  IEquatable<UsuarioResponse>
     { 
     
         /// <summary>
-        /// User Status
+        /// {{{usuario_response_status_value}}}
         /// </summary>
-        /// <value>User Status</value>
+        /// <value>{{{usuario_response_status_value}}}</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum StatusEnum {
             
@@ -34,9 +34,9 @@ namespace Conductor.Pier.Model
 
     
         /// <summary>
-        /// User Status
+        /// {{{usuario_response_status_value}}}
         /// </summary>
-        /// <value>User Status</value>
+        /// <value>{{{usuario_response_status_value}}}</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
     
@@ -44,19 +44,19 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="UsuarioResponse" /> class.
         /// Initializes a new instance of the <see cref="UsuarioResponse" />class.
         /// </summary>
-        /// <param name="Id">User Id.</param>
-        /// <param name="Nome">Username.</param>
-        /// <param name="Login">User login (required).</param>
-        /// <param name="IdEmissor">User issuer Id.</param>
-        /// <param name="Cpf">User user.</param>
-        /// <param name="Email">User email (required).</param>
-        /// <param name="Status">User Status.</param>
-        /// <param name="DataCriacao">Creation date of the user.</param>
-        /// <param name="DataModificacao">Modification date of the user.</param>
-        /// <param name="TentativasIncorretas">Number of Incorrect validation attempts.</param>
-        /// <param name="BloquearAcesso">Indicates whether access to the user application is blocked.</param>
-        /// <param name="DataValidade">expirationDate.</param>
-        /// <param name="IdPlataforma">plataformId.</param>
+        /// <param name="Id">{{{usuario_response_id_value}}}.</param>
+        /// <param name="Nome">{{{usuario_response_nome_value}}}.</param>
+        /// <param name="Login">{{{usuario_response_login_value}}} (required).</param>
+        /// <param name="IdEmissor">{{{usuario_response_id_emissor_value}}}.</param>
+        /// <param name="Cpf">{{{usuario_response_cpf_value}}}.</param>
+        /// <param name="Email">{{{usuario_response_email_value}}} (required).</param>
+        /// <param name="Status">{{{usuario_response_status_value}}}.</param>
+        /// <param name="DataCriacao">{{{usuario_response_data_criacao_value}}}.</param>
+        /// <param name="DataModificacao">{{{usuario_response_data_modificacao_value}}}.</param>
+        /// <param name="TentativasIncorretas">{{{usuario_response_tentativas_incorretas_value}}}.</param>
+        /// <param name="BloquearAcesso">{{{usuario_response_bloquear_acesso_descricao}}}.</param>
+        /// <param name="DataValidade">{{{usuario_response_data_validade_value}}}.</param>
+        /// <param name="IdPlataforma">{{{usuario_response_id_plataforma_value}}}.</param>
 
         public UsuarioResponse(long? Id = null, string Nome = null, string Login = null, long? IdEmissor = null, string Cpf = null, string Email = null, StatusEnum? Status = null, string DataCriacao = null, string DataModificacao = null, long? TentativasIncorretas = null, bool? BloquearAcesso = null, string DataValidade = null, int? IdPlataforma = null)
         {
@@ -94,86 +94,86 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// User Id
+        /// {{{usuario_response_id_value}}}
         /// </summary>
-        /// <value>User Id</value>
+        /// <value>{{{usuario_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Username
+        /// {{{usuario_response_nome_value}}}
         /// </summary>
-        /// <value>Username</value>
+        /// <value>{{{usuario_response_nome_value}}}</value>
         [DataMember(Name="nome", EmitDefaultValue=false)]
         public string Nome { get; set; }
     
         /// <summary>
-        /// User login
+        /// {{{usuario_response_login_value}}}
         /// </summary>
-        /// <value>User login</value>
+        /// <value>{{{usuario_response_login_value}}}</value>
         [DataMember(Name="login", EmitDefaultValue=false)]
         public string Login { get; set; }
     
         /// <summary>
-        /// User issuer Id
+        /// {{{usuario_response_id_emissor_value}}}
         /// </summary>
-        /// <value>User issuer Id</value>
+        /// <value>{{{usuario_response_id_emissor_value}}}</value>
         [DataMember(Name="idEmissor", EmitDefaultValue=false)]
         public long? IdEmissor { get; set; }
     
         /// <summary>
-        /// User user
+        /// {{{usuario_response_cpf_value}}}
         /// </summary>
-        /// <value>User user</value>
+        /// <value>{{{usuario_response_cpf_value}}}</value>
         [DataMember(Name="cpf", EmitDefaultValue=false)]
         public string Cpf { get; set; }
     
         /// <summary>
-        /// User email
+        /// {{{usuario_response_email_value}}}
         /// </summary>
-        /// <value>User email</value>
+        /// <value>{{{usuario_response_email_value}}}</value>
         [DataMember(Name="email", EmitDefaultValue=false)]
         public string Email { get; set; }
     
         /// <summary>
-        /// Creation date of the user
+        /// {{{usuario_response_data_criacao_value}}}
         /// </summary>
-        /// <value>Creation date of the user</value>
+        /// <value>{{{usuario_response_data_criacao_value}}}</value>
         [DataMember(Name="dataCriacao", EmitDefaultValue=false)]
         public string DataCriacao { get; set; }
     
         /// <summary>
-        /// Modification date of the user
+        /// {{{usuario_response_data_modificacao_value}}}
         /// </summary>
-        /// <value>Modification date of the user</value>
+        /// <value>{{{usuario_response_data_modificacao_value}}}</value>
         [DataMember(Name="dataModificacao", EmitDefaultValue=false)]
         public string DataModificacao { get; set; }
     
         /// <summary>
-        /// Number of Incorrect validation attempts
+        /// {{{usuario_response_tentativas_incorretas_value}}}
         /// </summary>
-        /// <value>Number of Incorrect validation attempts</value>
+        /// <value>{{{usuario_response_tentativas_incorretas_value}}}</value>
         [DataMember(Name="tentativasIncorretas", EmitDefaultValue=false)]
         public long? TentativasIncorretas { get; set; }
     
         /// <summary>
-        /// Indicates whether access to the user application is blocked
+        /// {{{usuario_response_bloquear_acesso_descricao}}}
         /// </summary>
-        /// <value>Indicates whether access to the user application is blocked</value>
+        /// <value>{{{usuario_response_bloquear_acesso_descricao}}}</value>
         [DataMember(Name="bloquearAcesso", EmitDefaultValue=false)]
         public bool? BloquearAcesso { get; set; }
     
         /// <summary>
-        /// expirationDate
+        /// {{{usuario_response_data_validade_value}}}
         /// </summary>
-        /// <value>expirationDate</value>
+        /// <value>{{{usuario_response_data_validade_value}}}</value>
         [DataMember(Name="dataValidade", EmitDefaultValue=false)]
         public string DataValidade { get; set; }
     
         /// <summary>
-        /// plataformId
+        /// {{{usuario_response_id_plataforma_value}}}
         /// </summary>
-        /// <value>plataformId</value>
+        /// <value>{{{usuario_response_id_plataforma_value}}}</value>
         [DataMember(Name="idPlataforma", EmitDefaultValue=false)]
         public int? IdPlataforma { get; set; }
     

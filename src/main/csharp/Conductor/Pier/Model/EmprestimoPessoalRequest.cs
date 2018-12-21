@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Request Representation of the Device resource
+    /// {{{emprestimo_pessoal_request_description}}}
     /// </summary>
     [DataContract]
     public partial class EmprestimoPessoalRequest :  IEquatable<EmprestimoPessoalRequest>
@@ -22,12 +22,12 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="EmprestimoPessoalRequest" /> class.
         /// Initializes a new instance of the <see cref="EmprestimoPessoalRequest" />class.
         /// </summary>
-        /// <param name="ValorSolicitado">Value of the Loan/financing (required).</param>
-        /// <param name="NumeroParcelas">Total Number of the portions of the loan/financing (required).</param>
-        /// <param name="TaxaJuros">Percent value of the taxes of interest to be applied (required).</param>
-        /// <param name="PeriodoTaxa">Period of application of the taxes of interest (required).</param>
-        /// <param name="SistemaAmortizacao">System to diminish the value of the portions (required).</param>
-        /// <param name="NumeroMesesCarencia">Number of months to the collection of the first portion.</param>
+        /// <param name="ValorSolicitado">{{{emprestimo_pessoal_request_valor_solicitado_value}}} (required).</param>
+        /// <param name="NumeroParcelas">{{{emprestimo_pessoal_request_numero_parcelas_value}}} (required).</param>
+        /// <param name="TaxaJuros">{{{emprestimo_pessoal_request_taxa_juros_value}}} (required).</param>
+        /// <param name="PeriodoTaxa">{{{emprestimo_pessoal_request_periodo_taxa_value}}} (required).</param>
+        /// <param name="SistemaAmortizacao">{{{emprestimo_pessoal_request_sistema_amortizacao_value}}} (required).</param>
+        /// <param name="NumeroMesesCarencia">{{{emprestimo_pessoal_request_numero_meses_carencia_value}}}.</param>
 
         public EmprestimoPessoalRequest(double? ValorSolicitado = null, int? NumeroParcelas = null, double? TaxaJuros = null, string PeriodoTaxa = null, string SistemaAmortizacao = null, int? NumeroMesesCarencia = null)
         {
@@ -82,44 +82,44 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Value of the Loan/financing
+        /// {{{emprestimo_pessoal_request_valor_solicitado_value}}}
         /// </summary>
-        /// <value>Value of the Loan/financing</value>
+        /// <value>{{{emprestimo_pessoal_request_valor_solicitado_value}}}</value>
         [DataMember(Name="valorSolicitado", EmitDefaultValue=false)]
         public double? ValorSolicitado { get; set; }
     
         /// <summary>
-        /// Total Number of the portions of the loan/financing
+        /// {{{emprestimo_pessoal_request_numero_parcelas_value}}}
         /// </summary>
-        /// <value>Total Number of the portions of the loan/financing</value>
+        /// <value>{{{emprestimo_pessoal_request_numero_parcelas_value}}}</value>
         [DataMember(Name="numeroParcelas", EmitDefaultValue=false)]
         public int? NumeroParcelas { get; set; }
     
         /// <summary>
-        /// Percent value of the taxes of interest to be applied
+        /// {{{emprestimo_pessoal_request_taxa_juros_value}}}
         /// </summary>
-        /// <value>Percent value of the taxes of interest to be applied</value>
+        /// <value>{{{emprestimo_pessoal_request_taxa_juros_value}}}</value>
         [DataMember(Name="taxaJuros", EmitDefaultValue=false)]
         public double? TaxaJuros { get; set; }
     
         /// <summary>
-        /// Period of application of the taxes of interest
+        /// {{{emprestimo_pessoal_request_periodo_taxa_value}}}
         /// </summary>
-        /// <value>Period of application of the taxes of interest</value>
+        /// <value>{{{emprestimo_pessoal_request_periodo_taxa_value}}}</value>
         [DataMember(Name="periodoTaxa", EmitDefaultValue=false)]
         public string PeriodoTaxa { get; set; }
     
         /// <summary>
-        /// System to diminish the value of the portions
+        /// {{{emprestimo_pessoal_request_sistema_amortizacao_value}}}
         /// </summary>
-        /// <value>System to diminish the value of the portions</value>
+        /// <value>{{{emprestimo_pessoal_request_sistema_amortizacao_value}}}</value>
         [DataMember(Name="sistemaAmortizacao", EmitDefaultValue=false)]
         public string SistemaAmortizacao { get; set; }
     
         /// <summary>
-        /// Number of months to the collection of the first portion
+        /// {{{emprestimo_pessoal_request_numero_meses_carencia_value}}}
         /// </summary>
-        /// <value>Number of months to the collection of the first portion</value>
+        /// <value>{{{emprestimo_pessoal_request_numero_meses_carencia_value}}}</value>
         [DataMember(Name="numeroMesesCarencia", EmitDefaultValue=false)]
         public int? NumeroMesesCarencia { get; set; }
     

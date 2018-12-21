@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Detail of the installment plan for credit transfer to banking accounts
+    /// {{{parcelamento_transferencia_response_description}}}
     /// </summary>
     [DataContract]
     public partial class ParcelamentoTransferenciaResponse :  IEquatable<ParcelamentoTransferenciaResponse>
@@ -22,13 +22,13 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="ParcelamentoTransferenciaResponse" /> class.
         /// Initializes a new instance of the <see cref="ParcelamentoTransferenciaResponse" />class.
         /// </summary>
-        /// <param name="NumeroParcela">Number of the available parcels.</param>
-        /// <param name="ValorParcelas">Value of the other parcels.</param>
-        /// <param name="ValorTotal">Total value of the financing.</param>
-        /// <param name="ValorTAC">Value of the hiring fee.</param>
-        /// <param name="ValorIOF">IOF calculated for the client.</param>
-        /// <param name="TaxaJuros">Value of the interest taxes.</param>
-        /// <param name="CetAnual">CET annual.</param>
+        /// <param name="NumeroParcela">{{{parcelamento_transferencia_response_numero_parcela_value}}}.</param>
+        /// <param name="ValorParcelas">{{{parcelamento_transferencia_response_valor_parcelas_value}}}.</param>
+        /// <param name="ValorTotal">{{{parcelamento_transferencia_response_valor_total_value}}}.</param>
+        /// <param name="ValorTAC">{{{parcelamento_transferencia_response_valor_t_a_c_value}}}.</param>
+        /// <param name="ValorIOF">{{{parcelamento_transferencia_response_valor_i_o_f_value}}}.</param>
+        /// <param name="TaxaJuros">{{{parcelamento_transferencia_response_taxa_juros_value}}}.</param>
+        /// <param name="CetAnual">{{{parcelamento_transferencia_response_cet_anual_value}}}.</param>
 
         public ParcelamentoTransferenciaResponse(int? NumeroParcela = null, double? ValorParcelas = null, double? ValorTotal = null, double? ValorTAC = null, double? ValorIOF = null, double? TaxaJuros = null, double? CetAnual = null)
         {
@@ -44,51 +44,51 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Number of the available parcels
+        /// {{{parcelamento_transferencia_response_numero_parcela_value}}}
         /// </summary>
-        /// <value>Number of the available parcels</value>
+        /// <value>{{{parcelamento_transferencia_response_numero_parcela_value}}}</value>
         [DataMember(Name="numeroParcela", EmitDefaultValue=false)]
         public int? NumeroParcela { get; set; }
     
         /// <summary>
-        /// Value of the other parcels
+        /// {{{parcelamento_transferencia_response_valor_parcelas_value}}}
         /// </summary>
-        /// <value>Value of the other parcels</value>
+        /// <value>{{{parcelamento_transferencia_response_valor_parcelas_value}}}</value>
         [DataMember(Name="valorParcelas", EmitDefaultValue=false)]
         public double? ValorParcelas { get; set; }
     
         /// <summary>
-        /// Total value of the financing
+        /// {{{parcelamento_transferencia_response_valor_total_value}}}
         /// </summary>
-        /// <value>Total value of the financing</value>
+        /// <value>{{{parcelamento_transferencia_response_valor_total_value}}}</value>
         [DataMember(Name="valorTotal", EmitDefaultValue=false)]
         public double? ValorTotal { get; set; }
     
         /// <summary>
-        /// Value of the hiring fee
+        /// {{{parcelamento_transferencia_response_valor_t_a_c_value}}}
         /// </summary>
-        /// <value>Value of the hiring fee</value>
+        /// <value>{{{parcelamento_transferencia_response_valor_t_a_c_value}}}</value>
         [DataMember(Name="valorTAC", EmitDefaultValue=false)]
         public double? ValorTAC { get; set; }
     
         /// <summary>
-        /// IOF calculated for the client
+        /// {{{parcelamento_transferencia_response_valor_i_o_f_value}}}
         /// </summary>
-        /// <value>IOF calculated for the client</value>
+        /// <value>{{{parcelamento_transferencia_response_valor_i_o_f_value}}}</value>
         [DataMember(Name="valorIOF", EmitDefaultValue=false)]
         public double? ValorIOF { get; set; }
     
         /// <summary>
-        /// Value of the interest taxes
+        /// {{{parcelamento_transferencia_response_taxa_juros_value}}}
         /// </summary>
-        /// <value>Value of the interest taxes</value>
+        /// <value>{{{parcelamento_transferencia_response_taxa_juros_value}}}</value>
         [DataMember(Name="taxaJuros", EmitDefaultValue=false)]
         public double? TaxaJuros { get; set; }
     
         /// <summary>
-        /// CET annual
+        /// {{{parcelamento_transferencia_response_cet_anual_value}}}
         /// </summary>
-        /// <value>CET annual</value>
+        /// <value>{{{parcelamento_transferencia_response_cet_anual_value}}}</value>
         [DataMember(Name="cetAnual", EmitDefaultValue=false)]
         public double? CetAnual { get; set; }
     

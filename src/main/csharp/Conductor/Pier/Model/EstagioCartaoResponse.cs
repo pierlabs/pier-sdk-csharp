@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representation of the Card Stage Resource
+    /// {{{estagio_cartao_response_description}}}
     /// </summary>
     [DataContract]
     public partial class EstagioCartaoResponse :  IEquatable<EstagioCartaoResponse>
@@ -22,8 +22,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="EstagioCartaoResponse" /> class.
         /// Initializes a new instance of the <see cref="EstagioCartaoResponse" />class.
         /// </summary>
-        /// <param name="Id">Stage Card Id (required).</param>
-        /// <param name="Nome">Stage Card Name (required).</param>
+        /// <param name="Id">{{{estagio_cartao_response_id_value}}} (required).</param>
+        /// <param name="Nome">{{{estagio_cartao_response_nome_value}}} (required).</param>
 
         public EstagioCartaoResponse(long? Id = null, string Nome = null)
         {
@@ -50,16 +50,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Stage Card Id
+        /// {{{estagio_cartao_response_id_value}}}
         /// </summary>
-        /// <value>Stage Card Id</value>
+        /// <value>{{{estagio_cartao_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Stage Card Name
+        /// {{{estagio_cartao_response_nome_value}}}
         /// </summary>
-        /// <value>Stage Card Name</value>
+        /// <value>{{{estagio_cartao_response_nome_value}}}</value>
         [DataMember(Name="nome", EmitDefaultValue=false)]
         public string Nome { get; set; }
     

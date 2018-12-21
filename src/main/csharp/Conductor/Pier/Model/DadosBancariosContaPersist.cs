@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Parameters for persisting bank account data
+    /// {{{dados_bancarios_conta_persist_description}}}
     /// </summary>
     [DataContract]
     public partial class DadosBancariosContaPersist :  IEquatable<DadosBancariosContaPersist>
@@ -22,11 +22,11 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="DadosBancariosContaPersist" /> class.
         /// Initializes a new instance of the <see cref="DadosBancariosContaPersist" />class.
         /// </summary>
-        /// <param name="IdConta">Identification Code of the account.</param>
-        /// <param name="NumeroAgencia">Displays the number of the Agency.</param>
-        /// <param name="NumeroContaCorrente">Displays the number of the Account.</param>
-        /// <param name="CodigoBanco">Displays the number representing the code of the bank.</param>
-        /// <param name="IdTipoContaBancaria">Identification Code of the bank account type (id).</param>
+        /// <param name="IdConta">{{{dados_bancarios_conta_persist_id_conta_value}}}.</param>
+        /// <param name="NumeroAgencia">{{{dados_bancarios_conta_persist_numero_agencia_value}}}.</param>
+        /// <param name="NumeroContaCorrente">{{{dados_bancarios_conta_persist_numero_conta_corrente_value}}}.</param>
+        /// <param name="CodigoBanco">{{{dados_bancarios_conta_persist_codigo_banco_value}}}.</param>
+        /// <param name="IdTipoContaBancaria">{{{dados_bancarios_conta_persist_id_tipo_conta_bancaria_value}}}.</param>
         /// <param name="DvContaCorrente">DvContaCorrente.</param>
         /// <param name="DvAgencia">DvAgencia.</param>
 
@@ -44,37 +44,37 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Identification Code of the account
+        /// {{{dados_bancarios_conta_persist_id_conta_value}}}
         /// </summary>
-        /// <value>Identification Code of the account</value>
+        /// <value>{{{dados_bancarios_conta_persist_id_conta_value}}}</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// Displays the number of the Agency
+        /// {{{dados_bancarios_conta_persist_numero_agencia_value}}}
         /// </summary>
-        /// <value>Displays the number of the Agency</value>
+        /// <value>{{{dados_bancarios_conta_persist_numero_agencia_value}}}</value>
         [DataMember(Name="numeroAgencia", EmitDefaultValue=false)]
         public long? NumeroAgencia { get; set; }
     
         /// <summary>
-        /// Displays the number of the Account
+        /// {{{dados_bancarios_conta_persist_numero_conta_corrente_value}}}
         /// </summary>
-        /// <value>Displays the number of the Account</value>
+        /// <value>{{{dados_bancarios_conta_persist_numero_conta_corrente_value}}}</value>
         [DataMember(Name="numeroContaCorrente", EmitDefaultValue=false)]
         public string NumeroContaCorrente { get; set; }
     
         /// <summary>
-        /// Displays the number representing the code of the bank
+        /// {{{dados_bancarios_conta_persist_codigo_banco_value}}}
         /// </summary>
-        /// <value>Displays the number representing the code of the bank</value>
+        /// <value>{{{dados_bancarios_conta_persist_codigo_banco_value}}}</value>
         [DataMember(Name="codigoBanco", EmitDefaultValue=false)]
         public long? CodigoBanco { get; set; }
     
         /// <summary>
-        /// Identification Code of the bank account type (id)
+        /// {{{dados_bancarios_conta_persist_id_tipo_conta_bancaria_value}}}
         /// </summary>
-        /// <value>Identification Code of the bank account type (id)</value>
+        /// <value>{{{dados_bancarios_conta_persist_id_tipo_conta_bancaria_value}}}</value>
         [DataMember(Name="idTipoContaBancaria", EmitDefaultValue=false)]
         public long? IdTipoContaBancaria { get; set; }
     

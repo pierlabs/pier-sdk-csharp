@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Parameters used in the product parameter partial update
+    /// {{{parametro_produto_partial_update_description}}}
     /// </summary>
     [DataContract]
     public partial class ParametroProdutoPartialUpdate :  IEquatable<ParametroProdutoPartialUpdate>
@@ -22,9 +22,9 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="ParametroProdutoPartialUpdate" /> class.
         /// Initializes a new instance of the <see cref="ParametroProdutoPartialUpdate" />class.
         /// </summary>
-        /// <param name="DataValidade">Product parameter expiration date.</param>
-        /// <param name="Descricao">Description of the product parameter.</param>
-        /// <param name="ValorParametro">Product parameter value.</param>
+        /// <param name="DataValidade">{{{parametro_produto_dto_data_validade_value}}}.</param>
+        /// <param name="Descricao">{{{parametro_produto_dto_descricao_value}}}.</param>
+        /// <param name="ValorParametro">{{{parametro_produto_dto_valor_parametro_value}}}.</param>
 
         public ParametroProdutoPartialUpdate(string DataValidade = null, string Descricao = null, string ValorParametro = null)
         {
@@ -36,23 +36,23 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Product parameter expiration date
+        /// {{{parametro_produto_dto_data_validade_value}}}
         /// </summary>
-        /// <value>Product parameter expiration date</value>
+        /// <value>{{{parametro_produto_dto_data_validade_value}}}</value>
         [DataMember(Name="dataValidade", EmitDefaultValue=false)]
         public string DataValidade { get; set; }
     
         /// <summary>
-        /// Description of the product parameter
+        /// {{{parametro_produto_dto_descricao_value}}}
         /// </summary>
-        /// <value>Description of the product parameter</value>
+        /// <value>{{{parametro_produto_dto_descricao_value}}}</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     
         /// <summary>
-        /// Product parameter value
+        /// {{{parametro_produto_dto_valor_parametro_value}}}
         /// </summary>
-        /// <value>Product parameter value</value>
+        /// <value>{{{parametro_produto_dto_valor_parametro_value}}}</value>
         [DataMember(Name="valorParametro", EmitDefaultValue=false)]
         public string ValorParametro { get; set; }
     

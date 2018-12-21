@@ -12,16 +12,16 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Object FAQ
+    /// {{{faq_response_description}}}
     /// </summary>
     [DataContract]
     public partial class FaqResponse :  IEquatable<FaqResponse>
     { 
     
         /// <summary>
-        /// Status describing the current situation of the FAQ
+        /// {{{faq_response_status_value}}}
         /// </summary>
-        /// <value>Status describing the current situation of the FAQ</value>
+        /// <value>{{{faq_response_status_value}}}</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum StatusEnum {
             
@@ -34,9 +34,9 @@ namespace Conductor.Pier.Model
 
     
         /// <summary>
-        /// Status describing the current situation of the FAQ
+        /// {{{faq_response_status_value}}}
         /// </summary>
-        /// <value>Status describing the current situation of the FAQ</value>
+        /// <value>{{{faq_response_status_value}}}</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
     
@@ -44,13 +44,13 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="FaqResponse" /> class.
         /// Initializes a new instance of the <see cref="FaqResponse" />class.
         /// </summary>
-        /// <param name="Id">Identification Code of the FAQ (id).</param>
-        /// <param name="Pergunta">Content of the question.</param>
-        /// <param name="Resposta">Content of the question.</param>
-        /// <param name="Relevancia">Relevance Level of the question.</param>
-        /// <param name="Plataforma">Platform which the FAQ fits.</param>
-        /// <param name="Categoria">Category of the subject which the FAQ refers.</param>
-        /// <param name="Status">Status describing the current situation of the FAQ.</param>
+        /// <param name="Id">{{{faq_response_id_value}}}.</param>
+        /// <param name="Pergunta">{{{faq_response_pergunta_value}}}.</param>
+        /// <param name="Resposta">{{{faq_response_resposta_value}}}.</param>
+        /// <param name="Relevancia">{{{faq_response_relevancia_value}}}.</param>
+        /// <param name="Plataforma">{{{faq_response_plataforma_value}}}.</param>
+        /// <param name="Categoria">{{{faq_response_categoria_value}}}.</param>
+        /// <param name="Status">{{{faq_response_status_value}}}.</param>
 
         public FaqResponse(long? Id = null, string Pergunta = null, string Resposta = null, int? Relevancia = null, string Plataforma = null, string Categoria = null, StatusEnum? Status = null)
         {
@@ -66,44 +66,44 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Identification Code of the FAQ (id)
+        /// {{{faq_response_id_value}}}
         /// </summary>
-        /// <value>Identification Code of the FAQ (id)</value>
+        /// <value>{{{faq_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Content of the question
+        /// {{{faq_response_pergunta_value}}}
         /// </summary>
-        /// <value>Content of the question</value>
+        /// <value>{{{faq_response_pergunta_value}}}</value>
         [DataMember(Name="pergunta", EmitDefaultValue=false)]
         public string Pergunta { get; set; }
     
         /// <summary>
-        /// Content of the question
+        /// {{{faq_response_resposta_value}}}
         /// </summary>
-        /// <value>Content of the question</value>
+        /// <value>{{{faq_response_resposta_value}}}</value>
         [DataMember(Name="resposta", EmitDefaultValue=false)]
         public string Resposta { get; set; }
     
         /// <summary>
-        /// Relevance Level of the question
+        /// {{{faq_response_relevancia_value}}}
         /// </summary>
-        /// <value>Relevance Level of the question</value>
+        /// <value>{{{faq_response_relevancia_value}}}</value>
         [DataMember(Name="relevancia", EmitDefaultValue=false)]
         public int? Relevancia { get; set; }
     
         /// <summary>
-        /// Platform which the FAQ fits
+        /// {{{faq_response_plataforma_value}}}
         /// </summary>
-        /// <value>Platform which the FAQ fits</value>
+        /// <value>{{{faq_response_plataforma_value}}}</value>
         [DataMember(Name="plataforma", EmitDefaultValue=false)]
         public string Plataforma { get; set; }
     
         /// <summary>
-        /// Category of the subject which the FAQ refers
+        /// {{{faq_response_categoria_value}}}
         /// </summary>
-        /// <value>Category of the subject which the FAQ refers</value>
+        /// <value>{{{faq_response_categoria_value}}}</value>
         [DataMember(Name="categoria", EmitDefaultValue=false)]
         public string Categoria { get; set; }
     

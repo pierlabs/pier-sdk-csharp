@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// List of the MCCs
+    /// {{{page_m_c_c_response_description}}}
     /// </summary>
     [DataContract]
     public partial class PageMCCResponse :  IEquatable<PageMCCResponse>

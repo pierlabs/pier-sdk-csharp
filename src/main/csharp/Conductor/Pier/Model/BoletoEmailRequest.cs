@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representation with the parameters required to send a Ticket by email
+    /// {{{boleto_email_request_description}}}
     /// </summary>
     [DataContract]
     public partial class BoletoEmailRequest :  IEquatable<BoletoEmailRequest>
@@ -22,9 +22,9 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="BoletoEmailRequest" /> class.
         /// Initializes a new instance of the <see cref="BoletoEmailRequest" />class.
         /// </summary>
-        /// <param name="Email">Email to send the ticket.</param>
-        /// <param name="IdTemplateNotificacao">Identification of notification template.</param>
-        /// <param name="Parametros">Map of parameters used in creating the email template.</param>
+        /// <param name="Email">{{{boleto_email_request_value}}}.</param>
+        /// <param name="IdTemplateNotificacao">{{{boleto_email_request_id_template_notificacao_value}}}.</param>
+        /// <param name="Parametros">{{{boleto_email_request_parametros_value}}}.</param>
 
         public BoletoEmailRequest(string Email = null, long? IdTemplateNotificacao = null, Object Parametros = null)
         {
@@ -36,23 +36,23 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Email to send the ticket
+        /// {{{boleto_email_request_value}}}
         /// </summary>
-        /// <value>Email to send the ticket</value>
+        /// <value>{{{boleto_email_request_value}}}</value>
         [DataMember(Name="email", EmitDefaultValue=false)]
         public string Email { get; set; }
     
         /// <summary>
-        /// Identification of notification template
+        /// {{{boleto_email_request_id_template_notificacao_value}}}
         /// </summary>
-        /// <value>Identification of notification template</value>
+        /// <value>{{{boleto_email_request_id_template_notificacao_value}}}</value>
         [DataMember(Name="idTemplateNotificacao", EmitDefaultValue=false)]
         public long? IdTemplateNotificacao { get; set; }
     
         /// <summary>
-        /// Map of parameters used in creating the email template
+        /// {{{boleto_email_request_parametros_value}}}
         /// </summary>
-        /// <value>Map of parameters used in creating the email template</value>
+        /// <value>{{{boleto_email_request_parametros_value}}}</value>
         [DataMember(Name="parametros", EmitDefaultValue=false)]
         public Object Parametros { get; set; }
     

@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representation of Card Status Resource
+    /// {{{status_cartao_response_description}}}
     /// </summary>
     [DataContract]
     public partial class StatusCartaoResponse :  IEquatable<StatusCartaoResponse>
@@ -22,12 +22,12 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="StatusCartaoResponse" /> class.
         /// Initializes a new instance of the <see cref="StatusCartaoResponse" />class.
         /// </summary>
-        /// <param name="Id">Identification Code of the Card Status (id) (required).</param>
-        /// <param name="Nome">Name attributed to the status of the Card Delivery (required).</param>
-        /// <param name="PermiteDesbloquear">Parameter that define if the status of the card allows the reactivation of the card, being: 0: Inactive and 1: Active.</param>
-        /// <param name="PermiteAtribuirComoBloqueio">Parameter that define if the status of the card allows the reactivation of the card, being: 0: Inactive and 1: Active.</param>
-        /// <param name="PermiteAtribuirComoCancelamento">Parameter that define if the status of the card allows the reactivation of the card, being: 0: Inactive and 1: Active.</param>
-        /// <param name="CobrarTarifaAoEmitirNovaVia">Parameter that define if the status of the card allows the reactivation of the card, being: 0: Inactive and 1: Active.</param>
+        /// <param name="Id">{{{status_cartao_response_id_value}}} (required).</param>
+        /// <param name="Nome">{{{status_cartao_response_nome_value}}} (required).</param>
+        /// <param name="PermiteDesbloquear">{{{status_cartao_response_permite_desbloquear_value}}}.</param>
+        /// <param name="PermiteAtribuirComoBloqueio">{{{status_cartao_response_permite_atribuir_como_bloqueio_value}}}.</param>
+        /// <param name="PermiteAtribuirComoCancelamento">{{{status_cartao_response_permite_atribuir_como_cancelamento_value}}}.</param>
+        /// <param name="CobrarTarifaAoEmitirNovaVia">{{{status_cartao_response_cobrar_tarifa_ao_emitir_nova_via_value}}}.</param>
 
         public StatusCartaoResponse(long? Id = null, string Nome = null, int? PermiteDesbloquear = null, int? PermiteAtribuirComoBloqueio = null, int? PermiteAtribuirComoCancelamento = null, int? CobrarTarifaAoEmitirNovaVia = null)
         {
@@ -58,44 +58,44 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Identification Code of the Card Status (id)
+        /// {{{status_cartao_response_id_value}}}
         /// </summary>
-        /// <value>Identification Code of the Card Status (id)</value>
+        /// <value>{{{status_cartao_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Name attributed to the status of the Card Delivery
+        /// {{{status_cartao_response_nome_value}}}
         /// </summary>
-        /// <value>Name attributed to the status of the Card Delivery</value>
+        /// <value>{{{status_cartao_response_nome_value}}}</value>
         [DataMember(Name="nome", EmitDefaultValue=false)]
         public string Nome { get; set; }
     
         /// <summary>
-        /// Parameter that define if the status of the card allows the reactivation of the card, being: 0: Inactive and 1: Active
+        /// {{{status_cartao_response_permite_desbloquear_value}}}
         /// </summary>
-        /// <value>Parameter that define if the status of the card allows the reactivation of the card, being: 0: Inactive and 1: Active</value>
+        /// <value>{{{status_cartao_response_permite_desbloquear_value}}}</value>
         [DataMember(Name="permiteDesbloquear", EmitDefaultValue=false)]
         public int? PermiteDesbloquear { get; set; }
     
         /// <summary>
-        /// Parameter that define if the status of the card allows the reactivation of the card, being: 0: Inactive and 1: Active
+        /// {{{status_cartao_response_permite_atribuir_como_bloqueio_value}}}
         /// </summary>
-        /// <value>Parameter that define if the status of the card allows the reactivation of the card, being: 0: Inactive and 1: Active</value>
+        /// <value>{{{status_cartao_response_permite_atribuir_como_bloqueio_value}}}</value>
         [DataMember(Name="permiteAtribuirComoBloqueio", EmitDefaultValue=false)]
         public int? PermiteAtribuirComoBloqueio { get; set; }
     
         /// <summary>
-        /// Parameter that define if the status of the card allows the reactivation of the card, being: 0: Inactive and 1: Active
+        /// {{{status_cartao_response_permite_atribuir_como_cancelamento_value}}}
         /// </summary>
-        /// <value>Parameter that define if the status of the card allows the reactivation of the card, being: 0: Inactive and 1: Active</value>
+        /// <value>{{{status_cartao_response_permite_atribuir_como_cancelamento_value}}}</value>
         [DataMember(Name="permiteAtribuirComoCancelamento", EmitDefaultValue=false)]
         public int? PermiteAtribuirComoCancelamento { get; set; }
     
         /// <summary>
-        /// Parameter that define if the status of the card allows the reactivation of the card, being: 0: Inactive and 1: Active
+        /// {{{status_cartao_response_cobrar_tarifa_ao_emitir_nova_via_value}}}
         /// </summary>
-        /// <value>Parameter that define if the status of the card allows the reactivation of the card, being: 0: Inactive and 1: Active</value>
+        /// <value>{{{status_cartao_response_cobrar_tarifa_ao_emitir_nova_via_value}}}</value>
         [DataMember(Name="cobrarTarifaAoEmitirNovaVia", EmitDefaultValue=false)]
         public int? CobrarTarifaAoEmitirNovaVia { get; set; }
     

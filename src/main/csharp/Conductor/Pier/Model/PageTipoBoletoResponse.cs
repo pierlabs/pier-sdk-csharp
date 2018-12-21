@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// List of the bank slip types
+    /// {{{page_tipo_boleto_response_description}}}
     /// </summary>
     [DataContract]
     public partial class PageTipoBoletoResponse :  IEquatable<PageTipoBoletoResponse>

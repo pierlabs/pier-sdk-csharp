@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Bank data
+    /// {{{dados_bancarios_conta_response_description}}}
     /// </summary>
     [DataContract]
     public partial class DadosBancariosContaResponse :  IEquatable<DadosBancariosContaResponse>
@@ -22,12 +22,12 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="DadosBancariosContaResponse" /> class.
         /// Initializes a new instance of the <see cref="DadosBancariosContaResponse" />class.
         /// </summary>
-        /// <param name="Id">Identification Code of the register bank data (id).</param>
-        /// <param name="IdConta">Identification Code of the account (id).</param>
-        /// <param name="CodigoBanco">Bank number.</param>
-        /// <param name="NumeroAgencia">Agency number.</param>
-        /// <param name="NumeroContaCorrente">Account number.</param>
-        /// <param name="IdTipoContaBancaria">Identification Code of the register bank account type (id).</param>
+        /// <param name="Id">{{{dados_bancarios_conta_response_id_value}}}.</param>
+        /// <param name="IdConta">{{{dados_bancarios_conta_response_idConta_value}}}.</param>
+        /// <param name="CodigoBanco">{{{dados_bancarios_conta_response_banco_value}}}.</param>
+        /// <param name="NumeroAgencia">{{{dados_bancarios_conta_response_agencia_value}}}.</param>
+        /// <param name="NumeroContaCorrente">{{{dados_bancarios_conta_response_contaCorrente_value}}}.</param>
+        /// <param name="IdTipoContaBancaria">{{{dados_bancarios_conta_response_IdTipoContaBancaria_value}}}.</param>
         /// <param name="DvContaCorrente">DvContaCorrente.</param>
         /// <param name="DvAgencia">DvAgencia.</param>
 
@@ -46,44 +46,44 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Identification Code of the register bank data (id)
+        /// {{{dados_bancarios_conta_response_id_value}}}
         /// </summary>
-        /// <value>Identification Code of the register bank data (id)</value>
+        /// <value>{{{dados_bancarios_conta_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Identification Code of the account (id)
+        /// {{{dados_bancarios_conta_response_idConta_value}}}
         /// </summary>
-        /// <value>Identification Code of the account (id)</value>
+        /// <value>{{{dados_bancarios_conta_response_idConta_value}}}</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// Bank number
+        /// {{{dados_bancarios_conta_response_banco_value}}}
         /// </summary>
-        /// <value>Bank number</value>
+        /// <value>{{{dados_bancarios_conta_response_banco_value}}}</value>
         [DataMember(Name="codigoBanco", EmitDefaultValue=false)]
         public long? CodigoBanco { get; set; }
     
         /// <summary>
-        /// Agency number
+        /// {{{dados_bancarios_conta_response_agencia_value}}}
         /// </summary>
-        /// <value>Agency number</value>
+        /// <value>{{{dados_bancarios_conta_response_agencia_value}}}</value>
         [DataMember(Name="numeroAgencia", EmitDefaultValue=false)]
         public long? NumeroAgencia { get; set; }
     
         /// <summary>
-        /// Account number
+        /// {{{dados_bancarios_conta_response_contaCorrente_value}}}
         /// </summary>
-        /// <value>Account number</value>
+        /// <value>{{{dados_bancarios_conta_response_contaCorrente_value}}}</value>
         [DataMember(Name="numeroContaCorrente", EmitDefaultValue=false)]
         public string NumeroContaCorrente { get; set; }
     
         /// <summary>
-        /// Identification Code of the register bank account type (id)
+        /// {{{dados_bancarios_conta_response_IdTipoContaBancaria_value}}}
         /// </summary>
-        /// <value>Identification Code of the register bank account type (id)</value>
+        /// <value>{{{dados_bancarios_conta_response_IdTipoContaBancaria_value}}}</value>
         [DataMember(Name="idTipoContaBancaria", EmitDefaultValue=false)]
         public long? IdTipoContaBancaria { get; set; }
     

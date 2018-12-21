@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// List of the auditorial of opportunity types
+    /// {{{page_tipo_oportunidade_a_u_d_response_description}}}
     /// </summary>
     [DataContract]
     public partial class PageTipoOportunidadeAUDResponse :  IEquatable<PageTipoOportunidadeAUDResponse>

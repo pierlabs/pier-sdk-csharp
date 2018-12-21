@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// List of the Status Printing
+    /// {{{page_status_impressao_response_description}}}
     /// </summary>
     [DataContract]
     public partial class PageStatusImpressaoResponse :  IEquatable<PageStatusImpressaoResponse>

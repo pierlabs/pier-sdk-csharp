@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// List of Bank Account Credit Transfer
+    /// {{{page_transferencia_credito_conta_bancaria_response_description}}}
     /// </summary>
     [DataContract]
     public partial class PageTransferenciaCreditoContaBancariaResponse :  IEquatable<PageTransferenciaCreditoContaBancariaResponse>

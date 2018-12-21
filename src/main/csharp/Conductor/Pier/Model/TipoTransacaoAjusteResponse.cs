@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Type of adjustment
+    /// {{{tipo_ajuste_response_description}}}
     /// </summary>
     [DataContract]
     public partial class TipoTransacaoAjusteResponse :  IEquatable<TipoTransacaoAjusteResponse>
@@ -22,8 +22,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TipoTransacaoAjusteResponse" /> class.
         /// Initializes a new instance of the <see cref="TipoTransacaoAjusteResponse" />class.
         /// </summary>
-        /// <param name="Id">Transaction type ID.</param>
-        /// <param name="Descricao">Transaction type description.</param>
+        /// <param name="Id">{{{tipo_transacao_ajuste_response_id_value}}}.</param>
+        /// <param name="Descricao">{{{tipo_transacao_ajuste_response_descricao_value}}}.</param>
 
         public TipoTransacaoAjusteResponse(long? Id = null, string Descricao = null)
         {
@@ -34,16 +34,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Transaction type ID
+        /// {{{tipo_transacao_ajuste_response_id_value}}}
         /// </summary>
-        /// <value>Transaction type ID</value>
+        /// <value>{{{tipo_transacao_ajuste_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Transaction type description
+        /// {{{tipo_transacao_ajuste_response_descricao_value}}}
         /// </summary>
-        /// <value>Transaction type description</value>
+        /// <value>{{{tipo_transacao_ajuste_response_descricao_value}}}</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     

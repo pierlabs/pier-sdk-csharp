@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Response Representation of the Recurrent Debit Account resource
+    /// {{{conta_debito_recorrente_response_description}}}
     /// </summary>
     [DataContract]
     public partial class ContaDebitoRecorrenteResponse :  IEquatable<ContaDebitoRecorrenteResponse>
@@ -22,18 +22,18 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="ContaDebitoRecorrenteResponse" /> class.
         /// Initializes a new instance of the <see cref="ContaDebitoRecorrenteResponse" />class.
         /// </summary>
-        /// <param name="Ativo">Identify if the debit recurrent is active.</param>
-        /// <param name="DataHoraFim">Ending date the recurrent debit.</param>
-        /// <param name="DataHoraInicio">Beginning date of the recurrent debit.</param>
-        /// <param name="DataHoraUltimoPagamento">Date of the last payment effected.</param>
-        /// <param name="Descricao">Description of the type of recurrent debit.</param>
-        /// <param name="IdConta">Identification Code of the Account (id).</param>
-        /// <param name="IdContaDebitoRecorrente">Identification Code of the DebitAccountRecurrent (id).</param>
-        /// <param name="IdTipoDebitoRecorrente">Identification Code of the type of recurrent debit (id).</param>
-        /// <param name="IdUsuario">Logged user id.</param>
-        /// <param name="Login">User loging logged in the system.</param>
-        /// <param name="NumeroParcelas">Portion quantity for recurrent debit.</param>
-        /// <param name="Origem">Origin where was made the register modification.</param>
+        /// <param name="Ativo">{{{conta_debito_recorrente_response_ativo_value}}}.</param>
+        /// <param name="DataHoraFim">{{{conta_debito_recorrente_response_data_hora_fim_value}}}.</param>
+        /// <param name="DataHoraInicio">{{{conta_debito_recorrente_response_data_hora_inicio_value}}}.</param>
+        /// <param name="DataHoraUltimoPagamento">{{{conta_debito_recorrente_response_data_hora_ultimo_pagamento_value}}}.</param>
+        /// <param name="Descricao">{{{conta_debito_recorrente_response_descricao_value}}}.</param>
+        /// <param name="IdConta">{{{conta_debito_recorrente_response_id_conta_value}}}.</param>
+        /// <param name="IdContaDebitoRecorrente">{{{conta_debito_recorrente_response_id_conta_debito_recorrente_value}}}.</param>
+        /// <param name="IdTipoDebitoRecorrente">{{{conta_debito_recorrente_response_id_tipo_debito_recorrente_value}}}.</param>
+        /// <param name="IdUsuario">{{{conta_debito_recorrente_response_id_usuario_value}}}.</param>
+        /// <param name="Login">{{{conta_debito_recorrente_response_id_login_value}}}.</param>
+        /// <param name="NumeroParcelas">{{{conta_debito_recorrente_response_num_parcelas_value}}}.</param>
+        /// <param name="Origem">{{{conta_debito_recorrente_response_origem_value}}}.</param>
 
         public ContaDebitoRecorrenteResponse(bool? Ativo = null, string DataHoraFim = null, string DataHoraInicio = null, string DataHoraUltimoPagamento = null, string Descricao = null, long? IdConta = null, long? IdContaDebitoRecorrente = null, long? IdTipoDebitoRecorrente = null, long? IdUsuario = null, string Login = null, int? NumeroParcelas = null, string Origem = null)
         {
@@ -54,86 +54,86 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Identify if the debit recurrent is active
+        /// {{{conta_debito_recorrente_response_ativo_value}}}
         /// </summary>
-        /// <value>Identify if the debit recurrent is active</value>
+        /// <value>{{{conta_debito_recorrente_response_ativo_value}}}</value>
         [DataMember(Name="ativo", EmitDefaultValue=false)]
         public bool? Ativo { get; set; }
     
         /// <summary>
-        /// Ending date the recurrent debit
+        /// {{{conta_debito_recorrente_response_data_hora_fim_value}}}
         /// </summary>
-        /// <value>Ending date the recurrent debit</value>
+        /// <value>{{{conta_debito_recorrente_response_data_hora_fim_value}}}</value>
         [DataMember(Name="dataHoraFim", EmitDefaultValue=false)]
         public string DataHoraFim { get; set; }
     
         /// <summary>
-        /// Beginning date of the recurrent debit
+        /// {{{conta_debito_recorrente_response_data_hora_inicio_value}}}
         /// </summary>
-        /// <value>Beginning date of the recurrent debit</value>
+        /// <value>{{{conta_debito_recorrente_response_data_hora_inicio_value}}}</value>
         [DataMember(Name="dataHoraInicio", EmitDefaultValue=false)]
         public string DataHoraInicio { get; set; }
     
         /// <summary>
-        /// Date of the last payment effected
+        /// {{{conta_debito_recorrente_response_data_hora_ultimo_pagamento_value}}}
         /// </summary>
-        /// <value>Date of the last payment effected</value>
+        /// <value>{{{conta_debito_recorrente_response_data_hora_ultimo_pagamento_value}}}</value>
         [DataMember(Name="dataHoraUltimoPagamento", EmitDefaultValue=false)]
         public string DataHoraUltimoPagamento { get; set; }
     
         /// <summary>
-        /// Description of the type of recurrent debit
+        /// {{{conta_debito_recorrente_response_descricao_value}}}
         /// </summary>
-        /// <value>Description of the type of recurrent debit</value>
+        /// <value>{{{conta_debito_recorrente_response_descricao_value}}}</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     
         /// <summary>
-        /// Identification Code of the Account (id)
+        /// {{{conta_debito_recorrente_response_id_conta_value}}}
         /// </summary>
-        /// <value>Identification Code of the Account (id)</value>
+        /// <value>{{{conta_debito_recorrente_response_id_conta_value}}}</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// Identification Code of the DebitAccountRecurrent (id)
+        /// {{{conta_debito_recorrente_response_id_conta_debito_recorrente_value}}}
         /// </summary>
-        /// <value>Identification Code of the DebitAccountRecurrent (id)</value>
+        /// <value>{{{conta_debito_recorrente_response_id_conta_debito_recorrente_value}}}</value>
         [DataMember(Name="idContaDebitoRecorrente", EmitDefaultValue=false)]
         public long? IdContaDebitoRecorrente { get; set; }
     
         /// <summary>
-        /// Identification Code of the type of recurrent debit (id)
+        /// {{{conta_debito_recorrente_response_id_tipo_debito_recorrente_value}}}
         /// </summary>
-        /// <value>Identification Code of the type of recurrent debit (id)</value>
+        /// <value>{{{conta_debito_recorrente_response_id_tipo_debito_recorrente_value}}}</value>
         [DataMember(Name="idTipoDebitoRecorrente", EmitDefaultValue=false)]
         public long? IdTipoDebitoRecorrente { get; set; }
     
         /// <summary>
-        /// Logged user id
+        /// {{{conta_debito_recorrente_response_id_usuario_value}}}
         /// </summary>
-        /// <value>Logged user id</value>
+        /// <value>{{{conta_debito_recorrente_response_id_usuario_value}}}</value>
         [DataMember(Name="idUsuario", EmitDefaultValue=false)]
         public long? IdUsuario { get; set; }
     
         /// <summary>
-        /// User loging logged in the system
+        /// {{{conta_debito_recorrente_response_id_login_value}}}
         /// </summary>
-        /// <value>User loging logged in the system</value>
+        /// <value>{{{conta_debito_recorrente_response_id_login_value}}}</value>
         [DataMember(Name="login", EmitDefaultValue=false)]
         public string Login { get; set; }
     
         /// <summary>
-        /// Portion quantity for recurrent debit
+        /// {{{conta_debito_recorrente_response_num_parcelas_value}}}
         /// </summary>
-        /// <value>Portion quantity for recurrent debit</value>
+        /// <value>{{{conta_debito_recorrente_response_num_parcelas_value}}}</value>
         [DataMember(Name="numeroParcelas", EmitDefaultValue=false)]
         public int? NumeroParcelas { get; set; }
     
         /// <summary>
-        /// Origin where was made the register modification
+        /// {{{conta_debito_recorrente_response_origem_value}}}
         /// </summary>
-        /// <value>Origin where was made the register modification</value>
+        /// <value>{{{conta_debito_recorrente_response_origem_value}}}</value>
         [DataMember(Name="origem", EmitDefaultValue=false)]
         public string Origem { get; set; }
     

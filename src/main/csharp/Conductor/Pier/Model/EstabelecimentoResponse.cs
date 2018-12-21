@@ -12,16 +12,16 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Objeto Estabelecimento
+    /// {{{estabelecimento_response_description}}}
     /// </summary>
     [DataContract]
     public partial class EstabelecimentoResponse :  IEquatable<EstabelecimentoResponse>
     { 
     
         /// <summary>
-        /// Type of the Merchant Payment Scheme
+        /// {{{estabelecimento_response_tipo_pagamento_value}}}
         /// </summary>
-        /// <value>Type of the Merchant Payment Scheme</value>
+        /// <value>{{{estabelecimento_response_tipo_pagamento_value}}}</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum TipoPagamentoEnum {
             
@@ -34,9 +34,9 @@ namespace Conductor.Pier.Model
 
     
         /// <summary>
-        /// Type of the Merchant Payment Scheme
+        /// {{{estabelecimento_response_tipo_pagamento_value}}}
         /// </summary>
-        /// <value>Type of the Merchant Payment Scheme</value>
+        /// <value>{{{estabelecimento_response_tipo_pagamento_value}}}</value>
         [DataMember(Name="tipoPagamento", EmitDefaultValue=false)]
         public TipoPagamentoEnum? TipoPagamento { get; set; }
     
@@ -44,48 +44,48 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="EstabelecimentoResponse" /> class.
         /// Initializes a new instance of the <see cref="EstabelecimentoResponse" />class.
         /// </summary>
-        /// <param name="Id">Identification Code of the Merchant (id).</param>
-        /// <param name="NumeroEstabelecimento">Identification Number of the Merchant at Conductor.</param>
-        /// <param name="FlagMatriz">Indicate if it is headquarter or Branch.</param>
-        /// <param name="IdGrupoEconomico">Show the identification number of the Economic Group.</param>
-        /// <param name="NumeroReceitaFederal">Show the number of the indentification number of the merchant in IRs.</param>
-        /// <param name="Nome">Merchant name.</param>
-        /// <param name="Descricao">Social Reason of the Merchant.</param>
-        /// <param name="NomeFantasia">Merchant Commercial Title.</param>
-        /// <param name="Cep">Mail Code (Zipcode).</param>
-        /// <param name="NomeLogradouro">Name of the Street.</param>
-        /// <param name="NumeroEndereco">Address number.</param>
-        /// <param name="Bairro">Neighborhood name.</param>
-        /// <param name="Cidade">Address city name.</param>
-        /// <param name="Complemento">Complementary Descriptions referring to the address.</param>
-        /// <param name="Uf">Acronym of the Federal Unity identification of the address.</param>
-        /// <param name="Cep2">Zip Code.</param>
-        /// <param name="NomeLogradouro2">Name of the Street.</param>
-        /// <param name="NumeroEndereco2">Address number.</param>
-        /// <param name="Bairro2">Neighborhood address name.</param>
-        /// <param name="Cidade2">Name of the city.</param>
-        /// <param name="Complemento2">Complementary Descriptions refering to the address.</param>
-        /// <param name="Uf2">Acronym of the Federal Unity identification of the address.</param>
-        /// <param name="Obs">Especific details about the Merchant Register.</param>
-        /// <param name="Contato">Name of the person for the contact with the Merchant.</param>
-        /// <param name="Email">E-mail of the pessoa to contact with the Merchant.</param>
-        /// <param name="FlagArquivoSecrFazenda">Indicate if the Merchant will be included in the file of register to the Secretary of State Treasury.</param>
-        /// <param name="FlagCartaoDigitado">Indicate if the Merchant can originate transactions without reading the magnetic stripe or the card chip.</param>
-        /// <param name="Inativo">Indicate if the Merchant is inactive.</param>
-        /// <param name="IdMoeda">Identifier Code fo the currency.</param>
-        /// <param name="IdPais">Country Identifier.</param>
-        /// <param name="AssociadoSPCBrasil">Number associated to the SPCBrazil.</param>
-        /// <param name="Mcc">Merchant Catergory Code.</param>
-        /// <param name="IdTipoEstabelecimento">Identification Code of the Merchant.</param>
-        /// <param name="Correspondencia">Type of Mail (MAIL, MAIL).</param>
-        /// <param name="CargoContato">Position of the Merchant.</param>
-        /// <param name="TipoPagamento">Type of the Merchant Payment Scheme.</param>
-        /// <param name="Consulta">Retrieve the register number one.</param>
-        /// <param name="Consulta2">Retrieve of register number two.</param>
-        /// <param name="Consulta3">Retrieve the register number three.</param>
-        /// <param name="Terminal">Terminal of the Merchant.</param>
-        /// <param name="DataCadastramento">Resgister date of the Merchant.</param>
-        /// <param name="Usuario">User of the application.</param>
+        /// <param name="Id">{{{estabelecimento_response_id_value}}}.</param>
+        /// <param name="NumeroEstabelecimento">{{{estabelecimento_response_numero_estabelecimento_value}}}.</param>
+        /// <param name="FlagMatriz">{{{estabelecimento_response_flag_matriz_value}}}.</param>
+        /// <param name="IdGrupoEconomico">{{{estabelecimento_response_id_grupo_economico_value}}}.</param>
+        /// <param name="NumeroReceitaFederal">{{{estabelecimento_response_numero_receita_federal_value}}}.</param>
+        /// <param name="Nome">{{{estabelecimento_response_nome_value}}}.</param>
+        /// <param name="Descricao">{{{estabelecimento_response_descricao_value}}}.</param>
+        /// <param name="NomeFantasia">{{{estabelecimento_response_nome_fantasia_value}}}.</param>
+        /// <param name="Cep">{{{estabelecimento_response_cep_value}}}.</param>
+        /// <param name="NomeLogradouro">{{{estabelecimento_response_nome_logradouro_value}}}.</param>
+        /// <param name="NumeroEndereco">{{{estabelecimento_response_numero_endereco_value}}}.</param>
+        /// <param name="Bairro">{{{estabelecimento_response_bairro_value}}}.</param>
+        /// <param name="Cidade">{{{estabelecimento_response_cidade_value}}}.</param>
+        /// <param name="Complemento">{{{estabelecimento_response_complemento_value}}}.</param>
+        /// <param name="Uf">{{{estabelecimento_response_uf_value}}}.</param>
+        /// <param name="Cep2">{{{estabelecimento_response_cep2_value}}}.</param>
+        /// <param name="NomeLogradouro2">{{{estabelecimento_response_nome_logradouro2_value}}}.</param>
+        /// <param name="NumeroEndereco2">{{{estabelecimento_response_numero_endereco2_value}}}.</param>
+        /// <param name="Bairro2">{{{estabelecimento_response_bairro2_value}}}.</param>
+        /// <param name="Cidade2">{{{estabelecimento_response_cidade2_value}}}.</param>
+        /// <param name="Complemento2">{{{estabelecimento_response_complemento2_value}}}.</param>
+        /// <param name="Uf2">{{{estabelecimento_response_uf2_value}}}.</param>
+        /// <param name="Obs">{{{estabelecimento_response_obs_value}}}.</param>
+        /// <param name="Contato">{{{estabelecimento_response_contato_value}}}.</param>
+        /// <param name="Email">{{{estabelecimento_response_email_value}}}.</param>
+        /// <param name="FlagArquivoSecrFazenda">{{{estabelecimento_response_flag_arquivo_secr_fazenda_value}}}.</param>
+        /// <param name="FlagCartaoDigitado">{{{estabelecimento_response_flag_cartao_digitado_value}}}.</param>
+        /// <param name="Inativo">{{{estabelecimento_response_inativo_value}}}.</param>
+        /// <param name="IdMoeda">{{{estabelecimento_response_id_moeda_value}}}.</param>
+        /// <param name="IdPais">{{{estabelecimento_response_id_pais_value}}}.</param>
+        /// <param name="AssociadoSPCBrasil">{{{estabelecimento_response_associado_s_p_c_brasil_value}}}.</param>
+        /// <param name="Mcc">{{{estabelecimento_response_mcc_value}}}.</param>
+        /// <param name="IdTipoEstabelecimento">{{{estabelecimento_response_id_tipo_estabelecimento_value}}}.</param>
+        /// <param name="Correspondencia">{{{estabelecimento_response_correspondencia_value}}}.</param>
+        /// <param name="CargoContato">{{{estabelecimento_response_cargo_contato_value}}}.</param>
+        /// <param name="TipoPagamento">{{{estabelecimento_response_tipo_pagamento_value}}}.</param>
+        /// <param name="Consulta">{{{estabelecimento_response_consulta_value}}}.</param>
+        /// <param name="Consulta2">{{{estabelecimento_response_consulta2_value}}}.</param>
+        /// <param name="Consulta3">{{{estabelecimento_response_consulta3_value}}}.</param>
+        /// <param name="Terminal">{{{estabelecimento_response_terminal_value}}}.</param>
+        /// <param name="DataCadastramento">{{{estabelecimento_response_data_cadastramento_value}}}.</param>
+        /// <param name="Usuario">{{{estabelecimento_response_usuario_value}}}.</param>
 
         public EstabelecimentoResponse(long? Id = null, string NumeroEstabelecimento = null, int? FlagMatriz = null, long? IdGrupoEconomico = null, long? NumeroReceitaFederal = null, string Nome = null, string Descricao = null, string NomeFantasia = null, string Cep = null, string NomeLogradouro = null, string NumeroEndereco = null, string Bairro = null, string Cidade = null, string Complemento = null, string Uf = null, string Cep2 = null, string NomeLogradouro2 = null, string NumeroEndereco2 = null, string Bairro2 = null, string Cidade2 = null, string Complemento2 = null, string Uf2 = null, string Obs = null, string Contato = null, string Email = null, int? FlagArquivoSecrFazenda = null, int? FlagCartaoDigitado = null, int? Inativo = null, long? IdMoeda = null, long? IdPais = null, int? AssociadoSPCBrasil = null, long? Mcc = null, long? IdTipoEstabelecimento = null, int? Correspondencia = null, string CargoContato = null, TipoPagamentoEnum? TipoPagamento = null, ConsultaCadastroEstabelecimentoDTO Consulta = null, ConsultaCadastroEstabelecimentoDTO Consulta2 = null, ConsultaCadastroEstabelecimentoDTO Consulta3 = null, string Terminal = null, string DataCadastramento = null, string Usuario = null)
         {
@@ -136,289 +136,289 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Identification Code of the Merchant (id)
+        /// {{{estabelecimento_response_id_value}}}
         /// </summary>
-        /// <value>Identification Code of the Merchant (id)</value>
+        /// <value>{{{estabelecimento_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Identification Number of the Merchant at Conductor
+        /// {{{estabelecimento_response_numero_estabelecimento_value}}}
         /// </summary>
-        /// <value>Identification Number of the Merchant at Conductor</value>
+        /// <value>{{{estabelecimento_response_numero_estabelecimento_value}}}</value>
         [DataMember(Name="numeroEstabelecimento", EmitDefaultValue=false)]
         public string NumeroEstabelecimento { get; set; }
     
         /// <summary>
-        /// Indicate if it is headquarter or Branch
+        /// {{{estabelecimento_response_flag_matriz_value}}}
         /// </summary>
-        /// <value>Indicate if it is headquarter or Branch</value>
+        /// <value>{{{estabelecimento_response_flag_matriz_value}}}</value>
         [DataMember(Name="flagMatriz", EmitDefaultValue=false)]
         public int? FlagMatriz { get; set; }
     
         /// <summary>
-        /// Show the identification number of the Economic Group
+        /// {{{estabelecimento_response_id_grupo_economico_value}}}
         /// </summary>
-        /// <value>Show the identification number of the Economic Group</value>
+        /// <value>{{{estabelecimento_response_id_grupo_economico_value}}}</value>
         [DataMember(Name="idGrupoEconomico", EmitDefaultValue=false)]
         public long? IdGrupoEconomico { get; set; }
     
         /// <summary>
-        /// Show the number of the indentification number of the merchant in IRs
+        /// {{{estabelecimento_response_numero_receita_federal_value}}}
         /// </summary>
-        /// <value>Show the number of the indentification number of the merchant in IRs</value>
+        /// <value>{{{estabelecimento_response_numero_receita_federal_value}}}</value>
         [DataMember(Name="numeroReceitaFederal", EmitDefaultValue=false)]
         public long? NumeroReceitaFederal { get; set; }
     
         /// <summary>
-        /// Merchant name
+        /// {{{estabelecimento_response_nome_value}}}
         /// </summary>
-        /// <value>Merchant name</value>
+        /// <value>{{{estabelecimento_response_nome_value}}}</value>
         [DataMember(Name="nome", EmitDefaultValue=false)]
         public string Nome { get; set; }
     
         /// <summary>
-        /// Social Reason of the Merchant
+        /// {{{estabelecimento_response_descricao_value}}}
         /// </summary>
-        /// <value>Social Reason of the Merchant</value>
+        /// <value>{{{estabelecimento_response_descricao_value}}}</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     
         /// <summary>
-        /// Merchant Commercial Title
+        /// {{{estabelecimento_response_nome_fantasia_value}}}
         /// </summary>
-        /// <value>Merchant Commercial Title</value>
+        /// <value>{{{estabelecimento_response_nome_fantasia_value}}}</value>
         [DataMember(Name="nomeFantasia", EmitDefaultValue=false)]
         public string NomeFantasia { get; set; }
     
         /// <summary>
-        /// Mail Code (Zipcode)
+        /// {{{estabelecimento_response_cep_value}}}
         /// </summary>
-        /// <value>Mail Code (Zipcode)</value>
+        /// <value>{{{estabelecimento_response_cep_value}}}</value>
         [DataMember(Name="cep", EmitDefaultValue=false)]
         public string Cep { get; set; }
     
         /// <summary>
-        /// Name of the Street
+        /// {{{estabelecimento_response_nome_logradouro_value}}}
         /// </summary>
-        /// <value>Name of the Street</value>
+        /// <value>{{{estabelecimento_response_nome_logradouro_value}}}</value>
         [DataMember(Name="nomeLogradouro", EmitDefaultValue=false)]
         public string NomeLogradouro { get; set; }
     
         /// <summary>
-        /// Address number
+        /// {{{estabelecimento_response_numero_endereco_value}}}
         /// </summary>
-        /// <value>Address number</value>
+        /// <value>{{{estabelecimento_response_numero_endereco_value}}}</value>
         [DataMember(Name="numeroEndereco", EmitDefaultValue=false)]
         public string NumeroEndereco { get; set; }
     
         /// <summary>
-        /// Neighborhood name
+        /// {{{estabelecimento_response_bairro_value}}}
         /// </summary>
-        /// <value>Neighborhood name</value>
+        /// <value>{{{estabelecimento_response_bairro_value}}}</value>
         [DataMember(Name="bairro", EmitDefaultValue=false)]
         public string Bairro { get; set; }
     
         /// <summary>
-        /// Address city name
+        /// {{{estabelecimento_response_cidade_value}}}
         /// </summary>
-        /// <value>Address city name</value>
+        /// <value>{{{estabelecimento_response_cidade_value}}}</value>
         [DataMember(Name="cidade", EmitDefaultValue=false)]
         public string Cidade { get; set; }
     
         /// <summary>
-        /// Complementary Descriptions referring to the address
+        /// {{{estabelecimento_response_complemento_value}}}
         /// </summary>
-        /// <value>Complementary Descriptions referring to the address</value>
+        /// <value>{{{estabelecimento_response_complemento_value}}}</value>
         [DataMember(Name="complemento", EmitDefaultValue=false)]
         public string Complemento { get; set; }
     
         /// <summary>
-        /// Acronym of the Federal Unity identification of the address
+        /// {{{estabelecimento_response_uf_value}}}
         /// </summary>
-        /// <value>Acronym of the Federal Unity identification of the address</value>
+        /// <value>{{{estabelecimento_response_uf_value}}}</value>
         [DataMember(Name="uf", EmitDefaultValue=false)]
         public string Uf { get; set; }
     
         /// <summary>
-        /// Zip Code
+        /// {{{estabelecimento_response_cep2_value}}}
         /// </summary>
-        /// <value>Zip Code</value>
+        /// <value>{{{estabelecimento_response_cep2_value}}}</value>
         [DataMember(Name="cep2", EmitDefaultValue=false)]
         public string Cep2 { get; set; }
     
         /// <summary>
-        /// Name of the Street
+        /// {{{estabelecimento_response_nome_logradouro2_value}}}
         /// </summary>
-        /// <value>Name of the Street</value>
+        /// <value>{{{estabelecimento_response_nome_logradouro2_value}}}</value>
         [DataMember(Name="nomeLogradouro2", EmitDefaultValue=false)]
         public string NomeLogradouro2 { get; set; }
     
         /// <summary>
-        /// Address number
+        /// {{{estabelecimento_response_numero_endereco2_value}}}
         /// </summary>
-        /// <value>Address number</value>
+        /// <value>{{{estabelecimento_response_numero_endereco2_value}}}</value>
         [DataMember(Name="numeroEndereco2", EmitDefaultValue=false)]
         public string NumeroEndereco2 { get; set; }
     
         /// <summary>
-        /// Neighborhood address name
+        /// {{{estabelecimento_response_bairro2_value}}}
         /// </summary>
-        /// <value>Neighborhood address name</value>
+        /// <value>{{{estabelecimento_response_bairro2_value}}}</value>
         [DataMember(Name="bairro2", EmitDefaultValue=false)]
         public string Bairro2 { get; set; }
     
         /// <summary>
-        /// Name of the city
+        /// {{{estabelecimento_response_cidade2_value}}}
         /// </summary>
-        /// <value>Name of the city</value>
+        /// <value>{{{estabelecimento_response_cidade2_value}}}</value>
         [DataMember(Name="cidade2", EmitDefaultValue=false)]
         public string Cidade2 { get; set; }
     
         /// <summary>
-        /// Complementary Descriptions refering to the address
+        /// {{{estabelecimento_response_complemento2_value}}}
         /// </summary>
-        /// <value>Complementary Descriptions refering to the address</value>
+        /// <value>{{{estabelecimento_response_complemento2_value}}}</value>
         [DataMember(Name="complemento2", EmitDefaultValue=false)]
         public string Complemento2 { get; set; }
     
         /// <summary>
-        /// Acronym of the Federal Unity identification of the address
+        /// {{{estabelecimento_response_uf2_value}}}
         /// </summary>
-        /// <value>Acronym of the Federal Unity identification of the address</value>
+        /// <value>{{{estabelecimento_response_uf2_value}}}</value>
         [DataMember(Name="uf2", EmitDefaultValue=false)]
         public string Uf2 { get; set; }
     
         /// <summary>
-        /// Especific details about the Merchant Register
+        /// {{{estabelecimento_response_obs_value}}}
         /// </summary>
-        /// <value>Especific details about the Merchant Register</value>
+        /// <value>{{{estabelecimento_response_obs_value}}}</value>
         [DataMember(Name="obs", EmitDefaultValue=false)]
         public string Obs { get; set; }
     
         /// <summary>
-        /// Name of the person for the contact with the Merchant
+        /// {{{estabelecimento_response_contato_value}}}
         /// </summary>
-        /// <value>Name of the person for the contact with the Merchant</value>
+        /// <value>{{{estabelecimento_response_contato_value}}}</value>
         [DataMember(Name="contato", EmitDefaultValue=false)]
         public string Contato { get; set; }
     
         /// <summary>
-        /// E-mail of the pessoa to contact with the Merchant
+        /// {{{estabelecimento_response_email_value}}}
         /// </summary>
-        /// <value>E-mail of the pessoa to contact with the Merchant</value>
+        /// <value>{{{estabelecimento_response_email_value}}}</value>
         [DataMember(Name="email", EmitDefaultValue=false)]
         public string Email { get; set; }
     
         /// <summary>
-        /// Indicate if the Merchant will be included in the file of register to the Secretary of State Treasury
+        /// {{{estabelecimento_response_flag_arquivo_secr_fazenda_value}}}
         /// </summary>
-        /// <value>Indicate if the Merchant will be included in the file of register to the Secretary of State Treasury</value>
+        /// <value>{{{estabelecimento_response_flag_arquivo_secr_fazenda_value}}}</value>
         [DataMember(Name="flagArquivoSecrFazenda", EmitDefaultValue=false)]
         public int? FlagArquivoSecrFazenda { get; set; }
     
         /// <summary>
-        /// Indicate if the Merchant can originate transactions without reading the magnetic stripe or the card chip
+        /// {{{estabelecimento_response_flag_cartao_digitado_value}}}
         /// </summary>
-        /// <value>Indicate if the Merchant can originate transactions without reading the magnetic stripe or the card chip</value>
+        /// <value>{{{estabelecimento_response_flag_cartao_digitado_value}}}</value>
         [DataMember(Name="flagCartaoDigitado", EmitDefaultValue=false)]
         public int? FlagCartaoDigitado { get; set; }
     
         /// <summary>
-        /// Indicate if the Merchant is inactive
+        /// {{{estabelecimento_response_inativo_value}}}
         /// </summary>
-        /// <value>Indicate if the Merchant is inactive</value>
+        /// <value>{{{estabelecimento_response_inativo_value}}}</value>
         [DataMember(Name="inativo", EmitDefaultValue=false)]
         public int? Inativo { get; set; }
     
         /// <summary>
-        /// Identifier Code fo the currency
+        /// {{{estabelecimento_response_id_moeda_value}}}
         /// </summary>
-        /// <value>Identifier Code fo the currency</value>
+        /// <value>{{{estabelecimento_response_id_moeda_value}}}</value>
         [DataMember(Name="idMoeda", EmitDefaultValue=false)]
         public long? IdMoeda { get; set; }
     
         /// <summary>
-        /// Country Identifier
+        /// {{{estabelecimento_response_id_pais_value}}}
         /// </summary>
-        /// <value>Country Identifier</value>
+        /// <value>{{{estabelecimento_response_id_pais_value}}}</value>
         [DataMember(Name="idPais", EmitDefaultValue=false)]
         public long? IdPais { get; set; }
     
         /// <summary>
-        /// Number associated to the SPCBrazil
+        /// {{{estabelecimento_response_associado_s_p_c_brasil_value}}}
         /// </summary>
-        /// <value>Number associated to the SPCBrazil</value>
+        /// <value>{{{estabelecimento_response_associado_s_p_c_brasil_value}}}</value>
         [DataMember(Name="associadoSPCBrasil", EmitDefaultValue=false)]
         public int? AssociadoSPCBrasil { get; set; }
     
         /// <summary>
-        /// Merchant Catergory Code
+        /// {{{estabelecimento_response_mcc_value}}}
         /// </summary>
-        /// <value>Merchant Catergory Code</value>
+        /// <value>{{{estabelecimento_response_mcc_value}}}</value>
         [DataMember(Name="mcc", EmitDefaultValue=false)]
         public long? Mcc { get; set; }
     
         /// <summary>
-        /// Identification Code of the Merchant
+        /// {{{estabelecimento_response_id_tipo_estabelecimento_value}}}
         /// </summary>
-        /// <value>Identification Code of the Merchant</value>
+        /// <value>{{{estabelecimento_response_id_tipo_estabelecimento_value}}}</value>
         [DataMember(Name="idTipoEstabelecimento", EmitDefaultValue=false)]
         public long? IdTipoEstabelecimento { get; set; }
     
         /// <summary>
-        /// Type of Mail (MAIL, MAIL)
+        /// {{{estabelecimento_response_correspondencia_value}}}
         /// </summary>
-        /// <value>Type of Mail (MAIL, MAIL)</value>
+        /// <value>{{{estabelecimento_response_correspondencia_value}}}</value>
         [DataMember(Name="correspondencia", EmitDefaultValue=false)]
         public int? Correspondencia { get; set; }
     
         /// <summary>
-        /// Position of the Merchant
+        /// {{{estabelecimento_response_cargo_contato_value}}}
         /// </summary>
-        /// <value>Position of the Merchant</value>
+        /// <value>{{{estabelecimento_response_cargo_contato_value}}}</value>
         [DataMember(Name="cargoContato", EmitDefaultValue=false)]
         public string CargoContato { get; set; }
     
         /// <summary>
-        /// Retrieve the register number one
+        /// {{{estabelecimento_response_consulta_value}}}
         /// </summary>
-        /// <value>Retrieve the register number one</value>
+        /// <value>{{{estabelecimento_response_consulta_value}}}</value>
         [DataMember(Name="consulta", EmitDefaultValue=false)]
         public ConsultaCadastroEstabelecimentoDTO Consulta { get; set; }
     
         /// <summary>
-        /// Retrieve of register number two
+        /// {{{estabelecimento_response_consulta2_value}}}
         /// </summary>
-        /// <value>Retrieve of register number two</value>
+        /// <value>{{{estabelecimento_response_consulta2_value}}}</value>
         [DataMember(Name="consulta2", EmitDefaultValue=false)]
         public ConsultaCadastroEstabelecimentoDTO Consulta2 { get; set; }
     
         /// <summary>
-        /// Retrieve the register number three
+        /// {{{estabelecimento_response_consulta3_value}}}
         /// </summary>
-        /// <value>Retrieve the register number three</value>
+        /// <value>{{{estabelecimento_response_consulta3_value}}}</value>
         [DataMember(Name="consulta3", EmitDefaultValue=false)]
         public ConsultaCadastroEstabelecimentoDTO Consulta3 { get; set; }
     
         /// <summary>
-        /// Terminal of the Merchant
+        /// {{{estabelecimento_response_terminal_value}}}
         /// </summary>
-        /// <value>Terminal of the Merchant</value>
+        /// <value>{{{estabelecimento_response_terminal_value}}}</value>
         [DataMember(Name="terminal", EmitDefaultValue=false)]
         public string Terminal { get; set; }
     
         /// <summary>
-        /// Resgister date of the Merchant
+        /// {{{estabelecimento_response_data_cadastramento_value}}}
         /// </summary>
-        /// <value>Resgister date of the Merchant</value>
+        /// <value>{{{estabelecimento_response_data_cadastramento_value}}}</value>
         [DataMember(Name="dataCadastramento", EmitDefaultValue=false)]
         public string DataCadastramento { get; set; }
     
         /// <summary>
-        /// User of the application
+        /// {{{estabelecimento_response_usuario_value}}}
         /// </summary>
-        /// <value>User of the application</value>
+        /// <value>{{{estabelecimento_response_usuario_value}}}</value>
         [DataMember(Name="usuario", EmitDefaultValue=false)]
         public string Usuario { get; set; }
     

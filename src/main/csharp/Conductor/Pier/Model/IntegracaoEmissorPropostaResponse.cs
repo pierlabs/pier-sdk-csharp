@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Response of the inclusion of the record of the proposal for integration
+    /// {{{integracao_emissor_proposta_resposta_descricao}}}
     /// </summary>
     [DataContract]
     public partial class IntegracaoEmissorPropostaResponse :  IEquatable<IntegracaoEmissorPropostaResponse>
@@ -22,13 +22,13 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="IntegracaoEmissorPropostaResponse" /> class.
         /// Initializes a new instance of the <see cref="IntegracaoEmissorPropostaResponse" />class.
         /// </summary>
-        /// <param name="Id">Identification code.</param>
-        /// <param name="IdConta">Account ID code.</param>
-        /// <param name="Status">Registration status.</param>
-        /// <param name="Observacao">Record notice.</param>
-        /// <param name="FlagSelecionado">Flag selected.</param>
-        /// <param name="IdPropostaExterna">Identification code of the external proposal.</param>
-        /// <param name="DataEvento">Date of the event.</param>
+        /// <param name="Id">{{{integracao_emissor_proposta_resposta_id}}}.</param>
+        /// <param name="IdConta">{{{integracao_emissor_proposta_resposta_id_conta}}}.</param>
+        /// <param name="Status">{{{integracao_emissor_proposta_resposta_status}}}.</param>
+        /// <param name="Observacao">{{{integracao_emissor_proposta_resposta_observacao}}}.</param>
+        /// <param name="FlagSelecionado">{{{integracao_emissor_proposta_resposta_flag_selecionado}}}.</param>
+        /// <param name="IdPropostaExterna">{{{integracao_emissor_proposta_resposta_id_proposta_externa}}}.</param>
+        /// <param name="DataEvento">{{{integracao_emissor_proposta_resposta_data_evento}}}.</param>
 
         public IntegracaoEmissorPropostaResponse(long? Id = null, long? IdConta = null, int? Status = null, string Observacao = null, bool? FlagSelecionado = null, long? IdPropostaExterna = null, string DataEvento = null)
         {
@@ -44,51 +44,51 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Identification code
+        /// {{{integracao_emissor_proposta_resposta_id}}}
         /// </summary>
-        /// <value>Identification code</value>
+        /// <value>{{{integracao_emissor_proposta_resposta_id}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Account ID code
+        /// {{{integracao_emissor_proposta_resposta_id_conta}}}
         /// </summary>
-        /// <value>Account ID code</value>
+        /// <value>{{{integracao_emissor_proposta_resposta_id_conta}}}</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// Registration status
+        /// {{{integracao_emissor_proposta_resposta_status}}}
         /// </summary>
-        /// <value>Registration status</value>
+        /// <value>{{{integracao_emissor_proposta_resposta_status}}}</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public int? Status { get; set; }
     
         /// <summary>
-        /// Record notice
+        /// {{{integracao_emissor_proposta_resposta_observacao}}}
         /// </summary>
-        /// <value>Record notice</value>
+        /// <value>{{{integracao_emissor_proposta_resposta_observacao}}}</value>
         [DataMember(Name="observacao", EmitDefaultValue=false)]
         public string Observacao { get; set; }
     
         /// <summary>
-        /// Flag selected
+        /// {{{integracao_emissor_proposta_resposta_flag_selecionado}}}
         /// </summary>
-        /// <value>Flag selected</value>
+        /// <value>{{{integracao_emissor_proposta_resposta_flag_selecionado}}}</value>
         [DataMember(Name="flagSelecionado", EmitDefaultValue=false)]
         public bool? FlagSelecionado { get; set; }
     
         /// <summary>
-        /// Identification code of the external proposal
+        /// {{{integracao_emissor_proposta_resposta_id_proposta_externa}}}
         /// </summary>
-        /// <value>Identification code of the external proposal</value>
+        /// <value>{{{integracao_emissor_proposta_resposta_id_proposta_externa}}}</value>
         [DataMember(Name="idPropostaExterna", EmitDefaultValue=false)]
         public long? IdPropostaExterna { get; set; }
     
         /// <summary>
-        /// Date of the event
+        /// {{{integracao_emissor_proposta_resposta_data_evento}}}
         /// </summary>
-        /// <value>Date of the event</value>
+        /// <value>{{{integracao_emissor_proposta_resposta_data_evento}}}</value>
         [DataMember(Name="dataEvento", EmitDefaultValue=false)]
         public string DataEvento { get; set; }
     

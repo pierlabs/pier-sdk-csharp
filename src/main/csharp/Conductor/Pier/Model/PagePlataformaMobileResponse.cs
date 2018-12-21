@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// List of the Paltforms Mobile
+    /// {{{page_plataforma_mobile_response_description}}}
     /// </summary>
     [DataContract]
     public partial class PagePlataformaMobileResponse :  IEquatable<PagePlataformaMobileResponse>

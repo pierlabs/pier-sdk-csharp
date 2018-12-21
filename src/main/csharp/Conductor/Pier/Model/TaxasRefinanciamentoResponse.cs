@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Object of response for the validation of the refinancing taxes
+    /// {{{taxas_refinanciamento_response_description}}}
     /// </summary>
     [DataContract]
     public partial class TaxasRefinanciamentoResponse :  IEquatable<TaxasRefinanciamentoResponse>
@@ -22,28 +22,28 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TaxasRefinanciamentoResponse" /> class.
         /// Initializes a new instance of the <see cref="TaxasRefinanciamentoResponse" />class.
         /// </summary>
-        /// <param name="Id">ID of the taxes.</param>
-        /// <param name="IdConta">ID of the account.</param>
-        /// <param name="IdProduto">ID of the product.</param>
-        /// <param name="IdPlanoConta">ID of the account plan.</param>
-        /// <param name="IdPlanoPct">ID of the PCT plan.</param>
-        /// <param name="IdPlanoCreditoTaxa">ID plan taxe credit.</param>
-        /// <param name="DataEntrada">Entrance date.</param>
-        /// <param name="Vencimento">Expiration of the taxes.</param>
-        /// <param name="RecuperacaoEncargosFinanceiros">Retrieve of the financial charges.</param>
-        /// <param name="ComissaoGarantia">Description of the guarantee commission.</param>
-        /// <param name="Agenciamento">Description of the management.</param>
-        /// <param name="TaxaMaximaProximoPeriodo">Maximum taxe of the next period.</param>
-        /// <param name="TaxaEncargosFinanciamento">Taxe of the financing charges.</param>
-        /// <param name="TaxaMaximaSaque">Maximum taxe of the withdrawal.</param>
-        /// <param name="TaxaSaque">Withdrawal taxe.</param>
-        /// <param name="TaxaMaximaCompraJuros">Maximum taxe of shop interest.</param>
-        /// <param name="TaxaCompraJuros">Shop interest taxes.</param>
-        /// <param name="TaxaPermanencia">Remaining Taxe.</param>
-        /// <param name="TaxaRefinanciamento">Remaining taxe.</param>
-        /// <param name="TaxaRecuperacaoRefinanciamento">Taxe of remaining.</param>
-        /// <param name="TaxaPercCalcPagamentoMinimo">Taxe of Installment for Minimum payment.</param>
-        /// <param name="PlanoTaxaDefault">Plan of the standard taxe.</param>
+        /// <param name="Id">{{{taxas_refinanciamento_response_id_value}}}.</param>
+        /// <param name="IdConta">{{{taxas_refinanciamento_response_id_conta_value}}}.</param>
+        /// <param name="IdProduto">{{{taxas_refinanciamento_response_id_produto_value}}}.</param>
+        /// <param name="IdPlanoConta">{{{taxas_refinanciamento_response_id_plano_conta_value}}}.</param>
+        /// <param name="IdPlanoPct">{{{taxas_refinanciamento_response_id_plano_pct_value}}}.</param>
+        /// <param name="IdPlanoCreditoTaxa">{{{taxas_refinanciamento_response_id_plano_credito_taxa_value}}}.</param>
+        /// <param name="DataEntrada">{{{taxas_refinanciamento_response_data_entrada_value}}}.</param>
+        /// <param name="Vencimento">{{{taxas_refinanciamento_response_vencimento_value}}}.</param>
+        /// <param name="RecuperacaoEncargosFinanceiros">{{{taxas_refinanciamento_response_recuperacao_encargos_financeiros_value}}}.</param>
+        /// <param name="ComissaoGarantia">{{{taxas_refinanciamento_response_comissao_garantia_value}}}.</param>
+        /// <param name="Agenciamento">{{{taxas_refinanciamento_response_agenciamento_value}}}.</param>
+        /// <param name="TaxaMaximaProximoPeriodo">{{{taxas_refinanciamento_response_taxa_maxima_proximo_periodo_value}}}.</param>
+        /// <param name="TaxaEncargosFinanciamento">{{{taxas_refinanciamento_response_taxa_encargos_financiamento_value}}}.</param>
+        /// <param name="TaxaMaximaSaque">{{{taxas_refinanciamento_response_taxa_maxima_saque_value}}}.</param>
+        /// <param name="TaxaSaque">{{{taxas_refinanciamento_response_taxa_saque_value}}}.</param>
+        /// <param name="TaxaMaximaCompraJuros">{{{taxas_refinanciamento_response_taxa_maxima_compra_juros_value}}}.</param>
+        /// <param name="TaxaCompraJuros">{{{taxas_refinanciamento_response_taxa_compra_juros_value}}}.</param>
+        /// <param name="TaxaPermanencia">{{{taxas_refinanciamento_response_taxa_permanencia_value}}}.</param>
+        /// <param name="TaxaRefinanciamento">{{{taxas_refinanciamento_response_taxa_refinanciamento_value}}}.</param>
+        /// <param name="TaxaRecuperacaoRefinanciamento">{{{taxas_refinanciamento_response_taxa_recuperacao_refinanciamento_value}}}.</param>
+        /// <param name="TaxaPercCalcPagamentoMinimo">{{{taxas_refinanciamento_response_taxa_perc_calc_pagamento_minimo_value}}}.</param>
+        /// <param name="PlanoTaxaDefault">{{{taxas_refinanciamento_response_plano_taxa_default_value}}}.</param>
 
         public TaxasRefinanciamentoResponse(long? Id = null, long? IdConta = null, long? IdProduto = null, long? IdPlanoConta = null, long? IdPlanoPct = null, long? IdPlanoCreditoTaxa = null, string DataEntrada = null, string Vencimento = null, double? RecuperacaoEncargosFinanceiros = null, double? ComissaoGarantia = null, double? Agenciamento = null, double? TaxaMaximaProximoPeriodo = null, double? TaxaEncargosFinanciamento = null, double? TaxaMaximaSaque = null, double? TaxaSaque = null, double? TaxaMaximaCompraJuros = null, double? TaxaCompraJuros = null, double? TaxaPermanencia = null, double? TaxaRefinanciamento = null, double? TaxaRecuperacaoRefinanciamento = null, double? TaxaPercCalcPagamentoMinimo = null, int? PlanoTaxaDefault = null)
         {
@@ -74,156 +74,156 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// ID of the taxes
+        /// {{{taxas_refinanciamento_response_id_value}}}
         /// </summary>
-        /// <value>ID of the taxes</value>
+        /// <value>{{{taxas_refinanciamento_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// ID of the account
+        /// {{{taxas_refinanciamento_response_id_conta_value}}}
         /// </summary>
-        /// <value>ID of the account</value>
+        /// <value>{{{taxas_refinanciamento_response_id_conta_value}}}</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// ID of the product
+        /// {{{taxas_refinanciamento_response_id_produto_value}}}
         /// </summary>
-        /// <value>ID of the product</value>
+        /// <value>{{{taxas_refinanciamento_response_id_produto_value}}}</value>
         [DataMember(Name="idProduto", EmitDefaultValue=false)]
         public long? IdProduto { get; set; }
     
         /// <summary>
-        /// ID of the account plan
+        /// {{{taxas_refinanciamento_response_id_plano_conta_value}}}
         /// </summary>
-        /// <value>ID of the account plan</value>
+        /// <value>{{{taxas_refinanciamento_response_id_plano_conta_value}}}</value>
         [DataMember(Name="idPlanoConta", EmitDefaultValue=false)]
         public long? IdPlanoConta { get; set; }
     
         /// <summary>
-        /// ID of the PCT plan
+        /// {{{taxas_refinanciamento_response_id_plano_pct_value}}}
         /// </summary>
-        /// <value>ID of the PCT plan</value>
+        /// <value>{{{taxas_refinanciamento_response_id_plano_pct_value}}}</value>
         [DataMember(Name="idPlanoPct", EmitDefaultValue=false)]
         public long? IdPlanoPct { get; set; }
     
         /// <summary>
-        /// ID plan taxe credit
+        /// {{{taxas_refinanciamento_response_id_plano_credito_taxa_value}}}
         /// </summary>
-        /// <value>ID plan taxe credit</value>
+        /// <value>{{{taxas_refinanciamento_response_id_plano_credito_taxa_value}}}</value>
         [DataMember(Name="idPlanoCreditoTaxa", EmitDefaultValue=false)]
         public long? IdPlanoCreditoTaxa { get; set; }
     
         /// <summary>
-        /// Entrance date
+        /// {{{taxas_refinanciamento_response_data_entrada_value}}}
         /// </summary>
-        /// <value>Entrance date</value>
+        /// <value>{{{taxas_refinanciamento_response_data_entrada_value}}}</value>
         [DataMember(Name="dataEntrada", EmitDefaultValue=false)]
         public string DataEntrada { get; set; }
     
         /// <summary>
-        /// Expiration of the taxes
+        /// {{{taxas_refinanciamento_response_vencimento_value}}}
         /// </summary>
-        /// <value>Expiration of the taxes</value>
+        /// <value>{{{taxas_refinanciamento_response_vencimento_value}}}</value>
         [DataMember(Name="vencimento", EmitDefaultValue=false)]
         public string Vencimento { get; set; }
     
         /// <summary>
-        /// Retrieve of the financial charges
+        /// {{{taxas_refinanciamento_response_recuperacao_encargos_financeiros_value}}}
         /// </summary>
-        /// <value>Retrieve of the financial charges</value>
+        /// <value>{{{taxas_refinanciamento_response_recuperacao_encargos_financeiros_value}}}</value>
         [DataMember(Name="recuperacaoEncargosFinanceiros", EmitDefaultValue=false)]
         public double? RecuperacaoEncargosFinanceiros { get; set; }
     
         /// <summary>
-        /// Description of the guarantee commission
+        /// {{{taxas_refinanciamento_response_comissao_garantia_value}}}
         /// </summary>
-        /// <value>Description of the guarantee commission</value>
+        /// <value>{{{taxas_refinanciamento_response_comissao_garantia_value}}}</value>
         [DataMember(Name="comissaoGarantia", EmitDefaultValue=false)]
         public double? ComissaoGarantia { get; set; }
     
         /// <summary>
-        /// Description of the management
+        /// {{{taxas_refinanciamento_response_agenciamento_value}}}
         /// </summary>
-        /// <value>Description of the management</value>
+        /// <value>{{{taxas_refinanciamento_response_agenciamento_value}}}</value>
         [DataMember(Name="agenciamento", EmitDefaultValue=false)]
         public double? Agenciamento { get; set; }
     
         /// <summary>
-        /// Maximum taxe of the next period
+        /// {{{taxas_refinanciamento_response_taxa_maxima_proximo_periodo_value}}}
         /// </summary>
-        /// <value>Maximum taxe of the next period</value>
+        /// <value>{{{taxas_refinanciamento_response_taxa_maxima_proximo_periodo_value}}}</value>
         [DataMember(Name="taxaMaximaProximoPeriodo", EmitDefaultValue=false)]
         public double? TaxaMaximaProximoPeriodo { get; set; }
     
         /// <summary>
-        /// Taxe of the financing charges
+        /// {{{taxas_refinanciamento_response_taxa_encargos_financiamento_value}}}
         /// </summary>
-        /// <value>Taxe of the financing charges</value>
+        /// <value>{{{taxas_refinanciamento_response_taxa_encargos_financiamento_value}}}</value>
         [DataMember(Name="taxaEncargosFinanciamento", EmitDefaultValue=false)]
         public double? TaxaEncargosFinanciamento { get; set; }
     
         /// <summary>
-        /// Maximum taxe of the withdrawal
+        /// {{{taxas_refinanciamento_response_taxa_maxima_saque_value}}}
         /// </summary>
-        /// <value>Maximum taxe of the withdrawal</value>
+        /// <value>{{{taxas_refinanciamento_response_taxa_maxima_saque_value}}}</value>
         [DataMember(Name="taxaMaximaSaque", EmitDefaultValue=false)]
         public double? TaxaMaximaSaque { get; set; }
     
         /// <summary>
-        /// Withdrawal taxe
+        /// {{{taxas_refinanciamento_response_taxa_saque_value}}}
         /// </summary>
-        /// <value>Withdrawal taxe</value>
+        /// <value>{{{taxas_refinanciamento_response_taxa_saque_value}}}</value>
         [DataMember(Name="taxaSaque", EmitDefaultValue=false)]
         public double? TaxaSaque { get; set; }
     
         /// <summary>
-        /// Maximum taxe of shop interest
+        /// {{{taxas_refinanciamento_response_taxa_maxima_compra_juros_value}}}
         /// </summary>
-        /// <value>Maximum taxe of shop interest</value>
+        /// <value>{{{taxas_refinanciamento_response_taxa_maxima_compra_juros_value}}}</value>
         [DataMember(Name="taxaMaximaCompraJuros", EmitDefaultValue=false)]
         public double? TaxaMaximaCompraJuros { get; set; }
     
         /// <summary>
-        /// Shop interest taxes
+        /// {{{taxas_refinanciamento_response_taxa_compra_juros_value}}}
         /// </summary>
-        /// <value>Shop interest taxes</value>
+        /// <value>{{{taxas_refinanciamento_response_taxa_compra_juros_value}}}</value>
         [DataMember(Name="taxaCompraJuros", EmitDefaultValue=false)]
         public double? TaxaCompraJuros { get; set; }
     
         /// <summary>
-        /// Remaining Taxe
+        /// {{{taxas_refinanciamento_response_taxa_permanencia_value}}}
         /// </summary>
-        /// <value>Remaining Taxe</value>
+        /// <value>{{{taxas_refinanciamento_response_taxa_permanencia_value}}}</value>
         [DataMember(Name="taxaPermanencia", EmitDefaultValue=false)]
         public double? TaxaPermanencia { get; set; }
     
         /// <summary>
-        /// Remaining taxe
+        /// {{{taxas_refinanciamento_response_taxa_refinanciamento_value}}}
         /// </summary>
-        /// <value>Remaining taxe</value>
+        /// <value>{{{taxas_refinanciamento_response_taxa_refinanciamento_value}}}</value>
         [DataMember(Name="taxaRefinanciamento", EmitDefaultValue=false)]
         public double? TaxaRefinanciamento { get; set; }
     
         /// <summary>
-        /// Taxe of remaining
+        /// {{{taxas_refinanciamento_response_taxa_recuperacao_refinanciamento_value}}}
         /// </summary>
-        /// <value>Taxe of remaining</value>
+        /// <value>{{{taxas_refinanciamento_response_taxa_recuperacao_refinanciamento_value}}}</value>
         [DataMember(Name="taxaRecuperacaoRefinanciamento", EmitDefaultValue=false)]
         public double? TaxaRecuperacaoRefinanciamento { get; set; }
     
         /// <summary>
-        /// Taxe of Installment for Minimum payment
+        /// {{{taxas_refinanciamento_response_taxa_perc_calc_pagamento_minimo_value}}}
         /// </summary>
-        /// <value>Taxe of Installment for Minimum payment</value>
+        /// <value>{{{taxas_refinanciamento_response_taxa_perc_calc_pagamento_minimo_value}}}</value>
         [DataMember(Name="taxaPercCalcPagamentoMinimo", EmitDefaultValue=false)]
         public double? TaxaPercCalcPagamentoMinimo { get; set; }
     
         /// <summary>
-        /// Plan of the standard taxe
+        /// {{{taxas_refinanciamento_response_plano_taxa_default_value}}}
         /// </summary>
-        /// <value>Plan of the standard taxe</value>
+        /// <value>{{{taxas_refinanciamento_response_plano_taxa_default_value}}}</value>
         [DataMember(Name="planoTaxaDefault", EmitDefaultValue=false)]
         public int? PlanoTaxaDefault { get; set; }
     

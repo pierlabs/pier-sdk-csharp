@@ -12,16 +12,16 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Object SMS
+    /// {{{notificacao_s_m_s_response_description}}}
     /// </summary>
     [DataContract]
     public partial class NotificacaoSMSResponse :  IEquatable<NotificacaoSMSResponse>
     { 
     
         /// <summary>
-        /// TipoEvento de notifica??o
+        /// {{{notificacao_s_m_s_response_tipo_evento_value}}}
         /// </summary>
-        /// <value>TipoEvento de notifica??o</value>
+        /// <value>{{{notificacao_s_m_s_response_tipo_evento_value}}}</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum TipoEventoEnum {
             
@@ -91,9 +91,9 @@ namespace Conductor.Pier.Model
 
     
         /// <summary>
-        /// Notification Sending Status
+        /// {{{notificacao_s_m_s_response_status_value}}}
         /// </summary>
-        /// <value>Notification Sending Status</value>
+        /// <value>{{{notificacao_s_m_s_response_status_value}}}</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum StatusEnum {
             
@@ -121,16 +121,16 @@ namespace Conductor.Pier.Model
 
     
         /// <summary>
-        /// TipoEvento de notifica??o
+        /// {{{notificacao_s_m_s_response_tipo_evento_value}}}
         /// </summary>
-        /// <value>TipoEvento de notifica??o</value>
+        /// <value>{{{notificacao_s_m_s_response_tipo_evento_value}}}</value>
         [DataMember(Name="tipoEvento", EmitDefaultValue=false)]
         public TipoEventoEnum? TipoEvento { get; set; }
     
         /// <summary>
-        /// Notification Sending Status
+        /// {{{notificacao_s_m_s_response_status_value}}}
         /// </summary>
-        /// <value>Notification Sending Status</value>
+        /// <value>{{{notificacao_s_m_s_response_status_value}}}</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
     
@@ -138,23 +138,23 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="NotificacaoSMSResponse" /> class.
         /// Initializes a new instance of the <see cref="NotificacaoSMSResponse" />class.
         /// </summary>
-        /// <param name="Id">Identifier Code.</param>
-        /// <param name="Nsu">Unique Sequel Number.</param>
-        /// <param name="IdEmissor">Identification Code of the issuer (id).</param>
-        /// <param name="TipoEvento">TipoEvento de notifica??o.</param>
-        /// <param name="Status">Notification Sending Status (required).</param>
-        /// <param name="DescricaoStatus">Description of the sending status of the notification (required).</param>
-        /// <param name="IdPessoa">Identified Code of the person (required).</param>
-        /// <param name="IdConta">Identifier Code of the Account (required).</param>
-        /// <param name="Celular">Show the cell phone to be sent the SMS in format 5588999999999 or 5588999999999 (required).</param>
-        /// <param name="Operadora">Show the operator of the cell phone to be sent the SMS (required).</param>
-        /// <param name="Conteudo">Show the notification text to be sent (required).</param>
-        /// <param name="Resposta">Show the text of the notification response that was sent (required).</param>
-        /// <param name="DataAgendamento">Show the date and time which will be sent the notification (required).</param>
-        /// <param name="QuantidadeTentativasEnvio">Quantity of attempts and notification sending (required).</param>
-        /// <param name="DataInclusao">Show the date which the register was included in the base to be sent (required).</param>
-        /// <param name="DataAlteracaoStatus">Show the date which the status of the register was modified (required).</param>
-        /// <param name="Protocolo">Protocol Number of the notification sending.</param>
+        /// <param name="Id">{{{notificacao_s_m_s_response_id_value}}}.</param>
+        /// <param name="Nsu">{{{notificacao_s_m_s_response_nsu_value}}}.</param>
+        /// <param name="IdEmissor">{{{notificacao_s_m_s_response_id_emissor_value}}}.</param>
+        /// <param name="TipoEvento">{{{notificacao_s_m_s_response_tipo_evento_value}}}.</param>
+        /// <param name="Status">{{{notificacao_s_m_s_response_status_value}}} (required).</param>
+        /// <param name="DescricaoStatus">{{{notificacao_s_m_s_response_descricao_status_value}}} (required).</param>
+        /// <param name="IdPessoa">{{{notificacao_s_m_s_response_id_pessoa_value}}} (required).</param>
+        /// <param name="IdConta">{{{notificacao_s_m_s_response_id_conta_value}}} (required).</param>
+        /// <param name="Celular">{{{notificacao_s_m_s_response_celular_value}}} (required).</param>
+        /// <param name="Operadora">{{{notificacao_s_m_s_response_operadora_value}}} (required).</param>
+        /// <param name="Conteudo">{{{notificacao_s_m_s_response_conteudo_value}}} (required).</param>
+        /// <param name="Resposta">{{{notificacao_s_m_s_response_resposta_value}}} (required).</param>
+        /// <param name="DataAgendamento">{{{notificacao_s_m_s_response_data_agendamento_value}}} (required).</param>
+        /// <param name="QuantidadeTentativasEnvio">{{{notificacao_s_m_s_response_quantidade_tentativas_envio_value}}} (required).</param>
+        /// <param name="DataInclusao">{{{notificacao_s_m_s_response_data_inclusao_value}}} (required).</param>
+        /// <param name="DataAlteracaoStatus">{{{notificacao_s_m_s_response_data_alteracao_status_value}}} (required).</param>
+        /// <param name="Protocolo">{{{notificacao_s_m_s_response_protocolo_value}}}.</param>
 
         public NotificacaoSMSResponse(long? Id = null, long? Nsu = null, long? IdEmissor = null, TipoEventoEnum? TipoEvento = null, StatusEnum? Status = null, string DescricaoStatus = null, long? IdPessoa = null, long? IdConta = null, string Celular = null, string Operadora = null, string Conteudo = null, string Resposta = null, string DataAgendamento = null, int? QuantidadeTentativasEnvio = null, string DataInclusao = null, string DataAlteracaoStatus = null, string Protocolo = null)
         {
@@ -276,107 +276,107 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Identifier Code
+        /// {{{notificacao_s_m_s_response_id_value}}}
         /// </summary>
-        /// <value>Identifier Code</value>
+        /// <value>{{{notificacao_s_m_s_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Unique Sequel Number
+        /// {{{notificacao_s_m_s_response_nsu_value}}}
         /// </summary>
-        /// <value>Unique Sequel Number</value>
+        /// <value>{{{notificacao_s_m_s_response_nsu_value}}}</value>
         [DataMember(Name="nsu", EmitDefaultValue=false)]
         public long? Nsu { get; set; }
     
         /// <summary>
-        /// Identification Code of the issuer (id)
+        /// {{{notificacao_s_m_s_response_id_emissor_value}}}
         /// </summary>
-        /// <value>Identification Code of the issuer (id)</value>
+        /// <value>{{{notificacao_s_m_s_response_id_emissor_value}}}</value>
         [DataMember(Name="idEmissor", EmitDefaultValue=false)]
         public long? IdEmissor { get; set; }
     
         /// <summary>
-        /// Description of the sending status of the notification
+        /// {{{notificacao_s_m_s_response_descricao_status_value}}}
         /// </summary>
-        /// <value>Description of the sending status of the notification</value>
+        /// <value>{{{notificacao_s_m_s_response_descricao_status_value}}}</value>
         [DataMember(Name="descricaoStatus", EmitDefaultValue=false)]
         public string DescricaoStatus { get; set; }
     
         /// <summary>
-        /// Identified Code of the person
+        /// {{{notificacao_s_m_s_response_id_pessoa_value}}}
         /// </summary>
-        /// <value>Identified Code of the person</value>
+        /// <value>{{{notificacao_s_m_s_response_id_pessoa_value}}}</value>
         [DataMember(Name="idPessoa", EmitDefaultValue=false)]
         public long? IdPessoa { get; set; }
     
         /// <summary>
-        /// Identifier Code of the Account
+        /// {{{notificacao_s_m_s_response_id_conta_value}}}
         /// </summary>
-        /// <value>Identifier Code of the Account</value>
+        /// <value>{{{notificacao_s_m_s_response_id_conta_value}}}</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// Show the cell phone to be sent the SMS in format 5588999999999 or 5588999999999
+        /// {{{notificacao_s_m_s_response_celular_value}}}
         /// </summary>
-        /// <value>Show the cell phone to be sent the SMS in format 5588999999999 or 5588999999999</value>
+        /// <value>{{{notificacao_s_m_s_response_celular_value}}}</value>
         [DataMember(Name="celular", EmitDefaultValue=false)]
         public string Celular { get; set; }
     
         /// <summary>
-        /// Show the operator of the cell phone to be sent the SMS
+        /// {{{notificacao_s_m_s_response_operadora_value}}}
         /// </summary>
-        /// <value>Show the operator of the cell phone to be sent the SMS</value>
+        /// <value>{{{notificacao_s_m_s_response_operadora_value}}}</value>
         [DataMember(Name="operadora", EmitDefaultValue=false)]
         public string Operadora { get; set; }
     
         /// <summary>
-        /// Show the notification text to be sent
+        /// {{{notificacao_s_m_s_response_conteudo_value}}}
         /// </summary>
-        /// <value>Show the notification text to be sent</value>
+        /// <value>{{{notificacao_s_m_s_response_conteudo_value}}}</value>
         [DataMember(Name="conteudo", EmitDefaultValue=false)]
         public string Conteudo { get; set; }
     
         /// <summary>
-        /// Show the text of the notification response that was sent
+        /// {{{notificacao_s_m_s_response_resposta_value}}}
         /// </summary>
-        /// <value>Show the text of the notification response that was sent</value>
+        /// <value>{{{notificacao_s_m_s_response_resposta_value}}}</value>
         [DataMember(Name="resposta", EmitDefaultValue=false)]
         public string Resposta { get; set; }
     
         /// <summary>
-        /// Show the date and time which will be sent the notification
+        /// {{{notificacao_s_m_s_response_data_agendamento_value}}}
         /// </summary>
-        /// <value>Show the date and time which will be sent the notification</value>
+        /// <value>{{{notificacao_s_m_s_response_data_agendamento_value}}}</value>
         [DataMember(Name="dataAgendamento", EmitDefaultValue=false)]
         public string DataAgendamento { get; set; }
     
         /// <summary>
-        /// Quantity of attempts and notification sending
+        /// {{{notificacao_s_m_s_response_quantidade_tentativas_envio_value}}}
         /// </summary>
-        /// <value>Quantity of attempts and notification sending</value>
+        /// <value>{{{notificacao_s_m_s_response_quantidade_tentativas_envio_value}}}</value>
         [DataMember(Name="quantidadeTentativasEnvio", EmitDefaultValue=false)]
         public int? QuantidadeTentativasEnvio { get; set; }
     
         /// <summary>
-        /// Show the date which the register was included in the base to be sent
+        /// {{{notificacao_s_m_s_response_data_inclusao_value}}}
         /// </summary>
-        /// <value>Show the date which the register was included in the base to be sent</value>
+        /// <value>{{{notificacao_s_m_s_response_data_inclusao_value}}}</value>
         [DataMember(Name="dataInclusao", EmitDefaultValue=false)]
         public string DataInclusao { get; set; }
     
         /// <summary>
-        /// Show the date which the status of the register was modified
+        /// {{{notificacao_s_m_s_response_data_alteracao_status_value}}}
         /// </summary>
-        /// <value>Show the date which the status of the register was modified</value>
+        /// <value>{{{notificacao_s_m_s_response_data_alteracao_status_value}}}</value>
         [DataMember(Name="dataAlteracaoStatus", EmitDefaultValue=false)]
         public string DataAlteracaoStatus { get; set; }
     
         /// <summary>
-        /// Protocol Number of the notification sending
+        /// {{{notificacao_s_m_s_response_protocolo_value}}}
         /// </summary>
-        /// <value>Protocol Number of the notification sending</value>
+        /// <value>{{{notificacao_s_m_s_response_protocolo_value}}}</value>
         [DataMember(Name="protocolo", EmitDefaultValue=false)]
         public string Protocolo { get; set; }
     

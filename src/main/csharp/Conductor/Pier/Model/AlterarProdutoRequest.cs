@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Request Representation of the device resource
+    /// {{{alterar_produto_request_description}}}
     /// </summary>
     [DataContract]
     public partial class AlterarProdutoRequest :  IEquatable<AlterarProdutoRequest>
@@ -22,10 +22,10 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="AlterarProdutoRequest" /> class.
         /// Initializes a new instance of the <see cref="AlterarProdutoRequest" />class.
         /// </summary>
-        /// <param name="IdProduto">Identifier Code of the product (required).</param>
-        /// <param name="IdOrigemComercial">Identifier Code of the commercial origin.</param>
-        /// <param name="IdEstabelecimento">It must be filled out with the idEstablishment where the Grade was made. When it is not informed, it is recorded with the idEstablishment associated to the Commercial Origin that captured the initial register of the account.</param>
-        /// <param name="IdPromotor">It must be filled out with the idCode of the Prosecutor where the Grade was made. When it is not informed, it is recorded a standard identification code.</param>
+        /// <param name="IdProduto">{{{alterar_produto_request_id_produto_value}}} (required).</param>
+        /// <param name="IdOrigemComercial">{{{alterar_produto_request_id_origem_comercial_value}}}.</param>
+        /// <param name="IdEstabelecimento">{{{alterar_produto_request_id_estabelecimento_value}}}.</param>
+        /// <param name="IdPromotor">{{{alterar_produto_request_id_promotor_value}}}.</param>
 
         public AlterarProdutoRequest(long? IdProduto = null, long? IdOrigemComercial = null, long? IdEstabelecimento = null, long? IdPromotor = null)
         {
@@ -46,30 +46,30 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Identifier Code of the product
+        /// {{{alterar_produto_request_id_produto_value}}}
         /// </summary>
-        /// <value>Identifier Code of the product</value>
+        /// <value>{{{alterar_produto_request_id_produto_value}}}</value>
         [DataMember(Name="idProduto", EmitDefaultValue=false)]
         public long? IdProduto { get; set; }
     
         /// <summary>
-        /// Identifier Code of the commercial origin
+        /// {{{alterar_produto_request_id_origem_comercial_value}}}
         /// </summary>
-        /// <value>Identifier Code of the commercial origin</value>
+        /// <value>{{{alterar_produto_request_id_origem_comercial_value}}}</value>
         [DataMember(Name="idOrigemComercial", EmitDefaultValue=false)]
         public long? IdOrigemComercial { get; set; }
     
         /// <summary>
-        /// It must be filled out with the idEstablishment where the Grade was made. When it is not informed, it is recorded with the idEstablishment associated to the Commercial Origin that captured the initial register of the account
+        /// {{{alterar_produto_request_id_estabelecimento_value}}}
         /// </summary>
-        /// <value>It must be filled out with the idEstablishment where the Grade was made. When it is not informed, it is recorded with the idEstablishment associated to the Commercial Origin that captured the initial register of the account</value>
+        /// <value>{{{alterar_produto_request_id_estabelecimento_value}}}</value>
         [DataMember(Name="idEstabelecimento", EmitDefaultValue=false)]
         public long? IdEstabelecimento { get; set; }
     
         /// <summary>
-        /// It must be filled out with the idCode of the Prosecutor where the Grade was made. When it is not informed, it is recorded a standard identification code
+        /// {{{alterar_produto_request_id_promotor_value}}}
         /// </summary>
-        /// <value>It must be filled out with the idCode of the Prosecutor where the Grade was made. When it is not informed, it is recorded a standard identification code</value>
+        /// <value>{{{alterar_produto_request_id_promotor_value}}}</value>
         [DataMember(Name="idPromotor", EmitDefaultValue=false)]
         public long? IdPromotor { get; set; }
     

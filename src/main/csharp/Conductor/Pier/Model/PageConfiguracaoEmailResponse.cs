@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Email Configuration List
+    /// {{{page_configuracao_email_response_description}}}
     /// </summary>
     [DataContract]
     public partial class PageConfiguracaoEmailResponse :  IEquatable<PageConfiguracaoEmailResponse>

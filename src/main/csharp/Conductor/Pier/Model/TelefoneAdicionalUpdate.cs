@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Object Telphone
+    /// {{{telefone_adicional_update_description}}}
     /// </summary>
     [DataContract]
     public partial class TelefoneAdicionalUpdate :  IEquatable<TelefoneAdicionalUpdate>
@@ -22,11 +22,11 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TelefoneAdicionalUpdate" /> class.
         /// Initializes a new instance of the <see cref="TelefoneAdicionalUpdate" />class.
         /// </summary>
-        /// <param name="Id">Identification Code of the Telephone.</param>
-        /// <param name="IdTipoTelefone">Identification Code of the Telephone Type.</param>
-        /// <param name="Ddd">Phone DDD.</param>
-        /// <param name="Telefone">Phone Number.</param>
-        /// <param name="Ramal">Phone Branch.</param>
+        /// <param name="Id">{{{telefone_adicional_update_id_value}}}.</param>
+        /// <param name="IdTipoTelefone">{{{telefone_adicional_update_id_tipo_telefone_value}}}.</param>
+        /// <param name="Ddd">{{{telefone_adicional_update_ddd_value}}}.</param>
+        /// <param name="Telefone">{{{telefone_adicional_update_telefone_value}}}.</param>
+        /// <param name="Ramal">{{{telefone_adicional_update_ramal_value}}}.</param>
 
         public TelefoneAdicionalUpdate(long? Id = null, long? IdTipoTelefone = null, string Ddd = null, string Telefone = null, string Ramal = null)
         {
@@ -40,37 +40,37 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Identification Code of the Telephone
+        /// {{{telefone_adicional_update_id_value}}}
         /// </summary>
-        /// <value>Identification Code of the Telephone</value>
+        /// <value>{{{telefone_adicional_update_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Identification Code of the Telephone Type
+        /// {{{telefone_adicional_update_id_tipo_telefone_value}}}
         /// </summary>
-        /// <value>Identification Code of the Telephone Type</value>
+        /// <value>{{{telefone_adicional_update_id_tipo_telefone_value}}}</value>
         [DataMember(Name="idTipoTelefone", EmitDefaultValue=false)]
         public long? IdTipoTelefone { get; set; }
     
         /// <summary>
-        /// Phone DDD
+        /// {{{telefone_adicional_update_ddd_value}}}
         /// </summary>
-        /// <value>Phone DDD</value>
+        /// <value>{{{telefone_adicional_update_ddd_value}}}</value>
         [DataMember(Name="ddd", EmitDefaultValue=false)]
         public string Ddd { get; set; }
     
         /// <summary>
-        /// Phone Number
+        /// {{{telefone_adicional_update_telefone_value}}}
         /// </summary>
-        /// <value>Phone Number</value>
+        /// <value>{{{telefone_adicional_update_telefone_value}}}</value>
         [DataMember(Name="telefone", EmitDefaultValue=false)]
         public string Telefone { get; set; }
     
         /// <summary>
-        /// Phone Branch
+        /// {{{telefone_adicional_update_ramal_value}}}
         /// </summary>
-        /// <value>Phone Branch</value>
+        /// <value>{{{telefone_adicional_update_ramal_value}}}</value>
         [DataMember(Name="ramal", EmitDefaultValue=false)]
         public string Ramal { get; set; }
     

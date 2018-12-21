@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representation Object Request for grid pending
+    /// {{{grade_pendente_request_description}}}
     /// </summary>
     [DataContract]
     public partial class GradePendenteRequest :  IEquatable<GradePendenteRequest>
@@ -22,8 +22,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="GradePendenteRequest" /> class.
         /// Initializes a new instance of the <see cref="GradePendenteRequest" />class.
         /// </summary>
-        /// <param name="IdConta">Identifier Code of the Account.</param>
-        /// <param name="DataBase">Date of adjustment in the format yyyy-MM-dd.</param>
+        /// <param name="IdConta">{{{grade_pendente_request_id_conta_value}}}.</param>
+        /// <param name="DataBase">{{{grade_pendente_request_data_base_value}}}.</param>
 
         public GradePendenteRequest(long? IdConta = null, string DataBase = null)
         {
@@ -34,16 +34,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Identifier Code of the Account
+        /// {{{grade_pendente_request_id_conta_value}}}
         /// </summary>
-        /// <value>Identifier Code of the Account</value>
+        /// <value>{{{grade_pendente_request_id_conta_value}}}</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// Date of adjustment in the format yyyy-MM-dd
+        /// {{{grade_pendente_request_data_base_value}}}
         /// </summary>
-        /// <value>Date of adjustment in the format yyyy-MM-dd</value>
+        /// <value>{{{grade_pendente_request_data_base_value}}}</value>
         [DataMember(Name="dataBase", EmitDefaultValue=false)]
         public string DataBase { get; set; }
     

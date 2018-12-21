@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Response Representation of the invoice bank slip
+    /// {{{boleto_response_description}}}
     /// </summary>
     [DataContract]
     public partial class BoletoResponse :  IEquatable<BoletoResponse>
@@ -22,41 +22,41 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="BoletoResponse" /> class.
         /// Initializes a new instance of the <see cref="BoletoResponse" />class.
         /// </summary>
-        /// <param name="NumeroDoDocumento">Number of the document is the code informed by the bank to the identification of the client.</param>
-        /// <param name="DataProcessamento">Date of processing (issue or billing) of the bank slip.</param>
-        /// <param name="DataDocumento">Date of the document (printing).</param>
-        /// <param name="DataVencimento">Date of the expiration.</param>
-        /// <param name="DataFechamento">Date of the closing.</param>
-        /// <param name="ValorBoleto">Value of the Bank slip.</param>
-        /// <param name="NomeBeneficiario">Beneficiary is the person/company that creates the bank slip.</param>
-        /// <param name="DocumentoBeneficiario">Document of the beneficiary.</param>
-        /// <param name="Agencia">Agency.</param>
-        /// <param name="CodigoBeneficiario">Code of the beneficiary.</param>
-        /// <param name="NumeroConvenio">Covenant number provided by the bank is the code that identifies the issuer with the bank to associate the Bank slip.</param>
-        /// <param name="DigitoCodigoBeneficiario">Digit of the beneficiary code.</param>
-        /// <param name="Carteira">Wallet is the code informed by the bank for identification of the type of bank slip.</param>
-        /// <param name="NossoNumero">Our number is the code that the beneficiary choose to keep control on the bank slip. This value serves to the identifier which bank slips were paid or not. It is recommended the use of the sequencial numbers, to create lots of bank slips, to facilitate the identification of the paid bank slips.</param>
-        /// <param name="DigitoNossoNumero">Digit of our number.</param>
-        /// <param name="Banco">Bank.</param>
-        /// <param name="Aceite">Acceptance informs to the bank if it must accept the bank slip after the expiration date (standard: &#39;N&#39;).</param>
-        /// <param name="EspecieDoDocumento">Document type is the identifier of the type of bank slip (standard: &#39;DV&#39;).</param>
-        /// <param name="Especie">Cash is the identifier of the currency of bank slip (standard: &#39;R$&#39;).</param>
-        /// <param name="Instrucoes">Instructions for the beneficiary.</param>
-        /// <param name="LocaisDePagamento">Places of payment.</param>
-        /// <param name="NomePagador">Payer is the person/company that must pay the bank slip.</param>
-        /// <param name="DocumentoPagador">Document of the payer (CPF or CNPJ).</param>
-        /// <param name="LogradouroPagador">Street of the payer.</param>
-        /// <param name="BairroPagador">Neighborhood of the payer.</param>
-        /// <param name="CepPagador">Zip code of the payer.</param>
-        /// <param name="CidadePagador">City of the payer.</param>
-        /// <param name="UfPagador">Federal Unity of the payer.</param>
-        /// <param name="CodigoDeBarras">Numeric value of the bar code.</param>
-        /// <param name="LinhaDigitavel">Digitable Line formated.</param>
-        /// <param name="Id">id.</param>
-        /// <param name="IdConta">id_account.</param>
-        /// <param name="EnderecoCobrancaBeneficiario">Beneficiary&#39;s billing address.</param>
-        /// <param name="Status">Status.</param>
-        /// <param name="BoletoRegistrado">Registered Bank slip.</param>
+        /// <param name="NumeroDoDocumento">{{{boleto_response_numero_do_documento_value}}}.</param>
+        /// <param name="DataProcessamento">{{{boleto_response_data_processamento_value}}}.</param>
+        /// <param name="DataDocumento">{{{boleto_response_data_documento_value}}}.</param>
+        /// <param name="DataVencimento">{{{boleto_response_data_vencimento_value}}}.</param>
+        /// <param name="DataFechamento">{{{boleto_response_data_fechamento_value}}}.</param>
+        /// <param name="ValorBoleto">{{{boleto_response_valor_boleto_value}}}.</param>
+        /// <param name="NomeBeneficiario">{{{boleto_response_nome_beneficiario_value}}}.</param>
+        /// <param name="DocumentoBeneficiario">{{{boleto_response_documento_beneficiario_value}}}.</param>
+        /// <param name="Agencia">{{{boleto_response_agencia_value}}}.</param>
+        /// <param name="CodigoBeneficiario">{{{boleto_response_codigo_beneficiario_value}}}.</param>
+        /// <param name="NumeroConvenio">{{{boleto_response_numero_convenio_value}}}.</param>
+        /// <param name="DigitoCodigoBeneficiario">{{{boleto_response_digito_codigo_beneficiario_value}}}.</param>
+        /// <param name="Carteira">{{{boleto_response_carteira_value}}}.</param>
+        /// <param name="NossoNumero">{{{boleto_response_nosso_numero_value}}}.</param>
+        /// <param name="DigitoNossoNumero">{{{boleto_response_digito_nosso_numero_value}}}.</param>
+        /// <param name="Banco">{{{boleto_response_banco_value}}}.</param>
+        /// <param name="Aceite">{{{boleto_response_aceite_value}}}.</param>
+        /// <param name="EspecieDoDocumento">{{{boleto_response_especie_do_documento_value}}}.</param>
+        /// <param name="Especie">{{{boleto_response_especie_value}}}.</param>
+        /// <param name="Instrucoes">{{{boleto_response_instrucoes_value}}}.</param>
+        /// <param name="LocaisDePagamento">{{{boleto_response_locais_de_pagamento_value}}}.</param>
+        /// <param name="NomePagador">{{{boleto_response_nome_pagador_value}}}.</param>
+        /// <param name="DocumentoPagador">{{{boleto_response_documento_pagador_value}}}.</param>
+        /// <param name="LogradouroPagador">{{{boleto_response_logradouro_pagador_value}}}.</param>
+        /// <param name="BairroPagador">{{{boleto_response_bairro_pagador_value}}}.</param>
+        /// <param name="CepPagador">{{{boleto_response_cep_pagador_value}}}.</param>
+        /// <param name="CidadePagador">{{{boleto_response_cidade_pagador_value}}}.</param>
+        /// <param name="UfPagador">{{{boleto_response_uf_pagador_value}}}.</param>
+        /// <param name="CodigoDeBarras">{{{boleto_response_codigo_de_barras_value}}}.</param>
+        /// <param name="LinhaDigitavel">{{{boleto_response_linha_digitavel_value}}}.</param>
+        /// <param name="Id">{{{boleto_response_id_value}}}.</param>
+        /// <param name="IdConta">{{{boleto_response_id_conta_value}}}.</param>
+        /// <param name="EnderecoCobrancaBeneficiario">{{{boleto_response_endereco_cobranca_beneficiario_value}}}.</param>
+        /// <param name="Status">{{{boleto_response_status_value}}}.</param>
+        /// <param name="BoletoRegistrado">{{{boleto_response_registrado_value}}}.</param>
 
         public BoletoResponse(string NumeroDoDocumento = null, string DataProcessamento = null, string DataDocumento = null, string DataVencimento = null, string DataFechamento = null, double? ValorBoleto = null, string NomeBeneficiario = null, string DocumentoBeneficiario = null, string Agencia = null, string CodigoBeneficiario = null, string NumeroConvenio = null, string DigitoCodigoBeneficiario = null, string Carteira = null, string NossoNumero = null, string DigitoNossoNumero = null, string Banco = null, bool? Aceite = null, string EspecieDoDocumento = null, string Especie = null, List<string> Instrucoes = null, List<string> LocaisDePagamento = null, string NomePagador = null, string DocumentoPagador = null, string LogradouroPagador = null, string BairroPagador = null, string CepPagador = null, string CidadePagador = null, string UfPagador = null, string CodigoDeBarras = null, string LinhaDigitavel = null, long? Id = null, long? IdConta = null, string EnderecoCobrancaBeneficiario = null, long? Status = null, bool? BoletoRegistrado = null)
         {
@@ -100,247 +100,247 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Number of the document is the code informed by the bank to the identification of the client
+        /// {{{boleto_response_numero_do_documento_value}}}
         /// </summary>
-        /// <value>Number of the document is the code informed by the bank to the identification of the client</value>
+        /// <value>{{{boleto_response_numero_do_documento_value}}}</value>
         [DataMember(Name="numeroDoDocumento", EmitDefaultValue=false)]
         public string NumeroDoDocumento { get; set; }
     
         /// <summary>
-        /// Date of processing (issue or billing) of the bank slip
+        /// {{{boleto_response_data_processamento_value}}}
         /// </summary>
-        /// <value>Date of processing (issue or billing) of the bank slip</value>
+        /// <value>{{{boleto_response_data_processamento_value}}}</value>
         [DataMember(Name="dataProcessamento", EmitDefaultValue=false)]
         public string DataProcessamento { get; set; }
     
         /// <summary>
-        /// Date of the document (printing)
+        /// {{{boleto_response_data_documento_value}}}
         /// </summary>
-        /// <value>Date of the document (printing)</value>
+        /// <value>{{{boleto_response_data_documento_value}}}</value>
         [DataMember(Name="dataDocumento", EmitDefaultValue=false)]
         public string DataDocumento { get; set; }
     
         /// <summary>
-        /// Date of the expiration
+        /// {{{boleto_response_data_vencimento_value}}}
         /// </summary>
-        /// <value>Date of the expiration</value>
+        /// <value>{{{boleto_response_data_vencimento_value}}}</value>
         [DataMember(Name="dataVencimento", EmitDefaultValue=false)]
         public string DataVencimento { get; set; }
     
         /// <summary>
-        /// Date of the closing
+        /// {{{boleto_response_data_fechamento_value}}}
         /// </summary>
-        /// <value>Date of the closing</value>
+        /// <value>{{{boleto_response_data_fechamento_value}}}</value>
         [DataMember(Name="dataFechamento", EmitDefaultValue=false)]
         public string DataFechamento { get; set; }
     
         /// <summary>
-        /// Value of the Bank slip
+        /// {{{boleto_response_valor_boleto_value}}}
         /// </summary>
-        /// <value>Value of the Bank slip</value>
+        /// <value>{{{boleto_response_valor_boleto_value}}}</value>
         [DataMember(Name="valorBoleto", EmitDefaultValue=false)]
         public double? ValorBoleto { get; set; }
     
         /// <summary>
-        /// Beneficiary is the person/company that creates the bank slip
+        /// {{{boleto_response_nome_beneficiario_value}}}
         /// </summary>
-        /// <value>Beneficiary is the person/company that creates the bank slip</value>
+        /// <value>{{{boleto_response_nome_beneficiario_value}}}</value>
         [DataMember(Name="nomeBeneficiario", EmitDefaultValue=false)]
         public string NomeBeneficiario { get; set; }
     
         /// <summary>
-        /// Document of the beneficiary
+        /// {{{boleto_response_documento_beneficiario_value}}}
         /// </summary>
-        /// <value>Document of the beneficiary</value>
+        /// <value>{{{boleto_response_documento_beneficiario_value}}}</value>
         [DataMember(Name="documentoBeneficiario", EmitDefaultValue=false)]
         public string DocumentoBeneficiario { get; set; }
     
         /// <summary>
-        /// Agency
+        /// {{{boleto_response_agencia_value}}}
         /// </summary>
-        /// <value>Agency</value>
+        /// <value>{{{boleto_response_agencia_value}}}</value>
         [DataMember(Name="agencia", EmitDefaultValue=false)]
         public string Agencia { get; set; }
     
         /// <summary>
-        /// Code of the beneficiary
+        /// {{{boleto_response_codigo_beneficiario_value}}}
         /// </summary>
-        /// <value>Code of the beneficiary</value>
+        /// <value>{{{boleto_response_codigo_beneficiario_value}}}</value>
         [DataMember(Name="codigoBeneficiario", EmitDefaultValue=false)]
         public string CodigoBeneficiario { get; set; }
     
         /// <summary>
-        /// Covenant number provided by the bank is the code that identifies the issuer with the bank to associate the Bank slip
+        /// {{{boleto_response_numero_convenio_value}}}
         /// </summary>
-        /// <value>Covenant number provided by the bank is the code that identifies the issuer with the bank to associate the Bank slip</value>
+        /// <value>{{{boleto_response_numero_convenio_value}}}</value>
         [DataMember(Name="numeroConvenio", EmitDefaultValue=false)]
         public string NumeroConvenio { get; set; }
     
         /// <summary>
-        /// Digit of the beneficiary code
+        /// {{{boleto_response_digito_codigo_beneficiario_value}}}
         /// </summary>
-        /// <value>Digit of the beneficiary code</value>
+        /// <value>{{{boleto_response_digito_codigo_beneficiario_value}}}</value>
         [DataMember(Name="digitoCodigoBeneficiario", EmitDefaultValue=false)]
         public string DigitoCodigoBeneficiario { get; set; }
     
         /// <summary>
-        /// Wallet is the code informed by the bank for identification of the type of bank slip
+        /// {{{boleto_response_carteira_value}}}
         /// </summary>
-        /// <value>Wallet is the code informed by the bank for identification of the type of bank slip</value>
+        /// <value>{{{boleto_response_carteira_value}}}</value>
         [DataMember(Name="carteira", EmitDefaultValue=false)]
         public string Carteira { get; set; }
     
         /// <summary>
-        /// Our number is the code that the beneficiary choose to keep control on the bank slip. This value serves to the identifier which bank slips were paid or not. It is recommended the use of the sequencial numbers, to create lots of bank slips, to facilitate the identification of the paid bank slips
+        /// {{{boleto_response_nosso_numero_value}}}
         /// </summary>
-        /// <value>Our number is the code that the beneficiary choose to keep control on the bank slip. This value serves to the identifier which bank slips were paid or not. It is recommended the use of the sequencial numbers, to create lots of bank slips, to facilitate the identification of the paid bank slips</value>
+        /// <value>{{{boleto_response_nosso_numero_value}}}</value>
         [DataMember(Name="nossoNumero", EmitDefaultValue=false)]
         public string NossoNumero { get; set; }
     
         /// <summary>
-        /// Digit of our number
+        /// {{{boleto_response_digito_nosso_numero_value}}}
         /// </summary>
-        /// <value>Digit of our number</value>
+        /// <value>{{{boleto_response_digito_nosso_numero_value}}}</value>
         [DataMember(Name="digitoNossoNumero", EmitDefaultValue=false)]
         public string DigitoNossoNumero { get; set; }
     
         /// <summary>
-        /// Bank
+        /// {{{boleto_response_banco_value}}}
         /// </summary>
-        /// <value>Bank</value>
+        /// <value>{{{boleto_response_banco_value}}}</value>
         [DataMember(Name="banco", EmitDefaultValue=false)]
         public string Banco { get; set; }
     
         /// <summary>
-        /// Acceptance informs to the bank if it must accept the bank slip after the expiration date (standard: &#39;N&#39;)
+        /// {{{boleto_response_aceite_value}}}
         /// </summary>
-        /// <value>Acceptance informs to the bank if it must accept the bank slip after the expiration date (standard: &#39;N&#39;)</value>
+        /// <value>{{{boleto_response_aceite_value}}}</value>
         [DataMember(Name="aceite", EmitDefaultValue=false)]
         public bool? Aceite { get; set; }
     
         /// <summary>
-        /// Document type is the identifier of the type of bank slip (standard: &#39;DV&#39;)
+        /// {{{boleto_response_especie_do_documento_value}}}
         /// </summary>
-        /// <value>Document type is the identifier of the type of bank slip (standard: &#39;DV&#39;)</value>
+        /// <value>{{{boleto_response_especie_do_documento_value}}}</value>
         [DataMember(Name="especieDoDocumento", EmitDefaultValue=false)]
         public string EspecieDoDocumento { get; set; }
     
         /// <summary>
-        /// Cash is the identifier of the currency of bank slip (standard: &#39;R$&#39;)
+        /// {{{boleto_response_especie_value}}}
         /// </summary>
-        /// <value>Cash is the identifier of the currency of bank slip (standard: &#39;R$&#39;)</value>
+        /// <value>{{{boleto_response_especie_value}}}</value>
         [DataMember(Name="especie", EmitDefaultValue=false)]
         public string Especie { get; set; }
     
         /// <summary>
-        /// Instructions for the beneficiary
+        /// {{{boleto_response_instrucoes_value}}}
         /// </summary>
-        /// <value>Instructions for the beneficiary</value>
+        /// <value>{{{boleto_response_instrucoes_value}}}</value>
         [DataMember(Name="instrucoes", EmitDefaultValue=false)]
         public List<string> Instrucoes { get; set; }
     
         /// <summary>
-        /// Places of payment
+        /// {{{boleto_response_locais_de_pagamento_value}}}
         /// </summary>
-        /// <value>Places of payment</value>
+        /// <value>{{{boleto_response_locais_de_pagamento_value}}}</value>
         [DataMember(Name="locaisDePagamento", EmitDefaultValue=false)]
         public List<string> LocaisDePagamento { get; set; }
     
         /// <summary>
-        /// Payer is the person/company that must pay the bank slip
+        /// {{{boleto_response_nome_pagador_value}}}
         /// </summary>
-        /// <value>Payer is the person/company that must pay the bank slip</value>
+        /// <value>{{{boleto_response_nome_pagador_value}}}</value>
         [DataMember(Name="nomePagador", EmitDefaultValue=false)]
         public string NomePagador { get; set; }
     
         /// <summary>
-        /// Document of the payer (CPF or CNPJ)
+        /// {{{boleto_response_documento_pagador_value}}}
         /// </summary>
-        /// <value>Document of the payer (CPF or CNPJ)</value>
+        /// <value>{{{boleto_response_documento_pagador_value}}}</value>
         [DataMember(Name="documentoPagador", EmitDefaultValue=false)]
         public string DocumentoPagador { get; set; }
     
         /// <summary>
-        /// Street of the payer
+        /// {{{boleto_response_logradouro_pagador_value}}}
         /// </summary>
-        /// <value>Street of the payer</value>
+        /// <value>{{{boleto_response_logradouro_pagador_value}}}</value>
         [DataMember(Name="logradouroPagador", EmitDefaultValue=false)]
         public string LogradouroPagador { get; set; }
     
         /// <summary>
-        /// Neighborhood of the payer
+        /// {{{boleto_response_bairro_pagador_value}}}
         /// </summary>
-        /// <value>Neighborhood of the payer</value>
+        /// <value>{{{boleto_response_bairro_pagador_value}}}</value>
         [DataMember(Name="bairroPagador", EmitDefaultValue=false)]
         public string BairroPagador { get; set; }
     
         /// <summary>
-        /// Zip code of the payer
+        /// {{{boleto_response_cep_pagador_value}}}
         /// </summary>
-        /// <value>Zip code of the payer</value>
+        /// <value>{{{boleto_response_cep_pagador_value}}}</value>
         [DataMember(Name="cepPagador", EmitDefaultValue=false)]
         public string CepPagador { get; set; }
     
         /// <summary>
-        /// City of the payer
+        /// {{{boleto_response_cidade_pagador_value}}}
         /// </summary>
-        /// <value>City of the payer</value>
+        /// <value>{{{boleto_response_cidade_pagador_value}}}</value>
         [DataMember(Name="cidadePagador", EmitDefaultValue=false)]
         public string CidadePagador { get; set; }
     
         /// <summary>
-        /// Federal Unity of the payer
+        /// {{{boleto_response_uf_pagador_value}}}
         /// </summary>
-        /// <value>Federal Unity of the payer</value>
+        /// <value>{{{boleto_response_uf_pagador_value}}}</value>
         [DataMember(Name="ufPagador", EmitDefaultValue=false)]
         public string UfPagador { get; set; }
     
         /// <summary>
-        /// Numeric value of the bar code
+        /// {{{boleto_response_codigo_de_barras_value}}}
         /// </summary>
-        /// <value>Numeric value of the bar code</value>
+        /// <value>{{{boleto_response_codigo_de_barras_value}}}</value>
         [DataMember(Name="codigoDeBarras", EmitDefaultValue=false)]
         public string CodigoDeBarras { get; set; }
     
         /// <summary>
-        /// Digitable Line formated
+        /// {{{boleto_response_linha_digitavel_value}}}
         /// </summary>
-        /// <value>Digitable Line formated</value>
+        /// <value>{{{boleto_response_linha_digitavel_value}}}</value>
         [DataMember(Name="linhaDigitavel", EmitDefaultValue=false)]
         public string LinhaDigitavel { get; set; }
     
         /// <summary>
-        /// id
+        /// {{{boleto_response_id_value}}}
         /// </summary>
-        /// <value>id</value>
+        /// <value>{{{boleto_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// id_account
+        /// {{{boleto_response_id_conta_value}}}
         /// </summary>
-        /// <value>id_account</value>
+        /// <value>{{{boleto_response_id_conta_value}}}</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// Beneficiary&#39;s billing address
+        /// {{{boleto_response_endereco_cobranca_beneficiario_value}}}
         /// </summary>
-        /// <value>Beneficiary&#39;s billing address</value>
+        /// <value>{{{boleto_response_endereco_cobranca_beneficiario_value}}}</value>
         [DataMember(Name="enderecoCobrancaBeneficiario", EmitDefaultValue=false)]
         public string EnderecoCobrancaBeneficiario { get; set; }
     
         /// <summary>
-        /// Status
+        /// {{{boleto_response_status_value}}}
         /// </summary>
-        /// <value>Status</value>
+        /// <value>{{{boleto_response_status_value}}}</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public long? Status { get; set; }
     
         /// <summary>
-        /// Registered Bank slip
+        /// {{{boleto_response_registrado_value}}}
         /// </summary>
-        /// <value>Registered Bank slip</value>
+        /// <value>{{{boleto_response_registrado_value}}}</value>
         [DataMember(Name="boletoRegistrado", EmitDefaultValue=false)]
         public bool? BoletoRegistrado { get; set; }
     

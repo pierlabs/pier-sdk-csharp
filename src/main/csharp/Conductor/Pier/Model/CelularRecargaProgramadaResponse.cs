@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Cellular recharge programmed answer
+    /// {{{celular_recarga_programada_resposta_descricao}}}
     /// </summary>
     [DataContract]
     public partial class CelularRecargaProgramadaResponse :  IEquatable<CelularRecargaProgramadaResponse>
@@ -22,20 +22,20 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="CelularRecargaProgramadaResponse" /> class.
         /// Initializes a new instance of the <see cref="CelularRecargaProgramadaResponse" />class.
         /// </summary>
-        /// <param name="CodigoOperadora">Operator code.</param>
-        /// <param name="CodigoProduto">product code.</param>
-        /// <param name="FlagGeraTarifa">Tariff signaling.</param>
-        /// <param name="Id">Card ID.</param>
-        /// <param name="IdCartao">Card ID.</param>
-        /// <param name="IdCelularRecarga">Cellphone number.</param>
-        /// <param name="IdConta">Account Identifier.</param>
-        /// <param name="IdDescricaoTipoRecargaProgramada">Scheduled recharge type identifier.</param>
-        /// <param name="IdOrigemComercial">Business Source Identifier.</param>
-        /// <param name="IdProposta">Proposal identifier.</param>
-        /// <param name="IdUsuarioRecarga">User ID.</param>
-        /// <param name="IdiPlataforma">Proposal identifier.</param>
-        /// <param name="MotivoCancelamento">Reason for cancellation.</param>
-        /// <param name="Valor">Recharge value.</param>
+        /// <param name="CodigoOperadora">{{{celular_recarga_programada_resposta_codigo_operadora_descricao}}}.</param>
+        /// <param name="CodigoProduto">{{{celular_recarga_programada_resposta_codigo_produto_descricao}}}.</param>
+        /// <param name="FlagGeraTarifa">{{{celular_recarga_programada_resposta_flag_gera_tarifa_descricao}}}.</param>
+        /// <param name="Id">{{{celular_recarga_programada_resposta_id_recarga_programada_descricao}}}.</param>
+        /// <param name="IdCartao">{{{celular_recarga_programada_resposta_id_cartao_descricao}}}.</param>
+        /// <param name="IdCelularRecarga">{{{celular_recarga_programada_resposta_id_celular_recarga_descricao}}}.</param>
+        /// <param name="IdConta">{{{celular_recarga_programada_resposta_id_conta_descricao}}}.</param>
+        /// <param name="IdDescricaoTipoRecargaProgramada">{{{celular_recarga_programada_resposta_id_descricao_tipo_recarga_programada_descricao}}}.</param>
+        /// <param name="IdOrigemComercial">{{{celular_recarga_programada_resposta_id_origem_comercial_descricao}}}.</param>
+        /// <param name="IdProposta">{{{celular_recarga_programada_resposta_id_proposta_descricao}}}.</param>
+        /// <param name="IdUsuarioRecarga">{{{celular_recarga_programada_resposta_id_usuario_recarga_descricao}}}.</param>
+        /// <param name="IdiPlataforma">{{{celular_recarga_programada_resposta_id_plataforma_descricao}}}.</param>
+        /// <param name="MotivoCancelamento">{{{celular_recarga_programada_resposta_motivo_cancelamento_descricao}}}.</param>
+        /// <param name="Valor">{{{celular_recarga_programada_resposta_valor_descricao}}}.</param>
 
         public CelularRecargaProgramadaResponse(long? CodigoOperadora = null, long? CodigoProduto = null, bool? FlagGeraTarifa = null, long? Id = null, long? IdCartao = null, long? IdCelularRecarga = null, long? IdConta = null, long? IdDescricaoTipoRecargaProgramada = null, long? IdOrigemComercial = null, long? IdProposta = null, long? IdUsuarioRecarga = null, long? IdiPlataforma = null, long? MotivoCancelamento = null, double? Valor = null)
         {
@@ -58,100 +58,100 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Operator code
+        /// {{{celular_recarga_programada_resposta_codigo_operadora_descricao}}}
         /// </summary>
-        /// <value>Operator code</value>
+        /// <value>{{{celular_recarga_programada_resposta_codigo_operadora_descricao}}}</value>
         [DataMember(Name="codigoOperadora", EmitDefaultValue=false)]
         public long? CodigoOperadora { get; set; }
     
         /// <summary>
-        /// product code
+        /// {{{celular_recarga_programada_resposta_codigo_produto_descricao}}}
         /// </summary>
-        /// <value>product code</value>
+        /// <value>{{{celular_recarga_programada_resposta_codigo_produto_descricao}}}</value>
         [DataMember(Name="codigoProduto", EmitDefaultValue=false)]
         public long? CodigoProduto { get; set; }
     
         /// <summary>
-        /// Tariff signaling
+        /// {{{celular_recarga_programada_resposta_flag_gera_tarifa_descricao}}}
         /// </summary>
-        /// <value>Tariff signaling</value>
+        /// <value>{{{celular_recarga_programada_resposta_flag_gera_tarifa_descricao}}}</value>
         [DataMember(Name="flagGeraTarifa", EmitDefaultValue=false)]
         public bool? FlagGeraTarifa { get; set; }
     
         /// <summary>
-        /// Card ID
+        /// {{{celular_recarga_programada_resposta_id_recarga_programada_descricao}}}
         /// </summary>
-        /// <value>Card ID</value>
+        /// <value>{{{celular_recarga_programada_resposta_id_recarga_programada_descricao}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Card ID
+        /// {{{celular_recarga_programada_resposta_id_cartao_descricao}}}
         /// </summary>
-        /// <value>Card ID</value>
+        /// <value>{{{celular_recarga_programada_resposta_id_cartao_descricao}}}</value>
         [DataMember(Name="idCartao", EmitDefaultValue=false)]
         public long? IdCartao { get; set; }
     
         /// <summary>
-        /// Cellphone number
+        /// {{{celular_recarga_programada_resposta_id_celular_recarga_descricao}}}
         /// </summary>
-        /// <value>Cellphone number</value>
+        /// <value>{{{celular_recarga_programada_resposta_id_celular_recarga_descricao}}}</value>
         [DataMember(Name="idCelularRecarga", EmitDefaultValue=false)]
         public long? IdCelularRecarga { get; set; }
     
         /// <summary>
-        /// Account Identifier
+        /// {{{celular_recarga_programada_resposta_id_conta_descricao}}}
         /// </summary>
-        /// <value>Account Identifier</value>
+        /// <value>{{{celular_recarga_programada_resposta_id_conta_descricao}}}</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// Scheduled recharge type identifier
+        /// {{{celular_recarga_programada_resposta_id_descricao_tipo_recarga_programada_descricao}}}
         /// </summary>
-        /// <value>Scheduled recharge type identifier</value>
+        /// <value>{{{celular_recarga_programada_resposta_id_descricao_tipo_recarga_programada_descricao}}}</value>
         [DataMember(Name="idDescricaoTipoRecargaProgramada", EmitDefaultValue=false)]
         public long? IdDescricaoTipoRecargaProgramada { get; set; }
     
         /// <summary>
-        /// Business Source Identifier
+        /// {{{celular_recarga_programada_resposta_id_origem_comercial_descricao}}}
         /// </summary>
-        /// <value>Business Source Identifier</value>
+        /// <value>{{{celular_recarga_programada_resposta_id_origem_comercial_descricao}}}</value>
         [DataMember(Name="idOrigemComercial", EmitDefaultValue=false)]
         public long? IdOrigemComercial { get; set; }
     
         /// <summary>
-        /// Proposal identifier
+        /// {{{celular_recarga_programada_resposta_id_proposta_descricao}}}
         /// </summary>
-        /// <value>Proposal identifier</value>
+        /// <value>{{{celular_recarga_programada_resposta_id_proposta_descricao}}}</value>
         [DataMember(Name="idProposta", EmitDefaultValue=false)]
         public long? IdProposta { get; set; }
     
         /// <summary>
-        /// User ID
+        /// {{{celular_recarga_programada_resposta_id_usuario_recarga_descricao}}}
         /// </summary>
-        /// <value>User ID</value>
+        /// <value>{{{celular_recarga_programada_resposta_id_usuario_recarga_descricao}}}</value>
         [DataMember(Name="idUsuarioRecarga", EmitDefaultValue=false)]
         public long? IdUsuarioRecarga { get; set; }
     
         /// <summary>
-        /// Proposal identifier
+        /// {{{celular_recarga_programada_resposta_id_plataforma_descricao}}}
         /// </summary>
-        /// <value>Proposal identifier</value>
+        /// <value>{{{celular_recarga_programada_resposta_id_plataforma_descricao}}}</value>
         [DataMember(Name="idiPlataforma", EmitDefaultValue=false)]
         public long? IdiPlataforma { get; set; }
     
         /// <summary>
-        /// Reason for cancellation
+        /// {{{celular_recarga_programada_resposta_motivo_cancelamento_descricao}}}
         /// </summary>
-        /// <value>Reason for cancellation</value>
+        /// <value>{{{celular_recarga_programada_resposta_motivo_cancelamento_descricao}}}</value>
         [DataMember(Name="motivoCancelamento", EmitDefaultValue=false)]
         public long? MotivoCancelamento { get; set; }
     
         /// <summary>
-        /// Recharge value
+        /// {{{celular_recarga_programada_resposta_valor_descricao}}}
         /// </summary>
-        /// <value>Recharge value</value>
+        /// <value>{{{celular_recarga_programada_resposta_valor_descricao}}}</value>
         [DataMember(Name="valor", EmitDefaultValue=false)]
         public double? Valor { get; set; }
     

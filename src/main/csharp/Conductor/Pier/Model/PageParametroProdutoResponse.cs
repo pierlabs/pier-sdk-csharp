@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// List the parameters of the products
+    /// {{{parametro_produto_dto_page_description}}}
     /// </summary>
     [DataContract]
     public partial class PageParametroProdutoResponse :  IEquatable<PageParametroProdutoResponse>

@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Object with link-to-cards response
+    /// {{{vincular_cartoes_response_description}}}
     /// </summary>
     [DataContract]
     public partial class VinculoCartoesResponse :  IEquatable<VinculoCartoesResponse>
@@ -22,8 +22,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="VinculoCartoesResponse" /> class.
         /// Initializes a new instance of the <see cref="VinculoCartoesResponse" />class.
         /// </summary>
-        /// <param name="IdCartaoPrincipal">ID code of main card generated.</param>
-        /// <param name="IdCartaoVinculado">Id of the card attached to the card.</param>
+        /// <param name="IdCartaoPrincipal">{{{vincular_cartoes_response_id_cartao_value}}}.</param>
+        /// <param name="IdCartaoVinculado">{{{vincular_cartoes_response_id_cartao_vinculado_value}}}.</param>
 
         public VinculoCartoesResponse(long? IdCartaoPrincipal = null, long? IdCartaoVinculado = null)
         {
@@ -34,16 +34,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// ID code of main card generated
+        /// {{{vincular_cartoes_response_id_cartao_value}}}
         /// </summary>
-        /// <value>ID code of main card generated</value>
+        /// <value>{{{vincular_cartoes_response_id_cartao_value}}}</value>
         [DataMember(Name="idCartaoPrincipal", EmitDefaultValue=false)]
         public long? IdCartaoPrincipal { get; set; }
     
         /// <summary>
-        /// Id of the card attached to the card
+        /// {{{vincular_cartoes_response_id_cartao_vinculado_value}}}
         /// </summary>
-        /// <value>Id of the card attached to the card</value>
+        /// <value>{{{vincular_cartoes_response_id_cartao_vinculado_value}}}</value>
         [DataMember(Name="idCartaoVinculado", EmitDefaultValue=false)]
         public long? IdCartaoVinculado { get; set; }
     

@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Lista of the historicEvents
+    /// {{{page_historico_eventos_response_description}}}
     /// </summary>
     [DataContract]
     public partial class PageHistoricoEventosResponse :  IEquatable<PageHistoricoEventosResponse>

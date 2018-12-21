@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Request Representatio of the email configuration resource
+    /// {{{configuracao_email_persist_description}}}
     /// </summary>
     [DataContract]
     public partial class ConfiguracaoEmailPersist :  IEquatable<ConfiguracaoEmailPersist>
@@ -22,16 +22,16 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="ConfiguracaoEmailPersist" /> class.
         /// Initializes a new instance of the <see cref="ConfiguracaoEmailPersist" />class.
         /// </summary>
-        /// <param name="Host">IP (Host) of the email server.</param>
-        /// <param name="Port">Way used by the e-mail server.</param>
-        /// <param name="PortTLSSTARTTLS">Door used by the service TLS/STARTTLS.</param>
-        /// <param name="PortSSL">Tool used by the server SSL.</param>
-        /// <param name="Protocolo">Protocol of communication used by the e-mail service.</param>
-        /// <param name="RequerAutenticacao">The service of the email requires authentication.</param>
-        /// <param name="RequerSSL">O servi?o de e-mail requer SSL.</param>
-        /// <param name="RequerTLS">The service of the email requires TLS.</param>
-        /// <param name="Usuario">User of the e-mail service.</param>
-        /// <param name="Senha">User Password of the email service.</param>
+        /// <param name="Host">{{{configuracao_email_persist_host_value}}}.</param>
+        /// <param name="Port">{{{configuracao_email_persist_port_value}}}.</param>
+        /// <param name="PortTLSSTARTTLS">{{{configuracao_email_persist_port_t_l_s_s_t_a_r_t_t_l_s_value}}}.</param>
+        /// <param name="PortSSL">{{{configuracao_email_persist_port_s_s_l_value}}}.</param>
+        /// <param name="Protocolo">{{{configuracao_email_persist_protocolo_value}}}.</param>
+        /// <param name="RequerAutenticacao">{{{configuracao_email_persist_requer_autenticacao_value}}}.</param>
+        /// <param name="RequerSSL">{{{configuracao_email_persist_requer_s_s_l_value}}}.</param>
+        /// <param name="RequerTLS">{{{configuracao_email_persist_requer_t_l_s_value}}}.</param>
+        /// <param name="Usuario">{{{configuracao_email_persist_usuario_value}}}.</param>
+        /// <param name="Senha">{{{configuracao_email_persist_senha_value}}}.</param>
 
         public ConfiguracaoEmailPersist(string Host = null, string Port = null, string PortTLSSTARTTLS = null, string PortSSL = null, string Protocolo = null, bool? RequerAutenticacao = null, bool? RequerSSL = null, bool? RequerTLS = null, string Usuario = null, string Senha = null)
         {
@@ -50,72 +50,72 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// IP (Host) of the email server
+        /// {{{configuracao_email_persist_host_value}}}
         /// </summary>
-        /// <value>IP (Host) of the email server</value>
+        /// <value>{{{configuracao_email_persist_host_value}}}</value>
         [DataMember(Name="host", EmitDefaultValue=false)]
         public string Host { get; set; }
     
         /// <summary>
-        /// Way used by the e-mail server
+        /// {{{configuracao_email_persist_port_value}}}
         /// </summary>
-        /// <value>Way used by the e-mail server</value>
+        /// <value>{{{configuracao_email_persist_port_value}}}</value>
         [DataMember(Name="port", EmitDefaultValue=false)]
         public string Port { get; set; }
     
         /// <summary>
-        /// Door used by the service TLS/STARTTLS
+        /// {{{configuracao_email_persist_port_t_l_s_s_t_a_r_t_t_l_s_value}}}
         /// </summary>
-        /// <value>Door used by the service TLS/STARTTLS</value>
+        /// <value>{{{configuracao_email_persist_port_t_l_s_s_t_a_r_t_t_l_s_value}}}</value>
         [DataMember(Name="portTLSSTARTTLS", EmitDefaultValue=false)]
         public string PortTLSSTARTTLS { get; set; }
     
         /// <summary>
-        /// Tool used by the server SSL
+        /// {{{configuracao_email_persist_port_s_s_l_value}}}
         /// </summary>
-        /// <value>Tool used by the server SSL</value>
+        /// <value>{{{configuracao_email_persist_port_s_s_l_value}}}</value>
         [DataMember(Name="portSSL", EmitDefaultValue=false)]
         public string PortSSL { get; set; }
     
         /// <summary>
-        /// Protocol of communication used by the e-mail service
+        /// {{{configuracao_email_persist_protocolo_value}}}
         /// </summary>
-        /// <value>Protocol of communication used by the e-mail service</value>
+        /// <value>{{{configuracao_email_persist_protocolo_value}}}</value>
         [DataMember(Name="protocolo", EmitDefaultValue=false)]
         public string Protocolo { get; set; }
     
         /// <summary>
-        /// The service of the email requires authentication
+        /// {{{configuracao_email_persist_requer_autenticacao_value}}}
         /// </summary>
-        /// <value>The service of the email requires authentication</value>
+        /// <value>{{{configuracao_email_persist_requer_autenticacao_value}}}</value>
         [DataMember(Name="requerAutenticacao", EmitDefaultValue=false)]
         public bool? RequerAutenticacao { get; set; }
     
         /// <summary>
-        /// O servi?o de e-mail requer SSL
+        /// {{{configuracao_email_persist_requer_s_s_l_value}}}
         /// </summary>
-        /// <value>O servi?o de e-mail requer SSL</value>
+        /// <value>{{{configuracao_email_persist_requer_s_s_l_value}}}</value>
         [DataMember(Name="requerSSL", EmitDefaultValue=false)]
         public bool? RequerSSL { get; set; }
     
         /// <summary>
-        /// The service of the email requires TLS
+        /// {{{configuracao_email_persist_requer_t_l_s_value}}}
         /// </summary>
-        /// <value>The service of the email requires TLS</value>
+        /// <value>{{{configuracao_email_persist_requer_t_l_s_value}}}</value>
         [DataMember(Name="requerTLS", EmitDefaultValue=false)]
         public bool? RequerTLS { get; set; }
     
         /// <summary>
-        /// User of the e-mail service
+        /// {{{configuracao_email_persist_usuario_value}}}
         /// </summary>
-        /// <value>User of the e-mail service</value>
+        /// <value>{{{configuracao_email_persist_usuario_value}}}</value>
         [DataMember(Name="usuario", EmitDefaultValue=false)]
         public string Usuario { get; set; }
     
         /// <summary>
-        /// User Password of the email service
+        /// {{{configuracao_email_persist_senha_value}}}
         /// </summary>
-        /// <value>User Password of the email service</value>
+        /// <value>{{{configuracao_email_persist_senha_value}}}</value>
         [DataMember(Name="senha", EmitDefaultValue=false)]
         public string Senha { get; set; }
     

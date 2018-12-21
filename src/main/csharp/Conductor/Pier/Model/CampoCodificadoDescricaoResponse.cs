@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Object Field Encoded
+    /// {{{campo_codificado_descricao_response_description}}}
     /// </summary>
     [DataContract]
     public partial class CampoCodificadoDescricaoResponse :  IEquatable<CampoCodificadoDescricaoResponse>
@@ -22,8 +22,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="CampoCodificadoDescricaoResponse" /> class.
         /// Initializes a new instance of the <see cref="CampoCodificadoDescricaoResponse" />class.
         /// </summary>
-        /// <param name="Codigo">Identification Code of the description.</param>
-        /// <param name="Descricao">Description of the encoded field.</param>
+        /// <param name="Codigo">{{{campo_codificado_descricao_response_codigo_value}}}.</param>
+        /// <param name="Descricao">{{{campo_codificado_descricao_response_descricao_value}}}.</param>
 
         public CampoCodificadoDescricaoResponse(long? Codigo = null, string Descricao = null)
         {
@@ -34,16 +34,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Identification Code of the description
+        /// {{{campo_codificado_descricao_response_codigo_value}}}
         /// </summary>
-        /// <value>Identification Code of the description</value>
+        /// <value>{{{campo_codificado_descricao_response_codigo_value}}}</value>
         [DataMember(Name="codigo", EmitDefaultValue=false)]
         public long? Codigo { get; set; }
     
         /// <summary>
-        /// Description of the encoded field
+        /// {{{campo_codificado_descricao_response_descricao_value}}}
         /// </summary>
-        /// <value>Description of the encoded field</value>
+        /// <value>{{{campo_codificado_descricao_response_descricao_value}}}</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     

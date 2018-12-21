@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Chargeback Code List
+    /// {{{page_codigo_chargeback_response_description}}}
     /// </summary>
     [DataContract]
     public partial class PageCodigoChargebackResponse :  IEquatable<PageCodigoChargebackResponse>

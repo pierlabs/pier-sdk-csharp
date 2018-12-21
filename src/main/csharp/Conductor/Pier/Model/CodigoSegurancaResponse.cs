@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Object security code
+    /// {{{codigo_seguranca_response_description}}}
     /// </summary>
     [DataContract]
     public partial class CodigoSegurancaResponse :  IEquatable<CodigoSegurancaResponse>
@@ -22,12 +22,12 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="CodigoSegurancaResponse" /> class.
         /// Initializes a new instance of the <see cref="CodigoSegurancaResponse" />class.
         /// </summary>
-        /// <param name="Id">Identification Code of the Safety Code (id).</param>
-        /// <param name="IdEmissor">Identification Code of the Issuer. (idIssuer).</param>
-        /// <param name="ModoEnvio">Show the sending model of the Safety Code.</param>
-        /// <param name="Contato">Show the contact of the safety code.</param>
-        /// <param name="Ativo">Show the statys of the Safety Code.</param>
-        /// <param name="DataValidade">Show the expiration date of the safety code created.</param>
+        /// <param name="Id">{{{codigo_seguranca_response_id_value}}}.</param>
+        /// <param name="IdEmissor">{{{codigo_seguranca_response_id_emissor_value}}}.</param>
+        /// <param name="ModoEnvio">{{{codigo_seguranca_response_modo_envio_value}}}.</param>
+        /// <param name="Contato">{{{codigo_seguranca_response_contato_value}}}.</param>
+        /// <param name="Ativo">{{{codigo_seguranca_response_ativo_value}}}.</param>
+        /// <param name="DataValidade">{{{codigo_seguranca_response_data_validade_value}}}.</param>
 
         public CodigoSegurancaResponse(long? Id = null, long? IdEmissor = null, string ModoEnvio = null, string Contato = null, bool? Ativo = null, string DataValidade = null)
         {
@@ -42,44 +42,44 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Identification Code of the Safety Code (id)
+        /// {{{codigo_seguranca_response_id_value}}}
         /// </summary>
-        /// <value>Identification Code of the Safety Code (id)</value>
+        /// <value>{{{codigo_seguranca_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Identification Code of the Issuer. (idIssuer)
+        /// {{{codigo_seguranca_response_id_emissor_value}}}
         /// </summary>
-        /// <value>Identification Code of the Issuer. (idIssuer)</value>
+        /// <value>{{{codigo_seguranca_response_id_emissor_value}}}</value>
         [DataMember(Name="idEmissor", EmitDefaultValue=false)]
         public long? IdEmissor { get; set; }
     
         /// <summary>
-        /// Show the sending model of the Safety Code
+        /// {{{codigo_seguranca_response_modo_envio_value}}}
         /// </summary>
-        /// <value>Show the sending model of the Safety Code</value>
+        /// <value>{{{codigo_seguranca_response_modo_envio_value}}}</value>
         [DataMember(Name="modoEnvio", EmitDefaultValue=false)]
         public string ModoEnvio { get; set; }
     
         /// <summary>
-        /// Show the contact of the safety code
+        /// {{{codigo_seguranca_response_contato_value}}}
         /// </summary>
-        /// <value>Show the contact of the safety code</value>
+        /// <value>{{{codigo_seguranca_response_contato_value}}}</value>
         [DataMember(Name="contato", EmitDefaultValue=false)]
         public string Contato { get; set; }
     
         /// <summary>
-        /// Show the statys of the Safety Code
+        /// {{{codigo_seguranca_response_ativo_value}}}
         /// </summary>
-        /// <value>Show the statys of the Safety Code</value>
+        /// <value>{{{codigo_seguranca_response_ativo_value}}}</value>
         [DataMember(Name="ativo", EmitDefaultValue=false)]
         public bool? Ativo { get; set; }
     
         /// <summary>
-        /// Show the expiration date of the safety code created
+        /// {{{codigo_seguranca_response_data_validade_value}}}
         /// </summary>
-        /// <value>Show the expiration date of the safety code created</value>
+        /// <value>{{{codigo_seguranca_response_data_validade_value}}}</value>
         [DataMember(Name="dataValidade", EmitDefaultValue=false)]
         public string DataValidade { get; set; }
     

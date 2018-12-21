@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Object to change accounts. None of the fields are required. Only the fields you want to change must be entered
+    /// {{{conta_partial_object_description}}}
     /// </summary>
     [DataContract]
     public partial class ContaPartialUpdate :  IEquatable<ContaPartialUpdate>
@@ -22,8 +22,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="ContaPartialUpdate" /> class.
         /// Initializes a new instance of the <see cref="ContaPartialUpdate" />class.
         /// </summary>
-        /// <param name="FuncaoAtiva">Active account function. Represents the function in which the account is enabled. Property should only be reported if the issuer makes use of account functions. The functions available for the accounts can be viewed in api/contas/tipos-funcoes.</param>
-        /// <param name="IdContaEmissor">Identifier of the internal control account created by the issuer.</param>
+        /// <param name="FuncaoAtiva">{{{conta_partial_funcao_ativa_value}}}.</param>
+        /// <param name="IdContaEmissor">{{{conta_partial_id_conta_emissor_value}}}.</param>
 
         public ContaPartialUpdate(string FuncaoAtiva = null, long? IdContaEmissor = null)
         {
@@ -34,16 +34,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Active account function. Represents the function in which the account is enabled. Property should only be reported if the issuer makes use of account functions. The functions available for the accounts can be viewed in api/contas/tipos-funcoes
+        /// {{{conta_partial_funcao_ativa_value}}}
         /// </summary>
-        /// <value>Active account function. Represents the function in which the account is enabled. Property should only be reported if the issuer makes use of account functions. The functions available for the accounts can be viewed in api/contas/tipos-funcoes</value>
+        /// <value>{{{conta_partial_funcao_ativa_value}}}</value>
         [DataMember(Name="funcaoAtiva", EmitDefaultValue=false)]
         public string FuncaoAtiva { get; set; }
     
         /// <summary>
-        /// Identifier of the internal control account created by the issuer
+        /// {{{conta_partial_id_conta_emissor_value}}}
         /// </summary>
-        /// <value>Identifier of the internal control account created by the issuer</value>
+        /// <value>{{{conta_partial_id_conta_emissor_value}}}</value>
         [DataMember(Name="idContaEmissor", EmitDefaultValue=false)]
         public long? IdContaEmissor { get; set; }
     

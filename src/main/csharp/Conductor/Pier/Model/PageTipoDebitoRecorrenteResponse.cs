@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Response representation of the recurrent debit type resource
+    /// {{{page_tipo_debito_recorrente_response_description}}}
     /// </summary>
     [DataContract]
     public partial class PageTipoDebitoRecorrenteResponse :  IEquatable<PageTipoDebitoRecorrenteResponse>

@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Celphone persistence recharge programmed
+    /// {{{celular_recarga_programada_persistencia_descricao}}}
     /// </summary>
     [DataContract]
     public partial class CelularRecargaProgramadaPersist :  IEquatable<CelularRecargaProgramadaPersist>
@@ -22,18 +22,18 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="CelularRecargaProgramadaPersist" /> class.
         /// Initializes a new instance of the <see cref="CelularRecargaProgramadaPersist" />class.
         /// </summary>
-        /// <param name="IdCartao">Card ID (required).</param>
-        /// <param name="IdUsuarioRecarga">User ID.</param>
-        /// <param name="IdDescricaoTipoRecargaProgramada">Scheduled recharge type identifier (required).</param>
-        /// <param name="CodigoProduto">Product code (required).</param>
-        /// <param name="CodigoOperadora">Operator code (required).</param>
-        /// <param name="Valor">Recharge value (required).</param>
-        /// <param name="IdPlataforma">Platform identifier.</param>
-        /// <param name="FlagGeraTarifa">Tariff signaling (required).</param>
-        /// <param name="IdProposta">Proposal identifier.</param>
-        /// <param name="IdOrigemComercial">Business Source Identifier (required).</param>
-        /// <param name="DddCelularRecarga">Direct dialing from cell phone (required).</param>
-        /// <param name="NumeroCelularRecarga">Cellphone number (required).</param>
+        /// <param name="IdCartao">{{{celular_recarga_programada_persistencia_id_cartao_descricao}}} (required).</param>
+        /// <param name="IdUsuarioRecarga">{{{celular_recarga_programada_persistencia_id_usuario_recarga_descricao}}}.</param>
+        /// <param name="IdDescricaoTipoRecargaProgramada">{{{celular_recarga_programada_persistencia_id_descricao_tipo_recarga_programada_descricao}}} (required).</param>
+        /// <param name="CodigoProduto">{{{celular_recarga_programada_persistencia_codigo_produto_descricao}}} (required).</param>
+        /// <param name="CodigoOperadora">{{{celular_recarga_programada_persistencia_codigo_operadora_descricao}}} (required).</param>
+        /// <param name="Valor">{{{celular_recarga_programada_persistencia_valor_descricao}}} (required).</param>
+        /// <param name="IdPlataforma">{{{celular_recarga_programada_persistencia_id_plataforma_descricao}}}.</param>
+        /// <param name="FlagGeraTarifa">{{{celular_recarga_programada_persistencia_flag_gera_tarifa_descricao}}} (required).</param>
+        /// <param name="IdProposta">{{{celular_recarga_programada_persistencia_id_proposta_descricao}}}.</param>
+        /// <param name="IdOrigemComercial">{{{celular_recarga_programada_persistencia_id_origem_comercial_descricao}}} (required).</param>
+        /// <param name="DddCelularRecarga">{{{celular_recarga_programada_persistencia_ddd_celular_recarga_descricao}}} (required).</param>
+        /// <param name="NumeroCelularRecarga">{{{celular_recarga_programada_persistencia_numero_celular_recarga_descricao}}} (required).</param>
 
         public CelularRecargaProgramadaPersist(long? IdCartao = null, long? IdUsuarioRecarga = null, long? IdDescricaoTipoRecargaProgramada = null, long? CodigoProduto = null, long? CodigoOperadora = null, double? Valor = null, long? IdPlataforma = null, bool? FlagGeraTarifa = null, long? IdProposta = null, long? IdOrigemComercial = null, string DddCelularRecarga = null, string NumeroCelularRecarga = null)
         {
@@ -126,86 +126,86 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Card ID
+        /// {{{celular_recarga_programada_persistencia_id_cartao_descricao}}}
         /// </summary>
-        /// <value>Card ID</value>
+        /// <value>{{{celular_recarga_programada_persistencia_id_cartao_descricao}}}</value>
         [DataMember(Name="idCartao", EmitDefaultValue=false)]
         public long? IdCartao { get; set; }
     
         /// <summary>
-        /// User ID
+        /// {{{celular_recarga_programada_persistencia_id_usuario_recarga_descricao}}}
         /// </summary>
-        /// <value>User ID</value>
+        /// <value>{{{celular_recarga_programada_persistencia_id_usuario_recarga_descricao}}}</value>
         [DataMember(Name="idUsuarioRecarga", EmitDefaultValue=false)]
         public long? IdUsuarioRecarga { get; set; }
     
         /// <summary>
-        /// Scheduled recharge type identifier
+        /// {{{celular_recarga_programada_persistencia_id_descricao_tipo_recarga_programada_descricao}}}
         /// </summary>
-        /// <value>Scheduled recharge type identifier</value>
+        /// <value>{{{celular_recarga_programada_persistencia_id_descricao_tipo_recarga_programada_descricao}}}</value>
         [DataMember(Name="idDescricaoTipoRecargaProgramada", EmitDefaultValue=false)]
         public long? IdDescricaoTipoRecargaProgramada { get; set; }
     
         /// <summary>
-        /// Product code
+        /// {{{celular_recarga_programada_persistencia_codigo_produto_descricao}}}
         /// </summary>
-        /// <value>Product code</value>
+        /// <value>{{{celular_recarga_programada_persistencia_codigo_produto_descricao}}}</value>
         [DataMember(Name="codigoProduto", EmitDefaultValue=false)]
         public long? CodigoProduto { get; set; }
     
         /// <summary>
-        /// Operator code
+        /// {{{celular_recarga_programada_persistencia_codigo_operadora_descricao}}}
         /// </summary>
-        /// <value>Operator code</value>
+        /// <value>{{{celular_recarga_programada_persistencia_codigo_operadora_descricao}}}</value>
         [DataMember(Name="codigoOperadora", EmitDefaultValue=false)]
         public long? CodigoOperadora { get; set; }
     
         /// <summary>
-        /// Recharge value
+        /// {{{celular_recarga_programada_persistencia_valor_descricao}}}
         /// </summary>
-        /// <value>Recharge value</value>
+        /// <value>{{{celular_recarga_programada_persistencia_valor_descricao}}}</value>
         [DataMember(Name="valor", EmitDefaultValue=false)]
         public double? Valor { get; set; }
     
         /// <summary>
-        /// Platform identifier
+        /// {{{celular_recarga_programada_persistencia_id_plataforma_descricao}}}
         /// </summary>
-        /// <value>Platform identifier</value>
+        /// <value>{{{celular_recarga_programada_persistencia_id_plataforma_descricao}}}</value>
         [DataMember(Name="idPlataforma", EmitDefaultValue=false)]
         public long? IdPlataforma { get; set; }
     
         /// <summary>
-        /// Tariff signaling
+        /// {{{celular_recarga_programada_persistencia_flag_gera_tarifa_descricao}}}
         /// </summary>
-        /// <value>Tariff signaling</value>
+        /// <value>{{{celular_recarga_programada_persistencia_flag_gera_tarifa_descricao}}}</value>
         [DataMember(Name="flagGeraTarifa", EmitDefaultValue=false)]
         public bool? FlagGeraTarifa { get; set; }
     
         /// <summary>
-        /// Proposal identifier
+        /// {{{celular_recarga_programada_persistencia_id_proposta_descricao}}}
         /// </summary>
-        /// <value>Proposal identifier</value>
+        /// <value>{{{celular_recarga_programada_persistencia_id_proposta_descricao}}}</value>
         [DataMember(Name="idProposta", EmitDefaultValue=false)]
         public long? IdProposta { get; set; }
     
         /// <summary>
-        /// Business Source Identifier
+        /// {{{celular_recarga_programada_persistencia_id_origem_comercial_descricao}}}
         /// </summary>
-        /// <value>Business Source Identifier</value>
+        /// <value>{{{celular_recarga_programada_persistencia_id_origem_comercial_descricao}}}</value>
         [DataMember(Name="idOrigemComercial", EmitDefaultValue=false)]
         public long? IdOrigemComercial { get; set; }
     
         /// <summary>
-        /// Direct dialing from cell phone
+        /// {{{celular_recarga_programada_persistencia_ddd_celular_recarga_descricao}}}
         /// </summary>
-        /// <value>Direct dialing from cell phone</value>
+        /// <value>{{{celular_recarga_programada_persistencia_ddd_celular_recarga_descricao}}}</value>
         [DataMember(Name="dddCelularRecarga", EmitDefaultValue=false)]
         public string DddCelularRecarga { get; set; }
     
         /// <summary>
-        /// Cellphone number
+        /// {{{celular_recarga_programada_persistencia_numero_celular_recarga_descricao}}}
         /// </summary>
-        /// <value>Cellphone number</value>
+        /// <value>{{{celular_recarga_programada_persistencia_numero_celular_recarga_descricao}}}</value>
         [DataMember(Name="numeroCelularRecarga", EmitDefaultValue=false)]
         public string NumeroCelularRecarga { get; set; }
     

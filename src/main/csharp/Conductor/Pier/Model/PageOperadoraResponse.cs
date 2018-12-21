@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Resposnse representation of the telephone operator resource
+    /// {{{page_operadora_response_description}}}
     /// </summary>
     [DataContract]
     public partial class PageOperadoraResponse :  IEquatable<PageOperadoraResponse>

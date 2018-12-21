@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Request Representation of the issuer integration including resource
+    /// {{{integracao_emissor_persist_description}}}
     /// </summary>
     [DataContract]
     public partial class IntegracaoEmissorPersist :  IEquatable<IntegracaoEmissorPersist>
@@ -22,7 +22,7 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="IntegracaoEmissorPersist" /> class.
         /// Initializes a new instance of the <see cref="IntegracaoEmissorPersist" />class.
         /// </summary>
-        /// <param name="CanalEntrada">Input channel where must be informed the device used in the communication.</param>
+        /// <param name="CanalEntrada">{{{integracao_emissor_persist_canal_entrada_value}}}.</param>
 
         public IntegracaoEmissorPersist(string CanalEntrada = null)
         {
@@ -32,9 +32,9 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Input channel where must be informed the device used in the communication
+        /// {{{integracao_emissor_persist_canal_entrada_value}}}
         /// </summary>
-        /// <value>Input channel where must be informed the device used in the communication</value>
+        /// <value>{{{integracao_emissor_persist_canal_entrada_value}}}</value>
         [DataMember(Name="canalEntrada", EmitDefaultValue=false)]
         public string CanalEntrada { get; set; }
     

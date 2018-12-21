@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Object Containing the details of an invoice
+    /// {{{detalhes_fatura_response_description}}}
     /// </summary>
     [DataContract]
     public partial class DetalhesFaturaResponse :  IEquatable<DetalhesFaturaResponse>
@@ -22,8 +22,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="DetalhesFaturaResponse" /> class.
         /// Initializes a new instance of the <see cref="DetalhesFaturaResponse" />class.
         /// </summary>
-        /// <param name="Fatura">Show the details of the invoice.</param>
-        /// <param name="Transacoes">Show the transactions related to the invoice.</param>
+        /// <param name="Fatura">{{{detalhes_fatura_response_fatura_value}}}.</param>
+        /// <param name="Transacoes">{{{detalhes_fatura_response_transacoes_value}}}.</param>
 
         public DetalhesFaturaResponse(FaturaFechadaResponse Fatura = null, List<TransacoesCorrentesResponse> Transacoes = null)
         {
@@ -34,16 +34,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Show the details of the invoice
+        /// {{{detalhes_fatura_response_fatura_value}}}
         /// </summary>
-        /// <value>Show the details of the invoice</value>
+        /// <value>{{{detalhes_fatura_response_fatura_value}}}</value>
         [DataMember(Name="fatura", EmitDefaultValue=false)]
         public FaturaFechadaResponse Fatura { get; set; }
     
         /// <summary>
-        /// Show the transactions related to the invoice
+        /// {{{detalhes_fatura_response_transacoes_value}}}
         /// </summary>
-        /// <value>Show the transactions related to the invoice</value>
+        /// <value>{{{detalhes_fatura_response_transacoes_value}}}</value>
         [DataMember(Name="transacoes", EmitDefaultValue=false)]
         public List<TransacoesCorrentesResponse> Transacoes { get; set; }
     

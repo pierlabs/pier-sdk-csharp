@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Response Representation of the telephone operator resource
+    /// {{{fantasia_basica_response_description}}}
     /// </summary>
     [DataContract]
     public partial class FantasiaBasicaResponse :  IEquatable<FantasiaBasicaResponse>
@@ -22,9 +22,9 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="FantasiaBasicaResponse" /> class.
         /// Initializes a new instance of the <see cref="FantasiaBasicaResponse" />class.
         /// </summary>
-        /// <param name="Id">Identifier of the Basic Fantasy.</param>
-        /// <param name="Nome">Name of the Basic fantasy.</param>
-        /// <param name="Descricao">Description of the basic fantasy.</param>
+        /// <param name="Id">{{{fantasia_basica_response_id_value}}}.</param>
+        /// <param name="Nome">{{{fantasia_basica_response_nome_value}}}.</param>
+        /// <param name="Descricao">{{{fantasia_basica_response_descricao_value}}}.</param>
 
         public FantasiaBasicaResponse(long? Id = null, string Nome = null, string Descricao = null)
         {
@@ -36,23 +36,23 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Identifier of the Basic Fantasy
+        /// {{{fantasia_basica_response_id_value}}}
         /// </summary>
-        /// <value>Identifier of the Basic Fantasy</value>
+        /// <value>{{{fantasia_basica_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Name of the Basic fantasy
+        /// {{{fantasia_basica_response_nome_value}}}
         /// </summary>
-        /// <value>Name of the Basic fantasy</value>
+        /// <value>{{{fantasia_basica_response_nome_value}}}</value>
         [DataMember(Name="nome", EmitDefaultValue=false)]
         public string Nome { get; set; }
     
         /// <summary>
-        /// Description of the basic fantasy
+        /// {{{fantasia_basica_response_descricao_value}}}
         /// </summary>
-        /// <value>Description of the basic fantasy</value>
+        /// <value>{{{fantasia_basica_response_descricao_value}}}</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     

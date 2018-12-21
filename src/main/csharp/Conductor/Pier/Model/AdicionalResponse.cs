@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Response of the additional register resource
+    /// {{{adicional_response_description}}}
     /// </summary>
     [DataContract]
     public partial class AdicionalResponse :  IEquatable<AdicionalResponse>
@@ -22,21 +22,21 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="AdicionalResponse" /> class.
         /// Initializes a new instance of the <see cref="AdicionalResponse" />class.
         /// </summary>
-        /// <param name="IdConta">Identification Code of the Account for the register of the Additional.</param>
-        /// <param name="IdPessoa">Identification Code of the Additional.</param>
-        /// <param name="Nome">Ful name of the Additional.</param>
-        /// <param name="NomeImpresso">Name of the additional that will be printed on the card.</param>
-        /// <param name="NumeroReceitaFederal">Number of CPF or CNPJ of the Additional.</param>
-        /// <param name="DataNascimento">Birth date of the Additional.</param>
-        /// <param name="Sexo">Identification Code of sex of the Person, when PP, being: (&#39;M&#39;: Male), (&#39;F&#39;: Female), (&#39;O&#39;: Other), (&#39;N&#39;: Not Specified).</param>
-        /// <param name="NumeroIdentidade">Number of Document of the Additional.</param>
-        /// <param name="OrgaoExpedidorIdentidade">Name of the Issuer of the Document of the Additional.</param>
-        /// <param name="UnidadeFederativaIdentidade">Acronym of the Federal Unity where the Identity document of the additional was issued.</param>
-        /// <param name="DataEmissaoIdentidade">Date of the issue of the Identity document of the Additional.</param>
-        /// <param name="IdParentesco">Identification Code of kinship of the Additional with the holder.</param>
-        /// <param name="FlagAtivo">Indicate if the additional is active =1 or inactive =0.</param>
-        /// <param name="DataCadastroPortador">Indicate the date of additional register.</param>
-        /// <param name="DataCancelamentoPortador">Indicate the date of the cancellation of the Additional.</param>
+        /// <param name="IdConta">{{{adicional_response_id_conta_value}}}.</param>
+        /// <param name="IdPessoa">{{{adicional_response_id_pessoa_value}}}.</param>
+        /// <param name="Nome">{{{adicional_response_nome_value}}}.</param>
+        /// <param name="NomeImpresso">{{{adicional_response_nome_impresso_value}}}.</param>
+        /// <param name="NumeroReceitaFederal">{{{adicional_response_numero_receita_federal_value}}}.</param>
+        /// <param name="DataNascimento">{{{adicional_response_data_nascimento_value}}}.</param>
+        /// <param name="Sexo">{{{adicional_response_sexo_value}}}.</param>
+        /// <param name="NumeroIdentidade">{{{adicional_response_numero_identidade_value}}}.</param>
+        /// <param name="OrgaoExpedidorIdentidade">{{{adicional_response_orgao_expedidor_identidade_value}}}.</param>
+        /// <param name="UnidadeFederativaIdentidade">{{{adicional_response_unidade_federativa_identidade_value}}}.</param>
+        /// <param name="DataEmissaoIdentidade">{{{adicional_response_data_emissao_identidade_value}}}.</param>
+        /// <param name="IdParentesco">{{{adicional_response_id_parentesco_value}}}.</param>
+        /// <param name="FlagAtivo">{{{adicional_response_flag_ativo_value}}}.</param>
+        /// <param name="DataCadastroPortador">{{{adicional_response_data_cadastro_portador_value}}}.</param>
+        /// <param name="DataCancelamentoPortador">{{{adicional_response_data_cancelamento_portador_value}}}.</param>
 
         public AdicionalResponse(long? IdConta = null, long? IdPessoa = null, string Nome = null, string NomeImpresso = null, string NumeroReceitaFederal = null, string DataNascimento = null, string Sexo = null, string NumeroIdentidade = null, string OrgaoExpedidorIdentidade = null, string UnidadeFederativaIdentidade = null, string DataEmissaoIdentidade = null, long? IdParentesco = null, int? FlagAtivo = null, string DataCadastroPortador = null, string DataCancelamentoPortador = null)
         {
@@ -60,107 +60,107 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Identification Code of the Account for the register of the Additional
+        /// {{{adicional_response_id_conta_value}}}
         /// </summary>
-        /// <value>Identification Code of the Account for the register of the Additional</value>
+        /// <value>{{{adicional_response_id_conta_value}}}</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// Identification Code of the Additional
+        /// {{{adicional_response_id_pessoa_value}}}
         /// </summary>
-        /// <value>Identification Code of the Additional</value>
+        /// <value>{{{adicional_response_id_pessoa_value}}}</value>
         [DataMember(Name="idPessoa", EmitDefaultValue=false)]
         public long? IdPessoa { get; set; }
     
         /// <summary>
-        /// Ful name of the Additional
+        /// {{{adicional_response_nome_value}}}
         /// </summary>
-        /// <value>Ful name of the Additional</value>
+        /// <value>{{{adicional_response_nome_value}}}</value>
         [DataMember(Name="nome", EmitDefaultValue=false)]
         public string Nome { get; set; }
     
         /// <summary>
-        /// Name of the additional that will be printed on the card
+        /// {{{adicional_response_nome_impresso_value}}}
         /// </summary>
-        /// <value>Name of the additional that will be printed on the card</value>
+        /// <value>{{{adicional_response_nome_impresso_value}}}</value>
         [DataMember(Name="nomeImpresso", EmitDefaultValue=false)]
         public string NomeImpresso { get; set; }
     
         /// <summary>
-        /// Number of CPF or CNPJ of the Additional
+        /// {{{adicional_response_numero_receita_federal_value}}}
         /// </summary>
-        /// <value>Number of CPF or CNPJ of the Additional</value>
+        /// <value>{{{adicional_response_numero_receita_federal_value}}}</value>
         [DataMember(Name="numeroReceitaFederal", EmitDefaultValue=false)]
         public string NumeroReceitaFederal { get; set; }
     
         /// <summary>
-        /// Birth date of the Additional
+        /// {{{adicional_response_data_nascimento_value}}}
         /// </summary>
-        /// <value>Birth date of the Additional</value>
+        /// <value>{{{adicional_response_data_nascimento_value}}}</value>
         [DataMember(Name="dataNascimento", EmitDefaultValue=false)]
         public string DataNascimento { get; set; }
     
         /// <summary>
-        /// Identification Code of sex of the Person, when PP, being: (&#39;M&#39;: Male), (&#39;F&#39;: Female), (&#39;O&#39;: Other), (&#39;N&#39;: Not Specified)
+        /// {{{adicional_response_sexo_value}}}
         /// </summary>
-        /// <value>Identification Code of sex of the Person, when PP, being: (&#39;M&#39;: Male), (&#39;F&#39;: Female), (&#39;O&#39;: Other), (&#39;N&#39;: Not Specified)</value>
+        /// <value>{{{adicional_response_sexo_value}}}</value>
         [DataMember(Name="sexo", EmitDefaultValue=false)]
         public string Sexo { get; set; }
     
         /// <summary>
-        /// Number of Document of the Additional
+        /// {{{adicional_response_numero_identidade_value}}}
         /// </summary>
-        /// <value>Number of Document of the Additional</value>
+        /// <value>{{{adicional_response_numero_identidade_value}}}</value>
         [DataMember(Name="numeroIdentidade", EmitDefaultValue=false)]
         public string NumeroIdentidade { get; set; }
     
         /// <summary>
-        /// Name of the Issuer of the Document of the Additional
+        /// {{{adicional_response_orgao_expedidor_identidade_value}}}
         /// </summary>
-        /// <value>Name of the Issuer of the Document of the Additional</value>
+        /// <value>{{{adicional_response_orgao_expedidor_identidade_value}}}</value>
         [DataMember(Name="orgaoExpedidorIdentidade", EmitDefaultValue=false)]
         public string OrgaoExpedidorIdentidade { get; set; }
     
         /// <summary>
-        /// Acronym of the Federal Unity where the Identity document of the additional was issued
+        /// {{{adicional_response_unidade_federativa_identidade_value}}}
         /// </summary>
-        /// <value>Acronym of the Federal Unity where the Identity document of the additional was issued</value>
+        /// <value>{{{adicional_response_unidade_federativa_identidade_value}}}</value>
         [DataMember(Name="unidadeFederativaIdentidade", EmitDefaultValue=false)]
         public string UnidadeFederativaIdentidade { get; set; }
     
         /// <summary>
-        /// Date of the issue of the Identity document of the Additional
+        /// {{{adicional_response_data_emissao_identidade_value}}}
         /// </summary>
-        /// <value>Date of the issue of the Identity document of the Additional</value>
+        /// <value>{{{adicional_response_data_emissao_identidade_value}}}</value>
         [DataMember(Name="dataEmissaoIdentidade", EmitDefaultValue=false)]
         public string DataEmissaoIdentidade { get; set; }
     
         /// <summary>
-        /// Identification Code of kinship of the Additional with the holder
+        /// {{{adicional_response_id_parentesco_value}}}
         /// </summary>
-        /// <value>Identification Code of kinship of the Additional with the holder</value>
+        /// <value>{{{adicional_response_id_parentesco_value}}}</value>
         [DataMember(Name="idParentesco", EmitDefaultValue=false)]
         public long? IdParentesco { get; set; }
     
         /// <summary>
-        /// Indicate if the additional is active =1 or inactive =0
+        /// {{{adicional_response_flag_ativo_value}}}
         /// </summary>
-        /// <value>Indicate if the additional is active =1 or inactive =0</value>
+        /// <value>{{{adicional_response_flag_ativo_value}}}</value>
         [DataMember(Name="flagAtivo", EmitDefaultValue=false)]
         public int? FlagAtivo { get; set; }
     
         /// <summary>
-        /// Indicate the date of additional register
+        /// {{{adicional_response_data_cadastro_portador_value}}}
         /// </summary>
-        /// <value>Indicate the date of additional register</value>
+        /// <value>{{{adicional_response_data_cadastro_portador_value}}}</value>
         [DataMember(Name="dataCadastroPortador", EmitDefaultValue=false)]
         public string DataCadastroPortador { get; set; }
     
         /// <summary>
-        /// Indicate the date of the cancellation of the Additional
+        /// {{{adicional_response_data_cancelamento_portador_value}}}
         /// </summary>
-        /// <value>Indicate the date of the cancellation of the Additional</value>
+        /// <value>{{{adicional_response_data_cancelamento_portador_value}}}</value>
         [DataMember(Name="dataCancelamentoPortador", EmitDefaultValue=false)]
         public string DataCancelamentoPortador { get; set; }
     

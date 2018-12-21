@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Cardholder
+    /// {{{portador_response_description}}}
     /// </summary>
     [DataContract]
     public partial class PortadorResponse :  IEquatable<PortadorResponse>
@@ -22,16 +22,16 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="PortadorResponse" /> class.
         /// Initializes a new instance of the <see cref="PortadorResponse" />class.
         /// </summary>
-        /// <param name="IdConta">Identification Code of the Account (id).</param>
-        /// <param name="IdProduto">Identification Code of the Product (id).</param>
-        /// <param name="IdPessoa">Identification Code of the Person (id).</param>
-        /// <param name="IdParentesco">Identification Code of the Kinship (id).</param>
-        /// <param name="TipoPortador">Show the type of Cardholder, being (&#39;H&#39;: Holder, &#39;A&#39;: Additional).</param>
-        /// <param name="NomeImpresso">Show the name to be printed on the card.</param>
-        /// <param name="IdTipoCartao">Show the identification Code of the Card type (id), that will be used to create cards of this cardholder, linked to the respective account through the Idaccount field.</param>
-        /// <param name="FlagAtivo">When it is active, indicate that the register of the Cardholder is active, in issuers that make this type of manangement.</param>
-        /// <param name="DataCadastroPortador">show the date which the Cardholder was registered, when there is this information.</param>
-        /// <param name="DataCancelamentoPortador">Show the date which the Cardholder was canceled, when there is this information.</param>
+        /// <param name="IdConta">{{{portador_response_id_conta_value}}}.</param>
+        /// <param name="IdProduto">{{{portador_response_id_produto_value}}}.</param>
+        /// <param name="IdPessoa">{{{portador_response_id_pessoa_value}}}.</param>
+        /// <param name="IdParentesco">{{{portador_response_id_parentesco_value}}}.</param>
+        /// <param name="TipoPortador">{{{portador_response_tipo_portador_value}}}.</param>
+        /// <param name="NomeImpresso">{{{portador_response_nome_impresso_value}}}.</param>
+        /// <param name="IdTipoCartao">{{{portador_response_id_tipo_cartao_value}}}.</param>
+        /// <param name="FlagAtivo">{{{portador_response_flag_ativo_value}}}.</param>
+        /// <param name="DataCadastroPortador">{{{portador_response_data_cadastro_portador_value}}}.</param>
+        /// <param name="DataCancelamentoPortador">{{{portador_response_data_cancelamento_portador_value}}}.</param>
 
         public PortadorResponse(long? IdConta = null, long? IdProduto = null, long? IdPessoa = null, long? IdParentesco = null, string TipoPortador = null, string NomeImpresso = null, long? IdTipoCartao = null, int? FlagAtivo = null, string DataCadastroPortador = null, string DataCancelamentoPortador = null)
         {
@@ -50,72 +50,72 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Identification Code of the Account (id)
+        /// {{{portador_response_id_conta_value}}}
         /// </summary>
-        /// <value>Identification Code of the Account (id)</value>
+        /// <value>{{{portador_response_id_conta_value}}}</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// Identification Code of the Product (id)
+        /// {{{portador_response_id_produto_value}}}
         /// </summary>
-        /// <value>Identification Code of the Product (id)</value>
+        /// <value>{{{portador_response_id_produto_value}}}</value>
         [DataMember(Name="idProduto", EmitDefaultValue=false)]
         public long? IdProduto { get; set; }
     
         /// <summary>
-        /// Identification Code of the Person (id)
+        /// {{{portador_response_id_pessoa_value}}}
         /// </summary>
-        /// <value>Identification Code of the Person (id)</value>
+        /// <value>{{{portador_response_id_pessoa_value}}}</value>
         [DataMember(Name="idPessoa", EmitDefaultValue=false)]
         public long? IdPessoa { get; set; }
     
         /// <summary>
-        /// Identification Code of the Kinship (id)
+        /// {{{portador_response_id_parentesco_value}}}
         /// </summary>
-        /// <value>Identification Code of the Kinship (id)</value>
+        /// <value>{{{portador_response_id_parentesco_value}}}</value>
         [DataMember(Name="idParentesco", EmitDefaultValue=false)]
         public long? IdParentesco { get; set; }
     
         /// <summary>
-        /// Show the type of Cardholder, being (&#39;H&#39;: Holder, &#39;A&#39;: Additional)
+        /// {{{portador_response_tipo_portador_value}}}
         /// </summary>
-        /// <value>Show the type of Cardholder, being (&#39;H&#39;: Holder, &#39;A&#39;: Additional)</value>
+        /// <value>{{{portador_response_tipo_portador_value}}}</value>
         [DataMember(Name="tipoPortador", EmitDefaultValue=false)]
         public string TipoPortador { get; set; }
     
         /// <summary>
-        /// Show the name to be printed on the card
+        /// {{{portador_response_nome_impresso_value}}}
         /// </summary>
-        /// <value>Show the name to be printed on the card</value>
+        /// <value>{{{portador_response_nome_impresso_value}}}</value>
         [DataMember(Name="nomeImpresso", EmitDefaultValue=false)]
         public string NomeImpresso { get; set; }
     
         /// <summary>
-        /// Show the identification Code of the Card type (id), that will be used to create cards of this cardholder, linked to the respective account through the Idaccount field
+        /// {{{portador_response_id_tipo_cartao_value}}}
         /// </summary>
-        /// <value>Show the identification Code of the Card type (id), that will be used to create cards of this cardholder, linked to the respective account through the Idaccount field</value>
+        /// <value>{{{portador_response_id_tipo_cartao_value}}}</value>
         [DataMember(Name="idTipoCartao", EmitDefaultValue=false)]
         public long? IdTipoCartao { get; set; }
     
         /// <summary>
-        /// When it is active, indicate that the register of the Cardholder is active, in issuers that make this type of manangement
+        /// {{{portador_response_flag_ativo_value}}}
         /// </summary>
-        /// <value>When it is active, indicate that the register of the Cardholder is active, in issuers that make this type of manangement</value>
+        /// <value>{{{portador_response_flag_ativo_value}}}</value>
         [DataMember(Name="flagAtivo", EmitDefaultValue=false)]
         public int? FlagAtivo { get; set; }
     
         /// <summary>
-        /// show the date which the Cardholder was registered, when there is this information
+        /// {{{portador_response_data_cadastro_portador_value}}}
         /// </summary>
-        /// <value>show the date which the Cardholder was registered, when there is this information</value>
+        /// <value>{{{portador_response_data_cadastro_portador_value}}}</value>
         [DataMember(Name="dataCadastroPortador", EmitDefaultValue=false)]
         public string DataCadastroPortador { get; set; }
     
         /// <summary>
-        /// Show the date which the Cardholder was canceled, when there is this information
+        /// {{{portador_response_data_cancelamento_portador_value}}}
         /// </summary>
-        /// <value>Show the date which the Cardholder was canceled, when there is this information</value>
+        /// <value>{{{portador_response_data_cancelamento_portador_value}}}</value>
         [DataMember(Name="dataCancelamentoPortador", EmitDefaultValue=false)]
         public string DataCancelamentoPortador { get; set; }
     

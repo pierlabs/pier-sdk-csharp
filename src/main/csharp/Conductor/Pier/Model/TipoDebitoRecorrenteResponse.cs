@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Response Representation of the recurrent debit type resource
+    /// {{{tipo_debito_recorrente_response_description}}}
     /// </summary>
     [DataContract]
     public partial class TipoDebitoRecorrenteResponse :  IEquatable<TipoDebitoRecorrenteResponse>
@@ -23,33 +23,33 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TipoDebitoRecorrenteResponse" />class.
         /// </summary>
         /// <param name="FlagAnuidadeBonificada">FlagAnuidadeBonificada.</param>
-        /// <param name="Id">Identification Code of the recurrent debit type (id).</param>
-        /// <param name="Nome">Description of the recurrent debit type.</param>
-        /// <param name="Valor">Value of the recurrent debit type.</param>
-        /// <param name="FlagAtivo">Flag that identifies if the type of recurrent debit is active.</param>
-        /// <param name="ValorBonus">Bonus value referring to the plan.</param>
-        /// <param name="NumeroParcelas">Parcel Number referring to the plan.</param>
-        /// <param name="FlagAdereAutomatico">Flag that indicates if the renovation is going to be automatic.</param>
-        /// <param name="FlagGeraNumeroSorte">Flag that indicates if the renewal is going to be automatic.</param>
-        /// <param name="FaixaEtaria">Indicates the age range to join to the plan.</param>
-        /// <param name="FlagSeguro">Flag indicates if the plan is safe.</param>
-        /// <param name="SorteiosMensais">Indicates which award referring to the month.</param>
-        /// <param name="FlagAdesaoAutomatica">Flag that indicates if the accession of the plan will be automatic.</param>
-        /// <param name="FlagDependente">Flag indicate if the plan covers the dependent.</param>
-        /// <param name="QuantidadeDependente">Indicate dependent numbers.</param>
-        /// <param name="IdTermoSeguroServico">Identification Code of the security service term (id).</param>
-        /// <param name="IdadeMinima">Minimum age to join to the plan.</param>
-        /// <param name="IdadeMaxima">Maximum age to join to the plan.</param>
-        /// <param name="FlagDebitoIncondicional">Flag indicates if the plan will have an unconditional debit.</param>
-        /// <param name="FlagExtratoIncondicional">Flag that indicates if the plan will be unconditional extract.</param>
-        /// <param name="FlagEstornoAutomatico">Flag indicates if the plan will have any automatic reversal.</param>
-        /// <param name="ValorRepassadoSeguradora">Value passed to the insurer.</param>
-        /// <param name="FlagLancaTransacao">Flag that indicates if it is going to launched a transaction.</param>
-        /// <param name="FlagTransferenciaAutomatica">Flag that indicates if it is going to be made an automatic transfer.</param>
-        /// <param name="IdProduto">Identification Code of the products (id).</param>
-        /// <param name="IdGrupoDebitoRecorrente">Identification Code of the recurrent debit group (id).</param>
-        /// <param name="QuantidadeTentativasCobranca">Attempt Quantities for the collection.</param>
-        /// <param name="IdAjuste">Identification Code of the adjustment types (id).</param>
+        /// <param name="Id">{{{tipo_debito_recorrente_response_id_value}}}.</param>
+        /// <param name="Nome">{{{tipo_debito_recorrente_response_descricao_value}}}.</param>
+        /// <param name="Valor">{{{tipo_debito_recorrente_response_valor_value}}}.</param>
+        /// <param name="FlagAtivo">{{{tipo_debito_recorrente_response_flag_ativo_value}}}.</param>
+        /// <param name="ValorBonus">{{{tipo_debito_recorrente_response_valor_bonus_value}}}.</param>
+        /// <param name="NumeroParcelas">{{{tipo_debito_recorrente_response_numero_parcelas_value}}}.</param>
+        /// <param name="FlagAdereAutomatico">{{{tipo_debito_recorrente_response_flag_adere_automatico_value}}}.</param>
+        /// <param name="FlagGeraNumeroSorte">{{{tipo_debito_recorrente_response_flag_gera_numero_sorte_value}}}.</param>
+        /// <param name="FaixaEtaria">{{{tipo_debito_recorrente_response_faixa_etaria_value}}}.</param>
+        /// <param name="FlagSeguro">{{{tipo_debito_recorrente_response_flag_seguro_value}}}.</param>
+        /// <param name="SorteiosMensais">{{{tipo_debito_recorrente_response_sorteios_mensais_value}}}.</param>
+        /// <param name="FlagAdesaoAutomatica">{{{tipo_debito_recorrente_response_flag_adesao_automatica_value}}}.</param>
+        /// <param name="FlagDependente">{{{tipo_debito_recorrente_response_flag_dependente_value}}}.</param>
+        /// <param name="QuantidadeDependente">{{{tipo_debito_recorrente_response_quantidade_dependente_value}}}.</param>
+        /// <param name="IdTermoSeguroServico">{{{tipo_debito_recorrente_response_id_termo_seguro_servico_value}}}.</param>
+        /// <param name="IdadeMinima">{{{tipo_debito_recorrente_response_idade_minima_value}}}.</param>
+        /// <param name="IdadeMaxima">{{{tipo_debito_recorrente_response_idade_maxima_value}}}.</param>
+        /// <param name="FlagDebitoIncondicional">{{{tipo_debito_recorrente_response_flag_debito_incondicional_value}}}.</param>
+        /// <param name="FlagExtratoIncondicional">{{{tipo_debito_recorrente_response_flag_extrato_incondicional_value}}}.</param>
+        /// <param name="FlagEstornoAutomatico">{{{tipo_debito_recorrente_response_flag_estorno_automatico_value}}}.</param>
+        /// <param name="ValorRepassadoSeguradora">{{{tipo_debito_recorrente_response_valor_repassado_seguradora_value}}}.</param>
+        /// <param name="FlagLancaTransacao">{{{tipo_debito_recorrente_response_flag_lanca_transacao_value}}}.</param>
+        /// <param name="FlagTransferenciaAutomatica">{{{tipo_debito_recorrente_response_flag_transferencia_automatica_value}}}.</param>
+        /// <param name="IdProduto">{{{tipo_debito_recorrente_response_id_produto_value}}}.</param>
+        /// <param name="IdGrupoDebitoRecorrente">{{{tipo_debito_recorrente_response_id_grupo_debito_recorrente_value}}}.</param>
+        /// <param name="QuantidadeTentativasCobranca">{{{tipo_debito_recorrente_response_quantidade_tentativas_cobranca_value}}}.</param>
+        /// <param name="IdAjuste">{{{tipo_debito_recorrente_response_id_ajuste_value}}}.</param>
 
         public TipoDebitoRecorrenteResponse(bool? FlagAnuidadeBonificada = null, long? Id = null, string Nome = null, double? Valor = null, bool? FlagAtivo = null, double? ValorBonus = null, int? NumeroParcelas = null, bool? FlagAdereAutomatico = null, bool? FlagGeraNumeroSorte = null, string FaixaEtaria = null, bool? FlagSeguro = null, string SorteiosMensais = null, bool? FlagAdesaoAutomatica = null, bool? FlagDependente = null, int? QuantidadeDependente = null, long? IdTermoSeguroServico = null, int? IdadeMinima = null, int? IdadeMaxima = null, bool? FlagDebitoIncondicional = null, bool? FlagExtratoIncondicional = null, bool? FlagEstornoAutomatico = null, double? ValorRepassadoSeguradora = null, bool? FlagLancaTransacao = null, bool? FlagTransferenciaAutomatica = null, long? IdProduto = null, long? IdGrupoDebitoRecorrente = null, int? QuantidadeTentativasCobranca = null, long? IdAjuste = null)
         {
@@ -92,191 +92,191 @@ namespace Conductor.Pier.Model
         public bool? FlagAnuidadeBonificada { get; set; }
     
         /// <summary>
-        /// Identification Code of the recurrent debit type (id)
+        /// {{{tipo_debito_recorrente_response_id_value}}}
         /// </summary>
-        /// <value>Identification Code of the recurrent debit type (id)</value>
+        /// <value>{{{tipo_debito_recorrente_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Description of the recurrent debit type
+        /// {{{tipo_debito_recorrente_response_descricao_value}}}
         /// </summary>
-        /// <value>Description of the recurrent debit type</value>
+        /// <value>{{{tipo_debito_recorrente_response_descricao_value}}}</value>
         [DataMember(Name="nome", EmitDefaultValue=false)]
         public string Nome { get; set; }
     
         /// <summary>
-        /// Value of the recurrent debit type
+        /// {{{tipo_debito_recorrente_response_valor_value}}}
         /// </summary>
-        /// <value>Value of the recurrent debit type</value>
+        /// <value>{{{tipo_debito_recorrente_response_valor_value}}}</value>
         [DataMember(Name="valor", EmitDefaultValue=false)]
         public double? Valor { get; set; }
     
         /// <summary>
-        /// Flag that identifies if the type of recurrent debit is active
+        /// {{{tipo_debito_recorrente_response_flag_ativo_value}}}
         /// </summary>
-        /// <value>Flag that identifies if the type of recurrent debit is active</value>
+        /// <value>{{{tipo_debito_recorrente_response_flag_ativo_value}}}</value>
         [DataMember(Name="flagAtivo", EmitDefaultValue=false)]
         public bool? FlagAtivo { get; set; }
     
         /// <summary>
-        /// Bonus value referring to the plan
+        /// {{{tipo_debito_recorrente_response_valor_bonus_value}}}
         /// </summary>
-        /// <value>Bonus value referring to the plan</value>
+        /// <value>{{{tipo_debito_recorrente_response_valor_bonus_value}}}</value>
         [DataMember(Name="valorBonus", EmitDefaultValue=false)]
         public double? ValorBonus { get; set; }
     
         /// <summary>
-        /// Parcel Number referring to the plan
+        /// {{{tipo_debito_recorrente_response_numero_parcelas_value}}}
         /// </summary>
-        /// <value>Parcel Number referring to the plan</value>
+        /// <value>{{{tipo_debito_recorrente_response_numero_parcelas_value}}}</value>
         [DataMember(Name="numeroParcelas", EmitDefaultValue=false)]
         public int? NumeroParcelas { get; set; }
     
         /// <summary>
-        /// Flag that indicates if the renovation is going to be automatic
+        /// {{{tipo_debito_recorrente_response_flag_adere_automatico_value}}}
         /// </summary>
-        /// <value>Flag that indicates if the renovation is going to be automatic</value>
+        /// <value>{{{tipo_debito_recorrente_response_flag_adere_automatico_value}}}</value>
         [DataMember(Name="flagAdereAutomatico", EmitDefaultValue=false)]
         public bool? FlagAdereAutomatico { get; set; }
     
         /// <summary>
-        /// Flag that indicates if the renewal is going to be automatic
+        /// {{{tipo_debito_recorrente_response_flag_gera_numero_sorte_value}}}
         /// </summary>
-        /// <value>Flag that indicates if the renewal is going to be automatic</value>
+        /// <value>{{{tipo_debito_recorrente_response_flag_gera_numero_sorte_value}}}</value>
         [DataMember(Name="flagGeraNumeroSorte", EmitDefaultValue=false)]
         public bool? FlagGeraNumeroSorte { get; set; }
     
         /// <summary>
-        /// Indicates the age range to join to the plan
+        /// {{{tipo_debito_recorrente_response_faixa_etaria_value}}}
         /// </summary>
-        /// <value>Indicates the age range to join to the plan</value>
+        /// <value>{{{tipo_debito_recorrente_response_faixa_etaria_value}}}</value>
         [DataMember(Name="faixaEtaria", EmitDefaultValue=false)]
         public string FaixaEtaria { get; set; }
     
         /// <summary>
-        /// Flag indicates if the plan is safe
+        /// {{{tipo_debito_recorrente_response_flag_seguro_value}}}
         /// </summary>
-        /// <value>Flag indicates if the plan is safe</value>
+        /// <value>{{{tipo_debito_recorrente_response_flag_seguro_value}}}</value>
         [DataMember(Name="flagSeguro", EmitDefaultValue=false)]
         public bool? FlagSeguro { get; set; }
     
         /// <summary>
-        /// Indicates which award referring to the month
+        /// {{{tipo_debito_recorrente_response_sorteios_mensais_value}}}
         /// </summary>
-        /// <value>Indicates which award referring to the month</value>
+        /// <value>{{{tipo_debito_recorrente_response_sorteios_mensais_value}}}</value>
         [DataMember(Name="sorteiosMensais", EmitDefaultValue=false)]
         public string SorteiosMensais { get; set; }
     
         /// <summary>
-        /// Flag that indicates if the accession of the plan will be automatic
+        /// {{{tipo_debito_recorrente_response_flag_adesao_automatica_value}}}
         /// </summary>
-        /// <value>Flag that indicates if the accession of the plan will be automatic</value>
+        /// <value>{{{tipo_debito_recorrente_response_flag_adesao_automatica_value}}}</value>
         [DataMember(Name="flagAdesaoAutomatica", EmitDefaultValue=false)]
         public bool? FlagAdesaoAutomatica { get; set; }
     
         /// <summary>
-        /// Flag indicate if the plan covers the dependent
+        /// {{{tipo_debito_recorrente_response_flag_dependente_value}}}
         /// </summary>
-        /// <value>Flag indicate if the plan covers the dependent</value>
+        /// <value>{{{tipo_debito_recorrente_response_flag_dependente_value}}}</value>
         [DataMember(Name="flagDependente", EmitDefaultValue=false)]
         public bool? FlagDependente { get; set; }
     
         /// <summary>
-        /// Indicate dependent numbers
+        /// {{{tipo_debito_recorrente_response_quantidade_dependente_value}}}
         /// </summary>
-        /// <value>Indicate dependent numbers</value>
+        /// <value>{{{tipo_debito_recorrente_response_quantidade_dependente_value}}}</value>
         [DataMember(Name="quantidadeDependente", EmitDefaultValue=false)]
         public int? QuantidadeDependente { get; set; }
     
         /// <summary>
-        /// Identification Code of the security service term (id)
+        /// {{{tipo_debito_recorrente_response_id_termo_seguro_servico_value}}}
         /// </summary>
-        /// <value>Identification Code of the security service term (id)</value>
+        /// <value>{{{tipo_debito_recorrente_response_id_termo_seguro_servico_value}}}</value>
         [DataMember(Name="idTermoSeguroServico", EmitDefaultValue=false)]
         public long? IdTermoSeguroServico { get; set; }
     
         /// <summary>
-        /// Minimum age to join to the plan
+        /// {{{tipo_debito_recorrente_response_idade_minima_value}}}
         /// </summary>
-        /// <value>Minimum age to join to the plan</value>
+        /// <value>{{{tipo_debito_recorrente_response_idade_minima_value}}}</value>
         [DataMember(Name="idadeMinima", EmitDefaultValue=false)]
         public int? IdadeMinima { get; set; }
     
         /// <summary>
-        /// Maximum age to join to the plan
+        /// {{{tipo_debito_recorrente_response_idade_maxima_value}}}
         /// </summary>
-        /// <value>Maximum age to join to the plan</value>
+        /// <value>{{{tipo_debito_recorrente_response_idade_maxima_value}}}</value>
         [DataMember(Name="idadeMaxima", EmitDefaultValue=false)]
         public int? IdadeMaxima { get; set; }
     
         /// <summary>
-        /// Flag indicates if the plan will have an unconditional debit
+        /// {{{tipo_debito_recorrente_response_flag_debito_incondicional_value}}}
         /// </summary>
-        /// <value>Flag indicates if the plan will have an unconditional debit</value>
+        /// <value>{{{tipo_debito_recorrente_response_flag_debito_incondicional_value}}}</value>
         [DataMember(Name="flagDebitoIncondicional", EmitDefaultValue=false)]
         public bool? FlagDebitoIncondicional { get; set; }
     
         /// <summary>
-        /// Flag that indicates if the plan will be unconditional extract
+        /// {{{tipo_debito_recorrente_response_flag_extrato_incondicional_value}}}
         /// </summary>
-        /// <value>Flag that indicates if the plan will be unconditional extract</value>
+        /// <value>{{{tipo_debito_recorrente_response_flag_extrato_incondicional_value}}}</value>
         [DataMember(Name="flagExtratoIncondicional", EmitDefaultValue=false)]
         public bool? FlagExtratoIncondicional { get; set; }
     
         /// <summary>
-        /// Flag indicates if the plan will have any automatic reversal
+        /// {{{tipo_debito_recorrente_response_flag_estorno_automatico_value}}}
         /// </summary>
-        /// <value>Flag indicates if the plan will have any automatic reversal</value>
+        /// <value>{{{tipo_debito_recorrente_response_flag_estorno_automatico_value}}}</value>
         [DataMember(Name="flagEstornoAutomatico", EmitDefaultValue=false)]
         public bool? FlagEstornoAutomatico { get; set; }
     
         /// <summary>
-        /// Value passed to the insurer
+        /// {{{tipo_debito_recorrente_response_valor_repassado_seguradora_value}}}
         /// </summary>
-        /// <value>Value passed to the insurer</value>
+        /// <value>{{{tipo_debito_recorrente_response_valor_repassado_seguradora_value}}}</value>
         [DataMember(Name="valorRepassadoSeguradora", EmitDefaultValue=false)]
         public double? ValorRepassadoSeguradora { get; set; }
     
         /// <summary>
-        /// Flag that indicates if it is going to launched a transaction
+        /// {{{tipo_debito_recorrente_response_flag_lanca_transacao_value}}}
         /// </summary>
-        /// <value>Flag that indicates if it is going to launched a transaction</value>
+        /// <value>{{{tipo_debito_recorrente_response_flag_lanca_transacao_value}}}</value>
         [DataMember(Name="flagLancaTransacao", EmitDefaultValue=false)]
         public bool? FlagLancaTransacao { get; set; }
     
         /// <summary>
-        /// Flag that indicates if it is going to be made an automatic transfer
+        /// {{{tipo_debito_recorrente_response_flag_transferencia_automatica_value}}}
         /// </summary>
-        /// <value>Flag that indicates if it is going to be made an automatic transfer</value>
+        /// <value>{{{tipo_debito_recorrente_response_flag_transferencia_automatica_value}}}</value>
         [DataMember(Name="flagTransferenciaAutomatica", EmitDefaultValue=false)]
         public bool? FlagTransferenciaAutomatica { get; set; }
     
         /// <summary>
-        /// Identification Code of the products (id)
+        /// {{{tipo_debito_recorrente_response_id_produto_value}}}
         /// </summary>
-        /// <value>Identification Code of the products (id)</value>
+        /// <value>{{{tipo_debito_recorrente_response_id_produto_value}}}</value>
         [DataMember(Name="idProduto", EmitDefaultValue=false)]
         public long? IdProduto { get; set; }
     
         /// <summary>
-        /// Identification Code of the recurrent debit group (id)
+        /// {{{tipo_debito_recorrente_response_id_grupo_debito_recorrente_value}}}
         /// </summary>
-        /// <value>Identification Code of the recurrent debit group (id)</value>
+        /// <value>{{{tipo_debito_recorrente_response_id_grupo_debito_recorrente_value}}}</value>
         [DataMember(Name="idGrupoDebitoRecorrente", EmitDefaultValue=false)]
         public long? IdGrupoDebitoRecorrente { get; set; }
     
         /// <summary>
-        /// Attempt Quantities for the collection
+        /// {{{tipo_debito_recorrente_response_quantidade_tentativas_cobranca_value}}}
         /// </summary>
-        /// <value>Attempt Quantities for the collection</value>
+        /// <value>{{{tipo_debito_recorrente_response_quantidade_tentativas_cobranca_value}}}</value>
         [DataMember(Name="quantidadeTentativasCobranca", EmitDefaultValue=false)]
         public int? QuantidadeTentativasCobranca { get; set; }
     
         /// <summary>
-        /// Identification Code of the adjustment types (id)
+        /// {{{tipo_debito_recorrente_response_id_ajuste_value}}}
         /// </summary>
-        /// <value>Identification Code of the adjustment types (id)</value>
+        /// <value>{{{tipo_debito_recorrente_response_id_ajuste_value}}}</value>
         [DataMember(Name="idAjuste", EmitDefaultValue=false)]
         public long? IdAjuste { get; set; }
     

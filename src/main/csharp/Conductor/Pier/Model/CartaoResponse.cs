@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Object Card
+    /// {{{cartao_response_description}}}
     /// </summary>
     [DataContract]
     public partial class CartaoResponse :  IEquatable<CartaoResponse>
@@ -22,28 +22,28 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="CartaoResponse" /> class.
         /// Initializes a new instance of the <see cref="CartaoResponse" />class.
         /// </summary>
-        /// <param name="Id">Identification Code of the Card.</param>
-        /// <param name="FlagTitular">Show the tiype of the Cardholder, being: (1: Holder, 0: Additional).</param>
-        /// <param name="IdPessoa">Identification Code of the Person which the card belongs.</param>
-        /// <param name="SequencialCartao">Card Sequel Number.</param>
-        /// <param name="IdConta">Identification Code of the Account which the card belongs.</param>
-        /// <param name="IdStatus">Identification Code of the Card Status.</param>
-        /// <param name="DataStatus">Show the date which the current idStatusCard was applied, when there is.</param>
-        /// <param name="IdEstagio">Identification Code of the Stage Printed Card.</param>
-        /// <param name="DataEstagio">Show te date which the current idStage of the card applied, when there is.</param>
-        /// <param name="NumeroBin">Bin number of the card.</param>
-        /// <param name="NumeroCartao">Show the card number.</param>
-        /// <param name="NumeroCartaoHash">Hash Card Number.</param>
-        /// <param name="NumeroCartaoCriptografado">Encrypted Card Number.</param>
-        /// <param name="DataEmissao">Show the issue date of the card.</param>
-        /// <param name="DataValidade">Show the Expiration date of the card in the format yyyy-MM, when there is.</param>
-        /// <param name="CartaoVirtual">Show the status that informs if the card is virtual, being: (1: True, 0: False).</param>
-        /// <param name="ImpressaoAvulsa">When it is active, indicates that the card was printed in the Commercial Origin.</param>
-        /// <param name="DataImpressao">Show the date of the card that was printed, in case of printing in a store, or the date which was included in the file for printing in a Graphic.</param>
-        /// <param name="NomeArquivoImpressao">Show the name of the file where the card was included for printing, when there is.</param>
-        /// <param name="IdProduto">Identification Code of the Product which the card belongs.</param>
-        /// <param name="NomeImpresso">Show the name printed on the card.</param>
-        /// <param name="CodigoDesbloqueio">Show a specific code to be used as a variable in the process of unlock the card for issuer that want to use this functionality.</param>
+        /// <param name="Id">{{{cartao_response_id_value}}}.</param>
+        /// <param name="FlagTitular">{{{cartao_response_flag_titular_value}}}.</param>
+        /// <param name="IdPessoa">{{{cartao_response_id_pessoa_value}}}.</param>
+        /// <param name="SequencialCartao">{{{cartao_response_sequencial_cartao_value}}}.</param>
+        /// <param name="IdConta">{{{cartao_response_id_conta_value}}}.</param>
+        /// <param name="IdStatus">{{{cartao_response_id_status_value}}}.</param>
+        /// <param name="DataStatus">{{{cartao_response_data_status_value}}}.</param>
+        /// <param name="IdEstagio">{{{cartao_response_id_estagio_value}}}.</param>
+        /// <param name="DataEstagio">{{{cartao_response_data_estagio_value}}}.</param>
+        /// <param name="NumeroBin">{{{cartao_response_numero_bin_value}}}.</param>
+        /// <param name="NumeroCartao">{{{cartao_response_numero_cartao_value}}}.</param>
+        /// <param name="NumeroCartaoHash">{{{cartao_response_numero_cartao_hash_value}}}.</param>
+        /// <param name="NumeroCartaoCriptografado">{{{cartao_response_numero_cartao_criptografado_value}}}.</param>
+        /// <param name="DataEmissao">{{{cartao_response_data_emissao_value}}}.</param>
+        /// <param name="DataValidade">{{{cartao_response_data_validade_value}}}.</param>
+        /// <param name="CartaoVirtual">{{{cartao_response_cartao_virtual_value}}}.</param>
+        /// <param name="ImpressaoAvulsa">{{{cartao_response_impressao_avulsa_value}}}.</param>
+        /// <param name="DataImpressao">{{{cartao_response_data_impressao_value}}}.</param>
+        /// <param name="NomeArquivoImpressao">{{{cartao_response_nome_arquivo_impressao_value}}}.</param>
+        /// <param name="IdProduto">{{{cartao_response_id_produto_value}}}.</param>
+        /// <param name="NomeImpresso">{{{cartao_response_nome_impresso_value}}}.</param>
+        /// <param name="CodigoDesbloqueio">{{{cartao_response_codigo_desbloqueio_value}}}.</param>
 
         public CartaoResponse(long? Id = null, int? FlagTitular = null, long? IdPessoa = null, int? SequencialCartao = null, long? IdConta = null, long? IdStatus = null, string DataStatus = null, long? IdEstagio = null, string DataEstagio = null, long? NumeroBin = null, string NumeroCartao = null, long? NumeroCartaoHash = null, string NumeroCartaoCriptografado = null, string DataEmissao = null, string DataValidade = null, int? CartaoVirtual = null, int? ImpressaoAvulsa = null, string DataImpressao = null, string NomeArquivoImpressao = null, long? IdProduto = null, string NomeImpresso = null, string CodigoDesbloqueio = null)
         {
@@ -74,156 +74,156 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Identification Code of the Card
+        /// {{{cartao_response_id_value}}}
         /// </summary>
-        /// <value>Identification Code of the Card</value>
+        /// <value>{{{cartao_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Show the tiype of the Cardholder, being: (1: Holder, 0: Additional)
+        /// {{{cartao_response_flag_titular_value}}}
         /// </summary>
-        /// <value>Show the tiype of the Cardholder, being: (1: Holder, 0: Additional)</value>
+        /// <value>{{{cartao_response_flag_titular_value}}}</value>
         [DataMember(Name="flagTitular", EmitDefaultValue=false)]
         public int? FlagTitular { get; set; }
     
         /// <summary>
-        /// Identification Code of the Person which the card belongs
+        /// {{{cartao_response_id_pessoa_value}}}
         /// </summary>
-        /// <value>Identification Code of the Person which the card belongs</value>
+        /// <value>{{{cartao_response_id_pessoa_value}}}</value>
         [DataMember(Name="idPessoa", EmitDefaultValue=false)]
         public long? IdPessoa { get; set; }
     
         /// <summary>
-        /// Card Sequel Number
+        /// {{{cartao_response_sequencial_cartao_value}}}
         /// </summary>
-        /// <value>Card Sequel Number</value>
+        /// <value>{{{cartao_response_sequencial_cartao_value}}}</value>
         [DataMember(Name="sequencialCartao", EmitDefaultValue=false)]
         public int? SequencialCartao { get; set; }
     
         /// <summary>
-        /// Identification Code of the Account which the card belongs
+        /// {{{cartao_response_id_conta_value}}}
         /// </summary>
-        /// <value>Identification Code of the Account which the card belongs</value>
+        /// <value>{{{cartao_response_id_conta_value}}}</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// Identification Code of the Card Status
+        /// {{{cartao_response_id_status_value}}}
         /// </summary>
-        /// <value>Identification Code of the Card Status</value>
+        /// <value>{{{cartao_response_id_status_value}}}</value>
         [DataMember(Name="idStatus", EmitDefaultValue=false)]
         public long? IdStatus { get; set; }
     
         /// <summary>
-        /// Show the date which the current idStatusCard was applied, when there is
+        /// {{{cartao_response_data_status_value}}}
         /// </summary>
-        /// <value>Show the date which the current idStatusCard was applied, when there is</value>
+        /// <value>{{{cartao_response_data_status_value}}}</value>
         [DataMember(Name="dataStatus", EmitDefaultValue=false)]
         public string DataStatus { get; set; }
     
         /// <summary>
-        /// Identification Code of the Stage Printed Card
+        /// {{{cartao_response_id_estagio_value}}}
         /// </summary>
-        /// <value>Identification Code of the Stage Printed Card</value>
+        /// <value>{{{cartao_response_id_estagio_value}}}</value>
         [DataMember(Name="idEstagio", EmitDefaultValue=false)]
         public long? IdEstagio { get; set; }
     
         /// <summary>
-        /// Show te date which the current idStage of the card applied, when there is
+        /// {{{cartao_response_data_estagio_value}}}
         /// </summary>
-        /// <value>Show te date which the current idStage of the card applied, when there is</value>
+        /// <value>{{{cartao_response_data_estagio_value}}}</value>
         [DataMember(Name="dataEstagio", EmitDefaultValue=false)]
         public string DataEstagio { get; set; }
     
         /// <summary>
-        /// Bin number of the card
+        /// {{{cartao_response_numero_bin_value}}}
         /// </summary>
-        /// <value>Bin number of the card</value>
+        /// <value>{{{cartao_response_numero_bin_value}}}</value>
         [DataMember(Name="numeroBin", EmitDefaultValue=false)]
         public long? NumeroBin { get; set; }
     
         /// <summary>
-        /// Show the card number
+        /// {{{cartao_response_numero_cartao_value}}}
         /// </summary>
-        /// <value>Show the card number</value>
+        /// <value>{{{cartao_response_numero_cartao_value}}}</value>
         [DataMember(Name="numeroCartao", EmitDefaultValue=false)]
         public string NumeroCartao { get; set; }
     
         /// <summary>
-        /// Hash Card Number
+        /// {{{cartao_response_numero_cartao_hash_value}}}
         /// </summary>
-        /// <value>Hash Card Number</value>
+        /// <value>{{{cartao_response_numero_cartao_hash_value}}}</value>
         [DataMember(Name="numeroCartaoHash", EmitDefaultValue=false)]
         public long? NumeroCartaoHash { get; set; }
     
         /// <summary>
-        /// Encrypted Card Number
+        /// {{{cartao_response_numero_cartao_criptografado_value}}}
         /// </summary>
-        /// <value>Encrypted Card Number</value>
+        /// <value>{{{cartao_response_numero_cartao_criptografado_value}}}</value>
         [DataMember(Name="numeroCartaoCriptografado", EmitDefaultValue=false)]
         public string NumeroCartaoCriptografado { get; set; }
     
         /// <summary>
-        /// Show the issue date of the card
+        /// {{{cartao_response_data_emissao_value}}}
         /// </summary>
-        /// <value>Show the issue date of the card</value>
+        /// <value>{{{cartao_response_data_emissao_value}}}</value>
         [DataMember(Name="dataEmissao", EmitDefaultValue=false)]
         public string DataEmissao { get; set; }
     
         /// <summary>
-        /// Show the Expiration date of the card in the format yyyy-MM, when there is
+        /// {{{cartao_response_data_validade_value}}}
         /// </summary>
-        /// <value>Show the Expiration date of the card in the format yyyy-MM, when there is</value>
+        /// <value>{{{cartao_response_data_validade_value}}}</value>
         [DataMember(Name="dataValidade", EmitDefaultValue=false)]
         public string DataValidade { get; set; }
     
         /// <summary>
-        /// Show the status that informs if the card is virtual, being: (1: True, 0: False)
+        /// {{{cartao_response_cartao_virtual_value}}}
         /// </summary>
-        /// <value>Show the status that informs if the card is virtual, being: (1: True, 0: False)</value>
+        /// <value>{{{cartao_response_cartao_virtual_value}}}</value>
         [DataMember(Name="cartaoVirtual", EmitDefaultValue=false)]
         public int? CartaoVirtual { get; set; }
     
         /// <summary>
-        /// When it is active, indicates that the card was printed in the Commercial Origin
+        /// {{{cartao_response_impressao_avulsa_value}}}
         /// </summary>
-        /// <value>When it is active, indicates that the card was printed in the Commercial Origin</value>
+        /// <value>{{{cartao_response_impressao_avulsa_value}}}</value>
         [DataMember(Name="impressaoAvulsa", EmitDefaultValue=false)]
         public int? ImpressaoAvulsa { get; set; }
     
         /// <summary>
-        /// Show the date of the card that was printed, in case of printing in a store, or the date which was included in the file for printing in a Graphic
+        /// {{{cartao_response_data_impressao_value}}}
         /// </summary>
-        /// <value>Show the date of the card that was printed, in case of printing in a store, or the date which was included in the file for printing in a Graphic</value>
+        /// <value>{{{cartao_response_data_impressao_value}}}</value>
         [DataMember(Name="dataImpressao", EmitDefaultValue=false)]
         public string DataImpressao { get; set; }
     
         /// <summary>
-        /// Show the name of the file where the card was included for printing, when there is
+        /// {{{cartao_response_nome_arquivo_impressao_value}}}
         /// </summary>
-        /// <value>Show the name of the file where the card was included for printing, when there is</value>
+        /// <value>{{{cartao_response_nome_arquivo_impressao_value}}}</value>
         [DataMember(Name="nomeArquivoImpressao", EmitDefaultValue=false)]
         public string NomeArquivoImpressao { get; set; }
     
         /// <summary>
-        /// Identification Code of the Product which the card belongs
+        /// {{{cartao_response_id_produto_value}}}
         /// </summary>
-        /// <value>Identification Code of the Product which the card belongs</value>
+        /// <value>{{{cartao_response_id_produto_value}}}</value>
         [DataMember(Name="idProduto", EmitDefaultValue=false)]
         public long? IdProduto { get; set; }
     
         /// <summary>
-        /// Show the name printed on the card
+        /// {{{cartao_response_nome_impresso_value}}}
         /// </summary>
-        /// <value>Show the name printed on the card</value>
+        /// <value>{{{cartao_response_nome_impresso_value}}}</value>
         [DataMember(Name="nomeImpresso", EmitDefaultValue=false)]
         public string NomeImpresso { get; set; }
     
         /// <summary>
-        /// Show a specific code to be used as a variable in the process of unlock the card for issuer that want to use this functionality
+        /// {{{cartao_response_codigo_desbloqueio_value}}}
         /// </summary>
-        /// <value>Show a specific code to be used as a variable in the process of unlock the card for issuer that want to use this functionality</value>
+        /// <value>{{{cartao_response_codigo_desbloqueio_value}}}</value>
         [DataMember(Name="codigoDesbloqueio", EmitDefaultValue=false)]
         public string CodigoDesbloqueio { get; set; }
     

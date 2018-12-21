@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Object of response of the Merchant Telephone
+    /// {{{telefone_estabelecimento_response_description}}}
     /// </summary>
     [DataContract]
     public partial class TelefoneEstabelecimentoResponse :  IEquatable<TelefoneEstabelecimentoResponse>
@@ -22,11 +22,11 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TelefoneEstabelecimentoResponse" /> class.
         /// Initializes a new instance of the <see cref="TelefoneEstabelecimentoResponse" />class.
         /// </summary>
-        /// <param name="Id">Identification Code of the telephone.</param>
-        /// <param name="IdEstabelecimento">Identification Code of the Merchant Type.</param>
-        /// <param name="Ddd">DDD code of the telephone.</param>
-        /// <param name="Telefone">Telephone Number.</param>
-        /// <param name="Ramal">Extension number.</param>
+        /// <param name="Id">{{{telefone_estabelecimento_response_id_value}}}.</param>
+        /// <param name="IdEstabelecimento">{{{telefone_estabelecimento_response_id_estabelecimento_value}}}.</param>
+        /// <param name="Ddd">{{{telefone_estabelecimento_response_ddd_value}}}.</param>
+        /// <param name="Telefone">{{{telefone_estabelecimento_response_telefone_value}}}.</param>
+        /// <param name="Ramal">{{{telefone_estabelecimento_response_ramal_value}}}.</param>
 
         public TelefoneEstabelecimentoResponse(long? Id = null, long? IdEstabelecimento = null, string Ddd = null, string Telefone = null, string Ramal = null)
         {
@@ -40,37 +40,37 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Identification Code of the telephone
+        /// {{{telefone_estabelecimento_response_id_value}}}
         /// </summary>
-        /// <value>Identification Code of the telephone</value>
+        /// <value>{{{telefone_estabelecimento_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Identification Code of the Merchant Type
+        /// {{{telefone_estabelecimento_response_id_estabelecimento_value}}}
         /// </summary>
-        /// <value>Identification Code of the Merchant Type</value>
+        /// <value>{{{telefone_estabelecimento_response_id_estabelecimento_value}}}</value>
         [DataMember(Name="idEstabelecimento", EmitDefaultValue=false)]
         public long? IdEstabelecimento { get; set; }
     
         /// <summary>
-        /// DDD code of the telephone
+        /// {{{telefone_estabelecimento_response_ddd_value}}}
         /// </summary>
-        /// <value>DDD code of the telephone</value>
+        /// <value>{{{telefone_estabelecimento_response_ddd_value}}}</value>
         [DataMember(Name="ddd", EmitDefaultValue=false)]
         public string Ddd { get; set; }
     
         /// <summary>
-        /// Telephone Number
+        /// {{{telefone_estabelecimento_response_telefone_value}}}
         /// </summary>
-        /// <value>Telephone Number</value>
+        /// <value>{{{telefone_estabelecimento_response_telefone_value}}}</value>
         [DataMember(Name="telefone", EmitDefaultValue=false)]
         public string Telefone { get; set; }
     
         /// <summary>
-        /// Extension number
+        /// {{{telefone_estabelecimento_response_ramal_value}}}
         /// </summary>
-        /// <value>Extension number</value>
+        /// <value>{{{telefone_estabelecimento_response_ramal_value}}}</value>
         [DataMember(Name="ramal", EmitDefaultValue=false)]
         public string Ramal { get; set; }
     

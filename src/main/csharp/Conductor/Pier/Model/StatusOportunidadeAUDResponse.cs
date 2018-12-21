@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Response Representation of the StatusTypeOpportunityAUD resource
+    /// {{{status_oportunidade_a_u_d_response_description}}}
     /// </summary>
     [DataContract]
     public partial class StatusOportunidadeAUDResponse :  IEquatable<StatusOportunidadeAUDResponse>
@@ -22,14 +22,14 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="StatusOportunidadeAUDResponse" /> class.
         /// Initializes a new instance of the <see cref="StatusOportunidadeAUDResponse" />class.
         /// </summary>
-        /// <param name="Rev">Identifer code of the auditorial of the opportunity types.</param>
-        /// <param name="RevType">code that represent the action type made in the resource of opportunity type.</param>
-        /// <param name="RevDate">Action date made in the resource of opportunity types.</param>
-        /// <param name="Id">Identifier Code of the StatusOpportunity.</param>
-        /// <param name="IdTipoOportunidade">Identifier Code of the TypeOpportunity.</param>
-        /// <param name="Nome">Name of the opportunity status.</param>
-        /// <param name="Descricao">Description of the StatusOpportunity.</param>
-        /// <param name="FlagAtivo">Flag that represent if the opportunity type is active.</param>
+        /// <param name="Rev">{{{status_oportunidade_a_u_d_response_rev_value}}}.</param>
+        /// <param name="RevType">{{{status_oportunidade_a_u_d_response_rev_type_value}}}.</param>
+        /// <param name="RevDate">{{{status_oportunidade_a_u_d_response_rev_date_value}}}.</param>
+        /// <param name="Id">{{{status_oportunidade_a_u_d_response_id_value}}}.</param>
+        /// <param name="IdTipoOportunidade">{{{status_oportunidade_a_u_d_response_id_tipo_oportunidade_value}}}.</param>
+        /// <param name="Nome">{{{status_oportunidade_a_u_d_response_nome_value}}}.</param>
+        /// <param name="Descricao">{{{status_oportunidade_a_u_d_response_descricao_value}}}.</param>
+        /// <param name="FlagAtivo">{{{status_oportunidade_a_u_d_response_flag_ativo_value}}}.</param>
 
         public StatusOportunidadeAUDResponse(long? Rev = null, long? RevType = null, string RevDate = null, long? Id = null, long? IdTipoOportunidade = null, string Nome = null, string Descricao = null, bool? FlagAtivo = null)
         {
@@ -46,58 +46,58 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Identifer code of the auditorial of the opportunity types
+        /// {{{status_oportunidade_a_u_d_response_rev_value}}}
         /// </summary>
-        /// <value>Identifer code of the auditorial of the opportunity types</value>
+        /// <value>{{{status_oportunidade_a_u_d_response_rev_value}}}</value>
         [DataMember(Name="rev", EmitDefaultValue=false)]
         public long? Rev { get; set; }
     
         /// <summary>
-        /// code that represent the action type made in the resource of opportunity type
+        /// {{{status_oportunidade_a_u_d_response_rev_type_value}}}
         /// </summary>
-        /// <value>code that represent the action type made in the resource of opportunity type</value>
+        /// <value>{{{status_oportunidade_a_u_d_response_rev_type_value}}}</value>
         [DataMember(Name="revType", EmitDefaultValue=false)]
         public long? RevType { get; set; }
     
         /// <summary>
-        /// Action date made in the resource of opportunity types
+        /// {{{status_oportunidade_a_u_d_response_rev_date_value}}}
         /// </summary>
-        /// <value>Action date made in the resource of opportunity types</value>
+        /// <value>{{{status_oportunidade_a_u_d_response_rev_date_value}}}</value>
         [DataMember(Name="revDate", EmitDefaultValue=false)]
         public string RevDate { get; set; }
     
         /// <summary>
-        /// Identifier Code of the StatusOpportunity
+        /// {{{status_oportunidade_a_u_d_response_id_value}}}
         /// </summary>
-        /// <value>Identifier Code of the StatusOpportunity</value>
+        /// <value>{{{status_oportunidade_a_u_d_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Identifier Code of the TypeOpportunity
+        /// {{{status_oportunidade_a_u_d_response_id_tipo_oportunidade_value}}}
         /// </summary>
-        /// <value>Identifier Code of the TypeOpportunity</value>
+        /// <value>{{{status_oportunidade_a_u_d_response_id_tipo_oportunidade_value}}}</value>
         [DataMember(Name="idTipoOportunidade", EmitDefaultValue=false)]
         public long? IdTipoOportunidade { get; set; }
     
         /// <summary>
-        /// Name of the opportunity status
+        /// {{{status_oportunidade_a_u_d_response_nome_value}}}
         /// </summary>
-        /// <value>Name of the opportunity status</value>
+        /// <value>{{{status_oportunidade_a_u_d_response_nome_value}}}</value>
         [DataMember(Name="nome", EmitDefaultValue=false)]
         public string Nome { get; set; }
     
         /// <summary>
-        /// Description of the StatusOpportunity
+        /// {{{status_oportunidade_a_u_d_response_descricao_value}}}
         /// </summary>
-        /// <value>Description of the StatusOpportunity</value>
+        /// <value>{{{status_oportunidade_a_u_d_response_descricao_value}}}</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     
         /// <summary>
-        /// Flag that represent if the opportunity type is active
+        /// {{{status_oportunidade_a_u_d_response_flag_ativo_value}}}
         /// </summary>
-        /// <value>Flag that represent if the opportunity type is active</value>
+        /// <value>{{{status_oportunidade_a_u_d_response_flag_ativo_value}}}</value>
         [DataMember(Name="flagAtivo", EmitDefaultValue=false)]
         public bool? FlagAtivo { get; set; }
     

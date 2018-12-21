@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// List of terminals
+    /// {{{page_terminal_response_description}}}
     /// </summary>
     [DataContract]
     public partial class PageTerminalResponse :  IEquatable<PageTerminalResponse>

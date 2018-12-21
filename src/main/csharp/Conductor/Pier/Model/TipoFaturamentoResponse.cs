@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Object Billing
+    /// {{{tipo_faturamento_response_description}}}
     /// </summary>
     [DataContract]
     public partial class TipoFaturamentoResponse :  IEquatable<TipoFaturamentoResponse>
@@ -22,10 +22,10 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TipoFaturamentoResponse" /> class.
         /// Initializes a new instance of the <see cref="TipoFaturamentoResponse" />class.
         /// </summary>
-        /// <param name="Id">Identification Code of the billing type (id).</param>
-        /// <param name="Descricao">Description of theh billing type.</param>
-        /// <param name="FlagApenasDemonstrativo">Flag that represents that the billing will be only demonstrative.</param>
-        /// <param name="IdConvenio">Identification Code of the related covenant to the billing type.</param>
+        /// <param name="Id">{{{tipo_faturamento_response_id_value}}}.</param>
+        /// <param name="Descricao">{{{tipo_faturamento_response_descricao_value}}}.</param>
+        /// <param name="FlagApenasDemonstrativo">{{{tipo_faturamento_response_flag_apenas_demonstrativo_value}}}.</param>
+        /// <param name="IdConvenio">{{{tipo_faturamento_response_id_convenio_value}}}.</param>
 
         public TipoFaturamentoResponse(long? Id = null, string Descricao = null, bool? FlagApenasDemonstrativo = null, long? IdConvenio = null)
         {
@@ -38,30 +38,30 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Identification Code of the billing type (id)
+        /// {{{tipo_faturamento_response_id_value}}}
         /// </summary>
-        /// <value>Identification Code of the billing type (id)</value>
+        /// <value>{{{tipo_faturamento_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Description of theh billing type
+        /// {{{tipo_faturamento_response_descricao_value}}}
         /// </summary>
-        /// <value>Description of theh billing type</value>
+        /// <value>{{{tipo_faturamento_response_descricao_value}}}</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     
         /// <summary>
-        /// Flag that represents that the billing will be only demonstrative
+        /// {{{tipo_faturamento_response_flag_apenas_demonstrativo_value}}}
         /// </summary>
-        /// <value>Flag that represents that the billing will be only demonstrative</value>
+        /// <value>{{{tipo_faturamento_response_flag_apenas_demonstrativo_value}}}</value>
         [DataMember(Name="flagApenasDemonstrativo", EmitDefaultValue=false)]
         public bool? FlagApenasDemonstrativo { get; set; }
     
         /// <summary>
-        /// Identification Code of the related covenant to the billing type
+        /// {{{tipo_faturamento_response_id_convenio_value}}}
         /// </summary>
-        /// <value>Identification Code of the related covenant to the billing type</value>
+        /// <value>{{{tipo_faturamento_response_id_convenio_value}}}</value>
         [DataMember(Name="idConvenio", EmitDefaultValue=false)]
         public long? IdConvenio { get; set; }
     

@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Object response for the telephone historic
+    /// {{{historico_telefone_response_description}}}
     /// </summary>
     [DataContract]
     public partial class HistoricoTelefoneResponse :  IEquatable<HistoricoTelefoneResponse>
@@ -22,11 +22,11 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="HistoricoTelefoneResponse" /> class.
         /// Initializes a new instance of the <see cref="HistoricoTelefoneResponse" />class.
         /// </summary>
-        /// <param name="Id">Identification Code of the Telephone (id).</param>
-        /// <param name="Telefone">Show the telephone number.</param>
-        /// <param name="IdTipoTelefone">Show the id type of the telephone.</param>
-        /// <param name="TipoTelefone">Show the description of the telephone type.</param>
-        /// <param name="DataModificacao">Show the date which the telephone was updated.</param>
+        /// <param name="Id">{{{historico_telefone_response_id_value}}}.</param>
+        /// <param name="Telefone">{{{historico_telefone_response_telefone_value}}}.</param>
+        /// <param name="IdTipoTelefone">{{{historico_telefone_response_id_tipo_telefone_value}}}.</param>
+        /// <param name="TipoTelefone">{{{historico_telefone_response_tipo_telefone_value}}}.</param>
+        /// <param name="DataModificacao">{{{historico_telefone_response_data_modificacao_value}}}.</param>
 
         public HistoricoTelefoneResponse(long? Id = null, string Telefone = null, long? IdTipoTelefone = null, string TipoTelefone = null, string DataModificacao = null)
         {
@@ -40,37 +40,37 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Identification Code of the Telephone (id)
+        /// {{{historico_telefone_response_id_value}}}
         /// </summary>
-        /// <value>Identification Code of the Telephone (id)</value>
+        /// <value>{{{historico_telefone_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Show the telephone number
+        /// {{{historico_telefone_response_telefone_value}}}
         /// </summary>
-        /// <value>Show the telephone number</value>
+        /// <value>{{{historico_telefone_response_telefone_value}}}</value>
         [DataMember(Name="telefone", EmitDefaultValue=false)]
         public string Telefone { get; set; }
     
         /// <summary>
-        /// Show the id type of the telephone
+        /// {{{historico_telefone_response_id_tipo_telefone_value}}}
         /// </summary>
-        /// <value>Show the id type of the telephone</value>
+        /// <value>{{{historico_telefone_response_id_tipo_telefone_value}}}</value>
         [DataMember(Name="idTipoTelefone", EmitDefaultValue=false)]
         public long? IdTipoTelefone { get; set; }
     
         /// <summary>
-        /// Show the description of the telephone type
+        /// {{{historico_telefone_response_tipo_telefone_value}}}
         /// </summary>
-        /// <value>Show the description of the telephone type</value>
+        /// <value>{{{historico_telefone_response_tipo_telefone_value}}}</value>
         [DataMember(Name="tipoTelefone", EmitDefaultValue=false)]
         public string TipoTelefone { get; set; }
     
         /// <summary>
-        /// Show the date which the telephone was updated
+        /// {{{historico_telefone_response_data_modificacao_value}}}
         /// </summary>
-        /// <value>Show the date which the telephone was updated</value>
+        /// <value>{{{historico_telefone_response_data_modificacao_value}}}</value>
         [DataMember(Name="dataModificacao", EmitDefaultValue=false)]
         public string DataModificacao { get; set; }
     

@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa??o da resposta do recurso Antecipacao Simulada
+    /// {{{antecipacao_simulada_lote_response_description}}}
     /// </summary>
     [DataContract]
     public partial class AntecipacaoSimuladaLoteResponse :  IEquatable<AntecipacaoSimuladaLoteResponse>
@@ -22,10 +22,10 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="AntecipacaoSimuladaLoteResponse" /> class.
         /// Initializes a new instance of the <see cref="AntecipacaoSimuladaLoteResponse" />class.
         /// </summary>
-        /// <param name="ValorTotalAntecipado">Total value antecipated.</param>
-        /// <param name="ValorTotalDesconto">Total value of the discount.</param>
-        /// <param name="ValorTotalComDesconto">Total value anticipated with the discount.</param>
-        /// <param name="AntecipacoesSimuladas">Antecipations Simulated.</param>
+        /// <param name="ValorTotalAntecipado">{{{antecipacao_simulada_lote_response_valor_total_antecipado_value}}}.</param>
+        /// <param name="ValorTotalDesconto">{{{antecipacao_simulada_lote_response_valor_total_desconto_value}}}.</param>
+        /// <param name="ValorTotalComDesconto">{{{antecipacao_simulada_lote_response_valor_total_com_desconto_value}}}.</param>
+        /// <param name="AntecipacoesSimuladas">{{{antecipacao_simulada_lote_response_antecipacoes_simuladas_value}}}.</param>
 
         public AntecipacaoSimuladaLoteResponse(double? ValorTotalAntecipado = null, double? ValorTotalDesconto = null, double? ValorTotalComDesconto = null, List<AntecipacaoSimuladaResponse> AntecipacoesSimuladas = null)
         {
@@ -38,30 +38,30 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Total value antecipated
+        /// {{{antecipacao_simulada_lote_response_valor_total_antecipado_value}}}
         /// </summary>
-        /// <value>Total value antecipated</value>
+        /// <value>{{{antecipacao_simulada_lote_response_valor_total_antecipado_value}}}</value>
         [DataMember(Name="valorTotalAntecipado", EmitDefaultValue=false)]
         public double? ValorTotalAntecipado { get; set; }
     
         /// <summary>
-        /// Total value of the discount
+        /// {{{antecipacao_simulada_lote_response_valor_total_desconto_value}}}
         /// </summary>
-        /// <value>Total value of the discount</value>
+        /// <value>{{{antecipacao_simulada_lote_response_valor_total_desconto_value}}}</value>
         [DataMember(Name="valorTotalDesconto", EmitDefaultValue=false)]
         public double? ValorTotalDesconto { get; set; }
     
         /// <summary>
-        /// Total value anticipated with the discount
+        /// {{{antecipacao_simulada_lote_response_valor_total_com_desconto_value}}}
         /// </summary>
-        /// <value>Total value anticipated with the discount</value>
+        /// <value>{{{antecipacao_simulada_lote_response_valor_total_com_desconto_value}}}</value>
         [DataMember(Name="valorTotalComDesconto", EmitDefaultValue=false)]
         public double? ValorTotalComDesconto { get; set; }
     
         /// <summary>
-        /// Antecipations Simulated
+        /// {{{antecipacao_simulada_lote_response_antecipacoes_simuladas_value}}}
         /// </summary>
-        /// <value>Antecipations Simulated</value>
+        /// <value>{{{antecipacao_simulada_lote_response_antecipacoes_simuladas_value}}}</value>
         [DataMember(Name="antecipacoesSimuladas", EmitDefaultValue=false)]
         public List<AntecipacaoSimuladaResponse> AntecipacoesSimuladas { get; set; }
     

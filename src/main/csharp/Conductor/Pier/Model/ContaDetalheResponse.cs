@@ -12,16 +12,16 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Object account
+    /// {{{conta_detalhe_response_description}}}
     /// </summary>
     [DataContract]
     public partial class ContaDetalheResponse :  IEquatable<ContaDetalheResponse>
     { 
     
         /// <summary>
-        /// Active account function
+        /// {{{conta_response_funcao_ativa_value}}}
         /// </summary>
-        /// <value>Active account function</value>
+        /// <value>{{{conta_response_funcao_ativa_value}}}</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum FuncaoAtivaEnum {
             
@@ -34,9 +34,9 @@ namespace Conductor.Pier.Model
 
     
         /// <summary>
-        /// Active account function
+        /// {{{conta_response_funcao_ativa_value}}}
         /// </summary>
-        /// <value>Active account function</value>
+        /// <value>{{{conta_response_funcao_ativa_value}}}</value>
         [DataMember(Name="funcaoAtiva", EmitDefaultValue=false)]
         public FuncaoAtivaEnum? FuncaoAtiva { get; set; }
     
@@ -44,44 +44,44 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="ContaDetalheResponse" /> class.
         /// Initializes a new instance of the <see cref="ContaDetalheResponse" />class.
         /// </summary>
-        /// <param name="Id">Identification Code of the account (id).</param>
-        /// <param name="IdPessoa">Identification Code of the Cardholder (id).</param>
-        /// <param name="Nome">Show the &#39;Full Name of the PP&#39; ot the &#39;Full Name of the Social Reason (Business Name)&#39;.</param>
-        /// <param name="IdProduto">Identification Code of the product which the account takes part (id).</param>
-        /// <param name="IdOrigemComercial">Identification Code of the Commercial Origin (id) that created the Account.</param>
-        /// <param name="NomeOrigemComercial">Name of the Commercial Origin.</param>
-        /// <param name="IdFantasiaBasica">Identification Code of the Basic Fantasy (id).</param>
-        /// <param name="NomeFantasiaBasica">Name of the Basic Fantasy.</param>
-        /// <param name="IdStatusConta">Identification Code of the status attributed to the account.</param>
-        /// <param name="StatusConta">Description of status of the account.</param>
-        /// <param name="DiaVencimento">Show the expiration day.</param>
-        /// <param name="MelhorDiaCompra">Show the best date of shopping.</param>
-        /// <param name="DataStatusConta">Show the date which the current idStatusAccount was attributed for it.</param>
-        /// <param name="DataCadastro">Show the date which the card was created.</param>
-        /// <param name="DataUltimaAlteracaoVencimento">Show the date of the last update of expiration.</param>
-        /// <param name="DataHoraUltimaCompra">Show the date of the last update of expiration.</param>
-        /// <param name="NumeroAgencia">Number of the agency.</param>
-        /// <param name="NumeroContaCorrente">Current Account Number.</param>
-        /// <param name="ValorRenda">Value of the proven income.</param>
-        /// <param name="FormaEnvioFatura">Sending way of the invoice.</param>
-        /// <param name="Titular">Show if the person is the Cardholder.</param>
-        /// <param name="LimiteGlobal">Show the value of credit limit that the cardholder has.</param>
-        /// <param name="LimiteSaqueGlobal">when it is used by the issuer, this field shows the value of the credit limit that the cardholder can use to make National Withdrawal transactions.</param>
-        /// <param name="SaldoDisponivelGlobal">When it is used by the issuer, this field show the value of credit limit that the cardholder has to the exclusively use in National Shopping.</param>
-        /// <param name="SaldoDisponivelSaque">When it is used by the issuer, this field show the value of the credit limit that the cardholder can used to make National Withdrawal Transactions inside of each cycle of billing.</param>
-        /// <param name="ImpedidoFinanciamento">Flag for banks business partners that are cardholders, but cannot operate financed credit transactions (Law n. 4595/64) .</param>
-        /// <param name="DiasAtraso">Show the quantity of days that the account is in arrears.</param>
-        /// <param name="ProximoVencimentoPadrao">Next Expering Date Default.</param>
-        /// <param name="IdProposta">Proposal identifier.</param>
-        /// <param name="QuantidadePagamentos">Number of payments.</param>
-        /// <param name="Correspondencia">correspondence.</param>
-        /// <param name="DataInicioAtraso">Expiry date of Collection.</param>
-        /// <param name="RotativoPagaJuros">Revolving interest rate.</param>
-        /// <param name="TotalPosProx">Next Invoice Value.</param>
-        /// <param name="SaldoAtualFinal">Final Actual Value.</param>
-        /// <param name="SaldoExtratoAnterior">Previous account balance.</param>
-        /// <param name="AceitaNovaContaPorGrupoProduto">Flag indicating acceptance of new account opening by product group.</param>
-        /// <param name="FuncaoAtiva">Active account function.</param>
+        /// <param name="Id">{{{conta_detalhe_response_id_value}}}.</param>
+        /// <param name="IdPessoa">{{{conta_detalhe_response_id_pessoa_value}}}.</param>
+        /// <param name="Nome">{{{conta_detalhe_response_nome_value}}}.</param>
+        /// <param name="IdProduto">{{{conta_detalhe_response_id_produto_value}}}.</param>
+        /// <param name="IdOrigemComercial">{{{conta_detalhe_response_id_origem_comercial_value}}}.</param>
+        /// <param name="NomeOrigemComercial">{{{conta_detalhe_response_nome_origem_comercial_value}}}.</param>
+        /// <param name="IdFantasiaBasica">{{{conta_detalhe_response_id_fantasia_basica_value}}}.</param>
+        /// <param name="NomeFantasiaBasica">{{{conta_detalhe_response_nome_fantasia_basica_value}}}.</param>
+        /// <param name="IdStatusConta">{{{conta_detalhe_response_id_status_conta_value}}}.</param>
+        /// <param name="StatusConta">{{{conta_detalhe_response_status_conta_value}}}.</param>
+        /// <param name="DiaVencimento">{{{conta_detalhe_response_dia_vencimento_value}}}.</param>
+        /// <param name="MelhorDiaCompra">{{{conta_detalhe_response_melhor_dia_compra_value}}}.</param>
+        /// <param name="DataStatusConta">{{{conta_detalhe_response_data_status_conta_value}}}.</param>
+        /// <param name="DataCadastro">{{{conta_detalhe_response_data_cadastro_value}}}.</param>
+        /// <param name="DataUltimaAlteracaoVencimento">{{{conta_detalhe_response_data_ultima_alteracao_vencimento_value}}}.</param>
+        /// <param name="DataHoraUltimaCompra">{{{conta_detalhe_response_data_hora_ultima_compra_value}}}.</param>
+        /// <param name="NumeroAgencia">{{{conta_detalhe_response_numero_agencia_value}}}.</param>
+        /// <param name="NumeroContaCorrente">{{{conta_detalhe_response_numero_conta_corrente_value}}}.</param>
+        /// <param name="ValorRenda">{{{conta_detalhe_response_valor_renda_value}}}.</param>
+        /// <param name="FormaEnvioFatura">{{{conta_detalhe_response_forma_envio_fatura_value}}}.</param>
+        /// <param name="Titular">{{{conta_detalhe_response_titular_value}}}.</param>
+        /// <param name="LimiteGlobal">{{{conta_detalhe_response_limite_global_value}}}.</param>
+        /// <param name="LimiteSaqueGlobal">{{{conta_detalhe_response_limite_saque_global_value}}}.</param>
+        /// <param name="SaldoDisponivelGlobal">{{{conta_detalhe_response_saldo_disponivel_global_value}}}.</param>
+        /// <param name="SaldoDisponivelSaque">{{{conta_detalhe_response_saldo_disponivel_saque_value}}}.</param>
+        /// <param name="ImpedidoFinanciamento">{{{conta_detalhe_response_impedido_de_financiamento_value}}}.</param>
+        /// <param name="DiasAtraso">{{{conta_detalhe_response_dias_atraso_value}}}.</param>
+        /// <param name="ProximoVencimentoPadrao">{{{conta_response_proximo_vencimento_padrao_value}}}.</param>
+        /// <param name="IdProposta">{{{conta_detalhe_response_id_proposta_value}}}.</param>
+        /// <param name="QuantidadePagamentos">{{{conta_detalhe_response_quantidade_pagamentos_value}}}.</param>
+        /// <param name="Correspondencia">{{{conta_detalhe_response_correspondencia_value}}}.</param>
+        /// <param name="DataInicioAtraso">{{{conta_detalhe_response_data_inicio_atraso_value}}}.</param>
+        /// <param name="RotativoPagaJuros">{{{estado_conta_response_rotativo_paga_juros_value}}}.</param>
+        /// <param name="TotalPosProx">{{{estado_conta_response_total_pos_proximo_value}}}.</param>
+        /// <param name="SaldoAtualFinal">{{{estado_conta_response_saldo_atual_final_value}}}.</param>
+        /// <param name="SaldoExtratoAnterior">{{{estado_conta_response_saldo_extrato_anterior_value}}}.</param>
+        /// <param name="AceitaNovaContaPorGrupoProduto">{{{conta_detalhe_response_aceita_nova_conta_grupo_produto_value}}}.</param>
+        /// <param name="FuncaoAtiva">{{{conta_response_funcao_ativa_value}}}.</param>
 
         public ContaDetalheResponse(long? Id = null, long? IdPessoa = null, string Nome = null, long? IdProduto = null, long? IdOrigemComercial = null, string NomeOrigemComercial = null, long? IdFantasiaBasica = null, string NomeFantasiaBasica = null, long? IdStatusConta = null, string StatusConta = null, int? DiaVencimento = null, int? MelhorDiaCompra = null, string DataStatusConta = null, string DataCadastro = null, string DataUltimaAlteracaoVencimento = null, string DataHoraUltimaCompra = null, int? NumeroAgencia = null, string NumeroContaCorrente = null, double? ValorRenda = null, string FormaEnvioFatura = null, bool? Titular = null, double? LimiteGlobal = null, double? LimiteSaqueGlobal = null, double? SaldoDisponivelGlobal = null, double? SaldoDisponivelSaque = null, bool? ImpedidoFinanciamento = null, long? DiasAtraso = null, string ProximoVencimentoPadrao = null, long? IdProposta = null, int? QuantidadePagamentos = null, long? Correspondencia = null, string DataInicioAtraso = null, double? RotativoPagaJuros = null, double? TotalPosProx = null, double? SaldoAtualFinal = null, double? SaldoExtratoAnterior = null, bool? AceitaNovaContaPorGrupoProduto = null, FuncaoAtivaEnum? FuncaoAtiva = null)
         {
@@ -128,261 +128,261 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Identification Code of the account (id)
+        /// {{{conta_detalhe_response_id_value}}}
         /// </summary>
-        /// <value>Identification Code of the account (id)</value>
+        /// <value>{{{conta_detalhe_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Identification Code of the Cardholder (id)
+        /// {{{conta_detalhe_response_id_pessoa_value}}}
         /// </summary>
-        /// <value>Identification Code of the Cardholder (id)</value>
+        /// <value>{{{conta_detalhe_response_id_pessoa_value}}}</value>
         [DataMember(Name="idPessoa", EmitDefaultValue=false)]
         public long? IdPessoa { get; set; }
     
         /// <summary>
-        /// Show the &#39;Full Name of the PP&#39; ot the &#39;Full Name of the Social Reason (Business Name)&#39;
+        /// {{{conta_detalhe_response_nome_value}}}
         /// </summary>
-        /// <value>Show the &#39;Full Name of the PP&#39; ot the &#39;Full Name of the Social Reason (Business Name)&#39;</value>
+        /// <value>{{{conta_detalhe_response_nome_value}}}</value>
         [DataMember(Name="nome", EmitDefaultValue=false)]
         public string Nome { get; set; }
     
         /// <summary>
-        /// Identification Code of the product which the account takes part (id)
+        /// {{{conta_detalhe_response_id_produto_value}}}
         /// </summary>
-        /// <value>Identification Code of the product which the account takes part (id)</value>
+        /// <value>{{{conta_detalhe_response_id_produto_value}}}</value>
         [DataMember(Name="idProduto", EmitDefaultValue=false)]
         public long? IdProduto { get; set; }
     
         /// <summary>
-        /// Identification Code of the Commercial Origin (id) that created the Account
+        /// {{{conta_detalhe_response_id_origem_comercial_value}}}
         /// </summary>
-        /// <value>Identification Code of the Commercial Origin (id) that created the Account</value>
+        /// <value>{{{conta_detalhe_response_id_origem_comercial_value}}}</value>
         [DataMember(Name="idOrigemComercial", EmitDefaultValue=false)]
         public long? IdOrigemComercial { get; set; }
     
         /// <summary>
-        /// Name of the Commercial Origin
+        /// {{{conta_detalhe_response_nome_origem_comercial_value}}}
         /// </summary>
-        /// <value>Name of the Commercial Origin</value>
+        /// <value>{{{conta_detalhe_response_nome_origem_comercial_value}}}</value>
         [DataMember(Name="nomeOrigemComercial", EmitDefaultValue=false)]
         public string NomeOrigemComercial { get; set; }
     
         /// <summary>
-        /// Identification Code of the Basic Fantasy (id)
+        /// {{{conta_detalhe_response_id_fantasia_basica_value}}}
         /// </summary>
-        /// <value>Identification Code of the Basic Fantasy (id)</value>
+        /// <value>{{{conta_detalhe_response_id_fantasia_basica_value}}}</value>
         [DataMember(Name="idFantasiaBasica", EmitDefaultValue=false)]
         public long? IdFantasiaBasica { get; set; }
     
         /// <summary>
-        /// Name of the Basic Fantasy
+        /// {{{conta_detalhe_response_nome_fantasia_basica_value}}}
         /// </summary>
-        /// <value>Name of the Basic Fantasy</value>
+        /// <value>{{{conta_detalhe_response_nome_fantasia_basica_value}}}</value>
         [DataMember(Name="nomeFantasiaBasica", EmitDefaultValue=false)]
         public string NomeFantasiaBasica { get; set; }
     
         /// <summary>
-        /// Identification Code of the status attributed to the account
+        /// {{{conta_detalhe_response_id_status_conta_value}}}
         /// </summary>
-        /// <value>Identification Code of the status attributed to the account</value>
+        /// <value>{{{conta_detalhe_response_id_status_conta_value}}}</value>
         [DataMember(Name="idStatusConta", EmitDefaultValue=false)]
         public long? IdStatusConta { get; set; }
     
         /// <summary>
-        /// Description of status of the account
+        /// {{{conta_detalhe_response_status_conta_value}}}
         /// </summary>
-        /// <value>Description of status of the account</value>
+        /// <value>{{{conta_detalhe_response_status_conta_value}}}</value>
         [DataMember(Name="statusConta", EmitDefaultValue=false)]
         public string StatusConta { get; set; }
     
         /// <summary>
-        /// Show the expiration day
+        /// {{{conta_detalhe_response_dia_vencimento_value}}}
         /// </summary>
-        /// <value>Show the expiration day</value>
+        /// <value>{{{conta_detalhe_response_dia_vencimento_value}}}</value>
         [DataMember(Name="diaVencimento", EmitDefaultValue=false)]
         public int? DiaVencimento { get; set; }
     
         /// <summary>
-        /// Show the best date of shopping
+        /// {{{conta_detalhe_response_melhor_dia_compra_value}}}
         /// </summary>
-        /// <value>Show the best date of shopping</value>
+        /// <value>{{{conta_detalhe_response_melhor_dia_compra_value}}}</value>
         [DataMember(Name="melhorDiaCompra", EmitDefaultValue=false)]
         public int? MelhorDiaCompra { get; set; }
     
         /// <summary>
-        /// Show the date which the current idStatusAccount was attributed for it
+        /// {{{conta_detalhe_response_data_status_conta_value}}}
         /// </summary>
-        /// <value>Show the date which the current idStatusAccount was attributed for it</value>
+        /// <value>{{{conta_detalhe_response_data_status_conta_value}}}</value>
         [DataMember(Name="dataStatusConta", EmitDefaultValue=false)]
         public string DataStatusConta { get; set; }
     
         /// <summary>
-        /// Show the date which the card was created
+        /// {{{conta_detalhe_response_data_cadastro_value}}}
         /// </summary>
-        /// <value>Show the date which the card was created</value>
+        /// <value>{{{conta_detalhe_response_data_cadastro_value}}}</value>
         [DataMember(Name="dataCadastro", EmitDefaultValue=false)]
         public string DataCadastro { get; set; }
     
         /// <summary>
-        /// Show the date of the last update of expiration
+        /// {{{conta_detalhe_response_data_ultima_alteracao_vencimento_value}}}
         /// </summary>
-        /// <value>Show the date of the last update of expiration</value>
+        /// <value>{{{conta_detalhe_response_data_ultima_alteracao_vencimento_value}}}</value>
         [DataMember(Name="dataUltimaAlteracaoVencimento", EmitDefaultValue=false)]
         public string DataUltimaAlteracaoVencimento { get; set; }
     
         /// <summary>
-        /// Show the date of the last update of expiration
+        /// {{{conta_detalhe_response_data_hora_ultima_compra_value}}}
         /// </summary>
-        /// <value>Show the date of the last update of expiration</value>
+        /// <value>{{{conta_detalhe_response_data_hora_ultima_compra_value}}}</value>
         [DataMember(Name="dataHoraUltimaCompra", EmitDefaultValue=false)]
         public string DataHoraUltimaCompra { get; set; }
     
         /// <summary>
-        /// Number of the agency
+        /// {{{conta_detalhe_response_numero_agencia_value}}}
         /// </summary>
-        /// <value>Number of the agency</value>
+        /// <value>{{{conta_detalhe_response_numero_agencia_value}}}</value>
         [DataMember(Name="numeroAgencia", EmitDefaultValue=false)]
         public int? NumeroAgencia { get; set; }
     
         /// <summary>
-        /// Current Account Number
+        /// {{{conta_detalhe_response_numero_conta_corrente_value}}}
         /// </summary>
-        /// <value>Current Account Number</value>
+        /// <value>{{{conta_detalhe_response_numero_conta_corrente_value}}}</value>
         [DataMember(Name="numeroContaCorrente", EmitDefaultValue=false)]
         public string NumeroContaCorrente { get; set; }
     
         /// <summary>
-        /// Value of the proven income
+        /// {{{conta_detalhe_response_valor_renda_value}}}
         /// </summary>
-        /// <value>Value of the proven income</value>
+        /// <value>{{{conta_detalhe_response_valor_renda_value}}}</value>
         [DataMember(Name="valorRenda", EmitDefaultValue=false)]
         public double? ValorRenda { get; set; }
     
         /// <summary>
-        /// Sending way of the invoice
+        /// {{{conta_detalhe_response_forma_envio_fatura_value}}}
         /// </summary>
-        /// <value>Sending way of the invoice</value>
+        /// <value>{{{conta_detalhe_response_forma_envio_fatura_value}}}</value>
         [DataMember(Name="formaEnvioFatura", EmitDefaultValue=false)]
         public string FormaEnvioFatura { get; set; }
     
         /// <summary>
-        /// Show if the person is the Cardholder
+        /// {{{conta_detalhe_response_titular_value}}}
         /// </summary>
-        /// <value>Show if the person is the Cardholder</value>
+        /// <value>{{{conta_detalhe_response_titular_value}}}</value>
         [DataMember(Name="titular", EmitDefaultValue=false)]
         public bool? Titular { get; set; }
     
         /// <summary>
-        /// Show the value of credit limit that the cardholder has
+        /// {{{conta_detalhe_response_limite_global_value}}}
         /// </summary>
-        /// <value>Show the value of credit limit that the cardholder has</value>
+        /// <value>{{{conta_detalhe_response_limite_global_value}}}</value>
         [DataMember(Name="limiteGlobal", EmitDefaultValue=false)]
         public double? LimiteGlobal { get; set; }
     
         /// <summary>
-        /// when it is used by the issuer, this field shows the value of the credit limit that the cardholder can use to make National Withdrawal transactions
+        /// {{{conta_detalhe_response_limite_saque_global_value}}}
         /// </summary>
-        /// <value>when it is used by the issuer, this field shows the value of the credit limit that the cardholder can use to make National Withdrawal transactions</value>
+        /// <value>{{{conta_detalhe_response_limite_saque_global_value}}}</value>
         [DataMember(Name="limiteSaqueGlobal", EmitDefaultValue=false)]
         public double? LimiteSaqueGlobal { get; set; }
     
         /// <summary>
-        /// When it is used by the issuer, this field show the value of credit limit that the cardholder has to the exclusively use in National Shopping
+        /// {{{conta_detalhe_response_saldo_disponivel_global_value}}}
         /// </summary>
-        /// <value>When it is used by the issuer, this field show the value of credit limit that the cardholder has to the exclusively use in National Shopping</value>
+        /// <value>{{{conta_detalhe_response_saldo_disponivel_global_value}}}</value>
         [DataMember(Name="saldoDisponivelGlobal", EmitDefaultValue=false)]
         public double? SaldoDisponivelGlobal { get; set; }
     
         /// <summary>
-        /// When it is used by the issuer, this field show the value of the credit limit that the cardholder can used to make National Withdrawal Transactions inside of each cycle of billing
+        /// {{{conta_detalhe_response_saldo_disponivel_saque_value}}}
         /// </summary>
-        /// <value>When it is used by the issuer, this field show the value of the credit limit that the cardholder can used to make National Withdrawal Transactions inside of each cycle of billing</value>
+        /// <value>{{{conta_detalhe_response_saldo_disponivel_saque_value}}}</value>
         [DataMember(Name="saldoDisponivelSaque", EmitDefaultValue=false)]
         public double? SaldoDisponivelSaque { get; set; }
     
         /// <summary>
-        /// Flag for banks business partners that are cardholders, but cannot operate financed credit transactions (Law n. 4595/64) 
+        /// {{{conta_detalhe_response_impedido_de_financiamento_value}}}
         /// </summary>
-        /// <value>Flag for banks business partners that are cardholders, but cannot operate financed credit transactions (Law n. 4595/64) </value>
+        /// <value>{{{conta_detalhe_response_impedido_de_financiamento_value}}}</value>
         [DataMember(Name="impedidoFinanciamento", EmitDefaultValue=false)]
         public bool? ImpedidoFinanciamento { get; set; }
     
         /// <summary>
-        /// Show the quantity of days that the account is in arrears
+        /// {{{conta_detalhe_response_dias_atraso_value}}}
         /// </summary>
-        /// <value>Show the quantity of days that the account is in arrears</value>
+        /// <value>{{{conta_detalhe_response_dias_atraso_value}}}</value>
         [DataMember(Name="diasAtraso", EmitDefaultValue=false)]
         public long? DiasAtraso { get; set; }
     
         /// <summary>
-        /// Next Expering Date Default
+        /// {{{conta_response_proximo_vencimento_padrao_value}}}
         /// </summary>
-        /// <value>Next Expering Date Default</value>
+        /// <value>{{{conta_response_proximo_vencimento_padrao_value}}}</value>
         [DataMember(Name="proximoVencimentoPadrao", EmitDefaultValue=false)]
         public string ProximoVencimentoPadrao { get; set; }
     
         /// <summary>
-        /// Proposal identifier
+        /// {{{conta_detalhe_response_id_proposta_value}}}
         /// </summary>
-        /// <value>Proposal identifier</value>
+        /// <value>{{{conta_detalhe_response_id_proposta_value}}}</value>
         [DataMember(Name="idProposta", EmitDefaultValue=false)]
         public long? IdProposta { get; set; }
     
         /// <summary>
-        /// Number of payments
+        /// {{{conta_detalhe_response_quantidade_pagamentos_value}}}
         /// </summary>
-        /// <value>Number of payments</value>
+        /// <value>{{{conta_detalhe_response_quantidade_pagamentos_value}}}</value>
         [DataMember(Name="quantidadePagamentos", EmitDefaultValue=false)]
         public int? QuantidadePagamentos { get; set; }
     
         /// <summary>
-        /// correspondence
+        /// {{{conta_detalhe_response_correspondencia_value}}}
         /// </summary>
-        /// <value>correspondence</value>
+        /// <value>{{{conta_detalhe_response_correspondencia_value}}}</value>
         [DataMember(Name="correspondencia", EmitDefaultValue=false)]
         public long? Correspondencia { get; set; }
     
         /// <summary>
-        /// Expiry date of Collection
+        /// {{{conta_detalhe_response_data_inicio_atraso_value}}}
         /// </summary>
-        /// <value>Expiry date of Collection</value>
+        /// <value>{{{conta_detalhe_response_data_inicio_atraso_value}}}</value>
         [DataMember(Name="dataInicioAtraso", EmitDefaultValue=false)]
         public string DataInicioAtraso { get; set; }
     
         /// <summary>
-        /// Revolving interest rate
+        /// {{{estado_conta_response_rotativo_paga_juros_value}}}
         /// </summary>
-        /// <value>Revolving interest rate</value>
+        /// <value>{{{estado_conta_response_rotativo_paga_juros_value}}}</value>
         [DataMember(Name="rotativoPagaJuros", EmitDefaultValue=false)]
         public double? RotativoPagaJuros { get; set; }
     
         /// <summary>
-        /// Next Invoice Value
+        /// {{{estado_conta_response_total_pos_proximo_value}}}
         /// </summary>
-        /// <value>Next Invoice Value</value>
+        /// <value>{{{estado_conta_response_total_pos_proximo_value}}}</value>
         [DataMember(Name="totalPosProx", EmitDefaultValue=false)]
         public double? TotalPosProx { get; set; }
     
         /// <summary>
-        /// Final Actual Value
+        /// {{{estado_conta_response_saldo_atual_final_value}}}
         /// </summary>
-        /// <value>Final Actual Value</value>
+        /// <value>{{{estado_conta_response_saldo_atual_final_value}}}</value>
         [DataMember(Name="saldoAtualFinal", EmitDefaultValue=false)]
         public double? SaldoAtualFinal { get; set; }
     
         /// <summary>
-        /// Previous account balance
+        /// {{{estado_conta_response_saldo_extrato_anterior_value}}}
         /// </summary>
-        /// <value>Previous account balance</value>
+        /// <value>{{{estado_conta_response_saldo_extrato_anterior_value}}}</value>
         [DataMember(Name="saldoExtratoAnterior", EmitDefaultValue=false)]
         public double? SaldoExtratoAnterior { get; set; }
     
         /// <summary>
-        /// Flag indicating acceptance of new account opening by product group
+        /// {{{conta_detalhe_response_aceita_nova_conta_grupo_produto_value}}}
         /// </summary>
-        /// <value>Flag indicating acceptance of new account opening by product group</value>
+        /// <value>{{{conta_detalhe_response_aceita_nova_conta_grupo_produto_value}}}</value>
         [DataMember(Name="aceitaNovaContaPorGrupoProduto", EmitDefaultValue=false)]
         public bool? AceitaNovaContaPorGrupoProduto { get; set; }
     

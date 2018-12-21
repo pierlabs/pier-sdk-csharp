@@ -12,16 +12,16 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Response Representation of the country resource
+    /// {{{pais_response_description}}}
     /// </summary>
     [DataContract]
     public partial class PaisResponse :  IEquatable<PaisResponse>
     { 
     
         /// <summary>
-        /// Continent which the country takes part
+        /// {{{pais_response_continente_value}}}
         /// </summary>
-        /// <value>Continent which the country takes part</value>
+        /// <value>{{{pais_response_continente_value}}}</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum ContinenteEnum {
             
@@ -49,9 +49,9 @@ namespace Conductor.Pier.Model
 
     
         /// <summary>
-        /// Continent which the country takes part
+        /// {{{pais_response_continente_value}}}
         /// </summary>
-        /// <value>Continent which the country takes part</value>
+        /// <value>{{{pais_response_continente_value}}}</value>
         [DataMember(Name="continente", EmitDefaultValue=false)]
         public ContinenteEnum? Continente { get; set; }
     
@@ -59,12 +59,12 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="PaisResponse" /> class.
         /// Initializes a new instance of the <see cref="PaisResponse" />class.
         /// </summary>
-        /// <param name="Id">Unique Identifier Code of the country in the base.</param>
-        /// <param name="Codigo">Identifier Code of the Country.</param>
-        /// <param name="Sigla">Country Acronym.</param>
-        /// <param name="Descricao">Country Name.</param>
-        /// <param name="Continente">Continent which the country takes part.</param>
-        /// <param name="FlagAtivo">Attribute that represents if the country is active.</param>
+        /// <param name="Id">{{{pais_response_id_value}}}.</param>
+        /// <param name="Codigo">{{{pais_response_codigo_value}}}.</param>
+        /// <param name="Sigla">{{{pais_response_sigla_value}}}.</param>
+        /// <param name="Descricao">{{{pais_response_descricao_value}}}.</param>
+        /// <param name="Continente">{{{pais_response_continente_value}}}.</param>
+        /// <param name="FlagAtivo">{{{pais_response_flag_ativo_value}}}.</param>
 
         public PaisResponse(long? Id = null, string Codigo = null, string Sigla = null, string Descricao = null, ContinenteEnum? Continente = null, bool? FlagAtivo = null)
         {
@@ -79,37 +79,37 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Unique Identifier Code of the country in the base
+        /// {{{pais_response_id_value}}}
         /// </summary>
-        /// <value>Unique Identifier Code of the country in the base</value>
+        /// <value>{{{pais_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Identifier Code of the Country
+        /// {{{pais_response_codigo_value}}}
         /// </summary>
-        /// <value>Identifier Code of the Country</value>
+        /// <value>{{{pais_response_codigo_value}}}</value>
         [DataMember(Name="codigo", EmitDefaultValue=false)]
         public string Codigo { get; set; }
     
         /// <summary>
-        /// Country Acronym
+        /// {{{pais_response_sigla_value}}}
         /// </summary>
-        /// <value>Country Acronym</value>
+        /// <value>{{{pais_response_sigla_value}}}</value>
         [DataMember(Name="sigla", EmitDefaultValue=false)]
         public string Sigla { get; set; }
     
         /// <summary>
-        /// Country Name
+        /// {{{pais_response_descricao_value}}}
         /// </summary>
-        /// <value>Country Name</value>
+        /// <value>{{{pais_response_descricao_value}}}</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     
         /// <summary>
-        /// Attribute that represents if the country is active
+        /// {{{pais_response_flag_ativo_value}}}
         /// </summary>
-        /// <value>Attribute that represents if the country is active</value>
+        /// <value>{{{pais_response_flag_ativo_value}}}</value>
         [DataMember(Name="flagAtivo", EmitDefaultValue=false)]
         public bool? FlagAtivo { get; set; }
     

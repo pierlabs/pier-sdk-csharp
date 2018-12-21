@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// List of notifications (layouts) of E-mail
+    /// {{{page_template_notificacao_response_description}}}
     /// </summary>
     [DataContract]
     public partial class PageTemplateNotificacaoResponse :  IEquatable<PageTemplateNotificacaoResponse>

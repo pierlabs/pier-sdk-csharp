@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// List of the billing types per Account
+    /// {{{page_tipo_faturamento_por_conta_response_description}}}
     /// </summary>
     [DataContract]
     public partial class PageTipoFaturamentoPorContaResponse :  IEquatable<PageTipoFaturamentoPorContaResponse>

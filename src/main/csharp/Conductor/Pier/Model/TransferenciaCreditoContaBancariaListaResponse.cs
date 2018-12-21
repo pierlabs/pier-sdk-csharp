@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// List of credit transfer to other banking accounts
+    /// {{{transferencia_credito_conta_bancaria_lista_response_description}}}
     /// </summary>
     [DataContract]
     public partial class TransferenciaCreditoContaBancariaListaResponse :  IEquatable<TransferenciaCreditoContaBancariaListaResponse>
@@ -22,14 +22,14 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TransferenciaCreditoContaBancariaListaResponse" /> class.
         /// Initializes a new instance of the <see cref="TransferenciaCreditoContaBancariaListaResponse" />class.
         /// </summary>
-        /// <param name="IdTransferencia">Identification code of the transfer.</param>
-        /// <param name="IdConta">Identification Code of the Account.</param>
-        /// <param name="IdCartao">Identification Code of the Card.</param>
-        /// <param name="ValorCompra">Value of the transfer.</param>
-        /// <param name="ValorContrato">Transfer value added to the withdrawal rate value if there is withdrawal rate.</param>
-        /// <param name="DataCompra">Date of the transfer.</param>
-        /// <param name="Status">Processing Status Code.</param>
-        /// <param name="StatusProcessamento">Processing Status.</param>
+        /// <param name="IdTransferencia">{{{transferencia_credito_conta_bancaria_lista_response_id_transferencia_value}}}.</param>
+        /// <param name="IdConta">{{{transferencia_credito_conta_bancaria_lista_response_id_conta_value}}}.</param>
+        /// <param name="IdCartao">{{{transferencia_credito_conta_bancaria_lista_response_id_cartao_value}}}.</param>
+        /// <param name="ValorCompra">{{{transferencia_credito_conta_bancaria_lista_response_valor_compra_value}}}.</param>
+        /// <param name="ValorContrato">{{{transferencia_credito_conta_bancaria_lista_response_valor_contrato_value}}}.</param>
+        /// <param name="DataCompra">{{{transferencia_credito_conta_bancaria_lista_response_data_compra_value}}}.</param>
+        /// <param name="Status">{{{transferencia_credito_conta_bancaria_lista_response_status_value}}}.</param>
+        /// <param name="StatusProcessamento">{{{transferencia_credito_conta_bancaria_lista_response_status_processamento_value}}}.</param>
 
         public TransferenciaCreditoContaBancariaListaResponse(long? IdTransferencia = null, long? IdConta = null, long? IdCartao = null, double? ValorCompra = null, double? ValorContrato = null, string DataCompra = null, int? Status = null, string StatusProcessamento = null)
         {
@@ -46,58 +46,58 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Identification code of the transfer
+        /// {{{transferencia_credito_conta_bancaria_lista_response_id_transferencia_value}}}
         /// </summary>
-        /// <value>Identification code of the transfer</value>
+        /// <value>{{{transferencia_credito_conta_bancaria_lista_response_id_transferencia_value}}}</value>
         [DataMember(Name="idTransferencia", EmitDefaultValue=false)]
         public long? IdTransferencia { get; set; }
     
         /// <summary>
-        /// Identification Code of the Account
+        /// {{{transferencia_credito_conta_bancaria_lista_response_id_conta_value}}}
         /// </summary>
-        /// <value>Identification Code of the Account</value>
+        /// <value>{{{transferencia_credito_conta_bancaria_lista_response_id_conta_value}}}</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// Identification Code of the Card
+        /// {{{transferencia_credito_conta_bancaria_lista_response_id_cartao_value}}}
         /// </summary>
-        /// <value>Identification Code of the Card</value>
+        /// <value>{{{transferencia_credito_conta_bancaria_lista_response_id_cartao_value}}}</value>
         [DataMember(Name="idCartao", EmitDefaultValue=false)]
         public long? IdCartao { get; set; }
     
         /// <summary>
-        /// Value of the transfer
+        /// {{{transferencia_credito_conta_bancaria_lista_response_valor_compra_value}}}
         /// </summary>
-        /// <value>Value of the transfer</value>
+        /// <value>{{{transferencia_credito_conta_bancaria_lista_response_valor_compra_value}}}</value>
         [DataMember(Name="valorCompra", EmitDefaultValue=false)]
         public double? ValorCompra { get; set; }
     
         /// <summary>
-        /// Transfer value added to the withdrawal rate value if there is withdrawal rate
+        /// {{{transferencia_credito_conta_bancaria_lista_response_valor_contrato_value}}}
         /// </summary>
-        /// <value>Transfer value added to the withdrawal rate value if there is withdrawal rate</value>
+        /// <value>{{{transferencia_credito_conta_bancaria_lista_response_valor_contrato_value}}}</value>
         [DataMember(Name="valorContrato", EmitDefaultValue=false)]
         public double? ValorContrato { get; set; }
     
         /// <summary>
-        /// Date of the transfer
+        /// {{{transferencia_credito_conta_bancaria_lista_response_data_compra_value}}}
         /// </summary>
-        /// <value>Date of the transfer</value>
+        /// <value>{{{transferencia_credito_conta_bancaria_lista_response_data_compra_value}}}</value>
         [DataMember(Name="dataCompra", EmitDefaultValue=false)]
         public string DataCompra { get; set; }
     
         /// <summary>
-        /// Processing Status Code
+        /// {{{transferencia_credito_conta_bancaria_lista_response_status_value}}}
         /// </summary>
-        /// <value>Processing Status Code</value>
+        /// <value>{{{transferencia_credito_conta_bancaria_lista_response_status_value}}}</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public int? Status { get; set; }
     
         /// <summary>
-        /// Processing Status
+        /// {{{transferencia_credito_conta_bancaria_lista_response_status_processamento_value}}}
         /// </summary>
-        /// <value>Processing Status</value>
+        /// <value>{{{transferencia_credito_conta_bancaria_lista_response_status_processamento_value}}}</value>
         [DataMember(Name="statusProcessamento", EmitDefaultValue=false)]
         public string StatusProcessamento { get; set; }
     

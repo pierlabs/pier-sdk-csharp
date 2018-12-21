@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representation Object Response for Adjustment
+    /// {{{ajuste_financeiro_response_description}}}
     /// </summary>
     [DataContract]
     public partial class AjusteFinanceiroResponse :  IEquatable<AjusteFinanceiroResponse>
@@ -22,13 +22,13 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="AjusteFinanceiroResponse" /> class.
         /// Initializes a new instance of the <see cref="AjusteFinanceiroResponse" />class.
         /// </summary>
-        /// <param name="Id">Identification Code of the Adjustment (id).</param>
-        /// <param name="IdTipoAjuste">Identification Code of the Adjustment type.</param>
-        /// <param name="IdConta">Identification Code of the Account (idConta).</param>
-        /// <param name="DataAjuste">Date of adjustment.</param>
-        /// <param name="Valor">Value of Adjustment.</param>
-        /// <param name="IdentificadorExterno">Description of the shop authorization status.</param>
-        /// <param name="Status">Status of the adjustment.</param>
+        /// <param name="Id">{{{ajuste_financeiro_response_id_value}}}.</param>
+        /// <param name="IdTipoAjuste">{{{ajuste_financeiro_response_id_tipo_ajuste_value}}}.</param>
+        /// <param name="IdConta">{{{ajuste_financeiro_response_id_conta_value}}}.</param>
+        /// <param name="DataAjuste">{{{ajuste_financeiro_response_data_ajuste_value}}}.</param>
+        /// <param name="Valor">{{{ajuste_financeiro_response_valor_value}}}.</param>
+        /// <param name="IdentificadorExterno">{{{ajuste_financeiro_response_identificador_externo_value}}}.</param>
+        /// <param name="Status">{{{ajuste_financeiro_response_status_value}}}.</param>
 
         public AjusteFinanceiroResponse(long? Id = null, long? IdTipoAjuste = null, long? IdConta = null, string DataAjuste = null, double? Valor = null, string IdentificadorExterno = null, long? Status = null)
         {
@@ -44,51 +44,51 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Identification Code of the Adjustment (id)
+        /// {{{ajuste_financeiro_response_id_value}}}
         /// </summary>
-        /// <value>Identification Code of the Adjustment (id)</value>
+        /// <value>{{{ajuste_financeiro_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Identification Code of the Adjustment type
+        /// {{{ajuste_financeiro_response_id_tipo_ajuste_value}}}
         /// </summary>
-        /// <value>Identification Code of the Adjustment type</value>
+        /// <value>{{{ajuste_financeiro_response_id_tipo_ajuste_value}}}</value>
         [DataMember(Name="idTipoAjuste", EmitDefaultValue=false)]
         public long? IdTipoAjuste { get; set; }
     
         /// <summary>
-        /// Identification Code of the Account (idConta)
+        /// {{{ajuste_financeiro_response_id_conta_value}}}
         /// </summary>
-        /// <value>Identification Code of the Account (idConta)</value>
+        /// <value>{{{ajuste_financeiro_response_id_conta_value}}}</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// Date of adjustment
+        /// {{{ajuste_financeiro_response_data_ajuste_value}}}
         /// </summary>
-        /// <value>Date of adjustment</value>
+        /// <value>{{{ajuste_financeiro_response_data_ajuste_value}}}</value>
         [DataMember(Name="dataAjuste", EmitDefaultValue=false)]
         public string DataAjuste { get; set; }
     
         /// <summary>
-        /// Value of Adjustment
+        /// {{{ajuste_financeiro_response_valor_value}}}
         /// </summary>
-        /// <value>Value of Adjustment</value>
+        /// <value>{{{ajuste_financeiro_response_valor_value}}}</value>
         [DataMember(Name="valor", EmitDefaultValue=false)]
         public double? Valor { get; set; }
     
         /// <summary>
-        /// Description of the shop authorization status
+        /// {{{ajuste_financeiro_response_identificador_externo_value}}}
         /// </summary>
-        /// <value>Description of the shop authorization status</value>
+        /// <value>{{{ajuste_financeiro_response_identificador_externo_value}}}</value>
         [DataMember(Name="identificadorExterno", EmitDefaultValue=false)]
         public string IdentificadorExterno { get; set; }
     
         /// <summary>
-        /// Status of the adjustment
+        /// {{{ajuste_financeiro_response_status_value}}}
         /// </summary>
-        /// <value>Status of the adjustment</value>
+        /// <value>{{{ajuste_financeiro_response_status_value}}}</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public long? Status { get; set; }
     

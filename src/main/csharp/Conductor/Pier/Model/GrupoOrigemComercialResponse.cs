@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Object of response of the commercial origin group
+    /// {{{grupo_origem_comercial_response_description}}}
     /// </summary>
     [DataContract]
     public partial class GrupoOrigemComercialResponse :  IEquatable<GrupoOrigemComercialResponse>
@@ -22,8 +22,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="GrupoOrigemComercialResponse" /> class.
         /// Initializes a new instance of the <see cref="GrupoOrigemComercialResponse" />class.
         /// </summary>
-        /// <param name="Id">Identification Code of the commercial origin group.</param>
-        /// <param name="Nome">Commercial Origin Group Date.</param>
+        /// <param name="Id">{{{grupo_origem_comercial_response_id_value}}}.</param>
+        /// <param name="Nome">{{{grupo_origem_comercial_response_nome_value}}}.</param>
 
         public GrupoOrigemComercialResponse(long? Id = null, string Nome = null)
         {
@@ -34,16 +34,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Identification Code of the commercial origin group
+        /// {{{grupo_origem_comercial_response_id_value}}}
         /// </summary>
-        /// <value>Identification Code of the commercial origin group</value>
+        /// <value>{{{grupo_origem_comercial_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Commercial Origin Group Date
+        /// {{{grupo_origem_comercial_response_nome_value}}}
         /// </summary>
-        /// <value>Commercial Origin Group Date</value>
+        /// <value>{{{grupo_origem_comercial_response_nome_value}}}</value>
         [DataMember(Name="nome", EmitDefaultValue=false)]
         public string Nome { get; set; }
     

@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representation of the content decryption request
+    /// {{{chave_criptografia_requisicao_descricao}}}
     /// </summary>
     [DataContract]
     public partial class ChaveCriptografiaRequest :  IEquatable<ChaveCriptografiaRequest>
@@ -22,8 +22,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="ChaveCriptografiaRequest" /> class.
         /// Initializes a new instance of the <see cref="ChaveCriptografiaRequest" />class.
         /// </summary>
-        /// <param name="IdChave">Decryption key identifier (required).</param>
-        /// <param name="Conteudo">Content to be decrypted (required).</param>
+        /// <param name="IdChave">{{{chave_criptografia_requisicao_id_chave_valor}}} (required).</param>
+        /// <param name="Conteudo">{{{chave_criptografia_requisicao_conteudo_valor}}} (required).</param>
 
         public ChaveCriptografiaRequest(long? IdChave = null, string Conteudo = null)
         {
@@ -50,16 +50,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Decryption key identifier
+        /// {{{chave_criptografia_requisicao_id_chave_valor}}}
         /// </summary>
-        /// <value>Decryption key identifier</value>
+        /// <value>{{{chave_criptografia_requisicao_id_chave_valor}}}</value>
         [DataMember(Name="idChave", EmitDefaultValue=false)]
         public long? IdChave { get; set; }
     
         /// <summary>
-        /// Content to be decrypted
+        /// {{{chave_criptografia_requisicao_conteudo_valor}}}
         /// </summary>
-        /// <value>Content to be decrypted</value>
+        /// <value>{{{chave_criptografia_requisicao_conteudo_valor}}}</value>
         [DataMember(Name="conteudo", EmitDefaultValue=false)]
         public string Conteudo { get; set; }
     

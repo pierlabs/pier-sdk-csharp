@@ -12,16 +12,16 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Persistence object for services adhesion
+    /// {{{adesao_servico_persistencia_descricao}}}
     /// </summary>
     [DataContract]
     public partial class AdesaoServicoPersist :  IEquatable<AdesaoServicoPersist>
     { 
     
         /// <summary>
-        /// Sms type
+        /// {{{adesao_servico_persistencia_tipo_sms_descricao}}}
         /// </summary>
-        /// <value>Sms type</value>
+        /// <value>{{{adesao_servico_persistencia_tipo_sms_descricao}}}</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum TipoSmsEnum {
             
@@ -37,9 +37,9 @@ namespace Conductor.Pier.Model
 
     
         /// <summary>
-        /// Sms type
+        /// {{{adesao_servico_persistencia_tipo_sms_descricao}}}
         /// </summary>
-        /// <value>Sms type</value>
+        /// <value>{{{adesao_servico_persistencia_tipo_sms_descricao}}}</value>
         [DataMember(Name="tipoSms", EmitDefaultValue=false)]
         public TipoSmsEnum? TipoSms { get; set; }
     
@@ -47,17 +47,17 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="AdesaoServicoPersist" /> class.
         /// Initializes a new instance of the <see cref="AdesaoServicoPersist" />class.
         /// </summary>
-        /// <param name="Canal">Input channer.</param>
-        /// <param name="Estabelecimento">Establishment.</param>
-        /// <param name="TipoEnvioFatura">Invoice submission type.</param>
-        /// <param name="TipoSms">Sms type.</param>
-        /// <param name="CobrancaLimiteCredito">Credit limit charge.</param>
-        /// <param name="FlagPromocoes">Offer deals.</param>
-        /// <param name="Responsavel">Responsible.</param>
-        /// <param name="FlagTipoEnvioFatura">offer type of invoice submission.</param>
-        /// <param name="FlagTipoSms">Offer SMS type.</param>
-        /// <param name="FlagCobrancaLimiteCredito">Offer billing at credit limit.</param>
-        /// <param name="FlagOfertasPromocoes">Offer Avaliable Deals.</param>
+        /// <param name="Canal">{{{adesao_servico_persistencia_canal_descricao}}}.</param>
+        /// <param name="Estabelecimento">{{{adesao_servico_persistencia_estabelecimento_descricao}}}.</param>
+        /// <param name="TipoEnvioFatura">{{{adesao_servico_persistencia_tipo_envio_fatura_descricao}}}.</param>
+        /// <param name="TipoSms">{{{adesao_servico_persistencia_tipo_sms_descricao}}}.</param>
+        /// <param name="CobrancaLimiteCredito">{{{adesao_servico_persistencia_cobranca_limite_credito_descricao}}}.</param>
+        /// <param name="FlagPromocoes">{{{adesao_servico_persistencia_ofertas_promocoes_descricao}}}.</param>
+        /// <param name="Responsavel">{{{adesao_servico_persistencia_responsavel_descricao}}}.</param>
+        /// <param name="FlagTipoEnvioFatura">{{{adesao_servico_persistencia_ofertar_tipo_envio_fatura_descricao}}}.</param>
+        /// <param name="FlagTipoSms">{{{adesao_servico_persistencia_ofertar_tipo_sms_descricao}}}.</param>
+        /// <param name="FlagCobrancaLimiteCredito">{{{adesao_servico_persistencia_ofertar_cobranca_limite_credito_descricao}}}.</param>
+        /// <param name="FlagOfertasPromocoes">{{{adesao_servico_persistencia_ofertar_ofertas_promocoes_descricao}}}.</param>
 
         public AdesaoServicoPersist(string Canal = null, int? Estabelecimento = null, int? TipoEnvioFatura = null, TipoSmsEnum? TipoSms = null, bool? CobrancaLimiteCredito = null, bool? FlagPromocoes = null, string Responsavel = null, bool? FlagTipoEnvioFatura = null, bool? FlagTipoSms = null, bool? FlagCobrancaLimiteCredito = null, bool? FlagOfertasPromocoes = null)
         {
@@ -77,72 +77,72 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Input channer
+        /// {{{adesao_servico_persistencia_canal_descricao}}}
         /// </summary>
-        /// <value>Input channer</value>
+        /// <value>{{{adesao_servico_persistencia_canal_descricao}}}</value>
         [DataMember(Name="canal", EmitDefaultValue=false)]
         public string Canal { get; set; }
     
         /// <summary>
-        /// Establishment
+        /// {{{adesao_servico_persistencia_estabelecimento_descricao}}}
         /// </summary>
-        /// <value>Establishment</value>
+        /// <value>{{{adesao_servico_persistencia_estabelecimento_descricao}}}</value>
         [DataMember(Name="estabelecimento", EmitDefaultValue=false)]
         public int? Estabelecimento { get; set; }
     
         /// <summary>
-        /// Invoice submission type
+        /// {{{adesao_servico_persistencia_tipo_envio_fatura_descricao}}}
         /// </summary>
-        /// <value>Invoice submission type</value>
+        /// <value>{{{adesao_servico_persistencia_tipo_envio_fatura_descricao}}}</value>
         [DataMember(Name="tipoEnvioFatura", EmitDefaultValue=false)]
         public int? TipoEnvioFatura { get; set; }
     
         /// <summary>
-        /// Credit limit charge
+        /// {{{adesao_servico_persistencia_cobranca_limite_credito_descricao}}}
         /// </summary>
-        /// <value>Credit limit charge</value>
+        /// <value>{{{adesao_servico_persistencia_cobranca_limite_credito_descricao}}}</value>
         [DataMember(Name="cobrancaLimiteCredito", EmitDefaultValue=false)]
         public bool? CobrancaLimiteCredito { get; set; }
     
         /// <summary>
-        /// Offer deals
+        /// {{{adesao_servico_persistencia_ofertas_promocoes_descricao}}}
         /// </summary>
-        /// <value>Offer deals</value>
+        /// <value>{{{adesao_servico_persistencia_ofertas_promocoes_descricao}}}</value>
         [DataMember(Name="flagPromocoes", EmitDefaultValue=false)]
         public bool? FlagPromocoes { get; set; }
     
         /// <summary>
-        /// Responsible
+        /// {{{adesao_servico_persistencia_responsavel_descricao}}}
         /// </summary>
-        /// <value>Responsible</value>
+        /// <value>{{{adesao_servico_persistencia_responsavel_descricao}}}</value>
         [DataMember(Name="responsavel", EmitDefaultValue=false)]
         public string Responsavel { get; set; }
     
         /// <summary>
-        /// offer type of invoice submission
+        /// {{{adesao_servico_persistencia_ofertar_tipo_envio_fatura_descricao}}}
         /// </summary>
-        /// <value>offer type of invoice submission</value>
+        /// <value>{{{adesao_servico_persistencia_ofertar_tipo_envio_fatura_descricao}}}</value>
         [DataMember(Name="flagTipoEnvioFatura", EmitDefaultValue=false)]
         public bool? FlagTipoEnvioFatura { get; set; }
     
         /// <summary>
-        /// Offer SMS type
+        /// {{{adesao_servico_persistencia_ofertar_tipo_sms_descricao}}}
         /// </summary>
-        /// <value>Offer SMS type</value>
+        /// <value>{{{adesao_servico_persistencia_ofertar_tipo_sms_descricao}}}</value>
         [DataMember(Name="flagTipoSms", EmitDefaultValue=false)]
         public bool? FlagTipoSms { get; set; }
     
         /// <summary>
-        /// Offer billing at credit limit
+        /// {{{adesao_servico_persistencia_ofertar_cobranca_limite_credito_descricao}}}
         /// </summary>
-        /// <value>Offer billing at credit limit</value>
+        /// <value>{{{adesao_servico_persistencia_ofertar_cobranca_limite_credito_descricao}}}</value>
         [DataMember(Name="flagCobrancaLimiteCredito", EmitDefaultValue=false)]
         public bool? FlagCobrancaLimiteCredito { get; set; }
     
         /// <summary>
-        /// Offer Avaliable Deals
+        /// {{{adesao_servico_persistencia_ofertar_ofertas_promocoes_descricao}}}
         /// </summary>
-        /// <value>Offer Avaliable Deals</value>
+        /// <value>{{{adesao_servico_persistencia_ofertar_ofertas_promocoes_descricao}}}</value>
         [DataMember(Name="flagOfertasPromocoes", EmitDefaultValue=false)]
         public bool? FlagOfertasPromocoes { get; set; }
     

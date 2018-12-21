@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Object transfer
+    /// {{{transferencia_response_description}}}
     /// </summary>
     [DataContract]
     public partial class TransferenciaResponse :  IEquatable<TransferenciaResponse>
@@ -22,11 +22,11 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TransferenciaResponse" /> class.
         /// Initializes a new instance of the <see cref="TransferenciaResponse" />class.
         /// </summary>
-        /// <param name="Id">Identification Code of the transfer (id).</param>
-        /// <param name="DataTransferencia">Date established to occur the transfer.</param>
-        /// <param name="IdContaOrigem">Identification Code of the account which value will be debited to the transfer (id).</param>
-        /// <param name="IdContaDestino">Identification of the account which value will be credited to the transfer (id).</param>
-        /// <param name="ValorTransferencia">Value established to be transfered.</param>
+        /// <param name="Id">{{{transferencia_response_id_value}}}.</param>
+        /// <param name="DataTransferencia">{{{transferencia_response_data_transferencia_value}}}.</param>
+        /// <param name="IdContaOrigem">{{{transferencia_response_id_conta_origem_value}}}.</param>
+        /// <param name="IdContaDestino">{{{transferencia_response_id_conta_destino_value}}}.</param>
+        /// <param name="ValorTransferencia">{{{transferencia_response_valor_transferencia_value}}}.</param>
 
         public TransferenciaResponse(long? Id = null, string DataTransferencia = null, long? IdContaOrigem = null, long? IdContaDestino = null, double? ValorTransferencia = null)
         {
@@ -40,37 +40,37 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Identification Code of the transfer (id)
+        /// {{{transferencia_response_id_value}}}
         /// </summary>
-        /// <value>Identification Code of the transfer (id)</value>
+        /// <value>{{{transferencia_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Date established to occur the transfer
+        /// {{{transferencia_response_data_transferencia_value}}}
         /// </summary>
-        /// <value>Date established to occur the transfer</value>
+        /// <value>{{{transferencia_response_data_transferencia_value}}}</value>
         [DataMember(Name="dataTransferencia", EmitDefaultValue=false)]
         public string DataTransferencia { get; set; }
     
         /// <summary>
-        /// Identification Code of the account which value will be debited to the transfer (id)
+        /// {{{transferencia_response_id_conta_origem_value}}}
         /// </summary>
-        /// <value>Identification Code of the account which value will be debited to the transfer (id)</value>
+        /// <value>{{{transferencia_response_id_conta_origem_value}}}</value>
         [DataMember(Name="idContaOrigem", EmitDefaultValue=false)]
         public long? IdContaOrigem { get; set; }
     
         /// <summary>
-        /// Identification of the account which value will be credited to the transfer (id)
+        /// {{{transferencia_response_id_conta_destino_value}}}
         /// </summary>
-        /// <value>Identification of the account which value will be credited to the transfer (id)</value>
+        /// <value>{{{transferencia_response_id_conta_destino_value}}}</value>
         [DataMember(Name="idContaDestino", EmitDefaultValue=false)]
         public long? IdContaDestino { get; set; }
     
         /// <summary>
-        /// Value established to be transfered
+        /// {{{transferencia_response_valor_transferencia_value}}}
         /// </summary>
-        /// <value>Value established to be transfered</value>
+        /// <value>{{{transferencia_response_valor_transferencia_value}}}</value>
         [DataMember(Name="valorTransferencia", EmitDefaultValue=false)]
         public double? ValorTransferencia { get; set; }
     

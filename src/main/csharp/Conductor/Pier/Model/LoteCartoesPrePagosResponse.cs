@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Batch Prepaid cards
+    /// {{{lote_cartoes_pre_pagos_response_description}}}
     /// </summary>
     [DataContract]
     public partial class LoteCartoesPrePagosResponse :  IEquatable<LoteCartoesPrePagosResponse>
@@ -22,17 +22,17 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="LoteCartoesPrePagosResponse" /> class.
         /// Initializes a new instance of the <see cref="LoteCartoesPrePagosResponse" />class.
         /// </summary>
-        /// <param name="Id">Identifica??o Code of the pre-paid card batch (id) (required).</param>
-        /// <param name="IdOrigemComercial">Identifier code of the Commercial origin (required).</param>
-        /// <param name="IdProduto">Identifier Code of the Product (required).</param>
-        /// <param name="IdTipoCartao">Identifier Code of the card type (required).</param>
-        /// <param name="IdImagem">Identifier code of the card image (required).</param>
-        /// <param name="IdEndereco">Identification Code of the address (required).</param>
-        /// <param name="Quantidade">Number of existing cards in the batch (required).</param>
-        /// <param name="DataCadastro">Register date of the pre-paid card batch (required).</param>
-        /// <param name="UsuarioCadastro">Username that created the batch (required).</param>
-        /// <param name="StatusProcessamento">Indicate the processin status of the batch (required).</param>
-        /// <param name="IdentificadorExterno">External identification number (used by the issuer) (required).</param>
+        /// <param name="Id">{{{lote_cartoes_pre_pagos_response_id_value}}} (required).</param>
+        /// <param name="IdOrigemComercial">{{{lote_cartoes_pre_pagos_response_id_origem_comercial_value}}} (required).</param>
+        /// <param name="IdProduto">{{{lote_cartoes_pre_pagos_response_id_produto_value}}} (required).</param>
+        /// <param name="IdTipoCartao">{{{lote_cartoes_pre_pagos_response_id_tipo_cartao_value}}} (required).</param>
+        /// <param name="IdImagem">{{{lote_cartoes_pre_pagos_response_id_imagem_value}}} (required).</param>
+        /// <param name="IdEndereco">{{{lote_cartoes_pre_pagos_response_id_endereco_value}}} (required).</param>
+        /// <param name="Quantidade">{{{lote_cartoes_pre_pagos_response_quantidade_value}}} (required).</param>
+        /// <param name="DataCadastro">{{{lote_cartoes_pre_pagos_response_data_cadastro_value}}} (required).</param>
+        /// <param name="UsuarioCadastro">{{{lote_cartoes_pre_pagos_response_usuario_cadastro_value}}} (required).</param>
+        /// <param name="StatusProcessamento">{{{lote_cartoes_pre_pagos_response_status_processamento_value}}} (required).</param>
+        /// <param name="IdentificadorExterno">{{{lote_cartoes_pre_pagos_response_identificador_externo_value}}} (required).</param>
 
         public LoteCartoesPrePagosResponse(long? Id = null, long? IdOrigemComercial = null, long? IdProduto = null, long? IdTipoCartao = null, long? IdImagem = null, long? IdEndereco = null, int? Quantidade = null, string DataCadastro = null, string UsuarioCadastro = null, int? StatusProcessamento = null, string IdentificadorExterno = null)
         {
@@ -140,79 +140,79 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Identifica??o Code of the pre-paid card batch (id)
+        /// {{{lote_cartoes_pre_pagos_response_id_value}}}
         /// </summary>
-        /// <value>Identifica??o Code of the pre-paid card batch (id)</value>
+        /// <value>{{{lote_cartoes_pre_pagos_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Identifier code of the Commercial origin
+        /// {{{lote_cartoes_pre_pagos_response_id_origem_comercial_value}}}
         /// </summary>
-        /// <value>Identifier code of the Commercial origin</value>
+        /// <value>{{{lote_cartoes_pre_pagos_response_id_origem_comercial_value}}}</value>
         [DataMember(Name="idOrigemComercial", EmitDefaultValue=false)]
         public long? IdOrigemComercial { get; set; }
     
         /// <summary>
-        /// Identifier Code of the Product
+        /// {{{lote_cartoes_pre_pagos_response_id_produto_value}}}
         /// </summary>
-        /// <value>Identifier Code of the Product</value>
+        /// <value>{{{lote_cartoes_pre_pagos_response_id_produto_value}}}</value>
         [DataMember(Name="idProduto", EmitDefaultValue=false)]
         public long? IdProduto { get; set; }
     
         /// <summary>
-        /// Identifier Code of the card type
+        /// {{{lote_cartoes_pre_pagos_response_id_tipo_cartao_value}}}
         /// </summary>
-        /// <value>Identifier Code of the card type</value>
+        /// <value>{{{lote_cartoes_pre_pagos_response_id_tipo_cartao_value}}}</value>
         [DataMember(Name="idTipoCartao", EmitDefaultValue=false)]
         public long? IdTipoCartao { get; set; }
     
         /// <summary>
-        /// Identifier code of the card image
+        /// {{{lote_cartoes_pre_pagos_response_id_imagem_value}}}
         /// </summary>
-        /// <value>Identifier code of the card image</value>
+        /// <value>{{{lote_cartoes_pre_pagos_response_id_imagem_value}}}</value>
         [DataMember(Name="idImagem", EmitDefaultValue=false)]
         public long? IdImagem { get; set; }
     
         /// <summary>
-        /// Identification Code of the address
+        /// {{{lote_cartoes_pre_pagos_response_id_endereco_value}}}
         /// </summary>
-        /// <value>Identification Code of the address</value>
+        /// <value>{{{lote_cartoes_pre_pagos_response_id_endereco_value}}}</value>
         [DataMember(Name="idEndereco", EmitDefaultValue=false)]
         public long? IdEndereco { get; set; }
     
         /// <summary>
-        /// Number of existing cards in the batch
+        /// {{{lote_cartoes_pre_pagos_response_quantidade_value}}}
         /// </summary>
-        /// <value>Number of existing cards in the batch</value>
+        /// <value>{{{lote_cartoes_pre_pagos_response_quantidade_value}}}</value>
         [DataMember(Name="quantidade", EmitDefaultValue=false)]
         public int? Quantidade { get; set; }
     
         /// <summary>
-        /// Register date of the pre-paid card batch
+        /// {{{lote_cartoes_pre_pagos_response_data_cadastro_value}}}
         /// </summary>
-        /// <value>Register date of the pre-paid card batch</value>
+        /// <value>{{{lote_cartoes_pre_pagos_response_data_cadastro_value}}}</value>
         [DataMember(Name="dataCadastro", EmitDefaultValue=false)]
         public string DataCadastro { get; set; }
     
         /// <summary>
-        /// Username that created the batch
+        /// {{{lote_cartoes_pre_pagos_response_usuario_cadastro_value}}}
         /// </summary>
-        /// <value>Username that created the batch</value>
+        /// <value>{{{lote_cartoes_pre_pagos_response_usuario_cadastro_value}}}</value>
         [DataMember(Name="usuarioCadastro", EmitDefaultValue=false)]
         public string UsuarioCadastro { get; set; }
     
         /// <summary>
-        /// Indicate the processin status of the batch
+        /// {{{lote_cartoes_pre_pagos_response_status_processamento_value}}}
         /// </summary>
-        /// <value>Indicate the processin status of the batch</value>
+        /// <value>{{{lote_cartoes_pre_pagos_response_status_processamento_value}}}</value>
         [DataMember(Name="statusProcessamento", EmitDefaultValue=false)]
         public int? StatusProcessamento { get; set; }
     
         /// <summary>
-        /// External identification number (used by the issuer)
+        /// {{{lote_cartoes_pre_pagos_response_identificador_externo_value}}}
         /// </summary>
-        /// <value>External identification number (used by the issuer)</value>
+        /// <value>{{{lote_cartoes_pre_pagos_response_identificador_externo_value}}}</value>
         [DataMember(Name="identificadorExterno", EmitDefaultValue=false)]
         public string IdentificadorExterno { get; set; }
     

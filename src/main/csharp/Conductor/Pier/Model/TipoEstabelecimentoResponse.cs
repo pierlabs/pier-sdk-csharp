@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Response of the merchant type resource
+    /// {{{tipo_estabelecimento_response_description}}}
     /// </summary>
     [DataContract]
     public partial class TipoEstabelecimentoResponse :  IEquatable<TipoEstabelecimentoResponse>
@@ -22,8 +22,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TipoEstabelecimentoResponse" /> class.
         /// Initializes a new instance of the <see cref="TipoEstabelecimentoResponse" />class.
         /// </summary>
-        /// <param name="Id">Identification Code of the Merchant Type (id).</param>
-        /// <param name="Descricao">Description of the Merchant Type.</param>
+        /// <param name="Id">{{{tipo_estabelecimento_response_id_value}}}.</param>
+        /// <param name="Descricao">{{{tipo_estabelecimento_response_descricao_value}}}.</param>
 
         public TipoEstabelecimentoResponse(long? Id = null, string Descricao = null)
         {
@@ -34,16 +34,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Identification Code of the Merchant Type (id)
+        /// {{{tipo_estabelecimento_response_id_value}}}
         /// </summary>
-        /// <value>Identification Code of the Merchant Type (id)</value>
+        /// <value>{{{tipo_estabelecimento_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Description of the Merchant Type
+        /// {{{tipo_estabelecimento_response_descricao_value}}}
         /// </summary>
-        /// <value>Description of the Merchant Type</value>
+        /// <value>{{{tipo_estabelecimento_response_descricao_value}}}</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     

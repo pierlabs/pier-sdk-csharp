@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Adjustment type list
+    /// {{{page_moeda_response_description}}}
     /// </summary>
     [DataContract]
     public partial class PageMoedaResponse :  IEquatable<PageMoedaResponse>

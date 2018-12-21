@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Request Object for save Convenant 
+    /// {{{convenio_persist_description}}} 
     /// </summary>
     [DataContract]
     public partial class ConvenioPersist :  IEquatable<ConvenioPersist>
@@ -22,22 +22,22 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="ConvenioPersist" /> class.
         /// Initializes a new instance of the <see cref="ConvenioPersist" />class.
         /// </summary>
-        /// <param name="Banco">Bank Id (required).</param>
-        /// <param name="Agencia">Agency Number (required).</param>
-        /// <param name="ContaCorrente">Current Account (required).</param>
-        /// <param name="Especie">Convenant Id code.</param>
-        /// <param name="NumeroConvenio">Number Convenant.</param>
-        /// <param name="Carteira">Wallet Id Code.</param>
-        /// <param name="CodigoCedente">Assignor code.</param>
-        /// <param name="EspecieTipo">Species Value.</param>
-        /// <param name="EspecieDocumento">Species Document Value.</param>
-        /// <param name="Aceite">Information about if payer signed billing document.</param>
-        /// <param name="Instrucoes">Instructions for the payment.</param>
-        /// <param name="LocalPagamento1">preferred place for payment.</param>
-        /// <param name="LocalPagamento2">preferred place for payment(additional).</param>
-        /// <param name="EnderecoCobrancaEmissor">billing address.</param>
-        /// <param name="NomeBeneficiario">Beneficiary name.</param>
-        /// <param name="CnpjBeneficiario">Beneficiary cnpj.</param>
+        /// <param name="Banco">{{{convenio_persist_banco_value}}} (required).</param>
+        /// <param name="Agencia">{{{convenio_persist_agencia_value}}} (required).</param>
+        /// <param name="ContaCorrente">{{{convenio_persist_conta_corrente_value}}} (required).</param>
+        /// <param name="Especie">{{{convenio_persist_especie_value}}}.</param>
+        /// <param name="NumeroConvenio">{{{convenio_persist_numero_convenio_value}}}.</param>
+        /// <param name="Carteira">{{{convenio_persist_carteira_value}}}.</param>
+        /// <param name="CodigoCedente">{{{convenio_persist_codigo_cedente_value}}}.</param>
+        /// <param name="EspecieTipo">{{{convenio_persist_especie_tipo_value}}}.</param>
+        /// <param name="EspecieDocumento">{{{convenio_persist_especie_documento_value}}}.</param>
+        /// <param name="Aceite">{{{convenio_persist_aceite_value}}}.</param>
+        /// <param name="Instrucoes">{{{convenio_persist_instrucoes_value}}}.</param>
+        /// <param name="LocalPagamento1">{{{convenio_persist_local_pagamento1_value}}}.</param>
+        /// <param name="LocalPagamento2">{{{convenio_persist_local_pagamento2_value}}}.</param>
+        /// <param name="EnderecoCobrancaEmissor">{{{convenio_persist_endereco_cobranca_emissor_value}}}.</param>
+        /// <param name="NomeBeneficiario">{{{convenio_persist_nome_beneficiario_emissor_value}}}.</param>
+        /// <param name="CnpjBeneficiario">{{{convenio_persist_cnpj_beneficiario_emissor_value}}}.</param>
 
         public ConvenioPersist(long? Banco = null, long? Agencia = null, string ContaCorrente = null, string Especie = null, double? NumeroConvenio = null, long? Carteira = null, string CodigoCedente = null, string EspecieTipo = null, string EspecieDocumento = null, bool? Aceite = null, string Instrucoes = null, string LocalPagamento1 = null, string LocalPagamento2 = null, string EnderecoCobrancaEmissor = null, string NomeBeneficiario = null, string CnpjBeneficiario = null)
         {
@@ -86,114 +86,114 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Bank Id
+        /// {{{convenio_persist_banco_value}}}
         /// </summary>
-        /// <value>Bank Id</value>
+        /// <value>{{{convenio_persist_banco_value}}}</value>
         [DataMember(Name="banco", EmitDefaultValue=false)]
         public long? Banco { get; set; }
     
         /// <summary>
-        /// Agency Number
+        /// {{{convenio_persist_agencia_value}}}
         /// </summary>
-        /// <value>Agency Number</value>
+        /// <value>{{{convenio_persist_agencia_value}}}</value>
         [DataMember(Name="agencia", EmitDefaultValue=false)]
         public long? Agencia { get; set; }
     
         /// <summary>
-        /// Current Account
+        /// {{{convenio_persist_conta_corrente_value}}}
         /// </summary>
-        /// <value>Current Account</value>
+        /// <value>{{{convenio_persist_conta_corrente_value}}}</value>
         [DataMember(Name="contaCorrente", EmitDefaultValue=false)]
         public string ContaCorrente { get; set; }
     
         /// <summary>
-        /// Convenant Id code
+        /// {{{convenio_persist_especie_value}}}
         /// </summary>
-        /// <value>Convenant Id code</value>
+        /// <value>{{{convenio_persist_especie_value}}}</value>
         [DataMember(Name="especie", EmitDefaultValue=false)]
         public string Especie { get; set; }
     
         /// <summary>
-        /// Number Convenant
+        /// {{{convenio_persist_numero_convenio_value}}}
         /// </summary>
-        /// <value>Number Convenant</value>
+        /// <value>{{{convenio_persist_numero_convenio_value}}}</value>
         [DataMember(Name="numeroConvenio", EmitDefaultValue=false)]
         public double? NumeroConvenio { get; set; }
     
         /// <summary>
-        /// Wallet Id Code
+        /// {{{convenio_persist_carteira_value}}}
         /// </summary>
-        /// <value>Wallet Id Code</value>
+        /// <value>{{{convenio_persist_carteira_value}}}</value>
         [DataMember(Name="carteira", EmitDefaultValue=false)]
         public long? Carteira { get; set; }
     
         /// <summary>
-        /// Assignor code
+        /// {{{convenio_persist_codigo_cedente_value}}}
         /// </summary>
-        /// <value>Assignor code</value>
+        /// <value>{{{convenio_persist_codigo_cedente_value}}}</value>
         [DataMember(Name="codigoCedente", EmitDefaultValue=false)]
         public string CodigoCedente { get; set; }
     
         /// <summary>
-        /// Species Value
+        /// {{{convenio_persist_especie_tipo_value}}}
         /// </summary>
-        /// <value>Species Value</value>
+        /// <value>{{{convenio_persist_especie_tipo_value}}}</value>
         [DataMember(Name="especieTipo", EmitDefaultValue=false)]
         public string EspecieTipo { get; set; }
     
         /// <summary>
-        /// Species Document Value
+        /// {{{convenio_persist_especie_documento_value}}}
         /// </summary>
-        /// <value>Species Document Value</value>
+        /// <value>{{{convenio_persist_especie_documento_value}}}</value>
         [DataMember(Name="especieDocumento", EmitDefaultValue=false)]
         public string EspecieDocumento { get; set; }
     
         /// <summary>
-        /// Information about if payer signed billing document
+        /// {{{convenio_persist_aceite_value}}}
         /// </summary>
-        /// <value>Information about if payer signed billing document</value>
+        /// <value>{{{convenio_persist_aceite_value}}}</value>
         [DataMember(Name="aceite", EmitDefaultValue=false)]
         public bool? Aceite { get; set; }
     
         /// <summary>
-        /// Instructions for the payment
+        /// {{{convenio_persist_instrucoes_value}}}
         /// </summary>
-        /// <value>Instructions for the payment</value>
+        /// <value>{{{convenio_persist_instrucoes_value}}}</value>
         [DataMember(Name="instrucoes", EmitDefaultValue=false)]
         public string Instrucoes { get; set; }
     
         /// <summary>
-        /// preferred place for payment
+        /// {{{convenio_persist_local_pagamento1_value}}}
         /// </summary>
-        /// <value>preferred place for payment</value>
+        /// <value>{{{convenio_persist_local_pagamento1_value}}}</value>
         [DataMember(Name="localPagamento1", EmitDefaultValue=false)]
         public string LocalPagamento1 { get; set; }
     
         /// <summary>
-        /// preferred place for payment(additional)
+        /// {{{convenio_persist_local_pagamento2_value}}}
         /// </summary>
-        /// <value>preferred place for payment(additional)</value>
+        /// <value>{{{convenio_persist_local_pagamento2_value}}}</value>
         [DataMember(Name="localPagamento2", EmitDefaultValue=false)]
         public string LocalPagamento2 { get; set; }
     
         /// <summary>
-        /// billing address
+        /// {{{convenio_persist_endereco_cobranca_emissor_value}}}
         /// </summary>
-        /// <value>billing address</value>
+        /// <value>{{{convenio_persist_endereco_cobranca_emissor_value}}}</value>
         [DataMember(Name="enderecoCobrancaEmissor", EmitDefaultValue=false)]
         public string EnderecoCobrancaEmissor { get; set; }
     
         /// <summary>
-        /// Beneficiary name
+        /// {{{convenio_persist_nome_beneficiario_emissor_value}}}
         /// </summary>
-        /// <value>Beneficiary name</value>
+        /// <value>{{{convenio_persist_nome_beneficiario_emissor_value}}}</value>
         [DataMember(Name="nomeBeneficiario", EmitDefaultValue=false)]
         public string NomeBeneficiario { get; set; }
     
         /// <summary>
-        /// Beneficiary cnpj
+        /// {{{convenio_persist_cnpj_beneficiario_emissor_value}}}
         /// </summary>
-        /// <value>Beneficiary cnpj</value>
+        /// <value>{{{convenio_persist_cnpj_beneficiario_emissor_value}}}</value>
         [DataMember(Name="cnpjBeneficiario", EmitDefaultValue=false)]
         public string CnpjBeneficiario { get; set; }
     

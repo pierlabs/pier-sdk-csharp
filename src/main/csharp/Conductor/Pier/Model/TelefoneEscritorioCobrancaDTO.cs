@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// telephone desktop billing description
+    /// {{{telefone_escritorio_cobranca_d_t_o_description}}}
     /// </summary>
     [DataContract]
     public partial class TelefoneEscritorioCobrancaDTO :  IEquatable<TelefoneEscritorioCobrancaDTO>
@@ -22,10 +22,10 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TelefoneEscritorioCobrancaDTO" /> class.
         /// Initializes a new instance of the <see cref="TelefoneEscritorioCobrancaDTO" />class.
         /// </summary>
-        /// <param name="Id">Telephone office charge id.</param>
-        /// <param name="Ddd">ddd phone billing desk (required).</param>
-        /// <param name="Telefone">phone billing desk telephone (required).</param>
-        /// <param name="Ramal">telephone bill collection extension.</param>
+        /// <param name="Id">{{{telefone_escritorio_cobranca_d_t_o_id}}}.</param>
+        /// <param name="Ddd">{{{telefone_escritorio_cobranca_d_t_o_ddd_value}}} (required).</param>
+        /// <param name="Telefone">{{{telefone_escritorio_cobranca_d_t_o_telefone_value}}} (required).</param>
+        /// <param name="Ramal">{{{telefone_escritorio_cobranca_d_t_o_ramal_value}}}.</param>
 
         public TelefoneEscritorioCobrancaDTO(long? Id = null, string Ddd = null, string Telefone = null, string Ramal = null)
         {
@@ -54,30 +54,30 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Telephone office charge id
+        /// {{{telefone_escritorio_cobranca_d_t_o_id}}}
         /// </summary>
-        /// <value>Telephone office charge id</value>
+        /// <value>{{{telefone_escritorio_cobranca_d_t_o_id}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// ddd phone billing desk
+        /// {{{telefone_escritorio_cobranca_d_t_o_ddd_value}}}
         /// </summary>
-        /// <value>ddd phone billing desk</value>
+        /// <value>{{{telefone_escritorio_cobranca_d_t_o_ddd_value}}}</value>
         [DataMember(Name="ddd", EmitDefaultValue=false)]
         public string Ddd { get; set; }
     
         /// <summary>
-        /// phone billing desk telephone
+        /// {{{telefone_escritorio_cobranca_d_t_o_telefone_value}}}
         /// </summary>
-        /// <value>phone billing desk telephone</value>
+        /// <value>{{{telefone_escritorio_cobranca_d_t_o_telefone_value}}}</value>
         [DataMember(Name="telefone", EmitDefaultValue=false)]
         public string Telefone { get; set; }
     
         /// <summary>
-        /// telephone bill collection extension
+        /// {{{telefone_escritorio_cobranca_d_t_o_ramal_value}}}
         /// </summary>
-        /// <value>telephone bill collection extension</value>
+        /// <value>{{{telefone_escritorio_cobranca_d_t_o_ramal_value}}}</value>
         [DataMember(Name="ramal", EmitDefaultValue=false)]
         public string Ramal { get; set; }
     

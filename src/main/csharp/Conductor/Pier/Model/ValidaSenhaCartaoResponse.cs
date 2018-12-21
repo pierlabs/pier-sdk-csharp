@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Object of response for the validation of the card password
+    /// {{{valida_senha_cartao_response_description}}}
     /// </summary>
     [DataContract]
     public partial class ValidaSenhaCartaoResponse :  IEquatable<ValidaSenhaCartaoResponse>
@@ -22,11 +22,11 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="ValidaSenhaCartaoResponse" /> class.
         /// Initializes a new instance of the <see cref="ValidaSenhaCartaoResponse" />class.
         /// </summary>
-        /// <param name="Mensagem">Message.</param>
-        /// <param name="IdStatusCartao">Description of the card status.</param>
-        /// <param name="StatusCartao">Description of the card status.</param>
-        /// <param name="QuantidadeTentativas">Quantity attempts.</param>
-        /// <param name="QuantidadeMaximaTentativas">Maximum Quantity of allowed attempts.</param>
+        /// <param name="Mensagem">{{{valida_senha_cartao_response_mensagem_value}}}.</param>
+        /// <param name="IdStatusCartao">{{{valida_senha_cartao_response_id_status_cartao_value}}}.</param>
+        /// <param name="StatusCartao">{{{valida_senha_cartao_response_status_cartao_value}}}.</param>
+        /// <param name="QuantidadeTentativas">{{{valida_senha_cartao_response_quantidade_tentativas_value}}}.</param>
+        /// <param name="QuantidadeMaximaTentativas">{{{valida_senha_cartao_response_quantidade_maxima_tentativas_value}}}.</param>
 
         public ValidaSenhaCartaoResponse(string Mensagem = null, long? IdStatusCartao = null, string StatusCartao = null, int? QuantidadeTentativas = null, int? QuantidadeMaximaTentativas = null)
         {
@@ -40,37 +40,37 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Message
+        /// {{{valida_senha_cartao_response_mensagem_value}}}
         /// </summary>
-        /// <value>Message</value>
+        /// <value>{{{valida_senha_cartao_response_mensagem_value}}}</value>
         [DataMember(Name="mensagem", EmitDefaultValue=false)]
         public string Mensagem { get; set; }
     
         /// <summary>
-        /// Description of the card status
+        /// {{{valida_senha_cartao_response_id_status_cartao_value}}}
         /// </summary>
-        /// <value>Description of the card status</value>
+        /// <value>{{{valida_senha_cartao_response_id_status_cartao_value}}}</value>
         [DataMember(Name="idStatusCartao", EmitDefaultValue=false)]
         public long? IdStatusCartao { get; set; }
     
         /// <summary>
-        /// Description of the card status
+        /// {{{valida_senha_cartao_response_status_cartao_value}}}
         /// </summary>
-        /// <value>Description of the card status</value>
+        /// <value>{{{valida_senha_cartao_response_status_cartao_value}}}</value>
         [DataMember(Name="statusCartao", EmitDefaultValue=false)]
         public string StatusCartao { get; set; }
     
         /// <summary>
-        /// Quantity attempts
+        /// {{{valida_senha_cartao_response_quantidade_tentativas_value}}}
         /// </summary>
-        /// <value>Quantity attempts</value>
+        /// <value>{{{valida_senha_cartao_response_quantidade_tentativas_value}}}</value>
         [DataMember(Name="quantidadeTentativas", EmitDefaultValue=false)]
         public int? QuantidadeTentativas { get; set; }
     
         /// <summary>
-        /// Maximum Quantity of allowed attempts
+        /// {{{valida_senha_cartao_response_quantidade_maxima_tentativas_value}}}
         /// </summary>
-        /// <value>Maximum Quantity of allowed attempts</value>
+        /// <value>{{{valida_senha_cartao_response_quantidade_maxima_tentativas_value}}}</value>
         [DataMember(Name="quantidadeMaximaTentativas", EmitDefaultValue=false)]
         public int? QuantidadeMaximaTentativas { get; set; }
     

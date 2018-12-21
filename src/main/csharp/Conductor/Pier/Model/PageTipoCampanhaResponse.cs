@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Response representation of the campaign type resource
+    /// {{{page_tipo_campanha_response_description}}}
     /// </summary>
     [DataContract]
     public partial class PageTipoCampanhaResponse :  IEquatable<PageTipoCampanhaResponse>

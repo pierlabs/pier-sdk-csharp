@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Response Representation of the annuity resource
+    /// {{{anuidade_response_description}}}
     /// </summary>
     [DataContract]
     public partial class AnuidadeResponse :  IEquatable<AnuidadeResponse>
@@ -22,10 +22,10 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="AnuidadeResponse" /> class.
         /// Initializes a new instance of the <see cref="AnuidadeResponse" />class.
         /// </summary>
-        /// <param name="Id">Identifier of Annuity type of the telephone bonuses.</param>
-        /// <param name="Descricao">Description of Annuity type of the telephone bonuses.</param>
-        /// <param name="Valor">Value of Annuity type of the telephone bonuses.</param>
-        /// <param name="FlagAnuidadeBonificada">If the type of annuity of the telephone bonuses is subsidised.</param>
+        /// <param name="Id">{{{anuidade_response_id_value}}}.</param>
+        /// <param name="Descricao">{{{anuidade_response_descricao_value}}}.</param>
+        /// <param name="Valor">{{{anuidade_response_valor_value}}}.</param>
+        /// <param name="FlagAnuidadeBonificada">{{{anuidade_response_flag_anuidade_bonificada_value}}}.</param>
 
         public AnuidadeResponse(long? Id = null, string Descricao = null, double? Valor = null, bool? FlagAnuidadeBonificada = null)
         {
@@ -38,30 +38,30 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Identifier of Annuity type of the telephone bonuses
+        /// {{{anuidade_response_id_value}}}
         /// </summary>
-        /// <value>Identifier of Annuity type of the telephone bonuses</value>
+        /// <value>{{{anuidade_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Description of Annuity type of the telephone bonuses
+        /// {{{anuidade_response_descricao_value}}}
         /// </summary>
-        /// <value>Description of Annuity type of the telephone bonuses</value>
+        /// <value>{{{anuidade_response_descricao_value}}}</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     
         /// <summary>
-        /// Value of Annuity type of the telephone bonuses
+        /// {{{anuidade_response_valor_value}}}
         /// </summary>
-        /// <value>Value of Annuity type of the telephone bonuses</value>
+        /// <value>{{{anuidade_response_valor_value}}}</value>
         [DataMember(Name="valor", EmitDefaultValue=false)]
         public double? Valor { get; set; }
     
         /// <summary>
-        /// If the type of annuity of the telephone bonuses is subsidised
+        /// {{{anuidade_response_flag_anuidade_bonificada_value}}}
         /// </summary>
-        /// <value>If the type of annuity of the telephone bonuses is subsidised</value>
+        /// <value>{{{anuidade_response_flag_anuidade_bonificada_value}}}</value>
         [DataMember(Name="flagAnuidadeBonificada", EmitDefaultValue=false)]
         public bool? FlagAnuidadeBonificada { get; set; }
     

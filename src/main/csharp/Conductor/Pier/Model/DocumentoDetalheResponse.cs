@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Response Representation for the detailed document
+    /// {{{documento_detalhe_response_description}}}
     /// </summary>
     [DataContract]
     public partial class DocumentoDetalheResponse :  IEquatable<DocumentoDetalheResponse>
@@ -22,9 +22,9 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="DocumentoDetalheResponse" /> class.
         /// Initializes a new instance of the <see cref="DocumentoDetalheResponse" />class.
         /// </summary>
-        /// <param name="Id">ID of identification of the document.</param>
-        /// <param name="Propriedade">Detailing Properties of the document.</param>
-        /// <param name="Conteudo">Detailing Content of the document.</param>
+        /// <param name="Id">{{{documento_detalhe_response_id_value}}}.</param>
+        /// <param name="Propriedade">{{{documento_detalhe_response_propriedade_value}}}.</param>
+        /// <param name="Conteudo">{{{documento_detalhe_response_conteudo_value}}}.</param>
 
         public DocumentoDetalheResponse(long? Id = null, string Propriedade = null, string Conteudo = null)
         {
@@ -36,23 +36,23 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// ID of identification of the document
+        /// {{{documento_detalhe_response_id_value}}}
         /// </summary>
-        /// <value>ID of identification of the document</value>
+        /// <value>{{{documento_detalhe_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Detailing Properties of the document
+        /// {{{documento_detalhe_response_propriedade_value}}}
         /// </summary>
-        /// <value>Detailing Properties of the document</value>
+        /// <value>{{{documento_detalhe_response_propriedade_value}}}</value>
         [DataMember(Name="propriedade", EmitDefaultValue=false)]
         public string Propriedade { get; set; }
     
         /// <summary>
-        /// Detailing Content of the document
+        /// {{{documento_detalhe_response_conteudo_value}}}
         /// </summary>
-        /// <value>Detailing Content of the document</value>
+        /// <value>{{{documento_detalhe_response_conteudo_value}}}</value>
         [DataMember(Name="conteudo", EmitDefaultValue=false)]
         public string Conteudo { get; set; }
     

@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Return of the attempts registration
+    /// {{{controle_tentativa_cadastro_resposta_descricao}}}
     /// </summary>
     [DataContract]
     public partial class ControleTentativaCadastroResponse :  IEquatable<ControleTentativaCadastroResponse>
@@ -22,9 +22,9 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="ControleTentativaCadastroResponse" /> class.
         /// Initializes a new instance of the <see cref="ControleTentativaCadastroResponse" />class.
         /// </summary>
-        /// <param name="Cpf">User CPF.</param>
-        /// <param name="Login">Login.</param>
-        /// <param name="Tentativas">Number of attempts.</param>
+        /// <param name="Cpf">{{{controle_tentativa_cadastro_resposta_cpf_descricao}}}.</param>
+        /// <param name="Login">{{{controle_tentativa_cadastro_resposta_login_descricao}}}.</param>
+        /// <param name="Tentativas">{{{controle_tentativa_cadastro_resposta_tentativas_descricao}}}.</param>
 
         public ControleTentativaCadastroResponse(string Cpf = null, string Login = null, int? Tentativas = null)
         {
@@ -36,23 +36,23 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// User CPF
+        /// {{{controle_tentativa_cadastro_resposta_cpf_descricao}}}
         /// </summary>
-        /// <value>User CPF</value>
+        /// <value>{{{controle_tentativa_cadastro_resposta_cpf_descricao}}}</value>
         [DataMember(Name="cpf", EmitDefaultValue=false)]
         public string Cpf { get; set; }
     
         /// <summary>
-        /// Login
+        /// {{{controle_tentativa_cadastro_resposta_login_descricao}}}
         /// </summary>
-        /// <value>Login</value>
+        /// <value>{{{controle_tentativa_cadastro_resposta_login_descricao}}}</value>
         [DataMember(Name="login", EmitDefaultValue=false)]
         public string Login { get; set; }
     
         /// <summary>
-        /// Number of attempts
+        /// {{{controle_tentativa_cadastro_resposta_tentativas_descricao}}}
         /// </summary>
-        /// <value>Number of attempts</value>
+        /// <value>{{{controle_tentativa_cadastro_resposta_tentativas_descricao}}}</value>
         [DataMember(Name="tentativas", EmitDefaultValue=false)]
         public int? Tentativas { get; set; }
     
