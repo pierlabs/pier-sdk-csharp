@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{valida_cartao_response_description}}}
+    /// Objeto de resposta para a valida\u00E7\u00E3o de cart\u00E3o
     /// </summary>
     [DataContract]
     public partial class ValidaCartaoResponse :  IEquatable<ValidaCartaoResponse>
@@ -22,14 +22,14 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="ValidaCartaoResponse" /> class.
         /// Initializes a new instance of the <see cref="ValidaCartaoResponse" />class.
         /// </summary>
-        /// <param name="IdStatusCartao">{{{valida_cartao_response_id_status_cartao_value}}}.</param>
-        /// <param name="StatusCartao">{{{valida_cartao_response_status_cartao_value}}}.</param>
-        /// <param name="IdStatusConta">{{{valida_cartao_response_id_status_conta_value}}}.</param>
-        /// <param name="StatusConta">{{{valida_cartao_response_status_conta_value}}}.</param>
-        /// <param name="IdConta">{{{valida_cartao_response_id_conta_value}}}.</param>
-        /// <param name="NumeroAgencia">{{{valida_cartao_response_numero_agencia_value}}}.</param>
-        /// <param name="NumeroContaCorrente">{{{valida_cartao_response_numero_conta_corrente_value}}}.</param>
-        /// <param name="CriptogramaResposta">{{{valida_cartao_response_criptograma_resposta_value}}}.</param>
+        /// <param name="IdStatusCartao">Descri\u00E7\u00E3o do status do cart\u00E3o.</param>
+        /// <param name="StatusCartao">Descri\u00E7\u00E3o do status do cart\u00E3o.</param>
+        /// <param name="IdStatusConta">Descri\u00E7\u00E3o do status da conta.</param>
+        /// <param name="StatusConta">Descri\u00E7\u00E3o do status da conta.</param>
+        /// <param name="IdConta">C\u00F3digo identificador da conta.</param>
+        /// <param name="NumeroAgencia">N\u00FAmero da ag\u00EAncia.</param>
+        /// <param name="NumeroContaCorrente">N\u00FAmero da conta corrente.</param>
+        /// <param name="CriptogramaResposta">Criptograma de resposta.</param>
 
         public ValidaCartaoResponse(long? IdStatusCartao = null, string StatusCartao = null, long? IdStatusConta = null, string StatusConta = null, long? IdConta = null, int? NumeroAgencia = null, string NumeroContaCorrente = null, string CriptogramaResposta = null)
         {
@@ -46,58 +46,58 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{valida_cartao_response_id_status_cartao_value}}}
+        /// Descri\u00E7\u00E3o do status do cart\u00E3o
         /// </summary>
-        /// <value>{{{valida_cartao_response_id_status_cartao_value}}}</value>
+        /// <value>Descri\u00E7\u00E3o do status do cart\u00E3o</value>
         [DataMember(Name="idStatusCartao", EmitDefaultValue=false)]
         public long? IdStatusCartao { get; set; }
     
         /// <summary>
-        /// {{{valida_cartao_response_status_cartao_value}}}
+        /// Descri\u00E7\u00E3o do status do cart\u00E3o
         /// </summary>
-        /// <value>{{{valida_cartao_response_status_cartao_value}}}</value>
+        /// <value>Descri\u00E7\u00E3o do status do cart\u00E3o</value>
         [DataMember(Name="statusCartao", EmitDefaultValue=false)]
         public string StatusCartao { get; set; }
     
         /// <summary>
-        /// {{{valida_cartao_response_id_status_conta_value}}}
+        /// Descri\u00E7\u00E3o do status da conta
         /// </summary>
-        /// <value>{{{valida_cartao_response_id_status_conta_value}}}</value>
+        /// <value>Descri\u00E7\u00E3o do status da conta</value>
         [DataMember(Name="idStatusConta", EmitDefaultValue=false)]
         public long? IdStatusConta { get; set; }
     
         /// <summary>
-        /// {{{valida_cartao_response_status_conta_value}}}
+        /// Descri\u00E7\u00E3o do status da conta
         /// </summary>
-        /// <value>{{{valida_cartao_response_status_conta_value}}}</value>
+        /// <value>Descri\u00E7\u00E3o do status da conta</value>
         [DataMember(Name="statusConta", EmitDefaultValue=false)]
         public string StatusConta { get; set; }
     
         /// <summary>
-        /// {{{valida_cartao_response_id_conta_value}}}
+        /// C\u00F3digo identificador da conta
         /// </summary>
-        /// <value>{{{valida_cartao_response_id_conta_value}}}</value>
+        /// <value>C\u00F3digo identificador da conta</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// {{{valida_cartao_response_numero_agencia_value}}}
+        /// N\u00FAmero da ag\u00EAncia
         /// </summary>
-        /// <value>{{{valida_cartao_response_numero_agencia_value}}}</value>
+        /// <value>N\u00FAmero da ag\u00EAncia</value>
         [DataMember(Name="numeroAgencia", EmitDefaultValue=false)]
         public int? NumeroAgencia { get; set; }
     
         /// <summary>
-        /// {{{valida_cartao_response_numero_conta_corrente_value}}}
+        /// N\u00FAmero da conta corrente
         /// </summary>
-        /// <value>{{{valida_cartao_response_numero_conta_corrente_value}}}</value>
+        /// <value>N\u00FAmero da conta corrente</value>
         [DataMember(Name="numeroContaCorrente", EmitDefaultValue=false)]
         public string NumeroContaCorrente { get; set; }
     
         /// <summary>
-        /// {{{valida_cartao_response_criptograma_resposta_value}}}
+        /// Criptograma de resposta
         /// </summary>
-        /// <value>{{{valida_cartao_response_criptograma_resposta_value}}}</value>
+        /// <value>Criptograma de resposta</value>
         [DataMember(Name="criptogramaResposta", EmitDefaultValue=false)]
         public string CriptogramaResposta { get; set; }
     

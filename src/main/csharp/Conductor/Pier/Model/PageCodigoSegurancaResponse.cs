@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{page_codigo_seguranca_response_description}}}
+    /// Lista de C\u00F3digos de Seguran\u00E7a
     /// </summary>
     [DataContract]
     public partial class PageCodigoSegurancaResponse :  IEquatable<PageCodigoSegurancaResponse>

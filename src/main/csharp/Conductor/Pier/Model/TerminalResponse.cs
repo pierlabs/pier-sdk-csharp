@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{terminal_response_description}}}
+    /// ObjetoTerminal
     /// </summary>
     [DataContract]
     public partial class TerminalResponse :  IEquatable<TerminalResponse>
@@ -22,12 +22,12 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TerminalResponse" /> class.
         /// Initializes a new instance of the <see cref="TerminalResponse" />class.
         /// </summary>
-        /// <param name="Id">{{{terminal_response_id_value}}}.</param>
-        /// <param name="Terminal">{{{terminal_response_terminal_value}}}.</param>
-        /// <param name="NumeroEstabelecimento">{{{terminal_response_numero_estabelecimento_value}}}.</param>
-        /// <param name="IdEstabelecimento">{{{terminal_response_id_estabelecimento_value}}}.</param>
-        /// <param name="FlagConsultaExtrato">{{{terminal_response_flag_consulta_extrato_value}}}.</param>
-        /// <param name="FlagTerminalVirtual">{{{terminal_response_flag_terminal_virtual_value}}}.</param>
+        /// <param name="Id">C\u00F3digo de Identifica\u00E7\u00E3o do Terminal (id).</param>
+        /// <param name="Terminal">N\u00FAmero \u00FAnico do terminal.</param>
+        /// <param name="NumeroEstabelecimento">N\u00FAmero do estabelecimento a qual o terminal pertence.</param>
+        /// <param name="IdEstabelecimento">N\u00FAmero de identifica\u00E7\u00E3o do estabelecimento a qual o terminal pertence.</param>
+        /// <param name="FlagConsultaExtrato">Flag indicando se o terminal \u00E9 f\u00EDsico ou virtual, sendo: (true: Sim), (false: N\u00E3o)).</param>
+        /// <param name="FlagTerminalVirtual">Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00E3o)).</param>
 
         public TerminalResponse(long? Id = null, string Terminal = null, long? NumeroEstabelecimento = null, long? IdEstabelecimento = null, bool? FlagConsultaExtrato = null, bool? FlagTerminalVirtual = null)
         {
@@ -42,44 +42,44 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{terminal_response_id_value}}}
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do Terminal (id)
         /// </summary>
-        /// <value>{{{terminal_response_id_value}}}</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Terminal (id)</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{terminal_response_terminal_value}}}
+        /// N\u00FAmero \u00FAnico do terminal
         /// </summary>
-        /// <value>{{{terminal_response_terminal_value}}}</value>
+        /// <value>N\u00FAmero \u00FAnico do terminal</value>
         [DataMember(Name="terminal", EmitDefaultValue=false)]
         public string Terminal { get; set; }
     
         /// <summary>
-        /// {{{terminal_response_numero_estabelecimento_value}}}
+        /// N\u00FAmero do estabelecimento a qual o terminal pertence
         /// </summary>
-        /// <value>{{{terminal_response_numero_estabelecimento_value}}}</value>
+        /// <value>N\u00FAmero do estabelecimento a qual o terminal pertence</value>
         [DataMember(Name="numeroEstabelecimento", EmitDefaultValue=false)]
         public long? NumeroEstabelecimento { get; set; }
     
         /// <summary>
-        /// {{{terminal_response_id_estabelecimento_value}}}
+        /// N\u00FAmero de identifica\u00E7\u00E3o do estabelecimento a qual o terminal pertence
         /// </summary>
-        /// <value>{{{terminal_response_id_estabelecimento_value}}}</value>
+        /// <value>N\u00FAmero de identifica\u00E7\u00E3o do estabelecimento a qual o terminal pertence</value>
         [DataMember(Name="idEstabelecimento", EmitDefaultValue=false)]
         public long? IdEstabelecimento { get; set; }
     
         /// <summary>
-        /// {{{terminal_response_flag_consulta_extrato_value}}}
+        /// Flag indicando se o terminal \u00E9 f\u00EDsico ou virtual, sendo: (true: Sim), (false: N\u00E3o))
         /// </summary>
-        /// <value>{{{terminal_response_flag_consulta_extrato_value}}}</value>
+        /// <value>Flag indicando se o terminal \u00E9 f\u00EDsico ou virtual, sendo: (true: Sim), (false: N\u00E3o))</value>
         [DataMember(Name="flagConsultaExtrato", EmitDefaultValue=false)]
         public bool? FlagConsultaExtrato { get; set; }
     
         /// <summary>
-        /// {{{terminal_response_flag_terminal_virtual_value}}}
+        /// Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00E3o))
         /// </summary>
-        /// <value>{{{terminal_response_flag_terminal_virtual_value}}}</value>
+        /// <value>Flag indicando se o terminal permite consultar extrato, sendo: (true: Sim), (false: N\u00E3o))</value>
         [DataMember(Name="flagTerminalVirtual", EmitDefaultValue=false)]
         public bool? FlagTerminalVirtual { get; set; }
     

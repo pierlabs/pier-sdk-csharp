@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{produto_pacote_tarifa_response_descricao}}}
+    /// Objeto de Resposta  de um  Pacote de Tarifa
     /// </summary>
     [DataContract]
     public partial class ProdutoPacoteTarifaResponse :  IEquatable<ProdutoPacoteTarifaResponse>
@@ -22,10 +22,10 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="ProdutoPacoteTarifaResponse" /> class.
         /// Initializes a new instance of the <see cref="ProdutoPacoteTarifaResponse" />class.
         /// </summary>
-        /// <param name="FlagDefault">{{{produto_pacote_tarifa_response_flag_default_descricao}}}.</param>
-        /// <param name="Id">{{{produto_pacote_tarifa_response_id_descricao}}}.</param>
-        /// <param name="IdPacoteTarifa">{{{produto_pacote_tarifa_response_id_pacote_tarifa_descricao}}}.</param>
-        /// <param name="IdProduto">{{{produto_pacote_tarifa_response_id_produto_descricao}}}.</param>
+        /// <param name="FlagDefault">Sinaliza se \u00E9 Padr\u00E3o.</param>
+        /// <param name="Id">Identificador do Produto de Pacote de  Tarifa.</param>
+        /// <param name="IdPacoteTarifa">Identificador do Pacote de Tarfica.</param>
+        /// <param name="IdProduto">Identificador do Produto.</param>
 
         public ProdutoPacoteTarifaResponse(bool? FlagDefault = null, long? Id = null, long? IdPacoteTarifa = null, long? IdProduto = null)
         {
@@ -38,30 +38,30 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{produto_pacote_tarifa_response_flag_default_descricao}}}
+        /// Sinaliza se \u00E9 Padr\u00E3o
         /// </summary>
-        /// <value>{{{produto_pacote_tarifa_response_flag_default_descricao}}}</value>
+        /// <value>Sinaliza se \u00E9 Padr\u00E3o</value>
         [DataMember(Name="flagDefault", EmitDefaultValue=false)]
         public bool? FlagDefault { get; set; }
     
         /// <summary>
-        /// {{{produto_pacote_tarifa_response_id_descricao}}}
+        /// Identificador do Produto de Pacote de  Tarifa
         /// </summary>
-        /// <value>{{{produto_pacote_tarifa_response_id_descricao}}}</value>
+        /// <value>Identificador do Produto de Pacote de  Tarifa</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{produto_pacote_tarifa_response_id_pacote_tarifa_descricao}}}
+        /// Identificador do Pacote de Tarfica
         /// </summary>
-        /// <value>{{{produto_pacote_tarifa_response_id_pacote_tarifa_descricao}}}</value>
+        /// <value>Identificador do Pacote de Tarfica</value>
         [DataMember(Name="idPacoteTarifa", EmitDefaultValue=false)]
         public long? IdPacoteTarifa { get; set; }
     
         /// <summary>
-        /// {{{produto_pacote_tarifa_response_id_produto_descricao}}}
+        /// Identificador do Produto
         /// </summary>
-        /// <value>{{{produto_pacote_tarifa_response_id_produto_descricao}}}</value>
+        /// <value>Identificador do Produto</value>
         [DataMember(Name="idProduto", EmitDefaultValue=false)]
         public long? IdProduto { get; set; }
     

@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{inscricao_apn_resposta_descricao}}}
+    /// Representa a resposta de uma inscricao APN
     /// </summary>
     [DataContract]
     public partial class InscricaoAPNResponse :  IEquatable<InscricaoAPNResponse>
@@ -22,13 +22,13 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="InscricaoAPNResponse" /> class.
         /// Initializes a new instance of the <see cref="InscricaoAPNResponse" />class.
         /// </summary>
-        /// <param name="AplicacaoMobile">{{{inscricao_apn_resposta_aplicacao_mobile_descricao}}}.</param>
-        /// <param name="Ativo">{{{inscricao_apn_resposta_ativo_descricao}}}.</param>
-        /// <param name="Cartao">{{{inscricao_apn_resposta_cartao_descricao}}}.</param>
-        /// <param name="DataCriacao">{{{inscricao_apn_resposta_data_criacao_descricao}}}.</param>
-        /// <param name="DataDesativacao">{{{inscricao_apn_resposta_data_desativacao_descricao}}}.</param>
-        /// <param name="DeviceToken">{{{inscricao_apn_resposta_device_token_descricao}}}.</param>
-        /// <param name="Id">{{{inscricao_apn_resposta_id_descricao}}}.</param>
+        /// <param name="AplicacaoMobile">Representa a aplica\u00E7\u00E3o mobile da inscri\u00E7\u00E3o.</param>
+        /// <param name="Ativo">Indica se a inscri\u00E7\u00E3o est\u00E1 ativa.</param>
+        /// <param name="Cartao">Representa o cart\u00E3o associado \u00E0 inscri\u00E7\u00E3o.</param>
+        /// <param name="DataCriacao">Data da cria\u00E7\u00E3o da inscri\u00E7\u00E3o.</param>
+        /// <param name="DataDesativacao">Data da desativa\u00E7\u00E3o da inscri\u00E7\u00E3o.</param>
+        /// <param name="DeviceToken">Token do dispositivo.</param>
+        /// <param name="Id">Id da inscri\u00E7\u00E3o.</param>
 
         public InscricaoAPNResponse(AplicacaoMobileEmissorResponse AplicacaoMobile = null, bool? Ativo = null, CartaoEmissorResponse Cartao = null, string DataCriacao = null, string DataDesativacao = null, string DeviceToken = null, long? Id = null)
         {
@@ -44,51 +44,51 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{inscricao_apn_resposta_aplicacao_mobile_descricao}}}
+        /// Representa a aplica\u00E7\u00E3o mobile da inscri\u00E7\u00E3o
         /// </summary>
-        /// <value>{{{inscricao_apn_resposta_aplicacao_mobile_descricao}}}</value>
+        /// <value>Representa a aplica\u00E7\u00E3o mobile da inscri\u00E7\u00E3o</value>
         [DataMember(Name="aplicacaoMobile", EmitDefaultValue=false)]
         public AplicacaoMobileEmissorResponse AplicacaoMobile { get; set; }
     
         /// <summary>
-        /// {{{inscricao_apn_resposta_ativo_descricao}}}
+        /// Indica se a inscri\u00E7\u00E3o est\u00E1 ativa
         /// </summary>
-        /// <value>{{{inscricao_apn_resposta_ativo_descricao}}}</value>
+        /// <value>Indica se a inscri\u00E7\u00E3o est\u00E1 ativa</value>
         [DataMember(Name="ativo", EmitDefaultValue=false)]
         public bool? Ativo { get; set; }
     
         /// <summary>
-        /// {{{inscricao_apn_resposta_cartao_descricao}}}
+        /// Representa o cart\u00E3o associado \u00E0 inscri\u00E7\u00E3o
         /// </summary>
-        /// <value>{{{inscricao_apn_resposta_cartao_descricao}}}</value>
+        /// <value>Representa o cart\u00E3o associado \u00E0 inscri\u00E7\u00E3o</value>
         [DataMember(Name="cartao", EmitDefaultValue=false)]
         public CartaoEmissorResponse Cartao { get; set; }
     
         /// <summary>
-        /// {{{inscricao_apn_resposta_data_criacao_descricao}}}
+        /// Data da cria\u00E7\u00E3o da inscri\u00E7\u00E3o
         /// </summary>
-        /// <value>{{{inscricao_apn_resposta_data_criacao_descricao}}}</value>
+        /// <value>Data da cria\u00E7\u00E3o da inscri\u00E7\u00E3o</value>
         [DataMember(Name="dataCriacao", EmitDefaultValue=false)]
         public string DataCriacao { get; set; }
     
         /// <summary>
-        /// {{{inscricao_apn_resposta_data_desativacao_descricao}}}
+        /// Data da desativa\u00E7\u00E3o da inscri\u00E7\u00E3o
         /// </summary>
-        /// <value>{{{inscricao_apn_resposta_data_desativacao_descricao}}}</value>
+        /// <value>Data da desativa\u00E7\u00E3o da inscri\u00E7\u00E3o</value>
         [DataMember(Name="dataDesativacao", EmitDefaultValue=false)]
         public string DataDesativacao { get; set; }
     
         /// <summary>
-        /// {{{inscricao_apn_resposta_device_token_descricao}}}
+        /// Token do dispositivo
         /// </summary>
-        /// <value>{{{inscricao_apn_resposta_device_token_descricao}}}</value>
+        /// <value>Token do dispositivo</value>
         [DataMember(Name="deviceToken", EmitDefaultValue=false)]
         public string DeviceToken { get; set; }
     
         /// <summary>
-        /// {{{inscricao_apn_resposta_id_descricao}}}
+        /// Id da inscri\u00E7\u00E3o
         /// </summary>
-        /// <value>{{{inscricao_apn_resposta_id_descricao}}}</value>
+        /// <value>Id da inscri\u00E7\u00E3o</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     

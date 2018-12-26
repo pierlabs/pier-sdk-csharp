@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{pessoa_detalhe_response_description}}}
+    /// PessoaDetalheResponse
     /// </summary>
     [DataContract]
     public partial class PessoaDetalheResponse :  IEquatable<PessoaDetalheResponse>
@@ -22,29 +22,29 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="PessoaDetalheResponse" /> class.
         /// Initializes a new instance of the <see cref="PessoaDetalheResponse" />class.
         /// </summary>
-        /// <param name="IdPessoa">{{{pessoa_detalhe_response_id_pessoa_value}}}.</param>
-        /// <param name="NomeMae">{{{pessoa_detalhe_response_nome_mae_value}}}.</param>
-        /// <param name="IdEstadoCivil">{{{pessoa_detalhe_response_id_estado_civil_value}}}.</param>
-        /// <param name="IdProfissao">{{{pessoa_detalhe_response_id_profissao_value}}}.</param>
-        /// <param name="IdNaturezaOcupacao">{{{pessoa_detalhe_response_id_natureza_ocupacao_value}}}.</param>
-        /// <param name="IdNacionalidade">{{{pessoa_detalhe_response_id_nacionalidade_value}}}.</param>
-        /// <param name="NumeroBanco">{{{pessoa_detalhe_response_numero_banco_value}}}.</param>
-        /// <param name="NumeroAgencia">{{{pessoa_detalhe_response_numero_agencia_value}}}.</param>
-        /// <param name="NumeroContaCorrente">{{{pessoa_detalhe_response_numero_conta_corrente_value}}}.</param>
-        /// <param name="Email">{{{pessoa_detalhe_response_email_value}}}.</param>
-        /// <param name="NomeEmpresa">{{{pessoa_detalhe_response_nome_empresa_value}}}.</param>
-        /// <param name="NomeReferencia1">{{{pessoa_detalhe_response_nome_referencia_1_value}}}.</param>
-        /// <param name="EnderecoReferencia1">{{{pessoa_detalhe_response_endereco_referencia_1_value}}}.</param>
-        /// <param name="NomeReferencia2">{{{pessoa_detalhe_response_nome_referencia_2_value}}}.</param>
-        /// <param name="EnderecoReferencia2">{{{pessoa_detalhe_response_endereco_referencia_2_value}}}.</param>
-        /// <param name="Salario">{{{pessoa_detalhe_response_salario_value}}}.</param>
-        /// <param name="ImpedidoFinanciamento">{{{pessoa_detalhe_response_impedido_de_financiamento_value}}}.</param>
-        /// <param name="NaturalidadeCidade">{{{pessoa_detalhe_response_naturalidade_Cidade_value}}}.</param>
-        /// <param name="NaturalidadeEstado">{{{pessoa_detalhe_response_naturalidade_Estado_value}}}.</param>
-        /// <param name="GrauInstrucao">{{{pessoa_detalhe_response_grau_Instrucao_value}}}.</param>
-        /// <param name="NumeroDependentes">{{{pessoa_detalhe_response_numero_Dependentes_value}}}.</param>
-        /// <param name="NomePai">{{{pessoa_detalhe_response_nome_Pai_value}}}.</param>
-        /// <param name="ChequeEspecial">{{{pessoa_detalhe_response_cheque_Especial_value}}}.</param>
+        /// <param name="IdPessoa">C\u00F3digo identificador da pessoa.</param>
+        /// <param name="NomeMae">Apresenta o nome da m\u00E3e da pessoa fisica.</param>
+        /// <param name="IdEstadoCivil">Id Estado civil da pessoa fisica.</param>
+        /// <param name="IdProfissao">Profiss\u00E3o da pessoa fisica.</param>
+        /// <param name="IdNaturezaOcupacao">Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica.</param>
+        /// <param name="IdNacionalidade">Id Nacionalidade da pessoa fisica.</param>
+        /// <param name="NumeroBanco">N\u00FAmero do banco.</param>
+        /// <param name="NumeroAgencia">N\u00FAmero da ag\u00EAncia.</param>
+        /// <param name="NumeroContaCorrente">N\u00FAmero da conta corrente.</param>
+        /// <param name="Email">Email da pessoa fisica.</param>
+        /// <param name="NomeEmpresa">Nome que deve ser impresso no cart\u00E3o.</param>
+        /// <param name="NomeReferencia1">Nome de refer\u00EAncia 1.</param>
+        /// <param name="EnderecoReferencia1">Endere\u00E7o de refer\u00EAncia 1.</param>
+        /// <param name="NomeReferencia2">Nome de refer\u00EAncia 2.</param>
+        /// <param name="EnderecoReferencia2">Endere\u00E7o de refer\u00EAncia 2.</param>
+        /// <param name="Salario">Sal\u00E1rio.</param>
+        /// <param name="ImpedidoFinanciamento">Flag para s\u00F3cios do banco que s\u00E3o portadores do cart\u00E3o, mas n\u00E3o podem operar transa\u00E7\u00F5es de cr\u00E9dito(Lei n. 4.595/64).</param>
+        /// <param name="NaturalidadeCidade">Apresenta o nome da cidade de nascimento da pessoa f\u00EDsica.</param>
+        /// <param name="NaturalidadeEstado">Apresenta a sigla do estado de nascimento da pessoa f\u00EDsica.</param>
+        /// <param name="GrauInstrucao">Apresenta o grau de instru\u00E7\u00E3o da pessoa f\u00EDsica.</param>
+        /// <param name="NumeroDependentes">Apresenta o n\u00FAmero de dependentes da pessoa f\u00EDsica.</param>
+        /// <param name="NomePai">Apresenta o nome do pai da pessoa f\u00EDsica.</param>
+        /// <param name="ChequeEspecial">Indica se pessoa f\u00EDsica aderir ao cheque especial.</param>
 
         public PessoaDetalheResponse(long? IdPessoa = null, string NomeMae = null, long? IdEstadoCivil = null, string IdProfissao = null, long? IdNaturezaOcupacao = null, long? IdNacionalidade = null, int? NumeroBanco = null, int? NumeroAgencia = null, string NumeroContaCorrente = null, string Email = null, string NomeEmpresa = null, string NomeReferencia1 = null, string EnderecoReferencia1 = null, string NomeReferencia2 = null, string EnderecoReferencia2 = null, double? Salario = null, bool? ImpedidoFinanciamento = null, string NaturalidadeCidade = null, string NaturalidadeEstado = null, int? GrauInstrucao = null, int? NumeroDependentes = null, string NomePai = null, int? ChequeEspecial = null)
         {
@@ -76,163 +76,163 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{pessoa_detalhe_response_id_pessoa_value}}}
+        /// C\u00F3digo identificador da pessoa
         /// </summary>
-        /// <value>{{{pessoa_detalhe_response_id_pessoa_value}}}</value>
+        /// <value>C\u00F3digo identificador da pessoa</value>
         [DataMember(Name="idPessoa", EmitDefaultValue=false)]
         public long? IdPessoa { get; set; }
     
         /// <summary>
-        /// {{{pessoa_detalhe_response_nome_mae_value}}}
+        /// Apresenta o nome da m\u00E3e da pessoa fisica
         /// </summary>
-        /// <value>{{{pessoa_detalhe_response_nome_mae_value}}}</value>
+        /// <value>Apresenta o nome da m\u00E3e da pessoa fisica</value>
         [DataMember(Name="nomeMae", EmitDefaultValue=false)]
         public string NomeMae { get; set; }
     
         /// <summary>
-        /// {{{pessoa_detalhe_response_id_estado_civil_value}}}
+        /// Id Estado civil da pessoa fisica
         /// </summary>
-        /// <value>{{{pessoa_detalhe_response_id_estado_civil_value}}}</value>
+        /// <value>Id Estado civil da pessoa fisica</value>
         [DataMember(Name="idEstadoCivil", EmitDefaultValue=false)]
         public long? IdEstadoCivil { get; set; }
     
         /// <summary>
-        /// {{{pessoa_detalhe_response_id_profissao_value}}}
+        /// Profiss\u00E3o da pessoa fisica
         /// </summary>
-        /// <value>{{{pessoa_detalhe_response_id_profissao_value}}}</value>
+        /// <value>Profiss\u00E3o da pessoa fisica</value>
         [DataMember(Name="idProfissao", EmitDefaultValue=false)]
         public string IdProfissao { get; set; }
     
         /// <summary>
-        /// {{{pessoa_detalhe_response_id_natureza_ocupacao_value}}}
+        /// Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica
         /// </summary>
-        /// <value>{{{pessoa_detalhe_response_id_natureza_ocupacao_value}}}</value>
+        /// <value>Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica</value>
         [DataMember(Name="idNaturezaOcupacao", EmitDefaultValue=false)]
         public long? IdNaturezaOcupacao { get; set; }
     
         /// <summary>
-        /// {{{pessoa_detalhe_response_id_nacionalidade_value}}}
+        /// Id Nacionalidade da pessoa fisica
         /// </summary>
-        /// <value>{{{pessoa_detalhe_response_id_nacionalidade_value}}}</value>
+        /// <value>Id Nacionalidade da pessoa fisica</value>
         [DataMember(Name="idNacionalidade", EmitDefaultValue=false)]
         public long? IdNacionalidade { get; set; }
     
         /// <summary>
-        /// {{{pessoa_detalhe_response_numero_banco_value}}}
+        /// N\u00FAmero do banco
         /// </summary>
-        /// <value>{{{pessoa_detalhe_response_numero_banco_value}}}</value>
+        /// <value>N\u00FAmero do banco</value>
         [DataMember(Name="numeroBanco", EmitDefaultValue=false)]
         public int? NumeroBanco { get; set; }
     
         /// <summary>
-        /// {{{pessoa_detalhe_response_numero_agencia_value}}}
+        /// N\u00FAmero da ag\u00EAncia
         /// </summary>
-        /// <value>{{{pessoa_detalhe_response_numero_agencia_value}}}</value>
+        /// <value>N\u00FAmero da ag\u00EAncia</value>
         [DataMember(Name="numeroAgencia", EmitDefaultValue=false)]
         public int? NumeroAgencia { get; set; }
     
         /// <summary>
-        /// {{{pessoa_detalhe_response_numero_conta_corrente_value}}}
+        /// N\u00FAmero da conta corrente
         /// </summary>
-        /// <value>{{{pessoa_detalhe_response_numero_conta_corrente_value}}}</value>
+        /// <value>N\u00FAmero da conta corrente</value>
         [DataMember(Name="numeroContaCorrente", EmitDefaultValue=false)]
         public string NumeroContaCorrente { get; set; }
     
         /// <summary>
-        /// {{{pessoa_detalhe_response_email_value}}}
+        /// Email da pessoa fisica
         /// </summary>
-        /// <value>{{{pessoa_detalhe_response_email_value}}}</value>
+        /// <value>Email da pessoa fisica</value>
         [DataMember(Name="email", EmitDefaultValue=false)]
         public string Email { get; set; }
     
         /// <summary>
-        /// {{{pessoa_detalhe_response_nome_empresa_value}}}
+        /// Nome que deve ser impresso no cart\u00E3o
         /// </summary>
-        /// <value>{{{pessoa_detalhe_response_nome_empresa_value}}}</value>
+        /// <value>Nome que deve ser impresso no cart\u00E3o</value>
         [DataMember(Name="nomeEmpresa", EmitDefaultValue=false)]
         public string NomeEmpresa { get; set; }
     
         /// <summary>
-        /// {{{pessoa_detalhe_response_nome_referencia_1_value}}}
+        /// Nome de refer\u00EAncia 1
         /// </summary>
-        /// <value>{{{pessoa_detalhe_response_nome_referencia_1_value}}}</value>
+        /// <value>Nome de refer\u00EAncia 1</value>
         [DataMember(Name="nomeReferencia1", EmitDefaultValue=false)]
         public string NomeReferencia1 { get; set; }
     
         /// <summary>
-        /// {{{pessoa_detalhe_response_endereco_referencia_1_value}}}
+        /// Endere\u00E7o de refer\u00EAncia 1
         /// </summary>
-        /// <value>{{{pessoa_detalhe_response_endereco_referencia_1_value}}}</value>
+        /// <value>Endere\u00E7o de refer\u00EAncia 1</value>
         [DataMember(Name="enderecoReferencia1", EmitDefaultValue=false)]
         public string EnderecoReferencia1 { get; set; }
     
         /// <summary>
-        /// {{{pessoa_detalhe_response_nome_referencia_2_value}}}
+        /// Nome de refer\u00EAncia 2
         /// </summary>
-        /// <value>{{{pessoa_detalhe_response_nome_referencia_2_value}}}</value>
+        /// <value>Nome de refer\u00EAncia 2</value>
         [DataMember(Name="nomeReferencia2", EmitDefaultValue=false)]
         public string NomeReferencia2 { get; set; }
     
         /// <summary>
-        /// {{{pessoa_detalhe_response_endereco_referencia_2_value}}}
+        /// Endere\u00E7o de refer\u00EAncia 2
         /// </summary>
-        /// <value>{{{pessoa_detalhe_response_endereco_referencia_2_value}}}</value>
+        /// <value>Endere\u00E7o de refer\u00EAncia 2</value>
         [DataMember(Name="enderecoReferencia2", EmitDefaultValue=false)]
         public string EnderecoReferencia2 { get; set; }
     
         /// <summary>
-        /// {{{pessoa_detalhe_response_salario_value}}}
+        /// Sal\u00E1rio
         /// </summary>
-        /// <value>{{{pessoa_detalhe_response_salario_value}}}</value>
+        /// <value>Sal\u00E1rio</value>
         [DataMember(Name="salario", EmitDefaultValue=false)]
         public double? Salario { get; set; }
     
         /// <summary>
-        /// {{{pessoa_detalhe_response_impedido_de_financiamento_value}}}
+        /// Flag para s\u00F3cios do banco que s\u00E3o portadores do cart\u00E3o, mas n\u00E3o podem operar transa\u00E7\u00F5es de cr\u00E9dito(Lei n. 4.595/64)
         /// </summary>
-        /// <value>{{{pessoa_detalhe_response_impedido_de_financiamento_value}}}</value>
+        /// <value>Flag para s\u00F3cios do banco que s\u00E3o portadores do cart\u00E3o, mas n\u00E3o podem operar transa\u00E7\u00F5es de cr\u00E9dito(Lei n. 4.595/64)</value>
         [DataMember(Name="impedidoFinanciamento", EmitDefaultValue=false)]
         public bool? ImpedidoFinanciamento { get; set; }
     
         /// <summary>
-        /// {{{pessoa_detalhe_response_naturalidade_Cidade_value}}}
+        /// Apresenta o nome da cidade de nascimento da pessoa f\u00EDsica
         /// </summary>
-        /// <value>{{{pessoa_detalhe_response_naturalidade_Cidade_value}}}</value>
+        /// <value>Apresenta o nome da cidade de nascimento da pessoa f\u00EDsica</value>
         [DataMember(Name="naturalidadeCidade", EmitDefaultValue=false)]
         public string NaturalidadeCidade { get; set; }
     
         /// <summary>
-        /// {{{pessoa_detalhe_response_naturalidade_Estado_value}}}
+        /// Apresenta a sigla do estado de nascimento da pessoa f\u00EDsica
         /// </summary>
-        /// <value>{{{pessoa_detalhe_response_naturalidade_Estado_value}}}</value>
+        /// <value>Apresenta a sigla do estado de nascimento da pessoa f\u00EDsica</value>
         [DataMember(Name="naturalidadeEstado", EmitDefaultValue=false)]
         public string NaturalidadeEstado { get; set; }
     
         /// <summary>
-        /// {{{pessoa_detalhe_response_grau_Instrucao_value}}}
+        /// Apresenta o grau de instru\u00E7\u00E3o da pessoa f\u00EDsica
         /// </summary>
-        /// <value>{{{pessoa_detalhe_response_grau_Instrucao_value}}}</value>
+        /// <value>Apresenta o grau de instru\u00E7\u00E3o da pessoa f\u00EDsica</value>
         [DataMember(Name="grauInstrucao", EmitDefaultValue=false)]
         public int? GrauInstrucao { get; set; }
     
         /// <summary>
-        /// {{{pessoa_detalhe_response_numero_Dependentes_value}}}
+        /// Apresenta o n\u00FAmero de dependentes da pessoa f\u00EDsica
         /// </summary>
-        /// <value>{{{pessoa_detalhe_response_numero_Dependentes_value}}}</value>
+        /// <value>Apresenta o n\u00FAmero de dependentes da pessoa f\u00EDsica</value>
         [DataMember(Name="numeroDependentes", EmitDefaultValue=false)]
         public int? NumeroDependentes { get; set; }
     
         /// <summary>
-        /// {{{pessoa_detalhe_response_nome_Pai_value}}}
+        /// Apresenta o nome do pai da pessoa f\u00EDsica
         /// </summary>
-        /// <value>{{{pessoa_detalhe_response_nome_Pai_value}}}</value>
+        /// <value>Apresenta o nome do pai da pessoa f\u00EDsica</value>
         [DataMember(Name="nomePai", EmitDefaultValue=false)]
         public string NomePai { get; set; }
     
         /// <summary>
-        /// {{{pessoa_detalhe_response_cheque_Especial_value}}}
+        /// Indica se pessoa f\u00EDsica aderir ao cheque especial
         /// </summary>
-        /// <value>{{{pessoa_detalhe_response_cheque_Especial_value}}}</value>
+        /// <value>Indica se pessoa f\u00EDsica aderir ao cheque especial</value>
         [DataMember(Name="chequeEspecial", EmitDefaultValue=false)]
         public int? ChequeEspecial { get; set; }
     

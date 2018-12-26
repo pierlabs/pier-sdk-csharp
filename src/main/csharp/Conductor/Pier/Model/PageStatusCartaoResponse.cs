@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{page_status_cartao_response_description}}}
+    /// Lista de Status Cart\u00F5es
     /// </summary>
     [DataContract]
     public partial class PageStatusCartaoResponse :  IEquatable<PageStatusCartaoResponse>

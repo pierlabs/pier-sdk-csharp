@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{lote_cartoes_pre_pagos_response_description}}}
+    /// Lote Cart\u00F5es Pr\u00E9-Pagos
     /// </summary>
     [DataContract]
     public partial class LoteCartoesPrePagosResponse :  IEquatable<LoteCartoesPrePagosResponse>
@@ -22,17 +22,17 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="LoteCartoesPrePagosResponse" /> class.
         /// Initializes a new instance of the <see cref="LoteCartoesPrePagosResponse" />class.
         /// </summary>
-        /// <param name="Id">{{{lote_cartoes_pre_pagos_response_id_value}}} (required).</param>
-        /// <param name="IdOrigemComercial">{{{lote_cartoes_pre_pagos_response_id_origem_comercial_value}}} (required).</param>
-        /// <param name="IdProduto">{{{lote_cartoes_pre_pagos_response_id_produto_value}}} (required).</param>
-        /// <param name="IdTipoCartao">{{{lote_cartoes_pre_pagos_response_id_tipo_cartao_value}}} (required).</param>
-        /// <param name="IdImagem">{{{lote_cartoes_pre_pagos_response_id_imagem_value}}} (required).</param>
-        /// <param name="IdEndereco">{{{lote_cartoes_pre_pagos_response_id_endereco_value}}} (required).</param>
-        /// <param name="Quantidade">{{{lote_cartoes_pre_pagos_response_quantidade_value}}} (required).</param>
-        /// <param name="DataCadastro">{{{lote_cartoes_pre_pagos_response_data_cadastro_value}}} (required).</param>
-        /// <param name="UsuarioCadastro">{{{lote_cartoes_pre_pagos_response_usuario_cadastro_value}}} (required).</param>
-        /// <param name="StatusProcessamento">{{{lote_cartoes_pre_pagos_response_status_processamento_value}}} (required).</param>
-        /// <param name="IdentificadorExterno">{{{lote_cartoes_pre_pagos_response_identificador_externo_value}}} (required).</param>
+        /// <param name="Id">C\u00F3digo de identifica\u00E7\u00E3o do lote de cart\u00F5es pr\u00E9-pagos (id) (required).</param>
+        /// <param name="IdOrigemComercial">C\u00F3digo identificador da origem comercial (required).</param>
+        /// <param name="IdProduto">C\u00F3digo identificador do Produto (required).</param>
+        /// <param name="IdTipoCartao">C\u00F3digo identificador do tipo do cart\u00E3o (required).</param>
+        /// <param name="IdImagem">C\u00F3digo identificador da Imagem do cart\u00E3o (required).</param>
+        /// <param name="IdEndereco">C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (required).</param>
+        /// <param name="Quantidade">N\u00FAmero de cart\u00F5es existentes no Lote (required).</param>
+        /// <param name="DataCadastro">Data de cadastro do lote de cart\u00F5es pr\u00E9-pagos (required).</param>
+        /// <param name="UsuarioCadastro">Nome do usu\u00E1rio que criou o lote (required).</param>
+        /// <param name="StatusProcessamento">Indica o status de processamento do lote (required).</param>
+        /// <param name="IdentificadorExterno">N\u00FAmero de identifica\u00E7\u00E3o externo (utilizado pelo emissor) (required).</param>
 
         public LoteCartoesPrePagosResponse(long? Id = null, long? IdOrigemComercial = null, long? IdProduto = null, long? IdTipoCartao = null, long? IdImagem = null, long? IdEndereco = null, int? Quantidade = null, string DataCadastro = null, string UsuarioCadastro = null, int? StatusProcessamento = null, string IdentificadorExterno = null)
         {
@@ -140,79 +140,79 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{lote_cartoes_pre_pagos_response_id_value}}}
+        /// C\u00F3digo de identifica\u00E7\u00E3o do lote de cart\u00F5es pr\u00E9-pagos (id)
         /// </summary>
-        /// <value>{{{lote_cartoes_pre_pagos_response_id_value}}}</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do lote de cart\u00F5es pr\u00E9-pagos (id)</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{lote_cartoes_pre_pagos_response_id_origem_comercial_value}}}
+        /// C\u00F3digo identificador da origem comercial
         /// </summary>
-        /// <value>{{{lote_cartoes_pre_pagos_response_id_origem_comercial_value}}}</value>
+        /// <value>C\u00F3digo identificador da origem comercial</value>
         [DataMember(Name="idOrigemComercial", EmitDefaultValue=false)]
         public long? IdOrigemComercial { get; set; }
     
         /// <summary>
-        /// {{{lote_cartoes_pre_pagos_response_id_produto_value}}}
+        /// C\u00F3digo identificador do Produto
         /// </summary>
-        /// <value>{{{lote_cartoes_pre_pagos_response_id_produto_value}}}</value>
+        /// <value>C\u00F3digo identificador do Produto</value>
         [DataMember(Name="idProduto", EmitDefaultValue=false)]
         public long? IdProduto { get; set; }
     
         /// <summary>
-        /// {{{lote_cartoes_pre_pagos_response_id_tipo_cartao_value}}}
+        /// C\u00F3digo identificador do tipo do cart\u00E3o
         /// </summary>
-        /// <value>{{{lote_cartoes_pre_pagos_response_id_tipo_cartao_value}}}</value>
+        /// <value>C\u00F3digo identificador do tipo do cart\u00E3o</value>
         [DataMember(Name="idTipoCartao", EmitDefaultValue=false)]
         public long? IdTipoCartao { get; set; }
     
         /// <summary>
-        /// {{{lote_cartoes_pre_pagos_response_id_imagem_value}}}
+        /// C\u00F3digo identificador da Imagem do cart\u00E3o
         /// </summary>
-        /// <value>{{{lote_cartoes_pre_pagos_response_id_imagem_value}}}</value>
+        /// <value>C\u00F3digo identificador da Imagem do cart\u00E3o</value>
         [DataMember(Name="idImagem", EmitDefaultValue=false)]
         public long? IdImagem { get; set; }
     
         /// <summary>
-        /// {{{lote_cartoes_pre_pagos_response_id_endereco_value}}}
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o
         /// </summary>
-        /// <value>{{{lote_cartoes_pre_pagos_response_id_endereco_value}}}</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o</value>
         [DataMember(Name="idEndereco", EmitDefaultValue=false)]
         public long? IdEndereco { get; set; }
     
         /// <summary>
-        /// {{{lote_cartoes_pre_pagos_response_quantidade_value}}}
+        /// N\u00FAmero de cart\u00F5es existentes no Lote
         /// </summary>
-        /// <value>{{{lote_cartoes_pre_pagos_response_quantidade_value}}}</value>
+        /// <value>N\u00FAmero de cart\u00F5es existentes no Lote</value>
         [DataMember(Name="quantidade", EmitDefaultValue=false)]
         public int? Quantidade { get; set; }
     
         /// <summary>
-        /// {{{lote_cartoes_pre_pagos_response_data_cadastro_value}}}
+        /// Data de cadastro do lote de cart\u00F5es pr\u00E9-pagos
         /// </summary>
-        /// <value>{{{lote_cartoes_pre_pagos_response_data_cadastro_value}}}</value>
+        /// <value>Data de cadastro do lote de cart\u00F5es pr\u00E9-pagos</value>
         [DataMember(Name="dataCadastro", EmitDefaultValue=false)]
         public string DataCadastro { get; set; }
     
         /// <summary>
-        /// {{{lote_cartoes_pre_pagos_response_usuario_cadastro_value}}}
+        /// Nome do usu\u00E1rio que criou o lote
         /// </summary>
-        /// <value>{{{lote_cartoes_pre_pagos_response_usuario_cadastro_value}}}</value>
+        /// <value>Nome do usu\u00E1rio que criou o lote</value>
         [DataMember(Name="usuarioCadastro", EmitDefaultValue=false)]
         public string UsuarioCadastro { get; set; }
     
         /// <summary>
-        /// {{{lote_cartoes_pre_pagos_response_status_processamento_value}}}
+        /// Indica o status de processamento do lote
         /// </summary>
-        /// <value>{{{lote_cartoes_pre_pagos_response_status_processamento_value}}}</value>
+        /// <value>Indica o status de processamento do lote</value>
         [DataMember(Name="statusProcessamento", EmitDefaultValue=false)]
         public int? StatusProcessamento { get; set; }
     
         /// <summary>
-        /// {{{lote_cartoes_pre_pagos_response_identificador_externo_value}}}
+        /// N\u00FAmero de identifica\u00E7\u00E3o externo (utilizado pelo emissor)
         /// </summary>
-        /// <value>{{{lote_cartoes_pre_pagos_response_identificador_externo_value}}}</value>
+        /// <value>N\u00FAmero de identifica\u00E7\u00E3o externo (utilizado pelo emissor)</value>
         [DataMember(Name="identificadorExterno", EmitDefaultValue=false)]
         public string IdentificadorExterno { get; set; }
     

@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{usuario_token_resposta_descricao}}}
+    /// Representa\u00E7\u00E3o do recurso Usuario Token
     /// </summary>
     [DataContract]
     public partial class UsuarioTokenResponse :  IEquatable<UsuarioTokenResponse>
@@ -22,15 +22,15 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="UsuarioTokenResponse" /> class.
         /// Initializes a new instance of the <see cref="UsuarioTokenResponse" />class.
         /// </summary>
-        /// <param name="Ativo">{{{usuario_token_resposta_ativo_descricao}}}.</param>
-        /// <param name="Cpf">{{{usuario_token_resposta_cpf_descricao}}}.</param>
-        /// <param name="DataInclusao">{{{usuario_token_resposta_data_inclusao_descricao}}}.</param>
-        /// <param name="DataNascimento">{{{usuario_token_resposta_data_nascimento_descricao}}}.</param>
-        /// <param name="Ddd">{{{usuario_token_resposta_ddd_descricao}}}.</param>
-        /// <param name="Email">{{{usuario_token_resposta_email_descricao}}}.</param>
-        /// <param name="Telefone">{{{usuario_token_resposta_telefone_descricao}}}.</param>
-        /// <param name="Token">{{{usuario_token_resposta_token_descricao}}}.</param>
-        /// <param name="Validade">{{{usuario_token_resposta_validade_descricao}}}.</param>
+        /// <param name="Ativo">Se o token est\u00E1 ativo.</param>
+        /// <param name="Cpf">CPF do usu\u00E1rio.</param>
+        /// <param name="DataInclusao">Data da inclusao do usu\u00E1rio.</param>
+        /// <param name="DataNascimento">Data de nascimento do usu\u00E1rio.</param>
+        /// <param name="Ddd">DDD do telefone do usu\u00E1rio.</param>
+        /// <param name="Email">Email do usu\u00E1rio.</param>
+        /// <param name="Telefone">N\u00FAmero do telefone do usu\u00E1rio.</param>
+        /// <param name="Token">Token do usu\u00E1rio.</param>
+        /// <param name="Validade">Validade do token.</param>
 
         public UsuarioTokenResponse(bool? Ativo = null, string Cpf = null, string DataInclusao = null, string DataNascimento = null, string Ddd = null, string Email = null, string Telefone = null, string Token = null, string Validade = null)
         {
@@ -48,65 +48,65 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{usuario_token_resposta_ativo_descricao}}}
+        /// Se o token est\u00E1 ativo
         /// </summary>
-        /// <value>{{{usuario_token_resposta_ativo_descricao}}}</value>
+        /// <value>Se o token est\u00E1 ativo</value>
         [DataMember(Name="ativo", EmitDefaultValue=false)]
         public bool? Ativo { get; set; }
     
         /// <summary>
-        /// {{{usuario_token_resposta_cpf_descricao}}}
+        /// CPF do usu\u00E1rio
         /// </summary>
-        /// <value>{{{usuario_token_resposta_cpf_descricao}}}</value>
+        /// <value>CPF do usu\u00E1rio</value>
         [DataMember(Name="cpf", EmitDefaultValue=false)]
         public string Cpf { get; set; }
     
         /// <summary>
-        /// {{{usuario_token_resposta_data_inclusao_descricao}}}
+        /// Data da inclusao do usu\u00E1rio
         /// </summary>
-        /// <value>{{{usuario_token_resposta_data_inclusao_descricao}}}</value>
+        /// <value>Data da inclusao do usu\u00E1rio</value>
         [DataMember(Name="dataInclusao", EmitDefaultValue=false)]
         public string DataInclusao { get; set; }
     
         /// <summary>
-        /// {{{usuario_token_resposta_data_nascimento_descricao}}}
+        /// Data de nascimento do usu\u00E1rio
         /// </summary>
-        /// <value>{{{usuario_token_resposta_data_nascimento_descricao}}}</value>
+        /// <value>Data de nascimento do usu\u00E1rio</value>
         [DataMember(Name="dataNascimento", EmitDefaultValue=false)]
         public string DataNascimento { get; set; }
     
         /// <summary>
-        /// {{{usuario_token_resposta_ddd_descricao}}}
+        /// DDD do telefone do usu\u00E1rio
         /// </summary>
-        /// <value>{{{usuario_token_resposta_ddd_descricao}}}</value>
+        /// <value>DDD do telefone do usu\u00E1rio</value>
         [DataMember(Name="ddd", EmitDefaultValue=false)]
         public string Ddd { get; set; }
     
         /// <summary>
-        /// {{{usuario_token_resposta_email_descricao}}}
+        /// Email do usu\u00E1rio
         /// </summary>
-        /// <value>{{{usuario_token_resposta_email_descricao}}}</value>
+        /// <value>Email do usu\u00E1rio</value>
         [DataMember(Name="email", EmitDefaultValue=false)]
         public string Email { get; set; }
     
         /// <summary>
-        /// {{{usuario_token_resposta_telefone_descricao}}}
+        /// N\u00FAmero do telefone do usu\u00E1rio
         /// </summary>
-        /// <value>{{{usuario_token_resposta_telefone_descricao}}}</value>
+        /// <value>N\u00FAmero do telefone do usu\u00E1rio</value>
         [DataMember(Name="telefone", EmitDefaultValue=false)]
         public string Telefone { get; set; }
     
         /// <summary>
-        /// {{{usuario_token_resposta_token_descricao}}}
+        /// Token do usu\u00E1rio
         /// </summary>
-        /// <value>{{{usuario_token_resposta_token_descricao}}}</value>
+        /// <value>Token do usu\u00E1rio</value>
         [DataMember(Name="token", EmitDefaultValue=false)]
         public string Token { get; set; }
     
         /// <summary>
-        /// {{{usuario_token_resposta_validade_descricao}}}
+        /// Validade do token
         /// </summary>
-        /// <value>{{{usuario_token_resposta_validade_descricao}}}</value>
+        /// <value>Validade do token</value>
         [DataMember(Name="validade", EmitDefaultValue=false)]
         public string Validade { get; set; }
     

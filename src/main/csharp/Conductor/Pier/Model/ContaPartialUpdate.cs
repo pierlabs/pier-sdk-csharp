@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{conta_partial_object_description}}}
+    /// Objeto para altera\u00E7\u00E3o de contas. Nenhum dos campos s\u00E3o obrigat\u00F3rios. Devem ser informados apenas os campos que deseja modificar
     /// </summary>
     [DataContract]
     public partial class ContaPartialUpdate :  IEquatable<ContaPartialUpdate>
@@ -22,8 +22,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="ContaPartialUpdate" /> class.
         /// Initializes a new instance of the <see cref="ContaPartialUpdate" />class.
         /// </summary>
-        /// <param name="FuncaoAtiva">{{{conta_partial_funcao_ativa_value}}}.</param>
-        /// <param name="IdContaEmissor">{{{conta_partial_id_conta_emissor_value}}}.</param>
+        /// <param name="FuncaoAtiva">Fun\u00E7\u00E3o ativa da conta. Representa a fun\u00E7\u00E3o na qual a conta encontra-se habilitada. Propriedade s\u00F3 deve ser informada caso o emissor fa\u00E7a uso de fun\u00E7\u00F5es para contas. As fun\u00E7\u00F5es dispon\u00EDveis para contas podem ser visualizadas em api/contas/tipos-funcoes.</param>
+        /// <param name="IdContaEmissor">Identificador da conta de controle interno criado pelo emissor.</param>
 
         public ContaPartialUpdate(string FuncaoAtiva = null, long? IdContaEmissor = null)
         {
@@ -34,16 +34,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{conta_partial_funcao_ativa_value}}}
+        /// Fun\u00E7\u00E3o ativa da conta. Representa a fun\u00E7\u00E3o na qual a conta encontra-se habilitada. Propriedade s\u00F3 deve ser informada caso o emissor fa\u00E7a uso de fun\u00E7\u00F5es para contas. As fun\u00E7\u00F5es dispon\u00EDveis para contas podem ser visualizadas em api/contas/tipos-funcoes
         /// </summary>
-        /// <value>{{{conta_partial_funcao_ativa_value}}}</value>
+        /// <value>Fun\u00E7\u00E3o ativa da conta. Representa a fun\u00E7\u00E3o na qual a conta encontra-se habilitada. Propriedade s\u00F3 deve ser informada caso o emissor fa\u00E7a uso de fun\u00E7\u00F5es para contas. As fun\u00E7\u00F5es dispon\u00EDveis para contas podem ser visualizadas em api/contas/tipos-funcoes</value>
         [DataMember(Name="funcaoAtiva", EmitDefaultValue=false)]
         public string FuncaoAtiva { get; set; }
     
         /// <summary>
-        /// {{{conta_partial_id_conta_emissor_value}}}
+        /// Identificador da conta de controle interno criado pelo emissor
         /// </summary>
-        /// <value>{{{conta_partial_id_conta_emissor_value}}}</value>
+        /// <value>Identificador da conta de controle interno criado pelo emissor</value>
         [DataMember(Name="idContaEmissor", EmitDefaultValue=false)]
         public long? IdContaEmissor { get; set; }
     

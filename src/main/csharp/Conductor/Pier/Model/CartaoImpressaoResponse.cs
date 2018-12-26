@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{cartao_impressao_response_description}}}
+    /// Objeto Cart\u00E3o para Impresso
     /// </summary>
     [DataContract]
     public partial class CartaoImpressaoResponse :  IEquatable<CartaoImpressaoResponse>
@@ -22,30 +22,30 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="CartaoImpressaoResponse" /> class.
         /// Initializes a new instance of the <see cref="CartaoImpressaoResponse" />class.
         /// </summary>
-        /// <param name="IdConta">{{{cartao_impressao_response_id_conta_value}}}.</param>
-        /// <param name="IdPessoa">{{{cartao_impressao_response_id_pessoa_value}}}.</param>
-        /// <param name="IdCartao">{{{cartao_impressao_response_id_cartao_value}}}.</param>
-        /// <param name="IdBandeira">{{{cartao_impressao_response_id_bandeira_value}}}.</param>
-        /// <param name="IdTipoCartao">{{{cartao_impressao_response_id_tipo_cartao_value}}}.</param>
-        /// <param name="NumeroCartao">{{{cartao_impressao_response_numero_cartao_value}}}.</param>
-        /// <param name="NomePlastico">{{{cartao_impressao_response_nome_plastico_value}}}.</param>
-        /// <param name="Cvv2">{{{cartao_impressao_response_cvv2_value}}}.</param>
-        /// <param name="DataGeracao">{{{cartao_impressao_response_data_geracao_value}}}.</param>
-        /// <param name="DataValidade">{{{cartao_impressao_response_data_validade_value}}}.</param>
-        /// <param name="NomeOrigemComercial">{{{cartao_impressao_response_nome_origem_comercial_value}}}.</param>
-        /// <param name="NomeEmpresa">{{{cartao_impressao_response_nome_empresa_value}}}.</param>
-        /// <param name="NumeroAgencia">{{{cartao_impressao_response_numero_agencia_value}}}.</param>
-        /// <param name="NumeroContaCorente">{{{cartao_impressao_response_numero_conta_corente_value}}}.</param>
-        /// <param name="NomeEmpresaBeneficio">{{{cartao_impressao_response_nome_empresa_beneficio_value}}}.</param>
-        /// <param name="Cpf">{{{cartao_impressao_response_cpf_value}}}.</param>
-        /// <param name="TipoPortador">{{{cartao_impressao_response_tipo_portador_value}}}.</param>
-        /// <param name="NomeEmpregador">{{{cartao_impressao_response_nome_empregador_value}}}.</param>
-        /// <param name="Trilha1">{{{cartao_impressao_response_trilha1_value}}}.</param>
-        /// <param name="Trilha2">{{{cartao_impressao_response_trilha2_value}}}.</param>
-        /// <param name="TrilhaCVV1">{{{cartao_impressao_response_trilha_c_v_v1_value}}}.</param>
-        /// <param name="TrilhaCVV2">{{{cartao_impressao_response_trilha_c_v_v2_value}}}.</param>
-        /// <param name="FlagVirtual">{{{cartao_impressao_response_flag_virtual_value}}}.</param>
-        /// <param name="NumeroCartaoHash">{{{cartao_impressao_response_numero_cartao_hash_value}}}.</param>
+        /// <param name="IdConta">Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id) a qual o cart\u00E3o gerado pertence.</param>
+        /// <param name="IdPessoa">Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id) portadora do cart\u00E3o gerado.</param>
+        /// <param name="IdCartao">Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id) que foi gerado.</param>
+        /// <param name="IdBandeira">Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Bandeira (id) a qual o Cart\u00E3o pertence, quando bandeirado.</param>
+        /// <param name="IdTipoCartao">Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Cart\u00E3o (id) atribu\u00EDdo ao Cart\u00E3o.</param>
+        /// <param name="NumeroCartao">Apresenta o n\u00FAmero do cart\u00E3o.</param>
+        /// <param name="NomePlastico">Apresenta o nome do Portador do Cart\u00E3o.</param>
+        /// <param name="Cvv2">Apresenta o n\u00FAmero do CVV a ser impresso no Cart\u00E3o.</param>
+        /// <param name="DataGeracao">Apresenta a data de emiss\u00E3o do Cart\u00E3o.</param>
+        /// <param name="DataValidade">Apresenta a data de Validade do Cart\u00E3o.</param>
+        /// <param name="NomeOrigemComercial">Apresenta o nome da Origem Comercial que realizou o cadastro do Titular da Conta a qual o Cart\u00E3o pertence.</param>
+        /// <param name="NomeEmpresa">Apresenta o nome da Empresa (Pessoa Jur\u00EDdica) titular do Cart\u00E3o, quando aplic\u00E1vel.</param>
+        /// <param name="NumeroAgencia">Apresenta o n\u00FAmero da Ag\u00EAncia a ser impresso no Cart\u00E3o, quando aplic\u00E1vel.</param>
+        /// <param name="NumeroContaCorente">Apresenta o n\u00FAmero da Conta Corrente a ser impresso no Cart\u00E3o, quando aplic\u00E1vel.</param>
+        /// <param name="NomeEmpresaBeneficio">Apresenta o nome da Pessoa F\u00EDsica ou Jur\u00EDdica que contratou servi\u00E7os de benef\u00EDcio para o portador do cart\u00E3o, quando aplic\u00E1vel.</param>
+        /// <param name="Cpf">Apresenta o CPF do Portador do Cart\u00E3o.</param>
+        /// <param name="TipoPortador">Apresenta o tipo do Portador do cart\u00E3o, sendo: (&#39;T&#39;: Titular, &#39;A&#39;: Adicional).</param>
+        /// <param name="NomeEmpregador">Apresenta o nome da Pessoa F\u00EDsica ou Jur\u00EDdica a ser impresso no cart\u00E3o, quando aplic\u00E1vel.</param>
+        /// <param name="Trilha1">Apresenta os dados da Trilha1, seguindo as regras de trilha do emissor.</param>
+        /// <param name="Trilha2">Apresenta os dados da Trilha2, seguindo as regras de trilha do emissor.</param>
+        /// <param name="TrilhaCVV1">Apresenta os dados da TrilhaCVV01, seguindo as regras de trilha do emissor.</param>
+        /// <param name="TrilhaCVV2">Apresenta os dados da TrilhaCVV02, seguindo as regras de trilha do emissor.</param>
+        /// <param name="FlagVirtual">Apresenta o status que informa se o cart\u00E3o \u00E9 virtual.</param>
+        /// <param name="NumeroCartaoHash">Apresenta o numero da hash do cart\u00E3o.</param>
 
         public CartaoImpressaoResponse(long? IdConta = null, long? IdPessoa = null, long? IdCartao = null, long? IdBandeira = null, long? IdTipoCartao = null, string NumeroCartao = null, string NomePlastico = null, string Cvv2 = null, string DataGeracao = null, string DataValidade = null, string NomeOrigemComercial = null, string NomeEmpresa = null, int? NumeroAgencia = null, string NumeroContaCorente = null, string NomeEmpresaBeneficio = null, string Cpf = null, string TipoPortador = null, string NomeEmpregador = null, string Trilha1 = null, string Trilha2 = null, string TrilhaCVV1 = null, string TrilhaCVV2 = null, int? FlagVirtual = null, long? NumeroCartaoHash = null)
         {
@@ -78,170 +78,170 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{cartao_impressao_response_id_conta_value}}}
+        /// Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id) a qual o cart\u00E3o gerado pertence
         /// </summary>
-        /// <value>{{{cartao_impressao_response_id_conta_value}}}</value>
+        /// <value>Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id) a qual o cart\u00E3o gerado pertence</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// {{{cartao_impressao_response_id_pessoa_value}}}
+        /// Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id) portadora do cart\u00E3o gerado
         /// </summary>
-        /// <value>{{{cartao_impressao_response_id_pessoa_value}}}</value>
+        /// <value>Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id) portadora do cart\u00E3o gerado</value>
         [DataMember(Name="idPessoa", EmitDefaultValue=false)]
         public long? IdPessoa { get; set; }
     
         /// <summary>
-        /// {{{cartao_impressao_response_id_cartao_value}}}
+        /// Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id) que foi gerado
         /// </summary>
-        /// <value>{{{cartao_impressao_response_id_cartao_value}}}</value>
+        /// <value>Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id) que foi gerado</value>
         [DataMember(Name="idCartao", EmitDefaultValue=false)]
         public long? IdCartao { get; set; }
     
         /// <summary>
-        /// {{{cartao_impressao_response_id_bandeira_value}}}
+        /// Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Bandeira (id) a qual o Cart\u00E3o pertence, quando bandeirado
         /// </summary>
-        /// <value>{{{cartao_impressao_response_id_bandeira_value}}}</value>
+        /// <value>Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Bandeira (id) a qual o Cart\u00E3o pertence, quando bandeirado</value>
         [DataMember(Name="idBandeira", EmitDefaultValue=false)]
         public long? IdBandeira { get; set; }
     
         /// <summary>
-        /// {{{cartao_impressao_response_id_tipo_cartao_value}}}
+        /// Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Cart\u00E3o (id) atribu\u00EDdo ao Cart\u00E3o
         /// </summary>
-        /// <value>{{{cartao_impressao_response_id_tipo_cartao_value}}}</value>
+        /// <value>Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Cart\u00E3o (id) atribu\u00EDdo ao Cart\u00E3o</value>
         [DataMember(Name="idTipoCartao", EmitDefaultValue=false)]
         public long? IdTipoCartao { get; set; }
     
         /// <summary>
-        /// {{{cartao_impressao_response_numero_cartao_value}}}
+        /// Apresenta o n\u00FAmero do cart\u00E3o
         /// </summary>
-        /// <value>{{{cartao_impressao_response_numero_cartao_value}}}</value>
+        /// <value>Apresenta o n\u00FAmero do cart\u00E3o</value>
         [DataMember(Name="numeroCartao", EmitDefaultValue=false)]
         public string NumeroCartao { get; set; }
     
         /// <summary>
-        /// {{{cartao_impressao_response_nome_plastico_value}}}
+        /// Apresenta o nome do Portador do Cart\u00E3o
         /// </summary>
-        /// <value>{{{cartao_impressao_response_nome_plastico_value}}}</value>
+        /// <value>Apresenta o nome do Portador do Cart\u00E3o</value>
         [DataMember(Name="nomePlastico", EmitDefaultValue=false)]
         public string NomePlastico { get; set; }
     
         /// <summary>
-        /// {{{cartao_impressao_response_cvv2_value}}}
+        /// Apresenta o n\u00FAmero do CVV a ser impresso no Cart\u00E3o
         /// </summary>
-        /// <value>{{{cartao_impressao_response_cvv2_value}}}</value>
+        /// <value>Apresenta o n\u00FAmero do CVV a ser impresso no Cart\u00E3o</value>
         [DataMember(Name="cvv2", EmitDefaultValue=false)]
         public string Cvv2 { get; set; }
     
         /// <summary>
-        /// {{{cartao_impressao_response_data_geracao_value}}}
+        /// Apresenta a data de emiss\u00E3o do Cart\u00E3o
         /// </summary>
-        /// <value>{{{cartao_impressao_response_data_geracao_value}}}</value>
+        /// <value>Apresenta a data de emiss\u00E3o do Cart\u00E3o</value>
         [DataMember(Name="dataGeracao", EmitDefaultValue=false)]
         public string DataGeracao { get; set; }
     
         /// <summary>
-        /// {{{cartao_impressao_response_data_validade_value}}}
+        /// Apresenta a data de Validade do Cart\u00E3o
         /// </summary>
-        /// <value>{{{cartao_impressao_response_data_validade_value}}}</value>
+        /// <value>Apresenta a data de Validade do Cart\u00E3o</value>
         [DataMember(Name="dataValidade", EmitDefaultValue=false)]
         public string DataValidade { get; set; }
     
         /// <summary>
-        /// {{{cartao_impressao_response_nome_origem_comercial_value}}}
+        /// Apresenta o nome da Origem Comercial que realizou o cadastro do Titular da Conta a qual o Cart\u00E3o pertence
         /// </summary>
-        /// <value>{{{cartao_impressao_response_nome_origem_comercial_value}}}</value>
+        /// <value>Apresenta o nome da Origem Comercial que realizou o cadastro do Titular da Conta a qual o Cart\u00E3o pertence</value>
         [DataMember(Name="nomeOrigemComercial", EmitDefaultValue=false)]
         public string NomeOrigemComercial { get; set; }
     
         /// <summary>
-        /// {{{cartao_impressao_response_nome_empresa_value}}}
+        /// Apresenta o nome da Empresa (Pessoa Jur\u00EDdica) titular do Cart\u00E3o, quando aplic\u00E1vel
         /// </summary>
-        /// <value>{{{cartao_impressao_response_nome_empresa_value}}}</value>
+        /// <value>Apresenta o nome da Empresa (Pessoa Jur\u00EDdica) titular do Cart\u00E3o, quando aplic\u00E1vel</value>
         [DataMember(Name="nomeEmpresa", EmitDefaultValue=false)]
         public string NomeEmpresa { get; set; }
     
         /// <summary>
-        /// {{{cartao_impressao_response_numero_agencia_value}}}
+        /// Apresenta o n\u00FAmero da Ag\u00EAncia a ser impresso no Cart\u00E3o, quando aplic\u00E1vel
         /// </summary>
-        /// <value>{{{cartao_impressao_response_numero_agencia_value}}}</value>
+        /// <value>Apresenta o n\u00FAmero da Ag\u00EAncia a ser impresso no Cart\u00E3o, quando aplic\u00E1vel</value>
         [DataMember(Name="numeroAgencia", EmitDefaultValue=false)]
         public int? NumeroAgencia { get; set; }
     
         /// <summary>
-        /// {{{cartao_impressao_response_numero_conta_corente_value}}}
+        /// Apresenta o n\u00FAmero da Conta Corrente a ser impresso no Cart\u00E3o, quando aplic\u00E1vel
         /// </summary>
-        /// <value>{{{cartao_impressao_response_numero_conta_corente_value}}}</value>
+        /// <value>Apresenta o n\u00FAmero da Conta Corrente a ser impresso no Cart\u00E3o, quando aplic\u00E1vel</value>
         [DataMember(Name="numeroContaCorente", EmitDefaultValue=false)]
         public string NumeroContaCorente { get; set; }
     
         /// <summary>
-        /// {{{cartao_impressao_response_nome_empresa_beneficio_value}}}
+        /// Apresenta o nome da Pessoa F\u00EDsica ou Jur\u00EDdica que contratou servi\u00E7os de benef\u00EDcio para o portador do cart\u00E3o, quando aplic\u00E1vel
         /// </summary>
-        /// <value>{{{cartao_impressao_response_nome_empresa_beneficio_value}}}</value>
+        /// <value>Apresenta o nome da Pessoa F\u00EDsica ou Jur\u00EDdica que contratou servi\u00E7os de benef\u00EDcio para o portador do cart\u00E3o, quando aplic\u00E1vel</value>
         [DataMember(Name="nomeEmpresaBeneficio", EmitDefaultValue=false)]
         public string NomeEmpresaBeneficio { get; set; }
     
         /// <summary>
-        /// {{{cartao_impressao_response_cpf_value}}}
+        /// Apresenta o CPF do Portador do Cart\u00E3o
         /// </summary>
-        /// <value>{{{cartao_impressao_response_cpf_value}}}</value>
+        /// <value>Apresenta o CPF do Portador do Cart\u00E3o</value>
         [DataMember(Name="cpf", EmitDefaultValue=false)]
         public string Cpf { get; set; }
     
         /// <summary>
-        /// {{{cartao_impressao_response_tipo_portador_value}}}
+        /// Apresenta o tipo do Portador do cart\u00E3o, sendo: (&#39;T&#39;: Titular, &#39;A&#39;: Adicional)
         /// </summary>
-        /// <value>{{{cartao_impressao_response_tipo_portador_value}}}</value>
+        /// <value>Apresenta o tipo do Portador do cart\u00E3o, sendo: (&#39;T&#39;: Titular, &#39;A&#39;: Adicional)</value>
         [DataMember(Name="tipoPortador", EmitDefaultValue=false)]
         public string TipoPortador { get; set; }
     
         /// <summary>
-        /// {{{cartao_impressao_response_nome_empregador_value}}}
+        /// Apresenta o nome da Pessoa F\u00EDsica ou Jur\u00EDdica a ser impresso no cart\u00E3o, quando aplic\u00E1vel
         /// </summary>
-        /// <value>{{{cartao_impressao_response_nome_empregador_value}}}</value>
+        /// <value>Apresenta o nome da Pessoa F\u00EDsica ou Jur\u00EDdica a ser impresso no cart\u00E3o, quando aplic\u00E1vel</value>
         [DataMember(Name="nomeEmpregador", EmitDefaultValue=false)]
         public string NomeEmpregador { get; set; }
     
         /// <summary>
-        /// {{{cartao_impressao_response_trilha1_value}}}
+        /// Apresenta os dados da Trilha1, seguindo as regras de trilha do emissor
         /// </summary>
-        /// <value>{{{cartao_impressao_response_trilha1_value}}}</value>
+        /// <value>Apresenta os dados da Trilha1, seguindo as regras de trilha do emissor</value>
         [DataMember(Name="trilha1", EmitDefaultValue=false)]
         public string Trilha1 { get; set; }
     
         /// <summary>
-        /// {{{cartao_impressao_response_trilha2_value}}}
+        /// Apresenta os dados da Trilha2, seguindo as regras de trilha do emissor
         /// </summary>
-        /// <value>{{{cartao_impressao_response_trilha2_value}}}</value>
+        /// <value>Apresenta os dados da Trilha2, seguindo as regras de trilha do emissor</value>
         [DataMember(Name="trilha2", EmitDefaultValue=false)]
         public string Trilha2 { get; set; }
     
         /// <summary>
-        /// {{{cartao_impressao_response_trilha_c_v_v1_value}}}
+        /// Apresenta os dados da TrilhaCVV01, seguindo as regras de trilha do emissor
         /// </summary>
-        /// <value>{{{cartao_impressao_response_trilha_c_v_v1_value}}}</value>
+        /// <value>Apresenta os dados da TrilhaCVV01, seguindo as regras de trilha do emissor</value>
         [DataMember(Name="trilhaCVV1", EmitDefaultValue=false)]
         public string TrilhaCVV1 { get; set; }
     
         /// <summary>
-        /// {{{cartao_impressao_response_trilha_c_v_v2_value}}}
+        /// Apresenta os dados da TrilhaCVV02, seguindo as regras de trilha do emissor
         /// </summary>
-        /// <value>{{{cartao_impressao_response_trilha_c_v_v2_value}}}</value>
+        /// <value>Apresenta os dados da TrilhaCVV02, seguindo as regras de trilha do emissor</value>
         [DataMember(Name="trilhaCVV2", EmitDefaultValue=false)]
         public string TrilhaCVV2 { get; set; }
     
         /// <summary>
-        /// {{{cartao_impressao_response_flag_virtual_value}}}
+        /// Apresenta o status que informa se o cart\u00E3o \u00E9 virtual
         /// </summary>
-        /// <value>{{{cartao_impressao_response_flag_virtual_value}}}</value>
+        /// <value>Apresenta o status que informa se o cart\u00E3o \u00E9 virtual</value>
         [DataMember(Name="flagVirtual", EmitDefaultValue=false)]
         public int? FlagVirtual { get; set; }
     
         /// <summary>
-        /// {{{cartao_impressao_response_numero_cartao_hash_value}}}
+        /// Apresenta o numero da hash do cart\u00E3o
         /// </summary>
-        /// <value>{{{cartao_impressao_response_numero_cartao_hash_value}}}</value>
+        /// <value>Apresenta o numero da hash do cart\u00E3o</value>
         [DataMember(Name="numeroCartaoHash", EmitDefaultValue=false)]
         public long? NumeroCartaoHash { get; set; }
     

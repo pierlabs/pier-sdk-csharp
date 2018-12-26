@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{vinculo_estabelecimento_adquirente_response_description}}}
+    /// Objeto de resposta do VinculoEstabelecimentoAdquirente
     /// </summary>
     [DataContract]
     public partial class VinculoEstabelecimentoAdquirenteResponse :  IEquatable<VinculoEstabelecimentoAdquirenteResponse>
@@ -22,13 +22,13 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="VinculoEstabelecimentoAdquirenteResponse" /> class.
         /// Initializes a new instance of the <see cref="VinculoEstabelecimentoAdquirenteResponse" />class.
         /// </summary>
-        /// <param name="Id">{{{vinculo_estabelecimento_adquirente_response_id_value}}}.</param>
-        /// <param name="IdEstabelecimento">{{{vinculo_estabelecimento_adquirente_response_id_estabelecimento_value}}}.</param>
-        /// <param name="IdAdquirente">{{{vinculo_estabelecimento_adquirente_response_id_adquirente_value}}}.</param>
-        /// <param name="CodigoEstabelecimentoAdquirente">{{{vinculo_estabelecimento_adquirente_response_codigo_estabelecimento_adquirente_value}}}.</param>
-        /// <param name="DataHoraCadastro">{{{vinculo_estabelecimento_adquirente_response_data_hora_cadastro_value}}}.</param>
-        /// <param name="Mensagem">{{{vinculo_estabelecimento_adquirente_response_mensagem_value}}}.</param>
-        /// <param name="Status">{{{vinculo_estabelecimento_adquirente_response_status_value}}}.</param>
+        /// <param name="Id">C\u00F3digo de Identifica\u00E7\u00E3o do VinculoEstabelecimentoAdquirente (id).</param>
+        /// <param name="IdEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento (id).</param>
+        /// <param name="IdAdquirente">C\u00F3digo de Identifica\u00E7\u00E3o do Adquirente (id).</param>
+        /// <param name="CodigoEstabelecimentoAdquirente">C\u00F3digo do v\u00EDnculo entre o estabelecimento e o adquirente.</param>
+        /// <param name="DataHoraCadastro">Data de cadastro do v\u00EDnculo.</param>
+        /// <param name="Mensagem">Data de cadastro do v\u00EDnculo.</param>
+        /// <param name="Status">Data de cadastro do v\u00EDnculo.</param>
 
         public VinculoEstabelecimentoAdquirenteResponse(long? Id = null, long? IdEstabelecimento = null, long? IdAdquirente = null, string CodigoEstabelecimentoAdquirente = null, string DataHoraCadastro = null, string Mensagem = null, int? Status = null)
         {
@@ -44,51 +44,51 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{vinculo_estabelecimento_adquirente_response_id_value}}}
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do VinculoEstabelecimentoAdquirente (id)
         /// </summary>
-        /// <value>{{{vinculo_estabelecimento_adquirente_response_id_value}}}</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do VinculoEstabelecimentoAdquirente (id)</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{vinculo_estabelecimento_adquirente_response_id_estabelecimento_value}}}
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento (id)
         /// </summary>
-        /// <value>{{{vinculo_estabelecimento_adquirente_response_id_estabelecimento_value}}}</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento (id)</value>
         [DataMember(Name="idEstabelecimento", EmitDefaultValue=false)]
         public long? IdEstabelecimento { get; set; }
     
         /// <summary>
-        /// {{{vinculo_estabelecimento_adquirente_response_id_adquirente_value}}}
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do Adquirente (id)
         /// </summary>
-        /// <value>{{{vinculo_estabelecimento_adquirente_response_id_adquirente_value}}}</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Adquirente (id)</value>
         [DataMember(Name="idAdquirente", EmitDefaultValue=false)]
         public long? IdAdquirente { get; set; }
     
         /// <summary>
-        /// {{{vinculo_estabelecimento_adquirente_response_codigo_estabelecimento_adquirente_value}}}
+        /// C\u00F3digo do v\u00EDnculo entre o estabelecimento e o adquirente
         /// </summary>
-        /// <value>{{{vinculo_estabelecimento_adquirente_response_codigo_estabelecimento_adquirente_value}}}</value>
+        /// <value>C\u00F3digo do v\u00EDnculo entre o estabelecimento e o adquirente</value>
         [DataMember(Name="codigoEstabelecimentoAdquirente", EmitDefaultValue=false)]
         public string CodigoEstabelecimentoAdquirente { get; set; }
     
         /// <summary>
-        /// {{{vinculo_estabelecimento_adquirente_response_data_hora_cadastro_value}}}
+        /// Data de cadastro do v\u00EDnculo
         /// </summary>
-        /// <value>{{{vinculo_estabelecimento_adquirente_response_data_hora_cadastro_value}}}</value>
+        /// <value>Data de cadastro do v\u00EDnculo</value>
         [DataMember(Name="dataHoraCadastro", EmitDefaultValue=false)]
         public string DataHoraCadastro { get; set; }
     
         /// <summary>
-        /// {{{vinculo_estabelecimento_adquirente_response_mensagem_value}}}
+        /// Data de cadastro do v\u00EDnculo
         /// </summary>
-        /// <value>{{{vinculo_estabelecimento_adquirente_response_mensagem_value}}}</value>
+        /// <value>Data de cadastro do v\u00EDnculo</value>
         [DataMember(Name="mensagem", EmitDefaultValue=false)]
         public string Mensagem { get; set; }
     
         /// <summary>
-        /// {{{vinculo_estabelecimento_adquirente_response_status_value}}}
+        /// Data de cadastro do v\u00EDnculo
         /// </summary>
-        /// <value>{{{vinculo_estabelecimento_adquirente_response_status_value}}}</value>
+        /// <value>Data de cadastro do v\u00EDnculo</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public int? Status { get; set; }
     

@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{tipo_operacao_persist_description}}}
+    /// Objeto tipo opera\u00E7\u00E3o com campos pass\u00EDveis de altera\u00E7\u00E3o
     /// </summary>
     [DataContract]
     public partial class TipoOperacaoParcialUpdate :  IEquatable<TipoOperacaoParcialUpdate>
@@ -22,7 +22,7 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TipoOperacaoParcialUpdate" /> class.
         /// Initializes a new instance of the <see cref="TipoOperacaoParcialUpdate" />class.
         /// </summary>
-        /// <param name="FlagManterTaxaJurosNoRotativo">{{{tipo_operacao_persist_flag_manter_taxa_juros_no_rotativo_value}}}.</param>
+        /// <param name="FlagManterTaxaJurosNoRotativo">Flag que indica que a opera\u00E7\u00E3o deve utilizar a taxa da compra como taxa do rotativo para transa\u00E7\u00F5es desse tipo opera\u00E7\u00E3o.</param>
 
         public TipoOperacaoParcialUpdate(bool? FlagManterTaxaJurosNoRotativo = null)
         {
@@ -32,9 +32,9 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{tipo_operacao_persist_flag_manter_taxa_juros_no_rotativo_value}}}
+        /// Flag que indica que a opera\u00E7\u00E3o deve utilizar a taxa da compra como taxa do rotativo para transa\u00E7\u00F5es desse tipo opera\u00E7\u00E3o
         /// </summary>
-        /// <value>{{{tipo_operacao_persist_flag_manter_taxa_juros_no_rotativo_value}}}</value>
+        /// <value>Flag que indica que a opera\u00E7\u00E3o deve utilizar a taxa da compra como taxa do rotativo para transa\u00E7\u00F5es desse tipo opera\u00E7\u00E3o</value>
         [DataMember(Name="flagManterTaxaJurosNoRotativo", EmitDefaultValue=false)]
         public bool? FlagManterTaxaJurosNoRotativo { get; set; }
     

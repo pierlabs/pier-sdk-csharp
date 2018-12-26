@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{acordo_response_description}}}
+    /// Objeto Acordo
     /// </summary>
     [DataContract]
     public partial class AcordoResponse :  IEquatable<AcordoResponse>
@@ -22,14 +22,14 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="AcordoResponse" /> class.
         /// Initializes a new instance of the <see cref="AcordoResponse" />class.
         /// </summary>
-        /// <param name="Id">{{{acordo_response_id_value}}}.</param>
-        /// <param name="IdConta">{{{acordo_response_id_conta_value}}}.</param>
-        /// <param name="StatusAcordo">{{{acordo_response_status_acordo_value}}}.</param>
-        /// <param name="ValorAcordo">{{{acordo_response_valor_acordo_value}}}.</param>
-        /// <param name="DataAcordo">{{{acordo_response_data_acordo_value}}}.</param>
-        /// <param name="QuantidadeParcelas">{{{acordo_response_quantidade_parcelas_value}}}.</param>
-        /// <param name="SaldoAtualFinal">{{{acordo_response_saldo_atual_final_value}}}.</param>
-        /// <param name="DiasEmAtraso">{{{acordo_response_dias_em_atraso_value}}}.</param>
+        /// <param name="Id">C\u00F3digo de Identifica\u00E7\u00E3o do acordo (id).</param>
+        /// <param name="IdConta">C\u00F3digo de Identifica\u00E7\u00E3o da conta.</param>
+        /// <param name="StatusAcordo">Status do acordo.</param>
+        /// <param name="ValorAcordo">Valor do Acordo.</param>
+        /// <param name="DataAcordo">Data e Hora do acordo.</param>
+        /// <param name="QuantidadeParcelas">Quantidade de parcelas do acordo.</param>
+        /// <param name="SaldoAtualFinal">Saldo atual final.</param>
+        /// <param name="DiasEmAtraso">Dias em atraso.</param>
 
         public AcordoResponse(long? Id = null, long? IdConta = null, long? StatusAcordo = null, double? ValorAcordo = null, string DataAcordo = null, int? QuantidadeParcelas = null, double? SaldoAtualFinal = null, int? DiasEmAtraso = null)
         {
@@ -46,58 +46,58 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{acordo_response_id_value}}}
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do acordo (id)
         /// </summary>
-        /// <value>{{{acordo_response_id_value}}}</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do acordo (id)</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{acordo_response_id_conta_value}}}
+        /// C\u00F3digo de Identifica\u00E7\u00E3o da conta
         /// </summary>
-        /// <value>{{{acordo_response_id_conta_value}}}</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o da conta</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// {{{acordo_response_status_acordo_value}}}
+        /// Status do acordo
         /// </summary>
-        /// <value>{{{acordo_response_status_acordo_value}}}</value>
+        /// <value>Status do acordo</value>
         [DataMember(Name="statusAcordo", EmitDefaultValue=false)]
         public long? StatusAcordo { get; set; }
     
         /// <summary>
-        /// {{{acordo_response_valor_acordo_value}}}
+        /// Valor do Acordo
         /// </summary>
-        /// <value>{{{acordo_response_valor_acordo_value}}}</value>
+        /// <value>Valor do Acordo</value>
         [DataMember(Name="valorAcordo", EmitDefaultValue=false)]
         public double? ValorAcordo { get; set; }
     
         /// <summary>
-        /// {{{acordo_response_data_acordo_value}}}
+        /// Data e Hora do acordo
         /// </summary>
-        /// <value>{{{acordo_response_data_acordo_value}}}</value>
+        /// <value>Data e Hora do acordo</value>
         [DataMember(Name="dataAcordo", EmitDefaultValue=false)]
         public string DataAcordo { get; set; }
     
         /// <summary>
-        /// {{{acordo_response_quantidade_parcelas_value}}}
+        /// Quantidade de parcelas do acordo
         /// </summary>
-        /// <value>{{{acordo_response_quantidade_parcelas_value}}}</value>
+        /// <value>Quantidade de parcelas do acordo</value>
         [DataMember(Name="quantidadeParcelas", EmitDefaultValue=false)]
         public int? QuantidadeParcelas { get; set; }
     
         /// <summary>
-        /// {{{acordo_response_saldo_atual_final_value}}}
+        /// Saldo atual final
         /// </summary>
-        /// <value>{{{acordo_response_saldo_atual_final_value}}}</value>
+        /// <value>Saldo atual final</value>
         [DataMember(Name="saldoAtualFinal", EmitDefaultValue=false)]
         public double? SaldoAtualFinal { get; set; }
     
         /// <summary>
-        /// {{{acordo_response_dias_em_atraso_value}}}
+        /// Dias em atraso
         /// </summary>
-        /// <value>{{{acordo_response_dias_em_atraso_value}}}</value>
+        /// <value>Dias em atraso</value>
         [DataMember(Name="diasEmAtraso", EmitDefaultValue=false)]
         public int? DiasEmAtraso { get; set; }
     

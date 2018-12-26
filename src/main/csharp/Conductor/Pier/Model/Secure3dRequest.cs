@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{secure_3d_request_description}}}
+    /// Requisi\u00E7\u00E3o Solicita\u00E7\u00E3o Envio de OTP
     /// </summary>
     [DataContract]
     public partial class Secure3dRequest :  IEquatable<Secure3dRequest>
@@ -22,8 +22,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="Secure3dRequest" /> class.
         /// Initializes a new instance of the <see cref="Secure3dRequest" />class.
         /// </summary>
-        /// <param name="IdCartao">{{{secure_3d_request_id_cartao}}}.</param>
-        /// <param name="Otp">{{{secure_3d_request_otp_3d_secure}}}.</param>
+        /// <param name="IdCartao">Identificador da conta.</param>
+        /// <param name="Otp">OTP que ser\u00E1 enviado para cliente.</param>
 
         public Secure3dRequest(long? IdCartao = null, string Otp = null)
         {
@@ -34,16 +34,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{secure_3d_request_id_cartao}}}
+        /// Identificador da conta
         /// </summary>
-        /// <value>{{{secure_3d_request_id_cartao}}}</value>
+        /// <value>Identificador da conta</value>
         [DataMember(Name="idCartao", EmitDefaultValue=false)]
         public long? IdCartao { get; set; }
     
         /// <summary>
-        /// {{{secure_3d_request_otp_3d_secure}}}
+        /// OTP que ser\u00E1 enviado para cliente
         /// </summary>
-        /// <value>{{{secure_3d_request_otp_3d_secure}}}</value>
+        /// <value>OTP que ser\u00E1 enviado para cliente</value>
         [DataMember(Name="otp", EmitDefaultValue=false)]
         public string Otp { get; set; }
     

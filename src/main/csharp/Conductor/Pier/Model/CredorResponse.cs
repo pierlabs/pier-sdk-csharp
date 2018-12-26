@@ -19,9 +19,9 @@ namespace Conductor.Pier.Model
     { 
     
         /// <summary>
-        /// {{{credor_response_recebe_rav_value}}}
+        /// Credor response recebe rav
         /// </summary>
-        /// <value>{{{credor_response_recebe_rav_value}}}</value>
+        /// <value>Credor response recebe rav</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum RecebeRAVEnum {
             
@@ -37,9 +37,9 @@ namespace Conductor.Pier.Model
 
     
         /// <summary>
-        /// {{{credor_response_periodicidade_value}}}
+        /// Credor response periodicidade
         /// </summary>
-        /// <value>{{{credor_response_periodicidade_value}}}</value>
+        /// <value>Credor response periodicidade</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum PeriodicidadeEnum {
             
@@ -61,16 +61,16 @@ namespace Conductor.Pier.Model
 
     
         /// <summary>
-        /// {{{credor_response_recebe_rav_value}}}
+        /// Credor response recebe rav
         /// </summary>
-        /// <value>{{{credor_response_recebe_rav_value}}}</value>
+        /// <value>Credor response recebe rav</value>
         [DataMember(Name="recebeRAV", EmitDefaultValue=false)]
         public RecebeRAVEnum? RecebeRAV { get; set; }
     
         /// <summary>
-        /// {{{credor_response_periodicidade_value}}}
+        /// Credor response periodicidade
         /// </summary>
-        /// <value>{{{credor_response_periodicidade_value}}}</value>
+        /// <value>Credor response periodicidade</value>
         [DataMember(Name="periodicidade", EmitDefaultValue=false)]
         public PeriodicidadeEnum? Periodicidade { get; set; }
     
@@ -78,47 +78,47 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="CredorResponse" /> class.
         /// Initializes a new instance of the <see cref="CredorResponse" />class.
         /// </summary>
-        /// <param name="Id">{{{credor_response_id_value}}}.</param>
-        /// <param name="NomeCredor">{{{credor_response_nome_credor_value}}}.</param>
-        /// <param name="DiaPagamentoSemanal">{{{credor_response_pagamento_semanal_value}}}.</param>
-        /// <param name="DiaPagamentoMensal">{{{credor_response_pagamento_mensal_value}}}.</param>
-        /// <param name="DiaPagamentoDecendialPrimeiro">{{{credor_response_pagamento_decendial_primeiro_value}}}.</param>
-        /// <param name="DiaPagamentoDecendialSegundo">{{{credor_response_pagamento_decendial_segundo_value}}}.</param>
-        /// <param name="DiaPagamentoDecendialTerceiro">{{{credor_response_pagamento_decendial_terceiro_value}}}.</param>
-        /// <param name="DiaPagamentoQuinzenalPrimeiro">{{{credor_response_pagamento_quinzenal_primeiro_value}}}.</param>
-        /// <param name="DiaPagamentoQuinzenalSegundo">{{{credor_response_pagamento_quinzenal_segundo_value}}}.</param>
-        /// <param name="Banco">{{{credor_response_banco_value}}}.</param>
-        /// <param name="Agencia">{{{credor_response_agencia_value}}}.</param>
-        /// <param name="DigitoAgencia">{{{credor_response_digito_agencia_value}}}.</param>
-        /// <param name="ContaCorrente">{{{credor_response_conta_corrente_value}}}.</param>
-        /// <param name="DigitoContaCorrente">{{{credor_response_digito_conta_corrente_value}}}.</param>
-        /// <param name="CredorBanco">{{{credor_response_credor_banco_value}}}.</param>
-        /// <param name="PercentualRAV">{{{credor_response_percentual_rav_value}}}.</param>
-        /// <param name="RecebeRAV">{{{credor_response_recebe_rav_value}}}.</param>
-        /// <param name="PercentualMultiplica">{{{credor_response_percentual_multiplica_value}}}.</param>
-        /// <param name="TaxaAdministrativa">{{{credor_response_taxa_adm_value}}}.</param>
-        /// <param name="TaxaBanco">{{{credor_response_taxa_banco_value}}}.</param>
-        /// <param name="LimiteRAV">{{{credor_response_limite_rav_value}}}.</param>
-        /// <param name="IdCredorRAV">{{{credor_response_id_credor_rav_value}}}.</param>
-        /// <param name="Periodicidade">{{{credor_response_periodicidade_value}}}.</param>
-        /// <param name="IdPessoaJuridica">{{{credor_response_id_pessoa_juridica_value}}}.</param>
-        /// <param name="FlagEscritorioCobranca">{{{credor_response_flag_escritorio_cobranca_value}}}.</param>
-        /// <param name="Prefixo">{{{credor_response_prefixo_value}}}.</param>
-        /// <param name="Ativo">{{{credor_response_ativo_value}}}.</param>
-        /// <param name="TelefonesEscritoriosCobranca">{{{credor_response_telefone_escritorio_cobranca_value}}}.</param>
-        /// <param name="NomeContato">{{{credor_response_nome_contato_value}}}.</param>
-        /// <param name="Email">{{{credor_response_email_value}}}.</param>
-        /// <param name="NomeLogradouro">{{{credor_response_nome_logradouro_value}}}.</param>
-        /// <param name="NumeroEndereco">{{{credor_response_numero_endereco_value}}}.</param>
-        /// <param name="ComplementoEndereco">{{{credor_response_complemento_endereco_value}}}.</param>
-        /// <param name="Bairro">{{{credor_response_bairro_value}}}.</param>
-        /// <param name="Cidade">{{{credor_response_cidade_value}}}.</param>
-        /// <param name="Cep">{{{credor_response_cep_value}}}.</param>
-        /// <param name="Uf">{{{credor_response_uf_value}}}.</param>
-        /// <param name="Responsavel">{{{credor_response_responsavel_value}}}.</param>
-        /// <param name="FlagSegundaViaAcordo">{{{credor_response_flag_segunda_via_acordo_value}}}.</param>
-        /// <param name="ValorMinimoParcela">{{{credor_response_valor_minimo_parcela_value}}}.</param>
-        /// <param name="DescontoMaximo">{{{credor_response_desconto_maximo_value}}}.</param>
+        /// <param name="Id">Credor response id credor.</param>
+        /// <param name="NomeCredor">Credor response nome credor.</param>
+        /// <param name="DiaPagamentoSemanal">Credor response pagamento semanal.</param>
+        /// <param name="DiaPagamentoMensal">Credor response pagamento mensal.</param>
+        /// <param name="DiaPagamentoDecendialPrimeiro">Credor respone pagamento decendial primeiro.</param>
+        /// <param name="DiaPagamentoDecendialSegundo">Credor respone pagamento decendial segundo.</param>
+        /// <param name="DiaPagamentoDecendialTerceiro">Credor respone pagamento decendial terceiro.</param>
+        /// <param name="DiaPagamentoQuinzenalPrimeiro">Credor respone pagamento quinzenal primeiro.</param>
+        /// <param name="DiaPagamentoQuinzenalSegundo">Credor respone pagamento quinzenal segundo.</param>
+        /// <param name="Banco">credor response banco.</param>
+        /// <param name="Agencia">Credor response ag\u00EAncia.</param>
+        /// <param name="DigitoAgencia">Credor response d\u00EDgito ag\u00EAncia.</param>
+        /// <param name="ContaCorrente">Credor response conta corrente.</param>
+        /// <param name="DigitoContaCorrente">Credor response d\u00EDgito conta corrente.</param>
+        /// <param name="CredorBanco">Credor response credor banco.</param>
+        /// <param name="PercentualRAV">Credor response percentual rav.</param>
+        /// <param name="RecebeRAV">Credor response recebe rav.</param>
+        /// <param name="PercentualMultiplica">Credor response percentual multiplica.</param>
+        /// <param name="TaxaAdministrativa">Credor response taxa adm.</param>
+        /// <param name="TaxaBanco">Credor response taxa banco.</param>
+        /// <param name="LimiteRAV">Credor response limite rav.</param>
+        /// <param name="IdCredorRAV">Credor response id credor rav.</param>
+        /// <param name="Periodicidade">Credor response periodicidade.</param>
+        /// <param name="IdPessoaJuridica">Credor response id pessoa juridica.</param>
+        /// <param name="FlagEscritorioCobranca">Credor response flag escritorio cobranca.</param>
+        /// <param name="Prefixo">Cerdor response prefixo escritorio cobran\u00E7a.</param>
+        /// <param name="Ativo">Credor response ativo escritorio cobran\u00E7a.</param>
+        /// <param name="TelefonesEscritoriosCobranca">Credor response telefone escritorio cobranca.</param>
+        /// <param name="NomeContato">Credor response nome contato escritorio cobran\u00E7a.</param>
+        /// <param name="Email">Credor response nome contato escritorio cobran\u00E7a.</param>
+        /// <param name="NomeLogradouro">Credor response logradouro escritorio cobran\u00E7a.</param>
+        /// <param name="NumeroEndereco">Credor response numero endere\u00E7o escritorio cobran\u00E7a.</param>
+        /// <param name="ComplementoEndereco">Credor response complemento endere\u00E7o escritorio cobran\u00E7a.</param>
+        /// <param name="Bairro">Credor response bairro escritorio cobran\u00E7a.</param>
+        /// <param name="Cidade">Credor response cidade escritorio cobran\u00E7a.</param>
+        /// <param name="Cep">Credor response cep escritorio cobran\u00E7a.</param>
+        /// <param name="Uf">Credor response uf escritorio cobran\u00E7a.</param>
+        /// <param name="Responsavel">Credor response responsavel escritorio cobran\u00E7a.</param>
+        /// <param name="FlagSegundaViaAcordo">Credor response flag segunda via acordo escritorio cobran\u00E7a.</param>
+        /// <param name="ValorMinimoParcela">Credor response valor m\u00EDnimo escritorio cobran\u00E7a.</param>
+        /// <param name="DescontoMaximo">Credor response desconto m\u00E1ximo escritorio cobran\u00E7a.</param>
 
         public CredorResponse(long? Id = null, string NomeCredor = null, int? DiaPagamentoSemanal = null, int? DiaPagamentoMensal = null, int? DiaPagamentoDecendialPrimeiro = null, int? DiaPagamentoDecendialSegundo = null, int? DiaPagamentoDecendialTerceiro = null, int? DiaPagamentoQuinzenalPrimeiro = null, int? DiaPagamentoQuinzenalSegundo = null, int? Banco = null, int? Agencia = null, string DigitoAgencia = null, string ContaCorrente = null, string DigitoContaCorrente = null, bool? CredorBanco = null, double? PercentualRAV = null, RecebeRAVEnum? RecebeRAV = null, double? PercentualMultiplica = null, double? TaxaAdministrativa = null, double? TaxaBanco = null, double? LimiteRAV = null, long? IdCredorRAV = null, PeriodicidadeEnum? Periodicidade = null, long? IdPessoaJuridica = null, bool? FlagEscritorioCobranca = null, string Prefixo = null, bool? Ativo = null, List<TelefoneEscritorioCobrancaDTO> TelefonesEscritoriosCobranca = null, string NomeContato = null, string Email = null, string NomeLogradouro = null, int? NumeroEndereco = null, string ComplementoEndereco = null, string Bairro = null, string Cidade = null, string Cep = null, string Uf = null, string Responsavel = null, int? FlagSegundaViaAcordo = null, double? ValorMinimoParcela = null, double? DescontoMaximo = null)
         {
@@ -168,275 +168,275 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{credor_response_id_value}}}
+        /// Credor response id credor
         /// </summary>
-        /// <value>{{{credor_response_id_value}}}</value>
+        /// <value>Credor response id credor</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{credor_response_nome_credor_value}}}
+        /// Credor response nome credor
         /// </summary>
-        /// <value>{{{credor_response_nome_credor_value}}}</value>
+        /// <value>Credor response nome credor</value>
         [DataMember(Name="nomeCredor", EmitDefaultValue=false)]
         public string NomeCredor { get; set; }
     
         /// <summary>
-        /// {{{credor_response_pagamento_semanal_value}}}
+        /// Credor response pagamento semanal
         /// </summary>
-        /// <value>{{{credor_response_pagamento_semanal_value}}}</value>
+        /// <value>Credor response pagamento semanal</value>
         [DataMember(Name="diaPagamentoSemanal", EmitDefaultValue=false)]
         public int? DiaPagamentoSemanal { get; set; }
     
         /// <summary>
-        /// {{{credor_response_pagamento_mensal_value}}}
+        /// Credor response pagamento mensal
         /// </summary>
-        /// <value>{{{credor_response_pagamento_mensal_value}}}</value>
+        /// <value>Credor response pagamento mensal</value>
         [DataMember(Name="diaPagamentoMensal", EmitDefaultValue=false)]
         public int? DiaPagamentoMensal { get; set; }
     
         /// <summary>
-        /// {{{credor_response_pagamento_decendial_primeiro_value}}}
+        /// Credor respone pagamento decendial primeiro
         /// </summary>
-        /// <value>{{{credor_response_pagamento_decendial_primeiro_value}}}</value>
+        /// <value>Credor respone pagamento decendial primeiro</value>
         [DataMember(Name="diaPagamentoDecendialPrimeiro", EmitDefaultValue=false)]
         public int? DiaPagamentoDecendialPrimeiro { get; set; }
     
         /// <summary>
-        /// {{{credor_response_pagamento_decendial_segundo_value}}}
+        /// Credor respone pagamento decendial segundo
         /// </summary>
-        /// <value>{{{credor_response_pagamento_decendial_segundo_value}}}</value>
+        /// <value>Credor respone pagamento decendial segundo</value>
         [DataMember(Name="diaPagamentoDecendialSegundo", EmitDefaultValue=false)]
         public int? DiaPagamentoDecendialSegundo { get; set; }
     
         /// <summary>
-        /// {{{credor_response_pagamento_decendial_terceiro_value}}}
+        /// Credor respone pagamento decendial terceiro
         /// </summary>
-        /// <value>{{{credor_response_pagamento_decendial_terceiro_value}}}</value>
+        /// <value>Credor respone pagamento decendial terceiro</value>
         [DataMember(Name="diaPagamentoDecendialTerceiro", EmitDefaultValue=false)]
         public int? DiaPagamentoDecendialTerceiro { get; set; }
     
         /// <summary>
-        /// {{{credor_response_pagamento_quinzenal_primeiro_value}}}
+        /// Credor respone pagamento quinzenal primeiro
         /// </summary>
-        /// <value>{{{credor_response_pagamento_quinzenal_primeiro_value}}}</value>
+        /// <value>Credor respone pagamento quinzenal primeiro</value>
         [DataMember(Name="diaPagamentoQuinzenalPrimeiro", EmitDefaultValue=false)]
         public int? DiaPagamentoQuinzenalPrimeiro { get; set; }
     
         /// <summary>
-        /// {{{credor_response_pagamento_quinzenal_segundo_value}}}
+        /// Credor respone pagamento quinzenal segundo
         /// </summary>
-        /// <value>{{{credor_response_pagamento_quinzenal_segundo_value}}}</value>
+        /// <value>Credor respone pagamento quinzenal segundo</value>
         [DataMember(Name="diaPagamentoQuinzenalSegundo", EmitDefaultValue=false)]
         public int? DiaPagamentoQuinzenalSegundo { get; set; }
     
         /// <summary>
-        /// {{{credor_response_banco_value}}}
+        /// credor response banco
         /// </summary>
-        /// <value>{{{credor_response_banco_value}}}</value>
+        /// <value>credor response banco</value>
         [DataMember(Name="banco", EmitDefaultValue=false)]
         public int? Banco { get; set; }
     
         /// <summary>
-        /// {{{credor_response_agencia_value}}}
+        /// Credor response ag\u00EAncia
         /// </summary>
-        /// <value>{{{credor_response_agencia_value}}}</value>
+        /// <value>Credor response ag\u00EAncia</value>
         [DataMember(Name="agencia", EmitDefaultValue=false)]
         public int? Agencia { get; set; }
     
         /// <summary>
-        /// {{{credor_response_digito_agencia_value}}}
+        /// Credor response d\u00EDgito ag\u00EAncia
         /// </summary>
-        /// <value>{{{credor_response_digito_agencia_value}}}</value>
+        /// <value>Credor response d\u00EDgito ag\u00EAncia</value>
         [DataMember(Name="digitoAgencia", EmitDefaultValue=false)]
         public string DigitoAgencia { get; set; }
     
         /// <summary>
-        /// {{{credor_response_conta_corrente_value}}}
+        /// Credor response conta corrente
         /// </summary>
-        /// <value>{{{credor_response_conta_corrente_value}}}</value>
+        /// <value>Credor response conta corrente</value>
         [DataMember(Name="contaCorrente", EmitDefaultValue=false)]
         public string ContaCorrente { get; set; }
     
         /// <summary>
-        /// {{{credor_response_digito_conta_corrente_value}}}
+        /// Credor response d\u00EDgito conta corrente
         /// </summary>
-        /// <value>{{{credor_response_digito_conta_corrente_value}}}</value>
+        /// <value>Credor response d\u00EDgito conta corrente</value>
         [DataMember(Name="digitoContaCorrente", EmitDefaultValue=false)]
         public string DigitoContaCorrente { get; set; }
     
         /// <summary>
-        /// {{{credor_response_credor_banco_value}}}
+        /// Credor response credor banco
         /// </summary>
-        /// <value>{{{credor_response_credor_banco_value}}}</value>
+        /// <value>Credor response credor banco</value>
         [DataMember(Name="credorBanco", EmitDefaultValue=false)]
         public bool? CredorBanco { get; set; }
     
         /// <summary>
-        /// {{{credor_response_percentual_rav_value}}}
+        /// Credor response percentual rav
         /// </summary>
-        /// <value>{{{credor_response_percentual_rav_value}}}</value>
+        /// <value>Credor response percentual rav</value>
         [DataMember(Name="percentualRAV", EmitDefaultValue=false)]
         public double? PercentualRAV { get; set; }
     
         /// <summary>
-        /// {{{credor_response_percentual_multiplica_value}}}
+        /// Credor response percentual multiplica
         /// </summary>
-        /// <value>{{{credor_response_percentual_multiplica_value}}}</value>
+        /// <value>Credor response percentual multiplica</value>
         [DataMember(Name="percentualMultiplica", EmitDefaultValue=false)]
         public double? PercentualMultiplica { get; set; }
     
         /// <summary>
-        /// {{{credor_response_taxa_adm_value}}}
+        /// Credor response taxa adm
         /// </summary>
-        /// <value>{{{credor_response_taxa_adm_value}}}</value>
+        /// <value>Credor response taxa adm</value>
         [DataMember(Name="taxaAdministrativa", EmitDefaultValue=false)]
         public double? TaxaAdministrativa { get; set; }
     
         /// <summary>
-        /// {{{credor_response_taxa_banco_value}}}
+        /// Credor response taxa banco
         /// </summary>
-        /// <value>{{{credor_response_taxa_banco_value}}}</value>
+        /// <value>Credor response taxa banco</value>
         [DataMember(Name="taxaBanco", EmitDefaultValue=false)]
         public double? TaxaBanco { get; set; }
     
         /// <summary>
-        /// {{{credor_response_limite_rav_value}}}
+        /// Credor response limite rav
         /// </summary>
-        /// <value>{{{credor_response_limite_rav_value}}}</value>
+        /// <value>Credor response limite rav</value>
         [DataMember(Name="limiteRAV", EmitDefaultValue=false)]
         public double? LimiteRAV { get; set; }
     
         /// <summary>
-        /// {{{credor_response_id_credor_rav_value}}}
+        /// Credor response id credor rav
         /// </summary>
-        /// <value>{{{credor_response_id_credor_rav_value}}}</value>
+        /// <value>Credor response id credor rav</value>
         [DataMember(Name="idCredorRAV", EmitDefaultValue=false)]
         public long? IdCredorRAV { get; set; }
     
         /// <summary>
-        /// {{{credor_response_id_pessoa_juridica_value}}}
+        /// Credor response id pessoa juridica
         /// </summary>
-        /// <value>{{{credor_response_id_pessoa_juridica_value}}}</value>
+        /// <value>Credor response id pessoa juridica</value>
         [DataMember(Name="idPessoaJuridica", EmitDefaultValue=false)]
         public long? IdPessoaJuridica { get; set; }
     
         /// <summary>
-        /// {{{credor_response_flag_escritorio_cobranca_value}}}
+        /// Credor response flag escritorio cobranca
         /// </summary>
-        /// <value>{{{credor_response_flag_escritorio_cobranca_value}}}</value>
+        /// <value>Credor response flag escritorio cobranca</value>
         [DataMember(Name="flagEscritorioCobranca", EmitDefaultValue=false)]
         public bool? FlagEscritorioCobranca { get; set; }
     
         /// <summary>
-        /// {{{credor_response_prefixo_value}}}
+        /// Cerdor response prefixo escritorio cobran\u00E7a
         /// </summary>
-        /// <value>{{{credor_response_prefixo_value}}}</value>
+        /// <value>Cerdor response prefixo escritorio cobran\u00E7a</value>
         [DataMember(Name="prefixo", EmitDefaultValue=false)]
         public string Prefixo { get; set; }
     
         /// <summary>
-        /// {{{credor_response_ativo_value}}}
+        /// Credor response ativo escritorio cobran\u00E7a
         /// </summary>
-        /// <value>{{{credor_response_ativo_value}}}</value>
+        /// <value>Credor response ativo escritorio cobran\u00E7a</value>
         [DataMember(Name="ativo", EmitDefaultValue=false)]
         public bool? Ativo { get; set; }
     
         /// <summary>
-        /// {{{credor_response_telefone_escritorio_cobranca_value}}}
+        /// Credor response telefone escritorio cobranca
         /// </summary>
-        /// <value>{{{credor_response_telefone_escritorio_cobranca_value}}}</value>
+        /// <value>Credor response telefone escritorio cobranca</value>
         [DataMember(Name="telefonesEscritoriosCobranca", EmitDefaultValue=false)]
         public List<TelefoneEscritorioCobrancaDTO> TelefonesEscritoriosCobranca { get; set; }
     
         /// <summary>
-        /// {{{credor_response_nome_contato_value}}}
+        /// Credor response nome contato escritorio cobran\u00E7a
         /// </summary>
-        /// <value>{{{credor_response_nome_contato_value}}}</value>
+        /// <value>Credor response nome contato escritorio cobran\u00E7a</value>
         [DataMember(Name="nomeContato", EmitDefaultValue=false)]
         public string NomeContato { get; set; }
     
         /// <summary>
-        /// {{{credor_response_email_value}}}
+        /// Credor response nome contato escritorio cobran\u00E7a
         /// </summary>
-        /// <value>{{{credor_response_email_value}}}</value>
+        /// <value>Credor response nome contato escritorio cobran\u00E7a</value>
         [DataMember(Name="email", EmitDefaultValue=false)]
         public string Email { get; set; }
     
         /// <summary>
-        /// {{{credor_response_nome_logradouro_value}}}
+        /// Credor response logradouro escritorio cobran\u00E7a
         /// </summary>
-        /// <value>{{{credor_response_nome_logradouro_value}}}</value>
+        /// <value>Credor response logradouro escritorio cobran\u00E7a</value>
         [DataMember(Name="nomeLogradouro", EmitDefaultValue=false)]
         public string NomeLogradouro { get; set; }
     
         /// <summary>
-        /// {{{credor_response_numero_endereco_value}}}
+        /// Credor response numero endere\u00E7o escritorio cobran\u00E7a
         /// </summary>
-        /// <value>{{{credor_response_numero_endereco_value}}}</value>
+        /// <value>Credor response numero endere\u00E7o escritorio cobran\u00E7a</value>
         [DataMember(Name="numeroEndereco", EmitDefaultValue=false)]
         public int? NumeroEndereco { get; set; }
     
         /// <summary>
-        /// {{{credor_response_complemento_endereco_value}}}
+        /// Credor response complemento endere\u00E7o escritorio cobran\u00E7a
         /// </summary>
-        /// <value>{{{credor_response_complemento_endereco_value}}}</value>
+        /// <value>Credor response complemento endere\u00E7o escritorio cobran\u00E7a</value>
         [DataMember(Name="complementoEndereco", EmitDefaultValue=false)]
         public string ComplementoEndereco { get; set; }
     
         /// <summary>
-        /// {{{credor_response_bairro_value}}}
+        /// Credor response bairro escritorio cobran\u00E7a
         /// </summary>
-        /// <value>{{{credor_response_bairro_value}}}</value>
+        /// <value>Credor response bairro escritorio cobran\u00E7a</value>
         [DataMember(Name="bairro", EmitDefaultValue=false)]
         public string Bairro { get; set; }
     
         /// <summary>
-        /// {{{credor_response_cidade_value}}}
+        /// Credor response cidade escritorio cobran\u00E7a
         /// </summary>
-        /// <value>{{{credor_response_cidade_value}}}</value>
+        /// <value>Credor response cidade escritorio cobran\u00E7a</value>
         [DataMember(Name="cidade", EmitDefaultValue=false)]
         public string Cidade { get; set; }
     
         /// <summary>
-        /// {{{credor_response_cep_value}}}
+        /// Credor response cep escritorio cobran\u00E7a
         /// </summary>
-        /// <value>{{{credor_response_cep_value}}}</value>
+        /// <value>Credor response cep escritorio cobran\u00E7a</value>
         [DataMember(Name="cep", EmitDefaultValue=false)]
         public string Cep { get; set; }
     
         /// <summary>
-        /// {{{credor_response_uf_value}}}
+        /// Credor response uf escritorio cobran\u00E7a
         /// </summary>
-        /// <value>{{{credor_response_uf_value}}}</value>
+        /// <value>Credor response uf escritorio cobran\u00E7a</value>
         [DataMember(Name="uf", EmitDefaultValue=false)]
         public string Uf { get; set; }
     
         /// <summary>
-        /// {{{credor_response_responsavel_value}}}
+        /// Credor response responsavel escritorio cobran\u00E7a
         /// </summary>
-        /// <value>{{{credor_response_responsavel_value}}}</value>
+        /// <value>Credor response responsavel escritorio cobran\u00E7a</value>
         [DataMember(Name="responsavel", EmitDefaultValue=false)]
         public string Responsavel { get; set; }
     
         /// <summary>
-        /// {{{credor_response_flag_segunda_via_acordo_value}}}
+        /// Credor response flag segunda via acordo escritorio cobran\u00E7a
         /// </summary>
-        /// <value>{{{credor_response_flag_segunda_via_acordo_value}}}</value>
+        /// <value>Credor response flag segunda via acordo escritorio cobran\u00E7a</value>
         [DataMember(Name="flagSegundaViaAcordo", EmitDefaultValue=false)]
         public int? FlagSegundaViaAcordo { get; set; }
     
         /// <summary>
-        /// {{{credor_response_valor_minimo_parcela_value}}}
+        /// Credor response valor m\u00EDnimo escritorio cobran\u00E7a
         /// </summary>
-        /// <value>{{{credor_response_valor_minimo_parcela_value}}}</value>
+        /// <value>Credor response valor m\u00EDnimo escritorio cobran\u00E7a</value>
         [DataMember(Name="valorMinimoParcela", EmitDefaultValue=false)]
         public double? ValorMinimoParcela { get; set; }
     
         /// <summary>
-        /// {{{credor_response_desconto_maximo_value}}}
+        /// Credor response desconto m\u00E1ximo escritorio cobran\u00E7a
         /// </summary>
-        /// <value>{{{credor_response_desconto_maximo_value}}}</value>
+        /// <value>Credor response desconto m\u00E1ximo escritorio cobran\u00E7a</value>
         [DataMember(Name="descontoMaximo", EmitDefaultValue=false)]
         public double? DescontoMaximo { get; set; }
     

@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{portador_response_description}}}
+    /// Portador
     /// </summary>
     [DataContract]
     public partial class PortadorResponse :  IEquatable<PortadorResponse>
@@ -22,16 +22,16 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="PortadorResponse" /> class.
         /// Initializes a new instance of the <see cref="PortadorResponse" />class.
         /// </summary>
-        /// <param name="IdConta">{{{portador_response_id_conta_value}}}.</param>
-        /// <param name="IdProduto">{{{portador_response_id_produto_value}}}.</param>
-        /// <param name="IdPessoa">{{{portador_response_id_pessoa_value}}}.</param>
-        /// <param name="IdParentesco">{{{portador_response_id_parentesco_value}}}.</param>
-        /// <param name="TipoPortador">{{{portador_response_tipo_portador_value}}}.</param>
-        /// <param name="NomeImpresso">{{{portador_response_nome_impresso_value}}}.</param>
-        /// <param name="IdTipoCartao">{{{portador_response_id_tipo_cartao_value}}}.</param>
-        /// <param name="FlagAtivo">{{{portador_response_flag_ativo_value}}}.</param>
-        /// <param name="DataCadastroPortador">{{{portador_response_data_cadastro_portador_value}}}.</param>
-        /// <param name="DataCancelamentoPortador">{{{portador_response_data_cancelamento_portador_value}}}.</param>
+        /// <param name="IdConta">C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id).</param>
+        /// <param name="IdProduto">C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id).</param>
+        /// <param name="IdPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id).</param>
+        /// <param name="IdParentesco">C\u00F3digo de Identifica\u00E7\u00E3o do Parentesco (id).</param>
+        /// <param name="TipoPortador">Apresenta o tipo do Portador do cart\u00E3o, sendo: (&#39;T&#39;: Titular, &#39;A&#39;: Adicional).</param>
+        /// <param name="NomeImpresso">Apresenta o nome a ser impresso no cart\u00E3o.</param>
+        /// <param name="IdTipoCartao">Apresenta o c\u00F3digo de identifica\u00E7\u00E3o do tipo do cart\u00E3o (id), que ser\u00E1 utilizado para gerar os cart\u00F5es deste portador, vinculados a sua respectiva conta atrav\u00E9s do campo idConta.</param>
+        /// <param name="FlagAtivo">Quanto ativa, indica que o cadastro do Portador est\u00E1 ativo, em emissores que realizam este tipo de gest\u00E3o.</param>
+        /// <param name="DataCadastroPortador">Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00E7\u00E3o.</param>
+        /// <param name="DataCancelamentoPortador">Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00E7\u00E3o.</param>
 
         public PortadorResponse(long? IdConta = null, long? IdProduto = null, long? IdPessoa = null, long? IdParentesco = null, string TipoPortador = null, string NomeImpresso = null, long? IdTipoCartao = null, int? FlagAtivo = null, string DataCadastroPortador = null, string DataCancelamentoPortador = null)
         {
@@ -50,72 +50,72 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{portador_response_id_conta_value}}}
+        /// C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id)
         /// </summary>
-        /// <value>{{{portador_response_id_conta_value}}}</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id)</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// {{{portador_response_id_produto_value}}}
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id)
         /// </summary>
-        /// <value>{{{portador_response_id_produto_value}}}</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id)</value>
         [DataMember(Name="idProduto", EmitDefaultValue=false)]
         public long? IdProduto { get; set; }
     
         /// <summary>
-        /// {{{portador_response_id_pessoa_value}}}
+        /// C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id)
         /// </summary>
-        /// <value>{{{portador_response_id_pessoa_value}}}</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id)</value>
         [DataMember(Name="idPessoa", EmitDefaultValue=false)]
         public long? IdPessoa { get; set; }
     
         /// <summary>
-        /// {{{portador_response_id_parentesco_value}}}
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do Parentesco (id)
         /// </summary>
-        /// <value>{{{portador_response_id_parentesco_value}}}</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Parentesco (id)</value>
         [DataMember(Name="idParentesco", EmitDefaultValue=false)]
         public long? IdParentesco { get; set; }
     
         /// <summary>
-        /// {{{portador_response_tipo_portador_value}}}
+        /// Apresenta o tipo do Portador do cart\u00E3o, sendo: (&#39;T&#39;: Titular, &#39;A&#39;: Adicional)
         /// </summary>
-        /// <value>{{{portador_response_tipo_portador_value}}}</value>
+        /// <value>Apresenta o tipo do Portador do cart\u00E3o, sendo: (&#39;T&#39;: Titular, &#39;A&#39;: Adicional)</value>
         [DataMember(Name="tipoPortador", EmitDefaultValue=false)]
         public string TipoPortador { get; set; }
     
         /// <summary>
-        /// {{{portador_response_nome_impresso_value}}}
+        /// Apresenta o nome a ser impresso no cart\u00E3o
         /// </summary>
-        /// <value>{{{portador_response_nome_impresso_value}}}</value>
+        /// <value>Apresenta o nome a ser impresso no cart\u00E3o</value>
         [DataMember(Name="nomeImpresso", EmitDefaultValue=false)]
         public string NomeImpresso { get; set; }
     
         /// <summary>
-        /// {{{portador_response_id_tipo_cartao_value}}}
+        /// Apresenta o c\u00F3digo de identifica\u00E7\u00E3o do tipo do cart\u00E3o (id), que ser\u00E1 utilizado para gerar os cart\u00F5es deste portador, vinculados a sua respectiva conta atrav\u00E9s do campo idConta
         /// </summary>
-        /// <value>{{{portador_response_id_tipo_cartao_value}}}</value>
+        /// <value>Apresenta o c\u00F3digo de identifica\u00E7\u00E3o do tipo do cart\u00E3o (id), que ser\u00E1 utilizado para gerar os cart\u00F5es deste portador, vinculados a sua respectiva conta atrav\u00E9s do campo idConta</value>
         [DataMember(Name="idTipoCartao", EmitDefaultValue=false)]
         public long? IdTipoCartao { get; set; }
     
         /// <summary>
-        /// {{{portador_response_flag_ativo_value}}}
+        /// Quanto ativa, indica que o cadastro do Portador est\u00E1 ativo, em emissores que realizam este tipo de gest\u00E3o
         /// </summary>
-        /// <value>{{{portador_response_flag_ativo_value}}}</value>
+        /// <value>Quanto ativa, indica que o cadastro do Portador est\u00E1 ativo, em emissores que realizam este tipo de gest\u00E3o</value>
         [DataMember(Name="flagAtivo", EmitDefaultValue=false)]
         public int? FlagAtivo { get; set; }
     
         /// <summary>
-        /// {{{portador_response_data_cadastro_portador_value}}}
+        /// Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00E7\u00E3o
         /// </summary>
-        /// <value>{{{portador_response_data_cadastro_portador_value}}}</value>
+        /// <value>Apresenta a data em que o Portador fora cadastrado, quando possuir esta informa\u00E7\u00E3o</value>
         [DataMember(Name="dataCadastroPortador", EmitDefaultValue=false)]
         public string DataCadastroPortador { get; set; }
     
         /// <summary>
-        /// {{{portador_response_data_cancelamento_portador_value}}}
+        /// Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00E7\u00E3o
         /// </summary>
-        /// <value>{{{portador_response_data_cancelamento_portador_value}}}</value>
+        /// <value>Apresenta a data em que o Portador fora cancelado, quando possuir esta informa\u00E7\u00E3o</value>
         [DataMember(Name="dataCancelamentoPortador", EmitDefaultValue=false)]
         public string DataCancelamentoPortador { get; set; }
     

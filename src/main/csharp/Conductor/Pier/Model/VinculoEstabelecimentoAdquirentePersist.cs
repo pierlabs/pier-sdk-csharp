@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{vinculo_estabelecimento_adquirente_persist_description}}}
+    /// Objeto VinculoEstabelecimentoPersist
     /// </summary>
     [DataContract]
     public partial class VinculoEstabelecimentoAdquirentePersist :  IEquatable<VinculoEstabelecimentoAdquirentePersist>
@@ -22,9 +22,9 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="VinculoEstabelecimentoAdquirentePersist" /> class.
         /// Initializes a new instance of the <see cref="VinculoEstabelecimentoAdquirentePersist" />class.
         /// </summary>
-        /// <param name="IdEstabelecimento">{{{vinculo_estabelecimento_adquirente_persist_id_estabelecimento_value}}} (required).</param>
-        /// <param name="IdAdquirente">{{{vinculo_estabelecimento_adquirente_persist_id_adquirente_value}}} (required).</param>
-        /// <param name="CodigoEstabelecimentoAdquirente">{{{vinculo_estabelecimento_adquirente_persist_codigo_estabelecimento_adquirente_value}}} (required).</param>
+        /// <param name="IdEstabelecimento">Apresenta o id do estabelecimento (required).</param>
+        /// <param name="IdAdquirente">Apresenta o id do adquirente (required).</param>
+        /// <param name="CodigoEstabelecimentoAdquirente">Apresenta o c\u00F3digo de v\u00EDnculo entre o estabelecimento e o adquirente (required).</param>
 
         public VinculoEstabelecimentoAdquirentePersist(long? IdEstabelecimento = null, long? IdAdquirente = null, string CodigoEstabelecimentoAdquirente = null)
         {
@@ -60,23 +60,23 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{vinculo_estabelecimento_adquirente_persist_id_estabelecimento_value}}}
+        /// Apresenta o id do estabelecimento
         /// </summary>
-        /// <value>{{{vinculo_estabelecimento_adquirente_persist_id_estabelecimento_value}}}</value>
+        /// <value>Apresenta o id do estabelecimento</value>
         [DataMember(Name="idEstabelecimento", EmitDefaultValue=false)]
         public long? IdEstabelecimento { get; set; }
     
         /// <summary>
-        /// {{{vinculo_estabelecimento_adquirente_persist_id_adquirente_value}}}
+        /// Apresenta o id do adquirente
         /// </summary>
-        /// <value>{{{vinculo_estabelecimento_adquirente_persist_id_adquirente_value}}}</value>
+        /// <value>Apresenta o id do adquirente</value>
         [DataMember(Name="idAdquirente", EmitDefaultValue=false)]
         public long? IdAdquirente { get; set; }
     
         /// <summary>
-        /// {{{vinculo_estabelecimento_adquirente_persist_codigo_estabelecimento_adquirente_value}}}
+        /// Apresenta o c\u00F3digo de v\u00EDnculo entre o estabelecimento e o adquirente
         /// </summary>
-        /// <value>{{{vinculo_estabelecimento_adquirente_persist_codigo_estabelecimento_adquirente_value}}}</value>
+        /// <value>Apresenta o c\u00F3digo de v\u00EDnculo entre o estabelecimento e o adquirente</value>
         [DataMember(Name="codigoEstabelecimentoAdquirente", EmitDefaultValue=false)]
         public string CodigoEstabelecimentoAdquirente { get; set; }
     

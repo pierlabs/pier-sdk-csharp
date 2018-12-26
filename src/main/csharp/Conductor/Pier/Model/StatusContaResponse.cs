@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{status_conta_response_description}}}
+    /// Status Conta
     /// </summary>
     [DataContract]
     public partial class StatusContaResponse :  IEquatable<StatusContaResponse>
@@ -22,17 +22,17 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="StatusContaResponse" /> class.
         /// Initializes a new instance of the <see cref="StatusContaResponse" />class.
         /// </summary>
-        /// <param name="Id">{{{status_conta_response_id_value}}} (required).</param>
-        /// <param name="Nome">{{{status_conta_response_nome_value}}} (required).</param>
-        /// <param name="PermiteAlterarVencimento">{{{status_conta_response_permite_alterar_vencimento_value}}}.</param>
-        /// <param name="PermiteAlterarLimite">{{{status_conta_response_permite_alterar_limite_value}}}.</param>
-        /// <param name="PermiteEmitirNovaViaCartao">{{{status_conta_response_permite_emitir_nova_via_cartao_value}}}.</param>
-        /// <param name="PermiteFazerTransferencia">{{{status_conta_response_permite_fazer_transferencia_value}}}.</param>
-        /// <param name="PermiteReceberTransferencia">{{{status_conta_response_permite_receber_transferencia_value}}}.</param>
-        /// <param name="PermiteCriarAcordoCobranca">{{{status_conta_response_permite_criar_acordo_cobranca_value}}}.</param>
-        /// <param name="PermiteAtribuirComoBloqueio">{{{status_conta_response_permite_atribuir_como_bloqueio_value}}}.</param>
-        /// <param name="PermiteDesbloquear">{{{status_conta_response_permite_desbloquear_value}}}.</param>
-        /// <param name="PermiteAtribuirComoCancelamento">{{{status_conta_response_permite_atribuir_como_cancelamento_value}}}.</param>
+        /// <param name="Id">C\u00F3digo de Identifica\u00E7\u00E3o do Status da Conta (id) (required).</param>
+        /// <param name="Nome">Nome atribu\u00EDdo ao Status da Conta (required).</param>
+        /// <param name="PermiteAlterarVencimento">Par\u00E2metro que define se o Status da conta permite a solicita\u00E7\u00E3o da altera\u00E7\u00E3o do Dia para Vencimento das Faturas, sendo: 0: Inativo e 1: Ativo.</param>
+        /// <param name="PermiteAlterarLimite">Par\u00E2metro que define se o Status da conta permite altera\u00E7\u00E3o de Limites, sendo: 0: Inativo e 1: Ativo.</param>
+        /// <param name="PermiteEmitirNovaViaCartao">Par\u00E2metro que define se o Status da conta permite solicitar uma nova via de Cart\u00E3o, sendo: 0: Inativo e 1: Ativo.</param>
+        /// <param name="PermiteFazerTransferencia">Par\u00E2metro que define se o Status da conta permite originar Transfer\u00EAncias de Cr\u00E9dito para outras Contas do mesmo Emissor ou para uma Conta Banc\u00E1ria, sendo: 0: Inativo e 1: Ativo.</param>
+        /// <param name="PermiteReceberTransferencia">Par\u00E2metro que define se o Status da conta permite  receber Transfer\u00EAncias de Cr\u00E9dito originadas de outras Contas do mesmo emissor, sendo: 0: Inativo e 1: Ativo.</param>
+        /// <param name="PermiteCriarAcordoCobranca">Par\u00E2metro que define se o Status da conta permite ter um Acordo de Cobran\u00E7a de D\u00EDvida criado para ela, sendo: 0: Inativo e 1: Ativo.</param>
+        /// <param name="PermiteAtribuirComoBloqueio">Par\u00E2metro que define se o Status da conta permite ser atribu\u00EDdo para Bloquear temporariamente uma Conta, sendo: 0: Inativo e 1: Ativo.</param>
+        /// <param name="PermiteDesbloquear">Par\u00E2metro que define se o Status da conta permite ser desbloqueada, sendo: 0: Inativo e 1: Ativo.</param>
+        /// <param name="PermiteAtribuirComoCancelamento">Par\u00E2metro que define se o Status da conta permite ser atribu\u00EDdo para realizar o cancelamento definitivo de uma conta, sendo: 0: Inativo e 1: Ativo.</param>
 
         public StatusContaResponse(long? Id = null, string Nome = null, int? PermiteAlterarVencimento = null, int? PermiteAlterarLimite = null, int? PermiteEmitirNovaViaCartao = null, int? PermiteFazerTransferencia = null, int? PermiteReceberTransferencia = null, int? PermiteCriarAcordoCobranca = null, int? PermiteAtribuirComoBloqueio = null, int? PermiteDesbloquear = null, int? PermiteAtribuirComoCancelamento = null)
         {
@@ -68,79 +68,79 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{status_conta_response_id_value}}}
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do Status da Conta (id)
         /// </summary>
-        /// <value>{{{status_conta_response_id_value}}}</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Status da Conta (id)</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{status_conta_response_nome_value}}}
+        /// Nome atribu\u00EDdo ao Status da Conta
         /// </summary>
-        /// <value>{{{status_conta_response_nome_value}}}</value>
+        /// <value>Nome atribu\u00EDdo ao Status da Conta</value>
         [DataMember(Name="nome", EmitDefaultValue=false)]
         public string Nome { get; set; }
     
         /// <summary>
-        /// {{{status_conta_response_permite_alterar_vencimento_value}}}
+        /// Par\u00E2metro que define se o Status da conta permite a solicita\u00E7\u00E3o da altera\u00E7\u00E3o do Dia para Vencimento das Faturas, sendo: 0: Inativo e 1: Ativo
         /// </summary>
-        /// <value>{{{status_conta_response_permite_alterar_vencimento_value}}}</value>
+        /// <value>Par\u00E2metro que define se o Status da conta permite a solicita\u00E7\u00E3o da altera\u00E7\u00E3o do Dia para Vencimento das Faturas, sendo: 0: Inativo e 1: Ativo</value>
         [DataMember(Name="permiteAlterarVencimento", EmitDefaultValue=false)]
         public int? PermiteAlterarVencimento { get; set; }
     
         /// <summary>
-        /// {{{status_conta_response_permite_alterar_limite_value}}}
+        /// Par\u00E2metro que define se o Status da conta permite altera\u00E7\u00E3o de Limites, sendo: 0: Inativo e 1: Ativo
         /// </summary>
-        /// <value>{{{status_conta_response_permite_alterar_limite_value}}}</value>
+        /// <value>Par\u00E2metro que define se o Status da conta permite altera\u00E7\u00E3o de Limites, sendo: 0: Inativo e 1: Ativo</value>
         [DataMember(Name="permiteAlterarLimite", EmitDefaultValue=false)]
         public int? PermiteAlterarLimite { get; set; }
     
         /// <summary>
-        /// {{{status_conta_response_permite_emitir_nova_via_cartao_value}}}
+        /// Par\u00E2metro que define se o Status da conta permite solicitar uma nova via de Cart\u00E3o, sendo: 0: Inativo e 1: Ativo
         /// </summary>
-        /// <value>{{{status_conta_response_permite_emitir_nova_via_cartao_value}}}</value>
+        /// <value>Par\u00E2metro que define se o Status da conta permite solicitar uma nova via de Cart\u00E3o, sendo: 0: Inativo e 1: Ativo</value>
         [DataMember(Name="permiteEmitirNovaViaCartao", EmitDefaultValue=false)]
         public int? PermiteEmitirNovaViaCartao { get; set; }
     
         /// <summary>
-        /// {{{status_conta_response_permite_fazer_transferencia_value}}}
+        /// Par\u00E2metro que define se o Status da conta permite originar Transfer\u00EAncias de Cr\u00E9dito para outras Contas do mesmo Emissor ou para uma Conta Banc\u00E1ria, sendo: 0: Inativo e 1: Ativo
         /// </summary>
-        /// <value>{{{status_conta_response_permite_fazer_transferencia_value}}}</value>
+        /// <value>Par\u00E2metro que define se o Status da conta permite originar Transfer\u00EAncias de Cr\u00E9dito para outras Contas do mesmo Emissor ou para uma Conta Banc\u00E1ria, sendo: 0: Inativo e 1: Ativo</value>
         [DataMember(Name="permiteFazerTransferencia", EmitDefaultValue=false)]
         public int? PermiteFazerTransferencia { get; set; }
     
         /// <summary>
-        /// {{{status_conta_response_permite_receber_transferencia_value}}}
+        /// Par\u00E2metro que define se o Status da conta permite  receber Transfer\u00EAncias de Cr\u00E9dito originadas de outras Contas do mesmo emissor, sendo: 0: Inativo e 1: Ativo
         /// </summary>
-        /// <value>{{{status_conta_response_permite_receber_transferencia_value}}}</value>
+        /// <value>Par\u00E2metro que define se o Status da conta permite  receber Transfer\u00EAncias de Cr\u00E9dito originadas de outras Contas do mesmo emissor, sendo: 0: Inativo e 1: Ativo</value>
         [DataMember(Name="permiteReceberTransferencia", EmitDefaultValue=false)]
         public int? PermiteReceberTransferencia { get; set; }
     
         /// <summary>
-        /// {{{status_conta_response_permite_criar_acordo_cobranca_value}}}
+        /// Par\u00E2metro que define se o Status da conta permite ter um Acordo de Cobran\u00E7a de D\u00EDvida criado para ela, sendo: 0: Inativo e 1: Ativo
         /// </summary>
-        /// <value>{{{status_conta_response_permite_criar_acordo_cobranca_value}}}</value>
+        /// <value>Par\u00E2metro que define se o Status da conta permite ter um Acordo de Cobran\u00E7a de D\u00EDvida criado para ela, sendo: 0: Inativo e 1: Ativo</value>
         [DataMember(Name="permiteCriarAcordoCobranca", EmitDefaultValue=false)]
         public int? PermiteCriarAcordoCobranca { get; set; }
     
         /// <summary>
-        /// {{{status_conta_response_permite_atribuir_como_bloqueio_value}}}
+        /// Par\u00E2metro que define se o Status da conta permite ser atribu\u00EDdo para Bloquear temporariamente uma Conta, sendo: 0: Inativo e 1: Ativo
         /// </summary>
-        /// <value>{{{status_conta_response_permite_atribuir_como_bloqueio_value}}}</value>
+        /// <value>Par\u00E2metro que define se o Status da conta permite ser atribu\u00EDdo para Bloquear temporariamente uma Conta, sendo: 0: Inativo e 1: Ativo</value>
         [DataMember(Name="permiteAtribuirComoBloqueio", EmitDefaultValue=false)]
         public int? PermiteAtribuirComoBloqueio { get; set; }
     
         /// <summary>
-        /// {{{status_conta_response_permite_desbloquear_value}}}
+        /// Par\u00E2metro que define se o Status da conta permite ser desbloqueada, sendo: 0: Inativo e 1: Ativo
         /// </summary>
-        /// <value>{{{status_conta_response_permite_desbloquear_value}}}</value>
+        /// <value>Par\u00E2metro que define se o Status da conta permite ser desbloqueada, sendo: 0: Inativo e 1: Ativo</value>
         [DataMember(Name="permiteDesbloquear", EmitDefaultValue=false)]
         public int? PermiteDesbloquear { get; set; }
     
         /// <summary>
-        /// {{{status_conta_response_permite_atribuir_como_cancelamento_value}}}
+        /// Par\u00E2metro que define se o Status da conta permite ser atribu\u00EDdo para realizar o cancelamento definitivo de uma conta, sendo: 0: Inativo e 1: Ativo
         /// </summary>
-        /// <value>{{{status_conta_response_permite_atribuir_como_cancelamento_value}}}</value>
+        /// <value>Par\u00E2metro que define se o Status da conta permite ser atribu\u00EDdo para realizar o cancelamento definitivo de uma conta, sendo: 0: Inativo e 1: Ativo</value>
         [DataMember(Name="permiteAtribuirComoCancelamento", EmitDefaultValue=false)]
         public int? PermiteAtribuirComoCancelamento { get; set; }
     

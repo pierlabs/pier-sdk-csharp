@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{tipo_ajuste_response_description}}}
+    /// Tipo de ajuste
     /// </summary>
     [DataContract]
     public partial class TipoAjusteResponse :  IEquatable<TipoAjusteResponse>
@@ -22,10 +22,10 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TipoAjusteResponse" /> class.
         /// Initializes a new instance of the <see cref="TipoAjusteResponse" />class.
         /// </summary>
-        /// <param name="Id">{{{tipo_ajuste_response_id_value}}}.</param>
-        /// <param name="Descricao">{{{tipo_ajuste_response_descricao_value}}}.</param>
-        /// <param name="FlagPagamentoLojista">{{{tipo_ajuste_response_flag_pagamento_lojista_value}}}.</param>
-        /// <param name="Transacoes">{{{tipo_ajuste_response_transacoes_value}}}.</param>
+        /// <param name="Id">C\u00F3digo identificador do tipo de ajuste.</param>
+        /// <param name="Descricao">Descri\u00E7\u00E3o do tipo de ajuste.</param>
+        /// <param name="FlagPagamentoLojista">Identifica se o pagamento foi efetuado em algum estabelecimento.</param>
+        /// <param name="Transacoes">Transa\u00E7\u00F5es relacionadas ao tipo do ajuste.</param>
 
         public TipoAjusteResponse(long? Id = null, string Descricao = null, bool? FlagPagamentoLojista = null, List<TipoTransacaoAjusteResponse> Transacoes = null)
         {
@@ -38,30 +38,30 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{tipo_ajuste_response_id_value}}}
+        /// C\u00F3digo identificador do tipo de ajuste
         /// </summary>
-        /// <value>{{{tipo_ajuste_response_id_value}}}</value>
+        /// <value>C\u00F3digo identificador do tipo de ajuste</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{tipo_ajuste_response_descricao_value}}}
+        /// Descri\u00E7\u00E3o do tipo de ajuste
         /// </summary>
-        /// <value>{{{tipo_ajuste_response_descricao_value}}}</value>
+        /// <value>Descri\u00E7\u00E3o do tipo de ajuste</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     
         /// <summary>
-        /// {{{tipo_ajuste_response_flag_pagamento_lojista_value}}}
+        /// Identifica se o pagamento foi efetuado em algum estabelecimento
         /// </summary>
-        /// <value>{{{tipo_ajuste_response_flag_pagamento_lojista_value}}}</value>
+        /// <value>Identifica se o pagamento foi efetuado em algum estabelecimento</value>
         [DataMember(Name="flagPagamentoLojista", EmitDefaultValue=false)]
         public bool? FlagPagamentoLojista { get; set; }
     
         /// <summary>
-        /// {{{tipo_ajuste_response_transacoes_value}}}
+        /// Transa\u00E7\u00F5es relacionadas ao tipo do ajuste
         /// </summary>
-        /// <value>{{{tipo_ajuste_response_transacoes_value}}}</value>
+        /// <value>Transa\u00E7\u00F5es relacionadas ao tipo do ajuste</value>
         [DataMember(Name="transacoes", EmitDefaultValue=false)]
         public List<TipoTransacaoAjusteResponse> Transacoes { get; set; }
     

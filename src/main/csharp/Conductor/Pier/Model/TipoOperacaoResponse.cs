@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{tipo_operacao_response_description}}}
+    /// Representa\u00E7\u00E3o da resposta do recurso TipoOperacao
     /// </summary>
     [DataContract]
     public partial class TipoOperacaoResponse :  IEquatable<TipoOperacaoResponse>
@@ -22,22 +22,22 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TipoOperacaoResponse" /> class.
         /// Initializes a new instance of the <see cref="TipoOperacaoResponse" />class.
         /// </summary>
-        /// <param name="Id">{{{tipo_operacao_response_id_value}}} (required).</param>
-        /// <param name="TipoOperacao">{{{tipo_operacao_response_tipo_operacao_value}}} (required).</param>
-        /// <param name="Nome">{{{tipo_operacao_response_nome_value}}} (required).</param>
-        /// <param name="Descricao">{{{tipo_operacao_response_descricao_value}}} (required).</param>
-        /// <param name="ExcedentePermitido">{{{tipo_operacao_response_excedente_permitido_value}}}.</param>
-        /// <param name="TipoExcedentePermitido">{{{tipo_operacao_response_tipo_excedente_permitido_value}}}.</param>
-        /// <param name="ValorMinimo">{{{tipo_operacao_response_valor_minimo_value}}} (required).</param>
-        /// <param name="ValorMaximo">{{{tipo_operacao_response_valor_maximo_value}}} (required).</param>
-        /// <param name="ValorTAC">{{{tipo_operacao_response_valor_t_a_c_value}}}.</param>
-        /// <param name="FlagTiraTac">{{{tipo_operacao_response_flag_tira_tac_value}}}.</param>
-        /// <param name="IdProduto">{{{tipo_operacao_response_id_produto_value}}} (required).</param>
-        /// <param name="IdEstabelecimento">{{{tipo_operacao_response_id_estabelecimento_value}}} (required).</param>
-        /// <param name="Tarifa">{{{tipo_operacao_response_tarifa_value}}}.</param>
-        /// <param name="RemuneracaoEmissor">{{{tipo_operacao_response_remuneracao_emissor_value}}}.</param>
-        /// <param name="PlanoMaximo">{{{tipo_operacao_response_plano_maximo_value}}} (required).</param>
-        /// <param name="PlanoMinimo">{{{tipo_operacao_response_plano_minimo_value}}} (required).</param>
+        /// <param name="Id">C\u00F3digo identificador do TipoOperacao (required).</param>
+        /// <param name="TipoOperacao">C\u00F3digo do TipoOperacao (required).</param>
+        /// <param name="Nome">Nome do TipoOperacao (required).</param>
+        /// <param name="Descricao">Decri\u00E7\u00E3o do TipoOperacao (required).</param>
+        /// <param name="ExcedentePermitido">Excedente permitido para o TipoOperacao.</param>
+        /// <param name="TipoExcedentePermitido">Tipo do Excedente permitido para o TipoOperacao.</param>
+        /// <param name="ValorMinimo">Valor minimo para a transa\u00E7\u00E3o do TipoOperacao (required).</param>
+        /// <param name="ValorMaximo">Valor maximo para a transa\u00E7\u00E3o do TipoOperacao (required).</param>
+        /// <param name="ValorTAC">Valor TAC da transa\u00E7\u00E3o do TipoOperacao.</param>
+        /// <param name="FlagTiraTac">Flag Tira TAC do TipoOperacao.</param>
+        /// <param name="IdProduto">Identificador do Produto do TipoOperacao (required).</param>
+        /// <param name="IdEstabelecimento">Identificador do Estabelecimento do TipoOperacao (required).</param>
+        /// <param name="Tarifa">Tarifa do TipoOperacao.</param>
+        /// <param name="RemuneracaoEmissor">Remunera\u00E7\u00E3o do Emissor para o TipoOperacao.</param>
+        /// <param name="PlanoMaximo">Plano m\u00E1ximo do TipoOperacao (required).</param>
+        /// <param name="PlanoMinimo">Plano minimo do TipoOperacao (required).</param>
 
         public TipoOperacaoResponse(long? Id = null, string TipoOperacao = null, string Nome = null, string Descricao = null, double? ExcedentePermitido = null, string TipoExcedentePermitido = null, double? ValorMinimo = null, double? ValorMaximo = null, double? ValorTAC = null, int? FlagTiraTac = null, long? IdProduto = null, long? IdEstabelecimento = null, double? Tarifa = null, double? RemuneracaoEmissor = null, int? PlanoMaximo = null, int? PlanoMinimo = null)
         {
@@ -142,114 +142,114 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{tipo_operacao_response_id_value}}}
+        /// C\u00F3digo identificador do TipoOperacao
         /// </summary>
-        /// <value>{{{tipo_operacao_response_id_value}}}</value>
+        /// <value>C\u00F3digo identificador do TipoOperacao</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{tipo_operacao_response_tipo_operacao_value}}}
+        /// C\u00F3digo do TipoOperacao
         /// </summary>
-        /// <value>{{{tipo_operacao_response_tipo_operacao_value}}}</value>
+        /// <value>C\u00F3digo do TipoOperacao</value>
         [DataMember(Name="tipoOperacao", EmitDefaultValue=false)]
         public string TipoOperacao { get; set; }
     
         /// <summary>
-        /// {{{tipo_operacao_response_nome_value}}}
+        /// Nome do TipoOperacao
         /// </summary>
-        /// <value>{{{tipo_operacao_response_nome_value}}}</value>
+        /// <value>Nome do TipoOperacao</value>
         [DataMember(Name="nome", EmitDefaultValue=false)]
         public string Nome { get; set; }
     
         /// <summary>
-        /// {{{tipo_operacao_response_descricao_value}}}
+        /// Decri\u00E7\u00E3o do TipoOperacao
         /// </summary>
-        /// <value>{{{tipo_operacao_response_descricao_value}}}</value>
+        /// <value>Decri\u00E7\u00E3o do TipoOperacao</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     
         /// <summary>
-        /// {{{tipo_operacao_response_excedente_permitido_value}}}
+        /// Excedente permitido para o TipoOperacao
         /// </summary>
-        /// <value>{{{tipo_operacao_response_excedente_permitido_value}}}</value>
+        /// <value>Excedente permitido para o TipoOperacao</value>
         [DataMember(Name="excedentePermitido", EmitDefaultValue=false)]
         public double? ExcedentePermitido { get; set; }
     
         /// <summary>
-        /// {{{tipo_operacao_response_tipo_excedente_permitido_value}}}
+        /// Tipo do Excedente permitido para o TipoOperacao
         /// </summary>
-        /// <value>{{{tipo_operacao_response_tipo_excedente_permitido_value}}}</value>
+        /// <value>Tipo do Excedente permitido para o TipoOperacao</value>
         [DataMember(Name="tipoExcedentePermitido", EmitDefaultValue=false)]
         public string TipoExcedentePermitido { get; set; }
     
         /// <summary>
-        /// {{{tipo_operacao_response_valor_minimo_value}}}
+        /// Valor minimo para a transa\u00E7\u00E3o do TipoOperacao
         /// </summary>
-        /// <value>{{{tipo_operacao_response_valor_minimo_value}}}</value>
+        /// <value>Valor minimo para a transa\u00E7\u00E3o do TipoOperacao</value>
         [DataMember(Name="valorMinimo", EmitDefaultValue=false)]
         public double? ValorMinimo { get; set; }
     
         /// <summary>
-        /// {{{tipo_operacao_response_valor_maximo_value}}}
+        /// Valor maximo para a transa\u00E7\u00E3o do TipoOperacao
         /// </summary>
-        /// <value>{{{tipo_operacao_response_valor_maximo_value}}}</value>
+        /// <value>Valor maximo para a transa\u00E7\u00E3o do TipoOperacao</value>
         [DataMember(Name="valorMaximo", EmitDefaultValue=false)]
         public double? ValorMaximo { get; set; }
     
         /// <summary>
-        /// {{{tipo_operacao_response_valor_t_a_c_value}}}
+        /// Valor TAC da transa\u00E7\u00E3o do TipoOperacao
         /// </summary>
-        /// <value>{{{tipo_operacao_response_valor_t_a_c_value}}}</value>
+        /// <value>Valor TAC da transa\u00E7\u00E3o do TipoOperacao</value>
         [DataMember(Name="valorTAC", EmitDefaultValue=false)]
         public double? ValorTAC { get; set; }
     
         /// <summary>
-        /// {{{tipo_operacao_response_flag_tira_tac_value}}}
+        /// Flag Tira TAC do TipoOperacao
         /// </summary>
-        /// <value>{{{tipo_operacao_response_flag_tira_tac_value}}}</value>
+        /// <value>Flag Tira TAC do TipoOperacao</value>
         [DataMember(Name="flagTiraTac", EmitDefaultValue=false)]
         public int? FlagTiraTac { get; set; }
     
         /// <summary>
-        /// {{{tipo_operacao_response_id_produto_value}}}
+        /// Identificador do Produto do TipoOperacao
         /// </summary>
-        /// <value>{{{tipo_operacao_response_id_produto_value}}}</value>
+        /// <value>Identificador do Produto do TipoOperacao</value>
         [DataMember(Name="idProduto", EmitDefaultValue=false)]
         public long? IdProduto { get; set; }
     
         /// <summary>
-        /// {{{tipo_operacao_response_id_estabelecimento_value}}}
+        /// Identificador do Estabelecimento do TipoOperacao
         /// </summary>
-        /// <value>{{{tipo_operacao_response_id_estabelecimento_value}}}</value>
+        /// <value>Identificador do Estabelecimento do TipoOperacao</value>
         [DataMember(Name="idEstabelecimento", EmitDefaultValue=false)]
         public long? IdEstabelecimento { get; set; }
     
         /// <summary>
-        /// {{{tipo_operacao_response_tarifa_value}}}
+        /// Tarifa do TipoOperacao
         /// </summary>
-        /// <value>{{{tipo_operacao_response_tarifa_value}}}</value>
+        /// <value>Tarifa do TipoOperacao</value>
         [DataMember(Name="tarifa", EmitDefaultValue=false)]
         public double? Tarifa { get; set; }
     
         /// <summary>
-        /// {{{tipo_operacao_response_remuneracao_emissor_value}}}
+        /// Remunera\u00E7\u00E3o do Emissor para o TipoOperacao
         /// </summary>
-        /// <value>{{{tipo_operacao_response_remuneracao_emissor_value}}}</value>
+        /// <value>Remunera\u00E7\u00E3o do Emissor para o TipoOperacao</value>
         [DataMember(Name="remuneracaoEmissor", EmitDefaultValue=false)]
         public double? RemuneracaoEmissor { get; set; }
     
         /// <summary>
-        /// {{{tipo_operacao_response_plano_maximo_value}}}
+        /// Plano m\u00E1ximo do TipoOperacao
         /// </summary>
-        /// <value>{{{tipo_operacao_response_plano_maximo_value}}}</value>
+        /// <value>Plano m\u00E1ximo do TipoOperacao</value>
         [DataMember(Name="planoMaximo", EmitDefaultValue=false)]
         public int? PlanoMaximo { get; set; }
     
         /// <summary>
-        /// {{{tipo_operacao_response_plano_minimo_value}}}
+        /// Plano minimo do TipoOperacao
         /// </summary>
-        /// <value>{{{tipo_operacao_response_plano_minimo_value}}}</value>
+        /// <value>Plano minimo do TipoOperacao</value>
         [DataMember(Name="planoMinimo", EmitDefaultValue=false)]
         public int? PlanoMinimo { get; set; }
     

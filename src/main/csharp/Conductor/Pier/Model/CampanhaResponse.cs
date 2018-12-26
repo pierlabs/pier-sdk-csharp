@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{campanha_response_description}}}
+    /// Representa\u00E7\u00E3o da resposta do recurso de campanha
     /// </summary>
     [DataContract]
     public partial class CampanhaResponse :  IEquatable<CampanhaResponse>
@@ -22,10 +22,10 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="CampanhaResponse" /> class.
         /// Initializes a new instance of the <see cref="CampanhaResponse" />class.
         /// </summary>
-        /// <param name="Id">{{{campanha_response_id_value}}}.</param>
-        /// <param name="Nome">{{{campanha_response_nome_value}}}.</param>
-        /// <param name="IdTipoCampanha">{{{campanha_response_id_tipo_campanha_value}}}.</param>
-        /// <param name="PlanosCampanhas">{{{campanha_response_planos_campanhas_value}}} (required).</param>
+        /// <param name="Id">Identificador da campanha.</param>
+        /// <param name="Nome">Nome da campanha.</param>
+        /// <param name="IdTipoCampanha">C\u00F3digo de Identifica\u00E7\u00E3o do tipo de campanha a qual a a Campanha pertence.</param>
+        /// <param name="PlanosCampanhas">Lista de planos associados a Campanha (required).</param>
 
         public CampanhaResponse(long? Id = null, string Nome = null, long? IdTipoCampanha = null, List<PlanoCampanhaResponse> PlanosCampanhas = null)
         {
@@ -46,30 +46,30 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{campanha_response_id_value}}}
+        /// Identificador da campanha
         /// </summary>
-        /// <value>{{{campanha_response_id_value}}}</value>
+        /// <value>Identificador da campanha</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{campanha_response_nome_value}}}
+        /// Nome da campanha
         /// </summary>
-        /// <value>{{{campanha_response_nome_value}}}</value>
+        /// <value>Nome da campanha</value>
         [DataMember(Name="nome", EmitDefaultValue=false)]
         public string Nome { get; set; }
     
         /// <summary>
-        /// {{{campanha_response_id_tipo_campanha_value}}}
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do tipo de campanha a qual a a Campanha pertence
         /// </summary>
-        /// <value>{{{campanha_response_id_tipo_campanha_value}}}</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do tipo de campanha a qual a a Campanha pertence</value>
         [DataMember(Name="idTipoCampanha", EmitDefaultValue=false)]
         public long? IdTipoCampanha { get; set; }
     
         /// <summary>
-        /// {{{campanha_response_planos_campanhas_value}}}
+        /// Lista de planos associados a Campanha
         /// </summary>
-        /// <value>{{{campanha_response_planos_campanhas_value}}}</value>
+        /// <value>Lista de planos associados a Campanha</value>
         [DataMember(Name="planosCampanhas", EmitDefaultValue=false)]
         public List<PlanoCampanhaResponse> PlanosCampanhas { get; set; }
     

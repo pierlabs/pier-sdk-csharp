@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{cartao_embossing_response_description}}}
+    /// Objeto Cart\u00E3o para Impress\u00E3o pela Gr\u00E1fica
     /// </summary>
     [DataContract]
     public partial class CartaoEmbossingResponse :  IEquatable<CartaoEmbossingResponse>
@@ -22,16 +22,16 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="CartaoEmbossingResponse" /> class.
         /// Initializes a new instance of the <see cref="CartaoEmbossingResponse" />class.
         /// </summary>
-        /// <param name="FlagVirtual">{{{cartao_embossing_response_flag_virtual_value}}}.</param>
-        /// <param name="IdConta">{{{cartao_embossing_response_id_conta_value}}}.</param>
-        /// <param name="IdPessoa">{{{cartao_embossing_response_id_pessoa_value}}}.</param>
-        /// <param name="IdCartao">{{{cartao_embossing_response_id_cartao_value}}}.</param>
-        /// <param name="IdBandeira">{{{cartao_embossing_response_id_bandeira_value}}}.</param>
-        /// <param name="IdTipoCartao">{{{cartao_embossing_response_id_tipo_cartao_value}}}.</param>
-        /// <param name="DataGeracao">{{{cartao_embossing_response_data_geracao_value}}}.</param>
-        /// <param name="DataValidade">{{{cartao_embossing_response_data_validade_value}}}.</param>
-        /// <param name="NomeOrigemComercial">{{{cartao_embossing_response_nome_origem_comercial_value}}}.</param>
-        /// <param name="Cpf">{{{cartao_embossing_response_cpf_value}}}.</param>
+        /// <param name="FlagVirtual">Apresenta o status que informa se o cart\u00E3o \u00E9 virtual.</param>
+        /// <param name="IdConta">Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id) a qual o cart\u00E3o gerado pertence.</param>
+        /// <param name="IdPessoa">Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id) portadora do cart\u00E3o gerado.</param>
+        /// <param name="IdCartao">Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id) que foi gerado.</param>
+        /// <param name="IdBandeira">Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Bandeira (id) a qual o Cart\u00E3o pertence, quando bandeirado.</param>
+        /// <param name="IdTipoCartao">Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Cart\u00E3o (id) atribu\u00EDdo ao Cart\u00E3o.</param>
+        /// <param name="DataGeracao">Apresenta a data de emiss\u00E3o do Cart\u00E3o.</param>
+        /// <param name="DataValidade">Apresenta a data de Validade do Cart\u00E3o.</param>
+        /// <param name="NomeOrigemComercial">Apresenta o nome da Origem Comercial que realizou o cadastro do Titular da Conta a qual o Cart\u00E3o pertence.</param>
+        /// <param name="Cpf">Apresenta o CPF do Portador do Cart\u00E3o.</param>
 
         public CartaoEmbossingResponse(int? FlagVirtual = null, long? IdConta = null, long? IdPessoa = null, long? IdCartao = null, long? IdBandeira = null, long? IdTipoCartao = null, string DataGeracao = null, string DataValidade = null, string NomeOrigemComercial = null, string Cpf = null)
         {
@@ -50,72 +50,72 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{cartao_embossing_response_flag_virtual_value}}}
+        /// Apresenta o status que informa se o cart\u00E3o \u00E9 virtual
         /// </summary>
-        /// <value>{{{cartao_embossing_response_flag_virtual_value}}}</value>
+        /// <value>Apresenta o status que informa se o cart\u00E3o \u00E9 virtual</value>
         [DataMember(Name="flagVirtual", EmitDefaultValue=false)]
         public int? FlagVirtual { get; set; }
     
         /// <summary>
-        /// {{{cartao_embossing_response_id_conta_value}}}
+        /// Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id) a qual o cart\u00E3o gerado pertence
         /// </summary>
-        /// <value>{{{cartao_embossing_response_id_conta_value}}}</value>
+        /// <value>Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id) a qual o cart\u00E3o gerado pertence</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// {{{cartao_embossing_response_id_pessoa_value}}}
+        /// Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id) portadora do cart\u00E3o gerado
         /// </summary>
-        /// <value>{{{cartao_embossing_response_id_pessoa_value}}}</value>
+        /// <value>Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id) portadora do cart\u00E3o gerado</value>
         [DataMember(Name="idPessoa", EmitDefaultValue=false)]
         public long? IdPessoa { get; set; }
     
         /// <summary>
-        /// {{{cartao_embossing_response_id_cartao_value}}}
+        /// Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id) que foi gerado
         /// </summary>
-        /// <value>{{{cartao_embossing_response_id_cartao_value}}}</value>
+        /// <value>Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id) que foi gerado</value>
         [DataMember(Name="idCartao", EmitDefaultValue=false)]
         public long? IdCartao { get; set; }
     
         /// <summary>
-        /// {{{cartao_embossing_response_id_bandeira_value}}}
+        /// Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Bandeira (id) a qual o Cart\u00E3o pertence, quando bandeirado
         /// </summary>
-        /// <value>{{{cartao_embossing_response_id_bandeira_value}}}</value>
+        /// <value>Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Bandeira (id) a qual o Cart\u00E3o pertence, quando bandeirado</value>
         [DataMember(Name="idBandeira", EmitDefaultValue=false)]
         public long? IdBandeira { get; set; }
     
         /// <summary>
-        /// {{{cartao_embossing_response_id_tipo_cartao_value}}}
+        /// Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Cart\u00E3o (id) atribu\u00EDdo ao Cart\u00E3o
         /// </summary>
-        /// <value>{{{cartao_embossing_response_id_tipo_cartao_value}}}</value>
+        /// <value>Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Cart\u00E3o (id) atribu\u00EDdo ao Cart\u00E3o</value>
         [DataMember(Name="idTipoCartao", EmitDefaultValue=false)]
         public long? IdTipoCartao { get; set; }
     
         /// <summary>
-        /// {{{cartao_embossing_response_data_geracao_value}}}
+        /// Apresenta a data de emiss\u00E3o do Cart\u00E3o
         /// </summary>
-        /// <value>{{{cartao_embossing_response_data_geracao_value}}}</value>
+        /// <value>Apresenta a data de emiss\u00E3o do Cart\u00E3o</value>
         [DataMember(Name="dataGeracao", EmitDefaultValue=false)]
         public string DataGeracao { get; set; }
     
         /// <summary>
-        /// {{{cartao_embossing_response_data_validade_value}}}
+        /// Apresenta a data de Validade do Cart\u00E3o
         /// </summary>
-        /// <value>{{{cartao_embossing_response_data_validade_value}}}</value>
+        /// <value>Apresenta a data de Validade do Cart\u00E3o</value>
         [DataMember(Name="dataValidade", EmitDefaultValue=false)]
         public string DataValidade { get; set; }
     
         /// <summary>
-        /// {{{cartao_embossing_response_nome_origem_comercial_value}}}
+        /// Apresenta o nome da Origem Comercial que realizou o cadastro do Titular da Conta a qual o Cart\u00E3o pertence
         /// </summary>
-        /// <value>{{{cartao_embossing_response_nome_origem_comercial_value}}}</value>
+        /// <value>Apresenta o nome da Origem Comercial que realizou o cadastro do Titular da Conta a qual o Cart\u00E3o pertence</value>
         [DataMember(Name="nomeOrigemComercial", EmitDefaultValue=false)]
         public string NomeOrigemComercial { get; set; }
     
         /// <summary>
-        /// {{{cartao_embossing_response_cpf_value}}}
+        /// Apresenta o CPF do Portador do Cart\u00E3o
         /// </summary>
-        /// <value>{{{cartao_embossing_response_cpf_value}}}</value>
+        /// <value>Apresenta o CPF do Portador do Cart\u00E3o</value>
         [DataMember(Name="cpf", EmitDefaultValue=false)]
         public string Cpf { get; set; }
     

@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{pessoa_juridica_aprovada_response_description}}}
+    /// PessoaJuridicaAprovadaPersist
     /// </summary>
     [DataContract]
     public partial class PessoaJuridicaAprovadaResponse :  IEquatable<PessoaJuridicaAprovadaResponse>
@@ -22,34 +22,34 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="PessoaJuridicaAprovadaResponse" /> class.
         /// Initializes a new instance of the <see cref="PessoaJuridicaAprovadaResponse" />class.
         /// </summary>
-        /// <param name="Id">{{{pessoa_juridica_aprovada_response_id_value}}}.</param>
-        /// <param name="RazaoSocial">{{{pessoa_juridica_aprovada_response_razao_social_value}}}.</param>
-        /// <param name="NomeFantasia">{{{pessoa_juridica_aprovada_response_nome_fantasia_value}}}.</param>
-        /// <param name="Cnpj">{{{pessoa_juridica_aprovada_response_cnpj_value}}}.</param>
-        /// <param name="InscricaoEstadual">{{{pessoa_juridica_aprovada_response_inscricao_estadual_value}}}.</param>
-        /// <param name="DataAberturaEmpresa">{{{pessoa_juridica_aprovada_response_data_abertura_empresa_value}}}.</param>
-        /// <param name="IdOrigemComercial">{{{pessoa_juridica_aprovada_response_id_origem_comercial_value}}}.</param>
-        /// <param name="IdProduto">{{{pessoa_juridica_aprovada_response_id_produto_value}}}.</param>
-        /// <param name="NumeroBanco">{{{pessoa_juridica_aprovada_response_numero_banco_value}}}.</param>
-        /// <param name="NumeroAgencia">{{{pessoa_juridica_aprovada_response_numero_agencia_value}}}.</param>
-        /// <param name="NumeroContaCorrente">{{{pessoa_juridica_aprovada_response_numero_conta_corrente_value}}}.</param>
-        /// <param name="Email">{{{pessoa_juridica_aprovada_response_email_value}}}.</param>
-        /// <param name="DiaVencimento">{{{pessoa_juridica_aprovada_response_dia_vencimento_value}}}.</param>
-        /// <param name="NomeImpresso">{{{pessoa_juridica_aprovada_response_nome_impresso_value}}}.</param>
-        /// <param name="IdConta">{{{pessoa_juridica_aprovada_response_id_conta_value}}}.</param>
-        /// <param name="IdProposta">{{{pessoa_juridica_aprovada_response_id_proposta_value}}}.</param>
-        /// <param name="CanalEntrada">{{{pessoa_juridica_aprovada_response_canal_entrada_value}}}.</param>
-        /// <param name="ValorPontuacao">{{{pessoa_juridica_aprovada_response_valor_pontuacao_value}}}.</param>
-        /// <param name="Telefones">{{{pessoa_juridica_aprovada_response_telefones_value}}}.</param>
-        /// <param name="Enderecos">{{{pessoa_juridica_aprovada_response_enderecos_value}}}.</param>
-        /// <param name="Socios">{{{pessoa_juridica_aprovada_response_socios_value}}}.</param>
-        /// <param name="Referencias">{{{pessoa_juridica_aprovada_response_referencias_value}}}.</param>
-        /// <param name="LimiteGlobal">{{{pessoa_juridica_aprovada_response_limite_global_value}}} (required).</param>
-        /// <param name="LimiteMaximo">{{{pessoa_juridica_aprovada_response_limite_maximo_value}}} (required).</param>
-        /// <param name="LimiteParcelas">{{{pessoa_juridica_aprovada_response_limite_parcelas_value}}} (required).</param>
-        /// <param name="ImpedidoFinanciamento">{{{pessoa_juridica_aprovada_response_impedido_de_financiamento_value}}}.</param>
+        /// <param name="Id">C\u00F3digo de Identifica\u00E7\u00E3o da pessoa jur\u00EDdica (id).</param>
+        /// <param name="RazaoSocial">Apresenta o nome completo da raz\u00E3o social (nome empresarial)&#39;.</param>
+        /// <param name="NomeFantasia">Apresenta o nome fantasia da empresa.</param>
+        /// <param name="Cnpj">Cadastro Nacional da Pessoa Jur\u00EDdica.</param>
+        /// <param name="InscricaoEstadual">N\u00FAmero da Inscri\u00E7\u00E3o Estadual (IE).</param>
+        /// <param name="DataAberturaEmpresa">Data de abertura da empresa, essa data deve ser informada no formato: aaaa-MM-dd.</param>
+        /// <param name="IdOrigemComercial">Id da origem comercial.</param>
+        /// <param name="IdProduto">Id do produto.</param>
+        /// <param name="NumeroBanco">N\u00FAmero do banco.</param>
+        /// <param name="NumeroAgencia">N\u00FAmero da ag\u00EAncia.</param>
+        /// <param name="NumeroContaCorrente">N\u00FAmero da conta corrente.</param>
+        /// <param name="Email">Email da empresa.</param>
+        /// <param name="DiaVencimento">Dia vencimento.</param>
+        /// <param name="NomeImpresso">Nome que deve ser impresso no cart\u00E3o.</param>
+        /// <param name="IdConta">C\u00F3digo de identifica\u00E7\u00E3o da conta cadastrada.</param>
+        /// <param name="IdProposta">C\u00F3digo de identifica\u00E7\u00E3o da proposta.</param>
+        /// <param name="CanalEntrada">Indica o canal pelo qual o cadastro do cliente foi realizado.</param>
+        /// <param name="ValorPontuacao">Indica o valor da pontua\u00E7\u00E3o atribuido ao cliente (caso n\u00E3o informado ser\u00E1 atribuido o valor =0).</param>
+        /// <param name="Telefones">Apresenta os telefones da empresa.</param>
+        /// <param name="Enderecos">Pode ser informado os seguintes tipos de endere\u00E7o: Residencial, Comercial, e Outros.</param>
+        /// <param name="Socios">Apresenta os dados dos s\u00F3cios da empresa, caso exista.</param>
+        /// <param name="Referencias">Apresenta os dados dos s\u00F3cios da empresa, caso exista.</param>
+        /// <param name="LimiteGlobal">Valor do Limite Global (required).</param>
+        /// <param name="LimiteMaximo">Valor m\u00E1ximo do limite de cr\u00E9dito para realizar transa\u00E7\u00F5es (required).</param>
+        /// <param name="LimiteParcelas">Valor do limite de cr\u00E9dito acumulado da soma das parcelas das compras (required).</param>
+        /// <param name="ImpedidoFinanciamento">Flag para s\u00F3cios do banco que s\u00E3o portadores do cart\u00E3o, mas n\u00E3o podem operar transa\u00E7\u00F5es de cr\u00E9dito(Lei n. 4.595/64).</param>
 
-        public PessoaJuridicaAprovadaResponse(long? Id = null, string RazaoSocial = null, string NomeFantasia = null, string Cnpj = null, string InscricaoEstadual = null, string DataAberturaEmpresa = null, long? IdOrigemComercial = null, long? IdProduto = null, int? NumeroBanco = null, int? NumeroAgencia = null, string NumeroContaCorrente = null, string Email = null, int? DiaVencimento = null, string NomeImpresso = null, long? IdConta = null, long? IdProposta = null, string CanalEntrada = null, int? ValorPontuacao = null, List<TelefonePessoaAprovadaResponse> Telefones = null, List<EnderecoAprovadoResponseValue> Enderecos = null, List<SocioAprovadoResponse> Socios = null, List<ReferenciaComercialAprovadoResponse> Referencias = null, double? LimiteGlobal = null, double? LimiteMaximo = null, double? LimiteParcelas = null, bool? ImpedidoFinanciamento = null)
+        public PessoaJuridicaAprovadaResponse(long? Id = null, string RazaoSocial = null, string NomeFantasia = null, string Cnpj = null, string InscricaoEstadual = null, string DataAberturaEmpresa = null, long? IdOrigemComercial = null, long? IdProduto = null, int? NumeroBanco = null, int? NumeroAgencia = null, string NumeroContaCorrente = null, string Email = null, int? DiaVencimento = null, string NomeImpresso = null, long? IdConta = null, long? IdProposta = null, string CanalEntrada = null, int? ValorPontuacao = null, List<TelefonePessoaAprovadaResponse> Telefones = null, List<ObjetoEndereoAprovado> Enderecos = null, List<SocioAprovadoResponse> Socios = null, List<ReferenciaComercialAprovadoResponse> Referencias = null, double? LimiteGlobal = null, double? LimiteMaximo = null, double? LimiteParcelas = null, bool? ImpedidoFinanciamento = null)
         {
             // to ensure "LimiteGlobal" is required (not null)
             if (LimiteGlobal == null)
@@ -106,184 +106,184 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{pessoa_juridica_aprovada_response_id_value}}}
+        /// C\u00F3digo de Identifica\u00E7\u00E3o da pessoa jur\u00EDdica (id)
         /// </summary>
-        /// <value>{{{pessoa_juridica_aprovada_response_id_value}}}</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o da pessoa jur\u00EDdica (id)</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{pessoa_juridica_aprovada_response_razao_social_value}}}
+        /// Apresenta o nome completo da raz\u00E3o social (nome empresarial)&#39;
         /// </summary>
-        /// <value>{{{pessoa_juridica_aprovada_response_razao_social_value}}}</value>
+        /// <value>Apresenta o nome completo da raz\u00E3o social (nome empresarial)&#39;</value>
         [DataMember(Name="razaoSocial", EmitDefaultValue=false)]
         public string RazaoSocial { get; set; }
     
         /// <summary>
-        /// {{{pessoa_juridica_aprovada_response_nome_fantasia_value}}}
+        /// Apresenta o nome fantasia da empresa
         /// </summary>
-        /// <value>{{{pessoa_juridica_aprovada_response_nome_fantasia_value}}}</value>
+        /// <value>Apresenta o nome fantasia da empresa</value>
         [DataMember(Name="nomeFantasia", EmitDefaultValue=false)]
         public string NomeFantasia { get; set; }
     
         /// <summary>
-        /// {{{pessoa_juridica_aprovada_response_cnpj_value}}}
+        /// Cadastro Nacional da Pessoa Jur\u00EDdica
         /// </summary>
-        /// <value>{{{pessoa_juridica_aprovada_response_cnpj_value}}}</value>
+        /// <value>Cadastro Nacional da Pessoa Jur\u00EDdica</value>
         [DataMember(Name="cnpj", EmitDefaultValue=false)]
         public string Cnpj { get; set; }
     
         /// <summary>
-        /// {{{pessoa_juridica_aprovada_response_inscricao_estadual_value}}}
+        /// N\u00FAmero da Inscri\u00E7\u00E3o Estadual (IE)
         /// </summary>
-        /// <value>{{{pessoa_juridica_aprovada_response_inscricao_estadual_value}}}</value>
+        /// <value>N\u00FAmero da Inscri\u00E7\u00E3o Estadual (IE)</value>
         [DataMember(Name="inscricaoEstadual", EmitDefaultValue=false)]
         public string InscricaoEstadual { get; set; }
     
         /// <summary>
-        /// {{{pessoa_juridica_aprovada_response_data_abertura_empresa_value}}}
+        /// Data de abertura da empresa, essa data deve ser informada no formato: aaaa-MM-dd
         /// </summary>
-        /// <value>{{{pessoa_juridica_aprovada_response_data_abertura_empresa_value}}}</value>
+        /// <value>Data de abertura da empresa, essa data deve ser informada no formato: aaaa-MM-dd</value>
         [DataMember(Name="dataAberturaEmpresa", EmitDefaultValue=false)]
         public string DataAberturaEmpresa { get; set; }
     
         /// <summary>
-        /// {{{pessoa_juridica_aprovada_response_id_origem_comercial_value}}}
+        /// Id da origem comercial
         /// </summary>
-        /// <value>{{{pessoa_juridica_aprovada_response_id_origem_comercial_value}}}</value>
+        /// <value>Id da origem comercial</value>
         [DataMember(Name="idOrigemComercial", EmitDefaultValue=false)]
         public long? IdOrigemComercial { get; set; }
     
         /// <summary>
-        /// {{{pessoa_juridica_aprovada_response_id_produto_value}}}
+        /// Id do produto
         /// </summary>
-        /// <value>{{{pessoa_juridica_aprovada_response_id_produto_value}}}</value>
+        /// <value>Id do produto</value>
         [DataMember(Name="idProduto", EmitDefaultValue=false)]
         public long? IdProduto { get; set; }
     
         /// <summary>
-        /// {{{pessoa_juridica_aprovada_response_numero_banco_value}}}
+        /// N\u00FAmero do banco
         /// </summary>
-        /// <value>{{{pessoa_juridica_aprovada_response_numero_banco_value}}}</value>
+        /// <value>N\u00FAmero do banco</value>
         [DataMember(Name="numeroBanco", EmitDefaultValue=false)]
         public int? NumeroBanco { get; set; }
     
         /// <summary>
-        /// {{{pessoa_juridica_aprovada_response_numero_agencia_value}}}
+        /// N\u00FAmero da ag\u00EAncia
         /// </summary>
-        /// <value>{{{pessoa_juridica_aprovada_response_numero_agencia_value}}}</value>
+        /// <value>N\u00FAmero da ag\u00EAncia</value>
         [DataMember(Name="numeroAgencia", EmitDefaultValue=false)]
         public int? NumeroAgencia { get; set; }
     
         /// <summary>
-        /// {{{pessoa_juridica_aprovada_response_numero_conta_corrente_value}}}
+        /// N\u00FAmero da conta corrente
         /// </summary>
-        /// <value>{{{pessoa_juridica_aprovada_response_numero_conta_corrente_value}}}</value>
+        /// <value>N\u00FAmero da conta corrente</value>
         [DataMember(Name="numeroContaCorrente", EmitDefaultValue=false)]
         public string NumeroContaCorrente { get; set; }
     
         /// <summary>
-        /// {{{pessoa_juridica_aprovada_response_email_value}}}
+        /// Email da empresa
         /// </summary>
-        /// <value>{{{pessoa_juridica_aprovada_response_email_value}}}</value>
+        /// <value>Email da empresa</value>
         [DataMember(Name="email", EmitDefaultValue=false)]
         public string Email { get; set; }
     
         /// <summary>
-        /// {{{pessoa_juridica_aprovada_response_dia_vencimento_value}}}
+        /// Dia vencimento
         /// </summary>
-        /// <value>{{{pessoa_juridica_aprovada_response_dia_vencimento_value}}}</value>
+        /// <value>Dia vencimento</value>
         [DataMember(Name="diaVencimento", EmitDefaultValue=false)]
         public int? DiaVencimento { get; set; }
     
         /// <summary>
-        /// {{{pessoa_juridica_aprovada_response_nome_impresso_value}}}
+        /// Nome que deve ser impresso no cart\u00E3o
         /// </summary>
-        /// <value>{{{pessoa_juridica_aprovada_response_nome_impresso_value}}}</value>
+        /// <value>Nome que deve ser impresso no cart\u00E3o</value>
         [DataMember(Name="nomeImpresso", EmitDefaultValue=false)]
         public string NomeImpresso { get; set; }
     
         /// <summary>
-        /// {{{pessoa_juridica_aprovada_response_id_conta_value}}}
+        /// C\u00F3digo de identifica\u00E7\u00E3o da conta cadastrada
         /// </summary>
-        /// <value>{{{pessoa_juridica_aprovada_response_id_conta_value}}}</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o da conta cadastrada</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// {{{pessoa_juridica_aprovada_response_id_proposta_value}}}
+        /// C\u00F3digo de identifica\u00E7\u00E3o da proposta
         /// </summary>
-        /// <value>{{{pessoa_juridica_aprovada_response_id_proposta_value}}}</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o da proposta</value>
         [DataMember(Name="idProposta", EmitDefaultValue=false)]
         public long? IdProposta { get; set; }
     
         /// <summary>
-        /// {{{pessoa_juridica_aprovada_response_canal_entrada_value}}}
+        /// Indica o canal pelo qual o cadastro do cliente foi realizado
         /// </summary>
-        /// <value>{{{pessoa_juridica_aprovada_response_canal_entrada_value}}}</value>
+        /// <value>Indica o canal pelo qual o cadastro do cliente foi realizado</value>
         [DataMember(Name="canalEntrada", EmitDefaultValue=false)]
         public string CanalEntrada { get; set; }
     
         /// <summary>
-        /// {{{pessoa_juridica_aprovada_response_valor_pontuacao_value}}}
+        /// Indica o valor da pontua\u00E7\u00E3o atribuido ao cliente (caso n\u00E3o informado ser\u00E1 atribuido o valor =0)
         /// </summary>
-        /// <value>{{{pessoa_juridica_aprovada_response_valor_pontuacao_value}}}</value>
+        /// <value>Indica o valor da pontua\u00E7\u00E3o atribuido ao cliente (caso n\u00E3o informado ser\u00E1 atribuido o valor =0)</value>
         [DataMember(Name="valorPontuacao", EmitDefaultValue=false)]
         public int? ValorPontuacao { get; set; }
     
         /// <summary>
-        /// {{{pessoa_juridica_aprovada_response_telefones_value}}}
+        /// Apresenta os telefones da empresa
         /// </summary>
-        /// <value>{{{pessoa_juridica_aprovada_response_telefones_value}}}</value>
+        /// <value>Apresenta os telefones da empresa</value>
         [DataMember(Name="telefones", EmitDefaultValue=false)]
         public List<TelefonePessoaAprovadaResponse> Telefones { get; set; }
     
         /// <summary>
-        /// {{{pessoa_juridica_aprovada_response_enderecos_value}}}
+        /// Pode ser informado os seguintes tipos de endere\u00E7o: Residencial, Comercial, e Outros
         /// </summary>
-        /// <value>{{{pessoa_juridica_aprovada_response_enderecos_value}}}</value>
+        /// <value>Pode ser informado os seguintes tipos de endere\u00E7o: Residencial, Comercial, e Outros</value>
         [DataMember(Name="enderecos", EmitDefaultValue=false)]
-        public List<EnderecoAprovadoResponseValue> Enderecos { get; set; }
+        public List<ObjetoEndereoAprovado> Enderecos { get; set; }
     
         /// <summary>
-        /// {{{pessoa_juridica_aprovada_response_socios_value}}}
+        /// Apresenta os dados dos s\u00F3cios da empresa, caso exista
         /// </summary>
-        /// <value>{{{pessoa_juridica_aprovada_response_socios_value}}}</value>
+        /// <value>Apresenta os dados dos s\u00F3cios da empresa, caso exista</value>
         [DataMember(Name="socios", EmitDefaultValue=false)]
         public List<SocioAprovadoResponse> Socios { get; set; }
     
         /// <summary>
-        /// {{{pessoa_juridica_aprovada_response_referencias_value}}}
+        /// Apresenta os dados dos s\u00F3cios da empresa, caso exista
         /// </summary>
-        /// <value>{{{pessoa_juridica_aprovada_response_referencias_value}}}</value>
+        /// <value>Apresenta os dados dos s\u00F3cios da empresa, caso exista</value>
         [DataMember(Name="referencias", EmitDefaultValue=false)]
         public List<ReferenciaComercialAprovadoResponse> Referencias { get; set; }
     
         /// <summary>
-        /// {{{pessoa_juridica_aprovada_response_limite_global_value}}}
+        /// Valor do Limite Global
         /// </summary>
-        /// <value>{{{pessoa_juridica_aprovada_response_limite_global_value}}}</value>
+        /// <value>Valor do Limite Global</value>
         [DataMember(Name="limiteGlobal", EmitDefaultValue=false)]
         public double? LimiteGlobal { get; set; }
     
         /// <summary>
-        /// {{{pessoa_juridica_aprovada_response_limite_maximo_value}}}
+        /// Valor m\u00E1ximo do limite de cr\u00E9dito para realizar transa\u00E7\u00F5es
         /// </summary>
-        /// <value>{{{pessoa_juridica_aprovada_response_limite_maximo_value}}}</value>
+        /// <value>Valor m\u00E1ximo do limite de cr\u00E9dito para realizar transa\u00E7\u00F5es</value>
         [DataMember(Name="limiteMaximo", EmitDefaultValue=false)]
         public double? LimiteMaximo { get; set; }
     
         /// <summary>
-        /// {{{pessoa_juridica_aprovada_response_limite_parcelas_value}}}
+        /// Valor do limite de cr\u00E9dito acumulado da soma das parcelas das compras
         /// </summary>
-        /// <value>{{{pessoa_juridica_aprovada_response_limite_parcelas_value}}}</value>
+        /// <value>Valor do limite de cr\u00E9dito acumulado da soma das parcelas das compras</value>
         [DataMember(Name="limiteParcelas", EmitDefaultValue=false)]
         public double? LimiteParcelas { get; set; }
     
         /// <summary>
-        /// {{{pessoa_juridica_aprovada_response_impedido_de_financiamento_value}}}
+        /// Flag para s\u00F3cios do banco que s\u00E3o portadores do cart\u00E3o, mas n\u00E3o podem operar transa\u00E7\u00F5es de cr\u00E9dito(Lei n. 4.595/64)
         /// </summary>
-        /// <value>{{{pessoa_juridica_aprovada_response_impedido_de_financiamento_value}}}</value>
+        /// <value>Flag para s\u00F3cios do banco que s\u00E3o portadores do cart\u00E3o, mas n\u00E3o podem operar transa\u00E7\u00F5es de cr\u00E9dito(Lei n. 4.595/64)</value>
         [DataMember(Name="impedidoFinanciamento", EmitDefaultValue=false)]
         public bool? ImpedidoFinanciamento { get; set; }
     

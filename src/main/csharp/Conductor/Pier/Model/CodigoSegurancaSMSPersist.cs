@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{codigo_seguranca_s_m_s_persist_description}}}
+    /// Representa\u00E7\u00E3o da requisi\u00E7\u00E3o do recurso gerar c\u00F3digo de seguran\u00E7a
     /// </summary>
     [DataContract]
     public partial class CodigoSegurancaSMSPersist :  IEquatable<CodigoSegurancaSMSPersist>
@@ -22,8 +22,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="CodigoSegurancaSMSPersist" /> class.
         /// Initializes a new instance of the <see cref="CodigoSegurancaSMSPersist" />class.
         /// </summary>
-        /// <param name="Ddd">{{{codigo_seguranca_s_m_s_persist_ddd_value}}}.</param>
-        /// <param name="Telefone">{{{codigo_seguranca_s_m_s_persist_telefone_value}}}.</param>
+        /// <param name="Ddd">DDD do telefone.</param>
+        /// <param name="Telefone">telefone para envio.</param>
 
         public CodigoSegurancaSMSPersist(string Ddd = null, string Telefone = null)
         {
@@ -34,16 +34,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{codigo_seguranca_s_m_s_persist_ddd_value}}}
+        /// DDD do telefone
         /// </summary>
-        /// <value>{{{codigo_seguranca_s_m_s_persist_ddd_value}}}</value>
+        /// <value>DDD do telefone</value>
         [DataMember(Name="ddd", EmitDefaultValue=false)]
         public string Ddd { get; set; }
     
         /// <summary>
-        /// {{{codigo_seguranca_s_m_s_persist_telefone_value}}}
+        /// telefone para envio
         /// </summary>
-        /// <value>{{{codigo_seguranca_s_m_s_persist_telefone_value}}}</value>
+        /// <value>telefone para envio</value>
         [DataMember(Name="telefone", EmitDefaultValue=false)]
         public string Telefone { get; set; }
     

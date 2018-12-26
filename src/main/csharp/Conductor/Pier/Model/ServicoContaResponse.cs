@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{servico_conta_response_description}}}
+    /// Objeto Response do Servi\u00E7o Conta
     /// </summary>
     [DataContract]
     public partial class ServicoContaResponse :  IEquatable<ServicoContaResponse>
@@ -22,15 +22,15 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="ServicoContaResponse" /> class.
         /// Initializes a new instance of the <see cref="ServicoContaResponse" />class.
         /// </summary>
-        /// <param name="Id">{{{servico_conta_response_id_value}}}.</param>
-        /// <param name="IdConta">{{{servico_conta_response_id_conta_value}}}.</param>
-        /// <param name="IdTipoServico">{{{servico_conta_response_id_tipo_servico_value}}}.</param>
-        /// <param name="DataAtivacao">{{{servico_conta_response_data_ativacao_value}}}.</param>
-        /// <param name="IdUsuarioAtivacao">{{{servico_conta_response_id_usuario_ativou_value}}}.</param>
-        /// <param name="IdPlataformaAtivacao">{{{servico_conta_response_id_plataforma_ativou_value}}}.</param>
-        /// <param name="DataCancelamento">{{{servico_conta_response_data_cancelou_value}}}.</param>
-        /// <param name="IdUsuarioCancelamento">{{{servico_conta_response_id_usuario_cancelou_value}}}.</param>
-        /// <param name="IdPlataformaCancelamento">{{{servico_conta_response_id_plataforma_cancelou_value}}}.</param>
+        /// <param name="Id">Identificador do Servi\u00E7o Conta.</param>
+        /// <param name="IdConta">Identificador da Conta.</param>
+        /// <param name="IdTipoServico">Identificador do Tipo de Servi\u00E7o.</param>
+        /// <param name="DataAtivacao">Data ativa\u00E7\u00E3o do servi\u00E7o.</param>
+        /// <param name="IdUsuarioAtivacao">Usu\u00E1rio ativou o servi\u00E7o.</param>
+        /// <param name="IdPlataformaAtivacao">Plataforma que ativou o servi\u00E7o.</param>
+        /// <param name="DataCancelamento">Data de cancelamento do servi\u00E7o.</param>
+        /// <param name="IdUsuarioCancelamento">Usu\u00E1rio que cancelou o servi\u00E7o.</param>
+        /// <param name="IdPlataformaCancelamento">Plataforma que cancelou o servi\u00E7o.</param>
 
         public ServicoContaResponse(long? Id = null, long? IdConta = null, long? IdTipoServico = null, string DataAtivacao = null, long? IdUsuarioAtivacao = null, long? IdPlataformaAtivacao = null, string DataCancelamento = null, long? IdUsuarioCancelamento = null, long? IdPlataformaCancelamento = null)
         {
@@ -48,65 +48,65 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{servico_conta_response_id_value}}}
+        /// Identificador do Servi\u00E7o Conta
         /// </summary>
-        /// <value>{{{servico_conta_response_id_value}}}</value>
+        /// <value>Identificador do Servi\u00E7o Conta</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{servico_conta_response_id_conta_value}}}
+        /// Identificador da Conta
         /// </summary>
-        /// <value>{{{servico_conta_response_id_conta_value}}}</value>
+        /// <value>Identificador da Conta</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// {{{servico_conta_response_id_tipo_servico_value}}}
+        /// Identificador do Tipo de Servi\u00E7o
         /// </summary>
-        /// <value>{{{servico_conta_response_id_tipo_servico_value}}}</value>
+        /// <value>Identificador do Tipo de Servi\u00E7o</value>
         [DataMember(Name="idTipoServico", EmitDefaultValue=false)]
         public long? IdTipoServico { get; set; }
     
         /// <summary>
-        /// {{{servico_conta_response_data_ativacao_value}}}
+        /// Data ativa\u00E7\u00E3o do servi\u00E7o
         /// </summary>
-        /// <value>{{{servico_conta_response_data_ativacao_value}}}</value>
+        /// <value>Data ativa\u00E7\u00E3o do servi\u00E7o</value>
         [DataMember(Name="dataAtivacao", EmitDefaultValue=false)]
         public string DataAtivacao { get; set; }
     
         /// <summary>
-        /// {{{servico_conta_response_id_usuario_ativou_value}}}
+        /// Usu\u00E1rio ativou o servi\u00E7o
         /// </summary>
-        /// <value>{{{servico_conta_response_id_usuario_ativou_value}}}</value>
+        /// <value>Usu\u00E1rio ativou o servi\u00E7o</value>
         [DataMember(Name="idUsuarioAtivacao", EmitDefaultValue=false)]
         public long? IdUsuarioAtivacao { get; set; }
     
         /// <summary>
-        /// {{{servico_conta_response_id_plataforma_ativou_value}}}
+        /// Plataforma que ativou o servi\u00E7o
         /// </summary>
-        /// <value>{{{servico_conta_response_id_plataforma_ativou_value}}}</value>
+        /// <value>Plataforma que ativou o servi\u00E7o</value>
         [DataMember(Name="idPlataformaAtivacao", EmitDefaultValue=false)]
         public long? IdPlataformaAtivacao { get; set; }
     
         /// <summary>
-        /// {{{servico_conta_response_data_cancelou_value}}}
+        /// Data de cancelamento do servi\u00E7o
         /// </summary>
-        /// <value>{{{servico_conta_response_data_cancelou_value}}}</value>
+        /// <value>Data de cancelamento do servi\u00E7o</value>
         [DataMember(Name="dataCancelamento", EmitDefaultValue=false)]
         public string DataCancelamento { get; set; }
     
         /// <summary>
-        /// {{{servico_conta_response_id_usuario_cancelou_value}}}
+        /// Usu\u00E1rio que cancelou o servi\u00E7o
         /// </summary>
-        /// <value>{{{servico_conta_response_id_usuario_cancelou_value}}}</value>
+        /// <value>Usu\u00E1rio que cancelou o servi\u00E7o</value>
         [DataMember(Name="idUsuarioCancelamento", EmitDefaultValue=false)]
         public long? IdUsuarioCancelamento { get; set; }
     
         /// <summary>
-        /// {{{servico_conta_response_id_plataforma_cancelou_value}}}
+        /// Plataforma que cancelou o servi\u00E7o
         /// </summary>
-        /// <value>{{{servico_conta_response_id_plataforma_cancelou_value}}}</value>
+        /// <value>Plataforma que cancelou o servi\u00E7o</value>
         [DataMember(Name="idPlataformaCancelamento", EmitDefaultValue=false)]
         public long? IdPlataformaCancelamento { get; set; }
     

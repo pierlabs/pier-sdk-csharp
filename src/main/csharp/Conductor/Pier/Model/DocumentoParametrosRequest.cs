@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{documento_parametros_request_description}}}
+    /// Objeto que encapsula os par\u00E2metros para gera\u00E7\u00E3o de um documento
     /// </summary>
     [DataContract]
     public partial class DocumentoParametrosRequest :  IEquatable<DocumentoParametrosRequest>
@@ -22,9 +22,9 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="DocumentoParametrosRequest" /> class.
         /// Initializes a new instance of the <see cref="DocumentoParametrosRequest" />class.
         /// </summary>
-        /// <param name="IdTemplateDocumento">{{{documento_parametros_request_id_template_documento_value}}}.</param>
-        /// <param name="Nome">{{{documento_parametros_request_nome_value}}}.</param>
-        /// <param name="ParametrosConteudo">{{{documento_parametros_request_parametros_conteudo_value}}}.</param>
+        /// <param name="IdTemplateDocumento">ID para o template do documento.</param>
+        /// <param name="Nome">Nome para o arquivo.</param>
+        /// <param name="ParametrosConteudo">Lista de par\u00E2metros para montagem do documento.</param>
 
         public DocumentoParametrosRequest(long? IdTemplateDocumento = null, string Nome = null, List<PropriedadeDocumentoRequest> ParametrosConteudo = null)
         {
@@ -36,23 +36,23 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{documento_parametros_request_id_template_documento_value}}}
+        /// ID para o template do documento
         /// </summary>
-        /// <value>{{{documento_parametros_request_id_template_documento_value}}}</value>
+        /// <value>ID para o template do documento</value>
         [DataMember(Name="idTemplateDocumento", EmitDefaultValue=false)]
         public long? IdTemplateDocumento { get; set; }
     
         /// <summary>
-        /// {{{documento_parametros_request_nome_value}}}
+        /// Nome para o arquivo
         /// </summary>
-        /// <value>{{{documento_parametros_request_nome_value}}}</value>
+        /// <value>Nome para o arquivo</value>
         [DataMember(Name="nome", EmitDefaultValue=false)]
         public string Nome { get; set; }
     
         /// <summary>
-        /// {{{documento_parametros_request_parametros_conteudo_value}}}
+        /// Lista de par\u00E2metros para montagem do documento
         /// </summary>
-        /// <value>{{{documento_parametros_request_parametros_conteudo_value}}}</value>
+        /// <value>Lista de par\u00E2metros para montagem do documento</value>
         [DataMember(Name="parametrosConteudo", EmitDefaultValue=false)]
         public List<PropriedadeDocumentoRequest> ParametrosConteudo { get; set; }
     

@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{tipo_template_request_description}}}
+    /// Representa\u00E7\u00E3o do tipo de template
     /// </summary>
     [DataContract]
     public partial class TipoTemplateRequest :  IEquatable<TipoTemplateRequest>
@@ -22,9 +22,9 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TipoTemplateRequest" /> class.
         /// Initializes a new instance of the <see cref="TipoTemplateRequest" />class.
         /// </summary>
-        /// <param name="Nome">{{{tipo_template_request_nome_value}}}.</param>
-        /// <param name="Descricao">{{{tipo_template_request_descricao_value}}}.</param>
-        /// <param name="Sigla">{{{tipo_template_request_sigla_value}}}.</param>
+        /// <param name="Nome">Nome do tipo de template.</param>
+        /// <param name="Descricao">Descri\u00E7\u00E3o do tipo de template.</param>
+        /// <param name="Sigla">Sigla do tipo de template.</param>
 
         public TipoTemplateRequest(string Nome = null, string Descricao = null, string Sigla = null)
         {
@@ -36,23 +36,23 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{tipo_template_request_nome_value}}}
+        /// Nome do tipo de template
         /// </summary>
-        /// <value>{{{tipo_template_request_nome_value}}}</value>
+        /// <value>Nome do tipo de template</value>
         [DataMember(Name="nome", EmitDefaultValue=false)]
         public string Nome { get; set; }
     
         /// <summary>
-        /// {{{tipo_template_request_descricao_value}}}
+        /// Descri\u00E7\u00E3o do tipo de template
         /// </summary>
-        /// <value>{{{tipo_template_request_descricao_value}}}</value>
+        /// <value>Descri\u00E7\u00E3o do tipo de template</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     
         /// <summary>
-        /// {{{tipo_template_request_sigla_value}}}
+        /// Sigla do tipo de template
         /// </summary>
-        /// <value>{{{tipo_template_request_sigla_value}}}</value>
+        /// <value>Sigla do tipo de template</value>
         [DataMember(Name="sigla", EmitDefaultValue=false)]
         public string Sigla { get; set; }
     

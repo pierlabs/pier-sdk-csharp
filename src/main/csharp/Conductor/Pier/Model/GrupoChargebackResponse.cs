@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{grupo_chargeback_response_description}}}
+    /// Objeto de resposta do grupo de chargeback
     /// </summary>
     [DataContract]
     public partial class GrupoChargebackResponse :  IEquatable<GrupoChargebackResponse>
@@ -22,8 +22,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="GrupoChargebackResponse" /> class.
         /// Initializes a new instance of the <see cref="GrupoChargebackResponse" />class.
         /// </summary>
-        /// <param name="Id">{{{grupo_chargeback_response_id_value}}}.</param>
-        /// <param name="Descricao">{{{grupo_chargeback_response_descricao_value}}}.</param>
+        /// <param name="Id">C\u00F3digo de Identifica\u00E7\u00E3o do grupo de chargeback.</param>
+        /// <param name="Descricao">Descri\u00E7\u00E3o do grupo de chargeback.</param>
 
         public GrupoChargebackResponse(long? Id = null, string Descricao = null)
         {
@@ -34,16 +34,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{grupo_chargeback_response_id_value}}}
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do grupo de chargeback
         /// </summary>
-        /// <value>{{{grupo_chargeback_response_id_value}}}</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do grupo de chargeback</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{grupo_chargeback_response_descricao_value}}}
+        /// Descri\u00E7\u00E3o do grupo de chargeback
         /// </summary>
-        /// <value>{{{grupo_chargeback_response_descricao_value}}}</value>
+        /// <value>Descri\u00E7\u00E3o do grupo de chargeback</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     

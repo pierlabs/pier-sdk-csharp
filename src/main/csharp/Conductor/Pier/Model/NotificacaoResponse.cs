@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{notificacao_response_description}}}
+    /// Objeto Notifica\u00E7\u00E3o SMS
     /// </summary>
     [DataContract]
     public partial class NotificacaoResponse :  IEquatable<NotificacaoResponse>
@@ -22,8 +22,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="NotificacaoResponse" /> class.
         /// Initializes a new instance of the <see cref="NotificacaoResponse" />class.
         /// </summary>
-        /// <param name="Protocolo">{{{notificacao_response_protocolo_value}}}.</param>
-        /// <param name="Mensagem">{{{notificacao_response_mensagem_value}}}.</param>
+        /// <param name="Protocolo">N\u00FAmero do protocolo de envio de notifica\u00E7\u00F5es.</param>
+        /// <param name="Mensagem">Mensagem de resposta da solicita\u00E7\u00F5es de envio.</param>
 
         public NotificacaoResponse(string Protocolo = null, string Mensagem = null)
         {
@@ -34,16 +34,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{notificacao_response_protocolo_value}}}
+        /// N\u00FAmero do protocolo de envio de notifica\u00E7\u00F5es
         /// </summary>
-        /// <value>{{{notificacao_response_protocolo_value}}}</value>
+        /// <value>N\u00FAmero do protocolo de envio de notifica\u00E7\u00F5es</value>
         [DataMember(Name="protocolo", EmitDefaultValue=false)]
         public string Protocolo { get; set; }
     
         /// <summary>
-        /// {{{notificacao_response_mensagem_value}}}
+        /// Mensagem de resposta da solicita\u00E7\u00F5es de envio
         /// </summary>
-        /// <value>{{{notificacao_response_mensagem_value}}}</value>
+        /// <value>Mensagem de resposta da solicita\u00E7\u00F5es de envio</value>
         [DataMember(Name="mensagem", EmitDefaultValue=false)]
         public string Mensagem { get; set; }
     

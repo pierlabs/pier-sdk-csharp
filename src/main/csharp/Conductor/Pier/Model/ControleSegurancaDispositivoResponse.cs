@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{controle_seguranca_dispositivo_resposta_descricao}}}
+    /// Representa\u00E7\u00E3o da resposta do dispositivo do usu\u00E1rio
     /// </summary>
     [DataContract]
     public partial class ControleSegurancaDispositivoResponse :  IEquatable<ControleSegurancaDispositivoResponse>
@@ -22,9 +22,9 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="ControleSegurancaDispositivoResponse" /> class.
         /// Initializes a new instance of the <see cref="ControleSegurancaDispositivoResponse" />class.
         /// </summary>
-        /// <param name="Id">{{{controle_seguranca_dispositivo_resposta_id_descricao}}}.</param>
-        /// <param name="IdUsuario">{{{controle_seguranca_dispositivo_resposta_id_usuario_descricao}}}.</param>
-        /// <param name="PhoneId">{{{controle_seguranca_dispositivo_resposta_phone_id_descricao}}}.</param>
+        /// <param name="Id">Identificador do registro do dispositivo do usu\u00E1rio.</param>
+        /// <param name="IdUsuario">C\u00F3digo identificador do usu\u00E1rio.</param>
+        /// <param name="PhoneId">Identifica\u00E7\u00E3o do dispositivo do usu\u00E1rio (phoneId).</param>
 
         public ControleSegurancaDispositivoResponse(long? Id = null, long? IdUsuario = null, string PhoneId = null)
         {
@@ -36,23 +36,23 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{controle_seguranca_dispositivo_resposta_id_descricao}}}
+        /// Identificador do registro do dispositivo do usu\u00E1rio
         /// </summary>
-        /// <value>{{{controle_seguranca_dispositivo_resposta_id_descricao}}}</value>
+        /// <value>Identificador do registro do dispositivo do usu\u00E1rio</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{controle_seguranca_dispositivo_resposta_id_usuario_descricao}}}
+        /// C\u00F3digo identificador do usu\u00E1rio
         /// </summary>
-        /// <value>{{{controle_seguranca_dispositivo_resposta_id_usuario_descricao}}}</value>
+        /// <value>C\u00F3digo identificador do usu\u00E1rio</value>
         [DataMember(Name="idUsuario", EmitDefaultValue=false)]
         public long? IdUsuario { get; set; }
     
         /// <summary>
-        /// {{{controle_seguranca_dispositivo_resposta_phone_id_descricao}}}
+        /// Identifica\u00E7\u00E3o do dispositivo do usu\u00E1rio (phoneId)
         /// </summary>
-        /// <value>{{{controle_seguranca_dispositivo_resposta_phone_id_descricao}}}</value>
+        /// <value>Identifica\u00E7\u00E3o do dispositivo do usu\u00E1rio (phoneId)</value>
         [DataMember(Name="phoneId", EmitDefaultValue=false)]
         public string PhoneId { get; set; }
     

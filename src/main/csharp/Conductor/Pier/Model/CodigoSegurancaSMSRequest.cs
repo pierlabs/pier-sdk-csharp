@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{codigo_seguranca_s_m_s_request_description}}}
+    /// Representa\u00E7\u00E3o do recurso validar c\u00F3digo de seguran\u00E7a
     /// </summary>
     [DataContract]
     public partial class CodigoSegurancaSMSRequest :  IEquatable<CodigoSegurancaSMSRequest>
@@ -22,9 +22,9 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="CodigoSegurancaSMSRequest" /> class.
         /// Initializes a new instance of the <see cref="CodigoSegurancaSMSRequest" />class.
         /// </summary>
-        /// <param name="Ddd">{{{codigo_seguranca_s_m_s_request_ddd_value}}}.</param>
-        /// <param name="Telefone">{{{codigo_seguranca_s_m_s_request_telefone_value}}}.</param>
-        /// <param name="CodigoSeguranca">{{{codigo_seguranca_s_m_s_request_codigo_seguranca_value}}}.</param>
+        /// <param name="Ddd">DDD.</param>
+        /// <param name="Telefone">Telefone n\u00FAmero.</param>
+        /// <param name="CodigoSeguranca">Token para valida\u00E7\u00E3o.</param>
 
         public CodigoSegurancaSMSRequest(string Ddd = null, string Telefone = null, string CodigoSeguranca = null)
         {
@@ -36,23 +36,23 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{codigo_seguranca_s_m_s_request_ddd_value}}}
+        /// DDD
         /// </summary>
-        /// <value>{{{codigo_seguranca_s_m_s_request_ddd_value}}}</value>
+        /// <value>DDD</value>
         [DataMember(Name="ddd", EmitDefaultValue=false)]
         public string Ddd { get; set; }
     
         /// <summary>
-        /// {{{codigo_seguranca_s_m_s_request_telefone_value}}}
+        /// Telefone n\u00FAmero
         /// </summary>
-        /// <value>{{{codigo_seguranca_s_m_s_request_telefone_value}}}</value>
+        /// <value>Telefone n\u00FAmero</value>
         [DataMember(Name="telefone", EmitDefaultValue=false)]
         public string Telefone { get; set; }
     
         /// <summary>
-        /// {{{codigo_seguranca_s_m_s_request_codigo_seguranca_value}}}
+        /// Token para valida\u00E7\u00E3o
         /// </summary>
-        /// <value>{{{codigo_seguranca_s_m_s_request_codigo_seguranca_value}}}</value>
+        /// <value>Token para valida\u00E7\u00E3o</value>
         [DataMember(Name="codigoSeguranca", EmitDefaultValue=false)]
         public string CodigoSeguranca { get; set; }
     

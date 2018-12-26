@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{terminal_persist_description}}}
+    /// Objeto Terminal
     /// </summary>
     [DataContract]
     public partial class TerminalPersist :  IEquatable<TerminalPersist>
@@ -22,9 +22,9 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TerminalPersist" /> class.
         /// Initializes a new instance of the <see cref="TerminalPersist" />class.
         /// </summary>
-        /// <param name="IdEstabelecimento">{{{terminal_persist_id_estabelecimento_value}}} (required).</param>
-        /// <param name="FlagConsultaExtrato">{{{terminal_persist_flag_consulta_extrato_value}}} (required).</param>
-        /// <param name="FlagTerminalVirtual">{{{terminal_persist_flag_terminal_virtual_value}}} (required).</param>
+        /// <param name="IdEstabelecimento">Apresenta o id do estabelecimento (required).</param>
+        /// <param name="FlagConsultaExtrato">Flag indicando se permite consultar extrato, sendo: (true: Sim), (false: N\u00E3o)) (required).</param>
+        /// <param name="FlagTerminalVirtual">Flag indicando se o terminal \u00E9 f\u00EDsico ou virtual, sendo: (true: Sim), (false: N\u00E3o)) (required).</param>
 
         public TerminalPersist(long? IdEstabelecimento = null, bool? FlagConsultaExtrato = null, bool? FlagTerminalVirtual = null)
         {
@@ -60,23 +60,23 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{terminal_persist_id_estabelecimento_value}}}
+        /// Apresenta o id do estabelecimento
         /// </summary>
-        /// <value>{{{terminal_persist_id_estabelecimento_value}}}</value>
+        /// <value>Apresenta o id do estabelecimento</value>
         [DataMember(Name="idEstabelecimento", EmitDefaultValue=false)]
         public long? IdEstabelecimento { get; set; }
     
         /// <summary>
-        /// {{{terminal_persist_flag_consulta_extrato_value}}}
+        /// Flag indicando se permite consultar extrato, sendo: (true: Sim), (false: N\u00E3o))
         /// </summary>
-        /// <value>{{{terminal_persist_flag_consulta_extrato_value}}}</value>
+        /// <value>Flag indicando se permite consultar extrato, sendo: (true: Sim), (false: N\u00E3o))</value>
         [DataMember(Name="flagConsultaExtrato", EmitDefaultValue=false)]
         public bool? FlagConsultaExtrato { get; set; }
     
         /// <summary>
-        /// {{{terminal_persist_flag_terminal_virtual_value}}}
+        /// Flag indicando se o terminal \u00E9 f\u00EDsico ou virtual, sendo: (true: Sim), (false: N\u00E3o))
         /// </summary>
-        /// <value>{{{terminal_persist_flag_terminal_virtual_value}}}</value>
+        /// <value>Flag indicando se o terminal \u00E9 f\u00EDsico ou virtual, sendo: (true: Sim), (false: N\u00E3o))</value>
         [DataMember(Name="flagTerminalVirtual", EmitDefaultValue=false)]
         public bool? FlagTerminalVirtual { get; set; }
     

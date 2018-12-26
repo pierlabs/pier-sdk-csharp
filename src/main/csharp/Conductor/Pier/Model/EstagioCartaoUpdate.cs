@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{estagio_cartao_update}}}
+    /// EstagioCartaoUpdate
     /// </summary>
     [DataContract]
     public partial class EstagioCartaoUpdate :  IEquatable<EstagioCartaoUpdate>
@@ -22,7 +22,7 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="EstagioCartaoUpdate" /> class.
         /// Initializes a new instance of the <see cref="EstagioCartaoUpdate" />class.
         /// </summary>
-        /// <param name="Id">{{{estagio_cartao_update_id_value}}}.</param>
+        /// <param name="Id">ID do est\u00E1gio do cart\u00E3o.</param>
 
         public EstagioCartaoUpdate(long? Id = null)
         {
@@ -32,9 +32,9 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{estagio_cartao_update_id_value}}}
+        /// ID do est\u00E1gio do cart\u00E3o
         /// </summary>
-        /// <value>{{{estagio_cartao_update_id_value}}}</value>
+        /// <value>ID do est\u00E1gio do cart\u00E3o</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     

@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{vinculo_operacao_persist_description}}}
+    /// Objeto VinculoOperacao
     /// </summary>
     [DataContract]
     public partial class VinculoOperacaoPersist :  IEquatable<VinculoOperacaoPersist>
@@ -22,9 +22,9 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="VinculoOperacaoPersist" /> class.
         /// Initializes a new instance of the <see cref="VinculoOperacaoPersist" />class.
         /// </summary>
-        /// <param name="IdProduto">{{{vinculo_operacao_persist_id_produto_value}}}.</param>
-        /// <param name="IdOperacao">{{{vinculo_operacao_persist_id_operacao_value}}}.</param>
-        /// <param name="CodigoMCC">{{{vinculo_operacao_persist_codigo_m_c_c_value}}}.</param>
+        /// <param name="IdProduto">C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id).</param>
+        /// <param name="IdOperacao">C\u00F3digo de Identifica\u00E7\u00E3o da Opera\u00E7\u00E3o (id).</param>
+        /// <param name="CodigoMCC">C\u00F3digo MCC.</param>
 
         public VinculoOperacaoPersist(long? IdProduto = null, long? IdOperacao = null, int? CodigoMCC = null)
         {
@@ -36,23 +36,23 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{vinculo_operacao_persist_id_produto_value}}}
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id)
         /// </summary>
-        /// <value>{{{vinculo_operacao_persist_id_produto_value}}}</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id)</value>
         [DataMember(Name="idProduto", EmitDefaultValue=false)]
         public long? IdProduto { get; set; }
     
         /// <summary>
-        /// {{{vinculo_operacao_persist_id_operacao_value}}}
+        /// C\u00F3digo de Identifica\u00E7\u00E3o da Opera\u00E7\u00E3o (id)
         /// </summary>
-        /// <value>{{{vinculo_operacao_persist_id_operacao_value}}}</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o da Opera\u00E7\u00E3o (id)</value>
         [DataMember(Name="idOperacao", EmitDefaultValue=false)]
         public long? IdOperacao { get; set; }
     
         /// <summary>
-        /// {{{vinculo_operacao_persist_codigo_m_c_c_value}}}
+        /// C\u00F3digo MCC
         /// </summary>
-        /// <value>{{{vinculo_operacao_persist_codigo_m_c_c_value}}}</value>
+        /// <value>C\u00F3digo MCC</value>
         [DataMember(Name="codigoMCC", EmitDefaultValue=false)]
         public int? CodigoMCC { get; set; }
     

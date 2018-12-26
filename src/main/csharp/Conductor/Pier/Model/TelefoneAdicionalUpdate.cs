@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{telefone_adicional_update_description}}}
+    /// Objeto Telefone
     /// </summary>
     [DataContract]
     public partial class TelefoneAdicionalUpdate :  IEquatable<TelefoneAdicionalUpdate>
@@ -22,11 +22,11 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TelefoneAdicionalUpdate" /> class.
         /// Initializes a new instance of the <see cref="TelefoneAdicionalUpdate" />class.
         /// </summary>
-        /// <param name="Id">{{{telefone_adicional_update_id_value}}}.</param>
-        /// <param name="IdTipoTelefone">{{{telefone_adicional_update_id_tipo_telefone_value}}}.</param>
-        /// <param name="Ddd">{{{telefone_adicional_update_ddd_value}}}.</param>
-        /// <param name="Telefone">{{{telefone_adicional_update_telefone_value}}}.</param>
-        /// <param name="Ramal">{{{telefone_adicional_update_ramal_value}}}.</param>
+        /// <param name="Id">C\u00F3digo de Identifica\u00E7\u00E3o do Telefone.</param>
+        /// <param name="IdTipoTelefone">C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone.</param>
+        /// <param name="Ddd">DDD.</param>
+        /// <param name="Telefone">N\u00FAmero do Telefone.</param>
+        /// <param name="Ramal">Ramal do Telefone.</param>
 
         public TelefoneAdicionalUpdate(long? Id = null, long? IdTipoTelefone = null, string Ddd = null, string Telefone = null, string Ramal = null)
         {
@@ -40,37 +40,37 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{telefone_adicional_update_id_value}}}
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do Telefone
         /// </summary>
-        /// <value>{{{telefone_adicional_update_id_value}}}</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Telefone</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{telefone_adicional_update_id_tipo_telefone_value}}}
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone
         /// </summary>
-        /// <value>{{{telefone_adicional_update_id_tipo_telefone_value}}}</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone</value>
         [DataMember(Name="idTipoTelefone", EmitDefaultValue=false)]
         public long? IdTipoTelefone { get; set; }
     
         /// <summary>
-        /// {{{telefone_adicional_update_ddd_value}}}
+        /// DDD
         /// </summary>
-        /// <value>{{{telefone_adicional_update_ddd_value}}}</value>
+        /// <value>DDD</value>
         [DataMember(Name="ddd", EmitDefaultValue=false)]
         public string Ddd { get; set; }
     
         /// <summary>
-        /// {{{telefone_adicional_update_telefone_value}}}
+        /// N\u00FAmero do Telefone
         /// </summary>
-        /// <value>{{{telefone_adicional_update_telefone_value}}}</value>
+        /// <value>N\u00FAmero do Telefone</value>
         [DataMember(Name="telefone", EmitDefaultValue=false)]
         public string Telefone { get; set; }
     
         /// <summary>
-        /// {{{telefone_adicional_update_ramal_value}}}
+        /// Ramal do Telefone
         /// </summary>
-        /// <value>{{{telefone_adicional_update_ramal_value}}}</value>
+        /// <value>Ramal do Telefone</value>
         [DataMember(Name="ramal", EmitDefaultValue=false)]
         public string Ramal { get; set; }
     

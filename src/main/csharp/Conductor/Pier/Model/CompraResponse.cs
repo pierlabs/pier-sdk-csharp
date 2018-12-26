@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{compra_response_description}}}
+    /// Objeto de Compra
     /// </summary>
     [DataContract]
     public partial class CompraResponse :  IEquatable<CompraResponse>
@@ -24,27 +24,27 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <param name="Mcc">Mcc.</param>
         /// <param name="Uf">Uf.</param>
-        /// <param name="IdCompra">{{{compra_response_id_compra_value}}}.</param>
-        /// <param name="Status">{{{compra_response_status_value}}}.</param>
-        /// <param name="DataCompra">{{{compra_response_data_compra_value}}}.</param>
-        /// <param name="ValorTotalCompra">{{{compra_response_valor_total_compra_value}}}.</param>
-        /// <param name="ValorParcela">{{{compra_response_valor_parcela_value}}}.</param>
-        /// <param name="PrimeiraParcela">{{{compra_response_primeira_parcela_value}}}.</param>
-        /// <param name="NumeroParcelas">{{{compra_response_numero_parcelas_value}}}.</param>
-        /// <param name="NumeroParcelasAntecipaveis">{{{compra_response_numero_parcelas_antecipaveis_value}}}.</param>
-        /// <param name="NomeEstabelecimento">{{{compra_response_nome_estabelecimento_value}}}.</param>
-        /// <param name="TipoOrigemTransacao">{{{compra_response_tipo_origem_transacao_value}}}.</param>
-        /// <param name="Cidade">{{{compra_response_cidade_value}}}.</param>
-        /// <param name="Pais">{{{compra_response_pais_value}}}.</param>
-        /// <param name="Latitude">{{{compra_response_latitude_value}}}.</param>
-        /// <param name="Longitude">{{{compra_response_longitude_value}}}.</param>
-        /// <param name="IdGrupoMCC">{{{compra_response_id_grupo_m_c_c_value}}}.</param>
-        /// <param name="DescricaoGrupoMCC">{{{compra_response_descricao_grupo_m_c_c_value}}}.</param>
-        /// <param name="IdConta">{{{compra_response_id_conta_value}}}.</param>
-        /// <param name="IdProduto">{{{compra_response_id_produto_value}}}.</param>
-        /// <param name="DescricaoProduto">{{{compra_response_descricao_produto_value}}}.</param>
-        /// <param name="Cartao">{{{compra_response_cartao_value}}}.</param>
-        /// <param name="NomePortadorCartao">{{{compra_response_nome_portador_cartao_value}}}.</param>
+        /// <param name="IdCompra">C\u00F3digo de identifica\u00E7\u00E3o da compra.</param>
+        /// <param name="Status">Descri\u00E7\u00E3o do status da autoriza\u00E7\u00E3o da compra.</param>
+        /// <param name="DataCompra">Data da compra.</param>
+        /// <param name="ValorTotalCompra">Valor total da compra.</param>
+        /// <param name="ValorParcela">Valor da parcela da compra.</param>
+        /// <param name="PrimeiraParcela">Valor da primeira parcela da compra.</param>
+        /// <param name="NumeroParcelas">N\u00FAmero de parcelas da compra.</param>
+        /// <param name="NumeroParcelasAntecipaveis">N\u00FAmero de parcelas antecip\u00E1veis da compra.</param>
+        /// <param name="NomeEstabelecimento">Nome do estabelecimento da compra.</param>
+        /// <param name="TipoOrigemTransacao">Tipo de transa\u00E7\u00E3o da compra.</param>
+        /// <param name="Cidade">Cidade onde a compra foi realizada.</param>
+        /// <param name="Pais">Pa\u00EDs onde a compra foi realizada.</param>
+        /// <param name="Latitude">Coordenada latitudinal da localiza\u00E7\u00E3o da compra.</param>
+        /// <param name="Longitude">Coordenada longitudinal da localiza\u00E7\u00E3o da compra.</param>
+        /// <param name="IdGrupoMCC">C\u00F3digo de Identifica\u00E7\u00E3o do Grupo MCC da compra.</param>
+        /// <param name="DescricaoGrupoMCC">Descri\u00E7\u00E3o do Grupo MCC da compra.</param>
+        /// <param name="IdConta">C\u00F3digo de Identifica\u00E7\u00E3o da conta da compra.</param>
+        /// <param name="IdProduto">C\u00F3digo de Identifica\u00E7\u00E3o do produto da compra.</param>
+        /// <param name="DescricaoProduto">Descri\u00E7\u00E3o do produto da compra.</param>
+        /// <param name="Cartao">N\u00FAmero do cart\u00E3o da compra.</param>
+        /// <param name="NomePortadorCartao">Nome do portador do cart\u00E3o da compra.</param>
 
         public CompraResponse(long? Mcc = null, string Uf = null, long? IdCompra = null, string Status = null, string DataCompra = null, double? ValorTotalCompra = null, double? ValorParcela = null, double? PrimeiraParcela = null, int? NumeroParcelas = null, int? NumeroParcelasAntecipaveis = null, string NomeEstabelecimento = null, string TipoOrigemTransacao = null, string Cidade = null, string Pais = null, string Latitude = null, string Longitude = null, long? IdGrupoMCC = null, string DescricaoGrupoMCC = null, long? IdConta = null, long? IdProduto = null, string DescricaoProduto = null, string Cartao = null, string NomePortadorCartao = null)
         {
@@ -88,149 +88,149 @@ namespace Conductor.Pier.Model
         public string Uf { get; set; }
     
         /// <summary>
-        /// {{{compra_response_id_compra_value}}}
+        /// C\u00F3digo de identifica\u00E7\u00E3o da compra
         /// </summary>
-        /// <value>{{{compra_response_id_compra_value}}}</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o da compra</value>
         [DataMember(Name="idCompra", EmitDefaultValue=false)]
         public long? IdCompra { get; set; }
     
         /// <summary>
-        /// {{{compra_response_status_value}}}
+        /// Descri\u00E7\u00E3o do status da autoriza\u00E7\u00E3o da compra
         /// </summary>
-        /// <value>{{{compra_response_status_value}}}</value>
+        /// <value>Descri\u00E7\u00E3o do status da autoriza\u00E7\u00E3o da compra</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public string Status { get; set; }
     
         /// <summary>
-        /// {{{compra_response_data_compra_value}}}
+        /// Data da compra
         /// </summary>
-        /// <value>{{{compra_response_data_compra_value}}}</value>
+        /// <value>Data da compra</value>
         [DataMember(Name="dataCompra", EmitDefaultValue=false)]
         public string DataCompra { get; set; }
     
         /// <summary>
-        /// {{{compra_response_valor_total_compra_value}}}
+        /// Valor total da compra
         /// </summary>
-        /// <value>{{{compra_response_valor_total_compra_value}}}</value>
+        /// <value>Valor total da compra</value>
         [DataMember(Name="valorTotalCompra", EmitDefaultValue=false)]
         public double? ValorTotalCompra { get; set; }
     
         /// <summary>
-        /// {{{compra_response_valor_parcela_value}}}
+        /// Valor da parcela da compra
         /// </summary>
-        /// <value>{{{compra_response_valor_parcela_value}}}</value>
+        /// <value>Valor da parcela da compra</value>
         [DataMember(Name="valorParcela", EmitDefaultValue=false)]
         public double? ValorParcela { get; set; }
     
         /// <summary>
-        /// {{{compra_response_primeira_parcela_value}}}
+        /// Valor da primeira parcela da compra
         /// </summary>
-        /// <value>{{{compra_response_primeira_parcela_value}}}</value>
+        /// <value>Valor da primeira parcela da compra</value>
         [DataMember(Name="primeiraParcela", EmitDefaultValue=false)]
         public double? PrimeiraParcela { get; set; }
     
         /// <summary>
-        /// {{{compra_response_numero_parcelas_value}}}
+        /// N\u00FAmero de parcelas da compra
         /// </summary>
-        /// <value>{{{compra_response_numero_parcelas_value}}}</value>
+        /// <value>N\u00FAmero de parcelas da compra</value>
         [DataMember(Name="numeroParcelas", EmitDefaultValue=false)]
         public int? NumeroParcelas { get; set; }
     
         /// <summary>
-        /// {{{compra_response_numero_parcelas_antecipaveis_value}}}
+        /// N\u00FAmero de parcelas antecip\u00E1veis da compra
         /// </summary>
-        /// <value>{{{compra_response_numero_parcelas_antecipaveis_value}}}</value>
+        /// <value>N\u00FAmero de parcelas antecip\u00E1veis da compra</value>
         [DataMember(Name="numeroParcelasAntecipaveis", EmitDefaultValue=false)]
         public int? NumeroParcelasAntecipaveis { get; set; }
     
         /// <summary>
-        /// {{{compra_response_nome_estabelecimento_value}}}
+        /// Nome do estabelecimento da compra
         /// </summary>
-        /// <value>{{{compra_response_nome_estabelecimento_value}}}</value>
+        /// <value>Nome do estabelecimento da compra</value>
         [DataMember(Name="nomeEstabelecimento", EmitDefaultValue=false)]
         public string NomeEstabelecimento { get; set; }
     
         /// <summary>
-        /// {{{compra_response_tipo_origem_transacao_value}}}
+        /// Tipo de transa\u00E7\u00E3o da compra
         /// </summary>
-        /// <value>{{{compra_response_tipo_origem_transacao_value}}}</value>
+        /// <value>Tipo de transa\u00E7\u00E3o da compra</value>
         [DataMember(Name="tipoOrigemTransacao", EmitDefaultValue=false)]
         public string TipoOrigemTransacao { get; set; }
     
         /// <summary>
-        /// {{{compra_response_cidade_value}}}
+        /// Cidade onde a compra foi realizada
         /// </summary>
-        /// <value>{{{compra_response_cidade_value}}}</value>
+        /// <value>Cidade onde a compra foi realizada</value>
         [DataMember(Name="cidade", EmitDefaultValue=false)]
         public string Cidade { get; set; }
     
         /// <summary>
-        /// {{{compra_response_pais_value}}}
+        /// Pa\u00EDs onde a compra foi realizada
         /// </summary>
-        /// <value>{{{compra_response_pais_value}}}</value>
+        /// <value>Pa\u00EDs onde a compra foi realizada</value>
         [DataMember(Name="pais", EmitDefaultValue=false)]
         public string Pais { get; set; }
     
         /// <summary>
-        /// {{{compra_response_latitude_value}}}
+        /// Coordenada latitudinal da localiza\u00E7\u00E3o da compra
         /// </summary>
-        /// <value>{{{compra_response_latitude_value}}}</value>
+        /// <value>Coordenada latitudinal da localiza\u00E7\u00E3o da compra</value>
         [DataMember(Name="latitude", EmitDefaultValue=false)]
         public string Latitude { get; set; }
     
         /// <summary>
-        /// {{{compra_response_longitude_value}}}
+        /// Coordenada longitudinal da localiza\u00E7\u00E3o da compra
         /// </summary>
-        /// <value>{{{compra_response_longitude_value}}}</value>
+        /// <value>Coordenada longitudinal da localiza\u00E7\u00E3o da compra</value>
         [DataMember(Name="longitude", EmitDefaultValue=false)]
         public string Longitude { get; set; }
     
         /// <summary>
-        /// {{{compra_response_id_grupo_m_c_c_value}}}
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do Grupo MCC da compra
         /// </summary>
-        /// <value>{{{compra_response_id_grupo_m_c_c_value}}}</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Grupo MCC da compra</value>
         [DataMember(Name="idGrupoMCC", EmitDefaultValue=false)]
         public long? IdGrupoMCC { get; set; }
     
         /// <summary>
-        /// {{{compra_response_descricao_grupo_m_c_c_value}}}
+        /// Descri\u00E7\u00E3o do Grupo MCC da compra
         /// </summary>
-        /// <value>{{{compra_response_descricao_grupo_m_c_c_value}}}</value>
+        /// <value>Descri\u00E7\u00E3o do Grupo MCC da compra</value>
         [DataMember(Name="descricaoGrupoMCC", EmitDefaultValue=false)]
         public string DescricaoGrupoMCC { get; set; }
     
         /// <summary>
-        /// {{{compra_response_id_conta_value}}}
+        /// C\u00F3digo de Identifica\u00E7\u00E3o da conta da compra
         /// </summary>
-        /// <value>{{{compra_response_id_conta_value}}}</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o da conta da compra</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// {{{compra_response_id_produto_value}}}
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do produto da compra
         /// </summary>
-        /// <value>{{{compra_response_id_produto_value}}}</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do produto da compra</value>
         [DataMember(Name="idProduto", EmitDefaultValue=false)]
         public long? IdProduto { get; set; }
     
         /// <summary>
-        /// {{{compra_response_descricao_produto_value}}}
+        /// Descri\u00E7\u00E3o do produto da compra
         /// </summary>
-        /// <value>{{{compra_response_descricao_produto_value}}}</value>
+        /// <value>Descri\u00E7\u00E3o do produto da compra</value>
         [DataMember(Name="descricaoProduto", EmitDefaultValue=false)]
         public string DescricaoProduto { get; set; }
     
         /// <summary>
-        /// {{{compra_response_cartao_value}}}
+        /// N\u00FAmero do cart\u00E3o da compra
         /// </summary>
-        /// <value>{{{compra_response_cartao_value}}}</value>
+        /// <value>N\u00FAmero do cart\u00E3o da compra</value>
         [DataMember(Name="cartao", EmitDefaultValue=false)]
         public string Cartao { get; set; }
     
         /// <summary>
-        /// {{{compra_response_nome_portador_cartao_value}}}
+        /// Nome do portador do cart\u00E3o da compra
         /// </summary>
-        /// <value>{{{compra_response_nome_portador_cartao_value}}}</value>
+        /// <value>Nome do portador do cart\u00E3o da compra</value>
         [DataMember(Name="nomePortadorCartao", EmitDefaultValue=false)]
         public string NomePortadorCartao { get; set; }
     
