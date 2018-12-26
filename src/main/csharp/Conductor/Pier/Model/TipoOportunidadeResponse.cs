@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00E7\u00E3o da resposta do recurso TipoOportunidade
+    /// {{{tipo_oportunidade_response_description}}}
     /// </summary>
     [DataContract]
     public partial class TipoOportunidadeResponse :  IEquatable<TipoOportunidadeResponse>
@@ -22,9 +22,9 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TipoOportunidadeResponse" /> class.
         /// Initializes a new instance of the <see cref="TipoOportunidadeResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00F3digo identificador do TipoOportunidade (required).</param>
-        /// <param name="Descricao">Descricao do TipoOportunidade (required).</param>
-        /// <param name="FlagAtivo">Flag que representa se o tipo oportunidade est\u00E1 ativo (required).</param>
+        /// <param name="Id">{{{tipo_oportunidade_response_id_value}}} (required).</param>
+        /// <param name="Descricao">{{{tipo_oportunidade_response_descricao_value}}} (required).</param>
+        /// <param name="FlagAtivo">{{{tipo_oportunidade_response_flag_ativo_value}}} (required).</param>
 
         public TipoOportunidadeResponse(long? Id = null, string Descricao = null, bool? FlagAtivo = null)
         {
@@ -60,23 +60,23 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00F3digo identificador do TipoOportunidade
+        /// {{{tipo_oportunidade_response_id_value}}}
         /// </summary>
-        /// <value>C\u00F3digo identificador do TipoOportunidade</value>
+        /// <value>{{{tipo_oportunidade_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Descricao do TipoOportunidade
+        /// {{{tipo_oportunidade_response_descricao_value}}}
         /// </summary>
-        /// <value>Descricao do TipoOportunidade</value>
+        /// <value>{{{tipo_oportunidade_response_descricao_value}}}</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     
         /// <summary>
-        /// Flag que representa se o tipo oportunidade est\u00E1 ativo
+        /// {{{tipo_oportunidade_response_flag_ativo_value}}}
         /// </summary>
-        /// <value>Flag que representa se o tipo oportunidade est\u00E1 ativo</value>
+        /// <value>{{{tipo_oportunidade_response_flag_ativo_value}}}</value>
         [DataMember(Name="flagAtivo", EmitDefaultValue=false)]
         public bool? FlagAtivo { get; set; }
     

@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Retorno da lista de status de contestacao
+    /// {{{status_contestacao_response_description}}}
     /// </summary>
     [DataContract]
     public partial class StatusContestacaoResponse :  IEquatable<StatusContestacaoResponse>
@@ -22,8 +22,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="StatusContestacaoResponse" /> class.
         /// Initializes a new instance of the <see cref="StatusContestacaoResponse" />class.
         /// </summary>
-        /// <param name="IdStatusContestacao">Id status da contesta\u00E7\u00E3o.</param>
-        /// <param name="Descricao">Descri\u00E7\u00E3o da Constenta\u00E7\u00E3o.</param>
+        /// <param name="IdStatusContestacao">{{{status_contestacao_request_idstatuscontestacao_value}}}.</param>
+        /// <param name="Descricao">{{{status_contestacao_response_descricao_value}}}.</param>
 
         public StatusContestacaoResponse(long? IdStatusContestacao = null, string Descricao = null)
         {
@@ -34,16 +34,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Id status da contesta\u00E7\u00E3o
+        /// {{{status_contestacao_request_idstatuscontestacao_value}}}
         /// </summary>
-        /// <value>Id status da contesta\u00E7\u00E3o</value>
+        /// <value>{{{status_contestacao_request_idstatuscontestacao_value}}}</value>
         [DataMember(Name="idStatusContestacao", EmitDefaultValue=false)]
         public long? IdStatusContestacao { get; set; }
     
         /// <summary>
-        /// Descri\u00E7\u00E3o da Constenta\u00E7\u00E3o
+        /// {{{status_contestacao_response_descricao_value}}}
         /// </summary>
-        /// <value>Descri\u00E7\u00E3o da Constenta\u00E7\u00E3o</value>
+        /// <value>{{{status_contestacao_response_descricao_value}}}</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     

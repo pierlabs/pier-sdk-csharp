@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Objeto de resposta de Risco de Fraude Detalhado
+    /// {{{risco_fraude_detalhado_response_description}}}
     /// </summary>
     [DataContract]
     public partial class RiscoFraudeDetalhadoResponse :  IEquatable<RiscoFraudeDetalhadoResponse>
@@ -22,33 +22,33 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="RiscoFraudeDetalhadoResponse" /> class.
         /// Initializes a new instance of the <see cref="RiscoFraudeDetalhadoResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude.</param>
-        /// <param name="IdTipoResolucao">C\u00F3digo de identifica\u00E7\u00E3o do tipo de resolu\u00E7\u00E3o atribu\u00EDdo ao registro.</param>
-        /// <param name="DescricaoTipoResolucao">Descri\u00E7\u00E3o do tipo de resolu\u00E7\u00E3o atribu\u00EDdo ao registro.</param>
-        /// <param name="FlagAltoRisco">Indica que a transa\u00E7\u00E3o possui um alto risco de fraude e que todas as transa\u00E7\u00F5es seguintes a ela ser\u00E3o negadas at\u00E9 que todas as transa\u00E7\u00F5es classificadas com risco de fraude sejam analisadas.</param>
-        /// <param name="IdConta">C\u00F3digo de identifica\u00E7\u00E3o da conta.</param>
-        /// <param name="IdCartao">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o.</param>
-        /// <param name="IdProduto">C\u00F3digo de identifica\u00E7\u00E3o do produto.</param>
-        /// <param name="IdTransacao">C\u00F3digo de identifica\u00E7\u00E3o da transa\u00E7\u00E3o.</param>
-        /// <param name="DataTransacao">Data que a transa\u00E7\u00E3o classificada com risco de fraude foi realizada.</param>
-        /// <param name="ValorTransacao">Valor da transa\u00E7\u00E3o classificada com risco de fraude.</param>
-        /// <param name="CodigoMoedaOrigem">C\u00F3digo da moeda de origem utilizada para a transa\u00E7\u00E3o.</param>
-        /// <param name="ValorOrigem">Valor da transa\u00E7\u00E3o na moeda de origem.</param>
-        /// <param name="CodigoMoedaDestino">C\u00F3digo da moeda de destino utilizada para a transa\u00E7\u00E3o.</param>
-        /// <param name="ValorDestino">Valor da transa\u00E7\u00E3o na moeda de destino.</param>
-        /// <param name="NomeEstabelecimento">Nome do estabelecimento onde a transa\u00E7\u00E3o  com risco de fraude foi realizada.</param>
-        /// <param name="IdPais">C\u00F3digo de Identifica\u00E7\u00E3o do Pa\u00EDs.</param>
-        /// <param name="CodigoRespostaAutorizador">C\u00F3digo de resposta do autorizador para a transa\u00E7\u00E3o.</param>
-        /// <param name="DescricaoRespostaAutorizador">Descri\u00E7\u00E3o da resposta do autorizador para a transa\u00E7\u00E3o.</param>
-        /// <param name="CodigoRespostaFraude">C\u00F3digo de resposta da ferramenta de Preven\u00E7\u00E3o a Fraude para a transa\u00E7\u00E3o.</param>
-        /// <param name="DescricaoRespostaFraude">Descri\u00E7\u00E3o da resposta da ferramenta de Preven\u00E7\u00E3o a Fraude para a transa\u00E7\u00E3o.</param>
-        /// <param name="OrigemTransacao">Tipo de Terminal que originou a Transa\u00E7\u00E3o (POS, ATM, TEF, etc).</param>
-        /// <param name="CodigoModoEntradaTerminal">C\u00F3digo de Identifica\u00E7\u00E3o do modo de origem da captura da Transa\u00E7\u00E3o.</param>
-        /// <param name="DescricaoModoEntradaTerminal">Descri\u00E7\u00E3o do modo de origem da captura da Transa\u00E7\u00E3o.</param>
-        /// <param name="Cpf">N\u00FAmero do CPF da Pessoa portadora do Cart\u00E3o, quando for do tipo Pessoa F\u00EDsica.</param>
-        /// <param name="Cnpj">N\u00FAmero do CNPJ da Pessoa portadora do Cart\u00E3o, quanto for do tipo Pessoa Jur\u00EDdica.</param>
-        /// <param name="Email">Endere\u00E7o de email da Pessoa portadora do Cart\u00E3o.</param>
-        /// <param name="Telefones">Lista de telefones associados ao portador do Cart\u00E3o.</param>
+        /// <param name="Id">{{{risco_fraude_detalhado_response_id_value}}}.</param>
+        /// <param name="IdTipoResolucao">{{{risco_fraude_detalhado_response_id_tipo_resolucao_value}}}.</param>
+        /// <param name="DescricaoTipoResolucao">{{{risco_fraude_detalhado_response_descricao_tipo_resolucao_value}}}.</param>
+        /// <param name="FlagAltoRisco">{{{risco_fraude_detalhado_response_flag_alto_risco_value}}}.</param>
+        /// <param name="IdConta">{{{risco_fraude_detalhado_response_id_conta_value}}}.</param>
+        /// <param name="IdCartao">{{{risco_fraude_detalhado_response_id_cartao_value}}}.</param>
+        /// <param name="IdProduto">{{{risco_fraude_detalhado_response_id_produto_value}}}.</param>
+        /// <param name="IdTransacao">{{{risco_fraude_detalhado_response_id_transacao_value}}}.</param>
+        /// <param name="DataTransacao">{{{risco_fraude_detalhado_response_data_transacao_value}}}.</param>
+        /// <param name="ValorTransacao">{{{risco_fraude_detalhado_response_valor_transacao_value}}}.</param>
+        /// <param name="CodigoMoedaOrigem">{{{risco_fraude_detalhado_response_codigo_moeda_origem_value}}}.</param>
+        /// <param name="ValorOrigem">{{{risco_fraude_detalhado_response_valor_origem_value}}}.</param>
+        /// <param name="CodigoMoedaDestino">{{{risco_fraude_detalhado_response_codigo_moeda_destino_value}}}.</param>
+        /// <param name="ValorDestino">{{{risco_fraude_detalhado_response_valor_destino_value}}}.</param>
+        /// <param name="NomeEstabelecimento">{{{risco_fraude_detalhado_response_nome_estabelecimento_value}}}.</param>
+        /// <param name="IdPais">{{{risco_fraude_detalhado_response_id_pais_value}}}.</param>
+        /// <param name="CodigoRespostaAutorizador">{{{risco_fraude_detalhado_response_codigo_resposta_autorizador_value}}}.</param>
+        /// <param name="DescricaoRespostaAutorizador">{{{risco_fraude_detalhado_response_descricao_resposta_autorizador_value}}}.</param>
+        /// <param name="CodigoRespostaFraude">{{{risco_fraude_detalhado_response_codigo_resposta_fraude_value}}}.</param>
+        /// <param name="DescricaoRespostaFraude">{{{risco_fraude_detalhado_response_descricao_resposta_fraude_value}}}.</param>
+        /// <param name="OrigemTransacao">{{{risco_fraude_detalhado_response_origem_transacao_value}}}.</param>
+        /// <param name="CodigoModoEntradaTerminal">{{{risco_fraude_detalhado_response_codigo_modo_entrada_terminal_value}}}.</param>
+        /// <param name="DescricaoModoEntradaTerminal">{{{risco_fraude_detalhado_response_descricao_modo_entrada_terminal_value}}}.</param>
+        /// <param name="Cpf">{{{risco_fraude_detalhado_response_cpf_value}}}.</param>
+        /// <param name="Cnpj">{{{risco_fraude_detalhado_response_cnpj_value}}}.</param>
+        /// <param name="Email">{{{risco_fraude_detalhado_response_email_value}}}.</param>
+        /// <param name="Telefones">{{{risco_fraude_detalhado_response_telefones_value}}}.</param>
 
         public RiscoFraudeDetalhadoResponse(long? Id = null, long? IdTipoResolucao = null, string DescricaoTipoResolucao = null, bool? FlagAltoRisco = null, long? IdConta = null, long? IdCartao = null, long? IdProduto = null, long? IdTransacao = null, string DataTransacao = null, double? ValorTransacao = null, string CodigoMoedaOrigem = null, double? ValorOrigem = null, string CodigoMoedaDestino = null, double? ValorDestino = null, string NomeEstabelecimento = null, string IdPais = null, string CodigoRespostaAutorizador = null, string DescricaoRespostaAutorizador = null, string CodigoRespostaFraude = null, string DescricaoRespostaFraude = null, string OrigemTransacao = null, string CodigoModoEntradaTerminal = null, string DescricaoModoEntradaTerminal = null, string Cpf = null, string Cnpj = null, string Email = null, List<TelefoneResponse> Telefones = null)
         {
@@ -84,191 +84,191 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude
+        /// {{{risco_fraude_detalhado_response_id_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude</value>
+        /// <value>{{{risco_fraude_detalhado_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// C\u00F3digo de identifica\u00E7\u00E3o do tipo de resolu\u00E7\u00E3o atribu\u00EDdo ao registro
+        /// {{{risco_fraude_detalhado_response_id_tipo_resolucao_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do tipo de resolu\u00E7\u00E3o atribu\u00EDdo ao registro</value>
+        /// <value>{{{risco_fraude_detalhado_response_id_tipo_resolucao_value}}}</value>
         [DataMember(Name="idTipoResolucao", EmitDefaultValue=false)]
         public long? IdTipoResolucao { get; set; }
     
         /// <summary>
-        /// Descri\u00E7\u00E3o do tipo de resolu\u00E7\u00E3o atribu\u00EDdo ao registro
+        /// {{{risco_fraude_detalhado_response_descricao_tipo_resolucao_value}}}
         /// </summary>
-        /// <value>Descri\u00E7\u00E3o do tipo de resolu\u00E7\u00E3o atribu\u00EDdo ao registro</value>
+        /// <value>{{{risco_fraude_detalhado_response_descricao_tipo_resolucao_value}}}</value>
         [DataMember(Name="descricaoTipoResolucao", EmitDefaultValue=false)]
         public string DescricaoTipoResolucao { get; set; }
     
         /// <summary>
-        /// Indica que a transa\u00E7\u00E3o possui um alto risco de fraude e que todas as transa\u00E7\u00F5es seguintes a ela ser\u00E3o negadas at\u00E9 que todas as transa\u00E7\u00F5es classificadas com risco de fraude sejam analisadas
+        /// {{{risco_fraude_detalhado_response_flag_alto_risco_value}}}
         /// </summary>
-        /// <value>Indica que a transa\u00E7\u00E3o possui um alto risco de fraude e que todas as transa\u00E7\u00F5es seguintes a ela ser\u00E3o negadas at\u00E9 que todas as transa\u00E7\u00F5es classificadas com risco de fraude sejam analisadas</value>
+        /// <value>{{{risco_fraude_detalhado_response_flag_alto_risco_value}}}</value>
         [DataMember(Name="flagAltoRisco", EmitDefaultValue=false)]
         public bool? FlagAltoRisco { get; set; }
     
         /// <summary>
-        /// C\u00F3digo de identifica\u00E7\u00E3o da conta
+        /// {{{risco_fraude_detalhado_response_id_conta_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de identifica\u00E7\u00E3o da conta</value>
+        /// <value>{{{risco_fraude_detalhado_response_id_conta_value}}}</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o
+        /// {{{risco_fraude_detalhado_response_id_cartao_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o</value>
+        /// <value>{{{risco_fraude_detalhado_response_id_cartao_value}}}</value>
         [DataMember(Name="idCartao", EmitDefaultValue=false)]
         public long? IdCartao { get; set; }
     
         /// <summary>
-        /// C\u00F3digo de identifica\u00E7\u00E3o do produto
+        /// {{{risco_fraude_detalhado_response_id_produto_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do produto</value>
+        /// <value>{{{risco_fraude_detalhado_response_id_produto_value}}}</value>
         [DataMember(Name="idProduto", EmitDefaultValue=false)]
         public long? IdProduto { get; set; }
     
         /// <summary>
-        /// C\u00F3digo de identifica\u00E7\u00E3o da transa\u00E7\u00E3o
+        /// {{{risco_fraude_detalhado_response_id_transacao_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de identifica\u00E7\u00E3o da transa\u00E7\u00E3o</value>
+        /// <value>{{{risco_fraude_detalhado_response_id_transacao_value}}}</value>
         [DataMember(Name="idTransacao", EmitDefaultValue=false)]
         public long? IdTransacao { get; set; }
     
         /// <summary>
-        /// Data que a transa\u00E7\u00E3o classificada com risco de fraude foi realizada
+        /// {{{risco_fraude_detalhado_response_data_transacao_value}}}
         /// </summary>
-        /// <value>Data que a transa\u00E7\u00E3o classificada com risco de fraude foi realizada</value>
+        /// <value>{{{risco_fraude_detalhado_response_data_transacao_value}}}</value>
         [DataMember(Name="dataTransacao", EmitDefaultValue=false)]
         public string DataTransacao { get; set; }
     
         /// <summary>
-        /// Valor da transa\u00E7\u00E3o classificada com risco de fraude
+        /// {{{risco_fraude_detalhado_response_valor_transacao_value}}}
         /// </summary>
-        /// <value>Valor da transa\u00E7\u00E3o classificada com risco de fraude</value>
+        /// <value>{{{risco_fraude_detalhado_response_valor_transacao_value}}}</value>
         [DataMember(Name="valorTransacao", EmitDefaultValue=false)]
         public double? ValorTransacao { get; set; }
     
         /// <summary>
-        /// C\u00F3digo da moeda de origem utilizada para a transa\u00E7\u00E3o
+        /// {{{risco_fraude_detalhado_response_codigo_moeda_origem_value}}}
         /// </summary>
-        /// <value>C\u00F3digo da moeda de origem utilizada para a transa\u00E7\u00E3o</value>
+        /// <value>{{{risco_fraude_detalhado_response_codigo_moeda_origem_value}}}</value>
         [DataMember(Name="codigoMoedaOrigem", EmitDefaultValue=false)]
         public string CodigoMoedaOrigem { get; set; }
     
         /// <summary>
-        /// Valor da transa\u00E7\u00E3o na moeda de origem
+        /// {{{risco_fraude_detalhado_response_valor_origem_value}}}
         /// </summary>
-        /// <value>Valor da transa\u00E7\u00E3o na moeda de origem</value>
+        /// <value>{{{risco_fraude_detalhado_response_valor_origem_value}}}</value>
         [DataMember(Name="valorOrigem", EmitDefaultValue=false)]
         public double? ValorOrigem { get; set; }
     
         /// <summary>
-        /// C\u00F3digo da moeda de destino utilizada para a transa\u00E7\u00E3o
+        /// {{{risco_fraude_detalhado_response_codigo_moeda_destino_value}}}
         /// </summary>
-        /// <value>C\u00F3digo da moeda de destino utilizada para a transa\u00E7\u00E3o</value>
+        /// <value>{{{risco_fraude_detalhado_response_codigo_moeda_destino_value}}}</value>
         [DataMember(Name="codigoMoedaDestino", EmitDefaultValue=false)]
         public string CodigoMoedaDestino { get; set; }
     
         /// <summary>
-        /// Valor da transa\u00E7\u00E3o na moeda de destino
+        /// {{{risco_fraude_detalhado_response_valor_destino_value}}}
         /// </summary>
-        /// <value>Valor da transa\u00E7\u00E3o na moeda de destino</value>
+        /// <value>{{{risco_fraude_detalhado_response_valor_destino_value}}}</value>
         [DataMember(Name="valorDestino", EmitDefaultValue=false)]
         public double? ValorDestino { get; set; }
     
         /// <summary>
-        /// Nome do estabelecimento onde a transa\u00E7\u00E3o  com risco de fraude foi realizada
+        /// {{{risco_fraude_detalhado_response_nome_estabelecimento_value}}}
         /// </summary>
-        /// <value>Nome do estabelecimento onde a transa\u00E7\u00E3o  com risco de fraude foi realizada</value>
+        /// <value>{{{risco_fraude_detalhado_response_nome_estabelecimento_value}}}</value>
         [DataMember(Name="nomeEstabelecimento", EmitDefaultValue=false)]
         public string NomeEstabelecimento { get; set; }
     
         /// <summary>
-        /// C\u00F3digo de Identifica\u00E7\u00E3o do Pa\u00EDs
+        /// {{{risco_fraude_detalhado_response_id_pais_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Pa\u00EDs</value>
+        /// <value>{{{risco_fraude_detalhado_response_id_pais_value}}}</value>
         [DataMember(Name="idPais", EmitDefaultValue=false)]
         public string IdPais { get; set; }
     
         /// <summary>
-        /// C\u00F3digo de resposta do autorizador para a transa\u00E7\u00E3o
+        /// {{{risco_fraude_detalhado_response_codigo_resposta_autorizador_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de resposta do autorizador para a transa\u00E7\u00E3o</value>
+        /// <value>{{{risco_fraude_detalhado_response_codigo_resposta_autorizador_value}}}</value>
         [DataMember(Name="codigoRespostaAutorizador", EmitDefaultValue=false)]
         public string CodigoRespostaAutorizador { get; set; }
     
         /// <summary>
-        /// Descri\u00E7\u00E3o da resposta do autorizador para a transa\u00E7\u00E3o
+        /// {{{risco_fraude_detalhado_response_descricao_resposta_autorizador_value}}}
         /// </summary>
-        /// <value>Descri\u00E7\u00E3o da resposta do autorizador para a transa\u00E7\u00E3o</value>
+        /// <value>{{{risco_fraude_detalhado_response_descricao_resposta_autorizador_value}}}</value>
         [DataMember(Name="descricaoRespostaAutorizador", EmitDefaultValue=false)]
         public string DescricaoRespostaAutorizador { get; set; }
     
         /// <summary>
-        /// C\u00F3digo de resposta da ferramenta de Preven\u00E7\u00E3o a Fraude para a transa\u00E7\u00E3o
+        /// {{{risco_fraude_detalhado_response_codigo_resposta_fraude_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de resposta da ferramenta de Preven\u00E7\u00E3o a Fraude para a transa\u00E7\u00E3o</value>
+        /// <value>{{{risco_fraude_detalhado_response_codigo_resposta_fraude_value}}}</value>
         [DataMember(Name="codigoRespostaFraude", EmitDefaultValue=false)]
         public string CodigoRespostaFraude { get; set; }
     
         /// <summary>
-        /// Descri\u00E7\u00E3o da resposta da ferramenta de Preven\u00E7\u00E3o a Fraude para a transa\u00E7\u00E3o
+        /// {{{risco_fraude_detalhado_response_descricao_resposta_fraude_value}}}
         /// </summary>
-        /// <value>Descri\u00E7\u00E3o da resposta da ferramenta de Preven\u00E7\u00E3o a Fraude para a transa\u00E7\u00E3o</value>
+        /// <value>{{{risco_fraude_detalhado_response_descricao_resposta_fraude_value}}}</value>
         [DataMember(Name="descricaoRespostaFraude", EmitDefaultValue=false)]
         public string DescricaoRespostaFraude { get; set; }
     
         /// <summary>
-        /// Tipo de Terminal que originou a Transa\u00E7\u00E3o (POS, ATM, TEF, etc)
+        /// {{{risco_fraude_detalhado_response_origem_transacao_value}}}
         /// </summary>
-        /// <value>Tipo de Terminal que originou a Transa\u00E7\u00E3o (POS, ATM, TEF, etc)</value>
+        /// <value>{{{risco_fraude_detalhado_response_origem_transacao_value}}}</value>
         [DataMember(Name="origemTransacao", EmitDefaultValue=false)]
         public string OrigemTransacao { get; set; }
     
         /// <summary>
-        /// C\u00F3digo de Identifica\u00E7\u00E3o do modo de origem da captura da Transa\u00E7\u00E3o
+        /// {{{risco_fraude_detalhado_response_codigo_modo_entrada_terminal_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do modo de origem da captura da Transa\u00E7\u00E3o</value>
+        /// <value>{{{risco_fraude_detalhado_response_codigo_modo_entrada_terminal_value}}}</value>
         [DataMember(Name="codigoModoEntradaTerminal", EmitDefaultValue=false)]
         public string CodigoModoEntradaTerminal { get; set; }
     
         /// <summary>
-        /// Descri\u00E7\u00E3o do modo de origem da captura da Transa\u00E7\u00E3o
+        /// {{{risco_fraude_detalhado_response_descricao_modo_entrada_terminal_value}}}
         /// </summary>
-        /// <value>Descri\u00E7\u00E3o do modo de origem da captura da Transa\u00E7\u00E3o</value>
+        /// <value>{{{risco_fraude_detalhado_response_descricao_modo_entrada_terminal_value}}}</value>
         [DataMember(Name="descricaoModoEntradaTerminal", EmitDefaultValue=false)]
         public string DescricaoModoEntradaTerminal { get; set; }
     
         /// <summary>
-        /// N\u00FAmero do CPF da Pessoa portadora do Cart\u00E3o, quando for do tipo Pessoa F\u00EDsica
+        /// {{{risco_fraude_detalhado_response_cpf_value}}}
         /// </summary>
-        /// <value>N\u00FAmero do CPF da Pessoa portadora do Cart\u00E3o, quando for do tipo Pessoa F\u00EDsica</value>
+        /// <value>{{{risco_fraude_detalhado_response_cpf_value}}}</value>
         [DataMember(Name="cpf", EmitDefaultValue=false)]
         public string Cpf { get; set; }
     
         /// <summary>
-        /// N\u00FAmero do CNPJ da Pessoa portadora do Cart\u00E3o, quanto for do tipo Pessoa Jur\u00EDdica
+        /// {{{risco_fraude_detalhado_response_cnpj_value}}}
         /// </summary>
-        /// <value>N\u00FAmero do CNPJ da Pessoa portadora do Cart\u00E3o, quanto for do tipo Pessoa Jur\u00EDdica</value>
+        /// <value>{{{risco_fraude_detalhado_response_cnpj_value}}}</value>
         [DataMember(Name="cnpj", EmitDefaultValue=false)]
         public string Cnpj { get; set; }
     
         /// <summary>
-        /// Endere\u00E7o de email da Pessoa portadora do Cart\u00E3o
+        /// {{{risco_fraude_detalhado_response_email_value}}}
         /// </summary>
-        /// <value>Endere\u00E7o de email da Pessoa portadora do Cart\u00E3o</value>
+        /// <value>{{{risco_fraude_detalhado_response_email_value}}}</value>
         [DataMember(Name="email", EmitDefaultValue=false)]
         public string Email { get; set; }
     
         /// <summary>
-        /// Lista de telefones associados ao portador do Cart\u00E3o
+        /// {{{risco_fraude_detalhado_response_telefones_value}}}
         /// </summary>
-        /// <value>Lista de telefones associados ao portador do Cart\u00E3o</value>
+        /// <value>{{{risco_fraude_detalhado_response_telefones_value}}}</value>
         [DataMember(Name="telefones", EmitDefaultValue=false)]
         public List<TelefoneResponse> Telefones { get; set; }
     

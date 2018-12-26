@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Objeto que representa a proposta
+    /// {{{proposta_parcial_update_description}}}
     /// </summary>
     [DataContract]
     public partial class PropostaParcialUpdate :  IEquatable<PropostaParcialUpdate>
@@ -22,7 +22,7 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="PropostaParcialUpdate" /> class.
         /// Initializes a new instance of the <see cref="PropostaParcialUpdate" />class.
         /// </summary>
-        /// <param name="Correspondencia">C\u00F3digo identificador do endere\u00E7o de correspond\u00EAncia da proposta.</param>
+        /// <param name="Correspondencia">{{{proposta_parcial_update_correspondencia_value}}}.</param>
 
         public PropostaParcialUpdate(int? Correspondencia = null)
         {
@@ -32,9 +32,9 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00F3digo identificador do endere\u00E7o de correspond\u00EAncia da proposta
+        /// {{{proposta_parcial_update_correspondencia_value}}}
         /// </summary>
-        /// <value>C\u00F3digo identificador do endere\u00E7o de correspond\u00EAncia da proposta</value>
+        /// <value>{{{proposta_parcial_update_correspondencia_value}}}</value>
         [DataMember(Name="correspondencia", EmitDefaultValue=false)]
         public int? Correspondencia { get; set; }
     

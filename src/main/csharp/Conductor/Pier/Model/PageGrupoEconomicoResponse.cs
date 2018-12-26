@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00E7\u00E3o da resposta do recurso de grupos encon\u00F4micos
+    /// {{{page_grupo_economico_response_description}}}
     /// </summary>
     [DataContract]
     public partial class PageGrupoEconomicoResponse :  IEquatable<PageGrupoEconomicoResponse>

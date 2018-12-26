@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Par\u00E2metros de atualiza\u00E7\u00E3o de um Status de Proposta
+    /// {{{status_proposta_update_request_description}}}
     /// </summary>
     [DataContract]
     public partial class StatusPropostaUpdate :  IEquatable<StatusPropostaUpdate>
@@ -22,7 +22,7 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="StatusPropostaUpdate" /> class.
         /// Initializes a new instance of the <see cref="StatusPropostaUpdate" />class.
         /// </summary>
-        /// <param name="Status">Status da proposta (required).</param>
+        /// <param name="Status">{{{status_proposta_update_status_value}}} (required).</param>
 
         public StatusPropostaUpdate(int? Status = null)
         {
@@ -40,9 +40,9 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Status da proposta
+        /// {{{status_proposta_update_status_value}}}
         /// </summary>
-        /// <value>Status da proposta</value>
+        /// <value>{{{status_proposta_update_status_value}}}</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public int? Status { get; set; }
     

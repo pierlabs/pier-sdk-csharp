@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Dados banc\u00E1rios
+    /// {{{dados_bancarios_conta_response_description}}}
     /// </summary>
     [DataContract]
     public partial class DadosBancariosContaResponse :  IEquatable<DadosBancariosContaResponse>
@@ -22,12 +22,12 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="DadosBancariosContaResponse" /> class.
         /// Initializes a new instance of the <see cref="DadosBancariosContaResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00F3digo de identifica\u00E7\u00E3o do registro dos dados banc\u00E1rios. (id).</param>
-        /// <param name="IdConta">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param>
-        /// <param name="CodigoBanco">Banco.</param>
-        /// <param name="NumeroAgencia">Ag\u00EAncia.</param>
-        /// <param name="NumeroContaCorrente">Conta Corrente.</param>
-        /// <param name="IdTipoContaBancaria">C\u00F3digo de Identifica\u00E7\u00E3o do tipo de conta banc\u00E1ria (id).</param>
+        /// <param name="Id">{{{dados_bancarios_conta_response_id_value}}}.</param>
+        /// <param name="IdConta">{{{dados_bancarios_conta_response_idConta_value}}}.</param>
+        /// <param name="CodigoBanco">{{{dados_bancarios_conta_response_banco_value}}}.</param>
+        /// <param name="NumeroAgencia">{{{dados_bancarios_conta_response_agencia_value}}}.</param>
+        /// <param name="NumeroContaCorrente">{{{dados_bancarios_conta_response_contaCorrente_value}}}.</param>
+        /// <param name="IdTipoContaBancaria">{{{dados_bancarios_conta_response_IdTipoContaBancaria_value}}}.</param>
         /// <param name="DvContaCorrente">DvContaCorrente.</param>
         /// <param name="DvAgencia">DvAgencia.</param>
 
@@ -46,44 +46,44 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00F3digo de identifica\u00E7\u00E3o do registro dos dados banc\u00E1rios. (id)
+        /// {{{dados_bancarios_conta_response_id_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do registro dos dados banc\u00E1rios. (id)</value>
+        /// <value>{{{dados_bancarios_conta_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)
+        /// {{{dados_bancarios_conta_response_idConta_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</value>
+        /// <value>{{{dados_bancarios_conta_response_idConta_value}}}</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// Banco
+        /// {{{dados_bancarios_conta_response_banco_value}}}
         /// </summary>
-        /// <value>Banco</value>
+        /// <value>{{{dados_bancarios_conta_response_banco_value}}}</value>
         [DataMember(Name="codigoBanco", EmitDefaultValue=false)]
         public long? CodigoBanco { get; set; }
     
         /// <summary>
-        /// Ag\u00EAncia
+        /// {{{dados_bancarios_conta_response_agencia_value}}}
         /// </summary>
-        /// <value>Ag\u00EAncia</value>
+        /// <value>{{{dados_bancarios_conta_response_agencia_value}}}</value>
         [DataMember(Name="numeroAgencia", EmitDefaultValue=false)]
         public long? NumeroAgencia { get; set; }
     
         /// <summary>
-        /// Conta Corrente
+        /// {{{dados_bancarios_conta_response_contaCorrente_value}}}
         /// </summary>
-        /// <value>Conta Corrente</value>
+        /// <value>{{{dados_bancarios_conta_response_contaCorrente_value}}}</value>
         [DataMember(Name="numeroContaCorrente", EmitDefaultValue=false)]
         public string NumeroContaCorrente { get; set; }
     
         /// <summary>
-        /// C\u00F3digo de Identifica\u00E7\u00E3o do tipo de conta banc\u00E1ria (id)
+        /// {{{dados_bancarios_conta_response_IdTipoContaBancaria_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do tipo de conta banc\u00E1ria (id)</value>
+        /// <value>{{{dados_bancarios_conta_response_IdTipoContaBancaria_value}}}</value>
         [DataMember(Name="idTipoContaBancaria", EmitDefaultValue=false)]
         public long? IdTipoContaBancaria { get; set; }
     

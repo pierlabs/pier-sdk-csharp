@@ -12,16 +12,16 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00E7\u00E3o da resposta do recurso de grupo econ\u00F4mico
+    /// {{{grupo_economico_response_description}}}
     /// </summary>
     [DataContract]
     public partial class GrupoEconomicoResponse :  IEquatable<GrupoEconomicoResponse>
     { 
     
         /// <summary>
-        /// Periodicidade do pagamento
+        /// {{{grupo_economico_response_periodicidade_value}}}
         /// </summary>
-        /// <value>Periodicidade do pagamento</value>
+        /// <value>{{{grupo_economico_response_periodicidade_value}}}</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum PeriodicidadeEnum {
             
@@ -43,9 +43,9 @@ namespace Conductor.Pier.Model
 
     
         /// <summary>
-        /// Dia para pagamento semanal
+        /// {{{grupo_economico_response_pagamento_semanal_value}}}
         /// </summary>
-        /// <value>Dia para pagamento semanal</value>
+        /// <value>{{{grupo_economico_response_pagamento_semanal_value}}}</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum PagamentoSemanalEnum {
             
@@ -73,9 +73,9 @@ namespace Conductor.Pier.Model
 
     
         /// <summary>
-        /// Indica se o credor recebe RAV e o tipo
+        /// {{{grupo_economico_response_recebe_r_a_v_value}}}
         /// </summary>
-        /// <value>Indica se o credor recebe RAV e o tipo</value>
+        /// <value>{{{grupo_economico_response_recebe_r_a_v_value}}}</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum RecebeRAVEnum {
             
@@ -91,23 +91,23 @@ namespace Conductor.Pier.Model
 
     
         /// <summary>
-        /// Periodicidade do pagamento
+        /// {{{grupo_economico_response_periodicidade_value}}}
         /// </summary>
-        /// <value>Periodicidade do pagamento</value>
+        /// <value>{{{grupo_economico_response_periodicidade_value}}}</value>
         [DataMember(Name="periodicidade", EmitDefaultValue=false)]
         public PeriodicidadeEnum? Periodicidade { get; set; }
     
         /// <summary>
-        /// Dia para pagamento semanal
+        /// {{{grupo_economico_response_pagamento_semanal_value}}}
         /// </summary>
-        /// <value>Dia para pagamento semanal</value>
+        /// <value>{{{grupo_economico_response_pagamento_semanal_value}}}</value>
         [DataMember(Name="pagamentoSemanal", EmitDefaultValue=false)]
         public PagamentoSemanalEnum? PagamentoSemanal { get; set; }
     
         /// <summary>
-        /// Indica se o credor recebe RAV e o tipo
+        /// {{{grupo_economico_response_recebe_r_a_v_value}}}
         /// </summary>
-        /// <value>Indica se o credor recebe RAV e o tipo</value>
+        /// <value>{{{grupo_economico_response_recebe_r_a_v_value}}}</value>
         [DataMember(Name="recebeRAV", EmitDefaultValue=false)]
         public RecebeRAVEnum? RecebeRAV { get; set; }
     
@@ -115,33 +115,33 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="GrupoEconomicoResponse" /> class.
         /// Initializes a new instance of the <see cref="GrupoEconomicoResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00F3digo identificador do grupo econ\u00F4mico.</param>
-        /// <param name="RazaoSocial">Raz\u00E3o social da pessoa jur\u00EDdica.</param>
-        /// <param name="NomeCredor">Nome do credor.</param>
-        /// <param name="NumeroReceitaFederal">N\u00FAmero da Receita Federal.</param>
-        /// <param name="InscricaoEstadual">N\u00FAmero da inscri\u00E7\u00E3o estadual.</param>
-        /// <param name="Contato">Nome da pessoa para entrar em contato.</param>
-        /// <param name="Banco">C\u00F3digo do banco.</param>
-        /// <param name="Agencia">C\u00F3digo da ag\u00EAncia.</param>
-        /// <param name="DigitoAgencia">D\u00EDgito verificador da ag\u00EAncia.</param>
-        /// <param name="ContaCorrente">C\u00F3digo da Conta Corrente.</param>
-        /// <param name="DigitoContaCorrente">D\u00EDgito Verificador da Conta Corrente.</param>
-        /// <param name="Usuario">Login do usu\u00E1rio para registro da inser\u00E7\u00E3o.</param>
-        /// <param name="Periodicidade">Periodicidade do pagamento.</param>
-        /// <param name="PagamentoSemanal">Dia para pagamento semanal.</param>
-        /// <param name="PagamentoMensal">Dia da data para o pagamento mensal.</param>
-        /// <param name="PagamentoDecendialPrimeiro">Dia da data para o primeiro pagamento decendial.</param>
-        /// <param name="PagamentoDecendialSegundo">Dia da data para o segundo pagamento decendial.</param>
-        /// <param name="PagamentoDecendialTerceiro">Dia da data para o terceiro pagamento decendial.</param>
-        /// <param name="PagamentoQuinzenalPrimeiro">Dia da data para o primeiro pagamento quinzenal.</param>
-        /// <param name="PagamentoQuinzenalSegundo">Dia da data para o segundo pagamento quinzenal.</param>
-        /// <param name="IdCredorRAV">Identificador do credor RAV.</param>
-        /// <param name="PercentualRAV">Valor percentual do RAV do credor.</param>
-        /// <param name="RecebeRAV">Indica se o credor recebe RAV e o tipo.</param>
-        /// <param name="PercentualMultiplica">Percentual Multiplica.</param>
-        /// <param name="TaxaAdm">Taxa Administrativa.</param>
-        /// <param name="TaxaBanco">Taxa do Banco.</param>
-        /// <param name="LimiteRAV">Valor limite do RAV.</param>
+        /// <param name="Id">{{{grupo_economico_response_id_value}}}.</param>
+        /// <param name="RazaoSocial">{{{grupo_economico_response_razao_social_value}}}.</param>
+        /// <param name="NomeCredor">{{{grupo_economico_response_nome_credor_value}}}.</param>
+        /// <param name="NumeroReceitaFederal">{{{grupo_economico_response_numero_receita_federal_value}}}.</param>
+        /// <param name="InscricaoEstadual">{{{grupo_economico_response_inscricao_estadual_value}}}.</param>
+        /// <param name="Contato">{{{grupo_economico_response_contato_value}}}.</param>
+        /// <param name="Banco">{{{grupo_economico_response_banco_value}}}.</param>
+        /// <param name="Agencia">{{{grupo_economico_response_agencia_value}}}.</param>
+        /// <param name="DigitoAgencia">{{{grupo_economico_response_digito_agencia_value}}}.</param>
+        /// <param name="ContaCorrente">{{{grupo_economico_response_conta_corrente_value}}}.</param>
+        /// <param name="DigitoContaCorrente">{{{grupo_economico_response_digito_conta_corrente_value}}}.</param>
+        /// <param name="Usuario">{{{grupo_economico_response_usuario_value}}}.</param>
+        /// <param name="Periodicidade">{{{grupo_economico_response_periodicidade_value}}}.</param>
+        /// <param name="PagamentoSemanal">{{{grupo_economico_response_pagamento_semanal_value}}}.</param>
+        /// <param name="PagamentoMensal">{{{grupo_economico_response_pagamento_mensal_value}}}.</param>
+        /// <param name="PagamentoDecendialPrimeiro">{{{grupo_economico_response_pagamento_decendial_primeiro_value}}}.</param>
+        /// <param name="PagamentoDecendialSegundo">{{{grupo_economico_response_pagamento_decendial_segundo_value}}}.</param>
+        /// <param name="PagamentoDecendialTerceiro">{{{grupo_economico_response_pagamento_decendial_terceiro_value}}}.</param>
+        /// <param name="PagamentoQuinzenalPrimeiro">{{{grupo_economico_response_pagamento_quinzenal_primeiro_value}}}.</param>
+        /// <param name="PagamentoQuinzenalSegundo">{{{grupo_economico_response_pagamento_quinzenal_segundo_value}}}.</param>
+        /// <param name="IdCredorRAV">{{{grupo_economico_response_id_credor_r_a_v_value}}}.</param>
+        /// <param name="PercentualRAV">{{{grupo_economico_response_percentual_r_a_v_value}}}.</param>
+        /// <param name="RecebeRAV">{{{grupo_economico_response_recebe_r_a_v_value}}}.</param>
+        /// <param name="PercentualMultiplica">{{{grupo_economico_response_percentual_multiplica_value}}}.</param>
+        /// <param name="TaxaAdm">{{{grupo_economico_response_taxa_adm_value}}}.</param>
+        /// <param name="TaxaBanco">{{{grupo_economico_response_taxa_banco_value}}}.</param>
+        /// <param name="LimiteRAV">{{{grupo_economico_response_limite_r_a_v_value}}}.</param>
 
         public GrupoEconomicoResponse(long? Id = null, string RazaoSocial = null, string NomeCredor = null, string NumeroReceitaFederal = null, string InscricaoEstadual = null, string Contato = null, int? Banco = null, int? Agencia = null, string DigitoAgencia = null, string ContaCorrente = null, string DigitoContaCorrente = null, string Usuario = null, PeriodicidadeEnum? Periodicidade = null, PagamentoSemanalEnum? PagamentoSemanal = null, int? PagamentoMensal = null, int? PagamentoDecendialPrimeiro = null, int? PagamentoDecendialSegundo = null, int? PagamentoDecendialTerceiro = null, int? PagamentoQuinzenalPrimeiro = null, int? PagamentoQuinzenalSegundo = null, long? IdCredorRAV = null, double? PercentualRAV = null, RecebeRAVEnum? RecebeRAV = null, double? PercentualMultiplica = null, double? TaxaAdm = null, double? TaxaBanco = null, double? LimiteRAV = null)
         {
@@ -177,170 +177,170 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00F3digo identificador do grupo econ\u00F4mico
+        /// {{{grupo_economico_response_id_value}}}
         /// </summary>
-        /// <value>C\u00F3digo identificador do grupo econ\u00F4mico</value>
+        /// <value>{{{grupo_economico_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Raz\u00E3o social da pessoa jur\u00EDdica
+        /// {{{grupo_economico_response_razao_social_value}}}
         /// </summary>
-        /// <value>Raz\u00E3o social da pessoa jur\u00EDdica</value>
+        /// <value>{{{grupo_economico_response_razao_social_value}}}</value>
         [DataMember(Name="razaoSocial", EmitDefaultValue=false)]
         public string RazaoSocial { get; set; }
     
         /// <summary>
-        /// Nome do credor
+        /// {{{grupo_economico_response_nome_credor_value}}}
         /// </summary>
-        /// <value>Nome do credor</value>
+        /// <value>{{{grupo_economico_response_nome_credor_value}}}</value>
         [DataMember(Name="nomeCredor", EmitDefaultValue=false)]
         public string NomeCredor { get; set; }
     
         /// <summary>
-        /// N\u00FAmero da Receita Federal
+        /// {{{grupo_economico_response_numero_receita_federal_value}}}
         /// </summary>
-        /// <value>N\u00FAmero da Receita Federal</value>
+        /// <value>{{{grupo_economico_response_numero_receita_federal_value}}}</value>
         [DataMember(Name="numeroReceitaFederal", EmitDefaultValue=false)]
         public string NumeroReceitaFederal { get; set; }
     
         /// <summary>
-        /// N\u00FAmero da inscri\u00E7\u00E3o estadual
+        /// {{{grupo_economico_response_inscricao_estadual_value}}}
         /// </summary>
-        /// <value>N\u00FAmero da inscri\u00E7\u00E3o estadual</value>
+        /// <value>{{{grupo_economico_response_inscricao_estadual_value}}}</value>
         [DataMember(Name="inscricaoEstadual", EmitDefaultValue=false)]
         public string InscricaoEstadual { get; set; }
     
         /// <summary>
-        /// Nome da pessoa para entrar em contato
+        /// {{{grupo_economico_response_contato_value}}}
         /// </summary>
-        /// <value>Nome da pessoa para entrar em contato</value>
+        /// <value>{{{grupo_economico_response_contato_value}}}</value>
         [DataMember(Name="contato", EmitDefaultValue=false)]
         public string Contato { get; set; }
     
         /// <summary>
-        /// C\u00F3digo do banco
+        /// {{{grupo_economico_response_banco_value}}}
         /// </summary>
-        /// <value>C\u00F3digo do banco</value>
+        /// <value>{{{grupo_economico_response_banco_value}}}</value>
         [DataMember(Name="banco", EmitDefaultValue=false)]
         public int? Banco { get; set; }
     
         /// <summary>
-        /// C\u00F3digo da ag\u00EAncia
+        /// {{{grupo_economico_response_agencia_value}}}
         /// </summary>
-        /// <value>C\u00F3digo da ag\u00EAncia</value>
+        /// <value>{{{grupo_economico_response_agencia_value}}}</value>
         [DataMember(Name="agencia", EmitDefaultValue=false)]
         public int? Agencia { get; set; }
     
         /// <summary>
-        /// D\u00EDgito verificador da ag\u00EAncia
+        /// {{{grupo_economico_response_digito_agencia_value}}}
         /// </summary>
-        /// <value>D\u00EDgito verificador da ag\u00EAncia</value>
+        /// <value>{{{grupo_economico_response_digito_agencia_value}}}</value>
         [DataMember(Name="digitoAgencia", EmitDefaultValue=false)]
         public string DigitoAgencia { get; set; }
     
         /// <summary>
-        /// C\u00F3digo da Conta Corrente
+        /// {{{grupo_economico_response_conta_corrente_value}}}
         /// </summary>
-        /// <value>C\u00F3digo da Conta Corrente</value>
+        /// <value>{{{grupo_economico_response_conta_corrente_value}}}</value>
         [DataMember(Name="contaCorrente", EmitDefaultValue=false)]
         public string ContaCorrente { get; set; }
     
         /// <summary>
-        /// D\u00EDgito Verificador da Conta Corrente
+        /// {{{grupo_economico_response_digito_conta_corrente_value}}}
         /// </summary>
-        /// <value>D\u00EDgito Verificador da Conta Corrente</value>
+        /// <value>{{{grupo_economico_response_digito_conta_corrente_value}}}</value>
         [DataMember(Name="digitoContaCorrente", EmitDefaultValue=false)]
         public string DigitoContaCorrente { get; set; }
     
         /// <summary>
-        /// Login do usu\u00E1rio para registro da inser\u00E7\u00E3o
+        /// {{{grupo_economico_response_usuario_value}}}
         /// </summary>
-        /// <value>Login do usu\u00E1rio para registro da inser\u00E7\u00E3o</value>
+        /// <value>{{{grupo_economico_response_usuario_value}}}</value>
         [DataMember(Name="usuario", EmitDefaultValue=false)]
         public string Usuario { get; set; }
     
         /// <summary>
-        /// Dia da data para o pagamento mensal
+        /// {{{grupo_economico_response_pagamento_mensal_value}}}
         /// </summary>
-        /// <value>Dia da data para o pagamento mensal</value>
+        /// <value>{{{grupo_economico_response_pagamento_mensal_value}}}</value>
         [DataMember(Name="pagamentoMensal", EmitDefaultValue=false)]
         public int? PagamentoMensal { get; set; }
     
         /// <summary>
-        /// Dia da data para o primeiro pagamento decendial
+        /// {{{grupo_economico_response_pagamento_decendial_primeiro_value}}}
         /// </summary>
-        /// <value>Dia da data para o primeiro pagamento decendial</value>
+        /// <value>{{{grupo_economico_response_pagamento_decendial_primeiro_value}}}</value>
         [DataMember(Name="pagamentoDecendialPrimeiro", EmitDefaultValue=false)]
         public int? PagamentoDecendialPrimeiro { get; set; }
     
         /// <summary>
-        /// Dia da data para o segundo pagamento decendial
+        /// {{{grupo_economico_response_pagamento_decendial_segundo_value}}}
         /// </summary>
-        /// <value>Dia da data para o segundo pagamento decendial</value>
+        /// <value>{{{grupo_economico_response_pagamento_decendial_segundo_value}}}</value>
         [DataMember(Name="pagamentoDecendialSegundo", EmitDefaultValue=false)]
         public int? PagamentoDecendialSegundo { get; set; }
     
         /// <summary>
-        /// Dia da data para o terceiro pagamento decendial
+        /// {{{grupo_economico_response_pagamento_decendial_terceiro_value}}}
         /// </summary>
-        /// <value>Dia da data para o terceiro pagamento decendial</value>
+        /// <value>{{{grupo_economico_response_pagamento_decendial_terceiro_value}}}</value>
         [DataMember(Name="pagamentoDecendialTerceiro", EmitDefaultValue=false)]
         public int? PagamentoDecendialTerceiro { get; set; }
     
         /// <summary>
-        /// Dia da data para o primeiro pagamento quinzenal
+        /// {{{grupo_economico_response_pagamento_quinzenal_primeiro_value}}}
         /// </summary>
-        /// <value>Dia da data para o primeiro pagamento quinzenal</value>
+        /// <value>{{{grupo_economico_response_pagamento_quinzenal_primeiro_value}}}</value>
         [DataMember(Name="pagamentoQuinzenalPrimeiro", EmitDefaultValue=false)]
         public int? PagamentoQuinzenalPrimeiro { get; set; }
     
         /// <summary>
-        /// Dia da data para o segundo pagamento quinzenal
+        /// {{{grupo_economico_response_pagamento_quinzenal_segundo_value}}}
         /// </summary>
-        /// <value>Dia da data para o segundo pagamento quinzenal</value>
+        /// <value>{{{grupo_economico_response_pagamento_quinzenal_segundo_value}}}</value>
         [DataMember(Name="pagamentoQuinzenalSegundo", EmitDefaultValue=false)]
         public int? PagamentoQuinzenalSegundo { get; set; }
     
         /// <summary>
-        /// Identificador do credor RAV
+        /// {{{grupo_economico_response_id_credor_r_a_v_value}}}
         /// </summary>
-        /// <value>Identificador do credor RAV</value>
+        /// <value>{{{grupo_economico_response_id_credor_r_a_v_value}}}</value>
         [DataMember(Name="idCredorRAV", EmitDefaultValue=false)]
         public long? IdCredorRAV { get; set; }
     
         /// <summary>
-        /// Valor percentual do RAV do credor
+        /// {{{grupo_economico_response_percentual_r_a_v_value}}}
         /// </summary>
-        /// <value>Valor percentual do RAV do credor</value>
+        /// <value>{{{grupo_economico_response_percentual_r_a_v_value}}}</value>
         [DataMember(Name="percentualRAV", EmitDefaultValue=false)]
         public double? PercentualRAV { get; set; }
     
         /// <summary>
-        /// Percentual Multiplica
+        /// {{{grupo_economico_response_percentual_multiplica_value}}}
         /// </summary>
-        /// <value>Percentual Multiplica</value>
+        /// <value>{{{grupo_economico_response_percentual_multiplica_value}}}</value>
         [DataMember(Name="percentualMultiplica", EmitDefaultValue=false)]
         public double? PercentualMultiplica { get; set; }
     
         /// <summary>
-        /// Taxa Administrativa
+        /// {{{grupo_economico_response_taxa_adm_value}}}
         /// </summary>
-        /// <value>Taxa Administrativa</value>
+        /// <value>{{{grupo_economico_response_taxa_adm_value}}}</value>
         [DataMember(Name="taxaAdm", EmitDefaultValue=false)]
         public double? TaxaAdm { get; set; }
     
         /// <summary>
-        /// Taxa do Banco
+        /// {{{grupo_economico_response_taxa_banco_value}}}
         /// </summary>
-        /// <value>Taxa do Banco</value>
+        /// <value>{{{grupo_economico_response_taxa_banco_value}}}</value>
         [DataMember(Name="taxaBanco", EmitDefaultValue=false)]
         public double? TaxaBanco { get; set; }
     
         /// <summary>
-        /// Valor limite do RAV
+        /// {{{grupo_economico_response_limite_r_a_v_value}}}
         /// </summary>
-        /// <value>Valor limite do RAV</value>
+        /// <value>{{{grupo_economico_response_limite_r_a_v_value}}}</value>
         [DataMember(Name="limiteRAV", EmitDefaultValue=false)]
         public double? LimiteRAV { get; set; }
     

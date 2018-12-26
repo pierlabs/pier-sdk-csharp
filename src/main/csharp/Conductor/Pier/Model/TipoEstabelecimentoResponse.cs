@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Resposta do recurso de tipo de estabelecimento
+    /// {{{tipo_estabelecimento_response_description}}}
     /// </summary>
     [DataContract]
     public partial class TipoEstabelecimentoResponse :  IEquatable<TipoEstabelecimentoResponse>
@@ -22,8 +22,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TipoEstabelecimentoResponse" /> class.
         /// Initializes a new instance of the <see cref="TipoEstabelecimentoResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00F3digo de identifica\u00E7\u00E3o do tipo estabelecimento (id).</param>
-        /// <param name="Descricao">Descri\u00E7\u00E3o do tipo de estabelecimento.</param>
+        /// <param name="Id">{{{tipo_estabelecimento_response_id_value}}}.</param>
+        /// <param name="Descricao">{{{tipo_estabelecimento_response_descricao_value}}}.</param>
 
         public TipoEstabelecimentoResponse(long? Id = null, string Descricao = null)
         {
@@ -34,16 +34,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00F3digo de identifica\u00E7\u00E3o do tipo estabelecimento (id)
+        /// {{{tipo_estabelecimento_response_id_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do tipo estabelecimento (id)</value>
+        /// <value>{{{tipo_estabelecimento_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Descri\u00E7\u00E3o do tipo de estabelecimento
+        /// {{{tipo_estabelecimento_response_descricao_value}}}
         /// </summary>
-        /// <value>Descri\u00E7\u00E3o do tipo de estabelecimento</value>
+        /// <value>{{{tipo_estabelecimento_response_descricao_value}}}</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     

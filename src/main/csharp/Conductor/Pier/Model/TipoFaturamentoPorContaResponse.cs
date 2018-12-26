@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Objeto Faturamento
+    /// {{{tipo_faturamento_por_conta_response_description}}}
     /// </summary>
     [DataContract]
     public partial class TipoFaturamentoPorContaResponse :  IEquatable<TipoFaturamentoPorContaResponse>
@@ -22,13 +22,13 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TipoFaturamentoPorContaResponse" /> class.
         /// Initializes a new instance of the <see cref="TipoFaturamentoPorContaResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento por conta (id).</param>
-        /// <param name="IdConta">C\u00F3digo de identifica\u00E7\u00E3o da conta relacionada ao tipo de faturamento.</param>
-        /// <param name="Ativo">Status da configura\u00E7\u00E3o que representa que se o tipo de faturamento por conta est\u00E1 ativo ou cancelado.</param>
-        /// <param name="IdTipoFaturamento">C\u00F3digo de identifica\u00E7\u00E3o da tipo de faturamento referenciado.</param>
-        /// <param name="DataHoraInclusao">Data de inclus\u00E3o da configura\u00E7\u00E3o de tipo de faturamento por conta.</param>
-        /// <param name="DataHoraCancelamento">Data de cancelamento da configura\u00E7\u00E3o de tipo de faturamento por conta.</param>
-        /// <param name="ModificadoPor">Descri\u00E7\u00E3o do respons\u00E1vel pela \u00FAltima modifica\u00E7\u00E3o da configura\u00E7\u00E3o.</param>
+        /// <param name="Id">{{{tipo_faturamento_por_conta_response_id_value}}}.</param>
+        /// <param name="IdConta">{{{tipo_faturamento_por_conta_response_id_conta_value}}}.</param>
+        /// <param name="Ativo">{{{tipo_faturamento_por_conta_response_status_value}}}.</param>
+        /// <param name="IdTipoFaturamento">{{{tipo_faturamento_por_conta_response_id_tipo_faturamento_value}}}.</param>
+        /// <param name="DataHoraInclusao">{{{tipo_faturamento_por_conta_response_data_hora_inclusao_value}}}.</param>
+        /// <param name="DataHoraCancelamento">{{{tipo_faturamento_por_conta_response_data_hora_cancelamento_value}}}.</param>
+        /// <param name="ModificadoPor">{{{tipo_faturamento_por_conta_response_modificado_por_value}}}.</param>
 
         public TipoFaturamentoPorContaResponse(long? Id = null, long? IdConta = null, bool? Ativo = null, long? IdTipoFaturamento = null, string DataHoraInclusao = null, string DataHoraCancelamento = null, string ModificadoPor = null)
         {
@@ -44,51 +44,51 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento por conta (id)
+        /// {{{tipo_faturamento_por_conta_response_id_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do tipo de faturamento por conta (id)</value>
+        /// <value>{{{tipo_faturamento_por_conta_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// C\u00F3digo de identifica\u00E7\u00E3o da conta relacionada ao tipo de faturamento
+        /// {{{tipo_faturamento_por_conta_response_id_conta_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de identifica\u00E7\u00E3o da conta relacionada ao tipo de faturamento</value>
+        /// <value>{{{tipo_faturamento_por_conta_response_id_conta_value}}}</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// Status da configura\u00E7\u00E3o que representa que se o tipo de faturamento por conta est\u00E1 ativo ou cancelado
+        /// {{{tipo_faturamento_por_conta_response_status_value}}}
         /// </summary>
-        /// <value>Status da configura\u00E7\u00E3o que representa que se o tipo de faturamento por conta est\u00E1 ativo ou cancelado</value>
+        /// <value>{{{tipo_faturamento_por_conta_response_status_value}}}</value>
         [DataMember(Name="ativo", EmitDefaultValue=false)]
         public bool? Ativo { get; set; }
     
         /// <summary>
-        /// C\u00F3digo de identifica\u00E7\u00E3o da tipo de faturamento referenciado
+        /// {{{tipo_faturamento_por_conta_response_id_tipo_faturamento_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de identifica\u00E7\u00E3o da tipo de faturamento referenciado</value>
+        /// <value>{{{tipo_faturamento_por_conta_response_id_tipo_faturamento_value}}}</value>
         [DataMember(Name="idTipoFaturamento", EmitDefaultValue=false)]
         public long? IdTipoFaturamento { get; set; }
     
         /// <summary>
-        /// Data de inclus\u00E3o da configura\u00E7\u00E3o de tipo de faturamento por conta
+        /// {{{tipo_faturamento_por_conta_response_data_hora_inclusao_value}}}
         /// </summary>
-        /// <value>Data de inclus\u00E3o da configura\u00E7\u00E3o de tipo de faturamento por conta</value>
+        /// <value>{{{tipo_faturamento_por_conta_response_data_hora_inclusao_value}}}</value>
         [DataMember(Name="dataHoraInclusao", EmitDefaultValue=false)]
         public string DataHoraInclusao { get; set; }
     
         /// <summary>
-        /// Data de cancelamento da configura\u00E7\u00E3o de tipo de faturamento por conta
+        /// {{{tipo_faturamento_por_conta_response_data_hora_cancelamento_value}}}
         /// </summary>
-        /// <value>Data de cancelamento da configura\u00E7\u00E3o de tipo de faturamento por conta</value>
+        /// <value>{{{tipo_faturamento_por_conta_response_data_hora_cancelamento_value}}}</value>
         [DataMember(Name="dataHoraCancelamento", EmitDefaultValue=false)]
         public string DataHoraCancelamento { get; set; }
     
         /// <summary>
-        /// Descri\u00E7\u00E3o do respons\u00E1vel pela \u00FAltima modifica\u00E7\u00E3o da configura\u00E7\u00E3o
+        /// {{{tipo_faturamento_por_conta_response_modificado_por_value}}}
         /// </summary>
-        /// <value>Descri\u00E7\u00E3o do respons\u00E1vel pela \u00FAltima modifica\u00E7\u00E3o da configura\u00E7\u00E3o</value>
+        /// <value>{{{tipo_faturamento_por_conta_response_modificado_por_value}}}</value>
         [DataMember(Name="modificadoPor", EmitDefaultValue=false)]
         public string ModificadoPor { get; set; }
     

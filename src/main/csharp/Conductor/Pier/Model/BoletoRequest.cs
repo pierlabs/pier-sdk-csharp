@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Par\u00E2metros de requisi\u00E7\u00E3o de um Boleto
+    /// {{{boleto_request_description}}}
     /// </summary>
     [DataContract]
     public partial class BoletoRequest :  IEquatable<BoletoRequest>
@@ -22,11 +22,11 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="BoletoRequest" /> class.
         /// Initializes a new instance of the <see cref="BoletoRequest" />class.
         /// </summary>
-        /// <param name="IdConta">C\u00F3digo de identifica\u00E7\u00E3o da Conta (ID) (required).</param>
-        /// <param name="TipoBoleto">Tipo de Boleto a ser gerado (required).</param>
-        /// <param name="Valor">Valor da cobran\u00E7a gerada (required).</param>
-        /// <param name="DataVencimento">Data de vencimento da cobran\u00E7a (required).</param>
-        /// <param name="IdConvenio">C\u00F3digo de identifica\u00E7\u00E3o do conv\u00EAnio para onde o boleto deve ser gerado.</param>
+        /// <param name="IdConta">{{{boleto_request_id_conta_value}}} (required).</param>
+        /// <param name="TipoBoleto">{{{boleto_request_tipo_boleto_value}}} (required).</param>
+        /// <param name="Valor">{{{boleto_request_valor_value}}} (required).</param>
+        /// <param name="DataVencimento">{{{boleto_request_data_vencimento_value}}} (required).</param>
+        /// <param name="IdConvenio">{{{boleto_request_id_convenio_value}}}.</param>
 
         public BoletoRequest(long? IdConta = null, long? TipoBoleto = null, double? Valor = null, string DataVencimento = null, long? IdConvenio = null)
         {
@@ -72,37 +72,37 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00F3digo de identifica\u00E7\u00E3o da Conta (ID)
+        /// {{{boleto_request_id_conta_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de identifica\u00E7\u00E3o da Conta (ID)</value>
+        /// <value>{{{boleto_request_id_conta_value}}}</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// Tipo de Boleto a ser gerado
+        /// {{{boleto_request_tipo_boleto_value}}}
         /// </summary>
-        /// <value>Tipo de Boleto a ser gerado</value>
+        /// <value>{{{boleto_request_tipo_boleto_value}}}</value>
         [DataMember(Name="tipoBoleto", EmitDefaultValue=false)]
         public long? TipoBoleto { get; set; }
     
         /// <summary>
-        /// Valor da cobran\u00E7a gerada
+        /// {{{boleto_request_valor_value}}}
         /// </summary>
-        /// <value>Valor da cobran\u00E7a gerada</value>
+        /// <value>{{{boleto_request_valor_value}}}</value>
         [DataMember(Name="valor", EmitDefaultValue=false)]
         public double? Valor { get; set; }
     
         /// <summary>
-        /// Data de vencimento da cobran\u00E7a
+        /// {{{boleto_request_data_vencimento_value}}}
         /// </summary>
-        /// <value>Data de vencimento da cobran\u00E7a</value>
+        /// <value>{{{boleto_request_data_vencimento_value}}}</value>
         [DataMember(Name="dataVencimento", EmitDefaultValue=false)]
         public string DataVencimento { get; set; }
     
         /// <summary>
-        /// C\u00F3digo de identifica\u00E7\u00E3o do conv\u00EAnio para onde o boleto deve ser gerado
+        /// {{{boleto_request_id_convenio_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do conv\u00EAnio para onde o boleto deve ser gerado</value>
+        /// <value>{{{boleto_request_id_convenio_value}}}</value>
         [DataMember(Name="idConvenio", EmitDefaultValue=false)]
         public long? IdConvenio { get; set; }
     

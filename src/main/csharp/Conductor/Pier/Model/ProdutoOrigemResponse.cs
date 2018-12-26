@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00E7\u00E3o da resposta dos produtosOrigem do recurso de Origem Comercial
+    /// {{{produto_origem_response_description}}}
     /// </summary>
     [DataContract]
     public partial class ProdutoOrigemResponse :  IEquatable<ProdutoOrigemResponse>
@@ -22,7 +22,7 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="ProdutoOrigemResponse" /> class.
         /// Initializes a new instance of the <see cref="ProdutoOrigemResponse" />class.
         /// </summary>
-        /// <param name="IdProduto">C\u00F3digo identificador do produto.</param>
+        /// <param name="IdProduto">{{{produto_origem_response_id_produto_value}}}.</param>
 
         public ProdutoOrigemResponse(long? IdProduto = null)
         {
@@ -32,9 +32,9 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00F3digo identificador do produto
+        /// {{{produto_origem_response_id_produto_value}}}
         /// </summary>
-        /// <value>C\u00F3digo identificador do produto</value>
+        /// <value>{{{produto_origem_response_id_produto_value}}}</value>
         [DataMember(Name="idProduto", EmitDefaultValue=false)]
         public long? IdProduto { get; set; }
     

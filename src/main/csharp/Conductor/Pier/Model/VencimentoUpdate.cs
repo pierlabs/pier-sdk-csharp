@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa Objeto de atualiza\u00E7\u00E3o de Vencimento
+    /// {{{vencimento_update_description}}}
     /// </summary>
     [DataContract]
     public partial class VencimentoUpdate :  IEquatable<VencimentoUpdate>
@@ -22,7 +22,7 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="VencimentoUpdate" /> class.
         /// Initializes a new instance of the <see cref="VencimentoUpdate" />class.
         /// </summary>
-        /// <param name="DataPrevistaCorte">Data prevista para Vencimento.</param>
+        /// <param name="DataPrevistaCorte">{{{vencimento_update_data_prevista_corte_value}}}.</param>
 
         public VencimentoUpdate(string DataPrevistaCorte = null)
         {
@@ -32,9 +32,9 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Data prevista para Vencimento
+        /// {{{vencimento_update_data_prevista_corte_value}}}
         /// </summary>
-        /// <value>Data prevista para Vencimento</value>
+        /// <value>{{{vencimento_update_data_prevista_corte_value}}}</value>
         [DataMember(Name="dataPrevistaCorte", EmitDefaultValue=false)]
         public string DataPrevistaCorte { get; set; }
     

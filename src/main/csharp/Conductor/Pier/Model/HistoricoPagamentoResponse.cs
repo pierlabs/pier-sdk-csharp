@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Objeto HistoricoPagamentoResponse
+    /// {{{historico_pagamento_response_description}}}
     /// </summary>
     [DataContract]
     public partial class HistoricoPagamentoResponse :  IEquatable<HistoricoPagamentoResponse>
@@ -22,15 +22,15 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="HistoricoPagamentoResponse" /> class.
         /// Initializes a new instance of the <see cref="HistoricoPagamentoResponse" />class.
         /// </summary>
-        /// <param name="IdConta">C\u00F3digo de Identifica\u00E7\u00E3o da Conta.</param>
-        /// <param name="IdPagamento">C\u00F3digo de Identifica\u00E7\u00E3o do Pagamento.</param>
-        /// <param name="IdEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento onde o Pagamento foi realizado, quando este for o local de pagamento.</param>
-        /// <param name="IdBanco">C\u00F3digo de Identifica\u00E7\u00E3o da Institui\u00E7\u00E3o Banc\u00E1ria onde o Pagamento foi realizado, quando este for o local de pagamento.</param>
-        /// <param name="IdCartao">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o.</param>
-        /// <param name="ValorPagamento">Valor do Pagamento.</param>
-        /// <param name="DataHoraPagamento">Data e Hora da realiza\u00E7\u00E3o do Pagamento. Quando feito em Institui\u00E7\u00E3o Banc\u00E1ria, o hor\u00E1rio do pagamento \u00E9 exibido com valor zero.</param>
-        /// <param name="DataHoraEntradaPagamento">Data e Hora em que o registro do Pagamento foi cadastrado.</param>
-        /// <param name="Status">C\u00F3digo de Identifica\u00E7\u00E3o do Status do Pagamento.</param>
+        /// <param name="IdConta">{{{historico_pagamento_response_id_conta_value}}}.</param>
+        /// <param name="IdPagamento">{{{historico_pagamento_response_id_pagamento_value}}}.</param>
+        /// <param name="IdEstabelecimento">{{{historico_pagamento_response_id_estabelecimento_value}}}.</param>
+        /// <param name="IdBanco">{{{historico_pagamento_response_id_banco_value}}}.</param>
+        /// <param name="IdCartao">{{{historico_pagamento_response_id_cartao_value}}}.</param>
+        /// <param name="ValorPagamento">{{{historico_pagamento_response_valor_pagamento_value}}}.</param>
+        /// <param name="DataHoraPagamento">{{{historico_pagamento_response_data_hora_pagamento_value}}}.</param>
+        /// <param name="DataHoraEntradaPagamento">{{{historico_pagamento_response_data_hora_entrada_pagamento_value}}}.</param>
+        /// <param name="Status">{{{historico_pagamento_response_status_value}}}.</param>
 
         public HistoricoPagamentoResponse(long? IdConta = null, long? IdPagamento = null, long? IdEstabelecimento = null, long? IdBanco = null, long? IdCartao = null, double? ValorPagamento = null, string DataHoraPagamento = null, string DataHoraEntradaPagamento = null, long? Status = null)
         {
@@ -48,65 +48,65 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00F3digo de Identifica\u00E7\u00E3o da Conta
+        /// {{{historico_pagamento_response_id_conta_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o da Conta</value>
+        /// <value>{{{historico_pagamento_response_id_conta_value}}}</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// C\u00F3digo de Identifica\u00E7\u00E3o do Pagamento
+        /// {{{historico_pagamento_response_id_pagamento_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Pagamento</value>
+        /// <value>{{{historico_pagamento_response_id_pagamento_value}}}</value>
         [DataMember(Name="idPagamento", EmitDefaultValue=false)]
         public long? IdPagamento { get; set; }
     
         /// <summary>
-        /// C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento onde o Pagamento foi realizado, quando este for o local de pagamento
+        /// {{{historico_pagamento_response_id_estabelecimento_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento onde o Pagamento foi realizado, quando este for o local de pagamento</value>
+        /// <value>{{{historico_pagamento_response_id_estabelecimento_value}}}</value>
         [DataMember(Name="idEstabelecimento", EmitDefaultValue=false)]
         public long? IdEstabelecimento { get; set; }
     
         /// <summary>
-        /// C\u00F3digo de Identifica\u00E7\u00E3o da Institui\u00E7\u00E3o Banc\u00E1ria onde o Pagamento foi realizado, quando este for o local de pagamento
+        /// {{{historico_pagamento_response_id_banco_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o da Institui\u00E7\u00E3o Banc\u00E1ria onde o Pagamento foi realizado, quando este for o local de pagamento</value>
+        /// <value>{{{historico_pagamento_response_id_banco_value}}}</value>
         [DataMember(Name="idBanco", EmitDefaultValue=false)]
         public long? IdBanco { get; set; }
     
         /// <summary>
-        /// C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o
+        /// {{{historico_pagamento_response_id_cartao_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o</value>
+        /// <value>{{{historico_pagamento_response_id_cartao_value}}}</value>
         [DataMember(Name="idCartao", EmitDefaultValue=false)]
         public long? IdCartao { get; set; }
     
         /// <summary>
-        /// Valor do Pagamento
+        /// {{{historico_pagamento_response_valor_pagamento_value}}}
         /// </summary>
-        /// <value>Valor do Pagamento</value>
+        /// <value>{{{historico_pagamento_response_valor_pagamento_value}}}</value>
         [DataMember(Name="valorPagamento", EmitDefaultValue=false)]
         public double? ValorPagamento { get; set; }
     
         /// <summary>
-        /// Data e Hora da realiza\u00E7\u00E3o do Pagamento. Quando feito em Institui\u00E7\u00E3o Banc\u00E1ria, o hor\u00E1rio do pagamento \u00E9 exibido com valor zero
+        /// {{{historico_pagamento_response_data_hora_pagamento_value}}}
         /// </summary>
-        /// <value>Data e Hora da realiza\u00E7\u00E3o do Pagamento. Quando feito em Institui\u00E7\u00E3o Banc\u00E1ria, o hor\u00E1rio do pagamento \u00E9 exibido com valor zero</value>
+        /// <value>{{{historico_pagamento_response_data_hora_pagamento_value}}}</value>
         [DataMember(Name="dataHoraPagamento", EmitDefaultValue=false)]
         public string DataHoraPagamento { get; set; }
     
         /// <summary>
-        /// Data e Hora em que o registro do Pagamento foi cadastrado
+        /// {{{historico_pagamento_response_data_hora_entrada_pagamento_value}}}
         /// </summary>
-        /// <value>Data e Hora em que o registro do Pagamento foi cadastrado</value>
+        /// <value>{{{historico_pagamento_response_data_hora_entrada_pagamento_value}}}</value>
         [DataMember(Name="dataHoraEntradaPagamento", EmitDefaultValue=false)]
         public string DataHoraEntradaPagamento { get; set; }
     
         /// <summary>
-        /// C\u00F3digo de Identifica\u00E7\u00E3o do Status do Pagamento
+        /// {{{historico_pagamento_response_status_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Status do Pagamento</value>
+        /// <value>{{{historico_pagamento_response_status_value}}}</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public long? Status { get; set; }
     

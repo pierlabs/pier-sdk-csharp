@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00E7\u00E3o do recurso Usuario Conta
+    /// {{{usuario_conta_resposta_descricao}}}
     /// </summary>
     [DataContract]
     public partial class UsuarioContasResponse :  IEquatable<UsuarioContasResponse>
@@ -22,11 +22,11 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="UsuarioContasResponse" /> class.
         /// Initializes a new instance of the <see cref="UsuarioContasResponse" />class.
         /// </summary>
-        /// <param name="Id">Id do usu\u00E1rio conta.</param>
-        /// <param name="IdConta">Id da conta vinculada ao usu\u00E1rio.</param>
-        /// <param name="IdPessoa">Id da pessoa.</param>
-        /// <param name="IdUsuario">Id do usu\u00E1rio vinculado a conta.</param>
-        /// <param name="NivelAcesso">N\u00EDvel de ACesso.</param>
+        /// <param name="Id">{{{usuario_conta_resposta_id_descricao}}}.</param>
+        /// <param name="IdConta">{{{usuario_conta_resposta_id_conta_descricao}}}.</param>
+        /// <param name="IdPessoa">{{{usuario_conta_resposta_id_pessoa_descricao}}}.</param>
+        /// <param name="IdUsuario">{{{usuario_conta_resposta_id_usuario_descricao}}}.</param>
+        /// <param name="NivelAcesso">{{{usuario_conta_resposta_nivel_acesso_descricao}}}.</param>
 
         public UsuarioContasResponse(long? Id = null, long? IdConta = null, long? IdPessoa = null, long? IdUsuario = null, int? NivelAcesso = null)
         {
@@ -40,37 +40,37 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Id do usu\u00E1rio conta
+        /// {{{usuario_conta_resposta_id_descricao}}}
         /// </summary>
-        /// <value>Id do usu\u00E1rio conta</value>
+        /// <value>{{{usuario_conta_resposta_id_descricao}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Id da conta vinculada ao usu\u00E1rio
+        /// {{{usuario_conta_resposta_id_conta_descricao}}}
         /// </summary>
-        /// <value>Id da conta vinculada ao usu\u00E1rio</value>
+        /// <value>{{{usuario_conta_resposta_id_conta_descricao}}}</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// Id da pessoa
+        /// {{{usuario_conta_resposta_id_pessoa_descricao}}}
         /// </summary>
-        /// <value>Id da pessoa</value>
+        /// <value>{{{usuario_conta_resposta_id_pessoa_descricao}}}</value>
         [DataMember(Name="idPessoa", EmitDefaultValue=false)]
         public long? IdPessoa { get; set; }
     
         /// <summary>
-        /// Id do usu\u00E1rio vinculado a conta
+        /// {{{usuario_conta_resposta_id_usuario_descricao}}}
         /// </summary>
-        /// <value>Id do usu\u00E1rio vinculado a conta</value>
+        /// <value>{{{usuario_conta_resposta_id_usuario_descricao}}}</value>
         [DataMember(Name="idUsuario", EmitDefaultValue=false)]
         public long? IdUsuario { get; set; }
     
         /// <summary>
-        /// N\u00EDvel de ACesso
+        /// {{{usuario_conta_resposta_nivel_acesso_descricao}}}
         /// </summary>
-        /// <value>N\u00EDvel de ACesso</value>
+        /// <value>{{{usuario_conta_resposta_nivel_acesso_descricao}}}</value>
         [DataMember(Name="nivelAcesso", EmitDefaultValue=false)]
         public int? NivelAcesso { get; set; }
     

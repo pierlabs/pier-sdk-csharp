@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00E7\u00E3o da resposta da listagem da taxa de juros
+    /// {{{taxa_juros_conta_lista_response_description}}}
     /// </summary>
     [DataContract]
     public partial class TaxaJurosContaListaResponse :  IEquatable<TaxaJurosContaListaResponse>
@@ -22,8 +22,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TaxaJurosContaListaResponse" /> class.
         /// Initializes a new instance of the <see cref="TaxaJurosContaListaResponse" />class.
         /// </summary>
-        /// <param name="Plano">Numero da parcela do plano de taxa.</param>
-        /// <param name="Taxa">Valor da taxa de juros.</param>
+        /// <param name="Plano">{{{taxa_juros_conta_lista_response_plano_value}}}.</param>
+        /// <param name="Taxa">{{{taxa_juros_conta_lista_response_taxa_value}}}.</param>
 
         public TaxaJurosContaListaResponse(int? Plano = null, double? Taxa = null)
         {
@@ -34,16 +34,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Numero da parcela do plano de taxa
+        /// {{{taxa_juros_conta_lista_response_plano_value}}}
         /// </summary>
-        /// <value>Numero da parcela do plano de taxa</value>
+        /// <value>{{{taxa_juros_conta_lista_response_plano_value}}}</value>
         [DataMember(Name="plano", EmitDefaultValue=false)]
         public int? Plano { get; set; }
     
         /// <summary>
-        /// Valor da taxa de juros
+        /// {{{taxa_juros_conta_lista_response_taxa_value}}}
         /// </summary>
-        /// <value>Valor da taxa de juros</value>
+        /// <value>{{{taxa_juros_conta_lista_response_taxa_value}}}</value>
         [DataMember(Name="taxa", EmitDefaultValue=false)]
         public double? Taxa { get; set; }
     

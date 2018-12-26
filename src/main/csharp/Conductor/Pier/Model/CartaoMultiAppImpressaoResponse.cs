@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Resultado do m\u00FAltiplo gerado com os dois cart\u00F5es vinculados
+    /// {{{cartao_impressao_multiapp_response_description}}}
     /// </summary>
     [DataContract]
     public partial class CartaoMultiAppImpressaoResponse :  IEquatable<CartaoMultiAppImpressaoResponse>
@@ -22,8 +22,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="CartaoMultiAppImpressaoResponse" /> class.
         /// Initializes a new instance of the <see cref="CartaoMultiAppImpressaoResponse" />class.
         /// </summary>
-        /// <param name="CartaoPai">Cart\u00E3o principal.</param>
-        /// <param name="Cartao">Cart\u00E3o secund\u00E1rio.</param>
+        /// <param name="CartaoPai">{{{cartao_impressao_multiapp_response_cartao_pai_value}}}.</param>
+        /// <param name="Cartao">{{{cartao_impressao_multiapp_response_cartao_filho_value}}}.</param>
 
         public CartaoMultiAppImpressaoResponse(CartaoImpressaoResponse CartaoPai = null, CartaoImpressaoResponse Cartao = null)
         {
@@ -34,16 +34,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Cart\u00E3o principal
+        /// {{{cartao_impressao_multiapp_response_cartao_pai_value}}}
         /// </summary>
-        /// <value>Cart\u00E3o principal</value>
+        /// <value>{{{cartao_impressao_multiapp_response_cartao_pai_value}}}</value>
         [DataMember(Name="cartaoPai", EmitDefaultValue=false)]
         public CartaoImpressaoResponse CartaoPai { get; set; }
     
         /// <summary>
-        /// Cart\u00E3o secund\u00E1rio
+        /// {{{cartao_impressao_multiapp_response_cartao_filho_value}}}
         /// </summary>
-        /// <value>Cart\u00E3o secund\u00E1rio</value>
+        /// <value>{{{cartao_impressao_multiapp_response_cartao_filho_value}}}</value>
         [DataMember(Name="cartao", EmitDefaultValue=false)]
         public CartaoImpressaoResponse Cartao { get; set; }
     

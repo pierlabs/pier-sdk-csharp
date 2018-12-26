@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00E7\u00E3o do recurso validar c\u00F3digo de seguran\u00E7a
+    /// {{{codigo_seguranca_e_m_a_i_l_persist_description}}}
     /// </summary>
     [DataContract]
     public partial class CodigoSegurancaEMAILPersist :  IEquatable<CodigoSegurancaEMAILPersist>
@@ -22,8 +22,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="CodigoSegurancaEMAILPersist" /> class.
         /// Initializes a new instance of the <see cref="CodigoSegurancaEMAILPersist" />class.
         /// </summary>
-        /// <param name="Email">E-mail usado para envio do c\u00F3digo de seguran\u00E7a.</param>
-        /// <param name="CodigoSeguranca">c\u00F3digo de seguran\u00E7a.</param>
+        /// <param name="Email">{{{codigo_seguranca_e_m_a_i_l_persist_email_value}}}.</param>
+        /// <param name="CodigoSeguranca">{{{codigo_seguranca_e_m_a_i_l_persist_codigo_seguranca_value}}}.</param>
 
         public CodigoSegurancaEMAILPersist(string Email = null, string CodigoSeguranca = null)
         {
@@ -34,16 +34,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// E-mail usado para envio do c\u00F3digo de seguran\u00E7a
+        /// {{{codigo_seguranca_e_m_a_i_l_persist_email_value}}}
         /// </summary>
-        /// <value>E-mail usado para envio do c\u00F3digo de seguran\u00E7a</value>
+        /// <value>{{{codigo_seguranca_e_m_a_i_l_persist_email_value}}}</value>
         [DataMember(Name="email", EmitDefaultValue=false)]
         public string Email { get; set; }
     
         /// <summary>
-        /// c\u00F3digo de seguran\u00E7a
+        /// {{{codigo_seguranca_e_m_a_i_l_persist_codigo_seguranca_value}}}
         /// </summary>
-        /// <value>c\u00F3digo de seguran\u00E7a</value>
+        /// <value>{{{codigo_seguranca_e_m_a_i_l_persist_codigo_seguranca_value}}}</value>
         [DataMember(Name="codigoSeguranca", EmitDefaultValue=false)]
         public string CodigoSeguranca { get; set; }
     

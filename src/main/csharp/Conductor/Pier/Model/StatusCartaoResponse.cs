@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00E7\u00E3o do recurso Status Cart\u00E3o
+    /// {{{status_cartao_response_description}}}
     /// </summary>
     [DataContract]
     public partial class StatusCartaoResponse :  IEquatable<StatusCartaoResponse>
@@ -22,12 +22,12 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="StatusCartaoResponse" /> class.
         /// Initializes a new instance of the <see cref="StatusCartaoResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00F3digo de Identifica\u00E7\u00E3o do Status do Cart\u00E3o (id) (required).</param>
-        /// <param name="Nome">Nome atribu\u00EDdo ao Status de Entrega do Cart\u00E3o (required).</param>
-        /// <param name="PermiteDesbloquear">Par\u00E2metro que define se o status do cart\u00E3o permite a reativa\u00E7\u00E3o do cart\u00E3o, sendo: 0: Inativo e 1: Ativo.</param>
-        /// <param name="PermiteAtribuirComoBloqueio">Par\u00E2metro que define se o status do cart\u00E3o permite a reativa\u00E7\u00E3o do cart\u00E3o, sendo: 0: Inativo e 1: Ativo.</param>
-        /// <param name="PermiteAtribuirComoCancelamento">Par\u00E2metro que define se o status do cart\u00E3o permite a reativa\u00E7\u00E3o do cart\u00E3o, sendo: 0: Inativo e 1: Ativo.</param>
-        /// <param name="CobrarTarifaAoEmitirNovaVia">Par\u00E2metro que define se o status do cart\u00E3o permite a reativa\u00E7\u00E3o do cart\u00E3o, sendo: 0: Inativo e 1: Ativo.</param>
+        /// <param name="Id">{{{status_cartao_response_id_value}}} (required).</param>
+        /// <param name="Nome">{{{status_cartao_response_nome_value}}} (required).</param>
+        /// <param name="PermiteDesbloquear">{{{status_cartao_response_permite_desbloquear_value}}}.</param>
+        /// <param name="PermiteAtribuirComoBloqueio">{{{status_cartao_response_permite_atribuir_como_bloqueio_value}}}.</param>
+        /// <param name="PermiteAtribuirComoCancelamento">{{{status_cartao_response_permite_atribuir_como_cancelamento_value}}}.</param>
+        /// <param name="CobrarTarifaAoEmitirNovaVia">{{{status_cartao_response_cobrar_tarifa_ao_emitir_nova_via_value}}}.</param>
 
         public StatusCartaoResponse(long? Id = null, string Nome = null, int? PermiteDesbloquear = null, int? PermiteAtribuirComoBloqueio = null, int? PermiteAtribuirComoCancelamento = null, int? CobrarTarifaAoEmitirNovaVia = null)
         {
@@ -58,44 +58,44 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00F3digo de Identifica\u00E7\u00E3o do Status do Cart\u00E3o (id)
+        /// {{{status_cartao_response_id_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Status do Cart\u00E3o (id)</value>
+        /// <value>{{{status_cartao_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Nome atribu\u00EDdo ao Status de Entrega do Cart\u00E3o
+        /// {{{status_cartao_response_nome_value}}}
         /// </summary>
-        /// <value>Nome atribu\u00EDdo ao Status de Entrega do Cart\u00E3o</value>
+        /// <value>{{{status_cartao_response_nome_value}}}</value>
         [DataMember(Name="nome", EmitDefaultValue=false)]
         public string Nome { get; set; }
     
         /// <summary>
-        /// Par\u00E2metro que define se o status do cart\u00E3o permite a reativa\u00E7\u00E3o do cart\u00E3o, sendo: 0: Inativo e 1: Ativo
+        /// {{{status_cartao_response_permite_desbloquear_value}}}
         /// </summary>
-        /// <value>Par\u00E2metro que define se o status do cart\u00E3o permite a reativa\u00E7\u00E3o do cart\u00E3o, sendo: 0: Inativo e 1: Ativo</value>
+        /// <value>{{{status_cartao_response_permite_desbloquear_value}}}</value>
         [DataMember(Name="permiteDesbloquear", EmitDefaultValue=false)]
         public int? PermiteDesbloquear { get; set; }
     
         /// <summary>
-        /// Par\u00E2metro que define se o status do cart\u00E3o permite a reativa\u00E7\u00E3o do cart\u00E3o, sendo: 0: Inativo e 1: Ativo
+        /// {{{status_cartao_response_permite_atribuir_como_bloqueio_value}}}
         /// </summary>
-        /// <value>Par\u00E2metro que define se o status do cart\u00E3o permite a reativa\u00E7\u00E3o do cart\u00E3o, sendo: 0: Inativo e 1: Ativo</value>
+        /// <value>{{{status_cartao_response_permite_atribuir_como_bloqueio_value}}}</value>
         [DataMember(Name="permiteAtribuirComoBloqueio", EmitDefaultValue=false)]
         public int? PermiteAtribuirComoBloqueio { get; set; }
     
         /// <summary>
-        /// Par\u00E2metro que define se o status do cart\u00E3o permite a reativa\u00E7\u00E3o do cart\u00E3o, sendo: 0: Inativo e 1: Ativo
+        /// {{{status_cartao_response_permite_atribuir_como_cancelamento_value}}}
         /// </summary>
-        /// <value>Par\u00E2metro que define se o status do cart\u00E3o permite a reativa\u00E7\u00E3o do cart\u00E3o, sendo: 0: Inativo e 1: Ativo</value>
+        /// <value>{{{status_cartao_response_permite_atribuir_como_cancelamento_value}}}</value>
         [DataMember(Name="permiteAtribuirComoCancelamento", EmitDefaultValue=false)]
         public int? PermiteAtribuirComoCancelamento { get; set; }
     
         /// <summary>
-        /// Par\u00E2metro que define se o status do cart\u00E3o permite a reativa\u00E7\u00E3o do cart\u00E3o, sendo: 0: Inativo e 1: Ativo
+        /// {{{status_cartao_response_cobrar_tarifa_ao_emitir_nova_via_value}}}
         /// </summary>
-        /// <value>Par\u00E2metro que define se o status do cart\u00E3o permite a reativa\u00E7\u00E3o do cart\u00E3o, sendo: 0: Inativo e 1: Ativo</value>
+        /// <value>{{{status_cartao_response_cobrar_tarifa_ao_emitir_nova_via_value}}}</value>
         [DataMember(Name="cobrarTarifaAoEmitirNovaVia", EmitDefaultValue=false)]
         public int? CobrarTarifaAoEmitirNovaVia { get; set; }
     

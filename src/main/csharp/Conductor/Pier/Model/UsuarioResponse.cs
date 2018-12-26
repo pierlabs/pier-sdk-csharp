@@ -12,16 +12,16 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00E7\u00E3o do recurso Usuario
+    /// {{{usuario_response_description}}}
     /// </summary>
     [DataContract]
     public partial class UsuarioResponse :  IEquatable<UsuarioResponse>
     { 
     
         /// <summary>
-        /// Status do Usu\u00E1rio
+        /// {{{usuario_response_status_value}}}
         /// </summary>
-        /// <value>Status do Usu\u00E1rio</value>
+        /// <value>{{{usuario_response_status_value}}}</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum StatusEnum {
             
@@ -34,9 +34,9 @@ namespace Conductor.Pier.Model
 
     
         /// <summary>
-        /// Status do Usu\u00E1rio
+        /// {{{usuario_response_status_value}}}
         /// </summary>
-        /// <value>Status do Usu\u00E1rio</value>
+        /// <value>{{{usuario_response_status_value}}}</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
     
@@ -44,19 +44,19 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="UsuarioResponse" /> class.
         /// Initializes a new instance of the <see cref="UsuarioResponse" />class.
         /// </summary>
-        /// <param name="Id">Id do Usu\u00E1rio.</param>
-        /// <param name="Nome">Nome do Usu\u00E1rio.</param>
-        /// <param name="Login">Login do Usu\u00E1rio (required).</param>
-        /// <param name="IdEmissor">Id do emissor do usu\u00E1rio.</param>
-        /// <param name="Cpf">CPF do Usu\u00E1rio.</param>
-        /// <param name="Email">Email do Usu\u00E1rio (required).</param>
-        /// <param name="Status">Status do Usu\u00E1rio.</param>
-        /// <param name="DataCriacao">Data de cria\u00E7\u00E3o do Usu\u00E1rio.</param>
-        /// <param name="DataModificacao">Data de modifica\u00E7\u00E3o do Usu\u00E1rio.</param>
-        /// <param name="TentativasIncorretas">N\u00FAmero de tentativas de valida\u00E7\u00E3o incorretas.</param>
-        /// <param name="BloquearAcesso">Indica se o acesso ao aplicativo do usu\u00E1rio est\u00E1 bloqueado.</param>
-        /// <param name="DataValidade">dataValidade.</param>
-        /// <param name="IdPlataforma">idPlataforma.</param>
+        /// <param name="Id">{{{usuario_response_id_value}}}.</param>
+        /// <param name="Nome">{{{usuario_response_nome_value}}}.</param>
+        /// <param name="Login">{{{usuario_response_login_value}}} (required).</param>
+        /// <param name="IdEmissor">{{{usuario_response_id_emissor_value}}}.</param>
+        /// <param name="Cpf">{{{usuario_response_cpf_value}}}.</param>
+        /// <param name="Email">{{{usuario_response_email_value}}} (required).</param>
+        /// <param name="Status">{{{usuario_response_status_value}}}.</param>
+        /// <param name="DataCriacao">{{{usuario_response_data_criacao_value}}}.</param>
+        /// <param name="DataModificacao">{{{usuario_response_data_modificacao_value}}}.</param>
+        /// <param name="TentativasIncorretas">{{{usuario_response_tentativas_incorretas_value}}}.</param>
+        /// <param name="BloquearAcesso">{{{usuario_response_bloquear_acesso_descricao}}}.</param>
+        /// <param name="DataValidade">{{{usuario_response_data_validade_value}}}.</param>
+        /// <param name="IdPlataforma">{{{usuario_response_id_plataforma_value}}}.</param>
 
         public UsuarioResponse(long? Id = null, string Nome = null, string Login = null, long? IdEmissor = null, string Cpf = null, string Email = null, StatusEnum? Status = null, string DataCriacao = null, string DataModificacao = null, long? TentativasIncorretas = null, bool? BloquearAcesso = null, string DataValidade = null, int? IdPlataforma = null)
         {
@@ -94,86 +94,86 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Id do Usu\u00E1rio
+        /// {{{usuario_response_id_value}}}
         /// </summary>
-        /// <value>Id do Usu\u00E1rio</value>
+        /// <value>{{{usuario_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Nome do Usu\u00E1rio
+        /// {{{usuario_response_nome_value}}}
         /// </summary>
-        /// <value>Nome do Usu\u00E1rio</value>
+        /// <value>{{{usuario_response_nome_value}}}</value>
         [DataMember(Name="nome", EmitDefaultValue=false)]
         public string Nome { get; set; }
     
         /// <summary>
-        /// Login do Usu\u00E1rio
+        /// {{{usuario_response_login_value}}}
         /// </summary>
-        /// <value>Login do Usu\u00E1rio</value>
+        /// <value>{{{usuario_response_login_value}}}</value>
         [DataMember(Name="login", EmitDefaultValue=false)]
         public string Login { get; set; }
     
         /// <summary>
-        /// Id do emissor do usu\u00E1rio
+        /// {{{usuario_response_id_emissor_value}}}
         /// </summary>
-        /// <value>Id do emissor do usu\u00E1rio</value>
+        /// <value>{{{usuario_response_id_emissor_value}}}</value>
         [DataMember(Name="idEmissor", EmitDefaultValue=false)]
         public long? IdEmissor { get; set; }
     
         /// <summary>
-        /// CPF do Usu\u00E1rio
+        /// {{{usuario_response_cpf_value}}}
         /// </summary>
-        /// <value>CPF do Usu\u00E1rio</value>
+        /// <value>{{{usuario_response_cpf_value}}}</value>
         [DataMember(Name="cpf", EmitDefaultValue=false)]
         public string Cpf { get; set; }
     
         /// <summary>
-        /// Email do Usu\u00E1rio
+        /// {{{usuario_response_email_value}}}
         /// </summary>
-        /// <value>Email do Usu\u00E1rio</value>
+        /// <value>{{{usuario_response_email_value}}}</value>
         [DataMember(Name="email", EmitDefaultValue=false)]
         public string Email { get; set; }
     
         /// <summary>
-        /// Data de cria\u00E7\u00E3o do Usu\u00E1rio
+        /// {{{usuario_response_data_criacao_value}}}
         /// </summary>
-        /// <value>Data de cria\u00E7\u00E3o do Usu\u00E1rio</value>
+        /// <value>{{{usuario_response_data_criacao_value}}}</value>
         [DataMember(Name="dataCriacao", EmitDefaultValue=false)]
         public string DataCriacao { get; set; }
     
         /// <summary>
-        /// Data de modifica\u00E7\u00E3o do Usu\u00E1rio
+        /// {{{usuario_response_data_modificacao_value}}}
         /// </summary>
-        /// <value>Data de modifica\u00E7\u00E3o do Usu\u00E1rio</value>
+        /// <value>{{{usuario_response_data_modificacao_value}}}</value>
         [DataMember(Name="dataModificacao", EmitDefaultValue=false)]
         public string DataModificacao { get; set; }
     
         /// <summary>
-        /// N\u00FAmero de tentativas de valida\u00E7\u00E3o incorretas
+        /// {{{usuario_response_tentativas_incorretas_value}}}
         /// </summary>
-        /// <value>N\u00FAmero de tentativas de valida\u00E7\u00E3o incorretas</value>
+        /// <value>{{{usuario_response_tentativas_incorretas_value}}}</value>
         [DataMember(Name="tentativasIncorretas", EmitDefaultValue=false)]
         public long? TentativasIncorretas { get; set; }
     
         /// <summary>
-        /// Indica se o acesso ao aplicativo do usu\u00E1rio est\u00E1 bloqueado
+        /// {{{usuario_response_bloquear_acesso_descricao}}}
         /// </summary>
-        /// <value>Indica se o acesso ao aplicativo do usu\u00E1rio est\u00E1 bloqueado</value>
+        /// <value>{{{usuario_response_bloquear_acesso_descricao}}}</value>
         [DataMember(Name="bloquearAcesso", EmitDefaultValue=false)]
         public bool? BloquearAcesso { get; set; }
     
         /// <summary>
-        /// dataValidade
+        /// {{{usuario_response_data_validade_value}}}
         /// </summary>
-        /// <value>dataValidade</value>
+        /// <value>{{{usuario_response_data_validade_value}}}</value>
         [DataMember(Name="dataValidade", EmitDefaultValue=false)]
         public string DataValidade { get; set; }
     
         /// <summary>
-        /// idPlataforma
+        /// {{{usuario_response_id_plataforma_value}}}
         /// </summary>
-        /// <value>idPlataforma</value>
+        /// <value>{{{usuario_response_id_plataforma_value}}}</value>
         [DataMember(Name="idPlataforma", EmitDefaultValue=false)]
         public int? IdPlataforma { get; set; }
     

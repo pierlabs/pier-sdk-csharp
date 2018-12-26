@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa a requisi\u00E7\u00E3o do recurso de cadastro de dados bancarios para uma conta
+    /// {{{dados_bancarios_conta_persist_description}}}
     /// </summary>
     [DataContract]
     public partial class DadosBancariosContaPersist :  IEquatable<DadosBancariosContaPersist>
@@ -22,11 +22,11 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="DadosBancariosContaPersist" /> class.
         /// Initializes a new instance of the <see cref="DadosBancariosContaPersist" />class.
         /// </summary>
-        /// <param name="IdConta">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
-        /// <param name="NumeroAgencia">N\u00FAmero da ag\u00EAncia.</param>
-        /// <param name="NumeroContaCorrente">N\u00FAmero da conta corrente.</param>
-        /// <param name="CodigoBanco">C\u00F3digo do banco.</param>
-        /// <param name="IdTipoContaBancaria">C\u00F3digo de identifica\u00E7\u00E3o do tipo da conta banc\u00E1ria (id).</param>
+        /// <param name="IdConta">{{{dados_bancarios_conta_persist_id_conta_value}}}.</param>
+        /// <param name="NumeroAgencia">{{{dados_bancarios_conta_persist_numero_agencia_value}}}.</param>
+        /// <param name="NumeroContaCorrente">{{{dados_bancarios_conta_persist_numero_conta_corrente_value}}}.</param>
+        /// <param name="CodigoBanco">{{{dados_bancarios_conta_persist_codigo_banco_value}}}.</param>
+        /// <param name="IdTipoContaBancaria">{{{dados_bancarios_conta_persist_id_tipo_conta_bancaria_value}}}.</param>
         /// <param name="DvContaCorrente">DvContaCorrente.</param>
         /// <param name="DvAgencia">DvAgencia.</param>
 
@@ -44,37 +44,37 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00F3digo de identifica\u00E7\u00E3o da conta (id)
+        /// {{{dados_bancarios_conta_persist_id_conta_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</value>
+        /// <value>{{{dados_bancarios_conta_persist_id_conta_value}}}</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// N\u00FAmero da ag\u00EAncia
+        /// {{{dados_bancarios_conta_persist_numero_agencia_value}}}
         /// </summary>
-        /// <value>N\u00FAmero da ag\u00EAncia</value>
+        /// <value>{{{dados_bancarios_conta_persist_numero_agencia_value}}}</value>
         [DataMember(Name="numeroAgencia", EmitDefaultValue=false)]
         public long? NumeroAgencia { get; set; }
     
         /// <summary>
-        /// N\u00FAmero da conta corrente
+        /// {{{dados_bancarios_conta_persist_numero_conta_corrente_value}}}
         /// </summary>
-        /// <value>N\u00FAmero da conta corrente</value>
+        /// <value>{{{dados_bancarios_conta_persist_numero_conta_corrente_value}}}</value>
         [DataMember(Name="numeroContaCorrente", EmitDefaultValue=false)]
         public string NumeroContaCorrente { get; set; }
     
         /// <summary>
-        /// C\u00F3digo do banco
+        /// {{{dados_bancarios_conta_persist_codigo_banco_value}}}
         /// </summary>
-        /// <value>C\u00F3digo do banco</value>
+        /// <value>{{{dados_bancarios_conta_persist_codigo_banco_value}}}</value>
         [DataMember(Name="codigoBanco", EmitDefaultValue=false)]
         public long? CodigoBanco { get; set; }
     
         /// <summary>
-        /// C\u00F3digo de identifica\u00E7\u00E3o do tipo da conta banc\u00E1ria (id)
+        /// {{{dados_bancarios_conta_persist_id_tipo_conta_bancaria_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do tipo da conta banc\u00E1ria (id)</value>
+        /// <value>{{{dados_bancarios_conta_persist_id_tipo_conta_bancaria_value}}}</value>
         [DataMember(Name="idTipoContaBancaria", EmitDefaultValue=false)]
         public long? IdTipoContaBancaria { get; set; }
     

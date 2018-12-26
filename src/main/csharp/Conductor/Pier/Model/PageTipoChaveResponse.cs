@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Page tipo chave description
+    /// {{{page_tipo_chave_response_description}}}
     /// </summary>
     [DataContract]
     public partial class PageTipoChaveResponse :  IEquatable<PageTipoChaveResponse>

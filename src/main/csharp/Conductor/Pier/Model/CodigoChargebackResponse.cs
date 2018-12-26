@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Objeto de resposta do c\u00F3digo de chargeback
+    /// {{{codigo_chargeback_response_description}}}
     /// </summary>
     [DataContract]
     public partial class CodigoChargebackResponse :  IEquatable<CodigoChargebackResponse>
@@ -22,8 +22,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="CodigoChargebackResponse" /> class.
         /// Initializes a new instance of the <see cref="CodigoChargebackResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00F3digo de Identifica\u00E7\u00E3o do c\u00F3digo de chargeback.</param>
-        /// <param name="Descricao">Descri\u00E7\u00E3o do c\u00F3digo de chargeback.</param>
+        /// <param name="Id">{{{codigo_chargeback_response_id_value}}}.</param>
+        /// <param name="Descricao">{{{codigo_chargeback_response_descricao_value}}}.</param>
 
         public CodigoChargebackResponse(long? Id = null, string Descricao = null)
         {
@@ -34,16 +34,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00F3digo de Identifica\u00E7\u00E3o do c\u00F3digo de chargeback
+        /// {{{codigo_chargeback_response_id_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do c\u00F3digo de chargeback</value>
+        /// <value>{{{codigo_chargeback_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Descri\u00E7\u00E3o do c\u00F3digo de chargeback
+        /// {{{codigo_chargeback_response_descricao_value}}}
         /// </summary>
-        /// <value>Descri\u00E7\u00E3o do c\u00F3digo de chargeback</value>
+        /// <value>{{{codigo_chargeback_response_descricao_value}}}</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     

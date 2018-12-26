@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Objeto Campo Condificado
+    /// {{{campo_codificado_descricao_response_description}}}
     /// </summary>
     [DataContract]
     public partial class CampoCodificadoDescricaoResponse :  IEquatable<CampoCodificadoDescricaoResponse>
@@ -22,8 +22,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="CampoCodificadoDescricaoResponse" /> class.
         /// Initializes a new instance of the <see cref="CampoCodificadoDescricaoResponse" />class.
         /// </summary>
-        /// <param name="Codigo">C\u00F3digo de Identifica\u00E7\u00E3o da descri\u00E7\u00E3o.</param>
-        /// <param name="Descricao">Descri\u00E7\u00E3o do campo codificado.</param>
+        /// <param name="Codigo">{{{campo_codificado_descricao_response_codigo_value}}}.</param>
+        /// <param name="Descricao">{{{campo_codificado_descricao_response_descricao_value}}}.</param>
 
         public CampoCodificadoDescricaoResponse(long? Codigo = null, string Descricao = null)
         {
@@ -34,16 +34,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00F3digo de Identifica\u00E7\u00E3o da descri\u00E7\u00E3o
+        /// {{{campo_codificado_descricao_response_codigo_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o da descri\u00E7\u00E3o</value>
+        /// <value>{{{campo_codificado_descricao_response_codigo_value}}}</value>
         [DataMember(Name="codigo", EmitDefaultValue=false)]
         public long? Codigo { get; set; }
     
         /// <summary>
-        /// Descri\u00E7\u00E3o do campo codificado
+        /// {{{campo_codificado_descricao_response_descricao_value}}}
         /// </summary>
-        /// <value>Descri\u00E7\u00E3o do campo codificado</value>
+        /// <value>{{{campo_codificado_descricao_response_descricao_value}}}</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     

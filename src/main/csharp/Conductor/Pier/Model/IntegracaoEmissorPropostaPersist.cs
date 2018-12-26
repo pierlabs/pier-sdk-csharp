@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa a requisi\u00E7\u00E3o do recurso de incluir integra\u00E7\u00E3o emissor
+    /// {{{integracao_emissor_proposta_persist_descricao}}}
     /// </summary>
     [DataContract]
     public partial class IntegracaoEmissorPropostaPersist :  IEquatable<IntegracaoEmissorPropostaPersist>
@@ -22,8 +22,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="IntegracaoEmissorPropostaPersist" /> class.
         /// Initializes a new instance of the <see cref="IntegracaoEmissorPropostaPersist" />class.
         /// </summary>
-        /// <param name="Observacao">Observa\u00E7\u00E3o do registro.</param>
-        /// <param name="IdProposta">Identification code of the external proposal.</param>
+        /// <param name="Observacao">{{{integracao_emissor_proposta_persist_observacao}}}.</param>
+        /// <param name="IdProposta">{{{integracao_emissor_proposta_persist_id_proposta}}}.</param>
 
         public IntegracaoEmissorPropostaPersist(string Observacao = null, long? IdProposta = null)
         {
@@ -34,16 +34,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Observa\u00E7\u00E3o do registro
+        /// {{{integracao_emissor_proposta_persist_observacao}}}
         /// </summary>
-        /// <value>Observa\u00E7\u00E3o do registro</value>
+        /// <value>{{{integracao_emissor_proposta_persist_observacao}}}</value>
         [DataMember(Name="observacao", EmitDefaultValue=false)]
         public string Observacao { get; set; }
     
         /// <summary>
-        /// Identification code of the external proposal
+        /// {{{integracao_emissor_proposta_persist_id_proposta}}}
         /// </summary>
-        /// <value>Identification code of the external proposal</value>
+        /// <value>{{{integracao_emissor_proposta_persist_id_proposta}}}</value>
         [DataMember(Name="idProposta", EmitDefaultValue=false)]
         public long? IdProposta { get; set; }
     

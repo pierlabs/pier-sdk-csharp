@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Hist\u00F3rico Pagamento Fatura Atraso
+    /// {{{historico_atraso_fatura_response_description}}}
     /// </summary>
     [DataContract]
     public partial class HistoricoAtrasoFaturaResponse :  IEquatable<HistoricoAtrasoFaturaResponse>
@@ -22,8 +22,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="HistoricoAtrasoFaturaResponse" /> class.
         /// Initializes a new instance of the <see cref="HistoricoAtrasoFaturaResponse" />class.
         /// </summary>
-        /// <param name="DataVencimento">Data vencimento fatura.</param>
-        /// <param name="DiasPagamentoAposVencimento">Quantidade de dias em atraso.</param>
+        /// <param name="DataVencimento">{{{historico_atraso_fatura_response_data_vencimento_value}}}.</param>
+        /// <param name="DiasPagamentoAposVencimento">{{{historico_atraso_fatura_response_dias_pagamento_apos_vencimento_value}}}.</param>
 
         public HistoricoAtrasoFaturaResponse(string DataVencimento = null, long? DiasPagamentoAposVencimento = null)
         {
@@ -34,16 +34,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Data vencimento fatura
+        /// {{{historico_atraso_fatura_response_data_vencimento_value}}}
         /// </summary>
-        /// <value>Data vencimento fatura</value>
+        /// <value>{{{historico_atraso_fatura_response_data_vencimento_value}}}</value>
         [DataMember(Name="dataVencimento", EmitDefaultValue=false)]
         public string DataVencimento { get; set; }
     
         /// <summary>
-        /// Quantidade de dias em atraso
+        /// {{{historico_atraso_fatura_response_dias_pagamento_apos_vencimento_value}}}
         /// </summary>
-        /// <value>Quantidade de dias em atraso</value>
+        /// <value>{{{historico_atraso_fatura_response_dias_pagamento_apos_vencimento_value}}}</value>
         [DataMember(Name="diasPagamentoAposVencimento", EmitDefaultValue=false)]
         public long? DiasPagamentoAposVencimento { get; set; }
     

@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00E7\u00E3o da resposta para o recurso de Documento
+    /// {{{documento_detalhado_response_description}}}
     /// </summary>
     [DataContract]
     public partial class DocumentoDetalhadoResponse :  IEquatable<DocumentoDetalhadoResponse>
@@ -22,12 +22,12 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="DocumentoDetalhadoResponse" /> class.
         /// Initializes a new instance of the <see cref="DocumentoDetalhadoResponse" />class.
         /// </summary>
-        /// <param name="Id">ID do Documento.</param>
-        /// <param name="IdTemplateDocumento">ID do Template de Documento associado.</param>
-        /// <param name="Nome">Nome do Documento.</param>
-        /// <param name="Documento">Representa\u00E7\u00E3o do documento em Base64.</param>
-        /// <param name="Extensao">Extens\u00E3o do Documento.</param>
-        /// <param name="DocumentoDetalhes">Detalhamento do documento.</param>
+        /// <param name="Id">{{{documento_detalhado_response_id_value}}}.</param>
+        /// <param name="IdTemplateDocumento">{{{documento_detalhado_response_id_template_documento_value}}}.</param>
+        /// <param name="Nome">{{{documento_detalhado_response_nome_value}}}.</param>
+        /// <param name="Documento">{{{documento_detalhado_response_documento_value}}}.</param>
+        /// <param name="Extensao">{{{documento_detalhado_response_extensao_value}}}.</param>
+        /// <param name="DocumentoDetalhes">{{{documento_detalhado_response_documento_detalhes_value}}}.</param>
 
         public DocumentoDetalhadoResponse(long? Id = null, long? IdTemplateDocumento = null, string Nome = null, string Documento = null, string Extensao = null, List<DocumentoDetalheResponse> DocumentoDetalhes = null)
         {
@@ -42,44 +42,44 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// ID do Documento
+        /// {{{documento_detalhado_response_id_value}}}
         /// </summary>
-        /// <value>ID do Documento</value>
+        /// <value>{{{documento_detalhado_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// ID do Template de Documento associado
+        /// {{{documento_detalhado_response_id_template_documento_value}}}
         /// </summary>
-        /// <value>ID do Template de Documento associado</value>
+        /// <value>{{{documento_detalhado_response_id_template_documento_value}}}</value>
         [DataMember(Name="idTemplateDocumento", EmitDefaultValue=false)]
         public long? IdTemplateDocumento { get; set; }
     
         /// <summary>
-        /// Nome do Documento
+        /// {{{documento_detalhado_response_nome_value}}}
         /// </summary>
-        /// <value>Nome do Documento</value>
+        /// <value>{{{documento_detalhado_response_nome_value}}}</value>
         [DataMember(Name="nome", EmitDefaultValue=false)]
         public string Nome { get; set; }
     
         /// <summary>
-        /// Representa\u00E7\u00E3o do documento em Base64
+        /// {{{documento_detalhado_response_documento_value}}}
         /// </summary>
-        /// <value>Representa\u00E7\u00E3o do documento em Base64</value>
+        /// <value>{{{documento_detalhado_response_documento_value}}}</value>
         [DataMember(Name="documento", EmitDefaultValue=false)]
         public string Documento { get; set; }
     
         /// <summary>
-        /// Extens\u00E3o do Documento
+        /// {{{documento_detalhado_response_extensao_value}}}
         /// </summary>
-        /// <value>Extens\u00E3o do Documento</value>
+        /// <value>{{{documento_detalhado_response_extensao_value}}}</value>
         [DataMember(Name="extensao", EmitDefaultValue=false)]
         public string Extensao { get; set; }
     
         /// <summary>
-        /// Detalhamento do documento
+        /// {{{documento_detalhado_response_documento_detalhes_value}}}
         /// </summary>
-        /// <value>Detalhamento do documento</value>
+        /// <value>{{{documento_detalhado_response_documento_detalhes_value}}}</value>
         [DataMember(Name="documentoDetalhes", EmitDefaultValue=false)]
         public List<DocumentoDetalheResponse> DocumentoDetalhes { get; set; }
     

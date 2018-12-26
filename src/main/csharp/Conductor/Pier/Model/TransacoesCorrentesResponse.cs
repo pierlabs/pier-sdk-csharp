@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Objeto transacoes correntes
+    /// {{{transacoes_correntes_response_description}}}
     /// </summary>
     [DataContract]
     public partial class TransacoesCorrentesResponse :  IEquatable<TransacoesCorrentesResponse>
@@ -22,44 +22,44 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TransacoesCorrentesResponse" /> class.
         /// Initializes a new instance of the <see cref="TransacoesCorrentesResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00F3digo de identifica\u00E7\u00E3o da transfer\u00EAncia (id).</param>
-        /// <param name="IdTipoTransacao">C\u00F3digo de Identifica\u00E7\u00E3o do Tipo da Transa\u00E7\u00E3o.</param>
-        /// <param name="DescricaoAbreviada">Descri\u00E7\u00E3o Abreviada da Transa\u00E7\u00E3o.</param>
-        /// <param name="StatusTransacao">Status de Processamento da Transa\u00E7\u00E3o.</param>
-        /// <param name="IdEvento">C\u00F3digo de Identifica\u00E7\u00E3o do Evento que originou a Transa\u00E7\u00E3o (id).</param>
-        /// <param name="TipoEvento">Descri\u00E7\u00E3o do Evento que representa a Transa\u00E7\u00E3o.</param>
-        /// <param name="IdConta">C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id).</param>
-        /// <param name="CartaoMascarado">N\u00FAmero do Cart\u00E3o em Formato 0000XXXXXXXX0000.</param>
-        /// <param name="NomePortador">Nome completo do Portador do Cart\u00E3o.</param>
-        /// <param name="DataTransacao">Data em que a Transa\u00E7\u00E3o foi realizada.</param>
-        /// <param name="DataFaturamento">Data de Faturamento da Transa\u00E7\u00E3o.</param>
-        /// <param name="DataVencimento">Data de Vencimento da Fatura.</param>
-        /// <param name="ModoEntradaTransacao">Descreve o modo utilizado para realizar a leitura dos dados do cart\u00E3o para realizar a Transa\u00E7\u00E3o.</param>
-        /// <param name="ValorTaxaEmbarque">Valor da Taxa de Embarque em Real (BRL) quando a transa\u00E7\u00E3o for relacionada a Compra de Passagens A\u00E9reas.</param>
-        /// <param name="ValorEntrada">Valor da Entrada em Real (BRL) quando a transa\u00E7\u00E3o for do tipo Parcelada com o pagamento de um valor de Entrada.</param>
-        /// <param name="ValorBRL">Valor da Transa\u00E7\u00E3o em Real (BRL).</param>
-        /// <param name="ValorUSD">Valor da Transa\u00E7\u00E3o em D\u00F3lar Americano (USD).</param>
-        /// <param name="CotacaoUSD">Valor do D\u00F3lar Americano (USD) convertido em Real (BRL).</param>
-        /// <param name="DataCotacaoUSD">Data de Fechamento da Cota\u00E7\u00E3o do D\u00F3lar Americano (USD).</param>
-        /// <param name="CodigoMoedaOrigem">C\u00F3digo de Identifica\u00E7\u00E3o da Moeda utilizada na Transa\u00E7\u00E3o, seguindo padr\u00E3o ISO 4217.</param>
-        /// <param name="CodigoMoedaDestino">C\u00F3digo de Identifica\u00E7\u00E3o da Moeda da Transa\u00E7\u00E3o ap\u00F3s a convers\u00E3o, seguindo padr\u00E3o ISO 4217.</param>
-        /// <param name="CodigoAutorizacao">C\u00F3digo de Autoriza\u00E7\u00E3o da Transa\u00E7\u00E3o.</param>
-        /// <param name="CodigoReferencia">C\u00F3digo de Refer\u00EAncia da Transa\u00E7\u00E3o quando utilizado Cart\u00E3o Bandeirado.</param>
-        /// <param name="CodigoTerminal">C\u00F3digo de Identifica\u00E7\u00E3o da origem da captura da Transa\u00E7\u00E3o.</param>
-        /// <param name="CodigoMCC">C\u00F3digo de identifica\u00E7\u00E3o da categoria do Estabelecimento.</param>
-        /// <param name="GrupoMCC">C\u00F3digo de identifica\u00E7\u00E3o do grupo do Estabelecimento.</param>
-        /// <param name="GrupoDescricaoMCC">Descri\u00E7\u00E3o do grupo do Estabelecimento.</param>
-        /// <param name="IdEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento (id).</param>
-        /// <param name="NomeEstabelecimento">Nome do Estabelecimento.</param>
-        /// <param name="NomeFantasiaEstabelecimento">Nome Fantasia do Estabelecimento.</param>
-        /// <param name="LocalidadeEstabelecimento">Localidade do Estabelecimento.</param>
-        /// <param name="PlanoParcelamento">Quando a Transa\u00E7\u00E3o for do tipo Parcelada, apresenta o n\u00FAmero total de Parcelas.</param>
-        /// <param name="NumeroParcela">Quando a Transa\u00E7\u00E3o for do tipo Parcelada, apresenta o n\u00FAmero da Parcela.</param>
-        /// <param name="DetalhesTransacao">Detalhes complementares a respeito da Transa\u00E7\u00E3o.</param>
-        /// <param name="FlagCredito">Quando ativa, indica que a Transa\u00E7\u00E3o \u00E9 do Tipo &#39;Cr\u00E9dito&#39;.</param>
-        /// <param name="FlagFaturado">Quando ativa, indica que a Transa\u00E7\u00E3o foi consolidada em uma Fatura.</param>
-        /// <param name="FlagEstorno">Quando ativa, indica que a Transa\u00E7\u00E3o foi estornada.</param>
-        /// <param name="IdTransacaoEstorno">C\u00F3digo de Identifica\u00E7\u00E3o da Transa\u00E7\u00E3o (id) que gerou o estorno.</param>
+        /// <param name="Id">{{{transacoes_correntes_response_id_value}}}.</param>
+        /// <param name="IdTipoTransacao">{{{transacoes_correntes_response_id_tipo_transacao_value}}}.</param>
+        /// <param name="DescricaoAbreviada">{{{transacoes_correntes_response_descricao_abreviada_value}}}.</param>
+        /// <param name="StatusTransacao">{{{transacoes_correntes_response_status_transacao_value}}}.</param>
+        /// <param name="IdEvento">{{{transacoes_correntes_response_id_evento_value}}}.</param>
+        /// <param name="TipoEvento">{{{transacoes_correntes_response_tipo_evento_value}}}.</param>
+        /// <param name="IdConta">{{{transacoes_correntes_response_id_conta_value}}}.</param>
+        /// <param name="CartaoMascarado">{{{transacoes_correntes_response_cartao_mascarado_value}}}.</param>
+        /// <param name="NomePortador">{{{transacoes_correntes_response_nome_portador_value}}}.</param>
+        /// <param name="DataTransacao">{{{transacoes_correntes_response_data_transacao_value}}}.</param>
+        /// <param name="DataFaturamento">{{{transacoes_correntes_response_data_faturamento_value}}}.</param>
+        /// <param name="DataVencimento">{{{transacoes_correntes_response_data_vencimento_value}}}.</param>
+        /// <param name="ModoEntradaTransacao">{{{transacoes_correntes_response_modo_entrada_transacao_value}}}.</param>
+        /// <param name="ValorTaxaEmbarque">{{{transacoes_correntes_response_valor_taxa_embarque_value}}}.</param>
+        /// <param name="ValorEntrada">{{{transacoes_correntes_response_valor_entrada_value}}}.</param>
+        /// <param name="ValorBRL">{{{transacoes_correntes_response_valor_b_r_l_value}}}.</param>
+        /// <param name="ValorUSD">{{{transacoes_correntes_response_valor_u_s_d_value}}}.</param>
+        /// <param name="CotacaoUSD">{{{transacoes_correntes_response_cotacao_u_s_d_value}}}.</param>
+        /// <param name="DataCotacaoUSD">{{{transacoes_correntes_response_data_cotacao_u_s_d_value}}}.</param>
+        /// <param name="CodigoMoedaOrigem">{{{transacoes_correntes_response_codigo_moeda_origem_value}}}.</param>
+        /// <param name="CodigoMoedaDestino">{{{transacoes_correntes_response_codigo_moeda_destino_value}}}.</param>
+        /// <param name="CodigoAutorizacao">{{{transacoes_correntes_response_codigo_autorizacao_value}}}.</param>
+        /// <param name="CodigoReferencia">{{{transacoes_correntes_response_codigo_referencia_value}}}.</param>
+        /// <param name="CodigoTerminal">{{{transacoes_correntes_response_codigo_terminal_value}}}.</param>
+        /// <param name="CodigoMCC">{{{transacoes_correntes_response_codigo_m_c_c_value}}}.</param>
+        /// <param name="GrupoMCC">{{{transacoes_correntes_response_grupo_m_c_c_value}}}.</param>
+        /// <param name="GrupoDescricaoMCC">{{{transacoes_correntes_response_grupo_descricao_m_c_c_value}}}.</param>
+        /// <param name="IdEstabelecimento">{{{transacoes_correntes_response_id_estabelecimento_value}}}.</param>
+        /// <param name="NomeEstabelecimento">{{{transacoes_correntes_response_nome_estabelecimento_value}}}.</param>
+        /// <param name="NomeFantasiaEstabelecimento">{{{transacoes_correntes_response_nome_fantasia_estabelecimento_value}}}.</param>
+        /// <param name="LocalidadeEstabelecimento">{{{transacoes_correntes_response_localidade_estabelecimento_value}}}.</param>
+        /// <param name="PlanoParcelamento">{{{transacoes_correntes_response_plano_parcelamento_value}}}.</param>
+        /// <param name="NumeroParcela">{{{transacoes_correntes_response_numero_parcela_value}}}.</param>
+        /// <param name="DetalhesTransacao">{{{transacoes_correntes_response_detalhes_transacao_value}}}.</param>
+        /// <param name="FlagCredito">{{{transacoes_correntes_response_flag_credito_value}}}.</param>
+        /// <param name="FlagFaturado">{{{transacoes_correntes_response_flag_faturado_value}}}.</param>
+        /// <param name="FlagEstorno">{{{transacoes_correntes_response_flag_estorno_value}}}.</param>
+        /// <param name="IdTransacaoEstorno">{{{transacoes_correntes_response_id_transacao_estorno_value}}}.</param>
 
         public TransacoesCorrentesResponse(long? Id = null, long? IdTipoTransacao = null, string DescricaoAbreviada = null, string StatusTransacao = null, long? IdEvento = null, string TipoEvento = null, long? IdConta = null, string CartaoMascarado = null, string NomePortador = null, string DataTransacao = null, string DataFaturamento = null, string DataVencimento = null, string ModoEntradaTransacao = null, double? ValorTaxaEmbarque = null, double? ValorEntrada = null, double? ValorBRL = null, double? ValorUSD = null, double? CotacaoUSD = null, string DataCotacaoUSD = null, string CodigoMoedaOrigem = null, string CodigoMoedaDestino = null, string CodigoAutorizacao = null, string CodigoReferencia = null, string CodigoTerminal = null, long? CodigoMCC = null, long? GrupoMCC = null, string GrupoDescricaoMCC = null, long? IdEstabelecimento = null, string NomeEstabelecimento = null, string NomeFantasiaEstabelecimento = null, string LocalidadeEstabelecimento = null, long? PlanoParcelamento = null, long? NumeroParcela = null, string DetalhesTransacao = null, int? FlagCredito = null, int? FlagFaturado = null, int? FlagEstorno = null, long? IdTransacaoEstorno = null)
         {
@@ -106,268 +106,268 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00F3digo de identifica\u00E7\u00E3o da transfer\u00EAncia (id)
+        /// {{{transacoes_correntes_response_id_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de identifica\u00E7\u00E3o da transfer\u00EAncia (id)</value>
+        /// <value>{{{transacoes_correntes_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// C\u00F3digo de Identifica\u00E7\u00E3o do Tipo da Transa\u00E7\u00E3o
+        /// {{{transacoes_correntes_response_id_tipo_transacao_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Tipo da Transa\u00E7\u00E3o</value>
+        /// <value>{{{transacoes_correntes_response_id_tipo_transacao_value}}}</value>
         [DataMember(Name="idTipoTransacao", EmitDefaultValue=false)]
         public long? IdTipoTransacao { get; set; }
     
         /// <summary>
-        /// Descri\u00E7\u00E3o Abreviada da Transa\u00E7\u00E3o
+        /// {{{transacoes_correntes_response_descricao_abreviada_value}}}
         /// </summary>
-        /// <value>Descri\u00E7\u00E3o Abreviada da Transa\u00E7\u00E3o</value>
+        /// <value>{{{transacoes_correntes_response_descricao_abreviada_value}}}</value>
         [DataMember(Name="descricaoAbreviada", EmitDefaultValue=false)]
         public string DescricaoAbreviada { get; set; }
     
         /// <summary>
-        /// Status de Processamento da Transa\u00E7\u00E3o
+        /// {{{transacoes_correntes_response_status_transacao_value}}}
         /// </summary>
-        /// <value>Status de Processamento da Transa\u00E7\u00E3o</value>
+        /// <value>{{{transacoes_correntes_response_status_transacao_value}}}</value>
         [DataMember(Name="statusTransacao", EmitDefaultValue=false)]
         public string StatusTransacao { get; set; }
     
         /// <summary>
-        /// C\u00F3digo de Identifica\u00E7\u00E3o do Evento que originou a Transa\u00E7\u00E3o (id)
+        /// {{{transacoes_correntes_response_id_evento_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Evento que originou a Transa\u00E7\u00E3o (id)</value>
+        /// <value>{{{transacoes_correntes_response_id_evento_value}}}</value>
         [DataMember(Name="idEvento", EmitDefaultValue=false)]
         public long? IdEvento { get; set; }
     
         /// <summary>
-        /// Descri\u00E7\u00E3o do Evento que representa a Transa\u00E7\u00E3o
+        /// {{{transacoes_correntes_response_tipo_evento_value}}}
         /// </summary>
-        /// <value>Descri\u00E7\u00E3o do Evento que representa a Transa\u00E7\u00E3o</value>
+        /// <value>{{{transacoes_correntes_response_tipo_evento_value}}}</value>
         [DataMember(Name="tipoEvento", EmitDefaultValue=false)]
         public string TipoEvento { get; set; }
     
         /// <summary>
-        /// C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id)
+        /// {{{transacoes_correntes_response_id_conta_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id)</value>
+        /// <value>{{{transacoes_correntes_response_id_conta_value}}}</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// N\u00FAmero do Cart\u00E3o em Formato 0000XXXXXXXX0000
+        /// {{{transacoes_correntes_response_cartao_mascarado_value}}}
         /// </summary>
-        /// <value>N\u00FAmero do Cart\u00E3o em Formato 0000XXXXXXXX0000</value>
+        /// <value>{{{transacoes_correntes_response_cartao_mascarado_value}}}</value>
         [DataMember(Name="cartaoMascarado", EmitDefaultValue=false)]
         public string CartaoMascarado { get; set; }
     
         /// <summary>
-        /// Nome completo do Portador do Cart\u00E3o
+        /// {{{transacoes_correntes_response_nome_portador_value}}}
         /// </summary>
-        /// <value>Nome completo do Portador do Cart\u00E3o</value>
+        /// <value>{{{transacoes_correntes_response_nome_portador_value}}}</value>
         [DataMember(Name="nomePortador", EmitDefaultValue=false)]
         public string NomePortador { get; set; }
     
         /// <summary>
-        /// Data em que a Transa\u00E7\u00E3o foi realizada
+        /// {{{transacoes_correntes_response_data_transacao_value}}}
         /// </summary>
-        /// <value>Data em que a Transa\u00E7\u00E3o foi realizada</value>
+        /// <value>{{{transacoes_correntes_response_data_transacao_value}}}</value>
         [DataMember(Name="dataTransacao", EmitDefaultValue=false)]
         public string DataTransacao { get; set; }
     
         /// <summary>
-        /// Data de Faturamento da Transa\u00E7\u00E3o
+        /// {{{transacoes_correntes_response_data_faturamento_value}}}
         /// </summary>
-        /// <value>Data de Faturamento da Transa\u00E7\u00E3o</value>
+        /// <value>{{{transacoes_correntes_response_data_faturamento_value}}}</value>
         [DataMember(Name="dataFaturamento", EmitDefaultValue=false)]
         public string DataFaturamento { get; set; }
     
         /// <summary>
-        /// Data de Vencimento da Fatura
+        /// {{{transacoes_correntes_response_data_vencimento_value}}}
         /// </summary>
-        /// <value>Data de Vencimento da Fatura</value>
+        /// <value>{{{transacoes_correntes_response_data_vencimento_value}}}</value>
         [DataMember(Name="dataVencimento", EmitDefaultValue=false)]
         public string DataVencimento { get; set; }
     
         /// <summary>
-        /// Descreve o modo utilizado para realizar a leitura dos dados do cart\u00E3o para realizar a Transa\u00E7\u00E3o
+        /// {{{transacoes_correntes_response_modo_entrada_transacao_value}}}
         /// </summary>
-        /// <value>Descreve o modo utilizado para realizar a leitura dos dados do cart\u00E3o para realizar a Transa\u00E7\u00E3o</value>
+        /// <value>{{{transacoes_correntes_response_modo_entrada_transacao_value}}}</value>
         [DataMember(Name="modoEntradaTransacao", EmitDefaultValue=false)]
         public string ModoEntradaTransacao { get; set; }
     
         /// <summary>
-        /// Valor da Taxa de Embarque em Real (BRL) quando a transa\u00E7\u00E3o for relacionada a Compra de Passagens A\u00E9reas
+        /// {{{transacoes_correntes_response_valor_taxa_embarque_value}}}
         /// </summary>
-        /// <value>Valor da Taxa de Embarque em Real (BRL) quando a transa\u00E7\u00E3o for relacionada a Compra de Passagens A\u00E9reas</value>
+        /// <value>{{{transacoes_correntes_response_valor_taxa_embarque_value}}}</value>
         [DataMember(Name="valorTaxaEmbarque", EmitDefaultValue=false)]
         public double? ValorTaxaEmbarque { get; set; }
     
         /// <summary>
-        /// Valor da Entrada em Real (BRL) quando a transa\u00E7\u00E3o for do tipo Parcelada com o pagamento de um valor de Entrada
+        /// {{{transacoes_correntes_response_valor_entrada_value}}}
         /// </summary>
-        /// <value>Valor da Entrada em Real (BRL) quando a transa\u00E7\u00E3o for do tipo Parcelada com o pagamento de um valor de Entrada</value>
+        /// <value>{{{transacoes_correntes_response_valor_entrada_value}}}</value>
         [DataMember(Name="valorEntrada", EmitDefaultValue=false)]
         public double? ValorEntrada { get; set; }
     
         /// <summary>
-        /// Valor da Transa\u00E7\u00E3o em Real (BRL)
+        /// {{{transacoes_correntes_response_valor_b_r_l_value}}}
         /// </summary>
-        /// <value>Valor da Transa\u00E7\u00E3o em Real (BRL)</value>
+        /// <value>{{{transacoes_correntes_response_valor_b_r_l_value}}}</value>
         [DataMember(Name="valorBRL", EmitDefaultValue=false)]
         public double? ValorBRL { get; set; }
     
         /// <summary>
-        /// Valor da Transa\u00E7\u00E3o em D\u00F3lar Americano (USD)
+        /// {{{transacoes_correntes_response_valor_u_s_d_value}}}
         /// </summary>
-        /// <value>Valor da Transa\u00E7\u00E3o em D\u00F3lar Americano (USD)</value>
+        /// <value>{{{transacoes_correntes_response_valor_u_s_d_value}}}</value>
         [DataMember(Name="valorUSD", EmitDefaultValue=false)]
         public double? ValorUSD { get; set; }
     
         /// <summary>
-        /// Valor do D\u00F3lar Americano (USD) convertido em Real (BRL)
+        /// {{{transacoes_correntes_response_cotacao_u_s_d_value}}}
         /// </summary>
-        /// <value>Valor do D\u00F3lar Americano (USD) convertido em Real (BRL)</value>
+        /// <value>{{{transacoes_correntes_response_cotacao_u_s_d_value}}}</value>
         [DataMember(Name="cotacaoUSD", EmitDefaultValue=false)]
         public double? CotacaoUSD { get; set; }
     
         /// <summary>
-        /// Data de Fechamento da Cota\u00E7\u00E3o do D\u00F3lar Americano (USD)
+        /// {{{transacoes_correntes_response_data_cotacao_u_s_d_value}}}
         /// </summary>
-        /// <value>Data de Fechamento da Cota\u00E7\u00E3o do D\u00F3lar Americano (USD)</value>
+        /// <value>{{{transacoes_correntes_response_data_cotacao_u_s_d_value}}}</value>
         [DataMember(Name="dataCotacaoUSD", EmitDefaultValue=false)]
         public string DataCotacaoUSD { get; set; }
     
         /// <summary>
-        /// C\u00F3digo de Identifica\u00E7\u00E3o da Moeda utilizada na Transa\u00E7\u00E3o, seguindo padr\u00E3o ISO 4217
+        /// {{{transacoes_correntes_response_codigo_moeda_origem_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o da Moeda utilizada na Transa\u00E7\u00E3o, seguindo padr\u00E3o ISO 4217</value>
+        /// <value>{{{transacoes_correntes_response_codigo_moeda_origem_value}}}</value>
         [DataMember(Name="codigoMoedaOrigem", EmitDefaultValue=false)]
         public string CodigoMoedaOrigem { get; set; }
     
         /// <summary>
-        /// C\u00F3digo de Identifica\u00E7\u00E3o da Moeda da Transa\u00E7\u00E3o ap\u00F3s a convers\u00E3o, seguindo padr\u00E3o ISO 4217
+        /// {{{transacoes_correntes_response_codigo_moeda_destino_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o da Moeda da Transa\u00E7\u00E3o ap\u00F3s a convers\u00E3o, seguindo padr\u00E3o ISO 4217</value>
+        /// <value>{{{transacoes_correntes_response_codigo_moeda_destino_value}}}</value>
         [DataMember(Name="codigoMoedaDestino", EmitDefaultValue=false)]
         public string CodigoMoedaDestino { get; set; }
     
         /// <summary>
-        /// C\u00F3digo de Autoriza\u00E7\u00E3o da Transa\u00E7\u00E3o
+        /// {{{transacoes_correntes_response_codigo_autorizacao_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de Autoriza\u00E7\u00E3o da Transa\u00E7\u00E3o</value>
+        /// <value>{{{transacoes_correntes_response_codigo_autorizacao_value}}}</value>
         [DataMember(Name="codigoAutorizacao", EmitDefaultValue=false)]
         public string CodigoAutorizacao { get; set; }
     
         /// <summary>
-        /// C\u00F3digo de Refer\u00EAncia da Transa\u00E7\u00E3o quando utilizado Cart\u00E3o Bandeirado
+        /// {{{transacoes_correntes_response_codigo_referencia_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de Refer\u00EAncia da Transa\u00E7\u00E3o quando utilizado Cart\u00E3o Bandeirado</value>
+        /// <value>{{{transacoes_correntes_response_codigo_referencia_value}}}</value>
         [DataMember(Name="codigoReferencia", EmitDefaultValue=false)]
         public string CodigoReferencia { get; set; }
     
         /// <summary>
-        /// C\u00F3digo de Identifica\u00E7\u00E3o da origem da captura da Transa\u00E7\u00E3o
+        /// {{{transacoes_correntes_response_codigo_terminal_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o da origem da captura da Transa\u00E7\u00E3o</value>
+        /// <value>{{{transacoes_correntes_response_codigo_terminal_value}}}</value>
         [DataMember(Name="codigoTerminal", EmitDefaultValue=false)]
         public string CodigoTerminal { get; set; }
     
         /// <summary>
-        /// C\u00F3digo de identifica\u00E7\u00E3o da categoria do Estabelecimento
+        /// {{{transacoes_correntes_response_codigo_m_c_c_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de identifica\u00E7\u00E3o da categoria do Estabelecimento</value>
+        /// <value>{{{transacoes_correntes_response_codigo_m_c_c_value}}}</value>
         [DataMember(Name="codigoMCC", EmitDefaultValue=false)]
         public long? CodigoMCC { get; set; }
     
         /// <summary>
-        /// C\u00F3digo de identifica\u00E7\u00E3o do grupo do Estabelecimento
+        /// {{{transacoes_correntes_response_grupo_m_c_c_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do grupo do Estabelecimento</value>
+        /// <value>{{{transacoes_correntes_response_grupo_m_c_c_value}}}</value>
         [DataMember(Name="grupoMCC", EmitDefaultValue=false)]
         public long? GrupoMCC { get; set; }
     
         /// <summary>
-        /// Descri\u00E7\u00E3o do grupo do Estabelecimento
+        /// {{{transacoes_correntes_response_grupo_descricao_m_c_c_value}}}
         /// </summary>
-        /// <value>Descri\u00E7\u00E3o do grupo do Estabelecimento</value>
+        /// <value>{{{transacoes_correntes_response_grupo_descricao_m_c_c_value}}}</value>
         [DataMember(Name="grupoDescricaoMCC", EmitDefaultValue=false)]
         public string GrupoDescricaoMCC { get; set; }
     
         /// <summary>
-        /// C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento (id)
+        /// {{{transacoes_correntes_response_id_estabelecimento_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento (id)</value>
+        /// <value>{{{transacoes_correntes_response_id_estabelecimento_value}}}</value>
         [DataMember(Name="idEstabelecimento", EmitDefaultValue=false)]
         public long? IdEstabelecimento { get; set; }
     
         /// <summary>
-        /// Nome do Estabelecimento
+        /// {{{transacoes_correntes_response_nome_estabelecimento_value}}}
         /// </summary>
-        /// <value>Nome do Estabelecimento</value>
+        /// <value>{{{transacoes_correntes_response_nome_estabelecimento_value}}}</value>
         [DataMember(Name="nomeEstabelecimento", EmitDefaultValue=false)]
         public string NomeEstabelecimento { get; set; }
     
         /// <summary>
-        /// Nome Fantasia do Estabelecimento
+        /// {{{transacoes_correntes_response_nome_fantasia_estabelecimento_value}}}
         /// </summary>
-        /// <value>Nome Fantasia do Estabelecimento</value>
+        /// <value>{{{transacoes_correntes_response_nome_fantasia_estabelecimento_value}}}</value>
         [DataMember(Name="nomeFantasiaEstabelecimento", EmitDefaultValue=false)]
         public string NomeFantasiaEstabelecimento { get; set; }
     
         /// <summary>
-        /// Localidade do Estabelecimento
+        /// {{{transacoes_correntes_response_localidade_estabelecimento_value}}}
         /// </summary>
-        /// <value>Localidade do Estabelecimento</value>
+        /// <value>{{{transacoes_correntes_response_localidade_estabelecimento_value}}}</value>
         [DataMember(Name="localidadeEstabelecimento", EmitDefaultValue=false)]
         public string LocalidadeEstabelecimento { get; set; }
     
         /// <summary>
-        /// Quando a Transa\u00E7\u00E3o for do tipo Parcelada, apresenta o n\u00FAmero total de Parcelas
+        /// {{{transacoes_correntes_response_plano_parcelamento_value}}}
         /// </summary>
-        /// <value>Quando a Transa\u00E7\u00E3o for do tipo Parcelada, apresenta o n\u00FAmero total de Parcelas</value>
+        /// <value>{{{transacoes_correntes_response_plano_parcelamento_value}}}</value>
         [DataMember(Name="planoParcelamento", EmitDefaultValue=false)]
         public long? PlanoParcelamento { get; set; }
     
         /// <summary>
-        /// Quando a Transa\u00E7\u00E3o for do tipo Parcelada, apresenta o n\u00FAmero da Parcela
+        /// {{{transacoes_correntes_response_numero_parcela_value}}}
         /// </summary>
-        /// <value>Quando a Transa\u00E7\u00E3o for do tipo Parcelada, apresenta o n\u00FAmero da Parcela</value>
+        /// <value>{{{transacoes_correntes_response_numero_parcela_value}}}</value>
         [DataMember(Name="numeroParcela", EmitDefaultValue=false)]
         public long? NumeroParcela { get; set; }
     
         /// <summary>
-        /// Detalhes complementares a respeito da Transa\u00E7\u00E3o
+        /// {{{transacoes_correntes_response_detalhes_transacao_value}}}
         /// </summary>
-        /// <value>Detalhes complementares a respeito da Transa\u00E7\u00E3o</value>
+        /// <value>{{{transacoes_correntes_response_detalhes_transacao_value}}}</value>
         [DataMember(Name="detalhesTransacao", EmitDefaultValue=false)]
         public string DetalhesTransacao { get; set; }
     
         /// <summary>
-        /// Quando ativa, indica que a Transa\u00E7\u00E3o \u00E9 do Tipo &#39;Cr\u00E9dito&#39;
+        /// {{{transacoes_correntes_response_flag_credito_value}}}
         /// </summary>
-        /// <value>Quando ativa, indica que a Transa\u00E7\u00E3o \u00E9 do Tipo &#39;Cr\u00E9dito&#39;</value>
+        /// <value>{{{transacoes_correntes_response_flag_credito_value}}}</value>
         [DataMember(Name="flagCredito", EmitDefaultValue=false)]
         public int? FlagCredito { get; set; }
     
         /// <summary>
-        /// Quando ativa, indica que a Transa\u00E7\u00E3o foi consolidada em uma Fatura
+        /// {{{transacoes_correntes_response_flag_faturado_value}}}
         /// </summary>
-        /// <value>Quando ativa, indica que a Transa\u00E7\u00E3o foi consolidada em uma Fatura</value>
+        /// <value>{{{transacoes_correntes_response_flag_faturado_value}}}</value>
         [DataMember(Name="flagFaturado", EmitDefaultValue=false)]
         public int? FlagFaturado { get; set; }
     
         /// <summary>
-        /// Quando ativa, indica que a Transa\u00E7\u00E3o foi estornada
+        /// {{{transacoes_correntes_response_flag_estorno_value}}}
         /// </summary>
-        /// <value>Quando ativa, indica que a Transa\u00E7\u00E3o foi estornada</value>
+        /// <value>{{{transacoes_correntes_response_flag_estorno_value}}}</value>
         [DataMember(Name="flagEstorno", EmitDefaultValue=false)]
         public int? FlagEstorno { get; set; }
     
         /// <summary>
-        /// C\u00F3digo de Identifica\u00E7\u00E3o da Transa\u00E7\u00E3o (id) que gerou o estorno
+        /// {{{transacoes_correntes_response_id_transacao_estorno_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o da Transa\u00E7\u00E3o (id) que gerou o estorno</value>
+        /// <value>{{{transacoes_correntes_response_id_transacao_estorno_value}}}</value>
         [DataMember(Name="idTransacaoEstorno", EmitDefaultValue=false)]
         public long? IdTransacaoEstorno { get; set; }
     

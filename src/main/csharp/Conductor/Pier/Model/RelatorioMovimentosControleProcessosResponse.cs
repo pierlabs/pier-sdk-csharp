@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00E7\u00E3o dos campos de resposta de uma lista de controle processos
+    /// {{{relatorio_movimentos_controle_processos_response_description}}}
     /// </summary>
     [DataContract]
     public partial class RelatorioMovimentosControleProcessosResponse :  IEquatable<RelatorioMovimentosControleProcessosResponse>

@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Objeto com response do v\u00EDnculo entre cart\u00F5es
+    /// {{{vincular_cartoes_response_description}}}
     /// </summary>
     [DataContract]
     public partial class VinculoCartoesResponse :  IEquatable<VinculoCartoesResponse>
@@ -22,8 +22,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="VinculoCartoesResponse" /> class.
         /// Initializes a new instance of the <see cref="VinculoCartoesResponse" />class.
         /// </summary>
-        /// <param name="IdCartaoPrincipal">C\u00F3digo identificador do cart\u00E3o principal gerado.</param>
-        /// <param name="IdCartaoVinculado">C\u00F3digo identificador do cart\u00E3o vinculado gerado.</param>
+        /// <param name="IdCartaoPrincipal">{{{vincular_cartoes_response_id_cartao_value}}}.</param>
+        /// <param name="IdCartaoVinculado">{{{vincular_cartoes_response_id_cartao_vinculado_value}}}.</param>
 
         public VinculoCartoesResponse(long? IdCartaoPrincipal = null, long? IdCartaoVinculado = null)
         {
@@ -34,16 +34,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00F3digo identificador do cart\u00E3o principal gerado
+        /// {{{vincular_cartoes_response_id_cartao_value}}}
         /// </summary>
-        /// <value>C\u00F3digo identificador do cart\u00E3o principal gerado</value>
+        /// <value>{{{vincular_cartoes_response_id_cartao_value}}}</value>
         [DataMember(Name="idCartaoPrincipal", EmitDefaultValue=false)]
         public long? IdCartaoPrincipal { get; set; }
     
         /// <summary>
-        /// C\u00F3digo identificador do cart\u00E3o vinculado gerado
+        /// {{{vincular_cartoes_response_id_cartao_vinculado_value}}}
         /// </summary>
-        /// <value>C\u00F3digo identificador do cart\u00E3o vinculado gerado</value>
+        /// <value>{{{vincular_cartoes_response_id_cartao_vinculado_value}}}</value>
         [DataMember(Name="idCartaoVinculado", EmitDefaultValue=false)]
         public long? IdCartaoVinculado { get; set; }
     

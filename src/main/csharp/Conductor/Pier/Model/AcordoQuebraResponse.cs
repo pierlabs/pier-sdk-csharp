@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Resposta da quebra do Acordo
+    /// {{{acordo_quebra_response_description}}}
     /// </summary>
     [DataContract]
     public partial class AcordoQuebraResponse :  IEquatable<AcordoQuebraResponse>
@@ -22,11 +22,11 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="AcordoQuebraResponse" /> class.
         /// Initializes a new instance of the <see cref="AcordoQuebraResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00F3digo de Identifica\u00E7\u00E3o do acordo (id).</param>
-        /// <param name="IdConta">C\u00F3digo de Identifica\u00E7\u00E3o da conta (idConta).</param>
-        /// <param name="StatusConta">Status da conta do acordo.</param>
-        /// <param name="SaldoAtualFinal">Saldo atual final da conta.</param>
-        /// <param name="DataQuebraAcordo">Data de quebra do acordo.</param>
+        /// <param name="Id">{{{acordo_quebra_response_id_value}}}.</param>
+        /// <param name="IdConta">{{{acordo_quebra_response_id_conta_value}}}.</param>
+        /// <param name="StatusConta">{{{acordo_quebra_response_status_conta_value}}}.</param>
+        /// <param name="SaldoAtualFinal">{{{acordo_quebra_response_saldo_atual_final_value}}}.</param>
+        /// <param name="DataQuebraAcordo">{{{acordo_quebra_response_data_quebra_acordo_value}}}.</param>
 
         public AcordoQuebraResponse(long? Id = null, long? IdConta = null, long? StatusConta = null, double? SaldoAtualFinal = null, string DataQuebraAcordo = null)
         {
@@ -40,37 +40,37 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00F3digo de Identifica\u00E7\u00E3o do acordo (id)
+        /// {{{acordo_quebra_response_id_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do acordo (id)</value>
+        /// <value>{{{acordo_quebra_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// C\u00F3digo de Identifica\u00E7\u00E3o da conta (idConta)
+        /// {{{acordo_quebra_response_id_conta_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o da conta (idConta)</value>
+        /// <value>{{{acordo_quebra_response_id_conta_value}}}</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// Status da conta do acordo
+        /// {{{acordo_quebra_response_status_conta_value}}}
         /// </summary>
-        /// <value>Status da conta do acordo</value>
+        /// <value>{{{acordo_quebra_response_status_conta_value}}}</value>
         [DataMember(Name="statusConta", EmitDefaultValue=false)]
         public long? StatusConta { get; set; }
     
         /// <summary>
-        /// Saldo atual final da conta
+        /// {{{acordo_quebra_response_saldo_atual_final_value}}}
         /// </summary>
-        /// <value>Saldo atual final da conta</value>
+        /// <value>{{{acordo_quebra_response_saldo_atual_final_value}}}</value>
         [DataMember(Name="saldoAtualFinal", EmitDefaultValue=false)]
         public double? SaldoAtualFinal { get; set; }
     
         /// <summary>
-        /// Data de quebra do acordo
+        /// {{{acordo_quebra_response_data_quebra_acordo_value}}}
         /// </summary>
-        /// <value>Data de quebra do acordo</value>
+        /// <value>{{{acordo_quebra_response_data_quebra_acordo_value}}}</value>
         [DataMember(Name="dataQuebraAcordo", EmitDefaultValue=false)]
         public string DataQuebraAcordo { get; set; }
     

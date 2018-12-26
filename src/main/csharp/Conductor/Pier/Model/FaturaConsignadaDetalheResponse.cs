@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Fatura Consignada detalhe
+    /// {{{fatura_consignada_detalhe_response_description}}}
     /// </summary>
     [DataContract]
     public partial class FaturaConsignadaDetalheResponse :  IEquatable<FaturaConsignadaDetalheResponse>
@@ -22,54 +22,54 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="FaturaConsignadaDetalheResponse" /> class.
         /// Initializes a new instance of the <see cref="FaturaConsignadaDetalheResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00F3digo identificador da fatura.</param>
-        /// <param name="IdConta">C\u00F3digo identificador da conta (id).</param>
-        /// <param name="LimiteGlobal">Apresenta o valor do limite de cr\u00E9dito que o portador do cart\u00E3o possui (required).</param>
-        /// <param name="FlagEmiteFatura">C\u00F3digo identificador da conta a qual a fatura se refere.</param>
-        /// <param name="LimiteCompra">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para uso exclusivo em Compras Nacionais (required).</param>
-        /// <param name="DataVencimentoFatura">Data de vencimento da fatura.</param>
-        /// <param name="LimiteParcelado">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para realizar transa\u00E7\u00F5es de compras parceladas (required).</param>
-        /// <param name="LimiteParcelas">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que portador pode acumular a partir da soma das parcelas das compras que forem realizadas nesta modalidade (required).</param>
-        /// <param name="ValorTotalFatura">Valor para pagamento total da fatura.</param>
-        /// <param name="ValorFaturaAnterior">Valor total da fatura anterior.</param>
-        /// <param name="ValorPagamentoMinimo">Valor m\u00EDnimo para pagamento da fatura.</param>
-        /// <param name="ValorPagamentoConsignado">Valor da fatura pago atrav\u00E9s de desconto em folha.</param>
-        /// <param name="LimiteSaqueGlobal">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Nacional (required).</param>
-        /// <param name="ValorPagamentoComplementar">Valor complementar para considerar o pagamento m\u00EDnimo da fatura.</param>
-        /// <param name="LimiteSaquePeriodo">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Nacional dentro de cada ciclo de faturamento (required).</param>
-        /// <param name="TotalComprasNacionais">Valor total das compras nacionais lan\u00E7adas na fatura.</param>
-        /// <param name="LimiteConsignado">Quando utilizado pelo emissor, este campo apresenta o valor da margem de cr\u00E9dito que ele poder\u00E1 utilizar para ser cobrado de forma consignada (desconto em folha) em seu sal\u00E1rio/vencimentos (required).</param>
-        /// <param name="TotalComprasInternacionas">Valor total das compras internacionais lan\u00E7adas na fatura.</param>
-        /// <param name="LimiteInternacionalCompra">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para uso exclusivo em Compras Internacionais (required).</param>
-        /// <param name="TotalSaquesNacionais">Valor total dos saques nacionais lan\u00E7ados na fatura.</param>
-        /// <param name="LimiteInternacionalParcelado">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para realizar transa\u00E7\u00F5es Internacionais de Compras Parceladas (required).</param>
-        /// <param name="TotalSaquesInternacionais">Valor total dos saques internacionais lan\u00E7ados na fatura.</param>
-        /// <param name="LimiteInternacionalParcelas">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que portador pode acumular a partir da soma das parcelas das compras internacionais que forem realizadas nesta modalidade (required).</param>
-        /// <param name="TotalDebitosNacionais">Valor total dos d\u00E9bitos nacionais lan\u00E7ados na fatura.</param>
-        /// <param name="LimiteInternacionalSaqueGlobal">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Internacional (required).</param>
-        /// <param name="TotalDebitosRecorrentes">Valor total dos d\u00E9bitos recorrentes lan\u00E7ados na fatura.</param>
-        /// <param name="LimiteInternacionalSaquePeriodo">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Internacional dentro de cada ciclo de faturamento (required).</param>
-        /// <param name="TotalDebitosInternacionais">Valor total dos d\u00E9bitos internacionais lan\u00E7ados na fatura.</param>
-        /// <param name="SaldoDisponivelGlobal">Apresenta o valor de cr\u00E9dito que o portador possui dispon\u00EDvel para realizar transa\u00E7\u00F5es (required).</param>
-        /// <param name="TotalDebitosDiversosNacionais">Valor total dos d\u00E9bitos diversos nacionais lan\u00E7ados na fatura.</param>
-        /// <param name="SaldoDisponivelCompra">Quando utilizado pelo emissor a modalidade limiteCompra, este campo apresentar\u00E1 o valor de cr\u00E9dito que o portador possui dispon\u00EDvel para realizar transa\u00E7\u00F5es de compra Nacional (required).</param>
-        /// <param name="TotalDebitosOpcionais">Valor total dos d\u00E9bitos diversos opcionais lan\u00E7ados na fatura.</param>
-        /// <param name="SaldoDisponivelParcelado">Quando utilizado pelo emissor a modalidade limiteParcelado, este campo apresentar\u00E1 o valor de cr\u00E9dito que o portador possui dispon\u00EDvel para realizar transa\u00E7\u00F5es de compra Nacional (required).</param>
-        /// <param name="TotalPagamentos">Valor total dos pagamentos lan\u00E7ados na fatura.</param>
-        /// <param name="SaldoDisponivelParcelas">Quando utilizado pelo emissor a modalidade limiteParcelas, este campo apresentar\u00E1 o valor de cr\u00E9dito que o portador possui dispon\u00EDvel para utilizar como valor de parcelas Nacionais em um determinado ciclo de faturamento (required).</param>
-        /// <param name="TotalCreditosNacionais">Valor total dos cr\u00E9ditos nacionais lan\u00E7ados na fatura.</param>
-        /// <param name="TotalAjustes">Valor total dos ajustes lan\u00E7ados na fatura.</param>
-        /// <param name="TotalTarifas">Valor total das tarifas lan\u00E7adas na fatura.</param>
-        /// <param name="TotalMulta">Valor total da multa lan\u00E7ada na fatura.</param>
-        /// <param name="SaldoDisponivelSaque">Quando utilizado pelo emissor a modalidade limiteSaque, este campo apresentar\u00E1 o valor de cr\u00E9dito que o portador possui dispon\u00EDvel para realizar transa\u00E7\u00F5es de Saque Nacional (required).</param>
-        /// <param name="TotalJuros">Valor total dos juros de mora lan\u00E7ados na fatura.</param>
-        /// <param name="SaldoPontosFidelidade">Quando utilizado um programa de fidelidade pelo emissor, este campo apresentar\u00E1 o saldo atual de pontos que o portador possui (required).</param>
-        /// <param name="TaxaRotativo">Valor percentual da taxa de juros rotativos.</param>
-        /// <param name="SaldoDisponivelCompraInternacional">Quando utilizado pelo emissor a modalidade limiteCompraInternacional, este campo apresentar\u00E1 o valor de cr\u00E9dito que o portador possui dispon\u00EDvel para realizar transa\u00E7\u00F5es de Compra Internacional (required).</param>
-        /// <param name="TaxaSaque">Valor percentual da taxa de saque.</param>
-        /// <param name="SaldoDisponivelSaqueInternacional">Quando utilizado pelo emissor a modalidade limiteSaqueInternacional, este campo apresentar\u00E1 o valor de cr\u00E9dito que o portador possui dispon\u00EDvel para realizar transa\u00E7\u00F5es de Saque Internacional (required).</param>
-        /// <param name="TaxaMaximaProximoPeriodo">Valor m\u00E1ximo percentual da taxa de encargos para o pr\u00F3ximo per\u00EDodo.</param>
-        /// <param name="TotalServicos">Apresenta a soma de todos os seguros cobrados na fatura do cliente (required).</param>
+        /// <param name="Id">{{{fatura_consignada_detalhe_response_id_value}}}.</param>
+        /// <param name="IdConta">{{{fatura_consignada_detalhe_response_id_conta_value}}}.</param>
+        /// <param name="LimiteGlobal">{{{fatura_consignada_detalhe_response_limite_global_value}}} (required).</param>
+        /// <param name="FlagEmiteFatura">{{{fatura_consignada_detalhe_response_flag_emite_fatura_value}}}.</param>
+        /// <param name="LimiteCompra">{{{fatura_consignada_detalhe_response_limite_compra_value}}} (required).</param>
+        /// <param name="DataVencimentoFatura">{{{fatura_consignada_detalhe_response_data_vencimento_fatura_value}}}.</param>
+        /// <param name="LimiteParcelado">{{{fatura_consignada_detalhe_response_limite_parcelado_value}}} (required).</param>
+        /// <param name="LimiteParcelas">{{{fatura_consignada_detalhe_response_limite_parcelas_value}}} (required).</param>
+        /// <param name="ValorTotalFatura">{{{fatura_consignada_detalhe_response_valor_total_fatura_value}}}.</param>
+        /// <param name="ValorFaturaAnterior">{{{fatura_consignada_detalhe_response_valor_fatura_anterior_value}}}.</param>
+        /// <param name="ValorPagamentoMinimo">{{{fatura_consignada_detalhe_response_valor_pagamento_minimo_value}}}.</param>
+        /// <param name="ValorPagamentoConsignado">{{{fatura_consignada_detalhe_response_valor_pagamento_consignado_value}}}.</param>
+        /// <param name="LimiteSaqueGlobal">{{{fatura_consignada_detalhe_response_limite_saque_global_value}}} (required).</param>
+        /// <param name="ValorPagamentoComplementar">{{{fatura_consignada_detalhe_response_valor_pagamento_complementar_value}}}.</param>
+        /// <param name="LimiteSaquePeriodo">{{{fatura_consignada_detalhe_response_limite_saque_periodo_value}}} (required).</param>
+        /// <param name="TotalComprasNacionais">{{{fatura_consignada_detalhe_response_total_compras_nacionais_value}}}.</param>
+        /// <param name="LimiteConsignado">{{{fatura_consignada_detalhe_response_limite_consignado_value}}} (required).</param>
+        /// <param name="TotalComprasInternacionas">{{{fatura_consignada_detalhe_response_total_compras_internacionas_value}}}.</param>
+        /// <param name="LimiteInternacionalCompra">{{{fatura_consignada_detalhe_response_limite_internacional_compra_value}}} (required).</param>
+        /// <param name="TotalSaquesNacionais">{{{fatura_consignada_detalhe_response_total_saques_nacionais_value}}}.</param>
+        /// <param name="LimiteInternacionalParcelado">{{{fatura_consignada_detalhe_response_limite_internacional_parcelado_value}}} (required).</param>
+        /// <param name="TotalSaquesInternacionais">{{{fatura_consignada_detalhe_response_total_saques_internacionais_value}}}.</param>
+        /// <param name="LimiteInternacionalParcelas">{{{fatura_consignada_detalhe_response_limite_internacional_parcelas_value}}} (required).</param>
+        /// <param name="TotalDebitosNacionais">{{{fatura_consignada_detalhe_response_total_debitos_nacionais_value}}}.</param>
+        /// <param name="LimiteInternacionalSaqueGlobal">{{{fatura_consignada_detalhe_response_limite_internacional_saque_global_value}}} (required).</param>
+        /// <param name="TotalDebitosRecorrentes">{{{fatura_consignada_detalhe_response_total_debitos_recorrentes_value}}}.</param>
+        /// <param name="LimiteInternacionalSaquePeriodo">{{{fatura_consignada_detalhe_response_limite_internacional_saque_periodo_value}}} (required).</param>
+        /// <param name="TotalDebitosInternacionais">{{{fatura_consignada_detalhe_response_total_debitos_internacionais_value}}}.</param>
+        /// <param name="SaldoDisponivelGlobal">{{{fatura_consignada_detalhe_response_saldo_disponivel_global_value}}} (required).</param>
+        /// <param name="TotalDebitosDiversosNacionais">{{{fatura_consignada_detalhe_response_total_debitos_diversos_nacionais_value}}}.</param>
+        /// <param name="SaldoDisponivelCompra">{{{fatura_consignada_detalhe_response_saldo_disponivel_compra_value}}} (required).</param>
+        /// <param name="TotalDebitosOpcionais">{{{fatura_consignada_detalhe_response_total_debitos_opcionais_value}}}.</param>
+        /// <param name="SaldoDisponivelParcelado">{{{fatura_consignada_detalhe_response_saldo_disponivel_parcelado_value}}} (required).</param>
+        /// <param name="TotalPagamentos">{{{fatura_consignada_detalhe_response_total_pagamentos_value}}}.</param>
+        /// <param name="SaldoDisponivelParcelas">{{{fatura_consignada_detalhe_response_saldo_disponivel_parcelas_value}}} (required).</param>
+        /// <param name="TotalCreditosNacionais">{{{fatura_consignada_detalhe_response_total_creditos_nacionais_value}}}.</param>
+        /// <param name="TotalAjustes">{{{fatura_consignada_detalhe_response_total_ajustes_value}}}.</param>
+        /// <param name="TotalTarifas">{{{fatura_consignada_detalhe_response_total_tarifas_value}}}.</param>
+        /// <param name="TotalMulta">{{{fatura_consignada_detalhe_response_total_multa_value}}}.</param>
+        /// <param name="SaldoDisponivelSaque">{{{fatura_consignada_detalhe_response_saldo_disponivel_saque_value}}} (required).</param>
+        /// <param name="TotalJuros">{{{fatura_consignada_detalhe_response_total_juros_value}}}.</param>
+        /// <param name="SaldoPontosFidelidade">{{{fatura_consignada_detalhe_response_saldo_pontos_fidelidade_value}}} (required).</param>
+        /// <param name="TaxaRotativo">{{{fatura_consignada_detalhe_response_taxa_rotativo_value}}}.</param>
+        /// <param name="SaldoDisponivelCompraInternacional">{{{fatura_consignada_detalhe_response_saldo_disponivel_compra_internacional_value}}} (required).</param>
+        /// <param name="TaxaSaque">{{{fatura_consignada_detalhe_response_taxa_saque_value}}}.</param>
+        /// <param name="SaldoDisponivelSaqueInternacional">{{{fatura_consignada_detalhe_response_saldo_disponivel_saque_internacional_value}}} (required).</param>
+        /// <param name="TaxaMaximaProximoPeriodo">{{{fatura_consignada_detalhe_response_taxa_maxima_proximo_periodo_value}}}.</param>
+        /// <param name="TotalServicos">{{{fatura_consignada_detalhe_response_total_servicos_value}}} (required).</param>
 
         public FaturaConsignadaDetalheResponse(long? Id = null, long? IdConta = null, double? LimiteGlobal = null, int? FlagEmiteFatura = null, double? LimiteCompra = null, string DataVencimentoFatura = null, double? LimiteParcelado = null, double? LimiteParcelas = null, double? ValorTotalFatura = null, double? ValorFaturaAnterior = null, double? ValorPagamentoMinimo = null, double? ValorPagamentoConsignado = null, double? LimiteSaqueGlobal = null, double? ValorPagamentoComplementar = null, double? LimiteSaquePeriodo = null, double? TotalComprasNacionais = null, double? LimiteConsignado = null, double? TotalComprasInternacionas = null, double? LimiteInternacionalCompra = null, double? TotalSaquesNacionais = null, double? LimiteInternacionalParcelado = null, double? TotalSaquesInternacionais = null, double? LimiteInternacionalParcelas = null, double? TotalDebitosNacionais = null, double? LimiteInternacionalSaqueGlobal = null, double? TotalDebitosRecorrentes = null, double? LimiteInternacionalSaquePeriodo = null, double? TotalDebitosInternacionais = null, double? SaldoDisponivelGlobal = null, double? TotalDebitosDiversosNacionais = null, double? SaldoDisponivelCompra = null, double? TotalDebitosOpcionais = null, double? SaldoDisponivelParcelado = null, double? TotalPagamentos = null, double? SaldoDisponivelParcelas = null, double? TotalCreditosNacionais = null, double? TotalAjustes = null, double? TotalTarifas = null, double? TotalMulta = null, double? SaldoDisponivelSaque = null, double? TotalJuros = null, double? SaldoPontosFidelidade = null, double? TaxaRotativo = null, double? SaldoDisponivelCompraInternacional = null, double? TaxaSaque = null, double? SaldoDisponivelSaqueInternacional = null, double? TaxaMaximaProximoPeriodo = null, double? TotalServicos = null)
         {
@@ -294,338 +294,338 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00F3digo identificador da fatura
+        /// {{{fatura_consignada_detalhe_response_id_value}}}
         /// </summary>
-        /// <value>C\u00F3digo identificador da fatura</value>
+        /// <value>{{{fatura_consignada_detalhe_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// C\u00F3digo identificador da conta (id)
+        /// {{{fatura_consignada_detalhe_response_id_conta_value}}}
         /// </summary>
-        /// <value>C\u00F3digo identificador da conta (id)</value>
+        /// <value>{{{fatura_consignada_detalhe_response_id_conta_value}}}</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// Apresenta o valor do limite de cr\u00E9dito que o portador do cart\u00E3o possui
+        /// {{{fatura_consignada_detalhe_response_limite_global_value}}}
         /// </summary>
-        /// <value>Apresenta o valor do limite de cr\u00E9dito que o portador do cart\u00E3o possui</value>
+        /// <value>{{{fatura_consignada_detalhe_response_limite_global_value}}}</value>
         [DataMember(Name="limiteGlobal", EmitDefaultValue=false)]
         public double? LimiteGlobal { get; set; }
     
         /// <summary>
-        /// C\u00F3digo identificador da conta a qual a fatura se refere
+        /// {{{fatura_consignada_detalhe_response_flag_emite_fatura_value}}}
         /// </summary>
-        /// <value>C\u00F3digo identificador da conta a qual a fatura se refere</value>
+        /// <value>{{{fatura_consignada_detalhe_response_flag_emite_fatura_value}}}</value>
         [DataMember(Name="flagEmiteFatura", EmitDefaultValue=false)]
         public int? FlagEmiteFatura { get; set; }
     
         /// <summary>
-        /// Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para uso exclusivo em Compras Nacionais
+        /// {{{fatura_consignada_detalhe_response_limite_compra_value}}}
         /// </summary>
-        /// <value>Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para uso exclusivo em Compras Nacionais</value>
+        /// <value>{{{fatura_consignada_detalhe_response_limite_compra_value}}}</value>
         [DataMember(Name="limiteCompra", EmitDefaultValue=false)]
         public double? LimiteCompra { get; set; }
     
         /// <summary>
-        /// Data de vencimento da fatura
+        /// {{{fatura_consignada_detalhe_response_data_vencimento_fatura_value}}}
         /// </summary>
-        /// <value>Data de vencimento da fatura</value>
+        /// <value>{{{fatura_consignada_detalhe_response_data_vencimento_fatura_value}}}</value>
         [DataMember(Name="dataVencimentoFatura", EmitDefaultValue=false)]
         public string DataVencimentoFatura { get; set; }
     
         /// <summary>
-        /// Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para realizar transa\u00E7\u00F5es de compras parceladas
+        /// {{{fatura_consignada_detalhe_response_limite_parcelado_value}}}
         /// </summary>
-        /// <value>Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para realizar transa\u00E7\u00F5es de compras parceladas</value>
+        /// <value>{{{fatura_consignada_detalhe_response_limite_parcelado_value}}}</value>
         [DataMember(Name="limiteParcelado", EmitDefaultValue=false)]
         public double? LimiteParcelado { get; set; }
     
         /// <summary>
-        /// Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que portador pode acumular a partir da soma das parcelas das compras que forem realizadas nesta modalidade
+        /// {{{fatura_consignada_detalhe_response_limite_parcelas_value}}}
         /// </summary>
-        /// <value>Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que portador pode acumular a partir da soma das parcelas das compras que forem realizadas nesta modalidade</value>
+        /// <value>{{{fatura_consignada_detalhe_response_limite_parcelas_value}}}</value>
         [DataMember(Name="limiteParcelas", EmitDefaultValue=false)]
         public double? LimiteParcelas { get; set; }
     
         /// <summary>
-        /// Valor para pagamento total da fatura
+        /// {{{fatura_consignada_detalhe_response_valor_total_fatura_value}}}
         /// </summary>
-        /// <value>Valor para pagamento total da fatura</value>
+        /// <value>{{{fatura_consignada_detalhe_response_valor_total_fatura_value}}}</value>
         [DataMember(Name="valorTotalFatura", EmitDefaultValue=false)]
         public double? ValorTotalFatura { get; set; }
     
         /// <summary>
-        /// Valor total da fatura anterior
+        /// {{{fatura_consignada_detalhe_response_valor_fatura_anterior_value}}}
         /// </summary>
-        /// <value>Valor total da fatura anterior</value>
+        /// <value>{{{fatura_consignada_detalhe_response_valor_fatura_anterior_value}}}</value>
         [DataMember(Name="valorFaturaAnterior", EmitDefaultValue=false)]
         public double? ValorFaturaAnterior { get; set; }
     
         /// <summary>
-        /// Valor m\u00EDnimo para pagamento da fatura
+        /// {{{fatura_consignada_detalhe_response_valor_pagamento_minimo_value}}}
         /// </summary>
-        /// <value>Valor m\u00EDnimo para pagamento da fatura</value>
+        /// <value>{{{fatura_consignada_detalhe_response_valor_pagamento_minimo_value}}}</value>
         [DataMember(Name="valorPagamentoMinimo", EmitDefaultValue=false)]
         public double? ValorPagamentoMinimo { get; set; }
     
         /// <summary>
-        /// Valor da fatura pago atrav\u00E9s de desconto em folha
+        /// {{{fatura_consignada_detalhe_response_valor_pagamento_consignado_value}}}
         /// </summary>
-        /// <value>Valor da fatura pago atrav\u00E9s de desconto em folha</value>
+        /// <value>{{{fatura_consignada_detalhe_response_valor_pagamento_consignado_value}}}</value>
         [DataMember(Name="valorPagamentoConsignado", EmitDefaultValue=false)]
         public double? ValorPagamentoConsignado { get; set; }
     
         /// <summary>
-        /// Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Nacional
+        /// {{{fatura_consignada_detalhe_response_limite_saque_global_value}}}
         /// </summary>
-        /// <value>Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Nacional</value>
+        /// <value>{{{fatura_consignada_detalhe_response_limite_saque_global_value}}}</value>
         [DataMember(Name="limiteSaqueGlobal", EmitDefaultValue=false)]
         public double? LimiteSaqueGlobal { get; set; }
     
         /// <summary>
-        /// Valor complementar para considerar o pagamento m\u00EDnimo da fatura
+        /// {{{fatura_consignada_detalhe_response_valor_pagamento_complementar_value}}}
         /// </summary>
-        /// <value>Valor complementar para considerar o pagamento m\u00EDnimo da fatura</value>
+        /// <value>{{{fatura_consignada_detalhe_response_valor_pagamento_complementar_value}}}</value>
         [DataMember(Name="valorPagamentoComplementar", EmitDefaultValue=false)]
         public double? ValorPagamentoComplementar { get; set; }
     
         /// <summary>
-        /// Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Nacional dentro de cada ciclo de faturamento
+        /// {{{fatura_consignada_detalhe_response_limite_saque_periodo_value}}}
         /// </summary>
-        /// <value>Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Nacional dentro de cada ciclo de faturamento</value>
+        /// <value>{{{fatura_consignada_detalhe_response_limite_saque_periodo_value}}}</value>
         [DataMember(Name="limiteSaquePeriodo", EmitDefaultValue=false)]
         public double? LimiteSaquePeriodo { get; set; }
     
         /// <summary>
-        /// Valor total das compras nacionais lan\u00E7adas na fatura
+        /// {{{fatura_consignada_detalhe_response_total_compras_nacionais_value}}}
         /// </summary>
-        /// <value>Valor total das compras nacionais lan\u00E7adas na fatura</value>
+        /// <value>{{{fatura_consignada_detalhe_response_total_compras_nacionais_value}}}</value>
         [DataMember(Name="totalComprasNacionais", EmitDefaultValue=false)]
         public double? TotalComprasNacionais { get; set; }
     
         /// <summary>
-        /// Quando utilizado pelo emissor, este campo apresenta o valor da margem de cr\u00E9dito que ele poder\u00E1 utilizar para ser cobrado de forma consignada (desconto em folha) em seu sal\u00E1rio/vencimentos
+        /// {{{fatura_consignada_detalhe_response_limite_consignado_value}}}
         /// </summary>
-        /// <value>Quando utilizado pelo emissor, este campo apresenta o valor da margem de cr\u00E9dito que ele poder\u00E1 utilizar para ser cobrado de forma consignada (desconto em folha) em seu sal\u00E1rio/vencimentos</value>
+        /// <value>{{{fatura_consignada_detalhe_response_limite_consignado_value}}}</value>
         [DataMember(Name="limiteConsignado", EmitDefaultValue=false)]
         public double? LimiteConsignado { get; set; }
     
         /// <summary>
-        /// Valor total das compras internacionais lan\u00E7adas na fatura
+        /// {{{fatura_consignada_detalhe_response_total_compras_internacionas_value}}}
         /// </summary>
-        /// <value>Valor total das compras internacionais lan\u00E7adas na fatura</value>
+        /// <value>{{{fatura_consignada_detalhe_response_total_compras_internacionas_value}}}</value>
         [DataMember(Name="totalComprasInternacionas", EmitDefaultValue=false)]
         public double? TotalComprasInternacionas { get; set; }
     
         /// <summary>
-        /// Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para uso exclusivo em Compras Internacionais
+        /// {{{fatura_consignada_detalhe_response_limite_internacional_compra_value}}}
         /// </summary>
-        /// <value>Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para uso exclusivo em Compras Internacionais</value>
+        /// <value>{{{fatura_consignada_detalhe_response_limite_internacional_compra_value}}}</value>
         [DataMember(Name="limiteInternacionalCompra", EmitDefaultValue=false)]
         public double? LimiteInternacionalCompra { get; set; }
     
         /// <summary>
-        /// Valor total dos saques nacionais lan\u00E7ados na fatura
+        /// {{{fatura_consignada_detalhe_response_total_saques_nacionais_value}}}
         /// </summary>
-        /// <value>Valor total dos saques nacionais lan\u00E7ados na fatura</value>
+        /// <value>{{{fatura_consignada_detalhe_response_total_saques_nacionais_value}}}</value>
         [DataMember(Name="totalSaquesNacionais", EmitDefaultValue=false)]
         public double? TotalSaquesNacionais { get; set; }
     
         /// <summary>
-        /// Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para realizar transa\u00E7\u00F5es Internacionais de Compras Parceladas
+        /// {{{fatura_consignada_detalhe_response_limite_internacional_parcelado_value}}}
         /// </summary>
-        /// <value>Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para realizar transa\u00E7\u00F5es Internacionais de Compras Parceladas</value>
+        /// <value>{{{fatura_consignada_detalhe_response_limite_internacional_parcelado_value}}}</value>
         [DataMember(Name="limiteInternacionalParcelado", EmitDefaultValue=false)]
         public double? LimiteInternacionalParcelado { get; set; }
     
         /// <summary>
-        /// Valor total dos saques internacionais lan\u00E7ados na fatura
+        /// {{{fatura_consignada_detalhe_response_total_saques_internacionais_value}}}
         /// </summary>
-        /// <value>Valor total dos saques internacionais lan\u00E7ados na fatura</value>
+        /// <value>{{{fatura_consignada_detalhe_response_total_saques_internacionais_value}}}</value>
         [DataMember(Name="totalSaquesInternacionais", EmitDefaultValue=false)]
         public double? TotalSaquesInternacionais { get; set; }
     
         /// <summary>
-        /// Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que portador pode acumular a partir da soma das parcelas das compras internacionais que forem realizadas nesta modalidade
+        /// {{{fatura_consignada_detalhe_response_limite_internacional_parcelas_value}}}
         /// </summary>
-        /// <value>Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que portador pode acumular a partir da soma das parcelas das compras internacionais que forem realizadas nesta modalidade</value>
+        /// <value>{{{fatura_consignada_detalhe_response_limite_internacional_parcelas_value}}}</value>
         [DataMember(Name="limiteInternacionalParcelas", EmitDefaultValue=false)]
         public double? LimiteInternacionalParcelas { get; set; }
     
         /// <summary>
-        /// Valor total dos d\u00E9bitos nacionais lan\u00E7ados na fatura
+        /// {{{fatura_consignada_detalhe_response_total_debitos_nacionais_value}}}
         /// </summary>
-        /// <value>Valor total dos d\u00E9bitos nacionais lan\u00E7ados na fatura</value>
+        /// <value>{{{fatura_consignada_detalhe_response_total_debitos_nacionais_value}}}</value>
         [DataMember(Name="totalDebitosNacionais", EmitDefaultValue=false)]
         public double? TotalDebitosNacionais { get; set; }
     
         /// <summary>
-        /// Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Internacional
+        /// {{{fatura_consignada_detalhe_response_limite_internacional_saque_global_value}}}
         /// </summary>
-        /// <value>Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Internacional</value>
+        /// <value>{{{fatura_consignada_detalhe_response_limite_internacional_saque_global_value}}}</value>
         [DataMember(Name="limiteInternacionalSaqueGlobal", EmitDefaultValue=false)]
         public double? LimiteInternacionalSaqueGlobal { get; set; }
     
         /// <summary>
-        /// Valor total dos d\u00E9bitos recorrentes lan\u00E7ados na fatura
+        /// {{{fatura_consignada_detalhe_response_total_debitos_recorrentes_value}}}
         /// </summary>
-        /// <value>Valor total dos d\u00E9bitos recorrentes lan\u00E7ados na fatura</value>
+        /// <value>{{{fatura_consignada_detalhe_response_total_debitos_recorrentes_value}}}</value>
         [DataMember(Name="totalDebitosRecorrentes", EmitDefaultValue=false)]
         public double? TotalDebitosRecorrentes { get; set; }
     
         /// <summary>
-        /// Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Internacional dentro de cada ciclo de faturamento
+        /// {{{fatura_consignada_detalhe_response_limite_internacional_saque_periodo_value}}}
         /// </summary>
-        /// <value>Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador pode utilizar para realizar transa\u00E7\u00F5es de Saque Internacional dentro de cada ciclo de faturamento</value>
+        /// <value>{{{fatura_consignada_detalhe_response_limite_internacional_saque_periodo_value}}}</value>
         [DataMember(Name="limiteInternacionalSaquePeriodo", EmitDefaultValue=false)]
         public double? LimiteInternacionalSaquePeriodo { get; set; }
     
         /// <summary>
-        /// Valor total dos d\u00E9bitos internacionais lan\u00E7ados na fatura
+        /// {{{fatura_consignada_detalhe_response_total_debitos_internacionais_value}}}
         /// </summary>
-        /// <value>Valor total dos d\u00E9bitos internacionais lan\u00E7ados na fatura</value>
+        /// <value>{{{fatura_consignada_detalhe_response_total_debitos_internacionais_value}}}</value>
         [DataMember(Name="totalDebitosInternacionais", EmitDefaultValue=false)]
         public double? TotalDebitosInternacionais { get; set; }
     
         /// <summary>
-        /// Apresenta o valor de cr\u00E9dito que o portador possui dispon\u00EDvel para realizar transa\u00E7\u00F5es
+        /// {{{fatura_consignada_detalhe_response_saldo_disponivel_global_value}}}
         /// </summary>
-        /// <value>Apresenta o valor de cr\u00E9dito que o portador possui dispon\u00EDvel para realizar transa\u00E7\u00F5es</value>
+        /// <value>{{{fatura_consignada_detalhe_response_saldo_disponivel_global_value}}}</value>
         [DataMember(Name="saldoDisponivelGlobal", EmitDefaultValue=false)]
         public double? SaldoDisponivelGlobal { get; set; }
     
         /// <summary>
-        /// Valor total dos d\u00E9bitos diversos nacionais lan\u00E7ados na fatura
+        /// {{{fatura_consignada_detalhe_response_total_debitos_diversos_nacionais_value}}}
         /// </summary>
-        /// <value>Valor total dos d\u00E9bitos diversos nacionais lan\u00E7ados na fatura</value>
+        /// <value>{{{fatura_consignada_detalhe_response_total_debitos_diversos_nacionais_value}}}</value>
         [DataMember(Name="totalDebitosDiversosNacionais", EmitDefaultValue=false)]
         public double? TotalDebitosDiversosNacionais { get; set; }
     
         /// <summary>
-        /// Quando utilizado pelo emissor a modalidade limiteCompra, este campo apresentar\u00E1 o valor de cr\u00E9dito que o portador possui dispon\u00EDvel para realizar transa\u00E7\u00F5es de compra Nacional
+        /// {{{fatura_consignada_detalhe_response_saldo_disponivel_compra_value}}}
         /// </summary>
-        /// <value>Quando utilizado pelo emissor a modalidade limiteCompra, este campo apresentar\u00E1 o valor de cr\u00E9dito que o portador possui dispon\u00EDvel para realizar transa\u00E7\u00F5es de compra Nacional</value>
+        /// <value>{{{fatura_consignada_detalhe_response_saldo_disponivel_compra_value}}}</value>
         [DataMember(Name="saldoDisponivelCompra", EmitDefaultValue=false)]
         public double? SaldoDisponivelCompra { get; set; }
     
         /// <summary>
-        /// Valor total dos d\u00E9bitos diversos opcionais lan\u00E7ados na fatura
+        /// {{{fatura_consignada_detalhe_response_total_debitos_opcionais_value}}}
         /// </summary>
-        /// <value>Valor total dos d\u00E9bitos diversos opcionais lan\u00E7ados na fatura</value>
+        /// <value>{{{fatura_consignada_detalhe_response_total_debitos_opcionais_value}}}</value>
         [DataMember(Name="totalDebitosOpcionais", EmitDefaultValue=false)]
         public double? TotalDebitosOpcionais { get; set; }
     
         /// <summary>
-        /// Quando utilizado pelo emissor a modalidade limiteParcelado, este campo apresentar\u00E1 o valor de cr\u00E9dito que o portador possui dispon\u00EDvel para realizar transa\u00E7\u00F5es de compra Nacional
+        /// {{{fatura_consignada_detalhe_response_saldo_disponivel_parcelado_value}}}
         /// </summary>
-        /// <value>Quando utilizado pelo emissor a modalidade limiteParcelado, este campo apresentar\u00E1 o valor de cr\u00E9dito que o portador possui dispon\u00EDvel para realizar transa\u00E7\u00F5es de compra Nacional</value>
+        /// <value>{{{fatura_consignada_detalhe_response_saldo_disponivel_parcelado_value}}}</value>
         [DataMember(Name="saldoDisponivelParcelado", EmitDefaultValue=false)]
         public double? SaldoDisponivelParcelado { get; set; }
     
         /// <summary>
-        /// Valor total dos pagamentos lan\u00E7ados na fatura
+        /// {{{fatura_consignada_detalhe_response_total_pagamentos_value}}}
         /// </summary>
-        /// <value>Valor total dos pagamentos lan\u00E7ados na fatura</value>
+        /// <value>{{{fatura_consignada_detalhe_response_total_pagamentos_value}}}</value>
         [DataMember(Name="totalPagamentos", EmitDefaultValue=false)]
         public double? TotalPagamentos { get; set; }
     
         /// <summary>
-        /// Quando utilizado pelo emissor a modalidade limiteParcelas, este campo apresentar\u00E1 o valor de cr\u00E9dito que o portador possui dispon\u00EDvel para utilizar como valor de parcelas Nacionais em um determinado ciclo de faturamento
+        /// {{{fatura_consignada_detalhe_response_saldo_disponivel_parcelas_value}}}
         /// </summary>
-        /// <value>Quando utilizado pelo emissor a modalidade limiteParcelas, este campo apresentar\u00E1 o valor de cr\u00E9dito que o portador possui dispon\u00EDvel para utilizar como valor de parcelas Nacionais em um determinado ciclo de faturamento</value>
+        /// <value>{{{fatura_consignada_detalhe_response_saldo_disponivel_parcelas_value}}}</value>
         [DataMember(Name="saldoDisponivelParcelas", EmitDefaultValue=false)]
         public double? SaldoDisponivelParcelas { get; set; }
     
         /// <summary>
-        /// Valor total dos cr\u00E9ditos nacionais lan\u00E7ados na fatura
+        /// {{{fatura_consignada_detalhe_response_total_creditos_nacionais_value}}}
         /// </summary>
-        /// <value>Valor total dos cr\u00E9ditos nacionais lan\u00E7ados na fatura</value>
+        /// <value>{{{fatura_consignada_detalhe_response_total_creditos_nacionais_value}}}</value>
         [DataMember(Name="totalCreditosNacionais", EmitDefaultValue=false)]
         public double? TotalCreditosNacionais { get; set; }
     
         /// <summary>
-        /// Valor total dos ajustes lan\u00E7ados na fatura
+        /// {{{fatura_consignada_detalhe_response_total_ajustes_value}}}
         /// </summary>
-        /// <value>Valor total dos ajustes lan\u00E7ados na fatura</value>
+        /// <value>{{{fatura_consignada_detalhe_response_total_ajustes_value}}}</value>
         [DataMember(Name="totalAjustes", EmitDefaultValue=false)]
         public double? TotalAjustes { get; set; }
     
         /// <summary>
-        /// Valor total das tarifas lan\u00E7adas na fatura
+        /// {{{fatura_consignada_detalhe_response_total_tarifas_value}}}
         /// </summary>
-        /// <value>Valor total das tarifas lan\u00E7adas na fatura</value>
+        /// <value>{{{fatura_consignada_detalhe_response_total_tarifas_value}}}</value>
         [DataMember(Name="totalTarifas", EmitDefaultValue=false)]
         public double? TotalTarifas { get; set; }
     
         /// <summary>
-        /// Valor total da multa lan\u00E7ada na fatura
+        /// {{{fatura_consignada_detalhe_response_total_multa_value}}}
         /// </summary>
-        /// <value>Valor total da multa lan\u00E7ada na fatura</value>
+        /// <value>{{{fatura_consignada_detalhe_response_total_multa_value}}}</value>
         [DataMember(Name="totalMulta", EmitDefaultValue=false)]
         public double? TotalMulta { get; set; }
     
         /// <summary>
-        /// Quando utilizado pelo emissor a modalidade limiteSaque, este campo apresentar\u00E1 o valor de cr\u00E9dito que o portador possui dispon\u00EDvel para realizar transa\u00E7\u00F5es de Saque Nacional
+        /// {{{fatura_consignada_detalhe_response_saldo_disponivel_saque_value}}}
         /// </summary>
-        /// <value>Quando utilizado pelo emissor a modalidade limiteSaque, este campo apresentar\u00E1 o valor de cr\u00E9dito que o portador possui dispon\u00EDvel para realizar transa\u00E7\u00F5es de Saque Nacional</value>
+        /// <value>{{{fatura_consignada_detalhe_response_saldo_disponivel_saque_value}}}</value>
         [DataMember(Name="saldoDisponivelSaque", EmitDefaultValue=false)]
         public double? SaldoDisponivelSaque { get; set; }
     
         /// <summary>
-        /// Valor total dos juros de mora lan\u00E7ados na fatura
+        /// {{{fatura_consignada_detalhe_response_total_juros_value}}}
         /// </summary>
-        /// <value>Valor total dos juros de mora lan\u00E7ados na fatura</value>
+        /// <value>{{{fatura_consignada_detalhe_response_total_juros_value}}}</value>
         [DataMember(Name="totalJuros", EmitDefaultValue=false)]
         public double? TotalJuros { get; set; }
     
         /// <summary>
-        /// Quando utilizado um programa de fidelidade pelo emissor, este campo apresentar\u00E1 o saldo atual de pontos que o portador possui
+        /// {{{fatura_consignada_detalhe_response_saldo_pontos_fidelidade_value}}}
         /// </summary>
-        /// <value>Quando utilizado um programa de fidelidade pelo emissor, este campo apresentar\u00E1 o saldo atual de pontos que o portador possui</value>
+        /// <value>{{{fatura_consignada_detalhe_response_saldo_pontos_fidelidade_value}}}</value>
         [DataMember(Name="saldoPontosFidelidade", EmitDefaultValue=false)]
         public double? SaldoPontosFidelidade { get; set; }
     
         /// <summary>
-        /// Valor percentual da taxa de juros rotativos
+        /// {{{fatura_consignada_detalhe_response_taxa_rotativo_value}}}
         /// </summary>
-        /// <value>Valor percentual da taxa de juros rotativos</value>
+        /// <value>{{{fatura_consignada_detalhe_response_taxa_rotativo_value}}}</value>
         [DataMember(Name="taxaRotativo", EmitDefaultValue=false)]
         public double? TaxaRotativo { get; set; }
     
         /// <summary>
-        /// Quando utilizado pelo emissor a modalidade limiteCompraInternacional, este campo apresentar\u00E1 o valor de cr\u00E9dito que o portador possui dispon\u00EDvel para realizar transa\u00E7\u00F5es de Compra Internacional
+        /// {{{fatura_consignada_detalhe_response_saldo_disponivel_compra_internacional_value}}}
         /// </summary>
-        /// <value>Quando utilizado pelo emissor a modalidade limiteCompraInternacional, este campo apresentar\u00E1 o valor de cr\u00E9dito que o portador possui dispon\u00EDvel para realizar transa\u00E7\u00F5es de Compra Internacional</value>
+        /// <value>{{{fatura_consignada_detalhe_response_saldo_disponivel_compra_internacional_value}}}</value>
         [DataMember(Name="saldoDisponivelCompraInternacional", EmitDefaultValue=false)]
         public double? SaldoDisponivelCompraInternacional { get; set; }
     
         /// <summary>
-        /// Valor percentual da taxa de saque
+        /// {{{fatura_consignada_detalhe_response_taxa_saque_value}}}
         /// </summary>
-        /// <value>Valor percentual da taxa de saque</value>
+        /// <value>{{{fatura_consignada_detalhe_response_taxa_saque_value}}}</value>
         [DataMember(Name="taxaSaque", EmitDefaultValue=false)]
         public double? TaxaSaque { get; set; }
     
         /// <summary>
-        /// Quando utilizado pelo emissor a modalidade limiteSaqueInternacional, este campo apresentar\u00E1 o valor de cr\u00E9dito que o portador possui dispon\u00EDvel para realizar transa\u00E7\u00F5es de Saque Internacional
+        /// {{{fatura_consignada_detalhe_response_saldo_disponivel_saque_internacional_value}}}
         /// </summary>
-        /// <value>Quando utilizado pelo emissor a modalidade limiteSaqueInternacional, este campo apresentar\u00E1 o valor de cr\u00E9dito que o portador possui dispon\u00EDvel para realizar transa\u00E7\u00F5es de Saque Internacional</value>
+        /// <value>{{{fatura_consignada_detalhe_response_saldo_disponivel_saque_internacional_value}}}</value>
         [DataMember(Name="saldoDisponivelSaqueInternacional", EmitDefaultValue=false)]
         public double? SaldoDisponivelSaqueInternacional { get; set; }
     
         /// <summary>
-        /// Valor m\u00E1ximo percentual da taxa de encargos para o pr\u00F3ximo per\u00EDodo
+        /// {{{fatura_consignada_detalhe_response_taxa_maxima_proximo_periodo_value}}}
         /// </summary>
-        /// <value>Valor m\u00E1ximo percentual da taxa de encargos para o pr\u00F3ximo per\u00EDodo</value>
+        /// <value>{{{fatura_consignada_detalhe_response_taxa_maxima_proximo_periodo_value}}}</value>
         [DataMember(Name="taxaMaximaProximoPeriodo", EmitDefaultValue=false)]
         public double? TaxaMaximaProximoPeriodo { get; set; }
     
         /// <summary>
-        /// Apresenta a soma de todos os seguros cobrados na fatura do cliente
+        /// {{{fatura_consignada_detalhe_response_total_servicos_value}}}
         /// </summary>
-        /// <value>Apresenta a soma de todos os seguros cobrados na fatura do cliente</value>
+        /// <value>{{{fatura_consignada_detalhe_response_total_servicos_value}}}</value>
         [DataMember(Name="totalServicos", EmitDefaultValue=false)]
         public double? TotalServicos { get; set; }
     

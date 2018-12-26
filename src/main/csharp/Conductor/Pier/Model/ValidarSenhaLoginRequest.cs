@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00E7\u00E3o da requisi\u00E7\u00E3o do recurso de validar senha pelo login
+    /// {{{validar_senha_login_request_description}}}
     /// </summary>
     [DataContract]
     public partial class ValidarSenhaLoginRequest :  IEquatable<ValidarSenhaLoginRequest>
@@ -22,7 +22,7 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="ValidarSenhaLoginRequest" /> class.
         /// Initializes a new instance of the <see cref="ValidarSenhaLoginRequest" />class.
         /// </summary>
-        /// <param name="IdPlataforma">idPlataforma.</param>
+        /// <param name="IdPlataforma">{{{validar_senha_login_request_id_plataforma_value}}}.</param>
 
         public ValidarSenhaLoginRequest(int? IdPlataforma = null)
         {
@@ -32,9 +32,9 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// idPlataforma
+        /// {{{validar_senha_login_request_id_plataforma_value}}}
         /// </summary>
-        /// <value>idPlataforma</value>
+        /// <value>{{{validar_senha_login_request_id_plataforma_value}}}</value>
         [DataMember(Name="idPlataforma", EmitDefaultValue=false)]
         public int? IdPlataforma { get; set; }
     

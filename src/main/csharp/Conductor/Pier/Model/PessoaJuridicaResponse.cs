@@ -22,16 +22,16 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="PessoaJuridicaResponse" /> class.
         /// Initializes a new instance of the <see cref="PessoaJuridicaResponse" />class.
         /// </summary>
-        /// <param name="Id">Id pessoa jur\u00EDdica.</param>
-        /// <param name="Contato">Pessoa jur\u00EDdica contato.</param>
-        /// <param name="RazaoSocial">Raz\u00E3o social pessoa jur\u00EDdica.</param>
-        /// <param name="NumeroReceitaFederal">CGC(CNPJ) pessoa jur\u00EDdica.</param>
-        /// <param name="InscricaoEstadual">Inscri\u00E7\u00E3o estadual pessoa jur\u00EDdica.</param>
-        /// <param name="Banco">Banco da pessoa jur\u00EDdica.</param>
-        /// <param name="Agencia">Ag\u00EAncia da pessoa jur\u00EDdica.</param>
-        /// <param name="DigitoAgencia">D\u00EDgito da agencia.</param>
-        /// <param name="ContaCorrente">Conta corrente pessoa jur\u00EDdica.</param>
-        /// <param name="DigitoContaCorrente">D\u00EDgito conta corrente.</param>
+        /// <param name="Id">{{{pessoa_juridica_persist_id_value}}}.</param>
+        /// <param name="Contato">{{{pessoa_juridica_persist_contato_value}}}.</param>
+        /// <param name="RazaoSocial">{{{pessoa_juridica_persist_razao_social_value}}}.</param>
+        /// <param name="NumeroReceitaFederal">{{{pessoa_juridica_persist_CGC_value}}}.</param>
+        /// <param name="InscricaoEstadual">{{{pessoa_juridica_persist_inscricao_estadual_value}}}.</param>
+        /// <param name="Banco">{{{pessoa_juridica_persist_banco_value}}}.</param>
+        /// <param name="Agencia">{{{pessoa_juridica_persist_agencia_value}}}.</param>
+        /// <param name="DigitoAgencia">{{{pessoa_juridica_persist_digito_agencia_value}}}.</param>
+        /// <param name="ContaCorrente">{{{pessoa_juridica_persist_conta_corrente_value}}}.</param>
+        /// <param name="DigitoContaCorrente">{{{pessoa_juridica_persist_digito_conta_corrente_value}}}.</param>
 
         public PessoaJuridicaResponse(long? Id = null, string Contato = null, string RazaoSocial = null, string NumeroReceitaFederal = null, string InscricaoEstadual = null, int? Banco = null, int? Agencia = null, string DigitoAgencia = null, string ContaCorrente = null, string DigitoContaCorrente = null)
         {
@@ -50,72 +50,72 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Id pessoa jur\u00EDdica
+        /// {{{pessoa_juridica_persist_id_value}}}
         /// </summary>
-        /// <value>Id pessoa jur\u00EDdica</value>
+        /// <value>{{{pessoa_juridica_persist_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Pessoa jur\u00EDdica contato
+        /// {{{pessoa_juridica_persist_contato_value}}}
         /// </summary>
-        /// <value>Pessoa jur\u00EDdica contato</value>
+        /// <value>{{{pessoa_juridica_persist_contato_value}}}</value>
         [DataMember(Name="contato", EmitDefaultValue=false)]
         public string Contato { get; set; }
     
         /// <summary>
-        /// Raz\u00E3o social pessoa jur\u00EDdica
+        /// {{{pessoa_juridica_persist_razao_social_value}}}
         /// </summary>
-        /// <value>Raz\u00E3o social pessoa jur\u00EDdica</value>
+        /// <value>{{{pessoa_juridica_persist_razao_social_value}}}</value>
         [DataMember(Name="razaoSocial", EmitDefaultValue=false)]
         public string RazaoSocial { get; set; }
     
         /// <summary>
-        /// CGC(CNPJ) pessoa jur\u00EDdica
+        /// {{{pessoa_juridica_persist_CGC_value}}}
         /// </summary>
-        /// <value>CGC(CNPJ) pessoa jur\u00EDdica</value>
+        /// <value>{{{pessoa_juridica_persist_CGC_value}}}</value>
         [DataMember(Name="numeroReceitaFederal", EmitDefaultValue=false)]
         public string NumeroReceitaFederal { get; set; }
     
         /// <summary>
-        /// Inscri\u00E7\u00E3o estadual pessoa jur\u00EDdica
+        /// {{{pessoa_juridica_persist_inscricao_estadual_value}}}
         /// </summary>
-        /// <value>Inscri\u00E7\u00E3o estadual pessoa jur\u00EDdica</value>
+        /// <value>{{{pessoa_juridica_persist_inscricao_estadual_value}}}</value>
         [DataMember(Name="inscricaoEstadual", EmitDefaultValue=false)]
         public string InscricaoEstadual { get; set; }
     
         /// <summary>
-        /// Banco da pessoa jur\u00EDdica
+        /// {{{pessoa_juridica_persist_banco_value}}}
         /// </summary>
-        /// <value>Banco da pessoa jur\u00EDdica</value>
+        /// <value>{{{pessoa_juridica_persist_banco_value}}}</value>
         [DataMember(Name="banco", EmitDefaultValue=false)]
         public int? Banco { get; set; }
     
         /// <summary>
-        /// Ag\u00EAncia da pessoa jur\u00EDdica
+        /// {{{pessoa_juridica_persist_agencia_value}}}
         /// </summary>
-        /// <value>Ag\u00EAncia da pessoa jur\u00EDdica</value>
+        /// <value>{{{pessoa_juridica_persist_agencia_value}}}</value>
         [DataMember(Name="agencia", EmitDefaultValue=false)]
         public int? Agencia { get; set; }
     
         /// <summary>
-        /// D\u00EDgito da agencia
+        /// {{{pessoa_juridica_persist_digito_agencia_value}}}
         /// </summary>
-        /// <value>D\u00EDgito da agencia</value>
+        /// <value>{{{pessoa_juridica_persist_digito_agencia_value}}}</value>
         [DataMember(Name="digitoAgencia", EmitDefaultValue=false)]
         public string DigitoAgencia { get; set; }
     
         /// <summary>
-        /// Conta corrente pessoa jur\u00EDdica
+        /// {{{pessoa_juridica_persist_conta_corrente_value}}}
         /// </summary>
-        /// <value>Conta corrente pessoa jur\u00EDdica</value>
+        /// <value>{{{pessoa_juridica_persist_conta_corrente_value}}}</value>
         [DataMember(Name="contaCorrente", EmitDefaultValue=false)]
         public string ContaCorrente { get; set; }
     
         /// <summary>
-        /// D\u00EDgito conta corrente
+        /// {{{pessoa_juridica_persist_digito_conta_corrente_value}}}
         /// </summary>
-        /// <value>D\u00EDgito conta corrente</value>
+        /// <value>{{{pessoa_juridica_persist_digito_conta_corrente_value}}}</value>
         [DataMember(Name="digitoContaCorrente", EmitDefaultValue=false)]
         public string DigitoContaCorrente { get; set; }
     

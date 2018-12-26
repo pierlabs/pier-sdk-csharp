@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Hist\u00F3rico Impress\u00E3o Cart\u00E3o
+    /// {{{historico_impressao_cartao_response_description}}}
     /// </summary>
     [DataContract]
     public partial class HistoricoImpressaoCartaoResponse :  IEquatable<HistoricoImpressaoCartaoResponse>
@@ -22,11 +22,11 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="HistoricoImpressaoCartaoResponse" /> class.
         /// Initializes a new instance of the <see cref="HistoricoImpressaoCartaoResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00F3digo de Identifica\u00E7\u00E3o do Hist\u00F3rico de Impress\u00E3o Avulsa de Cart\u00F5es (id) (required).</param>
-        /// <param name="IdCartao">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id) (required).</param>
-        /// <param name="IdStatusImpressaoCartao">C\u00F3digo de Identifica\u00E7\u00E3o do Status de Impress\u00E3o do Cart\u00E3o (id) (required).</param>
-        /// <param name="MensagemHistorico">Apresenta uma mensagem que descreve a etapa do processo de impress\u00E3o do cart\u00E3o que fora realizado.</param>
-        /// <param name="DataHistorico">Apresenta a data que o registro de Hist\u00F3rico de Impress\u00E3o de um Cart\u00E3o fora inserido.</param>
+        /// <param name="Id">{{{historico_impressao_cartao_response_id_value}}} (required).</param>
+        /// <param name="IdCartao">{{{historico_impressao_cartao_response_id_cartao_value}}} (required).</param>
+        /// <param name="IdStatusImpressaoCartao">{{{historico_impressao_cartao_response_id_status_impressao_cartao_value}}} (required).</param>
+        /// <param name="MensagemHistorico">{{{historico_impressao_cartao_response_mensagem_historico_value}}}.</param>
+        /// <param name="DataHistorico">{{{historico_impressao_cartao_response_data_historico_value}}}.</param>
 
         public HistoricoImpressaoCartaoResponse(long? Id = null, long? IdCartao = null, long? IdStatusImpressaoCartao = null, string MensagemHistorico = null, string DataHistorico = null)
         {
@@ -64,37 +64,37 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00F3digo de Identifica\u00E7\u00E3o do Hist\u00F3rico de Impress\u00E3o Avulsa de Cart\u00F5es (id)
+        /// {{{historico_impressao_cartao_response_id_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Hist\u00F3rico de Impress\u00E3o Avulsa de Cart\u00F5es (id)</value>
+        /// <value>{{{historico_impressao_cartao_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)
+        /// {{{historico_impressao_cartao_response_id_cartao_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)</value>
+        /// <value>{{{historico_impressao_cartao_response_id_cartao_value}}}</value>
         [DataMember(Name="idCartao", EmitDefaultValue=false)]
         public long? IdCartao { get; set; }
     
         /// <summary>
-        /// C\u00F3digo de Identifica\u00E7\u00E3o do Status de Impress\u00E3o do Cart\u00E3o (id)
+        /// {{{historico_impressao_cartao_response_id_status_impressao_cartao_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Status de Impress\u00E3o do Cart\u00E3o (id)</value>
+        /// <value>{{{historico_impressao_cartao_response_id_status_impressao_cartao_value}}}</value>
         [DataMember(Name="idStatusImpressaoCartao", EmitDefaultValue=false)]
         public long? IdStatusImpressaoCartao { get; set; }
     
         /// <summary>
-        /// Apresenta uma mensagem que descreve a etapa do processo de impress\u00E3o do cart\u00E3o que fora realizado
+        /// {{{historico_impressao_cartao_response_mensagem_historico_value}}}
         /// </summary>
-        /// <value>Apresenta uma mensagem que descreve a etapa do processo de impress\u00E3o do cart\u00E3o que fora realizado</value>
+        /// <value>{{{historico_impressao_cartao_response_mensagem_historico_value}}}</value>
         [DataMember(Name="mensagemHistorico", EmitDefaultValue=false)]
         public string MensagemHistorico { get; set; }
     
         /// <summary>
-        /// Apresenta a data que o registro de Hist\u00F3rico de Impress\u00E3o de um Cart\u00E3o fora inserido
+        /// {{{historico_impressao_cartao_response_data_historico_value}}}
         /// </summary>
-        /// <value>Apresenta a data que o registro de Hist\u00F3rico de Impress\u00E3o de um Cart\u00E3o fora inserido</value>
+        /// <value>{{{historico_impressao_cartao_response_data_historico_value}}}</value>
         [DataMember(Name="dataHistorico", EmitDefaultValue=false)]
         public string DataHistorico { get; set; }
     

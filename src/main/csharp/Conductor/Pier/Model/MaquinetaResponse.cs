@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Objeto de Resposta de Maquineta
+    /// {{{maquineta_response_description}}}
     /// </summary>
     [DataContract]
     public partial class MaquinetaResponse :  IEquatable<MaquinetaResponse>
@@ -22,14 +22,14 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="MaquinetaResponse" /> class.
         /// Initializes a new instance of the <see cref="MaquinetaResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00F3digo de Identifica\u00E7\u00E3o da Maquineta.</param>
-        /// <param name="IdEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do EStabelecimento.</param>
-        /// <param name="IdTipoMaquineta">C\u00F3digo de Identifica\u00E7\u00E3o do Tipo Maquineta.</param>
-        /// <param name="Valor">Valor de manuten\u00E7\u00E3o da Maquineta.</param>
-        /// <param name="DataHoraImplantacao">Data de implanta\u00E7\u00E3o da Maquineta.</param>
-        /// <param name="DataHoraCadastramento">Data de cadastramento da Maquineta.</param>
-        /// <param name="Terminal">N\u00FAmero do terminal vinculado a Maquineta.</param>
-        /// <param name="UsuarioApl">Usu\u00E1rio da aplica\u00E7\u00E3o.</param>
+        /// <param name="Id">{{{maquineta_response_id_value}}}.</param>
+        /// <param name="IdEstabelecimento">{{{maquineta_response_id_estabelecimento_value}}}.</param>
+        /// <param name="IdTipoMaquineta">{{{maquineta_response_id_tipo_maquineta_value}}}.</param>
+        /// <param name="Valor">{{{maquineta_response_valor_value}}}.</param>
+        /// <param name="DataHoraImplantacao">{{{maquineta_response_data_hora_implantacao_value}}}.</param>
+        /// <param name="DataHoraCadastramento">{{{maquineta_response_data_hora_cadastramento_value}}}.</param>
+        /// <param name="Terminal">{{{maquineta_response_terminal_value}}}.</param>
+        /// <param name="UsuarioApl">{{{maquineta_response_usuario_apl_value}}}.</param>
 
         public MaquinetaResponse(long? Id = null, long? IdEstabelecimento = null, long? IdTipoMaquineta = null, double? Valor = null, string DataHoraImplantacao = null, string DataHoraCadastramento = null, string Terminal = null, string UsuarioApl = null)
         {
@@ -46,58 +46,58 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00F3digo de Identifica\u00E7\u00E3o da Maquineta
+        /// {{{maquineta_response_id_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o da Maquineta</value>
+        /// <value>{{{maquineta_response_id_value}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// C\u00F3digo de Identifica\u00E7\u00E3o do EStabelecimento
+        /// {{{maquineta_response_id_estabelecimento_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do EStabelecimento</value>
+        /// <value>{{{maquineta_response_id_estabelecimento_value}}}</value>
         [DataMember(Name="idEstabelecimento", EmitDefaultValue=false)]
         public long? IdEstabelecimento { get; set; }
     
         /// <summary>
-        /// C\u00F3digo de Identifica\u00E7\u00E3o do Tipo Maquineta
+        /// {{{maquineta_response_id_tipo_maquineta_value}}}
         /// </summary>
-        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Tipo Maquineta</value>
+        /// <value>{{{maquineta_response_id_tipo_maquineta_value}}}</value>
         [DataMember(Name="idTipoMaquineta", EmitDefaultValue=false)]
         public long? IdTipoMaquineta { get; set; }
     
         /// <summary>
-        /// Valor de manuten\u00E7\u00E3o da Maquineta
+        /// {{{maquineta_response_valor_value}}}
         /// </summary>
-        /// <value>Valor de manuten\u00E7\u00E3o da Maquineta</value>
+        /// <value>{{{maquineta_response_valor_value}}}</value>
         [DataMember(Name="valor", EmitDefaultValue=false)]
         public double? Valor { get; set; }
     
         /// <summary>
-        /// Data de implanta\u00E7\u00E3o da Maquineta
+        /// {{{maquineta_response_data_hora_implantacao_value}}}
         /// </summary>
-        /// <value>Data de implanta\u00E7\u00E3o da Maquineta</value>
+        /// <value>{{{maquineta_response_data_hora_implantacao_value}}}</value>
         [DataMember(Name="dataHoraImplantacao", EmitDefaultValue=false)]
         public string DataHoraImplantacao { get; set; }
     
         /// <summary>
-        /// Data de cadastramento da Maquineta
+        /// {{{maquineta_response_data_hora_cadastramento_value}}}
         /// </summary>
-        /// <value>Data de cadastramento da Maquineta</value>
+        /// <value>{{{maquineta_response_data_hora_cadastramento_value}}}</value>
         [DataMember(Name="dataHoraCadastramento", EmitDefaultValue=false)]
         public string DataHoraCadastramento { get; set; }
     
         /// <summary>
-        /// N\u00FAmero do terminal vinculado a Maquineta
+        /// {{{maquineta_response_terminal_value}}}
         /// </summary>
-        /// <value>N\u00FAmero do terminal vinculado a Maquineta</value>
+        /// <value>{{{maquineta_response_terminal_value}}}</value>
         [DataMember(Name="terminal", EmitDefaultValue=false)]
         public string Terminal { get; set; }
     
         /// <summary>
-        /// Usu\u00E1rio da aplica\u00E7\u00E3o
+        /// {{{maquineta_response_usuario_apl_value}}}
         /// </summary>
-        /// <value>Usu\u00E1rio da aplica\u00E7\u00E3o</value>
+        /// <value>{{{maquineta_response_usuario_apl_value}}}</value>
         [DataMember(Name="usuarioApl", EmitDefaultValue=false)]
         public string UsuarioApl { get; set; }
     

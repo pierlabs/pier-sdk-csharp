@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00E7\u00E3o do recurso Par\u00E2metro Emissor
+    /// {{{parametro_emissor_resposta_description}}}
     /// </summary>
     [DataContract]
     public partial class ParametroEmissorResponse :  IEquatable<ParametroEmissorResponse>
@@ -22,11 +22,11 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="ParametroEmissorResponse" /> class.
         /// Initializes a new instance of the <see cref="ParametroEmissorResponse" />class.
         /// </summary>
-        /// <param name="Codigo">C\u00F3digo do par\u00E2metro.</param>
-        /// <param name="DataValidade">Data da validade do par\u00E2metro.</param>
-        /// <param name="Descricao">Descri\u00E7\u00E3o do par\u00E2metro.</param>
-        /// <param name="Tipo">Tipo do par\u00E2metro.</param>
-        /// <param name="ValorParametro">Valor do par\u00E2metro.</param>
+        /// <param name="Codigo">{{{parametro_emissor_resposta_codigo_descricao}}}.</param>
+        /// <param name="DataValidade">{{{parametro_emissor_resposta_data_validade_descricao}}}.</param>
+        /// <param name="Descricao">{{{parametro_emissor_resposta_descricao_description}}}.</param>
+        /// <param name="Tipo">{{{parametro_emissor_resposta_tipo_descricao}}}.</param>
+        /// <param name="ValorParametro">{{{parametro_emissor_resposta_valor_parametro_descricao}}}.</param>
 
         public ParametroEmissorResponse(string Codigo = null, string DataValidade = null, string Descricao = null, string Tipo = null, string ValorParametro = null)
         {
@@ -40,37 +40,37 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00F3digo do par\u00E2metro
+        /// {{{parametro_emissor_resposta_codigo_descricao}}}
         /// </summary>
-        /// <value>C\u00F3digo do par\u00E2metro</value>
+        /// <value>{{{parametro_emissor_resposta_codigo_descricao}}}</value>
         [DataMember(Name="codigo", EmitDefaultValue=false)]
         public string Codigo { get; set; }
     
         /// <summary>
-        /// Data da validade do par\u00E2metro
+        /// {{{parametro_emissor_resposta_data_validade_descricao}}}
         /// </summary>
-        /// <value>Data da validade do par\u00E2metro</value>
+        /// <value>{{{parametro_emissor_resposta_data_validade_descricao}}}</value>
         [DataMember(Name="dataValidade", EmitDefaultValue=false)]
         public string DataValidade { get; set; }
     
         /// <summary>
-        /// Descri\u00E7\u00E3o do par\u00E2metro
+        /// {{{parametro_emissor_resposta_descricao_description}}}
         /// </summary>
-        /// <value>Descri\u00E7\u00E3o do par\u00E2metro</value>
+        /// <value>{{{parametro_emissor_resposta_descricao_description}}}</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     
         /// <summary>
-        /// Tipo do par\u00E2metro
+        /// {{{parametro_emissor_resposta_tipo_descricao}}}
         /// </summary>
-        /// <value>Tipo do par\u00E2metro</value>
+        /// <value>{{{parametro_emissor_resposta_tipo_descricao}}}</value>
         [DataMember(Name="tipo", EmitDefaultValue=false)]
         public string Tipo { get; set; }
     
         /// <summary>
-        /// Valor do par\u00E2metro
+        /// {{{parametro_emissor_resposta_valor_parametro_descricao}}}
         /// </summary>
-        /// <value>Valor do par\u00E2metro</value>
+        /// <value>{{{parametro_emissor_resposta_valor_parametro_descricao}}}</value>
         [DataMember(Name="valorParametro", EmitDefaultValue=false)]
         public string ValorParametro { get; set; }
     

@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa o objeto de resposta para Benefio Paa Pagamento atrasado
+    /// {{{beneficio_pagamento_atraso_response_description}}}
     /// </summary>
     [DataContract]
     public partial class BeneficioPagamentoAtrasoResponse :  IEquatable<BeneficioPagamentoAtrasoResponse>
@@ -22,7 +22,7 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="BeneficioPagamentoAtrasoResponse" /> class.
         /// Initializes a new instance of the <see cref="BeneficioPagamentoAtrasoResponse" />class.
         /// </summary>
-        /// <param name="DataBeneficio">Data m\u00E1xima para pagamento da fatura em atraso para receber o benef\u00EDcio de isen\u00E7\u00E3o total no pagamento de multa, encargos, mora e IOF.</param>
+        /// <param name="DataBeneficio">{{{beneficio_pagamento_atraso_response_data_beneficio_value}}}.</param>
 
         public BeneficioPagamentoAtrasoResponse(string DataBeneficio = null)
         {
@@ -32,9 +32,9 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Data m\u00E1xima para pagamento da fatura em atraso para receber o benef\u00EDcio de isen\u00E7\u00E3o total no pagamento de multa, encargos, mora e IOF
+        /// {{{beneficio_pagamento_atraso_response_data_beneficio_value}}}
         /// </summary>
-        /// <value>Data m\u00E1xima para pagamento da fatura em atraso para receber o benef\u00EDcio de isen\u00E7\u00E3o total no pagamento de multa, encargos, mora e IOF</value>
+        /// <value>{{{beneficio_pagamento_atraso_response_data_beneficio_value}}}</value>
         [DataMember(Name="dataBeneficio", EmitDefaultValue=false)]
         public string DataBeneficio { get; set; }
     

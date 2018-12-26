@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Objeto com response do cadastro de contas MultiApp
+    /// {{{conta_multi_response_description}}}
     /// </summary>
     [DataContract]
     public partial class ContaMultiAppResponse :  IEquatable<ContaMultiAppResponse>
@@ -22,7 +22,7 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="ContaMultiAppResponse" /> class.
         /// Initializes a new instance of the <see cref="ContaMultiAppResponse" />class.
         /// </summary>
-        /// <param name="Contas">contas MultiApp geradas.</param>
+        /// <param name="Contas">{{{conta_multi_response_contas_value}}}.</param>
 
         public ContaMultiAppResponse(List<ContaResponse> Contas = null)
         {
@@ -32,9 +32,9 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// contas MultiApp geradas
+        /// {{{conta_multi_response_contas_value}}}
         /// </summary>
-        /// <value>contas MultiApp geradas</value>
+        /// <value>{{{conta_multi_response_contas_value}}}</value>
         [DataMember(Name="contas", EmitDefaultValue=false)]
         public List<ContaResponse> Contas { get; set; }
     

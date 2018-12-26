@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Objeto de resposta para a valida\u00E7\u00E3o de senha do cart\u00E3o
+    /// {{{valida_senha_cartao_response_description}}}
     /// </summary>
     [DataContract]
     public partial class ValidaSenhaCartaoResponse :  IEquatable<ValidaSenhaCartaoResponse>
@@ -22,11 +22,11 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="ValidaSenhaCartaoResponse" /> class.
         /// Initializes a new instance of the <see cref="ValidaSenhaCartaoResponse" />class.
         /// </summary>
-        /// <param name="Mensagem">Mensagem.</param>
-        /// <param name="IdStatusCartao">Descri\u00E7\u00E3o do status do cart\u00E3o.</param>
-        /// <param name="StatusCartao">Descri\u00E7\u00E3o do status do cart\u00E3o.</param>
-        /// <param name="QuantidadeTentativas">Quantidade tentativas.</param>
-        /// <param name="QuantidadeMaximaTentativas">Quantidade m\u00E1xima tentativas permitidas.</param>
+        /// <param name="Mensagem">{{{valida_senha_cartao_response_mensagem_value}}}.</param>
+        /// <param name="IdStatusCartao">{{{valida_senha_cartao_response_id_status_cartao_value}}}.</param>
+        /// <param name="StatusCartao">{{{valida_senha_cartao_response_status_cartao_value}}}.</param>
+        /// <param name="QuantidadeTentativas">{{{valida_senha_cartao_response_quantidade_tentativas_value}}}.</param>
+        /// <param name="QuantidadeMaximaTentativas">{{{valida_senha_cartao_response_quantidade_maxima_tentativas_value}}}.</param>
 
         public ValidaSenhaCartaoResponse(string Mensagem = null, long? IdStatusCartao = null, string StatusCartao = null, int? QuantidadeTentativas = null, int? QuantidadeMaximaTentativas = null)
         {
@@ -40,37 +40,37 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Mensagem
+        /// {{{valida_senha_cartao_response_mensagem_value}}}
         /// </summary>
-        /// <value>Mensagem</value>
+        /// <value>{{{valida_senha_cartao_response_mensagem_value}}}</value>
         [DataMember(Name="mensagem", EmitDefaultValue=false)]
         public string Mensagem { get; set; }
     
         /// <summary>
-        /// Descri\u00E7\u00E3o do status do cart\u00E3o
+        /// {{{valida_senha_cartao_response_id_status_cartao_value}}}
         /// </summary>
-        /// <value>Descri\u00E7\u00E3o do status do cart\u00E3o</value>
+        /// <value>{{{valida_senha_cartao_response_id_status_cartao_value}}}</value>
         [DataMember(Name="idStatusCartao", EmitDefaultValue=false)]
         public long? IdStatusCartao { get; set; }
     
         /// <summary>
-        /// Descri\u00E7\u00E3o do status do cart\u00E3o
+        /// {{{valida_senha_cartao_response_status_cartao_value}}}
         /// </summary>
-        /// <value>Descri\u00E7\u00E3o do status do cart\u00E3o</value>
+        /// <value>{{{valida_senha_cartao_response_status_cartao_value}}}</value>
         [DataMember(Name="statusCartao", EmitDefaultValue=false)]
         public string StatusCartao { get; set; }
     
         /// <summary>
-        /// Quantidade tentativas
+        /// {{{valida_senha_cartao_response_quantidade_tentativas_value}}}
         /// </summary>
-        /// <value>Quantidade tentativas</value>
+        /// <value>{{{valida_senha_cartao_response_quantidade_tentativas_value}}}</value>
         [DataMember(Name="quantidadeTentativas", EmitDefaultValue=false)]
         public int? QuantidadeTentativas { get; set; }
     
         /// <summary>
-        /// Quantidade m\u00E1xima tentativas permitidas
+        /// {{{valida_senha_cartao_response_quantidade_maxima_tentativas_value}}}
         /// </summary>
-        /// <value>Quantidade m\u00E1xima tentativas permitidas</value>
+        /// <value>{{{valida_senha_cartao_response_quantidade_maxima_tentativas_value}}}</value>
         [DataMember(Name="quantidadeMaximaTentativas", EmitDefaultValue=false)]
         public int? QuantidadeMaximaTentativas { get; set; }
     

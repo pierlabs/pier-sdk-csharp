@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Objeto de resposta para ades\u00E3o de pagamento no s\u00E1bado
+    /// {{{adesao_pagamento_sabado_resposta_descricao}}}
     /// </summary>
     [DataContract]
     public partial class AdesaoPagamentoSabadoResponse :  IEquatable<AdesaoPagamentoSabadoResponse>
@@ -22,10 +22,10 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="AdesaoPagamentoSabadoResponse" /> class.
         /// Initializes a new instance of the <see cref="AdesaoPagamentoSabadoResponse" />class.
         /// </summary>
-        /// <param name="DataCadastro">Data do cadastro da ades\u00E3o.</param>
-        /// <param name="DataVencimento">Data de vencimento para ades\u00E3o.</param>
-        /// <param name="Id">Id do registro de ades\u00E3o.</param>
-        /// <param name="IdConta">Id da conta.</param>
+        /// <param name="DataCadastro">{{{adesao_pagamento_sabado_resposta_data_cadastro_descricao}}}.</param>
+        /// <param name="DataVencimento">{{{adesao_pagamento_sabado_resposta_data_vencimento_descricao}}}.</param>
+        /// <param name="Id">{{{adesao_pagamento_sabado_resposta_id_descricao}}}.</param>
+        /// <param name="IdConta">{{{adesao_pagamento_sabado_resposta_id_conta_descricao}}}.</param>
 
         public AdesaoPagamentoSabadoResponse(string DataCadastro = null, string DataVencimento = null, long? Id = null, long? IdConta = null)
         {
@@ -38,30 +38,30 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Data do cadastro da ades\u00E3o
+        /// {{{adesao_pagamento_sabado_resposta_data_cadastro_descricao}}}
         /// </summary>
-        /// <value>Data do cadastro da ades\u00E3o</value>
+        /// <value>{{{adesao_pagamento_sabado_resposta_data_cadastro_descricao}}}</value>
         [DataMember(Name="dataCadastro", EmitDefaultValue=false)]
         public string DataCadastro { get; set; }
     
         /// <summary>
-        /// Data de vencimento para ades\u00E3o
+        /// {{{adesao_pagamento_sabado_resposta_data_vencimento_descricao}}}
         /// </summary>
-        /// <value>Data de vencimento para ades\u00E3o</value>
+        /// <value>{{{adesao_pagamento_sabado_resposta_data_vencimento_descricao}}}</value>
         [DataMember(Name="dataVencimento", EmitDefaultValue=false)]
         public string DataVencimento { get; set; }
     
         /// <summary>
-        /// Id do registro de ades\u00E3o
+        /// {{{adesao_pagamento_sabado_resposta_id_descricao}}}
         /// </summary>
-        /// <value>Id do registro de ades\u00E3o</value>
+        /// <value>{{{adesao_pagamento_sabado_resposta_id_descricao}}}</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Id da conta
+        /// {{{adesao_pagamento_sabado_resposta_id_conta_descricao}}}
         /// </summary>
-        /// <value>Id da conta</value>
+        /// <value>{{{adesao_pagamento_sabado_resposta_id_conta_descricao}}}</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
