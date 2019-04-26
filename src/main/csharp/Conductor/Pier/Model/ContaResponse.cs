@@ -12,16 +12,16 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{conta_response_description}}}
+    /// Objeto conta
     /// </summary>
     [DataContract]
     public partial class ContaResponse :  IEquatable<ContaResponse>
     { 
     
         /// <summary>
-        /// {{{conta_response_funcao_ativa_value}}}
+        /// Fun\u00E7\u00E3o ativa da conta
         /// </summary>
-        /// <value>{{{conta_response_funcao_ativa_value}}}</value>
+        /// <value>Fun\u00E7\u00E3o ativa da conta</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum FuncaoAtivaEnum {
             
@@ -29,14 +29,17 @@ namespace Conductor.Pier.Model
             DebitoCredito,
             
             [EnumMember(Value = "CREDITO")]
-            Credito
+            Credito,
+            
+            [EnumMember(Value = "DEBITO")]
+            Debito
         }
 
     
         /// <summary>
-        /// {{{conta_response_funcao_ativa_value}}}
+        /// Fun\u00E7\u00E3o ativa da conta
         /// </summary>
-        /// <value>{{{conta_response_funcao_ativa_value}}}</value>
+        /// <value>Fun\u00E7\u00E3o ativa da conta</value>
         [DataMember(Name="funcaoAtiva", EmitDefaultValue=false)]
         public FuncaoAtivaEnum? FuncaoAtiva { get; set; }
     
@@ -44,19 +47,19 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="ContaResponse" /> class.
         /// Initializes a new instance of the <see cref="ContaResponse" />class.
         /// </summary>
-        /// <param name="Id">{{{conta_response_id_value}}}.</param>
-        /// <param name="IdProduto">{{{conta_response_id_produto_value}}}.</param>
-        /// <param name="IdOrigemComercial">{{{conta_response_id_origem_comercial_value}}}.</param>
-        /// <param name="IdPessoa">{{{conta_response_id_pessoa_value}}}.</param>
-        /// <param name="IdStatusConta">{{{conta_response_id_status_conta_value}}}.</param>
-        /// <param name="DiaVencimento">{{{conta_response_dia_vencimento_value}}}.</param>
-        /// <param name="MelhorDiaCompra">{{{conta_response_melhor_dia_compra_value}}}.</param>
-        /// <param name="DataStatusConta">{{{conta_response_data_status_conta_value}}}.</param>
-        /// <param name="DataCadastro">{{{conta_response_data_cadastro_value}}}.</param>
-        /// <param name="DataUltimaAlteracaoVencimento">{{{conta_response_data_ultima_alteracao_vencimento_value}}}.</param>
-        /// <param name="ValorRenda">{{{conta_response_valor_renda_value}}}.</param>
-        /// <param name="IdProposta">{{{conta_response_id_proposta}}}.</param>
-        /// <param name="FuncaoAtiva">{{{conta_response_funcao_ativa_value}}}.</param>
+        /// <param name="Id">C\u00F3digo de identifica\u00E7\u00E3o de conta (id).</param>
+        /// <param name="IdProduto">C\u00F3digo de identifica\u00E7\u00E3o do produto ao qual a conta faz parte. (id).</param>
+        /// <param name="IdOrigemComercial">C\u00F3digo de Identifica\u00E7\u00E3o da Origem Comercial (id) que deu origem a Conta.</param>
+        /// <param name="IdPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa Titular da Conta (id).</param>
+        /// <param name="IdStatusConta">C\u00F3digo de Identifica\u00E7\u00E3o do status atribuido a conta.</param>
+        /// <param name="DiaVencimento">Apresenta o dia de vencimento.</param>
+        /// <param name="MelhorDiaCompra">Apresenta o melhor dia de compra.</param>
+        /// <param name="DataStatusConta">Apresenta a data em que o idStatusConta atual fora atribu\u00EDdo para ela.</param>
+        /// <param name="DataCadastro">Apresenta a data em que o cart\u00E3o foi gerado.</param>
+        /// <param name="DataUltimaAlteracaoVencimento">Apresenta a data da ultima altera\u00E7\u00E3o de vencimento.</param>
+        /// <param name="ValorRenda">Apresenta o valor da renda comprovada.</param>
+        /// <param name="IdProposta">C\u00F3digo identificador da proposta.</param>
+        /// <param name="FuncaoAtiva">Fun\u00E7\u00E3o ativa da conta.</param>
 
         public ContaResponse(long? Id = null, long? IdProduto = null, long? IdOrigemComercial = null, long? IdPessoa = null, long? IdStatusConta = null, int? DiaVencimento = null, int? MelhorDiaCompra = null, string DataStatusConta = null, string DataCadastro = null, string DataUltimaAlteracaoVencimento = null, double? ValorRenda = null, long? IdProposta = null, FuncaoAtivaEnum? FuncaoAtiva = null)
         {
@@ -78,86 +81,86 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{conta_response_id_value}}}
+        /// C\u00F3digo de identifica\u00E7\u00E3o de conta (id)
         /// </summary>
-        /// <value>{{{conta_response_id_value}}}</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o de conta (id)</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{conta_response_id_produto_value}}}
+        /// C\u00F3digo de identifica\u00E7\u00E3o do produto ao qual a conta faz parte. (id)
         /// </summary>
-        /// <value>{{{conta_response_id_produto_value}}}</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do produto ao qual a conta faz parte. (id)</value>
         [DataMember(Name="idProduto", EmitDefaultValue=false)]
         public long? IdProduto { get; set; }
     
         /// <summary>
-        /// {{{conta_response_id_origem_comercial_value}}}
+        /// C\u00F3digo de Identifica\u00E7\u00E3o da Origem Comercial (id) que deu origem a Conta
         /// </summary>
-        /// <value>{{{conta_response_id_origem_comercial_value}}}</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o da Origem Comercial (id) que deu origem a Conta</value>
         [DataMember(Name="idOrigemComercial", EmitDefaultValue=false)]
         public long? IdOrigemComercial { get; set; }
     
         /// <summary>
-        /// {{{conta_response_id_pessoa_value}}}
+        /// C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa Titular da Conta (id)
         /// </summary>
-        /// <value>{{{conta_response_id_pessoa_value}}}</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa Titular da Conta (id)</value>
         [DataMember(Name="idPessoa", EmitDefaultValue=false)]
         public long? IdPessoa { get; set; }
     
         /// <summary>
-        /// {{{conta_response_id_status_conta_value}}}
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do status atribuido a conta
         /// </summary>
-        /// <value>{{{conta_response_id_status_conta_value}}}</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do status atribuido a conta</value>
         [DataMember(Name="idStatusConta", EmitDefaultValue=false)]
         public long? IdStatusConta { get; set; }
     
         /// <summary>
-        /// {{{conta_response_dia_vencimento_value}}}
+        /// Apresenta o dia de vencimento
         /// </summary>
-        /// <value>{{{conta_response_dia_vencimento_value}}}</value>
+        /// <value>Apresenta o dia de vencimento</value>
         [DataMember(Name="diaVencimento", EmitDefaultValue=false)]
         public int? DiaVencimento { get; set; }
     
         /// <summary>
-        /// {{{conta_response_melhor_dia_compra_value}}}
+        /// Apresenta o melhor dia de compra
         /// </summary>
-        /// <value>{{{conta_response_melhor_dia_compra_value}}}</value>
+        /// <value>Apresenta o melhor dia de compra</value>
         [DataMember(Name="melhorDiaCompra", EmitDefaultValue=false)]
         public int? MelhorDiaCompra { get; set; }
     
         /// <summary>
-        /// {{{conta_response_data_status_conta_value}}}
+        /// Apresenta a data em que o idStatusConta atual fora atribu\u00EDdo para ela
         /// </summary>
-        /// <value>{{{conta_response_data_status_conta_value}}}</value>
+        /// <value>Apresenta a data em que o idStatusConta atual fora atribu\u00EDdo para ela</value>
         [DataMember(Name="dataStatusConta", EmitDefaultValue=false)]
         public string DataStatusConta { get; set; }
     
         /// <summary>
-        /// {{{conta_response_data_cadastro_value}}}
+        /// Apresenta a data em que o cart\u00E3o foi gerado
         /// </summary>
-        /// <value>{{{conta_response_data_cadastro_value}}}</value>
+        /// <value>Apresenta a data em que o cart\u00E3o foi gerado</value>
         [DataMember(Name="dataCadastro", EmitDefaultValue=false)]
         public string DataCadastro { get; set; }
     
         /// <summary>
-        /// {{{conta_response_data_ultima_alteracao_vencimento_value}}}
+        /// Apresenta a data da ultima altera\u00E7\u00E3o de vencimento
         /// </summary>
-        /// <value>{{{conta_response_data_ultima_alteracao_vencimento_value}}}</value>
+        /// <value>Apresenta a data da ultima altera\u00E7\u00E3o de vencimento</value>
         [DataMember(Name="dataUltimaAlteracaoVencimento", EmitDefaultValue=false)]
         public string DataUltimaAlteracaoVencimento { get; set; }
     
         /// <summary>
-        /// {{{conta_response_valor_renda_value}}}
+        /// Apresenta o valor da renda comprovada
         /// </summary>
-        /// <value>{{{conta_response_valor_renda_value}}}</value>
+        /// <value>Apresenta o valor da renda comprovada</value>
         [DataMember(Name="valorRenda", EmitDefaultValue=false)]
         public double? ValorRenda { get; set; }
     
         /// <summary>
-        /// {{{conta_response_id_proposta}}}
+        /// C\u00F3digo identificador da proposta
         /// </summary>
-        /// <value>{{{conta_response_id_proposta}}}</value>
+        /// <value>C\u00F3digo identificador da proposta</value>
         [DataMember(Name="idProposta", EmitDefaultValue=false)]
         public long? IdProposta { get; set; }
     

@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{tipo_operacao_response_description}}}
+    /// Representa\u00E7\u00E3o da resposta do recurso TipoOperacao
     /// </summary>
     [DataContract]
     public partial class TipoOperacaoResponse :  IEquatable<TipoOperacaoResponse>
@@ -22,24 +22,33 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TipoOperacaoResponse" /> class.
         /// Initializes a new instance of the <see cref="TipoOperacaoResponse" />class.
         /// </summary>
-        /// <param name="Id">{{{tipo_operacao_response_id_value}}} (required).</param>
-        /// <param name="TipoOperacao">{{{tipo_operacao_response_tipo_operacao_value}}} (required).</param>
-        /// <param name="Nome">{{{tipo_operacao_response_nome_value}}} (required).</param>
-        /// <param name="Descricao">{{{tipo_operacao_response_descricao_value}}} (required).</param>
-        /// <param name="ExcedentePermitido">{{{tipo_operacao_response_excedente_permitido_value}}}.</param>
-        /// <param name="TipoExcedentePermitido">{{{tipo_operacao_response_tipo_excedente_permitido_value}}}.</param>
-        /// <param name="ValorMinimo">{{{tipo_operacao_response_valor_minimo_value}}} (required).</param>
-        /// <param name="ValorMaximo">{{{tipo_operacao_response_valor_maximo_value}}} (required).</param>
-        /// <param name="ValorTAC">{{{tipo_operacao_response_valor_t_a_c_value}}}.</param>
-        /// <param name="FlagTiraTac">{{{tipo_operacao_response_flag_tira_tac_value}}}.</param>
-        /// <param name="IdProduto">{{{tipo_operacao_response_id_produto_value}}} (required).</param>
-        /// <param name="IdEstabelecimento">{{{tipo_operacao_response_id_estabelecimento_value}}} (required).</param>
-        /// <param name="Tarifa">{{{tipo_operacao_response_tarifa_value}}}.</param>
-        /// <param name="RemuneracaoEmissor">{{{tipo_operacao_response_remuneracao_emissor_value}}}.</param>
-        /// <param name="PlanoMaximo">{{{tipo_operacao_response_plano_maximo_value}}} (required).</param>
-        /// <param name="PlanoMinimo">{{{tipo_operacao_response_plano_minimo_value}}} (required).</param>
+        /// <param name="Id">C\u00F3digo identificador do TipoOperacao (required).</param>
+        /// <param name="TipoOperacao">C\u00F3digo do TipoOperacao (required).</param>
+        /// <param name="Nome">Nome do TipoOperacao (required).</param>
+        /// <param name="Descricao">Decri\u00E7\u00E3o do TipoOperacao (required).</param>
+        /// <param name="ExcedentePermitido">Excedente permitido para o TipoOperacao.</param>
+        /// <param name="TipoExcedentePermitido">Tipo do Excedente permitido para o TipoOperacao.</param>
+        /// <param name="ValorMinimo">Valor minimo para a transa\u00E7\u00E3o do TipoOperacao (required).</param>
+        /// <param name="ValorMaximo">Valor maximo para a transa\u00E7\u00E3o do TipoOperacao (required).</param>
+        /// <param name="ValorTAC">Valor TAC da transa\u00E7\u00E3o do TipoOperacao.</param>
+        /// <param name="FlagTiraTac">Flag Tira TAC do TipoOperacao.</param>
+        /// <param name="IdProduto">Identificador do Produto do TipoOperacao (required).</param>
+        /// <param name="IdEstabelecimento">Identificador do Estabelecimento do TipoOperacao (required).</param>
+        /// <param name="Tarifa">Tarifa do TipoOperacao.</param>
+        /// <param name="RemuneracaoEmissor">Remunera\u00E7\u00E3o do Emissor para o TipoOperacao.</param>
+        /// <param name="PlanoMaximo">Plano m\u00E1ximo do TipoOperacao (required).</param>
+        /// <param name="PlanoMinimo">Plano minimo do TipoOperacao.</param>
+        /// <param name="IdEmissor">C\u00F3digo identificador do emissor.</param>
+        /// <param name="IdTabela">C\u00F3digo identificador da tabela.</param>
+        /// <param name="ValorParcela">Valor da parcela.</param>
+        /// <param name="FlagCobraProRata">Flag cobra pr\u00F3-rata.</param>
+        /// <param name="FlagCobraJuros">Flag cobra juros.</param>
+        /// <param name="FlagPosProximoVencimento">Flag p\u00F3s-pr\u00F3ximo vencimento.</param>
+        /// <param name="PercentualTAC">Valor TAC.</param>
+        /// <param name="IdTabelaJuros">C\u00F3digo identificador da tabela de juros.</param>
+        /// <param name="CodigoProcessamento">C\u00F3digo identificador de opera\u00E7\u00E3o.</param>
 
-        public TipoOperacaoResponse(long? Id = null, string TipoOperacao = null, string Nome = null, string Descricao = null, double? ExcedentePermitido = null, string TipoExcedentePermitido = null, double? ValorMinimo = null, double? ValorMaximo = null, double? ValorTAC = null, int? FlagTiraTac = null, long? IdProduto = null, long? IdEstabelecimento = null, double? Tarifa = null, double? RemuneracaoEmissor = null, int? PlanoMaximo = null, int? PlanoMinimo = null)
+        public TipoOperacaoResponse(long? Id = null, string TipoOperacao = null, string Nome = null, string Descricao = null, double? ExcedentePermitido = null, string TipoExcedentePermitido = null, double? ValorMinimo = null, double? ValorMaximo = null, double? ValorTAC = null, int? FlagTiraTac = null, long? IdProduto = null, long? IdEstabelecimento = null, double? Tarifa = null, double? RemuneracaoEmissor = null, int? PlanoMaximo = null, int? PlanoMinimo = null, int? IdEmissor = null, int? IdTabela = null, int? ValorParcela = null, int? FlagCobraProRata = null, int? FlagCobraJuros = null, int? FlagPosProximoVencimento = null, int? PercentualTAC = null, int? IdTabelaJuros = null, string CodigoProcessamento = null)
         {
             // to ensure "Id" is required (not null)
             if (Id == null)
@@ -122,136 +131,200 @@ namespace Conductor.Pier.Model
             {
                 this.PlanoMaximo = PlanoMaximo;
             }
-            // to ensure "PlanoMinimo" is required (not null)
-            if (PlanoMinimo == null)
-            {
-                throw new InvalidDataException("PlanoMinimo is a required property for TipoOperacaoResponse and cannot be null");
-            }
-            else
-            {
-                this.PlanoMinimo = PlanoMinimo;
-            }
             this.ExcedentePermitido = ExcedentePermitido;
             this.TipoExcedentePermitido = TipoExcedentePermitido;
             this.ValorTAC = ValorTAC;
             this.FlagTiraTac = FlagTiraTac;
             this.Tarifa = Tarifa;
             this.RemuneracaoEmissor = RemuneracaoEmissor;
+            this.PlanoMinimo = PlanoMinimo;
+            this.IdEmissor = IdEmissor;
+            this.IdTabela = IdTabela;
+            this.ValorParcela = ValorParcela;
+            this.FlagCobraProRata = FlagCobraProRata;
+            this.FlagCobraJuros = FlagCobraJuros;
+            this.FlagPosProximoVencimento = FlagPosProximoVencimento;
+            this.PercentualTAC = PercentualTAC;
+            this.IdTabelaJuros = IdTabelaJuros;
+            this.CodigoProcessamento = CodigoProcessamento;
             
         }
         
     
         /// <summary>
-        /// {{{tipo_operacao_response_id_value}}}
+        /// C\u00F3digo identificador do TipoOperacao
         /// </summary>
-        /// <value>{{{tipo_operacao_response_id_value}}}</value>
+        /// <value>C\u00F3digo identificador do TipoOperacao</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{tipo_operacao_response_tipo_operacao_value}}}
+        /// C\u00F3digo do TipoOperacao
         /// </summary>
-        /// <value>{{{tipo_operacao_response_tipo_operacao_value}}}</value>
+        /// <value>C\u00F3digo do TipoOperacao</value>
         [DataMember(Name="tipoOperacao", EmitDefaultValue=false)]
         public string TipoOperacao { get; set; }
     
         /// <summary>
-        /// {{{tipo_operacao_response_nome_value}}}
+        /// Nome do TipoOperacao
         /// </summary>
-        /// <value>{{{tipo_operacao_response_nome_value}}}</value>
+        /// <value>Nome do TipoOperacao</value>
         [DataMember(Name="nome", EmitDefaultValue=false)]
         public string Nome { get; set; }
     
         /// <summary>
-        /// {{{tipo_operacao_response_descricao_value}}}
+        /// Decri\u00E7\u00E3o do TipoOperacao
         /// </summary>
-        /// <value>{{{tipo_operacao_response_descricao_value}}}</value>
+        /// <value>Decri\u00E7\u00E3o do TipoOperacao</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     
         /// <summary>
-        /// {{{tipo_operacao_response_excedente_permitido_value}}}
+        /// Excedente permitido para o TipoOperacao
         /// </summary>
-        /// <value>{{{tipo_operacao_response_excedente_permitido_value}}}</value>
+        /// <value>Excedente permitido para o TipoOperacao</value>
         [DataMember(Name="excedentePermitido", EmitDefaultValue=false)]
         public double? ExcedentePermitido { get; set; }
     
         /// <summary>
-        /// {{{tipo_operacao_response_tipo_excedente_permitido_value}}}
+        /// Tipo do Excedente permitido para o TipoOperacao
         /// </summary>
-        /// <value>{{{tipo_operacao_response_tipo_excedente_permitido_value}}}</value>
+        /// <value>Tipo do Excedente permitido para o TipoOperacao</value>
         [DataMember(Name="tipoExcedentePermitido", EmitDefaultValue=false)]
         public string TipoExcedentePermitido { get; set; }
     
         /// <summary>
-        /// {{{tipo_operacao_response_valor_minimo_value}}}
+        /// Valor minimo para a transa\u00E7\u00E3o do TipoOperacao
         /// </summary>
-        /// <value>{{{tipo_operacao_response_valor_minimo_value}}}</value>
+        /// <value>Valor minimo para a transa\u00E7\u00E3o do TipoOperacao</value>
         [DataMember(Name="valorMinimo", EmitDefaultValue=false)]
         public double? ValorMinimo { get; set; }
     
         /// <summary>
-        /// {{{tipo_operacao_response_valor_maximo_value}}}
+        /// Valor maximo para a transa\u00E7\u00E3o do TipoOperacao
         /// </summary>
-        /// <value>{{{tipo_operacao_response_valor_maximo_value}}}</value>
+        /// <value>Valor maximo para a transa\u00E7\u00E3o do TipoOperacao</value>
         [DataMember(Name="valorMaximo", EmitDefaultValue=false)]
         public double? ValorMaximo { get; set; }
     
         /// <summary>
-        /// {{{tipo_operacao_response_valor_t_a_c_value}}}
+        /// Valor TAC da transa\u00E7\u00E3o do TipoOperacao
         /// </summary>
-        /// <value>{{{tipo_operacao_response_valor_t_a_c_value}}}</value>
+        /// <value>Valor TAC da transa\u00E7\u00E3o do TipoOperacao</value>
         [DataMember(Name="valorTAC", EmitDefaultValue=false)]
         public double? ValorTAC { get; set; }
     
         /// <summary>
-        /// {{{tipo_operacao_response_flag_tira_tac_value}}}
+        /// Flag Tira TAC do TipoOperacao
         /// </summary>
-        /// <value>{{{tipo_operacao_response_flag_tira_tac_value}}}</value>
+        /// <value>Flag Tira TAC do TipoOperacao</value>
         [DataMember(Name="flagTiraTac", EmitDefaultValue=false)]
         public int? FlagTiraTac { get; set; }
     
         /// <summary>
-        /// {{{tipo_operacao_response_id_produto_value}}}
+        /// Identificador do Produto do TipoOperacao
         /// </summary>
-        /// <value>{{{tipo_operacao_response_id_produto_value}}}</value>
+        /// <value>Identificador do Produto do TipoOperacao</value>
         [DataMember(Name="idProduto", EmitDefaultValue=false)]
         public long? IdProduto { get; set; }
     
         /// <summary>
-        /// {{{tipo_operacao_response_id_estabelecimento_value}}}
+        /// Identificador do Estabelecimento do TipoOperacao
         /// </summary>
-        /// <value>{{{tipo_operacao_response_id_estabelecimento_value}}}</value>
+        /// <value>Identificador do Estabelecimento do TipoOperacao</value>
         [DataMember(Name="idEstabelecimento", EmitDefaultValue=false)]
         public long? IdEstabelecimento { get; set; }
     
         /// <summary>
-        /// {{{tipo_operacao_response_tarifa_value}}}
+        /// Tarifa do TipoOperacao
         /// </summary>
-        /// <value>{{{tipo_operacao_response_tarifa_value}}}</value>
+        /// <value>Tarifa do TipoOperacao</value>
         [DataMember(Name="tarifa", EmitDefaultValue=false)]
         public double? Tarifa { get; set; }
     
         /// <summary>
-        /// {{{tipo_operacao_response_remuneracao_emissor_value}}}
+        /// Remunera\u00E7\u00E3o do Emissor para o TipoOperacao
         /// </summary>
-        /// <value>{{{tipo_operacao_response_remuneracao_emissor_value}}}</value>
+        /// <value>Remunera\u00E7\u00E3o do Emissor para o TipoOperacao</value>
         [DataMember(Name="remuneracaoEmissor", EmitDefaultValue=false)]
         public double? RemuneracaoEmissor { get; set; }
     
         /// <summary>
-        /// {{{tipo_operacao_response_plano_maximo_value}}}
+        /// Plano m\u00E1ximo do TipoOperacao
         /// </summary>
-        /// <value>{{{tipo_operacao_response_plano_maximo_value}}}</value>
+        /// <value>Plano m\u00E1ximo do TipoOperacao</value>
         [DataMember(Name="planoMaximo", EmitDefaultValue=false)]
         public int? PlanoMaximo { get; set; }
     
         /// <summary>
-        /// {{{tipo_operacao_response_plano_minimo_value}}}
+        /// Plano minimo do TipoOperacao
         /// </summary>
-        /// <value>{{{tipo_operacao_response_plano_minimo_value}}}</value>
+        /// <value>Plano minimo do TipoOperacao</value>
         [DataMember(Name="planoMinimo", EmitDefaultValue=false)]
         public int? PlanoMinimo { get; set; }
+    
+        /// <summary>
+        /// C\u00F3digo identificador do emissor
+        /// </summary>
+        /// <value>C\u00F3digo identificador do emissor</value>
+        [DataMember(Name="idEmissor", EmitDefaultValue=false)]
+        public int? IdEmissor { get; set; }
+    
+        /// <summary>
+        /// C\u00F3digo identificador da tabela
+        /// </summary>
+        /// <value>C\u00F3digo identificador da tabela</value>
+        [DataMember(Name="idTabela", EmitDefaultValue=false)]
+        public int? IdTabela { get; set; }
+    
+        /// <summary>
+        /// Valor da parcela
+        /// </summary>
+        /// <value>Valor da parcela</value>
+        [DataMember(Name="valorParcela", EmitDefaultValue=false)]
+        public int? ValorParcela { get; set; }
+    
+        /// <summary>
+        /// Flag cobra pr\u00F3-rata
+        /// </summary>
+        /// <value>Flag cobra pr\u00F3-rata</value>
+        [DataMember(Name="flagCobraProRata", EmitDefaultValue=false)]
+        public int? FlagCobraProRata { get; set; }
+    
+        /// <summary>
+        /// Flag cobra juros
+        /// </summary>
+        /// <value>Flag cobra juros</value>
+        [DataMember(Name="flagCobraJuros", EmitDefaultValue=false)]
+        public int? FlagCobraJuros { get; set; }
+    
+        /// <summary>
+        /// Flag p\u00F3s-pr\u00F3ximo vencimento
+        /// </summary>
+        /// <value>Flag p\u00F3s-pr\u00F3ximo vencimento</value>
+        [DataMember(Name="flagPosProximoVencimento", EmitDefaultValue=false)]
+        public int? FlagPosProximoVencimento { get; set; }
+    
+        /// <summary>
+        /// Valor TAC
+        /// </summary>
+        /// <value>Valor TAC</value>
+        [DataMember(Name="percentualTAC", EmitDefaultValue=false)]
+        public int? PercentualTAC { get; set; }
+    
+        /// <summary>
+        /// C\u00F3digo identificador da tabela de juros
+        /// </summary>
+        /// <value>C\u00F3digo identificador da tabela de juros</value>
+        [DataMember(Name="idTabelaJuros", EmitDefaultValue=false)]
+        public int? IdTabelaJuros { get; set; }
+    
+        /// <summary>
+        /// C\u00F3digo identificador de opera\u00E7\u00E3o
+        /// </summary>
+        /// <value>C\u00F3digo identificador de opera\u00E7\u00E3o</value>
+        [DataMember(Name="codigoProcessamento", EmitDefaultValue=false)]
+        public string CodigoProcessamento { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -277,6 +350,15 @@ namespace Conductor.Pier.Model
             sb.Append("  RemuneracaoEmissor: ").Append(RemuneracaoEmissor).Append("\n");
             sb.Append("  PlanoMaximo: ").Append(PlanoMaximo).Append("\n");
             sb.Append("  PlanoMinimo: ").Append(PlanoMinimo).Append("\n");
+            sb.Append("  IdEmissor: ").Append(IdEmissor).Append("\n");
+            sb.Append("  IdTabela: ").Append(IdTabela).Append("\n");
+            sb.Append("  ValorParcela: ").Append(ValorParcela).Append("\n");
+            sb.Append("  FlagCobraProRata: ").Append(FlagCobraProRata).Append("\n");
+            sb.Append("  FlagCobraJuros: ").Append(FlagCobraJuros).Append("\n");
+            sb.Append("  FlagPosProximoVencimento: ").Append(FlagPosProximoVencimento).Append("\n");
+            sb.Append("  PercentualTAC: ").Append(PercentualTAC).Append("\n");
+            sb.Append("  IdTabelaJuros: ").Append(IdTabelaJuros).Append("\n");
+            sb.Append("  CodigoProcessamento: ").Append(CodigoProcessamento).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -393,6 +475,51 @@ namespace Conductor.Pier.Model
                     this.PlanoMinimo == other.PlanoMinimo ||
                     this.PlanoMinimo != null &&
                     this.PlanoMinimo.Equals(other.PlanoMinimo)
+                ) && 
+                (
+                    this.IdEmissor == other.IdEmissor ||
+                    this.IdEmissor != null &&
+                    this.IdEmissor.Equals(other.IdEmissor)
+                ) && 
+                (
+                    this.IdTabela == other.IdTabela ||
+                    this.IdTabela != null &&
+                    this.IdTabela.Equals(other.IdTabela)
+                ) && 
+                (
+                    this.ValorParcela == other.ValorParcela ||
+                    this.ValorParcela != null &&
+                    this.ValorParcela.Equals(other.ValorParcela)
+                ) && 
+                (
+                    this.FlagCobraProRata == other.FlagCobraProRata ||
+                    this.FlagCobraProRata != null &&
+                    this.FlagCobraProRata.Equals(other.FlagCobraProRata)
+                ) && 
+                (
+                    this.FlagCobraJuros == other.FlagCobraJuros ||
+                    this.FlagCobraJuros != null &&
+                    this.FlagCobraJuros.Equals(other.FlagCobraJuros)
+                ) && 
+                (
+                    this.FlagPosProximoVencimento == other.FlagPosProximoVencimento ||
+                    this.FlagPosProximoVencimento != null &&
+                    this.FlagPosProximoVencimento.Equals(other.FlagPosProximoVencimento)
+                ) && 
+                (
+                    this.PercentualTAC == other.PercentualTAC ||
+                    this.PercentualTAC != null &&
+                    this.PercentualTAC.Equals(other.PercentualTAC)
+                ) && 
+                (
+                    this.IdTabelaJuros == other.IdTabelaJuros ||
+                    this.IdTabelaJuros != null &&
+                    this.IdTabelaJuros.Equals(other.IdTabelaJuros)
+                ) && 
+                (
+                    this.CodigoProcessamento == other.CodigoProcessamento ||
+                    this.CodigoProcessamento != null &&
+                    this.CodigoProcessamento.Equals(other.CodigoProcessamento)
                 );
         }
 
@@ -455,6 +582,33 @@ namespace Conductor.Pier.Model
                 
                 if (this.PlanoMinimo != null)
                     hash = hash * 59 + this.PlanoMinimo.GetHashCode();
+                
+                if (this.IdEmissor != null)
+                    hash = hash * 59 + this.IdEmissor.GetHashCode();
+                
+                if (this.IdTabela != null)
+                    hash = hash * 59 + this.IdTabela.GetHashCode();
+                
+                if (this.ValorParcela != null)
+                    hash = hash * 59 + this.ValorParcela.GetHashCode();
+                
+                if (this.FlagCobraProRata != null)
+                    hash = hash * 59 + this.FlagCobraProRata.GetHashCode();
+                
+                if (this.FlagCobraJuros != null)
+                    hash = hash * 59 + this.FlagCobraJuros.GetHashCode();
+                
+                if (this.FlagPosProximoVencimento != null)
+                    hash = hash * 59 + this.FlagPosProximoVencimento.GetHashCode();
+                
+                if (this.PercentualTAC != null)
+                    hash = hash * 59 + this.PercentualTAC.GetHashCode();
+                
+                if (this.IdTabelaJuros != null)
+                    hash = hash * 59 + this.IdTabelaJuros.GetHashCode();
+                
+                if (this.CodigoProcessamento != null)
+                    hash = hash * 59 + this.CodigoProcessamento.GetHashCode();
                 
                 return hash;
             }

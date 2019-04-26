@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{page_sms_envio_response_description}}}
+    /// Lista de SMS
     /// </summary>
     [DataContract]
     public partial class PageSMSEnvioResponse :  IEquatable<PageSMSEnvioResponse>

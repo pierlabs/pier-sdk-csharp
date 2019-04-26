@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{tipo_telefone_response_description}}}
+    /// ObjetoTipoTelefone
     /// </summary>
     [DataContract]
     public partial class TipoTelefoneResponse :  IEquatable<TipoTelefoneResponse>
@@ -22,8 +22,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TipoTelefoneResponse" /> class.
         /// Initializes a new instance of the <see cref="TipoTelefoneResponse" />class.
         /// </summary>
-        /// <param name="Id">{{{tipo_telefone_response_id_value}}}.</param>
-        /// <param name="Nome">{{{tipo_telefone_response_nome_value}}}.</param>
+        /// <param name="Id">C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone (id).</param>
+        /// <param name="Nome">Nome do Tipo do Telefone.</param>
 
         public TipoTelefoneResponse(long? Id = null, string Nome = null)
         {
@@ -34,16 +34,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{tipo_telefone_response_id_value}}}
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone (id)
         /// </summary>
-        /// <value>{{{tipo_telefone_response_id_value}}}</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone (id)</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{tipo_telefone_response_nome_value}}}
+        /// Nome do Tipo do Telefone
         /// </summary>
-        /// <value>{{{tipo_telefone_response_nome_value}}}</value>
+        /// <value>Nome do Tipo do Telefone</value>
         [DataMember(Name="nome", EmitDefaultValue=false)]
         public string Nome { get; set; }
     

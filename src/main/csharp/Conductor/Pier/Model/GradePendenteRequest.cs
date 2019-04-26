@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{grade_pendente_request_description}}}
+    /// Representa\u00E7\u00E3o do Objeto para consulta para Grade Pedente
     /// </summary>
     [DataContract]
     public partial class GradePendenteRequest :  IEquatable<GradePendenteRequest>
@@ -22,8 +22,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="GradePendenteRequest" /> class.
         /// Initializes a new instance of the <see cref="GradePendenteRequest" />class.
         /// </summary>
-        /// <param name="IdConta">{{{grade_pendente_request_id_conta_value}}}.</param>
-        /// <param name="DataBase">{{{grade_pendente_request_data_base_value}}}.</param>
+        /// <param name="IdConta">C\u00F3digo identificador da conta.</param>
+        /// <param name="DataBase">Data do ajuste no formato yyyy-MM-dd.</param>
 
         public GradePendenteRequest(long? IdConta = null, string DataBase = null)
         {
@@ -34,16 +34,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{grade_pendente_request_id_conta_value}}}
+        /// C\u00F3digo identificador da conta
         /// </summary>
-        /// <value>{{{grade_pendente_request_id_conta_value}}}</value>
+        /// <value>C\u00F3digo identificador da conta</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// {{{grade_pendente_request_data_base_value}}}
+        /// Data do ajuste no formato yyyy-MM-dd
         /// </summary>
-        /// <value>{{{grade_pendente_request_data_base_value}}}</value>
+        /// <value>Data do ajuste no formato yyyy-MM-dd</value>
         [DataMember(Name="dataBase", EmitDefaultValue=false)]
         public string DataBase { get; set; }
     

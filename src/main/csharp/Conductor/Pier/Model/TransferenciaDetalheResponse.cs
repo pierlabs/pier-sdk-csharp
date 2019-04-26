@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{transferencia_detalhe_response_description}}}
+    /// Objeto transferencia
     /// </summary>
     [DataContract]
     public partial class TransferenciaDetalheResponse :  IEquatable<TransferenciaDetalheResponse>
@@ -22,14 +22,14 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TransferenciaDetalheResponse" /> class.
         /// Initializes a new instance of the <see cref="TransferenciaDetalheResponse" />class.
         /// </summary>
-        /// <param name="Id">{{{transferencia_detalhe_response_id_value}}}.</param>
-        /// <param name="DataTransferencia">{{{transferencia_detalhe_response_data_transferencia_value}}}.</param>
-        /// <param name="IdContaOrigem">{{{transferencia_detalhe_response_id_conta_origem_value}}}.</param>
-        /// <param name="NomePessoaOrigem">{{{transferencia_detalhe_response_nome_pessoa_origem_value}}}.</param>
-        /// <param name="IdContaDestino">{{{transferencia_detalhe_response_id_conta_destino_value}}}.</param>
-        /// <param name="NomePessoaDestino">{{{transferencia_detalhe_response_nome_pessoa_destino_value}}}.</param>
-        /// <param name="ValorTransferencia">{{{transferencia_detalhe_response_valor_transferencia_value}}}.</param>
-        /// <param name="ValorTarifa">{{{transferencia_detalhe_response_valor_tarifa_value}}}.</param>
+        /// <param name="Id">C\u00F3digo de identifica\u00E7\u00E3o da transfer\u00EAncia (id).</param>
+        /// <param name="DataTransferencia">Data estabelecida para ocorrer a transfer\u00EAncia.</param>
+        /// <param name="IdContaOrigem">C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 debitado para a transfer\u00EAncia. (id).</param>
+        /// <param name="NomePessoaOrigem">Apresenta o nome completo da pessoa que realizou a Transfer\u00EAncia.</param>
+        /// <param name="IdContaDestino">C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 creditado para a transfer\u00EAncia. (id).</param>
+        /// <param name="NomePessoaDestino">Apresenta o nome completo da pessoa que recebeu a Transfer\u00EAncia.</param>
+        /// <param name="ValorTransferencia">Valor estabelecido para ser transferido.</param>
+        /// <param name="ValorTarifa">Valor estabelecido da tarifa para a transfer\u00EAncia.</param>
 
         public TransferenciaDetalheResponse(long? Id = null, string DataTransferencia = null, long? IdContaOrigem = null, string NomePessoaOrigem = null, long? IdContaDestino = null, string NomePessoaDestino = null, double? ValorTransferencia = null, double? ValorTarifa = null)
         {
@@ -46,58 +46,58 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{transferencia_detalhe_response_id_value}}}
+        /// C\u00F3digo de identifica\u00E7\u00E3o da transfer\u00EAncia (id)
         /// </summary>
-        /// <value>{{{transferencia_detalhe_response_id_value}}}</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o da transfer\u00EAncia (id)</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{transferencia_detalhe_response_data_transferencia_value}}}
+        /// Data estabelecida para ocorrer a transfer\u00EAncia
         /// </summary>
-        /// <value>{{{transferencia_detalhe_response_data_transferencia_value}}}</value>
+        /// <value>Data estabelecida para ocorrer a transfer\u00EAncia</value>
         [DataMember(Name="dataTransferencia", EmitDefaultValue=false)]
         public string DataTransferencia { get; set; }
     
         /// <summary>
-        /// {{{transferencia_detalhe_response_id_conta_origem_value}}}
+        /// C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 debitado para a transfer\u00EAncia. (id)
         /// </summary>
-        /// <value>{{{transferencia_detalhe_response_id_conta_origem_value}}}</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 debitado para a transfer\u00EAncia. (id)</value>
         [DataMember(Name="idContaOrigem", EmitDefaultValue=false)]
         public long? IdContaOrigem { get; set; }
     
         /// <summary>
-        /// {{{transferencia_detalhe_response_nome_pessoa_origem_value}}}
+        /// Apresenta o nome completo da pessoa que realizou a Transfer\u00EAncia
         /// </summary>
-        /// <value>{{{transferencia_detalhe_response_nome_pessoa_origem_value}}}</value>
+        /// <value>Apresenta o nome completo da pessoa que realizou a Transfer\u00EAncia</value>
         [DataMember(Name="nomePessoaOrigem", EmitDefaultValue=false)]
         public string NomePessoaOrigem { get; set; }
     
         /// <summary>
-        /// {{{transferencia_detalhe_response_id_conta_destino_value}}}
+        /// C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 creditado para a transfer\u00EAncia. (id)
         /// </summary>
-        /// <value>{{{transferencia_detalhe_response_id_conta_destino_value}}}</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 creditado para a transfer\u00EAncia. (id)</value>
         [DataMember(Name="idContaDestino", EmitDefaultValue=false)]
         public long? IdContaDestino { get; set; }
     
         /// <summary>
-        /// {{{transferencia_detalhe_response_nome_pessoa_destino_value}}}
+        /// Apresenta o nome completo da pessoa que recebeu a Transfer\u00EAncia
         /// </summary>
-        /// <value>{{{transferencia_detalhe_response_nome_pessoa_destino_value}}}</value>
+        /// <value>Apresenta o nome completo da pessoa que recebeu a Transfer\u00EAncia</value>
         [DataMember(Name="nomePessoaDestino", EmitDefaultValue=false)]
         public string NomePessoaDestino { get; set; }
     
         /// <summary>
-        /// {{{transferencia_detalhe_response_valor_transferencia_value}}}
+        /// Valor estabelecido para ser transferido
         /// </summary>
-        /// <value>{{{transferencia_detalhe_response_valor_transferencia_value}}}</value>
+        /// <value>Valor estabelecido para ser transferido</value>
         [DataMember(Name="valorTransferencia", EmitDefaultValue=false)]
         public double? ValorTransferencia { get; set; }
     
         /// <summary>
-        /// {{{transferencia_detalhe_response_valor_tarifa_value}}}
+        /// Valor estabelecido da tarifa para a transfer\u00EAncia
         /// </summary>
-        /// <value>{{{transferencia_detalhe_response_valor_tarifa_value}}}</value>
+        /// <value>Valor estabelecido da tarifa para a transfer\u00EAncia</value>
         [DataMember(Name="valorTarifa", EmitDefaultValue=false)]
         public double? ValorTarifa { get; set; }
     

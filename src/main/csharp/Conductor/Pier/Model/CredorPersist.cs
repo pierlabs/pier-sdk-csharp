@@ -19,9 +19,9 @@ namespace Conductor.Pier.Model
     { 
     
         /// <summary>
-        /// {{{credor_persist_recebe_rav_value}}}
+        /// Credor persist recebe rav
         /// </summary>
-        /// <value>{{{credor_persist_recebe_rav_value}}}</value>
+        /// <value>Credor persist recebe rav</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum RecebeRAVEnum {
             
@@ -37,9 +37,9 @@ namespace Conductor.Pier.Model
 
     
         /// <summary>
-        /// {{{credor_persist_periodicidade_value}}}
+        /// Credor persist periodicidade
         /// </summary>
-        /// <value>{{{credor_persist_periodicidade_value}}}</value>
+        /// <value>Credor persist periodicidade</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum PeriodicidadeEnum {
             
@@ -61,16 +61,16 @@ namespace Conductor.Pier.Model
 
     
         /// <summary>
-        /// {{{credor_persist_recebe_rav_value}}}
+        /// Credor persist recebe rav
         /// </summary>
-        /// <value>{{{credor_persist_recebe_rav_value}}}</value>
+        /// <value>Credor persist recebe rav</value>
         [DataMember(Name="recebeRAV", EmitDefaultValue=false)]
         public RecebeRAVEnum? RecebeRAV { get; set; }
     
         /// <summary>
-        /// {{{credor_persist_periodicidade_value}}}
+        /// Credor persist periodicidade
         /// </summary>
-        /// <value>{{{credor_persist_periodicidade_value}}}</value>
+        /// <value>Credor persist periodicidade</value>
         [DataMember(Name="periodicidade", EmitDefaultValue=false)]
         public PeriodicidadeEnum? Periodicidade { get; set; }
     
@@ -78,46 +78,46 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="CredorPersist" /> class.
         /// Initializes a new instance of the <see cref="CredorPersist" />class.
         /// </summary>
-        /// <param name="TelefonesEscritoriosCobranca">{{{credor_persist_telefones_value}}}.</param>
-        /// <param name="NomeCredor">{{{credor_persist_nome_credor_value}}}.</param>
-        /// <param name="DiaPagamentoSemanal">{{{credor_persist_pagamento_semanal_value}}}.</param>
-        /// <param name="DiaPagamentoMensal">{{{credor_persist_pagamento_mensal_value}}}.</param>
-        /// <param name="DiaPagamentoDecendialPrimeiro">{{{credor_persist_pagamento_decendial_primeiro_value}}}.</param>
-        /// <param name="DiaPagamentoDecendialSegundo">{{{credor_persist_pagamento_decendial_segundo_value}}}.</param>
-        /// <param name="DiaPagamentoDecendialTerceiro">{{{credor_persist_pagamento_decendial_terceiro_value}}}.</param>
-        /// <param name="DiaPagamentoQuinzenalPrimeiro">{{{credor_persist_pagamento_quinzenal_primeiro_value}}}.</param>
-        /// <param name="DiaPagamentoQuinzenalSegundo">{{{credor_persist_pagamento_quinzenal_segundo_value}}}.</param>
-        /// <param name="Banco">{{{credor_persist_banco_value}}}.</param>
-        /// <param name="Agencia">{{{credor_persist_agencia_value}}}.</param>
-        /// <param name="DigitoAgencia">{{{credor_persist_digito_agencia_value}}}.</param>
-        /// <param name="ContaCorrente">{{{credor_persist_conta_corrente_value}}}.</param>
-        /// <param name="DigitoContaCorrente">{{{credor_persist_digito_conta_corrente_value}}}.</param>
-        /// <param name="CredorBanco">{{{credor_persist_credor_banco_value}}}.</param>
-        /// <param name="PercentualRAV">{{{credor_persist_percentual_rav_value}}} (required).</param>
-        /// <param name="RecebeRAV">{{{credor_persist_recebe_rav_value}}}.</param>
-        /// <param name="PercentualMultiplica">{{{credor_persist_percentual_multiplica_value}}}.</param>
-        /// <param name="TaxaAdministrativa">{{{credor_persist_taxa_adm_value}}}.</param>
-        /// <param name="TaxaBanco">{{{credor_persist_taxa_banco_value}}}.</param>
-        /// <param name="LimiteRAV">{{{credor_persist_limite_rav_value}}}.</param>
-        /// <param name="IdCredorRAV">{{{credor_persist_id_credor_rav_value}}} (required).</param>
-        /// <param name="Periodicidade">{{{credor_persist_periodicidade_value}}} (required).</param>
-        /// <param name="IdPessoaJuridica">{{{credor_persist_id_pessoa_juridica_value}}} (required).</param>
-        /// <param name="FlagEscritorioCobranca">{{{credor_persist_flag_escritorio_cobranca_value}}}.</param>
-        /// <param name="Prefixo">{{{credor_persist_prefixo_value}}}.</param>
-        /// <param name="Ativo">{{{credor_persist_ativo_value}}}.</param>
-        /// <param name="NomeContato">{{{credor_persist_nome_contato_value}}}.</param>
-        /// <param name="Email">{{{credor_persist_email_value}}}.</param>
-        /// <param name="NomeLogradouro">{{{credor_persist_nome_logradouro_value}}}.</param>
-        /// <param name="NumeroEndereco">{{{credor_persist_numero_endereco_value}}}.</param>
-        /// <param name="ComplementoEndereco">{{{credor_persist_complemento_endereco_value}}}.</param>
-        /// <param name="Bairro">{{{credor_persist_bairro_value}}}.</param>
-        /// <param name="Cidade">{{{credor_persist_cidade_value}}}.</param>
-        /// <param name="Cep">{{{credor_persist_cep_value}}}.</param>
-        /// <param name="Uf">{{{credor_persist_uf_value}}}.</param>
-        /// <param name="Responsavel">{{{credor_persist_responsavel_value}}}.</param>
-        /// <param name="FlagSegundaViaAcordo">{{{credor_persist_flag_segunda_via_acordo_value}}}.</param>
-        /// <param name="ValorMinimoParcela">{{{credor_persist_valor_minimo_parcela_value}}}.</param>
-        /// <param name="DescontoMaximo">{{{credor_persist_desconto_maximo_value}}}.</param>
+        /// <param name="TelefonesEscritoriosCobranca">Telefones do credor.</param>
+        /// <param name="NomeCredor">Credor persist nome credor.</param>
+        /// <param name="DiaPagamentoSemanal">Credor persist pagamento semanal.</param>
+        /// <param name="DiaPagamentoMensal">Credor persist pagamento mensal.</param>
+        /// <param name="DiaPagamentoDecendialPrimeiro">Credor respone pagamento decendial primeiro.</param>
+        /// <param name="DiaPagamentoDecendialSegundo">Credor respone pagamento decendial segundo.</param>
+        /// <param name="DiaPagamentoDecendialTerceiro">Credor respone pagamento decendial terceiro.</param>
+        /// <param name="DiaPagamentoQuinzenalPrimeiro">Credor respone pagamento quinzenal primeiro.</param>
+        /// <param name="DiaPagamentoQuinzenalSegundo">Credor respone pagamento quinzenal segundo.</param>
+        /// <param name="Banco">credor persist banco.</param>
+        /// <param name="Agencia">Credor persist ag\u00EAncia.</param>
+        /// <param name="DigitoAgencia">Credor persist d\u00EDgito ag\u00EAncia.</param>
+        /// <param name="ContaCorrente">Credor persist conta corrente.</param>
+        /// <param name="DigitoContaCorrente">Credor persist d\u00EDgito conta corrente.</param>
+        /// <param name="CredorBanco">Credor persist credor banco.</param>
+        /// <param name="PercentualRAV">Credor persist percentual rav (required).</param>
+        /// <param name="RecebeRAV">Credor persist recebe rav.</param>
+        /// <param name="PercentualMultiplica">Credor persist percentual multiplica.</param>
+        /// <param name="TaxaAdministrativa">Credor persist taxa adm.</param>
+        /// <param name="TaxaBanco">Credor persist taxa banco.</param>
+        /// <param name="LimiteRAV">Credor persist limite rav.</param>
+        /// <param name="IdCredorRAV">Credor persist id credor rav (required).</param>
+        /// <param name="Periodicidade">Credor persist periodicidade (required).</param>
+        /// <param name="IdPessoaJuridica">Credor persist id pessoa juridica (required).</param>
+        /// <param name="FlagEscritorioCobranca">Credor persist flag escritorio cobranca.</param>
+        /// <param name="Prefixo">Credor persist prefixo.</param>
+        /// <param name="Ativo">Credor persist flag ativo.</param>
+        /// <param name="NomeContato">Credor persist contato.</param>
+        /// <param name="Email">Credor persist email.</param>
+        /// <param name="NomeLogradouro">Credor persist logradouro.</param>
+        /// <param name="NumeroEndereco">Credor persist numero endereco.</param>
+        /// <param name="ComplementoEndereco">Credor persist complemento endereco.</param>
+        /// <param name="Bairro">Credor persist bairro.</param>
+        /// <param name="Cidade">Credor persist cidade.</param>
+        /// <param name="Cep">Credor persist cep.</param>
+        /// <param name="Uf">Credor persist uf.</param>
+        /// <param name="Responsavel">Credor persist responsavel.</param>
+        /// <param name="FlagSegundaViaAcordo">Credor persist flag segunda via acordo.</param>
+        /// <param name="ValorMinimoParcela">Credor persist valor minimo parcela.</param>
+        /// <param name="DescontoMaximo">Credor persist desconto maximo.</param>
 
         public CredorPersist(List<TelefoneEscritorioCobrancaDTO> TelefonesEscritoriosCobranca = null, string NomeCredor = null, int? DiaPagamentoSemanal = null, int? DiaPagamentoMensal = null, int? DiaPagamentoDecendialPrimeiro = null, int? DiaPagamentoDecendialSegundo = null, int? DiaPagamentoDecendialTerceiro = null, int? DiaPagamentoQuinzenalPrimeiro = null, int? DiaPagamentoQuinzenalSegundo = null, int? Banco = null, int? Agencia = null, string DigitoAgencia = null, string ContaCorrente = null, string DigitoContaCorrente = null, bool? CredorBanco = null, double? PercentualRAV = null, RecebeRAVEnum? RecebeRAV = null, double? PercentualMultiplica = null, double? TaxaAdministrativa = null, double? TaxaBanco = null, double? LimiteRAV = null, long? IdCredorRAV = null, PeriodicidadeEnum? Periodicidade = null, long? IdPessoaJuridica = null, bool? FlagEscritorioCobranca = null, string Prefixo = null, bool? Ativo = null, string NomeContato = null, string Email = null, string NomeLogradouro = null, int? NumeroEndereco = null, string ComplementoEndereco = null, string Bairro = null, string Cidade = null, string Cep = null, string Uf = null, string Responsavel = null, int? FlagSegundaViaAcordo = null, double? ValorMinimoParcela = null, double? DescontoMaximo = null)
         {
@@ -198,268 +198,268 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{credor_persist_telefones_value}}}
+        /// Telefones do credor
         /// </summary>
-        /// <value>{{{credor_persist_telefones_value}}}</value>
+        /// <value>Telefones do credor</value>
         [DataMember(Name="telefonesEscritoriosCobranca", EmitDefaultValue=false)]
         public List<TelefoneEscritorioCobrancaDTO> TelefonesEscritoriosCobranca { get; set; }
     
         /// <summary>
-        /// {{{credor_persist_nome_credor_value}}}
+        /// Credor persist nome credor
         /// </summary>
-        /// <value>{{{credor_persist_nome_credor_value}}}</value>
+        /// <value>Credor persist nome credor</value>
         [DataMember(Name="nomeCredor", EmitDefaultValue=false)]
         public string NomeCredor { get; set; }
     
         /// <summary>
-        /// {{{credor_persist_pagamento_semanal_value}}}
+        /// Credor persist pagamento semanal
         /// </summary>
-        /// <value>{{{credor_persist_pagamento_semanal_value}}}</value>
+        /// <value>Credor persist pagamento semanal</value>
         [DataMember(Name="diaPagamentoSemanal", EmitDefaultValue=false)]
         public int? DiaPagamentoSemanal { get; set; }
     
         /// <summary>
-        /// {{{credor_persist_pagamento_mensal_value}}}
+        /// Credor persist pagamento mensal
         /// </summary>
-        /// <value>{{{credor_persist_pagamento_mensal_value}}}</value>
+        /// <value>Credor persist pagamento mensal</value>
         [DataMember(Name="diaPagamentoMensal", EmitDefaultValue=false)]
         public int? DiaPagamentoMensal { get; set; }
     
         /// <summary>
-        /// {{{credor_persist_pagamento_decendial_primeiro_value}}}
+        /// Credor respone pagamento decendial primeiro
         /// </summary>
-        /// <value>{{{credor_persist_pagamento_decendial_primeiro_value}}}</value>
+        /// <value>Credor respone pagamento decendial primeiro</value>
         [DataMember(Name="diaPagamentoDecendialPrimeiro", EmitDefaultValue=false)]
         public int? DiaPagamentoDecendialPrimeiro { get; set; }
     
         /// <summary>
-        /// {{{credor_persist_pagamento_decendial_segundo_value}}}
+        /// Credor respone pagamento decendial segundo
         /// </summary>
-        /// <value>{{{credor_persist_pagamento_decendial_segundo_value}}}</value>
+        /// <value>Credor respone pagamento decendial segundo</value>
         [DataMember(Name="diaPagamentoDecendialSegundo", EmitDefaultValue=false)]
         public int? DiaPagamentoDecendialSegundo { get; set; }
     
         /// <summary>
-        /// {{{credor_persist_pagamento_decendial_terceiro_value}}}
+        /// Credor respone pagamento decendial terceiro
         /// </summary>
-        /// <value>{{{credor_persist_pagamento_decendial_terceiro_value}}}</value>
+        /// <value>Credor respone pagamento decendial terceiro</value>
         [DataMember(Name="diaPagamentoDecendialTerceiro", EmitDefaultValue=false)]
         public int? DiaPagamentoDecendialTerceiro { get; set; }
     
         /// <summary>
-        /// {{{credor_persist_pagamento_quinzenal_primeiro_value}}}
+        /// Credor respone pagamento quinzenal primeiro
         /// </summary>
-        /// <value>{{{credor_persist_pagamento_quinzenal_primeiro_value}}}</value>
+        /// <value>Credor respone pagamento quinzenal primeiro</value>
         [DataMember(Name="diaPagamentoQuinzenalPrimeiro", EmitDefaultValue=false)]
         public int? DiaPagamentoQuinzenalPrimeiro { get; set; }
     
         /// <summary>
-        /// {{{credor_persist_pagamento_quinzenal_segundo_value}}}
+        /// Credor respone pagamento quinzenal segundo
         /// </summary>
-        /// <value>{{{credor_persist_pagamento_quinzenal_segundo_value}}}</value>
+        /// <value>Credor respone pagamento quinzenal segundo</value>
         [DataMember(Name="diaPagamentoQuinzenalSegundo", EmitDefaultValue=false)]
         public int? DiaPagamentoQuinzenalSegundo { get; set; }
     
         /// <summary>
-        /// {{{credor_persist_banco_value}}}
+        /// credor persist banco
         /// </summary>
-        /// <value>{{{credor_persist_banco_value}}}</value>
+        /// <value>credor persist banco</value>
         [DataMember(Name="banco", EmitDefaultValue=false)]
         public int? Banco { get; set; }
     
         /// <summary>
-        /// {{{credor_persist_agencia_value}}}
+        /// Credor persist ag\u00EAncia
         /// </summary>
-        /// <value>{{{credor_persist_agencia_value}}}</value>
+        /// <value>Credor persist ag\u00EAncia</value>
         [DataMember(Name="agencia", EmitDefaultValue=false)]
         public int? Agencia { get; set; }
     
         /// <summary>
-        /// {{{credor_persist_digito_agencia_value}}}
+        /// Credor persist d\u00EDgito ag\u00EAncia
         /// </summary>
-        /// <value>{{{credor_persist_digito_agencia_value}}}</value>
+        /// <value>Credor persist d\u00EDgito ag\u00EAncia</value>
         [DataMember(Name="digitoAgencia", EmitDefaultValue=false)]
         public string DigitoAgencia { get; set; }
     
         /// <summary>
-        /// {{{credor_persist_conta_corrente_value}}}
+        /// Credor persist conta corrente
         /// </summary>
-        /// <value>{{{credor_persist_conta_corrente_value}}}</value>
+        /// <value>Credor persist conta corrente</value>
         [DataMember(Name="contaCorrente", EmitDefaultValue=false)]
         public string ContaCorrente { get; set; }
     
         /// <summary>
-        /// {{{credor_persist_digito_conta_corrente_value}}}
+        /// Credor persist d\u00EDgito conta corrente
         /// </summary>
-        /// <value>{{{credor_persist_digito_conta_corrente_value}}}</value>
+        /// <value>Credor persist d\u00EDgito conta corrente</value>
         [DataMember(Name="digitoContaCorrente", EmitDefaultValue=false)]
         public string DigitoContaCorrente { get; set; }
     
         /// <summary>
-        /// {{{credor_persist_credor_banco_value}}}
+        /// Credor persist credor banco
         /// </summary>
-        /// <value>{{{credor_persist_credor_banco_value}}}</value>
+        /// <value>Credor persist credor banco</value>
         [DataMember(Name="credorBanco", EmitDefaultValue=false)]
         public bool? CredorBanco { get; set; }
     
         /// <summary>
-        /// {{{credor_persist_percentual_rav_value}}}
+        /// Credor persist percentual rav
         /// </summary>
-        /// <value>{{{credor_persist_percentual_rav_value}}}</value>
+        /// <value>Credor persist percentual rav</value>
         [DataMember(Name="percentualRAV", EmitDefaultValue=false)]
         public double? PercentualRAV { get; set; }
     
         /// <summary>
-        /// {{{credor_persist_percentual_multiplica_value}}}
+        /// Credor persist percentual multiplica
         /// </summary>
-        /// <value>{{{credor_persist_percentual_multiplica_value}}}</value>
+        /// <value>Credor persist percentual multiplica</value>
         [DataMember(Name="percentualMultiplica", EmitDefaultValue=false)]
         public double? PercentualMultiplica { get; set; }
     
         /// <summary>
-        /// {{{credor_persist_taxa_adm_value}}}
+        /// Credor persist taxa adm
         /// </summary>
-        /// <value>{{{credor_persist_taxa_adm_value}}}</value>
+        /// <value>Credor persist taxa adm</value>
         [DataMember(Name="taxaAdministrativa", EmitDefaultValue=false)]
         public double? TaxaAdministrativa { get; set; }
     
         /// <summary>
-        /// {{{credor_persist_taxa_banco_value}}}
+        /// Credor persist taxa banco
         /// </summary>
-        /// <value>{{{credor_persist_taxa_banco_value}}}</value>
+        /// <value>Credor persist taxa banco</value>
         [DataMember(Name="taxaBanco", EmitDefaultValue=false)]
         public double? TaxaBanco { get; set; }
     
         /// <summary>
-        /// {{{credor_persist_limite_rav_value}}}
+        /// Credor persist limite rav
         /// </summary>
-        /// <value>{{{credor_persist_limite_rav_value}}}</value>
+        /// <value>Credor persist limite rav</value>
         [DataMember(Name="limiteRAV", EmitDefaultValue=false)]
         public double? LimiteRAV { get; set; }
     
         /// <summary>
-        /// {{{credor_persist_id_credor_rav_value}}}
+        /// Credor persist id credor rav
         /// </summary>
-        /// <value>{{{credor_persist_id_credor_rav_value}}}</value>
+        /// <value>Credor persist id credor rav</value>
         [DataMember(Name="idCredorRAV", EmitDefaultValue=false)]
         public long? IdCredorRAV { get; set; }
     
         /// <summary>
-        /// {{{credor_persist_id_pessoa_juridica_value}}}
+        /// Credor persist id pessoa juridica
         /// </summary>
-        /// <value>{{{credor_persist_id_pessoa_juridica_value}}}</value>
+        /// <value>Credor persist id pessoa juridica</value>
         [DataMember(Name="idPessoaJuridica", EmitDefaultValue=false)]
         public long? IdPessoaJuridica { get; set; }
     
         /// <summary>
-        /// {{{credor_persist_flag_escritorio_cobranca_value}}}
+        /// Credor persist flag escritorio cobranca
         /// </summary>
-        /// <value>{{{credor_persist_flag_escritorio_cobranca_value}}}</value>
+        /// <value>Credor persist flag escritorio cobranca</value>
         [DataMember(Name="flagEscritorioCobranca", EmitDefaultValue=false)]
         public bool? FlagEscritorioCobranca { get; set; }
     
         /// <summary>
-        /// {{{credor_persist_prefixo_value}}}
+        /// Credor persist prefixo
         /// </summary>
-        /// <value>{{{credor_persist_prefixo_value}}}</value>
+        /// <value>Credor persist prefixo</value>
         [DataMember(Name="prefixo", EmitDefaultValue=false)]
         public string Prefixo { get; set; }
     
         /// <summary>
-        /// {{{credor_persist_ativo_value}}}
+        /// Credor persist flag ativo
         /// </summary>
-        /// <value>{{{credor_persist_ativo_value}}}</value>
+        /// <value>Credor persist flag ativo</value>
         [DataMember(Name="ativo", EmitDefaultValue=false)]
         public bool? Ativo { get; set; }
     
         /// <summary>
-        /// {{{credor_persist_nome_contato_value}}}
+        /// Credor persist contato
         /// </summary>
-        /// <value>{{{credor_persist_nome_contato_value}}}</value>
+        /// <value>Credor persist contato</value>
         [DataMember(Name="nomeContato", EmitDefaultValue=false)]
         public string NomeContato { get; set; }
     
         /// <summary>
-        /// {{{credor_persist_email_value}}}
+        /// Credor persist email
         /// </summary>
-        /// <value>{{{credor_persist_email_value}}}</value>
+        /// <value>Credor persist email</value>
         [DataMember(Name="email", EmitDefaultValue=false)]
         public string Email { get; set; }
     
         /// <summary>
-        /// {{{credor_persist_nome_logradouro_value}}}
+        /// Credor persist logradouro
         /// </summary>
-        /// <value>{{{credor_persist_nome_logradouro_value}}}</value>
+        /// <value>Credor persist logradouro</value>
         [DataMember(Name="nomeLogradouro", EmitDefaultValue=false)]
         public string NomeLogradouro { get; set; }
     
         /// <summary>
-        /// {{{credor_persist_numero_endereco_value}}}
+        /// Credor persist numero endereco
         /// </summary>
-        /// <value>{{{credor_persist_numero_endereco_value}}}</value>
+        /// <value>Credor persist numero endereco</value>
         [DataMember(Name="numeroEndereco", EmitDefaultValue=false)]
         public int? NumeroEndereco { get; set; }
     
         /// <summary>
-        /// {{{credor_persist_complemento_endereco_value}}}
+        /// Credor persist complemento endereco
         /// </summary>
-        /// <value>{{{credor_persist_complemento_endereco_value}}}</value>
+        /// <value>Credor persist complemento endereco</value>
         [DataMember(Name="complementoEndereco", EmitDefaultValue=false)]
         public string ComplementoEndereco { get; set; }
     
         /// <summary>
-        /// {{{credor_persist_bairro_value}}}
+        /// Credor persist bairro
         /// </summary>
-        /// <value>{{{credor_persist_bairro_value}}}</value>
+        /// <value>Credor persist bairro</value>
         [DataMember(Name="bairro", EmitDefaultValue=false)]
         public string Bairro { get; set; }
     
         /// <summary>
-        /// {{{credor_persist_cidade_value}}}
+        /// Credor persist cidade
         /// </summary>
-        /// <value>{{{credor_persist_cidade_value}}}</value>
+        /// <value>Credor persist cidade</value>
         [DataMember(Name="cidade", EmitDefaultValue=false)]
         public string Cidade { get; set; }
     
         /// <summary>
-        /// {{{credor_persist_cep_value}}}
+        /// Credor persist cep
         /// </summary>
-        /// <value>{{{credor_persist_cep_value}}}</value>
+        /// <value>Credor persist cep</value>
         [DataMember(Name="cep", EmitDefaultValue=false)]
         public string Cep { get; set; }
     
         /// <summary>
-        /// {{{credor_persist_uf_value}}}
+        /// Credor persist uf
         /// </summary>
-        /// <value>{{{credor_persist_uf_value}}}</value>
+        /// <value>Credor persist uf</value>
         [DataMember(Name="uf", EmitDefaultValue=false)]
         public string Uf { get; set; }
     
         /// <summary>
-        /// {{{credor_persist_responsavel_value}}}
+        /// Credor persist responsavel
         /// </summary>
-        /// <value>{{{credor_persist_responsavel_value}}}</value>
+        /// <value>Credor persist responsavel</value>
         [DataMember(Name="responsavel", EmitDefaultValue=false)]
         public string Responsavel { get; set; }
     
         /// <summary>
-        /// {{{credor_persist_flag_segunda_via_acordo_value}}}
+        /// Credor persist flag segunda via acordo
         /// </summary>
-        /// <value>{{{credor_persist_flag_segunda_via_acordo_value}}}</value>
+        /// <value>Credor persist flag segunda via acordo</value>
         [DataMember(Name="flagSegundaViaAcordo", EmitDefaultValue=false)]
         public int? FlagSegundaViaAcordo { get; set; }
     
         /// <summary>
-        /// {{{credor_persist_valor_minimo_parcela_value}}}
+        /// Credor persist valor minimo parcela
         /// </summary>
-        /// <value>{{{credor_persist_valor_minimo_parcela_value}}}</value>
+        /// <value>Credor persist valor minimo parcela</value>
         [DataMember(Name="valorMinimoParcela", EmitDefaultValue=false)]
         public double? ValorMinimoParcela { get; set; }
     
         /// <summary>
-        /// {{{credor_persist_desconto_maximo_value}}}
+        /// Credor persist desconto maximo
         /// </summary>
-        /// <value>{{{credor_persist_desconto_maximo_value}}}</value>
+        /// <value>Credor persist desconto maximo</value>
         [DataMember(Name="descontoMaximo", EmitDefaultValue=false)]
         public double? DescontoMaximo { get; set; }
     

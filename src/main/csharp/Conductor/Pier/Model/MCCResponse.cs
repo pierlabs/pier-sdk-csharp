@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{m_c_c_response_description}}}
+    /// ObjetoMCC
     /// </summary>
     [DataContract]
     public partial class MCCResponse :  IEquatable<MCCResponse>
@@ -22,8 +22,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="MCCResponse" /> class.
         /// Initializes a new instance of the <see cref="MCCResponse" />class.
         /// </summary>
-        /// <param name="Id">{{{m_c_c_response_id_value}}}.</param>
-        /// <param name="Descricao">{{{m_c_c_response_descricao_value}}}.</param>
+        /// <param name="Id">C\u00F3digo de Identifica\u00E7\u00E3o do MCC (id).</param>
+        /// <param name="Descricao">descricao do MCC.</param>
 
         public MCCResponse(long? Id = null, string Descricao = null)
         {
@@ -34,16 +34,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{m_c_c_response_id_value}}}
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do MCC (id)
         /// </summary>
-        /// <value>{{{m_c_c_response_id_value}}}</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do MCC (id)</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{m_c_c_response_descricao_value}}}
+        /// descricao do MCC
         /// </summary>
-        /// <value>{{{m_c_c_response_descricao_value}}}</value>
+        /// <value>descricao do MCC</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     

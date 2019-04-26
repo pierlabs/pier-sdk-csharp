@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{status_boleto_response_description}}}
+    /// Representa\u00E7\u00E3o da resposta do recurso de status de boleto
     /// </summary>
     [DataContract]
     public partial class StatusBoletoResponse :  IEquatable<StatusBoletoResponse>
@@ -22,8 +22,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="StatusBoletoResponse" /> class.
         /// Initializes a new instance of the <see cref="StatusBoletoResponse" />class.
         /// </summary>
-        /// <param name="Status">{{{status_boleto_dto_status_value}}}.</param>
-        /// <param name="Data">{{{status_boleto_dto_data_value}}}.</param>
+        /// <param name="Status">Descri\u00E7\u00E3o do status CNAB sumarizado do boleto.</param>
+        /// <param name="Data">Data em que o status foi definido.</param>
 
         public StatusBoletoResponse(string Status = null, string Data = null)
         {
@@ -34,16 +34,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{status_boleto_dto_status_value}}}
+        /// Descri\u00E7\u00E3o do status CNAB sumarizado do boleto
         /// </summary>
-        /// <value>{{{status_boleto_dto_status_value}}}</value>
+        /// <value>Descri\u00E7\u00E3o do status CNAB sumarizado do boleto</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public string Status { get; set; }
     
         /// <summary>
-        /// {{{status_boleto_dto_data_value}}}
+        /// Data em que o status foi definido
         /// </summary>
-        /// <value>{{{status_boleto_dto_data_value}}}</value>
+        /// <value>Data em que o status foi definido</value>
         [DataMember(Name="data", EmitDefaultValue=false)]
         public string Data { get; set; }
     

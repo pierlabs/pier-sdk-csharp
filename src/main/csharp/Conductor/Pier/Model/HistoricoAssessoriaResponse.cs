@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{historico_assessoria_response_description}}}
+    /// Representa\u00E7\u00E3o da resposta do {@link HistoricoAssessoriaResponse}
     /// </summary>
     [DataContract]
     public partial class HistoricoAssessoriaResponse :  IEquatable<HistoricoAssessoriaResponse>
@@ -22,9 +22,9 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="HistoricoAssessoriaResponse" /> class.
         /// Initializes a new instance of the <see cref="HistoricoAssessoriaResponse" />class.
         /// </summary>
-        /// <param name="DataHoraHistorico">{{{historico_assessoria_response_data_hora_historico_value}}}.</param>
-        /// <param name="TipoHistorico">{{{historico_assessoria_response_tipo_historico_value}}}.</param>
-        /// <param name="NomeAssessoria">{{{historico_assessoria_response_nome_assessoria_value}}}.</param>
+        /// <param name="DataHoraHistorico">Apresenta a data e hora do hist\u00F3rico.</param>
+        /// <param name="TipoHistorico">Apresenta o tipo do hist\u00F3rico podendo ser ENTRADA ou SAIDA.</param>
+        /// <param name="NomeAssessoria">Apresenta o nome da Assessoria de Cobran\u00E7a relacionada ao hist\u00F3rico.</param>
 
         public HistoricoAssessoriaResponse(string DataHoraHistorico = null, string TipoHistorico = null, string NomeAssessoria = null)
         {
@@ -36,23 +36,23 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{historico_assessoria_response_data_hora_historico_value}}}
+        /// Apresenta a data e hora do hist\u00F3rico
         /// </summary>
-        /// <value>{{{historico_assessoria_response_data_hora_historico_value}}}</value>
+        /// <value>Apresenta a data e hora do hist\u00F3rico</value>
         [DataMember(Name="dataHoraHistorico", EmitDefaultValue=false)]
         public string DataHoraHistorico { get; set; }
     
         /// <summary>
-        /// {{{historico_assessoria_response_tipo_historico_value}}}
+        /// Apresenta o tipo do hist\u00F3rico podendo ser ENTRADA ou SAIDA
         /// </summary>
-        /// <value>{{{historico_assessoria_response_tipo_historico_value}}}</value>
+        /// <value>Apresenta o tipo do hist\u00F3rico podendo ser ENTRADA ou SAIDA</value>
         [DataMember(Name="tipoHistorico", EmitDefaultValue=false)]
         public string TipoHistorico { get; set; }
     
         /// <summary>
-        /// {{{historico_assessoria_response_nome_assessoria_value}}}
+        /// Apresenta o nome da Assessoria de Cobran\u00E7a relacionada ao hist\u00F3rico
         /// </summary>
-        /// <value>{{{historico_assessoria_response_nome_assessoria_value}}}</value>
+        /// <value>Apresenta o nome da Assessoria de Cobran\u00E7a relacionada ao hist\u00F3rico</value>
         [DataMember(Name="nomeAssessoria", EmitDefaultValue=false)]
         public string NomeAssessoria { get; set; }
     

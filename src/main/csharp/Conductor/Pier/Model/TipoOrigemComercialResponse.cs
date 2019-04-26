@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{tipo_origem_comercial_response_description}}}
+    /// Objeto de resposta do recurso de tipos de origens comerciais
     /// </summary>
     [DataContract]
     public partial class TipoOrigemComercialResponse :  IEquatable<TipoOrigemComercialResponse>
@@ -22,8 +22,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TipoOrigemComercialResponse" /> class.
         /// Initializes a new instance of the <see cref="TipoOrigemComercialResponse" />class.
         /// </summary>
-        /// <param name="Id">{{{tipo_origem_comercial_response_id_value}}}.</param>
-        /// <param name="Nome">{{{tipo_origem_comercial_response_nome_value}}}.</param>
+        /// <param name="Id">C\u00F3digo de Identifica\u00E7\u00E3o do Tipo de Origem Comercial.</param>
+        /// <param name="Nome">Nome do tipo de origem comercial.</param>
 
         public TipoOrigemComercialResponse(long? Id = null, string Nome = null)
         {
@@ -34,16 +34,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{tipo_origem_comercial_response_id_value}}}
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do Tipo de Origem Comercial
         /// </summary>
-        /// <value>{{{tipo_origem_comercial_response_id_value}}}</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Tipo de Origem Comercial</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{tipo_origem_comercial_response_nome_value}}}
+        /// Nome do tipo de origem comercial
         /// </summary>
-        /// <value>{{{tipo_origem_comercial_response_nome_value}}}</value>
+        /// <value>Nome do tipo de origem comercial</value>
         [DataMember(Name="nome", EmitDefaultValue=false)]
         public string Nome { get; set; }
     

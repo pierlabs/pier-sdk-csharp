@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{detalhes_fatura_consignada_response_description}}}
+    /// Objeto contendo os detalhes de uma fatura consignada
     /// </summary>
     [DataContract]
     public partial class DetalhesFaturaConsignadaResponse :  IEquatable<DetalhesFaturaConsignadaResponse>
@@ -22,8 +22,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="DetalhesFaturaConsignadaResponse" /> class.
         /// Initializes a new instance of the <see cref="DetalhesFaturaConsignadaResponse" />class.
         /// </summary>
-        /// <param name="FaturaConsignadaResponse">{{{detalhes_fatura_consignada_response_fatura_consignada_response_value}}}.</param>
-        /// <param name="Transacoes">{{{detalhes_fatura_consignada_response_transacoes_value}}}.</param>
+        /// <param name="FaturaConsignadaResponse">Apresenta os detalhes da fatura.</param>
+        /// <param name="Transacoes">Apresenta as transa\u00E7\u00F5es relacionadas a fatura.</param>
 
         public DetalhesFaturaConsignadaResponse(FaturaConsignadaResponse FaturaConsignadaResponse = null, List<TransacoesCorrentesResponse> Transacoes = null)
         {
@@ -34,16 +34,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{detalhes_fatura_consignada_response_fatura_consignada_response_value}}}
+        /// Apresenta os detalhes da fatura
         /// </summary>
-        /// <value>{{{detalhes_fatura_consignada_response_fatura_consignada_response_value}}}</value>
+        /// <value>Apresenta os detalhes da fatura</value>
         [DataMember(Name="faturaConsignadaResponse", EmitDefaultValue=false)]
         public FaturaConsignadaResponse FaturaConsignadaResponse { get; set; }
     
         /// <summary>
-        /// {{{detalhes_fatura_consignada_response_transacoes_value}}}
+        /// Apresenta as transa\u00E7\u00F5es relacionadas a fatura
         /// </summary>
-        /// <value>{{{detalhes_fatura_consignada_response_transacoes_value}}}</value>
+        /// <value>Apresenta as transa\u00E7\u00F5es relacionadas a fatura</value>
         [DataMember(Name="transacoes", EmitDefaultValue=false)]
         public List<TransacoesCorrentesResponse> Transacoes { get; set; }
     

@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{proposta_response_description}}}
+    /// Representa\u00E7\u00E3o da resposta da proposta
     /// </summary>
     [DataContract]
     public partial class PropostaResponse :  IEquatable<PropostaResponse>
@@ -22,10 +22,10 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="PropostaResponse" /> class.
         /// Initializes a new instance of the <see cref="PropostaResponse" />class.
         /// </summary>
-        /// <param name="Id">{{{proposta_response_id_value}}}.</param>
-        /// <param name="Status">{{{proposta_response_status_value}}}.</param>
-        /// <param name="DataCadastramento">{{{proposta_response_data_cadastramento_value}}}.</param>
-        /// <param name="DataAprovacaoNegacaoPendencia">{{{proposta_response_data_aprovacaoNegacaoPendencia_value}}}.</param>
+        /// <param name="Id">C\u00F3digo de Identifica\u00E7\u00E3o da Proposta (id).</param>
+        /// <param name="Status">Status da proposta.</param>
+        /// <param name="DataCadastramento">Data de cadastramento da proposta.</param>
+        /// <param name="DataAprovacaoNegacaoPendencia">Data de atualizaca\u00E7\u00E3o da proposta.</param>
 
         public PropostaResponse(long? Id = null, int? Status = null, string DataCadastramento = null, string DataAprovacaoNegacaoPendencia = null)
         {
@@ -38,30 +38,30 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{proposta_response_id_value}}}
+        /// C\u00F3digo de Identifica\u00E7\u00E3o da Proposta (id)
         /// </summary>
-        /// <value>{{{proposta_response_id_value}}}</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o da Proposta (id)</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{proposta_response_status_value}}}
+        /// Status da proposta
         /// </summary>
-        /// <value>{{{proposta_response_status_value}}}</value>
+        /// <value>Status da proposta</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public int? Status { get; set; }
     
         /// <summary>
-        /// {{{proposta_response_data_cadastramento_value}}}
+        /// Data de cadastramento da proposta
         /// </summary>
-        /// <value>{{{proposta_response_data_cadastramento_value}}}</value>
+        /// <value>Data de cadastramento da proposta</value>
         [DataMember(Name="dataCadastramento", EmitDefaultValue=false)]
         public string DataCadastramento { get; set; }
     
         /// <summary>
-        /// {{{proposta_response_data_aprovacaoNegacaoPendencia_value}}}
+        /// Data de atualizaca\u00E7\u00E3o da proposta
         /// </summary>
-        /// <value>{{{proposta_response_data_aprovacaoNegacaoPendencia_value}}}</value>
+        /// <value>Data de atualizaca\u00E7\u00E3o da proposta</value>
         [DataMember(Name="dataAprovacaoNegacaoPendencia", EmitDefaultValue=false)]
         public string DataAprovacaoNegacaoPendencia { get; set; }
     

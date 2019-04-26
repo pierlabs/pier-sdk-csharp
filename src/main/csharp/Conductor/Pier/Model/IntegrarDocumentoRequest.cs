@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{integrar_documento_request_description}}}
+    /// Objeto de requisi\u00E7\u00E3o
     /// </summary>
     [DataContract]
     public partial class IntegrarDocumentoRequest :  IEquatable<IntegrarDocumentoRequest>
@@ -22,10 +22,10 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="IntegrarDocumentoRequest" /> class.
         /// Initializes a new instance of the <see cref="IntegrarDocumentoRequest" />class.
         /// </summary>
-        /// <param name="IdTemplate">{{{integrar_documento_request_id_template_value}}}.</param>
-        /// <param name="Arquivo">{{{integrar_documento_request_arquivo_value}}}.</param>
-        /// <param name="Nome">{{{integrar_documento_request_nome_value}}}.</param>
-        /// <param name="Propriedades">{{{integrar_documento_request_propriedades_value}}}.</param>
+        /// <param name="IdTemplate">Identificador do template de documento.</param>
+        /// <param name="Arquivo">Conte\u00FAdo do arquivo convertido em Base 64.</param>
+        /// <param name="Nome">Nome do arquivo.</param>
+        /// <param name="Propriedades">Lista de par\u00E2metros para montagem do documento.</param>
 
         public IntegrarDocumentoRequest(long? IdTemplate = null, string Arquivo = null, string Nome = null, List<PropriedadeDocumentoRequest> Propriedades = null)
         {
@@ -38,30 +38,30 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{integrar_documento_request_id_template_value}}}
+        /// Identificador do template de documento
         /// </summary>
-        /// <value>{{{integrar_documento_request_id_template_value}}}</value>
+        /// <value>Identificador do template de documento</value>
         [DataMember(Name="idTemplate", EmitDefaultValue=false)]
         public long? IdTemplate { get; set; }
     
         /// <summary>
-        /// {{{integrar_documento_request_arquivo_value}}}
+        /// Conte\u00FAdo do arquivo convertido em Base 64
         /// </summary>
-        /// <value>{{{integrar_documento_request_arquivo_value}}}</value>
+        /// <value>Conte\u00FAdo do arquivo convertido em Base 64</value>
         [DataMember(Name="arquivo", EmitDefaultValue=false)]
         public string Arquivo { get; set; }
     
         /// <summary>
-        /// {{{integrar_documento_request_nome_value}}}
+        /// Nome do arquivo
         /// </summary>
-        /// <value>{{{integrar_documento_request_nome_value}}}</value>
+        /// <value>Nome do arquivo</value>
         [DataMember(Name="nome", EmitDefaultValue=false)]
         public string Nome { get; set; }
     
         /// <summary>
-        /// {{{integrar_documento_request_propriedades_value}}}
+        /// Lista de par\u00E2metros para montagem do documento
         /// </summary>
-        /// <value>{{{integrar_documento_request_propriedades_value}}}</value>
+        /// <value>Lista de par\u00E2metros para montagem do documento</value>
         [DataMember(Name="propriedades", EmitDefaultValue=false)]
         public List<PropriedadeDocumentoRequest> Propriedades { get; set; }
     

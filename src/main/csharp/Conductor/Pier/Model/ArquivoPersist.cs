@@ -12,16 +12,16 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{arquivo_persist_description}}}
+    /// Objeto Arquivo para persist\u00EAncia de dados
     /// </summary>
     [DataContract]
     public partial class ArquivoPersist :  IEquatable<ArquivoPersist>
     { 
     
         /// <summary>
-        /// {{{arquivo_persist_tipo_comunicacao_value}}}
+        /// Tipo de comunica\u00E7\u00E3o
         /// </summary>
-        /// <value>{{{arquivo_persist_tipo_comunicacao_value}}}</value>
+        /// <value>Tipo de comunica\u00E7\u00E3o</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum TipoComunicacaoEnum {
             
@@ -34,9 +34,9 @@ namespace Conductor.Pier.Model
 
     
         /// <summary>
-        /// {{{arquivo_persist_tipo_comunicacao_value}}}
+        /// Tipo de comunica\u00E7\u00E3o
         /// </summary>
-        /// <value>{{{arquivo_persist_tipo_comunicacao_value}}}</value>
+        /// <value>Tipo de comunica\u00E7\u00E3o</value>
         [DataMember(Name="tipoComunicacao", EmitDefaultValue=false)]
         public TipoComunicacaoEnum? TipoComunicacao { get; set; }
     
@@ -44,12 +44,12 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="ArquivoPersist" /> class.
         /// Initializes a new instance of the <see cref="ArquivoPersist" />class.
         /// </summary>
-        /// <param name="IdTipoArquivo">{{{arquivo_persist_id_tipo_arquivo_value}}}.</param>
-        /// <param name="Arquivo">{{{arquivo_persist_arquivo_value}}} (required).</param>
-        /// <param name="Nome">{{{arquivo_persist_nome_value}}}.</param>
-        /// <param name="Extensao">{{{arquivo_persist_extensao_value}}}.</param>
-        /// <param name="TipoComunicacao">{{{arquivo_persist_tipo_comunicacao_value}}}.</param>
-        /// <param name="Detalhes">{{{arquivo_persist_detalhes_value}}} (required).</param>
+        /// <param name="IdTipoArquivo">Tipo do arquivo.</param>
+        /// <param name="Arquivo">Conte\u00FAdo do arquivo convertido em Base 64 (required).</param>
+        /// <param name="Nome">Nome do arquivo.</param>
+        /// <param name="Extensao">Extens\u00E3o do Arquivo.</param>
+        /// <param name="TipoComunicacao">Tipo de comunica\u00E7\u00E3o.</param>
+        /// <param name="Detalhes">Detalhes contendo informa\u00E7\u00F5es adicionais, relacionadas ao arquivo (required).</param>
 
         public ArquivoPersist(long? IdTipoArquivo = null, string Arquivo = null, string Nome = null, string Extensao = null, TipoComunicacaoEnum? TipoComunicacao = null, List<ArquivoDetalhesPersist> Detalhes = null)
         {
@@ -80,37 +80,37 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{arquivo_persist_id_tipo_arquivo_value}}}
+        /// Tipo do arquivo
         /// </summary>
-        /// <value>{{{arquivo_persist_id_tipo_arquivo_value}}}</value>
+        /// <value>Tipo do arquivo</value>
         [DataMember(Name="idTipoArquivo", EmitDefaultValue=false)]
         public long? IdTipoArquivo { get; set; }
     
         /// <summary>
-        /// {{{arquivo_persist_arquivo_value}}}
+        /// Conte\u00FAdo do arquivo convertido em Base 64
         /// </summary>
-        /// <value>{{{arquivo_persist_arquivo_value}}}</value>
+        /// <value>Conte\u00FAdo do arquivo convertido em Base 64</value>
         [DataMember(Name="arquivo", EmitDefaultValue=false)]
         public string Arquivo { get; set; }
     
         /// <summary>
-        /// {{{arquivo_persist_nome_value}}}
+        /// Nome do arquivo
         /// </summary>
-        /// <value>{{{arquivo_persist_nome_value}}}</value>
+        /// <value>Nome do arquivo</value>
         [DataMember(Name="nome", EmitDefaultValue=false)]
         public string Nome { get; set; }
     
         /// <summary>
-        /// {{{arquivo_persist_extensao_value}}}
+        /// Extens\u00E3o do Arquivo
         /// </summary>
-        /// <value>{{{arquivo_persist_extensao_value}}}</value>
+        /// <value>Extens\u00E3o do Arquivo</value>
         [DataMember(Name="extensao", EmitDefaultValue=false)]
         public string Extensao { get; set; }
     
         /// <summary>
-        /// {{{arquivo_persist_detalhes_value}}}
+        /// Detalhes contendo informa\u00E7\u00F5es adicionais, relacionadas ao arquivo
         /// </summary>
-        /// <value>{{{arquivo_persist_detalhes_value}}}</value>
+        /// <value>Detalhes contendo informa\u00E7\u00F5es adicionais, relacionadas ao arquivo</value>
         [DataMember(Name="detalhes", EmitDefaultValue=false)]
         public List<ArquivoDetalhesPersist> Detalhes { get; set; }
     

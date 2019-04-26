@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{parcela_acordo_response_description}}}
+    /// Classe de retorno das parcelas de acordo
     /// </summary>
     [DataContract]
     public partial class ParcelaAcordoResponse :  IEquatable<ParcelaAcordoResponse>
@@ -22,14 +22,14 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="ParcelaAcordoResponse" /> class.
         /// Initializes a new instance of the <see cref="ParcelaAcordoResponse" />class.
         /// </summary>
-        /// <param name="Id">{{{parcela_acordo_response_id_value}}}.</param>
-        /// <param name="IdAcordo">{{{parcela_acordo_response_id_acordo_value}}}.</param>
-        /// <param name="NumeroParcela">{{{parcela_acordo_response_numero_parcela_value}}}.</param>
-        /// <param name="ValorParcela">{{{parcela_acordo_response_valor_parcela_value}}}.</param>
-        /// <param name="VencimentoParcela">{{{parcela_acordo_response_vencimento_parcela_value}}}.</param>
-        /// <param name="SaldoParcela">{{{parcela_acordo_response_saldo_parcela_value}}}.</param>
-        /// <param name="NossoNumero">{{{parcela_acordo_response_nosso_numero_value}}}.</param>
-        /// <param name="IdBoletoParcela">{{{parcela_acordo_response_id_boleto_parcela_value}}}.</param>
+        /// <param name="Id">C\u00F3digo identificador da parcela do acordo.</param>
+        /// <param name="IdAcordo">C\u00F3digo de identifica\u00E7\u00E3o do acordo (Id).</param>
+        /// <param name="NumeroParcela">N\u00FAmero da parcela.</param>
+        /// <param name="ValorParcela">Valor da parcela.</param>
+        /// <param name="VencimentoParcela">Data de vencimento da parcela.</param>
+        /// <param name="SaldoParcela">Saldo da parcela.</param>
+        /// <param name="NossoNumero">Nosso n\u00FAmero gerado por parcela.</param>
+        /// <param name="IdBoletoParcela">C\u00F3digo de identifica\u00E7\u00E3o do boleto.</param>
 
         public ParcelaAcordoResponse(long? Id = null, long? IdAcordo = null, int? NumeroParcela = null, double? ValorParcela = null, string VencimentoParcela = null, double? SaldoParcela = null, string NossoNumero = null, long? IdBoletoParcela = null)
         {
@@ -46,58 +46,58 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{parcela_acordo_response_id_value}}}
+        /// C\u00F3digo identificador da parcela do acordo
         /// </summary>
-        /// <value>{{{parcela_acordo_response_id_value}}}</value>
+        /// <value>C\u00F3digo identificador da parcela do acordo</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{parcela_acordo_response_id_acordo_value}}}
+        /// C\u00F3digo de identifica\u00E7\u00E3o do acordo (Id)
         /// </summary>
-        /// <value>{{{parcela_acordo_response_id_acordo_value}}}</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do acordo (Id)</value>
         [DataMember(Name="idAcordo", EmitDefaultValue=false)]
         public long? IdAcordo { get; set; }
     
         /// <summary>
-        /// {{{parcela_acordo_response_numero_parcela_value}}}
+        /// N\u00FAmero da parcela
         /// </summary>
-        /// <value>{{{parcela_acordo_response_numero_parcela_value}}}</value>
+        /// <value>N\u00FAmero da parcela</value>
         [DataMember(Name="numeroParcela", EmitDefaultValue=false)]
         public int? NumeroParcela { get; set; }
     
         /// <summary>
-        /// {{{parcela_acordo_response_valor_parcela_value}}}
+        /// Valor da parcela
         /// </summary>
-        /// <value>{{{parcela_acordo_response_valor_parcela_value}}}</value>
+        /// <value>Valor da parcela</value>
         [DataMember(Name="valorParcela", EmitDefaultValue=false)]
         public double? ValorParcela { get; set; }
     
         /// <summary>
-        /// {{{parcela_acordo_response_vencimento_parcela_value}}}
+        /// Data de vencimento da parcela
         /// </summary>
-        /// <value>{{{parcela_acordo_response_vencimento_parcela_value}}}</value>
+        /// <value>Data de vencimento da parcela</value>
         [DataMember(Name="vencimentoParcela", EmitDefaultValue=false)]
         public string VencimentoParcela { get; set; }
     
         /// <summary>
-        /// {{{parcela_acordo_response_saldo_parcela_value}}}
+        /// Saldo da parcela
         /// </summary>
-        /// <value>{{{parcela_acordo_response_saldo_parcela_value}}}</value>
+        /// <value>Saldo da parcela</value>
         [DataMember(Name="saldoParcela", EmitDefaultValue=false)]
         public double? SaldoParcela { get; set; }
     
         /// <summary>
-        /// {{{parcela_acordo_response_nosso_numero_value}}}
+        /// Nosso n\u00FAmero gerado por parcela
         /// </summary>
-        /// <value>{{{parcela_acordo_response_nosso_numero_value}}}</value>
+        /// <value>Nosso n\u00FAmero gerado por parcela</value>
         [DataMember(Name="nossoNumero", EmitDefaultValue=false)]
         public string NossoNumero { get; set; }
     
         /// <summary>
-        /// {{{parcela_acordo_response_id_boleto_parcela_value}}}
+        /// C\u00F3digo de identifica\u00E7\u00E3o do boleto
         /// </summary>
-        /// <value>{{{parcela_acordo_response_id_boleto_parcela_value}}}</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do boleto</value>
         [DataMember(Name="idBoletoParcela", EmitDefaultValue=false)]
         public long? IdBoletoParcela { get; set; }
     

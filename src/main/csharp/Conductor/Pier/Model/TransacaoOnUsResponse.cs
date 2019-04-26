@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{transacao_on_us_response_description}}}
+    /// Objeto de Resposta de Autoriza\u00E7\u00E3o
     /// </summary>
     [DataContract]
     public partial class TransacaoOnUsResponse :  IEquatable<TransacaoOnUsResponse>
@@ -22,13 +22,13 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TransacaoOnUsResponse" /> class.
         /// Initializes a new instance of the <see cref="TransacaoOnUsResponse" />class.
         /// </summary>
-        /// <param name="NsuOrigem">{{{transacao_on_us_response_nsu_origem_value}}}.</param>
-        /// <param name="NsuAutorizacao">{{{transacao_on_us_response_nsu_autorizacao_value}}}.</param>
-        /// <param name="PlanoDeParcelamento">{{{transacao_on_us_response_plano_de_parcelamento_value}}}.</param>
-        /// <param name="CodigoAutorizacao">{{{transacao_on_us_response_codigo_autorizacao_value}}}.</param>
-        /// <param name="NumeroMascaradoCartao">{{{transacao_on_us_response_numero_mascarado_cartao_value}}}.</param>
-        /// <param name="NomePortadorCartao">{{{transacao_on_us_response_nome_portador_cartao_value}}}.</param>
-        /// <param name="TerminalRequisitante">{{{transacao_on_us_response_terminal_requisitante_value}}} (required).</param>
+        /// <param name="NsuOrigem">N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema que a originou.</param>
+        /// <param name="NsuAutorizacao">N\u00FAmero Sequencial \u00DAnico gerado pelo Autorizador a cada Transa\u00E7\u00E3o.</param>
+        /// <param name="PlanoDeParcelamento">Descri\u00E7\u00E3o do Plano de Parcelamento atribu\u00EDdo a Transa\u00E7\u00E3o.</param>
+        /// <param name="CodigoAutorizacao">C\u00F3digo de Autoriza\u00E7\u00E3o gerado pelo Autorizador.</param>
+        /// <param name="NumeroMascaradoCartao">N\u00FAmero do Cart\u00E3o que originou a transa\u00E7\u00E3o em formato mascarado.</param>
+        /// <param name="NomePortadorCartao">Nome do Portador do Cart\u00E3o que originou a transa\u00E7\u00E3o.</param>
+        /// <param name="TerminalRequisitante">Apresenta a identifica\u00E7\u00E3o do terminal requisitante (required).</param>
 
         public TransacaoOnUsResponse(string NsuOrigem = null, string NsuAutorizacao = null, List<MapOfstringAndstring> PlanoDeParcelamento = null, string CodigoAutorizacao = null, string NumeroMascaradoCartao = null, string NomePortadorCartao = null, string TerminalRequisitante = null)
         {
@@ -52,51 +52,51 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{transacao_on_us_response_nsu_origem_value}}}
+        /// N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema que a originou
         /// </summary>
-        /// <value>{{{transacao_on_us_response_nsu_origem_value}}}</value>
+        /// <value>N\u00FAmero Sequencial \u00DAnico que identifica a transa\u00E7\u00E3o no sistema que a originou</value>
         [DataMember(Name="nsuOrigem", EmitDefaultValue=false)]
         public string NsuOrigem { get; set; }
     
         /// <summary>
-        /// {{{transacao_on_us_response_nsu_autorizacao_value}}}
+        /// N\u00FAmero Sequencial \u00DAnico gerado pelo Autorizador a cada Transa\u00E7\u00E3o
         /// </summary>
-        /// <value>{{{transacao_on_us_response_nsu_autorizacao_value}}}</value>
+        /// <value>N\u00FAmero Sequencial \u00DAnico gerado pelo Autorizador a cada Transa\u00E7\u00E3o</value>
         [DataMember(Name="nsuAutorizacao", EmitDefaultValue=false)]
         public string NsuAutorizacao { get; set; }
     
         /// <summary>
-        /// {{{transacao_on_us_response_plano_de_parcelamento_value}}}
+        /// Descri\u00E7\u00E3o do Plano de Parcelamento atribu\u00EDdo a Transa\u00E7\u00E3o
         /// </summary>
-        /// <value>{{{transacao_on_us_response_plano_de_parcelamento_value}}}</value>
+        /// <value>Descri\u00E7\u00E3o do Plano de Parcelamento atribu\u00EDdo a Transa\u00E7\u00E3o</value>
         [DataMember(Name="planoDeParcelamento", EmitDefaultValue=false)]
         public List<MapOfstringAndstring> PlanoDeParcelamento { get; set; }
     
         /// <summary>
-        /// {{{transacao_on_us_response_codigo_autorizacao_value}}}
+        /// C\u00F3digo de Autoriza\u00E7\u00E3o gerado pelo Autorizador
         /// </summary>
-        /// <value>{{{transacao_on_us_response_codigo_autorizacao_value}}}</value>
+        /// <value>C\u00F3digo de Autoriza\u00E7\u00E3o gerado pelo Autorizador</value>
         [DataMember(Name="codigoAutorizacao", EmitDefaultValue=false)]
         public string CodigoAutorizacao { get; set; }
     
         /// <summary>
-        /// {{{transacao_on_us_response_numero_mascarado_cartao_value}}}
+        /// N\u00FAmero do Cart\u00E3o que originou a transa\u00E7\u00E3o em formato mascarado
         /// </summary>
-        /// <value>{{{transacao_on_us_response_numero_mascarado_cartao_value}}}</value>
+        /// <value>N\u00FAmero do Cart\u00E3o que originou a transa\u00E7\u00E3o em formato mascarado</value>
         [DataMember(Name="numeroMascaradoCartao", EmitDefaultValue=false)]
         public string NumeroMascaradoCartao { get; set; }
     
         /// <summary>
-        /// {{{transacao_on_us_response_nome_portador_cartao_value}}}
+        /// Nome do Portador do Cart\u00E3o que originou a transa\u00E7\u00E3o
         /// </summary>
-        /// <value>{{{transacao_on_us_response_nome_portador_cartao_value}}}</value>
+        /// <value>Nome do Portador do Cart\u00E3o que originou a transa\u00E7\u00E3o</value>
         [DataMember(Name="nomePortadorCartao", EmitDefaultValue=false)]
         public string NomePortadorCartao { get; set; }
     
         /// <summary>
-        /// {{{transacao_on_us_response_terminal_requisitante_value}}}
+        /// Apresenta a identifica\u00E7\u00E3o do terminal requisitante
         /// </summary>
-        /// <value>{{{transacao_on_us_response_terminal_requisitante_value}}}</value>
+        /// <value>Apresenta a identifica\u00E7\u00E3o do terminal requisitante</value>
         [DataMember(Name="terminalRequisitante", EmitDefaultValue=false)]
         public string TerminalRequisitante { get; set; }
     

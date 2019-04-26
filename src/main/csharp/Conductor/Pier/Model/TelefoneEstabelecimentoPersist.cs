@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{telefone_estabelecimento_persist_description}}}
+    /// Objeto Telefone
     /// </summary>
     [DataContract]
     public partial class TelefoneEstabelecimentoPersist :  IEquatable<TelefoneEstabelecimentoPersist>
@@ -22,10 +22,10 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TelefoneEstabelecimentoPersist" /> class.
         /// Initializes a new instance of the <see cref="TelefoneEstabelecimentoPersist" />class.
         /// </summary>
-        /// <param name="IdEstabelecimento">{{{telefone_estabelecimento_persist_id_estabelecimento_value}}} (required).</param>
-        /// <param name="Ddd">{{{telefone_estabelecimento_persist_ddd_value}}} (required).</param>
-        /// <param name="Telefone">{{{telefone_estabelecimento_persist_telefone_value}}} (required).</param>
-        /// <param name="Ramal">{{{telefone_estabelecimento_persist_ramal_value}}}.</param>
+        /// <param name="IdEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento (id) (required).</param>
+        /// <param name="Ddd">C\u00F3digo DDD do telefone (required).</param>
+        /// <param name="Telefone">N\u00FAmero do Telefone (required).</param>
+        /// <param name="Ramal">N\u00FAmero do Ramal.</param>
 
         public TelefoneEstabelecimentoPersist(long? IdEstabelecimento = null, string Ddd = null, string Telefone = null, string Ramal = null)
         {
@@ -62,30 +62,30 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{telefone_estabelecimento_persist_id_estabelecimento_value}}}
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento (id)
         /// </summary>
-        /// <value>{{{telefone_estabelecimento_persist_id_estabelecimento_value}}}</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento (id)</value>
         [DataMember(Name="idEstabelecimento", EmitDefaultValue=false)]
         public long? IdEstabelecimento { get; set; }
     
         /// <summary>
-        /// {{{telefone_estabelecimento_persist_ddd_value}}}
+        /// C\u00F3digo DDD do telefone
         /// </summary>
-        /// <value>{{{telefone_estabelecimento_persist_ddd_value}}}</value>
+        /// <value>C\u00F3digo DDD do telefone</value>
         [DataMember(Name="ddd", EmitDefaultValue=false)]
         public string Ddd { get; set; }
     
         /// <summary>
-        /// {{{telefone_estabelecimento_persist_telefone_value}}}
+        /// N\u00FAmero do Telefone
         /// </summary>
-        /// <value>{{{telefone_estabelecimento_persist_telefone_value}}}</value>
+        /// <value>N\u00FAmero do Telefone</value>
         [DataMember(Name="telefone", EmitDefaultValue=false)]
         public string Telefone { get; set; }
     
         /// <summary>
-        /// {{{telefone_estabelecimento_persist_ramal_value}}}
+        /// N\u00FAmero do Ramal
         /// </summary>
-        /// <value>{{{telefone_estabelecimento_persist_ramal_value}}}</value>
+        /// <value>N\u00FAmero do Ramal</value>
         [DataMember(Name="ramal", EmitDefaultValue=false)]
         public string Ramal { get; set; }
     

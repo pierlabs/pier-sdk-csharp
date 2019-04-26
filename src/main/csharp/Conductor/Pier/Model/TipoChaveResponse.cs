@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{tipo_chave_response_description}}}
+    /// Representa\u00E7\u00E3o da resposta do recurso do Tipo Chave
     /// </summary>
     [DataContract]
     public partial class TipoChaveResponse :  IEquatable<TipoChaveResponse>
@@ -22,8 +22,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TipoChaveResponse" /> class.
         /// Initializes a new instance of the <see cref="TipoChaveResponse" />class.
         /// </summary>
-        /// <param name="Id">{{{tipo_chave_response_id_value}}}.</param>
-        /// <param name="Descricao">{{{tipo_chave_response_descricao_value}}}.</param>
+        /// <param name="Id">Tipo chave id.</param>
+        /// <param name="Descricao">Tipo chave descri\u00E7\u00E3o.</param>
 
         public TipoChaveResponse(long? Id = null, string Descricao = null)
         {
@@ -34,16 +34,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{tipo_chave_response_id_value}}}
+        /// Tipo chave id
         /// </summary>
-        /// <value>{{{tipo_chave_response_id_value}}}</value>
+        /// <value>Tipo chave id</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{tipo_chave_response_descricao_value}}}
+        /// Tipo chave descri\u00E7\u00E3o
         /// </summary>
-        /// <value>{{{tipo_chave_response_descricao_value}}}</value>
+        /// <value>Tipo chave descri\u00E7\u00E3o</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     

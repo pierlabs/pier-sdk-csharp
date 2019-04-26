@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{arquivo_detalhes_persist_description}}}
+    /// Objeto ArquivoParametros para persist\u00EAncia de dados
     /// </summary>
     [DataContract]
     public partial class ArquivoDetalhesPersist :  IEquatable<ArquivoDetalhesPersist>
@@ -22,8 +22,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="ArquivoDetalhesPersist" /> class.
         /// Initializes a new instance of the <see cref="ArquivoDetalhesPersist" />class.
         /// </summary>
-        /// <param name="NomeCampo">{{{arquivo_detalhes_persist_nome_campo_value}}} (required).</param>
-        /// <param name="Conteudo">{{{arquivo_detalhes_persist_conteudo_value}}} (required).</param>
+        /// <param name="NomeCampo">Nome que identifica o detalhe do arquivo (required).</param>
+        /// <param name="Conteudo">Conte\u00FAdo do nomeCampo (required).</param>
 
         public ArquivoDetalhesPersist(string NomeCampo = null, string Conteudo = null)
         {
@@ -50,16 +50,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{arquivo_detalhes_persist_nome_campo_value}}}
+        /// Nome que identifica o detalhe do arquivo
         /// </summary>
-        /// <value>{{{arquivo_detalhes_persist_nome_campo_value}}}</value>
+        /// <value>Nome que identifica o detalhe do arquivo</value>
         [DataMember(Name="nomeCampo", EmitDefaultValue=false)]
         public string NomeCampo { get; set; }
     
         /// <summary>
-        /// {{{arquivo_detalhes_persist_conteudo_value}}}
+        /// Conte\u00FAdo do nomeCampo
         /// </summary>
-        /// <value>{{{arquivo_detalhes_persist_conteudo_value}}}</value>
+        /// <value>Conte\u00FAdo do nomeCampo</value>
         [DataMember(Name="conteudo", EmitDefaultValue=false)]
         public string Conteudo { get; set; }
     

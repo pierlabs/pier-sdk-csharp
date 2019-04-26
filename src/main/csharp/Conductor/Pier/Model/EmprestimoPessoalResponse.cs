@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{emprestimo_pessoal_response_description}}}
+    /// Resposta do recurso de simular empr\u00E9stimos/financiamentos
     /// </summary>
     [DataContract]
     public partial class EmprestimoPessoalResponse :  IEquatable<EmprestimoPessoalResponse>
@@ -23,14 +23,14 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="EmprestimoPessoalResponse" />class.
         /// </summary>
         /// <param name="PlanosParcelamentos">PlanosParcelamentos.</param>
-        /// <param name="ValorSolicitado">{{{emprestimo_pessoal_response_valor_solicitado_value}}}.</param>
-        /// <param name="ValorMaximoSolicitacao">{{{emprestimo_pessoal_response_valor_maximo_solicitacao_value}}}.</param>
-        /// <param name="NumeroParcelas">{{{emprestimo_pessoal_response_numero_parcelas_value}}}.</param>
-        /// <param name="ValorMaximoParcela">{{{emprestimo_pessoal_response_valor_maximo_parcela_value}}}.</param>
-        /// <param name="DataPrimeiraParcela">{{{emprestimo_pessoal_response_data_primeira_parcela_value}}}.</param>
-        /// <param name="PeriodoTaxa">{{{emprestimo_pessoal_response_periodo_taxa_value}}}.</param>
-        /// <param name="SistemaAmortizacao">{{{emprestimo_pessoal_response_sistema_amortizacao_value}}}.</param>
-        /// <param name="TaxaJuros">{{{emprestimo_pessoal_response_taxa_juros_value}}}.</param>
+        /// <param name="ValorSolicitado">Valor solicitado do empr\u00E9stimo/financiamento.</param>
+        /// <param name="ValorMaximoSolicitacao">Valor m\u00E1ximo de empr\u00E9stimo pelo valor limite de parcela.</param>
+        /// <param name="NumeroParcelas">N\u00FAmero de parcelas solicitado.</param>
+        /// <param name="ValorMaximoParcela">Limite m\u00E1ximo de parcela permitido.</param>
+        /// <param name="DataPrimeiraParcela">Data do desconto da primeira parcela.</param>
+        /// <param name="PeriodoTaxa">Per\u00EDodo de aplica da taxa de juros.</param>
+        /// <param name="SistemaAmortizacao">Sistema para amortiza\u00E7\u00E3o do valor das parcelas.</param>
+        /// <param name="TaxaJuros">Valor percentual da taxa de juros a ser aplicada.</param>
 
         public EmprestimoPessoalResponse(List<PlanoParcelamentoEmprestimoResponse> PlanosParcelamentos = null, double? ValorSolicitado = null, double? ValorMaximoSolicitacao = null, int? NumeroParcelas = null, double? ValorMaximoParcela = null, string DataPrimeiraParcela = null, string PeriodoTaxa = null, string SistemaAmortizacao = null, double? TaxaJuros = null)
         {
@@ -54,58 +54,58 @@ namespace Conductor.Pier.Model
         public List<PlanoParcelamentoEmprestimoResponse> PlanosParcelamentos { get; set; }
     
         /// <summary>
-        /// {{{emprestimo_pessoal_response_valor_solicitado_value}}}
+        /// Valor solicitado do empr\u00E9stimo/financiamento
         /// </summary>
-        /// <value>{{{emprestimo_pessoal_response_valor_solicitado_value}}}</value>
+        /// <value>Valor solicitado do empr\u00E9stimo/financiamento</value>
         [DataMember(Name="valorSolicitado", EmitDefaultValue=false)]
         public double? ValorSolicitado { get; set; }
     
         /// <summary>
-        /// {{{emprestimo_pessoal_response_valor_maximo_solicitacao_value}}}
+        /// Valor m\u00E1ximo de empr\u00E9stimo pelo valor limite de parcela
         /// </summary>
-        /// <value>{{{emprestimo_pessoal_response_valor_maximo_solicitacao_value}}}</value>
+        /// <value>Valor m\u00E1ximo de empr\u00E9stimo pelo valor limite de parcela</value>
         [DataMember(Name="valorMaximoSolicitacao", EmitDefaultValue=false)]
         public double? ValorMaximoSolicitacao { get; set; }
     
         /// <summary>
-        /// {{{emprestimo_pessoal_response_numero_parcelas_value}}}
+        /// N\u00FAmero de parcelas solicitado
         /// </summary>
-        /// <value>{{{emprestimo_pessoal_response_numero_parcelas_value}}}</value>
+        /// <value>N\u00FAmero de parcelas solicitado</value>
         [DataMember(Name="numeroParcelas", EmitDefaultValue=false)]
         public int? NumeroParcelas { get; set; }
     
         /// <summary>
-        /// {{{emprestimo_pessoal_response_valor_maximo_parcela_value}}}
+        /// Limite m\u00E1ximo de parcela permitido
         /// </summary>
-        /// <value>{{{emprestimo_pessoal_response_valor_maximo_parcela_value}}}</value>
+        /// <value>Limite m\u00E1ximo de parcela permitido</value>
         [DataMember(Name="valorMaximoParcela", EmitDefaultValue=false)]
         public double? ValorMaximoParcela { get; set; }
     
         /// <summary>
-        /// {{{emprestimo_pessoal_response_data_primeira_parcela_value}}}
+        /// Data do desconto da primeira parcela
         /// </summary>
-        /// <value>{{{emprestimo_pessoal_response_data_primeira_parcela_value}}}</value>
+        /// <value>Data do desconto da primeira parcela</value>
         [DataMember(Name="dataPrimeiraParcela", EmitDefaultValue=false)]
         public string DataPrimeiraParcela { get; set; }
     
         /// <summary>
-        /// {{{emprestimo_pessoal_response_periodo_taxa_value}}}
+        /// Per\u00EDodo de aplica da taxa de juros
         /// </summary>
-        /// <value>{{{emprestimo_pessoal_response_periodo_taxa_value}}}</value>
+        /// <value>Per\u00EDodo de aplica da taxa de juros</value>
         [DataMember(Name="periodoTaxa", EmitDefaultValue=false)]
         public string PeriodoTaxa { get; set; }
     
         /// <summary>
-        /// {{{emprestimo_pessoal_response_sistema_amortizacao_value}}}
+        /// Sistema para amortiza\u00E7\u00E3o do valor das parcelas
         /// </summary>
-        /// <value>{{{emprestimo_pessoal_response_sistema_amortizacao_value}}}</value>
+        /// <value>Sistema para amortiza\u00E7\u00E3o do valor das parcelas</value>
         [DataMember(Name="sistemaAmortizacao", EmitDefaultValue=false)]
         public string SistemaAmortizacao { get; set; }
     
         /// <summary>
-        /// {{{emprestimo_pessoal_response_taxa_juros_value}}}
+        /// Valor percentual da taxa de juros a ser aplicada
         /// </summary>
-        /// <value>{{{emprestimo_pessoal_response_taxa_juros_value}}}</value>
+        /// <value>Valor percentual da taxa de juros a ser aplicada</value>
         [DataMember(Name="taxaJuros", EmitDefaultValue=false)]
         public double? TaxaJuros { get; set; }
     

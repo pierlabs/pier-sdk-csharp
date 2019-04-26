@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{page_configuracao_rotativo_response_description}}}
+    /// Listar Configura\u00E7\u00E3o Rotativo
     /// </summary>
     [DataContract]
     public partial class PageConfiguracaoRotativoResponse :  IEquatable<PageConfiguracaoRotativoResponse>

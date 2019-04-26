@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{boleto_request_description}}}
+    /// Par\u00E2metros de requisi\u00E7\u00E3o de um Boleto
     /// </summary>
     [DataContract]
     public partial class BoletoRequest :  IEquatable<BoletoRequest>
@@ -22,13 +22,14 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="BoletoRequest" /> class.
         /// Initializes a new instance of the <see cref="BoletoRequest" />class.
         /// </summary>
-        /// <param name="IdConta">{{{boleto_request_id_conta_value}}} (required).</param>
-        /// <param name="TipoBoleto">{{{boleto_request_tipo_boleto_value}}} (required).</param>
-        /// <param name="Valor">{{{boleto_request_valor_value}}} (required).</param>
-        /// <param name="DataVencimento">{{{boleto_request_data_vencimento_value}}} (required).</param>
-        /// <param name="IdConvenio">{{{boleto_request_id_convenio_value}}}.</param>
+        /// <param name="IdConta">C\u00F3digo de identifica\u00E7\u00E3o da Conta (ID) (required).</param>
+        /// <param name="TipoBoleto">Tipo de Boleto a ser gerado (required).</param>
+        /// <param name="Valor">Valor da cobran\u00E7a gerada (required).</param>
+        /// <param name="DataVencimento">Data de vencimento da cobran\u00E7a (required).</param>
+        /// <param name="IdConvenio">C\u00F3digo de identifica\u00E7\u00E3o do conv\u00EAnio para onde o boleto deve ser gerado.</param>
+        /// <param name="IdPessoafontePagadora">C\u00F3digo de identifica\u00E7\u00E3o da pessoa que ser\u00E1 a fonte pagadora do boleto.</param>
 
-        public BoletoRequest(long? IdConta = null, long? TipoBoleto = null, double? Valor = null, string DataVencimento = null, long? IdConvenio = null)
+        public BoletoRequest(long? IdConta = null, long? TipoBoleto = null, double? Valor = null, string DataVencimento = null, long? IdConvenio = null, long? IdPessoafontePagadora = null)
         {
             // to ensure "IdConta" is required (not null)
             if (IdConta == null)
@@ -67,44 +68,52 @@ namespace Conductor.Pier.Model
                 this.DataVencimento = DataVencimento;
             }
             this.IdConvenio = IdConvenio;
+            this.IdPessoafontePagadora = IdPessoafontePagadora;
             
         }
         
     
         /// <summary>
-        /// {{{boleto_request_id_conta_value}}}
+        /// C\u00F3digo de identifica\u00E7\u00E3o da Conta (ID)
         /// </summary>
-        /// <value>{{{boleto_request_id_conta_value}}}</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o da Conta (ID)</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// {{{boleto_request_tipo_boleto_value}}}
+        /// Tipo de Boleto a ser gerado
         /// </summary>
-        /// <value>{{{boleto_request_tipo_boleto_value}}}</value>
+        /// <value>Tipo de Boleto a ser gerado</value>
         [DataMember(Name="tipoBoleto", EmitDefaultValue=false)]
         public long? TipoBoleto { get; set; }
     
         /// <summary>
-        /// {{{boleto_request_valor_value}}}
+        /// Valor da cobran\u00E7a gerada
         /// </summary>
-        /// <value>{{{boleto_request_valor_value}}}</value>
+        /// <value>Valor da cobran\u00E7a gerada</value>
         [DataMember(Name="valor", EmitDefaultValue=false)]
         public double? Valor { get; set; }
     
         /// <summary>
-        /// {{{boleto_request_data_vencimento_value}}}
+        /// Data de vencimento da cobran\u00E7a
         /// </summary>
-        /// <value>{{{boleto_request_data_vencimento_value}}}</value>
+        /// <value>Data de vencimento da cobran\u00E7a</value>
         [DataMember(Name="dataVencimento", EmitDefaultValue=false)]
         public string DataVencimento { get; set; }
     
         /// <summary>
-        /// {{{boleto_request_id_convenio_value}}}
+        /// C\u00F3digo de identifica\u00E7\u00E3o do conv\u00EAnio para onde o boleto deve ser gerado
         /// </summary>
-        /// <value>{{{boleto_request_id_convenio_value}}}</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do conv\u00EAnio para onde o boleto deve ser gerado</value>
         [DataMember(Name="idConvenio", EmitDefaultValue=false)]
         public long? IdConvenio { get; set; }
+    
+        /// <summary>
+        /// C\u00F3digo de identifica\u00E7\u00E3o da pessoa que ser\u00E1 a fonte pagadora do boleto
+        /// </summary>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o da pessoa que ser\u00E1 a fonte pagadora do boleto</value>
+        [DataMember(Name="idPessoafontePagadora", EmitDefaultValue=false)]
+        public long? IdPessoafontePagadora { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -119,6 +128,7 @@ namespace Conductor.Pier.Model
             sb.Append("  Valor: ").Append(Valor).Append("\n");
             sb.Append("  DataVencimento: ").Append(DataVencimento).Append("\n");
             sb.Append("  IdConvenio: ").Append(IdConvenio).Append("\n");
+            sb.Append("  IdPessoafontePagadora: ").Append(IdPessoafontePagadora).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -180,6 +190,11 @@ namespace Conductor.Pier.Model
                     this.IdConvenio == other.IdConvenio ||
                     this.IdConvenio != null &&
                     this.IdConvenio.Equals(other.IdConvenio)
+                ) && 
+                (
+                    this.IdPessoafontePagadora == other.IdPessoafontePagadora ||
+                    this.IdPessoafontePagadora != null &&
+                    this.IdPessoafontePagadora.Equals(other.IdPessoafontePagadora)
                 );
         }
 
@@ -209,6 +224,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.IdConvenio != null)
                     hash = hash * 59 + this.IdConvenio.GetHashCode();
+                
+                if (this.IdPessoafontePagadora != null)
+                    hash = hash * 59 + this.IdPessoafontePagadora.GetHashCode();
                 
                 return hash;
             }

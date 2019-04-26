@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{promotor_response_description}}}
+    /// Objeto Promotor
     /// </summary>
     [DataContract]
     public partial class PromotorResponse :  IEquatable<PromotorResponse>
@@ -22,11 +22,11 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="PromotorResponse" /> class.
         /// Initializes a new instance of the <see cref="PromotorResponse" />class.
         /// </summary>
-        /// <param name="Id">{{{promotor_response_id_value}}}.</param>
-        /// <param name="Nome">{{{promotor_response_nome_value}}}.</param>
-        /// <param name="DataCadastro">{{{promotor_response_data_cadastro_value}}}.</param>
-        /// <param name="IdEstabelecimento">{{{promotor_response_id_estabelecimento_value}}}.</param>
-        /// <param name="IdUsuario">{{{promotor_response_id_usuario_value}}}.</param>
+        /// <param name="Id">C\u00F3digo de Identifica\u00E7\u00E3o do promotor (id).</param>
+        /// <param name="Nome">Nome do Promotor.</param>
+        /// <param name="DataCadastro">Data da Inclus\u00E3o.</param>
+        /// <param name="IdEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento.</param>
+        /// <param name="IdUsuario">C\u00F3digo de Identifica\u00E7\u00E3o do usu\u00E1rio.</param>
 
         public PromotorResponse(long? Id = null, string Nome = null, string DataCadastro = null, long? IdEstabelecimento = null, long? IdUsuario = null)
         {
@@ -40,37 +40,37 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{promotor_response_id_value}}}
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do promotor (id)
         /// </summary>
-        /// <value>{{{promotor_response_id_value}}}</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do promotor (id)</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{promotor_response_nome_value}}}
+        /// Nome do Promotor
         /// </summary>
-        /// <value>{{{promotor_response_nome_value}}}</value>
+        /// <value>Nome do Promotor</value>
         [DataMember(Name="nome", EmitDefaultValue=false)]
         public string Nome { get; set; }
     
         /// <summary>
-        /// {{{promotor_response_data_cadastro_value}}}
+        /// Data da Inclus\u00E3o
         /// </summary>
-        /// <value>{{{promotor_response_data_cadastro_value}}}</value>
+        /// <value>Data da Inclus\u00E3o</value>
         [DataMember(Name="dataCadastro", EmitDefaultValue=false)]
         public string DataCadastro { get; set; }
     
         /// <summary>
-        /// {{{promotor_response_id_estabelecimento_value}}}
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento
         /// </summary>
-        /// <value>{{{promotor_response_id_estabelecimento_value}}}</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento</value>
         [DataMember(Name="idEstabelecimento", EmitDefaultValue=false)]
         public long? IdEstabelecimento { get; set; }
     
         /// <summary>
-        /// {{{promotor_response_id_usuario_value}}}
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do usu\u00E1rio
         /// </summary>
-        /// <value>{{{promotor_response_id_usuario_value}}}</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do usu\u00E1rio</value>
         [DataMember(Name="idUsuario", EmitDefaultValue=false)]
         public long? IdUsuario { get; set; }
     

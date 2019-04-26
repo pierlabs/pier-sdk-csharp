@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{pessoa_response_description}}}
+    /// Pessoa
     /// </summary>
     [DataContract]
     public partial class PessoaResponse :  IEquatable<PessoaResponse>
@@ -22,17 +22,17 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="PessoaResponse" /> class.
         /// Initializes a new instance of the <see cref="PessoaResponse" />class.
         /// </summary>
-        /// <param name="Id">{{{pessoa_response_id_value}}} (required).</param>
-        /// <param name="Nome">{{{pessoa_response_nome_value}}} (required).</param>
-        /// <param name="Tipo">{{{pessoa_response_tipo_value}}} (required).</param>
-        /// <param name="Cpf">{{{pessoa_response_cpf_value}}}.</param>
-        /// <param name="Cnpj">{{{pessoa_response_cnpj_value}}}.</param>
-        /// <param name="DataNascimento">{{{pessoa_response_data_nascimento_value}}}.</param>
-        /// <param name="NumeroIdentidade">{{{pessoa_response_numero_identidade_value}}}.</param>
-        /// <param name="OrgaoExpedidorIdentidade">{{{pessoa_response_orgao_expedidor_identidade_value}}}.</param>
-        /// <param name="Sexo">{{{pessoa_response_sexo_value}}}.</param>
-        /// <param name="UnidadeFederativaIdentidade">{{{pessoa_response_unidade_federativa_identidade_value}}}.</param>
-        /// <param name="DataEmissaoIdentidade">{{{pessoa_response_data_emissao_identidade_value}}}.</param>
+        /// <param name="Id">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id) (required).</param>
+        /// <param name="Nome">Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00E3o Social (Nome Empresarial)&#39; (required).</param>
+        /// <param name="Tipo">C\u00F3digo de identifica\u00E7\u00E3o do tipo da Pessoa, sendo: (&#39;PF&#39;: Pessoa F\u00EDsica), (&#39;PJ&#39;: Pessoa Jur\u00EDdica) (required).</param>
+        /// <param name="Cpf">N\u00FAmero do CPF, quando PF.</param>
+        /// <param name="Cnpj">N\u00FAmero do CNPJ, quando PJ.</param>
+        /// <param name="DataNascimento">Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ.</param>
+        /// <param name="NumeroIdentidade">N\u00FAmero da Identidade.</param>
+        /// <param name="OrgaoExpedidorIdentidade">Org\u00E3o expedidor do RG.</param>
+        /// <param name="Sexo">C\u00F3digo de identifica\u00E7\u00E3o do sexo da Pessoa, quando PF, sendo: (&#39;M&#39;: Masculino), (&#39;F&#39;: Feminino), (&#39;O&#39;: Outro), (&#39;N&#39;: N\u00E3o Especificado).</param>
+        /// <param name="UnidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade.</param>
+        /// <param name="DataEmissaoIdentidade">Data emiss\u00E3o da identidade no formato aaaa-MM-dd.</param>
 
         public PessoaResponse(long? Id = null, string Nome = null, string Tipo = null, string Cpf = null, string Cnpj = null, string DataNascimento = null, string NumeroIdentidade = null, string OrgaoExpedidorIdentidade = null, string Sexo = null, string UnidadeFederativaIdentidade = null, string DataEmissaoIdentidade = null)
         {
@@ -76,79 +76,79 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{pessoa_response_id_value}}}
+        /// C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id)
         /// </summary>
-        /// <value>{{{pessoa_response_id_value}}}</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id)</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{pessoa_response_nome_value}}}
+        /// Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00E3o Social (Nome Empresarial)&#39;
         /// </summary>
-        /// <value>{{{pessoa_response_nome_value}}}</value>
+        /// <value>Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00E3o Social (Nome Empresarial)&#39;</value>
         [DataMember(Name="nome", EmitDefaultValue=false)]
         public string Nome { get; set; }
     
         /// <summary>
-        /// {{{pessoa_response_tipo_value}}}
+        /// C\u00F3digo de identifica\u00E7\u00E3o do tipo da Pessoa, sendo: (&#39;PF&#39;: Pessoa F\u00EDsica), (&#39;PJ&#39;: Pessoa Jur\u00EDdica)
         /// </summary>
-        /// <value>{{{pessoa_response_tipo_value}}}</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do tipo da Pessoa, sendo: (&#39;PF&#39;: Pessoa F\u00EDsica), (&#39;PJ&#39;: Pessoa Jur\u00EDdica)</value>
         [DataMember(Name="tipo", EmitDefaultValue=false)]
         public string Tipo { get; set; }
     
         /// <summary>
-        /// {{{pessoa_response_cpf_value}}}
+        /// N\u00FAmero do CPF, quando PF
         /// </summary>
-        /// <value>{{{pessoa_response_cpf_value}}}</value>
+        /// <value>N\u00FAmero do CPF, quando PF</value>
         [DataMember(Name="cpf", EmitDefaultValue=false)]
         public string Cpf { get; set; }
     
         /// <summary>
-        /// {{{pessoa_response_cnpj_value}}}
+        /// N\u00FAmero do CNPJ, quando PJ
         /// </summary>
-        /// <value>{{{pessoa_response_cnpj_value}}}</value>
+        /// <value>N\u00FAmero do CNPJ, quando PJ</value>
         [DataMember(Name="cnpj", EmitDefaultValue=false)]
         public string Cnpj { get; set; }
     
         /// <summary>
-        /// {{{pessoa_response_data_nascimento_value}}}
+        /// Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ
         /// </summary>
-        /// <value>{{{pessoa_response_data_nascimento_value}}}</value>
+        /// <value>Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ</value>
         [DataMember(Name="dataNascimento", EmitDefaultValue=false)]
         public string DataNascimento { get; set; }
     
         /// <summary>
-        /// {{{pessoa_response_numero_identidade_value}}}
+        /// N\u00FAmero da Identidade
         /// </summary>
-        /// <value>{{{pessoa_response_numero_identidade_value}}}</value>
+        /// <value>N\u00FAmero da Identidade</value>
         [DataMember(Name="numeroIdentidade", EmitDefaultValue=false)]
         public string NumeroIdentidade { get; set; }
     
         /// <summary>
-        /// {{{pessoa_response_orgao_expedidor_identidade_value}}}
+        /// Org\u00E3o expedidor do RG
         /// </summary>
-        /// <value>{{{pessoa_response_orgao_expedidor_identidade_value}}}</value>
+        /// <value>Org\u00E3o expedidor do RG</value>
         [DataMember(Name="orgaoExpedidorIdentidade", EmitDefaultValue=false)]
         public string OrgaoExpedidorIdentidade { get; set; }
     
         /// <summary>
-        /// {{{pessoa_response_sexo_value}}}
+        /// C\u00F3digo de identifica\u00E7\u00E3o do sexo da Pessoa, quando PF, sendo: (&#39;M&#39;: Masculino), (&#39;F&#39;: Feminino), (&#39;O&#39;: Outro), (&#39;N&#39;: N\u00E3o Especificado)
         /// </summary>
-        /// <value>{{{pessoa_response_sexo_value}}}</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do sexo da Pessoa, quando PF, sendo: (&#39;M&#39;: Masculino), (&#39;F&#39;: Feminino), (&#39;O&#39;: Outro), (&#39;N&#39;: N\u00E3o Especificado)</value>
         [DataMember(Name="sexo", EmitDefaultValue=false)]
         public string Sexo { get; set; }
     
         /// <summary>
-        /// {{{pessoa_response_unidade_federativa_identidade_value}}}
+        /// Sigla da Unidade Federativa de onde foi expedido a Identidade
         /// </summary>
-        /// <value>{{{pessoa_response_unidade_federativa_identidade_value}}}</value>
+        /// <value>Sigla da Unidade Federativa de onde foi expedido a Identidade</value>
         [DataMember(Name="unidadeFederativaIdentidade", EmitDefaultValue=false)]
         public string UnidadeFederativaIdentidade { get; set; }
     
         /// <summary>
-        /// {{{pessoa_response_data_emissao_identidade_value}}}
+        /// Data emiss\u00E3o da identidade no formato aaaa-MM-dd
         /// </summary>
-        /// <value>{{{pessoa_response_data_emissao_identidade_value}}}</value>
+        /// <value>Data emiss\u00E3o da identidade no formato aaaa-MM-dd</value>
         [DataMember(Name="dataEmissaoIdentidade", EmitDefaultValue=false)]
         public string DataEmissaoIdentidade { get; set; }
     

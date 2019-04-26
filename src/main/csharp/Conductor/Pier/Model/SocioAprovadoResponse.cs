@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{socio_aprovado_response_description}}}
+    /// PessoaPersist
     /// </summary>
     [DataContract]
     public partial class SocioAprovadoResponse :  IEquatable<SocioAprovadoResponse>
@@ -22,20 +22,20 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="SocioAprovadoResponse" /> class.
         /// Initializes a new instance of the <see cref="SocioAprovadoResponse" />class.
         /// </summary>
-        /// <param name="Id">{{{socio_aprovado_response_id_value}}}.</param>
-        /// <param name="Nome">{{{socio_aprovado_response_nome_value}}}.</param>
-        /// <param name="Cpf">{{{socio_aprovado_response_cpf_value}}}.</param>
-        /// <param name="DataNascimento">{{{socio_aprovado_response_data_nascimento_value}}}.</param>
-        /// <param name="Sexo">{{{socio_aprovado_response_sexo_value}}}.</param>
-        /// <param name="NumeroIdentidade">{{{socio_aprovado_response_numero_identidade_value}}}.</param>
-        /// <param name="OrgaoExpedidorIdentidade">{{{socio_aprovado_response_orgao_expedidor_identidade_value}}}.</param>
-        /// <param name="UnidadeFederativaIdentidade">{{{socio_aprovado_response_unidade_federativa_identidade_value}}}.</param>
-        /// <param name="DataEmissaoIdentidade">{{{socio_aprovado_response_data_emissao_identidade_value}}}.</param>
-        /// <param name="EstadoCivil">{{{socio_aprovado_response_estado_civil_value}}}.</param>
-        /// <param name="Profissao">{{{socio_aprovado_response_profissao_value}}}.</param>
-        /// <param name="Nacionalidade">{{{socio_aprovado_response_nacionalidade_value}}}.</param>
-        /// <param name="Email">{{{socio_aprovado_response_email_value}}}.</param>
-        /// <param name="Telefones">{{{socio_aprovado_response_telefones_value}}}.</param>
+        /// <param name="Id">C\u00F3digo de Identifica\u00E7\u00E3o do S\u00F3cio (id).</param>
+        /// <param name="Nome">Apresenta o Nome do Socio.</param>
+        /// <param name="Cpf">CPF.</param>
+        /// <param name="DataNascimento">Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd.</param>
+        /// <param name="Sexo">C\u00F3digo de identifica\u00E7\u00E3o do sexo da pessoa, quando for PF, sendo: (&#39;M&#39;: Masculino), (&#39;F&#39;: F\u00EAmea), (&#39;O&#39;: Outros), (&#39;N&#39;: N\u00E3o Especificado).</param>
+        /// <param name="NumeroIdentidade">N\u00FAmero da Identidade.</param>
+        /// <param name="OrgaoExpedidorIdentidade">Org\u00E3o expedidor do RG.</param>
+        /// <param name="UnidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade.</param>
+        /// <param name="DataEmissaoIdentidade">Data emiss\u00E3o da Identidade.</param>
+        /// <param name="EstadoCivil">Estado civil do s\u00F3cio.</param>
+        /// <param name="Profissao">Profiss\u00E3o do s\u00F3cio.</param>
+        /// <param name="Nacionalidade">Nacionalidade do s\u00F3cio.</param>
+        /// <param name="Email">Email do s\u00F3cio.</param>
+        /// <param name="Telefones">Informa os telefones do s\u00F3cio.</param>
 
         public SocioAprovadoResponse(long? Id = null, string Nome = null, string Cpf = null, string DataNascimento = null, string Sexo = null, string NumeroIdentidade = null, string OrgaoExpedidorIdentidade = null, string UnidadeFederativaIdentidade = null, string DataEmissaoIdentidade = null, string EstadoCivil = null, string Profissao = null, string Nacionalidade = null, string Email = null, List<TelefonePessoaAprovadaResponse> Telefones = null)
         {
@@ -58,100 +58,100 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{socio_aprovado_response_id_value}}}
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do S\u00F3cio (id)
         /// </summary>
-        /// <value>{{{socio_aprovado_response_id_value}}}</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do S\u00F3cio (id)</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{socio_aprovado_response_nome_value}}}
+        /// Apresenta o Nome do Socio
         /// </summary>
-        /// <value>{{{socio_aprovado_response_nome_value}}}</value>
+        /// <value>Apresenta o Nome do Socio</value>
         [DataMember(Name="nome", EmitDefaultValue=false)]
         public string Nome { get; set; }
     
         /// <summary>
-        /// {{{socio_aprovado_response_cpf_value}}}
+        /// CPF
         /// </summary>
-        /// <value>{{{socio_aprovado_response_cpf_value}}}</value>
+        /// <value>CPF</value>
         [DataMember(Name="cpf", EmitDefaultValue=false)]
         public string Cpf { get; set; }
     
         /// <summary>
-        /// {{{socio_aprovado_response_data_nascimento_value}}}
+        /// Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd
         /// </summary>
-        /// <value>{{{socio_aprovado_response_data_nascimento_value}}}</value>
+        /// <value>Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd</value>
         [DataMember(Name="dataNascimento", EmitDefaultValue=false)]
         public string DataNascimento { get; set; }
     
         /// <summary>
-        /// {{{socio_aprovado_response_sexo_value}}}
+        /// C\u00F3digo de identifica\u00E7\u00E3o do sexo da pessoa, quando for PF, sendo: (&#39;M&#39;: Masculino), (&#39;F&#39;: F\u00EAmea), (&#39;O&#39;: Outros), (&#39;N&#39;: N\u00E3o Especificado)
         /// </summary>
-        /// <value>{{{socio_aprovado_response_sexo_value}}}</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do sexo da pessoa, quando for PF, sendo: (&#39;M&#39;: Masculino), (&#39;F&#39;: F\u00EAmea), (&#39;O&#39;: Outros), (&#39;N&#39;: N\u00E3o Especificado)</value>
         [DataMember(Name="sexo", EmitDefaultValue=false)]
         public string Sexo { get; set; }
     
         /// <summary>
-        /// {{{socio_aprovado_response_numero_identidade_value}}}
+        /// N\u00FAmero da Identidade
         /// </summary>
-        /// <value>{{{socio_aprovado_response_numero_identidade_value}}}</value>
+        /// <value>N\u00FAmero da Identidade</value>
         [DataMember(Name="numeroIdentidade", EmitDefaultValue=false)]
         public string NumeroIdentidade { get; set; }
     
         /// <summary>
-        /// {{{socio_aprovado_response_orgao_expedidor_identidade_value}}}
+        /// Org\u00E3o expedidor do RG
         /// </summary>
-        /// <value>{{{socio_aprovado_response_orgao_expedidor_identidade_value}}}</value>
+        /// <value>Org\u00E3o expedidor do RG</value>
         [DataMember(Name="orgaoExpedidorIdentidade", EmitDefaultValue=false)]
         public string OrgaoExpedidorIdentidade { get; set; }
     
         /// <summary>
-        /// {{{socio_aprovado_response_unidade_federativa_identidade_value}}}
+        /// Sigla da Unidade Federativa de onde foi expedido a Identidade
         /// </summary>
-        /// <value>{{{socio_aprovado_response_unidade_federativa_identidade_value}}}</value>
+        /// <value>Sigla da Unidade Federativa de onde foi expedido a Identidade</value>
         [DataMember(Name="unidadeFederativaIdentidade", EmitDefaultValue=false)]
         public string UnidadeFederativaIdentidade { get; set; }
     
         /// <summary>
-        /// {{{socio_aprovado_response_data_emissao_identidade_value}}}
+        /// Data emiss\u00E3o da Identidade
         /// </summary>
-        /// <value>{{{socio_aprovado_response_data_emissao_identidade_value}}}</value>
+        /// <value>Data emiss\u00E3o da Identidade</value>
         [DataMember(Name="dataEmissaoIdentidade", EmitDefaultValue=false)]
         public string DataEmissaoIdentidade { get; set; }
     
         /// <summary>
-        /// {{{socio_aprovado_response_estado_civil_value}}}
+        /// Estado civil do s\u00F3cio
         /// </summary>
-        /// <value>{{{socio_aprovado_response_estado_civil_value}}}</value>
+        /// <value>Estado civil do s\u00F3cio</value>
         [DataMember(Name="estadoCivil", EmitDefaultValue=false)]
         public string EstadoCivil { get; set; }
     
         /// <summary>
-        /// {{{socio_aprovado_response_profissao_value}}}
+        /// Profiss\u00E3o do s\u00F3cio
         /// </summary>
-        /// <value>{{{socio_aprovado_response_profissao_value}}}</value>
+        /// <value>Profiss\u00E3o do s\u00F3cio</value>
         [DataMember(Name="profissao", EmitDefaultValue=false)]
         public string Profissao { get; set; }
     
         /// <summary>
-        /// {{{socio_aprovado_response_nacionalidade_value}}}
+        /// Nacionalidade do s\u00F3cio
         /// </summary>
-        /// <value>{{{socio_aprovado_response_nacionalidade_value}}}</value>
+        /// <value>Nacionalidade do s\u00F3cio</value>
         [DataMember(Name="nacionalidade", EmitDefaultValue=false)]
         public string Nacionalidade { get; set; }
     
         /// <summary>
-        /// {{{socio_aprovado_response_email_value}}}
+        /// Email do s\u00F3cio
         /// </summary>
-        /// <value>{{{socio_aprovado_response_email_value}}}</value>
+        /// <value>Email do s\u00F3cio</value>
         [DataMember(Name="email", EmitDefaultValue=false)]
         public string Email { get; set; }
     
         /// <summary>
-        /// {{{socio_aprovado_response_telefones_value}}}
+        /// Informa os telefones do s\u00F3cio
         /// </summary>
-        /// <value>{{{socio_aprovado_response_telefones_value}}}</value>
+        /// <value>Informa os telefones do s\u00F3cio</value>
         [DataMember(Name="telefones", EmitDefaultValue=false)]
         public List<TelefonePessoaAprovadaResponse> Telefones { get; set; }
     

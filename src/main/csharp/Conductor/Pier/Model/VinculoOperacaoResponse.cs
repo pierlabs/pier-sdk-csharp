@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{vinculo_operacao_response_description}}}
+    /// ObjetoVinculoOperacao
     /// </summary>
     [DataContract]
     public partial class VinculoOperacaoResponse :  IEquatable<VinculoOperacaoResponse>
@@ -22,48 +22,57 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="VinculoOperacaoResponse" /> class.
         /// Initializes a new instance of the <see cref="VinculoOperacaoResponse" />class.
         /// </summary>
-        /// <param name="IdProduto">{{{vinculo_operacao_response_id_produto_value}}}.</param>
-        /// <param name="IdOperacao">{{{vinculo_operacao_response_id_operacao_value}}}.</param>
-        /// <param name="CodigoProcessamento">{{{vinculo_operacao_response_codigo_processamento_value}}}.</param>
-        /// <param name="CodigoMCC">{{{vinculo_operacao_response_codigo_m_c_c_value}}}.</param>
+        /// <param name="IdProduto">C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id).</param>
+        /// <param name="IdOperacao">C\u00F3digo de Identifica\u00E7\u00E3o da Opera\u00E7\u00E3o (id).</param>
+        /// <param name="CodigoProcessamento">C\u00F3digo de processamento.</param>
+        /// <param name="CodigoMCC">C\u00F3digo MCC.</param>
+        /// <param name="NomeOperacao">Nome da opera\u00E7\u00E3o.</param>
 
-        public VinculoOperacaoResponse(long? IdProduto = null, long? IdOperacao = null, string CodigoProcessamento = null, int? CodigoMCC = null)
+        public VinculoOperacaoResponse(long? IdProduto = null, long? IdOperacao = null, string CodigoProcessamento = null, int? CodigoMCC = null, string NomeOperacao = null)
         {
             this.IdProduto = IdProduto;
             this.IdOperacao = IdOperacao;
             this.CodigoProcessamento = CodigoProcessamento;
             this.CodigoMCC = CodigoMCC;
+            this.NomeOperacao = NomeOperacao;
             
         }
         
     
         /// <summary>
-        /// {{{vinculo_operacao_response_id_produto_value}}}
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id)
         /// </summary>
-        /// <value>{{{vinculo_operacao_response_id_produto_value}}}</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Produto (id)</value>
         [DataMember(Name="idProduto", EmitDefaultValue=false)]
         public long? IdProduto { get; set; }
     
         /// <summary>
-        /// {{{vinculo_operacao_response_id_operacao_value}}}
+        /// C\u00F3digo de Identifica\u00E7\u00E3o da Opera\u00E7\u00E3o (id)
         /// </summary>
-        /// <value>{{{vinculo_operacao_response_id_operacao_value}}}</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o da Opera\u00E7\u00E3o (id)</value>
         [DataMember(Name="idOperacao", EmitDefaultValue=false)]
         public long? IdOperacao { get; set; }
     
         /// <summary>
-        /// {{{vinculo_operacao_response_codigo_processamento_value}}}
+        /// C\u00F3digo de processamento
         /// </summary>
-        /// <value>{{{vinculo_operacao_response_codigo_processamento_value}}}</value>
+        /// <value>C\u00F3digo de processamento</value>
         [DataMember(Name="codigoProcessamento", EmitDefaultValue=false)]
         public string CodigoProcessamento { get; set; }
     
         /// <summary>
-        /// {{{vinculo_operacao_response_codigo_m_c_c_value}}}
+        /// C\u00F3digo MCC
         /// </summary>
-        /// <value>{{{vinculo_operacao_response_codigo_m_c_c_value}}}</value>
+        /// <value>C\u00F3digo MCC</value>
         [DataMember(Name="codigoMCC", EmitDefaultValue=false)]
         public int? CodigoMCC { get; set; }
+    
+        /// <summary>
+        /// Nome da opera\u00E7\u00E3o
+        /// </summary>
+        /// <value>Nome da opera\u00E7\u00E3o</value>
+        [DataMember(Name="nomeOperacao", EmitDefaultValue=false)]
+        public string NomeOperacao { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -77,6 +86,7 @@ namespace Conductor.Pier.Model
             sb.Append("  IdOperacao: ").Append(IdOperacao).Append("\n");
             sb.Append("  CodigoProcessamento: ").Append(CodigoProcessamento).Append("\n");
             sb.Append("  CodigoMCC: ").Append(CodigoMCC).Append("\n");
+            sb.Append("  NomeOperacao: ").Append(NomeOperacao).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -133,6 +143,11 @@ namespace Conductor.Pier.Model
                     this.CodigoMCC == other.CodigoMCC ||
                     this.CodigoMCC != null &&
                     this.CodigoMCC.Equals(other.CodigoMCC)
+                ) && 
+                (
+                    this.NomeOperacao == other.NomeOperacao ||
+                    this.NomeOperacao != null &&
+                    this.NomeOperacao.Equals(other.NomeOperacao)
                 );
         }
 
@@ -159,6 +174,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.CodigoMCC != null)
                     hash = hash * 59 + this.CodigoMCC.GetHashCode();
+                
+                if (this.NomeOperacao != null)
+                    hash = hash * 59 + this.NomeOperacao.GetHashCode();
                 
                 return hash;
             }

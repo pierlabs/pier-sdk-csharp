@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{cartao_impressao_provisorio_response_description}}}
+    /// Objeto cart\u00E3o provis\u00F3rio
     /// </summary>
     [DataContract]
     public partial class CartaoImpressaoProvisorioResponse :  IEquatable<CartaoImpressaoProvisorioResponse>
@@ -23,12 +23,12 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="CartaoImpressaoProvisorioResponse" />class.
         /// </summary>
         /// <param name="FlagVirtual">FlagVirtual.</param>
-        /// <param name="IdConta">{{{cartao_impressao_provisorio_response_id_conta_value}}}.</param>
-        /// <param name="IdPessoa">{{{cartao_impressao_provisorio_response_id_pessoa_value}}}.</param>
-        /// <param name="IdCartao">{{{cartao_impressao_provisorio_response_id_cartao_value}}}.</param>
-        /// <param name="NumeroCartao">{{{cartao_impressao_provisorio_response_numero_cartao_value}}}.</param>
-        /// <param name="NomePlastico">{{{cartao_impressao_provisorio_response_nome_plastico_value}}}.</param>
-        /// <param name="DataValidade">{{{cartao_impressao_provisorio_response_data_validade_value}}}.</param>
+        /// <param name="IdConta">Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id) a qual o cart\u00E3o gerado pertence.</param>
+        /// <param name="IdPessoa">Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id) portadora do cart\u00E3o gerado.</param>
+        /// <param name="IdCartao">Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id) que foi gerado.</param>
+        /// <param name="NumeroCartao">Apresenta o n\u00FAmero do cart\u00E3o.</param>
+        /// <param name="NomePlastico">Apresenta o nome do Portador do Cart\u00E3o.</param>
+        /// <param name="DataValidade">Apresenta a data de Validade do Cart\u00E3o.</param>
 
         public CartaoImpressaoProvisorioResponse(int? FlagVirtual = null, long? IdConta = null, long? IdPessoa = null, long? IdCartao = null, string NumeroCartao = null, string NomePlastico = null, string DataValidade = null)
         {
@@ -50,44 +50,44 @@ namespace Conductor.Pier.Model
         public int? FlagVirtual { get; set; }
     
         /// <summary>
-        /// {{{cartao_impressao_provisorio_response_id_conta_value}}}
+        /// Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id) a qual o cart\u00E3o gerado pertence
         /// </summary>
-        /// <value>{{{cartao_impressao_provisorio_response_id_conta_value}}}</value>
+        /// <value>Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id) a qual o cart\u00E3o gerado pertence</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// {{{cartao_impressao_provisorio_response_id_pessoa_value}}}
+        /// Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id) portadora do cart\u00E3o gerado
         /// </summary>
-        /// <value>{{{cartao_impressao_provisorio_response_id_pessoa_value}}}</value>
+        /// <value>Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id) portadora do cart\u00E3o gerado</value>
         [DataMember(Name="idPessoa", EmitDefaultValue=false)]
         public long? IdPessoa { get; set; }
     
         /// <summary>
-        /// {{{cartao_impressao_provisorio_response_id_cartao_value}}}
+        /// Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id) que foi gerado
         /// </summary>
-        /// <value>{{{cartao_impressao_provisorio_response_id_cartao_value}}}</value>
+        /// <value>Apresenta o C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id) que foi gerado</value>
         [DataMember(Name="idCartao", EmitDefaultValue=false)]
         public long? IdCartao { get; set; }
     
         /// <summary>
-        /// {{{cartao_impressao_provisorio_response_numero_cartao_value}}}
+        /// Apresenta o n\u00FAmero do cart\u00E3o
         /// </summary>
-        /// <value>{{{cartao_impressao_provisorio_response_numero_cartao_value}}}</value>
+        /// <value>Apresenta o n\u00FAmero do cart\u00E3o</value>
         [DataMember(Name="numeroCartao", EmitDefaultValue=false)]
         public string NumeroCartao { get; set; }
     
         /// <summary>
-        /// {{{cartao_impressao_provisorio_response_nome_plastico_value}}}
+        /// Apresenta o nome do Portador do Cart\u00E3o
         /// </summary>
-        /// <value>{{{cartao_impressao_provisorio_response_nome_plastico_value}}}</value>
+        /// <value>Apresenta o nome do Portador do Cart\u00E3o</value>
         [DataMember(Name="nomePlastico", EmitDefaultValue=false)]
         public string NomePlastico { get; set; }
     
         /// <summary>
-        /// {{{cartao_impressao_provisorio_response_data_validade_value}}}
+        /// Apresenta a data de Validade do Cart\u00E3o
         /// </summary>
-        /// <value>{{{cartao_impressao_provisorio_response_data_validade_value}}}</value>
+        /// <value>Apresenta a data de Validade do Cart\u00E3o</value>
         [DataMember(Name="dataValidade", EmitDefaultValue=false)]
         public string DataValidade { get; set; }
     

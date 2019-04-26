@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{detalhes_fatura_response_description}}}
+    /// Objeto contendo os detalhes de uma fatura
     /// </summary>
     [DataContract]
     public partial class DetalhesFaturaResponse :  IEquatable<DetalhesFaturaResponse>
@@ -22,8 +22,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="DetalhesFaturaResponse" /> class.
         /// Initializes a new instance of the <see cref="DetalhesFaturaResponse" />class.
         /// </summary>
-        /// <param name="Fatura">{{{detalhes_fatura_response_fatura_value}}}.</param>
-        /// <param name="Transacoes">{{{detalhes_fatura_response_transacoes_value}}}.</param>
+        /// <param name="Fatura">Apresenta os detalhes da fatura.</param>
+        /// <param name="Transacoes">Apresenta as transa\u00E7\u00F5es relacionadas a fatura.</param>
 
         public DetalhesFaturaResponse(FaturaFechadaResponse Fatura = null, List<TransacoesCorrentesResponse> Transacoes = null)
         {
@@ -34,16 +34,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{detalhes_fatura_response_fatura_value}}}
+        /// Apresenta os detalhes da fatura
         /// </summary>
-        /// <value>{{{detalhes_fatura_response_fatura_value}}}</value>
+        /// <value>Apresenta os detalhes da fatura</value>
         [DataMember(Name="fatura", EmitDefaultValue=false)]
         public FaturaFechadaResponse Fatura { get; set; }
     
         /// <summary>
-        /// {{{detalhes_fatura_response_transacoes_value}}}
+        /// Apresenta as transa\u00E7\u00F5es relacionadas a fatura
         /// </summary>
-        /// <value>{{{detalhes_fatura_response_transacoes_value}}}</value>
+        /// <value>Apresenta as transa\u00E7\u00F5es relacionadas a fatura</value>
         [DataMember(Name="transacoes", EmitDefaultValue=false)]
         public List<TransacoesCorrentesResponse> Transacoes { get; set; }
     

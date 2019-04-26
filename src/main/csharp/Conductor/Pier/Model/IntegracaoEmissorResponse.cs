@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{integracao_emissor_response_description}}}
+    /// Resposta do recurso de inclus\u00E3o de registro para integra\u00E7\u00E3o
     /// </summary>
     [DataContract]
     public partial class IntegracaoEmissorResponse :  IEquatable<IntegracaoEmissorResponse>
@@ -22,12 +22,12 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="IntegracaoEmissorResponse" /> class.
         /// Initializes a new instance of the <see cref="IntegracaoEmissorResponse" />class.
         /// </summary>
-        /// <param name="Id">{{{integracao_emissor_response_id_value}}}.</param>
-        /// <param name="IdConta">{{{integracao_emissor_response_id_conta_value}}}.</param>
-        /// <param name="IdArquivo">{{{integracao_emissor_response_id_arquivo_value}}}.</param>
-        /// <param name="Status">{{{integracao_emissor_response_status_value}}}.</param>
-        /// <param name="DataInclusao">{{{integracao_emissor_response_data_inclusao_value}}}.</param>
-        /// <param name="DataAlteracao">{{{integracao_emissor_response_data_alteracao_value}}}.</param>
+        /// <param name="Id">C\u00F3digo de identifica\u00E7\u00E3o do registro na tabela Integra\u00E7\u00E3oEmissor.</param>
+        /// <param name="IdConta">C\u00F3digo de identifica\u00E7\u00E3o da conta.</param>
+        /// <param name="IdArquivo">C\u00F3digo de identifica\u00E7\u00E3o do arquivo.</param>
+        /// <param name="Status">Status do registro.</param>
+        /// <param name="DataInclusao">Data de inclus\u00E3o do registro.</param>
+        /// <param name="DataAlteracao">Data da ultima altera\u00E7\u00E3o do registro.</param>
 
         public IntegracaoEmissorResponse(long? Id = null, long? IdConta = null, long? IdArquivo = null, string Status = null, string DataInclusao = null, string DataAlteracao = null)
         {
@@ -42,44 +42,44 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{integracao_emissor_response_id_value}}}
+        /// C\u00F3digo de identifica\u00E7\u00E3o do registro na tabela Integra\u00E7\u00E3oEmissor
         /// </summary>
-        /// <value>{{{integracao_emissor_response_id_value}}}</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do registro na tabela Integra\u00E7\u00E3oEmissor</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{integracao_emissor_response_id_conta_value}}}
+        /// C\u00F3digo de identifica\u00E7\u00E3o da conta
         /// </summary>
-        /// <value>{{{integracao_emissor_response_id_conta_value}}}</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o da conta</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// {{{integracao_emissor_response_id_arquivo_value}}}
+        /// C\u00F3digo de identifica\u00E7\u00E3o do arquivo
         /// </summary>
-        /// <value>{{{integracao_emissor_response_id_arquivo_value}}}</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do arquivo</value>
         [DataMember(Name="idArquivo", EmitDefaultValue=false)]
         public long? IdArquivo { get; set; }
     
         /// <summary>
-        /// {{{integracao_emissor_response_status_value}}}
+        /// Status do registro
         /// </summary>
-        /// <value>{{{integracao_emissor_response_status_value}}}</value>
+        /// <value>Status do registro</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public string Status { get; set; }
     
         /// <summary>
-        /// {{{integracao_emissor_response_data_inclusao_value}}}
+        /// Data de inclus\u00E3o do registro
         /// </summary>
-        /// <value>{{{integracao_emissor_response_data_inclusao_value}}}</value>
+        /// <value>Data de inclus\u00E3o do registro</value>
         [DataMember(Name="dataInclusao", EmitDefaultValue=false)]
         public string DataInclusao { get; set; }
     
         /// <summary>
-        /// {{{integracao_emissor_response_data_alteracao_value}}}
+        /// Data da ultima altera\u00E7\u00E3o do registro
         /// </summary>
-        /// <value>{{{integracao_emissor_response_data_alteracao_value}}}</value>
+        /// <value>Data da ultima altera\u00E7\u00E3o do registro</value>
         [DataMember(Name="dataAlteracao", EmitDefaultValue=false)]
         public string DataAlteracao { get; set; }
     

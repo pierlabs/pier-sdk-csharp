@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{cartao_embossing_request_description}}}
+    /// Parametros de requisi\u00E7\u00E3o da gera\u00E7\u00E3o do cart\u00E3o embossing
     /// </summary>
     [DataContract]
     public partial class CartaoEmbossingRequest :  IEquatable<CartaoEmbossingRequest>
@@ -22,30 +22,39 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="CartaoEmbossingRequest" /> class.
         /// Initializes a new instance of the <see cref="CartaoEmbossingRequest" />class.
         /// </summary>
-        /// <param name="IdPessoa">{{{cartao_embossing_request_id_pessoa_value}}}.</param>
-        /// <param name="IdTipoPlastico">{{{cartao_embossing_request_id_tipo_plastico_value}}}.</param>
+        /// <param name="IdPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o cart\u00E3o pertence (id).</param>
+        /// <param name="IdTipoPlastico">C\u00F3digo de identifica\u00E7\u00E3o do TipoPlastico (id).</param>
+        /// <param name="IdImagem">C\u00F3digo de identifica\u00E7\u00E3o da imagem (id).</param>
 
-        public CartaoEmbossingRequest(long? IdPessoa = null, long? IdTipoPlastico = null)
+        public CartaoEmbossingRequest(long? IdPessoa = null, long? IdTipoPlastico = null, long? IdImagem = null)
         {
             this.IdPessoa = IdPessoa;
             this.IdTipoPlastico = IdTipoPlastico;
+            this.IdImagem = IdImagem;
             
         }
         
     
         /// <summary>
-        /// {{{cartao_embossing_request_id_pessoa_value}}}
+        /// C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o cart\u00E3o pertence (id)
         /// </summary>
-        /// <value>{{{cartao_embossing_request_id_pessoa_value}}}</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o cart\u00E3o pertence (id)</value>
         [DataMember(Name="id_pessoa", EmitDefaultValue=false)]
         public long? IdPessoa { get; set; }
     
         /// <summary>
-        /// {{{cartao_embossing_request_id_tipo_plastico_value}}}
+        /// C\u00F3digo de identifica\u00E7\u00E3o do TipoPlastico (id)
         /// </summary>
-        /// <value>{{{cartao_embossing_request_id_tipo_plastico_value}}}</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do TipoPlastico (id)</value>
         [DataMember(Name="id_tipo_plastico", EmitDefaultValue=false)]
         public long? IdTipoPlastico { get; set; }
+    
+        /// <summary>
+        /// C\u00F3digo de identifica\u00E7\u00E3o da imagem (id)
+        /// </summary>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o da imagem (id)</value>
+        [DataMember(Name="idImagem", EmitDefaultValue=false)]
+        public long? IdImagem { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -57,6 +66,7 @@ namespace Conductor.Pier.Model
             sb.Append("class CartaoEmbossingRequest {\n");
             sb.Append("  IdPessoa: ").Append(IdPessoa).Append("\n");
             sb.Append("  IdTipoPlastico: ").Append(IdTipoPlastico).Append("\n");
+            sb.Append("  IdImagem: ").Append(IdImagem).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -103,6 +113,11 @@ namespace Conductor.Pier.Model
                     this.IdTipoPlastico == other.IdTipoPlastico ||
                     this.IdTipoPlastico != null &&
                     this.IdTipoPlastico.Equals(other.IdTipoPlastico)
+                ) && 
+                (
+                    this.IdImagem == other.IdImagem ||
+                    this.IdImagem != null &&
+                    this.IdImagem.Equals(other.IdImagem)
                 );
         }
 
@@ -123,6 +138,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.IdTipoPlastico != null)
                     hash = hash * 59 + this.IdTipoPlastico.GetHashCode();
+                
+                if (this.IdImagem != null)
+                    hash = hash * 59 + this.IdImagem.GetHashCode();
                 
                 return hash;
             }

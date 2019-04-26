@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{sms_envio_response_description}}}
+    /// Objeto SMS
     /// </summary>
     [DataContract]
     public partial class SMSEnvioResponse :  IEquatable<SMSEnvioResponse>
@@ -22,14 +22,14 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="SMSEnvioResponse" /> class.
         /// Initializes a new instance of the <see cref="SMSEnvioResponse" />class.
         /// </summary>
-        /// <param name="Id">{{{sms_envio_response_id_value}}}.</param>
-        /// <param name="Status">{{{sms_envio_response_status_value}}}.</param>
-        /// <param name="IdConta">{{{sms_envio_response_id_conta_value}}}.</param>
-        /// <param name="Celular">{{{sms_envio_response_celular_value}}}.</param>
-        /// <param name="Conteudo">{{{sms_envio_response_conteudo_value}}}.</param>
-        /// <param name="QuantidadeTentativasEnvio">{{{sms_envio_response_quantidade_tentativas_envio_value}}}.</param>
-        /// <param name="DataInclusao">{{{s_m_s_envio_response_data_inclusao_value}}}.</param>
-        /// <param name="Cpf">{{{sms_envio_response_cpf_value}}}.</param>
+        /// <param name="Id">C\u00F3digo identificador.</param>
+        /// <param name="Status">Status do SMS.</param>
+        /// <param name="IdConta">identificador da conta.</param>
+        /// <param name="Celular">N\u00FAmero do celular.</param>
+        /// <param name="Conteudo">Conte\u00FAdo da mensagem.</param>
+        /// <param name="QuantidadeTentativasEnvio">N\u00FAmero de tentativas de envio.</param>
+        /// <param name="DataInclusao">Data de Inclus\u00E3o.</param>
+        /// <param name="Cpf">CPF do cliente referente ao SMS enviado.</param>
 
         public SMSEnvioResponse(long? Id = null, string Status = null, long? IdConta = null, string Celular = null, string Conteudo = null, int? QuantidadeTentativasEnvio = null, string DataInclusao = null, string Cpf = null)
         {
@@ -46,58 +46,58 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{sms_envio_response_id_value}}}
+        /// C\u00F3digo identificador
         /// </summary>
-        /// <value>{{{sms_envio_response_id_value}}}</value>
+        /// <value>C\u00F3digo identificador</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{sms_envio_response_status_value}}}
+        /// Status do SMS
         /// </summary>
-        /// <value>{{{sms_envio_response_status_value}}}</value>
+        /// <value>Status do SMS</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public string Status { get; set; }
     
         /// <summary>
-        /// {{{sms_envio_response_id_conta_value}}}
+        /// identificador da conta
         /// </summary>
-        /// <value>{{{sms_envio_response_id_conta_value}}}</value>
+        /// <value>identificador da conta</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// {{{sms_envio_response_celular_value}}}
+        /// N\u00FAmero do celular
         /// </summary>
-        /// <value>{{{sms_envio_response_celular_value}}}</value>
+        /// <value>N\u00FAmero do celular</value>
         [DataMember(Name="celular", EmitDefaultValue=false)]
         public string Celular { get; set; }
     
         /// <summary>
-        /// {{{sms_envio_response_conteudo_value}}}
+        /// Conte\u00FAdo da mensagem
         /// </summary>
-        /// <value>{{{sms_envio_response_conteudo_value}}}</value>
+        /// <value>Conte\u00FAdo da mensagem</value>
         [DataMember(Name="conteudo", EmitDefaultValue=false)]
         public string Conteudo { get; set; }
     
         /// <summary>
-        /// {{{sms_envio_response_quantidade_tentativas_envio_value}}}
+        /// N\u00FAmero de tentativas de envio
         /// </summary>
-        /// <value>{{{sms_envio_response_quantidade_tentativas_envio_value}}}</value>
+        /// <value>N\u00FAmero de tentativas de envio</value>
         [DataMember(Name="quantidadeTentativasEnvio", EmitDefaultValue=false)]
         public int? QuantidadeTentativasEnvio { get; set; }
     
         /// <summary>
-        /// {{{s_m_s_envio_response_data_inclusao_value}}}
+        /// Data de Inclus\u00E3o
         /// </summary>
-        /// <value>{{{s_m_s_envio_response_data_inclusao_value}}}</value>
+        /// <value>Data de Inclus\u00E3o</value>
         [DataMember(Name="dataInclusao", EmitDefaultValue=false)]
         public string DataInclusao { get; set; }
     
         /// <summary>
-        /// {{{sms_envio_response_cpf_value}}}
+        /// CPF do cliente referente ao SMS enviado
         /// </summary>
-        /// <value>{{{sms_envio_response_cpf_value}}}</value>
+        /// <value>CPF do cliente referente ao SMS enviado</value>
         [DataMember(Name="cpf", EmitDefaultValue=false)]
         public string Cpf { get; set; }
     

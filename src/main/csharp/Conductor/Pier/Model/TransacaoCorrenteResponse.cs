@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{transacao_corrente_response_description}}}
+    /// Representa\u00E7\u00E3o do recurso transacao
     /// </summary>
     [DataContract]
     public partial class TransacaoCorrenteResponse :  IEquatable<TransacaoCorrenteResponse>
@@ -23,26 +23,27 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TransacaoCorrenteResponse" />class.
         /// </summary>
         /// <param name="UltimaParcelaLancada">UltimaParcelaLancada.</param>
-        /// <param name="IdConta">{{{transacao_corrente_response_id_conta_value}}}.</param>
-        /// <param name="IdTipoRegistro">{{{transacao_corrente_response_id_tipo_registro_value}}}.</param>
-        /// <param name="Ordem">{{{transacao_corrente_response_ordem_value}}}.</param>
-        /// <param name="IdTransacao">{{{transacao_corrente_response_id_transacao_value}}}.</param>
-        /// <param name="Descricao">{{{transacao_corrente_response_descricao_value}}}.</param>
-        /// <param name="Status">{{{transacao_corrente_response_status_value}}}.</param>
-        /// <param name="DescricaoStatus">{{{transacao_corrente_response_descricao_status_value}}}.</param>
-        /// <param name="Valor">{{{transacao_corrente_response_valor_value}}}.</param>
-        /// <param name="ValorDolar">{{{transacao_corrente_response_valor_dolar_value}}}.</param>
-        /// <param name="QuantidadeParcelas">{{{transacao_corrente_response_quantidade_parcelas_value}}}.</param>
-        /// <param name="ValorParcela">{{{transacao_corrente_response_valor_parcela_value}}}.</param>
-        /// <param name="DataEvento">{{{transacao_corrente_response_data_evento_value}}}.</param>
-        /// <param name="Estabelecimento">{{{transacao_corrente_response_estabelecimento_value}}}.</param>
-        /// <param name="FlagCredito">{{{transacao_corrente_response_flag_credito_value}}}.</param>
-        /// <param name="TipoEstabelecimento">{{{transacao_corrente_response_tipo_estabelecimento_value}}}.</param>
-        /// <param name="IdGrupoMCC">{{{transacao_corrente_response_id_grupo_m_c_c_value}}}.</param>
-        /// <param name="FlagSolicitouContestacao">{{{transacao_corrente_response_flag_solicitou_contestacao_value}}}.</param>
-        /// <param name="TipoTransacao">{{{transacao_corrente_response_tipo_transacao_value}}}.</param>
+        /// <param name="IdConta">C\u00F3digo de identifica\u00E7\u00E3o da conta (id).</param>
+        /// <param name="IdTipoRegistro">C\u00F3digo de identifica\u00E7\u00E3o do tipo de transacao (id).</param>
+        /// <param name="Ordem">Representa\u00E7\u00E3o da ordena\u00E7\u00E3o da transacao (id).</param>
+        /// <param name="IdTransacao">C\u00F3digo de identifica\u00E7\u00E3o da transacao (id).</param>
+        /// <param name="Descricao">Atributo que representa a descri\u00E7\u00E3o da transa\u00E7\u00E3o.</param>
+        /// <param name="Status">Atributo que representa o c\u00F3digo identificador do status da transa\u00E7\u00E3o.</param>
+        /// <param name="DescricaoStatus">Atributo que representa a descri\u00E7\u00E3o do status da transa\u00E7\u00E3o.</param>
+        /// <param name="Valor">Atributo que representa o valor da transa\u00E7\u00E3o.</param>
+        /// <param name="ValorDolar">Atributo que representa o valor em D\u00F3lar da transa\u00E7\u00E3o.</param>
+        /// <param name="QuantidadeParcelas">Atributo que representa a quantidade de parcelas da transa\u00E7\u00E3o.</param>
+        /// <param name="ValorParcela">Atributo que representa o valor da parcela da transa\u00E7\u00E3o.</param>
+        /// <param name="DataEvento">Atributo que representa a data de envio da transa\u00E7\u00E3o.</param>
+        /// <param name="Estabelecimento">Atributo que representa o estabelecimento da transa\u00E7\u00E3o.</param>
+        /// <param name="FlagCredito">Atributo que identifica se a transa\u00E7\u00E3o \u00E9 um cr\u00E9dito ou d\u00E9bito.</param>
+        /// <param name="TipoEstabelecimento">Atributo que representa o tipo de estabelecimento da transa\u00E7\u00E3o.</param>
+        /// <param name="IdGrupoMCC">Atributo que representa o grupo MCC da transa\u00E7\u00E3o.</param>
+        /// <param name="FlagSolicitouContestacao">Atributo que identifica se o portador solicitou contesta\u00E7\u00E3o da transa\u00E7\u00E3o.</param>
+        /// <param name="TipoTransacao">Atributo que identifica se a transa\u00E7\u00E3o \u00E9 um cr\u00E9dito ou d\u00E9bito.</param>
+        /// <param name="IdEventoAjuste">Atributo que representa o evento de ajuste.</param>
 
-        public TransacaoCorrenteResponse(int? UltimaParcelaLancada = null, long? IdConta = null, long? IdTipoRegistro = null, int? Ordem = null, long? IdTransacao = null, string Descricao = null, int? Status = null, string DescricaoStatus = null, double? Valor = null, double? ValorDolar = null, int? QuantidadeParcelas = null, double? ValorParcela = null, string DataEvento = null, string Estabelecimento = null, int? FlagCredito = null, string TipoEstabelecimento = null, int? IdGrupoMCC = null, int? FlagSolicitouContestacao = null, int? TipoTransacao = null)
+        public TransacaoCorrenteResponse(int? UltimaParcelaLancada = null, long? IdConta = null, long? IdTipoRegistro = null, int? Ordem = null, long? IdTransacao = null, string Descricao = null, int? Status = null, string DescricaoStatus = null, double? Valor = null, double? ValorDolar = null, int? QuantidadeParcelas = null, double? ValorParcela = null, string DataEvento = null, string Estabelecimento = null, int? FlagCredito = null, string TipoEstabelecimento = null, int? IdGrupoMCC = null, int? FlagSolicitouContestacao = null, int? TipoTransacao = null, int? IdEventoAjuste = null)
         {
             this.UltimaParcelaLancada = UltimaParcelaLancada;
             this.IdConta = IdConta;
@@ -63,6 +64,7 @@ namespace Conductor.Pier.Model
             this.IdGrupoMCC = IdGrupoMCC;
             this.FlagSolicitouContestacao = FlagSolicitouContestacao;
             this.TipoTransacao = TipoTransacao;
+            this.IdEventoAjuste = IdEventoAjuste;
             
         }
         
@@ -74,130 +76,137 @@ namespace Conductor.Pier.Model
         public int? UltimaParcelaLancada { get; set; }
     
         /// <summary>
-        /// {{{transacao_corrente_response_id_conta_value}}}
+        /// C\u00F3digo de identifica\u00E7\u00E3o da conta (id)
         /// </summary>
-        /// <value>{{{transacao_corrente_response_id_conta_value}}}</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// {{{transacao_corrente_response_id_tipo_registro_value}}}
+        /// C\u00F3digo de identifica\u00E7\u00E3o do tipo de transacao (id)
         /// </summary>
-        /// <value>{{{transacao_corrente_response_id_tipo_registro_value}}}</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do tipo de transacao (id)</value>
         [DataMember(Name="idTipoRegistro", EmitDefaultValue=false)]
         public long? IdTipoRegistro { get; set; }
     
         /// <summary>
-        /// {{{transacao_corrente_response_ordem_value}}}
+        /// Representa\u00E7\u00E3o da ordena\u00E7\u00E3o da transacao (id)
         /// </summary>
-        /// <value>{{{transacao_corrente_response_ordem_value}}}</value>
+        /// <value>Representa\u00E7\u00E3o da ordena\u00E7\u00E3o da transacao (id)</value>
         [DataMember(Name="ordem", EmitDefaultValue=false)]
         public int? Ordem { get; set; }
     
         /// <summary>
-        /// {{{transacao_corrente_response_id_transacao_value}}}
+        /// C\u00F3digo de identifica\u00E7\u00E3o da transacao (id)
         /// </summary>
-        /// <value>{{{transacao_corrente_response_id_transacao_value}}}</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o da transacao (id)</value>
         [DataMember(Name="idTransacao", EmitDefaultValue=false)]
         public long? IdTransacao { get; set; }
     
         /// <summary>
-        /// {{{transacao_corrente_response_descricao_value}}}
+        /// Atributo que representa a descri\u00E7\u00E3o da transa\u00E7\u00E3o
         /// </summary>
-        /// <value>{{{transacao_corrente_response_descricao_value}}}</value>
+        /// <value>Atributo que representa a descri\u00E7\u00E3o da transa\u00E7\u00E3o</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     
         /// <summary>
-        /// {{{transacao_corrente_response_status_value}}}
+        /// Atributo que representa o c\u00F3digo identificador do status da transa\u00E7\u00E3o
         /// </summary>
-        /// <value>{{{transacao_corrente_response_status_value}}}</value>
+        /// <value>Atributo que representa o c\u00F3digo identificador do status da transa\u00E7\u00E3o</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public int? Status { get; set; }
     
         /// <summary>
-        /// {{{transacao_corrente_response_descricao_status_value}}}
+        /// Atributo que representa a descri\u00E7\u00E3o do status da transa\u00E7\u00E3o
         /// </summary>
-        /// <value>{{{transacao_corrente_response_descricao_status_value}}}</value>
+        /// <value>Atributo que representa a descri\u00E7\u00E3o do status da transa\u00E7\u00E3o</value>
         [DataMember(Name="descricaoStatus", EmitDefaultValue=false)]
         public string DescricaoStatus { get; set; }
     
         /// <summary>
-        /// {{{transacao_corrente_response_valor_value}}}
+        /// Atributo que representa o valor da transa\u00E7\u00E3o
         /// </summary>
-        /// <value>{{{transacao_corrente_response_valor_value}}}</value>
+        /// <value>Atributo que representa o valor da transa\u00E7\u00E3o</value>
         [DataMember(Name="valor", EmitDefaultValue=false)]
         public double? Valor { get; set; }
     
         /// <summary>
-        /// {{{transacao_corrente_response_valor_dolar_value}}}
+        /// Atributo que representa o valor em D\u00F3lar da transa\u00E7\u00E3o
         /// </summary>
-        /// <value>{{{transacao_corrente_response_valor_dolar_value}}}</value>
+        /// <value>Atributo que representa o valor em D\u00F3lar da transa\u00E7\u00E3o</value>
         [DataMember(Name="valorDolar", EmitDefaultValue=false)]
         public double? ValorDolar { get; set; }
     
         /// <summary>
-        /// {{{transacao_corrente_response_quantidade_parcelas_value}}}
+        /// Atributo que representa a quantidade de parcelas da transa\u00E7\u00E3o
         /// </summary>
-        /// <value>{{{transacao_corrente_response_quantidade_parcelas_value}}}</value>
+        /// <value>Atributo que representa a quantidade de parcelas da transa\u00E7\u00E3o</value>
         [DataMember(Name="quantidadeParcelas", EmitDefaultValue=false)]
         public int? QuantidadeParcelas { get; set; }
     
         /// <summary>
-        /// {{{transacao_corrente_response_valor_parcela_value}}}
+        /// Atributo que representa o valor da parcela da transa\u00E7\u00E3o
         /// </summary>
-        /// <value>{{{transacao_corrente_response_valor_parcela_value}}}</value>
+        /// <value>Atributo que representa o valor da parcela da transa\u00E7\u00E3o</value>
         [DataMember(Name="valorParcela", EmitDefaultValue=false)]
         public double? ValorParcela { get; set; }
     
         /// <summary>
-        /// {{{transacao_corrente_response_data_evento_value}}}
+        /// Atributo que representa a data de envio da transa\u00E7\u00E3o
         /// </summary>
-        /// <value>{{{transacao_corrente_response_data_evento_value}}}</value>
+        /// <value>Atributo que representa a data de envio da transa\u00E7\u00E3o</value>
         [DataMember(Name="dataEvento", EmitDefaultValue=false)]
         public string DataEvento { get; set; }
     
         /// <summary>
-        /// {{{transacao_corrente_response_estabelecimento_value}}}
+        /// Atributo que representa o estabelecimento da transa\u00E7\u00E3o
         /// </summary>
-        /// <value>{{{transacao_corrente_response_estabelecimento_value}}}</value>
+        /// <value>Atributo que representa o estabelecimento da transa\u00E7\u00E3o</value>
         [DataMember(Name="estabelecimento", EmitDefaultValue=false)]
         public string Estabelecimento { get; set; }
     
         /// <summary>
-        /// {{{transacao_corrente_response_flag_credito_value}}}
+        /// Atributo que identifica se a transa\u00E7\u00E3o \u00E9 um cr\u00E9dito ou d\u00E9bito
         /// </summary>
-        /// <value>{{{transacao_corrente_response_flag_credito_value}}}</value>
+        /// <value>Atributo que identifica se a transa\u00E7\u00E3o \u00E9 um cr\u00E9dito ou d\u00E9bito</value>
         [DataMember(Name="flagCredito", EmitDefaultValue=false)]
         public int? FlagCredito { get; set; }
     
         /// <summary>
-        /// {{{transacao_corrente_response_tipo_estabelecimento_value}}}
+        /// Atributo que representa o tipo de estabelecimento da transa\u00E7\u00E3o
         /// </summary>
-        /// <value>{{{transacao_corrente_response_tipo_estabelecimento_value}}}</value>
+        /// <value>Atributo que representa o tipo de estabelecimento da transa\u00E7\u00E3o</value>
         [DataMember(Name="tipoEstabelecimento", EmitDefaultValue=false)]
         public string TipoEstabelecimento { get; set; }
     
         /// <summary>
-        /// {{{transacao_corrente_response_id_grupo_m_c_c_value}}}
+        /// Atributo que representa o grupo MCC da transa\u00E7\u00E3o
         /// </summary>
-        /// <value>{{{transacao_corrente_response_id_grupo_m_c_c_value}}}</value>
+        /// <value>Atributo que representa o grupo MCC da transa\u00E7\u00E3o</value>
         [DataMember(Name="idGrupoMCC", EmitDefaultValue=false)]
         public int? IdGrupoMCC { get; set; }
     
         /// <summary>
-        /// {{{transacao_corrente_response_flag_solicitou_contestacao_value}}}
+        /// Atributo que identifica se o portador solicitou contesta\u00E7\u00E3o da transa\u00E7\u00E3o
         /// </summary>
-        /// <value>{{{transacao_corrente_response_flag_solicitou_contestacao_value}}}</value>
+        /// <value>Atributo que identifica se o portador solicitou contesta\u00E7\u00E3o da transa\u00E7\u00E3o</value>
         [DataMember(Name="flagSolicitouContestacao", EmitDefaultValue=false)]
         public int? FlagSolicitouContestacao { get; set; }
     
         /// <summary>
-        /// {{{transacao_corrente_response_tipo_transacao_value}}}
+        /// Atributo que identifica se a transa\u00E7\u00E3o \u00E9 um cr\u00E9dito ou d\u00E9bito
         /// </summary>
-        /// <value>{{{transacao_corrente_response_tipo_transacao_value}}}</value>
+        /// <value>Atributo que identifica se a transa\u00E7\u00E3o \u00E9 um cr\u00E9dito ou d\u00E9bito</value>
         [DataMember(Name="tipoTransacao", EmitDefaultValue=false)]
         public int? TipoTransacao { get; set; }
+    
+        /// <summary>
+        /// Atributo que representa o evento de ajuste
+        /// </summary>
+        /// <value>Atributo que representa o evento de ajuste</value>
+        [DataMember(Name="idEventoAjuste", EmitDefaultValue=false)]
+        public int? IdEventoAjuste { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -226,6 +235,7 @@ namespace Conductor.Pier.Model
             sb.Append("  IdGrupoMCC: ").Append(IdGrupoMCC).Append("\n");
             sb.Append("  FlagSolicitouContestacao: ").Append(FlagSolicitouContestacao).Append("\n");
             sb.Append("  TipoTransacao: ").Append(TipoTransacao).Append("\n");
+            sb.Append("  IdEventoAjuste: ").Append(IdEventoAjuste).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -357,6 +367,11 @@ namespace Conductor.Pier.Model
                     this.TipoTransacao == other.TipoTransacao ||
                     this.TipoTransacao != null &&
                     this.TipoTransacao.Equals(other.TipoTransacao)
+                ) && 
+                (
+                    this.IdEventoAjuste == other.IdEventoAjuste ||
+                    this.IdEventoAjuste != null &&
+                    this.IdEventoAjuste.Equals(other.IdEventoAjuste)
                 );
         }
 
@@ -428,6 +443,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.TipoTransacao != null)
                     hash = hash * 59 + this.TipoTransacao.GetHashCode();
+                
+                if (this.IdEventoAjuste != null)
+                    hash = hash * 59 + this.IdEventoAjuste.GetHashCode();
                 
                 return hash;
             }

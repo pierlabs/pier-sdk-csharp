@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{page_transacoes_correntes_response_description}}}
+    /// Lista de Transa\u00E7\u00F5es Correntes
     /// </summary>
     [DataContract]
     public partial class PageTransacoesCorrentesResponse :  IEquatable<PageTransacoesCorrentesResponse>

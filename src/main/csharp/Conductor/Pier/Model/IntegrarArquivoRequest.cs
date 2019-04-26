@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{integrar_arquivo_request_description}}}
+    /// Objeto de requisi\u00E7\u00E3o da integra\u00E7\u00E3o de Arquivos
     /// </summary>
     [DataContract]
     public partial class IntegrarArquivoRequest :  IEquatable<IntegrarArquivoRequest>
@@ -22,7 +22,7 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="IntegrarArquivoRequest" /> class.
         /// Initializes a new instance of the <see cref="IntegrarArquivoRequest" />class.
         /// </summary>
-        /// <param name="NumeroReceitaFederal">{{{integrar_arquivo_request_numero_receita_federal_value}}}.</param>
+        /// <param name="NumeroReceitaFederal">N\u00FAmero Receita Federal (CPF) vinculado a um ou mais arquivos que ser\u00E3o enviados para realizar integra\u00E7\u00E3o.</param>
 
         public IntegrarArquivoRequest(string NumeroReceitaFederal = null)
         {
@@ -32,9 +32,9 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{integrar_arquivo_request_numero_receita_federal_value}}}
+        /// N\u00FAmero Receita Federal (CPF) vinculado a um ou mais arquivos que ser\u00E3o enviados para realizar integra\u00E7\u00E3o
         /// </summary>
-        /// <value>{{{integrar_arquivo_request_numero_receita_federal_value}}}</value>
+        /// <value>N\u00FAmero Receita Federal (CPF) vinculado a um ou mais arquivos que ser\u00E3o enviados para realizar integra\u00E7\u00E3o</value>
         [DataMember(Name="numeroReceitaFederal", EmitDefaultValue=false)]
         public string NumeroReceitaFederal { get; set; }
     

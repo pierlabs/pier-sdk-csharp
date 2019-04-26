@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{adicional_persist_description}}}
+    /// Representa\u00E7\u00E3o da entrada do recurso de cadastrar adicionais
     /// </summary>
     [DataContract]
     public partial class AdicionalPersist :  IEquatable<AdicionalPersist>
@@ -22,21 +22,21 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="AdicionalPersist" /> class.
         /// Initializes a new instance of the <see cref="AdicionalPersist" />class.
         /// </summary>
-        /// <param name="Nome">{{{adicional_persist_nome_value}}} (required).</param>
-        /// <param name="NomeImpresso">{{{adicional_persist_nome_impresso_value}}}.</param>
-        /// <param name="NumeroReceitaFederal">{{{adicional_persist_numero_receita_federal_value}}} (required).</param>
-        /// <param name="DataNascimento">{{{adicional_persist_data_nascimento_value}}}.</param>
-        /// <param name="Sexo">{{{adicional_persist_sexo_value}}}.</param>
-        /// <param name="NumeroIdentidade">{{{adicional_persist_numero_identidade_value}}}.</param>
-        /// <param name="OrgaoExpedidorIdentidade">{{{adicional_persist_orgao_expedidor_identidade_value}}}.</param>
-        /// <param name="UnidadeFederativaIdentidade">{{{adicional_persist_unidade_federativa_identidade_value}}}.</param>
-        /// <param name="DataEmissaoIdentidade">{{{adicional_persist_data_emissao_identidade_value}}}.</param>
-        /// <param name="IdEstadoCivil">{{{adicional_persist_id_estado_civil_value}}}.</param>
-        /// <param name="IdProfissao">{{{adicional_persist_id_profissao_value}}}.</param>
-        /// <param name="IdNacionalidade">{{{adicional_persist_id_nacionalidade_value}}}.</param>
-        /// <param name="IdParentesco">{{{adicional_persist_id_parentesco_value}}}.</param>
-        /// <param name="Email">{{{adicional_persist_email_value}}}.</param>
-        /// <param name="Telefones">{{{adicional_persist_telefones_value}}}.</param>
+        /// <param name="Nome">Nome completo do Adicional (required).</param>
+        /// <param name="NomeImpresso">Nome do Adicional que ser\u00E1 gravado no Cart\u00E3o.</param>
+        /// <param name="NumeroReceitaFederal">N\u00FAmero da Receita Federal (required).</param>
+        /// <param name="DataNascimento">Data de Nascimento do Adicional em formato yyyy-MM-dd.</param>
+        /// <param name="Sexo">Sexo do Adicional.</param>
+        /// <param name="NumeroIdentidade">N\u00FAmero do Documento de Identidade do Adicional.</param>
+        /// <param name="OrgaoExpedidorIdentidade">Nome do Org\u00E3o Emissor do Documento de Identidade do Adicional.</param>
+        /// <param name="UnidadeFederativaIdentidade">Unidade Federativa.</param>
+        /// <param name="DataEmissaoIdentidade">Data de emiss\u00E3o do Documento de Identidade do Adicional em formato yyyy-MM-dd.</param>
+        /// <param name="IdEstadoCivil">C\u00F3digo de identifica\u00E7\u00E3o do Estado Civil do Adicional.</param>
+        /// <param name="IdProfissao">C\u00F3digo de identifica\u00E7\u00E3o da Profissao do Adicional.</param>
+        /// <param name="IdNacionalidade">C\u00F3digo de identifica\u00E7\u00E3o da Nacionalidade do Adicional.</param>
+        /// <param name="IdParentesco">C\u00F3digo de identifica\u00E7\u00E3o do Parentesco do Adicional com o Titular.</param>
+        /// <param name="Email">C\u00F3digo de identifica\u00E7\u00E3o do Parentesco do Adicional com o Titular.</param>
+        /// <param name="Telefones">Lista de telefones do adicional.</param>
 
         public AdicionalPersist(string Nome = null, string NomeImpresso = null, string NumeroReceitaFederal = null, string DataNascimento = null, string Sexo = null, string NumeroIdentidade = null, string OrgaoExpedidorIdentidade = null, string UnidadeFederativaIdentidade = null, string DataEmissaoIdentidade = null, long? IdEstadoCivil = null, long? IdProfissao = null, long? IdNacionalidade = null, long? IdParentesco = null, string Email = null, List<TelefoneAdicionalPersist> Telefones = null)
         {
@@ -76,107 +76,107 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{adicional_persist_nome_value}}}
+        /// Nome completo do Adicional
         /// </summary>
-        /// <value>{{{adicional_persist_nome_value}}}</value>
+        /// <value>Nome completo do Adicional</value>
         [DataMember(Name="nome", EmitDefaultValue=false)]
         public string Nome { get; set; }
     
         /// <summary>
-        /// {{{adicional_persist_nome_impresso_value}}}
+        /// Nome do Adicional que ser\u00E1 gravado no Cart\u00E3o
         /// </summary>
-        /// <value>{{{adicional_persist_nome_impresso_value}}}</value>
+        /// <value>Nome do Adicional que ser\u00E1 gravado no Cart\u00E3o</value>
         [DataMember(Name="nomeImpresso", EmitDefaultValue=false)]
         public string NomeImpresso { get; set; }
     
         /// <summary>
-        /// {{{adicional_persist_numero_receita_federal_value}}}
+        /// N\u00FAmero da Receita Federal
         /// </summary>
-        /// <value>{{{adicional_persist_numero_receita_federal_value}}}</value>
+        /// <value>N\u00FAmero da Receita Federal</value>
         [DataMember(Name="numeroReceitaFederal", EmitDefaultValue=false)]
         public string NumeroReceitaFederal { get; set; }
     
         /// <summary>
-        /// {{{adicional_persist_data_nascimento_value}}}
+        /// Data de Nascimento do Adicional em formato yyyy-MM-dd
         /// </summary>
-        /// <value>{{{adicional_persist_data_nascimento_value}}}</value>
+        /// <value>Data de Nascimento do Adicional em formato yyyy-MM-dd</value>
         [DataMember(Name="dataNascimento", EmitDefaultValue=false)]
         public string DataNascimento { get; set; }
     
         /// <summary>
-        /// {{{adicional_persist_sexo_value}}}
+        /// Sexo do Adicional
         /// </summary>
-        /// <value>{{{adicional_persist_sexo_value}}}</value>
+        /// <value>Sexo do Adicional</value>
         [DataMember(Name="sexo", EmitDefaultValue=false)]
         public string Sexo { get; set; }
     
         /// <summary>
-        /// {{{adicional_persist_numero_identidade_value}}}
+        /// N\u00FAmero do Documento de Identidade do Adicional
         /// </summary>
-        /// <value>{{{adicional_persist_numero_identidade_value}}}</value>
+        /// <value>N\u00FAmero do Documento de Identidade do Adicional</value>
         [DataMember(Name="numeroIdentidade", EmitDefaultValue=false)]
         public string NumeroIdentidade { get; set; }
     
         /// <summary>
-        /// {{{adicional_persist_orgao_expedidor_identidade_value}}}
+        /// Nome do Org\u00E3o Emissor do Documento de Identidade do Adicional
         /// </summary>
-        /// <value>{{{adicional_persist_orgao_expedidor_identidade_value}}}</value>
+        /// <value>Nome do Org\u00E3o Emissor do Documento de Identidade do Adicional</value>
         [DataMember(Name="orgaoExpedidorIdentidade", EmitDefaultValue=false)]
         public string OrgaoExpedidorIdentidade { get; set; }
     
         /// <summary>
-        /// {{{adicional_persist_unidade_federativa_identidade_value}}}
+        /// Unidade Federativa
         /// </summary>
-        /// <value>{{{adicional_persist_unidade_federativa_identidade_value}}}</value>
+        /// <value>Unidade Federativa</value>
         [DataMember(Name="unidadeFederativaIdentidade", EmitDefaultValue=false)]
         public string UnidadeFederativaIdentidade { get; set; }
     
         /// <summary>
-        /// {{{adicional_persist_data_emissao_identidade_value}}}
+        /// Data de emiss\u00E3o do Documento de Identidade do Adicional em formato yyyy-MM-dd
         /// </summary>
-        /// <value>{{{adicional_persist_data_emissao_identidade_value}}}</value>
+        /// <value>Data de emiss\u00E3o do Documento de Identidade do Adicional em formato yyyy-MM-dd</value>
         [DataMember(Name="dataEmissaoIdentidade", EmitDefaultValue=false)]
         public string DataEmissaoIdentidade { get; set; }
     
         /// <summary>
-        /// {{{adicional_persist_id_estado_civil_value}}}
+        /// C\u00F3digo de identifica\u00E7\u00E3o do Estado Civil do Adicional
         /// </summary>
-        /// <value>{{{adicional_persist_id_estado_civil_value}}}</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do Estado Civil do Adicional</value>
         [DataMember(Name="idEstadoCivil", EmitDefaultValue=false)]
         public long? IdEstadoCivil { get; set; }
     
         /// <summary>
-        /// {{{adicional_persist_id_profissao_value}}}
+        /// C\u00F3digo de identifica\u00E7\u00E3o da Profissao do Adicional
         /// </summary>
-        /// <value>{{{adicional_persist_id_profissao_value}}}</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o da Profissao do Adicional</value>
         [DataMember(Name="idProfissao", EmitDefaultValue=false)]
         public long? IdProfissao { get; set; }
     
         /// <summary>
-        /// {{{adicional_persist_id_nacionalidade_value}}}
+        /// C\u00F3digo de identifica\u00E7\u00E3o da Nacionalidade do Adicional
         /// </summary>
-        /// <value>{{{adicional_persist_id_nacionalidade_value}}}</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o da Nacionalidade do Adicional</value>
         [DataMember(Name="idNacionalidade", EmitDefaultValue=false)]
         public long? IdNacionalidade { get; set; }
     
         /// <summary>
-        /// {{{adicional_persist_id_parentesco_value}}}
+        /// C\u00F3digo de identifica\u00E7\u00E3o do Parentesco do Adicional com o Titular
         /// </summary>
-        /// <value>{{{adicional_persist_id_parentesco_value}}}</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do Parentesco do Adicional com o Titular</value>
         [DataMember(Name="idParentesco", EmitDefaultValue=false)]
         public long? IdParentesco { get; set; }
     
         /// <summary>
-        /// {{{adicional_persist_email_value}}}
+        /// C\u00F3digo de identifica\u00E7\u00E3o do Parentesco do Adicional com o Titular
         /// </summary>
-        /// <value>{{{adicional_persist_email_value}}}</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do Parentesco do Adicional com o Titular</value>
         [DataMember(Name="email", EmitDefaultValue=false)]
         public string Email { get; set; }
     
         /// <summary>
-        /// {{{adicional_persist_telefones_value}}}
+        /// Lista de telefones do adicional
         /// </summary>
-        /// <value>{{{adicional_persist_telefones_value}}}</value>
+        /// <value>Lista de telefones do adicional</value>
         [DataMember(Name="telefones", EmitDefaultValue=false)]
         public List<TelefoneAdicionalPersist> Telefones { get; set; }
     

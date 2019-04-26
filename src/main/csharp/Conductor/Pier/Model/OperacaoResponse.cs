@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{operacao_response_description}}}
+    /// Representa\u00E7\u00E3o da resposta do recurso Operacao
     /// </summary>
     [DataContract]
     public partial class OperacaoResponse :  IEquatable<OperacaoResponse>
@@ -22,15 +22,15 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="OperacaoResponse" /> class.
         /// Initializes a new instance of the <see cref="OperacaoResponse" />class.
         /// </summary>
-        /// <param name="IdOperacao">{{{operacao_response_id_operacao_value}}}.</param>
-        /// <param name="CodigoProcessamento">{{{operacao_response_codigo_processamento_value}}}.</param>
-        /// <param name="CodigoProcessamentoCancelamento">{{{operacao_response_codigo_processamento_cancelamento_value}}}.</param>
-        /// <param name="NomeOperacao">{{{operacao_response_nome_operacao_value}}}.</param>
-        /// <param name="FlagCobraJuros">{{{operacao_response_flag_cobra_juros_value}}}.</param>
-        /// <param name="FlagCobraTarifa">{{{operacao_response_flag_cobra_tarifa_value}}}.</param>
-        /// <param name="Carencia">{{{operacao_response_carencia_value}}}.</param>
-        /// <param name="FlagPermitirParcelamento">{{{operacao_response_flag_permitir_parcelamento_value}}}.</param>
-        /// <param name="FlagManterTaxaJurosNoRotativo">{{{operacao_response_flag_manter_taxa_juros_no_rotativo_value}}}.</param>
+        /// <param name="IdOperacao">C\u00F3digo que identifica a opera\u00E7\u00E3o.</param>
+        /// <param name="CodigoProcessamento">C\u00F3digo de processamento usado em transa\u00E7\u00F5es com o autorizador.</param>
+        /// <param name="CodigoProcessamentoCancelamento">C\u00F3digo de processamento usado para cancelar transa\u00E7\u00F5es no autorizador.</param>
+        /// <param name="NomeOperacao">Nome da opera\u00E7\u00E3o.</param>
+        /// <param name="FlagCobraJuros">Flag indicativa para crobran\u00E7a de juros.</param>
+        /// <param name="FlagCobraTarifa">Flag indicativa para crobran\u00E7a de tarifas.</param>
+        /// <param name="Carencia">Quantidade de meses para car\u00EAncia.</param>
+        /// <param name="FlagPermitirParcelamento">Permitir transa\u00E7\u00F5es parceladas.</param>
+        /// <param name="FlagManterTaxaJurosNoRotativo">Flag que indica que a opera\u00E7\u00E3o deve utilizar a taxa da compra como taxa do rotativo para transa\u00E7\u00F5es desse tipo opera\u00E7\u00E3o.</param>
 
         public OperacaoResponse(long? IdOperacao = null, string CodigoProcessamento = null, string CodigoProcessamentoCancelamento = null, string NomeOperacao = null, bool? FlagCobraJuros = null, bool? FlagCobraTarifa = null, int? Carencia = null, bool? FlagPermitirParcelamento = null, bool? FlagManterTaxaJurosNoRotativo = null)
         {
@@ -48,65 +48,65 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{operacao_response_id_operacao_value}}}
+        /// C\u00F3digo que identifica a opera\u00E7\u00E3o
         /// </summary>
-        /// <value>{{{operacao_response_id_operacao_value}}}</value>
+        /// <value>C\u00F3digo que identifica a opera\u00E7\u00E3o</value>
         [DataMember(Name="idOperacao", EmitDefaultValue=false)]
         public long? IdOperacao { get; set; }
     
         /// <summary>
-        /// {{{operacao_response_codigo_processamento_value}}}
+        /// C\u00F3digo de processamento usado em transa\u00E7\u00F5es com o autorizador
         /// </summary>
-        /// <value>{{{operacao_response_codigo_processamento_value}}}</value>
+        /// <value>C\u00F3digo de processamento usado em transa\u00E7\u00F5es com o autorizador</value>
         [DataMember(Name="codigoProcessamento", EmitDefaultValue=false)]
         public string CodigoProcessamento { get; set; }
     
         /// <summary>
-        /// {{{operacao_response_codigo_processamento_cancelamento_value}}}
+        /// C\u00F3digo de processamento usado para cancelar transa\u00E7\u00F5es no autorizador
         /// </summary>
-        /// <value>{{{operacao_response_codigo_processamento_cancelamento_value}}}</value>
+        /// <value>C\u00F3digo de processamento usado para cancelar transa\u00E7\u00F5es no autorizador</value>
         [DataMember(Name="codigoProcessamentoCancelamento", EmitDefaultValue=false)]
         public string CodigoProcessamentoCancelamento { get; set; }
     
         /// <summary>
-        /// {{{operacao_response_nome_operacao_value}}}
+        /// Nome da opera\u00E7\u00E3o
         /// </summary>
-        /// <value>{{{operacao_response_nome_operacao_value}}}</value>
+        /// <value>Nome da opera\u00E7\u00E3o</value>
         [DataMember(Name="nomeOperacao", EmitDefaultValue=false)]
         public string NomeOperacao { get; set; }
     
         /// <summary>
-        /// {{{operacao_response_flag_cobra_juros_value}}}
+        /// Flag indicativa para crobran\u00E7a de juros
         /// </summary>
-        /// <value>{{{operacao_response_flag_cobra_juros_value}}}</value>
+        /// <value>Flag indicativa para crobran\u00E7a de juros</value>
         [DataMember(Name="flagCobraJuros", EmitDefaultValue=false)]
         public bool? FlagCobraJuros { get; set; }
     
         /// <summary>
-        /// {{{operacao_response_flag_cobra_tarifa_value}}}
+        /// Flag indicativa para crobran\u00E7a de tarifas
         /// </summary>
-        /// <value>{{{operacao_response_flag_cobra_tarifa_value}}}</value>
+        /// <value>Flag indicativa para crobran\u00E7a de tarifas</value>
         [DataMember(Name="flagCobraTarifa", EmitDefaultValue=false)]
         public bool? FlagCobraTarifa { get; set; }
     
         /// <summary>
-        /// {{{operacao_response_carencia_value}}}
+        /// Quantidade de meses para car\u00EAncia
         /// </summary>
-        /// <value>{{{operacao_response_carencia_value}}}</value>
+        /// <value>Quantidade de meses para car\u00EAncia</value>
         [DataMember(Name="carencia", EmitDefaultValue=false)]
         public int? Carencia { get; set; }
     
         /// <summary>
-        /// {{{operacao_response_flag_permitir_parcelamento_value}}}
+        /// Permitir transa\u00E7\u00F5es parceladas
         /// </summary>
-        /// <value>{{{operacao_response_flag_permitir_parcelamento_value}}}</value>
+        /// <value>Permitir transa\u00E7\u00F5es parceladas</value>
         [DataMember(Name="flagPermitirParcelamento", EmitDefaultValue=false)]
         public bool? FlagPermitirParcelamento { get; set; }
     
         /// <summary>
-        /// {{{operacao_response_flag_manter_taxa_juros_no_rotativo_value}}}
+        /// Flag que indica que a opera\u00E7\u00E3o deve utilizar a taxa da compra como taxa do rotativo para transa\u00E7\u00F5es desse tipo opera\u00E7\u00E3o
         /// </summary>
-        /// <value>{{{operacao_response_flag_manter_taxa_juros_no_rotativo_value}}}</value>
+        /// <value>Flag que indica que a opera\u00E7\u00E3o deve utilizar a taxa da compra como taxa do rotativo para transa\u00E7\u00F5es desse tipo opera\u00E7\u00E3o</value>
         [DataMember(Name="flagManterTaxaJurosNoRotativo", EmitDefaultValue=false)]
         public bool? FlagManterTaxaJurosNoRotativo { get; set; }
     

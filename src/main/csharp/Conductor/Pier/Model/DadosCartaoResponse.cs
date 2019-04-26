@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{dados_cartao_response_description}}}
+    /// Objeto Dados Cart\u00E3o
     /// </summary>
     [DataContract]
     public partial class DadosCartaoResponse :  IEquatable<DadosCartaoResponse>
@@ -23,18 +23,18 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="DadosCartaoResponse" />class.
         /// </summary>
         /// <param name="FlagVirtual">FlagVirtual.</param>
-        /// <param name="NumeroCartao">{{{dados_cartao_response_numero_cartao_value}}}.</param>
-        /// <param name="DataValidade">{{{dados_cartao_response_data_validade_value}}}.</param>
-        /// <param name="Cvv2">{{{dados_cartao_response_cvv2_value}}}.</param>
-        /// <param name="NomePlastico">{{{dados_cartao_response_nome_plastico_value}}}.</param>
-        /// <param name="IdConta">{{{dados_cartao_response_id_conta_value}}}.</param>
-        /// <param name="IdCartao">{{{dados_cartao_response_id_cartao_value}}}.</param>
-        /// <param name="NumeroAgencia">{{{dados_cartao_response_numero_agencia_value}}}.</param>
-        /// <param name="NumeroContaCorente">{{{dados_cartao_response_numero_conta_corente_value}}}.</param>
-        /// <param name="IdStatusConta">{{{dados_cartao_response_id_status_conta_value}}}.</param>
-        /// <param name="StatusConta">{{{dados_cartao_response_status_conta_value}}}.</param>
-        /// <param name="IdStatusCartao">{{{dados_cartao_response_id_status_cartao_value}}}.</param>
-        /// <param name="StatusCartao">{{{dados_cartao_response_status_cartao_value}}}.</param>
+        /// <param name="NumeroCartao">N\u00FAmero do cart\u00E3o.</param>
+        /// <param name="DataValidade">Data de validade.</param>
+        /// <param name="Cvv2">CVV2 do cart\u00E3o.</param>
+        /// <param name="NomePlastico">Nome do portador.</param>
+        /// <param name="IdConta">Identificador da conta do portador.</param>
+        /// <param name="IdCartao">Identificador da cart\u00E3o do portador.</param>
+        /// <param name="NumeroAgencia">Apresenta o n\u00FAmero da Ag\u00EAncia a ser impresso no Cart\u00E3o, quando aplic\u00E1vel.</param>
+        /// <param name="NumeroContaCorente">Apresenta o n\u00FAmero da Conta Corrente a ser impresso no Cart\u00E3o, quando aplic\u00E1vel.</param>
+        /// <param name="IdStatusConta">Status da conta do portador.</param>
+        /// <param name="StatusConta">Descri\u00E7\u00E3o do status da conta do portador.</param>
+        /// <param name="IdStatusCartao">Status do cart\u00E3o.</param>
+        /// <param name="StatusCartao">Descri\u00E7\u00E3o do status do cart\u00E3o.</param>
 
         public DadosCartaoResponse(int? FlagVirtual = null, string NumeroCartao = null, string DataValidade = null, string Cvv2 = null, string NomePlastico = null, long? IdConta = null, long? IdCartao = null, int? NumeroAgencia = null, string NumeroContaCorente = null, long? IdStatusConta = null, string StatusConta = null, long? IdStatusCartao = null, string StatusCartao = null)
         {
@@ -62,86 +62,86 @@ namespace Conductor.Pier.Model
         public int? FlagVirtual { get; set; }
     
         /// <summary>
-        /// {{{dados_cartao_response_numero_cartao_value}}}
+        /// N\u00FAmero do cart\u00E3o
         /// </summary>
-        /// <value>{{{dados_cartao_response_numero_cartao_value}}}</value>
+        /// <value>N\u00FAmero do cart\u00E3o</value>
         [DataMember(Name="numeroCartao", EmitDefaultValue=false)]
         public string NumeroCartao { get; set; }
     
         /// <summary>
-        /// {{{dados_cartao_response_data_validade_value}}}
+        /// Data de validade
         /// </summary>
-        /// <value>{{{dados_cartao_response_data_validade_value}}}</value>
+        /// <value>Data de validade</value>
         [DataMember(Name="dataValidade", EmitDefaultValue=false)]
         public string DataValidade { get; set; }
     
         /// <summary>
-        /// {{{dados_cartao_response_cvv2_value}}}
+        /// CVV2 do cart\u00E3o
         /// </summary>
-        /// <value>{{{dados_cartao_response_cvv2_value}}}</value>
+        /// <value>CVV2 do cart\u00E3o</value>
         [DataMember(Name="cvv2", EmitDefaultValue=false)]
         public string Cvv2 { get; set; }
     
         /// <summary>
-        /// {{{dados_cartao_response_nome_plastico_value}}}
+        /// Nome do portador
         /// </summary>
-        /// <value>{{{dados_cartao_response_nome_plastico_value}}}</value>
+        /// <value>Nome do portador</value>
         [DataMember(Name="nomePlastico", EmitDefaultValue=false)]
         public string NomePlastico { get; set; }
     
         /// <summary>
-        /// {{{dados_cartao_response_id_conta_value}}}
+        /// Identificador da conta do portador
         /// </summary>
-        /// <value>{{{dados_cartao_response_id_conta_value}}}</value>
+        /// <value>Identificador da conta do portador</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// {{{dados_cartao_response_id_cartao_value}}}
+        /// Identificador da cart\u00E3o do portador
         /// </summary>
-        /// <value>{{{dados_cartao_response_id_cartao_value}}}</value>
+        /// <value>Identificador da cart\u00E3o do portador</value>
         [DataMember(Name="idCartao", EmitDefaultValue=false)]
         public long? IdCartao { get; set; }
     
         /// <summary>
-        /// {{{dados_cartao_response_numero_agencia_value}}}
+        /// Apresenta o n\u00FAmero da Ag\u00EAncia a ser impresso no Cart\u00E3o, quando aplic\u00E1vel
         /// </summary>
-        /// <value>{{{dados_cartao_response_numero_agencia_value}}}</value>
+        /// <value>Apresenta o n\u00FAmero da Ag\u00EAncia a ser impresso no Cart\u00E3o, quando aplic\u00E1vel</value>
         [DataMember(Name="numeroAgencia", EmitDefaultValue=false)]
         public int? NumeroAgencia { get; set; }
     
         /// <summary>
-        /// {{{dados_cartao_response_numero_conta_corente_value}}}
+        /// Apresenta o n\u00FAmero da Conta Corrente a ser impresso no Cart\u00E3o, quando aplic\u00E1vel
         /// </summary>
-        /// <value>{{{dados_cartao_response_numero_conta_corente_value}}}</value>
+        /// <value>Apresenta o n\u00FAmero da Conta Corrente a ser impresso no Cart\u00E3o, quando aplic\u00E1vel</value>
         [DataMember(Name="numeroContaCorente", EmitDefaultValue=false)]
         public string NumeroContaCorente { get; set; }
     
         /// <summary>
-        /// {{{dados_cartao_response_id_status_conta_value}}}
+        /// Status da conta do portador
         /// </summary>
-        /// <value>{{{dados_cartao_response_id_status_conta_value}}}</value>
+        /// <value>Status da conta do portador</value>
         [DataMember(Name="idStatusConta", EmitDefaultValue=false)]
         public long? IdStatusConta { get; set; }
     
         /// <summary>
-        /// {{{dados_cartao_response_status_conta_value}}}
+        /// Descri\u00E7\u00E3o do status da conta do portador
         /// </summary>
-        /// <value>{{{dados_cartao_response_status_conta_value}}}</value>
+        /// <value>Descri\u00E7\u00E3o do status da conta do portador</value>
         [DataMember(Name="statusConta", EmitDefaultValue=false)]
         public string StatusConta { get; set; }
     
         /// <summary>
-        /// {{{dados_cartao_response_id_status_cartao_value}}}
+        /// Status do cart\u00E3o
         /// </summary>
-        /// <value>{{{dados_cartao_response_id_status_cartao_value}}}</value>
+        /// <value>Status do cart\u00E3o</value>
         [DataMember(Name="idStatusCartao", EmitDefaultValue=false)]
         public long? IdStatusCartao { get; set; }
     
         /// <summary>
-        /// {{{dados_cartao_response_status_cartao_value}}}
+        /// Descri\u00E7\u00E3o do status do cart\u00E3o
         /// </summary>
-        /// <value>{{{dados_cartao_response_status_cartao_value}}}</value>
+        /// <value>Descri\u00E7\u00E3o do status do cart\u00E3o</value>
         [DataMember(Name="statusCartao", EmitDefaultValue=false)]
         public string StatusCartao { get; set; }
     

@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{status_contestacao_response_description}}}
+    /// Retorno da lista de status de contestacao
     /// </summary>
     [DataContract]
     public partial class StatusContestacaoResponse :  IEquatable<StatusContestacaoResponse>
@@ -22,8 +22,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="StatusContestacaoResponse" /> class.
         /// Initializes a new instance of the <see cref="StatusContestacaoResponse" />class.
         /// </summary>
-        /// <param name="IdStatusContestacao">{{{status_contestacao_request_idstatuscontestacao_value}}}.</param>
-        /// <param name="Descricao">{{{status_contestacao_response_descricao_value}}}.</param>
+        /// <param name="IdStatusContestacao">Identificador do status contesta\u00E7\u00E3o.</param>
+        /// <param name="Descricao">Descri\u00E7\u00E3o da Constenta\u00E7\u00E3o.</param>
 
         public StatusContestacaoResponse(long? IdStatusContestacao = null, string Descricao = null)
         {
@@ -34,16 +34,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{status_contestacao_request_idstatuscontestacao_value}}}
+        /// Identificador do status contesta\u00E7\u00E3o
         /// </summary>
-        /// <value>{{{status_contestacao_request_idstatuscontestacao_value}}}</value>
+        /// <value>Identificador do status contesta\u00E7\u00E3o</value>
         [DataMember(Name="idStatusContestacao", EmitDefaultValue=false)]
         public long? IdStatusContestacao { get; set; }
     
         /// <summary>
-        /// {{{status_contestacao_response_descricao_value}}}
+        /// Descri\u00E7\u00E3o da Constenta\u00E7\u00E3o
         /// </summary>
-        /// <value>{{{status_contestacao_response_descricao_value}}}</value>
+        /// <value>Descri\u00E7\u00E3o da Constenta\u00E7\u00E3o</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     

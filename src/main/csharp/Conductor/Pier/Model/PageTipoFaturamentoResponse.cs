@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{page_tipo_faturamento_response_description}}}
+    /// Lista de Tipos de Faturamentos
     /// </summary>
     [DataContract]
     public partial class PageTipoFaturamentoResponse :  IEquatable<PageTipoFaturamentoResponse>

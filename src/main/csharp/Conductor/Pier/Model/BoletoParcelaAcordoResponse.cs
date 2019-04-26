@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{boleto_parcela_acordo_response_description}}}
+    /// Representa\u00E7\u00E3o da resposta do boleto de fatura
     /// </summary>
     [DataContract]
     public partial class BoletoParcelaAcordoResponse :  IEquatable<BoletoParcelaAcordoResponse>
@@ -22,41 +22,41 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="BoletoParcelaAcordoResponse" /> class.
         /// Initializes a new instance of the <see cref="BoletoParcelaAcordoResponse" />class.
         /// </summary>
-        /// <param name="NumeroDocumento">{{{boleto_parcela_acordo_response_numero_documento_value}}}.</param>
-        /// <param name="DataProcessamento">{{{boleto_parcela_acordo_response_data_processamento_value}}}.</param>
-        /// <param name="DataDocumento">{{{boleto_parcela_acordo_response_data_documento_value}}}.</param>
-        /// <param name="DataVencimento">{{{boleto_parcela_acordo_response_data_vencimento_value}}}.</param>
-        /// <param name="DataFechamento">{{{boleto_parcela_acordo_response_data_fechamento_value}}}.</param>
-        /// <param name="ValorBoleto">{{{boleto_parcela_acordo_response_valor_boleto_value}}}.</param>
-        /// <param name="NomeBeneficiario">{{{boleto_parcela_acordo_response_nome_beneficiario_value}}}.</param>
-        /// <param name="DocumentoBeneficiario">{{{boleto_parcela_acordo_response_documento_beneficiario_value}}}.</param>
-        /// <param name="Agencia">{{{boleto_parcela_acordo_response_agencia_value}}}.</param>
-        /// <param name="CodigoBeneficiario">{{{boleto_parcela_acordo_response_codigo_beneficiario_value}}}.</param>
-        /// <param name="NumeroConvenio">{{{boleto_parcela_acordo_response_numero_convenio_value}}}.</param>
-        /// <param name="DigitoCodigoBeneficiario">{{{boleto_parcela_acordo_response_digito_codigo_beneficiario_value}}}.</param>
-        /// <param name="Carteira">{{{boleto_parcela_acordo_response_carteira_value}}}.</param>
-        /// <param name="NossoNumero">{{{boleto_parcela_acordo_response_nosso_numero_value}}}.</param>
-        /// <param name="DigitoNossoNumero">{{{boleto_parcela_acordo_response_digito_nosso_numero_value}}}.</param>
-        /// <param name="Banco">{{{boleto_parcela_acordo_response_banco_value}}}.</param>
-        /// <param name="Aceite">{{{boleto_parcela_acordo_response_aceite_value}}}.</param>
-        /// <param name="EspecieDocumento">{{{boleto_parcela_acordo_response_especie_documento_value}}}.</param>
-        /// <param name="Especie">{{{boleto_parcela_acordo_response_especie_value}}}.</param>
-        /// <param name="Instrucoes">{{{boleto_parcela_acordo_response_instrucoes_value}}}.</param>
-        /// <param name="LocaisDePagamento">{{{boleto_parcela_acordo_response_locais_de_pagamento_value}}}.</param>
-        /// <param name="NomePagador">{{{boleto_parcela_acordo_response_nome_pagador_value}}}.</param>
-        /// <param name="DocumentoPagador">{{{boleto_parcela_acordo_response_documento_pagador_value}}}.</param>
-        /// <param name="LogradouroPagador">{{{boleto_parcela_acordo_response_logradouro_pagador_value}}}.</param>
-        /// <param name="BairroPagador">{{{boleto_parcela_acordo_response_bairro_pagador_value}}}.</param>
-        /// <param name="CepPagador">{{{boleto_parcela_acordo_response_cep_pagador_value}}}.</param>
-        /// <param name="CidadePagador">{{{boleto_parcela_acordo_response_cidade_pagador_value}}}.</param>
-        /// <param name="UfPagador">{{{boleto_parcela_acordo_response_uf_pagador_value}}}.</param>
-        /// <param name="CodigoDeBarras">{{{boleto_parcela_acordo_response_codigo_de_barras_value}}}.</param>
-        /// <param name="LinhaDigitavel">{{{boleto_parcela_acordo_response_linha_digitavel_value}}}.</param>
-        /// <param name="Id">{{{boleto_parcela_acordo_response_id_value}}}.</param>
-        /// <param name="IdConta">{{{boleto_parcela_acordo_response_id_conta_value}}}.</param>
-        /// <param name="EnderecoCobrancaBeneficiario">{{{boleto_parcela_acordo_response_endereco_cobranca_beneficiario_value}}}.</param>
-        /// <param name="Status">{{{boleto_parcela_acordo_response_status_value}}}.</param>
-        /// <param name="BoletoRegistrado">{{{boleto_parcela_acordo_response_registrado_value}}}.</param>
+        /// <param name="NumeroDocumento">N\u00FAmero do documento \u00E9 o c\u00F3digo informado pelo banco para identifica\u00E7\u00E3o do cliente.</param>
+        /// <param name="DataProcessamento">Data do processamento (emiss\u00E3o ou faturamento) do boleto.</param>
+        /// <param name="DataDocumento">Data do documento (impress\u00E3o).</param>
+        /// <param name="DataVencimento">Data do vencimento da cobra\u00E7a.</param>
+        /// <param name="DataFechamento">Data do fechamento da cobran\u00E7a.</param>
+        /// <param name="ValorBoleto">Valor do Boleto.</param>
+        /// <param name="NomeBeneficiario">Benefici\u00E1rio \u00E9 a pessoa/empresa que gera o boleto.</param>
+        /// <param name="DocumentoBeneficiario">Documento do Beneficiario.</param>
+        /// <param name="Agencia">Ag\u00EAncia Banc\u00E1ria.</param>
+        /// <param name="CodigoBeneficiario">C\u00F3digo do benefici\u00E1rio.</param>
+        /// <param name="NumeroConvenio">N\u00FAmero do conv\u00EAnio fornecido pelo banco \u00E9 o c\u00F3digo que identifica um emissor junto ao seu banco para associar seus boletos.</param>
+        /// <param name="DigitoCodigoBeneficiario">D\u00EDgito do c\u00F3digo do benefici\u00E1rio.</param>
+        /// <param name="Carteira">Carteira \u00E9 o c\u00F3digo informado pelo banco pra identifica\u00E7\u00E3o do tipo do boleto.</param>
+        /// <param name="NossoNumero">Nosso n\u00FAmero \u00E9 o c\u00F3digo que o benefici\u00E1rio escolhe para manter controle sobre seus boletos. Esse valor serve para o cedente identificar quais boletos foram pagos ou n\u00E3o. Recomenda-se o uso de n\u00FAmeros sequ\u00EAnciais, na gera\u00E7\u00E3o de diversos boletos, para facilitar a identifica\u00E7\u00E3o dos boletos pagos.</param>
+        /// <param name="DigitoNossoNumero">D\u00EDgito do nosso n\u00FAmero.</param>
+        /// <param name="Banco">Banco.</param>
+        /// <param name="Aceite">Aceite informa ao banco se deve aceitar o boleto ap\u00F3s a data de vencimento (padr\u00E3o: &#39;N&#39;).</param>
+        /// <param name="EspecieDocumento">Esp\u00E9cie do documento \u00E9 o identificador do tipo de boleto (padr\u00E3o: &#39;DV&#39;).</param>
+        /// <param name="Especie">Esp\u00E9cie \u00E9 o identificador da moeda do boleto (padr\u00E3o: &#39;R$&#39;).</param>
+        /// <param name="Instrucoes">Instru\u00E7\u00F5es para o benefici\u00E1rio.</param>
+        /// <param name="LocaisDePagamento">Locais de pagamento.</param>
+        /// <param name="NomePagador">Pagador \u00E9 a pessoa/empresa que deve pagar o boleto.</param>
+        /// <param name="DocumentoPagador">Documento do pagador (CPF ou CNPJ).</param>
+        /// <param name="LogradouroPagador">Logradouro do pagador.</param>
+        /// <param name="BairroPagador">Bairro do pagador.</param>
+        /// <param name="CepPagador">CEP do pagador.</param>
+        /// <param name="CidadePagador">Cidade do pagador.</param>
+        /// <param name="UfPagador">Unidade federativa do pagador.</param>
+        /// <param name="CodigoDeBarras">Valor num\u00E9rico do c\u00F3digo de barras.</param>
+        /// <param name="LinhaDigitavel">Linha digit\u00E1vel formatada.</param>
+        /// <param name="Id">C\u00F3digo de identifica\u00E7\u00E3o do boleto.</param>
+        /// <param name="IdConta">C\u00F3digo de identifica\u00E7\u00E3o da conta.</param>
+        /// <param name="EnderecoCobrancaBeneficiario">Endere\u00E7o de cobran\u00E7a do benefici\u00E1rio.</param>
+        /// <param name="Status">Status.</param>
+        /// <param name="BoletoRegistrado">Boleto Registrado.</param>
 
         public BoletoParcelaAcordoResponse(string NumeroDocumento = null, string DataProcessamento = null, string DataDocumento = null, string DataVencimento = null, string DataFechamento = null, double? ValorBoleto = null, string NomeBeneficiario = null, string DocumentoBeneficiario = null, string Agencia = null, string CodigoBeneficiario = null, string NumeroConvenio = null, string DigitoCodigoBeneficiario = null, string Carteira = null, string NossoNumero = null, string DigitoNossoNumero = null, string Banco = null, bool? Aceite = null, string EspecieDocumento = null, string Especie = null, List<string> Instrucoes = null, List<string> LocaisDePagamento = null, string NomePagador = null, string DocumentoPagador = null, string LogradouroPagador = null, string BairroPagador = null, string CepPagador = null, string CidadePagador = null, string UfPagador = null, string CodigoDeBarras = null, string LinhaDigitavel = null, long? Id = null, long? IdConta = null, string EnderecoCobrancaBeneficiario = null, long? Status = null, bool? BoletoRegistrado = null)
         {
@@ -100,247 +100,247 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{boleto_parcela_acordo_response_numero_documento_value}}}
+        /// N\u00FAmero do documento \u00E9 o c\u00F3digo informado pelo banco para identifica\u00E7\u00E3o do cliente
         /// </summary>
-        /// <value>{{{boleto_parcela_acordo_response_numero_documento_value}}}</value>
+        /// <value>N\u00FAmero do documento \u00E9 o c\u00F3digo informado pelo banco para identifica\u00E7\u00E3o do cliente</value>
         [DataMember(Name="numeroDocumento", EmitDefaultValue=false)]
         public string NumeroDocumento { get; set; }
     
         /// <summary>
-        /// {{{boleto_parcela_acordo_response_data_processamento_value}}}
+        /// Data do processamento (emiss\u00E3o ou faturamento) do boleto
         /// </summary>
-        /// <value>{{{boleto_parcela_acordo_response_data_processamento_value}}}</value>
+        /// <value>Data do processamento (emiss\u00E3o ou faturamento) do boleto</value>
         [DataMember(Name="dataProcessamento", EmitDefaultValue=false)]
         public string DataProcessamento { get; set; }
     
         /// <summary>
-        /// {{{boleto_parcela_acordo_response_data_documento_value}}}
+        /// Data do documento (impress\u00E3o)
         /// </summary>
-        /// <value>{{{boleto_parcela_acordo_response_data_documento_value}}}</value>
+        /// <value>Data do documento (impress\u00E3o)</value>
         [DataMember(Name="dataDocumento", EmitDefaultValue=false)]
         public string DataDocumento { get; set; }
     
         /// <summary>
-        /// {{{boleto_parcela_acordo_response_data_vencimento_value}}}
+        /// Data do vencimento da cobra\u00E7a
         /// </summary>
-        /// <value>{{{boleto_parcela_acordo_response_data_vencimento_value}}}</value>
+        /// <value>Data do vencimento da cobra\u00E7a</value>
         [DataMember(Name="dataVencimento", EmitDefaultValue=false)]
         public string DataVencimento { get; set; }
     
         /// <summary>
-        /// {{{boleto_parcela_acordo_response_data_fechamento_value}}}
+        /// Data do fechamento da cobran\u00E7a
         /// </summary>
-        /// <value>{{{boleto_parcela_acordo_response_data_fechamento_value}}}</value>
+        /// <value>Data do fechamento da cobran\u00E7a</value>
         [DataMember(Name="dataFechamento", EmitDefaultValue=false)]
         public string DataFechamento { get; set; }
     
         /// <summary>
-        /// {{{boleto_parcela_acordo_response_valor_boleto_value}}}
+        /// Valor do Boleto
         /// </summary>
-        /// <value>{{{boleto_parcela_acordo_response_valor_boleto_value}}}</value>
+        /// <value>Valor do Boleto</value>
         [DataMember(Name="valorBoleto", EmitDefaultValue=false)]
         public double? ValorBoleto { get; set; }
     
         /// <summary>
-        /// {{{boleto_parcela_acordo_response_nome_beneficiario_value}}}
+        /// Benefici\u00E1rio \u00E9 a pessoa/empresa que gera o boleto
         /// </summary>
-        /// <value>{{{boleto_parcela_acordo_response_nome_beneficiario_value}}}</value>
+        /// <value>Benefici\u00E1rio \u00E9 a pessoa/empresa que gera o boleto</value>
         [DataMember(Name="nomeBeneficiario", EmitDefaultValue=false)]
         public string NomeBeneficiario { get; set; }
     
         /// <summary>
-        /// {{{boleto_parcela_acordo_response_documento_beneficiario_value}}}
+        /// Documento do Beneficiario
         /// </summary>
-        /// <value>{{{boleto_parcela_acordo_response_documento_beneficiario_value}}}</value>
+        /// <value>Documento do Beneficiario</value>
         [DataMember(Name="documentoBeneficiario", EmitDefaultValue=false)]
         public string DocumentoBeneficiario { get; set; }
     
         /// <summary>
-        /// {{{boleto_parcela_acordo_response_agencia_value}}}
+        /// Ag\u00EAncia Banc\u00E1ria
         /// </summary>
-        /// <value>{{{boleto_parcela_acordo_response_agencia_value}}}</value>
+        /// <value>Ag\u00EAncia Banc\u00E1ria</value>
         [DataMember(Name="agencia", EmitDefaultValue=false)]
         public string Agencia { get; set; }
     
         /// <summary>
-        /// {{{boleto_parcela_acordo_response_codigo_beneficiario_value}}}
+        /// C\u00F3digo do benefici\u00E1rio
         /// </summary>
-        /// <value>{{{boleto_parcela_acordo_response_codigo_beneficiario_value}}}</value>
+        /// <value>C\u00F3digo do benefici\u00E1rio</value>
         [DataMember(Name="codigoBeneficiario", EmitDefaultValue=false)]
         public string CodigoBeneficiario { get; set; }
     
         /// <summary>
-        /// {{{boleto_parcela_acordo_response_numero_convenio_value}}}
+        /// N\u00FAmero do conv\u00EAnio fornecido pelo banco \u00E9 o c\u00F3digo que identifica um emissor junto ao seu banco para associar seus boletos
         /// </summary>
-        /// <value>{{{boleto_parcela_acordo_response_numero_convenio_value}}}</value>
+        /// <value>N\u00FAmero do conv\u00EAnio fornecido pelo banco \u00E9 o c\u00F3digo que identifica um emissor junto ao seu banco para associar seus boletos</value>
         [DataMember(Name="numeroConvenio", EmitDefaultValue=false)]
         public string NumeroConvenio { get; set; }
     
         /// <summary>
-        /// {{{boleto_parcela_acordo_response_digito_codigo_beneficiario_value}}}
+        /// D\u00EDgito do c\u00F3digo do benefici\u00E1rio
         /// </summary>
-        /// <value>{{{boleto_parcela_acordo_response_digito_codigo_beneficiario_value}}}</value>
+        /// <value>D\u00EDgito do c\u00F3digo do benefici\u00E1rio</value>
         [DataMember(Name="digitoCodigoBeneficiario", EmitDefaultValue=false)]
         public string DigitoCodigoBeneficiario { get; set; }
     
         /// <summary>
-        /// {{{boleto_parcela_acordo_response_carteira_value}}}
+        /// Carteira \u00E9 o c\u00F3digo informado pelo banco pra identifica\u00E7\u00E3o do tipo do boleto
         /// </summary>
-        /// <value>{{{boleto_parcela_acordo_response_carteira_value}}}</value>
+        /// <value>Carteira \u00E9 o c\u00F3digo informado pelo banco pra identifica\u00E7\u00E3o do tipo do boleto</value>
         [DataMember(Name="carteira", EmitDefaultValue=false)]
         public string Carteira { get; set; }
     
         /// <summary>
-        /// {{{boleto_parcela_acordo_response_nosso_numero_value}}}
+        /// Nosso n\u00FAmero \u00E9 o c\u00F3digo que o benefici\u00E1rio escolhe para manter controle sobre seus boletos. Esse valor serve para o cedente identificar quais boletos foram pagos ou n\u00E3o. Recomenda-se o uso de n\u00FAmeros sequ\u00EAnciais, na gera\u00E7\u00E3o de diversos boletos, para facilitar a identifica\u00E7\u00E3o dos boletos pagos
         /// </summary>
-        /// <value>{{{boleto_parcela_acordo_response_nosso_numero_value}}}</value>
+        /// <value>Nosso n\u00FAmero \u00E9 o c\u00F3digo que o benefici\u00E1rio escolhe para manter controle sobre seus boletos. Esse valor serve para o cedente identificar quais boletos foram pagos ou n\u00E3o. Recomenda-se o uso de n\u00FAmeros sequ\u00EAnciais, na gera\u00E7\u00E3o de diversos boletos, para facilitar a identifica\u00E7\u00E3o dos boletos pagos</value>
         [DataMember(Name="nossoNumero", EmitDefaultValue=false)]
         public string NossoNumero { get; set; }
     
         /// <summary>
-        /// {{{boleto_parcela_acordo_response_digito_nosso_numero_value}}}
+        /// D\u00EDgito do nosso n\u00FAmero
         /// </summary>
-        /// <value>{{{boleto_parcela_acordo_response_digito_nosso_numero_value}}}</value>
+        /// <value>D\u00EDgito do nosso n\u00FAmero</value>
         [DataMember(Name="digitoNossoNumero", EmitDefaultValue=false)]
         public string DigitoNossoNumero { get; set; }
     
         /// <summary>
-        /// {{{boleto_parcela_acordo_response_banco_value}}}
+        /// Banco
         /// </summary>
-        /// <value>{{{boleto_parcela_acordo_response_banco_value}}}</value>
+        /// <value>Banco</value>
         [DataMember(Name="banco", EmitDefaultValue=false)]
         public string Banco { get; set; }
     
         /// <summary>
-        /// {{{boleto_parcela_acordo_response_aceite_value}}}
+        /// Aceite informa ao banco se deve aceitar o boleto ap\u00F3s a data de vencimento (padr\u00E3o: &#39;N&#39;)
         /// </summary>
-        /// <value>{{{boleto_parcela_acordo_response_aceite_value}}}</value>
+        /// <value>Aceite informa ao banco se deve aceitar o boleto ap\u00F3s a data de vencimento (padr\u00E3o: &#39;N&#39;)</value>
         [DataMember(Name="aceite", EmitDefaultValue=false)]
         public bool? Aceite { get; set; }
     
         /// <summary>
-        /// {{{boleto_parcela_acordo_response_especie_documento_value}}}
+        /// Esp\u00E9cie do documento \u00E9 o identificador do tipo de boleto (padr\u00E3o: &#39;DV&#39;)
         /// </summary>
-        /// <value>{{{boleto_parcela_acordo_response_especie_documento_value}}}</value>
+        /// <value>Esp\u00E9cie do documento \u00E9 o identificador do tipo de boleto (padr\u00E3o: &#39;DV&#39;)</value>
         [DataMember(Name="especieDocumento", EmitDefaultValue=false)]
         public string EspecieDocumento { get; set; }
     
         /// <summary>
-        /// {{{boleto_parcela_acordo_response_especie_value}}}
+        /// Esp\u00E9cie \u00E9 o identificador da moeda do boleto (padr\u00E3o: &#39;R$&#39;)
         /// </summary>
-        /// <value>{{{boleto_parcela_acordo_response_especie_value}}}</value>
+        /// <value>Esp\u00E9cie \u00E9 o identificador da moeda do boleto (padr\u00E3o: &#39;R$&#39;)</value>
         [DataMember(Name="especie", EmitDefaultValue=false)]
         public string Especie { get; set; }
     
         /// <summary>
-        /// {{{boleto_parcela_acordo_response_instrucoes_value}}}
+        /// Instru\u00E7\u00F5es para o benefici\u00E1rio
         /// </summary>
-        /// <value>{{{boleto_parcela_acordo_response_instrucoes_value}}}</value>
+        /// <value>Instru\u00E7\u00F5es para o benefici\u00E1rio</value>
         [DataMember(Name="instrucoes", EmitDefaultValue=false)]
         public List<string> Instrucoes { get; set; }
     
         /// <summary>
-        /// {{{boleto_parcela_acordo_response_locais_de_pagamento_value}}}
+        /// Locais de pagamento
         /// </summary>
-        /// <value>{{{boleto_parcela_acordo_response_locais_de_pagamento_value}}}</value>
+        /// <value>Locais de pagamento</value>
         [DataMember(Name="locaisDePagamento", EmitDefaultValue=false)]
         public List<string> LocaisDePagamento { get; set; }
     
         /// <summary>
-        /// {{{boleto_parcela_acordo_response_nome_pagador_value}}}
+        /// Pagador \u00E9 a pessoa/empresa que deve pagar o boleto
         /// </summary>
-        /// <value>{{{boleto_parcela_acordo_response_nome_pagador_value}}}</value>
+        /// <value>Pagador \u00E9 a pessoa/empresa que deve pagar o boleto</value>
         [DataMember(Name="nomePagador", EmitDefaultValue=false)]
         public string NomePagador { get; set; }
     
         /// <summary>
-        /// {{{boleto_parcela_acordo_response_documento_pagador_value}}}
+        /// Documento do pagador (CPF ou CNPJ)
         /// </summary>
-        /// <value>{{{boleto_parcela_acordo_response_documento_pagador_value}}}</value>
+        /// <value>Documento do pagador (CPF ou CNPJ)</value>
         [DataMember(Name="documentoPagador", EmitDefaultValue=false)]
         public string DocumentoPagador { get; set; }
     
         /// <summary>
-        /// {{{boleto_parcela_acordo_response_logradouro_pagador_value}}}
+        /// Logradouro do pagador
         /// </summary>
-        /// <value>{{{boleto_parcela_acordo_response_logradouro_pagador_value}}}</value>
+        /// <value>Logradouro do pagador</value>
         [DataMember(Name="logradouroPagador", EmitDefaultValue=false)]
         public string LogradouroPagador { get; set; }
     
         /// <summary>
-        /// {{{boleto_parcela_acordo_response_bairro_pagador_value}}}
+        /// Bairro do pagador
         /// </summary>
-        /// <value>{{{boleto_parcela_acordo_response_bairro_pagador_value}}}</value>
+        /// <value>Bairro do pagador</value>
         [DataMember(Name="bairroPagador", EmitDefaultValue=false)]
         public string BairroPagador { get; set; }
     
         /// <summary>
-        /// {{{boleto_parcela_acordo_response_cep_pagador_value}}}
+        /// CEP do pagador
         /// </summary>
-        /// <value>{{{boleto_parcela_acordo_response_cep_pagador_value}}}</value>
+        /// <value>CEP do pagador</value>
         [DataMember(Name="cepPagador", EmitDefaultValue=false)]
         public string CepPagador { get; set; }
     
         /// <summary>
-        /// {{{boleto_parcela_acordo_response_cidade_pagador_value}}}
+        /// Cidade do pagador
         /// </summary>
-        /// <value>{{{boleto_parcela_acordo_response_cidade_pagador_value}}}</value>
+        /// <value>Cidade do pagador</value>
         [DataMember(Name="cidadePagador", EmitDefaultValue=false)]
         public string CidadePagador { get; set; }
     
         /// <summary>
-        /// {{{boleto_parcela_acordo_response_uf_pagador_value}}}
+        /// Unidade federativa do pagador
         /// </summary>
-        /// <value>{{{boleto_parcela_acordo_response_uf_pagador_value}}}</value>
+        /// <value>Unidade federativa do pagador</value>
         [DataMember(Name="ufPagador", EmitDefaultValue=false)]
         public string UfPagador { get; set; }
     
         /// <summary>
-        /// {{{boleto_parcela_acordo_response_codigo_de_barras_value}}}
+        /// Valor num\u00E9rico do c\u00F3digo de barras
         /// </summary>
-        /// <value>{{{boleto_parcela_acordo_response_codigo_de_barras_value}}}</value>
+        /// <value>Valor num\u00E9rico do c\u00F3digo de barras</value>
         [DataMember(Name="codigoDeBarras", EmitDefaultValue=false)]
         public string CodigoDeBarras { get; set; }
     
         /// <summary>
-        /// {{{boleto_parcela_acordo_response_linha_digitavel_value}}}
+        /// Linha digit\u00E1vel formatada
         /// </summary>
-        /// <value>{{{boleto_parcela_acordo_response_linha_digitavel_value}}}</value>
+        /// <value>Linha digit\u00E1vel formatada</value>
         [DataMember(Name="linhaDigitavel", EmitDefaultValue=false)]
         public string LinhaDigitavel { get; set; }
     
         /// <summary>
-        /// {{{boleto_parcela_acordo_response_id_value}}}
+        /// C\u00F3digo de identifica\u00E7\u00E3o do boleto
         /// </summary>
-        /// <value>{{{boleto_parcela_acordo_response_id_value}}}</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do boleto</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{boleto_parcela_acordo_response_id_conta_value}}}
+        /// C\u00F3digo de identifica\u00E7\u00E3o da conta
         /// </summary>
-        /// <value>{{{boleto_parcela_acordo_response_id_conta_value}}}</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o da conta</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// {{{boleto_parcela_acordo_response_endereco_cobranca_beneficiario_value}}}
+        /// Endere\u00E7o de cobran\u00E7a do benefici\u00E1rio
         /// </summary>
-        /// <value>{{{boleto_parcela_acordo_response_endereco_cobranca_beneficiario_value}}}</value>
+        /// <value>Endere\u00E7o de cobran\u00E7a do benefici\u00E1rio</value>
         [DataMember(Name="enderecoCobrancaBeneficiario", EmitDefaultValue=false)]
         public string EnderecoCobrancaBeneficiario { get; set; }
     
         /// <summary>
-        /// {{{boleto_parcela_acordo_response_status_value}}}
+        /// Status
         /// </summary>
-        /// <value>{{{boleto_parcela_acordo_response_status_value}}}</value>
+        /// <value>Status</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public long? Status { get; set; }
     
         /// <summary>
-        /// {{{boleto_parcela_acordo_response_registrado_value}}}
+        /// Boleto Registrado
         /// </summary>
-        /// <value>{{{boleto_parcela_acordo_response_registrado_value}}}</value>
+        /// <value>Boleto Registrado</value>
         [DataMember(Name="boletoRegistrado", EmitDefaultValue=false)]
         public bool? BoletoRegistrado { get; set; }
     

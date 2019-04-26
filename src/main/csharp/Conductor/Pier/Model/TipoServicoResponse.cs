@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{tipo_servico_response_description}}}
+    /// Objeto Response do Tipo Servi\u00E7o
     /// </summary>
     [DataContract]
     public partial class TipoServicoResponse :  IEquatable<TipoServicoResponse>
@@ -23,7 +23,7 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TipoServicoResponse" />class.
         /// </summary>
         /// <param name="Descricao">Descricao.</param>
-        /// <param name="Id">{{{tipo_servico_response_id_value}}}.</param>
+        /// <param name="Id">Identificador do Tipo Servi\u00E7o.</param>
 
         public TipoServicoResponse(string Descricao = null, long? Id = null)
         {
@@ -40,9 +40,9 @@ namespace Conductor.Pier.Model
         public string Descricao { get; set; }
     
         /// <summary>
-        /// {{{tipo_servico_response_id_value}}}
+        /// Identificador do Tipo Servi\u00E7o
         /// </summary>
-        /// <value>{{{tipo_servico_response_id_value}}}</value>
+        /// <value>Identificador do Tipo Servi\u00E7o</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     

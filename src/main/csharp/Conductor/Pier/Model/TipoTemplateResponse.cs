@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{tipo_template_response_description}}}
+    /// Representa\u00E7\u00E3o da resposta do recurso de Tipo de Template
     /// </summary>
     [DataContract]
     public partial class TipoTemplateResponse :  IEquatable<TipoTemplateResponse>
@@ -22,10 +22,10 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TipoTemplateResponse" /> class.
         /// Initializes a new instance of the <see cref="TipoTemplateResponse" />class.
         /// </summary>
-        /// <param name="Id">{{{tipo_template_response_id_value}}}.</param>
-        /// <param name="Nome">{{{tipo_template_response_nome_value}}}.</param>
-        /// <param name="Descricao">{{{tipo_template_response_descricao_value}}}.</param>
-        /// <param name="Sigla">{{{tipo_template_response_sigla_value}}}.</param>
+        /// <param name="Id">ID do Tipo de Template.</param>
+        /// <param name="Nome">Nome do Tipo de Template.</param>
+        /// <param name="Descricao">Descri\u00E7\u00E3o do Tipo de Template.</param>
+        /// <param name="Sigla">Sigla do Tipo de Template.</param>
 
         public TipoTemplateResponse(long? Id = null, string Nome = null, string Descricao = null, string Sigla = null)
         {
@@ -38,30 +38,30 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{tipo_template_response_id_value}}}
+        /// ID do Tipo de Template
         /// </summary>
-        /// <value>{{{tipo_template_response_id_value}}}</value>
+        /// <value>ID do Tipo de Template</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// {{{tipo_template_response_nome_value}}}
+        /// Nome do Tipo de Template
         /// </summary>
-        /// <value>{{{tipo_template_response_nome_value}}}</value>
+        /// <value>Nome do Tipo de Template</value>
         [DataMember(Name="nome", EmitDefaultValue=false)]
         public string Nome { get; set; }
     
         /// <summary>
-        /// {{{tipo_template_response_descricao_value}}}
+        /// Descri\u00E7\u00E3o do Tipo de Template
         /// </summary>
-        /// <value>{{{tipo_template_response_descricao_value}}}</value>
+        /// <value>Descri\u00E7\u00E3o do Tipo de Template</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     
         /// <summary>
-        /// {{{tipo_template_response_sigla_value}}}
+        /// Sigla do Tipo de Template
         /// </summary>
-        /// <value>{{{tipo_template_response_sigla_value}}}</value>
+        /// <value>Sigla do Tipo de Template</value>
         [DataMember(Name="sigla", EmitDefaultValue=false)]
         public string Sigla { get; set; }
     

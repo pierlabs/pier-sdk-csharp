@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{transacao_processada_nao_processada_response_description}}}
+    /// Lista de Transa\u00E7\u00F5es processadas e nao Processadas
     /// </summary>
     [DataContract]
     public partial class TransacaoProcessadaNaoProcessadaResponse :  IEquatable<TransacaoProcessadaNaoProcessadaResponse>
@@ -22,43 +22,46 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TransacaoProcessadaNaoProcessadaResponse" /> class.
         /// Initializes a new instance of the <see cref="TransacaoProcessadaNaoProcessadaResponse" />class.
         /// </summary>
-        /// <param name="CartaoMascarado">{{{transacao_nao_processada_response_cartao_mascarado_value}}}.</param>
-        /// <param name="CodigoAutorizacao">{{{transacao_nao_processada_response_codigo_autorizacao_value}}}.</param>
-        /// <param name="CodigoMCC">{{{transacao_nao_processada_response_codigo_mcc_value}}}.</param>
-        /// <param name="CodigoMoedaDestino">{{{transacao_nao_processada_response_codigo_moeda_destino_value}}}.</param>
-        /// <param name="CodigoMoedaOrigem">{{{transacao_nao_processada_response_codigo_moeda_origem_value}}}.</param>
-        /// <param name="CodigoReferencia">{{{transacao_nao_processada_response_codigo_referencia_value}}}.</param>
-        /// <param name="CodigoTerminal">{{{transacao_nao_processada_response_codigo_terminal_value}}}.</param>
-        /// <param name="CotacaoUSD">{{{transacao_nao_processada_response_cotacao_usd_value}}}.</param>
-        /// <param name="DataCotacaoUSD">{{{transacao_nao_processada_response_data_cotacao_usd_value}}}.</param>
-        /// <param name="DataFaturamento">{{{transacao_nao_processada_response_data_faturamento_value}}}.</param>
-        /// <param name="DataOrigem">{{{transacao_nao_processada_response_data_origem_value}}}.</param>
-        /// <param name="DataVencimentoReal">{{{transacao_nao_processada_response_data_vencimento_value}}}.</param>
-        /// <param name="DescricaoAbreviada">{{{transacao_nao_processada_response_descricao_abreviada_value}}}.</param>
-        /// <param name="DescricaoTipoTransacaoNaoProcessada">{{{transacao_nao_processada_response_descricao_tipo_transacao_nao_processada_value}}}.</param>
-        /// <param name="FlagCredito">{{{transacao_nao_processada_response_flag_credito_value}}}.</param>
-        /// <param name="FlagFaturado">{{{transacao_nao_processada_response_flag_faturado_value}}}.</param>
-        /// <param name="GrupoDescricaoMCC">{{{transacao_nao_processada_response_grupo_descricao_mcc_value}}}.</param>
-        /// <param name="GrupoMCC">{{{transacao_nao_processada_response_grupo_mcc_value}}}.</param>
-        /// <param name="IdConta">{{{transacao_nao_processada_response_id_conta_value}}}.</param>
-        /// <param name="IdEstabelecimento">{{{transacao_nao_processada_response_id_estabelecimento_value}}}.</param>
-        /// <param name="IdEventoAjuste">{{{transacao_nao_processada_response_id_evento_ajuste_value}}}.</param>
-        /// <param name="IdTipoTransacaoNaoProcessada">{{{transacao_nao_processada_response_id_tipo_transacao_nao_processada_value}}}.</param>
-        /// <param name="IdTransacaoEstorno">{{{transacao_nao_processada_response_id_transacao_estorno_value}}}.</param>
-        /// <param name="LocalidadeEstabelecimento">{{{transacao_nao_processada_response_localidade_estabelecimento_value}}}.</param>
-        /// <param name="ModoEntradaTransacao">{{{transacao_nao_processada_response_modo_entrada_transacao_value}}}.</param>
-        /// <param name="NomeEstabelecimento">{{{transacao_nao_processada_response_nome_estabelecimento_value}}}.</param>
-        /// <param name="NomeFantasiaEstabelecimento">{{{transacao_nao_processada_response_nome_fantasia_estabelecimento_value}}}.</param>
-        /// <param name="NomePortador">{{{transacao_nao_processada_response_nome_portador_value}}}.</param>
-        /// <param name="Parcela">{{{transacao_nao_processada_response_numero_parcela_value}}}.</param>
-        /// <param name="Plano">{{{transacao_nao_processada_response_plano_parcelamento_value}}}.</param>
-        /// <param name="Status">{{{transacao_nao_processada_response_status_value}}}.</param>
-        /// <param name="TaxaEmbarque">{{{transacao_nao_processada_response_valor_taxa_embarque_value}}}.</param>
-        /// <param name="ValorBRL">{{{transacao_nao_processada_response_valor_brl_value}}}.</param>
-        /// <param name="ValorEntrada">{{{transacao_nao_processada_response_valor_entrada_value}}}.</param>
-        /// <param name="ValorUSD">{{{transacao_nao_processada_response_valor_usd_value}}}.</param>
+        /// <param name="CartaoMascarado">N\u00FAmero do Cart\u00E3o em Formato 0000XXXXXXXX0000.</param>
+        /// <param name="CodigoAutorizacao">C\u00F3digo de Autoriza\u00E7\u00E3o da Transa\u00E7\u00E3o.</param>
+        /// <param name="CodigoMCC">C\u00F3digo de identifica\u00E7\u00E3o da categoria do Estabelecimento.</param>
+        /// <param name="CodigoMoedaDestino">C\u00F3digo de Identifica\u00E7\u00E3o da Moeda da Transa\u00E7\u00E3o ap\u00F3s a convers\u00E3o, seguindo padr\u00E3o ISO 4217.</param>
+        /// <param name="CodigoMoedaOrigem">C\u00F3digo de Identifica\u00E7\u00E3o da Moeda utilizada na Transa\u00E7\u00E3o, seguindo padr\u00E3o ISO 4217.</param>
+        /// <param name="CodigoReferencia">C\u00F3digo de Refer\u00EAncia da Transa\u00E7\u00E3o quando utilizado Cart\u00E3o Bandeirado.</param>
+        /// <param name="CodigoTerminal">C\u00F3digo de Identifica\u00E7\u00E3o da origem da captura da Transa\u00E7\u00E3o.</param>
+        /// <param name="CotacaoUSD">Valor do D\u00F3lar Americano (USD) convertido em Real (BRL).</param>
+        /// <param name="DataCotacaoUSD">Data de Fechamento da Cota\u00E7\u00E3o do D\u00F3lar Americano (USD).</param>
+        /// <param name="DataFaturamento">Data de Faturamento da Transa\u00E7\u00E3o.</param>
+        /// <param name="DataOrigem">Data em que a Transa\u00E7\u00E3o foi realizada.</param>
+        /// <param name="DataVencimentoReal">Data de Vencimento da Fatura.</param>
+        /// <param name="DescricaoAbreviada">Descri\u00E7\u00E3o Abreviada da Transa\u00E7\u00E3o.</param>
+        /// <param name="DescricaoTipoTransacaoNaoProcessada">C\u00F3digo de Identifica\u00E7\u00E3o do Tipo da Transa\u00E7\u00E3o.</param>
+        /// <param name="FlagCredito">Quando ativa, indica que a Transa\u00E7\u00E3o \u00E9 do Tipo &#39;Cr\u00E9dito&#39;.</param>
+        /// <param name="FlagFaturado">Quando ativa, indica que a Transa\u00E7\u00E3o foi consolidada em uma Fatura.</param>
+        /// <param name="GrupoDescricaoMCC">Descri\u00E7\u00E3o do grupo do Estabelecimento.</param>
+        /// <param name="GrupoMCC">C\u00F3digo de identifica\u00E7\u00E3o do grupo do Estabelecimento.</param>
+        /// <param name="IdConta">C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id).</param>
+        /// <param name="IdEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento (id).</param>
+        /// <param name="IdEventoAjuste">C\u00F3digo de Identifica\u00E7\u00E3o do Evento Ajuste.</param>
+        /// <param name="IdTipoAjuste">Atributo que representa o c\u00F3digo de identifica\u00E7\u00E3o do tipo de ajuste.</param>
+        /// <param name="IdTipoTransacaoNaoProcessada">Identificador do tipo de transacao n\u00E3o processada.</param>
+        /// <param name="IdTransacaoEstorno">C\u00F3digo de Identifica\u00E7\u00E3o da Transa\u00E7\u00E3o (id) que gerou o estorno.</param>
+        /// <param name="LocalidadeEstabelecimento">Localidade do Estabelecimento.</param>
+        /// <param name="ModoEntradaTransacao">Descreve o modo utilizado para realizar a leitura dos dados do cart\u00E3o para realizar a Transa\u00E7\u00E3o.</param>
+        /// <param name="NomeEstabelecimento">Nome do Estabelecimento.</param>
+        /// <param name="NomeFantasiaEstabelecimento">Nome Fantasia do Estabelecimento.</param>
+        /// <param name="NomePortador">Nome completo do Portador do Cart\u00E3o.</param>
+        /// <param name="Parcela">Quando a Transa\u00E7\u00E3o for do tipo Parcelada, apresenta o n\u00FAmero da Parcela.</param>
+        /// <param name="Plano">Quando a Transa\u00E7\u00E3o for do tipo Parcelada, apresenta o n\u00FAmero total de Parcelas.</param>
+        /// <param name="Status">Atributo que representa o c\u00F3digo identificador do status da transa\u00E7\u00E3o.</param>
+        /// <param name="TaxaEmbarque">Valor da Taxa de Embarque em Real (BRL) quando a transa\u00E7\u00E3o for relacionada a Compra de Passagens A\u00E9reas.</param>
+        /// <param name="ValorBRL">Valor da Transa\u00E7\u00E3o em Real (BRL).</param>
+        /// <param name="ValorEntrada">Valor da Entrada em Real (BRL) quando a transa\u00E7\u00E3o for do tipo Parcelada com o pagamento de um valor de Entrada.</param>
+        /// <param name="ValorIOF">Valor do IOF.</param>
+        /// <param name="ValorTAC">Valor da TAC.</param>
+        /// <param name="ValorUSD">Valor da Transa\u00E7\u00E3o em D\u00F3lar Americano (USD).</param>
 
-        public TransacaoProcessadaNaoProcessadaResponse(string CartaoMascarado = null, string CodigoAutorizacao = null, long? CodigoMCC = null, string CodigoMoedaDestino = null, string CodigoMoedaOrigem = null, string CodigoReferencia = null, string CodigoTerminal = null, double? CotacaoUSD = null, string DataCotacaoUSD = null, string DataFaturamento = null, string DataOrigem = null, string DataVencimentoReal = null, string DescricaoAbreviada = null, string DescricaoTipoTransacaoNaoProcessada = null, int? FlagCredito = null, int? FlagFaturado = null, string GrupoDescricaoMCC = null, long? GrupoMCC = null, long? IdConta = null, long? IdEstabelecimento = null, long? IdEventoAjuste = null, long? IdTipoTransacaoNaoProcessada = null, long? IdTransacaoEstorno = null, string LocalidadeEstabelecimento = null, string ModoEntradaTransacao = null, string NomeEstabelecimento = null, string NomeFantasiaEstabelecimento = null, string NomePortador = null, long? Parcela = null, long? Plano = null, int? Status = null, double? TaxaEmbarque = null, double? ValorBRL = null, double? ValorEntrada = null, double? ValorUSD = null)
+        public TransacaoProcessadaNaoProcessadaResponse(string CartaoMascarado = null, string CodigoAutorizacao = null, long? CodigoMCC = null, string CodigoMoedaDestino = null, string CodigoMoedaOrigem = null, string CodigoReferencia = null, string CodigoTerminal = null, double? CotacaoUSD = null, string DataCotacaoUSD = null, string DataFaturamento = null, string DataOrigem = null, string DataVencimentoReal = null, string DescricaoAbreviada = null, string DescricaoTipoTransacaoNaoProcessada = null, int? FlagCredito = null, int? FlagFaturado = null, string GrupoDescricaoMCC = null, long? GrupoMCC = null, long? IdConta = null, long? IdEstabelecimento = null, long? IdEventoAjuste = null, long? IdTipoAjuste = null, long? IdTipoTransacaoNaoProcessada = null, long? IdTransacaoEstorno = null, string LocalidadeEstabelecimento = null, string ModoEntradaTransacao = null, string NomeEstabelecimento = null, string NomeFantasiaEstabelecimento = null, string NomePortador = null, long? Parcela = null, long? Plano = null, int? Status = null, double? TaxaEmbarque = null, double? ValorBRL = null, double? ValorEntrada = null, double? ValorIOF = null, double? ValorTAC = null, double? ValorUSD = null)
         {
             this.CartaoMascarado = CartaoMascarado;
             this.CodigoAutorizacao = CodigoAutorizacao;
@@ -81,6 +84,7 @@ namespace Conductor.Pier.Model
             this.IdConta = IdConta;
             this.IdEstabelecimento = IdEstabelecimento;
             this.IdEventoAjuste = IdEventoAjuste;
+            this.IdTipoAjuste = IdTipoAjuste;
             this.IdTipoTransacaoNaoProcessada = IdTipoTransacaoNaoProcessada;
             this.IdTransacaoEstorno = IdTransacaoEstorno;
             this.LocalidadeEstabelecimento = LocalidadeEstabelecimento;
@@ -94,253 +98,276 @@ namespace Conductor.Pier.Model
             this.TaxaEmbarque = TaxaEmbarque;
             this.ValorBRL = ValorBRL;
             this.ValorEntrada = ValorEntrada;
+            this.ValorIOF = ValorIOF;
+            this.ValorTAC = ValorTAC;
             this.ValorUSD = ValorUSD;
             
         }
         
     
         /// <summary>
-        /// {{{transacao_nao_processada_response_cartao_mascarado_value}}}
+        /// N\u00FAmero do Cart\u00E3o em Formato 0000XXXXXXXX0000
         /// </summary>
-        /// <value>{{{transacao_nao_processada_response_cartao_mascarado_value}}}</value>
+        /// <value>N\u00FAmero do Cart\u00E3o em Formato 0000XXXXXXXX0000</value>
         [DataMember(Name="cartaoMascarado", EmitDefaultValue=false)]
         public string CartaoMascarado { get; set; }
     
         /// <summary>
-        /// {{{transacao_nao_processada_response_codigo_autorizacao_value}}}
+        /// C\u00F3digo de Autoriza\u00E7\u00E3o da Transa\u00E7\u00E3o
         /// </summary>
-        /// <value>{{{transacao_nao_processada_response_codigo_autorizacao_value}}}</value>
+        /// <value>C\u00F3digo de Autoriza\u00E7\u00E3o da Transa\u00E7\u00E3o</value>
         [DataMember(Name="codigoAutorizacao", EmitDefaultValue=false)]
         public string CodigoAutorizacao { get; set; }
     
         /// <summary>
-        /// {{{transacao_nao_processada_response_codigo_mcc_value}}}
+        /// C\u00F3digo de identifica\u00E7\u00E3o da categoria do Estabelecimento
         /// </summary>
-        /// <value>{{{transacao_nao_processada_response_codigo_mcc_value}}}</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o da categoria do Estabelecimento</value>
         [DataMember(Name="codigoMCC", EmitDefaultValue=false)]
         public long? CodigoMCC { get; set; }
     
         /// <summary>
-        /// {{{transacao_nao_processada_response_codigo_moeda_destino_value}}}
+        /// C\u00F3digo de Identifica\u00E7\u00E3o da Moeda da Transa\u00E7\u00E3o ap\u00F3s a convers\u00E3o, seguindo padr\u00E3o ISO 4217
         /// </summary>
-        /// <value>{{{transacao_nao_processada_response_codigo_moeda_destino_value}}}</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o da Moeda da Transa\u00E7\u00E3o ap\u00F3s a convers\u00E3o, seguindo padr\u00E3o ISO 4217</value>
         [DataMember(Name="codigoMoedaDestino", EmitDefaultValue=false)]
         public string CodigoMoedaDestino { get; set; }
     
         /// <summary>
-        /// {{{transacao_nao_processada_response_codigo_moeda_origem_value}}}
+        /// C\u00F3digo de Identifica\u00E7\u00E3o da Moeda utilizada na Transa\u00E7\u00E3o, seguindo padr\u00E3o ISO 4217
         /// </summary>
-        /// <value>{{{transacao_nao_processada_response_codigo_moeda_origem_value}}}</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o da Moeda utilizada na Transa\u00E7\u00E3o, seguindo padr\u00E3o ISO 4217</value>
         [DataMember(Name="codigoMoedaOrigem", EmitDefaultValue=false)]
         public string CodigoMoedaOrigem { get; set; }
     
         /// <summary>
-        /// {{{transacao_nao_processada_response_codigo_referencia_value}}}
+        /// C\u00F3digo de Refer\u00EAncia da Transa\u00E7\u00E3o quando utilizado Cart\u00E3o Bandeirado
         /// </summary>
-        /// <value>{{{transacao_nao_processada_response_codigo_referencia_value}}}</value>
+        /// <value>C\u00F3digo de Refer\u00EAncia da Transa\u00E7\u00E3o quando utilizado Cart\u00E3o Bandeirado</value>
         [DataMember(Name="codigoReferencia", EmitDefaultValue=false)]
         public string CodigoReferencia { get; set; }
     
         /// <summary>
-        /// {{{transacao_nao_processada_response_codigo_terminal_value}}}
+        /// C\u00F3digo de Identifica\u00E7\u00E3o da origem da captura da Transa\u00E7\u00E3o
         /// </summary>
-        /// <value>{{{transacao_nao_processada_response_codigo_terminal_value}}}</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o da origem da captura da Transa\u00E7\u00E3o</value>
         [DataMember(Name="codigoTerminal", EmitDefaultValue=false)]
         public string CodigoTerminal { get; set; }
     
         /// <summary>
-        /// {{{transacao_nao_processada_response_cotacao_usd_value}}}
+        /// Valor do D\u00F3lar Americano (USD) convertido em Real (BRL)
         /// </summary>
-        /// <value>{{{transacao_nao_processada_response_cotacao_usd_value}}}</value>
+        /// <value>Valor do D\u00F3lar Americano (USD) convertido em Real (BRL)</value>
         [DataMember(Name="cotacaoUSD", EmitDefaultValue=false)]
         public double? CotacaoUSD { get; set; }
     
         /// <summary>
-        /// {{{transacao_nao_processada_response_data_cotacao_usd_value}}}
+        /// Data de Fechamento da Cota\u00E7\u00E3o do D\u00F3lar Americano (USD)
         /// </summary>
-        /// <value>{{{transacao_nao_processada_response_data_cotacao_usd_value}}}</value>
+        /// <value>Data de Fechamento da Cota\u00E7\u00E3o do D\u00F3lar Americano (USD)</value>
         [DataMember(Name="dataCotacaoUSD", EmitDefaultValue=false)]
         public string DataCotacaoUSD { get; set; }
     
         /// <summary>
-        /// {{{transacao_nao_processada_response_data_faturamento_value}}}
+        /// Data de Faturamento da Transa\u00E7\u00E3o
         /// </summary>
-        /// <value>{{{transacao_nao_processada_response_data_faturamento_value}}}</value>
+        /// <value>Data de Faturamento da Transa\u00E7\u00E3o</value>
         [DataMember(Name="dataFaturamento", EmitDefaultValue=false)]
         public string DataFaturamento { get; set; }
     
         /// <summary>
-        /// {{{transacao_nao_processada_response_data_origem_value}}}
+        /// Data em que a Transa\u00E7\u00E3o foi realizada
         /// </summary>
-        /// <value>{{{transacao_nao_processada_response_data_origem_value}}}</value>
+        /// <value>Data em que a Transa\u00E7\u00E3o foi realizada</value>
         [DataMember(Name="dataOrigem", EmitDefaultValue=false)]
         public string DataOrigem { get; set; }
     
         /// <summary>
-        /// {{{transacao_nao_processada_response_data_vencimento_value}}}
+        /// Data de Vencimento da Fatura
         /// </summary>
-        /// <value>{{{transacao_nao_processada_response_data_vencimento_value}}}</value>
+        /// <value>Data de Vencimento da Fatura</value>
         [DataMember(Name="dataVencimentoReal", EmitDefaultValue=false)]
         public string DataVencimentoReal { get; set; }
     
         /// <summary>
-        /// {{{transacao_nao_processada_response_descricao_abreviada_value}}}
+        /// Descri\u00E7\u00E3o Abreviada da Transa\u00E7\u00E3o
         /// </summary>
-        /// <value>{{{transacao_nao_processada_response_descricao_abreviada_value}}}</value>
+        /// <value>Descri\u00E7\u00E3o Abreviada da Transa\u00E7\u00E3o</value>
         [DataMember(Name="descricaoAbreviada", EmitDefaultValue=false)]
         public string DescricaoAbreviada { get; set; }
     
         /// <summary>
-        /// {{{transacao_nao_processada_response_descricao_tipo_transacao_nao_processada_value}}}
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do Tipo da Transa\u00E7\u00E3o
         /// </summary>
-        /// <value>{{{transacao_nao_processada_response_descricao_tipo_transacao_nao_processada_value}}}</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Tipo da Transa\u00E7\u00E3o</value>
         [DataMember(Name="descricaoTipoTransacaoNaoProcessada", EmitDefaultValue=false)]
         public string DescricaoTipoTransacaoNaoProcessada { get; set; }
     
         /// <summary>
-        /// {{{transacao_nao_processada_response_flag_credito_value}}}
+        /// Quando ativa, indica que a Transa\u00E7\u00E3o \u00E9 do Tipo &#39;Cr\u00E9dito&#39;
         /// </summary>
-        /// <value>{{{transacao_nao_processada_response_flag_credito_value}}}</value>
+        /// <value>Quando ativa, indica que a Transa\u00E7\u00E3o \u00E9 do Tipo &#39;Cr\u00E9dito&#39;</value>
         [DataMember(Name="flagCredito", EmitDefaultValue=false)]
         public int? FlagCredito { get; set; }
     
         /// <summary>
-        /// {{{transacao_nao_processada_response_flag_faturado_value}}}
+        /// Quando ativa, indica que a Transa\u00E7\u00E3o foi consolidada em uma Fatura
         /// </summary>
-        /// <value>{{{transacao_nao_processada_response_flag_faturado_value}}}</value>
+        /// <value>Quando ativa, indica que a Transa\u00E7\u00E3o foi consolidada em uma Fatura</value>
         [DataMember(Name="flagFaturado", EmitDefaultValue=false)]
         public int? FlagFaturado { get; set; }
     
         /// <summary>
-        /// {{{transacao_nao_processada_response_grupo_descricao_mcc_value}}}
+        /// Descri\u00E7\u00E3o do grupo do Estabelecimento
         /// </summary>
-        /// <value>{{{transacao_nao_processada_response_grupo_descricao_mcc_value}}}</value>
+        /// <value>Descri\u00E7\u00E3o do grupo do Estabelecimento</value>
         [DataMember(Name="grupoDescricaoMCC", EmitDefaultValue=false)]
         public string GrupoDescricaoMCC { get; set; }
     
         /// <summary>
-        /// {{{transacao_nao_processada_response_grupo_mcc_value}}}
+        /// C\u00F3digo de identifica\u00E7\u00E3o do grupo do Estabelecimento
         /// </summary>
-        /// <value>{{{transacao_nao_processada_response_grupo_mcc_value}}}</value>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do grupo do Estabelecimento</value>
         [DataMember(Name="grupoMCC", EmitDefaultValue=false)]
         public long? GrupoMCC { get; set; }
     
         /// <summary>
-        /// {{{transacao_nao_processada_response_id_conta_value}}}
+        /// C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id)
         /// </summary>
-        /// <value>{{{transacao_nao_processada_response_id_conta_value}}}</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o da Conta (id)</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// {{{transacao_nao_processada_response_id_estabelecimento_value}}}
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento (id)
         /// </summary>
-        /// <value>{{{transacao_nao_processada_response_id_estabelecimento_value}}}</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Estabelecimento (id)</value>
         [DataMember(Name="idEstabelecimento", EmitDefaultValue=false)]
         public long? IdEstabelecimento { get; set; }
     
         /// <summary>
-        /// {{{transacao_nao_processada_response_id_evento_ajuste_value}}}
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do Evento Ajuste
         /// </summary>
-        /// <value>{{{transacao_nao_processada_response_id_evento_ajuste_value}}}</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Evento Ajuste</value>
         [DataMember(Name="idEventoAjuste", EmitDefaultValue=false)]
         public long? IdEventoAjuste { get; set; }
     
         /// <summary>
-        /// {{{transacao_nao_processada_response_id_tipo_transacao_nao_processada_value}}}
+        /// Atributo que representa o c\u00F3digo de identifica\u00E7\u00E3o do tipo de ajuste
         /// </summary>
-        /// <value>{{{transacao_nao_processada_response_id_tipo_transacao_nao_processada_value}}}</value>
+        /// <value>Atributo que representa o c\u00F3digo de identifica\u00E7\u00E3o do tipo de ajuste</value>
+        [DataMember(Name="idTipoAjuste", EmitDefaultValue=false)]
+        public long? IdTipoAjuste { get; set; }
+    
+        /// <summary>
+        /// Identificador do tipo de transacao n\u00E3o processada
+        /// </summary>
+        /// <value>Identificador do tipo de transacao n\u00E3o processada</value>
         [DataMember(Name="idTipoTransacaoNaoProcessada", EmitDefaultValue=false)]
         public long? IdTipoTransacaoNaoProcessada { get; set; }
     
         /// <summary>
-        /// {{{transacao_nao_processada_response_id_transacao_estorno_value}}}
+        /// C\u00F3digo de Identifica\u00E7\u00E3o da Transa\u00E7\u00E3o (id) que gerou o estorno
         /// </summary>
-        /// <value>{{{transacao_nao_processada_response_id_transacao_estorno_value}}}</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o da Transa\u00E7\u00E3o (id) que gerou o estorno</value>
         [DataMember(Name="idTransacaoEstorno", EmitDefaultValue=false)]
         public long? IdTransacaoEstorno { get; set; }
     
         /// <summary>
-        /// {{{transacao_nao_processada_response_localidade_estabelecimento_value}}}
+        /// Localidade do Estabelecimento
         /// </summary>
-        /// <value>{{{transacao_nao_processada_response_localidade_estabelecimento_value}}}</value>
+        /// <value>Localidade do Estabelecimento</value>
         [DataMember(Name="localidadeEstabelecimento", EmitDefaultValue=false)]
         public string LocalidadeEstabelecimento { get; set; }
     
         /// <summary>
-        /// {{{transacao_nao_processada_response_modo_entrada_transacao_value}}}
+        /// Descreve o modo utilizado para realizar a leitura dos dados do cart\u00E3o para realizar a Transa\u00E7\u00E3o
         /// </summary>
-        /// <value>{{{transacao_nao_processada_response_modo_entrada_transacao_value}}}</value>
+        /// <value>Descreve o modo utilizado para realizar a leitura dos dados do cart\u00E3o para realizar a Transa\u00E7\u00E3o</value>
         [DataMember(Name="modoEntradaTransacao", EmitDefaultValue=false)]
         public string ModoEntradaTransacao { get; set; }
     
         /// <summary>
-        /// {{{transacao_nao_processada_response_nome_estabelecimento_value}}}
+        /// Nome do Estabelecimento
         /// </summary>
-        /// <value>{{{transacao_nao_processada_response_nome_estabelecimento_value}}}</value>
+        /// <value>Nome do Estabelecimento</value>
         [DataMember(Name="nomeEstabelecimento", EmitDefaultValue=false)]
         public string NomeEstabelecimento { get; set; }
     
         /// <summary>
-        /// {{{transacao_nao_processada_response_nome_fantasia_estabelecimento_value}}}
+        /// Nome Fantasia do Estabelecimento
         /// </summary>
-        /// <value>{{{transacao_nao_processada_response_nome_fantasia_estabelecimento_value}}}</value>
+        /// <value>Nome Fantasia do Estabelecimento</value>
         [DataMember(Name="nomeFantasiaEstabelecimento", EmitDefaultValue=false)]
         public string NomeFantasiaEstabelecimento { get; set; }
     
         /// <summary>
-        /// {{{transacao_nao_processada_response_nome_portador_value}}}
+        /// Nome completo do Portador do Cart\u00E3o
         /// </summary>
-        /// <value>{{{transacao_nao_processada_response_nome_portador_value}}}</value>
+        /// <value>Nome completo do Portador do Cart\u00E3o</value>
         [DataMember(Name="nomePortador", EmitDefaultValue=false)]
         public string NomePortador { get; set; }
     
         /// <summary>
-        /// {{{transacao_nao_processada_response_numero_parcela_value}}}
+        /// Quando a Transa\u00E7\u00E3o for do tipo Parcelada, apresenta o n\u00FAmero da Parcela
         /// </summary>
-        /// <value>{{{transacao_nao_processada_response_numero_parcela_value}}}</value>
+        /// <value>Quando a Transa\u00E7\u00E3o for do tipo Parcelada, apresenta o n\u00FAmero da Parcela</value>
         [DataMember(Name="parcela", EmitDefaultValue=false)]
         public long? Parcela { get; set; }
     
         /// <summary>
-        /// {{{transacao_nao_processada_response_plano_parcelamento_value}}}
+        /// Quando a Transa\u00E7\u00E3o for do tipo Parcelada, apresenta o n\u00FAmero total de Parcelas
         /// </summary>
-        /// <value>{{{transacao_nao_processada_response_plano_parcelamento_value}}}</value>
+        /// <value>Quando a Transa\u00E7\u00E3o for do tipo Parcelada, apresenta o n\u00FAmero total de Parcelas</value>
         [DataMember(Name="plano", EmitDefaultValue=false)]
         public long? Plano { get; set; }
     
         /// <summary>
-        /// {{{transacao_nao_processada_response_status_value}}}
+        /// Atributo que representa o c\u00F3digo identificador do status da transa\u00E7\u00E3o
         /// </summary>
-        /// <value>{{{transacao_nao_processada_response_status_value}}}</value>
+        /// <value>Atributo que representa o c\u00F3digo identificador do status da transa\u00E7\u00E3o</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public int? Status { get; set; }
     
         /// <summary>
-        /// {{{transacao_nao_processada_response_valor_taxa_embarque_value}}}
+        /// Valor da Taxa de Embarque em Real (BRL) quando a transa\u00E7\u00E3o for relacionada a Compra de Passagens A\u00E9reas
         /// </summary>
-        /// <value>{{{transacao_nao_processada_response_valor_taxa_embarque_value}}}</value>
+        /// <value>Valor da Taxa de Embarque em Real (BRL) quando a transa\u00E7\u00E3o for relacionada a Compra de Passagens A\u00E9reas</value>
         [DataMember(Name="taxaEmbarque", EmitDefaultValue=false)]
         public double? TaxaEmbarque { get; set; }
     
         /// <summary>
-        /// {{{transacao_nao_processada_response_valor_brl_value}}}
+        /// Valor da Transa\u00E7\u00E3o em Real (BRL)
         /// </summary>
-        /// <value>{{{transacao_nao_processada_response_valor_brl_value}}}</value>
+        /// <value>Valor da Transa\u00E7\u00E3o em Real (BRL)</value>
         [DataMember(Name="valorBRL", EmitDefaultValue=false)]
         public double? ValorBRL { get; set; }
     
         /// <summary>
-        /// {{{transacao_nao_processada_response_valor_entrada_value}}}
+        /// Valor da Entrada em Real (BRL) quando a transa\u00E7\u00E3o for do tipo Parcelada com o pagamento de um valor de Entrada
         /// </summary>
-        /// <value>{{{transacao_nao_processada_response_valor_entrada_value}}}</value>
+        /// <value>Valor da Entrada em Real (BRL) quando a transa\u00E7\u00E3o for do tipo Parcelada com o pagamento de um valor de Entrada</value>
         [DataMember(Name="valorEntrada", EmitDefaultValue=false)]
         public double? ValorEntrada { get; set; }
     
         /// <summary>
-        /// {{{transacao_nao_processada_response_valor_usd_value}}}
+        /// Valor do IOF
         /// </summary>
-        /// <value>{{{transacao_nao_processada_response_valor_usd_value}}}</value>
+        /// <value>Valor do IOF</value>
+        [DataMember(Name="valorIOF", EmitDefaultValue=false)]
+        public double? ValorIOF { get; set; }
+    
+        /// <summary>
+        /// Valor da TAC
+        /// </summary>
+        /// <value>Valor da TAC</value>
+        [DataMember(Name="valorTAC", EmitDefaultValue=false)]
+        public double? ValorTAC { get; set; }
+    
+        /// <summary>
+        /// Valor da Transa\u00E7\u00E3o em D\u00F3lar Americano (USD)
+        /// </summary>
+        /// <value>Valor da Transa\u00E7\u00E3o em D\u00F3lar Americano (USD)</value>
         [DataMember(Name="valorUSD", EmitDefaultValue=false)]
         public double? ValorUSD { get; set; }
     
@@ -373,6 +400,7 @@ namespace Conductor.Pier.Model
             sb.Append("  IdConta: ").Append(IdConta).Append("\n");
             sb.Append("  IdEstabelecimento: ").Append(IdEstabelecimento).Append("\n");
             sb.Append("  IdEventoAjuste: ").Append(IdEventoAjuste).Append("\n");
+            sb.Append("  IdTipoAjuste: ").Append(IdTipoAjuste).Append("\n");
             sb.Append("  IdTipoTransacaoNaoProcessada: ").Append(IdTipoTransacaoNaoProcessada).Append("\n");
             sb.Append("  IdTransacaoEstorno: ").Append(IdTransacaoEstorno).Append("\n");
             sb.Append("  LocalidadeEstabelecimento: ").Append(LocalidadeEstabelecimento).Append("\n");
@@ -386,6 +414,8 @@ namespace Conductor.Pier.Model
             sb.Append("  TaxaEmbarque: ").Append(TaxaEmbarque).Append("\n");
             sb.Append("  ValorBRL: ").Append(ValorBRL).Append("\n");
             sb.Append("  ValorEntrada: ").Append(ValorEntrada).Append("\n");
+            sb.Append("  ValorIOF: ").Append(ValorIOF).Append("\n");
+            sb.Append("  ValorTAC: ").Append(ValorTAC).Append("\n");
             sb.Append("  ValorUSD: ").Append(ValorUSD).Append("\n");
             
             sb.Append("}\n");
@@ -530,6 +560,11 @@ namespace Conductor.Pier.Model
                     this.IdEventoAjuste.Equals(other.IdEventoAjuste)
                 ) && 
                 (
+                    this.IdTipoAjuste == other.IdTipoAjuste ||
+                    this.IdTipoAjuste != null &&
+                    this.IdTipoAjuste.Equals(other.IdTipoAjuste)
+                ) && 
+                (
                     this.IdTipoTransacaoNaoProcessada == other.IdTipoTransacaoNaoProcessada ||
                     this.IdTipoTransacaoNaoProcessada != null &&
                     this.IdTipoTransacaoNaoProcessada.Equals(other.IdTipoTransacaoNaoProcessada)
@@ -593,6 +628,16 @@ namespace Conductor.Pier.Model
                     this.ValorEntrada == other.ValorEntrada ||
                     this.ValorEntrada != null &&
                     this.ValorEntrada.Equals(other.ValorEntrada)
+                ) && 
+                (
+                    this.ValorIOF == other.ValorIOF ||
+                    this.ValorIOF != null &&
+                    this.ValorIOF.Equals(other.ValorIOF)
+                ) && 
+                (
+                    this.ValorTAC == other.ValorTAC ||
+                    this.ValorTAC != null &&
+                    this.ValorTAC.Equals(other.ValorTAC)
                 ) && 
                 (
                     this.ValorUSD == other.ValorUSD ||
@@ -676,6 +721,9 @@ namespace Conductor.Pier.Model
                 if (this.IdEventoAjuste != null)
                     hash = hash * 59 + this.IdEventoAjuste.GetHashCode();
                 
+                if (this.IdTipoAjuste != null)
+                    hash = hash * 59 + this.IdTipoAjuste.GetHashCode();
+                
                 if (this.IdTipoTransacaoNaoProcessada != null)
                     hash = hash * 59 + this.IdTipoTransacaoNaoProcessada.GetHashCode();
                 
@@ -714,6 +762,12 @@ namespace Conductor.Pier.Model
                 
                 if (this.ValorEntrada != null)
                     hash = hash * 59 + this.ValorEntrada.GetHashCode();
+                
+                if (this.ValorIOF != null)
+                    hash = hash * 59 + this.ValorIOF.GetHashCode();
+                
+                if (this.ValorTAC != null)
+                    hash = hash * 59 + this.ValorTAC.GetHashCode();
                 
                 if (this.ValorUSD != null)
                     hash = hash * 59 + this.ValorUSD.GetHashCode();

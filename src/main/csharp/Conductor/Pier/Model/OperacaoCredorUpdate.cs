@@ -12,16 +12,16 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// {{{operacao_credor_update_description}}}
+    /// Objeto OperacaoCredor
     /// </summary>
     [DataContract]
     public partial class OperacaoCredorUpdate :  IEquatable<OperacaoCredorUpdate>
     { 
     
         /// <summary>
-        /// {{{operacao_credor_update_periodicidade_value}}}
+        /// Periodicidade (DIARIO(1), SEMANAL(2), MENSAL(3), DECENDIAL(4), QUINZENAL(5))
         /// </summary>
-        /// <value>{{{operacao_credor_update_periodicidade_value}}}</value>
+        /// <value>Periodicidade (DIARIO(1), SEMANAL(2), MENSAL(3), DECENDIAL(4), QUINZENAL(5))</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum PeriodicidadeEnum {
             
@@ -43,9 +43,9 @@ namespace Conductor.Pier.Model
 
     
         /// <summary>
-        /// {{{operacao_credor_update_fator_multiplicador_value}}}
+        /// Fator multiplicador (FORA_AGENDA(0), AGENDA(1))
         /// </summary>
-        /// <value>{{{operacao_credor_update_fator_multiplicador_value}}}</value>
+        /// <value>Fator multiplicador (FORA_AGENDA(0), AGENDA(1))</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum FatorMultiplicadorEnum {
             
@@ -61,16 +61,16 @@ namespace Conductor.Pier.Model
 
     
         /// <summary>
-        /// {{{operacao_credor_update_periodicidade_value}}}
+        /// Periodicidade (DIARIO(1), SEMANAL(2), MENSAL(3), DECENDIAL(4), QUINZENAL(5))
         /// </summary>
-        /// <value>{{{operacao_credor_update_periodicidade_value}}}</value>
+        /// <value>Periodicidade (DIARIO(1), SEMANAL(2), MENSAL(3), DECENDIAL(4), QUINZENAL(5))</value>
         [DataMember(Name="periodicidade", EmitDefaultValue=false)]
         public PeriodicidadeEnum? Periodicidade { get; set; }
     
         /// <summary>
-        /// {{{operacao_credor_update_fator_multiplicador_value}}}
+        /// Fator multiplicador (FORA_AGENDA(0), AGENDA(1))
         /// </summary>
-        /// <value>{{{operacao_credor_update_fator_multiplicador_value}}}</value>
+        /// <value>Fator multiplicador (FORA_AGENDA(0), AGENDA(1))</value>
         [DataMember(Name="fatorMultiplicador", EmitDefaultValue=false)]
         public FatorMultiplicadorEnum? FatorMultiplicador { get; set; }
     
@@ -78,18 +78,18 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="OperacaoCredorUpdate" /> class.
         /// Initializes a new instance of the <see cref="OperacaoCredorUpdate" />class.
         /// </summary>
-        /// <param name="IdOperacao">{{{operacao_credor_update_id_operacao_value}}} (required).</param>
-        /// <param name="IdGrupoEconomico">{{{operacao_credor_update_id_grupo_economico_value}}} (required).</param>
-        /// <param name="IdProduto">{{{operacao_credor_update_id_produto_value}}}.</param>
-        /// <param name="RemuneracaoPercentual">{{{operacao_credor_update_remuneracao_percentual_value}}}.</param>
-        /// <param name="RemuneracaoFixa">{{{operacao_credor_update_remuneracao_fixa_value}}}.</param>
-        /// <param name="Periodicidade">{{{operacao_credor_update_periodicidade_value}}}.</param>
-        /// <param name="VencimentoPrimeiraParcela">{{{operacao_credor_update_vencimento_primeira_parcela_value}}}.</param>
-        /// <param name="DiasAfastamento">{{{operacao_credor_update_dias_afastamento_value}}}.</param>
-        /// <param name="FatorMultiplicador">{{{operacao_credor_update_fator_multiplicador_value}}}.</param>
-        /// <param name="FlagTaxaFixada">{{{operacao_credor_update_flag_taxa_fixada_value}}}.</param>
-        /// <param name="PlanoMinimo">{{{operacao_credor_update_plano_minimo_value}}} (required).</param>
-        /// <param name="PlanoMaximo">{{{operacao_credor_update_plano_maximo_value}}} (required).</param>
+        /// <param name="IdOperacao">Apresenta o id da Opera\u00E7\u00E3o (required).</param>
+        /// <param name="IdGrupoEconomico">Apresenta o id do Grupo Econ\u00F4mico (required).</param>
+        /// <param name="IdProduto">Apresenta o id do produto que vai ser alterado.</param>
+        /// <param name="RemuneracaoPercentual">Remunera\u00E7\u00E3o Percentual.</param>
+        /// <param name="RemuneracaoFixa">Remunera\u00E7\u00E3o Fixa.</param>
+        /// <param name="Periodicidade">Periodicidade (DIARIO(1), SEMANAL(2), MENSAL(3), DECENDIAL(4), QUINZENAL(5)).</param>
+        /// <param name="VencimentoPrimeiraParcela">Vencimento da primeira parcela.</param>
+        /// <param name="DiasAfastamento">Dias afastamento.</param>
+        /// <param name="FatorMultiplicador">Fator multiplicador (FORA_AGENDA(0), AGENDA(1)).</param>
+        /// <param name="FlagTaxaFixada">Flag taxa fixada.</param>
+        /// <param name="PlanoMinimo">Plano m\u00EDnimo da regra (required).</param>
+        /// <param name="PlanoMaximo">Plano m\u00E1ximo da regra (required).</param>
 
         public OperacaoCredorUpdate(long? IdOperacao = null, long? IdGrupoEconomico = null, long? IdProduto = null, double? RemuneracaoPercentual = null, double? RemuneracaoFixa = null, PeriodicidadeEnum? Periodicidade = null, int? VencimentoPrimeiraParcela = null, int? DiasAfastamento = null, FatorMultiplicadorEnum? FatorMultiplicador = null, bool? FlagTaxaFixada = null, int? PlanoMinimo = null, int? PlanoMaximo = null)
         {
@@ -142,72 +142,72 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// {{{operacao_credor_update_id_operacao_value}}}
+        /// Apresenta o id da Opera\u00E7\u00E3o
         /// </summary>
-        /// <value>{{{operacao_credor_update_id_operacao_value}}}</value>
+        /// <value>Apresenta o id da Opera\u00E7\u00E3o</value>
         [DataMember(Name="idOperacao", EmitDefaultValue=false)]
         public long? IdOperacao { get; set; }
     
         /// <summary>
-        /// {{{operacao_credor_update_id_grupo_economico_value}}}
+        /// Apresenta o id do Grupo Econ\u00F4mico
         /// </summary>
-        /// <value>{{{operacao_credor_update_id_grupo_economico_value}}}</value>
+        /// <value>Apresenta o id do Grupo Econ\u00F4mico</value>
         [DataMember(Name="idGrupoEconomico", EmitDefaultValue=false)]
         public long? IdGrupoEconomico { get; set; }
     
         /// <summary>
-        /// {{{operacao_credor_update_id_produto_value}}}
+        /// Apresenta o id do produto que vai ser alterado
         /// </summary>
-        /// <value>{{{operacao_credor_update_id_produto_value}}}</value>
+        /// <value>Apresenta o id do produto que vai ser alterado</value>
         [DataMember(Name="idProduto", EmitDefaultValue=false)]
         public long? IdProduto { get; set; }
     
         /// <summary>
-        /// {{{operacao_credor_update_remuneracao_percentual_value}}}
+        /// Remunera\u00E7\u00E3o Percentual
         /// </summary>
-        /// <value>{{{operacao_credor_update_remuneracao_percentual_value}}}</value>
+        /// <value>Remunera\u00E7\u00E3o Percentual</value>
         [DataMember(Name="remuneracaoPercentual", EmitDefaultValue=false)]
         public double? RemuneracaoPercentual { get; set; }
     
         /// <summary>
-        /// {{{operacao_credor_update_remuneracao_fixa_value}}}
+        /// Remunera\u00E7\u00E3o Fixa
         /// </summary>
-        /// <value>{{{operacao_credor_update_remuneracao_fixa_value}}}</value>
+        /// <value>Remunera\u00E7\u00E3o Fixa</value>
         [DataMember(Name="remuneracaoFixa", EmitDefaultValue=false)]
         public double? RemuneracaoFixa { get; set; }
     
         /// <summary>
-        /// {{{operacao_credor_update_vencimento_primeira_parcela_value}}}
+        /// Vencimento da primeira parcela
         /// </summary>
-        /// <value>{{{operacao_credor_update_vencimento_primeira_parcela_value}}}</value>
+        /// <value>Vencimento da primeira parcela</value>
         [DataMember(Name="vencimentoPrimeiraParcela", EmitDefaultValue=false)]
         public int? VencimentoPrimeiraParcela { get; set; }
     
         /// <summary>
-        /// {{{operacao_credor_update_dias_afastamento_value}}}
+        /// Dias afastamento
         /// </summary>
-        /// <value>{{{operacao_credor_update_dias_afastamento_value}}}</value>
+        /// <value>Dias afastamento</value>
         [DataMember(Name="diasAfastamento", EmitDefaultValue=false)]
         public int? DiasAfastamento { get; set; }
     
         /// <summary>
-        /// {{{operacao_credor_update_flag_taxa_fixada_value}}}
+        /// Flag taxa fixada
         /// </summary>
-        /// <value>{{{operacao_credor_update_flag_taxa_fixada_value}}}</value>
+        /// <value>Flag taxa fixada</value>
         [DataMember(Name="flagTaxaFixada", EmitDefaultValue=false)]
         public bool? FlagTaxaFixada { get; set; }
     
         /// <summary>
-        /// {{{operacao_credor_update_plano_minimo_value}}}
+        /// Plano m\u00EDnimo da regra
         /// </summary>
-        /// <value>{{{operacao_credor_update_plano_minimo_value}}}</value>
+        /// <value>Plano m\u00EDnimo da regra</value>
         [DataMember(Name="planoMinimo", EmitDefaultValue=false)]
         public int? PlanoMinimo { get; set; }
     
         /// <summary>
-        /// {{{operacao_credor_update_plano_maximo_value}}}
+        /// Plano m\u00E1ximo da regra
         /// </summary>
-        /// <value>{{{operacao_credor_update_plano_maximo_value}}}</value>
+        /// <value>Plano m\u00E1ximo da regra</value>
         [DataMember(Name="planoMaximo", EmitDefaultValue=false)]
         public int? PlanoMaximo { get; set; }
     
