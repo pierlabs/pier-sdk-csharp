@@ -12,75 +12,45 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// 
+    /// Objeto Endere\u00E7o Aprovado
     /// </summary>
     [DataContract]
-    public partial class ObjetoEndereoAprovadoPersist :  IEquatable<ObjetoEndereoAprovadoPersist>
+    public partial class EnderecoAprovadoResponse :  IEquatable<EnderecoAprovadoResponse>
     { 
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="ObjetoEndereoAprovadoPersist" /> class.
-        /// Initializes a new instance of the <see cref="ObjetoEndereoAprovadoPersist" />class.
+        /// Initializes a new instance of the <see cref="EnderecoAprovadoResponse" /> class.
+        /// Initializes a new instance of the <see cref="EnderecoAprovadoResponse" />class.
         /// </summary>
-        /// <param name="IdTipoEndereco">C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id) (required).</param>
-        /// <param name="Cep">Apresenta o C\u00F3digo de Endere\u00E7amento Postal (CEP).</param>
-        /// <param name="Logradouro">Apresenta o nome do Logradouro.</param>
-        /// <param name="Numero">Apresenta o n\u00FAmero do endere\u00E7o.</param>
-        /// <param name="Complemento">Apresenta descri\u00E7oes complementares referente ao endere\u00E7o.</param>
-        /// <param name="PontoReferencia">Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o.</param>
-        /// <param name="Bairro">Apresenta nome do bairro.</param>
-        /// <param name="Cidade">Apresenta nome da cidade (required).</param>
-        /// <param name="Uf">Apresenta sigla da Unidade Federativa (required).</param>
-        /// <param name="Pais">Apresenta nome do Pa\u00EDs.</param>
-        /// <param name="EnderecoCorrespondencia">Indica se o endere\u00E7o informado \u00E9 o de correspond\u00EAncia (required).</param>
-        /// <param name="TempoResidenciaAnos">Apresenta o tempo de resid\u00EAncia em anos.</param>
-        /// <param name="TempoResidenciaMeses">Apresenta o tempo de resid\u00EAncia em meses.</param>
+        /// <param name="Id">C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o.</param>
+        /// <param name="IdTipoEndereco">C\u00F3digo de identifica\u00E7\u00E3o do tipo de endere\u00E7o.</param>
+        /// <param name="Cep">C\u00F3digo de Endere\u00E7amento Postal.</param>
+        /// <param name="Logradouro">Nome do logradouro.</param>
+        /// <param name="Numero">N\u00FAmero do endere\u00E7o.</param>
+        /// <param name="Complemento">Descri\u00E7\u00F5es complementares referentes ao endere\u00E7o.</param>
+        /// <param name="PontoReferencia">Descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o.</param>
+        /// <param name="Bairro">Nome do bairro.</param>
+        /// <param name="Cidade">Nome da cidade.</param>
+        /// <param name="Uf">Sigla da Unidade Federativa.</param>
+        /// <param name="Pais">Nome do Pa\u00EDs.</param>
+        /// <param name="EnderecoCorrespondencia">Indica se o endere\u00E7o informado \u00E9 o de correspond\u00EAncia.</param>
+        /// <param name="TempoResidenciaAnos">Tempo de resid\u00EAncia em anos.</param>
+        /// <param name="TempoResidenciaMeses">Tempo de resid\u00EAncia em meses.</param>
 
-        public ObjetoEndereoAprovadoPersist(long? IdTipoEndereco = null, string Cep = null, string Logradouro = null, int? Numero = null, string Complemento = null, string PontoReferencia = null, string Bairro = null, string Cidade = null, string Uf = null, string Pais = null, bool? EnderecoCorrespondencia = null, int? TempoResidenciaAnos = null, int? TempoResidenciaMeses = null)
+        public EnderecoAprovadoResponse(long? Id = null, long? IdTipoEndereco = null, string Cep = null, string Logradouro = null, int? Numero = null, string Complemento = null, string PontoReferencia = null, string Bairro = null, string Cidade = null, string Uf = null, string Pais = null, bool? EnderecoCorrespondencia = null, int? TempoResidenciaAnos = null, int? TempoResidenciaMeses = null)
         {
-            // to ensure "IdTipoEndereco" is required (not null)
-            if (IdTipoEndereco == null)
-            {
-                throw new InvalidDataException("IdTipoEndereco is a required property for ObjetoEndereoAprovadoPersist and cannot be null");
-            }
-            else
-            {
-                this.IdTipoEndereco = IdTipoEndereco;
-            }
-            // to ensure "Cidade" is required (not null)
-            if (Cidade == null)
-            {
-                throw new InvalidDataException("Cidade is a required property for ObjetoEndereoAprovadoPersist and cannot be null");
-            }
-            else
-            {
-                this.Cidade = Cidade;
-            }
-            // to ensure "Uf" is required (not null)
-            if (Uf == null)
-            {
-                throw new InvalidDataException("Uf is a required property for ObjetoEndereoAprovadoPersist and cannot be null");
-            }
-            else
-            {
-                this.Uf = Uf;
-            }
-            // to ensure "EnderecoCorrespondencia" is required (not null)
-            if (EnderecoCorrespondencia == null)
-            {
-                throw new InvalidDataException("EnderecoCorrespondencia is a required property for ObjetoEndereoAprovadoPersist and cannot be null");
-            }
-            else
-            {
-                this.EnderecoCorrespondencia = EnderecoCorrespondencia;
-            }
+            this.Id = Id;
+            this.IdTipoEndereco = IdTipoEndereco;
             this.Cep = Cep;
             this.Logradouro = Logradouro;
             this.Numero = Numero;
             this.Complemento = Complemento;
             this.PontoReferencia = PontoReferencia;
             this.Bairro = Bairro;
+            this.Cidade = Cidade;
+            this.Uf = Uf;
             this.Pais = Pais;
+            this.EnderecoCorrespondencia = EnderecoCorrespondencia;
             this.TempoResidenciaAnos = TempoResidenciaAnos;
             this.TempoResidenciaMeses = TempoResidenciaMeses;
             
@@ -88,72 +58,79 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id)
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o
         /// </summary>
-        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id)</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o</value>
+        [DataMember(Name="id", EmitDefaultValue=false)]
+        public long? Id { get; set; }
+    
+        /// <summary>
+        /// C\u00F3digo de identifica\u00E7\u00E3o do tipo de endere\u00E7o
+        /// </summary>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do tipo de endere\u00E7o</value>
         [DataMember(Name="idTipoEndereco", EmitDefaultValue=false)]
         public long? IdTipoEndereco { get; set; }
     
         /// <summary>
-        /// Apresenta o C\u00F3digo de Endere\u00E7amento Postal (CEP)
+        /// C\u00F3digo de Endere\u00E7amento Postal
         /// </summary>
-        /// <value>Apresenta o C\u00F3digo de Endere\u00E7amento Postal (CEP)</value>
+        /// <value>C\u00F3digo de Endere\u00E7amento Postal</value>
         [DataMember(Name="cep", EmitDefaultValue=false)]
         public string Cep { get; set; }
     
         /// <summary>
-        /// Apresenta o nome do Logradouro
+        /// Nome do logradouro
         /// </summary>
-        /// <value>Apresenta o nome do Logradouro</value>
+        /// <value>Nome do logradouro</value>
         [DataMember(Name="logradouro", EmitDefaultValue=false)]
         public string Logradouro { get; set; }
     
         /// <summary>
-        /// Apresenta o n\u00FAmero do endere\u00E7o
+        /// N\u00FAmero do endere\u00E7o
         /// </summary>
-        /// <value>Apresenta o n\u00FAmero do endere\u00E7o</value>
+        /// <value>N\u00FAmero do endere\u00E7o</value>
         [DataMember(Name="numero", EmitDefaultValue=false)]
         public int? Numero { get; set; }
     
         /// <summary>
-        /// Apresenta descri\u00E7oes complementares referente ao endere\u00E7o
+        /// Descri\u00E7\u00F5es complementares referentes ao endere\u00E7o
         /// </summary>
-        /// <value>Apresenta descri\u00E7oes complementares referente ao endere\u00E7o</value>
+        /// <value>Descri\u00E7\u00F5es complementares referentes ao endere\u00E7o</value>
         [DataMember(Name="complemento", EmitDefaultValue=false)]
         public string Complemento { get; set; }
     
         /// <summary>
-        /// Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o
+        /// Descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o
         /// </summary>
-        /// <value>Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o</value>
+        /// <value>Descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o</value>
         [DataMember(Name="pontoReferencia", EmitDefaultValue=false)]
         public string PontoReferencia { get; set; }
     
         /// <summary>
-        /// Apresenta nome do bairro
+        /// Nome do bairro
         /// </summary>
-        /// <value>Apresenta nome do bairro</value>
+        /// <value>Nome do bairro</value>
         [DataMember(Name="bairro", EmitDefaultValue=false)]
         public string Bairro { get; set; }
     
         /// <summary>
-        /// Apresenta nome da cidade
+        /// Nome da cidade
         /// </summary>
-        /// <value>Apresenta nome da cidade</value>
+        /// <value>Nome da cidade</value>
         [DataMember(Name="cidade", EmitDefaultValue=false)]
         public string Cidade { get; set; }
     
         /// <summary>
-        /// Apresenta sigla da Unidade Federativa
+        /// Sigla da Unidade Federativa
         /// </summary>
-        /// <value>Apresenta sigla da Unidade Federativa</value>
+        /// <value>Sigla da Unidade Federativa</value>
         [DataMember(Name="uf", EmitDefaultValue=false)]
         public string Uf { get; set; }
     
         /// <summary>
-        /// Apresenta nome do Pa\u00EDs
+        /// Nome do Pa\u00EDs
         /// </summary>
-        /// <value>Apresenta nome do Pa\u00EDs</value>
+        /// <value>Nome do Pa\u00EDs</value>
         [DataMember(Name="pais", EmitDefaultValue=false)]
         public string Pais { get; set; }
     
@@ -165,16 +142,16 @@ namespace Conductor.Pier.Model
         public bool? EnderecoCorrespondencia { get; set; }
     
         /// <summary>
-        /// Apresenta o tempo de resid\u00EAncia em anos
+        /// Tempo de resid\u00EAncia em anos
         /// </summary>
-        /// <value>Apresenta o tempo de resid\u00EAncia em anos</value>
+        /// <value>Tempo de resid\u00EAncia em anos</value>
         [DataMember(Name="tempoResidenciaAnos", EmitDefaultValue=false)]
         public int? TempoResidenciaAnos { get; set; }
     
         /// <summary>
-        /// Apresenta o tempo de resid\u00EAncia em meses
+        /// Tempo de resid\u00EAncia em meses
         /// </summary>
-        /// <value>Apresenta o tempo de resid\u00EAncia em meses</value>
+        /// <value>Tempo de resid\u00EAncia em meses</value>
         [DataMember(Name="tempoResidenciaMeses", EmitDefaultValue=false)]
         public int? TempoResidenciaMeses { get; set; }
     
@@ -185,7 +162,8 @@ namespace Conductor.Pier.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ObjetoEndereoAprovadoPersist {\n");
+            sb.Append("class EnderecoAprovadoResponse {\n");
+            sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  IdTipoEndereco: ").Append(IdTipoEndereco).Append("\n");
             sb.Append("  Cep: ").Append(Cep).Append("\n");
             sb.Append("  Logradouro: ").Append(Logradouro).Append("\n");
@@ -221,21 +199,26 @@ namespace Conductor.Pier.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as ObjetoEndereoAprovadoPersist);
+            return this.Equals(obj as EnderecoAprovadoResponse);
         }
 
         /// <summary>
-        /// Returns true if ObjetoEndereoAprovadoPersist instances are equal
+        /// Returns true if EnderecoAprovadoResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of ObjetoEndereoAprovadoPersist to be compared</param>
+        /// <param name="other">Instance of EnderecoAprovadoResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ObjetoEndereoAprovadoPersist other)
+        public bool Equals(EnderecoAprovadoResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
                 return false;
 
             return 
+                (
+                    this.Id == other.Id ||
+                    this.Id != null &&
+                    this.Id.Equals(other.Id)
+                ) && 
                 (
                     this.IdTipoEndereco == other.IdTipoEndereco ||
                     this.IdTipoEndereco != null &&
@@ -314,6 +297,9 @@ namespace Conductor.Pier.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
+                if (this.Id != null)
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.IdTipoEndereco != null)
                     hash = hash * 59 + this.IdTipoEndereco.GetHashCode();

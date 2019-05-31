@@ -22,11 +22,11 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="ReferenciaComercialAprovadoResponse" /> class.
         /// Initializes a new instance of the <see cref="ReferenciaComercialAprovadoResponse" />class.
         /// </summary>
-        /// <param name="RazaoSocial">Apresenta o nome completo da raz\u00E3o social da refer\u00EAncia comercial (nome empresarial).</param>
-        /// <param name="NomeContrato">Apresenta o nome do respons\u00E1vel pela refer\u00EAncia comercial.</param>
-        /// <param name="Ddd">Apresenta o DDD do n\u00FAmero de contato da refer\u00EAncia comercial.</param>
-        /// <param name="Telefone">Apresenta o n\u00FAmero de contato da refer\u00EAncia comercial.</param>
-        /// <param name="Email">Apresenta o e-mail de contato da refer\u00EAncia comercial.</param>
+        /// <param name="RazaoSocial">Nome completo da raz\u00E3o social da refer\u00EAncia comercial. Nome empresarial.</param>
+        /// <param name="NomeContrato">Nome do respons\u00E1vel pela refer\u00EAncia comercial.</param>
+        /// <param name="Ddd">DDD do contato da refer\u00EAncia comercial.</param>
+        /// <param name="Telefone">N\u00FAmero do telefone da refer\u00EAncia comercial.</param>
+        /// <param name="Email">E-mail de contato da refer\u00EAncia comercial.</param>
 
         public ReferenciaComercialAprovadoResponse(string RazaoSocial = null, string NomeContrato = null, string Ddd = null, string Telefone = null, string Email = null)
         {
@@ -40,37 +40,37 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Apresenta o nome completo da raz\u00E3o social da refer\u00EAncia comercial (nome empresarial)
+        /// Nome completo da raz\u00E3o social da refer\u00EAncia comercial. Nome empresarial
         /// </summary>
-        /// <value>Apresenta o nome completo da raz\u00E3o social da refer\u00EAncia comercial (nome empresarial)</value>
+        /// <value>Nome completo da raz\u00E3o social da refer\u00EAncia comercial. Nome empresarial</value>
         [DataMember(Name="razaoSocial", EmitDefaultValue=false)]
         public string RazaoSocial { get; set; }
     
         /// <summary>
-        /// Apresenta o nome do respons\u00E1vel pela refer\u00EAncia comercial
+        /// Nome do respons\u00E1vel pela refer\u00EAncia comercial
         /// </summary>
-        /// <value>Apresenta o nome do respons\u00E1vel pela refer\u00EAncia comercial</value>
+        /// <value>Nome do respons\u00E1vel pela refer\u00EAncia comercial</value>
         [DataMember(Name="nomeContrato", EmitDefaultValue=false)]
         public string NomeContrato { get; set; }
     
         /// <summary>
-        /// Apresenta o DDD do n\u00FAmero de contato da refer\u00EAncia comercial
+        /// DDD do contato da refer\u00EAncia comercial
         /// </summary>
-        /// <value>Apresenta o DDD do n\u00FAmero de contato da refer\u00EAncia comercial</value>
+        /// <value>DDD do contato da refer\u00EAncia comercial</value>
         [DataMember(Name="ddd", EmitDefaultValue=false)]
         public string Ddd { get; set; }
     
         /// <summary>
-        /// Apresenta o n\u00FAmero de contato da refer\u00EAncia comercial
+        /// N\u00FAmero do telefone da refer\u00EAncia comercial
         /// </summary>
-        /// <value>Apresenta o n\u00FAmero de contato da refer\u00EAncia comercial</value>
+        /// <value>N\u00FAmero do telefone da refer\u00EAncia comercial</value>
         [DataMember(Name="telefone", EmitDefaultValue=false)]
         public string Telefone { get; set; }
     
         /// <summary>
-        /// Apresenta o e-mail de contato da refer\u00EAncia comercial
+        /// E-mail de contato da refer\u00EAncia comercial
         /// </summary>
-        /// <value>Apresenta o e-mail de contato da refer\u00EAncia comercial</value>
+        /// <value>E-mail de contato da refer\u00EAncia comercial</value>
         [DataMember(Name="email", EmitDefaultValue=false)]
         public string Email { get; set; }
     

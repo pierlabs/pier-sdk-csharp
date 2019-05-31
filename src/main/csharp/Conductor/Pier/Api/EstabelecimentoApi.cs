@@ -852,6 +852,46 @@ namespace Conductor.Pier.Api
         ApiResponse<PageTipoTerminalResponse> ListarTiposTerminaisWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
         
         /// <summary>
+        /// Listar transa\u00E7\u00F5es existentes no banco de dados do Terminal
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite listar transa\u00E7\u00F5es existentes no banco de dados do Terminal
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do terminal (id)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="dataTransacao">Data inicial (optional)</param>
+        /// <param name="codigoProcessamento">C\u00F3digo de processamento da transa\u00E7\u00E3o (optional)</param>
+        /// <param name="nsuEmissor">NSU Emissor (optional)</param>
+        /// <param name="nsuOrigem">NSU Origem (optional)</param>
+        /// <param name="statusConta">Status da conta (optional)</param>
+        /// <param name="valorTransacao">Valor da transa\u00E7\u00E3o (optional)</param>
+        /// <returns>PageTipoTerminalTransacoesResponse</returns>
+        PageTipoTerminalTransacoesResponse ListarTransacoes (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataTransacao = null, string codigoProcessamento = null, int? nsuEmissor = null, int? nsuOrigem = null, int? statusConta = null, double? valorTransacao = null);
+  
+        /// <summary>
+        /// Listar transa\u00E7\u00F5es existentes no banco de dados do Terminal
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite listar transa\u00E7\u00F5es existentes no banco de dados do Terminal
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do terminal (id)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="dataTransacao">Data inicial (optional)</param>
+        /// <param name="codigoProcessamento">C\u00F3digo de processamento da transa\u00E7\u00E3o (optional)</param>
+        /// <param name="nsuEmissor">NSU Emissor (optional)</param>
+        /// <param name="nsuOrigem">NSU Origem (optional)</param>
+        /// <param name="statusConta">Status da conta (optional)</param>
+        /// <param name="valorTransacao">Valor da transa\u00E7\u00E3o (optional)</param>
+        /// <returns>ApiResponse of PageTipoTerminalTransacoesResponse</returns>
+        ApiResponse<PageTipoTerminalTransacoesResponse> ListarTransacoesWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataTransacao = null, string codigoProcessamento = null, int? nsuEmissor = null, int? nsuOrigem = null, int? statusConta = null, double? valorTransacao = null);
+        
+        /// <summary>
         /// Lista Estabelecimentos
         /// </summary>
         /// <remarks>
@@ -2186,6 +2226,46 @@ namespace Conductor.Pier.Api
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
         /// <returns>Task of ApiResponse (PageTipoTerminalResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<PageTipoTerminalResponse>> ListarTiposTerminaisAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
+        
+        /// <summary>
+        /// Listar transa\u00E7\u00F5es existentes no banco de dados do Terminal
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite listar transa\u00E7\u00F5es existentes no banco de dados do Terminal
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do terminal (id)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="dataTransacao">Data inicial (optional)</param>
+        /// <param name="codigoProcessamento">C\u00F3digo de processamento da transa\u00E7\u00E3o (optional)</param>
+        /// <param name="nsuEmissor">NSU Emissor (optional)</param>
+        /// <param name="nsuOrigem">NSU Origem (optional)</param>
+        /// <param name="statusConta">Status da conta (optional)</param>
+        /// <param name="valorTransacao">Valor da transa\u00E7\u00E3o (optional)</param>
+        /// <returns>Task of PageTipoTerminalTransacoesResponse</returns>
+        System.Threading.Tasks.Task<PageTipoTerminalTransacoesResponse> ListarTransacoesAsync (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataTransacao = null, string codigoProcessamento = null, int? nsuEmissor = null, int? nsuOrigem = null, int? statusConta = null, double? valorTransacao = null);
+
+        /// <summary>
+        /// Listar transa\u00E7\u00F5es existentes no banco de dados do Terminal
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite listar transa\u00E7\u00F5es existentes no banco de dados do Terminal
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do terminal (id)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="dataTransacao">Data inicial (optional)</param>
+        /// <param name="codigoProcessamento">C\u00F3digo de processamento da transa\u00E7\u00E3o (optional)</param>
+        /// <param name="nsuEmissor">NSU Emissor (optional)</param>
+        /// <param name="nsuOrigem">NSU Origem (optional)</param>
+        /// <param name="statusConta">Status da conta (optional)</param>
+        /// <param name="valorTransacao">Valor da transa\u00E7\u00E3o (optional)</param>
+        /// <returns>Task of ApiResponse (PageTipoTerminalTransacoesResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PageTipoTerminalTransacoesResponse>> ListarTransacoesAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataTransacao = null, string codigoProcessamento = null, int? nsuEmissor = null, int? nsuOrigem = null, int? statusConta = null, double? valorTransacao = null);
         
         /// <summary>
         /// Lista Estabelecimentos
@@ -8364,6 +8444,218 @@ namespace Conductor.Pier.Api
             return new ApiResponse<PageTipoTerminalResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (PageTipoTerminalResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageTipoTerminalResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Listar transa\u00E7\u00F5es existentes no banco de dados do Terminal Este recurso permite listar transa\u00E7\u00F5es existentes no banco de dados do Terminal
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do terminal (id)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="page">P\u00E1gina (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <param name="dataTransacao">Data inicial (optional)</param> 
+        /// <param name="codigoProcessamento">C\u00F3digo de processamento da transa\u00E7\u00E3o (optional)</param> 
+        /// <param name="nsuEmissor">NSU Emissor (optional)</param> 
+        /// <param name="nsuOrigem">NSU Origem (optional)</param> 
+        /// <param name="statusConta">Status da conta (optional)</param> 
+        /// <param name="valorTransacao">Valor da transa\u00E7\u00E3o (optional)</param> 
+        /// <returns>PageTipoTerminalTransacoesResponse</returns>
+        public PageTipoTerminalTransacoesResponse ListarTransacoes (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataTransacao = null, string codigoProcessamento = null, int? nsuEmissor = null, int? nsuOrigem = null, int? statusConta = null, double? valorTransacao = null)
+        {
+             ApiResponse<PageTipoTerminalTransacoesResponse> localVarResponse = ListarTransacoesWithHttpInfo(id, sort, page, limit, dataTransacao, codigoProcessamento, nsuEmissor, nsuOrigem, statusConta, valorTransacao);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Listar transa\u00E7\u00F5es existentes no banco de dados do Terminal Este recurso permite listar transa\u00E7\u00F5es existentes no banco de dados do Terminal
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do terminal (id)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="page">P\u00E1gina (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <param name="dataTransacao">Data inicial (optional)</param> 
+        /// <param name="codigoProcessamento">C\u00F3digo de processamento da transa\u00E7\u00E3o (optional)</param> 
+        /// <param name="nsuEmissor">NSU Emissor (optional)</param> 
+        /// <param name="nsuOrigem">NSU Origem (optional)</param> 
+        /// <param name="statusConta">Status da conta (optional)</param> 
+        /// <param name="valorTransacao">Valor da transa\u00E7\u00E3o (optional)</param> 
+        /// <returns>ApiResponse of PageTipoTerminalTransacoesResponse</returns>
+        public ApiResponse< PageTipoTerminalTransacoesResponse > ListarTransacoesWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataTransacao = null, string codigoProcessamento = null, int? nsuEmissor = null, int? nsuOrigem = null, int? statusConta = null, double? valorTransacao = null)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling EstabelecimentoApi->ListarTransacoes");
+            
+    
+            var localVarPath = "/api/tipos-terminais-estabelecimento/{id}/transacoes";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (dataTransacao != null) localVarQueryParams.Add("dataTransacao", Configuration.ApiClient.ParameterToString(dataTransacao)); // query parameter
+            if (codigoProcessamento != null) localVarQueryParams.Add("codigoProcessamento", Configuration.ApiClient.ParameterToString(codigoProcessamento)); // query parameter
+            if (nsuEmissor != null) localVarQueryParams.Add("nsuEmissor", Configuration.ApiClient.ParameterToString(nsuEmissor)); // query parameter
+            if (nsuOrigem != null) localVarQueryParams.Add("nsuOrigem", Configuration.ApiClient.ParameterToString(nsuOrigem)); // query parameter
+            if (statusConta != null) localVarQueryParams.Add("statusConta", Configuration.ApiClient.ParameterToString(statusConta)); // query parameter
+            if (valorTransacao != null) localVarQueryParams.Add("valorTransacao", Configuration.ApiClient.ParameterToString(valorTransacao)); // query parameter
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarTransacoes: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarTransacoes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<PageTipoTerminalTransacoesResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageTipoTerminalTransacoesResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageTipoTerminalTransacoesResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Listar transa\u00E7\u00F5es existentes no banco de dados do Terminal Este recurso permite listar transa\u00E7\u00F5es existentes no banco de dados do Terminal
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do terminal (id)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="dataTransacao">Data inicial (optional)</param>
+        /// <param name="codigoProcessamento">C\u00F3digo de processamento da transa\u00E7\u00E3o (optional)</param>
+        /// <param name="nsuEmissor">NSU Emissor (optional)</param>
+        /// <param name="nsuOrigem">NSU Origem (optional)</param>
+        /// <param name="statusConta">Status da conta (optional)</param>
+        /// <param name="valorTransacao">Valor da transa\u00E7\u00E3o (optional)</param>
+        /// <returns>Task of PageTipoTerminalTransacoesResponse</returns>
+        public async System.Threading.Tasks.Task<PageTipoTerminalTransacoesResponse> ListarTransacoesAsync (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataTransacao = null, string codigoProcessamento = null, int? nsuEmissor = null, int? nsuOrigem = null, int? statusConta = null, double? valorTransacao = null)
+        {
+             ApiResponse<PageTipoTerminalTransacoesResponse> localVarResponse = await ListarTransacoesAsyncWithHttpInfo(id, sort, page, limit, dataTransacao, codigoProcessamento, nsuEmissor, nsuOrigem, statusConta, valorTransacao);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Listar transa\u00E7\u00F5es existentes no banco de dados do Terminal Este recurso permite listar transa\u00E7\u00F5es existentes no banco de dados do Terminal
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do terminal (id)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="dataTransacao">Data inicial (optional)</param>
+        /// <param name="codigoProcessamento">C\u00F3digo de processamento da transa\u00E7\u00E3o (optional)</param>
+        /// <param name="nsuEmissor">NSU Emissor (optional)</param>
+        /// <param name="nsuOrigem">NSU Origem (optional)</param>
+        /// <param name="statusConta">Status da conta (optional)</param>
+        /// <param name="valorTransacao">Valor da transa\u00E7\u00E3o (optional)</param>
+        /// <returns>Task of ApiResponse (PageTipoTerminalTransacoesResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PageTipoTerminalTransacoesResponse>> ListarTransacoesAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataTransacao = null, string codigoProcessamento = null, int? nsuEmissor = null, int? nsuOrigem = null, int? statusConta = null, double? valorTransacao = null)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ListarTransacoes");
+            
+    
+            var localVarPath = "/api/tipos-terminais-estabelecimento/{id}/transacoes";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (dataTransacao != null) localVarQueryParams.Add("dataTransacao", Configuration.ApiClient.ParameterToString(dataTransacao)); // query parameter
+            if (codigoProcessamento != null) localVarQueryParams.Add("codigoProcessamento", Configuration.ApiClient.ParameterToString(codigoProcessamento)); // query parameter
+            if (nsuEmissor != null) localVarQueryParams.Add("nsuEmissor", Configuration.ApiClient.ParameterToString(nsuEmissor)); // query parameter
+            if (nsuOrigem != null) localVarQueryParams.Add("nsuOrigem", Configuration.ApiClient.ParameterToString(nsuOrigem)); // query parameter
+            if (statusConta != null) localVarQueryParams.Add("statusConta", Configuration.ApiClient.ParameterToString(statusConta)); // query parameter
+            if (valorTransacao != null) localVarQueryParams.Add("valorTransacao", Configuration.ApiClient.ParameterToString(valorTransacao)); // query parameter
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarTransacoes: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarTransacoes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PageTipoTerminalTransacoesResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageTipoTerminalTransacoesResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageTipoTerminalTransacoesResponse)));
             
         }
         

@@ -12,49 +12,40 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Objeto a ser persistido de pagamento inv\u00E1lido
+    /// Objeto para persist\u00EAncia de v\u00EDnculos entre contas
     /// </summary>
     [DataContract]
-    public partial class RegularizacaoPagamentoPersist :  IEquatable<RegularizacaoPagamentoPersist>
+    public partial class VinculoContaPersist :  IEquatable<VinculoContaPersist>
     { 
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="RegularizacaoPagamentoPersist" /> class.
-        /// Initializes a new instance of the <see cref="RegularizacaoPagamentoPersist" />class.
+        /// Initializes a new instance of the <see cref="VinculoContaPersist" /> class.
+        /// Initializes a new instance of the <see cref="VinculoContaPersist" />class.
         /// </summary>
-        /// <param name="IdConta">Identificador da conta cadastrada na base ap\u00F3s regularizar um pagamento inv\u00E1lido.</param>
-        /// <param name="NossoNumero">N\u00FAmero do boleto do pagamento inv\u00E1lido.</param>
-        /// <param name="ValorPago">Valor do boleto do pagamento inv\u00E1lido.</param>
+        /// <param name="IdConta">Id da subconta.</param>
+        /// <param name="IdTipoVinculo">Id do tipo de v\u00EDnculo entre as duas contas.</param>
 
-        public RegularizacaoPagamentoPersist(long? IdConta = null, double? NossoNumero = null, double? ValorPago = null)
+        public VinculoContaPersist(long? IdConta = null, long? IdTipoVinculo = null)
         {
             this.IdConta = IdConta;
-            this.NossoNumero = NossoNumero;
-            this.ValorPago = ValorPago;
+            this.IdTipoVinculo = IdTipoVinculo;
             
         }
         
     
         /// <summary>
-        /// Identificador da conta cadastrada na base ap\u00F3s regularizar um pagamento inv\u00E1lido
+        /// Id da subconta
         /// </summary>
-        /// <value>Identificador da conta cadastrada na base ap\u00F3s regularizar um pagamento inv\u00E1lido</value>
+        /// <value>Id da subconta</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
     
         /// <summary>
-        /// N\u00FAmero do boleto do pagamento inv\u00E1lido
+        /// Id do tipo de v\u00EDnculo entre as duas contas
         /// </summary>
-        /// <value>N\u00FAmero do boleto do pagamento inv\u00E1lido</value>
-        [DataMember(Name="nossoNumero", EmitDefaultValue=false)]
-        public double? NossoNumero { get; set; }
-    
-        /// <summary>
-        /// Valor do boleto do pagamento inv\u00E1lido
-        /// </summary>
-        /// <value>Valor do boleto do pagamento inv\u00E1lido</value>
-        [DataMember(Name="valorPago", EmitDefaultValue=false)]
-        public double? ValorPago { get; set; }
+        /// <value>Id do tipo de v\u00EDnculo entre as duas contas</value>
+        [DataMember(Name="idTipoVinculo", EmitDefaultValue=false)]
+        public long? IdTipoVinculo { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -63,10 +54,9 @@ namespace Conductor.Pier.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class RegularizacaoPagamentoPersist {\n");
+            sb.Append("class VinculoContaPersist {\n");
             sb.Append("  IdConta: ").Append(IdConta).Append("\n");
-            sb.Append("  NossoNumero: ").Append(NossoNumero).Append("\n");
-            sb.Append("  ValorPago: ").Append(ValorPago).Append("\n");
+            sb.Append("  IdTipoVinculo: ").Append(IdTipoVinculo).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -89,15 +79,15 @@ namespace Conductor.Pier.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as RegularizacaoPagamentoPersist);
+            return this.Equals(obj as VinculoContaPersist);
         }
 
         /// <summary>
-        /// Returns true if RegularizacaoPagamentoPersist instances are equal
+        /// Returns true if VinculoContaPersist instances are equal
         /// </summary>
-        /// <param name="other">Instance of RegularizacaoPagamentoPersist to be compared</param>
+        /// <param name="other">Instance of VinculoContaPersist to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(RegularizacaoPagamentoPersist other)
+        public bool Equals(VinculoContaPersist other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -110,14 +100,9 @@ namespace Conductor.Pier.Model
                     this.IdConta.Equals(other.IdConta)
                 ) && 
                 (
-                    this.NossoNumero == other.NossoNumero ||
-                    this.NossoNumero != null &&
-                    this.NossoNumero.Equals(other.NossoNumero)
-                ) && 
-                (
-                    this.ValorPago == other.ValorPago ||
-                    this.ValorPago != null &&
-                    this.ValorPago.Equals(other.ValorPago)
+                    this.IdTipoVinculo == other.IdTipoVinculo ||
+                    this.IdTipoVinculo != null &&
+                    this.IdTipoVinculo.Equals(other.IdTipoVinculo)
                 );
         }
 
@@ -136,11 +121,8 @@ namespace Conductor.Pier.Model
                 if (this.IdConta != null)
                     hash = hash * 59 + this.IdConta.GetHashCode();
                 
-                if (this.NossoNumero != null)
-                    hash = hash * 59 + this.NossoNumero.GetHashCode();
-                
-                if (this.ValorPago != null)
-                    hash = hash * 59 + this.ValorPago.GetHashCode();
+                if (this.IdTipoVinculo != null)
+                    hash = hash * 59 + this.IdTipoVinculo.GetHashCode();
                 
                 return hash;
             }

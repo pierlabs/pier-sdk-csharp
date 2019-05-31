@@ -12,15 +12,15 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Lista de WebHooks
+    /// Lista de tipos de v\u00EDnculos
     /// </summary>
     [DataContract]
-    public partial class PageWebHookResponse :  IEquatable<PageWebHookResponse>
+    public partial class PageTipoVinculoContaResponse :  IEquatable<PageTipoVinculoContaResponse>
     { 
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="PageWebHookResponse" /> class.
-        /// Initializes a new instance of the <see cref="PageWebHookResponse" />class.
+        /// Initializes a new instance of the <see cref="PageTipoVinculoContaResponse" /> class.
+        /// Initializes a new instance of the <see cref="PageTipoVinculoContaResponse" />class.
         /// </summary>
         /// <param name="Content">Content.</param>
         /// <param name="First">First.</param>
@@ -37,7 +37,7 @@ namespace Conductor.Pier.Model
         /// <param name="TotalElements">TotalElements.</param>
         /// <param name="TotalPages">TotalPages.</param>
 
-        public PageWebHookResponse(List<WebhookResponse> Content = null, bool? First = null, bool? FirstPage = null, bool? HasContent = null, bool? HasNextPage = null, bool? HasPreviousPage = null, bool? Last = null, int? NextPage = null, int? Number = null, int? NumberOfElements = null, int? PreviousPage = null, int? Size = null, long? TotalElements = null, int? TotalPages = null)
+        public PageTipoVinculoContaResponse(List<TipoVinculoContaResponse> Content = null, bool? First = null, bool? FirstPage = null, bool? HasContent = null, bool? HasNextPage = null, bool? HasPreviousPage = null, bool? Last = null, int? NextPage = null, int? Number = null, int? NumberOfElements = null, int? PreviousPage = null, int? Size = null, long? TotalElements = null, int? TotalPages = null)
         {
             this.Content = Content;
             this.First = First;
@@ -61,7 +61,7 @@ namespace Conductor.Pier.Model
         /// Gets or Sets Content
         /// </summary>
         [DataMember(Name="content", EmitDefaultValue=false)]
-        public List<WebhookResponse> Content { get; set; }
+        public List<TipoVinculoContaResponse> Content { get; set; }
     
         /// <summary>
         /// Gets or Sets First
@@ -148,7 +148,7 @@ namespace Conductor.Pier.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class PageWebHookResponse {\n");
+            sb.Append("class PageTipoVinculoContaResponse {\n");
             sb.Append("  Content: ").Append(Content).Append("\n");
             sb.Append("  First: ").Append(First).Append("\n");
             sb.Append("  FirstPage: ").Append(FirstPage).Append("\n");
@@ -185,15 +185,15 @@ namespace Conductor.Pier.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as PageWebHookResponse);
+            return this.Equals(obj as PageTipoVinculoContaResponse);
         }
 
         /// <summary>
-        /// Returns true if PageWebHookResponse instances are equal
+        /// Returns true if PageTipoVinculoContaResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of PageWebHookResponse to be compared</param>
+        /// <param name="other">Instance of PageTipoVinculoContaResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(PageWebHookResponse other)
+        public bool Equals(PageTipoVinculoContaResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

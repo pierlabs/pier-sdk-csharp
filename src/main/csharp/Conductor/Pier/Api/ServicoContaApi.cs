@@ -81,8 +81,9 @@ namespace Conductor.Pier.Api
         /// <param name="celular">N\u00FAmero do celular (optional)</param>
         /// <param name="idOperadora">Identificador da operadora do celular (optional)</param>
         /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param>
+        /// <param name="colaborador">Matr\u00EDcula do colaborador (optional)</param>
         /// <returns>Object</returns>
-        Object AtivarAnuidade (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null);
+        Object AtivarAnuidade (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null, string colaborador = null);
   
         /// <summary>
         /// Atribuir Anuidade
@@ -100,8 +101,9 @@ namespace Conductor.Pier.Api
         /// <param name="celular">N\u00FAmero do celular (optional)</param>
         /// <param name="idOperadora">Identificador da operadora do celular (optional)</param>
         /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param>
+        /// <param name="colaborador">Matr\u00EDcula do colaborador (optional)</param>
         /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> AtivarAnuidadeWithHttpInfo (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null);
+        ApiResponse<Object> AtivarAnuidadeWithHttpInfo (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null, string colaborador = null);
         
         /// <summary>
         /// Ativa o servi\u00E7o de envio de fatura por email
@@ -389,8 +391,9 @@ namespace Conductor.Pier.Api
         /// <param name="celular">N\u00FAmero do celular (optional)</param>
         /// <param name="idOperadora">Identificador da operadora do celular (optional)</param>
         /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param>
+        /// <param name="colaborador">Matr\u00EDcula do colaborador (optional)</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> AtivarAnuidadeAsync (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null);
+        System.Threading.Tasks.Task<Object> AtivarAnuidadeAsync (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null, string colaborador = null);
 
         /// <summary>
         /// Atribuir Anuidade
@@ -408,8 +411,9 @@ namespace Conductor.Pier.Api
         /// <param name="celular">N\u00FAmero do celular (optional)</param>
         /// <param name="idOperadora">Identificador da operadora do celular (optional)</param>
         /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param>
+        /// <param name="colaborador">Matr\u00EDcula do colaborador (optional)</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> AtivarAnuidadeAsyncWithHttpInfo (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> AtivarAnuidadeAsyncWithHttpInfo (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null, string colaborador = null);
         
         /// <summary>
         /// Ativa o servi\u00E7o de envio de fatura por email
@@ -1098,10 +1102,11 @@ namespace Conductor.Pier.Api
         /// <param name="celular">N\u00FAmero do celular (optional)</param> 
         /// <param name="idOperadora">Identificador da operadora do celular (optional)</param> 
         /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param> 
+        /// <param name="colaborador">Matr\u00EDcula do colaborador (optional)</param> 
         /// <returns>Object</returns>
-        public Object AtivarAnuidade (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null)
+        public Object AtivarAnuidade (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null, string colaborador = null)
         {
-             ApiResponse<Object> localVarResponse = AtivarAnuidadeWithHttpInfo(id, idAnuidade, sort, page, limit, DDD, celular, idOperadora, idOrigemComercial);
+             ApiResponse<Object> localVarResponse = AtivarAnuidadeWithHttpInfo(id, idAnuidade, sort, page, limit, DDD, celular, idOperadora, idOrigemComercial, colaborador);
              return localVarResponse.Data;
         }
 
@@ -1118,8 +1123,9 @@ namespace Conductor.Pier.Api
         /// <param name="celular">N\u00FAmero do celular (optional)</param> 
         /// <param name="idOperadora">Identificador da operadora do celular (optional)</param> 
         /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param> 
+        /// <param name="colaborador">Matr\u00EDcula do colaborador (optional)</param> 
         /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > AtivarAnuidadeWithHttpInfo (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null)
+        public ApiResponse< Object > AtivarAnuidadeWithHttpInfo (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null, string colaborador = null)
         {
             
             // verify the required parameter 'id' is set
@@ -1167,6 +1173,7 @@ namespace Conductor.Pier.Api
             if (celular != null) localVarQueryParams.Add("celular", Configuration.ApiClient.ParameterToString(celular)); // query parameter
             if (idOperadora != null) localVarQueryParams.Add("idOperadora", Configuration.ApiClient.ParameterToString(idOperadora)); // query parameter
             if (idOrigemComercial != null) localVarQueryParams.Add("idOrigemComercial", Configuration.ApiClient.ParameterToString(idOrigemComercial)); // query parameter
+            if (colaborador != null) localVarQueryParams.Add("colaborador", Configuration.ApiClient.ParameterToString(colaborador)); // query parameter
             
             
             
@@ -1206,10 +1213,11 @@ namespace Conductor.Pier.Api
         /// <param name="celular">N\u00FAmero do celular (optional)</param>
         /// <param name="idOperadora">Identificador da operadora do celular (optional)</param>
         /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param>
+        /// <param name="colaborador">Matr\u00EDcula do colaborador (optional)</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> AtivarAnuidadeAsync (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null)
+        public async System.Threading.Tasks.Task<Object> AtivarAnuidadeAsync (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null, string colaborador = null)
         {
-             ApiResponse<Object> localVarResponse = await AtivarAnuidadeAsyncWithHttpInfo(id, idAnuidade, sort, page, limit, DDD, celular, idOperadora, idOrigemComercial);
+             ApiResponse<Object> localVarResponse = await AtivarAnuidadeAsyncWithHttpInfo(id, idAnuidade, sort, page, limit, DDD, celular, idOperadora, idOrigemComercial, colaborador);
              return localVarResponse.Data;
 
         }
@@ -1227,8 +1235,9 @@ namespace Conductor.Pier.Api
         /// <param name="celular">N\u00FAmero do celular (optional)</param>
         /// <param name="idOperadora">Identificador da operadora do celular (optional)</param>
         /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param>
+        /// <param name="colaborador">Matr\u00EDcula do colaborador (optional)</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> AtivarAnuidadeAsyncWithHttpInfo (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> AtivarAnuidadeAsyncWithHttpInfo (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null, string colaborador = null)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AtivarAnuidade");
@@ -1272,6 +1281,7 @@ namespace Conductor.Pier.Api
             if (celular != null) localVarQueryParams.Add("celular", Configuration.ApiClient.ParameterToString(celular)); // query parameter
             if (idOperadora != null) localVarQueryParams.Add("idOperadora", Configuration.ApiClient.ParameterToString(idOperadora)); // query parameter
             if (idOrigemComercial != null) localVarQueryParams.Add("idOrigemComercial", Configuration.ApiClient.ParameterToString(idOrigemComercial)); // query parameter
+            if (colaborador != null) localVarQueryParams.Add("colaborador", Configuration.ApiClient.ParameterToString(colaborador)); // query parameter
             
             
             

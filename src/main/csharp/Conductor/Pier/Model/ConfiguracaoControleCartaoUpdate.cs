@@ -25,12 +25,14 @@ namespace Conductor.Pier.Model
         /// <param name="PermiteEcommerce">Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es ecommerce.</param>
         /// <param name="PermiteSaque">Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es de saque.</param>
         /// <param name="PermiteWallet">Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es por wallet.</param>
+        /// <param name="PermiteControleMCC">Indica se o cart\u00E3o est\u00E1 ativo para controle por grupos de MCCs.</param>
 
-        public ConfiguracaoControleCartaoUpdate(int? PermiteEcommerce = null, int? PermiteSaque = null, int? PermiteWallet = null)
+        public ConfiguracaoControleCartaoUpdate(bool? PermiteEcommerce = null, bool? PermiteSaque = null, bool? PermiteWallet = null, bool? PermiteControleMCC = null)
         {
             this.PermiteEcommerce = PermiteEcommerce;
             this.PermiteSaque = PermiteSaque;
             this.PermiteWallet = PermiteWallet;
+            this.PermiteControleMCC = PermiteControleMCC;
             
         }
         
@@ -40,21 +42,28 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es ecommerce</value>
         [DataMember(Name="permiteEcommerce", EmitDefaultValue=false)]
-        public int? PermiteEcommerce { get; set; }
+        public bool? PermiteEcommerce { get; set; }
     
         /// <summary>
         /// Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es de saque
         /// </summary>
         /// <value>Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es de saque</value>
         [DataMember(Name="permiteSaque", EmitDefaultValue=false)]
-        public int? PermiteSaque { get; set; }
+        public bool? PermiteSaque { get; set; }
     
         /// <summary>
         /// Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es por wallet
         /// </summary>
         /// <value>Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es por wallet</value>
         [DataMember(Name="permiteWallet", EmitDefaultValue=false)]
-        public int? PermiteWallet { get; set; }
+        public bool? PermiteWallet { get; set; }
+    
+        /// <summary>
+        /// Indica se o cart\u00E3o est\u00E1 ativo para controle por grupos de MCCs
+        /// </summary>
+        /// <value>Indica se o cart\u00E3o est\u00E1 ativo para controle por grupos de MCCs</value>
+        [DataMember(Name="permiteControleMCC", EmitDefaultValue=false)]
+        public bool? PermiteControleMCC { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -67,6 +76,7 @@ namespace Conductor.Pier.Model
             sb.Append("  PermiteEcommerce: ").Append(PermiteEcommerce).Append("\n");
             sb.Append("  PermiteSaque: ").Append(PermiteSaque).Append("\n");
             sb.Append("  PermiteWallet: ").Append(PermiteWallet).Append("\n");
+            sb.Append("  PermiteControleMCC: ").Append(PermiteControleMCC).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -118,6 +128,11 @@ namespace Conductor.Pier.Model
                     this.PermiteWallet == other.PermiteWallet ||
                     this.PermiteWallet != null &&
                     this.PermiteWallet.Equals(other.PermiteWallet)
+                ) && 
+                (
+                    this.PermiteControleMCC == other.PermiteControleMCC ||
+                    this.PermiteControleMCC != null &&
+                    this.PermiteControleMCC.Equals(other.PermiteControleMCC)
                 );
         }
 
@@ -141,6 +156,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.PermiteWallet != null)
                     hash = hash * 59 + this.PermiteWallet.GetHashCode();
+                
+                if (this.PermiteControleMCC != null)
+                    hash = hash * 59 + this.PermiteControleMCC.GetHashCode();
                 
                 return hash;
             }

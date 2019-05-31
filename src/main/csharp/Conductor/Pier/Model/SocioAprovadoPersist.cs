@@ -12,20 +12,20 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// PessoaPersist
+    /// Objeto de persist\u00EAncia do s\u00F3cio da pessoa aprovada
     /// </summary>
     [DataContract]
-    public partial class PessoaPersist :  IEquatable<PessoaPersist>
+    public partial class SocioAprovadoPersist :  IEquatable<SocioAprovadoPersist>
     { 
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="PessoaPersist" /> class.
-        /// Initializes a new instance of the <see cref="PessoaPersist" />class.
+        /// Initializes a new instance of the <see cref="SocioAprovadoPersist" /> class.
+        /// Initializes a new instance of the <see cref="SocioAprovadoPersist" />class.
         /// </summary>
-        /// <param name="Nome">Apresenta o Nome do Socio (required).</param>
-        /// <param name="Cpf">CPF do S\u00F3cio.</param>
-        /// <param name="DataNascimento">Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd.</param>
-        /// <param name="Sexo">Sexo do S\u00F3cio.</param>
+        /// <param name="Nome">Nome do s\u00F3cio (required).</param>
+        /// <param name="Cpf">CPF do s\u00F3cio.</param>
+        /// <param name="DataNascimento">Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd (required).</param>
+        /// <param name="Sexo">Sexo do s\u00F3cio.</param>
         /// <param name="NumeroIdentidade">N\u00FAmero da Identidade.</param>
         /// <param name="OrgaoExpedidorIdentidade">Org\u00E3o expedidor da Identidade.</param>
         /// <param name="UnidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade.</param>
@@ -34,21 +34,29 @@ namespace Conductor.Pier.Model
         /// <param name="Profissao">Profiss\u00E3o do s\u00F3cio.</param>
         /// <param name="Nacionalidade">Nacionalidade do s\u00F3cio.</param>
         /// <param name="Email">Email do s\u00F3cio.</param>
-        /// <param name="Telefones">Informa os telefones do s\u00F3cio.</param>
+        /// <param name="Telefones">Telefones do s\u00F3cio.</param>
 
-        public PessoaPersist(string Nome = null, string Cpf = null, string DataNascimento = null, string Sexo = null, string NumeroIdentidade = null, string OrgaoExpedidorIdentidade = null, string UnidadeFederativaIdentidade = null, string DataEmissaoIdentidade = null, string EstadoCivil = null, string Profissao = null, string Nacionalidade = null, string Email = null, List<TelefonePessoaAprovadaPersist> Telefones = null)
+        public SocioAprovadoPersist(string Nome = null, string Cpf = null, string DataNascimento = null, string Sexo = null, string NumeroIdentidade = null, string OrgaoExpedidorIdentidade = null, string UnidadeFederativaIdentidade = null, string DataEmissaoIdentidade = null, string EstadoCivil = null, string Profissao = null, string Nacionalidade = null, string Email = null, List<TelefonePessoaAprovadaPersist> Telefones = null)
         {
             // to ensure "Nome" is required (not null)
             if (Nome == null)
             {
-                throw new InvalidDataException("Nome is a required property for PessoaPersist and cannot be null");
+                throw new InvalidDataException("Nome is a required property for SocioAprovadoPersist and cannot be null");
             }
             else
             {
                 this.Nome = Nome;
             }
+            // to ensure "DataNascimento" is required (not null)
+            if (DataNascimento == null)
+            {
+                throw new InvalidDataException("DataNascimento is a required property for SocioAprovadoPersist and cannot be null");
+            }
+            else
+            {
+                this.DataNascimento = DataNascimento;
+            }
             this.Cpf = Cpf;
-            this.DataNascimento = DataNascimento;
             this.Sexo = Sexo;
             this.NumeroIdentidade = NumeroIdentidade;
             this.OrgaoExpedidorIdentidade = OrgaoExpedidorIdentidade;
@@ -64,16 +72,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Apresenta o Nome do Socio
+        /// Nome do s\u00F3cio
         /// </summary>
-        /// <value>Apresenta o Nome do Socio</value>
+        /// <value>Nome do s\u00F3cio</value>
         [DataMember(Name="nome", EmitDefaultValue=false)]
         public string Nome { get; set; }
     
         /// <summary>
-        /// CPF do S\u00F3cio
+        /// CPF do s\u00F3cio
         /// </summary>
-        /// <value>CPF do S\u00F3cio</value>
+        /// <value>CPF do s\u00F3cio</value>
         [DataMember(Name="cpf", EmitDefaultValue=false)]
         public string Cpf { get; set; }
     
@@ -85,9 +93,9 @@ namespace Conductor.Pier.Model
         public string DataNascimento { get; set; }
     
         /// <summary>
-        /// Sexo do S\u00F3cio
+        /// Sexo do s\u00F3cio
         /// </summary>
-        /// <value>Sexo do S\u00F3cio</value>
+        /// <value>Sexo do s\u00F3cio</value>
         [DataMember(Name="sexo", EmitDefaultValue=false)]
         public string Sexo { get; set; }
     
@@ -148,9 +156,9 @@ namespace Conductor.Pier.Model
         public string Email { get; set; }
     
         /// <summary>
-        /// Informa os telefones do s\u00F3cio
+        /// Telefones do s\u00F3cio
         /// </summary>
-        /// <value>Informa os telefones do s\u00F3cio</value>
+        /// <value>Telefones do s\u00F3cio</value>
         [DataMember(Name="telefones", EmitDefaultValue=false)]
         public List<TelefonePessoaAprovadaPersist> Telefones { get; set; }
     
@@ -161,7 +169,7 @@ namespace Conductor.Pier.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class PessoaPersist {\n");
+            sb.Append("class SocioAprovadoPersist {\n");
             sb.Append("  Nome: ").Append(Nome).Append("\n");
             sb.Append("  Cpf: ").Append(Cpf).Append("\n");
             sb.Append("  DataNascimento: ").Append(DataNascimento).Append("\n");
@@ -197,15 +205,15 @@ namespace Conductor.Pier.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as PessoaPersist);
+            return this.Equals(obj as SocioAprovadoPersist);
         }
 
         /// <summary>
-        /// Returns true if PessoaPersist instances are equal
+        /// Returns true if SocioAprovadoPersist instances are equal
         /// </summary>
-        /// <param name="other">Instance of PessoaPersist to be compared</param>
+        /// <param name="other">Instance of SocioAprovadoPersist to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(PessoaPersist other)
+        public bool Equals(SocioAprovadoPersist other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

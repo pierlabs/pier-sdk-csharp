@@ -12,40 +12,31 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Objeto Header do Webhook
+    /// Representa a requisi\u00E7\u00E3o do recurso de cadastro de um tipo de v\u00EDnculo
     /// </summary>
     [DataContract]
-    public partial class WebhookHeaderPersist :  IEquatable<WebhookHeaderPersist>
+    public partial class TipoVinculoContaPersist :  IEquatable<TipoVinculoContaPersist>
     { 
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="WebhookHeaderPersist" /> class.
-        /// Initializes a new instance of the <see cref="WebhookHeaderPersist" />class.
+        /// Initializes a new instance of the <see cref="TipoVinculoContaPersist" /> class.
+        /// Initializes a new instance of the <see cref="TipoVinculoContaPersist" />class.
         /// </summary>
-        /// <param name="Nome">Nome do header.</param>
-        /// <param name="Valor">Valor do header.</param>
+        /// <param name="Descricao">Descri\u00E7\u00E3o do tipo de v\u00EDnculo.</param>
 
-        public WebhookHeaderPersist(string Nome = null, string Valor = null)
+        public TipoVinculoContaPersist(string Descricao = null)
         {
-            this.Nome = Nome;
-            this.Valor = Valor;
+            this.Descricao = Descricao;
             
         }
         
     
         /// <summary>
-        /// Nome do header
+        /// Descri\u00E7\u00E3o do tipo de v\u00EDnculo
         /// </summary>
-        /// <value>Nome do header</value>
-        [DataMember(Name="nome", EmitDefaultValue=false)]
-        public string Nome { get; set; }
-    
-        /// <summary>
-        /// Valor do header
-        /// </summary>
-        /// <value>Valor do header</value>
-        [DataMember(Name="valor", EmitDefaultValue=false)]
-        public string Valor { get; set; }
+        /// <value>Descri\u00E7\u00E3o do tipo de v\u00EDnculo</value>
+        [DataMember(Name="descricao", EmitDefaultValue=false)]
+        public string Descricao { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -54,9 +45,8 @@ namespace Conductor.Pier.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class WebhookHeaderPersist {\n");
-            sb.Append("  Nome: ").Append(Nome).Append("\n");
-            sb.Append("  Valor: ").Append(Valor).Append("\n");
+            sb.Append("class TipoVinculoContaPersist {\n");
+            sb.Append("  Descricao: ").Append(Descricao).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -79,15 +69,15 @@ namespace Conductor.Pier.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as WebhookHeaderPersist);
+            return this.Equals(obj as TipoVinculoContaPersist);
         }
 
         /// <summary>
-        /// Returns true if WebhookHeaderPersist instances are equal
+        /// Returns true if TipoVinculoContaPersist instances are equal
         /// </summary>
-        /// <param name="other">Instance of WebhookHeaderPersist to be compared</param>
+        /// <param name="other">Instance of TipoVinculoContaPersist to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(WebhookHeaderPersist other)
+        public bool Equals(TipoVinculoContaPersist other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -95,14 +85,9 @@ namespace Conductor.Pier.Model
 
             return 
                 (
-                    this.Nome == other.Nome ||
-                    this.Nome != null &&
-                    this.Nome.Equals(other.Nome)
-                ) && 
-                (
-                    this.Valor == other.Valor ||
-                    this.Valor != null &&
-                    this.Valor.Equals(other.Valor)
+                    this.Descricao == other.Descricao ||
+                    this.Descricao != null &&
+                    this.Descricao.Equals(other.Descricao)
                 );
         }
 
@@ -118,11 +103,8 @@ namespace Conductor.Pier.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.Nome != null)
-                    hash = hash * 59 + this.Nome.GetHashCode();
-                
-                if (this.Valor != null)
-                    hash = hash * 59 + this.Valor.GetHashCode();
+                if (this.Descricao != null)
+                    hash = hash * 59 + this.Descricao.GetHashCode();
                 
                 return hash;
             }

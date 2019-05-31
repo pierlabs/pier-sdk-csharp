@@ -142,6 +142,30 @@ namespace Conductor.Pier.Api
         ApiResponse<ConfiguracaoControleCartaoResponse> ConsultarConfiguracaoControleCartaoWithHttpInfo (long? idConfiguracaoCartao, long? id);
         
         /// <summary>
+        /// Exibe todos os mcc de bloqueio vinculado a um cart\u00E3o espec\u00EDfico.
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite consultar a informa\u00E7\u00E3o de todos os mcc que est\u00E3o vinculado a um Cart\u00E3o pelo seu c\u00F3digo de identifica\u00E7\u00E3o (id).
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de controle de grupo MCC do cart\u00E3o.</param>
+        /// <param name="idControleCartaoGrupoMCC">idControleCartaoGrupoMCC</param>
+        /// <returns>ControleCartaoGrupoMCCResponse</returns>
+        ControleCartaoGrupoMCCResponse ConsultarControleGrupoMccCartao (long? id, long? idControleCartaoGrupoMCC);
+  
+        /// <summary>
+        /// Exibe todos os mcc de bloqueio vinculado a um cart\u00E3o espec\u00EDfico.
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite consultar a informa\u00E7\u00E3o de todos os mcc que est\u00E3o vinculado a um Cart\u00E3o pelo seu c\u00F3digo de identifica\u00E7\u00E3o (id).
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de controle de grupo MCC do cart\u00E3o.</param>
+        /// <param name="idControleCartaoGrupoMCC">idControleCartaoGrupoMCC</param>
+        /// <returns>ApiResponse of ControleCartaoGrupoMCCResponse</returns>
+        ApiResponse<ControleCartaoGrupoMCCResponse> ConsultarControleGrupoMccCartaoWithHttpInfo (long? id, long? idControleCartaoGrupoMCC);
+        
+        /// <summary>
         /// Deletar uma configura\u00E7\u00E3o de um cart\u00E3o.
         /// </summary>
         /// <remarks>
@@ -164,6 +188,30 @@ namespace Conductor.Pier.Api
         /// <param name="id">id</param>
         /// <returns>ApiResponse of ConfiguracaoControleCartaoResponse</returns>
         ApiResponse<ConfiguracaoControleCartaoResponse> DeletarConfiguracaoControleCartaoWithHttpInfo (long? idConfiguracaoCartao, long? id);
+        
+        /// <summary>
+        /// Deletar o vinculo do mcc com um cart\u00E3o.
+        /// </summary>
+        /// <remarks>
+        /// O metodo Deleta o vinculo do cart\u00E3o com o grupo MCC, deixando livre para transacionar de qualquer bloqueio para aquele grupo de mcc.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de controle de grupo MCC do cart\u00E3o.</param>
+        /// <param name="idControleCartaoGrupoMCC">idControleCartaoGrupoMCC</param>
+        /// <returns>ControleCartaoGrupoMCCResponse</returns>
+        ControleCartaoGrupoMCCResponse DeletarControleGrupoMccCartao (long? id, long? idControleCartaoGrupoMCC);
+  
+        /// <summary>
+        /// Deletar o vinculo do mcc com um cart\u00E3o.
+        /// </summary>
+        /// <remarks>
+        /// O metodo Deleta o vinculo do cart\u00E3o com o grupo MCC, deixando livre para transacionar de qualquer bloqueio para aquele grupo de mcc.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de controle de grupo MCC do cart\u00E3o.</param>
+        /// <param name="idControleCartaoGrupoMCC">idControleCartaoGrupoMCC</param>
+        /// <returns>ApiResponse of ControleCartaoGrupoMCCResponse</returns>
+        ApiResponse<ControleCartaoGrupoMCCResponse> DeletarControleGrupoMccCartaoWithHttpInfo (long? id, long? idControleCartaoGrupoMCC);
         
         /// <summary>
         /// Desativa um controle de limites de um cart\u00E3o
@@ -231,8 +279,9 @@ namespace Conductor.Pier.Api
         /// <param name="permiteEcommerce">Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es ecommerce (optional)</param>
         /// <param name="permiteSaque">Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es de saque (optional)</param>
         /// <param name="permiteWallet">Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es por meio wallet (optional)</param>
+        /// <param name="permiteControleMCC">Indica se o cart\u00E3o est\u00E1 ativo para controle por grupos de MCCs (optional)</param>
         /// <returns>PageConfiguracaoControleCartaoResponse</returns>
-        PageConfiguracaoControleCartaoResponse ListarConfiguracaoControleCartao (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, int? permiteEcommerce = null, int? permiteSaque = null, int? permiteWallet = null);
+        PageConfiguracaoControleCartaoResponse ListarConfiguracaoControleCartao (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, bool? permiteEcommerce = null, bool? permiteSaque = null, bool? permiteWallet = null, bool? permiteControleMCC = null);
   
         /// <summary>
         /// Lista os cart\u00F5es configurados pelo remetente
@@ -248,8 +297,39 @@ namespace Conductor.Pier.Api
         /// <param name="permiteEcommerce">Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es ecommerce (optional)</param>
         /// <param name="permiteSaque">Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es de saque (optional)</param>
         /// <param name="permiteWallet">Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es por meio wallet (optional)</param>
+        /// <param name="permiteControleMCC">Indica se o cart\u00E3o est\u00E1 ativo para controle por grupos de MCCs (optional)</param>
         /// <returns>ApiResponse of PageConfiguracaoControleCartaoResponse</returns>
-        ApiResponse<PageConfiguracaoControleCartaoResponse> ListarConfiguracaoControleCartaoWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, int? permiteEcommerce = null, int? permiteSaque = null, int? permiteWallet = null);
+        ApiResponse<PageConfiguracaoControleCartaoResponse> ListarConfiguracaoControleCartaoWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, bool? permiteEcommerce = null, bool? permiteSaque = null, bool? permiteWallet = null, bool? permiteControleMCC = null);
+        
+        /// <summary>
+        /// Lista os cart\u00F5es vinculados aos estabelecimentos.
+        /// </summary>
+        /// <remarks>
+        /// Esse m\u00E9todo permite listar os cart\u00F5es registrados respectivamente para grupos MCC.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idCartao">C\u00F3digo Identificador do cartao na base (id) (optional)</param>
+        /// <param name="idGrupoMCC">C\u00F3digo Identificador do grupo mcc na base. (optional)</param>
+        /// <returns>PageControleCartaoGrupoMCCResponse</returns>
+        PageControleCartaoGrupoMCCResponse ListarControleGrupoMccCartao (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, long? idGrupoMCC = null);
+  
+        /// <summary>
+        /// Lista os cart\u00F5es vinculados aos estabelecimentos.
+        /// </summary>
+        /// <remarks>
+        /// Esse m\u00E9todo permite listar os cart\u00F5es registrados respectivamente para grupos MCC.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idCartao">C\u00F3digo Identificador do cartao na base (id) (optional)</param>
+        /// <param name="idGrupoMCC">C\u00F3digo Identificador do grupo mcc na base. (optional)</param>
+        /// <returns>ApiResponse of PageControleCartaoGrupoMCCResponse</returns>
+        ApiResponse<PageControleCartaoGrupoMCCResponse> ListarControleGrupoMccCartaoWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, long? idGrupoMCC = null);
         
         /// <summary>
         /// Cadastra um controle de limites para um cart\u00E3o
@@ -285,7 +365,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">id</param>
         /// <param name="configuracaoControleCartaoPersist">configuracaoControleCartaoPersist</param>
         /// <returns>ConfiguracaoControleCartaoResponse</returns>
-        ConfiguracaoControleCartaoResponse SalvarConfiguracaoControleCartao (long? id, ConfiguracaoControleCartao configuracaoControleCartaoPersist);
+        ConfiguracaoControleCartaoResponse SalvarConfiguracaoControleCartao (long? id, ConfiguracaoControleCartaoPersist configuracaoControleCartaoPersist);
   
         /// <summary>
         /// Registra a configura\u00E7\u00E3o do cart\u00E3o.
@@ -297,7 +377,31 @@ namespace Conductor.Pier.Api
         /// <param name="id">id</param>
         /// <param name="configuracaoControleCartaoPersist">configuracaoControleCartaoPersist</param>
         /// <returns>ApiResponse of ConfiguracaoControleCartaoResponse</returns>
-        ApiResponse<ConfiguracaoControleCartaoResponse> SalvarConfiguracaoControleCartaoWithHttpInfo (long? id, ConfiguracaoControleCartao configuracaoControleCartaoPersist);
+        ApiResponse<ConfiguracaoControleCartaoResponse> SalvarConfiguracaoControleCartaoWithHttpInfo (long? id, ConfiguracaoControleCartaoPersist configuracaoControleCartaoPersist);
+        
+        /// <summary>
+        /// Registra o grupo mcc ao cart\u00E3o.
+        /// </summary>
+        /// <remarks>
+        /// Cria o vinculo de grupo mcc com o cart\u00E3o para controle transa\u00E7\u00F5es por grupo de mcc.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <param name="controleCartaoMCCPersist">controleCartaoMCCPersist</param>
+        /// <returns>ControleCartaoGrupoMCCResponse</returns>
+        ControleCartaoGrupoMCCResponse SalvarControleGrupoMccCartao (long? id, ControleCartaoGrupoMCCPersist controleCartaoMCCPersist);
+  
+        /// <summary>
+        /// Registra o grupo mcc ao cart\u00E3o.
+        /// </summary>
+        /// <remarks>
+        /// Cria o vinculo de grupo mcc com o cart\u00E3o para controle transa\u00E7\u00F5es por grupo de mcc.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <param name="controleCartaoMCCPersist">controleCartaoMCCPersist</param>
+        /// <returns>ApiResponse of ControleCartaoGrupoMCCResponse</returns>
+        ApiResponse<ControleCartaoGrupoMCCResponse> SalvarControleGrupoMccCartaoWithHttpInfo (long? id, ControleCartaoGrupoMCCPersist controleCartaoMCCPersist);
         
         #endregion Synchronous Operations
         
@@ -428,6 +532,30 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<ConfiguracaoControleCartaoResponse>> ConsultarConfiguracaoControleCartaoAsyncWithHttpInfo (long? idConfiguracaoCartao, long? id);
         
         /// <summary>
+        /// Exibe todos os mcc de bloqueio vinculado a um cart\u00E3o espec\u00EDfico.
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite consultar a informa\u00E7\u00E3o de todos os mcc que est\u00E3o vinculado a um Cart\u00E3o pelo seu c\u00F3digo de identifica\u00E7\u00E3o (id).
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de controle de grupo MCC do cart\u00E3o.</param>
+        /// <param name="idControleCartaoGrupoMCC">idControleCartaoGrupoMCC</param>
+        /// <returns>Task of ControleCartaoGrupoMCCResponse</returns>
+        System.Threading.Tasks.Task<ControleCartaoGrupoMCCResponse> ConsultarControleGrupoMccCartaoAsync (long? id, long? idControleCartaoGrupoMCC);
+
+        /// <summary>
+        /// Exibe todos os mcc de bloqueio vinculado a um cart\u00E3o espec\u00EDfico.
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite consultar a informa\u00E7\u00E3o de todos os mcc que est\u00E3o vinculado a um Cart\u00E3o pelo seu c\u00F3digo de identifica\u00E7\u00E3o (id).
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de controle de grupo MCC do cart\u00E3o.</param>
+        /// <param name="idControleCartaoGrupoMCC">idControleCartaoGrupoMCC</param>
+        /// <returns>Task of ApiResponse (ControleCartaoGrupoMCCResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ControleCartaoGrupoMCCResponse>> ConsultarControleGrupoMccCartaoAsyncWithHttpInfo (long? id, long? idControleCartaoGrupoMCC);
+        
+        /// <summary>
         /// Deletar uma configura\u00E7\u00E3o de um cart\u00E3o.
         /// </summary>
         /// <remarks>
@@ -450,6 +578,30 @@ namespace Conductor.Pier.Api
         /// <param name="id">id</param>
         /// <returns>Task of ApiResponse (ConfiguracaoControleCartaoResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<ConfiguracaoControleCartaoResponse>> DeletarConfiguracaoControleCartaoAsyncWithHttpInfo (long? idConfiguracaoCartao, long? id);
+        
+        /// <summary>
+        /// Deletar o vinculo do mcc com um cart\u00E3o.
+        /// </summary>
+        /// <remarks>
+        /// O metodo Deleta o vinculo do cart\u00E3o com o grupo MCC, deixando livre para transacionar de qualquer bloqueio para aquele grupo de mcc.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de controle de grupo MCC do cart\u00E3o.</param>
+        /// <param name="idControleCartaoGrupoMCC">idControleCartaoGrupoMCC</param>
+        /// <returns>Task of ControleCartaoGrupoMCCResponse</returns>
+        System.Threading.Tasks.Task<ControleCartaoGrupoMCCResponse> DeletarControleGrupoMccCartaoAsync (long? id, long? idControleCartaoGrupoMCC);
+
+        /// <summary>
+        /// Deletar o vinculo do mcc com um cart\u00E3o.
+        /// </summary>
+        /// <remarks>
+        /// O metodo Deleta o vinculo do cart\u00E3o com o grupo MCC, deixando livre para transacionar de qualquer bloqueio para aquele grupo de mcc.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de controle de grupo MCC do cart\u00E3o.</param>
+        /// <param name="idControleCartaoGrupoMCC">idControleCartaoGrupoMCC</param>
+        /// <returns>Task of ApiResponse (ControleCartaoGrupoMCCResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ControleCartaoGrupoMCCResponse>> DeletarControleGrupoMccCartaoAsyncWithHttpInfo (long? id, long? idControleCartaoGrupoMCC);
         
         /// <summary>
         /// Desativa um controle de limites de um cart\u00E3o
@@ -517,8 +669,9 @@ namespace Conductor.Pier.Api
         /// <param name="permiteEcommerce">Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es ecommerce (optional)</param>
         /// <param name="permiteSaque">Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es de saque (optional)</param>
         /// <param name="permiteWallet">Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es por meio wallet (optional)</param>
+        /// <param name="permiteControleMCC">Indica se o cart\u00E3o est\u00E1 ativo para controle por grupos de MCCs (optional)</param>
         /// <returns>Task of PageConfiguracaoControleCartaoResponse</returns>
-        System.Threading.Tasks.Task<PageConfiguracaoControleCartaoResponse> ListarConfiguracaoControleCartaoAsync (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, int? permiteEcommerce = null, int? permiteSaque = null, int? permiteWallet = null);
+        System.Threading.Tasks.Task<PageConfiguracaoControleCartaoResponse> ListarConfiguracaoControleCartaoAsync (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, bool? permiteEcommerce = null, bool? permiteSaque = null, bool? permiteWallet = null, bool? permiteControleMCC = null);
 
         /// <summary>
         /// Lista os cart\u00F5es configurados pelo remetente
@@ -534,8 +687,39 @@ namespace Conductor.Pier.Api
         /// <param name="permiteEcommerce">Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es ecommerce (optional)</param>
         /// <param name="permiteSaque">Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es de saque (optional)</param>
         /// <param name="permiteWallet">Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es por meio wallet (optional)</param>
+        /// <param name="permiteControleMCC">Indica se o cart\u00E3o est\u00E1 ativo para controle por grupos de MCCs (optional)</param>
         /// <returns>Task of ApiResponse (PageConfiguracaoControleCartaoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageConfiguracaoControleCartaoResponse>> ListarConfiguracaoControleCartaoAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, int? permiteEcommerce = null, int? permiteSaque = null, int? permiteWallet = null);
+        System.Threading.Tasks.Task<ApiResponse<PageConfiguracaoControleCartaoResponse>> ListarConfiguracaoControleCartaoAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, bool? permiteEcommerce = null, bool? permiteSaque = null, bool? permiteWallet = null, bool? permiteControleMCC = null);
+        
+        /// <summary>
+        /// Lista os cart\u00F5es vinculados aos estabelecimentos.
+        /// </summary>
+        /// <remarks>
+        /// Esse m\u00E9todo permite listar os cart\u00F5es registrados respectivamente para grupos MCC.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idCartao">C\u00F3digo Identificador do cartao na base (id) (optional)</param>
+        /// <param name="idGrupoMCC">C\u00F3digo Identificador do grupo mcc na base. (optional)</param>
+        /// <returns>Task of PageControleCartaoGrupoMCCResponse</returns>
+        System.Threading.Tasks.Task<PageControleCartaoGrupoMCCResponse> ListarControleGrupoMccCartaoAsync (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, long? idGrupoMCC = null);
+
+        /// <summary>
+        /// Lista os cart\u00F5es vinculados aos estabelecimentos.
+        /// </summary>
+        /// <remarks>
+        /// Esse m\u00E9todo permite listar os cart\u00F5es registrados respectivamente para grupos MCC.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idCartao">C\u00F3digo Identificador do cartao na base (id) (optional)</param>
+        /// <param name="idGrupoMCC">C\u00F3digo Identificador do grupo mcc na base. (optional)</param>
+        /// <returns>Task of ApiResponse (PageControleCartaoGrupoMCCResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PageControleCartaoGrupoMCCResponse>> ListarControleGrupoMccCartaoAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, long? idGrupoMCC = null);
         
         /// <summary>
         /// Cadastra um controle de limites para um cart\u00E3o
@@ -571,7 +755,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">id</param>
         /// <param name="configuracaoControleCartaoPersist">configuracaoControleCartaoPersist</param>
         /// <returns>Task of ConfiguracaoControleCartaoResponse</returns>
-        System.Threading.Tasks.Task<ConfiguracaoControleCartaoResponse> SalvarConfiguracaoControleCartaoAsync (long? id, ConfiguracaoControleCartao configuracaoControleCartaoPersist);
+        System.Threading.Tasks.Task<ConfiguracaoControleCartaoResponse> SalvarConfiguracaoControleCartaoAsync (long? id, ConfiguracaoControleCartaoPersist configuracaoControleCartaoPersist);
 
         /// <summary>
         /// Registra a configura\u00E7\u00E3o do cart\u00E3o.
@@ -583,7 +767,31 @@ namespace Conductor.Pier.Api
         /// <param name="id">id</param>
         /// <param name="configuracaoControleCartaoPersist">configuracaoControleCartaoPersist</param>
         /// <returns>Task of ApiResponse (ConfiguracaoControleCartaoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ConfiguracaoControleCartaoResponse>> SalvarConfiguracaoControleCartaoAsyncWithHttpInfo (long? id, ConfiguracaoControleCartao configuracaoControleCartaoPersist);
+        System.Threading.Tasks.Task<ApiResponse<ConfiguracaoControleCartaoResponse>> SalvarConfiguracaoControleCartaoAsyncWithHttpInfo (long? id, ConfiguracaoControleCartaoPersist configuracaoControleCartaoPersist);
+        
+        /// <summary>
+        /// Registra o grupo mcc ao cart\u00E3o.
+        /// </summary>
+        /// <remarks>
+        /// Cria o vinculo de grupo mcc com o cart\u00E3o para controle transa\u00E7\u00F5es por grupo de mcc.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <param name="controleCartaoMCCPersist">controleCartaoMCCPersist</param>
+        /// <returns>Task of ControleCartaoGrupoMCCResponse</returns>
+        System.Threading.Tasks.Task<ControleCartaoGrupoMCCResponse> SalvarControleGrupoMccCartaoAsync (long? id, ControleCartaoGrupoMCCPersist controleCartaoMCCPersist);
+
+        /// <summary>
+        /// Registra o grupo mcc ao cart\u00E3o.
+        /// </summary>
+        /// <remarks>
+        /// Cria o vinculo de grupo mcc com o cart\u00E3o para controle transa\u00E7\u00F5es por grupo de mcc.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <param name="controleCartaoMCCPersist">controleCartaoMCCPersist</param>
+        /// <returns>Task of ApiResponse (ControleCartaoGrupoMCCResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ControleCartaoGrupoMCCResponse>> SalvarControleGrupoMccCartaoAsyncWithHttpInfo (long? id, ControleCartaoGrupoMCCPersist controleCartaoMCCPersist);
         
         #endregion Asynchronous Operations
         
@@ -1576,6 +1784,176 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
+        /// Exibe todos os mcc de bloqueio vinculado a um cart\u00E3o espec\u00EDfico. Este m\u00E9todo permite consultar a informa\u00E7\u00E3o de todos os mcc que est\u00E3o vinculado a um Cart\u00E3o pelo seu c\u00F3digo de identifica\u00E7\u00E3o (id).
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de controle de grupo MCC do cart\u00E3o.</param> 
+        /// <param name="idControleCartaoGrupoMCC">idControleCartaoGrupoMCC</param> 
+        /// <returns>ControleCartaoGrupoMCCResponse</returns>
+        public ControleCartaoGrupoMCCResponse ConsultarControleGrupoMccCartao (long? id, long? idControleCartaoGrupoMCC)
+        {
+             ApiResponse<ControleCartaoGrupoMCCResponse> localVarResponse = ConsultarControleGrupoMccCartaoWithHttpInfo(id, idControleCartaoGrupoMCC);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Exibe todos os mcc de bloqueio vinculado a um cart\u00E3o espec\u00EDfico. Este m\u00E9todo permite consultar a informa\u00E7\u00E3o de todos os mcc que est\u00E3o vinculado a um Cart\u00E3o pelo seu c\u00F3digo de identifica\u00E7\u00E3o (id).
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de controle de grupo MCC do cart\u00E3o.</param> 
+        /// <param name="idControleCartaoGrupoMCC">idControleCartaoGrupoMCC</param> 
+        /// <returns>ApiResponse of ControleCartaoGrupoMCCResponse</returns>
+        public ApiResponse< ControleCartaoGrupoMCCResponse > ConsultarControleGrupoMccCartaoWithHttpInfo (long? id, long? idControleCartaoGrupoMCC)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling ControleCartaoApi->ConsultarControleGrupoMccCartao");
+            
+            // verify the required parameter 'idControleCartaoGrupoMCC' is set
+            if (idControleCartaoGrupoMCC == null)
+                throw new ApiException(400, "Missing required parameter 'idControleCartaoGrupoMCC' when calling ControleCartaoApi->ConsultarControleGrupoMccCartao");
+            
+    
+            var localVarPath = "/api/cartoes/{id}/controles-grupomcc/{idControleCartaoGrupoMCC}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (idControleCartaoGrupoMCC != null) localVarPathParams.Add("idControleCartaoGrupoMCC", Configuration.ApiClient.ParameterToString(idControleCartaoGrupoMCC)); // path parameter
+            
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarControleGrupoMccCartao: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarControleGrupoMccCartao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<ControleCartaoGrupoMCCResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ControleCartaoGrupoMCCResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ControleCartaoGrupoMCCResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Exibe todos os mcc de bloqueio vinculado a um cart\u00E3o espec\u00EDfico. Este m\u00E9todo permite consultar a informa\u00E7\u00E3o de todos os mcc que est\u00E3o vinculado a um Cart\u00E3o pelo seu c\u00F3digo de identifica\u00E7\u00E3o (id).
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de controle de grupo MCC do cart\u00E3o.</param>
+        /// <param name="idControleCartaoGrupoMCC">idControleCartaoGrupoMCC</param>
+        /// <returns>Task of ControleCartaoGrupoMCCResponse</returns>
+        public async System.Threading.Tasks.Task<ControleCartaoGrupoMCCResponse> ConsultarControleGrupoMccCartaoAsync (long? id, long? idControleCartaoGrupoMCC)
+        {
+             ApiResponse<ControleCartaoGrupoMCCResponse> localVarResponse = await ConsultarControleGrupoMccCartaoAsyncWithHttpInfo(id, idControleCartaoGrupoMCC);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Exibe todos os mcc de bloqueio vinculado a um cart\u00E3o espec\u00EDfico. Este m\u00E9todo permite consultar a informa\u00E7\u00E3o de todos os mcc que est\u00E3o vinculado a um Cart\u00E3o pelo seu c\u00F3digo de identifica\u00E7\u00E3o (id).
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de controle de grupo MCC do cart\u00E3o.</param>
+        /// <param name="idControleCartaoGrupoMCC">idControleCartaoGrupoMCC</param>
+        /// <returns>Task of ApiResponse (ControleCartaoGrupoMCCResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ControleCartaoGrupoMCCResponse>> ConsultarControleGrupoMccCartaoAsyncWithHttpInfo (long? id, long? idControleCartaoGrupoMCC)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarControleGrupoMccCartao");
+            // verify the required parameter 'idControleCartaoGrupoMCC' is set
+            if (idControleCartaoGrupoMCC == null) throw new ApiException(400, "Missing required parameter 'idControleCartaoGrupoMCC' when calling ConsultarControleGrupoMccCartao");
+            
+    
+            var localVarPath = "/api/cartoes/{id}/controles-grupomcc/{idControleCartaoGrupoMCC}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (idControleCartaoGrupoMCC != null) localVarPathParams.Add("idControleCartaoGrupoMCC", Configuration.ApiClient.ParameterToString(idControleCartaoGrupoMCC)); // path parameter
+            
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarControleGrupoMccCartao: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarControleGrupoMccCartao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ControleCartaoGrupoMCCResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ControleCartaoGrupoMCCResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ControleCartaoGrupoMCCResponse)));
+            
+        }
+        
+        /// <summary>
         /// Deletar uma configura\u00E7\u00E3o de um cart\u00E3o. O metodo Deleta a configura\u00E7\u00E3o que est\u00E1 vinculada ao cart\u00E3o e deixar sem bloqueio nas transa\u00E7\u00F5es relacionadas ao mesmo.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1742,6 +2120,176 @@ namespace Conductor.Pier.Api
             return new ApiResponse<ConfiguracaoControleCartaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ConfiguracaoControleCartaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConfiguracaoControleCartaoResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Deletar o vinculo do mcc com um cart\u00E3o. O metodo Deleta o vinculo do cart\u00E3o com o grupo MCC, deixando livre para transacionar de qualquer bloqueio para aquele grupo de mcc.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de controle de grupo MCC do cart\u00E3o.</param> 
+        /// <param name="idControleCartaoGrupoMCC">idControleCartaoGrupoMCC</param> 
+        /// <returns>ControleCartaoGrupoMCCResponse</returns>
+        public ControleCartaoGrupoMCCResponse DeletarControleGrupoMccCartao (long? id, long? idControleCartaoGrupoMCC)
+        {
+             ApiResponse<ControleCartaoGrupoMCCResponse> localVarResponse = DeletarControleGrupoMccCartaoWithHttpInfo(id, idControleCartaoGrupoMCC);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Deletar o vinculo do mcc com um cart\u00E3o. O metodo Deleta o vinculo do cart\u00E3o com o grupo MCC, deixando livre para transacionar de qualquer bloqueio para aquele grupo de mcc.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de controle de grupo MCC do cart\u00E3o.</param> 
+        /// <param name="idControleCartaoGrupoMCC">idControleCartaoGrupoMCC</param> 
+        /// <returns>ApiResponse of ControleCartaoGrupoMCCResponse</returns>
+        public ApiResponse< ControleCartaoGrupoMCCResponse > DeletarControleGrupoMccCartaoWithHttpInfo (long? id, long? idControleCartaoGrupoMCC)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling ControleCartaoApi->DeletarControleGrupoMccCartao");
+            
+            // verify the required parameter 'idControleCartaoGrupoMCC' is set
+            if (idControleCartaoGrupoMCC == null)
+                throw new ApiException(400, "Missing required parameter 'idControleCartaoGrupoMCC' when calling ControleCartaoApi->DeletarControleGrupoMccCartao");
+            
+    
+            var localVarPath = "/api/cartoes/{id}/controles-grupomcc/{idControleCartaoGrupoMCC}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (idControleCartaoGrupoMCC != null) localVarPathParams.Add("idControleCartaoGrupoMCC", Configuration.ApiClient.ParameterToString(idControleCartaoGrupoMCC)); // path parameter
+            
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeletarControleGrupoMccCartao: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeletarControleGrupoMccCartao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<ControleCartaoGrupoMCCResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ControleCartaoGrupoMCCResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ControleCartaoGrupoMCCResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Deletar o vinculo do mcc com um cart\u00E3o. O metodo Deleta o vinculo do cart\u00E3o com o grupo MCC, deixando livre para transacionar de qualquer bloqueio para aquele grupo de mcc.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de controle de grupo MCC do cart\u00E3o.</param>
+        /// <param name="idControleCartaoGrupoMCC">idControleCartaoGrupoMCC</param>
+        /// <returns>Task of ControleCartaoGrupoMCCResponse</returns>
+        public async System.Threading.Tasks.Task<ControleCartaoGrupoMCCResponse> DeletarControleGrupoMccCartaoAsync (long? id, long? idControleCartaoGrupoMCC)
+        {
+             ApiResponse<ControleCartaoGrupoMCCResponse> localVarResponse = await DeletarControleGrupoMccCartaoAsyncWithHttpInfo(id, idControleCartaoGrupoMCC);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Deletar o vinculo do mcc com um cart\u00E3o. O metodo Deleta o vinculo do cart\u00E3o com o grupo MCC, deixando livre para transacionar de qualquer bloqueio para aquele grupo de mcc.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de controle de grupo MCC do cart\u00E3o.</param>
+        /// <param name="idControleCartaoGrupoMCC">idControleCartaoGrupoMCC</param>
+        /// <returns>Task of ApiResponse (ControleCartaoGrupoMCCResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ControleCartaoGrupoMCCResponse>> DeletarControleGrupoMccCartaoAsyncWithHttpInfo (long? id, long? idControleCartaoGrupoMCC)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling DeletarControleGrupoMccCartao");
+            // verify the required parameter 'idControleCartaoGrupoMCC' is set
+            if (idControleCartaoGrupoMCC == null) throw new ApiException(400, "Missing required parameter 'idControleCartaoGrupoMCC' when calling DeletarControleGrupoMccCartao");
+            
+    
+            var localVarPath = "/api/cartoes/{id}/controles-grupomcc/{idControleCartaoGrupoMCC}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (idControleCartaoGrupoMCC != null) localVarPathParams.Add("idControleCartaoGrupoMCC", Configuration.ApiClient.ParameterToString(idControleCartaoGrupoMCC)); // path parameter
+            
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeletarControleGrupoMccCartao: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeletarControleGrupoMccCartao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ControleCartaoGrupoMCCResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ControleCartaoGrupoMCCResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ControleCartaoGrupoMCCResponse)));
             
         }
         
@@ -2096,10 +2644,11 @@ namespace Conductor.Pier.Api
         /// <param name="permiteEcommerce">Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es ecommerce (optional)</param> 
         /// <param name="permiteSaque">Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es de saque (optional)</param> 
         /// <param name="permiteWallet">Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es por meio wallet (optional)</param> 
+        /// <param name="permiteControleMCC">Indica se o cart\u00E3o est\u00E1 ativo para controle por grupos de MCCs (optional)</param> 
         /// <returns>PageConfiguracaoControleCartaoResponse</returns>
-        public PageConfiguracaoControleCartaoResponse ListarConfiguracaoControleCartao (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, int? permiteEcommerce = null, int? permiteSaque = null, int? permiteWallet = null)
+        public PageConfiguracaoControleCartaoResponse ListarConfiguracaoControleCartao (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, bool? permiteEcommerce = null, bool? permiteSaque = null, bool? permiteWallet = null, bool? permiteControleMCC = null)
         {
-             ApiResponse<PageConfiguracaoControleCartaoResponse> localVarResponse = ListarConfiguracaoControleCartaoWithHttpInfo(sort, page, limit, idCartao, permiteEcommerce, permiteSaque, permiteWallet);
+             ApiResponse<PageConfiguracaoControleCartaoResponse> localVarResponse = ListarConfiguracaoControleCartaoWithHttpInfo(sort, page, limit, idCartao, permiteEcommerce, permiteSaque, permiteWallet, permiteControleMCC);
              return localVarResponse.Data;
         }
 
@@ -2114,8 +2663,9 @@ namespace Conductor.Pier.Api
         /// <param name="permiteEcommerce">Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es ecommerce (optional)</param> 
         /// <param name="permiteSaque">Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es de saque (optional)</param> 
         /// <param name="permiteWallet">Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es por meio wallet (optional)</param> 
+        /// <param name="permiteControleMCC">Indica se o cart\u00E3o est\u00E1 ativo para controle por grupos de MCCs (optional)</param> 
         /// <returns>ApiResponse of PageConfiguracaoControleCartaoResponse</returns>
-        public ApiResponse< PageConfiguracaoControleCartaoResponse > ListarConfiguracaoControleCartaoWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, int? permiteEcommerce = null, int? permiteSaque = null, int? permiteWallet = null)
+        public ApiResponse< PageConfiguracaoControleCartaoResponse > ListarConfiguracaoControleCartaoWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, bool? permiteEcommerce = null, bool? permiteSaque = null, bool? permiteWallet = null, bool? permiteControleMCC = null)
         {
             
     
@@ -2153,6 +2703,7 @@ namespace Conductor.Pier.Api
             if (permiteEcommerce != null) localVarQueryParams.Add("permiteEcommerce", Configuration.ApiClient.ParameterToString(permiteEcommerce)); // query parameter
             if (permiteSaque != null) localVarQueryParams.Add("permiteSaque", Configuration.ApiClient.ParameterToString(permiteSaque)); // query parameter
             if (permiteWallet != null) localVarQueryParams.Add("permiteWallet", Configuration.ApiClient.ParameterToString(permiteWallet)); // query parameter
+            if (permiteControleMCC != null) localVarQueryParams.Add("permiteControleMCC", Configuration.ApiClient.ParameterToString(permiteControleMCC)); // query parameter
             
             
             
@@ -2190,10 +2741,11 @@ namespace Conductor.Pier.Api
         /// <param name="permiteEcommerce">Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es ecommerce (optional)</param>
         /// <param name="permiteSaque">Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es de saque (optional)</param>
         /// <param name="permiteWallet">Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es por meio wallet (optional)</param>
+        /// <param name="permiteControleMCC">Indica se o cart\u00E3o est\u00E1 ativo para controle por grupos de MCCs (optional)</param>
         /// <returns>Task of PageConfiguracaoControleCartaoResponse</returns>
-        public async System.Threading.Tasks.Task<PageConfiguracaoControleCartaoResponse> ListarConfiguracaoControleCartaoAsync (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, int? permiteEcommerce = null, int? permiteSaque = null, int? permiteWallet = null)
+        public async System.Threading.Tasks.Task<PageConfiguracaoControleCartaoResponse> ListarConfiguracaoControleCartaoAsync (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, bool? permiteEcommerce = null, bool? permiteSaque = null, bool? permiteWallet = null, bool? permiteControleMCC = null)
         {
-             ApiResponse<PageConfiguracaoControleCartaoResponse> localVarResponse = await ListarConfiguracaoControleCartaoAsyncWithHttpInfo(sort, page, limit, idCartao, permiteEcommerce, permiteSaque, permiteWallet);
+             ApiResponse<PageConfiguracaoControleCartaoResponse> localVarResponse = await ListarConfiguracaoControleCartaoAsyncWithHttpInfo(sort, page, limit, idCartao, permiteEcommerce, permiteSaque, permiteWallet, permiteControleMCC);
              return localVarResponse.Data;
 
         }
@@ -2209,8 +2761,9 @@ namespace Conductor.Pier.Api
         /// <param name="permiteEcommerce">Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es ecommerce (optional)</param>
         /// <param name="permiteSaque">Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es de saque (optional)</param>
         /// <param name="permiteWallet">Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es por meio wallet (optional)</param>
+        /// <param name="permiteControleMCC">Indica se o cart\u00E3o est\u00E1 ativo para controle por grupos de MCCs (optional)</param>
         /// <returns>Task of ApiResponse (PageConfiguracaoControleCartaoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageConfiguracaoControleCartaoResponse>> ListarConfiguracaoControleCartaoAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, int? permiteEcommerce = null, int? permiteSaque = null, int? permiteWallet = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageConfiguracaoControleCartaoResponse>> ListarConfiguracaoControleCartaoAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, bool? permiteEcommerce = null, bool? permiteSaque = null, bool? permiteWallet = null, bool? permiteControleMCC = null)
         {
             
     
@@ -2248,6 +2801,7 @@ namespace Conductor.Pier.Api
             if (permiteEcommerce != null) localVarQueryParams.Add("permiteEcommerce", Configuration.ApiClient.ParameterToString(permiteEcommerce)); // query parameter
             if (permiteSaque != null) localVarQueryParams.Add("permiteSaque", Configuration.ApiClient.ParameterToString(permiteSaque)); // query parameter
             if (permiteWallet != null) localVarQueryParams.Add("permiteWallet", Configuration.ApiClient.ParameterToString(permiteWallet)); // query parameter
+            if (permiteControleMCC != null) localVarQueryParams.Add("permiteControleMCC", Configuration.ApiClient.ParameterToString(permiteControleMCC)); // query parameter
             
             
             
@@ -2270,6 +2824,182 @@ namespace Conductor.Pier.Api
             return new ApiResponse<PageConfiguracaoControleCartaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (PageConfiguracaoControleCartaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageConfiguracaoControleCartaoResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Lista os cart\u00F5es vinculados aos estabelecimentos. Esse m\u00E9todo permite listar os cart\u00F5es registrados respectivamente para grupos MCC.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="page">P\u00E1gina (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <param name="idCartao">C\u00F3digo Identificador do cartao na base (id) (optional)</param> 
+        /// <param name="idGrupoMCC">C\u00F3digo Identificador do grupo mcc na base. (optional)</param> 
+        /// <returns>PageControleCartaoGrupoMCCResponse</returns>
+        public PageControleCartaoGrupoMCCResponse ListarControleGrupoMccCartao (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, long? idGrupoMCC = null)
+        {
+             ApiResponse<PageControleCartaoGrupoMCCResponse> localVarResponse = ListarControleGrupoMccCartaoWithHttpInfo(sort, page, limit, idCartao, idGrupoMCC);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Lista os cart\u00F5es vinculados aos estabelecimentos. Esse m\u00E9todo permite listar os cart\u00F5es registrados respectivamente para grupos MCC.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="page">P\u00E1gina (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <param name="idCartao">C\u00F3digo Identificador do cartao na base (id) (optional)</param> 
+        /// <param name="idGrupoMCC">C\u00F3digo Identificador do grupo mcc na base. (optional)</param> 
+        /// <returns>ApiResponse of PageControleCartaoGrupoMCCResponse</returns>
+        public ApiResponse< PageControleCartaoGrupoMCCResponse > ListarControleGrupoMccCartaoWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, long? idGrupoMCC = null)
+        {
+            
+    
+            var localVarPath = "/api/cartoes/controles-grupomcc";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (idCartao != null) localVarQueryParams.Add("idCartao", Configuration.ApiClient.ParameterToString(idCartao)); // query parameter
+            if (idGrupoMCC != null) localVarQueryParams.Add("idGrupoMCC", Configuration.ApiClient.ParameterToString(idGrupoMCC)); // query parameter
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarControleGrupoMccCartao: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarControleGrupoMccCartao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<PageControleCartaoGrupoMCCResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageControleCartaoGrupoMCCResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageControleCartaoGrupoMCCResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Lista os cart\u00F5es vinculados aos estabelecimentos. Esse m\u00E9todo permite listar os cart\u00F5es registrados respectivamente para grupos MCC.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idCartao">C\u00F3digo Identificador do cartao na base (id) (optional)</param>
+        /// <param name="idGrupoMCC">C\u00F3digo Identificador do grupo mcc na base. (optional)</param>
+        /// <returns>Task of PageControleCartaoGrupoMCCResponse</returns>
+        public async System.Threading.Tasks.Task<PageControleCartaoGrupoMCCResponse> ListarControleGrupoMccCartaoAsync (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, long? idGrupoMCC = null)
+        {
+             ApiResponse<PageControleCartaoGrupoMCCResponse> localVarResponse = await ListarControleGrupoMccCartaoAsyncWithHttpInfo(sort, page, limit, idCartao, idGrupoMCC);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Lista os cart\u00F5es vinculados aos estabelecimentos. Esse m\u00E9todo permite listar os cart\u00F5es registrados respectivamente para grupos MCC.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idCartao">C\u00F3digo Identificador do cartao na base (id) (optional)</param>
+        /// <param name="idGrupoMCC">C\u00F3digo Identificador do grupo mcc na base. (optional)</param>
+        /// <returns>Task of ApiResponse (PageControleCartaoGrupoMCCResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PageControleCartaoGrupoMCCResponse>> ListarControleGrupoMccCartaoAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, long? idGrupoMCC = null)
+        {
+            
+    
+            var localVarPath = "/api/cartoes/controles-grupomcc";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (idCartao != null) localVarQueryParams.Add("idCartao", Configuration.ApiClient.ParameterToString(idCartao)); // query parameter
+            if (idGrupoMCC != null) localVarQueryParams.Add("idGrupoMCC", Configuration.ApiClient.ParameterToString(idGrupoMCC)); // query parameter
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarControleGrupoMccCartao: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarControleGrupoMccCartao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PageControleCartaoGrupoMCCResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageControleCartaoGrupoMCCResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageControleCartaoGrupoMCCResponse)));
             
         }
         
@@ -2462,7 +3192,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">id</param> 
         /// <param name="configuracaoControleCartaoPersist">configuracaoControleCartaoPersist</param> 
         /// <returns>ConfiguracaoControleCartaoResponse</returns>
-        public ConfiguracaoControleCartaoResponse SalvarConfiguracaoControleCartao (long? id, ConfiguracaoControleCartao configuracaoControleCartaoPersist)
+        public ConfiguracaoControleCartaoResponse SalvarConfiguracaoControleCartao (long? id, ConfiguracaoControleCartaoPersist configuracaoControleCartaoPersist)
         {
              ApiResponse<ConfiguracaoControleCartaoResponse> localVarResponse = SalvarConfiguracaoControleCartaoWithHttpInfo(id, configuracaoControleCartaoPersist);
              return localVarResponse.Data;
@@ -2475,7 +3205,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">id</param> 
         /// <param name="configuracaoControleCartaoPersist">configuracaoControleCartaoPersist</param> 
         /// <returns>ApiResponse of ConfiguracaoControleCartaoResponse</returns>
-        public ApiResponse< ConfiguracaoControleCartaoResponse > SalvarConfiguracaoControleCartaoWithHttpInfo (long? id, ConfiguracaoControleCartao configuracaoControleCartaoPersist)
+        public ApiResponse< ConfiguracaoControleCartaoResponse > SalvarConfiguracaoControleCartaoWithHttpInfo (long? id, ConfiguracaoControleCartaoPersist configuracaoControleCartaoPersist)
         {
             
             // verify the required parameter 'id' is set
@@ -2555,7 +3285,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">id</param>
         /// <param name="configuracaoControleCartaoPersist">configuracaoControleCartaoPersist</param>
         /// <returns>Task of ConfiguracaoControleCartaoResponse</returns>
-        public async System.Threading.Tasks.Task<ConfiguracaoControleCartaoResponse> SalvarConfiguracaoControleCartaoAsync (long? id, ConfiguracaoControleCartao configuracaoControleCartaoPersist)
+        public async System.Threading.Tasks.Task<ConfiguracaoControleCartaoResponse> SalvarConfiguracaoControleCartaoAsync (long? id, ConfiguracaoControleCartaoPersist configuracaoControleCartaoPersist)
         {
              ApiResponse<ConfiguracaoControleCartaoResponse> localVarResponse = await SalvarConfiguracaoControleCartaoAsyncWithHttpInfo(id, configuracaoControleCartaoPersist);
              return localVarResponse.Data;
@@ -2569,7 +3299,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">id</param>
         /// <param name="configuracaoControleCartaoPersist">configuracaoControleCartaoPersist</param>
         /// <returns>Task of ApiResponse (ConfiguracaoControleCartaoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ConfiguracaoControleCartaoResponse>> SalvarConfiguracaoControleCartaoAsyncWithHttpInfo (long? id, ConfiguracaoControleCartao configuracaoControleCartaoPersist)
+        public async System.Threading.Tasks.Task<ApiResponse<ConfiguracaoControleCartaoResponse>> SalvarConfiguracaoControleCartaoAsyncWithHttpInfo (long? id, ConfiguracaoControleCartaoPersist configuracaoControleCartaoPersist)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling SalvarConfiguracaoControleCartao");
@@ -2634,6 +3364,188 @@ namespace Conductor.Pier.Api
             return new ApiResponse<ConfiguracaoControleCartaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ConfiguracaoControleCartaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConfiguracaoControleCartaoResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Registra o grupo mcc ao cart\u00E3o. Cria o vinculo de grupo mcc com o cart\u00E3o para controle transa\u00E7\u00F5es por grupo de mcc.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param> 
+        /// <param name="controleCartaoMCCPersist">controleCartaoMCCPersist</param> 
+        /// <returns>ControleCartaoGrupoMCCResponse</returns>
+        public ControleCartaoGrupoMCCResponse SalvarControleGrupoMccCartao (long? id, ControleCartaoGrupoMCCPersist controleCartaoMCCPersist)
+        {
+             ApiResponse<ControleCartaoGrupoMCCResponse> localVarResponse = SalvarControleGrupoMccCartaoWithHttpInfo(id, controleCartaoMCCPersist);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Registra o grupo mcc ao cart\u00E3o. Cria o vinculo de grupo mcc com o cart\u00E3o para controle transa\u00E7\u00F5es por grupo de mcc.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param> 
+        /// <param name="controleCartaoMCCPersist">controleCartaoMCCPersist</param> 
+        /// <returns>ApiResponse of ControleCartaoGrupoMCCResponse</returns>
+        public ApiResponse< ControleCartaoGrupoMCCResponse > SalvarControleGrupoMccCartaoWithHttpInfo (long? id, ControleCartaoGrupoMCCPersist controleCartaoMCCPersist)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling ControleCartaoApi->SalvarControleGrupoMccCartao");
+            
+            // verify the required parameter 'controleCartaoMCCPersist' is set
+            if (controleCartaoMCCPersist == null)
+                throw new ApiException(400, "Missing required parameter 'controleCartaoMCCPersist' when calling ControleCartaoApi->SalvarControleGrupoMccCartao");
+            
+    
+            var localVarPath = "/api/cartoes/{id}/controles-grupomcc";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            if (controleCartaoMCCPersist.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(controleCartaoMCCPersist); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = controleCartaoMCCPersist; // byte array
+            }
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarControleGrupoMccCartao: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarControleGrupoMccCartao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<ControleCartaoGrupoMCCResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ControleCartaoGrupoMCCResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ControleCartaoGrupoMCCResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Registra o grupo mcc ao cart\u00E3o. Cria o vinculo de grupo mcc com o cart\u00E3o para controle transa\u00E7\u00F5es por grupo de mcc.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <param name="controleCartaoMCCPersist">controleCartaoMCCPersist</param>
+        /// <returns>Task of ControleCartaoGrupoMCCResponse</returns>
+        public async System.Threading.Tasks.Task<ControleCartaoGrupoMCCResponse> SalvarControleGrupoMccCartaoAsync (long? id, ControleCartaoGrupoMCCPersist controleCartaoMCCPersist)
+        {
+             ApiResponse<ControleCartaoGrupoMCCResponse> localVarResponse = await SalvarControleGrupoMccCartaoAsyncWithHttpInfo(id, controleCartaoMCCPersist);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Registra o grupo mcc ao cart\u00E3o. Cria o vinculo de grupo mcc com o cart\u00E3o para controle transa\u00E7\u00F5es por grupo de mcc.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <param name="controleCartaoMCCPersist">controleCartaoMCCPersist</param>
+        /// <returns>Task of ApiResponse (ControleCartaoGrupoMCCResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ControleCartaoGrupoMCCResponse>> SalvarControleGrupoMccCartaoAsyncWithHttpInfo (long? id, ControleCartaoGrupoMCCPersist controleCartaoMCCPersist)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling SalvarControleGrupoMccCartao");
+            // verify the required parameter 'controleCartaoMCCPersist' is set
+            if (controleCartaoMCCPersist == null) throw new ApiException(400, "Missing required parameter 'controleCartaoMCCPersist' when calling SalvarControleGrupoMccCartao");
+            
+    
+            var localVarPath = "/api/cartoes/{id}/controles-grupomcc";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            if (controleCartaoMCCPersist.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(controleCartaoMCCPersist); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = controleCartaoMCCPersist; // byte array
+            }
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarControleGrupoMccCartao: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarControleGrupoMccCartao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ControleCartaoGrupoMCCResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ControleCartaoGrupoMCCResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ControleCartaoGrupoMCCResponse)));
             
         }
         

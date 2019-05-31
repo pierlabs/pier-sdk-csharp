@@ -12,23 +12,23 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// RefenciaAprovadoPersist
+    /// Objeto de persist\u00EAncia da refer\u00EAncia comercial da pessoa aprovada
     /// </summary>
     [DataContract]
-    public partial class RefenciaComercialAprovadoPersist :  IEquatable<RefenciaComercialAprovadoPersist>
+    public partial class ReferenciaComercialAprovadoPersist :  IEquatable<ReferenciaComercialAprovadoPersist>
     { 
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="RefenciaComercialAprovadoPersist" /> class.
-        /// Initializes a new instance of the <see cref="RefenciaComercialAprovadoPersist" />class.
+        /// Initializes a new instance of the <see cref="ReferenciaComercialAprovadoPersist" /> class.
+        /// Initializes a new instance of the <see cref="ReferenciaComercialAprovadoPersist" />class.
         /// </summary>
-        /// <param name="RazaoSocial">Apresenta o nome completo da raz\u00E3o social da refer\u00EAncia comercial (nome empresarial).</param>
+        /// <param name="RazaoSocial">Nome completo da raz\u00E3o social da refer\u00EAncia comercial. Nome empresarial.</param>
         /// <param name="NomeContrato">Nome do respons\u00E1vel pela refer\u00EAncia comercial.</param>
-        /// <param name="Ddd">DDD do n\u00FAmero telefone.</param>
-        /// <param name="Telefone">n\u00FAmero do telefone da refer\u00EAncia comercial.</param>
+        /// <param name="Ddd">DDD do contato da refer\u00EAncia comercial.</param>
+        /// <param name="Telefone">N\u00FAmero do telefone da refer\u00EAncia comercial.</param>
         /// <param name="Email">E-mail da refer\u00EAncia comercial.</param>
 
-        public RefenciaComercialAprovadoPersist(string RazaoSocial = null, string NomeContrato = null, string Ddd = null, string Telefone = null, string Email = null)
+        public ReferenciaComercialAprovadoPersist(string RazaoSocial = null, string NomeContrato = null, string Ddd = null, string Telefone = null, string Email = null)
         {
             this.RazaoSocial = RazaoSocial;
             this.NomeContrato = NomeContrato;
@@ -40,9 +40,9 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Apresenta o nome completo da raz\u00E3o social da refer\u00EAncia comercial (nome empresarial)
+        /// Nome completo da raz\u00E3o social da refer\u00EAncia comercial. Nome empresarial
         /// </summary>
-        /// <value>Apresenta o nome completo da raz\u00E3o social da refer\u00EAncia comercial (nome empresarial)</value>
+        /// <value>Nome completo da raz\u00E3o social da refer\u00EAncia comercial. Nome empresarial</value>
         [DataMember(Name="razaoSocial", EmitDefaultValue=false)]
         public string RazaoSocial { get; set; }
     
@@ -54,16 +54,16 @@ namespace Conductor.Pier.Model
         public string NomeContrato { get; set; }
     
         /// <summary>
-        /// DDD do n\u00FAmero telefone
+        /// DDD do contato da refer\u00EAncia comercial
         /// </summary>
-        /// <value>DDD do n\u00FAmero telefone</value>
+        /// <value>DDD do contato da refer\u00EAncia comercial</value>
         [DataMember(Name="ddd", EmitDefaultValue=false)]
         public string Ddd { get; set; }
     
         /// <summary>
-        /// n\u00FAmero do telefone da refer\u00EAncia comercial
+        /// N\u00FAmero do telefone da refer\u00EAncia comercial
         /// </summary>
-        /// <value>n\u00FAmero do telefone da refer\u00EAncia comercial</value>
+        /// <value>N\u00FAmero do telefone da refer\u00EAncia comercial</value>
         [DataMember(Name="telefone", EmitDefaultValue=false)]
         public string Telefone { get; set; }
     
@@ -81,7 +81,7 @@ namespace Conductor.Pier.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class RefenciaComercialAprovadoPersist {\n");
+            sb.Append("class ReferenciaComercialAprovadoPersist {\n");
             sb.Append("  RazaoSocial: ").Append(RazaoSocial).Append("\n");
             sb.Append("  NomeContrato: ").Append(NomeContrato).Append("\n");
             sb.Append("  Ddd: ").Append(Ddd).Append("\n");
@@ -109,15 +109,15 @@ namespace Conductor.Pier.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as RefenciaComercialAprovadoPersist);
+            return this.Equals(obj as ReferenciaComercialAprovadoPersist);
         }
 
         /// <summary>
-        /// Returns true if RefenciaComercialAprovadoPersist instances are equal
+        /// Returns true if ReferenciaComercialAprovadoPersist instances are equal
         /// </summary>
-        /// <param name="other">Instance of RefenciaComercialAprovadoPersist to be compared</param>
+        /// <param name="other">Instance of ReferenciaComercialAprovadoPersist to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(RefenciaComercialAprovadoPersist other)
+        public bool Equals(ReferenciaComercialAprovadoPersist other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

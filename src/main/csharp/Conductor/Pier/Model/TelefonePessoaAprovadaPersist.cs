@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Objeto Telefone Pessoa Aprovada
+    /// Objeto de persist\u00EAncia do telefone da pessoa aprovada
     /// </summary>
     [DataContract]
     public partial class TelefonePessoaAprovadaPersist :  IEquatable<TelefonePessoaAprovadaPersist>
@@ -22,8 +22,8 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TelefonePessoaAprovadaPersist" /> class.
         /// Initializes a new instance of the <see cref="TelefonePessoaAprovadaPersist" />class.
         /// </summary>
-        /// <param name="IdTipoTelefone">C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone (id) (required).</param>
-        /// <param name="Ddd">C\u00F3digo DDD do telefone (required).</param>
+        /// <param name="IdTipoTelefone">C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone (required).</param>
+        /// <param name="Ddd">C\u00F3digo de Discagem Direta \u00E0 Dist\u00E2ncia do telefone (required).</param>
         /// <param name="Telefone">N\u00FAmero do telefone (required).</param>
         /// <param name="Ramal">N\u00FAmero do ramal.</param>
 
@@ -62,16 +62,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone (id)
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone
         /// </summary>
-        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone (id)</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Tipo do Telefone</value>
         [DataMember(Name="idTipoTelefone", EmitDefaultValue=false)]
         public long? IdTipoTelefone { get; set; }
     
         /// <summary>
-        /// C\u00F3digo DDD do telefone
+        /// C\u00F3digo de Discagem Direta \u00E0 Dist\u00E2ncia do telefone
         /// </summary>
-        /// <value>C\u00F3digo DDD do telefone</value>
+        /// <value>C\u00F3digo de Discagem Direta \u00E0 Dist\u00E2ncia do telefone</value>
         [DataMember(Name="ddd", EmitDefaultValue=false)]
         public string Ddd { get; set; }
     

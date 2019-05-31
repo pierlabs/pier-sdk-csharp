@@ -733,9 +733,9 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)</param>
-        /// <param name="senha">Senha para ser validada</param>
+        /// <param name="senhaDTO">Representa o DTO de senha para usu\u00E1rio</param>
         /// <returns>ValidaSenhaCartaoResponse</returns>
-        ValidaSenhaCartaoResponse ValidarSenha (long? id, string senha);
+        ValidaSenhaCartaoResponse ValidarSenha (long? id, SenhaDTO senhaDTO);
   
         /// <summary>
         /// Permite validar a senha de um Cart\u00E3o
@@ -745,9 +745,9 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)</param>
-        /// <param name="senha">Senha para ser validada</param>
+        /// <param name="senhaDTO">Representa o DTO de senha para usu\u00E1rio</param>
         /// <returns>ApiResponse of ValidaSenhaCartaoResponse</returns>
-        ApiResponse<ValidaSenhaCartaoResponse> ValidarSenhaWithHttpInfo (long? id, string senha);
+        ApiResponse<ValidaSenhaCartaoResponse> ValidarSenhaWithHttpInfo (long? id, SenhaDTO senhaDTO);
         
         /// <summary>
         /// Permite validar um Cart\u00E3o Bandeirado a partir da Tarja
@@ -1495,9 +1495,9 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)</param>
-        /// <param name="senha">Senha para ser validada</param>
+        /// <param name="senhaDTO">Representa o DTO de senha para usu\u00E1rio</param>
         /// <returns>Task of ValidaSenhaCartaoResponse</returns>
-        System.Threading.Tasks.Task<ValidaSenhaCartaoResponse> ValidarSenhaAsync (long? id, string senha);
+        System.Threading.Tasks.Task<ValidaSenhaCartaoResponse> ValidarSenhaAsync (long? id, SenhaDTO senhaDTO);
 
         /// <summary>
         /// Permite validar a senha de um Cart\u00E3o
@@ -1507,9 +1507,9 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)</param>
-        /// <param name="senha">Senha para ser validada</param>
+        /// <param name="senhaDTO">Representa o DTO de senha para usu\u00E1rio</param>
         /// <returns>Task of ApiResponse (ValidaSenhaCartaoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ValidaSenhaCartaoResponse>> ValidarSenhaAsyncWithHttpInfo (long? id, string senha);
+        System.Threading.Tasks.Task<ApiResponse<ValidaSenhaCartaoResponse>> ValidarSenhaAsyncWithHttpInfo (long? id, SenhaDTO senhaDTO);
         
         /// <summary>
         /// Permite validar um Cart\u00E3o Bandeirado a partir da Tarja
@@ -6362,11 +6362,11 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)</param> 
-        /// <param name="senha">Senha para ser validada</param> 
+        /// <param name="senhaDTO">Representa o DTO de senha para usu\u00E1rio</param> 
         /// <returns>ValidaSenhaCartaoResponse</returns>
-        public ValidaSenhaCartaoResponse ValidarSenha (long? id, string senha)
+        public ValidaSenhaCartaoResponse ValidarSenha (long? id, SenhaDTO senhaDTO)
         {
-             ApiResponse<ValidaSenhaCartaoResponse> localVarResponse = ValidarSenhaWithHttpInfo(id, senha);
+             ApiResponse<ValidaSenhaCartaoResponse> localVarResponse = ValidarSenhaWithHttpInfo(id, senhaDTO);
              return localVarResponse.Data;
         }
 
@@ -6375,18 +6375,18 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)</param> 
-        /// <param name="senha">Senha para ser validada</param> 
+        /// <param name="senhaDTO">Representa o DTO de senha para usu\u00E1rio</param> 
         /// <returns>ApiResponse of ValidaSenhaCartaoResponse</returns>
-        public ApiResponse< ValidaSenhaCartaoResponse > ValidarSenhaWithHttpInfo (long? id, string senha)
+        public ApiResponse< ValidaSenhaCartaoResponse > ValidarSenhaWithHttpInfo (long? id, SenhaDTO senhaDTO)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling CartaoApi->ValidarSenha");
             
-            // verify the required parameter 'senha' is set
-            if (senha == null)
-                throw new ApiException(400, "Missing required parameter 'senha' when calling CartaoApi->ValidarSenha");
+            // verify the required parameter 'senhaDTO' is set
+            if (senhaDTO == null)
+                throw new ApiException(400, "Missing required parameter 'senhaDTO' when calling CartaoApi->ValidarSenha");
             
     
             var localVarPath = "/api/cartoes/{id}/validar-senha";
@@ -6400,7 +6400,7 @@ namespace Conductor.Pier.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
+                "application/json", "application/x-www-form-urlencoded"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -6418,16 +6418,22 @@ namespace Conductor.Pier.Api
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             
             
-            if (senha != null) localVarHeaderParams.Add("senha", Configuration.ApiClient.ParameterToString(senha)); // header parameter
             
             
-            
+            if (senhaDTO.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(senhaDTO); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = senhaDTO; // byte array
+            }
 
             
     
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
@@ -6449,11 +6455,11 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)</param>
-        /// <param name="senha">Senha para ser validada</param>
+        /// <param name="senhaDTO">Representa o DTO de senha para usu\u00E1rio</param>
         /// <returns>Task of ValidaSenhaCartaoResponse</returns>
-        public async System.Threading.Tasks.Task<ValidaSenhaCartaoResponse> ValidarSenhaAsync (long? id, string senha)
+        public async System.Threading.Tasks.Task<ValidaSenhaCartaoResponse> ValidarSenhaAsync (long? id, SenhaDTO senhaDTO)
         {
-             ApiResponse<ValidaSenhaCartaoResponse> localVarResponse = await ValidarSenhaAsyncWithHttpInfo(id, senha);
+             ApiResponse<ValidaSenhaCartaoResponse> localVarResponse = await ValidarSenhaAsyncWithHttpInfo(id, senhaDTO);
              return localVarResponse.Data;
 
         }
@@ -6463,14 +6469,14 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)</param>
-        /// <param name="senha">Senha para ser validada</param>
+        /// <param name="senhaDTO">Representa o DTO de senha para usu\u00E1rio</param>
         /// <returns>Task of ApiResponse (ValidaSenhaCartaoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ValidaSenhaCartaoResponse>> ValidarSenhaAsyncWithHttpInfo (long? id, string senha)
+        public async System.Threading.Tasks.Task<ApiResponse<ValidaSenhaCartaoResponse>> ValidarSenhaAsyncWithHttpInfo (long? id, SenhaDTO senhaDTO)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ValidarSenha");
-            // verify the required parameter 'senha' is set
-            if (senha == null) throw new ApiException(400, "Missing required parameter 'senha' when calling ValidarSenha");
+            // verify the required parameter 'senhaDTO' is set
+            if (senhaDTO == null) throw new ApiException(400, "Missing required parameter 'senhaDTO' when calling ValidarSenha");
             
     
             var localVarPath = "/api/cartoes/{id}/validar-senha";
@@ -6484,7 +6490,7 @@ namespace Conductor.Pier.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
+                "application/json", "application/x-www-form-urlencoded"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -6502,16 +6508,22 @@ namespace Conductor.Pier.Api
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             
             
-            if (senha != null) localVarHeaderParams.Add("senha", Configuration.ApiClient.ParameterToString(senha)); // header parameter
             
             
-            
+            if (senhaDTO.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(senhaDTO); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = senhaDTO; // byte array
+            }
 
             
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;

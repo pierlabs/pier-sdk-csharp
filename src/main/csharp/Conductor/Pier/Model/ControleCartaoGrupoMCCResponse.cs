@@ -12,48 +12,49 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Realiza a atribui\u00E7\u00E3o de um cart\u00E3o pr\u00E9-pago a uma conta.
+    /// Representa\u00E7\u00E3o para resposta de dados de Controle de cart\u00E3o por Grupo MCC.
     /// </summary>
     [DataContract]
-    public partial class ContaAtribuirCartaoPrePagoRequest :  IEquatable<ContaAtribuirCartaoPrePagoRequest>
+    public partial class ControleCartaoGrupoMCCResponse :  IEquatable<ControleCartaoGrupoMCCResponse>
     { 
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="ContaAtribuirCartaoPrePagoRequest" /> class.
-        /// Initializes a new instance of the <see cref="ContaAtribuirCartaoPrePagoRequest" />class.
+        /// Initializes a new instance of the <see cref="ControleCartaoGrupoMCCResponse" /> class.
+        /// Initializes a new instance of the <see cref="ControleCartaoGrupoMCCResponse" />class.
         /// </summary>
-        /// <param name="IdCartao">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id). (required).</param>
-        /// <param name="IdPessoaFisica">C\u00F3digo de Identifica\u00E7\u00E3o do Portador (id)..</param>
+        /// <param name="Id">C\u00F3digo Identificador do controle do cart\u00E3o na base (id).</param>
+        /// <param name="IdCartao">C\u00F3digo Identificador do cart\u00E3o na base..</param>
+        /// <param name="IdGrupoMCC">C\u00F3digo Identificador do grupo mcc na base..</param>
 
-        public ContaAtribuirCartaoPrePagoRequest(long? IdCartao = null, long? IdPessoaFisica = null)
+        public ControleCartaoGrupoMCCResponse(long? Id = null, long? IdCartao = null, long? IdGrupoMCC = null)
         {
-            // to ensure "IdCartao" is required (not null)
-            if (IdCartao == null)
-            {
-                throw new InvalidDataException("IdCartao is a required property for ContaAtribuirCartaoPrePagoRequest and cannot be null");
-            }
-            else
-            {
-                this.IdCartao = IdCartao;
-            }
-            this.IdPessoaFisica = IdPessoaFisica;
+            this.Id = Id;
+            this.IdCartao = IdCartao;
+            this.IdGrupoMCC = IdGrupoMCC;
             
         }
         
     
         /// <summary>
-        /// C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).
+        /// C\u00F3digo Identificador do controle do cart\u00E3o na base (id)
         /// </summary>
-        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id).</value>
+        /// <value>C\u00F3digo Identificador do controle do cart\u00E3o na base (id)</value>
+        [DataMember(Name="id", EmitDefaultValue=false)]
+        public long? Id { get; set; }
+    
+        /// <summary>
+        /// C\u00F3digo Identificador do cart\u00E3o na base.
+        /// </summary>
+        /// <value>C\u00F3digo Identificador do cart\u00E3o na base.</value>
         [DataMember(Name="idCartao", EmitDefaultValue=false)]
         public long? IdCartao { get; set; }
     
         /// <summary>
-        /// C\u00F3digo de Identifica\u00E7\u00E3o do Portador (id).
+        /// C\u00F3digo Identificador do grupo mcc na base.
         /// </summary>
-        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Portador (id).</value>
-        [DataMember(Name="idPessoaFisica", EmitDefaultValue=false)]
-        public long? IdPessoaFisica { get; set; }
+        /// <value>C\u00F3digo Identificador do grupo mcc na base.</value>
+        [DataMember(Name="idGrupoMCC", EmitDefaultValue=false)]
+        public long? IdGrupoMCC { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -62,9 +63,10 @@ namespace Conductor.Pier.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ContaAtribuirCartaoPrePagoRequest {\n");
+            sb.Append("class ControleCartaoGrupoMCCResponse {\n");
+            sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  IdCartao: ").Append(IdCartao).Append("\n");
-            sb.Append("  IdPessoaFisica: ").Append(IdPessoaFisica).Append("\n");
+            sb.Append("  IdGrupoMCC: ").Append(IdGrupoMCC).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -87,15 +89,15 @@ namespace Conductor.Pier.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as ContaAtribuirCartaoPrePagoRequest);
+            return this.Equals(obj as ControleCartaoGrupoMCCResponse);
         }
 
         /// <summary>
-        /// Returns true if ContaAtribuirCartaoPrePagoRequest instances are equal
+        /// Returns true if ControleCartaoGrupoMCCResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of ContaAtribuirCartaoPrePagoRequest to be compared</param>
+        /// <param name="other">Instance of ControleCartaoGrupoMCCResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ContaAtribuirCartaoPrePagoRequest other)
+        public bool Equals(ControleCartaoGrupoMCCResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -103,14 +105,19 @@ namespace Conductor.Pier.Model
 
             return 
                 (
+                    this.Id == other.Id ||
+                    this.Id != null &&
+                    this.Id.Equals(other.Id)
+                ) && 
+                (
                     this.IdCartao == other.IdCartao ||
                     this.IdCartao != null &&
                     this.IdCartao.Equals(other.IdCartao)
                 ) && 
                 (
-                    this.IdPessoaFisica == other.IdPessoaFisica ||
-                    this.IdPessoaFisica != null &&
-                    this.IdPessoaFisica.Equals(other.IdPessoaFisica)
+                    this.IdGrupoMCC == other.IdGrupoMCC ||
+                    this.IdGrupoMCC != null &&
+                    this.IdGrupoMCC.Equals(other.IdGrupoMCC)
                 );
         }
 
@@ -126,11 +133,14 @@ namespace Conductor.Pier.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
+                if (this.Id != null)
+                    hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.IdCartao != null)
                     hash = hash * 59 + this.IdCartao.GetHashCode();
                 
-                if (this.IdPessoaFisica != null)
-                    hash = hash * 59 + this.IdPessoaFisica.GetHashCode();
+                if (this.IdGrupoMCC != null)
+                    hash = hash * 59 + this.IdGrupoMCC.GetHashCode();
                 
                 return hash;
             }

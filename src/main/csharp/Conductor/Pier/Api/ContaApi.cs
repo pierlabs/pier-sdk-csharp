@@ -58,6 +58,30 @@ namespace Conductor.Pier.Api
         ApiResponse<AjusteFinanceiroResponse> AjustarContaWithHttpInfo (long? id, long? idTipoAjuste, string dataAjuste, double? valorAjuste, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null, bool? flagAtendimento = null, string mensagemAtendimento = null);
         
         /// <summary>
+        /// Altera parcialmente um controle de uma subconta
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite atualizar parcialmente um controle de subconta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o. O controle de subconta serve para registrar informa\u00E7\u00F5es adicionais da subconta como apelido, prop\u00F3sito da cria\u00E7\u00E3o da subconta e se ela pode ser gerenciada pela pr\u00F3pria subconta ou apenas pela conta pai.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo identificador do controle de subconta (id)</param>
+        /// <param name="controleSubcontaUpdate">controleSubcontaUpdate</param>
+        /// <returns>ControleSubcontaResponse</returns>
+        ControleSubcontaResponse AlterarParcialControlesSubcontas (long? id, ControleSubcontaUpdate controleSubcontaUpdate);
+  
+        /// <summary>
+        /// Altera parcialmente um controle de uma subconta
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite atualizar parcialmente um controle de subconta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o. O controle de subconta serve para registrar informa\u00E7\u00F5es adicionais da subconta como apelido, prop\u00F3sito da cria\u00E7\u00E3o da subconta e se ela pode ser gerenciada pela pr\u00F3pria subconta ou apenas pela conta pai.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo identificador do controle de subconta (id)</param>
+        /// <param name="controleSubcontaUpdate">controleSubcontaUpdate</param>
+        /// <returns>ApiResponse of ControleSubcontaResponse</returns>
+        ApiResponse<ControleSubcontaResponse> AlterarParcialControlesSubcontasWithHttpInfo (long? id, ControleSubcontaUpdate controleSubcontaUpdate);
+        
+        /// <summary>
         /// Altera o produto associado \u00E0 conta
         /// </summary>
         /// <remarks>
@@ -145,8 +169,9 @@ namespace Conductor.Pier.Api
         /// <param name="celular">N\u00FAmero do celular (optional)</param>
         /// <param name="idOperadora">Identificador da operadora do celular (optional)</param>
         /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param>
+        /// <param name="colaborador">Matr\u00EDcula do colaborador (optional)</param>
         /// <returns>Object</returns>
-        Object AtivarAnuidade (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null);
+        Object AtivarAnuidade (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null, string colaborador = null);
   
         /// <summary>
         /// Atribuir Anuidade
@@ -164,8 +189,9 @@ namespace Conductor.Pier.Api
         /// <param name="celular">N\u00FAmero do celular (optional)</param>
         /// <param name="idOperadora">Identificador da operadora do celular (optional)</param>
         /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param>
+        /// <param name="colaborador">Matr\u00EDcula do colaborador (optional)</param>
         /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> AtivarAnuidadeWithHttpInfo (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null);
+        ApiResponse<Object> AtivarAnuidadeWithHttpInfo (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null, string colaborador = null);
         
         /// <summary>
         /// Ativa o servi\u00E7o de envio de fatura por email
@@ -524,6 +550,28 @@ namespace Conductor.Pier.Api
         ApiResponse<BoletoResponse> ConsultarBoletoEmitidoWithHttpInfo (long? id);
         
         /// <summary>
+        /// Apresenta o controle de uma subconta
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite consultar um controle de subconta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o. O controle de subconta serve para registrar informa\u00E7\u00F5es adicionais da subconta como apelido, prop\u00F3sito da cria\u00E7\u00E3o da subconta e se ela pode ser gerenciada pela pr\u00F3pria subconta ou apenas pela conta pai.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo identificador do controle de subconta (id)</param>
+        /// <returns>ControleSubcontaResponse</returns>
+        ControleSubcontaResponse ConsultarControlesSubcontas (long? id);
+  
+        /// <summary>
+        /// Apresenta o controle de uma subconta
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite consultar um controle de subconta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o. O controle de subconta serve para registrar informa\u00E7\u00F5es adicionais da subconta como apelido, prop\u00F3sito da cria\u00E7\u00E3o da subconta e se ela pode ser gerenciada pela pr\u00F3pria subconta ou apenas pela conta pai.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo identificador do controle de subconta (id)</param>
+        /// <returns>ApiResponse of ControleSubcontaResponse</returns>
+        ApiResponse<ControleSubcontaResponse> ConsultarControlesSubcontasWithHttpInfo (long? id);
+        
+        /// <summary>
         /// Consulta a d\u00EDvida atualizada do cliente
         /// </summary>
         /// <remarks>
@@ -610,6 +658,30 @@ namespace Conductor.Pier.Api
         ApiResponse<TransacoesCorrentesResponse> ConsultarProcessadaWithHttpInfo (long? id, long? idTransacao);
         
         /// <summary>
+        /// Consulta a quita\u00E7\u00E3o de d\u00E9bitos do portador no ano referente
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite consultar a quita\u00E7\u00E3o de d\u00E9bitos do portador no ano referente
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta</param>
+        /// <param name="ano">Ano de refer\u00EAncia</param>
+        /// <returns>QuitacaoAnualResponse</returns>
+        QuitacaoAnualResponse ConsultarQuitacaoAnual (long? id, string ano);
+  
+        /// <summary>
+        /// Consulta a quita\u00E7\u00E3o de d\u00E9bitos do portador no ano referente
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite consultar a quita\u00E7\u00E3o de d\u00E9bitos do portador no ano referente
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta</param>
+        /// <param name="ano">Ano de refer\u00EAncia</param>
+        /// <returns>ApiResponse of QuitacaoAnualResponse</returns>
+        ApiResponse<QuitacaoAnualResponse> ConsultarQuitacaoAnualWithHttpInfo (long? id, string ano);
+        
+        /// <summary>
         /// Permite consultar a partir do ID da conta as taxas e tarifas
         /// </summary>
         /// <remarks>
@@ -636,6 +708,28 @@ namespace Conductor.Pier.Api
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
         /// <returns>ApiResponse of PageTaxasRefinanciamentoResponse</returns>
         ApiResponse<PageTaxasRefinanciamentoResponse> ConsultarTaxasTarifasWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null);
+        
+        /// <summary>
+        /// Consulta um tipo de v\u00EDnculo
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite consultar um tipo de v\u00EDnculo cadastrado na base do emissor a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id)
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo identificador do tipo de v\u00EDnculo (id)</param>
+        /// <returns>TipoVinculoContaResponse</returns>
+        TipoVinculoContaResponse ConsultarTipoVinculoConta (long? id);
+  
+        /// <summary>
+        /// Consulta um tipo de v\u00EDnculo
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite consultar um tipo de v\u00EDnculo cadastrado na base do emissor a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id)
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo identificador do tipo de v\u00EDnculo (id)</param>
+        /// <returns>ApiResponse of TipoVinculoContaResponse</returns>
+        ApiResponse<TipoVinculoContaResponse> ConsultarTipoVinculoContaWithHttpInfo (long? id);
         
         /// <summary>
         /// Apresenta dados de um determinado tipo de fun\u00E7\u00E3o para contas
@@ -764,6 +858,50 @@ namespace Conductor.Pier.Api
         /// <param name="contaMultiAppPersist">contaMultiAppPersist</param>
         /// <returns>ApiResponse of ContaMultiAppResponse</returns>
         ApiResponse<ContaMultiAppResponse> CriarContasMultiAppWithHttpInfo (ContaMultiAppPersist contaMultiAppPersist);
+        
+        /// <summary>
+        /// Exclui um controle de uma subconta
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite excluir um controle de subconta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o. O controle de subconta serve para registrar informa\u00E7\u00F5es adicionais da subconta como apelido, prop\u00F3sito da cria\u00E7\u00E3o da subconta e se ela pode ser gerenciada pela pr\u00F3pria subconta ou apenas pela conta pai.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo identificador do controle de subconta (id)</param>
+        /// <returns>Object</returns>
+        Object DeletarControlesSubcontas (long? id);
+  
+        /// <summary>
+        /// Exclui um controle de uma subconta
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite excluir um controle de subconta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o. O controle de subconta serve para registrar informa\u00E7\u00F5es adicionais da subconta como apelido, prop\u00F3sito da cria\u00E7\u00E3o da subconta e se ela pode ser gerenciada pela pr\u00F3pria subconta ou apenas pela conta pai.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo identificador do controle de subconta (id)</param>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> DeletarControlesSubcontasWithHttpInfo (long? id);
+        
+        /// <summary>
+        /// Deleta um v\u00EDnculo entre duas contas
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite deletar um v\u00EDnculo entre duas contas
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <returns>Object</returns>
+        Object DeletarVinculoConta (long? id);
+  
+        /// <summary>
+        /// Deleta um v\u00EDnculo entre duas contas
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite deletar um v\u00EDnculo entre duas contas
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> DeletarVinculoContaWithHttpInfo (long? id);
         
         /// <summary>
         /// Desativa o servi\u00E7o de envio de fatura por email
@@ -954,6 +1092,42 @@ namespace Conductor.Pier.Api
         /// <param name="funcaoAtiva"> (optional)</param>
         /// <returns>ApiResponse of PageContaResponse</returns>
         ApiResponse<PageContaResponse> ListarWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, string dataStatusConta = null, string dataCadastro = null, string dataUltimaAlteracaoVencimento = null, string funcaoAtiva = null);
+        
+        /// <summary>
+        /// Lista os controles de subcontas
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite listar os controles de subcontas cadastrados na base do emissor. O controle de subconta serve para registrar informa\u00E7\u00F5es adicionais da subconta como apelido, prop\u00F3sito da cria\u00E7\u00E3o da subconta e se ela pode ser gerenciada pela pr\u00F3pria subconta ou apenas pela conta pai.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idVinculoConta">Id referenciando o v\u00EDnculo da subconta na tabela VinculosContas (optional)</param>
+        /// <param name="idConta">C\u00F3digo identificador da subconta (id) (optional)</param>
+        /// <param name="nome">Nome/apelido dado para a subconta (optional)</param>
+        /// <param name="finalidade">Finalidade da cria\u00E7\u00E3o da subconta (optional)</param>
+        /// <param name="autoGerenciavel">Indica se a subconta \u00E9 auto gerenci\u00E1vel ou se apenas a conta pai poder\u00E1 gerir (optional)</param>
+        /// <returns>PageControleSubcontaResponse</returns>
+        PageControleSubcontaResponse ListarControlesSubcontas (List<string> sort = null, int? page = null, int? limit = null, long? idVinculoConta = null, long? idConta = null, string nome = null, string finalidade = null, bool? autoGerenciavel = null);
+  
+        /// <summary>
+        /// Lista os controles de subcontas
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite listar os controles de subcontas cadastrados na base do emissor. O controle de subconta serve para registrar informa\u00E7\u00F5es adicionais da subconta como apelido, prop\u00F3sito da cria\u00E7\u00E3o da subconta e se ela pode ser gerenciada pela pr\u00F3pria subconta ou apenas pela conta pai.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idVinculoConta">Id referenciando o v\u00EDnculo da subconta na tabela VinculosContas (optional)</param>
+        /// <param name="idConta">C\u00F3digo identificador da subconta (id) (optional)</param>
+        /// <param name="nome">Nome/apelido dado para a subconta (optional)</param>
+        /// <param name="finalidade">Finalidade da cria\u00E7\u00E3o da subconta (optional)</param>
+        /// <param name="autoGerenciavel">Indica se a subconta \u00E9 auto gerenci\u00E1vel ou se apenas a conta pai poder\u00E1 gerir (optional)</param>
+        /// <returns>ApiResponse of PageControleSubcontaResponse</returns>
+        ApiResponse<PageControleSubcontaResponse> ListarControlesSubcontasWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idVinculoConta = null, long? idConta = null, string nome = null, string finalidade = null, bool? autoGerenciavel = null);
         
         /// <summary>
         /// Lista o hist\u00F3rico de altera\u00E7\u00F5es de limites da conta
@@ -1166,6 +1340,66 @@ namespace Conductor.Pier.Api
         ApiResponse<PageSegurancaMobileResponse> ListarSegurancaMobileWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, bool? validos = null, string statusRequisicao = null, string cpfCnpj = null, string dataExpiracao = null, string token = null, string tablet = null, string deviceName = null, string deviceToken = null, string canal = null, string dataUtilizacao = null, string dataAtivacao = null, string chapaPromotor = null, string codOperacaoNeurotech = null, string respostaNeurotech = null);
         
         /// <summary>
+        /// Lista contas v\u00EDnculadas a uma conta pai
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite listar as contas que est\u00E3o v\u00EDnculadas a conta pai, informada no path
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idConta">Id da subconta (optional)</param>
+        /// <param name="idTipoVinculo">Id do tipo de v\u00EDnculo entre as duas contas (optional)</param>
+        /// <returns>PageVinculoContaResponse</returns>
+        PageVinculoContaResponse ListarSubcontasVinculadas (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idTipoVinculo = null);
+  
+        /// <summary>
+        /// Lista contas v\u00EDnculadas a uma conta pai
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite listar as contas que est\u00E3o v\u00EDnculadas a conta pai, informada no path
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idConta">Id da subconta (optional)</param>
+        /// <param name="idTipoVinculo">Id do tipo de v\u00EDnculo entre as duas contas (optional)</param>
+        /// <returns>ApiResponse of PageVinculoContaResponse</returns>
+        ApiResponse<PageVinculoContaResponse> ListarSubcontasVinculadasWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idTipoVinculo = null);
+        
+        /// <summary>
+        /// Lista os tipos de v\u00EDnculos
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite listar os tipos de v\u00EDnculos cadastrados na base do emissor
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="descricao">Descri\u00E7\u00E3o do tipo de v\u00EDnculo (optional)</param>
+        /// <returns>PageTipoVinculoContaResponse</returns>
+        PageTipoVinculoContaResponse ListarTipoVinculo (List<string> sort = null, int? page = null, int? limit = null, string descricao = null);
+  
+        /// <summary>
+        /// Lista os tipos de v\u00EDnculos
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite listar os tipos de v\u00EDnculos cadastrados na base do emissor
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="descricao">Descri\u00E7\u00E3o do tipo de v\u00EDnculo (optional)</param>
+        /// <returns>ApiResponse of PageTipoVinculoContaResponse</returns>
+        ApiResponse<PageTipoVinculoContaResponse> ListarTipoVinculoWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string descricao = null);
+        
+        /// <summary>
         /// Este recurso permite que uma proje\u00E7\u00E3o de compra ainda n\u00E3o processada seja recuperada. Os valores das compras s\u00E3o agrupados e exibidos em blocos mensais.
         /// </summary>
         /// <remarks>
@@ -1192,6 +1426,36 @@ namespace Conductor.Pier.Api
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
         /// <returns>ApiResponse of PageProjecaoCompraNaoProcessadaResponse</returns>
         ApiResponse<PageProjecaoCompraNaoProcessadaResponse> ListarTransacoesProjetadasWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null);
+        
+        /// <summary>
+        /// Lista v\u00EDnculos de contas
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite listar os v\u00EDnculos de contas existentes na base
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idConta">Id da subconta (optional)</param>
+        /// <param name="idTipoVinculo">Id do tipo de v\u00EDnculo entre as duas contas (optional)</param>
+        /// <returns>PageVinculoContaResponse</returns>
+        PageVinculoContaResponse ListarVinculoConta (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idTipoVinculo = null);
+  
+        /// <summary>
+        /// Lista v\u00EDnculos de contas
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite listar os v\u00EDnculos de contas existentes na base
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idConta">Id da subconta (optional)</param>
+        /// <param name="idTipoVinculo">Id do tipo de v\u00EDnculo entre as duas contas (optional)</param>
+        /// <returns>ApiResponse of PageVinculoContaResponse</returns>
+        ApiResponse<PageVinculoContaResponse> ListarVinculoContaWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idTipoVinculo = null);
         
         /// <summary>
         /// Lista os tipos de fun\u00E7\u00F5es para contas do Emissor
@@ -1456,6 +1720,78 @@ namespace Conductor.Pier.Api
         ApiResponse<AgendamentoResponse> SalvarAgendamentoWithHttpInfo (AgendamentoPersist agendamentoPersist, long? id);
         
         /// <summary>
+        /// Cadastra um controle para uma subconta
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite cadastrar um controle de subconta. O controle de subconta serve para registrar informa\u00E7\u00F5es adicionais da subconta como apelido, prop\u00F3sito da cria\u00E7\u00E3o da subconta e se ela pode ser gerenciada pela pr\u00F3pria subconta ou apenas pela conta pai.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo identificador da conta (id)</param>
+        /// <param name="idVinculoConta">Id referenciando o v\u00EDnculo da subconta na tabela VinculosContas</param>
+        /// <param name="controleSubcontaPersist">controleSubcontaPersist</param>
+        /// <returns>ControleSubcontaResponse</returns>
+        ControleSubcontaResponse SalvarControlesSubcontas (long? id, long? idVinculoConta, ControleSubcontaPersist controleSubcontaPersist);
+  
+        /// <summary>
+        /// Cadastra um controle para uma subconta
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite cadastrar um controle de subconta. O controle de subconta serve para registrar informa\u00E7\u00F5es adicionais da subconta como apelido, prop\u00F3sito da cria\u00E7\u00E3o da subconta e se ela pode ser gerenciada pela pr\u00F3pria subconta ou apenas pela conta pai.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo identificador da conta (id)</param>
+        /// <param name="idVinculoConta">Id referenciando o v\u00EDnculo da subconta na tabela VinculosContas</param>
+        /// <param name="controleSubcontaPersist">controleSubcontaPersist</param>
+        /// <returns>ApiResponse of ControleSubcontaResponse</returns>
+        ApiResponse<ControleSubcontaResponse> SalvarControlesSubcontasWithHttpInfo (long? id, long? idVinculoConta, ControleSubcontaPersist controleSubcontaPersist);
+        
+        /// <summary>
+        /// Salva um tipo de v\u00EDnculo
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite cadastrar um tipo de v\u00EDnculo na base do emissor
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tipoVinculoContaPersist">tipoVinculoContaPersist</param>
+        /// <returns>TipoVinculoContaResponse</returns>
+        TipoVinculoContaResponse SalvarTipoVinculoConta (TipoVinculoContaPersist tipoVinculoContaPersist);
+  
+        /// <summary>
+        /// Salva um tipo de v\u00EDnculo
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite cadastrar um tipo de v\u00EDnculo na base do emissor
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tipoVinculoContaPersist">tipoVinculoContaPersist</param>
+        /// <returns>ApiResponse of TipoVinculoContaResponse</returns>
+        ApiResponse<TipoVinculoContaResponse> SalvarTipoVinculoContaWithHttpInfo (TipoVinculoContaPersist tipoVinculoContaPersist);
+        
+        /// <summary>
+        /// Cadastra um v\u00EDnculo entre duas contas
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite cadastrar um v\u00EDnculo de uma conta com uma conta pai
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <param name="vinculoContaPersist">vinculoContaPersist</param>
+        /// <returns>VinculoContaResponse</returns>
+        VinculoContaResponse SalvarVinculoConta (long? id, VinculoContaPersist vinculoContaPersist);
+  
+        /// <summary>
+        /// Cadastra um v\u00EDnculo entre duas contas
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite cadastrar um v\u00EDnculo de uma conta com uma conta pai
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <param name="vinculoContaPersist">vinculoContaPersist</param>
+        /// <returns>ApiResponse of VinculoContaResponse</returns>
+        ApiResponse<VinculoContaResponse> SalvarVinculoContaWithHttpInfo (long? id, VinculoContaPersist vinculoContaPersist);
+        
+        /// <summary>
         /// Simula valores de presta\u00E7\u00F5es de empr\u00E9stimos/financiamentos
         /// </summary>
         /// <remarks>
@@ -1602,6 +1938,30 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<AjusteFinanceiroResponse>> AjustarContaAsyncWithHttpInfo (long? id, long? idTipoAjuste, string dataAjuste, double? valorAjuste, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null, bool? flagAtendimento = null, string mensagemAtendimento = null);
         
         /// <summary>
+        /// Altera parcialmente um controle de uma subconta
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite atualizar parcialmente um controle de subconta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o. O controle de subconta serve para registrar informa\u00E7\u00F5es adicionais da subconta como apelido, prop\u00F3sito da cria\u00E7\u00E3o da subconta e se ela pode ser gerenciada pela pr\u00F3pria subconta ou apenas pela conta pai.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo identificador do controle de subconta (id)</param>
+        /// <param name="controleSubcontaUpdate">controleSubcontaUpdate</param>
+        /// <returns>Task of ControleSubcontaResponse</returns>
+        System.Threading.Tasks.Task<ControleSubcontaResponse> AlterarParcialControlesSubcontasAsync (long? id, ControleSubcontaUpdate controleSubcontaUpdate);
+
+        /// <summary>
+        /// Altera parcialmente um controle de uma subconta
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite atualizar parcialmente um controle de subconta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o. O controle de subconta serve para registrar informa\u00E7\u00F5es adicionais da subconta como apelido, prop\u00F3sito da cria\u00E7\u00E3o da subconta e se ela pode ser gerenciada pela pr\u00F3pria subconta ou apenas pela conta pai.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo identificador do controle de subconta (id)</param>
+        /// <param name="controleSubcontaUpdate">controleSubcontaUpdate</param>
+        /// <returns>Task of ApiResponse (ControleSubcontaResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ControleSubcontaResponse>> AlterarParcialControlesSubcontasAsyncWithHttpInfo (long? id, ControleSubcontaUpdate controleSubcontaUpdate);
+        
+        /// <summary>
         /// Altera o produto associado \u00E0 conta
         /// </summary>
         /// <remarks>
@@ -1689,8 +2049,9 @@ namespace Conductor.Pier.Api
         /// <param name="celular">N\u00FAmero do celular (optional)</param>
         /// <param name="idOperadora">Identificador da operadora do celular (optional)</param>
         /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param>
+        /// <param name="colaborador">Matr\u00EDcula do colaborador (optional)</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> AtivarAnuidadeAsync (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null);
+        System.Threading.Tasks.Task<Object> AtivarAnuidadeAsync (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null, string colaborador = null);
 
         /// <summary>
         /// Atribuir Anuidade
@@ -1708,8 +2069,9 @@ namespace Conductor.Pier.Api
         /// <param name="celular">N\u00FAmero do celular (optional)</param>
         /// <param name="idOperadora">Identificador da operadora do celular (optional)</param>
         /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param>
+        /// <param name="colaborador">Matr\u00EDcula do colaborador (optional)</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> AtivarAnuidadeAsyncWithHttpInfo (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> AtivarAnuidadeAsyncWithHttpInfo (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null, string colaborador = null);
         
         /// <summary>
         /// Ativa o servi\u00E7o de envio de fatura por email
@@ -2068,6 +2430,28 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<BoletoResponse>> ConsultarBoletoEmitidoAsyncWithHttpInfo (long? id);
         
         /// <summary>
+        /// Apresenta o controle de uma subconta
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite consultar um controle de subconta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o. O controle de subconta serve para registrar informa\u00E7\u00F5es adicionais da subconta como apelido, prop\u00F3sito da cria\u00E7\u00E3o da subconta e se ela pode ser gerenciada pela pr\u00F3pria subconta ou apenas pela conta pai.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo identificador do controle de subconta (id)</param>
+        /// <returns>Task of ControleSubcontaResponse</returns>
+        System.Threading.Tasks.Task<ControleSubcontaResponse> ConsultarControlesSubcontasAsync (long? id);
+
+        /// <summary>
+        /// Apresenta o controle de uma subconta
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite consultar um controle de subconta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o. O controle de subconta serve para registrar informa\u00E7\u00F5es adicionais da subconta como apelido, prop\u00F3sito da cria\u00E7\u00E3o da subconta e se ela pode ser gerenciada pela pr\u00F3pria subconta ou apenas pela conta pai.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo identificador do controle de subconta (id)</param>
+        /// <returns>Task of ApiResponse (ControleSubcontaResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ControleSubcontaResponse>> ConsultarControlesSubcontasAsyncWithHttpInfo (long? id);
+        
+        /// <summary>
         /// Consulta a d\u00EDvida atualizada do cliente
         /// </summary>
         /// <remarks>
@@ -2154,6 +2538,30 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<TransacoesCorrentesResponse>> ConsultarProcessadaAsyncWithHttpInfo (long? id, long? idTransacao);
         
         /// <summary>
+        /// Consulta a quita\u00E7\u00E3o de d\u00E9bitos do portador no ano referente
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite consultar a quita\u00E7\u00E3o de d\u00E9bitos do portador no ano referente
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta</param>
+        /// <param name="ano">Ano de refer\u00EAncia</param>
+        /// <returns>Task of QuitacaoAnualResponse</returns>
+        System.Threading.Tasks.Task<QuitacaoAnualResponse> ConsultarQuitacaoAnualAsync (long? id, string ano);
+
+        /// <summary>
+        /// Consulta a quita\u00E7\u00E3o de d\u00E9bitos do portador no ano referente
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite consultar a quita\u00E7\u00E3o de d\u00E9bitos do portador no ano referente
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta</param>
+        /// <param name="ano">Ano de refer\u00EAncia</param>
+        /// <returns>Task of ApiResponse (QuitacaoAnualResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<QuitacaoAnualResponse>> ConsultarQuitacaoAnualAsyncWithHttpInfo (long? id, string ano);
+        
+        /// <summary>
         /// Permite consultar a partir do ID da conta as taxas e tarifas
         /// </summary>
         /// <remarks>
@@ -2180,6 +2588,28 @@ namespace Conductor.Pier.Api
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
         /// <returns>Task of ApiResponse (PageTaxasRefinanciamentoResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<PageTaxasRefinanciamentoResponse>> ConsultarTaxasTarifasAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null);
+        
+        /// <summary>
+        /// Consulta um tipo de v\u00EDnculo
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite consultar um tipo de v\u00EDnculo cadastrado na base do emissor a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id)
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo identificador do tipo de v\u00EDnculo (id)</param>
+        /// <returns>Task of TipoVinculoContaResponse</returns>
+        System.Threading.Tasks.Task<TipoVinculoContaResponse> ConsultarTipoVinculoContaAsync (long? id);
+
+        /// <summary>
+        /// Consulta um tipo de v\u00EDnculo
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite consultar um tipo de v\u00EDnculo cadastrado na base do emissor a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id)
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo identificador do tipo de v\u00EDnculo (id)</param>
+        /// <returns>Task of ApiResponse (TipoVinculoContaResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TipoVinculoContaResponse>> ConsultarTipoVinculoContaAsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Apresenta dados de um determinado tipo de fun\u00E7\u00E3o para contas
@@ -2308,6 +2738,50 @@ namespace Conductor.Pier.Api
         /// <param name="contaMultiAppPersist">contaMultiAppPersist</param>
         /// <returns>Task of ApiResponse (ContaMultiAppResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<ContaMultiAppResponse>> CriarContasMultiAppAsyncWithHttpInfo (ContaMultiAppPersist contaMultiAppPersist);
+        
+        /// <summary>
+        /// Exclui um controle de uma subconta
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite excluir um controle de subconta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o. O controle de subconta serve para registrar informa\u00E7\u00F5es adicionais da subconta como apelido, prop\u00F3sito da cria\u00E7\u00E3o da subconta e se ela pode ser gerenciada pela pr\u00F3pria subconta ou apenas pela conta pai.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo identificador do controle de subconta (id)</param>
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> DeletarControlesSubcontasAsync (long? id);
+
+        /// <summary>
+        /// Exclui um controle de uma subconta
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite excluir um controle de subconta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o. O controle de subconta serve para registrar informa\u00E7\u00F5es adicionais da subconta como apelido, prop\u00F3sito da cria\u00E7\u00E3o da subconta e se ela pode ser gerenciada pela pr\u00F3pria subconta ou apenas pela conta pai.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo identificador do controle de subconta (id)</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeletarControlesSubcontasAsyncWithHttpInfo (long? id);
+        
+        /// <summary>
+        /// Deleta um v\u00EDnculo entre duas contas
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite deletar um v\u00EDnculo entre duas contas
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> DeletarVinculoContaAsync (long? id);
+
+        /// <summary>
+        /// Deleta um v\u00EDnculo entre duas contas
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite deletar um v\u00EDnculo entre duas contas
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeletarVinculoContaAsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Desativa o servi\u00E7o de envio de fatura por email
@@ -2498,6 +2972,42 @@ namespace Conductor.Pier.Api
         /// <param name="funcaoAtiva"> (optional)</param>
         /// <returns>Task of ApiResponse (PageContaResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<PageContaResponse>> ListarAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, string dataStatusConta = null, string dataCadastro = null, string dataUltimaAlteracaoVencimento = null, string funcaoAtiva = null);
+        
+        /// <summary>
+        /// Lista os controles de subcontas
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite listar os controles de subcontas cadastrados na base do emissor. O controle de subconta serve para registrar informa\u00E7\u00F5es adicionais da subconta como apelido, prop\u00F3sito da cria\u00E7\u00E3o da subconta e se ela pode ser gerenciada pela pr\u00F3pria subconta ou apenas pela conta pai.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idVinculoConta">Id referenciando o v\u00EDnculo da subconta na tabela VinculosContas (optional)</param>
+        /// <param name="idConta">C\u00F3digo identificador da subconta (id) (optional)</param>
+        /// <param name="nome">Nome/apelido dado para a subconta (optional)</param>
+        /// <param name="finalidade">Finalidade da cria\u00E7\u00E3o da subconta (optional)</param>
+        /// <param name="autoGerenciavel">Indica se a subconta \u00E9 auto gerenci\u00E1vel ou se apenas a conta pai poder\u00E1 gerir (optional)</param>
+        /// <returns>Task of PageControleSubcontaResponse</returns>
+        System.Threading.Tasks.Task<PageControleSubcontaResponse> ListarControlesSubcontasAsync (List<string> sort = null, int? page = null, int? limit = null, long? idVinculoConta = null, long? idConta = null, string nome = null, string finalidade = null, bool? autoGerenciavel = null);
+
+        /// <summary>
+        /// Lista os controles de subcontas
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite listar os controles de subcontas cadastrados na base do emissor. O controle de subconta serve para registrar informa\u00E7\u00F5es adicionais da subconta como apelido, prop\u00F3sito da cria\u00E7\u00E3o da subconta e se ela pode ser gerenciada pela pr\u00F3pria subconta ou apenas pela conta pai.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idVinculoConta">Id referenciando o v\u00EDnculo da subconta na tabela VinculosContas (optional)</param>
+        /// <param name="idConta">C\u00F3digo identificador da subconta (id) (optional)</param>
+        /// <param name="nome">Nome/apelido dado para a subconta (optional)</param>
+        /// <param name="finalidade">Finalidade da cria\u00E7\u00E3o da subconta (optional)</param>
+        /// <param name="autoGerenciavel">Indica se a subconta \u00E9 auto gerenci\u00E1vel ou se apenas a conta pai poder\u00E1 gerir (optional)</param>
+        /// <returns>Task of ApiResponse (PageControleSubcontaResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PageControleSubcontaResponse>> ListarControlesSubcontasAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idVinculoConta = null, long? idConta = null, string nome = null, string finalidade = null, bool? autoGerenciavel = null);
         
         /// <summary>
         /// Lista o hist\u00F3rico de altera\u00E7\u00F5es de limites da conta
@@ -2710,6 +3220,66 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<PageSegurancaMobileResponse>> ListarSegurancaMobileAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, bool? validos = null, string statusRequisicao = null, string cpfCnpj = null, string dataExpiracao = null, string token = null, string tablet = null, string deviceName = null, string deviceToken = null, string canal = null, string dataUtilizacao = null, string dataAtivacao = null, string chapaPromotor = null, string codOperacaoNeurotech = null, string respostaNeurotech = null);
         
         /// <summary>
+        /// Lista contas v\u00EDnculadas a uma conta pai
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite listar as contas que est\u00E3o v\u00EDnculadas a conta pai, informada no path
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idConta">Id da subconta (optional)</param>
+        /// <param name="idTipoVinculo">Id do tipo de v\u00EDnculo entre as duas contas (optional)</param>
+        /// <returns>Task of PageVinculoContaResponse</returns>
+        System.Threading.Tasks.Task<PageVinculoContaResponse> ListarSubcontasVinculadasAsync (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idTipoVinculo = null);
+
+        /// <summary>
+        /// Lista contas v\u00EDnculadas a uma conta pai
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite listar as contas que est\u00E3o v\u00EDnculadas a conta pai, informada no path
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idConta">Id da subconta (optional)</param>
+        /// <param name="idTipoVinculo">Id do tipo de v\u00EDnculo entre as duas contas (optional)</param>
+        /// <returns>Task of ApiResponse (PageVinculoContaResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PageVinculoContaResponse>> ListarSubcontasVinculadasAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idTipoVinculo = null);
+        
+        /// <summary>
+        /// Lista os tipos de v\u00EDnculos
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite listar os tipos de v\u00EDnculos cadastrados na base do emissor
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="descricao">Descri\u00E7\u00E3o do tipo de v\u00EDnculo (optional)</param>
+        /// <returns>Task of PageTipoVinculoContaResponse</returns>
+        System.Threading.Tasks.Task<PageTipoVinculoContaResponse> ListarTipoVinculoAsync (List<string> sort = null, int? page = null, int? limit = null, string descricao = null);
+
+        /// <summary>
+        /// Lista os tipos de v\u00EDnculos
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite listar os tipos de v\u00EDnculos cadastrados na base do emissor
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="descricao">Descri\u00E7\u00E3o do tipo de v\u00EDnculo (optional)</param>
+        /// <returns>Task of ApiResponse (PageTipoVinculoContaResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PageTipoVinculoContaResponse>> ListarTipoVinculoAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string descricao = null);
+        
+        /// <summary>
         /// Este recurso permite que uma proje\u00E7\u00E3o de compra ainda n\u00E3o processada seja recuperada. Os valores das compras s\u00E3o agrupados e exibidos em blocos mensais.
         /// </summary>
         /// <remarks>
@@ -2736,6 +3306,36 @@ namespace Conductor.Pier.Api
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
         /// <returns>Task of ApiResponse (PageProjecaoCompraNaoProcessadaResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<PageProjecaoCompraNaoProcessadaResponse>> ListarTransacoesProjetadasAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null);
+        
+        /// <summary>
+        /// Lista v\u00EDnculos de contas
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite listar os v\u00EDnculos de contas existentes na base
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idConta">Id da subconta (optional)</param>
+        /// <param name="idTipoVinculo">Id do tipo de v\u00EDnculo entre as duas contas (optional)</param>
+        /// <returns>Task of PageVinculoContaResponse</returns>
+        System.Threading.Tasks.Task<PageVinculoContaResponse> ListarVinculoContaAsync (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idTipoVinculo = null);
+
+        /// <summary>
+        /// Lista v\u00EDnculos de contas
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite listar os v\u00EDnculos de contas existentes na base
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idConta">Id da subconta (optional)</param>
+        /// <param name="idTipoVinculo">Id do tipo de v\u00EDnculo entre as duas contas (optional)</param>
+        /// <returns>Task of ApiResponse (PageVinculoContaResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PageVinculoContaResponse>> ListarVinculoContaAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idTipoVinculo = null);
         
         /// <summary>
         /// Lista os tipos de fun\u00E7\u00F5es para contas do Emissor
@@ -2998,6 +3598,78 @@ namespace Conductor.Pier.Api
         /// <param name="id">id</param>
         /// <returns>Task of ApiResponse (AgendamentoResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<AgendamentoResponse>> SalvarAgendamentoAsyncWithHttpInfo (AgendamentoPersist agendamentoPersist, long? id);
+        
+        /// <summary>
+        /// Cadastra um controle para uma subconta
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite cadastrar um controle de subconta. O controle de subconta serve para registrar informa\u00E7\u00F5es adicionais da subconta como apelido, prop\u00F3sito da cria\u00E7\u00E3o da subconta e se ela pode ser gerenciada pela pr\u00F3pria subconta ou apenas pela conta pai.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo identificador da conta (id)</param>
+        /// <param name="idVinculoConta">Id referenciando o v\u00EDnculo da subconta na tabela VinculosContas</param>
+        /// <param name="controleSubcontaPersist">controleSubcontaPersist</param>
+        /// <returns>Task of ControleSubcontaResponse</returns>
+        System.Threading.Tasks.Task<ControleSubcontaResponse> SalvarControlesSubcontasAsync (long? id, long? idVinculoConta, ControleSubcontaPersist controleSubcontaPersist);
+
+        /// <summary>
+        /// Cadastra um controle para uma subconta
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite cadastrar um controle de subconta. O controle de subconta serve para registrar informa\u00E7\u00F5es adicionais da subconta como apelido, prop\u00F3sito da cria\u00E7\u00E3o da subconta e se ela pode ser gerenciada pela pr\u00F3pria subconta ou apenas pela conta pai.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo identificador da conta (id)</param>
+        /// <param name="idVinculoConta">Id referenciando o v\u00EDnculo da subconta na tabela VinculosContas</param>
+        /// <param name="controleSubcontaPersist">controleSubcontaPersist</param>
+        /// <returns>Task of ApiResponse (ControleSubcontaResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ControleSubcontaResponse>> SalvarControlesSubcontasAsyncWithHttpInfo (long? id, long? idVinculoConta, ControleSubcontaPersist controleSubcontaPersist);
+        
+        /// <summary>
+        /// Salva um tipo de v\u00EDnculo
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite cadastrar um tipo de v\u00EDnculo na base do emissor
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tipoVinculoContaPersist">tipoVinculoContaPersist</param>
+        /// <returns>Task of TipoVinculoContaResponse</returns>
+        System.Threading.Tasks.Task<TipoVinculoContaResponse> SalvarTipoVinculoContaAsync (TipoVinculoContaPersist tipoVinculoContaPersist);
+
+        /// <summary>
+        /// Salva um tipo de v\u00EDnculo
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite cadastrar um tipo de v\u00EDnculo na base do emissor
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tipoVinculoContaPersist">tipoVinculoContaPersist</param>
+        /// <returns>Task of ApiResponse (TipoVinculoContaResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TipoVinculoContaResponse>> SalvarTipoVinculoContaAsyncWithHttpInfo (TipoVinculoContaPersist tipoVinculoContaPersist);
+        
+        /// <summary>
+        /// Cadastra um v\u00EDnculo entre duas contas
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite cadastrar um v\u00EDnculo de uma conta com uma conta pai
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <param name="vinculoContaPersist">vinculoContaPersist</param>
+        /// <returns>Task of VinculoContaResponse</returns>
+        System.Threading.Tasks.Task<VinculoContaResponse> SalvarVinculoContaAsync (long? id, VinculoContaPersist vinculoContaPersist);
+
+        /// <summary>
+        /// Cadastra um v\u00EDnculo entre duas contas
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite cadastrar um v\u00EDnculo de uma conta com uma conta pai
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <param name="vinculoContaPersist">vinculoContaPersist</param>
+        /// <returns>Task of ApiResponse (VinculoContaResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<VinculoContaResponse>> SalvarVinculoContaAsyncWithHttpInfo (long? id, VinculoContaPersist vinculoContaPersist);
         
         /// <summary>
         /// Simula valores de presta\u00E7\u00F5es de empr\u00E9stimos/financiamentos
@@ -3420,6 +4092,188 @@ namespace Conductor.Pier.Api
             return new ApiResponse<AjusteFinanceiroResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (AjusteFinanceiroResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AjusteFinanceiroResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Altera parcialmente um controle de uma subconta Este recurso permite atualizar parcialmente um controle de subconta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o. O controle de subconta serve para registrar informa\u00E7\u00F5es adicionais da subconta como apelido, prop\u00F3sito da cria\u00E7\u00E3o da subconta e se ela pode ser gerenciada pela pr\u00F3pria subconta ou apenas pela conta pai.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo identificador do controle de subconta (id)</param> 
+        /// <param name="controleSubcontaUpdate">controleSubcontaUpdate</param> 
+        /// <returns>ControleSubcontaResponse</returns>
+        public ControleSubcontaResponse AlterarParcialControlesSubcontas (long? id, ControleSubcontaUpdate controleSubcontaUpdate)
+        {
+             ApiResponse<ControleSubcontaResponse> localVarResponse = AlterarParcialControlesSubcontasWithHttpInfo(id, controleSubcontaUpdate);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Altera parcialmente um controle de uma subconta Este recurso permite atualizar parcialmente um controle de subconta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o. O controle de subconta serve para registrar informa\u00E7\u00F5es adicionais da subconta como apelido, prop\u00F3sito da cria\u00E7\u00E3o da subconta e se ela pode ser gerenciada pela pr\u00F3pria subconta ou apenas pela conta pai.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo identificador do controle de subconta (id)</param> 
+        /// <param name="controleSubcontaUpdate">controleSubcontaUpdate</param> 
+        /// <returns>ApiResponse of ControleSubcontaResponse</returns>
+        public ApiResponse< ControleSubcontaResponse > AlterarParcialControlesSubcontasWithHttpInfo (long? id, ControleSubcontaUpdate controleSubcontaUpdate)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->AlterarParcialControlesSubcontas");
+            
+            // verify the required parameter 'controleSubcontaUpdate' is set
+            if (controleSubcontaUpdate == null)
+                throw new ApiException(400, "Missing required parameter 'controleSubcontaUpdate' when calling ContaApi->AlterarParcialControlesSubcontas");
+            
+    
+            var localVarPath = "/api/contas/vinculos/controles-subcontas/{id}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            if (controleSubcontaUpdate.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(controleSubcontaUpdate); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = controleSubcontaUpdate; // byte array
+            }
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling AlterarParcialControlesSubcontas: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling AlterarParcialControlesSubcontas: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<ControleSubcontaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ControleSubcontaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ControleSubcontaResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Altera parcialmente um controle de uma subconta Este recurso permite atualizar parcialmente um controle de subconta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o. O controle de subconta serve para registrar informa\u00E7\u00F5es adicionais da subconta como apelido, prop\u00F3sito da cria\u00E7\u00E3o da subconta e se ela pode ser gerenciada pela pr\u00F3pria subconta ou apenas pela conta pai.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo identificador do controle de subconta (id)</param>
+        /// <param name="controleSubcontaUpdate">controleSubcontaUpdate</param>
+        /// <returns>Task of ControleSubcontaResponse</returns>
+        public async System.Threading.Tasks.Task<ControleSubcontaResponse> AlterarParcialControlesSubcontasAsync (long? id, ControleSubcontaUpdate controleSubcontaUpdate)
+        {
+             ApiResponse<ControleSubcontaResponse> localVarResponse = await AlterarParcialControlesSubcontasAsyncWithHttpInfo(id, controleSubcontaUpdate);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Altera parcialmente um controle de uma subconta Este recurso permite atualizar parcialmente um controle de subconta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o. O controle de subconta serve para registrar informa\u00E7\u00F5es adicionais da subconta como apelido, prop\u00F3sito da cria\u00E7\u00E3o da subconta e se ela pode ser gerenciada pela pr\u00F3pria subconta ou apenas pela conta pai.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo identificador do controle de subconta (id)</param>
+        /// <param name="controleSubcontaUpdate">controleSubcontaUpdate</param>
+        /// <returns>Task of ApiResponse (ControleSubcontaResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ControleSubcontaResponse>> AlterarParcialControlesSubcontasAsyncWithHttpInfo (long? id, ControleSubcontaUpdate controleSubcontaUpdate)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AlterarParcialControlesSubcontas");
+            // verify the required parameter 'controleSubcontaUpdate' is set
+            if (controleSubcontaUpdate == null) throw new ApiException(400, "Missing required parameter 'controleSubcontaUpdate' when calling AlterarParcialControlesSubcontas");
+            
+    
+            var localVarPath = "/api/contas/vinculos/controles-subcontas/{id}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            if (controleSubcontaUpdate.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(controleSubcontaUpdate); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = controleSubcontaUpdate; // byte array
+            }
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling AlterarParcialControlesSubcontas: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling AlterarParcialControlesSubcontas: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ControleSubcontaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ControleSubcontaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ControleSubcontaResponse)));
             
         }
         
@@ -3958,10 +4812,11 @@ namespace Conductor.Pier.Api
         /// <param name="celular">N\u00FAmero do celular (optional)</param> 
         /// <param name="idOperadora">Identificador da operadora do celular (optional)</param> 
         /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param> 
+        /// <param name="colaborador">Matr\u00EDcula do colaborador (optional)</param> 
         /// <returns>Object</returns>
-        public Object AtivarAnuidade (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null)
+        public Object AtivarAnuidade (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null, string colaborador = null)
         {
-             ApiResponse<Object> localVarResponse = AtivarAnuidadeWithHttpInfo(id, idAnuidade, sort, page, limit, DDD, celular, idOperadora, idOrigemComercial);
+             ApiResponse<Object> localVarResponse = AtivarAnuidadeWithHttpInfo(id, idAnuidade, sort, page, limit, DDD, celular, idOperadora, idOrigemComercial, colaborador);
              return localVarResponse.Data;
         }
 
@@ -3978,8 +4833,9 @@ namespace Conductor.Pier.Api
         /// <param name="celular">N\u00FAmero do celular (optional)</param> 
         /// <param name="idOperadora">Identificador da operadora do celular (optional)</param> 
         /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param> 
+        /// <param name="colaborador">Matr\u00EDcula do colaborador (optional)</param> 
         /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > AtivarAnuidadeWithHttpInfo (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null)
+        public ApiResponse< Object > AtivarAnuidadeWithHttpInfo (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null, string colaborador = null)
         {
             
             // verify the required parameter 'id' is set
@@ -4027,6 +4883,7 @@ namespace Conductor.Pier.Api
             if (celular != null) localVarQueryParams.Add("celular", Configuration.ApiClient.ParameterToString(celular)); // query parameter
             if (idOperadora != null) localVarQueryParams.Add("idOperadora", Configuration.ApiClient.ParameterToString(idOperadora)); // query parameter
             if (idOrigemComercial != null) localVarQueryParams.Add("idOrigemComercial", Configuration.ApiClient.ParameterToString(idOrigemComercial)); // query parameter
+            if (colaborador != null) localVarQueryParams.Add("colaborador", Configuration.ApiClient.ParameterToString(colaborador)); // query parameter
             
             
             
@@ -4066,10 +4923,11 @@ namespace Conductor.Pier.Api
         /// <param name="celular">N\u00FAmero do celular (optional)</param>
         /// <param name="idOperadora">Identificador da operadora do celular (optional)</param>
         /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param>
+        /// <param name="colaborador">Matr\u00EDcula do colaborador (optional)</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> AtivarAnuidadeAsync (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null)
+        public async System.Threading.Tasks.Task<Object> AtivarAnuidadeAsync (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null, string colaborador = null)
         {
-             ApiResponse<Object> localVarResponse = await AtivarAnuidadeAsyncWithHttpInfo(id, idAnuidade, sort, page, limit, DDD, celular, idOperadora, idOrigemComercial);
+             ApiResponse<Object> localVarResponse = await AtivarAnuidadeAsyncWithHttpInfo(id, idAnuidade, sort, page, limit, DDD, celular, idOperadora, idOrigemComercial, colaborador);
              return localVarResponse.Data;
 
         }
@@ -4087,8 +4945,9 @@ namespace Conductor.Pier.Api
         /// <param name="celular">N\u00FAmero do celular (optional)</param>
         /// <param name="idOperadora">Identificador da operadora do celular (optional)</param>
         /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param>
+        /// <param name="colaborador">Matr\u00EDcula do colaborador (optional)</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> AtivarAnuidadeAsyncWithHttpInfo (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> AtivarAnuidadeAsyncWithHttpInfo (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null, string colaborador = null)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AtivarAnuidade");
@@ -4132,6 +4991,7 @@ namespace Conductor.Pier.Api
             if (celular != null) localVarQueryParams.Add("celular", Configuration.ApiClient.ParameterToString(celular)); // query parameter
             if (idOperadora != null) localVarQueryParams.Add("idOperadora", Configuration.ApiClient.ParameterToString(idOperadora)); // query parameter
             if (idOrigemComercial != null) localVarQueryParams.Add("idOrigemComercial", Configuration.ApiClient.ParameterToString(idOrigemComercial)); // query parameter
+            if (colaborador != null) localVarQueryParams.Add("colaborador", Configuration.ApiClient.ParameterToString(colaborador)); // query parameter
             
             
             
@@ -6744,6 +7604,164 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
+        /// Apresenta o controle de uma subconta Este recurso permite consultar um controle de subconta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o. O controle de subconta serve para registrar informa\u00E7\u00F5es adicionais da subconta como apelido, prop\u00F3sito da cria\u00E7\u00E3o da subconta e se ela pode ser gerenciada pela pr\u00F3pria subconta ou apenas pela conta pai.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo identificador do controle de subconta (id)</param> 
+        /// <returns>ControleSubcontaResponse</returns>
+        public ControleSubcontaResponse ConsultarControlesSubcontas (long? id)
+        {
+             ApiResponse<ControleSubcontaResponse> localVarResponse = ConsultarControlesSubcontasWithHttpInfo(id);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Apresenta o controle de uma subconta Este recurso permite consultar um controle de subconta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o. O controle de subconta serve para registrar informa\u00E7\u00F5es adicionais da subconta como apelido, prop\u00F3sito da cria\u00E7\u00E3o da subconta e se ela pode ser gerenciada pela pr\u00F3pria subconta ou apenas pela conta pai.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo identificador do controle de subconta (id)</param> 
+        /// <returns>ApiResponse of ControleSubcontaResponse</returns>
+        public ApiResponse< ControleSubcontaResponse > ConsultarControlesSubcontasWithHttpInfo (long? id)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->ConsultarControlesSubcontas");
+            
+    
+            var localVarPath = "/api/contas/vinculos/controles-subcontas/{id}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarControlesSubcontas: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarControlesSubcontas: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<ControleSubcontaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ControleSubcontaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ControleSubcontaResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Apresenta o controle de uma subconta Este recurso permite consultar um controle de subconta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o. O controle de subconta serve para registrar informa\u00E7\u00F5es adicionais da subconta como apelido, prop\u00F3sito da cria\u00E7\u00E3o da subconta e se ela pode ser gerenciada pela pr\u00F3pria subconta ou apenas pela conta pai.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo identificador do controle de subconta (id)</param>
+        /// <returns>Task of ControleSubcontaResponse</returns>
+        public async System.Threading.Tasks.Task<ControleSubcontaResponse> ConsultarControlesSubcontasAsync (long? id)
+        {
+             ApiResponse<ControleSubcontaResponse> localVarResponse = await ConsultarControlesSubcontasAsyncWithHttpInfo(id);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Apresenta o controle de uma subconta Este recurso permite consultar um controle de subconta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o. O controle de subconta serve para registrar informa\u00E7\u00F5es adicionais da subconta como apelido, prop\u00F3sito da cria\u00E7\u00E3o da subconta e se ela pode ser gerenciada pela pr\u00F3pria subconta ou apenas pela conta pai.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo identificador do controle de subconta (id)</param>
+        /// <returns>Task of ApiResponse (ControleSubcontaResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ControleSubcontaResponse>> ConsultarControlesSubcontasAsyncWithHttpInfo (long? id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarControlesSubcontas");
+            
+    
+            var localVarPath = "/api/contas/vinculos/controles-subcontas/{id}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarControlesSubcontas: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarControlesSubcontas: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ControleSubcontaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ControleSubcontaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ControleSubcontaResponse)));
+            
+        }
+        
+        /// <summary>
         /// Consulta a d\u00EDvida atualizada do cliente Este recurso consulta a d\u00EDvida atualizada do cliente
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
@@ -7290,6 +8308,176 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
+        /// Consulta a quita\u00E7\u00E3o de d\u00E9bitos do portador no ano referente Este recurso permite consultar a quita\u00E7\u00E3o de d\u00E9bitos do portador no ano referente
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta</param> 
+        /// <param name="ano">Ano de refer\u00EAncia</param> 
+        /// <returns>QuitacaoAnualResponse</returns>
+        public QuitacaoAnualResponse ConsultarQuitacaoAnual (long? id, string ano)
+        {
+             ApiResponse<QuitacaoAnualResponse> localVarResponse = ConsultarQuitacaoAnualWithHttpInfo(id, ano);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Consulta a quita\u00E7\u00E3o de d\u00E9bitos do portador no ano referente Este recurso permite consultar a quita\u00E7\u00E3o de d\u00E9bitos do portador no ano referente
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta</param> 
+        /// <param name="ano">Ano de refer\u00EAncia</param> 
+        /// <returns>ApiResponse of QuitacaoAnualResponse</returns>
+        public ApiResponse< QuitacaoAnualResponse > ConsultarQuitacaoAnualWithHttpInfo (long? id, string ano)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->ConsultarQuitacaoAnual");
+            
+            // verify the required parameter 'ano' is set
+            if (ano == null)
+                throw new ApiException(400, "Missing required parameter 'ano' when calling ContaApi->ConsultarQuitacaoAnual");
+            
+    
+            var localVarPath = "/api/contas/{id}/quitacoes-anuais/{ano}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (ano != null) localVarPathParams.Add("ano", Configuration.ApiClient.ParameterToString(ano)); // path parameter
+            
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarQuitacaoAnual: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarQuitacaoAnual: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<QuitacaoAnualResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (QuitacaoAnualResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(QuitacaoAnualResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Consulta a quita\u00E7\u00E3o de d\u00E9bitos do portador no ano referente Este recurso permite consultar a quita\u00E7\u00E3o de d\u00E9bitos do portador no ano referente
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta</param>
+        /// <param name="ano">Ano de refer\u00EAncia</param>
+        /// <returns>Task of QuitacaoAnualResponse</returns>
+        public async System.Threading.Tasks.Task<QuitacaoAnualResponse> ConsultarQuitacaoAnualAsync (long? id, string ano)
+        {
+             ApiResponse<QuitacaoAnualResponse> localVarResponse = await ConsultarQuitacaoAnualAsyncWithHttpInfo(id, ano);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Consulta a quita\u00E7\u00E3o de d\u00E9bitos do portador no ano referente Este recurso permite consultar a quita\u00E7\u00E3o de d\u00E9bitos do portador no ano referente
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta</param>
+        /// <param name="ano">Ano de refer\u00EAncia</param>
+        /// <returns>Task of ApiResponse (QuitacaoAnualResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<QuitacaoAnualResponse>> ConsultarQuitacaoAnualAsyncWithHttpInfo (long? id, string ano)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarQuitacaoAnual");
+            // verify the required parameter 'ano' is set
+            if (ano == null) throw new ApiException(400, "Missing required parameter 'ano' when calling ConsultarQuitacaoAnual");
+            
+    
+            var localVarPath = "/api/contas/{id}/quitacoes-anuais/{ano}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (ano != null) localVarPathParams.Add("ano", Configuration.ApiClient.ParameterToString(ano)); // path parameter
+            
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarQuitacaoAnual: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarQuitacaoAnual: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<QuitacaoAnualResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (QuitacaoAnualResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(QuitacaoAnualResponse)));
+            
+        }
+        
+        /// <summary>
         /// Permite consultar a partir do ID da conta as taxas e tarifas Esta opera\u00E7\u00E3o tem como objetivo permitir que os Emissores consultem as taxas e tarifas da conta
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
@@ -7462,6 +8650,164 @@ namespace Conductor.Pier.Api
             return new ApiResponse<PageTaxasRefinanciamentoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (PageTaxasRefinanciamentoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageTaxasRefinanciamentoResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Consulta um tipo de v\u00EDnculo Este recurso permite consultar um tipo de v\u00EDnculo cadastrado na base do emissor a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id)
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo identificador do tipo de v\u00EDnculo (id)</param> 
+        /// <returns>TipoVinculoContaResponse</returns>
+        public TipoVinculoContaResponse ConsultarTipoVinculoConta (long? id)
+        {
+             ApiResponse<TipoVinculoContaResponse> localVarResponse = ConsultarTipoVinculoContaWithHttpInfo(id);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Consulta um tipo de v\u00EDnculo Este recurso permite consultar um tipo de v\u00EDnculo cadastrado na base do emissor a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id)
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo identificador do tipo de v\u00EDnculo (id)</param> 
+        /// <returns>ApiResponse of TipoVinculoContaResponse</returns>
+        public ApiResponse< TipoVinculoContaResponse > ConsultarTipoVinculoContaWithHttpInfo (long? id)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->ConsultarTipoVinculoConta");
+            
+    
+            var localVarPath = "/api/contas/vinculos/tipos/{id}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarTipoVinculoConta: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarTipoVinculoConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<TipoVinculoContaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (TipoVinculoContaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TipoVinculoContaResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Consulta um tipo de v\u00EDnculo Este recurso permite consultar um tipo de v\u00EDnculo cadastrado na base do emissor a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id)
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo identificador do tipo de v\u00EDnculo (id)</param>
+        /// <returns>Task of TipoVinculoContaResponse</returns>
+        public async System.Threading.Tasks.Task<TipoVinculoContaResponse> ConsultarTipoVinculoContaAsync (long? id)
+        {
+             ApiResponse<TipoVinculoContaResponse> localVarResponse = await ConsultarTipoVinculoContaAsyncWithHttpInfo(id);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Consulta um tipo de v\u00EDnculo Este recurso permite consultar um tipo de v\u00EDnculo cadastrado na base do emissor a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id)
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo identificador do tipo de v\u00EDnculo (id)</param>
+        /// <returns>Task of ApiResponse (TipoVinculoContaResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<TipoVinculoContaResponse>> ConsultarTipoVinculoContaAsyncWithHttpInfo (long? id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarTipoVinculoConta");
+            
+    
+            var localVarPath = "/api/contas/vinculos/tipos/{id}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarTipoVinculoConta: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarTipoVinculoConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TipoVinculoContaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (TipoVinculoContaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TipoVinculoContaResponse)));
             
         }
         
@@ -8324,6 +9670,322 @@ namespace Conductor.Pier.Api
             return new ApiResponse<ContaMultiAppResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ContaMultiAppResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContaMultiAppResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Exclui um controle de uma subconta Este recurso permite excluir um controle de subconta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o. O controle de subconta serve para registrar informa\u00E7\u00F5es adicionais da subconta como apelido, prop\u00F3sito da cria\u00E7\u00E3o da subconta e se ela pode ser gerenciada pela pr\u00F3pria subconta ou apenas pela conta pai.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo identificador do controle de subconta (id)</param> 
+        /// <returns>Object</returns>
+        public Object DeletarControlesSubcontas (long? id)
+        {
+             ApiResponse<Object> localVarResponse = DeletarControlesSubcontasWithHttpInfo(id);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Exclui um controle de uma subconta Este recurso permite excluir um controle de subconta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o. O controle de subconta serve para registrar informa\u00E7\u00F5es adicionais da subconta como apelido, prop\u00F3sito da cria\u00E7\u00E3o da subconta e se ela pode ser gerenciada pela pr\u00F3pria subconta ou apenas pela conta pai.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo identificador do controle de subconta (id)</param> 
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > DeletarControlesSubcontasWithHttpInfo (long? id)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->DeletarControlesSubcontas");
+            
+    
+            var localVarPath = "/api/contas/vinculos/controles-subcontas/{id}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeletarControlesSubcontas: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeletarControlesSubcontas: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+            
+        }
+
+        
+        /// <summary>
+        /// Exclui um controle de uma subconta Este recurso permite excluir um controle de subconta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o. O controle de subconta serve para registrar informa\u00E7\u00F5es adicionais da subconta como apelido, prop\u00F3sito da cria\u00E7\u00E3o da subconta e se ela pode ser gerenciada pela pr\u00F3pria subconta ou apenas pela conta pai.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo identificador do controle de subconta (id)</param>
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> DeletarControlesSubcontasAsync (long? id)
+        {
+             ApiResponse<Object> localVarResponse = await DeletarControlesSubcontasAsyncWithHttpInfo(id);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Exclui um controle de uma subconta Este recurso permite excluir um controle de subconta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o. O controle de subconta serve para registrar informa\u00E7\u00F5es adicionais da subconta como apelido, prop\u00F3sito da cria\u00E7\u00E3o da subconta e se ela pode ser gerenciada pela pr\u00F3pria subconta ou apenas pela conta pai.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo identificador do controle de subconta (id)</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeletarControlesSubcontasAsyncWithHttpInfo (long? id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling DeletarControlesSubcontas");
+            
+    
+            var localVarPath = "/api/contas/vinculos/controles-subcontas/{id}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeletarControlesSubcontas: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeletarControlesSubcontas: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+            
+        }
+        
+        /// <summary>
+        /// Deleta um v\u00EDnculo entre duas contas Este recurso permite deletar um v\u00EDnculo entre duas contas
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param> 
+        /// <returns>Object</returns>
+        public Object DeletarVinculoConta (long? id)
+        {
+             ApiResponse<Object> localVarResponse = DeletarVinculoContaWithHttpInfo(id);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Deleta um v\u00EDnculo entre duas contas Este recurso permite deletar um v\u00EDnculo entre duas contas
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param> 
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > DeletarVinculoContaWithHttpInfo (long? id)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->DeletarVinculoConta");
+            
+    
+            var localVarPath = "/api/contas/vinculos/{id}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeletarVinculoConta: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeletarVinculoConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+            
+        }
+
+        
+        /// <summary>
+        /// Deleta um v\u00EDnculo entre duas contas Este recurso permite deletar um v\u00EDnculo entre duas contas
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> DeletarVinculoContaAsync (long? id)
+        {
+             ApiResponse<Object> localVarResponse = await DeletarVinculoContaAsyncWithHttpInfo(id);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Deleta um v\u00EDnculo entre duas contas Este recurso permite deletar um v\u00EDnculo entre duas contas
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeletarVinculoContaAsyncWithHttpInfo (long? id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling DeletarVinculoConta");
+            
+    
+            var localVarPath = "/api/contas/vinculos/{id}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeletarVinculoConta: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeletarVinculoConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
             
         }
         
@@ -9578,6 +11240,200 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
+        /// Lista os controles de subcontas Este recurso permite listar os controles de subcontas cadastrados na base do emissor. O controle de subconta serve para registrar informa\u00E7\u00F5es adicionais da subconta como apelido, prop\u00F3sito da cria\u00E7\u00E3o da subconta e se ela pode ser gerenciada pela pr\u00F3pria subconta ou apenas pela conta pai.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="page">P\u00E1gina (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <param name="idVinculoConta">Id referenciando o v\u00EDnculo da subconta na tabela VinculosContas (optional)</param> 
+        /// <param name="idConta">C\u00F3digo identificador da subconta (id) (optional)</param> 
+        /// <param name="nome">Nome/apelido dado para a subconta (optional)</param> 
+        /// <param name="finalidade">Finalidade da cria\u00E7\u00E3o da subconta (optional)</param> 
+        /// <param name="autoGerenciavel">Indica se a subconta \u00E9 auto gerenci\u00E1vel ou se apenas a conta pai poder\u00E1 gerir (optional)</param> 
+        /// <returns>PageControleSubcontaResponse</returns>
+        public PageControleSubcontaResponse ListarControlesSubcontas (List<string> sort = null, int? page = null, int? limit = null, long? idVinculoConta = null, long? idConta = null, string nome = null, string finalidade = null, bool? autoGerenciavel = null)
+        {
+             ApiResponse<PageControleSubcontaResponse> localVarResponse = ListarControlesSubcontasWithHttpInfo(sort, page, limit, idVinculoConta, idConta, nome, finalidade, autoGerenciavel);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Lista os controles de subcontas Este recurso permite listar os controles de subcontas cadastrados na base do emissor. O controle de subconta serve para registrar informa\u00E7\u00F5es adicionais da subconta como apelido, prop\u00F3sito da cria\u00E7\u00E3o da subconta e se ela pode ser gerenciada pela pr\u00F3pria subconta ou apenas pela conta pai.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="page">P\u00E1gina (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <param name="idVinculoConta">Id referenciando o v\u00EDnculo da subconta na tabela VinculosContas (optional)</param> 
+        /// <param name="idConta">C\u00F3digo identificador da subconta (id) (optional)</param> 
+        /// <param name="nome">Nome/apelido dado para a subconta (optional)</param> 
+        /// <param name="finalidade">Finalidade da cria\u00E7\u00E3o da subconta (optional)</param> 
+        /// <param name="autoGerenciavel">Indica se a subconta \u00E9 auto gerenci\u00E1vel ou se apenas a conta pai poder\u00E1 gerir (optional)</param> 
+        /// <returns>ApiResponse of PageControleSubcontaResponse</returns>
+        public ApiResponse< PageControleSubcontaResponse > ListarControlesSubcontasWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idVinculoConta = null, long? idConta = null, string nome = null, string finalidade = null, bool? autoGerenciavel = null)
+        {
+            
+    
+            var localVarPath = "/api/contas/vinculos/controles-subcontas";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (idVinculoConta != null) localVarQueryParams.Add("idVinculoConta", Configuration.ApiClient.ParameterToString(idVinculoConta)); // query parameter
+            if (idConta != null) localVarQueryParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // query parameter
+            if (nome != null) localVarQueryParams.Add("nome", Configuration.ApiClient.ParameterToString(nome)); // query parameter
+            if (finalidade != null) localVarQueryParams.Add("finalidade", Configuration.ApiClient.ParameterToString(finalidade)); // query parameter
+            if (autoGerenciavel != null) localVarQueryParams.Add("autoGerenciavel", Configuration.ApiClient.ParameterToString(autoGerenciavel)); // query parameter
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarControlesSubcontas: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarControlesSubcontas: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<PageControleSubcontaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageControleSubcontaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageControleSubcontaResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Lista os controles de subcontas Este recurso permite listar os controles de subcontas cadastrados na base do emissor. O controle de subconta serve para registrar informa\u00E7\u00F5es adicionais da subconta como apelido, prop\u00F3sito da cria\u00E7\u00E3o da subconta e se ela pode ser gerenciada pela pr\u00F3pria subconta ou apenas pela conta pai.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idVinculoConta">Id referenciando o v\u00EDnculo da subconta na tabela VinculosContas (optional)</param>
+        /// <param name="idConta">C\u00F3digo identificador da subconta (id) (optional)</param>
+        /// <param name="nome">Nome/apelido dado para a subconta (optional)</param>
+        /// <param name="finalidade">Finalidade da cria\u00E7\u00E3o da subconta (optional)</param>
+        /// <param name="autoGerenciavel">Indica se a subconta \u00E9 auto gerenci\u00E1vel ou se apenas a conta pai poder\u00E1 gerir (optional)</param>
+        /// <returns>Task of PageControleSubcontaResponse</returns>
+        public async System.Threading.Tasks.Task<PageControleSubcontaResponse> ListarControlesSubcontasAsync (List<string> sort = null, int? page = null, int? limit = null, long? idVinculoConta = null, long? idConta = null, string nome = null, string finalidade = null, bool? autoGerenciavel = null)
+        {
+             ApiResponse<PageControleSubcontaResponse> localVarResponse = await ListarControlesSubcontasAsyncWithHttpInfo(sort, page, limit, idVinculoConta, idConta, nome, finalidade, autoGerenciavel);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Lista os controles de subcontas Este recurso permite listar os controles de subcontas cadastrados na base do emissor. O controle de subconta serve para registrar informa\u00E7\u00F5es adicionais da subconta como apelido, prop\u00F3sito da cria\u00E7\u00E3o da subconta e se ela pode ser gerenciada pela pr\u00F3pria subconta ou apenas pela conta pai.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idVinculoConta">Id referenciando o v\u00EDnculo da subconta na tabela VinculosContas (optional)</param>
+        /// <param name="idConta">C\u00F3digo identificador da subconta (id) (optional)</param>
+        /// <param name="nome">Nome/apelido dado para a subconta (optional)</param>
+        /// <param name="finalidade">Finalidade da cria\u00E7\u00E3o da subconta (optional)</param>
+        /// <param name="autoGerenciavel">Indica se a subconta \u00E9 auto gerenci\u00E1vel ou se apenas a conta pai poder\u00E1 gerir (optional)</param>
+        /// <returns>Task of ApiResponse (PageControleSubcontaResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PageControleSubcontaResponse>> ListarControlesSubcontasAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idVinculoConta = null, long? idConta = null, string nome = null, string finalidade = null, bool? autoGerenciavel = null)
+        {
+            
+    
+            var localVarPath = "/api/contas/vinculos/controles-subcontas";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (idVinculoConta != null) localVarQueryParams.Add("idVinculoConta", Configuration.ApiClient.ParameterToString(idVinculoConta)); // query parameter
+            if (idConta != null) localVarQueryParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // query parameter
+            if (nome != null) localVarQueryParams.Add("nome", Configuration.ApiClient.ParameterToString(nome)); // query parameter
+            if (finalidade != null) localVarQueryParams.Add("finalidade", Configuration.ApiClient.ParameterToString(finalidade)); // query parameter
+            if (autoGerenciavel != null) localVarQueryParams.Add("autoGerenciavel", Configuration.ApiClient.ParameterToString(autoGerenciavel)); // query parameter
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarControlesSubcontas: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarControlesSubcontas: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PageControleSubcontaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageControleSubcontaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageControleSubcontaResponse)));
+            
+        }
+        
+        /// <summary>
         /// Lista o hist\u00F3rico de altera\u00E7\u00F5es de limites da conta Este recurso consulta o hist\u00F3rico com as altera\u00E7\u00F5es de limites da conta informada
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
@@ -10760,6 +12616,364 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
+        /// Lista contas v\u00EDnculadas a uma conta pai Este recurso permite listar as contas que est\u00E3o v\u00EDnculadas a conta pai, informada no path
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="page">P\u00E1gina (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <param name="idConta">Id da subconta (optional)</param> 
+        /// <param name="idTipoVinculo">Id do tipo de v\u00EDnculo entre as duas contas (optional)</param> 
+        /// <returns>PageVinculoContaResponse</returns>
+        public PageVinculoContaResponse ListarSubcontasVinculadas (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idTipoVinculo = null)
+        {
+             ApiResponse<PageVinculoContaResponse> localVarResponse = ListarSubcontasVinculadasWithHttpInfo(id, sort, page, limit, idConta, idTipoVinculo);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Lista contas v\u00EDnculadas a uma conta pai Este recurso permite listar as contas que est\u00E3o v\u00EDnculadas a conta pai, informada no path
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="page">P\u00E1gina (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <param name="idConta">Id da subconta (optional)</param> 
+        /// <param name="idTipoVinculo">Id do tipo de v\u00EDnculo entre as duas contas (optional)</param> 
+        /// <returns>ApiResponse of PageVinculoContaResponse</returns>
+        public ApiResponse< PageVinculoContaResponse > ListarSubcontasVinculadasWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idTipoVinculo = null)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->ListarSubcontasVinculadas");
+            
+    
+            var localVarPath = "/api/contas/{id}/vinculos";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (idConta != null) localVarQueryParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // query parameter
+            if (idTipoVinculo != null) localVarQueryParams.Add("idTipoVinculo", Configuration.ApiClient.ParameterToString(idTipoVinculo)); // query parameter
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarSubcontasVinculadas: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarSubcontasVinculadas: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<PageVinculoContaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageVinculoContaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageVinculoContaResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Lista contas v\u00EDnculadas a uma conta pai Este recurso permite listar as contas que est\u00E3o v\u00EDnculadas a conta pai, informada no path
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idConta">Id da subconta (optional)</param>
+        /// <param name="idTipoVinculo">Id do tipo de v\u00EDnculo entre as duas contas (optional)</param>
+        /// <returns>Task of PageVinculoContaResponse</returns>
+        public async System.Threading.Tasks.Task<PageVinculoContaResponse> ListarSubcontasVinculadasAsync (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idTipoVinculo = null)
+        {
+             ApiResponse<PageVinculoContaResponse> localVarResponse = await ListarSubcontasVinculadasAsyncWithHttpInfo(id, sort, page, limit, idConta, idTipoVinculo);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Lista contas v\u00EDnculadas a uma conta pai Este recurso permite listar as contas que est\u00E3o v\u00EDnculadas a conta pai, informada no path
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idConta">Id da subconta (optional)</param>
+        /// <param name="idTipoVinculo">Id do tipo de v\u00EDnculo entre as duas contas (optional)</param>
+        /// <returns>Task of ApiResponse (PageVinculoContaResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PageVinculoContaResponse>> ListarSubcontasVinculadasAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idTipoVinculo = null)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ListarSubcontasVinculadas");
+            
+    
+            var localVarPath = "/api/contas/{id}/vinculos";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (idConta != null) localVarQueryParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // query parameter
+            if (idTipoVinculo != null) localVarQueryParams.Add("idTipoVinculo", Configuration.ApiClient.ParameterToString(idTipoVinculo)); // query parameter
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarSubcontasVinculadas: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarSubcontasVinculadas: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PageVinculoContaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageVinculoContaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageVinculoContaResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Lista os tipos de v\u00EDnculos Este recurso permite listar os tipos de v\u00EDnculos cadastrados na base do emissor
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="page">P\u00E1gina (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <param name="descricao">Descri\u00E7\u00E3o do tipo de v\u00EDnculo (optional)</param> 
+        /// <returns>PageTipoVinculoContaResponse</returns>
+        public PageTipoVinculoContaResponse ListarTipoVinculo (List<string> sort = null, int? page = null, int? limit = null, string descricao = null)
+        {
+             ApiResponse<PageTipoVinculoContaResponse> localVarResponse = ListarTipoVinculoWithHttpInfo(sort, page, limit, descricao);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Lista os tipos de v\u00EDnculos Este recurso permite listar os tipos de v\u00EDnculos cadastrados na base do emissor
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="page">P\u00E1gina (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <param name="descricao">Descri\u00E7\u00E3o do tipo de v\u00EDnculo (optional)</param> 
+        /// <returns>ApiResponse of PageTipoVinculoContaResponse</returns>
+        public ApiResponse< PageTipoVinculoContaResponse > ListarTipoVinculoWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string descricao = null)
+        {
+            
+    
+            var localVarPath = "/api/contas/vinculos/tipos";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (descricao != null) localVarQueryParams.Add("descricao", Configuration.ApiClient.ParameterToString(descricao)); // query parameter
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarTipoVinculo: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarTipoVinculo: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<PageTipoVinculoContaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageTipoVinculoContaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageTipoVinculoContaResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Lista os tipos de v\u00EDnculos Este recurso permite listar os tipos de v\u00EDnculos cadastrados na base do emissor
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="descricao">Descri\u00E7\u00E3o do tipo de v\u00EDnculo (optional)</param>
+        /// <returns>Task of PageTipoVinculoContaResponse</returns>
+        public async System.Threading.Tasks.Task<PageTipoVinculoContaResponse> ListarTipoVinculoAsync (List<string> sort = null, int? page = null, int? limit = null, string descricao = null)
+        {
+             ApiResponse<PageTipoVinculoContaResponse> localVarResponse = await ListarTipoVinculoAsyncWithHttpInfo(sort, page, limit, descricao);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Lista os tipos de v\u00EDnculos Este recurso permite listar os tipos de v\u00EDnculos cadastrados na base do emissor
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="descricao">Descri\u00E7\u00E3o do tipo de v\u00EDnculo (optional)</param>
+        /// <returns>Task of ApiResponse (PageTipoVinculoContaResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PageTipoVinculoContaResponse>> ListarTipoVinculoAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string descricao = null)
+        {
+            
+    
+            var localVarPath = "/api/contas/vinculos/tipos";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (descricao != null) localVarQueryParams.Add("descricao", Configuration.ApiClient.ParameterToString(descricao)); // query parameter
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarTipoVinculo: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarTipoVinculo: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PageTipoVinculoContaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageTipoVinculoContaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageTipoVinculoContaResponse)));
+            
+        }
+        
+        /// <summary>
         /// Este recurso permite que uma proje\u00E7\u00E3o de compra ainda n\u00E3o processada seja recuperada. Os valores das compras s\u00E3o agrupados e exibidos em blocos mensais. Este recurso permite que uma proje\u00E7\u00E3o de compra ainda n\u00E3o processada seja recuperada. Os valores das compras s\u00E3o agrupados e exibidos em blocos mensais.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
@@ -10932,6 +13146,182 @@ namespace Conductor.Pier.Api
             return new ApiResponse<PageProjecaoCompraNaoProcessadaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (PageProjecaoCompraNaoProcessadaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageProjecaoCompraNaoProcessadaResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Lista v\u00EDnculos de contas Este recurso permite listar os v\u00EDnculos de contas existentes na base
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="page">P\u00E1gina (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <param name="idConta">Id da subconta (optional)</param> 
+        /// <param name="idTipoVinculo">Id do tipo de v\u00EDnculo entre as duas contas (optional)</param> 
+        /// <returns>PageVinculoContaResponse</returns>
+        public PageVinculoContaResponse ListarVinculoConta (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idTipoVinculo = null)
+        {
+             ApiResponse<PageVinculoContaResponse> localVarResponse = ListarVinculoContaWithHttpInfo(sort, page, limit, idConta, idTipoVinculo);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Lista v\u00EDnculos de contas Este recurso permite listar os v\u00EDnculos de contas existentes na base
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="page">P\u00E1gina (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <param name="idConta">Id da subconta (optional)</param> 
+        /// <param name="idTipoVinculo">Id do tipo de v\u00EDnculo entre as duas contas (optional)</param> 
+        /// <returns>ApiResponse of PageVinculoContaResponse</returns>
+        public ApiResponse< PageVinculoContaResponse > ListarVinculoContaWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idTipoVinculo = null)
+        {
+            
+    
+            var localVarPath = "/api/contas/vinculos";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (idConta != null) localVarQueryParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // query parameter
+            if (idTipoVinculo != null) localVarQueryParams.Add("idTipoVinculo", Configuration.ApiClient.ParameterToString(idTipoVinculo)); // query parameter
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarVinculoConta: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarVinculoConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<PageVinculoContaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageVinculoContaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageVinculoContaResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Lista v\u00EDnculos de contas Este recurso permite listar os v\u00EDnculos de contas existentes na base
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idConta">Id da subconta (optional)</param>
+        /// <param name="idTipoVinculo">Id do tipo de v\u00EDnculo entre as duas contas (optional)</param>
+        /// <returns>Task of PageVinculoContaResponse</returns>
+        public async System.Threading.Tasks.Task<PageVinculoContaResponse> ListarVinculoContaAsync (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idTipoVinculo = null)
+        {
+             ApiResponse<PageVinculoContaResponse> localVarResponse = await ListarVinculoContaAsyncWithHttpInfo(sort, page, limit, idConta, idTipoVinculo);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Lista v\u00EDnculos de contas Este recurso permite listar os v\u00EDnculos de contas existentes na base
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idConta">Id da subconta (optional)</param>
+        /// <param name="idTipoVinculo">Id do tipo de v\u00EDnculo entre as duas contas (optional)</param>
+        /// <returns>Task of ApiResponse (PageVinculoContaResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PageVinculoContaResponse>> ListarVinculoContaAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idTipoVinculo = null)
+        {
+            
+    
+            var localVarPath = "/api/contas/vinculos";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (idConta != null) localVarQueryParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // query parameter
+            if (idTipoVinculo != null) localVarQueryParams.Add("idTipoVinculo", Configuration.ApiClient.ParameterToString(idTipoVinculo)); // query parameter
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarVinculoConta: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarVinculoConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PageVinculoContaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageVinculoContaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageVinculoContaResponse)));
             
         }
         
@@ -12600,6 +14990,552 @@ namespace Conductor.Pier.Api
             return new ApiResponse<AgendamentoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (AgendamentoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AgendamentoResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Cadastra um controle para uma subconta Este recurso permite cadastrar um controle de subconta. O controle de subconta serve para registrar informa\u00E7\u00F5es adicionais da subconta como apelido, prop\u00F3sito da cria\u00E7\u00E3o da subconta e se ela pode ser gerenciada pela pr\u00F3pria subconta ou apenas pela conta pai.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo identificador da conta (id)</param> 
+        /// <param name="idVinculoConta">Id referenciando o v\u00EDnculo da subconta na tabela VinculosContas</param> 
+        /// <param name="controleSubcontaPersist">controleSubcontaPersist</param> 
+        /// <returns>ControleSubcontaResponse</returns>
+        public ControleSubcontaResponse SalvarControlesSubcontas (long? id, long? idVinculoConta, ControleSubcontaPersist controleSubcontaPersist)
+        {
+             ApiResponse<ControleSubcontaResponse> localVarResponse = SalvarControlesSubcontasWithHttpInfo(id, idVinculoConta, controleSubcontaPersist);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Cadastra um controle para uma subconta Este recurso permite cadastrar um controle de subconta. O controle de subconta serve para registrar informa\u00E7\u00F5es adicionais da subconta como apelido, prop\u00F3sito da cria\u00E7\u00E3o da subconta e se ela pode ser gerenciada pela pr\u00F3pria subconta ou apenas pela conta pai.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo identificador da conta (id)</param> 
+        /// <param name="idVinculoConta">Id referenciando o v\u00EDnculo da subconta na tabela VinculosContas</param> 
+        /// <param name="controleSubcontaPersist">controleSubcontaPersist</param> 
+        /// <returns>ApiResponse of ControleSubcontaResponse</returns>
+        public ApiResponse< ControleSubcontaResponse > SalvarControlesSubcontasWithHttpInfo (long? id, long? idVinculoConta, ControleSubcontaPersist controleSubcontaPersist)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->SalvarControlesSubcontas");
+            
+            // verify the required parameter 'idVinculoConta' is set
+            if (idVinculoConta == null)
+                throw new ApiException(400, "Missing required parameter 'idVinculoConta' when calling ContaApi->SalvarControlesSubcontas");
+            
+            // verify the required parameter 'controleSubcontaPersist' is set
+            if (controleSubcontaPersist == null)
+                throw new ApiException(400, "Missing required parameter 'controleSubcontaPersist' when calling ContaApi->SalvarControlesSubcontas");
+            
+    
+            var localVarPath = "/api/contas/{id}/vinculos/{idVinculoConta}/controles-subcontas";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (idVinculoConta != null) localVarPathParams.Add("idVinculoConta", Configuration.ApiClient.ParameterToString(idVinculoConta)); // path parameter
+            
+            
+            
+            
+            if (controleSubcontaPersist.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(controleSubcontaPersist); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = controleSubcontaPersist; // byte array
+            }
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarControlesSubcontas: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarControlesSubcontas: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<ControleSubcontaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ControleSubcontaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ControleSubcontaResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Cadastra um controle para uma subconta Este recurso permite cadastrar um controle de subconta. O controle de subconta serve para registrar informa\u00E7\u00F5es adicionais da subconta como apelido, prop\u00F3sito da cria\u00E7\u00E3o da subconta e se ela pode ser gerenciada pela pr\u00F3pria subconta ou apenas pela conta pai.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo identificador da conta (id)</param>
+        /// <param name="idVinculoConta">Id referenciando o v\u00EDnculo da subconta na tabela VinculosContas</param>
+        /// <param name="controleSubcontaPersist">controleSubcontaPersist</param>
+        /// <returns>Task of ControleSubcontaResponse</returns>
+        public async System.Threading.Tasks.Task<ControleSubcontaResponse> SalvarControlesSubcontasAsync (long? id, long? idVinculoConta, ControleSubcontaPersist controleSubcontaPersist)
+        {
+             ApiResponse<ControleSubcontaResponse> localVarResponse = await SalvarControlesSubcontasAsyncWithHttpInfo(id, idVinculoConta, controleSubcontaPersist);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Cadastra um controle para uma subconta Este recurso permite cadastrar um controle de subconta. O controle de subconta serve para registrar informa\u00E7\u00F5es adicionais da subconta como apelido, prop\u00F3sito da cria\u00E7\u00E3o da subconta e se ela pode ser gerenciada pela pr\u00F3pria subconta ou apenas pela conta pai.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo identificador da conta (id)</param>
+        /// <param name="idVinculoConta">Id referenciando o v\u00EDnculo da subconta na tabela VinculosContas</param>
+        /// <param name="controleSubcontaPersist">controleSubcontaPersist</param>
+        /// <returns>Task of ApiResponse (ControleSubcontaResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ControleSubcontaResponse>> SalvarControlesSubcontasAsyncWithHttpInfo (long? id, long? idVinculoConta, ControleSubcontaPersist controleSubcontaPersist)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling SalvarControlesSubcontas");
+            // verify the required parameter 'idVinculoConta' is set
+            if (idVinculoConta == null) throw new ApiException(400, "Missing required parameter 'idVinculoConta' when calling SalvarControlesSubcontas");
+            // verify the required parameter 'controleSubcontaPersist' is set
+            if (controleSubcontaPersist == null) throw new ApiException(400, "Missing required parameter 'controleSubcontaPersist' when calling SalvarControlesSubcontas");
+            
+    
+            var localVarPath = "/api/contas/{id}/vinculos/{idVinculoConta}/controles-subcontas";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (idVinculoConta != null) localVarPathParams.Add("idVinculoConta", Configuration.ApiClient.ParameterToString(idVinculoConta)); // path parameter
+            
+            
+            
+            
+            if (controleSubcontaPersist.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(controleSubcontaPersist); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = controleSubcontaPersist; // byte array
+            }
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarControlesSubcontas: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarControlesSubcontas: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ControleSubcontaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ControleSubcontaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ControleSubcontaResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Salva um tipo de v\u00EDnculo Este recurso permite cadastrar um tipo de v\u00EDnculo na base do emissor
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tipoVinculoContaPersist">tipoVinculoContaPersist</param> 
+        /// <returns>TipoVinculoContaResponse</returns>
+        public TipoVinculoContaResponse SalvarTipoVinculoConta (TipoVinculoContaPersist tipoVinculoContaPersist)
+        {
+             ApiResponse<TipoVinculoContaResponse> localVarResponse = SalvarTipoVinculoContaWithHttpInfo(tipoVinculoContaPersist);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Salva um tipo de v\u00EDnculo Este recurso permite cadastrar um tipo de v\u00EDnculo na base do emissor
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tipoVinculoContaPersist">tipoVinculoContaPersist</param> 
+        /// <returns>ApiResponse of TipoVinculoContaResponse</returns>
+        public ApiResponse< TipoVinculoContaResponse > SalvarTipoVinculoContaWithHttpInfo (TipoVinculoContaPersist tipoVinculoContaPersist)
+        {
+            
+            // verify the required parameter 'tipoVinculoContaPersist' is set
+            if (tipoVinculoContaPersist == null)
+                throw new ApiException(400, "Missing required parameter 'tipoVinculoContaPersist' when calling ContaApi->SalvarTipoVinculoConta");
+            
+    
+            var localVarPath = "/api/contas/vinculos/tipos";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            if (tipoVinculoContaPersist.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(tipoVinculoContaPersist); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = tipoVinculoContaPersist; // byte array
+            }
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarTipoVinculoConta: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarTipoVinculoConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<TipoVinculoContaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (TipoVinculoContaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TipoVinculoContaResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Salva um tipo de v\u00EDnculo Este recurso permite cadastrar um tipo de v\u00EDnculo na base do emissor
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tipoVinculoContaPersist">tipoVinculoContaPersist</param>
+        /// <returns>Task of TipoVinculoContaResponse</returns>
+        public async System.Threading.Tasks.Task<TipoVinculoContaResponse> SalvarTipoVinculoContaAsync (TipoVinculoContaPersist tipoVinculoContaPersist)
+        {
+             ApiResponse<TipoVinculoContaResponse> localVarResponse = await SalvarTipoVinculoContaAsyncWithHttpInfo(tipoVinculoContaPersist);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Salva um tipo de v\u00EDnculo Este recurso permite cadastrar um tipo de v\u00EDnculo na base do emissor
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tipoVinculoContaPersist">tipoVinculoContaPersist</param>
+        /// <returns>Task of ApiResponse (TipoVinculoContaResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<TipoVinculoContaResponse>> SalvarTipoVinculoContaAsyncWithHttpInfo (TipoVinculoContaPersist tipoVinculoContaPersist)
+        {
+            // verify the required parameter 'tipoVinculoContaPersist' is set
+            if (tipoVinculoContaPersist == null) throw new ApiException(400, "Missing required parameter 'tipoVinculoContaPersist' when calling SalvarTipoVinculoConta");
+            
+    
+            var localVarPath = "/api/contas/vinculos/tipos";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            if (tipoVinculoContaPersist.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(tipoVinculoContaPersist); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = tipoVinculoContaPersist; // byte array
+            }
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarTipoVinculoConta: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarTipoVinculoConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TipoVinculoContaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (TipoVinculoContaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TipoVinculoContaResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Cadastra um v\u00EDnculo entre duas contas Este recurso permite cadastrar um v\u00EDnculo de uma conta com uma conta pai
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param> 
+        /// <param name="vinculoContaPersist">vinculoContaPersist</param> 
+        /// <returns>VinculoContaResponse</returns>
+        public VinculoContaResponse SalvarVinculoConta (long? id, VinculoContaPersist vinculoContaPersist)
+        {
+             ApiResponse<VinculoContaResponse> localVarResponse = SalvarVinculoContaWithHttpInfo(id, vinculoContaPersist);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Cadastra um v\u00EDnculo entre duas contas Este recurso permite cadastrar um v\u00EDnculo de uma conta com uma conta pai
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param> 
+        /// <param name="vinculoContaPersist">vinculoContaPersist</param> 
+        /// <returns>ApiResponse of VinculoContaResponse</returns>
+        public ApiResponse< VinculoContaResponse > SalvarVinculoContaWithHttpInfo (long? id, VinculoContaPersist vinculoContaPersist)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->SalvarVinculoConta");
+            
+            // verify the required parameter 'vinculoContaPersist' is set
+            if (vinculoContaPersist == null)
+                throw new ApiException(400, "Missing required parameter 'vinculoContaPersist' when calling ContaApi->SalvarVinculoConta");
+            
+    
+            var localVarPath = "/api/contas/{id}/vinculos";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            if (vinculoContaPersist.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(vinculoContaPersist); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = vinculoContaPersist; // byte array
+            }
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarVinculoConta: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarVinculoConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<VinculoContaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (VinculoContaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(VinculoContaResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Cadastra um v\u00EDnculo entre duas contas Este recurso permite cadastrar um v\u00EDnculo de uma conta com uma conta pai
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <param name="vinculoContaPersist">vinculoContaPersist</param>
+        /// <returns>Task of VinculoContaResponse</returns>
+        public async System.Threading.Tasks.Task<VinculoContaResponse> SalvarVinculoContaAsync (long? id, VinculoContaPersist vinculoContaPersist)
+        {
+             ApiResponse<VinculoContaResponse> localVarResponse = await SalvarVinculoContaAsyncWithHttpInfo(id, vinculoContaPersist);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Cadastra um v\u00EDnculo entre duas contas Este recurso permite cadastrar um v\u00EDnculo de uma conta com uma conta pai
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <param name="vinculoContaPersist">vinculoContaPersist</param>
+        /// <returns>Task of ApiResponse (VinculoContaResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<VinculoContaResponse>> SalvarVinculoContaAsyncWithHttpInfo (long? id, VinculoContaPersist vinculoContaPersist)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling SalvarVinculoConta");
+            // verify the required parameter 'vinculoContaPersist' is set
+            if (vinculoContaPersist == null) throw new ApiException(400, "Missing required parameter 'vinculoContaPersist' when calling SalvarVinculoConta");
+            
+    
+            var localVarPath = "/api/contas/{id}/vinculos";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            if (vinculoContaPersist.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(vinculoContaPersist); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = vinculoContaPersist; // byte array
+            }
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarVinculoConta: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarVinculoConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<VinculoContaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (VinculoContaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(VinculoContaResponse)));
             
         }
         

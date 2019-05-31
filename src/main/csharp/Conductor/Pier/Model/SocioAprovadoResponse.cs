@@ -22,10 +22,10 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="SocioAprovadoResponse" /> class.
         /// Initializes a new instance of the <see cref="SocioAprovadoResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00F3digo de Identifica\u00E7\u00E3o do S\u00F3cio (id).</param>
-        /// <param name="Nome">Apresenta o Nome do Socio.</param>
-        /// <param name="Cpf">CPF.</param>
-        /// <param name="DataNascimento">Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd.</param>
+        /// <param name="Id">C\u00F3digo de Identifica\u00E7\u00E3o do S\u00F3cio.</param>
+        /// <param name="Nome">Nome do Socio.</param>
+        /// <param name="Cpf">CPF do s\u00F3cio.</param>
+        /// <param name="DataNascimento">Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ..</param>
         /// <param name="Sexo">C\u00F3digo de identifica\u00E7\u00E3o do sexo da pessoa, quando for PF, sendo: (&#39;M&#39;: Masculino), (&#39;F&#39;: F\u00EAmea), (&#39;O&#39;: Outros), (&#39;N&#39;: N\u00E3o Especificado).</param>
         /// <param name="NumeroIdentidade">N\u00FAmero da Identidade.</param>
         /// <param name="OrgaoExpedidorIdentidade">Org\u00E3o expedidor do RG.</param>
@@ -35,7 +35,7 @@ namespace Conductor.Pier.Model
         /// <param name="Profissao">Profiss\u00E3o do s\u00F3cio.</param>
         /// <param name="Nacionalidade">Nacionalidade do s\u00F3cio.</param>
         /// <param name="Email">Email do s\u00F3cio.</param>
-        /// <param name="Telefones">Informa os telefones do s\u00F3cio.</param>
+        /// <param name="Telefones">Telefones do s\u00F3cio.</param>
 
         public SocioAprovadoResponse(long? Id = null, string Nome = null, string Cpf = null, string DataNascimento = null, string Sexo = null, string NumeroIdentidade = null, string OrgaoExpedidorIdentidade = null, string UnidadeFederativaIdentidade = null, string DataEmissaoIdentidade = null, string EstadoCivil = null, string Profissao = null, string Nacionalidade = null, string Email = null, List<TelefonePessoaAprovadaResponse> Telefones = null)
         {
@@ -58,30 +58,30 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00F3digo de Identifica\u00E7\u00E3o do S\u00F3cio (id)
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do S\u00F3cio
         /// </summary>
-        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do S\u00F3cio (id)</value>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do S\u00F3cio</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Apresenta o Nome do Socio
+        /// Nome do Socio
         /// </summary>
-        /// <value>Apresenta o Nome do Socio</value>
+        /// <value>Nome do Socio</value>
         [DataMember(Name="nome", EmitDefaultValue=false)]
         public string Nome { get; set; }
     
         /// <summary>
-        /// CPF
+        /// CPF do s\u00F3cio
         /// </summary>
-        /// <value>CPF</value>
+        /// <value>CPF do s\u00F3cio</value>
         [DataMember(Name="cpf", EmitDefaultValue=false)]
         public string Cpf { get; set; }
     
         /// <summary>
-        /// Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd
+        /// Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ.
         /// </summary>
-        /// <value>Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd</value>
+        /// <value>Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ.</value>
         [DataMember(Name="dataNascimento", EmitDefaultValue=false)]
         public string DataNascimento { get; set; }
     
@@ -149,9 +149,9 @@ namespace Conductor.Pier.Model
         public string Email { get; set; }
     
         /// <summary>
-        /// Informa os telefones do s\u00F3cio
+        /// Telefones do s\u00F3cio
         /// </summary>
-        /// <value>Informa os telefones do s\u00F3cio</value>
+        /// <value>Telefones do s\u00F3cio</value>
         [DataMember(Name="telefones", EmitDefaultValue=false)]
         public List<TelefonePessoaAprovadaResponse> Telefones { get; set; }
     

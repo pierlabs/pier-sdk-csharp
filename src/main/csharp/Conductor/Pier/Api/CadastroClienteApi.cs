@@ -304,6 +304,32 @@ namespace Conductor.Pier.Api
         ApiResponse<EnderecoResponse> AtualizarEnderecoDeCorrespondenciaWithHttpInfo (long? id, long? idConta);
         
         /// <summary>
+        /// Atualizar indica\u00E7\u00E3o de amigos
+        /// </summary>
+        /// <remarks>
+        /// Atualiza a indica\u00E7\u00E3o de amigo uma pessoa
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo idenficador da pessoa</param>
+        /// <param name="idIndicacao">C\u00F3difo identificador da indica\u00E7\u00E3o</param>
+        /// <param name="update">update</param>
+        /// <returns>IndicacaoAmigoResponse</returns>
+        IndicacaoAmigoResponse AtualizarIndicacaoAmigo (long? id, long? idIndicacao, IndicacaoAmigoUpdate update);
+  
+        /// <summary>
+        /// Atualizar indica\u00E7\u00E3o de amigos
+        /// </summary>
+        /// <remarks>
+        /// Atualiza a indica\u00E7\u00E3o de amigo uma pessoa
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo idenficador da pessoa</param>
+        /// <param name="idIndicacao">C\u00F3difo identificador da indica\u00E7\u00E3o</param>
+        /// <param name="update">update</param>
+        /// <returns>ApiResponse of IndicacaoAmigoResponse</returns>
+        ApiResponse<IndicacaoAmigoResponse> AtualizarIndicacaoAmigoWithHttpInfo (long? id, long? idIndicacao, IndicacaoAmigoUpdate update);
+        
+        /// <summary>
         /// Cadastro da recarga programada
         /// </summary>
         /// <remarks>
@@ -348,6 +374,30 @@ namespace Conductor.Pier.Api
         /// <param name="adicionalContaPersist">adicionalContaPersist</param>
         /// <returns>ApiResponse of AdicionalContaResponse</returns>
         ApiResponse<AdicionalContaResponse> CadastrarAdicionalWithHttpInfo (long? id, AdicionalContaPersist adicionalContaPersist);
+        
+        /// <summary>
+        /// Cadastra uma indica\u00E7\u00E3o de amigo
+        /// </summary>
+        /// <remarks>
+        /// Cadastra uma indica\u00E7\u00E3o de amigo
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo idenficador da pessoa</param>
+        /// <param name="persist">persist</param>
+        /// <returns>IndicacaoAmigoResponse</returns>
+        IndicacaoAmigoResponse CadastrarIndicacaoAmigo (long? id, IndicacaoAmigoPersist persist);
+  
+        /// <summary>
+        /// Cadastra uma indica\u00E7\u00E3o de amigo
+        /// </summary>
+        /// <remarks>
+        /// Cadastra uma indica\u00E7\u00E3o de amigo
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo idenficador da pessoa</param>
+        /// <param name="persist">persist</param>
+        /// <returns>ApiResponse of IndicacaoAmigoResponse</returns>
+        ApiResponse<IndicacaoAmigoResponse> CadastrarIndicacaoAmigoWithHttpInfo (long? id, IndicacaoAmigoPersist persist);
         
         /// <summary>
         /// Realiza o cadastro de Adicionais para uma Conta
@@ -622,6 +672,48 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da pessoa (id)</param>
         /// <returns>ApiResponse of HistoricoTelefoneResponse</returns>
         ApiResponse<HistoricoTelefoneResponse> ListarHistoricoTelefonesWithHttpInfo (long? id);
+        
+        /// <summary>
+        /// Listar indica\u00E7\u00F5es de amigos
+        /// </summary>
+        /// <remarks>
+        /// Lista as indica\u00E7\u00F5es de amigos uma pessoa
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="dataIndicacao">Data da indica\u00E7\u00E3o (optional)</param>
+        /// <param name="dataUtilizacao">Data da utiliza\u00E7\u00E3o da indica\u00E7\u00E3o (optional)</param>
+        /// <param name="dataValidade">Data de validade da indica\u00E7\u00E3o (optional)</param>
+        /// <param name="cpfIndicado">N\u00FAmero do CPF do amigo indicado (optional)</param>
+        /// <param name="emailIndicado">Email do amigo indicado (optional)</param>
+        /// <param name="codigoIndicacao">C\u00F3digo da indica\u00E7\u00E3o (optional)</param>
+        /// <param name="idPessoa">C\u00F3digo identificador da pessoa (optional)</param>
+        /// <param name="status">Status da indica\u00E7\u00E3o (1 - CRIADO, 2 - UTILIZADO, 3 - PAGO) (optional)</param>
+        /// <returns>PageIndicacaoAmigoResponse</returns>
+        PageIndicacaoAmigoResponse ListarIndicacaoAmigo (List<string> sort = null, int? page = null, int? limit = null, string dataIndicacao = null, string dataUtilizacao = null, string dataValidade = null, string cpfIndicado = null, string emailIndicado = null, long? codigoIndicacao = null, int? idPessoa = null, int? status = null);
+  
+        /// <summary>
+        /// Listar indica\u00E7\u00F5es de amigos
+        /// </summary>
+        /// <remarks>
+        /// Lista as indica\u00E7\u00F5es de amigos uma pessoa
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="dataIndicacao">Data da indica\u00E7\u00E3o (optional)</param>
+        /// <param name="dataUtilizacao">Data da utiliza\u00E7\u00E3o da indica\u00E7\u00E3o (optional)</param>
+        /// <param name="dataValidade">Data de validade da indica\u00E7\u00E3o (optional)</param>
+        /// <param name="cpfIndicado">N\u00FAmero do CPF do amigo indicado (optional)</param>
+        /// <param name="emailIndicado">Email do amigo indicado (optional)</param>
+        /// <param name="codigoIndicacao">C\u00F3digo da indica\u00E7\u00E3o (optional)</param>
+        /// <param name="idPessoa">C\u00F3digo identificador da pessoa (optional)</param>
+        /// <param name="status">Status da indica\u00E7\u00E3o (1 - CRIADO, 2 - UTILIZADO, 3 - PAGO) (optional)</param>
+        /// <returns>ApiResponse of PageIndicacaoAmigoResponse</returns>
+        ApiResponse<PageIndicacaoAmigoResponse> ListarIndicacaoAmigoWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string dataIndicacao = null, string dataUtilizacao = null, string dataValidade = null, string cpfIndicado = null, string emailIndicado = null, long? codigoIndicacao = null, int? idPessoa = null, int? status = null);
         
         /// <summary>
         /// Listar s\u00F3cios de uma pessoa jur\u00EDdica
@@ -908,10 +1000,10 @@ namespace Conductor.Pier.Api
         ApiResponse<ObjetoPessoaFsicaAprovadaResponse> SalvarPessoaFisicaAprovadaWithHttpInfo (ObjetoPessoaFsicaAprovada pessoaPersist);
         
         /// <summary>
-        /// Cadastro de Conta e Pessoa Jur\u00EDdica
+        /// Cadastrar conta de Pessoa Jur\u00EDdica
         /// </summary>
         /// <remarks>
-        /// Cadastro de Conta e Pessoa Jur\u00EDdica Permite realizar o cadastro de uma Conta para um cliente do tipo Pessoa Jur\u00EDdica, recebendo nesta opera\u00E7\u00E3o todos os dados cadastrais que se fazem necess\u00E1rios para isso, inclu\u00EDndo o registro de cada um dos s\u00F3cios. Uma vez criado, poder\u00E1 ser acionado o m\u00E9todo de &#39;Gera\u00E7\u00E3o de Cart\u00E3o&#39; para o cliente e cada um dos s\u00F3cios vinculados
+        /// Realiza os procedimentos necess\u00E1rios de cria\u00E7\u00E3o de conta para pessoa jur\u00EDdica incluindo os cadastros de telefones, endere\u00E7os, limites e s\u00F3cios.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pessoaPersist">pessoaPersist</param>
@@ -919,10 +1011,10 @@ namespace Conductor.Pier.Api
         PessoaJuridicaAprovadaResponse SalvarPessoaJuridicaAprovada (PessoaJuridicaAprovadaPersist pessoaPersist);
   
         /// <summary>
-        /// Cadastro de Conta e Pessoa Jur\u00EDdica
+        /// Cadastrar conta de Pessoa Jur\u00EDdica
         /// </summary>
         /// <remarks>
-        /// Cadastro de Conta e Pessoa Jur\u00EDdica Permite realizar o cadastro de uma Conta para um cliente do tipo Pessoa Jur\u00EDdica, recebendo nesta opera\u00E7\u00E3o todos os dados cadastrais que se fazem necess\u00E1rios para isso, inclu\u00EDndo o registro de cada um dos s\u00F3cios. Uma vez criado, poder\u00E1 ser acionado o m\u00E9todo de &#39;Gera\u00E7\u00E3o de Cart\u00E3o&#39; para o cliente e cada um dos s\u00F3cios vinculados
+        /// Realiza os procedimentos necess\u00E1rios de cria\u00E7\u00E3o de conta para pessoa jur\u00EDdica incluindo os cadastros de telefones, endere\u00E7os, limites e s\u00F3cios.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pessoaPersist">pessoaPersist</param>
@@ -1428,6 +1520,32 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<EnderecoResponse>> AtualizarEnderecoDeCorrespondenciaAsyncWithHttpInfo (long? id, long? idConta);
         
         /// <summary>
+        /// Atualizar indica\u00E7\u00E3o de amigos
+        /// </summary>
+        /// <remarks>
+        /// Atualiza a indica\u00E7\u00E3o de amigo uma pessoa
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo idenficador da pessoa</param>
+        /// <param name="idIndicacao">C\u00F3difo identificador da indica\u00E7\u00E3o</param>
+        /// <param name="update">update</param>
+        /// <returns>Task of IndicacaoAmigoResponse</returns>
+        System.Threading.Tasks.Task<IndicacaoAmigoResponse> AtualizarIndicacaoAmigoAsync (long? id, long? idIndicacao, IndicacaoAmigoUpdate update);
+
+        /// <summary>
+        /// Atualizar indica\u00E7\u00E3o de amigos
+        /// </summary>
+        /// <remarks>
+        /// Atualiza a indica\u00E7\u00E3o de amigo uma pessoa
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo idenficador da pessoa</param>
+        /// <param name="idIndicacao">C\u00F3difo identificador da indica\u00E7\u00E3o</param>
+        /// <param name="update">update</param>
+        /// <returns>Task of ApiResponse (IndicacaoAmigoResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<IndicacaoAmigoResponse>> AtualizarIndicacaoAmigoAsyncWithHttpInfo (long? id, long? idIndicacao, IndicacaoAmigoUpdate update);
+        
+        /// <summary>
         /// Cadastro da recarga programada
         /// </summary>
         /// <remarks>
@@ -1472,6 +1590,30 @@ namespace Conductor.Pier.Api
         /// <param name="adicionalContaPersist">adicionalContaPersist</param>
         /// <returns>Task of ApiResponse (AdicionalContaResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<AdicionalContaResponse>> CadastrarAdicionalAsyncWithHttpInfo (long? id, AdicionalContaPersist adicionalContaPersist);
+        
+        /// <summary>
+        /// Cadastra uma indica\u00E7\u00E3o de amigo
+        /// </summary>
+        /// <remarks>
+        /// Cadastra uma indica\u00E7\u00E3o de amigo
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo idenficador da pessoa</param>
+        /// <param name="persist">persist</param>
+        /// <returns>Task of IndicacaoAmigoResponse</returns>
+        System.Threading.Tasks.Task<IndicacaoAmigoResponse> CadastrarIndicacaoAmigoAsync (long? id, IndicacaoAmigoPersist persist);
+
+        /// <summary>
+        /// Cadastra uma indica\u00E7\u00E3o de amigo
+        /// </summary>
+        /// <remarks>
+        /// Cadastra uma indica\u00E7\u00E3o de amigo
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo idenficador da pessoa</param>
+        /// <param name="persist">persist</param>
+        /// <returns>Task of ApiResponse (IndicacaoAmigoResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<IndicacaoAmigoResponse>> CadastrarIndicacaoAmigoAsyncWithHttpInfo (long? id, IndicacaoAmigoPersist persist);
         
         /// <summary>
         /// Realiza o cadastro de Adicionais para uma Conta
@@ -1746,6 +1888,48 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da pessoa (id)</param>
         /// <returns>Task of ApiResponse (HistoricoTelefoneResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<HistoricoTelefoneResponse>> ListarHistoricoTelefonesAsyncWithHttpInfo (long? id);
+        
+        /// <summary>
+        /// Listar indica\u00E7\u00F5es de amigos
+        /// </summary>
+        /// <remarks>
+        /// Lista as indica\u00E7\u00F5es de amigos uma pessoa
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="dataIndicacao">Data da indica\u00E7\u00E3o (optional)</param>
+        /// <param name="dataUtilizacao">Data da utiliza\u00E7\u00E3o da indica\u00E7\u00E3o (optional)</param>
+        /// <param name="dataValidade">Data de validade da indica\u00E7\u00E3o (optional)</param>
+        /// <param name="cpfIndicado">N\u00FAmero do CPF do amigo indicado (optional)</param>
+        /// <param name="emailIndicado">Email do amigo indicado (optional)</param>
+        /// <param name="codigoIndicacao">C\u00F3digo da indica\u00E7\u00E3o (optional)</param>
+        /// <param name="idPessoa">C\u00F3digo identificador da pessoa (optional)</param>
+        /// <param name="status">Status da indica\u00E7\u00E3o (1 - CRIADO, 2 - UTILIZADO, 3 - PAGO) (optional)</param>
+        /// <returns>Task of PageIndicacaoAmigoResponse</returns>
+        System.Threading.Tasks.Task<PageIndicacaoAmigoResponse> ListarIndicacaoAmigoAsync (List<string> sort = null, int? page = null, int? limit = null, string dataIndicacao = null, string dataUtilizacao = null, string dataValidade = null, string cpfIndicado = null, string emailIndicado = null, long? codigoIndicacao = null, int? idPessoa = null, int? status = null);
+
+        /// <summary>
+        /// Listar indica\u00E7\u00F5es de amigos
+        /// </summary>
+        /// <remarks>
+        /// Lista as indica\u00E7\u00F5es de amigos uma pessoa
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="dataIndicacao">Data da indica\u00E7\u00E3o (optional)</param>
+        /// <param name="dataUtilizacao">Data da utiliza\u00E7\u00E3o da indica\u00E7\u00E3o (optional)</param>
+        /// <param name="dataValidade">Data de validade da indica\u00E7\u00E3o (optional)</param>
+        /// <param name="cpfIndicado">N\u00FAmero do CPF do amigo indicado (optional)</param>
+        /// <param name="emailIndicado">Email do amigo indicado (optional)</param>
+        /// <param name="codigoIndicacao">C\u00F3digo da indica\u00E7\u00E3o (optional)</param>
+        /// <param name="idPessoa">C\u00F3digo identificador da pessoa (optional)</param>
+        /// <param name="status">Status da indica\u00E7\u00E3o (1 - CRIADO, 2 - UTILIZADO, 3 - PAGO) (optional)</param>
+        /// <returns>Task of ApiResponse (PageIndicacaoAmigoResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PageIndicacaoAmigoResponse>> ListarIndicacaoAmigoAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string dataIndicacao = null, string dataUtilizacao = null, string dataValidade = null, string cpfIndicado = null, string emailIndicado = null, long? codigoIndicacao = null, int? idPessoa = null, int? status = null);
         
         /// <summary>
         /// Listar s\u00F3cios de uma pessoa jur\u00EDdica
@@ -2032,10 +2216,10 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<ObjetoPessoaFsicaAprovadaResponse>> SalvarPessoaFisicaAprovadaAsyncWithHttpInfo (ObjetoPessoaFsicaAprovada pessoaPersist);
         
         /// <summary>
-        /// Cadastro de Conta e Pessoa Jur\u00EDdica
+        /// Cadastrar conta de Pessoa Jur\u00EDdica
         /// </summary>
         /// <remarks>
-        /// Cadastro de Conta e Pessoa Jur\u00EDdica Permite realizar o cadastro de uma Conta para um cliente do tipo Pessoa Jur\u00EDdica, recebendo nesta opera\u00E7\u00E3o todos os dados cadastrais que se fazem necess\u00E1rios para isso, inclu\u00EDndo o registro de cada um dos s\u00F3cios. Uma vez criado, poder\u00E1 ser acionado o m\u00E9todo de &#39;Gera\u00E7\u00E3o de Cart\u00E3o&#39; para o cliente e cada um dos s\u00F3cios vinculados
+        /// Realiza os procedimentos necess\u00E1rios de cria\u00E7\u00E3o de conta para pessoa jur\u00EDdica incluindo os cadastros de telefones, endere\u00E7os, limites e s\u00F3cios.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pessoaPersist">pessoaPersist</param>
@@ -2043,10 +2227,10 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<PessoaJuridicaAprovadaResponse> SalvarPessoaJuridicaAprovadaAsync (PessoaJuridicaAprovadaPersist pessoaPersist);
 
         /// <summary>
-        /// Cadastro de Conta e Pessoa Jur\u00EDdica
+        /// Cadastrar conta de Pessoa Jur\u00EDdica
         /// </summary>
         /// <remarks>
-        /// Cadastro de Conta e Pessoa Jur\u00EDdica Permite realizar o cadastro de uma Conta para um cliente do tipo Pessoa Jur\u00EDdica, recebendo nesta opera\u00E7\u00E3o todos os dados cadastrais que se fazem necess\u00E1rios para isso, inclu\u00EDndo o registro de cada um dos s\u00F3cios. Uma vez criado, poder\u00E1 ser acionado o m\u00E9todo de &#39;Gera\u00E7\u00E3o de Cart\u00E3o&#39; para o cliente e cada um dos s\u00F3cios vinculados
+        /// Realiza os procedimentos necess\u00E1rios de cria\u00E7\u00E3o de conta para pessoa jur\u00EDdica incluindo os cadastros de telefones, endere\u00E7os, limites e s\u00F3cios.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pessoaPersist">pessoaPersist</param>
@@ -4026,6 +4210,200 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
+        /// Atualizar indica\u00E7\u00E3o de amigos Atualiza a indica\u00E7\u00E3o de amigo uma pessoa
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo idenficador da pessoa</param> 
+        /// <param name="idIndicacao">C\u00F3difo identificador da indica\u00E7\u00E3o</param> 
+        /// <param name="update">update</param> 
+        /// <returns>IndicacaoAmigoResponse</returns>
+        public IndicacaoAmigoResponse AtualizarIndicacaoAmigo (long? id, long? idIndicacao, IndicacaoAmigoUpdate update)
+        {
+             ApiResponse<IndicacaoAmigoResponse> localVarResponse = AtualizarIndicacaoAmigoWithHttpInfo(id, idIndicacao, update);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Atualizar indica\u00E7\u00E3o de amigos Atualiza a indica\u00E7\u00E3o de amigo uma pessoa
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo idenficador da pessoa</param> 
+        /// <param name="idIndicacao">C\u00F3difo identificador da indica\u00E7\u00E3o</param> 
+        /// <param name="update">update</param> 
+        /// <returns>ApiResponse of IndicacaoAmigoResponse</returns>
+        public ApiResponse< IndicacaoAmigoResponse > AtualizarIndicacaoAmigoWithHttpInfo (long? id, long? idIndicacao, IndicacaoAmigoUpdate update)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling CadastroClienteApi->AtualizarIndicacaoAmigo");
+            
+            // verify the required parameter 'idIndicacao' is set
+            if (idIndicacao == null)
+                throw new ApiException(400, "Missing required parameter 'idIndicacao' when calling CadastroClienteApi->AtualizarIndicacaoAmigo");
+            
+            // verify the required parameter 'update' is set
+            if (update == null)
+                throw new ApiException(400, "Missing required parameter 'update' when calling CadastroClienteApi->AtualizarIndicacaoAmigo");
+            
+    
+            var localVarPath = "/api/pessoas/{id}/indicacoes-amigos/{idIndicacao}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (idIndicacao != null) localVarPathParams.Add("idIndicacao", Configuration.ApiClient.ParameterToString(idIndicacao)); // path parameter
+            
+            
+            
+            
+            if (update.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(update); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = update; // byte array
+            }
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling AtualizarIndicacaoAmigo: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling AtualizarIndicacaoAmigo: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<IndicacaoAmigoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (IndicacaoAmigoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(IndicacaoAmigoResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Atualizar indica\u00E7\u00E3o de amigos Atualiza a indica\u00E7\u00E3o de amigo uma pessoa
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo idenficador da pessoa</param>
+        /// <param name="idIndicacao">C\u00F3difo identificador da indica\u00E7\u00E3o</param>
+        /// <param name="update">update</param>
+        /// <returns>Task of IndicacaoAmigoResponse</returns>
+        public async System.Threading.Tasks.Task<IndicacaoAmigoResponse> AtualizarIndicacaoAmigoAsync (long? id, long? idIndicacao, IndicacaoAmigoUpdate update)
+        {
+             ApiResponse<IndicacaoAmigoResponse> localVarResponse = await AtualizarIndicacaoAmigoAsyncWithHttpInfo(id, idIndicacao, update);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Atualizar indica\u00E7\u00E3o de amigos Atualiza a indica\u00E7\u00E3o de amigo uma pessoa
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo idenficador da pessoa</param>
+        /// <param name="idIndicacao">C\u00F3difo identificador da indica\u00E7\u00E3o</param>
+        /// <param name="update">update</param>
+        /// <returns>Task of ApiResponse (IndicacaoAmigoResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<IndicacaoAmigoResponse>> AtualizarIndicacaoAmigoAsyncWithHttpInfo (long? id, long? idIndicacao, IndicacaoAmigoUpdate update)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AtualizarIndicacaoAmigo");
+            // verify the required parameter 'idIndicacao' is set
+            if (idIndicacao == null) throw new ApiException(400, "Missing required parameter 'idIndicacao' when calling AtualizarIndicacaoAmigo");
+            // verify the required parameter 'update' is set
+            if (update == null) throw new ApiException(400, "Missing required parameter 'update' when calling AtualizarIndicacaoAmigo");
+            
+    
+            var localVarPath = "/api/pessoas/{id}/indicacoes-amigos/{idIndicacao}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (idIndicacao != null) localVarPathParams.Add("idIndicacao", Configuration.ApiClient.ParameterToString(idIndicacao)); // path parameter
+            
+            
+            
+            
+            if (update.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(update); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = update; // byte array
+            }
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling AtualizarIndicacaoAmigo: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling AtualizarIndicacaoAmigo: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<IndicacaoAmigoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (IndicacaoAmigoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(IndicacaoAmigoResponse)));
+            
+        }
+        
+        /// <summary>
         /// Cadastro da recarga programada Este recurso permite cadastrar uma nova recarga programada na base do emissor
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4374,6 +4752,188 @@ namespace Conductor.Pier.Api
             return new ApiResponse<AdicionalContaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (AdicionalContaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AdicionalContaResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Cadastra uma indica\u00E7\u00E3o de amigo Cadastra uma indica\u00E7\u00E3o de amigo
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo idenficador da pessoa</param> 
+        /// <param name="persist">persist</param> 
+        /// <returns>IndicacaoAmigoResponse</returns>
+        public IndicacaoAmigoResponse CadastrarIndicacaoAmigo (long? id, IndicacaoAmigoPersist persist)
+        {
+             ApiResponse<IndicacaoAmigoResponse> localVarResponse = CadastrarIndicacaoAmigoWithHttpInfo(id, persist);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Cadastra uma indica\u00E7\u00E3o de amigo Cadastra uma indica\u00E7\u00E3o de amigo
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo idenficador da pessoa</param> 
+        /// <param name="persist">persist</param> 
+        /// <returns>ApiResponse of IndicacaoAmigoResponse</returns>
+        public ApiResponse< IndicacaoAmigoResponse > CadastrarIndicacaoAmigoWithHttpInfo (long? id, IndicacaoAmigoPersist persist)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling CadastroClienteApi->CadastrarIndicacaoAmigo");
+            
+            // verify the required parameter 'persist' is set
+            if (persist == null)
+                throw new ApiException(400, "Missing required parameter 'persist' when calling CadastroClienteApi->CadastrarIndicacaoAmigo");
+            
+    
+            var localVarPath = "/api/pessoas/{id}/indicacoes-amigos";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            if (persist.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(persist); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = persist; // byte array
+            }
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling CadastrarIndicacaoAmigo: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling CadastrarIndicacaoAmigo: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<IndicacaoAmigoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (IndicacaoAmigoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(IndicacaoAmigoResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Cadastra uma indica\u00E7\u00E3o de amigo Cadastra uma indica\u00E7\u00E3o de amigo
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo idenficador da pessoa</param>
+        /// <param name="persist">persist</param>
+        /// <returns>Task of IndicacaoAmigoResponse</returns>
+        public async System.Threading.Tasks.Task<IndicacaoAmigoResponse> CadastrarIndicacaoAmigoAsync (long? id, IndicacaoAmigoPersist persist)
+        {
+             ApiResponse<IndicacaoAmigoResponse> localVarResponse = await CadastrarIndicacaoAmigoAsyncWithHttpInfo(id, persist);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Cadastra uma indica\u00E7\u00E3o de amigo Cadastra uma indica\u00E7\u00E3o de amigo
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo idenficador da pessoa</param>
+        /// <param name="persist">persist</param>
+        /// <returns>Task of ApiResponse (IndicacaoAmigoResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<IndicacaoAmigoResponse>> CadastrarIndicacaoAmigoAsyncWithHttpInfo (long? id, IndicacaoAmigoPersist persist)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling CadastrarIndicacaoAmigo");
+            // verify the required parameter 'persist' is set
+            if (persist == null) throw new ApiException(400, "Missing required parameter 'persist' when calling CadastrarIndicacaoAmigo");
+            
+    
+            var localVarPath = "/api/pessoas/{id}/indicacoes-amigos";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            if (persist.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(persist); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = persist; // byte array
+            }
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling CadastrarIndicacaoAmigo: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling CadastrarIndicacaoAmigo: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<IndicacaoAmigoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (IndicacaoAmigoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(IndicacaoAmigoResponse)));
             
         }
         
@@ -6236,6 +6796,218 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
+        /// Listar indica\u00E7\u00F5es de amigos Lista as indica\u00E7\u00F5es de amigos uma pessoa
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="page">P\u00E1gina (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <param name="dataIndicacao">Data da indica\u00E7\u00E3o (optional)</param> 
+        /// <param name="dataUtilizacao">Data da utiliza\u00E7\u00E3o da indica\u00E7\u00E3o (optional)</param> 
+        /// <param name="dataValidade">Data de validade da indica\u00E7\u00E3o (optional)</param> 
+        /// <param name="cpfIndicado">N\u00FAmero do CPF do amigo indicado (optional)</param> 
+        /// <param name="emailIndicado">Email do amigo indicado (optional)</param> 
+        /// <param name="codigoIndicacao">C\u00F3digo da indica\u00E7\u00E3o (optional)</param> 
+        /// <param name="idPessoa">C\u00F3digo identificador da pessoa (optional)</param> 
+        /// <param name="status">Status da indica\u00E7\u00E3o (1 - CRIADO, 2 - UTILIZADO, 3 - PAGO) (optional)</param> 
+        /// <returns>PageIndicacaoAmigoResponse</returns>
+        public PageIndicacaoAmigoResponse ListarIndicacaoAmigo (List<string> sort = null, int? page = null, int? limit = null, string dataIndicacao = null, string dataUtilizacao = null, string dataValidade = null, string cpfIndicado = null, string emailIndicado = null, long? codigoIndicacao = null, int? idPessoa = null, int? status = null)
+        {
+             ApiResponse<PageIndicacaoAmigoResponse> localVarResponse = ListarIndicacaoAmigoWithHttpInfo(sort, page, limit, dataIndicacao, dataUtilizacao, dataValidade, cpfIndicado, emailIndicado, codigoIndicacao, idPessoa, status);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Listar indica\u00E7\u00F5es de amigos Lista as indica\u00E7\u00F5es de amigos uma pessoa
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="page">P\u00E1gina (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <param name="dataIndicacao">Data da indica\u00E7\u00E3o (optional)</param> 
+        /// <param name="dataUtilizacao">Data da utiliza\u00E7\u00E3o da indica\u00E7\u00E3o (optional)</param> 
+        /// <param name="dataValidade">Data de validade da indica\u00E7\u00E3o (optional)</param> 
+        /// <param name="cpfIndicado">N\u00FAmero do CPF do amigo indicado (optional)</param> 
+        /// <param name="emailIndicado">Email do amigo indicado (optional)</param> 
+        /// <param name="codigoIndicacao">C\u00F3digo da indica\u00E7\u00E3o (optional)</param> 
+        /// <param name="idPessoa">C\u00F3digo identificador da pessoa (optional)</param> 
+        /// <param name="status">Status da indica\u00E7\u00E3o (1 - CRIADO, 2 - UTILIZADO, 3 - PAGO) (optional)</param> 
+        /// <returns>ApiResponse of PageIndicacaoAmigoResponse</returns>
+        public ApiResponse< PageIndicacaoAmigoResponse > ListarIndicacaoAmigoWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string dataIndicacao = null, string dataUtilizacao = null, string dataValidade = null, string cpfIndicado = null, string emailIndicado = null, long? codigoIndicacao = null, int? idPessoa = null, int? status = null)
+        {
+            
+    
+            var localVarPath = "/api/pessoas/indicacoes-amigos";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (dataIndicacao != null) localVarQueryParams.Add("dataIndicacao", Configuration.ApiClient.ParameterToString(dataIndicacao)); // query parameter
+            if (dataUtilizacao != null) localVarQueryParams.Add("dataUtilizacao", Configuration.ApiClient.ParameterToString(dataUtilizacao)); // query parameter
+            if (dataValidade != null) localVarQueryParams.Add("dataValidade", Configuration.ApiClient.ParameterToString(dataValidade)); // query parameter
+            if (cpfIndicado != null) localVarQueryParams.Add("cpfIndicado", Configuration.ApiClient.ParameterToString(cpfIndicado)); // query parameter
+            if (emailIndicado != null) localVarQueryParams.Add("emailIndicado", Configuration.ApiClient.ParameterToString(emailIndicado)); // query parameter
+            if (codigoIndicacao != null) localVarQueryParams.Add("codigoIndicacao", Configuration.ApiClient.ParameterToString(codigoIndicacao)); // query parameter
+            if (idPessoa != null) localVarQueryParams.Add("idPessoa", Configuration.ApiClient.ParameterToString(idPessoa)); // query parameter
+            if (status != null) localVarQueryParams.Add("status", Configuration.ApiClient.ParameterToString(status)); // query parameter
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarIndicacaoAmigo: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarIndicacaoAmigo: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<PageIndicacaoAmigoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageIndicacaoAmigoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageIndicacaoAmigoResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Listar indica\u00E7\u00F5es de amigos Lista as indica\u00E7\u00F5es de amigos uma pessoa
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="dataIndicacao">Data da indica\u00E7\u00E3o (optional)</param>
+        /// <param name="dataUtilizacao">Data da utiliza\u00E7\u00E3o da indica\u00E7\u00E3o (optional)</param>
+        /// <param name="dataValidade">Data de validade da indica\u00E7\u00E3o (optional)</param>
+        /// <param name="cpfIndicado">N\u00FAmero do CPF do amigo indicado (optional)</param>
+        /// <param name="emailIndicado">Email do amigo indicado (optional)</param>
+        /// <param name="codigoIndicacao">C\u00F3digo da indica\u00E7\u00E3o (optional)</param>
+        /// <param name="idPessoa">C\u00F3digo identificador da pessoa (optional)</param>
+        /// <param name="status">Status da indica\u00E7\u00E3o (1 - CRIADO, 2 - UTILIZADO, 3 - PAGO) (optional)</param>
+        /// <returns>Task of PageIndicacaoAmigoResponse</returns>
+        public async System.Threading.Tasks.Task<PageIndicacaoAmigoResponse> ListarIndicacaoAmigoAsync (List<string> sort = null, int? page = null, int? limit = null, string dataIndicacao = null, string dataUtilizacao = null, string dataValidade = null, string cpfIndicado = null, string emailIndicado = null, long? codigoIndicacao = null, int? idPessoa = null, int? status = null)
+        {
+             ApiResponse<PageIndicacaoAmigoResponse> localVarResponse = await ListarIndicacaoAmigoAsyncWithHttpInfo(sort, page, limit, dataIndicacao, dataUtilizacao, dataValidade, cpfIndicado, emailIndicado, codigoIndicacao, idPessoa, status);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Listar indica\u00E7\u00F5es de amigos Lista as indica\u00E7\u00F5es de amigos uma pessoa
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="dataIndicacao">Data da indica\u00E7\u00E3o (optional)</param>
+        /// <param name="dataUtilizacao">Data da utiliza\u00E7\u00E3o da indica\u00E7\u00E3o (optional)</param>
+        /// <param name="dataValidade">Data de validade da indica\u00E7\u00E3o (optional)</param>
+        /// <param name="cpfIndicado">N\u00FAmero do CPF do amigo indicado (optional)</param>
+        /// <param name="emailIndicado">Email do amigo indicado (optional)</param>
+        /// <param name="codigoIndicacao">C\u00F3digo da indica\u00E7\u00E3o (optional)</param>
+        /// <param name="idPessoa">C\u00F3digo identificador da pessoa (optional)</param>
+        /// <param name="status">Status da indica\u00E7\u00E3o (1 - CRIADO, 2 - UTILIZADO, 3 - PAGO) (optional)</param>
+        /// <returns>Task of ApiResponse (PageIndicacaoAmigoResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PageIndicacaoAmigoResponse>> ListarIndicacaoAmigoAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string dataIndicacao = null, string dataUtilizacao = null, string dataValidade = null, string cpfIndicado = null, string emailIndicado = null, long? codigoIndicacao = null, int? idPessoa = null, int? status = null)
+        {
+            
+    
+            var localVarPath = "/api/pessoas/indicacoes-amigos";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (dataIndicacao != null) localVarQueryParams.Add("dataIndicacao", Configuration.ApiClient.ParameterToString(dataIndicacao)); // query parameter
+            if (dataUtilizacao != null) localVarQueryParams.Add("dataUtilizacao", Configuration.ApiClient.ParameterToString(dataUtilizacao)); // query parameter
+            if (dataValidade != null) localVarQueryParams.Add("dataValidade", Configuration.ApiClient.ParameterToString(dataValidade)); // query parameter
+            if (cpfIndicado != null) localVarQueryParams.Add("cpfIndicado", Configuration.ApiClient.ParameterToString(cpfIndicado)); // query parameter
+            if (emailIndicado != null) localVarQueryParams.Add("emailIndicado", Configuration.ApiClient.ParameterToString(emailIndicado)); // query parameter
+            if (codigoIndicacao != null) localVarQueryParams.Add("codigoIndicacao", Configuration.ApiClient.ParameterToString(codigoIndicacao)); // query parameter
+            if (idPessoa != null) localVarQueryParams.Add("idPessoa", Configuration.ApiClient.ParameterToString(idPessoa)); // query parameter
+            if (status != null) localVarQueryParams.Add("status", Configuration.ApiClient.ParameterToString(status)); // query parameter
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarIndicacaoAmigo: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarIndicacaoAmigo: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PageIndicacaoAmigoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageIndicacaoAmigoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageIndicacaoAmigoResponse)));
+            
+        }
+        
+        /// <summary>
         /// Listar s\u00F3cios de uma pessoa jur\u00EDdica Lista os s\u00F3cios vinculados \u00E0 uma Pessoa Jur\u00EDdica cadastrada
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
@@ -7732,7 +8504,7 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Cadastro de Conta e Pessoa Jur\u00EDdica Cadastro de Conta e Pessoa Jur\u00EDdica Permite realizar o cadastro de uma Conta para um cliente do tipo Pessoa Jur\u00EDdica, recebendo nesta opera\u00E7\u00E3o todos os dados cadastrais que se fazem necess\u00E1rios para isso, inclu\u00EDndo o registro de cada um dos s\u00F3cios. Uma vez criado, poder\u00E1 ser acionado o m\u00E9todo de &#39;Gera\u00E7\u00E3o de Cart\u00E3o&#39; para o cliente e cada um dos s\u00F3cios vinculados
+        /// Cadastrar conta de Pessoa Jur\u00EDdica Realiza os procedimentos necess\u00E1rios de cria\u00E7\u00E3o de conta para pessoa jur\u00EDdica incluindo os cadastros de telefones, endere\u00E7os, limites e s\u00F3cios.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pessoaPersist">pessoaPersist</param> 
@@ -7744,7 +8516,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Cadastro de Conta e Pessoa Jur\u00EDdica Cadastro de Conta e Pessoa Jur\u00EDdica Permite realizar o cadastro de uma Conta para um cliente do tipo Pessoa Jur\u00EDdica, recebendo nesta opera\u00E7\u00E3o todos os dados cadastrais que se fazem necess\u00E1rios para isso, inclu\u00EDndo o registro de cada um dos s\u00F3cios. Uma vez criado, poder\u00E1 ser acionado o m\u00E9todo de &#39;Gera\u00E7\u00E3o de Cart\u00E3o&#39; para o cliente e cada um dos s\u00F3cios vinculados
+        /// Cadastrar conta de Pessoa Jur\u00EDdica Realiza os procedimentos necess\u00E1rios de cria\u00E7\u00E3o de conta para pessoa jur\u00EDdica incluindo os cadastros de telefones, endere\u00E7os, limites e s\u00F3cios.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pessoaPersist">pessoaPersist</param> 
@@ -7818,7 +8590,7 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Cadastro de Conta e Pessoa Jur\u00EDdica Cadastro de Conta e Pessoa Jur\u00EDdica Permite realizar o cadastro de uma Conta para um cliente do tipo Pessoa Jur\u00EDdica, recebendo nesta opera\u00E7\u00E3o todos os dados cadastrais que se fazem necess\u00E1rios para isso, inclu\u00EDndo o registro de cada um dos s\u00F3cios. Uma vez criado, poder\u00E1 ser acionado o m\u00E9todo de &#39;Gera\u00E7\u00E3o de Cart\u00E3o&#39; para o cliente e cada um dos s\u00F3cios vinculados
+        /// Cadastrar conta de Pessoa Jur\u00EDdica Realiza os procedimentos necess\u00E1rios de cria\u00E7\u00E3o de conta para pessoa jur\u00EDdica incluindo os cadastros de telefones, endere\u00E7os, limites e s\u00F3cios.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pessoaPersist">pessoaPersist</param>
@@ -7831,7 +8603,7 @@ namespace Conductor.Pier.Api
         }
 
         /// <summary>
-        /// Cadastro de Conta e Pessoa Jur\u00EDdica Cadastro de Conta e Pessoa Jur\u00EDdica Permite realizar o cadastro de uma Conta para um cliente do tipo Pessoa Jur\u00EDdica, recebendo nesta opera\u00E7\u00E3o todos os dados cadastrais que se fazem necess\u00E1rios para isso, inclu\u00EDndo o registro de cada um dos s\u00F3cios. Uma vez criado, poder\u00E1 ser acionado o m\u00E9todo de &#39;Gera\u00E7\u00E3o de Cart\u00E3o&#39; para o cliente e cada um dos s\u00F3cios vinculados
+        /// Cadastrar conta de Pessoa Jur\u00EDdica Realiza os procedimentos necess\u00E1rios de cria\u00E7\u00E3o de conta para pessoa jur\u00EDdica incluindo os cadastros de telefones, endere\u00E7os, limites e s\u00F3cios.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pessoaPersist">pessoaPersist</param>
