@@ -40,6 +40,32 @@ namespace Conductor.Pier.Api
         ApiResponse<ContaDebitoRecorrenteResponse> AderirDebitoRecorrenteWithHttpInfo (ContaDebitoRecorrente contaDebitoRecorrentePersist);
         
         /// <summary>
+        /// Atualiza parcialmente um d\u00E9bito recorrente por portador de uma determinada conta
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite atualizar parcialmente um d\u00E9bito recorrente por portador de uma determinada conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo Identificador da conta</param>
+        /// <param name="idRegistro">C\u00F3digo identificador do registro</param>
+        /// <param name="portadorDebitoRecorrenteUpdate">portadorDebitoRecorrenteUpdate</param>
+        /// <returns>PortadorDebitoRecorrenteResponse</returns>
+        PortadorDebitoRecorrenteResponse AtualizarParcialPortadorDebitoRecorrente (long? id, long? idRegistro, PortadorDebitoRecorrenteUpdate portadorDebitoRecorrenteUpdate);
+  
+        /// <summary>
+        /// Atualiza parcialmente um d\u00E9bito recorrente por portador de uma determinada conta
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite atualizar parcialmente um d\u00E9bito recorrente por portador de uma determinada conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo Identificador da conta</param>
+        /// <param name="idRegistro">C\u00F3digo identificador do registro</param>
+        /// <param name="portadorDebitoRecorrenteUpdate">portadorDebitoRecorrenteUpdate</param>
+        /// <returns>ApiResponse of PortadorDebitoRecorrenteResponse</returns>
+        ApiResponse<PortadorDebitoRecorrenteResponse> AtualizarParcialPortadorDebitoRecorrenteWithHttpInfo (long? id, long? idRegistro, PortadorDebitoRecorrenteUpdate portadorDebitoRecorrenteUpdate);
+        
+        /// <summary>
         /// Cancelar o d\u00E9bito recorrente
         /// </summary>
         /// <remarks>
@@ -102,6 +128,34 @@ namespace Conductor.Pier.Api
         ApiResponse<PageContaDebitoRecorrenteResponse> ListarWithHttpInfo (long? idConta = null, long? idTipoDebitoRecorrente = null, List<string> sort = null, int? page = null, int? limit = null, string dataHoraInicio = null, string dataHoraFim = null, bool? ativo = null, string dataHoraUltimoPagamento = null);
         
         /// <summary>
+        /// Lista os d\u00E9bitos recorrentes por portador de uma determinada conta
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite consultar os d\u00E9bitos recorrentes por portador de uma determinada conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo Identificador da conta</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <returns>PagePortadorDebitoRecorrenteResponse</returns>
+        PagePortadorDebitoRecorrenteResponse ListarPortadorDebitoRecorrente (long? id, List<string> sort = null, int? page = null, int? limit = null);
+  
+        /// <summary>
+        /// Lista os d\u00E9bitos recorrentes por portador de uma determinada conta
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite consultar os d\u00E9bitos recorrentes por portador de uma determinada conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo Identificador da conta</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <returns>ApiResponse of PagePortadorDebitoRecorrenteResponse</returns>
+        ApiResponse<PagePortadorDebitoRecorrenteResponse> ListarPortadorDebitoRecorrenteWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null);
+        
+        /// <summary>
         /// Listar Tipos Debitos Recorrentes
         /// </summary>
         /// <remarks>
@@ -135,6 +189,30 @@ namespace Conductor.Pier.Api
         /// <returns>ApiResponse of PageTipoDebitoRecorrenteResponse</returns>
         ApiResponse<PageTipoDebitoRecorrenteResponse> Listar_0WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, double? valor = null, bool? flagAtivo = null);
         
+        /// <summary>
+        /// Salva os d\u00E9bitos recorrentes por portador de uma determinada conta
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite salvar os d\u00E9bitos recorrentes por portador de uma determinada conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo Identificador da conta</param>
+        /// <param name="portadorDebitoRecorrentePersist">portadorDebitoRecorrentePersist</param>
+        /// <returns>PortadorDebitoRecorrenteResponse</returns>
+        PortadorDebitoRecorrenteResponse SalvarPortadorDebitoRecorrente (long? id, PortadorDebitoRecorrentePersist portadorDebitoRecorrentePersist);
+  
+        /// <summary>
+        /// Salva os d\u00E9bitos recorrentes por portador de uma determinada conta
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite salvar os d\u00E9bitos recorrentes por portador de uma determinada conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo Identificador da conta</param>
+        /// <param name="portadorDebitoRecorrentePersist">portadorDebitoRecorrentePersist</param>
+        /// <returns>ApiResponse of PortadorDebitoRecorrenteResponse</returns>
+        ApiResponse<PortadorDebitoRecorrenteResponse> SalvarPortadorDebitoRecorrenteWithHttpInfo (long? id, PortadorDebitoRecorrentePersist portadorDebitoRecorrentePersist);
+        
         #endregion Synchronous Operations
         
         #region Asynchronous Operations
@@ -160,6 +238,32 @@ namespace Conductor.Pier.Api
         /// <param name="contaDebitoRecorrentePersist">contaDebitoRecorrentePersist</param>
         /// <returns>Task of ApiResponse (ContaDebitoRecorrenteResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<ContaDebitoRecorrenteResponse>> AderirDebitoRecorrenteAsyncWithHttpInfo (ContaDebitoRecorrente contaDebitoRecorrentePersist);
+        
+        /// <summary>
+        /// Atualiza parcialmente um d\u00E9bito recorrente por portador de uma determinada conta
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite atualizar parcialmente um d\u00E9bito recorrente por portador de uma determinada conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo Identificador da conta</param>
+        /// <param name="idRegistro">C\u00F3digo identificador do registro</param>
+        /// <param name="portadorDebitoRecorrenteUpdate">portadorDebitoRecorrenteUpdate</param>
+        /// <returns>Task of PortadorDebitoRecorrenteResponse</returns>
+        System.Threading.Tasks.Task<PortadorDebitoRecorrenteResponse> AtualizarParcialPortadorDebitoRecorrenteAsync (long? id, long? idRegistro, PortadorDebitoRecorrenteUpdate portadorDebitoRecorrenteUpdate);
+
+        /// <summary>
+        /// Atualiza parcialmente um d\u00E9bito recorrente por portador de uma determinada conta
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite atualizar parcialmente um d\u00E9bito recorrente por portador de uma determinada conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo Identificador da conta</param>
+        /// <param name="idRegistro">C\u00F3digo identificador do registro</param>
+        /// <param name="portadorDebitoRecorrenteUpdate">portadorDebitoRecorrenteUpdate</param>
+        /// <returns>Task of ApiResponse (PortadorDebitoRecorrenteResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PortadorDebitoRecorrenteResponse>> AtualizarParcialPortadorDebitoRecorrenteAsyncWithHttpInfo (long? id, long? idRegistro, PortadorDebitoRecorrenteUpdate portadorDebitoRecorrenteUpdate);
         
         /// <summary>
         /// Cancelar o d\u00E9bito recorrente
@@ -224,6 +328,34 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<PageContaDebitoRecorrenteResponse>> ListarAsyncWithHttpInfo (long? idConta = null, long? idTipoDebitoRecorrente = null, List<string> sort = null, int? page = null, int? limit = null, string dataHoraInicio = null, string dataHoraFim = null, bool? ativo = null, string dataHoraUltimoPagamento = null);
         
         /// <summary>
+        /// Lista os d\u00E9bitos recorrentes por portador de uma determinada conta
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite consultar os d\u00E9bitos recorrentes por portador de uma determinada conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo Identificador da conta</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <returns>Task of PagePortadorDebitoRecorrenteResponse</returns>
+        System.Threading.Tasks.Task<PagePortadorDebitoRecorrenteResponse> ListarPortadorDebitoRecorrenteAsync (long? id, List<string> sort = null, int? page = null, int? limit = null);
+
+        /// <summary>
+        /// Lista os d\u00E9bitos recorrentes por portador de uma determinada conta
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite consultar os d\u00E9bitos recorrentes por portador de uma determinada conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo Identificador da conta</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <returns>Task of ApiResponse (PagePortadorDebitoRecorrenteResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PagePortadorDebitoRecorrenteResponse>> ListarPortadorDebitoRecorrenteAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null);
+        
+        /// <summary>
         /// Listar Tipos Debitos Recorrentes
         /// </summary>
         /// <remarks>
@@ -256,6 +388,30 @@ namespace Conductor.Pier.Api
         /// <param name="flagAtivo">Flag que identifica se o tipo d\u00E9bito recorrente est\u00E1 ativo (optional)</param>
         /// <returns>Task of ApiResponse (PageTipoDebitoRecorrenteResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<PageTipoDebitoRecorrenteResponse>> Listar_0AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, double? valor = null, bool? flagAtivo = null);
+        
+        /// <summary>
+        /// Salva os d\u00E9bitos recorrentes por portador de uma determinada conta
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite salvar os d\u00E9bitos recorrentes por portador de uma determinada conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo Identificador da conta</param>
+        /// <param name="portadorDebitoRecorrentePersist">portadorDebitoRecorrentePersist</param>
+        /// <returns>Task of PortadorDebitoRecorrenteResponse</returns>
+        System.Threading.Tasks.Task<PortadorDebitoRecorrenteResponse> SalvarPortadorDebitoRecorrenteAsync (long? id, PortadorDebitoRecorrentePersist portadorDebitoRecorrentePersist);
+
+        /// <summary>
+        /// Salva os d\u00E9bitos recorrentes por portador de uma determinada conta
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite salvar os d\u00E9bitos recorrentes por portador de uma determinada conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo Identificador da conta</param>
+        /// <param name="portadorDebitoRecorrentePersist">portadorDebitoRecorrentePersist</param>
+        /// <returns>Task of ApiResponse (PortadorDebitoRecorrenteResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PortadorDebitoRecorrenteResponse>> SalvarPortadorDebitoRecorrenteAsyncWithHttpInfo (long? id, PortadorDebitoRecorrentePersist portadorDebitoRecorrentePersist);
         
         #endregion Asynchronous Operations
         
@@ -516,6 +672,200 @@ namespace Conductor.Pier.Api
             return new ApiResponse<ContaDebitoRecorrenteResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ContaDebitoRecorrenteResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContaDebitoRecorrenteResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Atualiza parcialmente um d\u00E9bito recorrente por portador de uma determinada conta Este recurso permite atualizar parcialmente um d\u00E9bito recorrente por portador de uma determinada conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo Identificador da conta</param> 
+        /// <param name="idRegistro">C\u00F3digo identificador do registro</param> 
+        /// <param name="portadorDebitoRecorrenteUpdate">portadorDebitoRecorrenteUpdate</param> 
+        /// <returns>PortadorDebitoRecorrenteResponse</returns>
+        public PortadorDebitoRecorrenteResponse AtualizarParcialPortadorDebitoRecorrente (long? id, long? idRegistro, PortadorDebitoRecorrenteUpdate portadorDebitoRecorrenteUpdate)
+        {
+             ApiResponse<PortadorDebitoRecorrenteResponse> localVarResponse = AtualizarParcialPortadorDebitoRecorrenteWithHttpInfo(id, idRegistro, portadorDebitoRecorrenteUpdate);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Atualiza parcialmente um d\u00E9bito recorrente por portador de uma determinada conta Este recurso permite atualizar parcialmente um d\u00E9bito recorrente por portador de uma determinada conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo Identificador da conta</param> 
+        /// <param name="idRegistro">C\u00F3digo identificador do registro</param> 
+        /// <param name="portadorDebitoRecorrenteUpdate">portadorDebitoRecorrenteUpdate</param> 
+        /// <returns>ApiResponse of PortadorDebitoRecorrenteResponse</returns>
+        public ApiResponse< PortadorDebitoRecorrenteResponse > AtualizarParcialPortadorDebitoRecorrenteWithHttpInfo (long? id, long? idRegistro, PortadorDebitoRecorrenteUpdate portadorDebitoRecorrenteUpdate)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling DebitoRecorrenteApi->AtualizarParcialPortadorDebitoRecorrente");
+            
+            // verify the required parameter 'idRegistro' is set
+            if (idRegistro == null)
+                throw new ApiException(400, "Missing required parameter 'idRegistro' when calling DebitoRecorrenteApi->AtualizarParcialPortadorDebitoRecorrente");
+            
+            // verify the required parameter 'portadorDebitoRecorrenteUpdate' is set
+            if (portadorDebitoRecorrenteUpdate == null)
+                throw new ApiException(400, "Missing required parameter 'portadorDebitoRecorrenteUpdate' when calling DebitoRecorrenteApi->AtualizarParcialPortadorDebitoRecorrente");
+            
+    
+            var localVarPath = "/api/contas/{id}/portadores/debitos-recorrentes/{idRegistro}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (idRegistro != null) localVarPathParams.Add("idRegistro", Configuration.ApiClient.ParameterToString(idRegistro)); // path parameter
+            
+            
+            
+            
+            if (portadorDebitoRecorrenteUpdate.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(portadorDebitoRecorrenteUpdate); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = portadorDebitoRecorrenteUpdate; // byte array
+            }
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling AtualizarParcialPortadorDebitoRecorrente: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling AtualizarParcialPortadorDebitoRecorrente: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<PortadorDebitoRecorrenteResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PortadorDebitoRecorrenteResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PortadorDebitoRecorrenteResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Atualiza parcialmente um d\u00E9bito recorrente por portador de uma determinada conta Este recurso permite atualizar parcialmente um d\u00E9bito recorrente por portador de uma determinada conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo Identificador da conta</param>
+        /// <param name="idRegistro">C\u00F3digo identificador do registro</param>
+        /// <param name="portadorDebitoRecorrenteUpdate">portadorDebitoRecorrenteUpdate</param>
+        /// <returns>Task of PortadorDebitoRecorrenteResponse</returns>
+        public async System.Threading.Tasks.Task<PortadorDebitoRecorrenteResponse> AtualizarParcialPortadorDebitoRecorrenteAsync (long? id, long? idRegistro, PortadorDebitoRecorrenteUpdate portadorDebitoRecorrenteUpdate)
+        {
+             ApiResponse<PortadorDebitoRecorrenteResponse> localVarResponse = await AtualizarParcialPortadorDebitoRecorrenteAsyncWithHttpInfo(id, idRegistro, portadorDebitoRecorrenteUpdate);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Atualiza parcialmente um d\u00E9bito recorrente por portador de uma determinada conta Este recurso permite atualizar parcialmente um d\u00E9bito recorrente por portador de uma determinada conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo Identificador da conta</param>
+        /// <param name="idRegistro">C\u00F3digo identificador do registro</param>
+        /// <param name="portadorDebitoRecorrenteUpdate">portadorDebitoRecorrenteUpdate</param>
+        /// <returns>Task of ApiResponse (PortadorDebitoRecorrenteResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PortadorDebitoRecorrenteResponse>> AtualizarParcialPortadorDebitoRecorrenteAsyncWithHttpInfo (long? id, long? idRegistro, PortadorDebitoRecorrenteUpdate portadorDebitoRecorrenteUpdate)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AtualizarParcialPortadorDebitoRecorrente");
+            // verify the required parameter 'idRegistro' is set
+            if (idRegistro == null) throw new ApiException(400, "Missing required parameter 'idRegistro' when calling AtualizarParcialPortadorDebitoRecorrente");
+            // verify the required parameter 'portadorDebitoRecorrenteUpdate' is set
+            if (portadorDebitoRecorrenteUpdate == null) throw new ApiException(400, "Missing required parameter 'portadorDebitoRecorrenteUpdate' when calling AtualizarParcialPortadorDebitoRecorrente");
+            
+    
+            var localVarPath = "/api/contas/{id}/portadores/debitos-recorrentes/{idRegistro}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (idRegistro != null) localVarPathParams.Add("idRegistro", Configuration.ApiClient.ParameterToString(idRegistro)); // path parameter
+            
+            
+            
+            
+            if (portadorDebitoRecorrenteUpdate.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(portadorDebitoRecorrenteUpdate); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = portadorDebitoRecorrenteUpdate; // byte array
+            }
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling AtualizarParcialPortadorDebitoRecorrente: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling AtualizarParcialPortadorDebitoRecorrente: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PortadorDebitoRecorrenteResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PortadorDebitoRecorrenteResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PortadorDebitoRecorrenteResponse)));
             
         }
         
@@ -902,6 +1252,182 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
+        /// Lista os d\u00E9bitos recorrentes por portador de uma determinada conta Este recurso permite consultar os d\u00E9bitos recorrentes por portador de uma determinada conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo Identificador da conta</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="page">P\u00E1gina (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <returns>PagePortadorDebitoRecorrenteResponse</returns>
+        public PagePortadorDebitoRecorrenteResponse ListarPortadorDebitoRecorrente (long? id, List<string> sort = null, int? page = null, int? limit = null)
+        {
+             ApiResponse<PagePortadorDebitoRecorrenteResponse> localVarResponse = ListarPortadorDebitoRecorrenteWithHttpInfo(id, sort, page, limit);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Lista os d\u00E9bitos recorrentes por portador de uma determinada conta Este recurso permite consultar os d\u00E9bitos recorrentes por portador de uma determinada conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo Identificador da conta</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="page">P\u00E1gina (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <returns>ApiResponse of PagePortadorDebitoRecorrenteResponse</returns>
+        public ApiResponse< PagePortadorDebitoRecorrenteResponse > ListarPortadorDebitoRecorrenteWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling DebitoRecorrenteApi->ListarPortadorDebitoRecorrente");
+            
+    
+            var localVarPath = "/api/contas/{id}/portadores/debitos-recorrentes";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarPortadorDebitoRecorrente: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarPortadorDebitoRecorrente: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<PagePortadorDebitoRecorrenteResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PagePortadorDebitoRecorrenteResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PagePortadorDebitoRecorrenteResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Lista os d\u00E9bitos recorrentes por portador de uma determinada conta Este recurso permite consultar os d\u00E9bitos recorrentes por portador de uma determinada conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo Identificador da conta</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <returns>Task of PagePortadorDebitoRecorrenteResponse</returns>
+        public async System.Threading.Tasks.Task<PagePortadorDebitoRecorrenteResponse> ListarPortadorDebitoRecorrenteAsync (long? id, List<string> sort = null, int? page = null, int? limit = null)
+        {
+             ApiResponse<PagePortadorDebitoRecorrenteResponse> localVarResponse = await ListarPortadorDebitoRecorrenteAsyncWithHttpInfo(id, sort, page, limit);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Lista os d\u00E9bitos recorrentes por portador de uma determinada conta Este recurso permite consultar os d\u00E9bitos recorrentes por portador de uma determinada conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo Identificador da conta</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <returns>Task of ApiResponse (PagePortadorDebitoRecorrenteResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PagePortadorDebitoRecorrenteResponse>> ListarPortadorDebitoRecorrenteAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ListarPortadorDebitoRecorrente");
+            
+    
+            var localVarPath = "/api/contas/{id}/portadores/debitos-recorrentes";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarPortadorDebitoRecorrente: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarPortadorDebitoRecorrente: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PagePortadorDebitoRecorrenteResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PagePortadorDebitoRecorrenteResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PagePortadorDebitoRecorrenteResponse)));
+            
+        }
+        
+        /// <summary>
         /// Listar Tipos Debitos Recorrentes Para os emissores que utilizam a entidade Debitos Recorrentes precisam previamente solicitar a Conductor o cadastro de quais Tipos eles poder\u00E3o comercializar. Por isso, este recurso tem como objetivo apresentar todos os Tipos de D\u00E9bitos Recorrentes que est\u00E3o cadastrados para um determinado Emissor, independente do status dele
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1086,6 +1612,188 @@ namespace Conductor.Pier.Api
             return new ApiResponse<PageTipoDebitoRecorrenteResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (PageTipoDebitoRecorrenteResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageTipoDebitoRecorrenteResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Salva os d\u00E9bitos recorrentes por portador de uma determinada conta Este recurso permite salvar os d\u00E9bitos recorrentes por portador de uma determinada conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo Identificador da conta</param> 
+        /// <param name="portadorDebitoRecorrentePersist">portadorDebitoRecorrentePersist</param> 
+        /// <returns>PortadorDebitoRecorrenteResponse</returns>
+        public PortadorDebitoRecorrenteResponse SalvarPortadorDebitoRecorrente (long? id, PortadorDebitoRecorrentePersist portadorDebitoRecorrentePersist)
+        {
+             ApiResponse<PortadorDebitoRecorrenteResponse> localVarResponse = SalvarPortadorDebitoRecorrenteWithHttpInfo(id, portadorDebitoRecorrentePersist);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Salva os d\u00E9bitos recorrentes por portador de uma determinada conta Este recurso permite salvar os d\u00E9bitos recorrentes por portador de uma determinada conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo Identificador da conta</param> 
+        /// <param name="portadorDebitoRecorrentePersist">portadorDebitoRecorrentePersist</param> 
+        /// <returns>ApiResponse of PortadorDebitoRecorrenteResponse</returns>
+        public ApiResponse< PortadorDebitoRecorrenteResponse > SalvarPortadorDebitoRecorrenteWithHttpInfo (long? id, PortadorDebitoRecorrentePersist portadorDebitoRecorrentePersist)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling DebitoRecorrenteApi->SalvarPortadorDebitoRecorrente");
+            
+            // verify the required parameter 'portadorDebitoRecorrentePersist' is set
+            if (portadorDebitoRecorrentePersist == null)
+                throw new ApiException(400, "Missing required parameter 'portadorDebitoRecorrentePersist' when calling DebitoRecorrenteApi->SalvarPortadorDebitoRecorrente");
+            
+    
+            var localVarPath = "/api/contas/{id}/portadores/debitos-recorrentes";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            if (portadorDebitoRecorrentePersist.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(portadorDebitoRecorrentePersist); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = portadorDebitoRecorrentePersist; // byte array
+            }
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarPortadorDebitoRecorrente: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarPortadorDebitoRecorrente: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<PortadorDebitoRecorrenteResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PortadorDebitoRecorrenteResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PortadorDebitoRecorrenteResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Salva os d\u00E9bitos recorrentes por portador de uma determinada conta Este recurso permite salvar os d\u00E9bitos recorrentes por portador de uma determinada conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo Identificador da conta</param>
+        /// <param name="portadorDebitoRecorrentePersist">portadorDebitoRecorrentePersist</param>
+        /// <returns>Task of PortadorDebitoRecorrenteResponse</returns>
+        public async System.Threading.Tasks.Task<PortadorDebitoRecorrenteResponse> SalvarPortadorDebitoRecorrenteAsync (long? id, PortadorDebitoRecorrentePersist portadorDebitoRecorrentePersist)
+        {
+             ApiResponse<PortadorDebitoRecorrenteResponse> localVarResponse = await SalvarPortadorDebitoRecorrenteAsyncWithHttpInfo(id, portadorDebitoRecorrentePersist);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Salva os d\u00E9bitos recorrentes por portador de uma determinada conta Este recurso permite salvar os d\u00E9bitos recorrentes por portador de uma determinada conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo Identificador da conta</param>
+        /// <param name="portadorDebitoRecorrentePersist">portadorDebitoRecorrentePersist</param>
+        /// <returns>Task of ApiResponse (PortadorDebitoRecorrenteResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PortadorDebitoRecorrenteResponse>> SalvarPortadorDebitoRecorrenteAsyncWithHttpInfo (long? id, PortadorDebitoRecorrentePersist portadorDebitoRecorrentePersist)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling SalvarPortadorDebitoRecorrente");
+            // verify the required parameter 'portadorDebitoRecorrentePersist' is set
+            if (portadorDebitoRecorrentePersist == null) throw new ApiException(400, "Missing required parameter 'portadorDebitoRecorrentePersist' when calling SalvarPortadorDebitoRecorrente");
+            
+    
+            var localVarPath = "/api/contas/{id}/portadores/debitos-recorrentes";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            if (portadorDebitoRecorrentePersist.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(portadorDebitoRecorrentePersist); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = portadorDebitoRecorrentePersist; // byte array
+            }
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarPortadorDebitoRecorrente: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarPortadorDebitoRecorrente: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PortadorDebitoRecorrenteResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PortadorDebitoRecorrenteResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PortadorDebitoRecorrenteResponse)));
             
         }
         

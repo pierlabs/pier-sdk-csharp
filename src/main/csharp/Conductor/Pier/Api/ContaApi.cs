@@ -314,6 +314,32 @@ namespace Conductor.Pier.Api
         ApiResponse<SegurancaMobileResponse> AtualizarParcialSegurancaMobileWithHttpInfo (long? id, long? idSegurancaMobile, SegurancaMobileParcialUpdate parcialUpdate);
         
         /// <summary>
+        /// Atualiza parcialmente o registro de um favorito de recarga de celular
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite Atualizar parcialmente um favorito de recarga de celular
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta</param>
+        /// <param name="idFavorito">Identificador do favorito de recarga</param>
+        /// <param name="parcialUpdate">parcialUpdate</param>
+        /// <returns>RecargaCelularFavoritoResponse</returns>
+        RecargaCelularFavoritoResponse AtualizarParcialmenteFavoritoRecargaCelular (long? id, long? idFavorito, RecargaCelularFavoritoParcialUpdate parcialUpdate);
+  
+        /// <summary>
+        /// Atualiza parcialmente o registro de um favorito de recarga de celular
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite Atualizar parcialmente um favorito de recarga de celular
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta</param>
+        /// <param name="idFavorito">Identificador do favorito de recarga</param>
+        /// <param name="parcialUpdate">parcialUpdate</param>
+        /// <returns>ApiResponse of RecargaCelularFavoritoResponse</returns>
+        ApiResponse<RecargaCelularFavoritoResponse> AtualizarParcialmenteFavoritoRecargaCelularWithHttpInfo (long? id, long? idFavorito, RecargaCelularFavoritoParcialUpdate parcialUpdate);
+        
+        /// <summary>
         /// Realiza o bloqueio de uma determinada Conta
         /// </summary>
         /// <remarks>
@@ -358,6 +384,30 @@ namespace Conductor.Pier.Api
         /// <param name="id">Id da conta</param>
         /// <returns>ApiResponse of AdesaoPagamentoSabadoResponse</returns>
         ApiResponse<AdesaoPagamentoSabadoResponse> CadastrarWithHttpInfo (long? id);
+        
+        /// <summary>
+        /// Cadastro de favorito de recarga de celular
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite cadastrar um favorito de recarga de celular
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta</param>
+        /// <param name="persist">persist</param>
+        /// <returns>RecargaCelularFavoritoResponse</returns>
+        RecargaCelularFavoritoResponse CadastrarRecargaCelularFavorito (long? id, RecargaCelularFavoritoPersist persist);
+  
+        /// <summary>
+        /// Cadastro de favorito de recarga de celular
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite cadastrar um favorito de recarga de celular
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta</param>
+        /// <param name="persist">persist</param>
+        /// <returns>ApiResponse of RecargaCelularFavoritoResponse</returns>
+        ApiResponse<RecargaCelularFavoritoResponse> CadastrarRecargaCelularFavoritoWithHttpInfo (long? id, RecargaCelularFavoritoPersist persist);
         
         /// <summary>
         /// Cadastro de uma seguran\u00E7a mobile
@@ -1128,6 +1178,42 @@ namespace Conductor.Pier.Api
         /// <param name="autoGerenciavel">Indica se a subconta \u00E9 auto gerenci\u00E1vel ou se apenas a conta pai poder\u00E1 gerir (optional)</param>
         /// <returns>ApiResponse of PageControleSubcontaResponse</returns>
         ApiResponse<PageControleSubcontaResponse> ListarControlesSubcontasWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idVinculoConta = null, long? idConta = null, string nome = null, string finalidade = null, bool? autoGerenciavel = null);
+        
+        /// <summary>
+        /// Lista registros de favoritos de recarga de celular
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite listar registros de favoritos de recarga de celular
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="dddCelular">DDD do celular (optional)</param>
+        /// <param name="numeroCelular">N\u00FAmero do celular (optional)</param>
+        /// <param name="nome">Nome do propriet\u00E1rio do celular (optional)</param>
+        /// <param name="ativo">Indicador de status do favorito (optional)</param>
+        /// <returns>PageRecargaCelularFavoritoResponse</returns>
+        PageRecargaCelularFavoritoResponse ListarFavoritosRecargasCelular (long? id, List<string> sort = null, int? page = null, int? limit = null, string dddCelular = null, string numeroCelular = null, string nome = null, bool? ativo = null);
+  
+        /// <summary>
+        /// Lista registros de favoritos de recarga de celular
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite listar registros de favoritos de recarga de celular
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="dddCelular">DDD do celular (optional)</param>
+        /// <param name="numeroCelular">N\u00FAmero do celular (optional)</param>
+        /// <param name="nome">Nome do propriet\u00E1rio do celular (optional)</param>
+        /// <param name="ativo">Indicador de status do favorito (optional)</param>
+        /// <returns>ApiResponse of PageRecargaCelularFavoritoResponse</returns>
+        ApiResponse<PageRecargaCelularFavoritoResponse> ListarFavoritosRecargasCelularWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, string dddCelular = null, string numeroCelular = null, string nome = null, bool? ativo = null);
         
         /// <summary>
         /// Lista o hist\u00F3rico de altera\u00E7\u00F5es de limites da conta
@@ -2194,6 +2280,32 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<SegurancaMobileResponse>> AtualizarParcialSegurancaMobileAsyncWithHttpInfo (long? id, long? idSegurancaMobile, SegurancaMobileParcialUpdate parcialUpdate);
         
         /// <summary>
+        /// Atualiza parcialmente o registro de um favorito de recarga de celular
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite Atualizar parcialmente um favorito de recarga de celular
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta</param>
+        /// <param name="idFavorito">Identificador do favorito de recarga</param>
+        /// <param name="parcialUpdate">parcialUpdate</param>
+        /// <returns>Task of RecargaCelularFavoritoResponse</returns>
+        System.Threading.Tasks.Task<RecargaCelularFavoritoResponse> AtualizarParcialmenteFavoritoRecargaCelularAsync (long? id, long? idFavorito, RecargaCelularFavoritoParcialUpdate parcialUpdate);
+
+        /// <summary>
+        /// Atualiza parcialmente o registro de um favorito de recarga de celular
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite Atualizar parcialmente um favorito de recarga de celular
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta</param>
+        /// <param name="idFavorito">Identificador do favorito de recarga</param>
+        /// <param name="parcialUpdate">parcialUpdate</param>
+        /// <returns>Task of ApiResponse (RecargaCelularFavoritoResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RecargaCelularFavoritoResponse>> AtualizarParcialmenteFavoritoRecargaCelularAsyncWithHttpInfo (long? id, long? idFavorito, RecargaCelularFavoritoParcialUpdate parcialUpdate);
+        
+        /// <summary>
         /// Realiza o bloqueio de uma determinada Conta
         /// </summary>
         /// <remarks>
@@ -2238,6 +2350,30 @@ namespace Conductor.Pier.Api
         /// <param name="id">Id da conta</param>
         /// <returns>Task of ApiResponse (AdesaoPagamentoSabadoResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<AdesaoPagamentoSabadoResponse>> CadastrarAsyncWithHttpInfo (long? id);
+        
+        /// <summary>
+        /// Cadastro de favorito de recarga de celular
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite cadastrar um favorito de recarga de celular
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta</param>
+        /// <param name="persist">persist</param>
+        /// <returns>Task of RecargaCelularFavoritoResponse</returns>
+        System.Threading.Tasks.Task<RecargaCelularFavoritoResponse> CadastrarRecargaCelularFavoritoAsync (long? id, RecargaCelularFavoritoPersist persist);
+
+        /// <summary>
+        /// Cadastro de favorito de recarga de celular
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite cadastrar um favorito de recarga de celular
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta</param>
+        /// <param name="persist">persist</param>
+        /// <returns>Task of ApiResponse (RecargaCelularFavoritoResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RecargaCelularFavoritoResponse>> CadastrarRecargaCelularFavoritoAsyncWithHttpInfo (long? id, RecargaCelularFavoritoPersist persist);
         
         /// <summary>
         /// Cadastro de uma seguran\u00E7a mobile
@@ -3008,6 +3144,42 @@ namespace Conductor.Pier.Api
         /// <param name="autoGerenciavel">Indica se a subconta \u00E9 auto gerenci\u00E1vel ou se apenas a conta pai poder\u00E1 gerir (optional)</param>
         /// <returns>Task of ApiResponse (PageControleSubcontaResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<PageControleSubcontaResponse>> ListarControlesSubcontasAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idVinculoConta = null, long? idConta = null, string nome = null, string finalidade = null, bool? autoGerenciavel = null);
+        
+        /// <summary>
+        /// Lista registros de favoritos de recarga de celular
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite listar registros de favoritos de recarga de celular
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="dddCelular">DDD do celular (optional)</param>
+        /// <param name="numeroCelular">N\u00FAmero do celular (optional)</param>
+        /// <param name="nome">Nome do propriet\u00E1rio do celular (optional)</param>
+        /// <param name="ativo">Indicador de status do favorito (optional)</param>
+        /// <returns>Task of PageRecargaCelularFavoritoResponse</returns>
+        System.Threading.Tasks.Task<PageRecargaCelularFavoritoResponse> ListarFavoritosRecargasCelularAsync (long? id, List<string> sort = null, int? page = null, int? limit = null, string dddCelular = null, string numeroCelular = null, string nome = null, bool? ativo = null);
+
+        /// <summary>
+        /// Lista registros de favoritos de recarga de celular
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite listar registros de favoritos de recarga de celular
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="dddCelular">DDD do celular (optional)</param>
+        /// <param name="numeroCelular">N\u00FAmero do celular (optional)</param>
+        /// <param name="nome">Nome do propriet\u00E1rio do celular (optional)</param>
+        /// <param name="ativo">Indicador de status do favorito (optional)</param>
+        /// <returns>Task of ApiResponse (PageRecargaCelularFavoritoResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PageRecargaCelularFavoritoResponse>> ListarFavoritosRecargasCelularAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, string dddCelular = null, string numeroCelular = null, string nome = null, bool? ativo = null);
         
         /// <summary>
         /// Lista o hist\u00F3rico de altera\u00E7\u00F5es de limites da conta
@@ -5916,6 +6088,200 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
+        /// Atualiza parcialmente o registro de um favorito de recarga de celular Este recurso permite Atualizar parcialmente um favorito de recarga de celular
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta</param> 
+        /// <param name="idFavorito">Identificador do favorito de recarga</param> 
+        /// <param name="parcialUpdate">parcialUpdate</param> 
+        /// <returns>RecargaCelularFavoritoResponse</returns>
+        public RecargaCelularFavoritoResponse AtualizarParcialmenteFavoritoRecargaCelular (long? id, long? idFavorito, RecargaCelularFavoritoParcialUpdate parcialUpdate)
+        {
+             ApiResponse<RecargaCelularFavoritoResponse> localVarResponse = AtualizarParcialmenteFavoritoRecargaCelularWithHttpInfo(id, idFavorito, parcialUpdate);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Atualiza parcialmente o registro de um favorito de recarga de celular Este recurso permite Atualizar parcialmente um favorito de recarga de celular
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta</param> 
+        /// <param name="idFavorito">Identificador do favorito de recarga</param> 
+        /// <param name="parcialUpdate">parcialUpdate</param> 
+        /// <returns>ApiResponse of RecargaCelularFavoritoResponse</returns>
+        public ApiResponse< RecargaCelularFavoritoResponse > AtualizarParcialmenteFavoritoRecargaCelularWithHttpInfo (long? id, long? idFavorito, RecargaCelularFavoritoParcialUpdate parcialUpdate)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->AtualizarParcialmenteFavoritoRecargaCelular");
+            
+            // verify the required parameter 'idFavorito' is set
+            if (idFavorito == null)
+                throw new ApiException(400, "Missing required parameter 'idFavorito' when calling ContaApi->AtualizarParcialmenteFavoritoRecargaCelular");
+            
+            // verify the required parameter 'parcialUpdate' is set
+            if (parcialUpdate == null)
+                throw new ApiException(400, "Missing required parameter 'parcialUpdate' when calling ContaApi->AtualizarParcialmenteFavoritoRecargaCelular");
+            
+    
+            var localVarPath = "/api/contas/{id}/celulares/recargas/favoritos/{idFavorito}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (idFavorito != null) localVarPathParams.Add("idFavorito", Configuration.ApiClient.ParameterToString(idFavorito)); // path parameter
+            
+            
+            
+            
+            if (parcialUpdate.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(parcialUpdate); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = parcialUpdate; // byte array
+            }
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling AtualizarParcialmenteFavoritoRecargaCelular: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling AtualizarParcialmenteFavoritoRecargaCelular: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<RecargaCelularFavoritoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RecargaCelularFavoritoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RecargaCelularFavoritoResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Atualiza parcialmente o registro de um favorito de recarga de celular Este recurso permite Atualizar parcialmente um favorito de recarga de celular
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta</param>
+        /// <param name="idFavorito">Identificador do favorito de recarga</param>
+        /// <param name="parcialUpdate">parcialUpdate</param>
+        /// <returns>Task of RecargaCelularFavoritoResponse</returns>
+        public async System.Threading.Tasks.Task<RecargaCelularFavoritoResponse> AtualizarParcialmenteFavoritoRecargaCelularAsync (long? id, long? idFavorito, RecargaCelularFavoritoParcialUpdate parcialUpdate)
+        {
+             ApiResponse<RecargaCelularFavoritoResponse> localVarResponse = await AtualizarParcialmenteFavoritoRecargaCelularAsyncWithHttpInfo(id, idFavorito, parcialUpdate);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Atualiza parcialmente o registro de um favorito de recarga de celular Este recurso permite Atualizar parcialmente um favorito de recarga de celular
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta</param>
+        /// <param name="idFavorito">Identificador do favorito de recarga</param>
+        /// <param name="parcialUpdate">parcialUpdate</param>
+        /// <returns>Task of ApiResponse (RecargaCelularFavoritoResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RecargaCelularFavoritoResponse>> AtualizarParcialmenteFavoritoRecargaCelularAsyncWithHttpInfo (long? id, long? idFavorito, RecargaCelularFavoritoParcialUpdate parcialUpdate)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AtualizarParcialmenteFavoritoRecargaCelular");
+            // verify the required parameter 'idFavorito' is set
+            if (idFavorito == null) throw new ApiException(400, "Missing required parameter 'idFavorito' when calling AtualizarParcialmenteFavoritoRecargaCelular");
+            // verify the required parameter 'parcialUpdate' is set
+            if (parcialUpdate == null) throw new ApiException(400, "Missing required parameter 'parcialUpdate' when calling AtualizarParcialmenteFavoritoRecargaCelular");
+            
+    
+            var localVarPath = "/api/contas/{id}/celulares/recargas/favoritos/{idFavorito}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (idFavorito != null) localVarPathParams.Add("idFavorito", Configuration.ApiClient.ParameterToString(idFavorito)); // path parameter
+            
+            
+            
+            
+            if (parcialUpdate.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(parcialUpdate); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = parcialUpdate; // byte array
+            }
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling AtualizarParcialmenteFavoritoRecargaCelular: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling AtualizarParcialmenteFavoritoRecargaCelular: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<RecargaCelularFavoritoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RecargaCelularFavoritoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RecargaCelularFavoritoResponse)));
+            
+        }
+        
+        /// <summary>
         /// Realiza o bloqueio de uma determinada Conta Este m\u00E9todo permite a realiza\u00E7\u00E3o do bloqueio de uma determinada conta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id)
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
@@ -6240,6 +6606,188 @@ namespace Conductor.Pier.Api
             return new ApiResponse<AdesaoPagamentoSabadoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (AdesaoPagamentoSabadoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AdesaoPagamentoSabadoResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Cadastro de favorito de recarga de celular Este recurso permite cadastrar um favorito de recarga de celular
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta</param> 
+        /// <param name="persist">persist</param> 
+        /// <returns>RecargaCelularFavoritoResponse</returns>
+        public RecargaCelularFavoritoResponse CadastrarRecargaCelularFavorito (long? id, RecargaCelularFavoritoPersist persist)
+        {
+             ApiResponse<RecargaCelularFavoritoResponse> localVarResponse = CadastrarRecargaCelularFavoritoWithHttpInfo(id, persist);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Cadastro de favorito de recarga de celular Este recurso permite cadastrar um favorito de recarga de celular
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta</param> 
+        /// <param name="persist">persist</param> 
+        /// <returns>ApiResponse of RecargaCelularFavoritoResponse</returns>
+        public ApiResponse< RecargaCelularFavoritoResponse > CadastrarRecargaCelularFavoritoWithHttpInfo (long? id, RecargaCelularFavoritoPersist persist)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->CadastrarRecargaCelularFavorito");
+            
+            // verify the required parameter 'persist' is set
+            if (persist == null)
+                throw new ApiException(400, "Missing required parameter 'persist' when calling ContaApi->CadastrarRecargaCelularFavorito");
+            
+    
+            var localVarPath = "/api/contas/{id}/celulares/recargas/favoritos";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            if (persist.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(persist); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = persist; // byte array
+            }
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling CadastrarRecargaCelularFavorito: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling CadastrarRecargaCelularFavorito: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<RecargaCelularFavoritoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RecargaCelularFavoritoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RecargaCelularFavoritoResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Cadastro de favorito de recarga de celular Este recurso permite cadastrar um favorito de recarga de celular
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta</param>
+        /// <param name="persist">persist</param>
+        /// <returns>Task of RecargaCelularFavoritoResponse</returns>
+        public async System.Threading.Tasks.Task<RecargaCelularFavoritoResponse> CadastrarRecargaCelularFavoritoAsync (long? id, RecargaCelularFavoritoPersist persist)
+        {
+             ApiResponse<RecargaCelularFavoritoResponse> localVarResponse = await CadastrarRecargaCelularFavoritoAsyncWithHttpInfo(id, persist);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Cadastro de favorito de recarga de celular Este recurso permite cadastrar um favorito de recarga de celular
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta</param>
+        /// <param name="persist">persist</param>
+        /// <returns>Task of ApiResponse (RecargaCelularFavoritoResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RecargaCelularFavoritoResponse>> CadastrarRecargaCelularFavoritoAsyncWithHttpInfo (long? id, RecargaCelularFavoritoPersist persist)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling CadastrarRecargaCelularFavorito");
+            // verify the required parameter 'persist' is set
+            if (persist == null) throw new ApiException(400, "Missing required parameter 'persist' when calling CadastrarRecargaCelularFavorito");
+            
+    
+            var localVarPath = "/api/contas/{id}/celulares/recargas/favoritos";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            if (persist.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(persist); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = persist; // byte array
+            }
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling CadastrarRecargaCelularFavorito: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling CadastrarRecargaCelularFavorito: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<RecargaCelularFavoritoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RecargaCelularFavoritoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RecargaCelularFavoritoResponse)));
             
         }
         
@@ -11430,6 +11978,206 @@ namespace Conductor.Pier.Api
             return new ApiResponse<PageControleSubcontaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (PageControleSubcontaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageControleSubcontaResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Lista registros de favoritos de recarga de celular Este recurso permite listar registros de favoritos de recarga de celular
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="page">P\u00E1gina (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <param name="dddCelular">DDD do celular (optional)</param> 
+        /// <param name="numeroCelular">N\u00FAmero do celular (optional)</param> 
+        /// <param name="nome">Nome do propriet\u00E1rio do celular (optional)</param> 
+        /// <param name="ativo">Indicador de status do favorito (optional)</param> 
+        /// <returns>PageRecargaCelularFavoritoResponse</returns>
+        public PageRecargaCelularFavoritoResponse ListarFavoritosRecargasCelular (long? id, List<string> sort = null, int? page = null, int? limit = null, string dddCelular = null, string numeroCelular = null, string nome = null, bool? ativo = null)
+        {
+             ApiResponse<PageRecargaCelularFavoritoResponse> localVarResponse = ListarFavoritosRecargasCelularWithHttpInfo(id, sort, page, limit, dddCelular, numeroCelular, nome, ativo);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Lista registros de favoritos de recarga de celular Este recurso permite listar registros de favoritos de recarga de celular
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="page">P\u00E1gina (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <param name="dddCelular">DDD do celular (optional)</param> 
+        /// <param name="numeroCelular">N\u00FAmero do celular (optional)</param> 
+        /// <param name="nome">Nome do propriet\u00E1rio do celular (optional)</param> 
+        /// <param name="ativo">Indicador de status do favorito (optional)</param> 
+        /// <returns>ApiResponse of PageRecargaCelularFavoritoResponse</returns>
+        public ApiResponse< PageRecargaCelularFavoritoResponse > ListarFavoritosRecargasCelularWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, string dddCelular = null, string numeroCelular = null, string nome = null, bool? ativo = null)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->ListarFavoritosRecargasCelular");
+            
+    
+            var localVarPath = "/api/contas/{id}/celulares/recargas/favoritos";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (dddCelular != null) localVarQueryParams.Add("dddCelular", Configuration.ApiClient.ParameterToString(dddCelular)); // query parameter
+            if (numeroCelular != null) localVarQueryParams.Add("numeroCelular", Configuration.ApiClient.ParameterToString(numeroCelular)); // query parameter
+            if (nome != null) localVarQueryParams.Add("nome", Configuration.ApiClient.ParameterToString(nome)); // query parameter
+            if (ativo != null) localVarQueryParams.Add("ativo", Configuration.ApiClient.ParameterToString(ativo)); // query parameter
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarFavoritosRecargasCelular: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarFavoritosRecargasCelular: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<PageRecargaCelularFavoritoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageRecargaCelularFavoritoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageRecargaCelularFavoritoResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Lista registros de favoritos de recarga de celular Este recurso permite listar registros de favoritos de recarga de celular
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="dddCelular">DDD do celular (optional)</param>
+        /// <param name="numeroCelular">N\u00FAmero do celular (optional)</param>
+        /// <param name="nome">Nome do propriet\u00E1rio do celular (optional)</param>
+        /// <param name="ativo">Indicador de status do favorito (optional)</param>
+        /// <returns>Task of PageRecargaCelularFavoritoResponse</returns>
+        public async System.Threading.Tasks.Task<PageRecargaCelularFavoritoResponse> ListarFavoritosRecargasCelularAsync (long? id, List<string> sort = null, int? page = null, int? limit = null, string dddCelular = null, string numeroCelular = null, string nome = null, bool? ativo = null)
+        {
+             ApiResponse<PageRecargaCelularFavoritoResponse> localVarResponse = await ListarFavoritosRecargasCelularAsyncWithHttpInfo(id, sort, page, limit, dddCelular, numeroCelular, nome, ativo);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Lista registros de favoritos de recarga de celular Este recurso permite listar registros de favoritos de recarga de celular
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="dddCelular">DDD do celular (optional)</param>
+        /// <param name="numeroCelular">N\u00FAmero do celular (optional)</param>
+        /// <param name="nome">Nome do propriet\u00E1rio do celular (optional)</param>
+        /// <param name="ativo">Indicador de status do favorito (optional)</param>
+        /// <returns>Task of ApiResponse (PageRecargaCelularFavoritoResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PageRecargaCelularFavoritoResponse>> ListarFavoritosRecargasCelularAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, string dddCelular = null, string numeroCelular = null, string nome = null, bool? ativo = null)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ListarFavoritosRecargasCelular");
+            
+    
+            var localVarPath = "/api/contas/{id}/celulares/recargas/favoritos";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (dddCelular != null) localVarQueryParams.Add("dddCelular", Configuration.ApiClient.ParameterToString(dddCelular)); // query parameter
+            if (numeroCelular != null) localVarQueryParams.Add("numeroCelular", Configuration.ApiClient.ParameterToString(numeroCelular)); // query parameter
+            if (nome != null) localVarQueryParams.Add("nome", Configuration.ApiClient.ParameterToString(nome)); // query parameter
+            if (ativo != null) localVarQueryParams.Add("ativo", Configuration.ApiClient.ParameterToString(ativo)); // query parameter
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarFavoritosRecargasCelular: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarFavoritosRecargasCelular: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PageRecargaCelularFavoritoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageRecargaCelularFavoritoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageRecargaCelularFavoritoResponse)));
             
         }
         
