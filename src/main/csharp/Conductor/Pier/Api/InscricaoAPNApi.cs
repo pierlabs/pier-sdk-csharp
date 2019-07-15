@@ -26,7 +26,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id</param>
         /// <returns>InscricaoAPNResponse</returns>
-        InscricaoAPNResponse Desativar (long? id);
+        InscricaoAPNResponse DesativarInscricaoAPN (long? id);
   
         /// <summary>
         /// Desativa uma inscri\u00E7\u00E3o APN
@@ -37,7 +37,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id</param>
         /// <returns>ApiResponse of InscricaoAPNResponse</returns>
-        ApiResponse<InscricaoAPNResponse> DesativarWithHttpInfo (long? id);
+        ApiResponse<InscricaoAPNResponse> DesativarInscricaoAPNWithHttpInfo (long? id);
         
         /// <summary>
         /// Lista as inscri\u00E7\u00F5es APN
@@ -56,7 +56,7 @@ namespace Conductor.Pier.Api
         /// <param name="ativo">Indica se a inscri\u00E7\u00E3o est\u00E1 ativa (optional)</param>
         /// <param name="idAplicacaoMobile">Id da aplica\u00E7\u00E3o mobile (optional)</param>
         /// <returns>PageInscricaoAPNResponse</returns>
-        PageInscricaoAPNResponse Listar (List<string> sort = null, List<long?> idCartoes = null, int? page = null, int? limit = null, string deviceToken = null, string dataCriacao = null, string dataDesativacao = null, bool? ativo = null, long? idAplicacaoMobile = null);
+        PageInscricaoAPNResponse ListarInscricoesAPN (List<string> sort = null, List<long?> idCartoes = null, int? page = null, int? limit = null, string deviceToken = null, string dataCriacao = null, string dataDesativacao = null, bool? ativo = null, long? idAplicacaoMobile = null);
   
         /// <summary>
         /// Lista as inscri\u00E7\u00F5es APN
@@ -75,7 +75,7 @@ namespace Conductor.Pier.Api
         /// <param name="ativo">Indica se a inscri\u00E7\u00E3o est\u00E1 ativa (optional)</param>
         /// <param name="idAplicacaoMobile">Id da aplica\u00E7\u00E3o mobile (optional)</param>
         /// <returns>ApiResponse of PageInscricaoAPNResponse</returns>
-        ApiResponse<PageInscricaoAPNResponse> ListarWithHttpInfo (List<string> sort = null, List<long?> idCartoes = null, int? page = null, int? limit = null, string deviceToken = null, string dataCriacao = null, string dataDesativacao = null, bool? ativo = null, long? idAplicacaoMobile = null);
+        ApiResponse<PageInscricaoAPNResponse> ListarInscricoesAPNWithHttpInfo (List<string> sort = null, List<long?> idCartoes = null, int? page = null, int? limit = null, string deviceToken = null, string dataCriacao = null, string dataDesativacao = null, bool? ativo = null, long? idAplicacaoMobile = null);
         
         /// <summary>
         /// Salva uma nova inscri\u00E7\u00E3o APN
@@ -86,7 +86,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inscricaoPersist">inscricaoPersist</param>
         /// <returns>List&lt;InscricaoAPNResponse&gt;</returns>
-        List<InscricaoAPNResponse> Salvar (InscricaoAPN inscricaoPersist);
+        List<InscricaoAPNResponse> SalvarInscricaoAPN (InscricaoAPN inscricaoPersist);
   
         /// <summary>
         /// Salva uma nova inscri\u00E7\u00E3o APN
@@ -97,7 +97,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inscricaoPersist">inscricaoPersist</param>
         /// <returns>ApiResponse of List&lt;InscricaoAPNResponse&gt;</returns>
-        ApiResponse<List<InscricaoAPNResponse>> SalvarWithHttpInfo (InscricaoAPN inscricaoPersist);
+        ApiResponse<List<InscricaoAPNResponse>> SalvarInscricaoAPNWithHttpInfo (InscricaoAPN inscricaoPersist);
         
         #endregion Synchronous Operations
         
@@ -112,7 +112,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id</param>
         /// <returns>Task of InscricaoAPNResponse</returns>
-        System.Threading.Tasks.Task<InscricaoAPNResponse> DesativarAsync (long? id);
+        System.Threading.Tasks.Task<InscricaoAPNResponse> DesativarInscricaoAPNAsync (long? id);
 
         /// <summary>
         /// Desativa uma inscri\u00E7\u00E3o APN
@@ -123,7 +123,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id</param>
         /// <returns>Task of ApiResponse (InscricaoAPNResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InscricaoAPNResponse>> DesativarAsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<InscricaoAPNResponse>> DesativarInscricaoAPNAsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Lista as inscri\u00E7\u00F5es APN
@@ -142,7 +142,7 @@ namespace Conductor.Pier.Api
         /// <param name="ativo">Indica se a inscri\u00E7\u00E3o est\u00E1 ativa (optional)</param>
         /// <param name="idAplicacaoMobile">Id da aplica\u00E7\u00E3o mobile (optional)</param>
         /// <returns>Task of PageInscricaoAPNResponse</returns>
-        System.Threading.Tasks.Task<PageInscricaoAPNResponse> ListarAsync (List<string> sort = null, List<long?> idCartoes = null, int? page = null, int? limit = null, string deviceToken = null, string dataCriacao = null, string dataDesativacao = null, bool? ativo = null, long? idAplicacaoMobile = null);
+        System.Threading.Tasks.Task<PageInscricaoAPNResponse> ListarInscricoesAPNAsync (List<string> sort = null, List<long?> idCartoes = null, int? page = null, int? limit = null, string deviceToken = null, string dataCriacao = null, string dataDesativacao = null, bool? ativo = null, long? idAplicacaoMobile = null);
 
         /// <summary>
         /// Lista as inscri\u00E7\u00F5es APN
@@ -161,7 +161,7 @@ namespace Conductor.Pier.Api
         /// <param name="ativo">Indica se a inscri\u00E7\u00E3o est\u00E1 ativa (optional)</param>
         /// <param name="idAplicacaoMobile">Id da aplica\u00E7\u00E3o mobile (optional)</param>
         /// <returns>Task of ApiResponse (PageInscricaoAPNResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageInscricaoAPNResponse>> ListarAsyncWithHttpInfo (List<string> sort = null, List<long?> idCartoes = null, int? page = null, int? limit = null, string deviceToken = null, string dataCriacao = null, string dataDesativacao = null, bool? ativo = null, long? idAplicacaoMobile = null);
+        System.Threading.Tasks.Task<ApiResponse<PageInscricaoAPNResponse>> ListarInscricoesAPNAsyncWithHttpInfo (List<string> sort = null, List<long?> idCartoes = null, int? page = null, int? limit = null, string deviceToken = null, string dataCriacao = null, string dataDesativacao = null, bool? ativo = null, long? idAplicacaoMobile = null);
         
         /// <summary>
         /// Salva uma nova inscri\u00E7\u00E3o APN
@@ -172,7 +172,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inscricaoPersist">inscricaoPersist</param>
         /// <returns>Task of List&lt;InscricaoAPNResponse&gt;</returns>
-        System.Threading.Tasks.Task<List<InscricaoAPNResponse>> SalvarAsync (InscricaoAPN inscricaoPersist);
+        System.Threading.Tasks.Task<List<InscricaoAPNResponse>> SalvarInscricaoAPNAsync (InscricaoAPN inscricaoPersist);
 
         /// <summary>
         /// Salva uma nova inscri\u00E7\u00E3o APN
@@ -183,7 +183,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inscricaoPersist">inscricaoPersist</param>
         /// <returns>Task of ApiResponse (List&lt;InscricaoAPNResponse&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<InscricaoAPNResponse>>> SalvarAsyncWithHttpInfo (InscricaoAPN inscricaoPersist);
+        System.Threading.Tasks.Task<ApiResponse<List<InscricaoAPNResponse>>> SalvarInscricaoAPNAsyncWithHttpInfo (InscricaoAPN inscricaoPersist);
         
         #endregion Asynchronous Operations
         
@@ -283,9 +283,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id</param> 
         /// <returns>InscricaoAPNResponse</returns>
-        public InscricaoAPNResponse Desativar (long? id)
+        public InscricaoAPNResponse DesativarInscricaoAPN (long? id)
         {
-             ApiResponse<InscricaoAPNResponse> localVarResponse = DesativarWithHttpInfo(id);
+             ApiResponse<InscricaoAPNResponse> localVarResponse = DesativarInscricaoAPNWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -295,12 +295,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id</param> 
         /// <returns>ApiResponse of InscricaoAPNResponse</returns>
-        public ApiResponse< InscricaoAPNResponse > DesativarWithHttpInfo (long? id)
+        public ApiResponse< InscricaoAPNResponse > DesativarInscricaoAPNWithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling InscricaoAPNApi->Desativar");
+                throw new ApiException(400, "Missing required parameter 'id' when calling InscricaoAPNApi->DesativarInscricaoAPN");
             
     
             var localVarPath = "/api/inscricoes-apn/{id}/desativar";
@@ -346,9 +346,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Desativar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling DesativarInscricaoAPN: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Desativar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DesativarInscricaoAPN: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<InscricaoAPNResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -363,9 +363,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id</param>
         /// <returns>Task of InscricaoAPNResponse</returns>
-        public async System.Threading.Tasks.Task<InscricaoAPNResponse> DesativarAsync (long? id)
+        public async System.Threading.Tasks.Task<InscricaoAPNResponse> DesativarInscricaoAPNAsync (long? id)
         {
-             ApiResponse<InscricaoAPNResponse> localVarResponse = await DesativarAsyncWithHttpInfo(id);
+             ApiResponse<InscricaoAPNResponse> localVarResponse = await DesativarInscricaoAPNAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -376,10 +376,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id</param>
         /// <returns>Task of ApiResponse (InscricaoAPNResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InscricaoAPNResponse>> DesativarAsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<InscricaoAPNResponse>> DesativarInscricaoAPNAsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling Desativar");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling DesativarInscricaoAPN");
             
     
             var localVarPath = "/api/inscricoes-apn/{id}/desativar";
@@ -425,9 +425,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Desativar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling DesativarInscricaoAPN: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Desativar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DesativarInscricaoAPN: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<InscricaoAPNResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -449,9 +449,9 @@ namespace Conductor.Pier.Api
         /// <param name="ativo">Indica se a inscri\u00E7\u00E3o est\u00E1 ativa (optional)</param> 
         /// <param name="idAplicacaoMobile">Id da aplica\u00E7\u00E3o mobile (optional)</param> 
         /// <returns>PageInscricaoAPNResponse</returns>
-        public PageInscricaoAPNResponse Listar (List<string> sort = null, List<long?> idCartoes = null, int? page = null, int? limit = null, string deviceToken = null, string dataCriacao = null, string dataDesativacao = null, bool? ativo = null, long? idAplicacaoMobile = null)
+        public PageInscricaoAPNResponse ListarInscricoesAPN (List<string> sort = null, List<long?> idCartoes = null, int? page = null, int? limit = null, string deviceToken = null, string dataCriacao = null, string dataDesativacao = null, bool? ativo = null, long? idAplicacaoMobile = null)
         {
-             ApiResponse<PageInscricaoAPNResponse> localVarResponse = ListarWithHttpInfo(sort, idCartoes, page, limit, deviceToken, dataCriacao, dataDesativacao, ativo, idAplicacaoMobile);
+             ApiResponse<PageInscricaoAPNResponse> localVarResponse = ListarInscricoesAPNWithHttpInfo(sort, idCartoes, page, limit, deviceToken, dataCriacao, dataDesativacao, ativo, idAplicacaoMobile);
              return localVarResponse.Data;
         }
 
@@ -469,7 +469,7 @@ namespace Conductor.Pier.Api
         /// <param name="ativo">Indica se a inscri\u00E7\u00E3o est\u00E1 ativa (optional)</param> 
         /// <param name="idAplicacaoMobile">Id da aplica\u00E7\u00E3o mobile (optional)</param> 
         /// <returns>ApiResponse of PageInscricaoAPNResponse</returns>
-        public ApiResponse< PageInscricaoAPNResponse > ListarWithHttpInfo (List<string> sort = null, List<long?> idCartoes = null, int? page = null, int? limit = null, string deviceToken = null, string dataCriacao = null, string dataDesativacao = null, bool? ativo = null, long? idAplicacaoMobile = null)
+        public ApiResponse< PageInscricaoAPNResponse > ListarInscricoesAPNWithHttpInfo (List<string> sort = null, List<long?> idCartoes = null, int? page = null, int? limit = null, string deviceToken = null, string dataCriacao = null, string dataDesativacao = null, bool? ativo = null, long? idAplicacaoMobile = null)
         {
             
     
@@ -524,9 +524,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Listar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarInscricoesAPN: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Listar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarInscricoesAPN: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageInscricaoAPNResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -549,9 +549,9 @@ namespace Conductor.Pier.Api
         /// <param name="ativo">Indica se a inscri\u00E7\u00E3o est\u00E1 ativa (optional)</param>
         /// <param name="idAplicacaoMobile">Id da aplica\u00E7\u00E3o mobile (optional)</param>
         /// <returns>Task of PageInscricaoAPNResponse</returns>
-        public async System.Threading.Tasks.Task<PageInscricaoAPNResponse> ListarAsync (List<string> sort = null, List<long?> idCartoes = null, int? page = null, int? limit = null, string deviceToken = null, string dataCriacao = null, string dataDesativacao = null, bool? ativo = null, long? idAplicacaoMobile = null)
+        public async System.Threading.Tasks.Task<PageInscricaoAPNResponse> ListarInscricoesAPNAsync (List<string> sort = null, List<long?> idCartoes = null, int? page = null, int? limit = null, string deviceToken = null, string dataCriacao = null, string dataDesativacao = null, bool? ativo = null, long? idAplicacaoMobile = null)
         {
-             ApiResponse<PageInscricaoAPNResponse> localVarResponse = await ListarAsyncWithHttpInfo(sort, idCartoes, page, limit, deviceToken, dataCriacao, dataDesativacao, ativo, idAplicacaoMobile);
+             ApiResponse<PageInscricaoAPNResponse> localVarResponse = await ListarInscricoesAPNAsyncWithHttpInfo(sort, idCartoes, page, limit, deviceToken, dataCriacao, dataDesativacao, ativo, idAplicacaoMobile);
              return localVarResponse.Data;
 
         }
@@ -570,7 +570,7 @@ namespace Conductor.Pier.Api
         /// <param name="ativo">Indica se a inscri\u00E7\u00E3o est\u00E1 ativa (optional)</param>
         /// <param name="idAplicacaoMobile">Id da aplica\u00E7\u00E3o mobile (optional)</param>
         /// <returns>Task of ApiResponse (PageInscricaoAPNResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageInscricaoAPNResponse>> ListarAsyncWithHttpInfo (List<string> sort = null, List<long?> idCartoes = null, int? page = null, int? limit = null, string deviceToken = null, string dataCriacao = null, string dataDesativacao = null, bool? ativo = null, long? idAplicacaoMobile = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageInscricaoAPNResponse>> ListarInscricoesAPNAsyncWithHttpInfo (List<string> sort = null, List<long?> idCartoes = null, int? page = null, int? limit = null, string deviceToken = null, string dataCriacao = null, string dataDesativacao = null, bool? ativo = null, long? idAplicacaoMobile = null)
         {
             
     
@@ -625,9 +625,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Listar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarInscricoesAPN: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Listar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarInscricoesAPN: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageInscricaoAPNResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -641,9 +641,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inscricaoPersist">inscricaoPersist</param> 
         /// <returns>List&lt;InscricaoAPNResponse&gt;</returns>
-        public List<InscricaoAPNResponse> Salvar (InscricaoAPN inscricaoPersist)
+        public List<InscricaoAPNResponse> SalvarInscricaoAPN (InscricaoAPN inscricaoPersist)
         {
-             ApiResponse<List<InscricaoAPNResponse>> localVarResponse = SalvarWithHttpInfo(inscricaoPersist);
+             ApiResponse<List<InscricaoAPNResponse>> localVarResponse = SalvarInscricaoAPNWithHttpInfo(inscricaoPersist);
              return localVarResponse.Data;
         }
 
@@ -653,12 +653,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inscricaoPersist">inscricaoPersist</param> 
         /// <returns>ApiResponse of List&lt;InscricaoAPNResponse&gt;</returns>
-        public ApiResponse< List<InscricaoAPNResponse> > SalvarWithHttpInfo (InscricaoAPN inscricaoPersist)
+        public ApiResponse< List<InscricaoAPNResponse> > SalvarInscricaoAPNWithHttpInfo (InscricaoAPN inscricaoPersist)
         {
             
             // verify the required parameter 'inscricaoPersist' is set
             if (inscricaoPersist == null)
-                throw new ApiException(400, "Missing required parameter 'inscricaoPersist' when calling InscricaoAPNApi->Salvar");
+                throw new ApiException(400, "Missing required parameter 'inscricaoPersist' when calling InscricaoAPNApi->SalvarInscricaoAPN");
             
     
             var localVarPath = "/api/inscricoes-apn";
@@ -710,9 +710,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Salvar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarInscricaoAPN: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Salvar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarInscricaoAPN: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<List<InscricaoAPNResponse>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -727,9 +727,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inscricaoPersist">inscricaoPersist</param>
         /// <returns>Task of List&lt;InscricaoAPNResponse&gt;</returns>
-        public async System.Threading.Tasks.Task<List<InscricaoAPNResponse>> SalvarAsync (InscricaoAPN inscricaoPersist)
+        public async System.Threading.Tasks.Task<List<InscricaoAPNResponse>> SalvarInscricaoAPNAsync (InscricaoAPN inscricaoPersist)
         {
-             ApiResponse<List<InscricaoAPNResponse>> localVarResponse = await SalvarAsyncWithHttpInfo(inscricaoPersist);
+             ApiResponse<List<InscricaoAPNResponse>> localVarResponse = await SalvarInscricaoAPNAsyncWithHttpInfo(inscricaoPersist);
              return localVarResponse.Data;
 
         }
@@ -740,10 +740,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inscricaoPersist">inscricaoPersist</param>
         /// <returns>Task of ApiResponse (List&lt;InscricaoAPNResponse&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<InscricaoAPNResponse>>> SalvarAsyncWithHttpInfo (InscricaoAPN inscricaoPersist)
+        public async System.Threading.Tasks.Task<ApiResponse<List<InscricaoAPNResponse>>> SalvarInscricaoAPNAsyncWithHttpInfo (InscricaoAPN inscricaoPersist)
         {
             // verify the required parameter 'inscricaoPersist' is set
-            if (inscricaoPersist == null) throw new ApiException(400, "Missing required parameter 'inscricaoPersist' when calling Salvar");
+            if (inscricaoPersist == null) throw new ApiException(400, "Missing required parameter 'inscricaoPersist' when calling SalvarInscricaoAPN");
             
     
             var localVarPath = "/api/inscricoes-apn";
@@ -795,9 +795,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Salvar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarInscricaoAPN: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Salvar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarInscricaoAPN: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<List<InscricaoAPNResponse>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

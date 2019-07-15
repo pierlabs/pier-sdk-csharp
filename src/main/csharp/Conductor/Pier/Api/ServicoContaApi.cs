@@ -66,46 +66,6 @@ namespace Conductor.Pier.Api
         ApiResponse<AdesaoPacoteTarifaResponse> AlterarAdesaoPacoteTarifaWithHttpInfo (long? id, AdesaoPacoteTarifaUpdate adesaoPacoteTarifaUpdate);
         
         /// <summary>
-        /// Atribuir Anuidade
-        /// </summary>
-        /// <remarks>
-        /// Esse recurso permite configurar qual a regra de Anuidade que ser\u00E1 atribu\u00EDda a uma determinada Conta
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
-        /// <param name="idAnuidade">Identificador da anuidade</param>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="DDD">DDD do celular (optional)</param>
-        /// <param name="celular">N\u00FAmero do celular (optional)</param>
-        /// <param name="idOperadora">Identificador da operadora do celular (optional)</param>
-        /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param>
-        /// <param name="colaborador">Matr\u00EDcula do colaborador (optional)</param>
-        /// <returns>Object</returns>
-        Object AtivarAnuidade (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null, string colaborador = null);
-  
-        /// <summary>
-        /// Atribuir Anuidade
-        /// </summary>
-        /// <remarks>
-        /// Esse recurso permite configurar qual a regra de Anuidade que ser\u00E1 atribu\u00EDda a uma determinada Conta
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
-        /// <param name="idAnuidade">Identificador da anuidade</param>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="DDD">DDD do celular (optional)</param>
-        /// <param name="celular">N\u00FAmero do celular (optional)</param>
-        /// <param name="idOperadora">Identificador da operadora do celular (optional)</param>
-        /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param>
-        /// <param name="colaborador">Matr\u00EDcula do colaborador (optional)</param>
-        /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> AtivarAnuidadeWithHttpInfo (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null, string colaborador = null);
-        
-        /// <summary>
         /// Ativa o servi\u00E7o de envio de fatura por email
         /// </summary>
         /// <remarks>
@@ -126,6 +86,46 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> AtivarEnvioFaturaEmailWithHttpInfo (long? id);
+        
+        /// <summary>
+        /// Atribuir Anuidade
+        /// </summary>
+        /// <remarks>
+        /// Esse recurso permite configurar qual a regra de Anuidade que ser\u00E1 atribu\u00EDda a uma determinada Conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
+        /// <param name="idAnuidade">Identificador da anuidade</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="DDD">DDD do celular (optional)</param>
+        /// <param name="celular">N\u00FAmero do celular (optional)</param>
+        /// <param name="idOperadora">Identificador da operadora do celular (optional)</param>
+        /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param>
+        /// <param name="colaborador">Matr\u00EDcula do colaborador (optional)</param>
+        /// <returns>Object</returns>
+        Object AtribuirAnuidade (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null, string colaborador = null);
+  
+        /// <summary>
+        /// Atribuir Anuidade
+        /// </summary>
+        /// <remarks>
+        /// Esse recurso permite configurar qual a regra de Anuidade que ser\u00E1 atribu\u00EDda a uma determinada Conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
+        /// <param name="idAnuidade">Identificador da anuidade</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="DDD">DDD do celular (optional)</param>
+        /// <param name="celular">N\u00FAmero do celular (optional)</param>
+        /// <param name="idOperadora">Identificador da operadora do celular (optional)</param>
+        /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param>
+        /// <param name="colaborador">Matr\u00EDcula do colaborador (optional)</param>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> AtribuirAnuidadeWithHttpInfo (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null, string colaborador = null);
         
         /// <summary>
         /// Realiza uma consulta de uma ades\u00E3o de um pacote de tarifa
@@ -150,28 +150,6 @@ namespace Conductor.Pier.Api
         ApiResponse<AdesaoPacoteTarifaResponse> ConsultarAdesaoPacoteTarifaWithHttpInfo (long? id);
         
         /// <summary>
-        /// Desativa servi\u00E7o das contas
-        /// </summary>
-        /// <remarks>
-        /// Recurso que desativa servi\u00E7o das contas
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo Identificador do servi\u00E7o conta</param>
-        /// <returns>Object</returns>
-        Object Desativar (long? id);
-  
-        /// <summary>
-        /// Desativa servi\u00E7o das contas
-        /// </summary>
-        /// <remarks>
-        /// Recurso que desativa servi\u00E7o das contas
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo Identificador do servi\u00E7o conta</param>
-        /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> DesativarWithHttpInfo (long? id);
-        
-        /// <summary>
         /// Desativa o servi\u00E7o de envio de fatura por email
         /// </summary>
         /// <remarks>
@@ -194,34 +172,26 @@ namespace Conductor.Pier.Api
         ApiResponse<Object> DesativarEnvioFaturaEmailWithHttpInfo (long? id);
         
         /// <summary>
-        /// Lista os servi\u00E7os ativos
+        /// Desativa servi\u00E7o das contas
         /// </summary>
         /// <remarks>
-        /// Recurso que lista os servi\u00E7os ativos
+        /// Recurso que desativa servi\u00E7o das contas
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="idConta">C\u00F3digo Identificador da conta (optional)</param>
-        /// <param name="idTipoServico">C\u00F3digo Identificador do tipo de servi\u00E7o (optional)</param>
-        /// <returns>PageServicoContaResponse</returns>
-        PageServicoContaResponse Listar (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idTipoServico = null);
+        /// <param name="id">C\u00F3digo Identificador do servi\u00E7o conta</param>
+        /// <returns>Object</returns>
+        Object DesativarServicoConta (long? id);
   
         /// <summary>
-        /// Lista os servi\u00E7os ativos
+        /// Desativa servi\u00E7o das contas
         /// </summary>
         /// <remarks>
-        /// Recurso que lista os servi\u00E7os ativos
+        /// Recurso que desativa servi\u00E7o das contas
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="idConta">C\u00F3digo Identificador da conta (optional)</param>
-        /// <param name="idTipoServico">C\u00F3digo Identificador do tipo de servi\u00E7o (optional)</param>
-        /// <returns>ApiResponse of PageServicoContaResponse</returns>
-        ApiResponse<PageServicoContaResponse> ListarWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idTipoServico = null);
+        /// <param name="id">C\u00F3digo Identificador do servi\u00E7o conta</param>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> DesativarServicoContaWithHttpInfo (long? id);
         
         /// <summary>
         /// Listar Anuidades
@@ -276,6 +246,36 @@ namespace Conductor.Pier.Api
         ApiResponse<PageOperadoraResponse> ListarOperadorasTelefonicasWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
         
         /// <summary>
+        /// Lista os servi\u00E7os ativos
+        /// </summary>
+        /// <remarks>
+        /// Recurso que lista os servi\u00E7os ativos
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idConta">C\u00F3digo Identificador da conta (optional)</param>
+        /// <param name="idTipoServico">C\u00F3digo Identificador do tipo de servi\u00E7o (optional)</param>
+        /// <returns>PageServicoContaResponse</returns>
+        PageServicoContaResponse ListarServicosContas (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idTipoServico = null);
+  
+        /// <summary>
+        /// Lista os servi\u00E7os ativos
+        /// </summary>
+        /// <remarks>
+        /// Recurso que lista os servi\u00E7os ativos
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idConta">C\u00F3digo Identificador da conta (optional)</param>
+        /// <param name="idTipoServico">C\u00F3digo Identificador do tipo de servi\u00E7o (optional)</param>
+        /// <returns>ApiResponse of PageServicoContaResponse</returns>
+        ApiResponse<PageServicoContaResponse> ListarServicosContasWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idTipoServico = null);
+        
+        /// <summary>
         /// Lista os Tipos de Servi\u00E7os
         /// </summary>
         /// <remarks>
@@ -310,7 +310,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="servicoContaPersist">servicoContaPersist</param>
         /// <returns>Object</returns>
-        Object Salvar (RepresentaoDaEntradaDoRecursoDeCadastrarUmServioConta servicoContaPersist);
+        Object SalvarServicoConta (RepresentaoDaEntradaDoRecursoDeCadastrarUmServioConta servicoContaPersist);
   
         /// <summary>
         /// Ativa servi\u00E7os para contas
@@ -321,7 +321,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="servicoContaPersist">servicoContaPersist</param>
         /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> SalvarWithHttpInfo (RepresentaoDaEntradaDoRecursoDeCadastrarUmServioConta servicoContaPersist);
+        ApiResponse<Object> SalvarServicoContaWithHttpInfo (RepresentaoDaEntradaDoRecursoDeCadastrarUmServioConta servicoContaPersist);
         
         #endregion Synchronous Operations
         
@@ -376,46 +376,6 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<AdesaoPacoteTarifaResponse>> AlterarAdesaoPacoteTarifaAsyncWithHttpInfo (long? id, AdesaoPacoteTarifaUpdate adesaoPacoteTarifaUpdate);
         
         /// <summary>
-        /// Atribuir Anuidade
-        /// </summary>
-        /// <remarks>
-        /// Esse recurso permite configurar qual a regra de Anuidade que ser\u00E1 atribu\u00EDda a uma determinada Conta
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
-        /// <param name="idAnuidade">Identificador da anuidade</param>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="DDD">DDD do celular (optional)</param>
-        /// <param name="celular">N\u00FAmero do celular (optional)</param>
-        /// <param name="idOperadora">Identificador da operadora do celular (optional)</param>
-        /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param>
-        /// <param name="colaborador">Matr\u00EDcula do colaborador (optional)</param>
-        /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> AtivarAnuidadeAsync (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null, string colaborador = null);
-
-        /// <summary>
-        /// Atribuir Anuidade
-        /// </summary>
-        /// <remarks>
-        /// Esse recurso permite configurar qual a regra de Anuidade que ser\u00E1 atribu\u00EDda a uma determinada Conta
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
-        /// <param name="idAnuidade">Identificador da anuidade</param>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="DDD">DDD do celular (optional)</param>
-        /// <param name="celular">N\u00FAmero do celular (optional)</param>
-        /// <param name="idOperadora">Identificador da operadora do celular (optional)</param>
-        /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param>
-        /// <param name="colaborador">Matr\u00EDcula do colaborador (optional)</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> AtivarAnuidadeAsyncWithHttpInfo (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null, string colaborador = null);
-        
-        /// <summary>
         /// Ativa o servi\u00E7o de envio de fatura por email
         /// </summary>
         /// <remarks>
@@ -436,6 +396,46 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> AtivarEnvioFaturaEmailAsyncWithHttpInfo (long? id);
+        
+        /// <summary>
+        /// Atribuir Anuidade
+        /// </summary>
+        /// <remarks>
+        /// Esse recurso permite configurar qual a regra de Anuidade que ser\u00E1 atribu\u00EDda a uma determinada Conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
+        /// <param name="idAnuidade">Identificador da anuidade</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="DDD">DDD do celular (optional)</param>
+        /// <param name="celular">N\u00FAmero do celular (optional)</param>
+        /// <param name="idOperadora">Identificador da operadora do celular (optional)</param>
+        /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param>
+        /// <param name="colaborador">Matr\u00EDcula do colaborador (optional)</param>
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> AtribuirAnuidadeAsync (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null, string colaborador = null);
+
+        /// <summary>
+        /// Atribuir Anuidade
+        /// </summary>
+        /// <remarks>
+        /// Esse recurso permite configurar qual a regra de Anuidade que ser\u00E1 atribu\u00EDda a uma determinada Conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
+        /// <param name="idAnuidade">Identificador da anuidade</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="DDD">DDD do celular (optional)</param>
+        /// <param name="celular">N\u00FAmero do celular (optional)</param>
+        /// <param name="idOperadora">Identificador da operadora do celular (optional)</param>
+        /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param>
+        /// <param name="colaborador">Matr\u00EDcula do colaborador (optional)</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> AtribuirAnuidadeAsyncWithHttpInfo (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null, string colaborador = null);
         
         /// <summary>
         /// Realiza uma consulta de uma ades\u00E3o de um pacote de tarifa
@@ -460,28 +460,6 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<AdesaoPacoteTarifaResponse>> ConsultarAdesaoPacoteTarifaAsyncWithHttpInfo (long? id);
         
         /// <summary>
-        /// Desativa servi\u00E7o das contas
-        /// </summary>
-        /// <remarks>
-        /// Recurso que desativa servi\u00E7o das contas
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo Identificador do servi\u00E7o conta</param>
-        /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> DesativarAsync (long? id);
-
-        /// <summary>
-        /// Desativa servi\u00E7o das contas
-        /// </summary>
-        /// <remarks>
-        /// Recurso que desativa servi\u00E7o das contas
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo Identificador do servi\u00E7o conta</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DesativarAsyncWithHttpInfo (long? id);
-        
-        /// <summary>
         /// Desativa o servi\u00E7o de envio de fatura por email
         /// </summary>
         /// <remarks>
@@ -504,34 +482,26 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<Object>> DesativarEnvioFaturaEmailAsyncWithHttpInfo (long? id);
         
         /// <summary>
-        /// Lista os servi\u00E7os ativos
+        /// Desativa servi\u00E7o das contas
         /// </summary>
         /// <remarks>
-        /// Recurso que lista os servi\u00E7os ativos
+        /// Recurso que desativa servi\u00E7o das contas
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="idConta">C\u00F3digo Identificador da conta (optional)</param>
-        /// <param name="idTipoServico">C\u00F3digo Identificador do tipo de servi\u00E7o (optional)</param>
-        /// <returns>Task of PageServicoContaResponse</returns>
-        System.Threading.Tasks.Task<PageServicoContaResponse> ListarAsync (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idTipoServico = null);
+        /// <param name="id">C\u00F3digo Identificador do servi\u00E7o conta</param>
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> DesativarServicoContaAsync (long? id);
 
         /// <summary>
-        /// Lista os servi\u00E7os ativos
+        /// Desativa servi\u00E7o das contas
         /// </summary>
         /// <remarks>
-        /// Recurso que lista os servi\u00E7os ativos
+        /// Recurso que desativa servi\u00E7o das contas
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="idConta">C\u00F3digo Identificador da conta (optional)</param>
-        /// <param name="idTipoServico">C\u00F3digo Identificador do tipo de servi\u00E7o (optional)</param>
-        /// <returns>Task of ApiResponse (PageServicoContaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageServicoContaResponse>> ListarAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idTipoServico = null);
+        /// <param name="id">C\u00F3digo Identificador do servi\u00E7o conta</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DesativarServicoContaAsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Listar Anuidades
@@ -586,6 +556,36 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<PageOperadoraResponse>> ListarOperadorasTelefonicasAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
         
         /// <summary>
+        /// Lista os servi\u00E7os ativos
+        /// </summary>
+        /// <remarks>
+        /// Recurso que lista os servi\u00E7os ativos
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idConta">C\u00F3digo Identificador da conta (optional)</param>
+        /// <param name="idTipoServico">C\u00F3digo Identificador do tipo de servi\u00E7o (optional)</param>
+        /// <returns>Task of PageServicoContaResponse</returns>
+        System.Threading.Tasks.Task<PageServicoContaResponse> ListarServicosContasAsync (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idTipoServico = null);
+
+        /// <summary>
+        /// Lista os servi\u00E7os ativos
+        /// </summary>
+        /// <remarks>
+        /// Recurso que lista os servi\u00E7os ativos
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idConta">C\u00F3digo Identificador da conta (optional)</param>
+        /// <param name="idTipoServico">C\u00F3digo Identificador do tipo de servi\u00E7o (optional)</param>
+        /// <returns>Task of ApiResponse (PageServicoContaResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PageServicoContaResponse>> ListarServicosContasAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idTipoServico = null);
+        
+        /// <summary>
         /// Lista os Tipos de Servi\u00E7os
         /// </summary>
         /// <remarks>
@@ -620,7 +620,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="servicoContaPersist">servicoContaPersist</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> SalvarAsync (RepresentaoDaEntradaDoRecursoDeCadastrarUmServioConta servicoContaPersist);
+        System.Threading.Tasks.Task<Object> SalvarServicoContaAsync (RepresentaoDaEntradaDoRecursoDeCadastrarUmServioConta servicoContaPersist);
 
         /// <summary>
         /// Ativa servi\u00E7os para contas
@@ -631,7 +631,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="servicoContaPersist">servicoContaPersist</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> SalvarAsyncWithHttpInfo (RepresentaoDaEntradaDoRecursoDeCadastrarUmServioConta servicoContaPersist);
+        System.Threading.Tasks.Task<ApiResponse<Object>> SalvarServicoContaAsyncWithHttpInfo (RepresentaoDaEntradaDoRecursoDeCadastrarUmServioConta servicoContaPersist);
         
         #endregion Asynchronous Operations
         
@@ -1090,224 +1090,6 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Atribuir Anuidade Esse recurso permite configurar qual a regra de Anuidade que ser\u00E1 atribu\u00EDda a uma determinada Conta
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param> 
-        /// <param name="idAnuidade">Identificador da anuidade</param> 
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
-        /// <param name="page">P\u00E1gina (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
-        /// <param name="DDD">DDD do celular (optional)</param> 
-        /// <param name="celular">N\u00FAmero do celular (optional)</param> 
-        /// <param name="idOperadora">Identificador da operadora do celular (optional)</param> 
-        /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param> 
-        /// <param name="colaborador">Matr\u00EDcula do colaborador (optional)</param> 
-        /// <returns>Object</returns>
-        public Object AtivarAnuidade (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null, string colaborador = null)
-        {
-             ApiResponse<Object> localVarResponse = AtivarAnuidadeWithHttpInfo(id, idAnuidade, sort, page, limit, DDD, celular, idOperadora, idOrigemComercial, colaborador);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Atribuir Anuidade Esse recurso permite configurar qual a regra de Anuidade que ser\u00E1 atribu\u00EDda a uma determinada Conta
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param> 
-        /// <param name="idAnuidade">Identificador da anuidade</param> 
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
-        /// <param name="page">P\u00E1gina (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
-        /// <param name="DDD">DDD do celular (optional)</param> 
-        /// <param name="celular">N\u00FAmero do celular (optional)</param> 
-        /// <param name="idOperadora">Identificador da operadora do celular (optional)</param> 
-        /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param> 
-        /// <param name="colaborador">Matr\u00EDcula do colaborador (optional)</param> 
-        /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > AtivarAnuidadeWithHttpInfo (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null, string colaborador = null)
-        {
-            
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling ServicoContaApi->AtivarAnuidade");
-            
-            // verify the required parameter 'idAnuidade' is set
-            if (idAnuidade == null)
-                throw new ApiException(400, "Missing required parameter 'idAnuidade' when calling ServicoContaApi->AtivarAnuidade");
-            
-    
-            var localVarPath = "/api/contas/{id}/atribuir-anuidade";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            
-            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
-            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
-            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
-            if (idAnuidade != null) localVarQueryParams.Add("idAnuidade", Configuration.ApiClient.ParameterToString(idAnuidade)); // query parameter
-            if (DDD != null) localVarQueryParams.Add("DDD", Configuration.ApiClient.ParameterToString(DDD)); // query parameter
-            if (celular != null) localVarQueryParams.Add("celular", Configuration.ApiClient.ParameterToString(celular)); // query parameter
-            if (idOperadora != null) localVarQueryParams.Add("idOperadora", Configuration.ApiClient.ParameterToString(idOperadora)); // query parameter
-            if (idOrigemComercial != null) localVarQueryParams.Add("idOrigemComercial", Configuration.ApiClient.ParameterToString(idOrigemComercial)); // query parameter
-            if (colaborador != null) localVarQueryParams.Add("colaborador", Configuration.ApiClient.ParameterToString(colaborador)); // query parameter
-            
-            
-            
-            
-
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling AtivarAnuidade: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling AtivarAnuidade: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
-            
-        }
-
-        
-        /// <summary>
-        /// Atribuir Anuidade Esse recurso permite configurar qual a regra de Anuidade que ser\u00E1 atribu\u00EDda a uma determinada Conta
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
-        /// <param name="idAnuidade">Identificador da anuidade</param>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="DDD">DDD do celular (optional)</param>
-        /// <param name="celular">N\u00FAmero do celular (optional)</param>
-        /// <param name="idOperadora">Identificador da operadora do celular (optional)</param>
-        /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param>
-        /// <param name="colaborador">Matr\u00EDcula do colaborador (optional)</param>
-        /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> AtivarAnuidadeAsync (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null, string colaborador = null)
-        {
-             ApiResponse<Object> localVarResponse = await AtivarAnuidadeAsyncWithHttpInfo(id, idAnuidade, sort, page, limit, DDD, celular, idOperadora, idOrigemComercial, colaborador);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Atribuir Anuidade Esse recurso permite configurar qual a regra de Anuidade que ser\u00E1 atribu\u00EDda a uma determinada Conta
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
-        /// <param name="idAnuidade">Identificador da anuidade</param>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="DDD">DDD do celular (optional)</param>
-        /// <param name="celular">N\u00FAmero do celular (optional)</param>
-        /// <param name="idOperadora">Identificador da operadora do celular (optional)</param>
-        /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param>
-        /// <param name="colaborador">Matr\u00EDcula do colaborador (optional)</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> AtivarAnuidadeAsyncWithHttpInfo (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null, string colaborador = null)
-        {
-            // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AtivarAnuidade");
-            // verify the required parameter 'idAnuidade' is set
-            if (idAnuidade == null) throw new ApiException(400, "Missing required parameter 'idAnuidade' when calling AtivarAnuidade");
-            
-    
-            var localVarPath = "/api/contas/{id}/atribuir-anuidade";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            
-            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
-            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
-            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
-            if (idAnuidade != null) localVarQueryParams.Add("idAnuidade", Configuration.ApiClient.ParameterToString(idAnuidade)); // query parameter
-            if (DDD != null) localVarQueryParams.Add("DDD", Configuration.ApiClient.ParameterToString(DDD)); // query parameter
-            if (celular != null) localVarQueryParams.Add("celular", Configuration.ApiClient.ParameterToString(celular)); // query parameter
-            if (idOperadora != null) localVarQueryParams.Add("idOperadora", Configuration.ApiClient.ParameterToString(idOperadora)); // query parameter
-            if (idOrigemComercial != null) localVarQueryParams.Add("idOrigemComercial", Configuration.ApiClient.ParameterToString(idOrigemComercial)); // query parameter
-            if (colaborador != null) localVarQueryParams.Add("colaborador", Configuration.ApiClient.ParameterToString(colaborador)); // query parameter
-            
-            
-            
-            
-
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling AtivarAnuidade: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling AtivarAnuidade: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
-            
-        }
-        
-        /// <summary>
         /// Ativa o servi\u00E7o de envio de fatura por email Este recurso ativa o servi\u00E7o de envio de fatura por email
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1458,6 +1240,224 @@ namespace Conductor.Pier.Api
                 throw new ApiException (localVarStatusCode, "Error calling AtivarEnvioFaturaEmail: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling AtivarEnvioFaturaEmail: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+            
+        }
+        
+        /// <summary>
+        /// Atribuir Anuidade Esse recurso permite configurar qual a regra de Anuidade que ser\u00E1 atribu\u00EDda a uma determinada Conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param> 
+        /// <param name="idAnuidade">Identificador da anuidade</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="page">P\u00E1gina (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <param name="DDD">DDD do celular (optional)</param> 
+        /// <param name="celular">N\u00FAmero do celular (optional)</param> 
+        /// <param name="idOperadora">Identificador da operadora do celular (optional)</param> 
+        /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param> 
+        /// <param name="colaborador">Matr\u00EDcula do colaborador (optional)</param> 
+        /// <returns>Object</returns>
+        public Object AtribuirAnuidade (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null, string colaborador = null)
+        {
+             ApiResponse<Object> localVarResponse = AtribuirAnuidadeWithHttpInfo(id, idAnuidade, sort, page, limit, DDD, celular, idOperadora, idOrigemComercial, colaborador);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Atribuir Anuidade Esse recurso permite configurar qual a regra de Anuidade que ser\u00E1 atribu\u00EDda a uma determinada Conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param> 
+        /// <param name="idAnuidade">Identificador da anuidade</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="page">P\u00E1gina (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <param name="DDD">DDD do celular (optional)</param> 
+        /// <param name="celular">N\u00FAmero do celular (optional)</param> 
+        /// <param name="idOperadora">Identificador da operadora do celular (optional)</param> 
+        /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param> 
+        /// <param name="colaborador">Matr\u00EDcula do colaborador (optional)</param> 
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > AtribuirAnuidadeWithHttpInfo (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null, string colaborador = null)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling ServicoContaApi->AtribuirAnuidade");
+            
+            // verify the required parameter 'idAnuidade' is set
+            if (idAnuidade == null)
+                throw new ApiException(400, "Missing required parameter 'idAnuidade' when calling ServicoContaApi->AtribuirAnuidade");
+            
+    
+            var localVarPath = "/api/contas/{id}/atribuir-anuidade";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (idAnuidade != null) localVarQueryParams.Add("idAnuidade", Configuration.ApiClient.ParameterToString(idAnuidade)); // query parameter
+            if (DDD != null) localVarQueryParams.Add("DDD", Configuration.ApiClient.ParameterToString(DDD)); // query parameter
+            if (celular != null) localVarQueryParams.Add("celular", Configuration.ApiClient.ParameterToString(celular)); // query parameter
+            if (idOperadora != null) localVarQueryParams.Add("idOperadora", Configuration.ApiClient.ParameterToString(idOperadora)); // query parameter
+            if (idOrigemComercial != null) localVarQueryParams.Add("idOrigemComercial", Configuration.ApiClient.ParameterToString(idOrigemComercial)); // query parameter
+            if (colaborador != null) localVarQueryParams.Add("colaborador", Configuration.ApiClient.ParameterToString(colaborador)); // query parameter
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling AtribuirAnuidade: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling AtribuirAnuidade: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+            
+        }
+
+        
+        /// <summary>
+        /// Atribuir Anuidade Esse recurso permite configurar qual a regra de Anuidade que ser\u00E1 atribu\u00EDda a uma determinada Conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
+        /// <param name="idAnuidade">Identificador da anuidade</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="DDD">DDD do celular (optional)</param>
+        /// <param name="celular">N\u00FAmero do celular (optional)</param>
+        /// <param name="idOperadora">Identificador da operadora do celular (optional)</param>
+        /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param>
+        /// <param name="colaborador">Matr\u00EDcula do colaborador (optional)</param>
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> AtribuirAnuidadeAsync (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null, string colaborador = null)
+        {
+             ApiResponse<Object> localVarResponse = await AtribuirAnuidadeAsyncWithHttpInfo(id, idAnuidade, sort, page, limit, DDD, celular, idOperadora, idOrigemComercial, colaborador);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Atribuir Anuidade Esse recurso permite configurar qual a regra de Anuidade que ser\u00E1 atribu\u00EDda a uma determinada Conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
+        /// <param name="idAnuidade">Identificador da anuidade</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="DDD">DDD do celular (optional)</param>
+        /// <param name="celular">N\u00FAmero do celular (optional)</param>
+        /// <param name="idOperadora">Identificador da operadora do celular (optional)</param>
+        /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param>
+        /// <param name="colaborador">Matr\u00EDcula do colaborador (optional)</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> AtribuirAnuidadeAsyncWithHttpInfo (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null, string colaborador = null)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AtribuirAnuidade");
+            // verify the required parameter 'idAnuidade' is set
+            if (idAnuidade == null) throw new ApiException(400, "Missing required parameter 'idAnuidade' when calling AtribuirAnuidade");
+            
+    
+            var localVarPath = "/api/contas/{id}/atribuir-anuidade";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (idAnuidade != null) localVarQueryParams.Add("idAnuidade", Configuration.ApiClient.ParameterToString(idAnuidade)); // query parameter
+            if (DDD != null) localVarQueryParams.Add("DDD", Configuration.ApiClient.ParameterToString(DDD)); // query parameter
+            if (celular != null) localVarQueryParams.Add("celular", Configuration.ApiClient.ParameterToString(celular)); // query parameter
+            if (idOperadora != null) localVarQueryParams.Add("idOperadora", Configuration.ApiClient.ParameterToString(idOperadora)); // query parameter
+            if (idOrigemComercial != null) localVarQueryParams.Add("idOrigemComercial", Configuration.ApiClient.ParameterToString(idOrigemComercial)); // query parameter
+            if (colaborador != null) localVarQueryParams.Add("colaborador", Configuration.ApiClient.ParameterToString(colaborador)); // query parameter
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling AtribuirAnuidade: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling AtribuirAnuidade: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1624,164 +1624,6 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Desativa servi\u00E7o das contas Recurso que desativa servi\u00E7o das contas
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo Identificador do servi\u00E7o conta</param> 
-        /// <returns>Object</returns>
-        public Object Desativar (long? id)
-        {
-             ApiResponse<Object> localVarResponse = DesativarWithHttpInfo(id);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Desativa servi\u00E7o das contas Recurso que desativa servi\u00E7o das contas
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo Identificador do servi\u00E7o conta</param> 
-        /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > DesativarWithHttpInfo (long? id)
-        {
-            
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling ServicoContaApi->Desativar");
-            
-    
-            var localVarPath = "/api/contas/servicos/{id}";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            
-            
-            
-            
-            
-
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Desativar: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Desativar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
-            
-        }
-
-        
-        /// <summary>
-        /// Desativa servi\u00E7o das contas Recurso que desativa servi\u00E7o das contas
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo Identificador do servi\u00E7o conta</param>
-        /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> DesativarAsync (long? id)
-        {
-             ApiResponse<Object> localVarResponse = await DesativarAsyncWithHttpInfo(id);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Desativa servi\u00E7o das contas Recurso que desativa servi\u00E7o das contas
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo Identificador do servi\u00E7o conta</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DesativarAsyncWithHttpInfo (long? id)
-        {
-            // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling Desativar");
-            
-    
-            var localVarPath = "/api/contas/servicos/{id}";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            
-            
-            
-            
-            
-
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Desativar: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Desativar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
-            
-        }
-        
-        /// <summary>
         /// Desativa o servi\u00E7o de envio de fatura por email Este recurso desativa o servi\u00E7o de envio de fatura por email
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1940,36 +1782,32 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Lista os servi\u00E7os ativos Recurso que lista os servi\u00E7os ativos
+        /// Desativa servi\u00E7o das contas Recurso que desativa servi\u00E7o das contas
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
-        /// <param name="page">P\u00E1gina (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
-        /// <param name="idConta">C\u00F3digo Identificador da conta (optional)</param> 
-        /// <param name="idTipoServico">C\u00F3digo Identificador do tipo de servi\u00E7o (optional)</param> 
-        /// <returns>PageServicoContaResponse</returns>
-        public PageServicoContaResponse Listar (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idTipoServico = null)
+        /// <param name="id">C\u00F3digo Identificador do servi\u00E7o conta</param> 
+        /// <returns>Object</returns>
+        public Object DesativarServicoConta (long? id)
         {
-             ApiResponse<PageServicoContaResponse> localVarResponse = ListarWithHttpInfo(sort, page, limit, idConta, idTipoServico);
+             ApiResponse<Object> localVarResponse = DesativarServicoContaWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Lista os servi\u00E7os ativos Recurso que lista os servi\u00E7os ativos
+        /// Desativa servi\u00E7o das contas Recurso que desativa servi\u00E7o das contas
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
-        /// <param name="page">P\u00E1gina (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
-        /// <param name="idConta">C\u00F3digo Identificador da conta (optional)</param> 
-        /// <param name="idTipoServico">C\u00F3digo Identificador do tipo de servi\u00E7o (optional)</param> 
-        /// <returns>ApiResponse of PageServicoContaResponse</returns>
-        public ApiResponse< PageServicoContaResponse > ListarWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idTipoServico = null)
+        /// <param name="id">C\u00F3digo Identificador do servi\u00E7o conta</param> 
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > DesativarServicoContaWithHttpInfo (long? id)
         {
             
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling ServicoContaApi->DesativarServicoConta");
+            
     
-            var localVarPath = "/api/contas/servicos";
+            var localVarPath = "/api/contas/servicos/{id}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1995,12 +1833,8 @@ namespace Conductor.Pier.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             
-            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
-            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
-            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
-            if (idConta != null) localVarQueryParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // query parameter
-            if (idTipoServico != null) localVarQueryParams.Add("idTipoServico", Configuration.ApiClient.ParameterToString(idTipoServico)); // query parameter
             
             
             
@@ -2010,55 +1844,49 @@ namespace Conductor.Pier.Api
     
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Listar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling DesativarServicoConta: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Listar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DesativarServicoConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<PageServicoContaResponse>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PageServicoContaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageServicoContaResponse)));
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
             
         }
 
         
         /// <summary>
-        /// Lista os servi\u00E7os ativos Recurso que lista os servi\u00E7os ativos
+        /// Desativa servi\u00E7o das contas Recurso que desativa servi\u00E7o das contas
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="idConta">C\u00F3digo Identificador da conta (optional)</param>
-        /// <param name="idTipoServico">C\u00F3digo Identificador do tipo de servi\u00E7o (optional)</param>
-        /// <returns>Task of PageServicoContaResponse</returns>
-        public async System.Threading.Tasks.Task<PageServicoContaResponse> ListarAsync (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idTipoServico = null)
+        /// <param name="id">C\u00F3digo Identificador do servi\u00E7o conta</param>
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> DesativarServicoContaAsync (long? id)
         {
-             ApiResponse<PageServicoContaResponse> localVarResponse = await ListarAsyncWithHttpInfo(sort, page, limit, idConta, idTipoServico);
+             ApiResponse<Object> localVarResponse = await DesativarServicoContaAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Lista os servi\u00E7os ativos Recurso que lista os servi\u00E7os ativos
+        /// Desativa servi\u00E7o das contas Recurso que desativa servi\u00E7o das contas
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="idConta">C\u00F3digo Identificador da conta (optional)</param>
-        /// <param name="idTipoServico">C\u00F3digo Identificador do tipo de servi\u00E7o (optional)</param>
-        /// <returns>Task of ApiResponse (PageServicoContaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageServicoContaResponse>> ListarAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idTipoServico = null)
+        /// <param name="id">C\u00F3digo Identificador do servi\u00E7o conta</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DesativarServicoContaAsyncWithHttpInfo (long? id)
         {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling DesativarServicoConta");
             
     
-            var localVarPath = "/api/contas/servicos";
+            var localVarPath = "/api/contas/servicos/{id}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2084,12 +1912,8 @@ namespace Conductor.Pier.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             
-            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
-            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
-            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
-            if (idConta != null) localVarQueryParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // query parameter
-            if (idTipoServico != null) localVarQueryParams.Add("idTipoServico", Configuration.ApiClient.ParameterToString(idTipoServico)); // query parameter
             
             
             
@@ -2099,19 +1923,19 @@ namespace Conductor.Pier.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Listar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling DesativarServicoConta: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Listar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DesativarServicoConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<PageServicoContaResponse>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PageServicoContaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageServicoContaResponse)));
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
             
         }
         
@@ -2444,6 +2268,182 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
+        /// Lista os servi\u00E7os ativos Recurso que lista os servi\u00E7os ativos
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="page">P\u00E1gina (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <param name="idConta">C\u00F3digo Identificador da conta (optional)</param> 
+        /// <param name="idTipoServico">C\u00F3digo Identificador do tipo de servi\u00E7o (optional)</param> 
+        /// <returns>PageServicoContaResponse</returns>
+        public PageServicoContaResponse ListarServicosContas (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idTipoServico = null)
+        {
+             ApiResponse<PageServicoContaResponse> localVarResponse = ListarServicosContasWithHttpInfo(sort, page, limit, idConta, idTipoServico);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Lista os servi\u00E7os ativos Recurso que lista os servi\u00E7os ativos
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="page">P\u00E1gina (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <param name="idConta">C\u00F3digo Identificador da conta (optional)</param> 
+        /// <param name="idTipoServico">C\u00F3digo Identificador do tipo de servi\u00E7o (optional)</param> 
+        /// <returns>ApiResponse of PageServicoContaResponse</returns>
+        public ApiResponse< PageServicoContaResponse > ListarServicosContasWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idTipoServico = null)
+        {
+            
+    
+            var localVarPath = "/api/contas/servicos";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (idConta != null) localVarQueryParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // query parameter
+            if (idTipoServico != null) localVarQueryParams.Add("idTipoServico", Configuration.ApiClient.ParameterToString(idTipoServico)); // query parameter
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarServicosContas: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarServicosContas: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<PageServicoContaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageServicoContaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageServicoContaResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Lista os servi\u00E7os ativos Recurso que lista os servi\u00E7os ativos
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idConta">C\u00F3digo Identificador da conta (optional)</param>
+        /// <param name="idTipoServico">C\u00F3digo Identificador do tipo de servi\u00E7o (optional)</param>
+        /// <returns>Task of PageServicoContaResponse</returns>
+        public async System.Threading.Tasks.Task<PageServicoContaResponse> ListarServicosContasAsync (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idTipoServico = null)
+        {
+             ApiResponse<PageServicoContaResponse> localVarResponse = await ListarServicosContasAsyncWithHttpInfo(sort, page, limit, idConta, idTipoServico);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Lista os servi\u00E7os ativos Recurso que lista os servi\u00E7os ativos
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idConta">C\u00F3digo Identificador da conta (optional)</param>
+        /// <param name="idTipoServico">C\u00F3digo Identificador do tipo de servi\u00E7o (optional)</param>
+        /// <returns>Task of ApiResponse (PageServicoContaResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PageServicoContaResponse>> ListarServicosContasAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idTipoServico = null)
+        {
+            
+    
+            var localVarPath = "/api/contas/servicos";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (idConta != null) localVarQueryParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // query parameter
+            if (idTipoServico != null) localVarQueryParams.Add("idTipoServico", Configuration.ApiClient.ParameterToString(idTipoServico)); // query parameter
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarServicosContas: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarServicosContas: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PageServicoContaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageServicoContaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageServicoContaResponse)));
+            
+        }
+        
+        /// <summary>
         /// Lista os Tipos de Servi\u00E7os Esse recurso permite listar os Tipos de Servi\u00E7os
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
@@ -2613,9 +2613,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="servicoContaPersist">servicoContaPersist</param> 
         /// <returns>Object</returns>
-        public Object Salvar (RepresentaoDaEntradaDoRecursoDeCadastrarUmServioConta servicoContaPersist)
+        public Object SalvarServicoConta (RepresentaoDaEntradaDoRecursoDeCadastrarUmServioConta servicoContaPersist)
         {
-             ApiResponse<Object> localVarResponse = SalvarWithHttpInfo(servicoContaPersist);
+             ApiResponse<Object> localVarResponse = SalvarServicoContaWithHttpInfo(servicoContaPersist);
              return localVarResponse.Data;
         }
 
@@ -2625,12 +2625,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="servicoContaPersist">servicoContaPersist</param> 
         /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > SalvarWithHttpInfo (RepresentaoDaEntradaDoRecursoDeCadastrarUmServioConta servicoContaPersist)
+        public ApiResponse< Object > SalvarServicoContaWithHttpInfo (RepresentaoDaEntradaDoRecursoDeCadastrarUmServioConta servicoContaPersist)
         {
             
             // verify the required parameter 'servicoContaPersist' is set
             if (servicoContaPersist == null)
-                throw new ApiException(400, "Missing required parameter 'servicoContaPersist' when calling ServicoContaApi->Salvar");
+                throw new ApiException(400, "Missing required parameter 'servicoContaPersist' when calling ServicoContaApi->SalvarServicoConta");
             
     
             var localVarPath = "/api/contas/servicos";
@@ -2682,9 +2682,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Salvar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarServicoConta: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Salvar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarServicoConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2699,9 +2699,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="servicoContaPersist">servicoContaPersist</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> SalvarAsync (RepresentaoDaEntradaDoRecursoDeCadastrarUmServioConta servicoContaPersist)
+        public async System.Threading.Tasks.Task<Object> SalvarServicoContaAsync (RepresentaoDaEntradaDoRecursoDeCadastrarUmServioConta servicoContaPersist)
         {
-             ApiResponse<Object> localVarResponse = await SalvarAsyncWithHttpInfo(servicoContaPersist);
+             ApiResponse<Object> localVarResponse = await SalvarServicoContaAsyncWithHttpInfo(servicoContaPersist);
              return localVarResponse.Data;
 
         }
@@ -2712,10 +2712,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="servicoContaPersist">servicoContaPersist</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> SalvarAsyncWithHttpInfo (RepresentaoDaEntradaDoRecursoDeCadastrarUmServioConta servicoContaPersist)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> SalvarServicoContaAsyncWithHttpInfo (RepresentaoDaEntradaDoRecursoDeCadastrarUmServioConta servicoContaPersist)
         {
             // verify the required parameter 'servicoContaPersist' is set
-            if (servicoContaPersist == null) throw new ApiException(400, "Missing required parameter 'servicoContaPersist' when calling Salvar");
+            if (servicoContaPersist == null) throw new ApiException(400, "Missing required parameter 'servicoContaPersist' when calling SalvarServicoConta");
             
     
             var localVarPath = "/api/contas/servicos";
@@ -2767,9 +2767,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Salvar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarServicoConta: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Salvar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarServicoConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

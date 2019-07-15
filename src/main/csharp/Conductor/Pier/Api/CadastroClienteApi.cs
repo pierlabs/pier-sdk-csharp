@@ -28,7 +28,7 @@ namespace Conductor.Pier.Api
         /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da pessoa (id)</param>
         /// <param name="adicionalUpdate">adicionalUpdate</param>
         /// <returns>AdicionalDetalheResponse</returns>
-        AdicionalDetalheResponse Alterar (long? id, long? idPessoa, AdicionalUpdate adicionalUpdate);
+        AdicionalDetalheResponse AlterarAdicionalConta (long? id, long? idPessoa, AdicionalUpdate adicionalUpdate);
   
         /// <summary>
         /// Altera Adicional de uma Conta
@@ -41,7 +41,7 @@ namespace Conductor.Pier.Api
         /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da pessoa (id)</param>
         /// <param name="adicionalUpdate">adicionalUpdate</param>
         /// <returns>ApiResponse of AdicionalDetalheResponse</returns>
-        ApiResponse<AdicionalDetalheResponse> AlterarWithHttpInfo (long? id, long? idPessoa, AdicionalUpdate adicionalUpdate);
+        ApiResponse<AdicionalDetalheResponse> AlterarAdicionalContaWithHttpInfo (long? id, long? idPessoa, AdicionalUpdate adicionalUpdate);
         
         /// <summary>
         /// Atualiza os dados de um determinado Endere\u00E7o
@@ -65,8 +65,9 @@ namespace Conductor.Pier.Api
         /// <param name="tempoResidenciaAnos">Apresenta a quantidade de anos em que habita na resid\u00EAncia (optional)</param>
         /// <param name="tempoResidenciaMeses">Apresenta a quantidade de meses que habita na resid\u00EAncia (optional)</param>
         /// <param name="aplicativoAlteracao">Apresenta a aplica\u00E7\u00E3o respons\u00E1vel por alterar o endere\u00E7o (optional)</param>
+        /// <param name="usuarioAlteracao">Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o (optional)</param>
         /// <returns>EnderecoResponse</returns>
-        EnderecoResponse Alterar_0 (long? id, long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null, string aplicativoAlteracao = null);
+        EnderecoResponse AlterarEndereco (long? id, long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null, string aplicativoAlteracao = null, string usuarioAlteracao = null);
   
         /// <summary>
         /// Atualiza os dados de um determinado Endere\u00E7o
@@ -90,74 +91,9 @@ namespace Conductor.Pier.Api
         /// <param name="tempoResidenciaAnos">Apresenta a quantidade de anos em que habita na resid\u00EAncia (optional)</param>
         /// <param name="tempoResidenciaMeses">Apresenta a quantidade de meses que habita na resid\u00EAncia (optional)</param>
         /// <param name="aplicativoAlteracao">Apresenta a aplica\u00E7\u00E3o respons\u00E1vel por alterar o endere\u00E7o (optional)</param>
+        /// <param name="usuarioAlteracao">Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o (optional)</param>
         /// <returns>ApiResponse of EnderecoResponse</returns>
-        ApiResponse<EnderecoResponse> Alterar_0WithHttpInfo (long? id, long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null, string aplicativoAlteracao = null);
-        
-        /// <summary>
-        /// Atualiza os detalhes de uma determinada Pessoa
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite que seja alterado na base do emissor os detalhes de uma determinada Pessoa
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">ID da Pessoa</param>
-        /// <param name="nomeMae">Apresenta o nome da m\u00E3e da pessoa fisica (optional)</param>
-        /// <param name="idEstadoCivil">Id Estado civil da pessoa fisica (optional)</param>
-        /// <param name="idProfissao">Profiss\u00E3o da pessoa fisica (optional)</param>
-        /// <param name="idNaturezaOcupacao">Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica (optional)</param>
-        /// <param name="idNacionalidade">Id Nacionalidade da pessoa fisica (optional)</param>
-        /// <param name="numeroBanco">N\u00FAmero do banco (optional)</param>
-        /// <param name="numeroAgencia">N\u00FAmero da ag\u00EAncia (optional)</param>
-        /// <param name="numeroContaCorrente">N\u00FAmero da conta corrente (optional)</param>
-        /// <param name="email">Email da pessoa fisica (optional)</param>
-        /// <param name="nomeEmpresa">Nome que deve ser impresso no cart\u00E3o (optional)</param>
-        /// <param name="nomeReferencia1">Nome de refer\u00EAncia 1 (optional)</param>
-        /// <param name="enderecoReferencia1">Endere\u00E7o de refer\u00EAncia 1 (optional)</param>
-        /// <param name="nomeReferencia2">Nome de refer\u00EAncia 2 (optional)</param>
-        /// <param name="enderecoReferencia2">Endere\u00E7o de refer\u00EAncia 2 (optional)</param>
-        /// <param name="impedidoFinanciamento">Flag para s\u00F3cios do banco que s\u00E3o portadores do cart\u00E3o, mas n\u00E3o podem operar transa\u00E7\u00F5es de cr\u00E9dito(Lei n. 4.595/64) (optional)</param>
-        /// <param name="naturalidadeCidade">Apresenta o nome da cidade de nascimento da pessoa f\u00EDsica (optional)</param>
-        /// <param name="naturalidadeEstado">Apresenta a sigla do estado de nascimento da pessoa f\u00EDsica (optional)</param>
-        /// <param name="grauInstrucao">Apresenta o grau de instru\u00E7\u00E3o da pessoa f\u00EDsica (optional)</param>
-        /// <param name="numeroDependentes">Apresenta o n\u00FAmero de dependentes da pessoa f\u00EDsica (optional)</param>
-        /// <param name="nomePai">Apresenta o nome do pai da pessoa f\u00EDsica (optional)</param>
-        /// <param name="chequeEspecial">Indica se pessoa f\u00EDsica aderir ao cheque especial (optional)</param>
-        /// <param name="numeroCnh">N\u00FAmero da CNH da pessoa (optional)</param>
-        /// <returns>PessoaDetalheResponse</returns>
-        PessoaDetalheResponse Alterar_1 (long? id, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string nomeReferencia1 = null, string enderecoReferencia1 = null, string nomeReferencia2 = null, string enderecoReferencia2 = null, bool? impedidoFinanciamento = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, string numeroCnh = null);
-  
-        /// <summary>
-        /// Atualiza os detalhes de uma determinada Pessoa
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite que seja alterado na base do emissor os detalhes de uma determinada Pessoa
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">ID da Pessoa</param>
-        /// <param name="nomeMae">Apresenta o nome da m\u00E3e da pessoa fisica (optional)</param>
-        /// <param name="idEstadoCivil">Id Estado civil da pessoa fisica (optional)</param>
-        /// <param name="idProfissao">Profiss\u00E3o da pessoa fisica (optional)</param>
-        /// <param name="idNaturezaOcupacao">Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica (optional)</param>
-        /// <param name="idNacionalidade">Id Nacionalidade da pessoa fisica (optional)</param>
-        /// <param name="numeroBanco">N\u00FAmero do banco (optional)</param>
-        /// <param name="numeroAgencia">N\u00FAmero da ag\u00EAncia (optional)</param>
-        /// <param name="numeroContaCorrente">N\u00FAmero da conta corrente (optional)</param>
-        /// <param name="email">Email da pessoa fisica (optional)</param>
-        /// <param name="nomeEmpresa">Nome que deve ser impresso no cart\u00E3o (optional)</param>
-        /// <param name="nomeReferencia1">Nome de refer\u00EAncia 1 (optional)</param>
-        /// <param name="enderecoReferencia1">Endere\u00E7o de refer\u00EAncia 1 (optional)</param>
-        /// <param name="nomeReferencia2">Nome de refer\u00EAncia 2 (optional)</param>
-        /// <param name="enderecoReferencia2">Endere\u00E7o de refer\u00EAncia 2 (optional)</param>
-        /// <param name="impedidoFinanciamento">Flag para s\u00F3cios do banco que s\u00E3o portadores do cart\u00E3o, mas n\u00E3o podem operar transa\u00E7\u00F5es de cr\u00E9dito(Lei n. 4.595/64) (optional)</param>
-        /// <param name="naturalidadeCidade">Apresenta o nome da cidade de nascimento da pessoa f\u00EDsica (optional)</param>
-        /// <param name="naturalidadeEstado">Apresenta a sigla do estado de nascimento da pessoa f\u00EDsica (optional)</param>
-        /// <param name="grauInstrucao">Apresenta o grau de instru\u00E7\u00E3o da pessoa f\u00EDsica (optional)</param>
-        /// <param name="numeroDependentes">Apresenta o n\u00FAmero de dependentes da pessoa f\u00EDsica (optional)</param>
-        /// <param name="nomePai">Apresenta o nome do pai da pessoa f\u00EDsica (optional)</param>
-        /// <param name="chequeEspecial">Indica se pessoa f\u00EDsica aderir ao cheque especial (optional)</param>
-        /// <param name="numeroCnh">N\u00FAmero da CNH da pessoa (optional)</param>
-        /// <returns>ApiResponse of PessoaDetalheResponse</returns>
-        ApiResponse<PessoaDetalheResponse> Alterar_1WithHttpInfo (long? id, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string nomeReferencia1 = null, string enderecoReferencia1 = null, string nomeReferencia2 = null, string enderecoReferencia2 = null, bool? impedidoFinanciamento = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, string numeroCnh = null);
+        ApiResponse<EnderecoResponse> AlterarEnderecoWithHttpInfo (long? id, long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null, string aplicativoAlteracao = null, string usuarioAlteracao = null);
         
         /// <summary>
         /// Atualiza os dados de uma determinada Pessoa
@@ -177,8 +113,9 @@ namespace Conductor.Pier.Api
         /// <param name="orgaoExpedidorIdentidade">Org\u00E3o expedidor do Identidade (optional)</param>
         /// <param name="unidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade (optional)</param>
         /// <param name="dataEmissaoIdentidade">Data emiss\u00E3o da Identidade (optional)</param>
+        /// <param name="usuarioAlteracao">Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o (optional)</param>
         /// <returns>PessoaResponse</returns>
-        PessoaResponse Alterar_2 (long? id, string nome, string tipo, string dataNascimento, string cpf = null, string cnpj = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null);
+        PessoaResponse AlterarPessoa (long? id, string nome, string tipo, string dataNascimento, string cpf = null, string cnpj = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null, string usuarioAlteracao = null);
   
         /// <summary>
         /// Atualiza os dados de uma determinada Pessoa
@@ -198,8 +135,79 @@ namespace Conductor.Pier.Api
         /// <param name="orgaoExpedidorIdentidade">Org\u00E3o expedidor do Identidade (optional)</param>
         /// <param name="unidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade (optional)</param>
         /// <param name="dataEmissaoIdentidade">Data emiss\u00E3o da Identidade (optional)</param>
+        /// <param name="usuarioAlteracao">Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o (optional)</param>
         /// <returns>ApiResponse of PessoaResponse</returns>
-        ApiResponse<PessoaResponse> Alterar_2WithHttpInfo (long? id, string nome, string tipo, string dataNascimento, string cpf = null, string cnpj = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null);
+        ApiResponse<PessoaResponse> AlterarPessoaWithHttpInfo (long? id, string nome, string tipo, string dataNascimento, string cpf = null, string cnpj = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null, string usuarioAlteracao = null);
+        
+        /// <summary>
+        /// Atualiza os detalhes de uma determinada Pessoa
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que seja alterado na base do emissor os detalhes de uma determinada Pessoa
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">ID da Pessoa</param>
+        /// <param name="nomeMae">Apresenta o nome da m\u00E3e da pessoa fisica (optional)</param>
+        /// <param name="idEstadoCivil">Id Estado civil da pessoa fisica (optional)</param>
+        /// <param name="idProfissao">Profiss\u00E3o da pessoa fisica (optional)</param>
+        /// <param name="idNaturezaOcupacao">Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica (optional)</param>
+        /// <param name="idNacionalidade">Id Nacionalidade da pessoa fisica (optional)</param>
+        /// <param name="numeroBanco">N\u00FAmero do banco (optional)</param>
+        /// <param name="numeroAgencia">N\u00FAmero da ag\u00EAncia (optional)</param>
+        /// <param name="numeroContaCorrente">N\u00FAmero da conta corrente (optional)</param>
+        /// <param name="email">Email da pessoa fisica (optional)</param>
+        /// <param name="nomeEmpresa">Nome que deve ser impresso no cart\u00E3o (optional)</param>
+        /// <param name="nomeReferencia1">Nome de refer\u00EAncia 1 (optional)</param>
+        /// <param name="enderecoReferencia1">Endere\u00E7o de refer\u00EAncia 1 (optional)</param>
+        /// <param name="nomeReferencia2">Nome de refer\u00EAncia 2 (optional)</param>
+        /// <param name="enderecoReferencia2">Endere\u00E7o de refer\u00EAncia 2 (optional)</param>
+        /// <param name="impedidoFinanciamento">Flag para s\u00F3cios do banco que s\u00E3o portadores do cart\u00E3o, mas n\u00E3o podem operar transa\u00E7\u00F5es de cr\u00E9dito(Lei n. 4.595/64) (optional)</param>
+        /// <param name="naturalidadeCidade">Apresenta o nome da cidade de nascimento da pessoa f\u00EDsica (optional)</param>
+        /// <param name="naturalidadeEstado">Apresenta a sigla do estado de nascimento da pessoa f\u00EDsica (optional)</param>
+        /// <param name="grauInstrucao">Apresenta o grau de instru\u00E7\u00E3o da pessoa f\u00EDsica (optional)</param>
+        /// <param name="numeroDependentes">Apresenta o n\u00FAmero de dependentes da pessoa f\u00EDsica (optional)</param>
+        /// <param name="nomePai">Apresenta o nome do pai da pessoa f\u00EDsica (optional)</param>
+        /// <param name="chequeEspecial">Indica se pessoa f\u00EDsica aderir ao cheque especial (optional)</param>
+        /// <param name="numeroCnh">N\u00FAmero da CNH da pessoa (optional)</param>
+        /// <param name="pessoaPoliticamenteExposta">Flag para identificar se a pessoa \u00E9 politicamente exposta (optional)</param>
+        /// <param name="usuarioAlteracao">Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o (optional)</param>
+        /// <returns>PessoaDetalheResponse</returns>
+        PessoaDetalheResponse AlterarPessoaDetalhe (long? id, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string nomeReferencia1 = null, string enderecoReferencia1 = null, string nomeReferencia2 = null, string enderecoReferencia2 = null, bool? impedidoFinanciamento = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, string numeroCnh = null, bool? pessoaPoliticamenteExposta = null, string usuarioAlteracao = null);
+  
+        /// <summary>
+        /// Atualiza os detalhes de uma determinada Pessoa
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que seja alterado na base do emissor os detalhes de uma determinada Pessoa
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">ID da Pessoa</param>
+        /// <param name="nomeMae">Apresenta o nome da m\u00E3e da pessoa fisica (optional)</param>
+        /// <param name="idEstadoCivil">Id Estado civil da pessoa fisica (optional)</param>
+        /// <param name="idProfissao">Profiss\u00E3o da pessoa fisica (optional)</param>
+        /// <param name="idNaturezaOcupacao">Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica (optional)</param>
+        /// <param name="idNacionalidade">Id Nacionalidade da pessoa fisica (optional)</param>
+        /// <param name="numeroBanco">N\u00FAmero do banco (optional)</param>
+        /// <param name="numeroAgencia">N\u00FAmero da ag\u00EAncia (optional)</param>
+        /// <param name="numeroContaCorrente">N\u00FAmero da conta corrente (optional)</param>
+        /// <param name="email">Email da pessoa fisica (optional)</param>
+        /// <param name="nomeEmpresa">Nome que deve ser impresso no cart\u00E3o (optional)</param>
+        /// <param name="nomeReferencia1">Nome de refer\u00EAncia 1 (optional)</param>
+        /// <param name="enderecoReferencia1">Endere\u00E7o de refer\u00EAncia 1 (optional)</param>
+        /// <param name="nomeReferencia2">Nome de refer\u00EAncia 2 (optional)</param>
+        /// <param name="enderecoReferencia2">Endere\u00E7o de refer\u00EAncia 2 (optional)</param>
+        /// <param name="impedidoFinanciamento">Flag para s\u00F3cios do banco que s\u00E3o portadores do cart\u00E3o, mas n\u00E3o podem operar transa\u00E7\u00F5es de cr\u00E9dito(Lei n. 4.595/64) (optional)</param>
+        /// <param name="naturalidadeCidade">Apresenta o nome da cidade de nascimento da pessoa f\u00EDsica (optional)</param>
+        /// <param name="naturalidadeEstado">Apresenta a sigla do estado de nascimento da pessoa f\u00EDsica (optional)</param>
+        /// <param name="grauInstrucao">Apresenta o grau de instru\u00E7\u00E3o da pessoa f\u00EDsica (optional)</param>
+        /// <param name="numeroDependentes">Apresenta o n\u00FAmero de dependentes da pessoa f\u00EDsica (optional)</param>
+        /// <param name="nomePai">Apresenta o nome do pai da pessoa f\u00EDsica (optional)</param>
+        /// <param name="chequeEspecial">Indica se pessoa f\u00EDsica aderir ao cheque especial (optional)</param>
+        /// <param name="numeroCnh">N\u00FAmero da CNH da pessoa (optional)</param>
+        /// <param name="pessoaPoliticamenteExposta">Flag para identificar se a pessoa \u00E9 politicamente exposta (optional)</param>
+        /// <param name="usuarioAlteracao">Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o (optional)</param>
+        /// <returns>ApiResponse of PessoaDetalheResponse</returns>
+        ApiResponse<PessoaDetalheResponse> AlterarPessoaDetalheWithHttpInfo (long? id, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string nomeReferencia1 = null, string enderecoReferencia1 = null, string nomeReferencia2 = null, string enderecoReferencia2 = null, bool? impedidoFinanciamento = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, string numeroCnh = null, bool? pessoaPoliticamenteExposta = null, string usuarioAlteracao = null);
         
         /// <summary>
         /// Realiza a altera\u00E7\u00E3o de um determinado Telefone
@@ -213,8 +221,9 @@ namespace Conductor.Pier.Api
         /// <param name="ddd">DDD do n\u00FAmero do telfone (optional)</param>
         /// <param name="telefone">N\u00FAmero do telefone (optional)</param>
         /// <param name="ramal">Ramal do telefone (optional)</param>
+        /// <param name="usuarioAlteracao">Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o (optional)</param>
         /// <returns>TelefoneResponse</returns>
-        TelefoneResponse Alterar_3 (long? id, long? idTipoTelefone = null, string ddd = null, string telefone = null, string ramal = null);
+        TelefoneResponse AlterarTelefone (long? id, long? idTipoTelefone = null, string ddd = null, string telefone = null, string ramal = null, string usuarioAlteracao = null);
   
         /// <summary>
         /// Realiza a altera\u00E7\u00E3o de um determinado Telefone
@@ -228,8 +237,9 @@ namespace Conductor.Pier.Api
         /// <param name="ddd">DDD do n\u00FAmero do telfone (optional)</param>
         /// <param name="telefone">N\u00FAmero do telefone (optional)</param>
         /// <param name="ramal">Ramal do telefone (optional)</param>
+        /// <param name="usuarioAlteracao">Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o (optional)</param>
         /// <returns>ApiResponse of TelefoneResponse</returns>
-        ApiResponse<TelefoneResponse> Alterar_3WithHttpInfo (long? id, long? idTipoTelefone = null, string ddd = null, string telefone = null, string ramal = null);
+        ApiResponse<TelefoneResponse> AlterarTelefoneWithHttpInfo (long? id, long? idTipoTelefone = null, string ddd = null, string telefone = null, string ramal = null, string usuarioAlteracao = null);
         
         /// <summary>
         /// Permite atribuir um documento para uma Conta
@@ -256,30 +266,6 @@ namespace Conductor.Pier.Api
         ApiResponse<Object> AtribuirAssinaturaClienteWithHttpInfo (long? id, AtribuirAssinaturaClientePersist body);
         
         /// <summary>
-        /// Atualiza conta integrada com o emissor
-        /// </summary>
-        /// <remarks>
-        /// Este recurso permite a atualiza\u00E7\u00E3o de uma conta integrada com o emissor
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
-        /// <param name="body">Descri\u00E7\u00E3o do canal de entrada (optional)</param>
-        /// <returns>IntegracaoEmissorResponse</returns>
-        IntegracaoEmissorResponse Atualizar (long? id, IntegracaoEmissorPersist body = null);
-  
-        /// <summary>
-        /// Atualiza conta integrada com o emissor
-        /// </summary>
-        /// <remarks>
-        /// Este recurso permite a atualiza\u00E7\u00E3o de uma conta integrada com o emissor
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
-        /// <param name="body">Descri\u00E7\u00E3o do canal de entrada (optional)</param>
-        /// <returns>ApiResponse of IntegracaoEmissorResponse</returns>
-        ApiResponse<IntegracaoEmissorResponse> AtualizarWithHttpInfo (long? id, IntegracaoEmissorPersist body = null);
-        
-        /// <summary>
         /// Atualiza o endere\u00E7o de correspond\u00EAncia, para o endere\u00E7o informado
         /// </summary>
         /// <remarks>
@@ -289,7 +275,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id)</param>
         /// <param name="idConta">C\u00F3digo de Identifica\u00E7\u00E3o da Conta</param>
         /// <returns>EnderecoResponse</returns>
-        EnderecoResponse AtualizarEnderecoDeCorrespondencia (long? id, long? idConta);
+        EnderecoResponse AtribuirEnderecoCorrespondenciaConta (long? id, long? idConta);
   
         /// <summary>
         /// Atualiza o endere\u00E7o de correspond\u00EAncia, para o endere\u00E7o informado
@@ -301,7 +287,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id)</param>
         /// <param name="idConta">C\u00F3digo de Identifica\u00E7\u00E3o da Conta</param>
         /// <returns>ApiResponse of EnderecoResponse</returns>
-        ApiResponse<EnderecoResponse> AtualizarEnderecoDeCorrespondenciaWithHttpInfo (long? id, long? idConta);
+        ApiResponse<EnderecoResponse> AtribuirEnderecoCorrespondenciaContaWithHttpInfo (long? id, long? idConta);
         
         /// <summary>
         /// Atualizar indica\u00E7\u00E3o de amigos
@@ -330,50 +316,28 @@ namespace Conductor.Pier.Api
         ApiResponse<IndicacaoAmigoResponse> AtualizarIndicacaoAmigoWithHttpInfo (long? id, long? idIndicacao, IndicacaoAmigoUpdate update);
         
         /// <summary>
-        /// Cadastro da recarga programada
+        /// Atualiza conta integrada com o emissor
         /// </summary>
         /// <remarks>
-        /// Este recurso permite cadastrar uma nova recarga programada na base do emissor
+        /// Este recurso permite a atualiza\u00E7\u00E3o de uma conta integrada com o emissor
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="persistencia">persistencia</param>
-        /// <returns>CelularRecargaProgramadaResponse</returns>
-        CelularRecargaProgramadaResponse Cadastrar (CelularRecargaProgramadaPersist persistencia);
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
+        /// <param name="body">Descri\u00E7\u00E3o do canal de entrada (optional)</param>
+        /// <returns>IntegracaoEmissorResponse</returns>
+        IntegracaoEmissorResponse AtualizarRegistroIntegracaoConta (long? id, IntegracaoEmissorPersist body = null);
   
         /// <summary>
-        /// Cadastro da recarga programada
+        /// Atualiza conta integrada com o emissor
         /// </summary>
         /// <remarks>
-        /// Este recurso permite cadastrar uma nova recarga programada na base do emissor
+        /// Este recurso permite a atualiza\u00E7\u00E3o de uma conta integrada com o emissor
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="persistencia">persistencia</param>
-        /// <returns>ApiResponse of CelularRecargaProgramadaResponse</returns>
-        ApiResponse<CelularRecargaProgramadaResponse> CadastrarWithHttpInfo (CelularRecargaProgramadaPersist persistencia);
-        
-        /// <summary>
-        /// Realiza o cadastro de Adicionais para uma Conta
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite que uma pessoa existente na base possa ser um adicional na conta informada
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
-        /// <param name="adicionalContaPersist">adicionalContaPersist</param>
-        /// <returns>AdicionalContaResponse</returns>
-        AdicionalContaResponse CadastrarAdicional (long? id, AdicionalContaPersist adicionalContaPersist);
-  
-        /// <summary>
-        /// Realiza o cadastro de Adicionais para uma Conta
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite que uma pessoa existente na base possa ser um adicional na conta informada
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
-        /// <param name="adicionalContaPersist">adicionalContaPersist</param>
-        /// <returns>ApiResponse of AdicionalContaResponse</returns>
-        ApiResponse<AdicionalContaResponse> CadastrarAdicionalWithHttpInfo (long? id, AdicionalContaPersist adicionalContaPersist);
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
+        /// <param name="body">Descri\u00E7\u00E3o do canal de entrada (optional)</param>
+        /// <returns>ApiResponse of IntegracaoEmissorResponse</returns>
+        ApiResponse<IntegracaoEmissorResponse> AtualizarRegistroIntegracaoContaWithHttpInfo (long? id, IntegracaoEmissorPersist body = null);
         
         /// <summary>
         /// Cadastra uma indica\u00E7\u00E3o de amigo
@@ -400,52 +364,26 @@ namespace Conductor.Pier.Api
         ApiResponse<IndicacaoAmigoResponse> CadastrarIndicacaoAmigoWithHttpInfo (long? id, IndicacaoAmigoPersist persist);
         
         /// <summary>
-        /// Realiza o cadastro de Adicionais para uma Conta
+        /// Cadastro da recarga programada
         /// </summary>
         /// <remarks>
-        /// Este m\u00E9todo permite que sejam cadastrados um portador Adicional para uma determinada Conta
+        /// Este recurso permite cadastrar uma nova recarga programada na base do emissor
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
-        /// <param name="persist">persist</param>
-        /// <returns>AdicionalDetalheResponse</returns>
-        AdicionalDetalheResponse Cadastrar_0 (long? id, AdicionalPersist persist);
+        /// <param name="persistencia">persistencia</param>
+        /// <returns>CelularRecargaProgramadaResponse</returns>
+        CelularRecargaProgramadaResponse CadastrarRecargaProgramadaCelular (CelularRecargaProgramadaPersist persistencia);
   
         /// <summary>
-        /// Realiza o cadastro de Adicionais para uma Conta
+        /// Cadastro da recarga programada
         /// </summary>
         /// <remarks>
-        /// Este m\u00E9todo permite que sejam cadastrados um portador Adicional para uma determinada Conta
+        /// Este recurso permite cadastrar uma nova recarga programada na base do emissor
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
-        /// <param name="persist">persist</param>
-        /// <returns>ApiResponse of AdicionalDetalheResponse</returns>
-        ApiResponse<AdicionalDetalheResponse> Cadastrar_0WithHttpInfo (long? id, AdicionalPersist persist);
-        
-        /// <summary>
-        /// Consulta Adicional de uma Conta
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite que seja consultado um portador Adicional de uma determinada Conta
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
-        /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da pessoa (id)</param>
-        /// <returns>AdicionalDetalheResponse</returns>
-        AdicionalDetalheResponse Consultar (long? id, long? idPessoa);
-  
-        /// <summary>
-        /// Consulta Adicional de uma Conta
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite que seja consultado um portador Adicional de uma determinada Conta
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
-        /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da pessoa (id)</param>
-        /// <returns>ApiResponse of AdicionalDetalheResponse</returns>
-        ApiResponse<AdicionalDetalheResponse> ConsultarWithHttpInfo (long? id, long? idPessoa);
+        /// <param name="persistencia">persistencia</param>
+        /// <returns>ApiResponse of CelularRecargaProgramadaResponse</returns>
+        ApiResponse<CelularRecargaProgramadaResponse> CadastrarRecargaProgramadaCelularWithHttpInfo (CelularRecargaProgramadaPersist persistencia);
         
         /// <summary>
         /// Apresenta os dados de um determinado Endere\u00E7o
@@ -456,7 +394,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id)</param>
         /// <returns>EnderecoResponse</returns>
-        EnderecoResponse Consultar_0 (long? id);
+        EnderecoResponse ConsultarEndereco (long? id);
   
         /// <summary>
         /// Apresenta os dados de um determinado Endere\u00E7o
@@ -467,29 +405,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id)</param>
         /// <returns>ApiResponse of EnderecoResponse</returns>
-        ApiResponse<EnderecoResponse> Consultar_0WithHttpInfo (long? id);
-        
-        /// <summary>
-        /// Apresenta os detalhes de uma determinada Pessoa
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite a consulta dos detalhes de uma Pessoa existentes na base de dados do Emissor
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">ID da Pessoa</param>
-        /// <returns>PessoaDetalheResponse</returns>
-        PessoaDetalheResponse Consultar_1 (long? id);
-  
-        /// <summary>
-        /// Apresenta os detalhes de uma determinada Pessoa
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite a consulta dos detalhes de uma Pessoa existentes na base de dados do Emissor
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">ID da Pessoa</param>
-        /// <returns>ApiResponse of PessoaDetalheResponse</returns>
-        ApiResponse<PessoaDetalheResponse> Consultar_1WithHttpInfo (long? id);
+        ApiResponse<EnderecoResponse> ConsultarEnderecoWithHttpInfo (long? id);
         
         /// <summary>
         /// Apresenta os dados de uma determinada Pessoa
@@ -500,7 +416,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID da Pessoa</param>
         /// <returns>PessoaResponse</returns>
-        PessoaResponse Consultar_2 (long? id);
+        PessoaResponse ConsultarPessoa (long? id);
   
         /// <summary>
         /// Apresenta os dados de uma determinada Pessoa
@@ -511,7 +427,53 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID da Pessoa</param>
         /// <returns>ApiResponse of PessoaResponse</returns>
-        ApiResponse<PessoaResponse> Consultar_2WithHttpInfo (long? id);
+        ApiResponse<PessoaResponse> ConsultarPessoaWithHttpInfo (long? id);
+        
+        /// <summary>
+        /// Consulta Adicional de uma Conta
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que seja consultado um portador Adicional de uma determinada Conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
+        /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da pessoa (id)</param>
+        /// <returns>AdicionalDetalheResponse</returns>
+        AdicionalDetalheResponse ConsultarPessoaAdicionalDaConta (long? id, long? idPessoa);
+  
+        /// <summary>
+        /// Consulta Adicional de uma Conta
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que seja consultado um portador Adicional de uma determinada Conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
+        /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da pessoa (id)</param>
+        /// <returns>ApiResponse of AdicionalDetalheResponse</returns>
+        ApiResponse<AdicionalDetalheResponse> ConsultarPessoaAdicionalDaContaWithHttpInfo (long? id, long? idPessoa);
+        
+        /// <summary>
+        /// Apresenta os detalhes de uma determinada Pessoa
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite a consulta dos detalhes de uma Pessoa existentes na base de dados do Emissor
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">ID da Pessoa</param>
+        /// <returns>PessoaDetalheResponse</returns>
+        PessoaDetalheResponse ConsultarPessoaDetalhe (long? id);
+  
+        /// <summary>
+        /// Apresenta os detalhes de uma determinada Pessoa
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite a consulta dos detalhes de uma Pessoa existentes na base de dados do Emissor
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">ID da Pessoa</param>
+        /// <returns>ApiResponse of PessoaDetalheResponse</returns>
+        ApiResponse<PessoaDetalheResponse> ConsultarPessoaDetalheWithHttpInfo (long? id);
         
         /// <summary>
         /// Apresenta os dados de um determinado Telefone
@@ -522,7 +484,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Telefone (id)</param>
         /// <returns>TelefoneResponse</returns>
-        TelefoneResponse Consultar_3 (long? id);
+        TelefoneResponse ConsultarTelefone (long? id);
   
         /// <summary>
         /// Apresenta os dados de um determinado Telefone
@@ -533,7 +495,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Telefone (id)</param>
         /// <returns>ApiResponse of TelefoneResponse</returns>
-        ApiResponse<TelefoneResponse> Consultar_3WithHttpInfo (long? id);
+        ApiResponse<TelefoneResponse> ConsultarTelefoneWithHttpInfo (long? id);
         
         /// <summary>
         /// Inativa Adicional de uma Conta
@@ -545,7 +507,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
         /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da pessoa (id)</param>
         /// <returns>string</returns>
-        string Inativar (long? id, long? idPessoa);
+        string InativarAdicionalConta (long? id, long? idPessoa);
   
         /// <summary>
         /// Inativa Adicional de uma Conta
@@ -557,7 +519,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
         /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da pessoa (id)</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> InativarWithHttpInfo (long? id, long? idPessoa);
+        ApiResponse<string> InativarAdicionalContaWithHttpInfo (long? id, long? idPessoa);
         
         /// <summary>
         /// Lista os Adicionais de uma Conta
@@ -571,7 +533,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00E1gina (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
         /// <returns>AdicionalResponse</returns>
-        AdicionalResponse Listar (long? id, List<string> sort = null, int? page = null, int? limit = null);
+        AdicionalResponse ListarAdicionaisConta (long? id, List<string> sort = null, int? page = null, int? limit = null);
   
         /// <summary>
         /// Lista os Adicionais de uma Conta
@@ -585,7 +547,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00E1gina (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
         /// <returns>ApiResponse of AdicionalResponse</returns>
-        ApiResponse<AdicionalResponse> ListarWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null);
+        ApiResponse<AdicionalResponse> ListarAdicionaisContaWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null);
         
         /// <summary>
         /// Lista as contas da pessoa
@@ -599,7 +561,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00E1gina (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
         /// <returns>PageContaDetalheResponse</returns>
-        PageContaDetalheResponse ListarContasPorPessoa (string numeroReceitaFederal, List<string> sort = null, int? page = null, int? limit = null);
+        PageContaDetalheResponse ListarContasPessoa (string numeroReceitaFederal, List<string> sort = null, int? page = null, int? limit = null);
   
         /// <summary>
         /// Lista as contas da pessoa
@@ -613,7 +575,65 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00E1gina (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
         /// <returns>ApiResponse of PageContaDetalheResponse</returns>
-        ApiResponse<PageContaDetalheResponse> ListarContasPorPessoaWithHttpInfo (string numeroReceitaFederal, List<string> sort = null, int? page = null, int? limit = null);
+        ApiResponse<PageContaDetalheResponse> ListarContasPessoaWithHttpInfo (string numeroReceitaFederal, List<string> sort = null, int? page = null, int? limit = null);
+        
+        /// <summary>
+        /// Lista os Endere\u00E7os cadastrados para o Emissor
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que sejam listados os Endere\u00E7os existentes na base de dados do Emissor
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id) (optional)</param>
+        /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o endere\u00E7o pertence (id) (optional)</param>
+        /// <param name="idTipoEndereco">C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id) (optional)</param>
+        /// <param name="cep">List os CEPs (optional)</param>
+        /// <param name="logradouro">Apresenta o nome do Logradouro (optional)</param>
+        /// <param name="numero">Apresenta o n\u00FAmero do endere\u00E7o (optional)</param>
+        /// <param name="complemento">Apresenta descri\u00E7oes complementares referente ao endere\u00E7o (optional)</param>
+        /// <param name="pontoReferencia">Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o (optional)</param>
+        /// <param name="bairro">Apresenta nome do bairro (optional)</param>
+        /// <param name="cidade">Apresenta nome da cidade (optional)</param>
+        /// <param name="uf">Apresenta sigla da Unidade Federativa (optional)</param>
+        /// <param name="pais">Apresenta nome do Pa\u00EDs (optional)</param>
+        /// <param name="dataInclusao">Apresenta a data em que fora cadastrado o Endere\u00E7o (optional)</param>
+        /// <param name="dataUltimaAtualizacao">Data em que fora realizada a \u00FAltima mudan\u00E7a neste registro de endere\u00E7o. Quando n\u00E3o tiver ocorrido mudan\u00E7a, conter\u00E1 a mesma informa\u00E7\u00E3o que o campo dataInclusao (optional)</param>
+        /// <param name="tempoResidenciaAnos">Apresenta a quantidade de anos em que habita na resid\u00EAncia (optional)</param>
+        /// <param name="tempoResidenciaMeses">Apresenta a quantidade de meses que habita na resid\u00EAncia (optional)</param>
+        /// <returns>PageEnderecoResponse</returns>
+        PageEnderecoResponse ListarEnderecos (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, string dataInclusao = null, string dataUltimaAtualizacao = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null);
+  
+        /// <summary>
+        /// Lista os Endere\u00E7os cadastrados para o Emissor
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que sejam listados os Endere\u00E7os existentes na base de dados do Emissor
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id) (optional)</param>
+        /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o endere\u00E7o pertence (id) (optional)</param>
+        /// <param name="idTipoEndereco">C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id) (optional)</param>
+        /// <param name="cep">List os CEPs (optional)</param>
+        /// <param name="logradouro">Apresenta o nome do Logradouro (optional)</param>
+        /// <param name="numero">Apresenta o n\u00FAmero do endere\u00E7o (optional)</param>
+        /// <param name="complemento">Apresenta descri\u00E7oes complementares referente ao endere\u00E7o (optional)</param>
+        /// <param name="pontoReferencia">Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o (optional)</param>
+        /// <param name="bairro">Apresenta nome do bairro (optional)</param>
+        /// <param name="cidade">Apresenta nome da cidade (optional)</param>
+        /// <param name="uf">Apresenta sigla da Unidade Federativa (optional)</param>
+        /// <param name="pais">Apresenta nome do Pa\u00EDs (optional)</param>
+        /// <param name="dataInclusao">Apresenta a data em que fora cadastrado o Endere\u00E7o (optional)</param>
+        /// <param name="dataUltimaAtualizacao">Data em que fora realizada a \u00FAltima mudan\u00E7a neste registro de endere\u00E7o. Quando n\u00E3o tiver ocorrido mudan\u00E7a, conter\u00E1 a mesma informa\u00E7\u00E3o que o campo dataInclusao (optional)</param>
+        /// <param name="tempoResidenciaAnos">Apresenta a quantidade de anos em que habita na resid\u00EAncia (optional)</param>
+        /// <param name="tempoResidenciaMeses">Apresenta a quantidade de meses que habita na resid\u00EAncia (optional)</param>
+        /// <returns>ApiResponse of PageEnderecoResponse</returns>
+        ApiResponse<PageEnderecoResponse> ListarEnderecosWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, string dataInclusao = null, string dataUltimaAtualizacao = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null);
         
         /// <summary>
         /// Lista o hist\u00F3rico de altera\u00E7\u00E3o do endereco
@@ -660,7 +680,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da pessoa (id)</param>
         /// <returns>HistoricoTelefoneResponse</returns>
-        HistoricoTelefoneResponse ListarHistoricoTelefones (long? id);
+        HistoricoTelefoneResponse ListarHistoricoTelefonesPessoa (long? id);
   
         /// <summary>
         /// Listar altera\u00E7\u00F5es de telefones realizadas nos \u00FAltimos 60 dias
@@ -671,7 +691,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da pessoa (id)</param>
         /// <returns>ApiResponse of HistoricoTelefoneResponse</returns>
-        ApiResponse<HistoricoTelefoneResponse> ListarHistoricoTelefonesWithHttpInfo (long? id);
+        ApiResponse<HistoricoTelefoneResponse> ListarHistoricoTelefonesPessoaWithHttpInfo (long? id);
         
         /// <summary>
         /// Listar indica\u00E7\u00F5es de amigos
@@ -716,6 +736,124 @@ namespace Conductor.Pier.Api
         ApiResponse<PageIndicacaoAmigoResponse> ListarIndicacaoAmigoWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string dataIndicacao = null, string dataUtilizacao = null, string dataValidade = null, string cpfIndicado = null, string emailIndicado = null, long? codigoIndicacao = null, int? idPessoa = null, int? status = null);
         
         /// <summary>
+        /// Lista as Pessoas cadastradas no Emissor
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id) (optional)</param>
+        /// <param name="nome">Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00E3o Social (Nome Empresarial)&#39; (optional)</param>
+        /// <param name="tipo">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa F\u00EDsica, sendo: (&#39;PF&#39;: Pessoa F\u00EDsica), (&#39;PJ&#39;: Pessoa Jur\u00EDdica) (optional)</param>
+        /// <param name="cpf">Quando uma pessoa f\u00EDsica preencha com o CPF (optional)</param>
+        /// <param name="cnpj">Quando um pessoa jur\u00EDdica preencha o CNPJ (optional)</param>
+        /// <param name="dataNascimento">Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ (optional)</param>
+        /// <param name="sexo">C\u00F3digo de Identifica\u00E7\u00E3o do sexo da pessoa, quando \u00E9 PF, sendo: (&#39;M&#39;: Masculino), (&#39;F&#39;: Feminino), (&#39;O&#39;: Outro), (&#39;N&#39;: N\u00E3o especificado) (optional)</param>
+        /// <param name="numeroIdentidade">N\u00FAmero da Identidade (optional)</param>
+        /// <param name="orgaoExpedidorIdentidade">Org\u00E3o expedidor do RG (optional)</param>
+        /// <param name="unidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade (optional)</param>
+        /// <param name="dataEmissaoIdentidade">Data emiss\u00E3o da identidade no formato aaaa-MM-dd (optional)</param>
+        /// <returns>PagePessoaResponse</returns>
+        PagePessoaResponse ListarPessoas (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, string tipo = null, string cpf = null, string cnpj = null, string dataNascimento = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null);
+  
+        /// <summary>
+        /// Lista as Pessoas cadastradas no Emissor
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id) (optional)</param>
+        /// <param name="nome">Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00E3o Social (Nome Empresarial)&#39; (optional)</param>
+        /// <param name="tipo">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa F\u00EDsica, sendo: (&#39;PF&#39;: Pessoa F\u00EDsica), (&#39;PJ&#39;: Pessoa Jur\u00EDdica) (optional)</param>
+        /// <param name="cpf">Quando uma pessoa f\u00EDsica preencha com o CPF (optional)</param>
+        /// <param name="cnpj">Quando um pessoa jur\u00EDdica preencha o CNPJ (optional)</param>
+        /// <param name="dataNascimento">Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ (optional)</param>
+        /// <param name="sexo">C\u00F3digo de Identifica\u00E7\u00E3o do sexo da pessoa, quando \u00E9 PF, sendo: (&#39;M&#39;: Masculino), (&#39;F&#39;: Feminino), (&#39;O&#39;: Outro), (&#39;N&#39;: N\u00E3o especificado) (optional)</param>
+        /// <param name="numeroIdentidade">N\u00FAmero da Identidade (optional)</param>
+        /// <param name="orgaoExpedidorIdentidade">Org\u00E3o expedidor do RG (optional)</param>
+        /// <param name="unidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade (optional)</param>
+        /// <param name="dataEmissaoIdentidade">Data emiss\u00E3o da identidade no formato aaaa-MM-dd (optional)</param>
+        /// <returns>ApiResponse of PagePessoaResponse</returns>
+        ApiResponse<PagePessoaResponse> ListarPessoasWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, string tipo = null, string cpf = null, string cnpj = null, string dataNascimento = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null);
+        
+        /// <summary>
+        /// Lista os Detalhes das Pessoas cadastradas no Emissor
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que sejam listadas od detalhes das Pessoas existentes na base de dados do Emissor
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idPessoa">C\u00F3digo identificador da pessoa (optional)</param>
+        /// <param name="nomeMae">Apresenta o nome da m\u00E3e da pessoa fisica (optional)</param>
+        /// <param name="idEstadoCivil">Id Estado civil da pessoa fisica (optional)</param>
+        /// <param name="idProfissao">Profiss\u00E3o da pessoa fisica (optional)</param>
+        /// <param name="idNaturezaOcupacao">Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica (optional)</param>
+        /// <param name="idNacionalidade">Id Nacionalidade da pessoa fisica (optional)</param>
+        /// <param name="numeroBanco">N\u00FAmero do Banco (optional)</param>
+        /// <param name="numeroAgencia">N\u00FAmero da ag\u00EAncia (optional)</param>
+        /// <param name="numeroContaCorrente">N\u00FAmero da conta corrente (optional)</param>
+        /// <param name="email">Email da pessoa fisica (optional)</param>
+        /// <param name="nomeEmpresa">Nome que deve ser impresso no cart\u00E3o (optional)</param>
+        /// <param name="naturalidadeCidade">Apresenta o nome da cidade de nascimento da pessoa f\u00EDsica (optional)</param>
+        /// <param name="naturalidadeEstado">Apresenta a sigla do estado de nascimento da pessoa f\u00EDsica (optional)</param>
+        /// <param name="grauInstrucao">Apresenta o grau de instru\u00E7\u00E3o da pessoa f\u00EDsica (optional)</param>
+        /// <param name="numeroDependentes">Apresenta o n\u00FAmero de dependentes da pessoa f\u00EDsica (optional)</param>
+        /// <param name="nomePai">Apresenta o nome do pai da pessoa f\u00EDsica (optional)</param>
+        /// <param name="chequeEspecial">Indica se pessoa f\u00EDsica aderir ao cheque especial (optional)</param>
+        /// <param name="impedidoFinanciamento">Flag para s\u00F3cios do banco que s\u00E3o portadores do cart\u00E3o, mas n\u00E3o podem operar transa\u00E7\u00F5esde cr\u00E9dito(Lei n. 4.595/64) (optional)</param>
+        /// <param name="numeroCnh">N\u00FAmero da CNH da pessoa (optional)</param>
+        /// <param name="patrimonioTotal">Patrim\u00F4nio total da pessoa (optional)</param>
+        /// <param name="salario">Sal\u00E1rio da pessoa (optional)</param>
+        /// <param name="nomeConjuge">Nome do c\u00F4njuge da pessoa (optional)</param>
+        /// <returns>PagePessoaDetalheResponse</returns>
+        PagePessoaDetalheResponse ListarPessoasDetalhes (List<string> sort = null, int? page = null, int? limit = null, long? idPessoa = null, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null, string numeroCnh = null, double? patrimonioTotal = null, double? salario = null, string nomeConjuge = null);
+  
+        /// <summary>
+        /// Lista os Detalhes das Pessoas cadastradas no Emissor
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que sejam listadas od detalhes das Pessoas existentes na base de dados do Emissor
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idPessoa">C\u00F3digo identificador da pessoa (optional)</param>
+        /// <param name="nomeMae">Apresenta o nome da m\u00E3e da pessoa fisica (optional)</param>
+        /// <param name="idEstadoCivil">Id Estado civil da pessoa fisica (optional)</param>
+        /// <param name="idProfissao">Profiss\u00E3o da pessoa fisica (optional)</param>
+        /// <param name="idNaturezaOcupacao">Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica (optional)</param>
+        /// <param name="idNacionalidade">Id Nacionalidade da pessoa fisica (optional)</param>
+        /// <param name="numeroBanco">N\u00FAmero do Banco (optional)</param>
+        /// <param name="numeroAgencia">N\u00FAmero da ag\u00EAncia (optional)</param>
+        /// <param name="numeroContaCorrente">N\u00FAmero da conta corrente (optional)</param>
+        /// <param name="email">Email da pessoa fisica (optional)</param>
+        /// <param name="nomeEmpresa">Nome que deve ser impresso no cart\u00E3o (optional)</param>
+        /// <param name="naturalidadeCidade">Apresenta o nome da cidade de nascimento da pessoa f\u00EDsica (optional)</param>
+        /// <param name="naturalidadeEstado">Apresenta a sigla do estado de nascimento da pessoa f\u00EDsica (optional)</param>
+        /// <param name="grauInstrucao">Apresenta o grau de instru\u00E7\u00E3o da pessoa f\u00EDsica (optional)</param>
+        /// <param name="numeroDependentes">Apresenta o n\u00FAmero de dependentes da pessoa f\u00EDsica (optional)</param>
+        /// <param name="nomePai">Apresenta o nome do pai da pessoa f\u00EDsica (optional)</param>
+        /// <param name="chequeEspecial">Indica se pessoa f\u00EDsica aderir ao cheque especial (optional)</param>
+        /// <param name="impedidoFinanciamento">Flag para s\u00F3cios do banco que s\u00E3o portadores do cart\u00E3o, mas n\u00E3o podem operar transa\u00E7\u00F5esde cr\u00E9dito(Lei n. 4.595/64) (optional)</param>
+        /// <param name="numeroCnh">N\u00FAmero da CNH da pessoa (optional)</param>
+        /// <param name="patrimonioTotal">Patrim\u00F4nio total da pessoa (optional)</param>
+        /// <param name="salario">Sal\u00E1rio da pessoa (optional)</param>
+        /// <param name="nomeConjuge">Nome do c\u00F4njuge da pessoa (optional)</param>
+        /// <returns>ApiResponse of PagePessoaDetalheResponse</returns>
+        ApiResponse<PagePessoaDetalheResponse> ListarPessoasDetalhesWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idPessoa = null, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null, string numeroCnh = null, double? patrimonioTotal = null, double? salario = null, string nomeConjuge = null);
+        
+        /// <summary>
         /// Listar s\u00F3cios de uma pessoa jur\u00EDdica
         /// </summary>
         /// <remarks>
@@ -744,176 +882,6 @@ namespace Conductor.Pier.Api
         ApiResponse<PagePessoaResponse> ListarSociosWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null);
         
         /// <summary>
-        /// Lista os Endere\u00E7os cadastrados para o Emissor
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite que sejam listados os Endere\u00E7os existentes na base de dados do Emissor
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id) (optional)</param>
-        /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o endere\u00E7o pertence (id) (optional)</param>
-        /// <param name="idTipoEndereco">C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id) (optional)</param>
-        /// <param name="cep">List os CEPs (optional)</param>
-        /// <param name="logradouro">Apresenta o nome do Logradouro (optional)</param>
-        /// <param name="numero">Apresenta o n\u00FAmero do endere\u00E7o (optional)</param>
-        /// <param name="complemento">Apresenta descri\u00E7oes complementares referente ao endere\u00E7o (optional)</param>
-        /// <param name="pontoReferencia">Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o (optional)</param>
-        /// <param name="bairro">Apresenta nome do bairro (optional)</param>
-        /// <param name="cidade">Apresenta nome da cidade (optional)</param>
-        /// <param name="uf">Apresenta sigla da Unidade Federativa (optional)</param>
-        /// <param name="pais">Apresenta nome do Pa\u00EDs (optional)</param>
-        /// <param name="dataInclusao">Apresenta a data em que fora cadastrado o Endere\u00E7o (optional)</param>
-        /// <param name="dataUltimaAtualizacao">Data em que fora realizada a \u00FAltima mudan\u00E7a neste registro de endere\u00E7o. Quando n\u00E3o tiver ocorrido mudan\u00E7a, conter\u00E1 a mesma informa\u00E7\u00E3o que o campo dataInclusao (optional)</param>
-        /// <param name="tempoResidenciaAnos">Apresenta a quantidade de anos em que habita na resid\u00EAncia (optional)</param>
-        /// <param name="tempoResidenciaMeses">Apresenta a quantidade de meses que habita na resid\u00EAncia (optional)</param>
-        /// <returns>PageEnderecoResponse</returns>
-        PageEnderecoResponse Listar_0 (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, string dataInclusao = null, string dataUltimaAtualizacao = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null);
-  
-        /// <summary>
-        /// Lista os Endere\u00E7os cadastrados para o Emissor
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite que sejam listados os Endere\u00E7os existentes na base de dados do Emissor
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id) (optional)</param>
-        /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o endere\u00E7o pertence (id) (optional)</param>
-        /// <param name="idTipoEndereco">C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id) (optional)</param>
-        /// <param name="cep">List os CEPs (optional)</param>
-        /// <param name="logradouro">Apresenta o nome do Logradouro (optional)</param>
-        /// <param name="numero">Apresenta o n\u00FAmero do endere\u00E7o (optional)</param>
-        /// <param name="complemento">Apresenta descri\u00E7oes complementares referente ao endere\u00E7o (optional)</param>
-        /// <param name="pontoReferencia">Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o (optional)</param>
-        /// <param name="bairro">Apresenta nome do bairro (optional)</param>
-        /// <param name="cidade">Apresenta nome da cidade (optional)</param>
-        /// <param name="uf">Apresenta sigla da Unidade Federativa (optional)</param>
-        /// <param name="pais">Apresenta nome do Pa\u00EDs (optional)</param>
-        /// <param name="dataInclusao">Apresenta a data em que fora cadastrado o Endere\u00E7o (optional)</param>
-        /// <param name="dataUltimaAtualizacao">Data em que fora realizada a \u00FAltima mudan\u00E7a neste registro de endere\u00E7o. Quando n\u00E3o tiver ocorrido mudan\u00E7a, conter\u00E1 a mesma informa\u00E7\u00E3o que o campo dataInclusao (optional)</param>
-        /// <param name="tempoResidenciaAnos">Apresenta a quantidade de anos em que habita na resid\u00EAncia (optional)</param>
-        /// <param name="tempoResidenciaMeses">Apresenta a quantidade de meses que habita na resid\u00EAncia (optional)</param>
-        /// <returns>ApiResponse of PageEnderecoResponse</returns>
-        ApiResponse<PageEnderecoResponse> Listar_0WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, string dataInclusao = null, string dataUltimaAtualizacao = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null);
-        
-        /// <summary>
-        /// Lista as Pessoas cadastradas no Emissor
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id) (optional)</param>
-        /// <param name="nome">Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00E3o Social (Nome Empresarial)&#39; (optional)</param>
-        /// <param name="tipo">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa F\u00EDsica, sendo: (&#39;PF&#39;: Pessoa F\u00EDsica), (&#39;PJ&#39;: Pessoa Jur\u00EDdica) (optional)</param>
-        /// <param name="cpf">Quando uma pessoa f\u00EDsica preencha com o CPF (optional)</param>
-        /// <param name="cnpj">Quando um pessoa jur\u00EDdica preencha o CNPJ (optional)</param>
-        /// <param name="dataNascimento">Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ (optional)</param>
-        /// <param name="sexo">C\u00F3digo de Identifica\u00E7\u00E3o do sexo da pessoa, quando \u00E9 PF, sendo: (&#39;M&#39;: Masculino), (&#39;F&#39;: Feminino), (&#39;O&#39;: Outro), (&#39;N&#39;: N\u00E3o especificado) (optional)</param>
-        /// <param name="numeroIdentidade">N\u00FAmero da Identidade (optional)</param>
-        /// <param name="orgaoExpedidorIdentidade">Org\u00E3o expedidor do RG (optional)</param>
-        /// <param name="unidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade (optional)</param>
-        /// <param name="dataEmissaoIdentidade">Data emiss\u00E3o da identidade no formato aaaa-MM-dd (optional)</param>
-        /// <returns>PagePessoaResponse</returns>
-        PagePessoaResponse Listar_1 (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, string tipo = null, string cpf = null, string cnpj = null, string dataNascimento = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null);
-  
-        /// <summary>
-        /// Lista as Pessoas cadastradas no Emissor
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id) (optional)</param>
-        /// <param name="nome">Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00E3o Social (Nome Empresarial)&#39; (optional)</param>
-        /// <param name="tipo">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa F\u00EDsica, sendo: (&#39;PF&#39;: Pessoa F\u00EDsica), (&#39;PJ&#39;: Pessoa Jur\u00EDdica) (optional)</param>
-        /// <param name="cpf">Quando uma pessoa f\u00EDsica preencha com o CPF (optional)</param>
-        /// <param name="cnpj">Quando um pessoa jur\u00EDdica preencha o CNPJ (optional)</param>
-        /// <param name="dataNascimento">Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ (optional)</param>
-        /// <param name="sexo">C\u00F3digo de Identifica\u00E7\u00E3o do sexo da pessoa, quando \u00E9 PF, sendo: (&#39;M&#39;: Masculino), (&#39;F&#39;: Feminino), (&#39;O&#39;: Outro), (&#39;N&#39;: N\u00E3o especificado) (optional)</param>
-        /// <param name="numeroIdentidade">N\u00FAmero da Identidade (optional)</param>
-        /// <param name="orgaoExpedidorIdentidade">Org\u00E3o expedidor do RG (optional)</param>
-        /// <param name="unidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade (optional)</param>
-        /// <param name="dataEmissaoIdentidade">Data emiss\u00E3o da identidade no formato aaaa-MM-dd (optional)</param>
-        /// <returns>ApiResponse of PagePessoaResponse</returns>
-        ApiResponse<PagePessoaResponse> Listar_1WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, string tipo = null, string cpf = null, string cnpj = null, string dataNascimento = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null);
-        
-        /// <summary>
-        /// Lista os Detalhes das Pessoas cadastradas no Emissor
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite que sejam listadas od detalhes das Pessoas existentes na base de dados do Emissor
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="idPessoa">C\u00F3digo identificador da pessoa (optional)</param>
-        /// <param name="nomeMae">Apresenta o nome da m\u00E3e da pessoa fisica (optional)</param>
-        /// <param name="idEstadoCivil">Id Estado civil da pessoa fisica (optional)</param>
-        /// <param name="idProfissao">Profiss\u00E3o da pessoa fisica (optional)</param>
-        /// <param name="idNaturezaOcupacao">Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica (optional)</param>
-        /// <param name="idNacionalidade">Id Nacionalidade da pessoa fisica (optional)</param>
-        /// <param name="numeroBanco">N\u00FAmero do Banco (optional)</param>
-        /// <param name="numeroAgencia">N\u00FAmero da ag\u00EAncia (optional)</param>
-        /// <param name="numeroContaCorrente">N\u00FAmero da conta corrente (optional)</param>
-        /// <param name="email">Email da pessoa fisica (optional)</param>
-        /// <param name="nomeEmpresa">Nome que deve ser impresso no cart\u00E3o (optional)</param>
-        /// <param name="naturalidadeCidade">Apresenta o nome da cidade de nascimento da pessoa f\u00EDsica (optional)</param>
-        /// <param name="naturalidadeEstado">Apresenta a sigla do estado de nascimento da pessoa f\u00EDsica (optional)</param>
-        /// <param name="grauInstrucao">Apresenta o grau de instru\u00E7\u00E3o da pessoa f\u00EDsica (optional)</param>
-        /// <param name="numeroDependentes">Apresenta o n\u00FAmero de dependentes da pessoa f\u00EDsica (optional)</param>
-        /// <param name="nomePai">Apresenta o nome do pai da pessoa f\u00EDsica (optional)</param>
-        /// <param name="chequeEspecial">Indica se pessoa f\u00EDsica aderir ao cheque especial (optional)</param>
-        /// <param name="impedidoFinanciamento">Flag para s\u00F3cios do banco que s\u00E3o portadores do cart\u00E3o, mas n\u00E3o podem operar transa\u00E7\u00F5esde cr\u00E9dito(Lei n. 4.595/64) (optional)</param>
-        /// <param name="numeroCnh">N\u00FAmero da CNH da pessoa (optional)</param>
-        /// <returns>PagePessoaDetalheResponse</returns>
-        PagePessoaDetalheResponse Listar_2 (List<string> sort = null, int? page = null, int? limit = null, long? idPessoa = null, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null, string numeroCnh = null);
-  
-        /// <summary>
-        /// Lista os Detalhes das Pessoas cadastradas no Emissor
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite que sejam listadas od detalhes das Pessoas existentes na base de dados do Emissor
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="idPessoa">C\u00F3digo identificador da pessoa (optional)</param>
-        /// <param name="nomeMae">Apresenta o nome da m\u00E3e da pessoa fisica (optional)</param>
-        /// <param name="idEstadoCivil">Id Estado civil da pessoa fisica (optional)</param>
-        /// <param name="idProfissao">Profiss\u00E3o da pessoa fisica (optional)</param>
-        /// <param name="idNaturezaOcupacao">Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica (optional)</param>
-        /// <param name="idNacionalidade">Id Nacionalidade da pessoa fisica (optional)</param>
-        /// <param name="numeroBanco">N\u00FAmero do Banco (optional)</param>
-        /// <param name="numeroAgencia">N\u00FAmero da ag\u00EAncia (optional)</param>
-        /// <param name="numeroContaCorrente">N\u00FAmero da conta corrente (optional)</param>
-        /// <param name="email">Email da pessoa fisica (optional)</param>
-        /// <param name="nomeEmpresa">Nome que deve ser impresso no cart\u00E3o (optional)</param>
-        /// <param name="naturalidadeCidade">Apresenta o nome da cidade de nascimento da pessoa f\u00EDsica (optional)</param>
-        /// <param name="naturalidadeEstado">Apresenta a sigla do estado de nascimento da pessoa f\u00EDsica (optional)</param>
-        /// <param name="grauInstrucao">Apresenta o grau de instru\u00E7\u00E3o da pessoa f\u00EDsica (optional)</param>
-        /// <param name="numeroDependentes">Apresenta o n\u00FAmero de dependentes da pessoa f\u00EDsica (optional)</param>
-        /// <param name="nomePai">Apresenta o nome do pai da pessoa f\u00EDsica (optional)</param>
-        /// <param name="chequeEspecial">Indica se pessoa f\u00EDsica aderir ao cheque especial (optional)</param>
-        /// <param name="impedidoFinanciamento">Flag para s\u00F3cios do banco que s\u00E3o portadores do cart\u00E3o, mas n\u00E3o podem operar transa\u00E7\u00F5esde cr\u00E9dito(Lei n. 4.595/64) (optional)</param>
-        /// <param name="numeroCnh">N\u00FAmero da CNH da pessoa (optional)</param>
-        /// <returns>ApiResponse of PagePessoaDetalheResponse</returns>
-        ApiResponse<PagePessoaDetalheResponse> Listar_2WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idPessoa = null, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null, string numeroCnh = null);
-        
-        /// <summary>
         /// Lista os Telefones cadastrados no Emissor
         /// </summary>
         /// <remarks>
@@ -931,7 +899,7 @@ namespace Conductor.Pier.Api
         /// <param name="ramal">N\u00FAmero do ramal (optional)</param>
         /// <param name="status">Apresenta o Status do Telefone, onde: &#39;0&#39;: Inativo e &#39;1&#39;: Ativo (optional)</param>
         /// <returns>PageTelefoneResponse</returns>
-        PageTelefoneResponse Listar_3 (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idTipoTelefone = null, long? idPessoa = null, string ddd = null, string telefone = null, string ramal = null, int? status = null);
+        PageTelefoneResponse ListarTelefones (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idTipoTelefone = null, long? idPessoa = null, string ddd = null, string telefone = null, string ramal = null, int? status = null);
   
         /// <summary>
         /// Lista os Telefones cadastrados no Emissor
@@ -951,31 +919,197 @@ namespace Conductor.Pier.Api
         /// <param name="ramal">N\u00FAmero do ramal (optional)</param>
         /// <param name="status">Apresenta o Status do Telefone, onde: &#39;0&#39;: Inativo e &#39;1&#39;: Ativo (optional)</param>
         /// <returns>ApiResponse of PageTelefoneResponse</returns>
-        ApiResponse<PageTelefoneResponse> Listar_3WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idTipoTelefone = null, long? idPessoa = null, string ddd = null, string telefone = null, string ramal = null, int? status = null);
+        ApiResponse<PageTelefoneResponse> ListarTelefonesWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idTipoTelefone = null, long? idPessoa = null, string ddd = null, string telefone = null, string ramal = null, int? status = null);
         
         /// <summary>
-        /// Inclui a conta como registro para integra\u00E7\u00E3o
+        /// Realiza o cadastro de Adicionais para uma Conta
         /// </summary>
         /// <remarks>
-        /// Este recurso permite incluir uma conta como registro para integra\u00E7\u00E3o
+        /// Este m\u00E9todo permite que uma pessoa existente na base possa ser um adicional na conta informada
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">idConta</param>
-        /// <param name="body">IntegracaoEmissorPersist (optional)</param>
-        /// <returns>IntegracaoEmissorResponse</returns>
-        IntegracaoEmissorResponse Salvar (long? id, IntegracaoEmissorPersist body = null);
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
+        /// <param name="adicionalContaPersist">adicionalContaPersist</param>
+        /// <returns>AdicionalContaResponse</returns>
+        AdicionalContaResponse SalvarAdicionalConta (long? id, AdicionalContaPersist adicionalContaPersist);
   
         /// <summary>
-        /// Inclui a conta como registro para integra\u00E7\u00E3o
+        /// Realiza o cadastro de Adicionais para uma Conta
         /// </summary>
         /// <remarks>
-        /// Este recurso permite incluir uma conta como registro para integra\u00E7\u00E3o
+        /// Este m\u00E9todo permite que uma pessoa existente na base possa ser um adicional na conta informada
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">idConta</param>
-        /// <param name="body">IntegracaoEmissorPersist (optional)</param>
-        /// <returns>ApiResponse of IntegracaoEmissorResponse</returns>
-        ApiResponse<IntegracaoEmissorResponse> SalvarWithHttpInfo (long? id, IntegracaoEmissorPersist body = null);
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
+        /// <param name="adicionalContaPersist">adicionalContaPersist</param>
+        /// <returns>ApiResponse of AdicionalContaResponse</returns>
+        ApiResponse<AdicionalContaResponse> SalvarAdicionalContaWithHttpInfo (long? id, AdicionalContaPersist adicionalContaPersist);
+        
+        /// <summary>
+        /// Realiza o cadastro de um novo Endere\u00E7o
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que seja cadastrado um novo Endere\u00E7o na base de dados do Emissor
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o endere\u00E7o pertence (id) (optional)</param>
+        /// <param name="idTipoEndereco">C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id) (optional)</param>
+        /// <param name="cep">CEP do endere\u00E7o (optional)</param>
+        /// <param name="logradouro">Apresenta o nome do Logradouro (optional)</param>
+        /// <param name="numero">Apresenta o n\u00FAmero do endere\u00E7o (optional)</param>
+        /// <param name="complemento">Apresenta descri\u00E7oes complementares referente ao endere\u00E7o (optional)</param>
+        /// <param name="pontoReferencia">Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o (optional)</param>
+        /// <param name="bairro">Apresenta nome do bairro (optional)</param>
+        /// <param name="cidade">Apresenta nome da cidade (optional)</param>
+        /// <param name="uf">Apresenta sigla da Unidade Federativa (optional)</param>
+        /// <param name="pais">Apresenta nome do Pa\u00EDs (optional)</param>
+        /// <param name="tempoResidenciaAnos">Apresenta a quantidade de anos em que habita na resid\u00EAncia (optional)</param>
+        /// <param name="tempoResidenciaMeses">Apresenta a quantidade de meses que habita na resid\u00EAncia (optional)</param>
+        /// <param name="aplicativoAlteracao">Apresenta a aplica\u00E7\u00E3o respons\u00E1vel por alterar o endere\u00E7o (optional)</param>
+        /// <param name="usuarioAlteracao">Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o (optional)</param>
+        /// <returns>EnderecoResponse</returns>
+        EnderecoResponse SalvarEndereco (long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null, string aplicativoAlteracao = null, string usuarioAlteracao = null);
+  
+        /// <summary>
+        /// Realiza o cadastro de um novo Endere\u00E7o
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que seja cadastrado um novo Endere\u00E7o na base de dados do Emissor
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o endere\u00E7o pertence (id) (optional)</param>
+        /// <param name="idTipoEndereco">C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id) (optional)</param>
+        /// <param name="cep">CEP do endere\u00E7o (optional)</param>
+        /// <param name="logradouro">Apresenta o nome do Logradouro (optional)</param>
+        /// <param name="numero">Apresenta o n\u00FAmero do endere\u00E7o (optional)</param>
+        /// <param name="complemento">Apresenta descri\u00E7oes complementares referente ao endere\u00E7o (optional)</param>
+        /// <param name="pontoReferencia">Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o (optional)</param>
+        /// <param name="bairro">Apresenta nome do bairro (optional)</param>
+        /// <param name="cidade">Apresenta nome da cidade (optional)</param>
+        /// <param name="uf">Apresenta sigla da Unidade Federativa (optional)</param>
+        /// <param name="pais">Apresenta nome do Pa\u00EDs (optional)</param>
+        /// <param name="tempoResidenciaAnos">Apresenta a quantidade de anos em que habita na resid\u00EAncia (optional)</param>
+        /// <param name="tempoResidenciaMeses">Apresenta a quantidade de meses que habita na resid\u00EAncia (optional)</param>
+        /// <param name="aplicativoAlteracao">Apresenta a aplica\u00E7\u00E3o respons\u00E1vel por alterar o endere\u00E7o (optional)</param>
+        /// <param name="usuarioAlteracao">Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o (optional)</param>
+        /// <returns>ApiResponse of EnderecoResponse</returns>
+        ApiResponse<EnderecoResponse> SalvarEnderecoWithHttpInfo (long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null, string aplicativoAlteracao = null, string usuarioAlteracao = null);
+        
+        /// <summary>
+        /// Realiza o cadastro de um nova Pessoa
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que seja cadastrado uma nova Pessoa na base de dados do Emissor
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="nome">Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00E3o Social (Nome Empresarial)&#39;</param>
+        /// <param name="tipo">Tipo de Pessoa (PF ou PJ)</param>
+        /// <param name="dataNascimento">Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd</param>
+        /// <param name="cpf">N\u00FAmero do CPF, quando PF (optional)</param>
+        /// <param name="cnpj">N\u00FAmero do CNPJ, quando PJ (optional)</param>
+        /// <param name="sexo">Sexo da Pessoa (optional)</param>
+        /// <param name="numeroIdentidade">N\u00FAmero da Identidade (optional)</param>
+        /// <param name="orgaoExpedidorIdentidade">Org\u00E3o expedidor do Identidade (optional)</param>
+        /// <param name="unidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade (optional)</param>
+        /// <param name="dataEmissaoIdentidade">Data emiss\u00E3o da Identidade (optional)</param>
+        /// <param name="usuarioAlteracao">Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o (optional)</param>
+        /// <returns>PessoaResponse</returns>
+        PessoaResponse SalvarPessoa (string nome, string tipo, string dataNascimento, string cpf = null, string cnpj = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null, string usuarioAlteracao = null);
+  
+        /// <summary>
+        /// Realiza o cadastro de um nova Pessoa
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que seja cadastrado uma nova Pessoa na base de dados do Emissor
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="nome">Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00E3o Social (Nome Empresarial)&#39;</param>
+        /// <param name="tipo">Tipo de Pessoa (PF ou PJ)</param>
+        /// <param name="dataNascimento">Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd</param>
+        /// <param name="cpf">N\u00FAmero do CPF, quando PF (optional)</param>
+        /// <param name="cnpj">N\u00FAmero do CNPJ, quando PJ (optional)</param>
+        /// <param name="sexo">Sexo da Pessoa (optional)</param>
+        /// <param name="numeroIdentidade">N\u00FAmero da Identidade (optional)</param>
+        /// <param name="orgaoExpedidorIdentidade">Org\u00E3o expedidor do Identidade (optional)</param>
+        /// <param name="unidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade (optional)</param>
+        /// <param name="dataEmissaoIdentidade">Data emiss\u00E3o da Identidade (optional)</param>
+        /// <param name="usuarioAlteracao">Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o (optional)</param>
+        /// <returns>ApiResponse of PessoaResponse</returns>
+        ApiResponse<PessoaResponse> SalvarPessoaWithHttpInfo (string nome, string tipo, string dataNascimento, string cpf = null, string cnpj = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null, string usuarioAlteracao = null);
+        
+        /// <summary>
+        /// Salvar os detalhes de uma determinada Pessoa
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que seja incluido na base do emissor os detalhes de uma determinada Pessoa
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idPessoa">Apresenta o c\u00F3digo identificador da pessoa</param>
+        /// <param name="nomeMae">Apresenta o nome da m\u00E3e da pessoa fisica (optional)</param>
+        /// <param name="idEstadoCivil">Id Estado civil da pessoa fisica (optional)</param>
+        /// <param name="idProfissao">Profiss\u00E3o da pessoa fisica (optional)</param>
+        /// <param name="idNaturezaOcupacao">Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica (optional)</param>
+        /// <param name="idNacionalidade">Id Nacionalidade da pessoa fisica (optional)</param>
+        /// <param name="numeroBanco">N\u00FAmero do banco (optional)</param>
+        /// <param name="numeroAgencia">N\u00FAmero da ag\u00EAncia (optional)</param>
+        /// <param name="numeroContaCorrente">N\u00FAmero da conta corrente (optional)</param>
+        /// <param name="email">Email da pessoa fisica (optional)</param>
+        /// <param name="nomeEmpresa">Nome que deve ser impresso no cart\u00E3o (optional)</param>
+        /// <param name="nomeReferencia1">Nome de refer\u00EAncia 1 (optional)</param>
+        /// <param name="enderecoReferencia1">Endere\u00E7o de refer\u00EAncia 1 (optional)</param>
+        /// <param name="nomeReferencia2">Nome de refer\u00EAncia 2 (optional)</param>
+        /// <param name="enderecoReferencia2">Endere\u00E7o de refer\u00EAncia 2 (optional)</param>
+        /// <param name="naturalidadeCidade">Apresenta o nome da cidade de nascimento da pessoa f\u00EDsica (optional)</param>
+        /// <param name="naturalidadeEstado">Apresenta a sigla do estado de nascimento da pessoa f\u00EDsica (optional)</param>
+        /// <param name="grauInstrucao">Apresenta o grau de instru\u00E7\u00E3o da pessoa f\u00EDsica (optional)</param>
+        /// <param name="numeroDependentes">Apresenta o n\u00FAmero de dependentes da pessoa f\u00EDsica (optional)</param>
+        /// <param name="nomePai">Apresenta o nome do pai da pessoa f\u00EDsica (optional)</param>
+        /// <param name="chequeEspecial">Indica se pessoa f\u00EDsica aderir ao cheque especial (optional)</param>
+        /// <param name="impedidoFinanciamento">Flag para s\u00F3cios do banco que s\u00E3o portadores do cart\u00E3o, mas n\u00E3o podem operar transa\u00E7\u00F5es de cr\u00E9dito(Lei n. 4.595/64) (optional)</param>
+        /// <param name="numeroCnh">N\u00FAmero da CNH da pessoa (optional)</param>
+        /// <param name="pessoaPoliticamenteExposta">Flag para identificar se a pessoa \u00E9 politicamente exposta (optional)</param>
+        /// <param name="patrimonioTotal">Patrim\u00F4nio total da pessoa (optional)</param>
+        /// <param name="salario">Sal\u00E1rio da pessoa (optional)</param>
+        /// <param name="nomeConjuge">Nome do c\u00F4njuge da pessoa (optional)</param>
+        /// <returns>PessoaDetalheResponse</returns>
+        PessoaDetalheResponse SalvarPessoaDetalhe (long? idPessoa, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string nomeReferencia1 = null, string enderecoReferencia1 = null, string nomeReferencia2 = null, string enderecoReferencia2 = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null, string numeroCnh = null, bool? pessoaPoliticamenteExposta = null, double? patrimonioTotal = null, double? salario = null, string nomeConjuge = null);
+  
+        /// <summary>
+        /// Salvar os detalhes de uma determinada Pessoa
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que seja incluido na base do emissor os detalhes de uma determinada Pessoa
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idPessoa">Apresenta o c\u00F3digo identificador da pessoa</param>
+        /// <param name="nomeMae">Apresenta o nome da m\u00E3e da pessoa fisica (optional)</param>
+        /// <param name="idEstadoCivil">Id Estado civil da pessoa fisica (optional)</param>
+        /// <param name="idProfissao">Profiss\u00E3o da pessoa fisica (optional)</param>
+        /// <param name="idNaturezaOcupacao">Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica (optional)</param>
+        /// <param name="idNacionalidade">Id Nacionalidade da pessoa fisica (optional)</param>
+        /// <param name="numeroBanco">N\u00FAmero do banco (optional)</param>
+        /// <param name="numeroAgencia">N\u00FAmero da ag\u00EAncia (optional)</param>
+        /// <param name="numeroContaCorrente">N\u00FAmero da conta corrente (optional)</param>
+        /// <param name="email">Email da pessoa fisica (optional)</param>
+        /// <param name="nomeEmpresa">Nome que deve ser impresso no cart\u00E3o (optional)</param>
+        /// <param name="nomeReferencia1">Nome de refer\u00EAncia 1 (optional)</param>
+        /// <param name="enderecoReferencia1">Endere\u00E7o de refer\u00EAncia 1 (optional)</param>
+        /// <param name="nomeReferencia2">Nome de refer\u00EAncia 2 (optional)</param>
+        /// <param name="enderecoReferencia2">Endere\u00E7o de refer\u00EAncia 2 (optional)</param>
+        /// <param name="naturalidadeCidade">Apresenta o nome da cidade de nascimento da pessoa f\u00EDsica (optional)</param>
+        /// <param name="naturalidadeEstado">Apresenta a sigla do estado de nascimento da pessoa f\u00EDsica (optional)</param>
+        /// <param name="grauInstrucao">Apresenta o grau de instru\u00E7\u00E3o da pessoa f\u00EDsica (optional)</param>
+        /// <param name="numeroDependentes">Apresenta o n\u00FAmero de dependentes da pessoa f\u00EDsica (optional)</param>
+        /// <param name="nomePai">Apresenta o nome do pai da pessoa f\u00EDsica (optional)</param>
+        /// <param name="chequeEspecial">Indica se pessoa f\u00EDsica aderir ao cheque especial (optional)</param>
+        /// <param name="impedidoFinanciamento">Flag para s\u00F3cios do banco que s\u00E3o portadores do cart\u00E3o, mas n\u00E3o podem operar transa\u00E7\u00F5es de cr\u00E9dito(Lei n. 4.595/64) (optional)</param>
+        /// <param name="numeroCnh">N\u00FAmero da CNH da pessoa (optional)</param>
+        /// <param name="pessoaPoliticamenteExposta">Flag para identificar se a pessoa \u00E9 politicamente exposta (optional)</param>
+        /// <param name="patrimonioTotal">Patrim\u00F4nio total da pessoa (optional)</param>
+        /// <param name="salario">Sal\u00E1rio da pessoa (optional)</param>
+        /// <param name="nomeConjuge">Nome do c\u00F4njuge da pessoa (optional)</param>
+        /// <returns>ApiResponse of PessoaDetalheResponse</returns>
+        ApiResponse<PessoaDetalheResponse> SalvarPessoaDetalheWithHttpInfo (long? idPessoa, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string nomeReferencia1 = null, string enderecoReferencia1 = null, string nomeReferencia2 = null, string enderecoReferencia2 = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null, string numeroCnh = null, bool? pessoaPoliticamenteExposta = null, double? patrimonioTotal = null, double? salario = null, string nomeConjuge = null);
         
         /// <summary>
         /// Cadastro de Conta e Pessoa Fisica
@@ -1022,6 +1156,30 @@ namespace Conductor.Pier.Api
         ApiResponse<PessoaJuridicaAprovadaResponse> SalvarPessoaJuridicaAprovadaWithHttpInfo (PessoaJuridicaAprovadaPersist pessoaPersist);
         
         /// <summary>
+        /// Inclui a conta como registro para integra\u00E7\u00E3o
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite incluir uma conta como registro para integra\u00E7\u00E3o
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">idConta</param>
+        /// <param name="body">IntegracaoEmissorPersist (optional)</param>
+        /// <returns>IntegracaoEmissorResponse</returns>
+        IntegracaoEmissorResponse SalvarRegistroIntegracaoConta (long? id, IntegracaoEmissorPersist body = null);
+  
+        /// <summary>
+        /// Inclui a conta como registro para integra\u00E7\u00E3o
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite incluir uma conta como registro para integra\u00E7\u00E3o
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">idConta</param>
+        /// <param name="body">IntegracaoEmissorPersist (optional)</param>
+        /// <returns>ApiResponse of IntegracaoEmissorResponse</returns>
+        ApiResponse<IntegracaoEmissorResponse> SalvarRegistroIntegracaoContaWithHttpInfo (long? id, IntegracaoEmissorPersist body = null);
+        
+        /// <summary>
         /// Inclui registro de integra\u00E7\u00E3o
         /// </summary>
         /// <remarks>
@@ -1031,7 +1189,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">Identificador da conta</param>
         /// <param name="integracaoEmissorPropostaPersist">integracaoEmissorPropostaPersist</param>
         /// <returns>IntegracaoEmissorPropostaResponse</returns>
-        IntegracaoEmissorPropostaResponse SalvarRegistroIntegracaoManager (long? id, IntegracaoEmissorPropostaPersist integracaoEmissorPropostaPersist);
+        IntegracaoEmissorPropostaResponse SalvarRegistroIntegracaoManagerConta (long? id, IntegracaoEmissorPropostaPersist integracaoEmissorPropostaPersist);
   
         /// <summary>
         /// Inclui registro de integra\u00E7\u00E3o
@@ -1043,161 +1201,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">Identificador da conta</param>
         /// <param name="integracaoEmissorPropostaPersist">integracaoEmissorPropostaPersist</param>
         /// <returns>ApiResponse of IntegracaoEmissorPropostaResponse</returns>
-        ApiResponse<IntegracaoEmissorPropostaResponse> SalvarRegistroIntegracaoManagerWithHttpInfo (long? id, IntegracaoEmissorPropostaPersist integracaoEmissorPropostaPersist);
-        
-        /// <summary>
-        /// Realiza o cadastro de um novo Endere\u00E7o
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite que seja cadastrado um novo Endere\u00E7o na base de dados do Emissor
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o endere\u00E7o pertence (id) (optional)</param>
-        /// <param name="idTipoEndereco">C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id) (optional)</param>
-        /// <param name="cep">CEP do endere\u00E7o (optional)</param>
-        /// <param name="logradouro">Apresenta o nome do Logradouro (optional)</param>
-        /// <param name="numero">Apresenta o n\u00FAmero do endere\u00E7o (optional)</param>
-        /// <param name="complemento">Apresenta descri\u00E7oes complementares referente ao endere\u00E7o (optional)</param>
-        /// <param name="pontoReferencia">Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o (optional)</param>
-        /// <param name="bairro">Apresenta nome do bairro (optional)</param>
-        /// <param name="cidade">Apresenta nome da cidade (optional)</param>
-        /// <param name="uf">Apresenta sigla da Unidade Federativa (optional)</param>
-        /// <param name="pais">Apresenta nome do Pa\u00EDs (optional)</param>
-        /// <param name="tempoResidenciaAnos">Apresenta a quantidade de anos em que habita na resid\u00EAncia (optional)</param>
-        /// <param name="tempoResidenciaMeses">Apresenta a quantidade de meses que habita na resid\u00EAncia (optional)</param>
-        /// <param name="aplicativoAlteracao">Apresenta a aplica\u00E7\u00E3o respons\u00E1vel por alterar o endere\u00E7o (optional)</param>
-        /// <returns>EnderecoResponse</returns>
-        EnderecoResponse Salvar_0 (long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null, string aplicativoAlteracao = null);
-  
-        /// <summary>
-        /// Realiza o cadastro de um novo Endere\u00E7o
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite que seja cadastrado um novo Endere\u00E7o na base de dados do Emissor
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o endere\u00E7o pertence (id) (optional)</param>
-        /// <param name="idTipoEndereco">C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id) (optional)</param>
-        /// <param name="cep">CEP do endere\u00E7o (optional)</param>
-        /// <param name="logradouro">Apresenta o nome do Logradouro (optional)</param>
-        /// <param name="numero">Apresenta o n\u00FAmero do endere\u00E7o (optional)</param>
-        /// <param name="complemento">Apresenta descri\u00E7oes complementares referente ao endere\u00E7o (optional)</param>
-        /// <param name="pontoReferencia">Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o (optional)</param>
-        /// <param name="bairro">Apresenta nome do bairro (optional)</param>
-        /// <param name="cidade">Apresenta nome da cidade (optional)</param>
-        /// <param name="uf">Apresenta sigla da Unidade Federativa (optional)</param>
-        /// <param name="pais">Apresenta nome do Pa\u00EDs (optional)</param>
-        /// <param name="tempoResidenciaAnos">Apresenta a quantidade de anos em que habita na resid\u00EAncia (optional)</param>
-        /// <param name="tempoResidenciaMeses">Apresenta a quantidade de meses que habita na resid\u00EAncia (optional)</param>
-        /// <param name="aplicativoAlteracao">Apresenta a aplica\u00E7\u00E3o respons\u00E1vel por alterar o endere\u00E7o (optional)</param>
-        /// <returns>ApiResponse of EnderecoResponse</returns>
-        ApiResponse<EnderecoResponse> Salvar_0WithHttpInfo (long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null, string aplicativoAlteracao = null);
-        
-        /// <summary>
-        /// Realiza o cadastro de um nova Pessoa
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite que seja cadastrado uma nova Pessoa na base de dados do Emissor
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="nome">Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00E3o Social (Nome Empresarial)&#39;</param>
-        /// <param name="tipo">Tipo de Pessoa (PF ou PJ)</param>
-        /// <param name="dataNascimento">Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd</param>
-        /// <param name="cpf">N\u00FAmero do CPF, quando PF (optional)</param>
-        /// <param name="cnpj">N\u00FAmero do CNPJ, quando PJ (optional)</param>
-        /// <param name="sexo">Sexo da Pessoa (optional)</param>
-        /// <param name="numeroIdentidade">N\u00FAmero da Identidade (optional)</param>
-        /// <param name="orgaoExpedidorIdentidade">Org\u00E3o expedidor do Identidade (optional)</param>
-        /// <param name="unidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade (optional)</param>
-        /// <param name="dataEmissaoIdentidade">Data emiss\u00E3o da Identidade (optional)</param>
-        /// <returns>PessoaResponse</returns>
-        PessoaResponse Salvar_1 (string nome, string tipo, string dataNascimento, string cpf = null, string cnpj = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null);
-  
-        /// <summary>
-        /// Realiza o cadastro de um nova Pessoa
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite que seja cadastrado uma nova Pessoa na base de dados do Emissor
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="nome">Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00E3o Social (Nome Empresarial)&#39;</param>
-        /// <param name="tipo">Tipo de Pessoa (PF ou PJ)</param>
-        /// <param name="dataNascimento">Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd</param>
-        /// <param name="cpf">N\u00FAmero do CPF, quando PF (optional)</param>
-        /// <param name="cnpj">N\u00FAmero do CNPJ, quando PJ (optional)</param>
-        /// <param name="sexo">Sexo da Pessoa (optional)</param>
-        /// <param name="numeroIdentidade">N\u00FAmero da Identidade (optional)</param>
-        /// <param name="orgaoExpedidorIdentidade">Org\u00E3o expedidor do Identidade (optional)</param>
-        /// <param name="unidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade (optional)</param>
-        /// <param name="dataEmissaoIdentidade">Data emiss\u00E3o da Identidade (optional)</param>
-        /// <returns>ApiResponse of PessoaResponse</returns>
-        ApiResponse<PessoaResponse> Salvar_1WithHttpInfo (string nome, string tipo, string dataNascimento, string cpf = null, string cnpj = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null);
-        
-        /// <summary>
-        /// Salvar os detalhes de uma determinada Pessoa
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite que seja incluido na base do emissor os detalhes de uma determinada Pessoa
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idPessoa">Apresenta o c\u00F3digo identificador da pessoa</param>
-        /// <param name="nomeMae">Apresenta o nome da m\u00E3e da pessoa fisica (optional)</param>
-        /// <param name="idEstadoCivil">Id Estado civil da pessoa fisica (optional)</param>
-        /// <param name="idProfissao">Profiss\u00E3o da pessoa fisica (optional)</param>
-        /// <param name="idNaturezaOcupacao">Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica (optional)</param>
-        /// <param name="idNacionalidade">Id Nacionalidade da pessoa fisica (optional)</param>
-        /// <param name="numeroBanco">N\u00FAmero do banco (optional)</param>
-        /// <param name="numeroAgencia">N\u00FAmero da ag\u00EAncia (optional)</param>
-        /// <param name="numeroContaCorrente">N\u00FAmero da conta corrente (optional)</param>
-        /// <param name="email">Email da pessoa fisica (optional)</param>
-        /// <param name="nomeEmpresa">Nome que deve ser impresso no cart\u00E3o (optional)</param>
-        /// <param name="nomeReferencia1">Nome de refer\u00EAncia 1 (optional)</param>
-        /// <param name="enderecoReferencia1">Endere\u00E7o de refer\u00EAncia 1 (optional)</param>
-        /// <param name="nomeReferencia2">Nome de refer\u00EAncia 2 (optional)</param>
-        /// <param name="enderecoReferencia2">Endere\u00E7o de refer\u00EAncia 2 (optional)</param>
-        /// <param name="naturalidadeCidade">Apresenta o nome da cidade de nascimento da pessoa f\u00EDsica (optional)</param>
-        /// <param name="naturalidadeEstado">Apresenta a sigla do estado de nascimento da pessoa f\u00EDsica (optional)</param>
-        /// <param name="grauInstrucao">Apresenta o grau de instru\u00E7\u00E3o da pessoa f\u00EDsica (optional)</param>
-        /// <param name="numeroDependentes">Apresenta o n\u00FAmero de dependentes da pessoa f\u00EDsica (optional)</param>
-        /// <param name="nomePai">Apresenta o nome do pai da pessoa f\u00EDsica (optional)</param>
-        /// <param name="chequeEspecial">Indica se pessoa f\u00EDsica aderir ao cheque especial (optional)</param>
-        /// <param name="impedidoFinanciamento">Flag para s\u00F3cios do banco que s\u00E3o portadores do cart\u00E3o, mas n\u00E3o podem operar transa\u00E7\u00F5es de cr\u00E9dito(Lei n. 4.595/64) (optional)</param>
-        /// <param name="numeroCnh">N\u00FAmero da CNH da pessoa (optional)</param>
-        /// <returns>PessoaDetalheResponse</returns>
-        PessoaDetalheResponse Salvar_2 (long? idPessoa, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string nomeReferencia1 = null, string enderecoReferencia1 = null, string nomeReferencia2 = null, string enderecoReferencia2 = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null, string numeroCnh = null);
-  
-        /// <summary>
-        /// Salvar os detalhes de uma determinada Pessoa
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite que seja incluido na base do emissor os detalhes de uma determinada Pessoa
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idPessoa">Apresenta o c\u00F3digo identificador da pessoa</param>
-        /// <param name="nomeMae">Apresenta o nome da m\u00E3e da pessoa fisica (optional)</param>
-        /// <param name="idEstadoCivil">Id Estado civil da pessoa fisica (optional)</param>
-        /// <param name="idProfissao">Profiss\u00E3o da pessoa fisica (optional)</param>
-        /// <param name="idNaturezaOcupacao">Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica (optional)</param>
-        /// <param name="idNacionalidade">Id Nacionalidade da pessoa fisica (optional)</param>
-        /// <param name="numeroBanco">N\u00FAmero do banco (optional)</param>
-        /// <param name="numeroAgencia">N\u00FAmero da ag\u00EAncia (optional)</param>
-        /// <param name="numeroContaCorrente">N\u00FAmero da conta corrente (optional)</param>
-        /// <param name="email">Email da pessoa fisica (optional)</param>
-        /// <param name="nomeEmpresa">Nome que deve ser impresso no cart\u00E3o (optional)</param>
-        /// <param name="nomeReferencia1">Nome de refer\u00EAncia 1 (optional)</param>
-        /// <param name="enderecoReferencia1">Endere\u00E7o de refer\u00EAncia 1 (optional)</param>
-        /// <param name="nomeReferencia2">Nome de refer\u00EAncia 2 (optional)</param>
-        /// <param name="enderecoReferencia2">Endere\u00E7o de refer\u00EAncia 2 (optional)</param>
-        /// <param name="naturalidadeCidade">Apresenta o nome da cidade de nascimento da pessoa f\u00EDsica (optional)</param>
-        /// <param name="naturalidadeEstado">Apresenta a sigla do estado de nascimento da pessoa f\u00EDsica (optional)</param>
-        /// <param name="grauInstrucao">Apresenta o grau de instru\u00E7\u00E3o da pessoa f\u00EDsica (optional)</param>
-        /// <param name="numeroDependentes">Apresenta o n\u00FAmero de dependentes da pessoa f\u00EDsica (optional)</param>
-        /// <param name="nomePai">Apresenta o nome do pai da pessoa f\u00EDsica (optional)</param>
-        /// <param name="chequeEspecial">Indica se pessoa f\u00EDsica aderir ao cheque especial (optional)</param>
-        /// <param name="impedidoFinanciamento">Flag para s\u00F3cios do banco que s\u00E3o portadores do cart\u00E3o, mas n\u00E3o podem operar transa\u00E7\u00F5es de cr\u00E9dito(Lei n. 4.595/64) (optional)</param>
-        /// <param name="numeroCnh">N\u00FAmero da CNH da pessoa (optional)</param>
-        /// <returns>ApiResponse of PessoaDetalheResponse</returns>
-        ApiResponse<PessoaDetalheResponse> Salvar_2WithHttpInfo (long? idPessoa, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string nomeReferencia1 = null, string enderecoReferencia1 = null, string nomeReferencia2 = null, string enderecoReferencia2 = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null, string numeroCnh = null);
+        ApiResponse<IntegracaoEmissorPropostaResponse> SalvarRegistroIntegracaoManagerContaWithHttpInfo (long? id, IntegracaoEmissorPropostaPersist integracaoEmissorPropostaPersist);
         
         /// <summary>
         /// Realiza o cadastro de um novo Telefone
@@ -1212,7 +1216,7 @@ namespace Conductor.Pier.Api
         /// <param name="telefone">N\u00FAmero do telefone (optional)</param>
         /// <param name="ramal">N\u00FAmero do ramal (optional)</param>
         /// <returns>TelefoneResponse</returns>
-        TelefoneResponse Salvar_3 (long? idTipoTelefone = null, long? idPessoa = null, string ddd = null, string telefone = null, string ramal = null);
+        TelefoneResponse SalvarTelefone (long? idTipoTelefone = null, long? idPessoa = null, string ddd = null, string telefone = null, string ramal = null);
   
         /// <summary>
         /// Realiza o cadastro de um novo Telefone
@@ -1227,7 +1231,31 @@ namespace Conductor.Pier.Api
         /// <param name="telefone">N\u00FAmero do telefone (optional)</param>
         /// <param name="ramal">N\u00FAmero do ramal (optional)</param>
         /// <returns>ApiResponse of TelefoneResponse</returns>
-        ApiResponse<TelefoneResponse> Salvar_3WithHttpInfo (long? idTipoTelefone = null, long? idPessoa = null, string ddd = null, string telefone = null, string ramal = null);
+        ApiResponse<TelefoneResponse> SalvarTelefoneWithHttpInfo (long? idTipoTelefone = null, long? idPessoa = null, string ddd = null, string telefone = null, string ramal = null);
+        
+        /// <summary>
+        /// Realiza o cadastro de Adicionais para uma Conta
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que sejam cadastrados um portador Adicional para uma determinada Conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
+        /// <param name="persist">persist</param>
+        /// <returns>AdicionalDetalheResponse</returns>
+        AdicionalDetalheResponse VincularAdicionalConta (long? id, AdicionalPersist persist);
+  
+        /// <summary>
+        /// Realiza o cadastro de Adicionais para uma Conta
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que sejam cadastrados um portador Adicional para uma determinada Conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
+        /// <param name="persist">persist</param>
+        /// <returns>ApiResponse of AdicionalDetalheResponse</returns>
+        ApiResponse<AdicionalDetalheResponse> VincularAdicionalContaWithHttpInfo (long? id, AdicionalPersist persist);
         
         #endregion Synchronous Operations
         
@@ -1244,7 +1272,7 @@ namespace Conductor.Pier.Api
         /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da pessoa (id)</param>
         /// <param name="adicionalUpdate">adicionalUpdate</param>
         /// <returns>Task of AdicionalDetalheResponse</returns>
-        System.Threading.Tasks.Task<AdicionalDetalheResponse> AlterarAsync (long? id, long? idPessoa, AdicionalUpdate adicionalUpdate);
+        System.Threading.Tasks.Task<AdicionalDetalheResponse> AlterarAdicionalContaAsync (long? id, long? idPessoa, AdicionalUpdate adicionalUpdate);
 
         /// <summary>
         /// Altera Adicional de uma Conta
@@ -1257,7 +1285,7 @@ namespace Conductor.Pier.Api
         /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da pessoa (id)</param>
         /// <param name="adicionalUpdate">adicionalUpdate</param>
         /// <returns>Task of ApiResponse (AdicionalDetalheResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AdicionalDetalheResponse>> AlterarAsyncWithHttpInfo (long? id, long? idPessoa, AdicionalUpdate adicionalUpdate);
+        System.Threading.Tasks.Task<ApiResponse<AdicionalDetalheResponse>> AlterarAdicionalContaAsyncWithHttpInfo (long? id, long? idPessoa, AdicionalUpdate adicionalUpdate);
         
         /// <summary>
         /// Atualiza os dados de um determinado Endere\u00E7o
@@ -1281,8 +1309,9 @@ namespace Conductor.Pier.Api
         /// <param name="tempoResidenciaAnos">Apresenta a quantidade de anos em que habita na resid\u00EAncia (optional)</param>
         /// <param name="tempoResidenciaMeses">Apresenta a quantidade de meses que habita na resid\u00EAncia (optional)</param>
         /// <param name="aplicativoAlteracao">Apresenta a aplica\u00E7\u00E3o respons\u00E1vel por alterar o endere\u00E7o (optional)</param>
+        /// <param name="usuarioAlteracao">Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o (optional)</param>
         /// <returns>Task of EnderecoResponse</returns>
-        System.Threading.Tasks.Task<EnderecoResponse> Alterar_0Async (long? id, long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null, string aplicativoAlteracao = null);
+        System.Threading.Tasks.Task<EnderecoResponse> AlterarEnderecoAsync (long? id, long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null, string aplicativoAlteracao = null, string usuarioAlteracao = null);
 
         /// <summary>
         /// Atualiza os dados de um determinado Endere\u00E7o
@@ -1306,74 +1335,9 @@ namespace Conductor.Pier.Api
         /// <param name="tempoResidenciaAnos">Apresenta a quantidade de anos em que habita na resid\u00EAncia (optional)</param>
         /// <param name="tempoResidenciaMeses">Apresenta a quantidade de meses que habita na resid\u00EAncia (optional)</param>
         /// <param name="aplicativoAlteracao">Apresenta a aplica\u00E7\u00E3o respons\u00E1vel por alterar o endere\u00E7o (optional)</param>
+        /// <param name="usuarioAlteracao">Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o (optional)</param>
         /// <returns>Task of ApiResponse (EnderecoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EnderecoResponse>> Alterar_0AsyncWithHttpInfo (long? id, long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null, string aplicativoAlteracao = null);
-        
-        /// <summary>
-        /// Atualiza os detalhes de uma determinada Pessoa
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite que seja alterado na base do emissor os detalhes de uma determinada Pessoa
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">ID da Pessoa</param>
-        /// <param name="nomeMae">Apresenta o nome da m\u00E3e da pessoa fisica (optional)</param>
-        /// <param name="idEstadoCivil">Id Estado civil da pessoa fisica (optional)</param>
-        /// <param name="idProfissao">Profiss\u00E3o da pessoa fisica (optional)</param>
-        /// <param name="idNaturezaOcupacao">Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica (optional)</param>
-        /// <param name="idNacionalidade">Id Nacionalidade da pessoa fisica (optional)</param>
-        /// <param name="numeroBanco">N\u00FAmero do banco (optional)</param>
-        /// <param name="numeroAgencia">N\u00FAmero da ag\u00EAncia (optional)</param>
-        /// <param name="numeroContaCorrente">N\u00FAmero da conta corrente (optional)</param>
-        /// <param name="email">Email da pessoa fisica (optional)</param>
-        /// <param name="nomeEmpresa">Nome que deve ser impresso no cart\u00E3o (optional)</param>
-        /// <param name="nomeReferencia1">Nome de refer\u00EAncia 1 (optional)</param>
-        /// <param name="enderecoReferencia1">Endere\u00E7o de refer\u00EAncia 1 (optional)</param>
-        /// <param name="nomeReferencia2">Nome de refer\u00EAncia 2 (optional)</param>
-        /// <param name="enderecoReferencia2">Endere\u00E7o de refer\u00EAncia 2 (optional)</param>
-        /// <param name="impedidoFinanciamento">Flag para s\u00F3cios do banco que s\u00E3o portadores do cart\u00E3o, mas n\u00E3o podem operar transa\u00E7\u00F5es de cr\u00E9dito(Lei n. 4.595/64) (optional)</param>
-        /// <param name="naturalidadeCidade">Apresenta o nome da cidade de nascimento da pessoa f\u00EDsica (optional)</param>
-        /// <param name="naturalidadeEstado">Apresenta a sigla do estado de nascimento da pessoa f\u00EDsica (optional)</param>
-        /// <param name="grauInstrucao">Apresenta o grau de instru\u00E7\u00E3o da pessoa f\u00EDsica (optional)</param>
-        /// <param name="numeroDependentes">Apresenta o n\u00FAmero de dependentes da pessoa f\u00EDsica (optional)</param>
-        /// <param name="nomePai">Apresenta o nome do pai da pessoa f\u00EDsica (optional)</param>
-        /// <param name="chequeEspecial">Indica se pessoa f\u00EDsica aderir ao cheque especial (optional)</param>
-        /// <param name="numeroCnh">N\u00FAmero da CNH da pessoa (optional)</param>
-        /// <returns>Task of PessoaDetalheResponse</returns>
-        System.Threading.Tasks.Task<PessoaDetalheResponse> Alterar_1Async (long? id, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string nomeReferencia1 = null, string enderecoReferencia1 = null, string nomeReferencia2 = null, string enderecoReferencia2 = null, bool? impedidoFinanciamento = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, string numeroCnh = null);
-
-        /// <summary>
-        /// Atualiza os detalhes de uma determinada Pessoa
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite que seja alterado na base do emissor os detalhes de uma determinada Pessoa
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">ID da Pessoa</param>
-        /// <param name="nomeMae">Apresenta o nome da m\u00E3e da pessoa fisica (optional)</param>
-        /// <param name="idEstadoCivil">Id Estado civil da pessoa fisica (optional)</param>
-        /// <param name="idProfissao">Profiss\u00E3o da pessoa fisica (optional)</param>
-        /// <param name="idNaturezaOcupacao">Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica (optional)</param>
-        /// <param name="idNacionalidade">Id Nacionalidade da pessoa fisica (optional)</param>
-        /// <param name="numeroBanco">N\u00FAmero do banco (optional)</param>
-        /// <param name="numeroAgencia">N\u00FAmero da ag\u00EAncia (optional)</param>
-        /// <param name="numeroContaCorrente">N\u00FAmero da conta corrente (optional)</param>
-        /// <param name="email">Email da pessoa fisica (optional)</param>
-        /// <param name="nomeEmpresa">Nome que deve ser impresso no cart\u00E3o (optional)</param>
-        /// <param name="nomeReferencia1">Nome de refer\u00EAncia 1 (optional)</param>
-        /// <param name="enderecoReferencia1">Endere\u00E7o de refer\u00EAncia 1 (optional)</param>
-        /// <param name="nomeReferencia2">Nome de refer\u00EAncia 2 (optional)</param>
-        /// <param name="enderecoReferencia2">Endere\u00E7o de refer\u00EAncia 2 (optional)</param>
-        /// <param name="impedidoFinanciamento">Flag para s\u00F3cios do banco que s\u00E3o portadores do cart\u00E3o, mas n\u00E3o podem operar transa\u00E7\u00F5es de cr\u00E9dito(Lei n. 4.595/64) (optional)</param>
-        /// <param name="naturalidadeCidade">Apresenta o nome da cidade de nascimento da pessoa f\u00EDsica (optional)</param>
-        /// <param name="naturalidadeEstado">Apresenta a sigla do estado de nascimento da pessoa f\u00EDsica (optional)</param>
-        /// <param name="grauInstrucao">Apresenta o grau de instru\u00E7\u00E3o da pessoa f\u00EDsica (optional)</param>
-        /// <param name="numeroDependentes">Apresenta o n\u00FAmero de dependentes da pessoa f\u00EDsica (optional)</param>
-        /// <param name="nomePai">Apresenta o nome do pai da pessoa f\u00EDsica (optional)</param>
-        /// <param name="chequeEspecial">Indica se pessoa f\u00EDsica aderir ao cheque especial (optional)</param>
-        /// <param name="numeroCnh">N\u00FAmero da CNH da pessoa (optional)</param>
-        /// <returns>Task of ApiResponse (PessoaDetalheResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PessoaDetalheResponse>> Alterar_1AsyncWithHttpInfo (long? id, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string nomeReferencia1 = null, string enderecoReferencia1 = null, string nomeReferencia2 = null, string enderecoReferencia2 = null, bool? impedidoFinanciamento = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, string numeroCnh = null);
+        System.Threading.Tasks.Task<ApiResponse<EnderecoResponse>> AlterarEnderecoAsyncWithHttpInfo (long? id, long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null, string aplicativoAlteracao = null, string usuarioAlteracao = null);
         
         /// <summary>
         /// Atualiza os dados de uma determinada Pessoa
@@ -1393,8 +1357,9 @@ namespace Conductor.Pier.Api
         /// <param name="orgaoExpedidorIdentidade">Org\u00E3o expedidor do Identidade (optional)</param>
         /// <param name="unidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade (optional)</param>
         /// <param name="dataEmissaoIdentidade">Data emiss\u00E3o da Identidade (optional)</param>
+        /// <param name="usuarioAlteracao">Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o (optional)</param>
         /// <returns>Task of PessoaResponse</returns>
-        System.Threading.Tasks.Task<PessoaResponse> Alterar_2Async (long? id, string nome, string tipo, string dataNascimento, string cpf = null, string cnpj = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null);
+        System.Threading.Tasks.Task<PessoaResponse> AlterarPessoaAsync (long? id, string nome, string tipo, string dataNascimento, string cpf = null, string cnpj = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null, string usuarioAlteracao = null);
 
         /// <summary>
         /// Atualiza os dados de uma determinada Pessoa
@@ -1414,8 +1379,79 @@ namespace Conductor.Pier.Api
         /// <param name="orgaoExpedidorIdentidade">Org\u00E3o expedidor do Identidade (optional)</param>
         /// <param name="unidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade (optional)</param>
         /// <param name="dataEmissaoIdentidade">Data emiss\u00E3o da Identidade (optional)</param>
+        /// <param name="usuarioAlteracao">Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o (optional)</param>
         /// <returns>Task of ApiResponse (PessoaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PessoaResponse>> Alterar_2AsyncWithHttpInfo (long? id, string nome, string tipo, string dataNascimento, string cpf = null, string cnpj = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null);
+        System.Threading.Tasks.Task<ApiResponse<PessoaResponse>> AlterarPessoaAsyncWithHttpInfo (long? id, string nome, string tipo, string dataNascimento, string cpf = null, string cnpj = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null, string usuarioAlteracao = null);
+        
+        /// <summary>
+        /// Atualiza os detalhes de uma determinada Pessoa
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que seja alterado na base do emissor os detalhes de uma determinada Pessoa
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">ID da Pessoa</param>
+        /// <param name="nomeMae">Apresenta o nome da m\u00E3e da pessoa fisica (optional)</param>
+        /// <param name="idEstadoCivil">Id Estado civil da pessoa fisica (optional)</param>
+        /// <param name="idProfissao">Profiss\u00E3o da pessoa fisica (optional)</param>
+        /// <param name="idNaturezaOcupacao">Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica (optional)</param>
+        /// <param name="idNacionalidade">Id Nacionalidade da pessoa fisica (optional)</param>
+        /// <param name="numeroBanco">N\u00FAmero do banco (optional)</param>
+        /// <param name="numeroAgencia">N\u00FAmero da ag\u00EAncia (optional)</param>
+        /// <param name="numeroContaCorrente">N\u00FAmero da conta corrente (optional)</param>
+        /// <param name="email">Email da pessoa fisica (optional)</param>
+        /// <param name="nomeEmpresa">Nome que deve ser impresso no cart\u00E3o (optional)</param>
+        /// <param name="nomeReferencia1">Nome de refer\u00EAncia 1 (optional)</param>
+        /// <param name="enderecoReferencia1">Endere\u00E7o de refer\u00EAncia 1 (optional)</param>
+        /// <param name="nomeReferencia2">Nome de refer\u00EAncia 2 (optional)</param>
+        /// <param name="enderecoReferencia2">Endere\u00E7o de refer\u00EAncia 2 (optional)</param>
+        /// <param name="impedidoFinanciamento">Flag para s\u00F3cios do banco que s\u00E3o portadores do cart\u00E3o, mas n\u00E3o podem operar transa\u00E7\u00F5es de cr\u00E9dito(Lei n. 4.595/64) (optional)</param>
+        /// <param name="naturalidadeCidade">Apresenta o nome da cidade de nascimento da pessoa f\u00EDsica (optional)</param>
+        /// <param name="naturalidadeEstado">Apresenta a sigla do estado de nascimento da pessoa f\u00EDsica (optional)</param>
+        /// <param name="grauInstrucao">Apresenta o grau de instru\u00E7\u00E3o da pessoa f\u00EDsica (optional)</param>
+        /// <param name="numeroDependentes">Apresenta o n\u00FAmero de dependentes da pessoa f\u00EDsica (optional)</param>
+        /// <param name="nomePai">Apresenta o nome do pai da pessoa f\u00EDsica (optional)</param>
+        /// <param name="chequeEspecial">Indica se pessoa f\u00EDsica aderir ao cheque especial (optional)</param>
+        /// <param name="numeroCnh">N\u00FAmero da CNH da pessoa (optional)</param>
+        /// <param name="pessoaPoliticamenteExposta">Flag para identificar se a pessoa \u00E9 politicamente exposta (optional)</param>
+        /// <param name="usuarioAlteracao">Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o (optional)</param>
+        /// <returns>Task of PessoaDetalheResponse</returns>
+        System.Threading.Tasks.Task<PessoaDetalheResponse> AlterarPessoaDetalheAsync (long? id, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string nomeReferencia1 = null, string enderecoReferencia1 = null, string nomeReferencia2 = null, string enderecoReferencia2 = null, bool? impedidoFinanciamento = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, string numeroCnh = null, bool? pessoaPoliticamenteExposta = null, string usuarioAlteracao = null);
+
+        /// <summary>
+        /// Atualiza os detalhes de uma determinada Pessoa
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que seja alterado na base do emissor os detalhes de uma determinada Pessoa
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">ID da Pessoa</param>
+        /// <param name="nomeMae">Apresenta o nome da m\u00E3e da pessoa fisica (optional)</param>
+        /// <param name="idEstadoCivil">Id Estado civil da pessoa fisica (optional)</param>
+        /// <param name="idProfissao">Profiss\u00E3o da pessoa fisica (optional)</param>
+        /// <param name="idNaturezaOcupacao">Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica (optional)</param>
+        /// <param name="idNacionalidade">Id Nacionalidade da pessoa fisica (optional)</param>
+        /// <param name="numeroBanco">N\u00FAmero do banco (optional)</param>
+        /// <param name="numeroAgencia">N\u00FAmero da ag\u00EAncia (optional)</param>
+        /// <param name="numeroContaCorrente">N\u00FAmero da conta corrente (optional)</param>
+        /// <param name="email">Email da pessoa fisica (optional)</param>
+        /// <param name="nomeEmpresa">Nome que deve ser impresso no cart\u00E3o (optional)</param>
+        /// <param name="nomeReferencia1">Nome de refer\u00EAncia 1 (optional)</param>
+        /// <param name="enderecoReferencia1">Endere\u00E7o de refer\u00EAncia 1 (optional)</param>
+        /// <param name="nomeReferencia2">Nome de refer\u00EAncia 2 (optional)</param>
+        /// <param name="enderecoReferencia2">Endere\u00E7o de refer\u00EAncia 2 (optional)</param>
+        /// <param name="impedidoFinanciamento">Flag para s\u00F3cios do banco que s\u00E3o portadores do cart\u00E3o, mas n\u00E3o podem operar transa\u00E7\u00F5es de cr\u00E9dito(Lei n. 4.595/64) (optional)</param>
+        /// <param name="naturalidadeCidade">Apresenta o nome da cidade de nascimento da pessoa f\u00EDsica (optional)</param>
+        /// <param name="naturalidadeEstado">Apresenta a sigla do estado de nascimento da pessoa f\u00EDsica (optional)</param>
+        /// <param name="grauInstrucao">Apresenta o grau de instru\u00E7\u00E3o da pessoa f\u00EDsica (optional)</param>
+        /// <param name="numeroDependentes">Apresenta o n\u00FAmero de dependentes da pessoa f\u00EDsica (optional)</param>
+        /// <param name="nomePai">Apresenta o nome do pai da pessoa f\u00EDsica (optional)</param>
+        /// <param name="chequeEspecial">Indica se pessoa f\u00EDsica aderir ao cheque especial (optional)</param>
+        /// <param name="numeroCnh">N\u00FAmero da CNH da pessoa (optional)</param>
+        /// <param name="pessoaPoliticamenteExposta">Flag para identificar se a pessoa \u00E9 politicamente exposta (optional)</param>
+        /// <param name="usuarioAlteracao">Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o (optional)</param>
+        /// <returns>Task of ApiResponse (PessoaDetalheResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PessoaDetalheResponse>> AlterarPessoaDetalheAsyncWithHttpInfo (long? id, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string nomeReferencia1 = null, string enderecoReferencia1 = null, string nomeReferencia2 = null, string enderecoReferencia2 = null, bool? impedidoFinanciamento = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, string numeroCnh = null, bool? pessoaPoliticamenteExposta = null, string usuarioAlteracao = null);
         
         /// <summary>
         /// Realiza a altera\u00E7\u00E3o de um determinado Telefone
@@ -1429,8 +1465,9 @@ namespace Conductor.Pier.Api
         /// <param name="ddd">DDD do n\u00FAmero do telfone (optional)</param>
         /// <param name="telefone">N\u00FAmero do telefone (optional)</param>
         /// <param name="ramal">Ramal do telefone (optional)</param>
+        /// <param name="usuarioAlteracao">Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o (optional)</param>
         /// <returns>Task of TelefoneResponse</returns>
-        System.Threading.Tasks.Task<TelefoneResponse> Alterar_3Async (long? id, long? idTipoTelefone = null, string ddd = null, string telefone = null, string ramal = null);
+        System.Threading.Tasks.Task<TelefoneResponse> AlterarTelefoneAsync (long? id, long? idTipoTelefone = null, string ddd = null, string telefone = null, string ramal = null, string usuarioAlteracao = null);
 
         /// <summary>
         /// Realiza a altera\u00E7\u00E3o de um determinado Telefone
@@ -1444,8 +1481,9 @@ namespace Conductor.Pier.Api
         /// <param name="ddd">DDD do n\u00FAmero do telfone (optional)</param>
         /// <param name="telefone">N\u00FAmero do telefone (optional)</param>
         /// <param name="ramal">Ramal do telefone (optional)</param>
+        /// <param name="usuarioAlteracao">Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o (optional)</param>
         /// <returns>Task of ApiResponse (TelefoneResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TelefoneResponse>> Alterar_3AsyncWithHttpInfo (long? id, long? idTipoTelefone = null, string ddd = null, string telefone = null, string ramal = null);
+        System.Threading.Tasks.Task<ApiResponse<TelefoneResponse>> AlterarTelefoneAsyncWithHttpInfo (long? id, long? idTipoTelefone = null, string ddd = null, string telefone = null, string ramal = null, string usuarioAlteracao = null);
         
         /// <summary>
         /// Permite atribuir um documento para uma Conta
@@ -1472,30 +1510,6 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<Object>> AtribuirAssinaturaClienteAsyncWithHttpInfo (long? id, AtribuirAssinaturaClientePersist body);
         
         /// <summary>
-        /// Atualiza conta integrada com o emissor
-        /// </summary>
-        /// <remarks>
-        /// Este recurso permite a atualiza\u00E7\u00E3o de uma conta integrada com o emissor
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
-        /// <param name="body">Descri\u00E7\u00E3o do canal de entrada (optional)</param>
-        /// <returns>Task of IntegracaoEmissorResponse</returns>
-        System.Threading.Tasks.Task<IntegracaoEmissorResponse> AtualizarAsync (long? id, IntegracaoEmissorPersist body = null);
-
-        /// <summary>
-        /// Atualiza conta integrada com o emissor
-        /// </summary>
-        /// <remarks>
-        /// Este recurso permite a atualiza\u00E7\u00E3o de uma conta integrada com o emissor
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
-        /// <param name="body">Descri\u00E7\u00E3o do canal de entrada (optional)</param>
-        /// <returns>Task of ApiResponse (IntegracaoEmissorResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<IntegracaoEmissorResponse>> AtualizarAsyncWithHttpInfo (long? id, IntegracaoEmissorPersist body = null);
-        
-        /// <summary>
         /// Atualiza o endere\u00E7o de correspond\u00EAncia, para o endere\u00E7o informado
         /// </summary>
         /// <remarks>
@@ -1505,7 +1519,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id)</param>
         /// <param name="idConta">C\u00F3digo de Identifica\u00E7\u00E3o da Conta</param>
         /// <returns>Task of EnderecoResponse</returns>
-        System.Threading.Tasks.Task<EnderecoResponse> AtualizarEnderecoDeCorrespondenciaAsync (long? id, long? idConta);
+        System.Threading.Tasks.Task<EnderecoResponse> AtribuirEnderecoCorrespondenciaContaAsync (long? id, long? idConta);
 
         /// <summary>
         /// Atualiza o endere\u00E7o de correspond\u00EAncia, para o endere\u00E7o informado
@@ -1517,7 +1531,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id)</param>
         /// <param name="idConta">C\u00F3digo de Identifica\u00E7\u00E3o da Conta</param>
         /// <returns>Task of ApiResponse (EnderecoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EnderecoResponse>> AtualizarEnderecoDeCorrespondenciaAsyncWithHttpInfo (long? id, long? idConta);
+        System.Threading.Tasks.Task<ApiResponse<EnderecoResponse>> AtribuirEnderecoCorrespondenciaContaAsyncWithHttpInfo (long? id, long? idConta);
         
         /// <summary>
         /// Atualizar indica\u00E7\u00E3o de amigos
@@ -1546,50 +1560,28 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<IndicacaoAmigoResponse>> AtualizarIndicacaoAmigoAsyncWithHttpInfo (long? id, long? idIndicacao, IndicacaoAmigoUpdate update);
         
         /// <summary>
-        /// Cadastro da recarga programada
+        /// Atualiza conta integrada com o emissor
         /// </summary>
         /// <remarks>
-        /// Este recurso permite cadastrar uma nova recarga programada na base do emissor
+        /// Este recurso permite a atualiza\u00E7\u00E3o de uma conta integrada com o emissor
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="persistencia">persistencia</param>
-        /// <returns>Task of CelularRecargaProgramadaResponse</returns>
-        System.Threading.Tasks.Task<CelularRecargaProgramadaResponse> CadastrarAsync (CelularRecargaProgramadaPersist persistencia);
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
+        /// <param name="body">Descri\u00E7\u00E3o do canal de entrada (optional)</param>
+        /// <returns>Task of IntegracaoEmissorResponse</returns>
+        System.Threading.Tasks.Task<IntegracaoEmissorResponse> AtualizarRegistroIntegracaoContaAsync (long? id, IntegracaoEmissorPersist body = null);
 
         /// <summary>
-        /// Cadastro da recarga programada
+        /// Atualiza conta integrada com o emissor
         /// </summary>
         /// <remarks>
-        /// Este recurso permite cadastrar uma nova recarga programada na base do emissor
+        /// Este recurso permite a atualiza\u00E7\u00E3o de uma conta integrada com o emissor
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="persistencia">persistencia</param>
-        /// <returns>Task of ApiResponse (CelularRecargaProgramadaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CelularRecargaProgramadaResponse>> CadastrarAsyncWithHttpInfo (CelularRecargaProgramadaPersist persistencia);
-        
-        /// <summary>
-        /// Realiza o cadastro de Adicionais para uma Conta
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite que uma pessoa existente na base possa ser um adicional na conta informada
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
-        /// <param name="adicionalContaPersist">adicionalContaPersist</param>
-        /// <returns>Task of AdicionalContaResponse</returns>
-        System.Threading.Tasks.Task<AdicionalContaResponse> CadastrarAdicionalAsync (long? id, AdicionalContaPersist adicionalContaPersist);
-
-        /// <summary>
-        /// Realiza o cadastro de Adicionais para uma Conta
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite que uma pessoa existente na base possa ser um adicional na conta informada
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
-        /// <param name="adicionalContaPersist">adicionalContaPersist</param>
-        /// <returns>Task of ApiResponse (AdicionalContaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AdicionalContaResponse>> CadastrarAdicionalAsyncWithHttpInfo (long? id, AdicionalContaPersist adicionalContaPersist);
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
+        /// <param name="body">Descri\u00E7\u00E3o do canal de entrada (optional)</param>
+        /// <returns>Task of ApiResponse (IntegracaoEmissorResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<IntegracaoEmissorResponse>> AtualizarRegistroIntegracaoContaAsyncWithHttpInfo (long? id, IntegracaoEmissorPersist body = null);
         
         /// <summary>
         /// Cadastra uma indica\u00E7\u00E3o de amigo
@@ -1616,52 +1608,26 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<IndicacaoAmigoResponse>> CadastrarIndicacaoAmigoAsyncWithHttpInfo (long? id, IndicacaoAmigoPersist persist);
         
         /// <summary>
-        /// Realiza o cadastro de Adicionais para uma Conta
+        /// Cadastro da recarga programada
         /// </summary>
         /// <remarks>
-        /// Este m\u00E9todo permite que sejam cadastrados um portador Adicional para uma determinada Conta
+        /// Este recurso permite cadastrar uma nova recarga programada na base do emissor
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
-        /// <param name="persist">persist</param>
-        /// <returns>Task of AdicionalDetalheResponse</returns>
-        System.Threading.Tasks.Task<AdicionalDetalheResponse> Cadastrar_0Async (long? id, AdicionalPersist persist);
+        /// <param name="persistencia">persistencia</param>
+        /// <returns>Task of CelularRecargaProgramadaResponse</returns>
+        System.Threading.Tasks.Task<CelularRecargaProgramadaResponse> CadastrarRecargaProgramadaCelularAsync (CelularRecargaProgramadaPersist persistencia);
 
         /// <summary>
-        /// Realiza o cadastro de Adicionais para uma Conta
+        /// Cadastro da recarga programada
         /// </summary>
         /// <remarks>
-        /// Este m\u00E9todo permite que sejam cadastrados um portador Adicional para uma determinada Conta
+        /// Este recurso permite cadastrar uma nova recarga programada na base do emissor
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
-        /// <param name="persist">persist</param>
-        /// <returns>Task of ApiResponse (AdicionalDetalheResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AdicionalDetalheResponse>> Cadastrar_0AsyncWithHttpInfo (long? id, AdicionalPersist persist);
-        
-        /// <summary>
-        /// Consulta Adicional de uma Conta
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite que seja consultado um portador Adicional de uma determinada Conta
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
-        /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da pessoa (id)</param>
-        /// <returns>Task of AdicionalDetalheResponse</returns>
-        System.Threading.Tasks.Task<AdicionalDetalheResponse> ConsultarAsync (long? id, long? idPessoa);
-
-        /// <summary>
-        /// Consulta Adicional de uma Conta
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite que seja consultado um portador Adicional de uma determinada Conta
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
-        /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da pessoa (id)</param>
-        /// <returns>Task of ApiResponse (AdicionalDetalheResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AdicionalDetalheResponse>> ConsultarAsyncWithHttpInfo (long? id, long? idPessoa);
+        /// <param name="persistencia">persistencia</param>
+        /// <returns>Task of ApiResponse (CelularRecargaProgramadaResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CelularRecargaProgramadaResponse>> CadastrarRecargaProgramadaCelularAsyncWithHttpInfo (CelularRecargaProgramadaPersist persistencia);
         
         /// <summary>
         /// Apresenta os dados de um determinado Endere\u00E7o
@@ -1672,7 +1638,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id)</param>
         /// <returns>Task of EnderecoResponse</returns>
-        System.Threading.Tasks.Task<EnderecoResponse> Consultar_0Async (long? id);
+        System.Threading.Tasks.Task<EnderecoResponse> ConsultarEnderecoAsync (long? id);
 
         /// <summary>
         /// Apresenta os dados de um determinado Endere\u00E7o
@@ -1683,29 +1649,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id)</param>
         /// <returns>Task of ApiResponse (EnderecoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EnderecoResponse>> Consultar_0AsyncWithHttpInfo (long? id);
-        
-        /// <summary>
-        /// Apresenta os detalhes de uma determinada Pessoa
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite a consulta dos detalhes de uma Pessoa existentes na base de dados do Emissor
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">ID da Pessoa</param>
-        /// <returns>Task of PessoaDetalheResponse</returns>
-        System.Threading.Tasks.Task<PessoaDetalheResponse> Consultar_1Async (long? id);
-
-        /// <summary>
-        /// Apresenta os detalhes de uma determinada Pessoa
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite a consulta dos detalhes de uma Pessoa existentes na base de dados do Emissor
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">ID da Pessoa</param>
-        /// <returns>Task of ApiResponse (PessoaDetalheResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PessoaDetalheResponse>> Consultar_1AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<EnderecoResponse>> ConsultarEnderecoAsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Apresenta os dados de uma determinada Pessoa
@@ -1716,7 +1660,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID da Pessoa</param>
         /// <returns>Task of PessoaResponse</returns>
-        System.Threading.Tasks.Task<PessoaResponse> Consultar_2Async (long? id);
+        System.Threading.Tasks.Task<PessoaResponse> ConsultarPessoaAsync (long? id);
 
         /// <summary>
         /// Apresenta os dados de uma determinada Pessoa
@@ -1727,7 +1671,53 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID da Pessoa</param>
         /// <returns>Task of ApiResponse (PessoaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PessoaResponse>> Consultar_2AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<PessoaResponse>> ConsultarPessoaAsyncWithHttpInfo (long? id);
+        
+        /// <summary>
+        /// Consulta Adicional de uma Conta
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que seja consultado um portador Adicional de uma determinada Conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
+        /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da pessoa (id)</param>
+        /// <returns>Task of AdicionalDetalheResponse</returns>
+        System.Threading.Tasks.Task<AdicionalDetalheResponse> ConsultarPessoaAdicionalDaContaAsync (long? id, long? idPessoa);
+
+        /// <summary>
+        /// Consulta Adicional de uma Conta
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que seja consultado um portador Adicional de uma determinada Conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
+        /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da pessoa (id)</param>
+        /// <returns>Task of ApiResponse (AdicionalDetalheResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AdicionalDetalheResponse>> ConsultarPessoaAdicionalDaContaAsyncWithHttpInfo (long? id, long? idPessoa);
+        
+        /// <summary>
+        /// Apresenta os detalhes de uma determinada Pessoa
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite a consulta dos detalhes de uma Pessoa existentes na base de dados do Emissor
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">ID da Pessoa</param>
+        /// <returns>Task of PessoaDetalheResponse</returns>
+        System.Threading.Tasks.Task<PessoaDetalheResponse> ConsultarPessoaDetalheAsync (long? id);
+
+        /// <summary>
+        /// Apresenta os detalhes de uma determinada Pessoa
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite a consulta dos detalhes de uma Pessoa existentes na base de dados do Emissor
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">ID da Pessoa</param>
+        /// <returns>Task of ApiResponse (PessoaDetalheResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PessoaDetalheResponse>> ConsultarPessoaDetalheAsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Apresenta os dados de um determinado Telefone
@@ -1738,7 +1728,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Telefone (id)</param>
         /// <returns>Task of TelefoneResponse</returns>
-        System.Threading.Tasks.Task<TelefoneResponse> Consultar_3Async (long? id);
+        System.Threading.Tasks.Task<TelefoneResponse> ConsultarTelefoneAsync (long? id);
 
         /// <summary>
         /// Apresenta os dados de um determinado Telefone
@@ -1749,7 +1739,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Telefone (id)</param>
         /// <returns>Task of ApiResponse (TelefoneResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TelefoneResponse>> Consultar_3AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<TelefoneResponse>> ConsultarTelefoneAsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Inativa Adicional de uma Conta
@@ -1761,7 +1751,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
         /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da pessoa (id)</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> InativarAsync (long? id, long? idPessoa);
+        System.Threading.Tasks.Task<string> InativarAdicionalContaAsync (long? id, long? idPessoa);
 
         /// <summary>
         /// Inativa Adicional de uma Conta
@@ -1773,7 +1763,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
         /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da pessoa (id)</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> InativarAsyncWithHttpInfo (long? id, long? idPessoa);
+        System.Threading.Tasks.Task<ApiResponse<string>> InativarAdicionalContaAsyncWithHttpInfo (long? id, long? idPessoa);
         
         /// <summary>
         /// Lista os Adicionais de uma Conta
@@ -1787,7 +1777,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00E1gina (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
         /// <returns>Task of AdicionalResponse</returns>
-        System.Threading.Tasks.Task<AdicionalResponse> ListarAsync (long? id, List<string> sort = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<AdicionalResponse> ListarAdicionaisContaAsync (long? id, List<string> sort = null, int? page = null, int? limit = null);
 
         /// <summary>
         /// Lista os Adicionais de uma Conta
@@ -1801,7 +1791,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00E1gina (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
         /// <returns>Task of ApiResponse (AdicionalResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AdicionalResponse>> ListarAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<ApiResponse<AdicionalResponse>> ListarAdicionaisContaAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null);
         
         /// <summary>
         /// Lista as contas da pessoa
@@ -1815,7 +1805,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00E1gina (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
         /// <returns>Task of PageContaDetalheResponse</returns>
-        System.Threading.Tasks.Task<PageContaDetalheResponse> ListarContasPorPessoaAsync (string numeroReceitaFederal, List<string> sort = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<PageContaDetalheResponse> ListarContasPessoaAsync (string numeroReceitaFederal, List<string> sort = null, int? page = null, int? limit = null);
 
         /// <summary>
         /// Lista as contas da pessoa
@@ -1829,7 +1819,65 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00E1gina (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
         /// <returns>Task of ApiResponse (PageContaDetalheResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageContaDetalheResponse>> ListarContasPorPessoaAsyncWithHttpInfo (string numeroReceitaFederal, List<string> sort = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<ApiResponse<PageContaDetalheResponse>> ListarContasPessoaAsyncWithHttpInfo (string numeroReceitaFederal, List<string> sort = null, int? page = null, int? limit = null);
+        
+        /// <summary>
+        /// Lista os Endere\u00E7os cadastrados para o Emissor
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que sejam listados os Endere\u00E7os existentes na base de dados do Emissor
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id) (optional)</param>
+        /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o endere\u00E7o pertence (id) (optional)</param>
+        /// <param name="idTipoEndereco">C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id) (optional)</param>
+        /// <param name="cep">List os CEPs (optional)</param>
+        /// <param name="logradouro">Apresenta o nome do Logradouro (optional)</param>
+        /// <param name="numero">Apresenta o n\u00FAmero do endere\u00E7o (optional)</param>
+        /// <param name="complemento">Apresenta descri\u00E7oes complementares referente ao endere\u00E7o (optional)</param>
+        /// <param name="pontoReferencia">Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o (optional)</param>
+        /// <param name="bairro">Apresenta nome do bairro (optional)</param>
+        /// <param name="cidade">Apresenta nome da cidade (optional)</param>
+        /// <param name="uf">Apresenta sigla da Unidade Federativa (optional)</param>
+        /// <param name="pais">Apresenta nome do Pa\u00EDs (optional)</param>
+        /// <param name="dataInclusao">Apresenta a data em que fora cadastrado o Endere\u00E7o (optional)</param>
+        /// <param name="dataUltimaAtualizacao">Data em que fora realizada a \u00FAltima mudan\u00E7a neste registro de endere\u00E7o. Quando n\u00E3o tiver ocorrido mudan\u00E7a, conter\u00E1 a mesma informa\u00E7\u00E3o que o campo dataInclusao (optional)</param>
+        /// <param name="tempoResidenciaAnos">Apresenta a quantidade de anos em que habita na resid\u00EAncia (optional)</param>
+        /// <param name="tempoResidenciaMeses">Apresenta a quantidade de meses que habita na resid\u00EAncia (optional)</param>
+        /// <returns>Task of PageEnderecoResponse</returns>
+        System.Threading.Tasks.Task<PageEnderecoResponse> ListarEnderecosAsync (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, string dataInclusao = null, string dataUltimaAtualizacao = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null);
+
+        /// <summary>
+        /// Lista os Endere\u00E7os cadastrados para o Emissor
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que sejam listados os Endere\u00E7os existentes na base de dados do Emissor
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id) (optional)</param>
+        /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o endere\u00E7o pertence (id) (optional)</param>
+        /// <param name="idTipoEndereco">C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id) (optional)</param>
+        /// <param name="cep">List os CEPs (optional)</param>
+        /// <param name="logradouro">Apresenta o nome do Logradouro (optional)</param>
+        /// <param name="numero">Apresenta o n\u00FAmero do endere\u00E7o (optional)</param>
+        /// <param name="complemento">Apresenta descri\u00E7oes complementares referente ao endere\u00E7o (optional)</param>
+        /// <param name="pontoReferencia">Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o (optional)</param>
+        /// <param name="bairro">Apresenta nome do bairro (optional)</param>
+        /// <param name="cidade">Apresenta nome da cidade (optional)</param>
+        /// <param name="uf">Apresenta sigla da Unidade Federativa (optional)</param>
+        /// <param name="pais">Apresenta nome do Pa\u00EDs (optional)</param>
+        /// <param name="dataInclusao">Apresenta a data em que fora cadastrado o Endere\u00E7o (optional)</param>
+        /// <param name="dataUltimaAtualizacao">Data em que fora realizada a \u00FAltima mudan\u00E7a neste registro de endere\u00E7o. Quando n\u00E3o tiver ocorrido mudan\u00E7a, conter\u00E1 a mesma informa\u00E7\u00E3o que o campo dataInclusao (optional)</param>
+        /// <param name="tempoResidenciaAnos">Apresenta a quantidade de anos em que habita na resid\u00EAncia (optional)</param>
+        /// <param name="tempoResidenciaMeses">Apresenta a quantidade de meses que habita na resid\u00EAncia (optional)</param>
+        /// <returns>Task of ApiResponse (PageEnderecoResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PageEnderecoResponse>> ListarEnderecosAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, string dataInclusao = null, string dataUltimaAtualizacao = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null);
         
         /// <summary>
         /// Lista o hist\u00F3rico de altera\u00E7\u00E3o do endereco
@@ -1876,7 +1924,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da pessoa (id)</param>
         /// <returns>Task of HistoricoTelefoneResponse</returns>
-        System.Threading.Tasks.Task<HistoricoTelefoneResponse> ListarHistoricoTelefonesAsync (long? id);
+        System.Threading.Tasks.Task<HistoricoTelefoneResponse> ListarHistoricoTelefonesPessoaAsync (long? id);
 
         /// <summary>
         /// Listar altera\u00E7\u00F5es de telefones realizadas nos \u00FAltimos 60 dias
@@ -1887,7 +1935,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da pessoa (id)</param>
         /// <returns>Task of ApiResponse (HistoricoTelefoneResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<HistoricoTelefoneResponse>> ListarHistoricoTelefonesAsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<HistoricoTelefoneResponse>> ListarHistoricoTelefonesPessoaAsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Listar indica\u00E7\u00F5es de amigos
@@ -1932,6 +1980,124 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<PageIndicacaoAmigoResponse>> ListarIndicacaoAmigoAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string dataIndicacao = null, string dataUtilizacao = null, string dataValidade = null, string cpfIndicado = null, string emailIndicado = null, long? codigoIndicacao = null, int? idPessoa = null, int? status = null);
         
         /// <summary>
+        /// Lista as Pessoas cadastradas no Emissor
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id) (optional)</param>
+        /// <param name="nome">Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00E3o Social (Nome Empresarial)&#39; (optional)</param>
+        /// <param name="tipo">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa F\u00EDsica, sendo: (&#39;PF&#39;: Pessoa F\u00EDsica), (&#39;PJ&#39;: Pessoa Jur\u00EDdica) (optional)</param>
+        /// <param name="cpf">Quando uma pessoa f\u00EDsica preencha com o CPF (optional)</param>
+        /// <param name="cnpj">Quando um pessoa jur\u00EDdica preencha o CNPJ (optional)</param>
+        /// <param name="dataNascimento">Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ (optional)</param>
+        /// <param name="sexo">C\u00F3digo de Identifica\u00E7\u00E3o do sexo da pessoa, quando \u00E9 PF, sendo: (&#39;M&#39;: Masculino), (&#39;F&#39;: Feminino), (&#39;O&#39;: Outro), (&#39;N&#39;: N\u00E3o especificado) (optional)</param>
+        /// <param name="numeroIdentidade">N\u00FAmero da Identidade (optional)</param>
+        /// <param name="orgaoExpedidorIdentidade">Org\u00E3o expedidor do RG (optional)</param>
+        /// <param name="unidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade (optional)</param>
+        /// <param name="dataEmissaoIdentidade">Data emiss\u00E3o da identidade no formato aaaa-MM-dd (optional)</param>
+        /// <returns>Task of PagePessoaResponse</returns>
+        System.Threading.Tasks.Task<PagePessoaResponse> ListarPessoasAsync (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, string tipo = null, string cpf = null, string cnpj = null, string dataNascimento = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null);
+
+        /// <summary>
+        /// Lista as Pessoas cadastradas no Emissor
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id) (optional)</param>
+        /// <param name="nome">Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00E3o Social (Nome Empresarial)&#39; (optional)</param>
+        /// <param name="tipo">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa F\u00EDsica, sendo: (&#39;PF&#39;: Pessoa F\u00EDsica), (&#39;PJ&#39;: Pessoa Jur\u00EDdica) (optional)</param>
+        /// <param name="cpf">Quando uma pessoa f\u00EDsica preencha com o CPF (optional)</param>
+        /// <param name="cnpj">Quando um pessoa jur\u00EDdica preencha o CNPJ (optional)</param>
+        /// <param name="dataNascimento">Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ (optional)</param>
+        /// <param name="sexo">C\u00F3digo de Identifica\u00E7\u00E3o do sexo da pessoa, quando \u00E9 PF, sendo: (&#39;M&#39;: Masculino), (&#39;F&#39;: Feminino), (&#39;O&#39;: Outro), (&#39;N&#39;: N\u00E3o especificado) (optional)</param>
+        /// <param name="numeroIdentidade">N\u00FAmero da Identidade (optional)</param>
+        /// <param name="orgaoExpedidorIdentidade">Org\u00E3o expedidor do RG (optional)</param>
+        /// <param name="unidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade (optional)</param>
+        /// <param name="dataEmissaoIdentidade">Data emiss\u00E3o da identidade no formato aaaa-MM-dd (optional)</param>
+        /// <returns>Task of ApiResponse (PagePessoaResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PagePessoaResponse>> ListarPessoasAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, string tipo = null, string cpf = null, string cnpj = null, string dataNascimento = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null);
+        
+        /// <summary>
+        /// Lista os Detalhes das Pessoas cadastradas no Emissor
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que sejam listadas od detalhes das Pessoas existentes na base de dados do Emissor
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idPessoa">C\u00F3digo identificador da pessoa (optional)</param>
+        /// <param name="nomeMae">Apresenta o nome da m\u00E3e da pessoa fisica (optional)</param>
+        /// <param name="idEstadoCivil">Id Estado civil da pessoa fisica (optional)</param>
+        /// <param name="idProfissao">Profiss\u00E3o da pessoa fisica (optional)</param>
+        /// <param name="idNaturezaOcupacao">Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica (optional)</param>
+        /// <param name="idNacionalidade">Id Nacionalidade da pessoa fisica (optional)</param>
+        /// <param name="numeroBanco">N\u00FAmero do Banco (optional)</param>
+        /// <param name="numeroAgencia">N\u00FAmero da ag\u00EAncia (optional)</param>
+        /// <param name="numeroContaCorrente">N\u00FAmero da conta corrente (optional)</param>
+        /// <param name="email">Email da pessoa fisica (optional)</param>
+        /// <param name="nomeEmpresa">Nome que deve ser impresso no cart\u00E3o (optional)</param>
+        /// <param name="naturalidadeCidade">Apresenta o nome da cidade de nascimento da pessoa f\u00EDsica (optional)</param>
+        /// <param name="naturalidadeEstado">Apresenta a sigla do estado de nascimento da pessoa f\u00EDsica (optional)</param>
+        /// <param name="grauInstrucao">Apresenta o grau de instru\u00E7\u00E3o da pessoa f\u00EDsica (optional)</param>
+        /// <param name="numeroDependentes">Apresenta o n\u00FAmero de dependentes da pessoa f\u00EDsica (optional)</param>
+        /// <param name="nomePai">Apresenta o nome do pai da pessoa f\u00EDsica (optional)</param>
+        /// <param name="chequeEspecial">Indica se pessoa f\u00EDsica aderir ao cheque especial (optional)</param>
+        /// <param name="impedidoFinanciamento">Flag para s\u00F3cios do banco que s\u00E3o portadores do cart\u00E3o, mas n\u00E3o podem operar transa\u00E7\u00F5esde cr\u00E9dito(Lei n. 4.595/64) (optional)</param>
+        /// <param name="numeroCnh">N\u00FAmero da CNH da pessoa (optional)</param>
+        /// <param name="patrimonioTotal">Patrim\u00F4nio total da pessoa (optional)</param>
+        /// <param name="salario">Sal\u00E1rio da pessoa (optional)</param>
+        /// <param name="nomeConjuge">Nome do c\u00F4njuge da pessoa (optional)</param>
+        /// <returns>Task of PagePessoaDetalheResponse</returns>
+        System.Threading.Tasks.Task<PagePessoaDetalheResponse> ListarPessoasDetalhesAsync (List<string> sort = null, int? page = null, int? limit = null, long? idPessoa = null, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null, string numeroCnh = null, double? patrimonioTotal = null, double? salario = null, string nomeConjuge = null);
+
+        /// <summary>
+        /// Lista os Detalhes das Pessoas cadastradas no Emissor
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que sejam listadas od detalhes das Pessoas existentes na base de dados do Emissor
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idPessoa">C\u00F3digo identificador da pessoa (optional)</param>
+        /// <param name="nomeMae">Apresenta o nome da m\u00E3e da pessoa fisica (optional)</param>
+        /// <param name="idEstadoCivil">Id Estado civil da pessoa fisica (optional)</param>
+        /// <param name="idProfissao">Profiss\u00E3o da pessoa fisica (optional)</param>
+        /// <param name="idNaturezaOcupacao">Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica (optional)</param>
+        /// <param name="idNacionalidade">Id Nacionalidade da pessoa fisica (optional)</param>
+        /// <param name="numeroBanco">N\u00FAmero do Banco (optional)</param>
+        /// <param name="numeroAgencia">N\u00FAmero da ag\u00EAncia (optional)</param>
+        /// <param name="numeroContaCorrente">N\u00FAmero da conta corrente (optional)</param>
+        /// <param name="email">Email da pessoa fisica (optional)</param>
+        /// <param name="nomeEmpresa">Nome que deve ser impresso no cart\u00E3o (optional)</param>
+        /// <param name="naturalidadeCidade">Apresenta o nome da cidade de nascimento da pessoa f\u00EDsica (optional)</param>
+        /// <param name="naturalidadeEstado">Apresenta a sigla do estado de nascimento da pessoa f\u00EDsica (optional)</param>
+        /// <param name="grauInstrucao">Apresenta o grau de instru\u00E7\u00E3o da pessoa f\u00EDsica (optional)</param>
+        /// <param name="numeroDependentes">Apresenta o n\u00FAmero de dependentes da pessoa f\u00EDsica (optional)</param>
+        /// <param name="nomePai">Apresenta o nome do pai da pessoa f\u00EDsica (optional)</param>
+        /// <param name="chequeEspecial">Indica se pessoa f\u00EDsica aderir ao cheque especial (optional)</param>
+        /// <param name="impedidoFinanciamento">Flag para s\u00F3cios do banco que s\u00E3o portadores do cart\u00E3o, mas n\u00E3o podem operar transa\u00E7\u00F5esde cr\u00E9dito(Lei n. 4.595/64) (optional)</param>
+        /// <param name="numeroCnh">N\u00FAmero da CNH da pessoa (optional)</param>
+        /// <param name="patrimonioTotal">Patrim\u00F4nio total da pessoa (optional)</param>
+        /// <param name="salario">Sal\u00E1rio da pessoa (optional)</param>
+        /// <param name="nomeConjuge">Nome do c\u00F4njuge da pessoa (optional)</param>
+        /// <returns>Task of ApiResponse (PagePessoaDetalheResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PagePessoaDetalheResponse>> ListarPessoasDetalhesAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idPessoa = null, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null, string numeroCnh = null, double? patrimonioTotal = null, double? salario = null, string nomeConjuge = null);
+        
+        /// <summary>
         /// Listar s\u00F3cios de uma pessoa jur\u00EDdica
         /// </summary>
         /// <remarks>
@@ -1960,176 +2126,6 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<PagePessoaResponse>> ListarSociosAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null);
         
         /// <summary>
-        /// Lista os Endere\u00E7os cadastrados para o Emissor
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite que sejam listados os Endere\u00E7os existentes na base de dados do Emissor
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id) (optional)</param>
-        /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o endere\u00E7o pertence (id) (optional)</param>
-        /// <param name="idTipoEndereco">C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id) (optional)</param>
-        /// <param name="cep">List os CEPs (optional)</param>
-        /// <param name="logradouro">Apresenta o nome do Logradouro (optional)</param>
-        /// <param name="numero">Apresenta o n\u00FAmero do endere\u00E7o (optional)</param>
-        /// <param name="complemento">Apresenta descri\u00E7oes complementares referente ao endere\u00E7o (optional)</param>
-        /// <param name="pontoReferencia">Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o (optional)</param>
-        /// <param name="bairro">Apresenta nome do bairro (optional)</param>
-        /// <param name="cidade">Apresenta nome da cidade (optional)</param>
-        /// <param name="uf">Apresenta sigla da Unidade Federativa (optional)</param>
-        /// <param name="pais">Apresenta nome do Pa\u00EDs (optional)</param>
-        /// <param name="dataInclusao">Apresenta a data em que fora cadastrado o Endere\u00E7o (optional)</param>
-        /// <param name="dataUltimaAtualizacao">Data em que fora realizada a \u00FAltima mudan\u00E7a neste registro de endere\u00E7o. Quando n\u00E3o tiver ocorrido mudan\u00E7a, conter\u00E1 a mesma informa\u00E7\u00E3o que o campo dataInclusao (optional)</param>
-        /// <param name="tempoResidenciaAnos">Apresenta a quantidade de anos em que habita na resid\u00EAncia (optional)</param>
-        /// <param name="tempoResidenciaMeses">Apresenta a quantidade de meses que habita na resid\u00EAncia (optional)</param>
-        /// <returns>Task of PageEnderecoResponse</returns>
-        System.Threading.Tasks.Task<PageEnderecoResponse> Listar_0Async (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, string dataInclusao = null, string dataUltimaAtualizacao = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null);
-
-        /// <summary>
-        /// Lista os Endere\u00E7os cadastrados para o Emissor
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite que sejam listados os Endere\u00E7os existentes na base de dados do Emissor
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id) (optional)</param>
-        /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o endere\u00E7o pertence (id) (optional)</param>
-        /// <param name="idTipoEndereco">C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id) (optional)</param>
-        /// <param name="cep">List os CEPs (optional)</param>
-        /// <param name="logradouro">Apresenta o nome do Logradouro (optional)</param>
-        /// <param name="numero">Apresenta o n\u00FAmero do endere\u00E7o (optional)</param>
-        /// <param name="complemento">Apresenta descri\u00E7oes complementares referente ao endere\u00E7o (optional)</param>
-        /// <param name="pontoReferencia">Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o (optional)</param>
-        /// <param name="bairro">Apresenta nome do bairro (optional)</param>
-        /// <param name="cidade">Apresenta nome da cidade (optional)</param>
-        /// <param name="uf">Apresenta sigla da Unidade Federativa (optional)</param>
-        /// <param name="pais">Apresenta nome do Pa\u00EDs (optional)</param>
-        /// <param name="dataInclusao">Apresenta a data em que fora cadastrado o Endere\u00E7o (optional)</param>
-        /// <param name="dataUltimaAtualizacao">Data em que fora realizada a \u00FAltima mudan\u00E7a neste registro de endere\u00E7o. Quando n\u00E3o tiver ocorrido mudan\u00E7a, conter\u00E1 a mesma informa\u00E7\u00E3o que o campo dataInclusao (optional)</param>
-        /// <param name="tempoResidenciaAnos">Apresenta a quantidade de anos em que habita na resid\u00EAncia (optional)</param>
-        /// <param name="tempoResidenciaMeses">Apresenta a quantidade de meses que habita na resid\u00EAncia (optional)</param>
-        /// <returns>Task of ApiResponse (PageEnderecoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageEnderecoResponse>> Listar_0AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, string dataInclusao = null, string dataUltimaAtualizacao = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null);
-        
-        /// <summary>
-        /// Lista as Pessoas cadastradas no Emissor
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id) (optional)</param>
-        /// <param name="nome">Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00E3o Social (Nome Empresarial)&#39; (optional)</param>
-        /// <param name="tipo">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa F\u00EDsica, sendo: (&#39;PF&#39;: Pessoa F\u00EDsica), (&#39;PJ&#39;: Pessoa Jur\u00EDdica) (optional)</param>
-        /// <param name="cpf">Quando uma pessoa f\u00EDsica preencha com o CPF (optional)</param>
-        /// <param name="cnpj">Quando um pessoa jur\u00EDdica preencha o CNPJ (optional)</param>
-        /// <param name="dataNascimento">Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ (optional)</param>
-        /// <param name="sexo">C\u00F3digo de Identifica\u00E7\u00E3o do sexo da pessoa, quando \u00E9 PF, sendo: (&#39;M&#39;: Masculino), (&#39;F&#39;: Feminino), (&#39;O&#39;: Outro), (&#39;N&#39;: N\u00E3o especificado) (optional)</param>
-        /// <param name="numeroIdentidade">N\u00FAmero da Identidade (optional)</param>
-        /// <param name="orgaoExpedidorIdentidade">Org\u00E3o expedidor do RG (optional)</param>
-        /// <param name="unidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade (optional)</param>
-        /// <param name="dataEmissaoIdentidade">Data emiss\u00E3o da identidade no formato aaaa-MM-dd (optional)</param>
-        /// <returns>Task of PagePessoaResponse</returns>
-        System.Threading.Tasks.Task<PagePessoaResponse> Listar_1Async (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, string tipo = null, string cpf = null, string cnpj = null, string dataNascimento = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null);
-
-        /// <summary>
-        /// Lista as Pessoas cadastradas no Emissor
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id) (optional)</param>
-        /// <param name="nome">Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00E3o Social (Nome Empresarial)&#39; (optional)</param>
-        /// <param name="tipo">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa F\u00EDsica, sendo: (&#39;PF&#39;: Pessoa F\u00EDsica), (&#39;PJ&#39;: Pessoa Jur\u00EDdica) (optional)</param>
-        /// <param name="cpf">Quando uma pessoa f\u00EDsica preencha com o CPF (optional)</param>
-        /// <param name="cnpj">Quando um pessoa jur\u00EDdica preencha o CNPJ (optional)</param>
-        /// <param name="dataNascimento">Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ (optional)</param>
-        /// <param name="sexo">C\u00F3digo de Identifica\u00E7\u00E3o do sexo da pessoa, quando \u00E9 PF, sendo: (&#39;M&#39;: Masculino), (&#39;F&#39;: Feminino), (&#39;O&#39;: Outro), (&#39;N&#39;: N\u00E3o especificado) (optional)</param>
-        /// <param name="numeroIdentidade">N\u00FAmero da Identidade (optional)</param>
-        /// <param name="orgaoExpedidorIdentidade">Org\u00E3o expedidor do RG (optional)</param>
-        /// <param name="unidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade (optional)</param>
-        /// <param name="dataEmissaoIdentidade">Data emiss\u00E3o da identidade no formato aaaa-MM-dd (optional)</param>
-        /// <returns>Task of ApiResponse (PagePessoaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PagePessoaResponse>> Listar_1AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, string tipo = null, string cpf = null, string cnpj = null, string dataNascimento = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null);
-        
-        /// <summary>
-        /// Lista os Detalhes das Pessoas cadastradas no Emissor
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite que sejam listadas od detalhes das Pessoas existentes na base de dados do Emissor
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="idPessoa">C\u00F3digo identificador da pessoa (optional)</param>
-        /// <param name="nomeMae">Apresenta o nome da m\u00E3e da pessoa fisica (optional)</param>
-        /// <param name="idEstadoCivil">Id Estado civil da pessoa fisica (optional)</param>
-        /// <param name="idProfissao">Profiss\u00E3o da pessoa fisica (optional)</param>
-        /// <param name="idNaturezaOcupacao">Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica (optional)</param>
-        /// <param name="idNacionalidade">Id Nacionalidade da pessoa fisica (optional)</param>
-        /// <param name="numeroBanco">N\u00FAmero do Banco (optional)</param>
-        /// <param name="numeroAgencia">N\u00FAmero da ag\u00EAncia (optional)</param>
-        /// <param name="numeroContaCorrente">N\u00FAmero da conta corrente (optional)</param>
-        /// <param name="email">Email da pessoa fisica (optional)</param>
-        /// <param name="nomeEmpresa">Nome que deve ser impresso no cart\u00E3o (optional)</param>
-        /// <param name="naturalidadeCidade">Apresenta o nome da cidade de nascimento da pessoa f\u00EDsica (optional)</param>
-        /// <param name="naturalidadeEstado">Apresenta a sigla do estado de nascimento da pessoa f\u00EDsica (optional)</param>
-        /// <param name="grauInstrucao">Apresenta o grau de instru\u00E7\u00E3o da pessoa f\u00EDsica (optional)</param>
-        /// <param name="numeroDependentes">Apresenta o n\u00FAmero de dependentes da pessoa f\u00EDsica (optional)</param>
-        /// <param name="nomePai">Apresenta o nome do pai da pessoa f\u00EDsica (optional)</param>
-        /// <param name="chequeEspecial">Indica se pessoa f\u00EDsica aderir ao cheque especial (optional)</param>
-        /// <param name="impedidoFinanciamento">Flag para s\u00F3cios do banco que s\u00E3o portadores do cart\u00E3o, mas n\u00E3o podem operar transa\u00E7\u00F5esde cr\u00E9dito(Lei n. 4.595/64) (optional)</param>
-        /// <param name="numeroCnh">N\u00FAmero da CNH da pessoa (optional)</param>
-        /// <returns>Task of PagePessoaDetalheResponse</returns>
-        System.Threading.Tasks.Task<PagePessoaDetalheResponse> Listar_2Async (List<string> sort = null, int? page = null, int? limit = null, long? idPessoa = null, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null, string numeroCnh = null);
-
-        /// <summary>
-        /// Lista os Detalhes das Pessoas cadastradas no Emissor
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite que sejam listadas od detalhes das Pessoas existentes na base de dados do Emissor
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="idPessoa">C\u00F3digo identificador da pessoa (optional)</param>
-        /// <param name="nomeMae">Apresenta o nome da m\u00E3e da pessoa fisica (optional)</param>
-        /// <param name="idEstadoCivil">Id Estado civil da pessoa fisica (optional)</param>
-        /// <param name="idProfissao">Profiss\u00E3o da pessoa fisica (optional)</param>
-        /// <param name="idNaturezaOcupacao">Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica (optional)</param>
-        /// <param name="idNacionalidade">Id Nacionalidade da pessoa fisica (optional)</param>
-        /// <param name="numeroBanco">N\u00FAmero do Banco (optional)</param>
-        /// <param name="numeroAgencia">N\u00FAmero da ag\u00EAncia (optional)</param>
-        /// <param name="numeroContaCorrente">N\u00FAmero da conta corrente (optional)</param>
-        /// <param name="email">Email da pessoa fisica (optional)</param>
-        /// <param name="nomeEmpresa">Nome que deve ser impresso no cart\u00E3o (optional)</param>
-        /// <param name="naturalidadeCidade">Apresenta o nome da cidade de nascimento da pessoa f\u00EDsica (optional)</param>
-        /// <param name="naturalidadeEstado">Apresenta a sigla do estado de nascimento da pessoa f\u00EDsica (optional)</param>
-        /// <param name="grauInstrucao">Apresenta o grau de instru\u00E7\u00E3o da pessoa f\u00EDsica (optional)</param>
-        /// <param name="numeroDependentes">Apresenta o n\u00FAmero de dependentes da pessoa f\u00EDsica (optional)</param>
-        /// <param name="nomePai">Apresenta o nome do pai da pessoa f\u00EDsica (optional)</param>
-        /// <param name="chequeEspecial">Indica se pessoa f\u00EDsica aderir ao cheque especial (optional)</param>
-        /// <param name="impedidoFinanciamento">Flag para s\u00F3cios do banco que s\u00E3o portadores do cart\u00E3o, mas n\u00E3o podem operar transa\u00E7\u00F5esde cr\u00E9dito(Lei n. 4.595/64) (optional)</param>
-        /// <param name="numeroCnh">N\u00FAmero da CNH da pessoa (optional)</param>
-        /// <returns>Task of ApiResponse (PagePessoaDetalheResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PagePessoaDetalheResponse>> Listar_2AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idPessoa = null, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null, string numeroCnh = null);
-        
-        /// <summary>
         /// Lista os Telefones cadastrados no Emissor
         /// </summary>
         /// <remarks>
@@ -2147,7 +2143,7 @@ namespace Conductor.Pier.Api
         /// <param name="ramal">N\u00FAmero do ramal (optional)</param>
         /// <param name="status">Apresenta o Status do Telefone, onde: &#39;0&#39;: Inativo e &#39;1&#39;: Ativo (optional)</param>
         /// <returns>Task of PageTelefoneResponse</returns>
-        System.Threading.Tasks.Task<PageTelefoneResponse> Listar_3Async (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idTipoTelefone = null, long? idPessoa = null, string ddd = null, string telefone = null, string ramal = null, int? status = null);
+        System.Threading.Tasks.Task<PageTelefoneResponse> ListarTelefonesAsync (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idTipoTelefone = null, long? idPessoa = null, string ddd = null, string telefone = null, string ramal = null, int? status = null);
 
         /// <summary>
         /// Lista os Telefones cadastrados no Emissor
@@ -2167,31 +2163,197 @@ namespace Conductor.Pier.Api
         /// <param name="ramal">N\u00FAmero do ramal (optional)</param>
         /// <param name="status">Apresenta o Status do Telefone, onde: &#39;0&#39;: Inativo e &#39;1&#39;: Ativo (optional)</param>
         /// <returns>Task of ApiResponse (PageTelefoneResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageTelefoneResponse>> Listar_3AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idTipoTelefone = null, long? idPessoa = null, string ddd = null, string telefone = null, string ramal = null, int? status = null);
+        System.Threading.Tasks.Task<ApiResponse<PageTelefoneResponse>> ListarTelefonesAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idTipoTelefone = null, long? idPessoa = null, string ddd = null, string telefone = null, string ramal = null, int? status = null);
         
         /// <summary>
-        /// Inclui a conta como registro para integra\u00E7\u00E3o
+        /// Realiza o cadastro de Adicionais para uma Conta
         /// </summary>
         /// <remarks>
-        /// Este recurso permite incluir uma conta como registro para integra\u00E7\u00E3o
+        /// Este m\u00E9todo permite que uma pessoa existente na base possa ser um adicional na conta informada
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">idConta</param>
-        /// <param name="body">IntegracaoEmissorPersist (optional)</param>
-        /// <returns>Task of IntegracaoEmissorResponse</returns>
-        System.Threading.Tasks.Task<IntegracaoEmissorResponse> SalvarAsync (long? id, IntegracaoEmissorPersist body = null);
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
+        /// <param name="adicionalContaPersist">adicionalContaPersist</param>
+        /// <returns>Task of AdicionalContaResponse</returns>
+        System.Threading.Tasks.Task<AdicionalContaResponse> SalvarAdicionalContaAsync (long? id, AdicionalContaPersist adicionalContaPersist);
 
         /// <summary>
-        /// Inclui a conta como registro para integra\u00E7\u00E3o
+        /// Realiza o cadastro de Adicionais para uma Conta
         /// </summary>
         /// <remarks>
-        /// Este recurso permite incluir uma conta como registro para integra\u00E7\u00E3o
+        /// Este m\u00E9todo permite que uma pessoa existente na base possa ser um adicional na conta informada
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">idConta</param>
-        /// <param name="body">IntegracaoEmissorPersist (optional)</param>
-        /// <returns>Task of ApiResponse (IntegracaoEmissorResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<IntegracaoEmissorResponse>> SalvarAsyncWithHttpInfo (long? id, IntegracaoEmissorPersist body = null);
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
+        /// <param name="adicionalContaPersist">adicionalContaPersist</param>
+        /// <returns>Task of ApiResponse (AdicionalContaResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AdicionalContaResponse>> SalvarAdicionalContaAsyncWithHttpInfo (long? id, AdicionalContaPersist adicionalContaPersist);
+        
+        /// <summary>
+        /// Realiza o cadastro de um novo Endere\u00E7o
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que seja cadastrado um novo Endere\u00E7o na base de dados do Emissor
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o endere\u00E7o pertence (id) (optional)</param>
+        /// <param name="idTipoEndereco">C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id) (optional)</param>
+        /// <param name="cep">CEP do endere\u00E7o (optional)</param>
+        /// <param name="logradouro">Apresenta o nome do Logradouro (optional)</param>
+        /// <param name="numero">Apresenta o n\u00FAmero do endere\u00E7o (optional)</param>
+        /// <param name="complemento">Apresenta descri\u00E7oes complementares referente ao endere\u00E7o (optional)</param>
+        /// <param name="pontoReferencia">Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o (optional)</param>
+        /// <param name="bairro">Apresenta nome do bairro (optional)</param>
+        /// <param name="cidade">Apresenta nome da cidade (optional)</param>
+        /// <param name="uf">Apresenta sigla da Unidade Federativa (optional)</param>
+        /// <param name="pais">Apresenta nome do Pa\u00EDs (optional)</param>
+        /// <param name="tempoResidenciaAnos">Apresenta a quantidade de anos em que habita na resid\u00EAncia (optional)</param>
+        /// <param name="tempoResidenciaMeses">Apresenta a quantidade de meses que habita na resid\u00EAncia (optional)</param>
+        /// <param name="aplicativoAlteracao">Apresenta a aplica\u00E7\u00E3o respons\u00E1vel por alterar o endere\u00E7o (optional)</param>
+        /// <param name="usuarioAlteracao">Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o (optional)</param>
+        /// <returns>Task of EnderecoResponse</returns>
+        System.Threading.Tasks.Task<EnderecoResponse> SalvarEnderecoAsync (long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null, string aplicativoAlteracao = null, string usuarioAlteracao = null);
+
+        /// <summary>
+        /// Realiza o cadastro de um novo Endere\u00E7o
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que seja cadastrado um novo Endere\u00E7o na base de dados do Emissor
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o endere\u00E7o pertence (id) (optional)</param>
+        /// <param name="idTipoEndereco">C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id) (optional)</param>
+        /// <param name="cep">CEP do endere\u00E7o (optional)</param>
+        /// <param name="logradouro">Apresenta o nome do Logradouro (optional)</param>
+        /// <param name="numero">Apresenta o n\u00FAmero do endere\u00E7o (optional)</param>
+        /// <param name="complemento">Apresenta descri\u00E7oes complementares referente ao endere\u00E7o (optional)</param>
+        /// <param name="pontoReferencia">Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o (optional)</param>
+        /// <param name="bairro">Apresenta nome do bairro (optional)</param>
+        /// <param name="cidade">Apresenta nome da cidade (optional)</param>
+        /// <param name="uf">Apresenta sigla da Unidade Federativa (optional)</param>
+        /// <param name="pais">Apresenta nome do Pa\u00EDs (optional)</param>
+        /// <param name="tempoResidenciaAnos">Apresenta a quantidade de anos em que habita na resid\u00EAncia (optional)</param>
+        /// <param name="tempoResidenciaMeses">Apresenta a quantidade de meses que habita na resid\u00EAncia (optional)</param>
+        /// <param name="aplicativoAlteracao">Apresenta a aplica\u00E7\u00E3o respons\u00E1vel por alterar o endere\u00E7o (optional)</param>
+        /// <param name="usuarioAlteracao">Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o (optional)</param>
+        /// <returns>Task of ApiResponse (EnderecoResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EnderecoResponse>> SalvarEnderecoAsyncWithHttpInfo (long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null, string aplicativoAlteracao = null, string usuarioAlteracao = null);
+        
+        /// <summary>
+        /// Realiza o cadastro de um nova Pessoa
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que seja cadastrado uma nova Pessoa na base de dados do Emissor
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="nome">Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00E3o Social (Nome Empresarial)&#39;</param>
+        /// <param name="tipo">Tipo de Pessoa (PF ou PJ)</param>
+        /// <param name="dataNascimento">Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd</param>
+        /// <param name="cpf">N\u00FAmero do CPF, quando PF (optional)</param>
+        /// <param name="cnpj">N\u00FAmero do CNPJ, quando PJ (optional)</param>
+        /// <param name="sexo">Sexo da Pessoa (optional)</param>
+        /// <param name="numeroIdentidade">N\u00FAmero da Identidade (optional)</param>
+        /// <param name="orgaoExpedidorIdentidade">Org\u00E3o expedidor do Identidade (optional)</param>
+        /// <param name="unidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade (optional)</param>
+        /// <param name="dataEmissaoIdentidade">Data emiss\u00E3o da Identidade (optional)</param>
+        /// <param name="usuarioAlteracao">Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o (optional)</param>
+        /// <returns>Task of PessoaResponse</returns>
+        System.Threading.Tasks.Task<PessoaResponse> SalvarPessoaAsync (string nome, string tipo, string dataNascimento, string cpf = null, string cnpj = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null, string usuarioAlteracao = null);
+
+        /// <summary>
+        /// Realiza o cadastro de um nova Pessoa
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que seja cadastrado uma nova Pessoa na base de dados do Emissor
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="nome">Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00E3o Social (Nome Empresarial)&#39;</param>
+        /// <param name="tipo">Tipo de Pessoa (PF ou PJ)</param>
+        /// <param name="dataNascimento">Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd</param>
+        /// <param name="cpf">N\u00FAmero do CPF, quando PF (optional)</param>
+        /// <param name="cnpj">N\u00FAmero do CNPJ, quando PJ (optional)</param>
+        /// <param name="sexo">Sexo da Pessoa (optional)</param>
+        /// <param name="numeroIdentidade">N\u00FAmero da Identidade (optional)</param>
+        /// <param name="orgaoExpedidorIdentidade">Org\u00E3o expedidor do Identidade (optional)</param>
+        /// <param name="unidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade (optional)</param>
+        /// <param name="dataEmissaoIdentidade">Data emiss\u00E3o da Identidade (optional)</param>
+        /// <param name="usuarioAlteracao">Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o (optional)</param>
+        /// <returns>Task of ApiResponse (PessoaResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PessoaResponse>> SalvarPessoaAsyncWithHttpInfo (string nome, string tipo, string dataNascimento, string cpf = null, string cnpj = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null, string usuarioAlteracao = null);
+        
+        /// <summary>
+        /// Salvar os detalhes de uma determinada Pessoa
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que seja incluido na base do emissor os detalhes de uma determinada Pessoa
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idPessoa">Apresenta o c\u00F3digo identificador da pessoa</param>
+        /// <param name="nomeMae">Apresenta o nome da m\u00E3e da pessoa fisica (optional)</param>
+        /// <param name="idEstadoCivil">Id Estado civil da pessoa fisica (optional)</param>
+        /// <param name="idProfissao">Profiss\u00E3o da pessoa fisica (optional)</param>
+        /// <param name="idNaturezaOcupacao">Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica (optional)</param>
+        /// <param name="idNacionalidade">Id Nacionalidade da pessoa fisica (optional)</param>
+        /// <param name="numeroBanco">N\u00FAmero do banco (optional)</param>
+        /// <param name="numeroAgencia">N\u00FAmero da ag\u00EAncia (optional)</param>
+        /// <param name="numeroContaCorrente">N\u00FAmero da conta corrente (optional)</param>
+        /// <param name="email">Email da pessoa fisica (optional)</param>
+        /// <param name="nomeEmpresa">Nome que deve ser impresso no cart\u00E3o (optional)</param>
+        /// <param name="nomeReferencia1">Nome de refer\u00EAncia 1 (optional)</param>
+        /// <param name="enderecoReferencia1">Endere\u00E7o de refer\u00EAncia 1 (optional)</param>
+        /// <param name="nomeReferencia2">Nome de refer\u00EAncia 2 (optional)</param>
+        /// <param name="enderecoReferencia2">Endere\u00E7o de refer\u00EAncia 2 (optional)</param>
+        /// <param name="naturalidadeCidade">Apresenta o nome da cidade de nascimento da pessoa f\u00EDsica (optional)</param>
+        /// <param name="naturalidadeEstado">Apresenta a sigla do estado de nascimento da pessoa f\u00EDsica (optional)</param>
+        /// <param name="grauInstrucao">Apresenta o grau de instru\u00E7\u00E3o da pessoa f\u00EDsica (optional)</param>
+        /// <param name="numeroDependentes">Apresenta o n\u00FAmero de dependentes da pessoa f\u00EDsica (optional)</param>
+        /// <param name="nomePai">Apresenta o nome do pai da pessoa f\u00EDsica (optional)</param>
+        /// <param name="chequeEspecial">Indica se pessoa f\u00EDsica aderir ao cheque especial (optional)</param>
+        /// <param name="impedidoFinanciamento">Flag para s\u00F3cios do banco que s\u00E3o portadores do cart\u00E3o, mas n\u00E3o podem operar transa\u00E7\u00F5es de cr\u00E9dito(Lei n. 4.595/64) (optional)</param>
+        /// <param name="numeroCnh">N\u00FAmero da CNH da pessoa (optional)</param>
+        /// <param name="pessoaPoliticamenteExposta">Flag para identificar se a pessoa \u00E9 politicamente exposta (optional)</param>
+        /// <param name="patrimonioTotal">Patrim\u00F4nio total da pessoa (optional)</param>
+        /// <param name="salario">Sal\u00E1rio da pessoa (optional)</param>
+        /// <param name="nomeConjuge">Nome do c\u00F4njuge da pessoa (optional)</param>
+        /// <returns>Task of PessoaDetalheResponse</returns>
+        System.Threading.Tasks.Task<PessoaDetalheResponse> SalvarPessoaDetalheAsync (long? idPessoa, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string nomeReferencia1 = null, string enderecoReferencia1 = null, string nomeReferencia2 = null, string enderecoReferencia2 = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null, string numeroCnh = null, bool? pessoaPoliticamenteExposta = null, double? patrimonioTotal = null, double? salario = null, string nomeConjuge = null);
+
+        /// <summary>
+        /// Salvar os detalhes de uma determinada Pessoa
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que seja incluido na base do emissor os detalhes de uma determinada Pessoa
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idPessoa">Apresenta o c\u00F3digo identificador da pessoa</param>
+        /// <param name="nomeMae">Apresenta o nome da m\u00E3e da pessoa fisica (optional)</param>
+        /// <param name="idEstadoCivil">Id Estado civil da pessoa fisica (optional)</param>
+        /// <param name="idProfissao">Profiss\u00E3o da pessoa fisica (optional)</param>
+        /// <param name="idNaturezaOcupacao">Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica (optional)</param>
+        /// <param name="idNacionalidade">Id Nacionalidade da pessoa fisica (optional)</param>
+        /// <param name="numeroBanco">N\u00FAmero do banco (optional)</param>
+        /// <param name="numeroAgencia">N\u00FAmero da ag\u00EAncia (optional)</param>
+        /// <param name="numeroContaCorrente">N\u00FAmero da conta corrente (optional)</param>
+        /// <param name="email">Email da pessoa fisica (optional)</param>
+        /// <param name="nomeEmpresa">Nome que deve ser impresso no cart\u00E3o (optional)</param>
+        /// <param name="nomeReferencia1">Nome de refer\u00EAncia 1 (optional)</param>
+        /// <param name="enderecoReferencia1">Endere\u00E7o de refer\u00EAncia 1 (optional)</param>
+        /// <param name="nomeReferencia2">Nome de refer\u00EAncia 2 (optional)</param>
+        /// <param name="enderecoReferencia2">Endere\u00E7o de refer\u00EAncia 2 (optional)</param>
+        /// <param name="naturalidadeCidade">Apresenta o nome da cidade de nascimento da pessoa f\u00EDsica (optional)</param>
+        /// <param name="naturalidadeEstado">Apresenta a sigla do estado de nascimento da pessoa f\u00EDsica (optional)</param>
+        /// <param name="grauInstrucao">Apresenta o grau de instru\u00E7\u00E3o da pessoa f\u00EDsica (optional)</param>
+        /// <param name="numeroDependentes">Apresenta o n\u00FAmero de dependentes da pessoa f\u00EDsica (optional)</param>
+        /// <param name="nomePai">Apresenta o nome do pai da pessoa f\u00EDsica (optional)</param>
+        /// <param name="chequeEspecial">Indica se pessoa f\u00EDsica aderir ao cheque especial (optional)</param>
+        /// <param name="impedidoFinanciamento">Flag para s\u00F3cios do banco que s\u00E3o portadores do cart\u00E3o, mas n\u00E3o podem operar transa\u00E7\u00F5es de cr\u00E9dito(Lei n. 4.595/64) (optional)</param>
+        /// <param name="numeroCnh">N\u00FAmero da CNH da pessoa (optional)</param>
+        /// <param name="pessoaPoliticamenteExposta">Flag para identificar se a pessoa \u00E9 politicamente exposta (optional)</param>
+        /// <param name="patrimonioTotal">Patrim\u00F4nio total da pessoa (optional)</param>
+        /// <param name="salario">Sal\u00E1rio da pessoa (optional)</param>
+        /// <param name="nomeConjuge">Nome do c\u00F4njuge da pessoa (optional)</param>
+        /// <returns>Task of ApiResponse (PessoaDetalheResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PessoaDetalheResponse>> SalvarPessoaDetalheAsyncWithHttpInfo (long? idPessoa, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string nomeReferencia1 = null, string enderecoReferencia1 = null, string nomeReferencia2 = null, string enderecoReferencia2 = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null, string numeroCnh = null, bool? pessoaPoliticamenteExposta = null, double? patrimonioTotal = null, double? salario = null, string nomeConjuge = null);
         
         /// <summary>
         /// Cadastro de Conta e Pessoa Fisica
@@ -2238,6 +2400,30 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<PessoaJuridicaAprovadaResponse>> SalvarPessoaJuridicaAprovadaAsyncWithHttpInfo (PessoaJuridicaAprovadaPersist pessoaPersist);
         
         /// <summary>
+        /// Inclui a conta como registro para integra\u00E7\u00E3o
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite incluir uma conta como registro para integra\u00E7\u00E3o
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">idConta</param>
+        /// <param name="body">IntegracaoEmissorPersist (optional)</param>
+        /// <returns>Task of IntegracaoEmissorResponse</returns>
+        System.Threading.Tasks.Task<IntegracaoEmissorResponse> SalvarRegistroIntegracaoContaAsync (long? id, IntegracaoEmissorPersist body = null);
+
+        /// <summary>
+        /// Inclui a conta como registro para integra\u00E7\u00E3o
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite incluir uma conta como registro para integra\u00E7\u00E3o
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">idConta</param>
+        /// <param name="body">IntegracaoEmissorPersist (optional)</param>
+        /// <returns>Task of ApiResponse (IntegracaoEmissorResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<IntegracaoEmissorResponse>> SalvarRegistroIntegracaoContaAsyncWithHttpInfo (long? id, IntegracaoEmissorPersist body = null);
+        
+        /// <summary>
         /// Inclui registro de integra\u00E7\u00E3o
         /// </summary>
         /// <remarks>
@@ -2247,7 +2433,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">Identificador da conta</param>
         /// <param name="integracaoEmissorPropostaPersist">integracaoEmissorPropostaPersist</param>
         /// <returns>Task of IntegracaoEmissorPropostaResponse</returns>
-        System.Threading.Tasks.Task<IntegracaoEmissorPropostaResponse> SalvarRegistroIntegracaoManagerAsync (long? id, IntegracaoEmissorPropostaPersist integracaoEmissorPropostaPersist);
+        System.Threading.Tasks.Task<IntegracaoEmissorPropostaResponse> SalvarRegistroIntegracaoManagerContaAsync (long? id, IntegracaoEmissorPropostaPersist integracaoEmissorPropostaPersist);
 
         /// <summary>
         /// Inclui registro de integra\u00E7\u00E3o
@@ -2259,161 +2445,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">Identificador da conta</param>
         /// <param name="integracaoEmissorPropostaPersist">integracaoEmissorPropostaPersist</param>
         /// <returns>Task of ApiResponse (IntegracaoEmissorPropostaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<IntegracaoEmissorPropostaResponse>> SalvarRegistroIntegracaoManagerAsyncWithHttpInfo (long? id, IntegracaoEmissorPropostaPersist integracaoEmissorPropostaPersist);
-        
-        /// <summary>
-        /// Realiza o cadastro de um novo Endere\u00E7o
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite que seja cadastrado um novo Endere\u00E7o na base de dados do Emissor
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o endere\u00E7o pertence (id) (optional)</param>
-        /// <param name="idTipoEndereco">C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id) (optional)</param>
-        /// <param name="cep">CEP do endere\u00E7o (optional)</param>
-        /// <param name="logradouro">Apresenta o nome do Logradouro (optional)</param>
-        /// <param name="numero">Apresenta o n\u00FAmero do endere\u00E7o (optional)</param>
-        /// <param name="complemento">Apresenta descri\u00E7oes complementares referente ao endere\u00E7o (optional)</param>
-        /// <param name="pontoReferencia">Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o (optional)</param>
-        /// <param name="bairro">Apresenta nome do bairro (optional)</param>
-        /// <param name="cidade">Apresenta nome da cidade (optional)</param>
-        /// <param name="uf">Apresenta sigla da Unidade Federativa (optional)</param>
-        /// <param name="pais">Apresenta nome do Pa\u00EDs (optional)</param>
-        /// <param name="tempoResidenciaAnos">Apresenta a quantidade de anos em que habita na resid\u00EAncia (optional)</param>
-        /// <param name="tempoResidenciaMeses">Apresenta a quantidade de meses que habita na resid\u00EAncia (optional)</param>
-        /// <param name="aplicativoAlteracao">Apresenta a aplica\u00E7\u00E3o respons\u00E1vel por alterar o endere\u00E7o (optional)</param>
-        /// <returns>Task of EnderecoResponse</returns>
-        System.Threading.Tasks.Task<EnderecoResponse> Salvar_0Async (long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null, string aplicativoAlteracao = null);
-
-        /// <summary>
-        /// Realiza o cadastro de um novo Endere\u00E7o
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite que seja cadastrado um novo Endere\u00E7o na base de dados do Emissor
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o endere\u00E7o pertence (id) (optional)</param>
-        /// <param name="idTipoEndereco">C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id) (optional)</param>
-        /// <param name="cep">CEP do endere\u00E7o (optional)</param>
-        /// <param name="logradouro">Apresenta o nome do Logradouro (optional)</param>
-        /// <param name="numero">Apresenta o n\u00FAmero do endere\u00E7o (optional)</param>
-        /// <param name="complemento">Apresenta descri\u00E7oes complementares referente ao endere\u00E7o (optional)</param>
-        /// <param name="pontoReferencia">Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o (optional)</param>
-        /// <param name="bairro">Apresenta nome do bairro (optional)</param>
-        /// <param name="cidade">Apresenta nome da cidade (optional)</param>
-        /// <param name="uf">Apresenta sigla da Unidade Federativa (optional)</param>
-        /// <param name="pais">Apresenta nome do Pa\u00EDs (optional)</param>
-        /// <param name="tempoResidenciaAnos">Apresenta a quantidade de anos em que habita na resid\u00EAncia (optional)</param>
-        /// <param name="tempoResidenciaMeses">Apresenta a quantidade de meses que habita na resid\u00EAncia (optional)</param>
-        /// <param name="aplicativoAlteracao">Apresenta a aplica\u00E7\u00E3o respons\u00E1vel por alterar o endere\u00E7o (optional)</param>
-        /// <returns>Task of ApiResponse (EnderecoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EnderecoResponse>> Salvar_0AsyncWithHttpInfo (long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null, string aplicativoAlteracao = null);
-        
-        /// <summary>
-        /// Realiza o cadastro de um nova Pessoa
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite que seja cadastrado uma nova Pessoa na base de dados do Emissor
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="nome">Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00E3o Social (Nome Empresarial)&#39;</param>
-        /// <param name="tipo">Tipo de Pessoa (PF ou PJ)</param>
-        /// <param name="dataNascimento">Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd</param>
-        /// <param name="cpf">N\u00FAmero do CPF, quando PF (optional)</param>
-        /// <param name="cnpj">N\u00FAmero do CNPJ, quando PJ (optional)</param>
-        /// <param name="sexo">Sexo da Pessoa (optional)</param>
-        /// <param name="numeroIdentidade">N\u00FAmero da Identidade (optional)</param>
-        /// <param name="orgaoExpedidorIdentidade">Org\u00E3o expedidor do Identidade (optional)</param>
-        /// <param name="unidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade (optional)</param>
-        /// <param name="dataEmissaoIdentidade">Data emiss\u00E3o da Identidade (optional)</param>
-        /// <returns>Task of PessoaResponse</returns>
-        System.Threading.Tasks.Task<PessoaResponse> Salvar_1Async (string nome, string tipo, string dataNascimento, string cpf = null, string cnpj = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null);
-
-        /// <summary>
-        /// Realiza o cadastro de um nova Pessoa
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite que seja cadastrado uma nova Pessoa na base de dados do Emissor
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="nome">Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00E3o Social (Nome Empresarial)&#39;</param>
-        /// <param name="tipo">Tipo de Pessoa (PF ou PJ)</param>
-        /// <param name="dataNascimento">Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd</param>
-        /// <param name="cpf">N\u00FAmero do CPF, quando PF (optional)</param>
-        /// <param name="cnpj">N\u00FAmero do CNPJ, quando PJ (optional)</param>
-        /// <param name="sexo">Sexo da Pessoa (optional)</param>
-        /// <param name="numeroIdentidade">N\u00FAmero da Identidade (optional)</param>
-        /// <param name="orgaoExpedidorIdentidade">Org\u00E3o expedidor do Identidade (optional)</param>
-        /// <param name="unidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade (optional)</param>
-        /// <param name="dataEmissaoIdentidade">Data emiss\u00E3o da Identidade (optional)</param>
-        /// <returns>Task of ApiResponse (PessoaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PessoaResponse>> Salvar_1AsyncWithHttpInfo (string nome, string tipo, string dataNascimento, string cpf = null, string cnpj = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null);
-        
-        /// <summary>
-        /// Salvar os detalhes de uma determinada Pessoa
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite que seja incluido na base do emissor os detalhes de uma determinada Pessoa
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idPessoa">Apresenta o c\u00F3digo identificador da pessoa</param>
-        /// <param name="nomeMae">Apresenta o nome da m\u00E3e da pessoa fisica (optional)</param>
-        /// <param name="idEstadoCivil">Id Estado civil da pessoa fisica (optional)</param>
-        /// <param name="idProfissao">Profiss\u00E3o da pessoa fisica (optional)</param>
-        /// <param name="idNaturezaOcupacao">Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica (optional)</param>
-        /// <param name="idNacionalidade">Id Nacionalidade da pessoa fisica (optional)</param>
-        /// <param name="numeroBanco">N\u00FAmero do banco (optional)</param>
-        /// <param name="numeroAgencia">N\u00FAmero da ag\u00EAncia (optional)</param>
-        /// <param name="numeroContaCorrente">N\u00FAmero da conta corrente (optional)</param>
-        /// <param name="email">Email da pessoa fisica (optional)</param>
-        /// <param name="nomeEmpresa">Nome que deve ser impresso no cart\u00E3o (optional)</param>
-        /// <param name="nomeReferencia1">Nome de refer\u00EAncia 1 (optional)</param>
-        /// <param name="enderecoReferencia1">Endere\u00E7o de refer\u00EAncia 1 (optional)</param>
-        /// <param name="nomeReferencia2">Nome de refer\u00EAncia 2 (optional)</param>
-        /// <param name="enderecoReferencia2">Endere\u00E7o de refer\u00EAncia 2 (optional)</param>
-        /// <param name="naturalidadeCidade">Apresenta o nome da cidade de nascimento da pessoa f\u00EDsica (optional)</param>
-        /// <param name="naturalidadeEstado">Apresenta a sigla do estado de nascimento da pessoa f\u00EDsica (optional)</param>
-        /// <param name="grauInstrucao">Apresenta o grau de instru\u00E7\u00E3o da pessoa f\u00EDsica (optional)</param>
-        /// <param name="numeroDependentes">Apresenta o n\u00FAmero de dependentes da pessoa f\u00EDsica (optional)</param>
-        /// <param name="nomePai">Apresenta o nome do pai da pessoa f\u00EDsica (optional)</param>
-        /// <param name="chequeEspecial">Indica se pessoa f\u00EDsica aderir ao cheque especial (optional)</param>
-        /// <param name="impedidoFinanciamento">Flag para s\u00F3cios do banco que s\u00E3o portadores do cart\u00E3o, mas n\u00E3o podem operar transa\u00E7\u00F5es de cr\u00E9dito(Lei n. 4.595/64) (optional)</param>
-        /// <param name="numeroCnh">N\u00FAmero da CNH da pessoa (optional)</param>
-        /// <returns>Task of PessoaDetalheResponse</returns>
-        System.Threading.Tasks.Task<PessoaDetalheResponse> Salvar_2Async (long? idPessoa, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string nomeReferencia1 = null, string enderecoReferencia1 = null, string nomeReferencia2 = null, string enderecoReferencia2 = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null, string numeroCnh = null);
-
-        /// <summary>
-        /// Salvar os detalhes de uma determinada Pessoa
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite que seja incluido na base do emissor os detalhes de uma determinada Pessoa
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idPessoa">Apresenta o c\u00F3digo identificador da pessoa</param>
-        /// <param name="nomeMae">Apresenta o nome da m\u00E3e da pessoa fisica (optional)</param>
-        /// <param name="idEstadoCivil">Id Estado civil da pessoa fisica (optional)</param>
-        /// <param name="idProfissao">Profiss\u00E3o da pessoa fisica (optional)</param>
-        /// <param name="idNaturezaOcupacao">Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica (optional)</param>
-        /// <param name="idNacionalidade">Id Nacionalidade da pessoa fisica (optional)</param>
-        /// <param name="numeroBanco">N\u00FAmero do banco (optional)</param>
-        /// <param name="numeroAgencia">N\u00FAmero da ag\u00EAncia (optional)</param>
-        /// <param name="numeroContaCorrente">N\u00FAmero da conta corrente (optional)</param>
-        /// <param name="email">Email da pessoa fisica (optional)</param>
-        /// <param name="nomeEmpresa">Nome que deve ser impresso no cart\u00E3o (optional)</param>
-        /// <param name="nomeReferencia1">Nome de refer\u00EAncia 1 (optional)</param>
-        /// <param name="enderecoReferencia1">Endere\u00E7o de refer\u00EAncia 1 (optional)</param>
-        /// <param name="nomeReferencia2">Nome de refer\u00EAncia 2 (optional)</param>
-        /// <param name="enderecoReferencia2">Endere\u00E7o de refer\u00EAncia 2 (optional)</param>
-        /// <param name="naturalidadeCidade">Apresenta o nome da cidade de nascimento da pessoa f\u00EDsica (optional)</param>
-        /// <param name="naturalidadeEstado">Apresenta a sigla do estado de nascimento da pessoa f\u00EDsica (optional)</param>
-        /// <param name="grauInstrucao">Apresenta o grau de instru\u00E7\u00E3o da pessoa f\u00EDsica (optional)</param>
-        /// <param name="numeroDependentes">Apresenta o n\u00FAmero de dependentes da pessoa f\u00EDsica (optional)</param>
-        /// <param name="nomePai">Apresenta o nome do pai da pessoa f\u00EDsica (optional)</param>
-        /// <param name="chequeEspecial">Indica se pessoa f\u00EDsica aderir ao cheque especial (optional)</param>
-        /// <param name="impedidoFinanciamento">Flag para s\u00F3cios do banco que s\u00E3o portadores do cart\u00E3o, mas n\u00E3o podem operar transa\u00E7\u00F5es de cr\u00E9dito(Lei n. 4.595/64) (optional)</param>
-        /// <param name="numeroCnh">N\u00FAmero da CNH da pessoa (optional)</param>
-        /// <returns>Task of ApiResponse (PessoaDetalheResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PessoaDetalheResponse>> Salvar_2AsyncWithHttpInfo (long? idPessoa, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string nomeReferencia1 = null, string enderecoReferencia1 = null, string nomeReferencia2 = null, string enderecoReferencia2 = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null, string numeroCnh = null);
+        System.Threading.Tasks.Task<ApiResponse<IntegracaoEmissorPropostaResponse>> SalvarRegistroIntegracaoManagerContaAsyncWithHttpInfo (long? id, IntegracaoEmissorPropostaPersist integracaoEmissorPropostaPersist);
         
         /// <summary>
         /// Realiza o cadastro de um novo Telefone
@@ -2428,7 +2460,7 @@ namespace Conductor.Pier.Api
         /// <param name="telefone">N\u00FAmero do telefone (optional)</param>
         /// <param name="ramal">N\u00FAmero do ramal (optional)</param>
         /// <returns>Task of TelefoneResponse</returns>
-        System.Threading.Tasks.Task<TelefoneResponse> Salvar_3Async (long? idTipoTelefone = null, long? idPessoa = null, string ddd = null, string telefone = null, string ramal = null);
+        System.Threading.Tasks.Task<TelefoneResponse> SalvarTelefoneAsync (long? idTipoTelefone = null, long? idPessoa = null, string ddd = null, string telefone = null, string ramal = null);
 
         /// <summary>
         /// Realiza o cadastro de um novo Telefone
@@ -2443,7 +2475,31 @@ namespace Conductor.Pier.Api
         /// <param name="telefone">N\u00FAmero do telefone (optional)</param>
         /// <param name="ramal">N\u00FAmero do ramal (optional)</param>
         /// <returns>Task of ApiResponse (TelefoneResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TelefoneResponse>> Salvar_3AsyncWithHttpInfo (long? idTipoTelefone = null, long? idPessoa = null, string ddd = null, string telefone = null, string ramal = null);
+        System.Threading.Tasks.Task<ApiResponse<TelefoneResponse>> SalvarTelefoneAsyncWithHttpInfo (long? idTipoTelefone = null, long? idPessoa = null, string ddd = null, string telefone = null, string ramal = null);
+        
+        /// <summary>
+        /// Realiza o cadastro de Adicionais para uma Conta
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que sejam cadastrados um portador Adicional para uma determinada Conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
+        /// <param name="persist">persist</param>
+        /// <returns>Task of AdicionalDetalheResponse</returns>
+        System.Threading.Tasks.Task<AdicionalDetalheResponse> VincularAdicionalContaAsync (long? id, AdicionalPersist persist);
+
+        /// <summary>
+        /// Realiza o cadastro de Adicionais para uma Conta
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que sejam cadastrados um portador Adicional para uma determinada Conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
+        /// <param name="persist">persist</param>
+        /// <returns>Task of ApiResponse (AdicionalDetalheResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AdicionalDetalheResponse>> VincularAdicionalContaAsyncWithHttpInfo (long? id, AdicionalPersist persist);
         
         #endregion Asynchronous Operations
         
@@ -2545,9 +2601,9 @@ namespace Conductor.Pier.Api
         /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da pessoa (id)</param> 
         /// <param name="adicionalUpdate">adicionalUpdate</param> 
         /// <returns>AdicionalDetalheResponse</returns>
-        public AdicionalDetalheResponse Alterar (long? id, long? idPessoa, AdicionalUpdate adicionalUpdate)
+        public AdicionalDetalheResponse AlterarAdicionalConta (long? id, long? idPessoa, AdicionalUpdate adicionalUpdate)
         {
-             ApiResponse<AdicionalDetalheResponse> localVarResponse = AlterarWithHttpInfo(id, idPessoa, adicionalUpdate);
+             ApiResponse<AdicionalDetalheResponse> localVarResponse = AlterarAdicionalContaWithHttpInfo(id, idPessoa, adicionalUpdate);
              return localVarResponse.Data;
         }
 
@@ -2559,20 +2615,20 @@ namespace Conductor.Pier.Api
         /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da pessoa (id)</param> 
         /// <param name="adicionalUpdate">adicionalUpdate</param> 
         /// <returns>ApiResponse of AdicionalDetalheResponse</returns>
-        public ApiResponse< AdicionalDetalheResponse > AlterarWithHttpInfo (long? id, long? idPessoa, AdicionalUpdate adicionalUpdate)
+        public ApiResponse< AdicionalDetalheResponse > AlterarAdicionalContaWithHttpInfo (long? id, long? idPessoa, AdicionalUpdate adicionalUpdate)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling CadastroClienteApi->Alterar");
+                throw new ApiException(400, "Missing required parameter 'id' when calling CadastroClienteApi->AlterarAdicionalConta");
             
             // verify the required parameter 'idPessoa' is set
             if (idPessoa == null)
-                throw new ApiException(400, "Missing required parameter 'idPessoa' when calling CadastroClienteApi->Alterar");
+                throw new ApiException(400, "Missing required parameter 'idPessoa' when calling CadastroClienteApi->AlterarAdicionalConta");
             
             // verify the required parameter 'adicionalUpdate' is set
             if (adicionalUpdate == null)
-                throw new ApiException(400, "Missing required parameter 'adicionalUpdate' when calling CadastroClienteApi->Alterar");
+                throw new ApiException(400, "Missing required parameter 'adicionalUpdate' when calling CadastroClienteApi->AlterarAdicionalConta");
             
     
             var localVarPath = "/api/contas/{id}/adicionais/{idPessoa}";
@@ -2626,9 +2682,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Alterar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarAdicionalConta: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Alterar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarAdicionalConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<AdicionalDetalheResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2645,9 +2701,9 @@ namespace Conductor.Pier.Api
         /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da pessoa (id)</param>
         /// <param name="adicionalUpdate">adicionalUpdate</param>
         /// <returns>Task of AdicionalDetalheResponse</returns>
-        public async System.Threading.Tasks.Task<AdicionalDetalheResponse> AlterarAsync (long? id, long? idPessoa, AdicionalUpdate adicionalUpdate)
+        public async System.Threading.Tasks.Task<AdicionalDetalheResponse> AlterarAdicionalContaAsync (long? id, long? idPessoa, AdicionalUpdate adicionalUpdate)
         {
-             ApiResponse<AdicionalDetalheResponse> localVarResponse = await AlterarAsyncWithHttpInfo(id, idPessoa, adicionalUpdate);
+             ApiResponse<AdicionalDetalheResponse> localVarResponse = await AlterarAdicionalContaAsyncWithHttpInfo(id, idPessoa, adicionalUpdate);
              return localVarResponse.Data;
 
         }
@@ -2660,14 +2716,14 @@ namespace Conductor.Pier.Api
         /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da pessoa (id)</param>
         /// <param name="adicionalUpdate">adicionalUpdate</param>
         /// <returns>Task of ApiResponse (AdicionalDetalheResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AdicionalDetalheResponse>> AlterarAsyncWithHttpInfo (long? id, long? idPessoa, AdicionalUpdate adicionalUpdate)
+        public async System.Threading.Tasks.Task<ApiResponse<AdicionalDetalheResponse>> AlterarAdicionalContaAsyncWithHttpInfo (long? id, long? idPessoa, AdicionalUpdate adicionalUpdate)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling Alterar");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AlterarAdicionalConta");
             // verify the required parameter 'idPessoa' is set
-            if (idPessoa == null) throw new ApiException(400, "Missing required parameter 'idPessoa' when calling Alterar");
+            if (idPessoa == null) throw new ApiException(400, "Missing required parameter 'idPessoa' when calling AlterarAdicionalConta");
             // verify the required parameter 'adicionalUpdate' is set
-            if (adicionalUpdate == null) throw new ApiException(400, "Missing required parameter 'adicionalUpdate' when calling Alterar");
+            if (adicionalUpdate == null) throw new ApiException(400, "Missing required parameter 'adicionalUpdate' when calling AlterarAdicionalConta");
             
     
             var localVarPath = "/api/contas/{id}/adicionais/{idPessoa}";
@@ -2721,9 +2777,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Alterar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarAdicionalConta: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Alterar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarAdicionalConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<AdicionalDetalheResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2750,10 +2806,11 @@ namespace Conductor.Pier.Api
         /// <param name="tempoResidenciaAnos">Apresenta a quantidade de anos em que habita na resid\u00EAncia (optional)</param> 
         /// <param name="tempoResidenciaMeses">Apresenta a quantidade de meses que habita na resid\u00EAncia (optional)</param> 
         /// <param name="aplicativoAlteracao">Apresenta a aplica\u00E7\u00E3o respons\u00E1vel por alterar o endere\u00E7o (optional)</param> 
+        /// <param name="usuarioAlteracao">Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o (optional)</param> 
         /// <returns>EnderecoResponse</returns>
-        public EnderecoResponse Alterar_0 (long? id, long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null, string aplicativoAlteracao = null)
+        public EnderecoResponse AlterarEndereco (long? id, long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null, string aplicativoAlteracao = null, string usuarioAlteracao = null)
         {
-             ApiResponse<EnderecoResponse> localVarResponse = Alterar_0WithHttpInfo(id, idPessoa, idTipoEndereco, cep, logradouro, numero, complemento, pontoReferencia, bairro, cidade, uf, pais, tempoResidenciaAnos, tempoResidenciaMeses, aplicativoAlteracao);
+             ApiResponse<EnderecoResponse> localVarResponse = AlterarEnderecoWithHttpInfo(id, idPessoa, idTipoEndereco, cep, logradouro, numero, complemento, pontoReferencia, bairro, cidade, uf, pais, tempoResidenciaAnos, tempoResidenciaMeses, aplicativoAlteracao, usuarioAlteracao);
              return localVarResponse.Data;
         }
 
@@ -2776,13 +2833,14 @@ namespace Conductor.Pier.Api
         /// <param name="tempoResidenciaAnos">Apresenta a quantidade de anos em que habita na resid\u00EAncia (optional)</param> 
         /// <param name="tempoResidenciaMeses">Apresenta a quantidade de meses que habita na resid\u00EAncia (optional)</param> 
         /// <param name="aplicativoAlteracao">Apresenta a aplica\u00E7\u00E3o respons\u00E1vel por alterar o endere\u00E7o (optional)</param> 
+        /// <param name="usuarioAlteracao">Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o (optional)</param> 
         /// <returns>ApiResponse of EnderecoResponse</returns>
-        public ApiResponse< EnderecoResponse > Alterar_0WithHttpInfo (long? id, long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null, string aplicativoAlteracao = null)
+        public ApiResponse< EnderecoResponse > AlterarEnderecoWithHttpInfo (long? id, long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null, string aplicativoAlteracao = null, string usuarioAlteracao = null)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling CadastroClienteApi->Alterar_0");
+                throw new ApiException(400, "Missing required parameter 'id' when calling CadastroClienteApi->AlterarEndereco");
             
     
             var localVarPath = "/api/enderecos";
@@ -2827,6 +2885,7 @@ namespace Conductor.Pier.Api
             if (tempoResidenciaAnos != null) localVarQueryParams.Add("tempoResidenciaAnos", Configuration.ApiClient.ParameterToString(tempoResidenciaAnos)); // query parameter
             if (tempoResidenciaMeses != null) localVarQueryParams.Add("tempoResidenciaMeses", Configuration.ApiClient.ParameterToString(tempoResidenciaMeses)); // query parameter
             if (aplicativoAlteracao != null) localVarQueryParams.Add("aplicativoAlteracao", Configuration.ApiClient.ParameterToString(aplicativoAlteracao)); // query parameter
+            if (usuarioAlteracao != null) localVarQueryParams.Add("usuarioAlteracao", Configuration.ApiClient.ParameterToString(usuarioAlteracao)); // query parameter
             
             
             
@@ -2842,9 +2901,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Alterar_0: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarEndereco: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Alterar_0: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarEndereco: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<EnderecoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2872,10 +2931,11 @@ namespace Conductor.Pier.Api
         /// <param name="tempoResidenciaAnos">Apresenta a quantidade de anos em que habita na resid\u00EAncia (optional)</param>
         /// <param name="tempoResidenciaMeses">Apresenta a quantidade de meses que habita na resid\u00EAncia (optional)</param>
         /// <param name="aplicativoAlteracao">Apresenta a aplica\u00E7\u00E3o respons\u00E1vel por alterar o endere\u00E7o (optional)</param>
+        /// <param name="usuarioAlteracao">Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o (optional)</param>
         /// <returns>Task of EnderecoResponse</returns>
-        public async System.Threading.Tasks.Task<EnderecoResponse> Alterar_0Async (long? id, long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null, string aplicativoAlteracao = null)
+        public async System.Threading.Tasks.Task<EnderecoResponse> AlterarEnderecoAsync (long? id, long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null, string aplicativoAlteracao = null, string usuarioAlteracao = null)
         {
-             ApiResponse<EnderecoResponse> localVarResponse = await Alterar_0AsyncWithHttpInfo(id, idPessoa, idTipoEndereco, cep, logradouro, numero, complemento, pontoReferencia, bairro, cidade, uf, pais, tempoResidenciaAnos, tempoResidenciaMeses, aplicativoAlteracao);
+             ApiResponse<EnderecoResponse> localVarResponse = await AlterarEnderecoAsyncWithHttpInfo(id, idPessoa, idTipoEndereco, cep, logradouro, numero, complemento, pontoReferencia, bairro, cidade, uf, pais, tempoResidenciaAnos, tempoResidenciaMeses, aplicativoAlteracao, usuarioAlteracao);
              return localVarResponse.Data;
 
         }
@@ -2899,11 +2959,12 @@ namespace Conductor.Pier.Api
         /// <param name="tempoResidenciaAnos">Apresenta a quantidade de anos em que habita na resid\u00EAncia (optional)</param>
         /// <param name="tempoResidenciaMeses">Apresenta a quantidade de meses que habita na resid\u00EAncia (optional)</param>
         /// <param name="aplicativoAlteracao">Apresenta a aplica\u00E7\u00E3o respons\u00E1vel por alterar o endere\u00E7o (optional)</param>
+        /// <param name="usuarioAlteracao">Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o (optional)</param>
         /// <returns>Task of ApiResponse (EnderecoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EnderecoResponse>> Alterar_0AsyncWithHttpInfo (long? id, long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null, string aplicativoAlteracao = null)
+        public async System.Threading.Tasks.Task<ApiResponse<EnderecoResponse>> AlterarEnderecoAsyncWithHttpInfo (long? id, long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null, string aplicativoAlteracao = null, string usuarioAlteracao = null)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling Alterar_0");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AlterarEndereco");
             
     
             var localVarPath = "/api/enderecos";
@@ -2948,6 +3009,7 @@ namespace Conductor.Pier.Api
             if (tempoResidenciaAnos != null) localVarQueryParams.Add("tempoResidenciaAnos", Configuration.ApiClient.ParameterToString(tempoResidenciaAnos)); // query parameter
             if (tempoResidenciaMeses != null) localVarQueryParams.Add("tempoResidenciaMeses", Configuration.ApiClient.ParameterToString(tempoResidenciaMeses)); // query parameter
             if (aplicativoAlteracao != null) localVarQueryParams.Add("aplicativoAlteracao", Configuration.ApiClient.ParameterToString(aplicativoAlteracao)); // query parameter
+            if (usuarioAlteracao != null) localVarQueryParams.Add("usuarioAlteracao", Configuration.ApiClient.ParameterToString(usuarioAlteracao)); // query parameter
             
             
             
@@ -2963,9 +3025,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Alterar_0: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarEndereco: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Alterar_0: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarEndereco: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<EnderecoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2974,296 +3036,6 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Atualiza os detalhes de uma determinada Pessoa Este m\u00E9todo permite que seja alterado na base do emissor os detalhes de uma determinada Pessoa
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">ID da Pessoa</param> 
-        /// <param name="nomeMae">Apresenta o nome da m\u00E3e da pessoa fisica (optional)</param> 
-        /// <param name="idEstadoCivil">Id Estado civil da pessoa fisica (optional)</param> 
-        /// <param name="idProfissao">Profiss\u00E3o da pessoa fisica (optional)</param> 
-        /// <param name="idNaturezaOcupacao">Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica (optional)</param> 
-        /// <param name="idNacionalidade">Id Nacionalidade da pessoa fisica (optional)</param> 
-        /// <param name="numeroBanco">N\u00FAmero do banco (optional)</param> 
-        /// <param name="numeroAgencia">N\u00FAmero da ag\u00EAncia (optional)</param> 
-        /// <param name="numeroContaCorrente">N\u00FAmero da conta corrente (optional)</param> 
-        /// <param name="email">Email da pessoa fisica (optional)</param> 
-        /// <param name="nomeEmpresa">Nome que deve ser impresso no cart\u00E3o (optional)</param> 
-        /// <param name="nomeReferencia1">Nome de refer\u00EAncia 1 (optional)</param> 
-        /// <param name="enderecoReferencia1">Endere\u00E7o de refer\u00EAncia 1 (optional)</param> 
-        /// <param name="nomeReferencia2">Nome de refer\u00EAncia 2 (optional)</param> 
-        /// <param name="enderecoReferencia2">Endere\u00E7o de refer\u00EAncia 2 (optional)</param> 
-        /// <param name="impedidoFinanciamento">Flag para s\u00F3cios do banco que s\u00E3o portadores do cart\u00E3o, mas n\u00E3o podem operar transa\u00E7\u00F5es de cr\u00E9dito(Lei n. 4.595/64) (optional)</param> 
-        /// <param name="naturalidadeCidade">Apresenta o nome da cidade de nascimento da pessoa f\u00EDsica (optional)</param> 
-        /// <param name="naturalidadeEstado">Apresenta a sigla do estado de nascimento da pessoa f\u00EDsica (optional)</param> 
-        /// <param name="grauInstrucao">Apresenta o grau de instru\u00E7\u00E3o da pessoa f\u00EDsica (optional)</param> 
-        /// <param name="numeroDependentes">Apresenta o n\u00FAmero de dependentes da pessoa f\u00EDsica (optional)</param> 
-        /// <param name="nomePai">Apresenta o nome do pai da pessoa f\u00EDsica (optional)</param> 
-        /// <param name="chequeEspecial">Indica se pessoa f\u00EDsica aderir ao cheque especial (optional)</param> 
-        /// <param name="numeroCnh">N\u00FAmero da CNH da pessoa (optional)</param> 
-        /// <returns>PessoaDetalheResponse</returns>
-        public PessoaDetalheResponse Alterar_1 (long? id, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string nomeReferencia1 = null, string enderecoReferencia1 = null, string nomeReferencia2 = null, string enderecoReferencia2 = null, bool? impedidoFinanciamento = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, string numeroCnh = null)
-        {
-             ApiResponse<PessoaDetalheResponse> localVarResponse = Alterar_1WithHttpInfo(id, nomeMae, idEstadoCivil, idProfissao, idNaturezaOcupacao, idNacionalidade, numeroBanco, numeroAgencia, numeroContaCorrente, email, nomeEmpresa, nomeReferencia1, enderecoReferencia1, nomeReferencia2, enderecoReferencia2, impedidoFinanciamento, naturalidadeCidade, naturalidadeEstado, grauInstrucao, numeroDependentes, nomePai, chequeEspecial, numeroCnh);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Atualiza os detalhes de uma determinada Pessoa Este m\u00E9todo permite que seja alterado na base do emissor os detalhes de uma determinada Pessoa
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">ID da Pessoa</param> 
-        /// <param name="nomeMae">Apresenta o nome da m\u00E3e da pessoa fisica (optional)</param> 
-        /// <param name="idEstadoCivil">Id Estado civil da pessoa fisica (optional)</param> 
-        /// <param name="idProfissao">Profiss\u00E3o da pessoa fisica (optional)</param> 
-        /// <param name="idNaturezaOcupacao">Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica (optional)</param> 
-        /// <param name="idNacionalidade">Id Nacionalidade da pessoa fisica (optional)</param> 
-        /// <param name="numeroBanco">N\u00FAmero do banco (optional)</param> 
-        /// <param name="numeroAgencia">N\u00FAmero da ag\u00EAncia (optional)</param> 
-        /// <param name="numeroContaCorrente">N\u00FAmero da conta corrente (optional)</param> 
-        /// <param name="email">Email da pessoa fisica (optional)</param> 
-        /// <param name="nomeEmpresa">Nome que deve ser impresso no cart\u00E3o (optional)</param> 
-        /// <param name="nomeReferencia1">Nome de refer\u00EAncia 1 (optional)</param> 
-        /// <param name="enderecoReferencia1">Endere\u00E7o de refer\u00EAncia 1 (optional)</param> 
-        /// <param name="nomeReferencia2">Nome de refer\u00EAncia 2 (optional)</param> 
-        /// <param name="enderecoReferencia2">Endere\u00E7o de refer\u00EAncia 2 (optional)</param> 
-        /// <param name="impedidoFinanciamento">Flag para s\u00F3cios do banco que s\u00E3o portadores do cart\u00E3o, mas n\u00E3o podem operar transa\u00E7\u00F5es de cr\u00E9dito(Lei n. 4.595/64) (optional)</param> 
-        /// <param name="naturalidadeCidade">Apresenta o nome da cidade de nascimento da pessoa f\u00EDsica (optional)</param> 
-        /// <param name="naturalidadeEstado">Apresenta a sigla do estado de nascimento da pessoa f\u00EDsica (optional)</param> 
-        /// <param name="grauInstrucao">Apresenta o grau de instru\u00E7\u00E3o da pessoa f\u00EDsica (optional)</param> 
-        /// <param name="numeroDependentes">Apresenta o n\u00FAmero de dependentes da pessoa f\u00EDsica (optional)</param> 
-        /// <param name="nomePai">Apresenta o nome do pai da pessoa f\u00EDsica (optional)</param> 
-        /// <param name="chequeEspecial">Indica se pessoa f\u00EDsica aderir ao cheque especial (optional)</param> 
-        /// <param name="numeroCnh">N\u00FAmero da CNH da pessoa (optional)</param> 
-        /// <returns>ApiResponse of PessoaDetalheResponse</returns>
-        public ApiResponse< PessoaDetalheResponse > Alterar_1WithHttpInfo (long? id, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string nomeReferencia1 = null, string enderecoReferencia1 = null, string nomeReferencia2 = null, string enderecoReferencia2 = null, bool? impedidoFinanciamento = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, string numeroCnh = null)
-        {
-            
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling CadastroClienteApi->Alterar_1");
-            
-    
-            var localVarPath = "/api/pessoas-detalhes/{id}";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            
-            if (nomeMae != null) localVarQueryParams.Add("nomeMae", Configuration.ApiClient.ParameterToString(nomeMae)); // query parameter
-            if (idEstadoCivil != null) localVarQueryParams.Add("idEstadoCivil", Configuration.ApiClient.ParameterToString(idEstadoCivil)); // query parameter
-            if (idProfissao != null) localVarQueryParams.Add("idProfissao", Configuration.ApiClient.ParameterToString(idProfissao)); // query parameter
-            if (idNaturezaOcupacao != null) localVarQueryParams.Add("idNaturezaOcupacao", Configuration.ApiClient.ParameterToString(idNaturezaOcupacao)); // query parameter
-            if (idNacionalidade != null) localVarQueryParams.Add("idNacionalidade", Configuration.ApiClient.ParameterToString(idNacionalidade)); // query parameter
-            if (numeroBanco != null) localVarQueryParams.Add("numeroBanco", Configuration.ApiClient.ParameterToString(numeroBanco)); // query parameter
-            if (numeroAgencia != null) localVarQueryParams.Add("numeroAgencia", Configuration.ApiClient.ParameterToString(numeroAgencia)); // query parameter
-            if (numeroContaCorrente != null) localVarQueryParams.Add("numeroContaCorrente", Configuration.ApiClient.ParameterToString(numeroContaCorrente)); // query parameter
-            if (email != null) localVarQueryParams.Add("email", Configuration.ApiClient.ParameterToString(email)); // query parameter
-            if (nomeEmpresa != null) localVarQueryParams.Add("nomeEmpresa", Configuration.ApiClient.ParameterToString(nomeEmpresa)); // query parameter
-            if (nomeReferencia1 != null) localVarQueryParams.Add("nomeReferencia1", Configuration.ApiClient.ParameterToString(nomeReferencia1)); // query parameter
-            if (enderecoReferencia1 != null) localVarQueryParams.Add("enderecoReferencia1", Configuration.ApiClient.ParameterToString(enderecoReferencia1)); // query parameter
-            if (nomeReferencia2 != null) localVarQueryParams.Add("nomeReferencia2", Configuration.ApiClient.ParameterToString(nomeReferencia2)); // query parameter
-            if (enderecoReferencia2 != null) localVarQueryParams.Add("enderecoReferencia2", Configuration.ApiClient.ParameterToString(enderecoReferencia2)); // query parameter
-            if (impedidoFinanciamento != null) localVarQueryParams.Add("impedidoFinanciamento", Configuration.ApiClient.ParameterToString(impedidoFinanciamento)); // query parameter
-            if (naturalidadeCidade != null) localVarQueryParams.Add("naturalidadeCidade", Configuration.ApiClient.ParameterToString(naturalidadeCidade)); // query parameter
-            if (naturalidadeEstado != null) localVarQueryParams.Add("naturalidadeEstado", Configuration.ApiClient.ParameterToString(naturalidadeEstado)); // query parameter
-            if (grauInstrucao != null) localVarQueryParams.Add("grauInstrucao", Configuration.ApiClient.ParameterToString(grauInstrucao)); // query parameter
-            if (numeroDependentes != null) localVarQueryParams.Add("numeroDependentes", Configuration.ApiClient.ParameterToString(numeroDependentes)); // query parameter
-            if (nomePai != null) localVarQueryParams.Add("nomePai", Configuration.ApiClient.ParameterToString(nomePai)); // query parameter
-            if (chequeEspecial != null) localVarQueryParams.Add("chequeEspecial", Configuration.ApiClient.ParameterToString(chequeEspecial)); // query parameter
-            if (numeroCnh != null) localVarQueryParams.Add("numeroCnh", Configuration.ApiClient.ParameterToString(numeroCnh)); // query parameter
-            
-            
-            
-            
-
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Alterar_1: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Alterar_1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<PessoaDetalheResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PessoaDetalheResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PessoaDetalheResponse)));
-            
-        }
-
-        
-        /// <summary>
-        /// Atualiza os detalhes de uma determinada Pessoa Este m\u00E9todo permite que seja alterado na base do emissor os detalhes de uma determinada Pessoa
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">ID da Pessoa</param>
-        /// <param name="nomeMae">Apresenta o nome da m\u00E3e da pessoa fisica (optional)</param>
-        /// <param name="idEstadoCivil">Id Estado civil da pessoa fisica (optional)</param>
-        /// <param name="idProfissao">Profiss\u00E3o da pessoa fisica (optional)</param>
-        /// <param name="idNaturezaOcupacao">Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica (optional)</param>
-        /// <param name="idNacionalidade">Id Nacionalidade da pessoa fisica (optional)</param>
-        /// <param name="numeroBanco">N\u00FAmero do banco (optional)</param>
-        /// <param name="numeroAgencia">N\u00FAmero da ag\u00EAncia (optional)</param>
-        /// <param name="numeroContaCorrente">N\u00FAmero da conta corrente (optional)</param>
-        /// <param name="email">Email da pessoa fisica (optional)</param>
-        /// <param name="nomeEmpresa">Nome que deve ser impresso no cart\u00E3o (optional)</param>
-        /// <param name="nomeReferencia1">Nome de refer\u00EAncia 1 (optional)</param>
-        /// <param name="enderecoReferencia1">Endere\u00E7o de refer\u00EAncia 1 (optional)</param>
-        /// <param name="nomeReferencia2">Nome de refer\u00EAncia 2 (optional)</param>
-        /// <param name="enderecoReferencia2">Endere\u00E7o de refer\u00EAncia 2 (optional)</param>
-        /// <param name="impedidoFinanciamento">Flag para s\u00F3cios do banco que s\u00E3o portadores do cart\u00E3o, mas n\u00E3o podem operar transa\u00E7\u00F5es de cr\u00E9dito(Lei n. 4.595/64) (optional)</param>
-        /// <param name="naturalidadeCidade">Apresenta o nome da cidade de nascimento da pessoa f\u00EDsica (optional)</param>
-        /// <param name="naturalidadeEstado">Apresenta a sigla do estado de nascimento da pessoa f\u00EDsica (optional)</param>
-        /// <param name="grauInstrucao">Apresenta o grau de instru\u00E7\u00E3o da pessoa f\u00EDsica (optional)</param>
-        /// <param name="numeroDependentes">Apresenta o n\u00FAmero de dependentes da pessoa f\u00EDsica (optional)</param>
-        /// <param name="nomePai">Apresenta o nome do pai da pessoa f\u00EDsica (optional)</param>
-        /// <param name="chequeEspecial">Indica se pessoa f\u00EDsica aderir ao cheque especial (optional)</param>
-        /// <param name="numeroCnh">N\u00FAmero da CNH da pessoa (optional)</param>
-        /// <returns>Task of PessoaDetalheResponse</returns>
-        public async System.Threading.Tasks.Task<PessoaDetalheResponse> Alterar_1Async (long? id, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string nomeReferencia1 = null, string enderecoReferencia1 = null, string nomeReferencia2 = null, string enderecoReferencia2 = null, bool? impedidoFinanciamento = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, string numeroCnh = null)
-        {
-             ApiResponse<PessoaDetalheResponse> localVarResponse = await Alterar_1AsyncWithHttpInfo(id, nomeMae, idEstadoCivil, idProfissao, idNaturezaOcupacao, idNacionalidade, numeroBanco, numeroAgencia, numeroContaCorrente, email, nomeEmpresa, nomeReferencia1, enderecoReferencia1, nomeReferencia2, enderecoReferencia2, impedidoFinanciamento, naturalidadeCidade, naturalidadeEstado, grauInstrucao, numeroDependentes, nomePai, chequeEspecial, numeroCnh);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Atualiza os detalhes de uma determinada Pessoa Este m\u00E9todo permite que seja alterado na base do emissor os detalhes de uma determinada Pessoa
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">ID da Pessoa</param>
-        /// <param name="nomeMae">Apresenta o nome da m\u00E3e da pessoa fisica (optional)</param>
-        /// <param name="idEstadoCivil">Id Estado civil da pessoa fisica (optional)</param>
-        /// <param name="idProfissao">Profiss\u00E3o da pessoa fisica (optional)</param>
-        /// <param name="idNaturezaOcupacao">Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica (optional)</param>
-        /// <param name="idNacionalidade">Id Nacionalidade da pessoa fisica (optional)</param>
-        /// <param name="numeroBanco">N\u00FAmero do banco (optional)</param>
-        /// <param name="numeroAgencia">N\u00FAmero da ag\u00EAncia (optional)</param>
-        /// <param name="numeroContaCorrente">N\u00FAmero da conta corrente (optional)</param>
-        /// <param name="email">Email da pessoa fisica (optional)</param>
-        /// <param name="nomeEmpresa">Nome que deve ser impresso no cart\u00E3o (optional)</param>
-        /// <param name="nomeReferencia1">Nome de refer\u00EAncia 1 (optional)</param>
-        /// <param name="enderecoReferencia1">Endere\u00E7o de refer\u00EAncia 1 (optional)</param>
-        /// <param name="nomeReferencia2">Nome de refer\u00EAncia 2 (optional)</param>
-        /// <param name="enderecoReferencia2">Endere\u00E7o de refer\u00EAncia 2 (optional)</param>
-        /// <param name="impedidoFinanciamento">Flag para s\u00F3cios do banco que s\u00E3o portadores do cart\u00E3o, mas n\u00E3o podem operar transa\u00E7\u00F5es de cr\u00E9dito(Lei n. 4.595/64) (optional)</param>
-        /// <param name="naturalidadeCidade">Apresenta o nome da cidade de nascimento da pessoa f\u00EDsica (optional)</param>
-        /// <param name="naturalidadeEstado">Apresenta a sigla do estado de nascimento da pessoa f\u00EDsica (optional)</param>
-        /// <param name="grauInstrucao">Apresenta o grau de instru\u00E7\u00E3o da pessoa f\u00EDsica (optional)</param>
-        /// <param name="numeroDependentes">Apresenta o n\u00FAmero de dependentes da pessoa f\u00EDsica (optional)</param>
-        /// <param name="nomePai">Apresenta o nome do pai da pessoa f\u00EDsica (optional)</param>
-        /// <param name="chequeEspecial">Indica se pessoa f\u00EDsica aderir ao cheque especial (optional)</param>
-        /// <param name="numeroCnh">N\u00FAmero da CNH da pessoa (optional)</param>
-        /// <returns>Task of ApiResponse (PessoaDetalheResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PessoaDetalheResponse>> Alterar_1AsyncWithHttpInfo (long? id, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string nomeReferencia1 = null, string enderecoReferencia1 = null, string nomeReferencia2 = null, string enderecoReferencia2 = null, bool? impedidoFinanciamento = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, string numeroCnh = null)
-        {
-            // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling Alterar_1");
-            
-    
-            var localVarPath = "/api/pessoas-detalhes/{id}";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            
-            if (nomeMae != null) localVarQueryParams.Add("nomeMae", Configuration.ApiClient.ParameterToString(nomeMae)); // query parameter
-            if (idEstadoCivil != null) localVarQueryParams.Add("idEstadoCivil", Configuration.ApiClient.ParameterToString(idEstadoCivil)); // query parameter
-            if (idProfissao != null) localVarQueryParams.Add("idProfissao", Configuration.ApiClient.ParameterToString(idProfissao)); // query parameter
-            if (idNaturezaOcupacao != null) localVarQueryParams.Add("idNaturezaOcupacao", Configuration.ApiClient.ParameterToString(idNaturezaOcupacao)); // query parameter
-            if (idNacionalidade != null) localVarQueryParams.Add("idNacionalidade", Configuration.ApiClient.ParameterToString(idNacionalidade)); // query parameter
-            if (numeroBanco != null) localVarQueryParams.Add("numeroBanco", Configuration.ApiClient.ParameterToString(numeroBanco)); // query parameter
-            if (numeroAgencia != null) localVarQueryParams.Add("numeroAgencia", Configuration.ApiClient.ParameterToString(numeroAgencia)); // query parameter
-            if (numeroContaCorrente != null) localVarQueryParams.Add("numeroContaCorrente", Configuration.ApiClient.ParameterToString(numeroContaCorrente)); // query parameter
-            if (email != null) localVarQueryParams.Add("email", Configuration.ApiClient.ParameterToString(email)); // query parameter
-            if (nomeEmpresa != null) localVarQueryParams.Add("nomeEmpresa", Configuration.ApiClient.ParameterToString(nomeEmpresa)); // query parameter
-            if (nomeReferencia1 != null) localVarQueryParams.Add("nomeReferencia1", Configuration.ApiClient.ParameterToString(nomeReferencia1)); // query parameter
-            if (enderecoReferencia1 != null) localVarQueryParams.Add("enderecoReferencia1", Configuration.ApiClient.ParameterToString(enderecoReferencia1)); // query parameter
-            if (nomeReferencia2 != null) localVarQueryParams.Add("nomeReferencia2", Configuration.ApiClient.ParameterToString(nomeReferencia2)); // query parameter
-            if (enderecoReferencia2 != null) localVarQueryParams.Add("enderecoReferencia2", Configuration.ApiClient.ParameterToString(enderecoReferencia2)); // query parameter
-            if (impedidoFinanciamento != null) localVarQueryParams.Add("impedidoFinanciamento", Configuration.ApiClient.ParameterToString(impedidoFinanciamento)); // query parameter
-            if (naturalidadeCidade != null) localVarQueryParams.Add("naturalidadeCidade", Configuration.ApiClient.ParameterToString(naturalidadeCidade)); // query parameter
-            if (naturalidadeEstado != null) localVarQueryParams.Add("naturalidadeEstado", Configuration.ApiClient.ParameterToString(naturalidadeEstado)); // query parameter
-            if (grauInstrucao != null) localVarQueryParams.Add("grauInstrucao", Configuration.ApiClient.ParameterToString(grauInstrucao)); // query parameter
-            if (numeroDependentes != null) localVarQueryParams.Add("numeroDependentes", Configuration.ApiClient.ParameterToString(numeroDependentes)); // query parameter
-            if (nomePai != null) localVarQueryParams.Add("nomePai", Configuration.ApiClient.ParameterToString(nomePai)); // query parameter
-            if (chequeEspecial != null) localVarQueryParams.Add("chequeEspecial", Configuration.ApiClient.ParameterToString(chequeEspecial)); // query parameter
-            if (numeroCnh != null) localVarQueryParams.Add("numeroCnh", Configuration.ApiClient.ParameterToString(numeroCnh)); // query parameter
-            
-            
-            
-            
-
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Alterar_1: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Alterar_1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<PessoaDetalheResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PessoaDetalheResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PessoaDetalheResponse)));
-            
-        }
-        
-        /// <summary>
         /// Atualiza os dados de uma determinada Pessoa Este m\u00E9todo permite que seja alterado na base do emissor um registro de determinada Pessoa
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3278,10 +3050,11 @@ namespace Conductor.Pier.Api
         /// <param name="orgaoExpedidorIdentidade">Org\u00E3o expedidor do Identidade (optional)</param> 
         /// <param name="unidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade (optional)</param> 
         /// <param name="dataEmissaoIdentidade">Data emiss\u00E3o da Identidade (optional)</param> 
+        /// <param name="usuarioAlteracao">Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o (optional)</param> 
         /// <returns>PessoaResponse</returns>
-        public PessoaResponse Alterar_2 (long? id, string nome, string tipo, string dataNascimento, string cpf = null, string cnpj = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null)
+        public PessoaResponse AlterarPessoa (long? id, string nome, string tipo, string dataNascimento, string cpf = null, string cnpj = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null, string usuarioAlteracao = null)
         {
-             ApiResponse<PessoaResponse> localVarResponse = Alterar_2WithHttpInfo(id, nome, tipo, dataNascimento, cpf, cnpj, sexo, numeroIdentidade, orgaoExpedidorIdentidade, unidadeFederativaIdentidade, dataEmissaoIdentidade);
+             ApiResponse<PessoaResponse> localVarResponse = AlterarPessoaWithHttpInfo(id, nome, tipo, dataNascimento, cpf, cnpj, sexo, numeroIdentidade, orgaoExpedidorIdentidade, unidadeFederativaIdentidade, dataEmissaoIdentidade, usuarioAlteracao);
              return localVarResponse.Data;
         }
 
@@ -3300,25 +3073,26 @@ namespace Conductor.Pier.Api
         /// <param name="orgaoExpedidorIdentidade">Org\u00E3o expedidor do Identidade (optional)</param> 
         /// <param name="unidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade (optional)</param> 
         /// <param name="dataEmissaoIdentidade">Data emiss\u00E3o da Identidade (optional)</param> 
+        /// <param name="usuarioAlteracao">Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o (optional)</param> 
         /// <returns>ApiResponse of PessoaResponse</returns>
-        public ApiResponse< PessoaResponse > Alterar_2WithHttpInfo (long? id, string nome, string tipo, string dataNascimento, string cpf = null, string cnpj = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null)
+        public ApiResponse< PessoaResponse > AlterarPessoaWithHttpInfo (long? id, string nome, string tipo, string dataNascimento, string cpf = null, string cnpj = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null, string usuarioAlteracao = null)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling CadastroClienteApi->Alterar_2");
+                throw new ApiException(400, "Missing required parameter 'id' when calling CadastroClienteApi->AlterarPessoa");
             
             // verify the required parameter 'nome' is set
             if (nome == null)
-                throw new ApiException(400, "Missing required parameter 'nome' when calling CadastroClienteApi->Alterar_2");
+                throw new ApiException(400, "Missing required parameter 'nome' when calling CadastroClienteApi->AlterarPessoa");
             
             // verify the required parameter 'tipo' is set
             if (tipo == null)
-                throw new ApiException(400, "Missing required parameter 'tipo' when calling CadastroClienteApi->Alterar_2");
+                throw new ApiException(400, "Missing required parameter 'tipo' when calling CadastroClienteApi->AlterarPessoa");
             
             // verify the required parameter 'dataNascimento' is set
             if (dataNascimento == null)
-                throw new ApiException(400, "Missing required parameter 'dataNascimento' when calling CadastroClienteApi->Alterar_2");
+                throw new ApiException(400, "Missing required parameter 'dataNascimento' when calling CadastroClienteApi->AlterarPessoa");
             
     
             var localVarPath = "/api/pessoas/{id}";
@@ -3359,6 +3133,7 @@ namespace Conductor.Pier.Api
             if (orgaoExpedidorIdentidade != null) localVarQueryParams.Add("orgaoExpedidorIdentidade", Configuration.ApiClient.ParameterToString(orgaoExpedidorIdentidade)); // query parameter
             if (unidadeFederativaIdentidade != null) localVarQueryParams.Add("unidadeFederativaIdentidade", Configuration.ApiClient.ParameterToString(unidadeFederativaIdentidade)); // query parameter
             if (dataEmissaoIdentidade != null) localVarQueryParams.Add("dataEmissaoIdentidade", Configuration.ApiClient.ParameterToString(dataEmissaoIdentidade)); // query parameter
+            if (usuarioAlteracao != null) localVarQueryParams.Add("usuarioAlteracao", Configuration.ApiClient.ParameterToString(usuarioAlteracao)); // query parameter
             
             
             
@@ -3374,9 +3149,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Alterar_2: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarPessoa: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Alterar_2: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarPessoa: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PessoaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3400,10 +3175,11 @@ namespace Conductor.Pier.Api
         /// <param name="orgaoExpedidorIdentidade">Org\u00E3o expedidor do Identidade (optional)</param>
         /// <param name="unidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade (optional)</param>
         /// <param name="dataEmissaoIdentidade">Data emiss\u00E3o da Identidade (optional)</param>
+        /// <param name="usuarioAlteracao">Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o (optional)</param>
         /// <returns>Task of PessoaResponse</returns>
-        public async System.Threading.Tasks.Task<PessoaResponse> Alterar_2Async (long? id, string nome, string tipo, string dataNascimento, string cpf = null, string cnpj = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null)
+        public async System.Threading.Tasks.Task<PessoaResponse> AlterarPessoaAsync (long? id, string nome, string tipo, string dataNascimento, string cpf = null, string cnpj = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null, string usuarioAlteracao = null)
         {
-             ApiResponse<PessoaResponse> localVarResponse = await Alterar_2AsyncWithHttpInfo(id, nome, tipo, dataNascimento, cpf, cnpj, sexo, numeroIdentidade, orgaoExpedidorIdentidade, unidadeFederativaIdentidade, dataEmissaoIdentidade);
+             ApiResponse<PessoaResponse> localVarResponse = await AlterarPessoaAsyncWithHttpInfo(id, nome, tipo, dataNascimento, cpf, cnpj, sexo, numeroIdentidade, orgaoExpedidorIdentidade, unidadeFederativaIdentidade, dataEmissaoIdentidade, usuarioAlteracao);
              return localVarResponse.Data;
 
         }
@@ -3423,17 +3199,18 @@ namespace Conductor.Pier.Api
         /// <param name="orgaoExpedidorIdentidade">Org\u00E3o expedidor do Identidade (optional)</param>
         /// <param name="unidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade (optional)</param>
         /// <param name="dataEmissaoIdentidade">Data emiss\u00E3o da Identidade (optional)</param>
+        /// <param name="usuarioAlteracao">Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o (optional)</param>
         /// <returns>Task of ApiResponse (PessoaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PessoaResponse>> Alterar_2AsyncWithHttpInfo (long? id, string nome, string tipo, string dataNascimento, string cpf = null, string cnpj = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PessoaResponse>> AlterarPessoaAsyncWithHttpInfo (long? id, string nome, string tipo, string dataNascimento, string cpf = null, string cnpj = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null, string usuarioAlteracao = null)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling Alterar_2");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AlterarPessoa");
             // verify the required parameter 'nome' is set
-            if (nome == null) throw new ApiException(400, "Missing required parameter 'nome' when calling Alterar_2");
+            if (nome == null) throw new ApiException(400, "Missing required parameter 'nome' when calling AlterarPessoa");
             // verify the required parameter 'tipo' is set
-            if (tipo == null) throw new ApiException(400, "Missing required parameter 'tipo' when calling Alterar_2");
+            if (tipo == null) throw new ApiException(400, "Missing required parameter 'tipo' when calling AlterarPessoa");
             // verify the required parameter 'dataNascimento' is set
-            if (dataNascimento == null) throw new ApiException(400, "Missing required parameter 'dataNascimento' when calling Alterar_2");
+            if (dataNascimento == null) throw new ApiException(400, "Missing required parameter 'dataNascimento' when calling AlterarPessoa");
             
     
             var localVarPath = "/api/pessoas/{id}";
@@ -3474,6 +3251,7 @@ namespace Conductor.Pier.Api
             if (orgaoExpedidorIdentidade != null) localVarQueryParams.Add("orgaoExpedidorIdentidade", Configuration.ApiClient.ParameterToString(orgaoExpedidorIdentidade)); // query parameter
             if (unidadeFederativaIdentidade != null) localVarQueryParams.Add("unidadeFederativaIdentidade", Configuration.ApiClient.ParameterToString(unidadeFederativaIdentidade)); // query parameter
             if (dataEmissaoIdentidade != null) localVarQueryParams.Add("dataEmissaoIdentidade", Configuration.ApiClient.ParameterToString(dataEmissaoIdentidade)); // query parameter
+            if (usuarioAlteracao != null) localVarQueryParams.Add("usuarioAlteracao", Configuration.ApiClient.ParameterToString(usuarioAlteracao)); // query parameter
             
             
             
@@ -3489,13 +3267,315 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Alterar_2: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarPessoa: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Alterar_2: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarPessoa: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PessoaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (PessoaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PessoaResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Atualiza os detalhes de uma determinada Pessoa Este m\u00E9todo permite que seja alterado na base do emissor os detalhes de uma determinada Pessoa
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">ID da Pessoa</param> 
+        /// <param name="nomeMae">Apresenta o nome da m\u00E3e da pessoa fisica (optional)</param> 
+        /// <param name="idEstadoCivil">Id Estado civil da pessoa fisica (optional)</param> 
+        /// <param name="idProfissao">Profiss\u00E3o da pessoa fisica (optional)</param> 
+        /// <param name="idNaturezaOcupacao">Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica (optional)</param> 
+        /// <param name="idNacionalidade">Id Nacionalidade da pessoa fisica (optional)</param> 
+        /// <param name="numeroBanco">N\u00FAmero do banco (optional)</param> 
+        /// <param name="numeroAgencia">N\u00FAmero da ag\u00EAncia (optional)</param> 
+        /// <param name="numeroContaCorrente">N\u00FAmero da conta corrente (optional)</param> 
+        /// <param name="email">Email da pessoa fisica (optional)</param> 
+        /// <param name="nomeEmpresa">Nome que deve ser impresso no cart\u00E3o (optional)</param> 
+        /// <param name="nomeReferencia1">Nome de refer\u00EAncia 1 (optional)</param> 
+        /// <param name="enderecoReferencia1">Endere\u00E7o de refer\u00EAncia 1 (optional)</param> 
+        /// <param name="nomeReferencia2">Nome de refer\u00EAncia 2 (optional)</param> 
+        /// <param name="enderecoReferencia2">Endere\u00E7o de refer\u00EAncia 2 (optional)</param> 
+        /// <param name="impedidoFinanciamento">Flag para s\u00F3cios do banco que s\u00E3o portadores do cart\u00E3o, mas n\u00E3o podem operar transa\u00E7\u00F5es de cr\u00E9dito(Lei n. 4.595/64) (optional)</param> 
+        /// <param name="naturalidadeCidade">Apresenta o nome da cidade de nascimento da pessoa f\u00EDsica (optional)</param> 
+        /// <param name="naturalidadeEstado">Apresenta a sigla do estado de nascimento da pessoa f\u00EDsica (optional)</param> 
+        /// <param name="grauInstrucao">Apresenta o grau de instru\u00E7\u00E3o da pessoa f\u00EDsica (optional)</param> 
+        /// <param name="numeroDependentes">Apresenta o n\u00FAmero de dependentes da pessoa f\u00EDsica (optional)</param> 
+        /// <param name="nomePai">Apresenta o nome do pai da pessoa f\u00EDsica (optional)</param> 
+        /// <param name="chequeEspecial">Indica se pessoa f\u00EDsica aderir ao cheque especial (optional)</param> 
+        /// <param name="numeroCnh">N\u00FAmero da CNH da pessoa (optional)</param> 
+        /// <param name="pessoaPoliticamenteExposta">Flag para identificar se a pessoa \u00E9 politicamente exposta (optional)</param> 
+        /// <param name="usuarioAlteracao">Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o (optional)</param> 
+        /// <returns>PessoaDetalheResponse</returns>
+        public PessoaDetalheResponse AlterarPessoaDetalhe (long? id, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string nomeReferencia1 = null, string enderecoReferencia1 = null, string nomeReferencia2 = null, string enderecoReferencia2 = null, bool? impedidoFinanciamento = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, string numeroCnh = null, bool? pessoaPoliticamenteExposta = null, string usuarioAlteracao = null)
+        {
+             ApiResponse<PessoaDetalheResponse> localVarResponse = AlterarPessoaDetalheWithHttpInfo(id, nomeMae, idEstadoCivil, idProfissao, idNaturezaOcupacao, idNacionalidade, numeroBanco, numeroAgencia, numeroContaCorrente, email, nomeEmpresa, nomeReferencia1, enderecoReferencia1, nomeReferencia2, enderecoReferencia2, impedidoFinanciamento, naturalidadeCidade, naturalidadeEstado, grauInstrucao, numeroDependentes, nomePai, chequeEspecial, numeroCnh, pessoaPoliticamenteExposta, usuarioAlteracao);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Atualiza os detalhes de uma determinada Pessoa Este m\u00E9todo permite que seja alterado na base do emissor os detalhes de uma determinada Pessoa
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">ID da Pessoa</param> 
+        /// <param name="nomeMae">Apresenta o nome da m\u00E3e da pessoa fisica (optional)</param> 
+        /// <param name="idEstadoCivil">Id Estado civil da pessoa fisica (optional)</param> 
+        /// <param name="idProfissao">Profiss\u00E3o da pessoa fisica (optional)</param> 
+        /// <param name="idNaturezaOcupacao">Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica (optional)</param> 
+        /// <param name="idNacionalidade">Id Nacionalidade da pessoa fisica (optional)</param> 
+        /// <param name="numeroBanco">N\u00FAmero do banco (optional)</param> 
+        /// <param name="numeroAgencia">N\u00FAmero da ag\u00EAncia (optional)</param> 
+        /// <param name="numeroContaCorrente">N\u00FAmero da conta corrente (optional)</param> 
+        /// <param name="email">Email da pessoa fisica (optional)</param> 
+        /// <param name="nomeEmpresa">Nome que deve ser impresso no cart\u00E3o (optional)</param> 
+        /// <param name="nomeReferencia1">Nome de refer\u00EAncia 1 (optional)</param> 
+        /// <param name="enderecoReferencia1">Endere\u00E7o de refer\u00EAncia 1 (optional)</param> 
+        /// <param name="nomeReferencia2">Nome de refer\u00EAncia 2 (optional)</param> 
+        /// <param name="enderecoReferencia2">Endere\u00E7o de refer\u00EAncia 2 (optional)</param> 
+        /// <param name="impedidoFinanciamento">Flag para s\u00F3cios do banco que s\u00E3o portadores do cart\u00E3o, mas n\u00E3o podem operar transa\u00E7\u00F5es de cr\u00E9dito(Lei n. 4.595/64) (optional)</param> 
+        /// <param name="naturalidadeCidade">Apresenta o nome da cidade de nascimento da pessoa f\u00EDsica (optional)</param> 
+        /// <param name="naturalidadeEstado">Apresenta a sigla do estado de nascimento da pessoa f\u00EDsica (optional)</param> 
+        /// <param name="grauInstrucao">Apresenta o grau de instru\u00E7\u00E3o da pessoa f\u00EDsica (optional)</param> 
+        /// <param name="numeroDependentes">Apresenta o n\u00FAmero de dependentes da pessoa f\u00EDsica (optional)</param> 
+        /// <param name="nomePai">Apresenta o nome do pai da pessoa f\u00EDsica (optional)</param> 
+        /// <param name="chequeEspecial">Indica se pessoa f\u00EDsica aderir ao cheque especial (optional)</param> 
+        /// <param name="numeroCnh">N\u00FAmero da CNH da pessoa (optional)</param> 
+        /// <param name="pessoaPoliticamenteExposta">Flag para identificar se a pessoa \u00E9 politicamente exposta (optional)</param> 
+        /// <param name="usuarioAlteracao">Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o (optional)</param> 
+        /// <returns>ApiResponse of PessoaDetalheResponse</returns>
+        public ApiResponse< PessoaDetalheResponse > AlterarPessoaDetalheWithHttpInfo (long? id, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string nomeReferencia1 = null, string enderecoReferencia1 = null, string nomeReferencia2 = null, string enderecoReferencia2 = null, bool? impedidoFinanciamento = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, string numeroCnh = null, bool? pessoaPoliticamenteExposta = null, string usuarioAlteracao = null)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling CadastroClienteApi->AlterarPessoaDetalhe");
+            
+    
+            var localVarPath = "/api/pessoas-detalhes/{id}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            if (nomeMae != null) localVarQueryParams.Add("nomeMae", Configuration.ApiClient.ParameterToString(nomeMae)); // query parameter
+            if (idEstadoCivil != null) localVarQueryParams.Add("idEstadoCivil", Configuration.ApiClient.ParameterToString(idEstadoCivil)); // query parameter
+            if (idProfissao != null) localVarQueryParams.Add("idProfissao", Configuration.ApiClient.ParameterToString(idProfissao)); // query parameter
+            if (idNaturezaOcupacao != null) localVarQueryParams.Add("idNaturezaOcupacao", Configuration.ApiClient.ParameterToString(idNaturezaOcupacao)); // query parameter
+            if (idNacionalidade != null) localVarQueryParams.Add("idNacionalidade", Configuration.ApiClient.ParameterToString(idNacionalidade)); // query parameter
+            if (numeroBanco != null) localVarQueryParams.Add("numeroBanco", Configuration.ApiClient.ParameterToString(numeroBanco)); // query parameter
+            if (numeroAgencia != null) localVarQueryParams.Add("numeroAgencia", Configuration.ApiClient.ParameterToString(numeroAgencia)); // query parameter
+            if (numeroContaCorrente != null) localVarQueryParams.Add("numeroContaCorrente", Configuration.ApiClient.ParameterToString(numeroContaCorrente)); // query parameter
+            if (email != null) localVarQueryParams.Add("email", Configuration.ApiClient.ParameterToString(email)); // query parameter
+            if (nomeEmpresa != null) localVarQueryParams.Add("nomeEmpresa", Configuration.ApiClient.ParameterToString(nomeEmpresa)); // query parameter
+            if (nomeReferencia1 != null) localVarQueryParams.Add("nomeReferencia1", Configuration.ApiClient.ParameterToString(nomeReferencia1)); // query parameter
+            if (enderecoReferencia1 != null) localVarQueryParams.Add("enderecoReferencia1", Configuration.ApiClient.ParameterToString(enderecoReferencia1)); // query parameter
+            if (nomeReferencia2 != null) localVarQueryParams.Add("nomeReferencia2", Configuration.ApiClient.ParameterToString(nomeReferencia2)); // query parameter
+            if (enderecoReferencia2 != null) localVarQueryParams.Add("enderecoReferencia2", Configuration.ApiClient.ParameterToString(enderecoReferencia2)); // query parameter
+            if (impedidoFinanciamento != null) localVarQueryParams.Add("impedidoFinanciamento", Configuration.ApiClient.ParameterToString(impedidoFinanciamento)); // query parameter
+            if (naturalidadeCidade != null) localVarQueryParams.Add("naturalidadeCidade", Configuration.ApiClient.ParameterToString(naturalidadeCidade)); // query parameter
+            if (naturalidadeEstado != null) localVarQueryParams.Add("naturalidadeEstado", Configuration.ApiClient.ParameterToString(naturalidadeEstado)); // query parameter
+            if (grauInstrucao != null) localVarQueryParams.Add("grauInstrucao", Configuration.ApiClient.ParameterToString(grauInstrucao)); // query parameter
+            if (numeroDependentes != null) localVarQueryParams.Add("numeroDependentes", Configuration.ApiClient.ParameterToString(numeroDependentes)); // query parameter
+            if (nomePai != null) localVarQueryParams.Add("nomePai", Configuration.ApiClient.ParameterToString(nomePai)); // query parameter
+            if (chequeEspecial != null) localVarQueryParams.Add("chequeEspecial", Configuration.ApiClient.ParameterToString(chequeEspecial)); // query parameter
+            if (numeroCnh != null) localVarQueryParams.Add("numeroCnh", Configuration.ApiClient.ParameterToString(numeroCnh)); // query parameter
+            if (pessoaPoliticamenteExposta != null) localVarQueryParams.Add("pessoaPoliticamenteExposta", Configuration.ApiClient.ParameterToString(pessoaPoliticamenteExposta)); // query parameter
+            if (usuarioAlteracao != null) localVarQueryParams.Add("usuarioAlteracao", Configuration.ApiClient.ParameterToString(usuarioAlteracao)); // query parameter
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling AlterarPessoaDetalhe: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling AlterarPessoaDetalhe: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<PessoaDetalheResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PessoaDetalheResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PessoaDetalheResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Atualiza os detalhes de uma determinada Pessoa Este m\u00E9todo permite que seja alterado na base do emissor os detalhes de uma determinada Pessoa
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">ID da Pessoa</param>
+        /// <param name="nomeMae">Apresenta o nome da m\u00E3e da pessoa fisica (optional)</param>
+        /// <param name="idEstadoCivil">Id Estado civil da pessoa fisica (optional)</param>
+        /// <param name="idProfissao">Profiss\u00E3o da pessoa fisica (optional)</param>
+        /// <param name="idNaturezaOcupacao">Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica (optional)</param>
+        /// <param name="idNacionalidade">Id Nacionalidade da pessoa fisica (optional)</param>
+        /// <param name="numeroBanco">N\u00FAmero do banco (optional)</param>
+        /// <param name="numeroAgencia">N\u00FAmero da ag\u00EAncia (optional)</param>
+        /// <param name="numeroContaCorrente">N\u00FAmero da conta corrente (optional)</param>
+        /// <param name="email">Email da pessoa fisica (optional)</param>
+        /// <param name="nomeEmpresa">Nome que deve ser impresso no cart\u00E3o (optional)</param>
+        /// <param name="nomeReferencia1">Nome de refer\u00EAncia 1 (optional)</param>
+        /// <param name="enderecoReferencia1">Endere\u00E7o de refer\u00EAncia 1 (optional)</param>
+        /// <param name="nomeReferencia2">Nome de refer\u00EAncia 2 (optional)</param>
+        /// <param name="enderecoReferencia2">Endere\u00E7o de refer\u00EAncia 2 (optional)</param>
+        /// <param name="impedidoFinanciamento">Flag para s\u00F3cios do banco que s\u00E3o portadores do cart\u00E3o, mas n\u00E3o podem operar transa\u00E7\u00F5es de cr\u00E9dito(Lei n. 4.595/64) (optional)</param>
+        /// <param name="naturalidadeCidade">Apresenta o nome da cidade de nascimento da pessoa f\u00EDsica (optional)</param>
+        /// <param name="naturalidadeEstado">Apresenta a sigla do estado de nascimento da pessoa f\u00EDsica (optional)</param>
+        /// <param name="grauInstrucao">Apresenta o grau de instru\u00E7\u00E3o da pessoa f\u00EDsica (optional)</param>
+        /// <param name="numeroDependentes">Apresenta o n\u00FAmero de dependentes da pessoa f\u00EDsica (optional)</param>
+        /// <param name="nomePai">Apresenta o nome do pai da pessoa f\u00EDsica (optional)</param>
+        /// <param name="chequeEspecial">Indica se pessoa f\u00EDsica aderir ao cheque especial (optional)</param>
+        /// <param name="numeroCnh">N\u00FAmero da CNH da pessoa (optional)</param>
+        /// <param name="pessoaPoliticamenteExposta">Flag para identificar se a pessoa \u00E9 politicamente exposta (optional)</param>
+        /// <param name="usuarioAlteracao">Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o (optional)</param>
+        /// <returns>Task of PessoaDetalheResponse</returns>
+        public async System.Threading.Tasks.Task<PessoaDetalheResponse> AlterarPessoaDetalheAsync (long? id, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string nomeReferencia1 = null, string enderecoReferencia1 = null, string nomeReferencia2 = null, string enderecoReferencia2 = null, bool? impedidoFinanciamento = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, string numeroCnh = null, bool? pessoaPoliticamenteExposta = null, string usuarioAlteracao = null)
+        {
+             ApiResponse<PessoaDetalheResponse> localVarResponse = await AlterarPessoaDetalheAsyncWithHttpInfo(id, nomeMae, idEstadoCivil, idProfissao, idNaturezaOcupacao, idNacionalidade, numeroBanco, numeroAgencia, numeroContaCorrente, email, nomeEmpresa, nomeReferencia1, enderecoReferencia1, nomeReferencia2, enderecoReferencia2, impedidoFinanciamento, naturalidadeCidade, naturalidadeEstado, grauInstrucao, numeroDependentes, nomePai, chequeEspecial, numeroCnh, pessoaPoliticamenteExposta, usuarioAlteracao);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Atualiza os detalhes de uma determinada Pessoa Este m\u00E9todo permite que seja alterado na base do emissor os detalhes de uma determinada Pessoa
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">ID da Pessoa</param>
+        /// <param name="nomeMae">Apresenta o nome da m\u00E3e da pessoa fisica (optional)</param>
+        /// <param name="idEstadoCivil">Id Estado civil da pessoa fisica (optional)</param>
+        /// <param name="idProfissao">Profiss\u00E3o da pessoa fisica (optional)</param>
+        /// <param name="idNaturezaOcupacao">Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica (optional)</param>
+        /// <param name="idNacionalidade">Id Nacionalidade da pessoa fisica (optional)</param>
+        /// <param name="numeroBanco">N\u00FAmero do banco (optional)</param>
+        /// <param name="numeroAgencia">N\u00FAmero da ag\u00EAncia (optional)</param>
+        /// <param name="numeroContaCorrente">N\u00FAmero da conta corrente (optional)</param>
+        /// <param name="email">Email da pessoa fisica (optional)</param>
+        /// <param name="nomeEmpresa">Nome que deve ser impresso no cart\u00E3o (optional)</param>
+        /// <param name="nomeReferencia1">Nome de refer\u00EAncia 1 (optional)</param>
+        /// <param name="enderecoReferencia1">Endere\u00E7o de refer\u00EAncia 1 (optional)</param>
+        /// <param name="nomeReferencia2">Nome de refer\u00EAncia 2 (optional)</param>
+        /// <param name="enderecoReferencia2">Endere\u00E7o de refer\u00EAncia 2 (optional)</param>
+        /// <param name="impedidoFinanciamento">Flag para s\u00F3cios do banco que s\u00E3o portadores do cart\u00E3o, mas n\u00E3o podem operar transa\u00E7\u00F5es de cr\u00E9dito(Lei n. 4.595/64) (optional)</param>
+        /// <param name="naturalidadeCidade">Apresenta o nome da cidade de nascimento da pessoa f\u00EDsica (optional)</param>
+        /// <param name="naturalidadeEstado">Apresenta a sigla do estado de nascimento da pessoa f\u00EDsica (optional)</param>
+        /// <param name="grauInstrucao">Apresenta o grau de instru\u00E7\u00E3o da pessoa f\u00EDsica (optional)</param>
+        /// <param name="numeroDependentes">Apresenta o n\u00FAmero de dependentes da pessoa f\u00EDsica (optional)</param>
+        /// <param name="nomePai">Apresenta o nome do pai da pessoa f\u00EDsica (optional)</param>
+        /// <param name="chequeEspecial">Indica se pessoa f\u00EDsica aderir ao cheque especial (optional)</param>
+        /// <param name="numeroCnh">N\u00FAmero da CNH da pessoa (optional)</param>
+        /// <param name="pessoaPoliticamenteExposta">Flag para identificar se a pessoa \u00E9 politicamente exposta (optional)</param>
+        /// <param name="usuarioAlteracao">Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o (optional)</param>
+        /// <returns>Task of ApiResponse (PessoaDetalheResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PessoaDetalheResponse>> AlterarPessoaDetalheAsyncWithHttpInfo (long? id, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string nomeReferencia1 = null, string enderecoReferencia1 = null, string nomeReferencia2 = null, string enderecoReferencia2 = null, bool? impedidoFinanciamento = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, string numeroCnh = null, bool? pessoaPoliticamenteExposta = null, string usuarioAlteracao = null)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AlterarPessoaDetalhe");
+            
+    
+            var localVarPath = "/api/pessoas-detalhes/{id}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            if (nomeMae != null) localVarQueryParams.Add("nomeMae", Configuration.ApiClient.ParameterToString(nomeMae)); // query parameter
+            if (idEstadoCivil != null) localVarQueryParams.Add("idEstadoCivil", Configuration.ApiClient.ParameterToString(idEstadoCivil)); // query parameter
+            if (idProfissao != null) localVarQueryParams.Add("idProfissao", Configuration.ApiClient.ParameterToString(idProfissao)); // query parameter
+            if (idNaturezaOcupacao != null) localVarQueryParams.Add("idNaturezaOcupacao", Configuration.ApiClient.ParameterToString(idNaturezaOcupacao)); // query parameter
+            if (idNacionalidade != null) localVarQueryParams.Add("idNacionalidade", Configuration.ApiClient.ParameterToString(idNacionalidade)); // query parameter
+            if (numeroBanco != null) localVarQueryParams.Add("numeroBanco", Configuration.ApiClient.ParameterToString(numeroBanco)); // query parameter
+            if (numeroAgencia != null) localVarQueryParams.Add("numeroAgencia", Configuration.ApiClient.ParameterToString(numeroAgencia)); // query parameter
+            if (numeroContaCorrente != null) localVarQueryParams.Add("numeroContaCorrente", Configuration.ApiClient.ParameterToString(numeroContaCorrente)); // query parameter
+            if (email != null) localVarQueryParams.Add("email", Configuration.ApiClient.ParameterToString(email)); // query parameter
+            if (nomeEmpresa != null) localVarQueryParams.Add("nomeEmpresa", Configuration.ApiClient.ParameterToString(nomeEmpresa)); // query parameter
+            if (nomeReferencia1 != null) localVarQueryParams.Add("nomeReferencia1", Configuration.ApiClient.ParameterToString(nomeReferencia1)); // query parameter
+            if (enderecoReferencia1 != null) localVarQueryParams.Add("enderecoReferencia1", Configuration.ApiClient.ParameterToString(enderecoReferencia1)); // query parameter
+            if (nomeReferencia2 != null) localVarQueryParams.Add("nomeReferencia2", Configuration.ApiClient.ParameterToString(nomeReferencia2)); // query parameter
+            if (enderecoReferencia2 != null) localVarQueryParams.Add("enderecoReferencia2", Configuration.ApiClient.ParameterToString(enderecoReferencia2)); // query parameter
+            if (impedidoFinanciamento != null) localVarQueryParams.Add("impedidoFinanciamento", Configuration.ApiClient.ParameterToString(impedidoFinanciamento)); // query parameter
+            if (naturalidadeCidade != null) localVarQueryParams.Add("naturalidadeCidade", Configuration.ApiClient.ParameterToString(naturalidadeCidade)); // query parameter
+            if (naturalidadeEstado != null) localVarQueryParams.Add("naturalidadeEstado", Configuration.ApiClient.ParameterToString(naturalidadeEstado)); // query parameter
+            if (grauInstrucao != null) localVarQueryParams.Add("grauInstrucao", Configuration.ApiClient.ParameterToString(grauInstrucao)); // query parameter
+            if (numeroDependentes != null) localVarQueryParams.Add("numeroDependentes", Configuration.ApiClient.ParameterToString(numeroDependentes)); // query parameter
+            if (nomePai != null) localVarQueryParams.Add("nomePai", Configuration.ApiClient.ParameterToString(nomePai)); // query parameter
+            if (chequeEspecial != null) localVarQueryParams.Add("chequeEspecial", Configuration.ApiClient.ParameterToString(chequeEspecial)); // query parameter
+            if (numeroCnh != null) localVarQueryParams.Add("numeroCnh", Configuration.ApiClient.ParameterToString(numeroCnh)); // query parameter
+            if (pessoaPoliticamenteExposta != null) localVarQueryParams.Add("pessoaPoliticamenteExposta", Configuration.ApiClient.ParameterToString(pessoaPoliticamenteExposta)); // query parameter
+            if (usuarioAlteracao != null) localVarQueryParams.Add("usuarioAlteracao", Configuration.ApiClient.ParameterToString(usuarioAlteracao)); // query parameter
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling AlterarPessoaDetalhe: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling AlterarPessoaDetalhe: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PessoaDetalheResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PessoaDetalheResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PessoaDetalheResponse)));
             
         }
         
@@ -3508,10 +3588,11 @@ namespace Conductor.Pier.Api
         /// <param name="ddd">DDD do n\u00FAmero do telfone (optional)</param> 
         /// <param name="telefone">N\u00FAmero do telefone (optional)</param> 
         /// <param name="ramal">Ramal do telefone (optional)</param> 
+        /// <param name="usuarioAlteracao">Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o (optional)</param> 
         /// <returns>TelefoneResponse</returns>
-        public TelefoneResponse Alterar_3 (long? id, long? idTipoTelefone = null, string ddd = null, string telefone = null, string ramal = null)
+        public TelefoneResponse AlterarTelefone (long? id, long? idTipoTelefone = null, string ddd = null, string telefone = null, string ramal = null, string usuarioAlteracao = null)
         {
-             ApiResponse<TelefoneResponse> localVarResponse = Alterar_3WithHttpInfo(id, idTipoTelefone, ddd, telefone, ramal);
+             ApiResponse<TelefoneResponse> localVarResponse = AlterarTelefoneWithHttpInfo(id, idTipoTelefone, ddd, telefone, ramal, usuarioAlteracao);
              return localVarResponse.Data;
         }
 
@@ -3524,13 +3605,14 @@ namespace Conductor.Pier.Api
         /// <param name="ddd">DDD do n\u00FAmero do telfone (optional)</param> 
         /// <param name="telefone">N\u00FAmero do telefone (optional)</param> 
         /// <param name="ramal">Ramal do telefone (optional)</param> 
+        /// <param name="usuarioAlteracao">Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o (optional)</param> 
         /// <returns>ApiResponse of TelefoneResponse</returns>
-        public ApiResponse< TelefoneResponse > Alterar_3WithHttpInfo (long? id, long? idTipoTelefone = null, string ddd = null, string telefone = null, string ramal = null)
+        public ApiResponse< TelefoneResponse > AlterarTelefoneWithHttpInfo (long? id, long? idTipoTelefone = null, string ddd = null, string telefone = null, string ramal = null, string usuarioAlteracao = null)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling CadastroClienteApi->Alterar_3");
+                throw new ApiException(400, "Missing required parameter 'id' when calling CadastroClienteApi->AlterarTelefone");
             
     
             var localVarPath = "/api/telefones";
@@ -3565,6 +3647,7 @@ namespace Conductor.Pier.Api
             if (ddd != null) localVarQueryParams.Add("ddd", Configuration.ApiClient.ParameterToString(ddd)); // query parameter
             if (telefone != null) localVarQueryParams.Add("telefone", Configuration.ApiClient.ParameterToString(telefone)); // query parameter
             if (ramal != null) localVarQueryParams.Add("ramal", Configuration.ApiClient.ParameterToString(ramal)); // query parameter
+            if (usuarioAlteracao != null) localVarQueryParams.Add("usuarioAlteracao", Configuration.ApiClient.ParameterToString(usuarioAlteracao)); // query parameter
             
             
             
@@ -3580,9 +3663,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Alterar_3: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarTelefone: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Alterar_3: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarTelefone: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<TelefoneResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3600,10 +3683,11 @@ namespace Conductor.Pier.Api
         /// <param name="ddd">DDD do n\u00FAmero do telfone (optional)</param>
         /// <param name="telefone">N\u00FAmero do telefone (optional)</param>
         /// <param name="ramal">Ramal do telefone (optional)</param>
+        /// <param name="usuarioAlteracao">Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o (optional)</param>
         /// <returns>Task of TelefoneResponse</returns>
-        public async System.Threading.Tasks.Task<TelefoneResponse> Alterar_3Async (long? id, long? idTipoTelefone = null, string ddd = null, string telefone = null, string ramal = null)
+        public async System.Threading.Tasks.Task<TelefoneResponse> AlterarTelefoneAsync (long? id, long? idTipoTelefone = null, string ddd = null, string telefone = null, string ramal = null, string usuarioAlteracao = null)
         {
-             ApiResponse<TelefoneResponse> localVarResponse = await Alterar_3AsyncWithHttpInfo(id, idTipoTelefone, ddd, telefone, ramal);
+             ApiResponse<TelefoneResponse> localVarResponse = await AlterarTelefoneAsyncWithHttpInfo(id, idTipoTelefone, ddd, telefone, ramal, usuarioAlteracao);
              return localVarResponse.Data;
 
         }
@@ -3617,11 +3701,12 @@ namespace Conductor.Pier.Api
         /// <param name="ddd">DDD do n\u00FAmero do telfone (optional)</param>
         /// <param name="telefone">N\u00FAmero do telefone (optional)</param>
         /// <param name="ramal">Ramal do telefone (optional)</param>
+        /// <param name="usuarioAlteracao">Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o (optional)</param>
         /// <returns>Task of ApiResponse (TelefoneResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TelefoneResponse>> Alterar_3AsyncWithHttpInfo (long? id, long? idTipoTelefone = null, string ddd = null, string telefone = null, string ramal = null)
+        public async System.Threading.Tasks.Task<ApiResponse<TelefoneResponse>> AlterarTelefoneAsyncWithHttpInfo (long? id, long? idTipoTelefone = null, string ddd = null, string telefone = null, string ramal = null, string usuarioAlteracao = null)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling Alterar_3");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AlterarTelefone");
             
     
             var localVarPath = "/api/telefones";
@@ -3656,6 +3741,7 @@ namespace Conductor.Pier.Api
             if (ddd != null) localVarQueryParams.Add("ddd", Configuration.ApiClient.ParameterToString(ddd)); // query parameter
             if (telefone != null) localVarQueryParams.Add("telefone", Configuration.ApiClient.ParameterToString(telefone)); // query parameter
             if (ramal != null) localVarQueryParams.Add("ramal", Configuration.ApiClient.ParameterToString(ramal)); // query parameter
+            if (usuarioAlteracao != null) localVarQueryParams.Add("usuarioAlteracao", Configuration.ApiClient.ParameterToString(usuarioAlteracao)); // query parameter
             
             
             
@@ -3671,9 +3757,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Alterar_3: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarTelefone: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Alterar_3: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarTelefone: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<TelefoneResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3864,191 +3950,15 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Atualiza conta integrada com o emissor Este recurso permite a atualiza\u00E7\u00E3o de uma conta integrada com o emissor
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param> 
-        /// <param name="body">Descri\u00E7\u00E3o do canal de entrada (optional)</param> 
-        /// <returns>IntegracaoEmissorResponse</returns>
-        public IntegracaoEmissorResponse Atualizar (long? id, IntegracaoEmissorPersist body = null)
-        {
-             ApiResponse<IntegracaoEmissorResponse> localVarResponse = AtualizarWithHttpInfo(id, body);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Atualiza conta integrada com o emissor Este recurso permite a atualiza\u00E7\u00E3o de uma conta integrada com o emissor
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param> 
-        /// <param name="body">Descri\u00E7\u00E3o do canal de entrada (optional)</param> 
-        /// <returns>ApiResponse of IntegracaoEmissorResponse</returns>
-        public ApiResponse< IntegracaoEmissorResponse > AtualizarWithHttpInfo (long? id, IntegracaoEmissorPersist body = null)
-        {
-            
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling CadastroClienteApi->Atualizar");
-            
-    
-            var localVarPath = "/api/contas/{id}/atualizar-registro-integracao";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            
-            
-            
-            
-            if (body.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = body; // byte array
-            }
-
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Atualizar: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Atualizar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<IntegracaoEmissorResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (IntegracaoEmissorResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(IntegracaoEmissorResponse)));
-            
-        }
-
-        
-        /// <summary>
-        /// Atualiza conta integrada com o emissor Este recurso permite a atualiza\u00E7\u00E3o de uma conta integrada com o emissor
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
-        /// <param name="body">Descri\u00E7\u00E3o do canal de entrada (optional)</param>
-        /// <returns>Task of IntegracaoEmissorResponse</returns>
-        public async System.Threading.Tasks.Task<IntegracaoEmissorResponse> AtualizarAsync (long? id, IntegracaoEmissorPersist body = null)
-        {
-             ApiResponse<IntegracaoEmissorResponse> localVarResponse = await AtualizarAsyncWithHttpInfo(id, body);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Atualiza conta integrada com o emissor Este recurso permite a atualiza\u00E7\u00E3o de uma conta integrada com o emissor
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
-        /// <param name="body">Descri\u00E7\u00E3o do canal de entrada (optional)</param>
-        /// <returns>Task of ApiResponse (IntegracaoEmissorResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<IntegracaoEmissorResponse>> AtualizarAsyncWithHttpInfo (long? id, IntegracaoEmissorPersist body = null)
-        {
-            // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling Atualizar");
-            
-    
-            var localVarPath = "/api/contas/{id}/atualizar-registro-integracao";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            
-            
-            
-            
-            if (body.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = body; // byte array
-            }
-
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Atualizar: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Atualizar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<IntegracaoEmissorResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (IntegracaoEmissorResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(IntegracaoEmissorResponse)));
-            
-        }
-        
-        /// <summary>
         /// Atualiza o endere\u00E7o de correspond\u00EAncia, para o endere\u00E7o informado Este m\u00E9todo permite que o endere\u00E7o de correspond\u00EAncia de uma determinada conta, seja atualizado para o endere\u00E7o de correspond\u00EAncia informado
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id)</param> 
         /// <param name="idConta">C\u00F3digo de Identifica\u00E7\u00E3o da Conta</param> 
         /// <returns>EnderecoResponse</returns>
-        public EnderecoResponse AtualizarEnderecoDeCorrespondencia (long? id, long? idConta)
+        public EnderecoResponse AtribuirEnderecoCorrespondenciaConta (long? id, long? idConta)
         {
-             ApiResponse<EnderecoResponse> localVarResponse = AtualizarEnderecoDeCorrespondenciaWithHttpInfo(id, idConta);
+             ApiResponse<EnderecoResponse> localVarResponse = AtribuirEnderecoCorrespondenciaContaWithHttpInfo(id, idConta);
              return localVarResponse.Data;
         }
 
@@ -4059,16 +3969,16 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id)</param> 
         /// <param name="idConta">C\u00F3digo de Identifica\u00E7\u00E3o da Conta</param> 
         /// <returns>ApiResponse of EnderecoResponse</returns>
-        public ApiResponse< EnderecoResponse > AtualizarEnderecoDeCorrespondenciaWithHttpInfo (long? id, long? idConta)
+        public ApiResponse< EnderecoResponse > AtribuirEnderecoCorrespondenciaContaWithHttpInfo (long? id, long? idConta)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling CadastroClienteApi->AtualizarEnderecoDeCorrespondencia");
+                throw new ApiException(400, "Missing required parameter 'id' when calling CadastroClienteApi->AtribuirEnderecoCorrespondenciaConta");
             
             // verify the required parameter 'idConta' is set
             if (idConta == null)
-                throw new ApiException(400, "Missing required parameter 'idConta' when calling CadastroClienteApi->AtualizarEnderecoDeCorrespondencia");
+                throw new ApiException(400, "Missing required parameter 'idConta' when calling CadastroClienteApi->AtribuirEnderecoCorrespondenciaConta");
             
     
             var localVarPath = "/api/enderecos/{id}/alterar-endereco-correspondencia";
@@ -4115,9 +4025,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling AtualizarEnderecoDeCorrespondencia: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling AtribuirEnderecoCorrespondenciaConta: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling AtualizarEnderecoDeCorrespondencia: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling AtribuirEnderecoCorrespondenciaConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<EnderecoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4133,9 +4043,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id)</param>
         /// <param name="idConta">C\u00F3digo de Identifica\u00E7\u00E3o da Conta</param>
         /// <returns>Task of EnderecoResponse</returns>
-        public async System.Threading.Tasks.Task<EnderecoResponse> AtualizarEnderecoDeCorrespondenciaAsync (long? id, long? idConta)
+        public async System.Threading.Tasks.Task<EnderecoResponse> AtribuirEnderecoCorrespondenciaContaAsync (long? id, long? idConta)
         {
-             ApiResponse<EnderecoResponse> localVarResponse = await AtualizarEnderecoDeCorrespondenciaAsyncWithHttpInfo(id, idConta);
+             ApiResponse<EnderecoResponse> localVarResponse = await AtribuirEnderecoCorrespondenciaContaAsyncWithHttpInfo(id, idConta);
              return localVarResponse.Data;
 
         }
@@ -4147,12 +4057,12 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id)</param>
         /// <param name="idConta">C\u00F3digo de Identifica\u00E7\u00E3o da Conta</param>
         /// <returns>Task of ApiResponse (EnderecoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EnderecoResponse>> AtualizarEnderecoDeCorrespondenciaAsyncWithHttpInfo (long? id, long? idConta)
+        public async System.Threading.Tasks.Task<ApiResponse<EnderecoResponse>> AtribuirEnderecoCorrespondenciaContaAsyncWithHttpInfo (long? id, long? idConta)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AtualizarEnderecoDeCorrespondencia");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AtribuirEnderecoCorrespondenciaConta");
             // verify the required parameter 'idConta' is set
-            if (idConta == null) throw new ApiException(400, "Missing required parameter 'idConta' when calling AtualizarEnderecoDeCorrespondencia");
+            if (idConta == null) throw new ApiException(400, "Missing required parameter 'idConta' when calling AtribuirEnderecoCorrespondenciaConta");
             
     
             var localVarPath = "/api/enderecos/{id}/alterar-endereco-correspondencia";
@@ -4199,9 +4109,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling AtualizarEnderecoDeCorrespondencia: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling AtribuirEnderecoCorrespondenciaConta: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling AtualizarEnderecoDeCorrespondencia: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling AtribuirEnderecoCorrespondenciaConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<EnderecoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4404,208 +4314,34 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Cadastro da recarga programada Este recurso permite cadastrar uma nova recarga programada na base do emissor
+        /// Atualiza conta integrada com o emissor Este recurso permite a atualiza\u00E7\u00E3o de uma conta integrada com o emissor
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="persistencia">persistencia</param> 
-        /// <returns>CelularRecargaProgramadaResponse</returns>
-        public CelularRecargaProgramadaResponse Cadastrar (CelularRecargaProgramadaPersist persistencia)
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param> 
+        /// <param name="body">Descri\u00E7\u00E3o do canal de entrada (optional)</param> 
+        /// <returns>IntegracaoEmissorResponse</returns>
+        public IntegracaoEmissorResponse AtualizarRegistroIntegracaoConta (long? id, IntegracaoEmissorPersist body = null)
         {
-             ApiResponse<CelularRecargaProgramadaResponse> localVarResponse = CadastrarWithHttpInfo(persistencia);
+             ApiResponse<IntegracaoEmissorResponse> localVarResponse = AtualizarRegistroIntegracaoContaWithHttpInfo(id, body);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Cadastro da recarga programada Este recurso permite cadastrar uma nova recarga programada na base do emissor
+        /// Atualiza conta integrada com o emissor Este recurso permite a atualiza\u00E7\u00E3o de uma conta integrada com o emissor
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="persistencia">persistencia</param> 
-        /// <returns>ApiResponse of CelularRecargaProgramadaResponse</returns>
-        public ApiResponse< CelularRecargaProgramadaResponse > CadastrarWithHttpInfo (CelularRecargaProgramadaPersist persistencia)
-        {
-            
-            // verify the required parameter 'persistencia' is set
-            if (persistencia == null)
-                throw new ApiException(400, "Missing required parameter 'persistencia' when calling CadastroClienteApi->Cadastrar");
-            
-    
-            var localVarPath = "/api/celulares/recargas-programadas";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            
-            
-            
-            
-            if (persistencia.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(persistencia); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = persistencia; // byte array
-            }
-
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Cadastrar: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Cadastrar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<CelularRecargaProgramadaResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CelularRecargaProgramadaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CelularRecargaProgramadaResponse)));
-            
-        }
-
-        
-        /// <summary>
-        /// Cadastro da recarga programada Este recurso permite cadastrar uma nova recarga programada na base do emissor
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="persistencia">persistencia</param>
-        /// <returns>Task of CelularRecargaProgramadaResponse</returns>
-        public async System.Threading.Tasks.Task<CelularRecargaProgramadaResponse> CadastrarAsync (CelularRecargaProgramadaPersist persistencia)
-        {
-             ApiResponse<CelularRecargaProgramadaResponse> localVarResponse = await CadastrarAsyncWithHttpInfo(persistencia);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Cadastro da recarga programada Este recurso permite cadastrar uma nova recarga programada na base do emissor
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="persistencia">persistencia</param>
-        /// <returns>Task of ApiResponse (CelularRecargaProgramadaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CelularRecargaProgramadaResponse>> CadastrarAsyncWithHttpInfo (CelularRecargaProgramadaPersist persistencia)
-        {
-            // verify the required parameter 'persistencia' is set
-            if (persistencia == null) throw new ApiException(400, "Missing required parameter 'persistencia' when calling Cadastrar");
-            
-    
-            var localVarPath = "/api/celulares/recargas-programadas";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            
-            
-            
-            
-            if (persistencia.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(persistencia); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = persistencia; // byte array
-            }
-
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Cadastrar: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Cadastrar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<CelularRecargaProgramadaResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CelularRecargaProgramadaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CelularRecargaProgramadaResponse)));
-            
-        }
-        
-        /// <summary>
-        /// Realiza o cadastro de Adicionais para uma Conta Este m\u00E9todo permite que uma pessoa existente na base possa ser um adicional na conta informada
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param> 
-        /// <param name="adicionalContaPersist">adicionalContaPersist</param> 
-        /// <returns>AdicionalContaResponse</returns>
-        public AdicionalContaResponse CadastrarAdicional (long? id, AdicionalContaPersist adicionalContaPersist)
-        {
-             ApiResponse<AdicionalContaResponse> localVarResponse = CadastrarAdicionalWithHttpInfo(id, adicionalContaPersist);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Realiza o cadastro de Adicionais para uma Conta Este m\u00E9todo permite que uma pessoa existente na base possa ser um adicional na conta informada
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param> 
-        /// <param name="adicionalContaPersist">adicionalContaPersist</param> 
-        /// <returns>ApiResponse of AdicionalContaResponse</returns>
-        public ApiResponse< AdicionalContaResponse > CadastrarAdicionalWithHttpInfo (long? id, AdicionalContaPersist adicionalContaPersist)
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param> 
+        /// <param name="body">Descri\u00E7\u00E3o do canal de entrada (optional)</param> 
+        /// <returns>ApiResponse of IntegracaoEmissorResponse</returns>
+        public ApiResponse< IntegracaoEmissorResponse > AtualizarRegistroIntegracaoContaWithHttpInfo (long? id, IntegracaoEmissorPersist body = null)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling CadastroClienteApi->CadastrarAdicional");
-            
-            // verify the required parameter 'adicionalContaPersist' is set
-            if (adicionalContaPersist == null)
-                throw new ApiException(400, "Missing required parameter 'adicionalContaPersist' when calling CadastroClienteApi->CadastrarAdicional");
+                throw new ApiException(400, "Missing required parameter 'id' when calling CadastroClienteApi->AtualizarRegistroIntegracaoConta");
             
     
-            var localVarPath = "/api/contas/{id}/adicionais";
+            var localVarPath = "/api/contas/{id}/atualizar-registro-integracao";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -4636,13 +4372,13 @@ namespace Conductor.Pier.Api
             
             
             
-            if (adicionalContaPersist.GetType() != typeof(byte[]))
+            if (body.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(adicionalContaPersist); // http body (model) parameter
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
             }
             else
             {
-                localVarPostBody = adicionalContaPersist; // byte array
+                localVarPostBody = body; // byte array
             }
 
             
@@ -4655,47 +4391,45 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling CadastrarAdicional: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling AtualizarRegistroIntegracaoConta: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling CadastrarAdicional: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling AtualizarRegistroIntegracaoConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<AdicionalContaResponse>(localVarStatusCode,
+            return new ApiResponse<IntegracaoEmissorResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (AdicionalContaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AdicionalContaResponse)));
+                (IntegracaoEmissorResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(IntegracaoEmissorResponse)));
             
         }
 
         
         /// <summary>
-        /// Realiza o cadastro de Adicionais para uma Conta Este m\u00E9todo permite que uma pessoa existente na base possa ser um adicional na conta informada
+        /// Atualiza conta integrada com o emissor Este recurso permite a atualiza\u00E7\u00E3o de uma conta integrada com o emissor
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
-        /// <param name="adicionalContaPersist">adicionalContaPersist</param>
-        /// <returns>Task of AdicionalContaResponse</returns>
-        public async System.Threading.Tasks.Task<AdicionalContaResponse> CadastrarAdicionalAsync (long? id, AdicionalContaPersist adicionalContaPersist)
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
+        /// <param name="body">Descri\u00E7\u00E3o do canal de entrada (optional)</param>
+        /// <returns>Task of IntegracaoEmissorResponse</returns>
+        public async System.Threading.Tasks.Task<IntegracaoEmissorResponse> AtualizarRegistroIntegracaoContaAsync (long? id, IntegracaoEmissorPersist body = null)
         {
-             ApiResponse<AdicionalContaResponse> localVarResponse = await CadastrarAdicionalAsyncWithHttpInfo(id, adicionalContaPersist);
+             ApiResponse<IntegracaoEmissorResponse> localVarResponse = await AtualizarRegistroIntegracaoContaAsyncWithHttpInfo(id, body);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Realiza o cadastro de Adicionais para uma Conta Este m\u00E9todo permite que uma pessoa existente na base possa ser um adicional na conta informada
+        /// Atualiza conta integrada com o emissor Este recurso permite a atualiza\u00E7\u00E3o de uma conta integrada com o emissor
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
-        /// <param name="adicionalContaPersist">adicionalContaPersist</param>
-        /// <returns>Task of ApiResponse (AdicionalContaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AdicionalContaResponse>> CadastrarAdicionalAsyncWithHttpInfo (long? id, AdicionalContaPersist adicionalContaPersist)
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
+        /// <param name="body">Descri\u00E7\u00E3o do canal de entrada (optional)</param>
+        /// <returns>Task of ApiResponse (IntegracaoEmissorResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<IntegracaoEmissorResponse>> AtualizarRegistroIntegracaoContaAsyncWithHttpInfo (long? id, IntegracaoEmissorPersist body = null)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling CadastrarAdicional");
-            // verify the required parameter 'adicionalContaPersist' is set
-            if (adicionalContaPersist == null) throw new ApiException(400, "Missing required parameter 'adicionalContaPersist' when calling CadastrarAdicional");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AtualizarRegistroIntegracaoConta");
             
     
-            var localVarPath = "/api/contas/{id}/adicionais";
+            var localVarPath = "/api/contas/{id}/atualizar-registro-integracao";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -4726,13 +4460,13 @@ namespace Conductor.Pier.Api
             
             
             
-            if (adicionalContaPersist.GetType() != typeof(byte[]))
+            if (body.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(adicionalContaPersist); // http body (model) parameter
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
             }
             else
             {
-                localVarPostBody = adicionalContaPersist; // byte array
+                localVarPostBody = body; // byte array
             }
 
             
@@ -4745,13 +4479,13 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling CadastrarAdicional: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling AtualizarRegistroIntegracaoConta: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling CadastrarAdicional: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling AtualizarRegistroIntegracaoConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<AdicionalContaResponse>(localVarStatusCode,
+            return new ApiResponse<IntegracaoEmissorResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (AdicionalContaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AdicionalContaResponse)));
+                (IntegracaoEmissorResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(IntegracaoEmissorResponse)));
             
         }
         
@@ -4938,38 +4672,32 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Realiza o cadastro de Adicionais para uma Conta Este m\u00E9todo permite que sejam cadastrados um portador Adicional para uma determinada Conta
+        /// Cadastro da recarga programada Este recurso permite cadastrar uma nova recarga programada na base do emissor
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param> 
-        /// <param name="persist">persist</param> 
-        /// <returns>AdicionalDetalheResponse</returns>
-        public AdicionalDetalheResponse Cadastrar_0 (long? id, AdicionalPersist persist)
+        /// <param name="persistencia">persistencia</param> 
+        /// <returns>CelularRecargaProgramadaResponse</returns>
+        public CelularRecargaProgramadaResponse CadastrarRecargaProgramadaCelular (CelularRecargaProgramadaPersist persistencia)
         {
-             ApiResponse<AdicionalDetalheResponse> localVarResponse = Cadastrar_0WithHttpInfo(id, persist);
+             ApiResponse<CelularRecargaProgramadaResponse> localVarResponse = CadastrarRecargaProgramadaCelularWithHttpInfo(persistencia);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Realiza o cadastro de Adicionais para uma Conta Este m\u00E9todo permite que sejam cadastrados um portador Adicional para uma determinada Conta
+        /// Cadastro da recarga programada Este recurso permite cadastrar uma nova recarga programada na base do emissor
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param> 
-        /// <param name="persist">persist</param> 
-        /// <returns>ApiResponse of AdicionalDetalheResponse</returns>
-        public ApiResponse< AdicionalDetalheResponse > Cadastrar_0WithHttpInfo (long? id, AdicionalPersist persist)
+        /// <param name="persistencia">persistencia</param> 
+        /// <returns>ApiResponse of CelularRecargaProgramadaResponse</returns>
+        public ApiResponse< CelularRecargaProgramadaResponse > CadastrarRecargaProgramadaCelularWithHttpInfo (CelularRecargaProgramadaPersist persistencia)
         {
             
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling CadastroClienteApi->Cadastrar_0");
-            
-            // verify the required parameter 'persist' is set
-            if (persist == null)
-                throw new ApiException(400, "Missing required parameter 'persist' when calling CadastroClienteApi->Cadastrar_0");
+            // verify the required parameter 'persistencia' is set
+            if (persistencia == null)
+                throw new ApiException(400, "Missing required parameter 'persistencia' when calling CadastroClienteApi->CadastrarRecargaProgramadaCelular");
             
     
-            var localVarPath = "/api/contas/{id}/cadastrar-adicional";
+            var localVarPath = "/api/celulares/recargas-programadas";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -4995,18 +4723,17 @@ namespace Conductor.Pier.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             
             
             
             
-            if (persist.GetType() != typeof(byte[]))
+            if (persistencia.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(persist); // http body (model) parameter
+                localVarPostBody = Configuration.ApiClient.Serialize(persistencia); // http body (model) parameter
             }
             else
             {
-                localVarPostBody = persist; // byte array
+                localVarPostBody = persistencia; // byte array
             }
 
             
@@ -5019,47 +4746,43 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Cadastrar_0: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling CadastrarRecargaProgramadaCelular: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Cadastrar_0: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling CadastrarRecargaProgramadaCelular: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<AdicionalDetalheResponse>(localVarStatusCode,
+            return new ApiResponse<CelularRecargaProgramadaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (AdicionalDetalheResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AdicionalDetalheResponse)));
+                (CelularRecargaProgramadaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CelularRecargaProgramadaResponse)));
             
         }
 
         
         /// <summary>
-        /// Realiza o cadastro de Adicionais para uma Conta Este m\u00E9todo permite que sejam cadastrados um portador Adicional para uma determinada Conta
+        /// Cadastro da recarga programada Este recurso permite cadastrar uma nova recarga programada na base do emissor
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
-        /// <param name="persist">persist</param>
-        /// <returns>Task of AdicionalDetalheResponse</returns>
-        public async System.Threading.Tasks.Task<AdicionalDetalheResponse> Cadastrar_0Async (long? id, AdicionalPersist persist)
+        /// <param name="persistencia">persistencia</param>
+        /// <returns>Task of CelularRecargaProgramadaResponse</returns>
+        public async System.Threading.Tasks.Task<CelularRecargaProgramadaResponse> CadastrarRecargaProgramadaCelularAsync (CelularRecargaProgramadaPersist persistencia)
         {
-             ApiResponse<AdicionalDetalheResponse> localVarResponse = await Cadastrar_0AsyncWithHttpInfo(id, persist);
+             ApiResponse<CelularRecargaProgramadaResponse> localVarResponse = await CadastrarRecargaProgramadaCelularAsyncWithHttpInfo(persistencia);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Realiza o cadastro de Adicionais para uma Conta Este m\u00E9todo permite que sejam cadastrados um portador Adicional para uma determinada Conta
+        /// Cadastro da recarga programada Este recurso permite cadastrar uma nova recarga programada na base do emissor
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
-        /// <param name="persist">persist</param>
-        /// <returns>Task of ApiResponse (AdicionalDetalheResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AdicionalDetalheResponse>> Cadastrar_0AsyncWithHttpInfo (long? id, AdicionalPersist persist)
+        /// <param name="persistencia">persistencia</param>
+        /// <returns>Task of ApiResponse (CelularRecargaProgramadaResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CelularRecargaProgramadaResponse>> CadastrarRecargaProgramadaCelularAsyncWithHttpInfo (CelularRecargaProgramadaPersist persistencia)
         {
-            // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling Cadastrar_0");
-            // verify the required parameter 'persist' is set
-            if (persist == null) throw new ApiException(400, "Missing required parameter 'persist' when calling Cadastrar_0");
+            // verify the required parameter 'persistencia' is set
+            if (persistencia == null) throw new ApiException(400, "Missing required parameter 'persistencia' when calling CadastrarRecargaProgramadaCelular");
             
     
-            var localVarPath = "/api/contas/{id}/cadastrar-adicional";
+            var localVarPath = "/api/celulares/recargas-programadas";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -5085,18 +4808,17 @@ namespace Conductor.Pier.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             
             
             
             
-            if (persist.GetType() != typeof(byte[]))
+            if (persistencia.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(persist); // http body (model) parameter
+                localVarPostBody = Configuration.ApiClient.Serialize(persistencia); // http body (model) parameter
             }
             else
             {
-                localVarPostBody = persist; // byte array
+                localVarPostBody = persistencia; // byte array
             }
 
             
@@ -5109,183 +4831,13 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Cadastrar_0: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling CadastrarRecargaProgramadaCelular: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Cadastrar_0: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling CadastrarRecargaProgramadaCelular: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<AdicionalDetalheResponse>(localVarStatusCode,
+            return new ApiResponse<CelularRecargaProgramadaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (AdicionalDetalheResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AdicionalDetalheResponse)));
-            
-        }
-        
-        /// <summary>
-        /// Consulta Adicional de uma Conta Este m\u00E9todo permite que seja consultado um portador Adicional de uma determinada Conta
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param> 
-        /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da pessoa (id)</param> 
-        /// <returns>AdicionalDetalheResponse</returns>
-        public AdicionalDetalheResponse Consultar (long? id, long? idPessoa)
-        {
-             ApiResponse<AdicionalDetalheResponse> localVarResponse = ConsultarWithHttpInfo(id, idPessoa);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Consulta Adicional de uma Conta Este m\u00E9todo permite que seja consultado um portador Adicional de uma determinada Conta
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param> 
-        /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da pessoa (id)</param> 
-        /// <returns>ApiResponse of AdicionalDetalheResponse</returns>
-        public ApiResponse< AdicionalDetalheResponse > ConsultarWithHttpInfo (long? id, long? idPessoa)
-        {
-            
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling CadastroClienteApi->Consultar");
-            
-            // verify the required parameter 'idPessoa' is set
-            if (idPessoa == null)
-                throw new ApiException(400, "Missing required parameter 'idPessoa' when calling CadastroClienteApi->Consultar");
-            
-    
-            var localVarPath = "/api/contas/{id}/adicionais/{idPessoa}";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            if (idPessoa != null) localVarPathParams.Add("idPessoa", Configuration.ApiClient.ParameterToString(idPessoa)); // path parameter
-            
-            
-            
-            
-            
-
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<AdicionalDetalheResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (AdicionalDetalheResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AdicionalDetalheResponse)));
-            
-        }
-
-        
-        /// <summary>
-        /// Consulta Adicional de uma Conta Este m\u00E9todo permite que seja consultado um portador Adicional de uma determinada Conta
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
-        /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da pessoa (id)</param>
-        /// <returns>Task of AdicionalDetalheResponse</returns>
-        public async System.Threading.Tasks.Task<AdicionalDetalheResponse> ConsultarAsync (long? id, long? idPessoa)
-        {
-             ApiResponse<AdicionalDetalheResponse> localVarResponse = await ConsultarAsyncWithHttpInfo(id, idPessoa);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Consulta Adicional de uma Conta Este m\u00E9todo permite que seja consultado um portador Adicional de uma determinada Conta
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
-        /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da pessoa (id)</param>
-        /// <returns>Task of ApiResponse (AdicionalDetalheResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AdicionalDetalheResponse>> ConsultarAsyncWithHttpInfo (long? id, long? idPessoa)
-        {
-            // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling Consultar");
-            // verify the required parameter 'idPessoa' is set
-            if (idPessoa == null) throw new ApiException(400, "Missing required parameter 'idPessoa' when calling Consultar");
-            
-    
-            var localVarPath = "/api/contas/{id}/adicionais/{idPessoa}";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            if (idPessoa != null) localVarPathParams.Add("idPessoa", Configuration.ApiClient.ParameterToString(idPessoa)); // path parameter
-            
-            
-            
-            
-            
-
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<AdicionalDetalheResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (AdicionalDetalheResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AdicionalDetalheResponse)));
+                (CelularRecargaProgramadaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CelularRecargaProgramadaResponse)));
             
         }
         
@@ -5295,9 +4847,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id)</param> 
         /// <returns>EnderecoResponse</returns>
-        public EnderecoResponse Consultar_0 (long? id)
+        public EnderecoResponse ConsultarEndereco (long? id)
         {
-             ApiResponse<EnderecoResponse> localVarResponse = Consultar_0WithHttpInfo(id);
+             ApiResponse<EnderecoResponse> localVarResponse = ConsultarEnderecoWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -5307,12 +4859,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id)</param> 
         /// <returns>ApiResponse of EnderecoResponse</returns>
-        public ApiResponse< EnderecoResponse > Consultar_0WithHttpInfo (long? id)
+        public ApiResponse< EnderecoResponse > ConsultarEnderecoWithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling CadastroClienteApi->Consultar_0");
+                throw new ApiException(400, "Missing required parameter 'id' when calling CadastroClienteApi->ConsultarEndereco");
             
     
             var localVarPath = "/api/enderecos/{id}";
@@ -5358,9 +4910,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar_0: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarEndereco: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar_0: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarEndereco: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<EnderecoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5375,9 +4927,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id)</param>
         /// <returns>Task of EnderecoResponse</returns>
-        public async System.Threading.Tasks.Task<EnderecoResponse> Consultar_0Async (long? id)
+        public async System.Threading.Tasks.Task<EnderecoResponse> ConsultarEnderecoAsync (long? id)
         {
-             ApiResponse<EnderecoResponse> localVarResponse = await Consultar_0AsyncWithHttpInfo(id);
+             ApiResponse<EnderecoResponse> localVarResponse = await ConsultarEnderecoAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -5388,10 +4940,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id)</param>
         /// <returns>Task of ApiResponse (EnderecoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EnderecoResponse>> Consultar_0AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<EnderecoResponse>> ConsultarEnderecoAsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling Consultar_0");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarEndereco");
             
     
             var localVarPath = "/api/enderecos/{id}";
@@ -5437,171 +4989,13 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar_0: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarEndereco: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar_0: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarEndereco: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<EnderecoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (EnderecoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EnderecoResponse)));
-            
-        }
-        
-        /// <summary>
-        /// Apresenta os detalhes de uma determinada Pessoa Este m\u00E9todo permite a consulta dos detalhes de uma Pessoa existentes na base de dados do Emissor
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">ID da Pessoa</param> 
-        /// <returns>PessoaDetalheResponse</returns>
-        public PessoaDetalheResponse Consultar_1 (long? id)
-        {
-             ApiResponse<PessoaDetalheResponse> localVarResponse = Consultar_1WithHttpInfo(id);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Apresenta os detalhes de uma determinada Pessoa Este m\u00E9todo permite a consulta dos detalhes de uma Pessoa existentes na base de dados do Emissor
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">ID da Pessoa</param> 
-        /// <returns>ApiResponse of PessoaDetalheResponse</returns>
-        public ApiResponse< PessoaDetalheResponse > Consultar_1WithHttpInfo (long? id)
-        {
-            
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling CadastroClienteApi->Consultar_1");
-            
-    
-            var localVarPath = "/api/pessoas-detalhes/{id}";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            
-            
-            
-            
-            
-
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar_1: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar_1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<PessoaDetalheResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PessoaDetalheResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PessoaDetalheResponse)));
-            
-        }
-
-        
-        /// <summary>
-        /// Apresenta os detalhes de uma determinada Pessoa Este m\u00E9todo permite a consulta dos detalhes de uma Pessoa existentes na base de dados do Emissor
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">ID da Pessoa</param>
-        /// <returns>Task of PessoaDetalheResponse</returns>
-        public async System.Threading.Tasks.Task<PessoaDetalheResponse> Consultar_1Async (long? id)
-        {
-             ApiResponse<PessoaDetalheResponse> localVarResponse = await Consultar_1AsyncWithHttpInfo(id);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Apresenta os detalhes de uma determinada Pessoa Este m\u00E9todo permite a consulta dos detalhes de uma Pessoa existentes na base de dados do Emissor
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">ID da Pessoa</param>
-        /// <returns>Task of ApiResponse (PessoaDetalheResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PessoaDetalheResponse>> Consultar_1AsyncWithHttpInfo (long? id)
-        {
-            // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling Consultar_1");
-            
-    
-            var localVarPath = "/api/pessoas-detalhes/{id}";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            
-            
-            
-            
-            
-
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar_1: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar_1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<PessoaDetalheResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PessoaDetalheResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PessoaDetalheResponse)));
             
         }
         
@@ -5611,9 +5005,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID da Pessoa</param> 
         /// <returns>PessoaResponse</returns>
-        public PessoaResponse Consultar_2 (long? id)
+        public PessoaResponse ConsultarPessoa (long? id)
         {
-             ApiResponse<PessoaResponse> localVarResponse = Consultar_2WithHttpInfo(id);
+             ApiResponse<PessoaResponse> localVarResponse = ConsultarPessoaWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -5623,12 +5017,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID da Pessoa</param> 
         /// <returns>ApiResponse of PessoaResponse</returns>
-        public ApiResponse< PessoaResponse > Consultar_2WithHttpInfo (long? id)
+        public ApiResponse< PessoaResponse > ConsultarPessoaWithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling CadastroClienteApi->Consultar_2");
+                throw new ApiException(400, "Missing required parameter 'id' when calling CadastroClienteApi->ConsultarPessoa");
             
     
             var localVarPath = "/api/pessoas/{id}";
@@ -5674,9 +5068,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar_2: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarPessoa: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar_2: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarPessoa: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PessoaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5691,9 +5085,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID da Pessoa</param>
         /// <returns>Task of PessoaResponse</returns>
-        public async System.Threading.Tasks.Task<PessoaResponse> Consultar_2Async (long? id)
+        public async System.Threading.Tasks.Task<PessoaResponse> ConsultarPessoaAsync (long? id)
         {
-             ApiResponse<PessoaResponse> localVarResponse = await Consultar_2AsyncWithHttpInfo(id);
+             ApiResponse<PessoaResponse> localVarResponse = await ConsultarPessoaAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -5704,10 +5098,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">ID da Pessoa</param>
         /// <returns>Task of ApiResponse (PessoaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PessoaResponse>> Consultar_2AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<PessoaResponse>> ConsultarPessoaAsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling Consultar_2");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarPessoa");
             
     
             var localVarPath = "/api/pessoas/{id}";
@@ -5753,13 +5147,341 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar_2: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarPessoa: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar_2: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarPessoa: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PessoaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (PessoaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PessoaResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Consulta Adicional de uma Conta Este m\u00E9todo permite que seja consultado um portador Adicional de uma determinada Conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param> 
+        /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da pessoa (id)</param> 
+        /// <returns>AdicionalDetalheResponse</returns>
+        public AdicionalDetalheResponse ConsultarPessoaAdicionalDaConta (long? id, long? idPessoa)
+        {
+             ApiResponse<AdicionalDetalheResponse> localVarResponse = ConsultarPessoaAdicionalDaContaWithHttpInfo(id, idPessoa);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Consulta Adicional de uma Conta Este m\u00E9todo permite que seja consultado um portador Adicional de uma determinada Conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param> 
+        /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da pessoa (id)</param> 
+        /// <returns>ApiResponse of AdicionalDetalheResponse</returns>
+        public ApiResponse< AdicionalDetalheResponse > ConsultarPessoaAdicionalDaContaWithHttpInfo (long? id, long? idPessoa)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling CadastroClienteApi->ConsultarPessoaAdicionalDaConta");
+            
+            // verify the required parameter 'idPessoa' is set
+            if (idPessoa == null)
+                throw new ApiException(400, "Missing required parameter 'idPessoa' when calling CadastroClienteApi->ConsultarPessoaAdicionalDaConta");
+            
+    
+            var localVarPath = "/api/contas/{id}/adicionais/{idPessoa}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (idPessoa != null) localVarPathParams.Add("idPessoa", Configuration.ApiClient.ParameterToString(idPessoa)); // path parameter
+            
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarPessoaAdicionalDaConta: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarPessoaAdicionalDaConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<AdicionalDetalheResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AdicionalDetalheResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AdicionalDetalheResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Consulta Adicional de uma Conta Este m\u00E9todo permite que seja consultado um portador Adicional de uma determinada Conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
+        /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da pessoa (id)</param>
+        /// <returns>Task of AdicionalDetalheResponse</returns>
+        public async System.Threading.Tasks.Task<AdicionalDetalheResponse> ConsultarPessoaAdicionalDaContaAsync (long? id, long? idPessoa)
+        {
+             ApiResponse<AdicionalDetalheResponse> localVarResponse = await ConsultarPessoaAdicionalDaContaAsyncWithHttpInfo(id, idPessoa);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Consulta Adicional de uma Conta Este m\u00E9todo permite que seja consultado um portador Adicional de uma determinada Conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
+        /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da pessoa (id)</param>
+        /// <returns>Task of ApiResponse (AdicionalDetalheResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AdicionalDetalheResponse>> ConsultarPessoaAdicionalDaContaAsyncWithHttpInfo (long? id, long? idPessoa)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarPessoaAdicionalDaConta");
+            // verify the required parameter 'idPessoa' is set
+            if (idPessoa == null) throw new ApiException(400, "Missing required parameter 'idPessoa' when calling ConsultarPessoaAdicionalDaConta");
+            
+    
+            var localVarPath = "/api/contas/{id}/adicionais/{idPessoa}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (idPessoa != null) localVarPathParams.Add("idPessoa", Configuration.ApiClient.ParameterToString(idPessoa)); // path parameter
+            
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarPessoaAdicionalDaConta: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarPessoaAdicionalDaConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AdicionalDetalheResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AdicionalDetalheResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AdicionalDetalheResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Apresenta os detalhes de uma determinada Pessoa Este m\u00E9todo permite a consulta dos detalhes de uma Pessoa existentes na base de dados do Emissor
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">ID da Pessoa</param> 
+        /// <returns>PessoaDetalheResponse</returns>
+        public PessoaDetalheResponse ConsultarPessoaDetalhe (long? id)
+        {
+             ApiResponse<PessoaDetalheResponse> localVarResponse = ConsultarPessoaDetalheWithHttpInfo(id);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Apresenta os detalhes de uma determinada Pessoa Este m\u00E9todo permite a consulta dos detalhes de uma Pessoa existentes na base de dados do Emissor
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">ID da Pessoa</param> 
+        /// <returns>ApiResponse of PessoaDetalheResponse</returns>
+        public ApiResponse< PessoaDetalheResponse > ConsultarPessoaDetalheWithHttpInfo (long? id)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling CadastroClienteApi->ConsultarPessoaDetalhe");
+            
+    
+            var localVarPath = "/api/pessoas-detalhes/{id}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarPessoaDetalhe: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarPessoaDetalhe: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<PessoaDetalheResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PessoaDetalheResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PessoaDetalheResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Apresenta os detalhes de uma determinada Pessoa Este m\u00E9todo permite a consulta dos detalhes de uma Pessoa existentes na base de dados do Emissor
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">ID da Pessoa</param>
+        /// <returns>Task of PessoaDetalheResponse</returns>
+        public async System.Threading.Tasks.Task<PessoaDetalheResponse> ConsultarPessoaDetalheAsync (long? id)
+        {
+             ApiResponse<PessoaDetalheResponse> localVarResponse = await ConsultarPessoaDetalheAsyncWithHttpInfo(id);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Apresenta os detalhes de uma determinada Pessoa Este m\u00E9todo permite a consulta dos detalhes de uma Pessoa existentes na base de dados do Emissor
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">ID da Pessoa</param>
+        /// <returns>Task of ApiResponse (PessoaDetalheResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PessoaDetalheResponse>> ConsultarPessoaDetalheAsyncWithHttpInfo (long? id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarPessoaDetalhe");
+            
+    
+            var localVarPath = "/api/pessoas-detalhes/{id}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarPessoaDetalhe: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarPessoaDetalhe: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PessoaDetalheResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PessoaDetalheResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PessoaDetalheResponse)));
             
         }
         
@@ -5769,9 +5491,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Telefone (id)</param> 
         /// <returns>TelefoneResponse</returns>
-        public TelefoneResponse Consultar_3 (long? id)
+        public TelefoneResponse ConsultarTelefone (long? id)
         {
-             ApiResponse<TelefoneResponse> localVarResponse = Consultar_3WithHttpInfo(id);
+             ApiResponse<TelefoneResponse> localVarResponse = ConsultarTelefoneWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -5781,12 +5503,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Telefone (id)</param> 
         /// <returns>ApiResponse of TelefoneResponse</returns>
-        public ApiResponse< TelefoneResponse > Consultar_3WithHttpInfo (long? id)
+        public ApiResponse< TelefoneResponse > ConsultarTelefoneWithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling CadastroClienteApi->Consultar_3");
+                throw new ApiException(400, "Missing required parameter 'id' when calling CadastroClienteApi->ConsultarTelefone");
             
     
             var localVarPath = "/api/telefones/{id}";
@@ -5832,9 +5554,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar_3: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarTelefone: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar_3: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarTelefone: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<TelefoneResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5849,9 +5571,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Telefone (id)</param>
         /// <returns>Task of TelefoneResponse</returns>
-        public async System.Threading.Tasks.Task<TelefoneResponse> Consultar_3Async (long? id)
+        public async System.Threading.Tasks.Task<TelefoneResponse> ConsultarTelefoneAsync (long? id)
         {
-             ApiResponse<TelefoneResponse> localVarResponse = await Consultar_3AsyncWithHttpInfo(id);
+             ApiResponse<TelefoneResponse> localVarResponse = await ConsultarTelefoneAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -5862,10 +5584,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Telefone (id)</param>
         /// <returns>Task of ApiResponse (TelefoneResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TelefoneResponse>> Consultar_3AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<TelefoneResponse>> ConsultarTelefoneAsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling Consultar_3");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarTelefone");
             
     
             var localVarPath = "/api/telefones/{id}";
@@ -5911,9 +5633,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar_3: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarTelefone: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar_3: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarTelefone: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<TelefoneResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5928,9 +5650,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param> 
         /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da pessoa (id)</param> 
         /// <returns>string</returns>
-        public string Inativar (long? id, long? idPessoa)
+        public string InativarAdicionalConta (long? id, long? idPessoa)
         {
-             ApiResponse<string> localVarResponse = InativarWithHttpInfo(id, idPessoa);
+             ApiResponse<string> localVarResponse = InativarAdicionalContaWithHttpInfo(id, idPessoa);
              return localVarResponse.Data;
         }
 
@@ -5941,16 +5663,16 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param> 
         /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da pessoa (id)</param> 
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > InativarWithHttpInfo (long? id, long? idPessoa)
+        public ApiResponse< string > InativarAdicionalContaWithHttpInfo (long? id, long? idPessoa)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling CadastroClienteApi->Inativar");
+                throw new ApiException(400, "Missing required parameter 'id' when calling CadastroClienteApi->InativarAdicionalConta");
             
             // verify the required parameter 'idPessoa' is set
             if (idPessoa == null)
-                throw new ApiException(400, "Missing required parameter 'idPessoa' when calling CadastroClienteApi->Inativar");
+                throw new ApiException(400, "Missing required parameter 'idPessoa' when calling CadastroClienteApi->InativarAdicionalConta");
             
     
             var localVarPath = "/api/contas/{id}/adicionais/{idPessoa}/inativar";
@@ -5997,9 +5719,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Inativar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling InativarAdicionalConta: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Inativar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling InativarAdicionalConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6015,9 +5737,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
         /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da pessoa (id)</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> InativarAsync (long? id, long? idPessoa)
+        public async System.Threading.Tasks.Task<string> InativarAdicionalContaAsync (long? id, long? idPessoa)
         {
-             ApiResponse<string> localVarResponse = await InativarAsyncWithHttpInfo(id, idPessoa);
+             ApiResponse<string> localVarResponse = await InativarAdicionalContaAsyncWithHttpInfo(id, idPessoa);
              return localVarResponse.Data;
 
         }
@@ -6029,12 +5751,12 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
         /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da pessoa (id)</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> InativarAsyncWithHttpInfo (long? id, long? idPessoa)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> InativarAdicionalContaAsyncWithHttpInfo (long? id, long? idPessoa)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling Inativar");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling InativarAdicionalConta");
             // verify the required parameter 'idPessoa' is set
-            if (idPessoa == null) throw new ApiException(400, "Missing required parameter 'idPessoa' when calling Inativar");
+            if (idPessoa == null) throw new ApiException(400, "Missing required parameter 'idPessoa' when calling InativarAdicionalConta");
             
     
             var localVarPath = "/api/contas/{id}/adicionais/{idPessoa}/inativar";
@@ -6081,9 +5803,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Inativar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling InativarAdicionalConta: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Inativar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling InativarAdicionalConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6100,9 +5822,9 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00E1gina (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
         /// <returns>AdicionalResponse</returns>
-        public AdicionalResponse Listar (long? id, List<string> sort = null, int? page = null, int? limit = null)
+        public AdicionalResponse ListarAdicionaisConta (long? id, List<string> sort = null, int? page = null, int? limit = null)
         {
-             ApiResponse<AdicionalResponse> localVarResponse = ListarWithHttpInfo(id, sort, page, limit);
+             ApiResponse<AdicionalResponse> localVarResponse = ListarAdicionaisContaWithHttpInfo(id, sort, page, limit);
              return localVarResponse.Data;
         }
 
@@ -6115,12 +5837,12 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00E1gina (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
         /// <returns>ApiResponse of AdicionalResponse</returns>
-        public ApiResponse< AdicionalResponse > ListarWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null)
+        public ApiResponse< AdicionalResponse > ListarAdicionaisContaWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling CadastroClienteApi->Listar");
+                throw new ApiException(400, "Missing required parameter 'id' when calling CadastroClienteApi->ListarAdicionaisConta");
             
     
             var localVarPath = "/api/contas/{id}/adicionais";
@@ -6169,9 +5891,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Listar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarAdicionaisConta: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Listar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarAdicionaisConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<AdicionalResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6189,9 +5911,9 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00E1gina (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
         /// <returns>Task of AdicionalResponse</returns>
-        public async System.Threading.Tasks.Task<AdicionalResponse> ListarAsync (long? id, List<string> sort = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<AdicionalResponse> ListarAdicionaisContaAsync (long? id, List<string> sort = null, int? page = null, int? limit = null)
         {
-             ApiResponse<AdicionalResponse> localVarResponse = await ListarAsyncWithHttpInfo(id, sort, page, limit);
+             ApiResponse<AdicionalResponse> localVarResponse = await ListarAdicionaisContaAsyncWithHttpInfo(id, sort, page, limit);
              return localVarResponse.Data;
 
         }
@@ -6205,10 +5927,10 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00E1gina (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
         /// <returns>Task of ApiResponse (AdicionalResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AdicionalResponse>> ListarAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<ApiResponse<AdicionalResponse>> ListarAdicionaisContaAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling Listar");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ListarAdicionaisConta");
             
     
             var localVarPath = "/api/contas/{id}/adicionais";
@@ -6257,9 +5979,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Listar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarAdicionaisConta: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Listar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarAdicionaisConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<AdicionalResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6276,9 +5998,9 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00E1gina (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
         /// <returns>PageContaDetalheResponse</returns>
-        public PageContaDetalheResponse ListarContasPorPessoa (string numeroReceitaFederal, List<string> sort = null, int? page = null, int? limit = null)
+        public PageContaDetalheResponse ListarContasPessoa (string numeroReceitaFederal, List<string> sort = null, int? page = null, int? limit = null)
         {
-             ApiResponse<PageContaDetalheResponse> localVarResponse = ListarContasPorPessoaWithHttpInfo(numeroReceitaFederal, sort, page, limit);
+             ApiResponse<PageContaDetalheResponse> localVarResponse = ListarContasPessoaWithHttpInfo(numeroReceitaFederal, sort, page, limit);
              return localVarResponse.Data;
         }
 
@@ -6291,12 +6013,12 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00E1gina (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
         /// <returns>ApiResponse of PageContaDetalheResponse</returns>
-        public ApiResponse< PageContaDetalheResponse > ListarContasPorPessoaWithHttpInfo (string numeroReceitaFederal, List<string> sort = null, int? page = null, int? limit = null)
+        public ApiResponse< PageContaDetalheResponse > ListarContasPessoaWithHttpInfo (string numeroReceitaFederal, List<string> sort = null, int? page = null, int? limit = null)
         {
             
             // verify the required parameter 'numeroReceitaFederal' is set
             if (numeroReceitaFederal == null)
-                throw new ApiException(400, "Missing required parameter 'numeroReceitaFederal' when calling CadastroClienteApi->ListarContasPorPessoa");
+                throw new ApiException(400, "Missing required parameter 'numeroReceitaFederal' when calling CadastroClienteApi->ListarContasPessoa");
             
     
             var localVarPath = "/api/pessoas/listar-contas";
@@ -6345,9 +6067,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarContasPorPessoa: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarContasPessoa: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarContasPorPessoa: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarContasPessoa: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageContaDetalheResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6365,9 +6087,9 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00E1gina (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
         /// <returns>Task of PageContaDetalheResponse</returns>
-        public async System.Threading.Tasks.Task<PageContaDetalheResponse> ListarContasPorPessoaAsync (string numeroReceitaFederal, List<string> sort = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<PageContaDetalheResponse> ListarContasPessoaAsync (string numeroReceitaFederal, List<string> sort = null, int? page = null, int? limit = null)
         {
-             ApiResponse<PageContaDetalheResponse> localVarResponse = await ListarContasPorPessoaAsyncWithHttpInfo(numeroReceitaFederal, sort, page, limit);
+             ApiResponse<PageContaDetalheResponse> localVarResponse = await ListarContasPessoaAsyncWithHttpInfo(numeroReceitaFederal, sort, page, limit);
              return localVarResponse.Data;
 
         }
@@ -6381,10 +6103,10 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00E1gina (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
         /// <returns>Task of ApiResponse (PageContaDetalheResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageContaDetalheResponse>> ListarContasPorPessoaAsyncWithHttpInfo (string numeroReceitaFederal, List<string> sort = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageContaDetalheResponse>> ListarContasPessoaAsyncWithHttpInfo (string numeroReceitaFederal, List<string> sort = null, int? page = null, int? limit = null)
         {
             // verify the required parameter 'numeroReceitaFederal' is set
-            if (numeroReceitaFederal == null) throw new ApiException(400, "Missing required parameter 'numeroReceitaFederal' when calling ListarContasPorPessoa");
+            if (numeroReceitaFederal == null) throw new ApiException(400, "Missing required parameter 'numeroReceitaFederal' when calling ListarContasPessoa");
             
     
             var localVarPath = "/api/pessoas/listar-contas";
@@ -6433,13 +6155,273 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarContasPorPessoa: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarContasPessoa: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarContasPorPessoa: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarContasPessoa: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageContaDetalheResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (PageContaDetalheResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageContaDetalheResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Lista os Endere\u00E7os cadastrados para o Emissor Este m\u00E9todo permite que sejam listados os Endere\u00E7os existentes na base de dados do Emissor
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="page">P\u00E1gina (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id) (optional)</param> 
+        /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o endere\u00E7o pertence (id) (optional)</param> 
+        /// <param name="idTipoEndereco">C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id) (optional)</param> 
+        /// <param name="cep">List os CEPs (optional)</param> 
+        /// <param name="logradouro">Apresenta o nome do Logradouro (optional)</param> 
+        /// <param name="numero">Apresenta o n\u00FAmero do endere\u00E7o (optional)</param> 
+        /// <param name="complemento">Apresenta descri\u00E7oes complementares referente ao endere\u00E7o (optional)</param> 
+        /// <param name="pontoReferencia">Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o (optional)</param> 
+        /// <param name="bairro">Apresenta nome do bairro (optional)</param> 
+        /// <param name="cidade">Apresenta nome da cidade (optional)</param> 
+        /// <param name="uf">Apresenta sigla da Unidade Federativa (optional)</param> 
+        /// <param name="pais">Apresenta nome do Pa\u00EDs (optional)</param> 
+        /// <param name="dataInclusao">Apresenta a data em que fora cadastrado o Endere\u00E7o (optional)</param> 
+        /// <param name="dataUltimaAtualizacao">Data em que fora realizada a \u00FAltima mudan\u00E7a neste registro de endere\u00E7o. Quando n\u00E3o tiver ocorrido mudan\u00E7a, conter\u00E1 a mesma informa\u00E7\u00E3o que o campo dataInclusao (optional)</param> 
+        /// <param name="tempoResidenciaAnos">Apresenta a quantidade de anos em que habita na resid\u00EAncia (optional)</param> 
+        /// <param name="tempoResidenciaMeses">Apresenta a quantidade de meses que habita na resid\u00EAncia (optional)</param> 
+        /// <returns>PageEnderecoResponse</returns>
+        public PageEnderecoResponse ListarEnderecos (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, string dataInclusao = null, string dataUltimaAtualizacao = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null)
+        {
+             ApiResponse<PageEnderecoResponse> localVarResponse = ListarEnderecosWithHttpInfo(sort, page, limit, id, idPessoa, idTipoEndereco, cep, logradouro, numero, complemento, pontoReferencia, bairro, cidade, uf, pais, dataInclusao, dataUltimaAtualizacao, tempoResidenciaAnos, tempoResidenciaMeses);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Lista os Endere\u00E7os cadastrados para o Emissor Este m\u00E9todo permite que sejam listados os Endere\u00E7os existentes na base de dados do Emissor
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="page">P\u00E1gina (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id) (optional)</param> 
+        /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o endere\u00E7o pertence (id) (optional)</param> 
+        /// <param name="idTipoEndereco">C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id) (optional)</param> 
+        /// <param name="cep">List os CEPs (optional)</param> 
+        /// <param name="logradouro">Apresenta o nome do Logradouro (optional)</param> 
+        /// <param name="numero">Apresenta o n\u00FAmero do endere\u00E7o (optional)</param> 
+        /// <param name="complemento">Apresenta descri\u00E7oes complementares referente ao endere\u00E7o (optional)</param> 
+        /// <param name="pontoReferencia">Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o (optional)</param> 
+        /// <param name="bairro">Apresenta nome do bairro (optional)</param> 
+        /// <param name="cidade">Apresenta nome da cidade (optional)</param> 
+        /// <param name="uf">Apresenta sigla da Unidade Federativa (optional)</param> 
+        /// <param name="pais">Apresenta nome do Pa\u00EDs (optional)</param> 
+        /// <param name="dataInclusao">Apresenta a data em que fora cadastrado o Endere\u00E7o (optional)</param> 
+        /// <param name="dataUltimaAtualizacao">Data em que fora realizada a \u00FAltima mudan\u00E7a neste registro de endere\u00E7o. Quando n\u00E3o tiver ocorrido mudan\u00E7a, conter\u00E1 a mesma informa\u00E7\u00E3o que o campo dataInclusao (optional)</param> 
+        /// <param name="tempoResidenciaAnos">Apresenta a quantidade de anos em que habita na resid\u00EAncia (optional)</param> 
+        /// <param name="tempoResidenciaMeses">Apresenta a quantidade de meses que habita na resid\u00EAncia (optional)</param> 
+        /// <returns>ApiResponse of PageEnderecoResponse</returns>
+        public ApiResponse< PageEnderecoResponse > ListarEnderecosWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, string dataInclusao = null, string dataUltimaAtualizacao = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null)
+        {
+            
+    
+            var localVarPath = "/api/enderecos";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
+            if (idPessoa != null) localVarQueryParams.Add("idPessoa", Configuration.ApiClient.ParameterToString(idPessoa)); // query parameter
+            if (idTipoEndereco != null) localVarQueryParams.Add("idTipoEndereco", Configuration.ApiClient.ParameterToString(idTipoEndereco)); // query parameter
+            if (cep != null) localVarQueryParams.Add("cep", Configuration.ApiClient.ParameterToString(cep)); // query parameter
+            if (logradouro != null) localVarQueryParams.Add("logradouro", Configuration.ApiClient.ParameterToString(logradouro)); // query parameter
+            if (numero != null) localVarQueryParams.Add("numero", Configuration.ApiClient.ParameterToString(numero)); // query parameter
+            if (complemento != null) localVarQueryParams.Add("complemento", Configuration.ApiClient.ParameterToString(complemento)); // query parameter
+            if (pontoReferencia != null) localVarQueryParams.Add("pontoReferencia", Configuration.ApiClient.ParameterToString(pontoReferencia)); // query parameter
+            if (bairro != null) localVarQueryParams.Add("bairro", Configuration.ApiClient.ParameterToString(bairro)); // query parameter
+            if (cidade != null) localVarQueryParams.Add("cidade", Configuration.ApiClient.ParameterToString(cidade)); // query parameter
+            if (uf != null) localVarQueryParams.Add("uf", Configuration.ApiClient.ParameterToString(uf)); // query parameter
+            if (pais != null) localVarQueryParams.Add("pais", Configuration.ApiClient.ParameterToString(pais)); // query parameter
+            if (dataInclusao != null) localVarQueryParams.Add("dataInclusao", Configuration.ApiClient.ParameterToString(dataInclusao)); // query parameter
+            if (dataUltimaAtualizacao != null) localVarQueryParams.Add("dataUltimaAtualizacao", Configuration.ApiClient.ParameterToString(dataUltimaAtualizacao)); // query parameter
+            if (tempoResidenciaAnos != null) localVarQueryParams.Add("tempoResidenciaAnos", Configuration.ApiClient.ParameterToString(tempoResidenciaAnos)); // query parameter
+            if (tempoResidenciaMeses != null) localVarQueryParams.Add("tempoResidenciaMeses", Configuration.ApiClient.ParameterToString(tempoResidenciaMeses)); // query parameter
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarEnderecos: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarEnderecos: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<PageEnderecoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageEnderecoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageEnderecoResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Lista os Endere\u00E7os cadastrados para o Emissor Este m\u00E9todo permite que sejam listados os Endere\u00E7os existentes na base de dados do Emissor
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id) (optional)</param>
+        /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o endere\u00E7o pertence (id) (optional)</param>
+        /// <param name="idTipoEndereco">C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id) (optional)</param>
+        /// <param name="cep">List os CEPs (optional)</param>
+        /// <param name="logradouro">Apresenta o nome do Logradouro (optional)</param>
+        /// <param name="numero">Apresenta o n\u00FAmero do endere\u00E7o (optional)</param>
+        /// <param name="complemento">Apresenta descri\u00E7oes complementares referente ao endere\u00E7o (optional)</param>
+        /// <param name="pontoReferencia">Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o (optional)</param>
+        /// <param name="bairro">Apresenta nome do bairro (optional)</param>
+        /// <param name="cidade">Apresenta nome da cidade (optional)</param>
+        /// <param name="uf">Apresenta sigla da Unidade Federativa (optional)</param>
+        /// <param name="pais">Apresenta nome do Pa\u00EDs (optional)</param>
+        /// <param name="dataInclusao">Apresenta a data em que fora cadastrado o Endere\u00E7o (optional)</param>
+        /// <param name="dataUltimaAtualizacao">Data em que fora realizada a \u00FAltima mudan\u00E7a neste registro de endere\u00E7o. Quando n\u00E3o tiver ocorrido mudan\u00E7a, conter\u00E1 a mesma informa\u00E7\u00E3o que o campo dataInclusao (optional)</param>
+        /// <param name="tempoResidenciaAnos">Apresenta a quantidade de anos em que habita na resid\u00EAncia (optional)</param>
+        /// <param name="tempoResidenciaMeses">Apresenta a quantidade de meses que habita na resid\u00EAncia (optional)</param>
+        /// <returns>Task of PageEnderecoResponse</returns>
+        public async System.Threading.Tasks.Task<PageEnderecoResponse> ListarEnderecosAsync (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, string dataInclusao = null, string dataUltimaAtualizacao = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null)
+        {
+             ApiResponse<PageEnderecoResponse> localVarResponse = await ListarEnderecosAsyncWithHttpInfo(sort, page, limit, id, idPessoa, idTipoEndereco, cep, logradouro, numero, complemento, pontoReferencia, bairro, cidade, uf, pais, dataInclusao, dataUltimaAtualizacao, tempoResidenciaAnos, tempoResidenciaMeses);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Lista os Endere\u00E7os cadastrados para o Emissor Este m\u00E9todo permite que sejam listados os Endere\u00E7os existentes na base de dados do Emissor
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id) (optional)</param>
+        /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o endere\u00E7o pertence (id) (optional)</param>
+        /// <param name="idTipoEndereco">C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id) (optional)</param>
+        /// <param name="cep">List os CEPs (optional)</param>
+        /// <param name="logradouro">Apresenta o nome do Logradouro (optional)</param>
+        /// <param name="numero">Apresenta o n\u00FAmero do endere\u00E7o (optional)</param>
+        /// <param name="complemento">Apresenta descri\u00E7oes complementares referente ao endere\u00E7o (optional)</param>
+        /// <param name="pontoReferencia">Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o (optional)</param>
+        /// <param name="bairro">Apresenta nome do bairro (optional)</param>
+        /// <param name="cidade">Apresenta nome da cidade (optional)</param>
+        /// <param name="uf">Apresenta sigla da Unidade Federativa (optional)</param>
+        /// <param name="pais">Apresenta nome do Pa\u00EDs (optional)</param>
+        /// <param name="dataInclusao">Apresenta a data em que fora cadastrado o Endere\u00E7o (optional)</param>
+        /// <param name="dataUltimaAtualizacao">Data em que fora realizada a \u00FAltima mudan\u00E7a neste registro de endere\u00E7o. Quando n\u00E3o tiver ocorrido mudan\u00E7a, conter\u00E1 a mesma informa\u00E7\u00E3o que o campo dataInclusao (optional)</param>
+        /// <param name="tempoResidenciaAnos">Apresenta a quantidade de anos em que habita na resid\u00EAncia (optional)</param>
+        /// <param name="tempoResidenciaMeses">Apresenta a quantidade de meses que habita na resid\u00EAncia (optional)</param>
+        /// <returns>Task of ApiResponse (PageEnderecoResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PageEnderecoResponse>> ListarEnderecosAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, string dataInclusao = null, string dataUltimaAtualizacao = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null)
+        {
+            
+    
+            var localVarPath = "/api/enderecos";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
+            if (idPessoa != null) localVarQueryParams.Add("idPessoa", Configuration.ApiClient.ParameterToString(idPessoa)); // query parameter
+            if (idTipoEndereco != null) localVarQueryParams.Add("idTipoEndereco", Configuration.ApiClient.ParameterToString(idTipoEndereco)); // query parameter
+            if (cep != null) localVarQueryParams.Add("cep", Configuration.ApiClient.ParameterToString(cep)); // query parameter
+            if (logradouro != null) localVarQueryParams.Add("logradouro", Configuration.ApiClient.ParameterToString(logradouro)); // query parameter
+            if (numero != null) localVarQueryParams.Add("numero", Configuration.ApiClient.ParameterToString(numero)); // query parameter
+            if (complemento != null) localVarQueryParams.Add("complemento", Configuration.ApiClient.ParameterToString(complemento)); // query parameter
+            if (pontoReferencia != null) localVarQueryParams.Add("pontoReferencia", Configuration.ApiClient.ParameterToString(pontoReferencia)); // query parameter
+            if (bairro != null) localVarQueryParams.Add("bairro", Configuration.ApiClient.ParameterToString(bairro)); // query parameter
+            if (cidade != null) localVarQueryParams.Add("cidade", Configuration.ApiClient.ParameterToString(cidade)); // query parameter
+            if (uf != null) localVarQueryParams.Add("uf", Configuration.ApiClient.ParameterToString(uf)); // query parameter
+            if (pais != null) localVarQueryParams.Add("pais", Configuration.ApiClient.ParameterToString(pais)); // query parameter
+            if (dataInclusao != null) localVarQueryParams.Add("dataInclusao", Configuration.ApiClient.ParameterToString(dataInclusao)); // query parameter
+            if (dataUltimaAtualizacao != null) localVarQueryParams.Add("dataUltimaAtualizacao", Configuration.ApiClient.ParameterToString(dataUltimaAtualizacao)); // query parameter
+            if (tempoResidenciaAnos != null) localVarQueryParams.Add("tempoResidenciaAnos", Configuration.ApiClient.ParameterToString(tempoResidenciaAnos)); // query parameter
+            if (tempoResidenciaMeses != null) localVarQueryParams.Add("tempoResidenciaMeses", Configuration.ApiClient.ParameterToString(tempoResidenciaMeses)); // query parameter
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarEnderecos: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarEnderecos: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PageEnderecoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageEnderecoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageEnderecoResponse)));
             
         }
         
@@ -6643,9 +6625,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da pessoa (id)</param> 
         /// <returns>HistoricoTelefoneResponse</returns>
-        public HistoricoTelefoneResponse ListarHistoricoTelefones (long? id)
+        public HistoricoTelefoneResponse ListarHistoricoTelefonesPessoa (long? id)
         {
-             ApiResponse<HistoricoTelefoneResponse> localVarResponse = ListarHistoricoTelefonesWithHttpInfo(id);
+             ApiResponse<HistoricoTelefoneResponse> localVarResponse = ListarHistoricoTelefonesPessoaWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -6655,12 +6637,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da pessoa (id)</param> 
         /// <returns>ApiResponse of HistoricoTelefoneResponse</returns>
-        public ApiResponse< HistoricoTelefoneResponse > ListarHistoricoTelefonesWithHttpInfo (long? id)
+        public ApiResponse< HistoricoTelefoneResponse > ListarHistoricoTelefonesPessoaWithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling CadastroClienteApi->ListarHistoricoTelefones");
+                throw new ApiException(400, "Missing required parameter 'id' when calling CadastroClienteApi->ListarHistoricoTelefonesPessoa");
             
     
             var localVarPath = "/api/pessoas/{id}/historico-telefones";
@@ -6706,9 +6688,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarHistoricoTelefones: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarHistoricoTelefonesPessoa: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarHistoricoTelefones: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarHistoricoTelefonesPessoa: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<HistoricoTelefoneResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6723,9 +6705,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da pessoa (id)</param>
         /// <returns>Task of HistoricoTelefoneResponse</returns>
-        public async System.Threading.Tasks.Task<HistoricoTelefoneResponse> ListarHistoricoTelefonesAsync (long? id)
+        public async System.Threading.Tasks.Task<HistoricoTelefoneResponse> ListarHistoricoTelefonesPessoaAsync (long? id)
         {
-             ApiResponse<HistoricoTelefoneResponse> localVarResponse = await ListarHistoricoTelefonesAsyncWithHttpInfo(id);
+             ApiResponse<HistoricoTelefoneResponse> localVarResponse = await ListarHistoricoTelefonesPessoaAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -6736,10 +6718,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da pessoa (id)</param>
         /// <returns>Task of ApiResponse (HistoricoTelefoneResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<HistoricoTelefoneResponse>> ListarHistoricoTelefonesAsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<HistoricoTelefoneResponse>> ListarHistoricoTelefonesPessoaAsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ListarHistoricoTelefones");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ListarHistoricoTelefonesPessoa");
             
     
             var localVarPath = "/api/pessoas/{id}/historico-telefones";
@@ -6785,9 +6767,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarHistoricoTelefones: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarHistoricoTelefonesPessoa: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarHistoricoTelefones: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarHistoricoTelefonesPessoa: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<HistoricoTelefoneResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -7008,6 +6990,532 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
+        /// Lista as Pessoas cadastradas no Emissor Este m\u00E9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="page">P\u00E1gina (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id) (optional)</param> 
+        /// <param name="nome">Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00E3o Social (Nome Empresarial)&#39; (optional)</param> 
+        /// <param name="tipo">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa F\u00EDsica, sendo: (&#39;PF&#39;: Pessoa F\u00EDsica), (&#39;PJ&#39;: Pessoa Jur\u00EDdica) (optional)</param> 
+        /// <param name="cpf">Quando uma pessoa f\u00EDsica preencha com o CPF (optional)</param> 
+        /// <param name="cnpj">Quando um pessoa jur\u00EDdica preencha o CNPJ (optional)</param> 
+        /// <param name="dataNascimento">Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ (optional)</param> 
+        /// <param name="sexo">C\u00F3digo de Identifica\u00E7\u00E3o do sexo da pessoa, quando \u00E9 PF, sendo: (&#39;M&#39;: Masculino), (&#39;F&#39;: Feminino), (&#39;O&#39;: Outro), (&#39;N&#39;: N\u00E3o especificado) (optional)</param> 
+        /// <param name="numeroIdentidade">N\u00FAmero da Identidade (optional)</param> 
+        /// <param name="orgaoExpedidorIdentidade">Org\u00E3o expedidor do RG (optional)</param> 
+        /// <param name="unidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade (optional)</param> 
+        /// <param name="dataEmissaoIdentidade">Data emiss\u00E3o da identidade no formato aaaa-MM-dd (optional)</param> 
+        /// <returns>PagePessoaResponse</returns>
+        public PagePessoaResponse ListarPessoas (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, string tipo = null, string cpf = null, string cnpj = null, string dataNascimento = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null)
+        {
+             ApiResponse<PagePessoaResponse> localVarResponse = ListarPessoasWithHttpInfo(sort, page, limit, id, nome, tipo, cpf, cnpj, dataNascimento, sexo, numeroIdentidade, orgaoExpedidorIdentidade, unidadeFederativaIdentidade, dataEmissaoIdentidade);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Lista as Pessoas cadastradas no Emissor Este m\u00E9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="page">P\u00E1gina (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id) (optional)</param> 
+        /// <param name="nome">Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00E3o Social (Nome Empresarial)&#39; (optional)</param> 
+        /// <param name="tipo">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa F\u00EDsica, sendo: (&#39;PF&#39;: Pessoa F\u00EDsica), (&#39;PJ&#39;: Pessoa Jur\u00EDdica) (optional)</param> 
+        /// <param name="cpf">Quando uma pessoa f\u00EDsica preencha com o CPF (optional)</param> 
+        /// <param name="cnpj">Quando um pessoa jur\u00EDdica preencha o CNPJ (optional)</param> 
+        /// <param name="dataNascimento">Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ (optional)</param> 
+        /// <param name="sexo">C\u00F3digo de Identifica\u00E7\u00E3o do sexo da pessoa, quando \u00E9 PF, sendo: (&#39;M&#39;: Masculino), (&#39;F&#39;: Feminino), (&#39;O&#39;: Outro), (&#39;N&#39;: N\u00E3o especificado) (optional)</param> 
+        /// <param name="numeroIdentidade">N\u00FAmero da Identidade (optional)</param> 
+        /// <param name="orgaoExpedidorIdentidade">Org\u00E3o expedidor do RG (optional)</param> 
+        /// <param name="unidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade (optional)</param> 
+        /// <param name="dataEmissaoIdentidade">Data emiss\u00E3o da identidade no formato aaaa-MM-dd (optional)</param> 
+        /// <returns>ApiResponse of PagePessoaResponse</returns>
+        public ApiResponse< PagePessoaResponse > ListarPessoasWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, string tipo = null, string cpf = null, string cnpj = null, string dataNascimento = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null)
+        {
+            
+    
+            var localVarPath = "/api/pessoas";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
+            if (nome != null) localVarQueryParams.Add("nome", Configuration.ApiClient.ParameterToString(nome)); // query parameter
+            if (tipo != null) localVarQueryParams.Add("tipo", Configuration.ApiClient.ParameterToString(tipo)); // query parameter
+            if (cpf != null) localVarQueryParams.Add("cpf", Configuration.ApiClient.ParameterToString(cpf)); // query parameter
+            if (cnpj != null) localVarQueryParams.Add("cnpj", Configuration.ApiClient.ParameterToString(cnpj)); // query parameter
+            if (dataNascimento != null) localVarQueryParams.Add("dataNascimento", Configuration.ApiClient.ParameterToString(dataNascimento)); // query parameter
+            if (sexo != null) localVarQueryParams.Add("sexo", Configuration.ApiClient.ParameterToString(sexo)); // query parameter
+            if (numeroIdentidade != null) localVarQueryParams.Add("numeroIdentidade", Configuration.ApiClient.ParameterToString(numeroIdentidade)); // query parameter
+            if (orgaoExpedidorIdentidade != null) localVarQueryParams.Add("orgaoExpedidorIdentidade", Configuration.ApiClient.ParameterToString(orgaoExpedidorIdentidade)); // query parameter
+            if (unidadeFederativaIdentidade != null) localVarQueryParams.Add("unidadeFederativaIdentidade", Configuration.ApiClient.ParameterToString(unidadeFederativaIdentidade)); // query parameter
+            if (dataEmissaoIdentidade != null) localVarQueryParams.Add("dataEmissaoIdentidade", Configuration.ApiClient.ParameterToString(dataEmissaoIdentidade)); // query parameter
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarPessoas: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarPessoas: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<PagePessoaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PagePessoaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PagePessoaResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Lista as Pessoas cadastradas no Emissor Este m\u00E9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id) (optional)</param>
+        /// <param name="nome">Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00E3o Social (Nome Empresarial)&#39; (optional)</param>
+        /// <param name="tipo">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa F\u00EDsica, sendo: (&#39;PF&#39;: Pessoa F\u00EDsica), (&#39;PJ&#39;: Pessoa Jur\u00EDdica) (optional)</param>
+        /// <param name="cpf">Quando uma pessoa f\u00EDsica preencha com o CPF (optional)</param>
+        /// <param name="cnpj">Quando um pessoa jur\u00EDdica preencha o CNPJ (optional)</param>
+        /// <param name="dataNascimento">Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ (optional)</param>
+        /// <param name="sexo">C\u00F3digo de Identifica\u00E7\u00E3o do sexo da pessoa, quando \u00E9 PF, sendo: (&#39;M&#39;: Masculino), (&#39;F&#39;: Feminino), (&#39;O&#39;: Outro), (&#39;N&#39;: N\u00E3o especificado) (optional)</param>
+        /// <param name="numeroIdentidade">N\u00FAmero da Identidade (optional)</param>
+        /// <param name="orgaoExpedidorIdentidade">Org\u00E3o expedidor do RG (optional)</param>
+        /// <param name="unidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade (optional)</param>
+        /// <param name="dataEmissaoIdentidade">Data emiss\u00E3o da identidade no formato aaaa-MM-dd (optional)</param>
+        /// <returns>Task of PagePessoaResponse</returns>
+        public async System.Threading.Tasks.Task<PagePessoaResponse> ListarPessoasAsync (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, string tipo = null, string cpf = null, string cnpj = null, string dataNascimento = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null)
+        {
+             ApiResponse<PagePessoaResponse> localVarResponse = await ListarPessoasAsyncWithHttpInfo(sort, page, limit, id, nome, tipo, cpf, cnpj, dataNascimento, sexo, numeroIdentidade, orgaoExpedidorIdentidade, unidadeFederativaIdentidade, dataEmissaoIdentidade);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Lista as Pessoas cadastradas no Emissor Este m\u00E9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id) (optional)</param>
+        /// <param name="nome">Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00E3o Social (Nome Empresarial)&#39; (optional)</param>
+        /// <param name="tipo">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa F\u00EDsica, sendo: (&#39;PF&#39;: Pessoa F\u00EDsica), (&#39;PJ&#39;: Pessoa Jur\u00EDdica) (optional)</param>
+        /// <param name="cpf">Quando uma pessoa f\u00EDsica preencha com o CPF (optional)</param>
+        /// <param name="cnpj">Quando um pessoa jur\u00EDdica preencha o CNPJ (optional)</param>
+        /// <param name="dataNascimento">Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ (optional)</param>
+        /// <param name="sexo">C\u00F3digo de Identifica\u00E7\u00E3o do sexo da pessoa, quando \u00E9 PF, sendo: (&#39;M&#39;: Masculino), (&#39;F&#39;: Feminino), (&#39;O&#39;: Outro), (&#39;N&#39;: N\u00E3o especificado) (optional)</param>
+        /// <param name="numeroIdentidade">N\u00FAmero da Identidade (optional)</param>
+        /// <param name="orgaoExpedidorIdentidade">Org\u00E3o expedidor do RG (optional)</param>
+        /// <param name="unidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade (optional)</param>
+        /// <param name="dataEmissaoIdentidade">Data emiss\u00E3o da identidade no formato aaaa-MM-dd (optional)</param>
+        /// <returns>Task of ApiResponse (PagePessoaResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PagePessoaResponse>> ListarPessoasAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, string tipo = null, string cpf = null, string cnpj = null, string dataNascimento = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null)
+        {
+            
+    
+            var localVarPath = "/api/pessoas";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
+            if (nome != null) localVarQueryParams.Add("nome", Configuration.ApiClient.ParameterToString(nome)); // query parameter
+            if (tipo != null) localVarQueryParams.Add("tipo", Configuration.ApiClient.ParameterToString(tipo)); // query parameter
+            if (cpf != null) localVarQueryParams.Add("cpf", Configuration.ApiClient.ParameterToString(cpf)); // query parameter
+            if (cnpj != null) localVarQueryParams.Add("cnpj", Configuration.ApiClient.ParameterToString(cnpj)); // query parameter
+            if (dataNascimento != null) localVarQueryParams.Add("dataNascimento", Configuration.ApiClient.ParameterToString(dataNascimento)); // query parameter
+            if (sexo != null) localVarQueryParams.Add("sexo", Configuration.ApiClient.ParameterToString(sexo)); // query parameter
+            if (numeroIdentidade != null) localVarQueryParams.Add("numeroIdentidade", Configuration.ApiClient.ParameterToString(numeroIdentidade)); // query parameter
+            if (orgaoExpedidorIdentidade != null) localVarQueryParams.Add("orgaoExpedidorIdentidade", Configuration.ApiClient.ParameterToString(orgaoExpedidorIdentidade)); // query parameter
+            if (unidadeFederativaIdentidade != null) localVarQueryParams.Add("unidadeFederativaIdentidade", Configuration.ApiClient.ParameterToString(unidadeFederativaIdentidade)); // query parameter
+            if (dataEmissaoIdentidade != null) localVarQueryParams.Add("dataEmissaoIdentidade", Configuration.ApiClient.ParameterToString(dataEmissaoIdentidade)); // query parameter
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarPessoas: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarPessoas: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PagePessoaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PagePessoaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PagePessoaResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Lista os Detalhes das Pessoas cadastradas no Emissor Este m\u00E9todo permite que sejam listadas od detalhes das Pessoas existentes na base de dados do Emissor
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="page">P\u00E1gina (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <param name="idPessoa">C\u00F3digo identificador da pessoa (optional)</param> 
+        /// <param name="nomeMae">Apresenta o nome da m\u00E3e da pessoa fisica (optional)</param> 
+        /// <param name="idEstadoCivil">Id Estado civil da pessoa fisica (optional)</param> 
+        /// <param name="idProfissao">Profiss\u00E3o da pessoa fisica (optional)</param> 
+        /// <param name="idNaturezaOcupacao">Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica (optional)</param> 
+        /// <param name="idNacionalidade">Id Nacionalidade da pessoa fisica (optional)</param> 
+        /// <param name="numeroBanco">N\u00FAmero do Banco (optional)</param> 
+        /// <param name="numeroAgencia">N\u00FAmero da ag\u00EAncia (optional)</param> 
+        /// <param name="numeroContaCorrente">N\u00FAmero da conta corrente (optional)</param> 
+        /// <param name="email">Email da pessoa fisica (optional)</param> 
+        /// <param name="nomeEmpresa">Nome que deve ser impresso no cart\u00E3o (optional)</param> 
+        /// <param name="naturalidadeCidade">Apresenta o nome da cidade de nascimento da pessoa f\u00EDsica (optional)</param> 
+        /// <param name="naturalidadeEstado">Apresenta a sigla do estado de nascimento da pessoa f\u00EDsica (optional)</param> 
+        /// <param name="grauInstrucao">Apresenta o grau de instru\u00E7\u00E3o da pessoa f\u00EDsica (optional)</param> 
+        /// <param name="numeroDependentes">Apresenta o n\u00FAmero de dependentes da pessoa f\u00EDsica (optional)</param> 
+        /// <param name="nomePai">Apresenta o nome do pai da pessoa f\u00EDsica (optional)</param> 
+        /// <param name="chequeEspecial">Indica se pessoa f\u00EDsica aderir ao cheque especial (optional)</param> 
+        /// <param name="impedidoFinanciamento">Flag para s\u00F3cios do banco que s\u00E3o portadores do cart\u00E3o, mas n\u00E3o podem operar transa\u00E7\u00F5esde cr\u00E9dito(Lei n. 4.595/64) (optional)</param> 
+        /// <param name="numeroCnh">N\u00FAmero da CNH da pessoa (optional)</param> 
+        /// <param name="patrimonioTotal">Patrim\u00F4nio total da pessoa (optional)</param> 
+        /// <param name="salario">Sal\u00E1rio da pessoa (optional)</param> 
+        /// <param name="nomeConjuge">Nome do c\u00F4njuge da pessoa (optional)</param> 
+        /// <returns>PagePessoaDetalheResponse</returns>
+        public PagePessoaDetalheResponse ListarPessoasDetalhes (List<string> sort = null, int? page = null, int? limit = null, long? idPessoa = null, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null, string numeroCnh = null, double? patrimonioTotal = null, double? salario = null, string nomeConjuge = null)
+        {
+             ApiResponse<PagePessoaDetalheResponse> localVarResponse = ListarPessoasDetalhesWithHttpInfo(sort, page, limit, idPessoa, nomeMae, idEstadoCivil, idProfissao, idNaturezaOcupacao, idNacionalidade, numeroBanco, numeroAgencia, numeroContaCorrente, email, nomeEmpresa, naturalidadeCidade, naturalidadeEstado, grauInstrucao, numeroDependentes, nomePai, chequeEspecial, impedidoFinanciamento, numeroCnh, patrimonioTotal, salario, nomeConjuge);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Lista os Detalhes das Pessoas cadastradas no Emissor Este m\u00E9todo permite que sejam listadas od detalhes das Pessoas existentes na base de dados do Emissor
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="page">P\u00E1gina (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <param name="idPessoa">C\u00F3digo identificador da pessoa (optional)</param> 
+        /// <param name="nomeMae">Apresenta o nome da m\u00E3e da pessoa fisica (optional)</param> 
+        /// <param name="idEstadoCivil">Id Estado civil da pessoa fisica (optional)</param> 
+        /// <param name="idProfissao">Profiss\u00E3o da pessoa fisica (optional)</param> 
+        /// <param name="idNaturezaOcupacao">Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica (optional)</param> 
+        /// <param name="idNacionalidade">Id Nacionalidade da pessoa fisica (optional)</param> 
+        /// <param name="numeroBanco">N\u00FAmero do Banco (optional)</param> 
+        /// <param name="numeroAgencia">N\u00FAmero da ag\u00EAncia (optional)</param> 
+        /// <param name="numeroContaCorrente">N\u00FAmero da conta corrente (optional)</param> 
+        /// <param name="email">Email da pessoa fisica (optional)</param> 
+        /// <param name="nomeEmpresa">Nome que deve ser impresso no cart\u00E3o (optional)</param> 
+        /// <param name="naturalidadeCidade">Apresenta o nome da cidade de nascimento da pessoa f\u00EDsica (optional)</param> 
+        /// <param name="naturalidadeEstado">Apresenta a sigla do estado de nascimento da pessoa f\u00EDsica (optional)</param> 
+        /// <param name="grauInstrucao">Apresenta o grau de instru\u00E7\u00E3o da pessoa f\u00EDsica (optional)</param> 
+        /// <param name="numeroDependentes">Apresenta o n\u00FAmero de dependentes da pessoa f\u00EDsica (optional)</param> 
+        /// <param name="nomePai">Apresenta o nome do pai da pessoa f\u00EDsica (optional)</param> 
+        /// <param name="chequeEspecial">Indica se pessoa f\u00EDsica aderir ao cheque especial (optional)</param> 
+        /// <param name="impedidoFinanciamento">Flag para s\u00F3cios do banco que s\u00E3o portadores do cart\u00E3o, mas n\u00E3o podem operar transa\u00E7\u00F5esde cr\u00E9dito(Lei n. 4.595/64) (optional)</param> 
+        /// <param name="numeroCnh">N\u00FAmero da CNH da pessoa (optional)</param> 
+        /// <param name="patrimonioTotal">Patrim\u00F4nio total da pessoa (optional)</param> 
+        /// <param name="salario">Sal\u00E1rio da pessoa (optional)</param> 
+        /// <param name="nomeConjuge">Nome do c\u00F4njuge da pessoa (optional)</param> 
+        /// <returns>ApiResponse of PagePessoaDetalheResponse</returns>
+        public ApiResponse< PagePessoaDetalheResponse > ListarPessoasDetalhesWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idPessoa = null, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null, string numeroCnh = null, double? patrimonioTotal = null, double? salario = null, string nomeConjuge = null)
+        {
+            
+    
+            var localVarPath = "/api/pessoas-detalhes";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (idPessoa != null) localVarQueryParams.Add("idPessoa", Configuration.ApiClient.ParameterToString(idPessoa)); // query parameter
+            if (nomeMae != null) localVarQueryParams.Add("nomeMae", Configuration.ApiClient.ParameterToString(nomeMae)); // query parameter
+            if (idEstadoCivil != null) localVarQueryParams.Add("idEstadoCivil", Configuration.ApiClient.ParameterToString(idEstadoCivil)); // query parameter
+            if (idProfissao != null) localVarQueryParams.Add("idProfissao", Configuration.ApiClient.ParameterToString(idProfissao)); // query parameter
+            if (idNaturezaOcupacao != null) localVarQueryParams.Add("idNaturezaOcupacao", Configuration.ApiClient.ParameterToString(idNaturezaOcupacao)); // query parameter
+            if (idNacionalidade != null) localVarQueryParams.Add("idNacionalidade", Configuration.ApiClient.ParameterToString(idNacionalidade)); // query parameter
+            if (numeroBanco != null) localVarQueryParams.Add("numeroBanco", Configuration.ApiClient.ParameterToString(numeroBanco)); // query parameter
+            if (numeroAgencia != null) localVarQueryParams.Add("numeroAgencia", Configuration.ApiClient.ParameterToString(numeroAgencia)); // query parameter
+            if (numeroContaCorrente != null) localVarQueryParams.Add("numeroContaCorrente", Configuration.ApiClient.ParameterToString(numeroContaCorrente)); // query parameter
+            if (email != null) localVarQueryParams.Add("email", Configuration.ApiClient.ParameterToString(email)); // query parameter
+            if (nomeEmpresa != null) localVarQueryParams.Add("nomeEmpresa", Configuration.ApiClient.ParameterToString(nomeEmpresa)); // query parameter
+            if (naturalidadeCidade != null) localVarQueryParams.Add("naturalidadeCidade", Configuration.ApiClient.ParameterToString(naturalidadeCidade)); // query parameter
+            if (naturalidadeEstado != null) localVarQueryParams.Add("naturalidadeEstado", Configuration.ApiClient.ParameterToString(naturalidadeEstado)); // query parameter
+            if (grauInstrucao != null) localVarQueryParams.Add("grauInstrucao", Configuration.ApiClient.ParameterToString(grauInstrucao)); // query parameter
+            if (numeroDependentes != null) localVarQueryParams.Add("numeroDependentes", Configuration.ApiClient.ParameterToString(numeroDependentes)); // query parameter
+            if (nomePai != null) localVarQueryParams.Add("nomePai", Configuration.ApiClient.ParameterToString(nomePai)); // query parameter
+            if (chequeEspecial != null) localVarQueryParams.Add("chequeEspecial", Configuration.ApiClient.ParameterToString(chequeEspecial)); // query parameter
+            if (impedidoFinanciamento != null) localVarQueryParams.Add("impedidoFinanciamento", Configuration.ApiClient.ParameterToString(impedidoFinanciamento)); // query parameter
+            if (numeroCnh != null) localVarQueryParams.Add("numeroCnh", Configuration.ApiClient.ParameterToString(numeroCnh)); // query parameter
+            if (patrimonioTotal != null) localVarQueryParams.Add("patrimonioTotal", Configuration.ApiClient.ParameterToString(patrimonioTotal)); // query parameter
+            if (salario != null) localVarQueryParams.Add("salario", Configuration.ApiClient.ParameterToString(salario)); // query parameter
+            if (nomeConjuge != null) localVarQueryParams.Add("nomeConjuge", Configuration.ApiClient.ParameterToString(nomeConjuge)); // query parameter
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarPessoasDetalhes: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarPessoasDetalhes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<PagePessoaDetalheResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PagePessoaDetalheResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PagePessoaDetalheResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Lista os Detalhes das Pessoas cadastradas no Emissor Este m\u00E9todo permite que sejam listadas od detalhes das Pessoas existentes na base de dados do Emissor
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idPessoa">C\u00F3digo identificador da pessoa (optional)</param>
+        /// <param name="nomeMae">Apresenta o nome da m\u00E3e da pessoa fisica (optional)</param>
+        /// <param name="idEstadoCivil">Id Estado civil da pessoa fisica (optional)</param>
+        /// <param name="idProfissao">Profiss\u00E3o da pessoa fisica (optional)</param>
+        /// <param name="idNaturezaOcupacao">Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica (optional)</param>
+        /// <param name="idNacionalidade">Id Nacionalidade da pessoa fisica (optional)</param>
+        /// <param name="numeroBanco">N\u00FAmero do Banco (optional)</param>
+        /// <param name="numeroAgencia">N\u00FAmero da ag\u00EAncia (optional)</param>
+        /// <param name="numeroContaCorrente">N\u00FAmero da conta corrente (optional)</param>
+        /// <param name="email">Email da pessoa fisica (optional)</param>
+        /// <param name="nomeEmpresa">Nome que deve ser impresso no cart\u00E3o (optional)</param>
+        /// <param name="naturalidadeCidade">Apresenta o nome da cidade de nascimento da pessoa f\u00EDsica (optional)</param>
+        /// <param name="naturalidadeEstado">Apresenta a sigla do estado de nascimento da pessoa f\u00EDsica (optional)</param>
+        /// <param name="grauInstrucao">Apresenta o grau de instru\u00E7\u00E3o da pessoa f\u00EDsica (optional)</param>
+        /// <param name="numeroDependentes">Apresenta o n\u00FAmero de dependentes da pessoa f\u00EDsica (optional)</param>
+        /// <param name="nomePai">Apresenta o nome do pai da pessoa f\u00EDsica (optional)</param>
+        /// <param name="chequeEspecial">Indica se pessoa f\u00EDsica aderir ao cheque especial (optional)</param>
+        /// <param name="impedidoFinanciamento">Flag para s\u00F3cios do banco que s\u00E3o portadores do cart\u00E3o, mas n\u00E3o podem operar transa\u00E7\u00F5esde cr\u00E9dito(Lei n. 4.595/64) (optional)</param>
+        /// <param name="numeroCnh">N\u00FAmero da CNH da pessoa (optional)</param>
+        /// <param name="patrimonioTotal">Patrim\u00F4nio total da pessoa (optional)</param>
+        /// <param name="salario">Sal\u00E1rio da pessoa (optional)</param>
+        /// <param name="nomeConjuge">Nome do c\u00F4njuge da pessoa (optional)</param>
+        /// <returns>Task of PagePessoaDetalheResponse</returns>
+        public async System.Threading.Tasks.Task<PagePessoaDetalheResponse> ListarPessoasDetalhesAsync (List<string> sort = null, int? page = null, int? limit = null, long? idPessoa = null, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null, string numeroCnh = null, double? patrimonioTotal = null, double? salario = null, string nomeConjuge = null)
+        {
+             ApiResponse<PagePessoaDetalheResponse> localVarResponse = await ListarPessoasDetalhesAsyncWithHttpInfo(sort, page, limit, idPessoa, nomeMae, idEstadoCivil, idProfissao, idNaturezaOcupacao, idNacionalidade, numeroBanco, numeroAgencia, numeroContaCorrente, email, nomeEmpresa, naturalidadeCidade, naturalidadeEstado, grauInstrucao, numeroDependentes, nomePai, chequeEspecial, impedidoFinanciamento, numeroCnh, patrimonioTotal, salario, nomeConjuge);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Lista os Detalhes das Pessoas cadastradas no Emissor Este m\u00E9todo permite que sejam listadas od detalhes das Pessoas existentes na base de dados do Emissor
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idPessoa">C\u00F3digo identificador da pessoa (optional)</param>
+        /// <param name="nomeMae">Apresenta o nome da m\u00E3e da pessoa fisica (optional)</param>
+        /// <param name="idEstadoCivil">Id Estado civil da pessoa fisica (optional)</param>
+        /// <param name="idProfissao">Profiss\u00E3o da pessoa fisica (optional)</param>
+        /// <param name="idNaturezaOcupacao">Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica (optional)</param>
+        /// <param name="idNacionalidade">Id Nacionalidade da pessoa fisica (optional)</param>
+        /// <param name="numeroBanco">N\u00FAmero do Banco (optional)</param>
+        /// <param name="numeroAgencia">N\u00FAmero da ag\u00EAncia (optional)</param>
+        /// <param name="numeroContaCorrente">N\u00FAmero da conta corrente (optional)</param>
+        /// <param name="email">Email da pessoa fisica (optional)</param>
+        /// <param name="nomeEmpresa">Nome que deve ser impresso no cart\u00E3o (optional)</param>
+        /// <param name="naturalidadeCidade">Apresenta o nome da cidade de nascimento da pessoa f\u00EDsica (optional)</param>
+        /// <param name="naturalidadeEstado">Apresenta a sigla do estado de nascimento da pessoa f\u00EDsica (optional)</param>
+        /// <param name="grauInstrucao">Apresenta o grau de instru\u00E7\u00E3o da pessoa f\u00EDsica (optional)</param>
+        /// <param name="numeroDependentes">Apresenta o n\u00FAmero de dependentes da pessoa f\u00EDsica (optional)</param>
+        /// <param name="nomePai">Apresenta o nome do pai da pessoa f\u00EDsica (optional)</param>
+        /// <param name="chequeEspecial">Indica se pessoa f\u00EDsica aderir ao cheque especial (optional)</param>
+        /// <param name="impedidoFinanciamento">Flag para s\u00F3cios do banco que s\u00E3o portadores do cart\u00E3o, mas n\u00E3o podem operar transa\u00E7\u00F5esde cr\u00E9dito(Lei n. 4.595/64) (optional)</param>
+        /// <param name="numeroCnh">N\u00FAmero da CNH da pessoa (optional)</param>
+        /// <param name="patrimonioTotal">Patrim\u00F4nio total da pessoa (optional)</param>
+        /// <param name="salario">Sal\u00E1rio da pessoa (optional)</param>
+        /// <param name="nomeConjuge">Nome do c\u00F4njuge da pessoa (optional)</param>
+        /// <returns>Task of ApiResponse (PagePessoaDetalheResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PagePessoaDetalheResponse>> ListarPessoasDetalhesAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idPessoa = null, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null, string numeroCnh = null, double? patrimonioTotal = null, double? salario = null, string nomeConjuge = null)
+        {
+            
+    
+            var localVarPath = "/api/pessoas-detalhes";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (idPessoa != null) localVarQueryParams.Add("idPessoa", Configuration.ApiClient.ParameterToString(idPessoa)); // query parameter
+            if (nomeMae != null) localVarQueryParams.Add("nomeMae", Configuration.ApiClient.ParameterToString(nomeMae)); // query parameter
+            if (idEstadoCivil != null) localVarQueryParams.Add("idEstadoCivil", Configuration.ApiClient.ParameterToString(idEstadoCivil)); // query parameter
+            if (idProfissao != null) localVarQueryParams.Add("idProfissao", Configuration.ApiClient.ParameterToString(idProfissao)); // query parameter
+            if (idNaturezaOcupacao != null) localVarQueryParams.Add("idNaturezaOcupacao", Configuration.ApiClient.ParameterToString(idNaturezaOcupacao)); // query parameter
+            if (idNacionalidade != null) localVarQueryParams.Add("idNacionalidade", Configuration.ApiClient.ParameterToString(idNacionalidade)); // query parameter
+            if (numeroBanco != null) localVarQueryParams.Add("numeroBanco", Configuration.ApiClient.ParameterToString(numeroBanco)); // query parameter
+            if (numeroAgencia != null) localVarQueryParams.Add("numeroAgencia", Configuration.ApiClient.ParameterToString(numeroAgencia)); // query parameter
+            if (numeroContaCorrente != null) localVarQueryParams.Add("numeroContaCorrente", Configuration.ApiClient.ParameterToString(numeroContaCorrente)); // query parameter
+            if (email != null) localVarQueryParams.Add("email", Configuration.ApiClient.ParameterToString(email)); // query parameter
+            if (nomeEmpresa != null) localVarQueryParams.Add("nomeEmpresa", Configuration.ApiClient.ParameterToString(nomeEmpresa)); // query parameter
+            if (naturalidadeCidade != null) localVarQueryParams.Add("naturalidadeCidade", Configuration.ApiClient.ParameterToString(naturalidadeCidade)); // query parameter
+            if (naturalidadeEstado != null) localVarQueryParams.Add("naturalidadeEstado", Configuration.ApiClient.ParameterToString(naturalidadeEstado)); // query parameter
+            if (grauInstrucao != null) localVarQueryParams.Add("grauInstrucao", Configuration.ApiClient.ParameterToString(grauInstrucao)); // query parameter
+            if (numeroDependentes != null) localVarQueryParams.Add("numeroDependentes", Configuration.ApiClient.ParameterToString(numeroDependentes)); // query parameter
+            if (nomePai != null) localVarQueryParams.Add("nomePai", Configuration.ApiClient.ParameterToString(nomePai)); // query parameter
+            if (chequeEspecial != null) localVarQueryParams.Add("chequeEspecial", Configuration.ApiClient.ParameterToString(chequeEspecial)); // query parameter
+            if (impedidoFinanciamento != null) localVarQueryParams.Add("impedidoFinanciamento", Configuration.ApiClient.ParameterToString(impedidoFinanciamento)); // query parameter
+            if (numeroCnh != null) localVarQueryParams.Add("numeroCnh", Configuration.ApiClient.ParameterToString(numeroCnh)); // query parameter
+            if (patrimonioTotal != null) localVarQueryParams.Add("patrimonioTotal", Configuration.ApiClient.ParameterToString(patrimonioTotal)); // query parameter
+            if (salario != null) localVarQueryParams.Add("salario", Configuration.ApiClient.ParameterToString(salario)); // query parameter
+            if (nomeConjuge != null) localVarQueryParams.Add("nomeConjuge", Configuration.ApiClient.ParameterToString(nomeConjuge)); // query parameter
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarPessoasDetalhes: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarPessoasDetalhes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PagePessoaDetalheResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PagePessoaDetalheResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PagePessoaDetalheResponse)));
+            
+        }
+        
+        /// <summary>
         /// Listar s\u00F3cios de uma pessoa jur\u00EDdica Lista os s\u00F3cios vinculados \u00E0 uma Pessoa Jur\u00EDdica cadastrada
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
@@ -7184,774 +7692,6 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Lista os Endere\u00E7os cadastrados para o Emissor Este m\u00E9todo permite que sejam listados os Endere\u00E7os existentes na base de dados do Emissor
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
-        /// <param name="page">P\u00E1gina (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id) (optional)</param> 
-        /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o endere\u00E7o pertence (id) (optional)</param> 
-        /// <param name="idTipoEndereco">C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id) (optional)</param> 
-        /// <param name="cep">List os CEPs (optional)</param> 
-        /// <param name="logradouro">Apresenta o nome do Logradouro (optional)</param> 
-        /// <param name="numero">Apresenta o n\u00FAmero do endere\u00E7o (optional)</param> 
-        /// <param name="complemento">Apresenta descri\u00E7oes complementares referente ao endere\u00E7o (optional)</param> 
-        /// <param name="pontoReferencia">Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o (optional)</param> 
-        /// <param name="bairro">Apresenta nome do bairro (optional)</param> 
-        /// <param name="cidade">Apresenta nome da cidade (optional)</param> 
-        /// <param name="uf">Apresenta sigla da Unidade Federativa (optional)</param> 
-        /// <param name="pais">Apresenta nome do Pa\u00EDs (optional)</param> 
-        /// <param name="dataInclusao">Apresenta a data em que fora cadastrado o Endere\u00E7o (optional)</param> 
-        /// <param name="dataUltimaAtualizacao">Data em que fora realizada a \u00FAltima mudan\u00E7a neste registro de endere\u00E7o. Quando n\u00E3o tiver ocorrido mudan\u00E7a, conter\u00E1 a mesma informa\u00E7\u00E3o que o campo dataInclusao (optional)</param> 
-        /// <param name="tempoResidenciaAnos">Apresenta a quantidade de anos em que habita na resid\u00EAncia (optional)</param> 
-        /// <param name="tempoResidenciaMeses">Apresenta a quantidade de meses que habita na resid\u00EAncia (optional)</param> 
-        /// <returns>PageEnderecoResponse</returns>
-        public PageEnderecoResponse Listar_0 (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, string dataInclusao = null, string dataUltimaAtualizacao = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null)
-        {
-             ApiResponse<PageEnderecoResponse> localVarResponse = Listar_0WithHttpInfo(sort, page, limit, id, idPessoa, idTipoEndereco, cep, logradouro, numero, complemento, pontoReferencia, bairro, cidade, uf, pais, dataInclusao, dataUltimaAtualizacao, tempoResidenciaAnos, tempoResidenciaMeses);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Lista os Endere\u00E7os cadastrados para o Emissor Este m\u00E9todo permite que sejam listados os Endere\u00E7os existentes na base de dados do Emissor
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
-        /// <param name="page">P\u00E1gina (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id) (optional)</param> 
-        /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o endere\u00E7o pertence (id) (optional)</param> 
-        /// <param name="idTipoEndereco">C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id) (optional)</param> 
-        /// <param name="cep">List os CEPs (optional)</param> 
-        /// <param name="logradouro">Apresenta o nome do Logradouro (optional)</param> 
-        /// <param name="numero">Apresenta o n\u00FAmero do endere\u00E7o (optional)</param> 
-        /// <param name="complemento">Apresenta descri\u00E7oes complementares referente ao endere\u00E7o (optional)</param> 
-        /// <param name="pontoReferencia">Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o (optional)</param> 
-        /// <param name="bairro">Apresenta nome do bairro (optional)</param> 
-        /// <param name="cidade">Apresenta nome da cidade (optional)</param> 
-        /// <param name="uf">Apresenta sigla da Unidade Federativa (optional)</param> 
-        /// <param name="pais">Apresenta nome do Pa\u00EDs (optional)</param> 
-        /// <param name="dataInclusao">Apresenta a data em que fora cadastrado o Endere\u00E7o (optional)</param> 
-        /// <param name="dataUltimaAtualizacao">Data em que fora realizada a \u00FAltima mudan\u00E7a neste registro de endere\u00E7o. Quando n\u00E3o tiver ocorrido mudan\u00E7a, conter\u00E1 a mesma informa\u00E7\u00E3o que o campo dataInclusao (optional)</param> 
-        /// <param name="tempoResidenciaAnos">Apresenta a quantidade de anos em que habita na resid\u00EAncia (optional)</param> 
-        /// <param name="tempoResidenciaMeses">Apresenta a quantidade de meses que habita na resid\u00EAncia (optional)</param> 
-        /// <returns>ApiResponse of PageEnderecoResponse</returns>
-        public ApiResponse< PageEnderecoResponse > Listar_0WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, string dataInclusao = null, string dataUltimaAtualizacao = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null)
-        {
-            
-    
-            var localVarPath = "/api/enderecos";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            
-            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
-            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
-            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
-            if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
-            if (idPessoa != null) localVarQueryParams.Add("idPessoa", Configuration.ApiClient.ParameterToString(idPessoa)); // query parameter
-            if (idTipoEndereco != null) localVarQueryParams.Add("idTipoEndereco", Configuration.ApiClient.ParameterToString(idTipoEndereco)); // query parameter
-            if (cep != null) localVarQueryParams.Add("cep", Configuration.ApiClient.ParameterToString(cep)); // query parameter
-            if (logradouro != null) localVarQueryParams.Add("logradouro", Configuration.ApiClient.ParameterToString(logradouro)); // query parameter
-            if (numero != null) localVarQueryParams.Add("numero", Configuration.ApiClient.ParameterToString(numero)); // query parameter
-            if (complemento != null) localVarQueryParams.Add("complemento", Configuration.ApiClient.ParameterToString(complemento)); // query parameter
-            if (pontoReferencia != null) localVarQueryParams.Add("pontoReferencia", Configuration.ApiClient.ParameterToString(pontoReferencia)); // query parameter
-            if (bairro != null) localVarQueryParams.Add("bairro", Configuration.ApiClient.ParameterToString(bairro)); // query parameter
-            if (cidade != null) localVarQueryParams.Add("cidade", Configuration.ApiClient.ParameterToString(cidade)); // query parameter
-            if (uf != null) localVarQueryParams.Add("uf", Configuration.ApiClient.ParameterToString(uf)); // query parameter
-            if (pais != null) localVarQueryParams.Add("pais", Configuration.ApiClient.ParameterToString(pais)); // query parameter
-            if (dataInclusao != null) localVarQueryParams.Add("dataInclusao", Configuration.ApiClient.ParameterToString(dataInclusao)); // query parameter
-            if (dataUltimaAtualizacao != null) localVarQueryParams.Add("dataUltimaAtualizacao", Configuration.ApiClient.ParameterToString(dataUltimaAtualizacao)); // query parameter
-            if (tempoResidenciaAnos != null) localVarQueryParams.Add("tempoResidenciaAnos", Configuration.ApiClient.ParameterToString(tempoResidenciaAnos)); // query parameter
-            if (tempoResidenciaMeses != null) localVarQueryParams.Add("tempoResidenciaMeses", Configuration.ApiClient.ParameterToString(tempoResidenciaMeses)); // query parameter
-            
-            
-            
-            
-
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Listar_0: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Listar_0: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<PageEnderecoResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PageEnderecoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageEnderecoResponse)));
-            
-        }
-
-        
-        /// <summary>
-        /// Lista os Endere\u00E7os cadastrados para o Emissor Este m\u00E9todo permite que sejam listados os Endere\u00E7os existentes na base de dados do Emissor
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id) (optional)</param>
-        /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o endere\u00E7o pertence (id) (optional)</param>
-        /// <param name="idTipoEndereco">C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id) (optional)</param>
-        /// <param name="cep">List os CEPs (optional)</param>
-        /// <param name="logradouro">Apresenta o nome do Logradouro (optional)</param>
-        /// <param name="numero">Apresenta o n\u00FAmero do endere\u00E7o (optional)</param>
-        /// <param name="complemento">Apresenta descri\u00E7oes complementares referente ao endere\u00E7o (optional)</param>
-        /// <param name="pontoReferencia">Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o (optional)</param>
-        /// <param name="bairro">Apresenta nome do bairro (optional)</param>
-        /// <param name="cidade">Apresenta nome da cidade (optional)</param>
-        /// <param name="uf">Apresenta sigla da Unidade Federativa (optional)</param>
-        /// <param name="pais">Apresenta nome do Pa\u00EDs (optional)</param>
-        /// <param name="dataInclusao">Apresenta a data em que fora cadastrado o Endere\u00E7o (optional)</param>
-        /// <param name="dataUltimaAtualizacao">Data em que fora realizada a \u00FAltima mudan\u00E7a neste registro de endere\u00E7o. Quando n\u00E3o tiver ocorrido mudan\u00E7a, conter\u00E1 a mesma informa\u00E7\u00E3o que o campo dataInclusao (optional)</param>
-        /// <param name="tempoResidenciaAnos">Apresenta a quantidade de anos em que habita na resid\u00EAncia (optional)</param>
-        /// <param name="tempoResidenciaMeses">Apresenta a quantidade de meses que habita na resid\u00EAncia (optional)</param>
-        /// <returns>Task of PageEnderecoResponse</returns>
-        public async System.Threading.Tasks.Task<PageEnderecoResponse> Listar_0Async (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, string dataInclusao = null, string dataUltimaAtualizacao = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null)
-        {
-             ApiResponse<PageEnderecoResponse> localVarResponse = await Listar_0AsyncWithHttpInfo(sort, page, limit, id, idPessoa, idTipoEndereco, cep, logradouro, numero, complemento, pontoReferencia, bairro, cidade, uf, pais, dataInclusao, dataUltimaAtualizacao, tempoResidenciaAnos, tempoResidenciaMeses);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Lista os Endere\u00E7os cadastrados para o Emissor Este m\u00E9todo permite que sejam listados os Endere\u00E7os existentes na base de dados do Emissor
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Endere\u00E7o (id) (optional)</param>
-        /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o endere\u00E7o pertence (id) (optional)</param>
-        /// <param name="idTipoEndereco">C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id) (optional)</param>
-        /// <param name="cep">List os CEPs (optional)</param>
-        /// <param name="logradouro">Apresenta o nome do Logradouro (optional)</param>
-        /// <param name="numero">Apresenta o n\u00FAmero do endere\u00E7o (optional)</param>
-        /// <param name="complemento">Apresenta descri\u00E7oes complementares referente ao endere\u00E7o (optional)</param>
-        /// <param name="pontoReferencia">Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o (optional)</param>
-        /// <param name="bairro">Apresenta nome do bairro (optional)</param>
-        /// <param name="cidade">Apresenta nome da cidade (optional)</param>
-        /// <param name="uf">Apresenta sigla da Unidade Federativa (optional)</param>
-        /// <param name="pais">Apresenta nome do Pa\u00EDs (optional)</param>
-        /// <param name="dataInclusao">Apresenta a data em que fora cadastrado o Endere\u00E7o (optional)</param>
-        /// <param name="dataUltimaAtualizacao">Data em que fora realizada a \u00FAltima mudan\u00E7a neste registro de endere\u00E7o. Quando n\u00E3o tiver ocorrido mudan\u00E7a, conter\u00E1 a mesma informa\u00E7\u00E3o que o campo dataInclusao (optional)</param>
-        /// <param name="tempoResidenciaAnos">Apresenta a quantidade de anos em que habita na resid\u00EAncia (optional)</param>
-        /// <param name="tempoResidenciaMeses">Apresenta a quantidade de meses que habita na resid\u00EAncia (optional)</param>
-        /// <returns>Task of ApiResponse (PageEnderecoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageEnderecoResponse>> Listar_0AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, string dataInclusao = null, string dataUltimaAtualizacao = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null)
-        {
-            
-    
-            var localVarPath = "/api/enderecos";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            
-            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
-            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
-            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
-            if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
-            if (idPessoa != null) localVarQueryParams.Add("idPessoa", Configuration.ApiClient.ParameterToString(idPessoa)); // query parameter
-            if (idTipoEndereco != null) localVarQueryParams.Add("idTipoEndereco", Configuration.ApiClient.ParameterToString(idTipoEndereco)); // query parameter
-            if (cep != null) localVarQueryParams.Add("cep", Configuration.ApiClient.ParameterToString(cep)); // query parameter
-            if (logradouro != null) localVarQueryParams.Add("logradouro", Configuration.ApiClient.ParameterToString(logradouro)); // query parameter
-            if (numero != null) localVarQueryParams.Add("numero", Configuration.ApiClient.ParameterToString(numero)); // query parameter
-            if (complemento != null) localVarQueryParams.Add("complemento", Configuration.ApiClient.ParameterToString(complemento)); // query parameter
-            if (pontoReferencia != null) localVarQueryParams.Add("pontoReferencia", Configuration.ApiClient.ParameterToString(pontoReferencia)); // query parameter
-            if (bairro != null) localVarQueryParams.Add("bairro", Configuration.ApiClient.ParameterToString(bairro)); // query parameter
-            if (cidade != null) localVarQueryParams.Add("cidade", Configuration.ApiClient.ParameterToString(cidade)); // query parameter
-            if (uf != null) localVarQueryParams.Add("uf", Configuration.ApiClient.ParameterToString(uf)); // query parameter
-            if (pais != null) localVarQueryParams.Add("pais", Configuration.ApiClient.ParameterToString(pais)); // query parameter
-            if (dataInclusao != null) localVarQueryParams.Add("dataInclusao", Configuration.ApiClient.ParameterToString(dataInclusao)); // query parameter
-            if (dataUltimaAtualizacao != null) localVarQueryParams.Add("dataUltimaAtualizacao", Configuration.ApiClient.ParameterToString(dataUltimaAtualizacao)); // query parameter
-            if (tempoResidenciaAnos != null) localVarQueryParams.Add("tempoResidenciaAnos", Configuration.ApiClient.ParameterToString(tempoResidenciaAnos)); // query parameter
-            if (tempoResidenciaMeses != null) localVarQueryParams.Add("tempoResidenciaMeses", Configuration.ApiClient.ParameterToString(tempoResidenciaMeses)); // query parameter
-            
-            
-            
-            
-
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Listar_0: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Listar_0: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<PageEnderecoResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PageEnderecoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageEnderecoResponse)));
-            
-        }
-        
-        /// <summary>
-        /// Lista as Pessoas cadastradas no Emissor Este m\u00E9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
-        /// <param name="page">P\u00E1gina (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id) (optional)</param> 
-        /// <param name="nome">Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00E3o Social (Nome Empresarial)&#39; (optional)</param> 
-        /// <param name="tipo">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa F\u00EDsica, sendo: (&#39;PF&#39;: Pessoa F\u00EDsica), (&#39;PJ&#39;: Pessoa Jur\u00EDdica) (optional)</param> 
-        /// <param name="cpf">Quando uma pessoa f\u00EDsica preencha com o CPF (optional)</param> 
-        /// <param name="cnpj">Quando um pessoa jur\u00EDdica preencha o CNPJ (optional)</param> 
-        /// <param name="dataNascimento">Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ (optional)</param> 
-        /// <param name="sexo">C\u00F3digo de Identifica\u00E7\u00E3o do sexo da pessoa, quando \u00E9 PF, sendo: (&#39;M&#39;: Masculino), (&#39;F&#39;: Feminino), (&#39;O&#39;: Outro), (&#39;N&#39;: N\u00E3o especificado) (optional)</param> 
-        /// <param name="numeroIdentidade">N\u00FAmero da Identidade (optional)</param> 
-        /// <param name="orgaoExpedidorIdentidade">Org\u00E3o expedidor do RG (optional)</param> 
-        /// <param name="unidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade (optional)</param> 
-        /// <param name="dataEmissaoIdentidade">Data emiss\u00E3o da identidade no formato aaaa-MM-dd (optional)</param> 
-        /// <returns>PagePessoaResponse</returns>
-        public PagePessoaResponse Listar_1 (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, string tipo = null, string cpf = null, string cnpj = null, string dataNascimento = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null)
-        {
-             ApiResponse<PagePessoaResponse> localVarResponse = Listar_1WithHttpInfo(sort, page, limit, id, nome, tipo, cpf, cnpj, dataNascimento, sexo, numeroIdentidade, orgaoExpedidorIdentidade, unidadeFederativaIdentidade, dataEmissaoIdentidade);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Lista as Pessoas cadastradas no Emissor Este m\u00E9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
-        /// <param name="page">P\u00E1gina (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id) (optional)</param> 
-        /// <param name="nome">Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00E3o Social (Nome Empresarial)&#39; (optional)</param> 
-        /// <param name="tipo">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa F\u00EDsica, sendo: (&#39;PF&#39;: Pessoa F\u00EDsica), (&#39;PJ&#39;: Pessoa Jur\u00EDdica) (optional)</param> 
-        /// <param name="cpf">Quando uma pessoa f\u00EDsica preencha com o CPF (optional)</param> 
-        /// <param name="cnpj">Quando um pessoa jur\u00EDdica preencha o CNPJ (optional)</param> 
-        /// <param name="dataNascimento">Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ (optional)</param> 
-        /// <param name="sexo">C\u00F3digo de Identifica\u00E7\u00E3o do sexo da pessoa, quando \u00E9 PF, sendo: (&#39;M&#39;: Masculino), (&#39;F&#39;: Feminino), (&#39;O&#39;: Outro), (&#39;N&#39;: N\u00E3o especificado) (optional)</param> 
-        /// <param name="numeroIdentidade">N\u00FAmero da Identidade (optional)</param> 
-        /// <param name="orgaoExpedidorIdentidade">Org\u00E3o expedidor do RG (optional)</param> 
-        /// <param name="unidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade (optional)</param> 
-        /// <param name="dataEmissaoIdentidade">Data emiss\u00E3o da identidade no formato aaaa-MM-dd (optional)</param> 
-        /// <returns>ApiResponse of PagePessoaResponse</returns>
-        public ApiResponse< PagePessoaResponse > Listar_1WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, string tipo = null, string cpf = null, string cnpj = null, string dataNascimento = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null)
-        {
-            
-    
-            var localVarPath = "/api/pessoas";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            
-            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
-            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
-            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
-            if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
-            if (nome != null) localVarQueryParams.Add("nome", Configuration.ApiClient.ParameterToString(nome)); // query parameter
-            if (tipo != null) localVarQueryParams.Add("tipo", Configuration.ApiClient.ParameterToString(tipo)); // query parameter
-            if (cpf != null) localVarQueryParams.Add("cpf", Configuration.ApiClient.ParameterToString(cpf)); // query parameter
-            if (cnpj != null) localVarQueryParams.Add("cnpj", Configuration.ApiClient.ParameterToString(cnpj)); // query parameter
-            if (dataNascimento != null) localVarQueryParams.Add("dataNascimento", Configuration.ApiClient.ParameterToString(dataNascimento)); // query parameter
-            if (sexo != null) localVarQueryParams.Add("sexo", Configuration.ApiClient.ParameterToString(sexo)); // query parameter
-            if (numeroIdentidade != null) localVarQueryParams.Add("numeroIdentidade", Configuration.ApiClient.ParameterToString(numeroIdentidade)); // query parameter
-            if (orgaoExpedidorIdentidade != null) localVarQueryParams.Add("orgaoExpedidorIdentidade", Configuration.ApiClient.ParameterToString(orgaoExpedidorIdentidade)); // query parameter
-            if (unidadeFederativaIdentidade != null) localVarQueryParams.Add("unidadeFederativaIdentidade", Configuration.ApiClient.ParameterToString(unidadeFederativaIdentidade)); // query parameter
-            if (dataEmissaoIdentidade != null) localVarQueryParams.Add("dataEmissaoIdentidade", Configuration.ApiClient.ParameterToString(dataEmissaoIdentidade)); // query parameter
-            
-            
-            
-            
-
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Listar_1: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Listar_1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<PagePessoaResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PagePessoaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PagePessoaResponse)));
-            
-        }
-
-        
-        /// <summary>
-        /// Lista as Pessoas cadastradas no Emissor Este m\u00E9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id) (optional)</param>
-        /// <param name="nome">Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00E3o Social (Nome Empresarial)&#39; (optional)</param>
-        /// <param name="tipo">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa F\u00EDsica, sendo: (&#39;PF&#39;: Pessoa F\u00EDsica), (&#39;PJ&#39;: Pessoa Jur\u00EDdica) (optional)</param>
-        /// <param name="cpf">Quando uma pessoa f\u00EDsica preencha com o CPF (optional)</param>
-        /// <param name="cnpj">Quando um pessoa jur\u00EDdica preencha o CNPJ (optional)</param>
-        /// <param name="dataNascimento">Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ (optional)</param>
-        /// <param name="sexo">C\u00F3digo de Identifica\u00E7\u00E3o do sexo da pessoa, quando \u00E9 PF, sendo: (&#39;M&#39;: Masculino), (&#39;F&#39;: Feminino), (&#39;O&#39;: Outro), (&#39;N&#39;: N\u00E3o especificado) (optional)</param>
-        /// <param name="numeroIdentidade">N\u00FAmero da Identidade (optional)</param>
-        /// <param name="orgaoExpedidorIdentidade">Org\u00E3o expedidor do RG (optional)</param>
-        /// <param name="unidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade (optional)</param>
-        /// <param name="dataEmissaoIdentidade">Data emiss\u00E3o da identidade no formato aaaa-MM-dd (optional)</param>
-        /// <returns>Task of PagePessoaResponse</returns>
-        public async System.Threading.Tasks.Task<PagePessoaResponse> Listar_1Async (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, string tipo = null, string cpf = null, string cnpj = null, string dataNascimento = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null)
-        {
-             ApiResponse<PagePessoaResponse> localVarResponse = await Listar_1AsyncWithHttpInfo(sort, page, limit, id, nome, tipo, cpf, cnpj, dataNascimento, sexo, numeroIdentidade, orgaoExpedidorIdentidade, unidadeFederativaIdentidade, dataEmissaoIdentidade);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Lista as Pessoas cadastradas no Emissor Este m\u00E9todo permite que sejam listadas as Pessoas existentes na base de dados do Emissor
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa (id) (optional)</param>
-        /// <param name="nome">Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00E3o Social (Nome Empresarial)&#39; (optional)</param>
-        /// <param name="tipo">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa F\u00EDsica, sendo: (&#39;PF&#39;: Pessoa F\u00EDsica), (&#39;PJ&#39;: Pessoa Jur\u00EDdica) (optional)</param>
-        /// <param name="cpf">Quando uma pessoa f\u00EDsica preencha com o CPF (optional)</param>
-        /// <param name="cnpj">Quando um pessoa jur\u00EDdica preencha o CNPJ (optional)</param>
-        /// <param name="dataNascimento">Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ (optional)</param>
-        /// <param name="sexo">C\u00F3digo de Identifica\u00E7\u00E3o do sexo da pessoa, quando \u00E9 PF, sendo: (&#39;M&#39;: Masculino), (&#39;F&#39;: Feminino), (&#39;O&#39;: Outro), (&#39;N&#39;: N\u00E3o especificado) (optional)</param>
-        /// <param name="numeroIdentidade">N\u00FAmero da Identidade (optional)</param>
-        /// <param name="orgaoExpedidorIdentidade">Org\u00E3o expedidor do RG (optional)</param>
-        /// <param name="unidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade (optional)</param>
-        /// <param name="dataEmissaoIdentidade">Data emiss\u00E3o da identidade no formato aaaa-MM-dd (optional)</param>
-        /// <returns>Task of ApiResponse (PagePessoaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PagePessoaResponse>> Listar_1AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, string tipo = null, string cpf = null, string cnpj = null, string dataNascimento = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null)
-        {
-            
-    
-            var localVarPath = "/api/pessoas";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            
-            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
-            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
-            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
-            if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
-            if (nome != null) localVarQueryParams.Add("nome", Configuration.ApiClient.ParameterToString(nome)); // query parameter
-            if (tipo != null) localVarQueryParams.Add("tipo", Configuration.ApiClient.ParameterToString(tipo)); // query parameter
-            if (cpf != null) localVarQueryParams.Add("cpf", Configuration.ApiClient.ParameterToString(cpf)); // query parameter
-            if (cnpj != null) localVarQueryParams.Add("cnpj", Configuration.ApiClient.ParameterToString(cnpj)); // query parameter
-            if (dataNascimento != null) localVarQueryParams.Add("dataNascimento", Configuration.ApiClient.ParameterToString(dataNascimento)); // query parameter
-            if (sexo != null) localVarQueryParams.Add("sexo", Configuration.ApiClient.ParameterToString(sexo)); // query parameter
-            if (numeroIdentidade != null) localVarQueryParams.Add("numeroIdentidade", Configuration.ApiClient.ParameterToString(numeroIdentidade)); // query parameter
-            if (orgaoExpedidorIdentidade != null) localVarQueryParams.Add("orgaoExpedidorIdentidade", Configuration.ApiClient.ParameterToString(orgaoExpedidorIdentidade)); // query parameter
-            if (unidadeFederativaIdentidade != null) localVarQueryParams.Add("unidadeFederativaIdentidade", Configuration.ApiClient.ParameterToString(unidadeFederativaIdentidade)); // query parameter
-            if (dataEmissaoIdentidade != null) localVarQueryParams.Add("dataEmissaoIdentidade", Configuration.ApiClient.ParameterToString(dataEmissaoIdentidade)); // query parameter
-            
-            
-            
-            
-
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Listar_1: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Listar_1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<PagePessoaResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PagePessoaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PagePessoaResponse)));
-            
-        }
-        
-        /// <summary>
-        /// Lista os Detalhes das Pessoas cadastradas no Emissor Este m\u00E9todo permite que sejam listadas od detalhes das Pessoas existentes na base de dados do Emissor
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
-        /// <param name="page">P\u00E1gina (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
-        /// <param name="idPessoa">C\u00F3digo identificador da pessoa (optional)</param> 
-        /// <param name="nomeMae">Apresenta o nome da m\u00E3e da pessoa fisica (optional)</param> 
-        /// <param name="idEstadoCivil">Id Estado civil da pessoa fisica (optional)</param> 
-        /// <param name="idProfissao">Profiss\u00E3o da pessoa fisica (optional)</param> 
-        /// <param name="idNaturezaOcupacao">Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica (optional)</param> 
-        /// <param name="idNacionalidade">Id Nacionalidade da pessoa fisica (optional)</param> 
-        /// <param name="numeroBanco">N\u00FAmero do Banco (optional)</param> 
-        /// <param name="numeroAgencia">N\u00FAmero da ag\u00EAncia (optional)</param> 
-        /// <param name="numeroContaCorrente">N\u00FAmero da conta corrente (optional)</param> 
-        /// <param name="email">Email da pessoa fisica (optional)</param> 
-        /// <param name="nomeEmpresa">Nome que deve ser impresso no cart\u00E3o (optional)</param> 
-        /// <param name="naturalidadeCidade">Apresenta o nome da cidade de nascimento da pessoa f\u00EDsica (optional)</param> 
-        /// <param name="naturalidadeEstado">Apresenta a sigla do estado de nascimento da pessoa f\u00EDsica (optional)</param> 
-        /// <param name="grauInstrucao">Apresenta o grau de instru\u00E7\u00E3o da pessoa f\u00EDsica (optional)</param> 
-        /// <param name="numeroDependentes">Apresenta o n\u00FAmero de dependentes da pessoa f\u00EDsica (optional)</param> 
-        /// <param name="nomePai">Apresenta o nome do pai da pessoa f\u00EDsica (optional)</param> 
-        /// <param name="chequeEspecial">Indica se pessoa f\u00EDsica aderir ao cheque especial (optional)</param> 
-        /// <param name="impedidoFinanciamento">Flag para s\u00F3cios do banco que s\u00E3o portadores do cart\u00E3o, mas n\u00E3o podem operar transa\u00E7\u00F5esde cr\u00E9dito(Lei n. 4.595/64) (optional)</param> 
-        /// <param name="numeroCnh">N\u00FAmero da CNH da pessoa (optional)</param> 
-        /// <returns>PagePessoaDetalheResponse</returns>
-        public PagePessoaDetalheResponse Listar_2 (List<string> sort = null, int? page = null, int? limit = null, long? idPessoa = null, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null, string numeroCnh = null)
-        {
-             ApiResponse<PagePessoaDetalheResponse> localVarResponse = Listar_2WithHttpInfo(sort, page, limit, idPessoa, nomeMae, idEstadoCivil, idProfissao, idNaturezaOcupacao, idNacionalidade, numeroBanco, numeroAgencia, numeroContaCorrente, email, nomeEmpresa, naturalidadeCidade, naturalidadeEstado, grauInstrucao, numeroDependentes, nomePai, chequeEspecial, impedidoFinanciamento, numeroCnh);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Lista os Detalhes das Pessoas cadastradas no Emissor Este m\u00E9todo permite que sejam listadas od detalhes das Pessoas existentes na base de dados do Emissor
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
-        /// <param name="page">P\u00E1gina (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
-        /// <param name="idPessoa">C\u00F3digo identificador da pessoa (optional)</param> 
-        /// <param name="nomeMae">Apresenta o nome da m\u00E3e da pessoa fisica (optional)</param> 
-        /// <param name="idEstadoCivil">Id Estado civil da pessoa fisica (optional)</param> 
-        /// <param name="idProfissao">Profiss\u00E3o da pessoa fisica (optional)</param> 
-        /// <param name="idNaturezaOcupacao">Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica (optional)</param> 
-        /// <param name="idNacionalidade">Id Nacionalidade da pessoa fisica (optional)</param> 
-        /// <param name="numeroBanco">N\u00FAmero do Banco (optional)</param> 
-        /// <param name="numeroAgencia">N\u00FAmero da ag\u00EAncia (optional)</param> 
-        /// <param name="numeroContaCorrente">N\u00FAmero da conta corrente (optional)</param> 
-        /// <param name="email">Email da pessoa fisica (optional)</param> 
-        /// <param name="nomeEmpresa">Nome que deve ser impresso no cart\u00E3o (optional)</param> 
-        /// <param name="naturalidadeCidade">Apresenta o nome da cidade de nascimento da pessoa f\u00EDsica (optional)</param> 
-        /// <param name="naturalidadeEstado">Apresenta a sigla do estado de nascimento da pessoa f\u00EDsica (optional)</param> 
-        /// <param name="grauInstrucao">Apresenta o grau de instru\u00E7\u00E3o da pessoa f\u00EDsica (optional)</param> 
-        /// <param name="numeroDependentes">Apresenta o n\u00FAmero de dependentes da pessoa f\u00EDsica (optional)</param> 
-        /// <param name="nomePai">Apresenta o nome do pai da pessoa f\u00EDsica (optional)</param> 
-        /// <param name="chequeEspecial">Indica se pessoa f\u00EDsica aderir ao cheque especial (optional)</param> 
-        /// <param name="impedidoFinanciamento">Flag para s\u00F3cios do banco que s\u00E3o portadores do cart\u00E3o, mas n\u00E3o podem operar transa\u00E7\u00F5esde cr\u00E9dito(Lei n. 4.595/64) (optional)</param> 
-        /// <param name="numeroCnh">N\u00FAmero da CNH da pessoa (optional)</param> 
-        /// <returns>ApiResponse of PagePessoaDetalheResponse</returns>
-        public ApiResponse< PagePessoaDetalheResponse > Listar_2WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idPessoa = null, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null, string numeroCnh = null)
-        {
-            
-    
-            var localVarPath = "/api/pessoas-detalhes";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            
-            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
-            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
-            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
-            if (idPessoa != null) localVarQueryParams.Add("idPessoa", Configuration.ApiClient.ParameterToString(idPessoa)); // query parameter
-            if (nomeMae != null) localVarQueryParams.Add("nomeMae", Configuration.ApiClient.ParameterToString(nomeMae)); // query parameter
-            if (idEstadoCivil != null) localVarQueryParams.Add("idEstadoCivil", Configuration.ApiClient.ParameterToString(idEstadoCivil)); // query parameter
-            if (idProfissao != null) localVarQueryParams.Add("idProfissao", Configuration.ApiClient.ParameterToString(idProfissao)); // query parameter
-            if (idNaturezaOcupacao != null) localVarQueryParams.Add("idNaturezaOcupacao", Configuration.ApiClient.ParameterToString(idNaturezaOcupacao)); // query parameter
-            if (idNacionalidade != null) localVarQueryParams.Add("idNacionalidade", Configuration.ApiClient.ParameterToString(idNacionalidade)); // query parameter
-            if (numeroBanco != null) localVarQueryParams.Add("numeroBanco", Configuration.ApiClient.ParameterToString(numeroBanco)); // query parameter
-            if (numeroAgencia != null) localVarQueryParams.Add("numeroAgencia", Configuration.ApiClient.ParameterToString(numeroAgencia)); // query parameter
-            if (numeroContaCorrente != null) localVarQueryParams.Add("numeroContaCorrente", Configuration.ApiClient.ParameterToString(numeroContaCorrente)); // query parameter
-            if (email != null) localVarQueryParams.Add("email", Configuration.ApiClient.ParameterToString(email)); // query parameter
-            if (nomeEmpresa != null) localVarQueryParams.Add("nomeEmpresa", Configuration.ApiClient.ParameterToString(nomeEmpresa)); // query parameter
-            if (naturalidadeCidade != null) localVarQueryParams.Add("naturalidadeCidade", Configuration.ApiClient.ParameterToString(naturalidadeCidade)); // query parameter
-            if (naturalidadeEstado != null) localVarQueryParams.Add("naturalidadeEstado", Configuration.ApiClient.ParameterToString(naturalidadeEstado)); // query parameter
-            if (grauInstrucao != null) localVarQueryParams.Add("grauInstrucao", Configuration.ApiClient.ParameterToString(grauInstrucao)); // query parameter
-            if (numeroDependentes != null) localVarQueryParams.Add("numeroDependentes", Configuration.ApiClient.ParameterToString(numeroDependentes)); // query parameter
-            if (nomePai != null) localVarQueryParams.Add("nomePai", Configuration.ApiClient.ParameterToString(nomePai)); // query parameter
-            if (chequeEspecial != null) localVarQueryParams.Add("chequeEspecial", Configuration.ApiClient.ParameterToString(chequeEspecial)); // query parameter
-            if (impedidoFinanciamento != null) localVarQueryParams.Add("impedidoFinanciamento", Configuration.ApiClient.ParameterToString(impedidoFinanciamento)); // query parameter
-            if (numeroCnh != null) localVarQueryParams.Add("numeroCnh", Configuration.ApiClient.ParameterToString(numeroCnh)); // query parameter
-            
-            
-            
-            
-
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Listar_2: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Listar_2: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<PagePessoaDetalheResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PagePessoaDetalheResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PagePessoaDetalheResponse)));
-            
-        }
-
-        
-        /// <summary>
-        /// Lista os Detalhes das Pessoas cadastradas no Emissor Este m\u00E9todo permite que sejam listadas od detalhes das Pessoas existentes na base de dados do Emissor
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="idPessoa">C\u00F3digo identificador da pessoa (optional)</param>
-        /// <param name="nomeMae">Apresenta o nome da m\u00E3e da pessoa fisica (optional)</param>
-        /// <param name="idEstadoCivil">Id Estado civil da pessoa fisica (optional)</param>
-        /// <param name="idProfissao">Profiss\u00E3o da pessoa fisica (optional)</param>
-        /// <param name="idNaturezaOcupacao">Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica (optional)</param>
-        /// <param name="idNacionalidade">Id Nacionalidade da pessoa fisica (optional)</param>
-        /// <param name="numeroBanco">N\u00FAmero do Banco (optional)</param>
-        /// <param name="numeroAgencia">N\u00FAmero da ag\u00EAncia (optional)</param>
-        /// <param name="numeroContaCorrente">N\u00FAmero da conta corrente (optional)</param>
-        /// <param name="email">Email da pessoa fisica (optional)</param>
-        /// <param name="nomeEmpresa">Nome que deve ser impresso no cart\u00E3o (optional)</param>
-        /// <param name="naturalidadeCidade">Apresenta o nome da cidade de nascimento da pessoa f\u00EDsica (optional)</param>
-        /// <param name="naturalidadeEstado">Apresenta a sigla do estado de nascimento da pessoa f\u00EDsica (optional)</param>
-        /// <param name="grauInstrucao">Apresenta o grau de instru\u00E7\u00E3o da pessoa f\u00EDsica (optional)</param>
-        /// <param name="numeroDependentes">Apresenta o n\u00FAmero de dependentes da pessoa f\u00EDsica (optional)</param>
-        /// <param name="nomePai">Apresenta o nome do pai da pessoa f\u00EDsica (optional)</param>
-        /// <param name="chequeEspecial">Indica se pessoa f\u00EDsica aderir ao cheque especial (optional)</param>
-        /// <param name="impedidoFinanciamento">Flag para s\u00F3cios do banco que s\u00E3o portadores do cart\u00E3o, mas n\u00E3o podem operar transa\u00E7\u00F5esde cr\u00E9dito(Lei n. 4.595/64) (optional)</param>
-        /// <param name="numeroCnh">N\u00FAmero da CNH da pessoa (optional)</param>
-        /// <returns>Task of PagePessoaDetalheResponse</returns>
-        public async System.Threading.Tasks.Task<PagePessoaDetalheResponse> Listar_2Async (List<string> sort = null, int? page = null, int? limit = null, long? idPessoa = null, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null, string numeroCnh = null)
-        {
-             ApiResponse<PagePessoaDetalheResponse> localVarResponse = await Listar_2AsyncWithHttpInfo(sort, page, limit, idPessoa, nomeMae, idEstadoCivil, idProfissao, idNaturezaOcupacao, idNacionalidade, numeroBanco, numeroAgencia, numeroContaCorrente, email, nomeEmpresa, naturalidadeCidade, naturalidadeEstado, grauInstrucao, numeroDependentes, nomePai, chequeEspecial, impedidoFinanciamento, numeroCnh);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Lista os Detalhes das Pessoas cadastradas no Emissor Este m\u00E9todo permite que sejam listadas od detalhes das Pessoas existentes na base de dados do Emissor
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="idPessoa">C\u00F3digo identificador da pessoa (optional)</param>
-        /// <param name="nomeMae">Apresenta o nome da m\u00E3e da pessoa fisica (optional)</param>
-        /// <param name="idEstadoCivil">Id Estado civil da pessoa fisica (optional)</param>
-        /// <param name="idProfissao">Profiss\u00E3o da pessoa fisica (optional)</param>
-        /// <param name="idNaturezaOcupacao">Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica (optional)</param>
-        /// <param name="idNacionalidade">Id Nacionalidade da pessoa fisica (optional)</param>
-        /// <param name="numeroBanco">N\u00FAmero do Banco (optional)</param>
-        /// <param name="numeroAgencia">N\u00FAmero da ag\u00EAncia (optional)</param>
-        /// <param name="numeroContaCorrente">N\u00FAmero da conta corrente (optional)</param>
-        /// <param name="email">Email da pessoa fisica (optional)</param>
-        /// <param name="nomeEmpresa">Nome que deve ser impresso no cart\u00E3o (optional)</param>
-        /// <param name="naturalidadeCidade">Apresenta o nome da cidade de nascimento da pessoa f\u00EDsica (optional)</param>
-        /// <param name="naturalidadeEstado">Apresenta a sigla do estado de nascimento da pessoa f\u00EDsica (optional)</param>
-        /// <param name="grauInstrucao">Apresenta o grau de instru\u00E7\u00E3o da pessoa f\u00EDsica (optional)</param>
-        /// <param name="numeroDependentes">Apresenta o n\u00FAmero de dependentes da pessoa f\u00EDsica (optional)</param>
-        /// <param name="nomePai">Apresenta o nome do pai da pessoa f\u00EDsica (optional)</param>
-        /// <param name="chequeEspecial">Indica se pessoa f\u00EDsica aderir ao cheque especial (optional)</param>
-        /// <param name="impedidoFinanciamento">Flag para s\u00F3cios do banco que s\u00E3o portadores do cart\u00E3o, mas n\u00E3o podem operar transa\u00E7\u00F5esde cr\u00E9dito(Lei n. 4.595/64) (optional)</param>
-        /// <param name="numeroCnh">N\u00FAmero da CNH da pessoa (optional)</param>
-        /// <returns>Task of ApiResponse (PagePessoaDetalheResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PagePessoaDetalheResponse>> Listar_2AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idPessoa = null, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null, string numeroCnh = null)
-        {
-            
-    
-            var localVarPath = "/api/pessoas-detalhes";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            
-            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
-            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
-            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
-            if (idPessoa != null) localVarQueryParams.Add("idPessoa", Configuration.ApiClient.ParameterToString(idPessoa)); // query parameter
-            if (nomeMae != null) localVarQueryParams.Add("nomeMae", Configuration.ApiClient.ParameterToString(nomeMae)); // query parameter
-            if (idEstadoCivil != null) localVarQueryParams.Add("idEstadoCivil", Configuration.ApiClient.ParameterToString(idEstadoCivil)); // query parameter
-            if (idProfissao != null) localVarQueryParams.Add("idProfissao", Configuration.ApiClient.ParameterToString(idProfissao)); // query parameter
-            if (idNaturezaOcupacao != null) localVarQueryParams.Add("idNaturezaOcupacao", Configuration.ApiClient.ParameterToString(idNaturezaOcupacao)); // query parameter
-            if (idNacionalidade != null) localVarQueryParams.Add("idNacionalidade", Configuration.ApiClient.ParameterToString(idNacionalidade)); // query parameter
-            if (numeroBanco != null) localVarQueryParams.Add("numeroBanco", Configuration.ApiClient.ParameterToString(numeroBanco)); // query parameter
-            if (numeroAgencia != null) localVarQueryParams.Add("numeroAgencia", Configuration.ApiClient.ParameterToString(numeroAgencia)); // query parameter
-            if (numeroContaCorrente != null) localVarQueryParams.Add("numeroContaCorrente", Configuration.ApiClient.ParameterToString(numeroContaCorrente)); // query parameter
-            if (email != null) localVarQueryParams.Add("email", Configuration.ApiClient.ParameterToString(email)); // query parameter
-            if (nomeEmpresa != null) localVarQueryParams.Add("nomeEmpresa", Configuration.ApiClient.ParameterToString(nomeEmpresa)); // query parameter
-            if (naturalidadeCidade != null) localVarQueryParams.Add("naturalidadeCidade", Configuration.ApiClient.ParameterToString(naturalidadeCidade)); // query parameter
-            if (naturalidadeEstado != null) localVarQueryParams.Add("naturalidadeEstado", Configuration.ApiClient.ParameterToString(naturalidadeEstado)); // query parameter
-            if (grauInstrucao != null) localVarQueryParams.Add("grauInstrucao", Configuration.ApiClient.ParameterToString(grauInstrucao)); // query parameter
-            if (numeroDependentes != null) localVarQueryParams.Add("numeroDependentes", Configuration.ApiClient.ParameterToString(numeroDependentes)); // query parameter
-            if (nomePai != null) localVarQueryParams.Add("nomePai", Configuration.ApiClient.ParameterToString(nomePai)); // query parameter
-            if (chequeEspecial != null) localVarQueryParams.Add("chequeEspecial", Configuration.ApiClient.ParameterToString(chequeEspecial)); // query parameter
-            if (impedidoFinanciamento != null) localVarQueryParams.Add("impedidoFinanciamento", Configuration.ApiClient.ParameterToString(impedidoFinanciamento)); // query parameter
-            if (numeroCnh != null) localVarQueryParams.Add("numeroCnh", Configuration.ApiClient.ParameterToString(numeroCnh)); // query parameter
-            
-            
-            
-            
-
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Listar_2: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Listar_2: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<PagePessoaDetalheResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PagePessoaDetalheResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PagePessoaDetalheResponse)));
-            
-        }
-        
-        /// <summary>
         /// Lista os Telefones cadastrados no Emissor Este m\u00E9todo permite que sejam listados os Telefones existentes na base de dados do Emissor
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
@@ -7966,9 +7706,9 @@ namespace Conductor.Pier.Api
         /// <param name="ramal">N\u00FAmero do ramal (optional)</param> 
         /// <param name="status">Apresenta o Status do Telefone, onde: &#39;0&#39;: Inativo e &#39;1&#39;: Ativo (optional)</param> 
         /// <returns>PageTelefoneResponse</returns>
-        public PageTelefoneResponse Listar_3 (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idTipoTelefone = null, long? idPessoa = null, string ddd = null, string telefone = null, string ramal = null, int? status = null)
+        public PageTelefoneResponse ListarTelefones (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idTipoTelefone = null, long? idPessoa = null, string ddd = null, string telefone = null, string ramal = null, int? status = null)
         {
-             ApiResponse<PageTelefoneResponse> localVarResponse = Listar_3WithHttpInfo(sort, page, limit, id, idTipoTelefone, idPessoa, ddd, telefone, ramal, status);
+             ApiResponse<PageTelefoneResponse> localVarResponse = ListarTelefonesWithHttpInfo(sort, page, limit, id, idTipoTelefone, idPessoa, ddd, telefone, ramal, status);
              return localVarResponse.Data;
         }
 
@@ -7987,7 +7727,7 @@ namespace Conductor.Pier.Api
         /// <param name="ramal">N\u00FAmero do ramal (optional)</param> 
         /// <param name="status">Apresenta o Status do Telefone, onde: &#39;0&#39;: Inativo e &#39;1&#39;: Ativo (optional)</param> 
         /// <returns>ApiResponse of PageTelefoneResponse</returns>
-        public ApiResponse< PageTelefoneResponse > Listar_3WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idTipoTelefone = null, long? idPessoa = null, string ddd = null, string telefone = null, string ramal = null, int? status = null)
+        public ApiResponse< PageTelefoneResponse > ListarTelefonesWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idTipoTelefone = null, long? idPessoa = null, string ddd = null, string telefone = null, string ramal = null, int? status = null)
         {
             
     
@@ -8043,9 +7783,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Listar_3: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarTelefones: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Listar_3: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarTelefones: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageTelefoneResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -8069,9 +7809,9 @@ namespace Conductor.Pier.Api
         /// <param name="ramal">N\u00FAmero do ramal (optional)</param>
         /// <param name="status">Apresenta o Status do Telefone, onde: &#39;0&#39;: Inativo e &#39;1&#39;: Ativo (optional)</param>
         /// <returns>Task of PageTelefoneResponse</returns>
-        public async System.Threading.Tasks.Task<PageTelefoneResponse> Listar_3Async (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idTipoTelefone = null, long? idPessoa = null, string ddd = null, string telefone = null, string ramal = null, int? status = null)
+        public async System.Threading.Tasks.Task<PageTelefoneResponse> ListarTelefonesAsync (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idTipoTelefone = null, long? idPessoa = null, string ddd = null, string telefone = null, string ramal = null, int? status = null)
         {
-             ApiResponse<PageTelefoneResponse> localVarResponse = await Listar_3AsyncWithHttpInfo(sort, page, limit, id, idTipoTelefone, idPessoa, ddd, telefone, ramal, status);
+             ApiResponse<PageTelefoneResponse> localVarResponse = await ListarTelefonesAsyncWithHttpInfo(sort, page, limit, id, idTipoTelefone, idPessoa, ddd, telefone, ramal, status);
              return localVarResponse.Data;
 
         }
@@ -8091,7 +7831,7 @@ namespace Conductor.Pier.Api
         /// <param name="ramal">N\u00FAmero do ramal (optional)</param>
         /// <param name="status">Apresenta o Status do Telefone, onde: &#39;0&#39;: Inativo e &#39;1&#39;: Ativo (optional)</param>
         /// <returns>Task of ApiResponse (PageTelefoneResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageTelefoneResponse>> Listar_3AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idTipoTelefone = null, long? idPessoa = null, string ddd = null, string telefone = null, string ramal = null, int? status = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageTelefoneResponse>> ListarTelefonesAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idTipoTelefone = null, long? idPessoa = null, string ddd = null, string telefone = null, string ramal = null, int? status = null)
         {
             
     
@@ -8147,9 +7887,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Listar_3: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarTelefones: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Listar_3: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarTelefones: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageTelefoneResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -8158,34 +7898,38 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Inclui a conta como registro para integra\u00E7\u00E3o Este recurso permite incluir uma conta como registro para integra\u00E7\u00E3o
+        /// Realiza o cadastro de Adicionais para uma Conta Este m\u00E9todo permite que uma pessoa existente na base possa ser um adicional na conta informada
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">idConta</param> 
-        /// <param name="body">IntegracaoEmissorPersist (optional)</param> 
-        /// <returns>IntegracaoEmissorResponse</returns>
-        public IntegracaoEmissorResponse Salvar (long? id, IntegracaoEmissorPersist body = null)
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param> 
+        /// <param name="adicionalContaPersist">adicionalContaPersist</param> 
+        /// <returns>AdicionalContaResponse</returns>
+        public AdicionalContaResponse SalvarAdicionalConta (long? id, AdicionalContaPersist adicionalContaPersist)
         {
-             ApiResponse<IntegracaoEmissorResponse> localVarResponse = SalvarWithHttpInfo(id, body);
+             ApiResponse<AdicionalContaResponse> localVarResponse = SalvarAdicionalContaWithHttpInfo(id, adicionalContaPersist);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Inclui a conta como registro para integra\u00E7\u00E3o Este recurso permite incluir uma conta como registro para integra\u00E7\u00E3o
+        /// Realiza o cadastro de Adicionais para uma Conta Este m\u00E9todo permite que uma pessoa existente na base possa ser um adicional na conta informada
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">idConta</param> 
-        /// <param name="body">IntegracaoEmissorPersist (optional)</param> 
-        /// <returns>ApiResponse of IntegracaoEmissorResponse</returns>
-        public ApiResponse< IntegracaoEmissorResponse > SalvarWithHttpInfo (long? id, IntegracaoEmissorPersist body = null)
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param> 
+        /// <param name="adicionalContaPersist">adicionalContaPersist</param> 
+        /// <returns>ApiResponse of AdicionalContaResponse</returns>
+        public ApiResponse< AdicionalContaResponse > SalvarAdicionalContaWithHttpInfo (long? id, AdicionalContaPersist adicionalContaPersist)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling CadastroClienteApi->Salvar");
+                throw new ApiException(400, "Missing required parameter 'id' when calling CadastroClienteApi->SalvarAdicionalConta");
+            
+            // verify the required parameter 'adicionalContaPersist' is set
+            if (adicionalContaPersist == null)
+                throw new ApiException(400, "Missing required parameter 'adicionalContaPersist' when calling CadastroClienteApi->SalvarAdicionalConta");
             
     
-            var localVarPath = "/api/contas/{id}/incluir-registro-integracao";
+            var localVarPath = "/api/contas/{id}/adicionais";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -8216,13 +7960,13 @@ namespace Conductor.Pier.Api
             
             
             
-            if (body.GetType() != typeof(byte[]))
+            if (adicionalContaPersist.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+                localVarPostBody = Configuration.ApiClient.Serialize(adicionalContaPersist); // http body (model) parameter
             }
             else
             {
-                localVarPostBody = body; // byte array
+                localVarPostBody = adicionalContaPersist; // byte array
             }
 
             
@@ -8235,45 +7979,47 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Salvar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarAdicionalConta: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Salvar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarAdicionalConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<IntegracaoEmissorResponse>(localVarStatusCode,
+            return new ApiResponse<AdicionalContaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (IntegracaoEmissorResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(IntegracaoEmissorResponse)));
+                (AdicionalContaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AdicionalContaResponse)));
             
         }
 
         
         /// <summary>
-        /// Inclui a conta como registro para integra\u00E7\u00E3o Este recurso permite incluir uma conta como registro para integra\u00E7\u00E3o
+        /// Realiza o cadastro de Adicionais para uma Conta Este m\u00E9todo permite que uma pessoa existente na base possa ser um adicional na conta informada
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">idConta</param>
-        /// <param name="body">IntegracaoEmissorPersist (optional)</param>
-        /// <returns>Task of IntegracaoEmissorResponse</returns>
-        public async System.Threading.Tasks.Task<IntegracaoEmissorResponse> SalvarAsync (long? id, IntegracaoEmissorPersist body = null)
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
+        /// <param name="adicionalContaPersist">adicionalContaPersist</param>
+        /// <returns>Task of AdicionalContaResponse</returns>
+        public async System.Threading.Tasks.Task<AdicionalContaResponse> SalvarAdicionalContaAsync (long? id, AdicionalContaPersist adicionalContaPersist)
         {
-             ApiResponse<IntegracaoEmissorResponse> localVarResponse = await SalvarAsyncWithHttpInfo(id, body);
+             ApiResponse<AdicionalContaResponse> localVarResponse = await SalvarAdicionalContaAsyncWithHttpInfo(id, adicionalContaPersist);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Inclui a conta como registro para integra\u00E7\u00E3o Este recurso permite incluir uma conta como registro para integra\u00E7\u00E3o
+        /// Realiza o cadastro de Adicionais para uma Conta Este m\u00E9todo permite que uma pessoa existente na base possa ser um adicional na conta informada
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">idConta</param>
-        /// <param name="body">IntegracaoEmissorPersist (optional)</param>
-        /// <returns>Task of ApiResponse (IntegracaoEmissorResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<IntegracaoEmissorResponse>> SalvarAsyncWithHttpInfo (long? id, IntegracaoEmissorPersist body = null)
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
+        /// <param name="adicionalContaPersist">adicionalContaPersist</param>
+        /// <returns>Task of ApiResponse (AdicionalContaResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AdicionalContaResponse>> SalvarAdicionalContaAsyncWithHttpInfo (long? id, AdicionalContaPersist adicionalContaPersist)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling Salvar");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling SalvarAdicionalConta");
+            // verify the required parameter 'adicionalContaPersist' is set
+            if (adicionalContaPersist == null) throw new ApiException(400, "Missing required parameter 'adicionalContaPersist' when calling SalvarAdicionalConta");
             
     
-            var localVarPath = "/api/contas/{id}/incluir-registro-integracao";
+            var localVarPath = "/api/contas/{id}/adicionais";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -8304,13 +8050,13 @@ namespace Conductor.Pier.Api
             
             
             
-            if (body.GetType() != typeof(byte[]))
+            if (adicionalContaPersist.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+                localVarPostBody = Configuration.ApiClient.Serialize(adicionalContaPersist); // http body (model) parameter
             }
             else
             {
-                localVarPostBody = body; // byte array
+                localVarPostBody = adicionalContaPersist; // byte array
             }
 
             
@@ -8323,13 +8069,793 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Salvar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarAdicionalConta: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Salvar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarAdicionalConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<IntegracaoEmissorResponse>(localVarStatusCode,
+            return new ApiResponse<AdicionalContaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (IntegracaoEmissorResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(IntegracaoEmissorResponse)));
+                (AdicionalContaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AdicionalContaResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Realiza o cadastro de um novo Endere\u00E7o Este m\u00E9todo permite que seja cadastrado um novo Endere\u00E7o na base de dados do Emissor
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o endere\u00E7o pertence (id) (optional)</param> 
+        /// <param name="idTipoEndereco">C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id) (optional)</param> 
+        /// <param name="cep">CEP do endere\u00E7o (optional)</param> 
+        /// <param name="logradouro">Apresenta o nome do Logradouro (optional)</param> 
+        /// <param name="numero">Apresenta o n\u00FAmero do endere\u00E7o (optional)</param> 
+        /// <param name="complemento">Apresenta descri\u00E7oes complementares referente ao endere\u00E7o (optional)</param> 
+        /// <param name="pontoReferencia">Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o (optional)</param> 
+        /// <param name="bairro">Apresenta nome do bairro (optional)</param> 
+        /// <param name="cidade">Apresenta nome da cidade (optional)</param> 
+        /// <param name="uf">Apresenta sigla da Unidade Federativa (optional)</param> 
+        /// <param name="pais">Apresenta nome do Pa\u00EDs (optional)</param> 
+        /// <param name="tempoResidenciaAnos">Apresenta a quantidade de anos em que habita na resid\u00EAncia (optional)</param> 
+        /// <param name="tempoResidenciaMeses">Apresenta a quantidade de meses que habita na resid\u00EAncia (optional)</param> 
+        /// <param name="aplicativoAlteracao">Apresenta a aplica\u00E7\u00E3o respons\u00E1vel por alterar o endere\u00E7o (optional)</param> 
+        /// <param name="usuarioAlteracao">Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o (optional)</param> 
+        /// <returns>EnderecoResponse</returns>
+        public EnderecoResponse SalvarEndereco (long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null, string aplicativoAlteracao = null, string usuarioAlteracao = null)
+        {
+             ApiResponse<EnderecoResponse> localVarResponse = SalvarEnderecoWithHttpInfo(idPessoa, idTipoEndereco, cep, logradouro, numero, complemento, pontoReferencia, bairro, cidade, uf, pais, tempoResidenciaAnos, tempoResidenciaMeses, aplicativoAlteracao, usuarioAlteracao);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Realiza o cadastro de um novo Endere\u00E7o Este m\u00E9todo permite que seja cadastrado um novo Endere\u00E7o na base de dados do Emissor
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o endere\u00E7o pertence (id) (optional)</param> 
+        /// <param name="idTipoEndereco">C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id) (optional)</param> 
+        /// <param name="cep">CEP do endere\u00E7o (optional)</param> 
+        /// <param name="logradouro">Apresenta o nome do Logradouro (optional)</param> 
+        /// <param name="numero">Apresenta o n\u00FAmero do endere\u00E7o (optional)</param> 
+        /// <param name="complemento">Apresenta descri\u00E7oes complementares referente ao endere\u00E7o (optional)</param> 
+        /// <param name="pontoReferencia">Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o (optional)</param> 
+        /// <param name="bairro">Apresenta nome do bairro (optional)</param> 
+        /// <param name="cidade">Apresenta nome da cidade (optional)</param> 
+        /// <param name="uf">Apresenta sigla da Unidade Federativa (optional)</param> 
+        /// <param name="pais">Apresenta nome do Pa\u00EDs (optional)</param> 
+        /// <param name="tempoResidenciaAnos">Apresenta a quantidade de anos em que habita na resid\u00EAncia (optional)</param> 
+        /// <param name="tempoResidenciaMeses">Apresenta a quantidade de meses que habita na resid\u00EAncia (optional)</param> 
+        /// <param name="aplicativoAlteracao">Apresenta a aplica\u00E7\u00E3o respons\u00E1vel por alterar o endere\u00E7o (optional)</param> 
+        /// <param name="usuarioAlteracao">Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o (optional)</param> 
+        /// <returns>ApiResponse of EnderecoResponse</returns>
+        public ApiResponse< EnderecoResponse > SalvarEnderecoWithHttpInfo (long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null, string aplicativoAlteracao = null, string usuarioAlteracao = null)
+        {
+            
+    
+            var localVarPath = "/api/enderecos";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (idPessoa != null) localVarQueryParams.Add("idPessoa", Configuration.ApiClient.ParameterToString(idPessoa)); // query parameter
+            if (idTipoEndereco != null) localVarQueryParams.Add("idTipoEndereco", Configuration.ApiClient.ParameterToString(idTipoEndereco)); // query parameter
+            if (cep != null) localVarQueryParams.Add("cep", Configuration.ApiClient.ParameterToString(cep)); // query parameter
+            if (logradouro != null) localVarQueryParams.Add("logradouro", Configuration.ApiClient.ParameterToString(logradouro)); // query parameter
+            if (numero != null) localVarQueryParams.Add("numero", Configuration.ApiClient.ParameterToString(numero)); // query parameter
+            if (complemento != null) localVarQueryParams.Add("complemento", Configuration.ApiClient.ParameterToString(complemento)); // query parameter
+            if (pontoReferencia != null) localVarQueryParams.Add("pontoReferencia", Configuration.ApiClient.ParameterToString(pontoReferencia)); // query parameter
+            if (bairro != null) localVarQueryParams.Add("bairro", Configuration.ApiClient.ParameterToString(bairro)); // query parameter
+            if (cidade != null) localVarQueryParams.Add("cidade", Configuration.ApiClient.ParameterToString(cidade)); // query parameter
+            if (uf != null) localVarQueryParams.Add("uf", Configuration.ApiClient.ParameterToString(uf)); // query parameter
+            if (pais != null) localVarQueryParams.Add("pais", Configuration.ApiClient.ParameterToString(pais)); // query parameter
+            if (tempoResidenciaAnos != null) localVarQueryParams.Add("tempoResidenciaAnos", Configuration.ApiClient.ParameterToString(tempoResidenciaAnos)); // query parameter
+            if (tempoResidenciaMeses != null) localVarQueryParams.Add("tempoResidenciaMeses", Configuration.ApiClient.ParameterToString(tempoResidenciaMeses)); // query parameter
+            if (aplicativoAlteracao != null) localVarQueryParams.Add("aplicativoAlteracao", Configuration.ApiClient.ParameterToString(aplicativoAlteracao)); // query parameter
+            if (usuarioAlteracao != null) localVarQueryParams.Add("usuarioAlteracao", Configuration.ApiClient.ParameterToString(usuarioAlteracao)); // query parameter
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarEndereco: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarEndereco: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<EnderecoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (EnderecoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EnderecoResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Realiza o cadastro de um novo Endere\u00E7o Este m\u00E9todo permite que seja cadastrado um novo Endere\u00E7o na base de dados do Emissor
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o endere\u00E7o pertence (id) (optional)</param>
+        /// <param name="idTipoEndereco">C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id) (optional)</param>
+        /// <param name="cep">CEP do endere\u00E7o (optional)</param>
+        /// <param name="logradouro">Apresenta o nome do Logradouro (optional)</param>
+        /// <param name="numero">Apresenta o n\u00FAmero do endere\u00E7o (optional)</param>
+        /// <param name="complemento">Apresenta descri\u00E7oes complementares referente ao endere\u00E7o (optional)</param>
+        /// <param name="pontoReferencia">Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o (optional)</param>
+        /// <param name="bairro">Apresenta nome do bairro (optional)</param>
+        /// <param name="cidade">Apresenta nome da cidade (optional)</param>
+        /// <param name="uf">Apresenta sigla da Unidade Federativa (optional)</param>
+        /// <param name="pais">Apresenta nome do Pa\u00EDs (optional)</param>
+        /// <param name="tempoResidenciaAnos">Apresenta a quantidade de anos em que habita na resid\u00EAncia (optional)</param>
+        /// <param name="tempoResidenciaMeses">Apresenta a quantidade de meses que habita na resid\u00EAncia (optional)</param>
+        /// <param name="aplicativoAlteracao">Apresenta a aplica\u00E7\u00E3o respons\u00E1vel por alterar o endere\u00E7o (optional)</param>
+        /// <param name="usuarioAlteracao">Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o (optional)</param>
+        /// <returns>Task of EnderecoResponse</returns>
+        public async System.Threading.Tasks.Task<EnderecoResponse> SalvarEnderecoAsync (long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null, string aplicativoAlteracao = null, string usuarioAlteracao = null)
+        {
+             ApiResponse<EnderecoResponse> localVarResponse = await SalvarEnderecoAsyncWithHttpInfo(idPessoa, idTipoEndereco, cep, logradouro, numero, complemento, pontoReferencia, bairro, cidade, uf, pais, tempoResidenciaAnos, tempoResidenciaMeses, aplicativoAlteracao, usuarioAlteracao);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Realiza o cadastro de um novo Endere\u00E7o Este m\u00E9todo permite que seja cadastrado um novo Endere\u00E7o na base de dados do Emissor
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o endere\u00E7o pertence (id) (optional)</param>
+        /// <param name="idTipoEndereco">C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id) (optional)</param>
+        /// <param name="cep">CEP do endere\u00E7o (optional)</param>
+        /// <param name="logradouro">Apresenta o nome do Logradouro (optional)</param>
+        /// <param name="numero">Apresenta o n\u00FAmero do endere\u00E7o (optional)</param>
+        /// <param name="complemento">Apresenta descri\u00E7oes complementares referente ao endere\u00E7o (optional)</param>
+        /// <param name="pontoReferencia">Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o (optional)</param>
+        /// <param name="bairro">Apresenta nome do bairro (optional)</param>
+        /// <param name="cidade">Apresenta nome da cidade (optional)</param>
+        /// <param name="uf">Apresenta sigla da Unidade Federativa (optional)</param>
+        /// <param name="pais">Apresenta nome do Pa\u00EDs (optional)</param>
+        /// <param name="tempoResidenciaAnos">Apresenta a quantidade de anos em que habita na resid\u00EAncia (optional)</param>
+        /// <param name="tempoResidenciaMeses">Apresenta a quantidade de meses que habita na resid\u00EAncia (optional)</param>
+        /// <param name="aplicativoAlteracao">Apresenta a aplica\u00E7\u00E3o respons\u00E1vel por alterar o endere\u00E7o (optional)</param>
+        /// <param name="usuarioAlteracao">Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o (optional)</param>
+        /// <returns>Task of ApiResponse (EnderecoResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EnderecoResponse>> SalvarEnderecoAsyncWithHttpInfo (long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null, string aplicativoAlteracao = null, string usuarioAlteracao = null)
+        {
+            
+    
+            var localVarPath = "/api/enderecos";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (idPessoa != null) localVarQueryParams.Add("idPessoa", Configuration.ApiClient.ParameterToString(idPessoa)); // query parameter
+            if (idTipoEndereco != null) localVarQueryParams.Add("idTipoEndereco", Configuration.ApiClient.ParameterToString(idTipoEndereco)); // query parameter
+            if (cep != null) localVarQueryParams.Add("cep", Configuration.ApiClient.ParameterToString(cep)); // query parameter
+            if (logradouro != null) localVarQueryParams.Add("logradouro", Configuration.ApiClient.ParameterToString(logradouro)); // query parameter
+            if (numero != null) localVarQueryParams.Add("numero", Configuration.ApiClient.ParameterToString(numero)); // query parameter
+            if (complemento != null) localVarQueryParams.Add("complemento", Configuration.ApiClient.ParameterToString(complemento)); // query parameter
+            if (pontoReferencia != null) localVarQueryParams.Add("pontoReferencia", Configuration.ApiClient.ParameterToString(pontoReferencia)); // query parameter
+            if (bairro != null) localVarQueryParams.Add("bairro", Configuration.ApiClient.ParameterToString(bairro)); // query parameter
+            if (cidade != null) localVarQueryParams.Add("cidade", Configuration.ApiClient.ParameterToString(cidade)); // query parameter
+            if (uf != null) localVarQueryParams.Add("uf", Configuration.ApiClient.ParameterToString(uf)); // query parameter
+            if (pais != null) localVarQueryParams.Add("pais", Configuration.ApiClient.ParameterToString(pais)); // query parameter
+            if (tempoResidenciaAnos != null) localVarQueryParams.Add("tempoResidenciaAnos", Configuration.ApiClient.ParameterToString(tempoResidenciaAnos)); // query parameter
+            if (tempoResidenciaMeses != null) localVarQueryParams.Add("tempoResidenciaMeses", Configuration.ApiClient.ParameterToString(tempoResidenciaMeses)); // query parameter
+            if (aplicativoAlteracao != null) localVarQueryParams.Add("aplicativoAlteracao", Configuration.ApiClient.ParameterToString(aplicativoAlteracao)); // query parameter
+            if (usuarioAlteracao != null) localVarQueryParams.Add("usuarioAlteracao", Configuration.ApiClient.ParameterToString(usuarioAlteracao)); // query parameter
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarEndereco: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarEndereco: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EnderecoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (EnderecoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EnderecoResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Realiza o cadastro de um nova Pessoa Este m\u00E9todo permite que seja cadastrado uma nova Pessoa na base de dados do Emissor
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="nome">Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00E3o Social (Nome Empresarial)&#39;</param> 
+        /// <param name="tipo">Tipo de Pessoa (PF ou PJ)</param> 
+        /// <param name="dataNascimento">Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd</param> 
+        /// <param name="cpf">N\u00FAmero do CPF, quando PF (optional)</param> 
+        /// <param name="cnpj">N\u00FAmero do CNPJ, quando PJ (optional)</param> 
+        /// <param name="sexo">Sexo da Pessoa (optional)</param> 
+        /// <param name="numeroIdentidade">N\u00FAmero da Identidade (optional)</param> 
+        /// <param name="orgaoExpedidorIdentidade">Org\u00E3o expedidor do Identidade (optional)</param> 
+        /// <param name="unidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade (optional)</param> 
+        /// <param name="dataEmissaoIdentidade">Data emiss\u00E3o da Identidade (optional)</param> 
+        /// <param name="usuarioAlteracao">Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o (optional)</param> 
+        /// <returns>PessoaResponse</returns>
+        public PessoaResponse SalvarPessoa (string nome, string tipo, string dataNascimento, string cpf = null, string cnpj = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null, string usuarioAlteracao = null)
+        {
+             ApiResponse<PessoaResponse> localVarResponse = SalvarPessoaWithHttpInfo(nome, tipo, dataNascimento, cpf, cnpj, sexo, numeroIdentidade, orgaoExpedidorIdentidade, unidadeFederativaIdentidade, dataEmissaoIdentidade, usuarioAlteracao);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Realiza o cadastro de um nova Pessoa Este m\u00E9todo permite que seja cadastrado uma nova Pessoa na base de dados do Emissor
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="nome">Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00E3o Social (Nome Empresarial)&#39;</param> 
+        /// <param name="tipo">Tipo de Pessoa (PF ou PJ)</param> 
+        /// <param name="dataNascimento">Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd</param> 
+        /// <param name="cpf">N\u00FAmero do CPF, quando PF (optional)</param> 
+        /// <param name="cnpj">N\u00FAmero do CNPJ, quando PJ (optional)</param> 
+        /// <param name="sexo">Sexo da Pessoa (optional)</param> 
+        /// <param name="numeroIdentidade">N\u00FAmero da Identidade (optional)</param> 
+        /// <param name="orgaoExpedidorIdentidade">Org\u00E3o expedidor do Identidade (optional)</param> 
+        /// <param name="unidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade (optional)</param> 
+        /// <param name="dataEmissaoIdentidade">Data emiss\u00E3o da Identidade (optional)</param> 
+        /// <param name="usuarioAlteracao">Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o (optional)</param> 
+        /// <returns>ApiResponse of PessoaResponse</returns>
+        public ApiResponse< PessoaResponse > SalvarPessoaWithHttpInfo (string nome, string tipo, string dataNascimento, string cpf = null, string cnpj = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null, string usuarioAlteracao = null)
+        {
+            
+            // verify the required parameter 'nome' is set
+            if (nome == null)
+                throw new ApiException(400, "Missing required parameter 'nome' when calling CadastroClienteApi->SalvarPessoa");
+            
+            // verify the required parameter 'tipo' is set
+            if (tipo == null)
+                throw new ApiException(400, "Missing required parameter 'tipo' when calling CadastroClienteApi->SalvarPessoa");
+            
+            // verify the required parameter 'dataNascimento' is set
+            if (dataNascimento == null)
+                throw new ApiException(400, "Missing required parameter 'dataNascimento' when calling CadastroClienteApi->SalvarPessoa");
+            
+    
+            var localVarPath = "/api/pessoas";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (nome != null) localVarQueryParams.Add("nome", Configuration.ApiClient.ParameterToString(nome)); // query parameter
+            if (tipo != null) localVarQueryParams.Add("tipo", Configuration.ApiClient.ParameterToString(tipo)); // query parameter
+            if (cpf != null) localVarQueryParams.Add("cpf", Configuration.ApiClient.ParameterToString(cpf)); // query parameter
+            if (cnpj != null) localVarQueryParams.Add("cnpj", Configuration.ApiClient.ParameterToString(cnpj)); // query parameter
+            if (dataNascimento != null) localVarQueryParams.Add("dataNascimento", Configuration.ApiClient.ParameterToString(dataNascimento)); // query parameter
+            if (sexo != null) localVarQueryParams.Add("sexo", Configuration.ApiClient.ParameterToString(sexo)); // query parameter
+            if (numeroIdentidade != null) localVarQueryParams.Add("numeroIdentidade", Configuration.ApiClient.ParameterToString(numeroIdentidade)); // query parameter
+            if (orgaoExpedidorIdentidade != null) localVarQueryParams.Add("orgaoExpedidorIdentidade", Configuration.ApiClient.ParameterToString(orgaoExpedidorIdentidade)); // query parameter
+            if (unidadeFederativaIdentidade != null) localVarQueryParams.Add("unidadeFederativaIdentidade", Configuration.ApiClient.ParameterToString(unidadeFederativaIdentidade)); // query parameter
+            if (dataEmissaoIdentidade != null) localVarQueryParams.Add("dataEmissaoIdentidade", Configuration.ApiClient.ParameterToString(dataEmissaoIdentidade)); // query parameter
+            if (usuarioAlteracao != null) localVarQueryParams.Add("usuarioAlteracao", Configuration.ApiClient.ParameterToString(usuarioAlteracao)); // query parameter
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarPessoa: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarPessoa: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<PessoaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PessoaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PessoaResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Realiza o cadastro de um nova Pessoa Este m\u00E9todo permite que seja cadastrado uma nova Pessoa na base de dados do Emissor
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="nome">Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00E3o Social (Nome Empresarial)&#39;</param>
+        /// <param name="tipo">Tipo de Pessoa (PF ou PJ)</param>
+        /// <param name="dataNascimento">Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd</param>
+        /// <param name="cpf">N\u00FAmero do CPF, quando PF (optional)</param>
+        /// <param name="cnpj">N\u00FAmero do CNPJ, quando PJ (optional)</param>
+        /// <param name="sexo">Sexo da Pessoa (optional)</param>
+        /// <param name="numeroIdentidade">N\u00FAmero da Identidade (optional)</param>
+        /// <param name="orgaoExpedidorIdentidade">Org\u00E3o expedidor do Identidade (optional)</param>
+        /// <param name="unidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade (optional)</param>
+        /// <param name="dataEmissaoIdentidade">Data emiss\u00E3o da Identidade (optional)</param>
+        /// <param name="usuarioAlteracao">Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o (optional)</param>
+        /// <returns>Task of PessoaResponse</returns>
+        public async System.Threading.Tasks.Task<PessoaResponse> SalvarPessoaAsync (string nome, string tipo, string dataNascimento, string cpf = null, string cnpj = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null, string usuarioAlteracao = null)
+        {
+             ApiResponse<PessoaResponse> localVarResponse = await SalvarPessoaAsyncWithHttpInfo(nome, tipo, dataNascimento, cpf, cnpj, sexo, numeroIdentidade, orgaoExpedidorIdentidade, unidadeFederativaIdentidade, dataEmissaoIdentidade, usuarioAlteracao);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Realiza o cadastro de um nova Pessoa Este m\u00E9todo permite que seja cadastrado uma nova Pessoa na base de dados do Emissor
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="nome">Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00E3o Social (Nome Empresarial)&#39;</param>
+        /// <param name="tipo">Tipo de Pessoa (PF ou PJ)</param>
+        /// <param name="dataNascimento">Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd</param>
+        /// <param name="cpf">N\u00FAmero do CPF, quando PF (optional)</param>
+        /// <param name="cnpj">N\u00FAmero do CNPJ, quando PJ (optional)</param>
+        /// <param name="sexo">Sexo da Pessoa (optional)</param>
+        /// <param name="numeroIdentidade">N\u00FAmero da Identidade (optional)</param>
+        /// <param name="orgaoExpedidorIdentidade">Org\u00E3o expedidor do Identidade (optional)</param>
+        /// <param name="unidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade (optional)</param>
+        /// <param name="dataEmissaoIdentidade">Data emiss\u00E3o da Identidade (optional)</param>
+        /// <param name="usuarioAlteracao">Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o (optional)</param>
+        /// <returns>Task of ApiResponse (PessoaResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PessoaResponse>> SalvarPessoaAsyncWithHttpInfo (string nome, string tipo, string dataNascimento, string cpf = null, string cnpj = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null, string usuarioAlteracao = null)
+        {
+            // verify the required parameter 'nome' is set
+            if (nome == null) throw new ApiException(400, "Missing required parameter 'nome' when calling SalvarPessoa");
+            // verify the required parameter 'tipo' is set
+            if (tipo == null) throw new ApiException(400, "Missing required parameter 'tipo' when calling SalvarPessoa");
+            // verify the required parameter 'dataNascimento' is set
+            if (dataNascimento == null) throw new ApiException(400, "Missing required parameter 'dataNascimento' when calling SalvarPessoa");
+            
+    
+            var localVarPath = "/api/pessoas";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (nome != null) localVarQueryParams.Add("nome", Configuration.ApiClient.ParameterToString(nome)); // query parameter
+            if (tipo != null) localVarQueryParams.Add("tipo", Configuration.ApiClient.ParameterToString(tipo)); // query parameter
+            if (cpf != null) localVarQueryParams.Add("cpf", Configuration.ApiClient.ParameterToString(cpf)); // query parameter
+            if (cnpj != null) localVarQueryParams.Add("cnpj", Configuration.ApiClient.ParameterToString(cnpj)); // query parameter
+            if (dataNascimento != null) localVarQueryParams.Add("dataNascimento", Configuration.ApiClient.ParameterToString(dataNascimento)); // query parameter
+            if (sexo != null) localVarQueryParams.Add("sexo", Configuration.ApiClient.ParameterToString(sexo)); // query parameter
+            if (numeroIdentidade != null) localVarQueryParams.Add("numeroIdentidade", Configuration.ApiClient.ParameterToString(numeroIdentidade)); // query parameter
+            if (orgaoExpedidorIdentidade != null) localVarQueryParams.Add("orgaoExpedidorIdentidade", Configuration.ApiClient.ParameterToString(orgaoExpedidorIdentidade)); // query parameter
+            if (unidadeFederativaIdentidade != null) localVarQueryParams.Add("unidadeFederativaIdentidade", Configuration.ApiClient.ParameterToString(unidadeFederativaIdentidade)); // query parameter
+            if (dataEmissaoIdentidade != null) localVarQueryParams.Add("dataEmissaoIdentidade", Configuration.ApiClient.ParameterToString(dataEmissaoIdentidade)); // query parameter
+            if (usuarioAlteracao != null) localVarQueryParams.Add("usuarioAlteracao", Configuration.ApiClient.ParameterToString(usuarioAlteracao)); // query parameter
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarPessoa: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarPessoa: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PessoaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PessoaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PessoaResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Salvar os detalhes de uma determinada Pessoa Este m\u00E9todo permite que seja incluido na base do emissor os detalhes de uma determinada Pessoa
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idPessoa">Apresenta o c\u00F3digo identificador da pessoa</param> 
+        /// <param name="nomeMae">Apresenta o nome da m\u00E3e da pessoa fisica (optional)</param> 
+        /// <param name="idEstadoCivil">Id Estado civil da pessoa fisica (optional)</param> 
+        /// <param name="idProfissao">Profiss\u00E3o da pessoa fisica (optional)</param> 
+        /// <param name="idNaturezaOcupacao">Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica (optional)</param> 
+        /// <param name="idNacionalidade">Id Nacionalidade da pessoa fisica (optional)</param> 
+        /// <param name="numeroBanco">N\u00FAmero do banco (optional)</param> 
+        /// <param name="numeroAgencia">N\u00FAmero da ag\u00EAncia (optional)</param> 
+        /// <param name="numeroContaCorrente">N\u00FAmero da conta corrente (optional)</param> 
+        /// <param name="email">Email da pessoa fisica (optional)</param> 
+        /// <param name="nomeEmpresa">Nome que deve ser impresso no cart\u00E3o (optional)</param> 
+        /// <param name="nomeReferencia1">Nome de refer\u00EAncia 1 (optional)</param> 
+        /// <param name="enderecoReferencia1">Endere\u00E7o de refer\u00EAncia 1 (optional)</param> 
+        /// <param name="nomeReferencia2">Nome de refer\u00EAncia 2 (optional)</param> 
+        /// <param name="enderecoReferencia2">Endere\u00E7o de refer\u00EAncia 2 (optional)</param> 
+        /// <param name="naturalidadeCidade">Apresenta o nome da cidade de nascimento da pessoa f\u00EDsica (optional)</param> 
+        /// <param name="naturalidadeEstado">Apresenta a sigla do estado de nascimento da pessoa f\u00EDsica (optional)</param> 
+        /// <param name="grauInstrucao">Apresenta o grau de instru\u00E7\u00E3o da pessoa f\u00EDsica (optional)</param> 
+        /// <param name="numeroDependentes">Apresenta o n\u00FAmero de dependentes da pessoa f\u00EDsica (optional)</param> 
+        /// <param name="nomePai">Apresenta o nome do pai da pessoa f\u00EDsica (optional)</param> 
+        /// <param name="chequeEspecial">Indica se pessoa f\u00EDsica aderir ao cheque especial (optional)</param> 
+        /// <param name="impedidoFinanciamento">Flag para s\u00F3cios do banco que s\u00E3o portadores do cart\u00E3o, mas n\u00E3o podem operar transa\u00E7\u00F5es de cr\u00E9dito(Lei n. 4.595/64) (optional)</param> 
+        /// <param name="numeroCnh">N\u00FAmero da CNH da pessoa (optional)</param> 
+        /// <param name="pessoaPoliticamenteExposta">Flag para identificar se a pessoa \u00E9 politicamente exposta (optional)</param> 
+        /// <param name="patrimonioTotal">Patrim\u00F4nio total da pessoa (optional)</param> 
+        /// <param name="salario">Sal\u00E1rio da pessoa (optional)</param> 
+        /// <param name="nomeConjuge">Nome do c\u00F4njuge da pessoa (optional)</param> 
+        /// <returns>PessoaDetalheResponse</returns>
+        public PessoaDetalheResponse SalvarPessoaDetalhe (long? idPessoa, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string nomeReferencia1 = null, string enderecoReferencia1 = null, string nomeReferencia2 = null, string enderecoReferencia2 = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null, string numeroCnh = null, bool? pessoaPoliticamenteExposta = null, double? patrimonioTotal = null, double? salario = null, string nomeConjuge = null)
+        {
+             ApiResponse<PessoaDetalheResponse> localVarResponse = SalvarPessoaDetalheWithHttpInfo(idPessoa, nomeMae, idEstadoCivil, idProfissao, idNaturezaOcupacao, idNacionalidade, numeroBanco, numeroAgencia, numeroContaCorrente, email, nomeEmpresa, nomeReferencia1, enderecoReferencia1, nomeReferencia2, enderecoReferencia2, naturalidadeCidade, naturalidadeEstado, grauInstrucao, numeroDependentes, nomePai, chequeEspecial, impedidoFinanciamento, numeroCnh, pessoaPoliticamenteExposta, patrimonioTotal, salario, nomeConjuge);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Salvar os detalhes de uma determinada Pessoa Este m\u00E9todo permite que seja incluido na base do emissor os detalhes de uma determinada Pessoa
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idPessoa">Apresenta o c\u00F3digo identificador da pessoa</param> 
+        /// <param name="nomeMae">Apresenta o nome da m\u00E3e da pessoa fisica (optional)</param> 
+        /// <param name="idEstadoCivil">Id Estado civil da pessoa fisica (optional)</param> 
+        /// <param name="idProfissao">Profiss\u00E3o da pessoa fisica (optional)</param> 
+        /// <param name="idNaturezaOcupacao">Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica (optional)</param> 
+        /// <param name="idNacionalidade">Id Nacionalidade da pessoa fisica (optional)</param> 
+        /// <param name="numeroBanco">N\u00FAmero do banco (optional)</param> 
+        /// <param name="numeroAgencia">N\u00FAmero da ag\u00EAncia (optional)</param> 
+        /// <param name="numeroContaCorrente">N\u00FAmero da conta corrente (optional)</param> 
+        /// <param name="email">Email da pessoa fisica (optional)</param> 
+        /// <param name="nomeEmpresa">Nome que deve ser impresso no cart\u00E3o (optional)</param> 
+        /// <param name="nomeReferencia1">Nome de refer\u00EAncia 1 (optional)</param> 
+        /// <param name="enderecoReferencia1">Endere\u00E7o de refer\u00EAncia 1 (optional)</param> 
+        /// <param name="nomeReferencia2">Nome de refer\u00EAncia 2 (optional)</param> 
+        /// <param name="enderecoReferencia2">Endere\u00E7o de refer\u00EAncia 2 (optional)</param> 
+        /// <param name="naturalidadeCidade">Apresenta o nome da cidade de nascimento da pessoa f\u00EDsica (optional)</param> 
+        /// <param name="naturalidadeEstado">Apresenta a sigla do estado de nascimento da pessoa f\u00EDsica (optional)</param> 
+        /// <param name="grauInstrucao">Apresenta o grau de instru\u00E7\u00E3o da pessoa f\u00EDsica (optional)</param> 
+        /// <param name="numeroDependentes">Apresenta o n\u00FAmero de dependentes da pessoa f\u00EDsica (optional)</param> 
+        /// <param name="nomePai">Apresenta o nome do pai da pessoa f\u00EDsica (optional)</param> 
+        /// <param name="chequeEspecial">Indica se pessoa f\u00EDsica aderir ao cheque especial (optional)</param> 
+        /// <param name="impedidoFinanciamento">Flag para s\u00F3cios do banco que s\u00E3o portadores do cart\u00E3o, mas n\u00E3o podem operar transa\u00E7\u00F5es de cr\u00E9dito(Lei n. 4.595/64) (optional)</param> 
+        /// <param name="numeroCnh">N\u00FAmero da CNH da pessoa (optional)</param> 
+        /// <param name="pessoaPoliticamenteExposta">Flag para identificar se a pessoa \u00E9 politicamente exposta (optional)</param> 
+        /// <param name="patrimonioTotal">Patrim\u00F4nio total da pessoa (optional)</param> 
+        /// <param name="salario">Sal\u00E1rio da pessoa (optional)</param> 
+        /// <param name="nomeConjuge">Nome do c\u00F4njuge da pessoa (optional)</param> 
+        /// <returns>ApiResponse of PessoaDetalheResponse</returns>
+        public ApiResponse< PessoaDetalheResponse > SalvarPessoaDetalheWithHttpInfo (long? idPessoa, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string nomeReferencia1 = null, string enderecoReferencia1 = null, string nomeReferencia2 = null, string enderecoReferencia2 = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null, string numeroCnh = null, bool? pessoaPoliticamenteExposta = null, double? patrimonioTotal = null, double? salario = null, string nomeConjuge = null)
+        {
+            
+            // verify the required parameter 'idPessoa' is set
+            if (idPessoa == null)
+                throw new ApiException(400, "Missing required parameter 'idPessoa' when calling CadastroClienteApi->SalvarPessoaDetalhe");
+            
+    
+            var localVarPath = "/api/pessoas-detalhes";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (idPessoa != null) localVarQueryParams.Add("idPessoa", Configuration.ApiClient.ParameterToString(idPessoa)); // query parameter
+            if (nomeMae != null) localVarQueryParams.Add("nomeMae", Configuration.ApiClient.ParameterToString(nomeMae)); // query parameter
+            if (idEstadoCivil != null) localVarQueryParams.Add("idEstadoCivil", Configuration.ApiClient.ParameterToString(idEstadoCivil)); // query parameter
+            if (idProfissao != null) localVarQueryParams.Add("idProfissao", Configuration.ApiClient.ParameterToString(idProfissao)); // query parameter
+            if (idNaturezaOcupacao != null) localVarQueryParams.Add("idNaturezaOcupacao", Configuration.ApiClient.ParameterToString(idNaturezaOcupacao)); // query parameter
+            if (idNacionalidade != null) localVarQueryParams.Add("idNacionalidade", Configuration.ApiClient.ParameterToString(idNacionalidade)); // query parameter
+            if (numeroBanco != null) localVarQueryParams.Add("numeroBanco", Configuration.ApiClient.ParameterToString(numeroBanco)); // query parameter
+            if (numeroAgencia != null) localVarQueryParams.Add("numeroAgencia", Configuration.ApiClient.ParameterToString(numeroAgencia)); // query parameter
+            if (numeroContaCorrente != null) localVarQueryParams.Add("numeroContaCorrente", Configuration.ApiClient.ParameterToString(numeroContaCorrente)); // query parameter
+            if (email != null) localVarQueryParams.Add("email", Configuration.ApiClient.ParameterToString(email)); // query parameter
+            if (nomeEmpresa != null) localVarQueryParams.Add("nomeEmpresa", Configuration.ApiClient.ParameterToString(nomeEmpresa)); // query parameter
+            if (nomeReferencia1 != null) localVarQueryParams.Add("nomeReferencia1", Configuration.ApiClient.ParameterToString(nomeReferencia1)); // query parameter
+            if (enderecoReferencia1 != null) localVarQueryParams.Add("enderecoReferencia1", Configuration.ApiClient.ParameterToString(enderecoReferencia1)); // query parameter
+            if (nomeReferencia2 != null) localVarQueryParams.Add("nomeReferencia2", Configuration.ApiClient.ParameterToString(nomeReferencia2)); // query parameter
+            if (enderecoReferencia2 != null) localVarQueryParams.Add("enderecoReferencia2", Configuration.ApiClient.ParameterToString(enderecoReferencia2)); // query parameter
+            if (naturalidadeCidade != null) localVarQueryParams.Add("naturalidadeCidade", Configuration.ApiClient.ParameterToString(naturalidadeCidade)); // query parameter
+            if (naturalidadeEstado != null) localVarQueryParams.Add("naturalidadeEstado", Configuration.ApiClient.ParameterToString(naturalidadeEstado)); // query parameter
+            if (grauInstrucao != null) localVarQueryParams.Add("grauInstrucao", Configuration.ApiClient.ParameterToString(grauInstrucao)); // query parameter
+            if (numeroDependentes != null) localVarQueryParams.Add("numeroDependentes", Configuration.ApiClient.ParameterToString(numeroDependentes)); // query parameter
+            if (nomePai != null) localVarQueryParams.Add("nomePai", Configuration.ApiClient.ParameterToString(nomePai)); // query parameter
+            if (chequeEspecial != null) localVarQueryParams.Add("chequeEspecial", Configuration.ApiClient.ParameterToString(chequeEspecial)); // query parameter
+            if (impedidoFinanciamento != null) localVarQueryParams.Add("impedidoFinanciamento", Configuration.ApiClient.ParameterToString(impedidoFinanciamento)); // query parameter
+            if (numeroCnh != null) localVarQueryParams.Add("numeroCnh", Configuration.ApiClient.ParameterToString(numeroCnh)); // query parameter
+            if (pessoaPoliticamenteExposta != null) localVarQueryParams.Add("pessoaPoliticamenteExposta", Configuration.ApiClient.ParameterToString(pessoaPoliticamenteExposta)); // query parameter
+            if (patrimonioTotal != null) localVarQueryParams.Add("patrimonioTotal", Configuration.ApiClient.ParameterToString(patrimonioTotal)); // query parameter
+            if (salario != null) localVarQueryParams.Add("salario", Configuration.ApiClient.ParameterToString(salario)); // query parameter
+            if (nomeConjuge != null) localVarQueryParams.Add("nomeConjuge", Configuration.ApiClient.ParameterToString(nomeConjuge)); // query parameter
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarPessoaDetalhe: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarPessoaDetalhe: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<PessoaDetalheResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PessoaDetalheResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PessoaDetalheResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Salvar os detalhes de uma determinada Pessoa Este m\u00E9todo permite que seja incluido na base do emissor os detalhes de uma determinada Pessoa
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idPessoa">Apresenta o c\u00F3digo identificador da pessoa</param>
+        /// <param name="nomeMae">Apresenta o nome da m\u00E3e da pessoa fisica (optional)</param>
+        /// <param name="idEstadoCivil">Id Estado civil da pessoa fisica (optional)</param>
+        /// <param name="idProfissao">Profiss\u00E3o da pessoa fisica (optional)</param>
+        /// <param name="idNaturezaOcupacao">Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica (optional)</param>
+        /// <param name="idNacionalidade">Id Nacionalidade da pessoa fisica (optional)</param>
+        /// <param name="numeroBanco">N\u00FAmero do banco (optional)</param>
+        /// <param name="numeroAgencia">N\u00FAmero da ag\u00EAncia (optional)</param>
+        /// <param name="numeroContaCorrente">N\u00FAmero da conta corrente (optional)</param>
+        /// <param name="email">Email da pessoa fisica (optional)</param>
+        /// <param name="nomeEmpresa">Nome que deve ser impresso no cart\u00E3o (optional)</param>
+        /// <param name="nomeReferencia1">Nome de refer\u00EAncia 1 (optional)</param>
+        /// <param name="enderecoReferencia1">Endere\u00E7o de refer\u00EAncia 1 (optional)</param>
+        /// <param name="nomeReferencia2">Nome de refer\u00EAncia 2 (optional)</param>
+        /// <param name="enderecoReferencia2">Endere\u00E7o de refer\u00EAncia 2 (optional)</param>
+        /// <param name="naturalidadeCidade">Apresenta o nome da cidade de nascimento da pessoa f\u00EDsica (optional)</param>
+        /// <param name="naturalidadeEstado">Apresenta a sigla do estado de nascimento da pessoa f\u00EDsica (optional)</param>
+        /// <param name="grauInstrucao">Apresenta o grau de instru\u00E7\u00E3o da pessoa f\u00EDsica (optional)</param>
+        /// <param name="numeroDependentes">Apresenta o n\u00FAmero de dependentes da pessoa f\u00EDsica (optional)</param>
+        /// <param name="nomePai">Apresenta o nome do pai da pessoa f\u00EDsica (optional)</param>
+        /// <param name="chequeEspecial">Indica se pessoa f\u00EDsica aderir ao cheque especial (optional)</param>
+        /// <param name="impedidoFinanciamento">Flag para s\u00F3cios do banco que s\u00E3o portadores do cart\u00E3o, mas n\u00E3o podem operar transa\u00E7\u00F5es de cr\u00E9dito(Lei n. 4.595/64) (optional)</param>
+        /// <param name="numeroCnh">N\u00FAmero da CNH da pessoa (optional)</param>
+        /// <param name="pessoaPoliticamenteExposta">Flag para identificar se a pessoa \u00E9 politicamente exposta (optional)</param>
+        /// <param name="patrimonioTotal">Patrim\u00F4nio total da pessoa (optional)</param>
+        /// <param name="salario">Sal\u00E1rio da pessoa (optional)</param>
+        /// <param name="nomeConjuge">Nome do c\u00F4njuge da pessoa (optional)</param>
+        /// <returns>Task of PessoaDetalheResponse</returns>
+        public async System.Threading.Tasks.Task<PessoaDetalheResponse> SalvarPessoaDetalheAsync (long? idPessoa, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string nomeReferencia1 = null, string enderecoReferencia1 = null, string nomeReferencia2 = null, string enderecoReferencia2 = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null, string numeroCnh = null, bool? pessoaPoliticamenteExposta = null, double? patrimonioTotal = null, double? salario = null, string nomeConjuge = null)
+        {
+             ApiResponse<PessoaDetalheResponse> localVarResponse = await SalvarPessoaDetalheAsyncWithHttpInfo(idPessoa, nomeMae, idEstadoCivil, idProfissao, idNaturezaOcupacao, idNacionalidade, numeroBanco, numeroAgencia, numeroContaCorrente, email, nomeEmpresa, nomeReferencia1, enderecoReferencia1, nomeReferencia2, enderecoReferencia2, naturalidadeCidade, naturalidadeEstado, grauInstrucao, numeroDependentes, nomePai, chequeEspecial, impedidoFinanciamento, numeroCnh, pessoaPoliticamenteExposta, patrimonioTotal, salario, nomeConjuge);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Salvar os detalhes de uma determinada Pessoa Este m\u00E9todo permite que seja incluido na base do emissor os detalhes de uma determinada Pessoa
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idPessoa">Apresenta o c\u00F3digo identificador da pessoa</param>
+        /// <param name="nomeMae">Apresenta o nome da m\u00E3e da pessoa fisica (optional)</param>
+        /// <param name="idEstadoCivil">Id Estado civil da pessoa fisica (optional)</param>
+        /// <param name="idProfissao">Profiss\u00E3o da pessoa fisica (optional)</param>
+        /// <param name="idNaturezaOcupacao">Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica (optional)</param>
+        /// <param name="idNacionalidade">Id Nacionalidade da pessoa fisica (optional)</param>
+        /// <param name="numeroBanco">N\u00FAmero do banco (optional)</param>
+        /// <param name="numeroAgencia">N\u00FAmero da ag\u00EAncia (optional)</param>
+        /// <param name="numeroContaCorrente">N\u00FAmero da conta corrente (optional)</param>
+        /// <param name="email">Email da pessoa fisica (optional)</param>
+        /// <param name="nomeEmpresa">Nome que deve ser impresso no cart\u00E3o (optional)</param>
+        /// <param name="nomeReferencia1">Nome de refer\u00EAncia 1 (optional)</param>
+        /// <param name="enderecoReferencia1">Endere\u00E7o de refer\u00EAncia 1 (optional)</param>
+        /// <param name="nomeReferencia2">Nome de refer\u00EAncia 2 (optional)</param>
+        /// <param name="enderecoReferencia2">Endere\u00E7o de refer\u00EAncia 2 (optional)</param>
+        /// <param name="naturalidadeCidade">Apresenta o nome da cidade de nascimento da pessoa f\u00EDsica (optional)</param>
+        /// <param name="naturalidadeEstado">Apresenta a sigla do estado de nascimento da pessoa f\u00EDsica (optional)</param>
+        /// <param name="grauInstrucao">Apresenta o grau de instru\u00E7\u00E3o da pessoa f\u00EDsica (optional)</param>
+        /// <param name="numeroDependentes">Apresenta o n\u00FAmero de dependentes da pessoa f\u00EDsica (optional)</param>
+        /// <param name="nomePai">Apresenta o nome do pai da pessoa f\u00EDsica (optional)</param>
+        /// <param name="chequeEspecial">Indica se pessoa f\u00EDsica aderir ao cheque especial (optional)</param>
+        /// <param name="impedidoFinanciamento">Flag para s\u00F3cios do banco que s\u00E3o portadores do cart\u00E3o, mas n\u00E3o podem operar transa\u00E7\u00F5es de cr\u00E9dito(Lei n. 4.595/64) (optional)</param>
+        /// <param name="numeroCnh">N\u00FAmero da CNH da pessoa (optional)</param>
+        /// <param name="pessoaPoliticamenteExposta">Flag para identificar se a pessoa \u00E9 politicamente exposta (optional)</param>
+        /// <param name="patrimonioTotal">Patrim\u00F4nio total da pessoa (optional)</param>
+        /// <param name="salario">Sal\u00E1rio da pessoa (optional)</param>
+        /// <param name="nomeConjuge">Nome do c\u00F4njuge da pessoa (optional)</param>
+        /// <returns>Task of ApiResponse (PessoaDetalheResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PessoaDetalheResponse>> SalvarPessoaDetalheAsyncWithHttpInfo (long? idPessoa, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string nomeReferencia1 = null, string enderecoReferencia1 = null, string nomeReferencia2 = null, string enderecoReferencia2 = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null, string numeroCnh = null, bool? pessoaPoliticamenteExposta = null, double? patrimonioTotal = null, double? salario = null, string nomeConjuge = null)
+        {
+            // verify the required parameter 'idPessoa' is set
+            if (idPessoa == null) throw new ApiException(400, "Missing required parameter 'idPessoa' when calling SalvarPessoaDetalhe");
+            
+    
+            var localVarPath = "/api/pessoas-detalhes";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (idPessoa != null) localVarQueryParams.Add("idPessoa", Configuration.ApiClient.ParameterToString(idPessoa)); // query parameter
+            if (nomeMae != null) localVarQueryParams.Add("nomeMae", Configuration.ApiClient.ParameterToString(nomeMae)); // query parameter
+            if (idEstadoCivil != null) localVarQueryParams.Add("idEstadoCivil", Configuration.ApiClient.ParameterToString(idEstadoCivil)); // query parameter
+            if (idProfissao != null) localVarQueryParams.Add("idProfissao", Configuration.ApiClient.ParameterToString(idProfissao)); // query parameter
+            if (idNaturezaOcupacao != null) localVarQueryParams.Add("idNaturezaOcupacao", Configuration.ApiClient.ParameterToString(idNaturezaOcupacao)); // query parameter
+            if (idNacionalidade != null) localVarQueryParams.Add("idNacionalidade", Configuration.ApiClient.ParameterToString(idNacionalidade)); // query parameter
+            if (numeroBanco != null) localVarQueryParams.Add("numeroBanco", Configuration.ApiClient.ParameterToString(numeroBanco)); // query parameter
+            if (numeroAgencia != null) localVarQueryParams.Add("numeroAgencia", Configuration.ApiClient.ParameterToString(numeroAgencia)); // query parameter
+            if (numeroContaCorrente != null) localVarQueryParams.Add("numeroContaCorrente", Configuration.ApiClient.ParameterToString(numeroContaCorrente)); // query parameter
+            if (email != null) localVarQueryParams.Add("email", Configuration.ApiClient.ParameterToString(email)); // query parameter
+            if (nomeEmpresa != null) localVarQueryParams.Add("nomeEmpresa", Configuration.ApiClient.ParameterToString(nomeEmpresa)); // query parameter
+            if (nomeReferencia1 != null) localVarQueryParams.Add("nomeReferencia1", Configuration.ApiClient.ParameterToString(nomeReferencia1)); // query parameter
+            if (enderecoReferencia1 != null) localVarQueryParams.Add("enderecoReferencia1", Configuration.ApiClient.ParameterToString(enderecoReferencia1)); // query parameter
+            if (nomeReferencia2 != null) localVarQueryParams.Add("nomeReferencia2", Configuration.ApiClient.ParameterToString(nomeReferencia2)); // query parameter
+            if (enderecoReferencia2 != null) localVarQueryParams.Add("enderecoReferencia2", Configuration.ApiClient.ParameterToString(enderecoReferencia2)); // query parameter
+            if (naturalidadeCidade != null) localVarQueryParams.Add("naturalidadeCidade", Configuration.ApiClient.ParameterToString(naturalidadeCidade)); // query parameter
+            if (naturalidadeEstado != null) localVarQueryParams.Add("naturalidadeEstado", Configuration.ApiClient.ParameterToString(naturalidadeEstado)); // query parameter
+            if (grauInstrucao != null) localVarQueryParams.Add("grauInstrucao", Configuration.ApiClient.ParameterToString(grauInstrucao)); // query parameter
+            if (numeroDependentes != null) localVarQueryParams.Add("numeroDependentes", Configuration.ApiClient.ParameterToString(numeroDependentes)); // query parameter
+            if (nomePai != null) localVarQueryParams.Add("nomePai", Configuration.ApiClient.ParameterToString(nomePai)); // query parameter
+            if (chequeEspecial != null) localVarQueryParams.Add("chequeEspecial", Configuration.ApiClient.ParameterToString(chequeEspecial)); // query parameter
+            if (impedidoFinanciamento != null) localVarQueryParams.Add("impedidoFinanciamento", Configuration.ApiClient.ParameterToString(impedidoFinanciamento)); // query parameter
+            if (numeroCnh != null) localVarQueryParams.Add("numeroCnh", Configuration.ApiClient.ParameterToString(numeroCnh)); // query parameter
+            if (pessoaPoliticamenteExposta != null) localVarQueryParams.Add("pessoaPoliticamenteExposta", Configuration.ApiClient.ParameterToString(pessoaPoliticamenteExposta)); // query parameter
+            if (patrimonioTotal != null) localVarQueryParams.Add("patrimonioTotal", Configuration.ApiClient.ParameterToString(patrimonioTotal)); // query parameter
+            if (salario != null) localVarQueryParams.Add("salario", Configuration.ApiClient.ParameterToString(salario)); // query parameter
+            if (nomeConjuge != null) localVarQueryParams.Add("nomeConjuge", Configuration.ApiClient.ParameterToString(nomeConjuge)); // query parameter
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarPessoaDetalhe: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarPessoaDetalhe: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PessoaDetalheResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PessoaDetalheResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PessoaDetalheResponse)));
             
         }
         
@@ -8674,15 +9200,191 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
+        /// Inclui a conta como registro para integra\u00E7\u00E3o Este recurso permite incluir uma conta como registro para integra\u00E7\u00E3o
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">idConta</param> 
+        /// <param name="body">IntegracaoEmissorPersist (optional)</param> 
+        /// <returns>IntegracaoEmissorResponse</returns>
+        public IntegracaoEmissorResponse SalvarRegistroIntegracaoConta (long? id, IntegracaoEmissorPersist body = null)
+        {
+             ApiResponse<IntegracaoEmissorResponse> localVarResponse = SalvarRegistroIntegracaoContaWithHttpInfo(id, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Inclui a conta como registro para integra\u00E7\u00E3o Este recurso permite incluir uma conta como registro para integra\u00E7\u00E3o
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">idConta</param> 
+        /// <param name="body">IntegracaoEmissorPersist (optional)</param> 
+        /// <returns>ApiResponse of IntegracaoEmissorResponse</returns>
+        public ApiResponse< IntegracaoEmissorResponse > SalvarRegistroIntegracaoContaWithHttpInfo (long? id, IntegracaoEmissorPersist body = null)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling CadastroClienteApi->SalvarRegistroIntegracaoConta");
+            
+    
+            var localVarPath = "/api/contas/{id}/incluir-registro-integracao";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarRegistroIntegracaoConta: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarRegistroIntegracaoConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<IntegracaoEmissorResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (IntegracaoEmissorResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(IntegracaoEmissorResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Inclui a conta como registro para integra\u00E7\u00E3o Este recurso permite incluir uma conta como registro para integra\u00E7\u00E3o
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">idConta</param>
+        /// <param name="body">IntegracaoEmissorPersist (optional)</param>
+        /// <returns>Task of IntegracaoEmissorResponse</returns>
+        public async System.Threading.Tasks.Task<IntegracaoEmissorResponse> SalvarRegistroIntegracaoContaAsync (long? id, IntegracaoEmissorPersist body = null)
+        {
+             ApiResponse<IntegracaoEmissorResponse> localVarResponse = await SalvarRegistroIntegracaoContaAsyncWithHttpInfo(id, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Inclui a conta como registro para integra\u00E7\u00E3o Este recurso permite incluir uma conta como registro para integra\u00E7\u00E3o
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">idConta</param>
+        /// <param name="body">IntegracaoEmissorPersist (optional)</param>
+        /// <returns>Task of ApiResponse (IntegracaoEmissorResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<IntegracaoEmissorResponse>> SalvarRegistroIntegracaoContaAsyncWithHttpInfo (long? id, IntegracaoEmissorPersist body = null)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling SalvarRegistroIntegracaoConta");
+            
+    
+            var localVarPath = "/api/contas/{id}/incluir-registro-integracao";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarRegistroIntegracaoConta: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarRegistroIntegracaoConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<IntegracaoEmissorResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (IntegracaoEmissorResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(IntegracaoEmissorResponse)));
+            
+        }
+        
+        /// <summary>
         /// Inclui registro de integra\u00E7\u00E3o Este recurso permite incluir um registro de integra\u00E7\u00E3o
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Identificador da conta</param> 
         /// <param name="integracaoEmissorPropostaPersist">integracaoEmissorPropostaPersist</param> 
         /// <returns>IntegracaoEmissorPropostaResponse</returns>
-        public IntegracaoEmissorPropostaResponse SalvarRegistroIntegracaoManager (long? id, IntegracaoEmissorPropostaPersist integracaoEmissorPropostaPersist)
+        public IntegracaoEmissorPropostaResponse SalvarRegistroIntegracaoManagerConta (long? id, IntegracaoEmissorPropostaPersist integracaoEmissorPropostaPersist)
         {
-             ApiResponse<IntegracaoEmissorPropostaResponse> localVarResponse = SalvarRegistroIntegracaoManagerWithHttpInfo(id, integracaoEmissorPropostaPersist);
+             ApiResponse<IntegracaoEmissorPropostaResponse> localVarResponse = SalvarRegistroIntegracaoManagerContaWithHttpInfo(id, integracaoEmissorPropostaPersist);
              return localVarResponse.Data;
         }
 
@@ -8693,16 +9395,16 @@ namespace Conductor.Pier.Api
         /// <param name="id">Identificador da conta</param> 
         /// <param name="integracaoEmissorPropostaPersist">integracaoEmissorPropostaPersist</param> 
         /// <returns>ApiResponse of IntegracaoEmissorPropostaResponse</returns>
-        public ApiResponse< IntegracaoEmissorPropostaResponse > SalvarRegistroIntegracaoManagerWithHttpInfo (long? id, IntegracaoEmissorPropostaPersist integracaoEmissorPropostaPersist)
+        public ApiResponse< IntegracaoEmissorPropostaResponse > SalvarRegistroIntegracaoManagerContaWithHttpInfo (long? id, IntegracaoEmissorPropostaPersist integracaoEmissorPropostaPersist)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling CadastroClienteApi->SalvarRegistroIntegracaoManager");
+                throw new ApiException(400, "Missing required parameter 'id' when calling CadastroClienteApi->SalvarRegistroIntegracaoManagerConta");
             
             // verify the required parameter 'integracaoEmissorPropostaPersist' is set
             if (integracaoEmissorPropostaPersist == null)
-                throw new ApiException(400, "Missing required parameter 'integracaoEmissorPropostaPersist' when calling CadastroClienteApi->SalvarRegistroIntegracaoManager");
+                throw new ApiException(400, "Missing required parameter 'integracaoEmissorPropostaPersist' when calling CadastroClienteApi->SalvarRegistroIntegracaoManagerConta");
             
     
             var localVarPath = "/api/contas/{id}/registros-integracao-manager";
@@ -8755,9 +9457,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarRegistroIntegracaoManager: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarRegistroIntegracaoManagerConta: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarRegistroIntegracaoManager: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarRegistroIntegracaoManagerConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<IntegracaoEmissorPropostaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -8773,9 +9475,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">Identificador da conta</param>
         /// <param name="integracaoEmissorPropostaPersist">integracaoEmissorPropostaPersist</param>
         /// <returns>Task of IntegracaoEmissorPropostaResponse</returns>
-        public async System.Threading.Tasks.Task<IntegracaoEmissorPropostaResponse> SalvarRegistroIntegracaoManagerAsync (long? id, IntegracaoEmissorPropostaPersist integracaoEmissorPropostaPersist)
+        public async System.Threading.Tasks.Task<IntegracaoEmissorPropostaResponse> SalvarRegistroIntegracaoManagerContaAsync (long? id, IntegracaoEmissorPropostaPersist integracaoEmissorPropostaPersist)
         {
-             ApiResponse<IntegracaoEmissorPropostaResponse> localVarResponse = await SalvarRegistroIntegracaoManagerAsyncWithHttpInfo(id, integracaoEmissorPropostaPersist);
+             ApiResponse<IntegracaoEmissorPropostaResponse> localVarResponse = await SalvarRegistroIntegracaoManagerContaAsyncWithHttpInfo(id, integracaoEmissorPropostaPersist);
              return localVarResponse.Data;
 
         }
@@ -8787,12 +9489,12 @@ namespace Conductor.Pier.Api
         /// <param name="id">Identificador da conta</param>
         /// <param name="integracaoEmissorPropostaPersist">integracaoEmissorPropostaPersist</param>
         /// <returns>Task of ApiResponse (IntegracaoEmissorPropostaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<IntegracaoEmissorPropostaResponse>> SalvarRegistroIntegracaoManagerAsyncWithHttpInfo (long? id, IntegracaoEmissorPropostaPersist integracaoEmissorPropostaPersist)
+        public async System.Threading.Tasks.Task<ApiResponse<IntegracaoEmissorPropostaResponse>> SalvarRegistroIntegracaoManagerContaAsyncWithHttpInfo (long? id, IntegracaoEmissorPropostaPersist integracaoEmissorPropostaPersist)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling SalvarRegistroIntegracaoManager");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling SalvarRegistroIntegracaoManagerConta");
             // verify the required parameter 'integracaoEmissorPropostaPersist' is set
-            if (integracaoEmissorPropostaPersist == null) throw new ApiException(400, "Missing required parameter 'integracaoEmissorPropostaPersist' when calling SalvarRegistroIntegracaoManager");
+            if (integracaoEmissorPropostaPersist == null) throw new ApiException(400, "Missing required parameter 'integracaoEmissorPropostaPersist' when calling SalvarRegistroIntegracaoManagerConta");
             
     
             var localVarPath = "/api/contas/{id}/registros-integracao-manager";
@@ -8845,757 +9547,13 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarRegistroIntegracaoManager: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarRegistroIntegracaoManagerConta: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarRegistroIntegracaoManager: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarRegistroIntegracaoManagerConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<IntegracaoEmissorPropostaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (IntegracaoEmissorPropostaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(IntegracaoEmissorPropostaResponse)));
-            
-        }
-        
-        /// <summary>
-        /// Realiza o cadastro de um novo Endere\u00E7o Este m\u00E9todo permite que seja cadastrado um novo Endere\u00E7o na base de dados do Emissor
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o endere\u00E7o pertence (id) (optional)</param> 
-        /// <param name="idTipoEndereco">C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id) (optional)</param> 
-        /// <param name="cep">CEP do endere\u00E7o (optional)</param> 
-        /// <param name="logradouro">Apresenta o nome do Logradouro (optional)</param> 
-        /// <param name="numero">Apresenta o n\u00FAmero do endere\u00E7o (optional)</param> 
-        /// <param name="complemento">Apresenta descri\u00E7oes complementares referente ao endere\u00E7o (optional)</param> 
-        /// <param name="pontoReferencia">Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o (optional)</param> 
-        /// <param name="bairro">Apresenta nome do bairro (optional)</param> 
-        /// <param name="cidade">Apresenta nome da cidade (optional)</param> 
-        /// <param name="uf">Apresenta sigla da Unidade Federativa (optional)</param> 
-        /// <param name="pais">Apresenta nome do Pa\u00EDs (optional)</param> 
-        /// <param name="tempoResidenciaAnos">Apresenta a quantidade de anos em que habita na resid\u00EAncia (optional)</param> 
-        /// <param name="tempoResidenciaMeses">Apresenta a quantidade de meses que habita na resid\u00EAncia (optional)</param> 
-        /// <param name="aplicativoAlteracao">Apresenta a aplica\u00E7\u00E3o respons\u00E1vel por alterar o endere\u00E7o (optional)</param> 
-        /// <returns>EnderecoResponse</returns>
-        public EnderecoResponse Salvar_0 (long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null, string aplicativoAlteracao = null)
-        {
-             ApiResponse<EnderecoResponse> localVarResponse = Salvar_0WithHttpInfo(idPessoa, idTipoEndereco, cep, logradouro, numero, complemento, pontoReferencia, bairro, cidade, uf, pais, tempoResidenciaAnos, tempoResidenciaMeses, aplicativoAlteracao);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Realiza o cadastro de um novo Endere\u00E7o Este m\u00E9todo permite que seja cadastrado um novo Endere\u00E7o na base de dados do Emissor
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o endere\u00E7o pertence (id) (optional)</param> 
-        /// <param name="idTipoEndereco">C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id) (optional)</param> 
-        /// <param name="cep">CEP do endere\u00E7o (optional)</param> 
-        /// <param name="logradouro">Apresenta o nome do Logradouro (optional)</param> 
-        /// <param name="numero">Apresenta o n\u00FAmero do endere\u00E7o (optional)</param> 
-        /// <param name="complemento">Apresenta descri\u00E7oes complementares referente ao endere\u00E7o (optional)</param> 
-        /// <param name="pontoReferencia">Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o (optional)</param> 
-        /// <param name="bairro">Apresenta nome do bairro (optional)</param> 
-        /// <param name="cidade">Apresenta nome da cidade (optional)</param> 
-        /// <param name="uf">Apresenta sigla da Unidade Federativa (optional)</param> 
-        /// <param name="pais">Apresenta nome do Pa\u00EDs (optional)</param> 
-        /// <param name="tempoResidenciaAnos">Apresenta a quantidade de anos em que habita na resid\u00EAncia (optional)</param> 
-        /// <param name="tempoResidenciaMeses">Apresenta a quantidade de meses que habita na resid\u00EAncia (optional)</param> 
-        /// <param name="aplicativoAlteracao">Apresenta a aplica\u00E7\u00E3o respons\u00E1vel por alterar o endere\u00E7o (optional)</param> 
-        /// <returns>ApiResponse of EnderecoResponse</returns>
-        public ApiResponse< EnderecoResponse > Salvar_0WithHttpInfo (long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null, string aplicativoAlteracao = null)
-        {
-            
-    
-            var localVarPath = "/api/enderecos";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            
-            if (idPessoa != null) localVarQueryParams.Add("idPessoa", Configuration.ApiClient.ParameterToString(idPessoa)); // query parameter
-            if (idTipoEndereco != null) localVarQueryParams.Add("idTipoEndereco", Configuration.ApiClient.ParameterToString(idTipoEndereco)); // query parameter
-            if (cep != null) localVarQueryParams.Add("cep", Configuration.ApiClient.ParameterToString(cep)); // query parameter
-            if (logradouro != null) localVarQueryParams.Add("logradouro", Configuration.ApiClient.ParameterToString(logradouro)); // query parameter
-            if (numero != null) localVarQueryParams.Add("numero", Configuration.ApiClient.ParameterToString(numero)); // query parameter
-            if (complemento != null) localVarQueryParams.Add("complemento", Configuration.ApiClient.ParameterToString(complemento)); // query parameter
-            if (pontoReferencia != null) localVarQueryParams.Add("pontoReferencia", Configuration.ApiClient.ParameterToString(pontoReferencia)); // query parameter
-            if (bairro != null) localVarQueryParams.Add("bairro", Configuration.ApiClient.ParameterToString(bairro)); // query parameter
-            if (cidade != null) localVarQueryParams.Add("cidade", Configuration.ApiClient.ParameterToString(cidade)); // query parameter
-            if (uf != null) localVarQueryParams.Add("uf", Configuration.ApiClient.ParameterToString(uf)); // query parameter
-            if (pais != null) localVarQueryParams.Add("pais", Configuration.ApiClient.ParameterToString(pais)); // query parameter
-            if (tempoResidenciaAnos != null) localVarQueryParams.Add("tempoResidenciaAnos", Configuration.ApiClient.ParameterToString(tempoResidenciaAnos)); // query parameter
-            if (tempoResidenciaMeses != null) localVarQueryParams.Add("tempoResidenciaMeses", Configuration.ApiClient.ParameterToString(tempoResidenciaMeses)); // query parameter
-            if (aplicativoAlteracao != null) localVarQueryParams.Add("aplicativoAlteracao", Configuration.ApiClient.ParameterToString(aplicativoAlteracao)); // query parameter
-            
-            
-            
-            
-
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Salvar_0: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Salvar_0: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<EnderecoResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (EnderecoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EnderecoResponse)));
-            
-        }
-
-        
-        /// <summary>
-        /// Realiza o cadastro de um novo Endere\u00E7o Este m\u00E9todo permite que seja cadastrado um novo Endere\u00E7o na base de dados do Emissor
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o endere\u00E7o pertence (id) (optional)</param>
-        /// <param name="idTipoEndereco">C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id) (optional)</param>
-        /// <param name="cep">CEP do endere\u00E7o (optional)</param>
-        /// <param name="logradouro">Apresenta o nome do Logradouro (optional)</param>
-        /// <param name="numero">Apresenta o n\u00FAmero do endere\u00E7o (optional)</param>
-        /// <param name="complemento">Apresenta descri\u00E7oes complementares referente ao endere\u00E7o (optional)</param>
-        /// <param name="pontoReferencia">Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o (optional)</param>
-        /// <param name="bairro">Apresenta nome do bairro (optional)</param>
-        /// <param name="cidade">Apresenta nome da cidade (optional)</param>
-        /// <param name="uf">Apresenta sigla da Unidade Federativa (optional)</param>
-        /// <param name="pais">Apresenta nome do Pa\u00EDs (optional)</param>
-        /// <param name="tempoResidenciaAnos">Apresenta a quantidade de anos em que habita na resid\u00EAncia (optional)</param>
-        /// <param name="tempoResidenciaMeses">Apresenta a quantidade de meses que habita na resid\u00EAncia (optional)</param>
-        /// <param name="aplicativoAlteracao">Apresenta a aplica\u00E7\u00E3o respons\u00E1vel por alterar o endere\u00E7o (optional)</param>
-        /// <returns>Task of EnderecoResponse</returns>
-        public async System.Threading.Tasks.Task<EnderecoResponse> Salvar_0Async (long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null, string aplicativoAlteracao = null)
-        {
-             ApiResponse<EnderecoResponse> localVarResponse = await Salvar_0AsyncWithHttpInfo(idPessoa, idTipoEndereco, cep, logradouro, numero, complemento, pontoReferencia, bairro, cidade, uf, pais, tempoResidenciaAnos, tempoResidenciaMeses, aplicativoAlteracao);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Realiza o cadastro de um novo Endere\u00E7o Este m\u00E9todo permite que seja cadastrado um novo Endere\u00E7o na base de dados do Emissor
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o endere\u00E7o pertence (id) (optional)</param>
-        /// <param name="idTipoEndereco">C\u00F3digo de Identifica\u00E7\u00E3o da Tipo Endere\u00E7o (id) (optional)</param>
-        /// <param name="cep">CEP do endere\u00E7o (optional)</param>
-        /// <param name="logradouro">Apresenta o nome do Logradouro (optional)</param>
-        /// <param name="numero">Apresenta o n\u00FAmero do endere\u00E7o (optional)</param>
-        /// <param name="complemento">Apresenta descri\u00E7oes complementares referente ao endere\u00E7o (optional)</param>
-        /// <param name="pontoReferencia">Apresenta a descri\u00E7\u00E3o de ponto de refer\u00EAncia do endere\u00E7o (optional)</param>
-        /// <param name="bairro">Apresenta nome do bairro (optional)</param>
-        /// <param name="cidade">Apresenta nome da cidade (optional)</param>
-        /// <param name="uf">Apresenta sigla da Unidade Federativa (optional)</param>
-        /// <param name="pais">Apresenta nome do Pa\u00EDs (optional)</param>
-        /// <param name="tempoResidenciaAnos">Apresenta a quantidade de anos em que habita na resid\u00EAncia (optional)</param>
-        /// <param name="tempoResidenciaMeses">Apresenta a quantidade de meses que habita na resid\u00EAncia (optional)</param>
-        /// <param name="aplicativoAlteracao">Apresenta a aplica\u00E7\u00E3o respons\u00E1vel por alterar o endere\u00E7o (optional)</param>
-        /// <returns>Task of ApiResponse (EnderecoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EnderecoResponse>> Salvar_0AsyncWithHttpInfo (long? idPessoa = null, long? idTipoEndereco = null, string cep = null, string logradouro = null, int? numero = null, string complemento = null, string pontoReferencia = null, string bairro = null, string cidade = null, string uf = null, string pais = null, int? tempoResidenciaAnos = null, int? tempoResidenciaMeses = null, string aplicativoAlteracao = null)
-        {
-            
-    
-            var localVarPath = "/api/enderecos";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            
-            if (idPessoa != null) localVarQueryParams.Add("idPessoa", Configuration.ApiClient.ParameterToString(idPessoa)); // query parameter
-            if (idTipoEndereco != null) localVarQueryParams.Add("idTipoEndereco", Configuration.ApiClient.ParameterToString(idTipoEndereco)); // query parameter
-            if (cep != null) localVarQueryParams.Add("cep", Configuration.ApiClient.ParameterToString(cep)); // query parameter
-            if (logradouro != null) localVarQueryParams.Add("logradouro", Configuration.ApiClient.ParameterToString(logradouro)); // query parameter
-            if (numero != null) localVarQueryParams.Add("numero", Configuration.ApiClient.ParameterToString(numero)); // query parameter
-            if (complemento != null) localVarQueryParams.Add("complemento", Configuration.ApiClient.ParameterToString(complemento)); // query parameter
-            if (pontoReferencia != null) localVarQueryParams.Add("pontoReferencia", Configuration.ApiClient.ParameterToString(pontoReferencia)); // query parameter
-            if (bairro != null) localVarQueryParams.Add("bairro", Configuration.ApiClient.ParameterToString(bairro)); // query parameter
-            if (cidade != null) localVarQueryParams.Add("cidade", Configuration.ApiClient.ParameterToString(cidade)); // query parameter
-            if (uf != null) localVarQueryParams.Add("uf", Configuration.ApiClient.ParameterToString(uf)); // query parameter
-            if (pais != null) localVarQueryParams.Add("pais", Configuration.ApiClient.ParameterToString(pais)); // query parameter
-            if (tempoResidenciaAnos != null) localVarQueryParams.Add("tempoResidenciaAnos", Configuration.ApiClient.ParameterToString(tempoResidenciaAnos)); // query parameter
-            if (tempoResidenciaMeses != null) localVarQueryParams.Add("tempoResidenciaMeses", Configuration.ApiClient.ParameterToString(tempoResidenciaMeses)); // query parameter
-            if (aplicativoAlteracao != null) localVarQueryParams.Add("aplicativoAlteracao", Configuration.ApiClient.ParameterToString(aplicativoAlteracao)); // query parameter
-            
-            
-            
-            
-
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Salvar_0: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Salvar_0: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<EnderecoResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (EnderecoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EnderecoResponse)));
-            
-        }
-        
-        /// <summary>
-        /// Realiza o cadastro de um nova Pessoa Este m\u00E9todo permite que seja cadastrado uma nova Pessoa na base de dados do Emissor
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="nome">Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00E3o Social (Nome Empresarial)&#39;</param> 
-        /// <param name="tipo">Tipo de Pessoa (PF ou PJ)</param> 
-        /// <param name="dataNascimento">Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd</param> 
-        /// <param name="cpf">N\u00FAmero do CPF, quando PF (optional)</param> 
-        /// <param name="cnpj">N\u00FAmero do CNPJ, quando PJ (optional)</param> 
-        /// <param name="sexo">Sexo da Pessoa (optional)</param> 
-        /// <param name="numeroIdentidade">N\u00FAmero da Identidade (optional)</param> 
-        /// <param name="orgaoExpedidorIdentidade">Org\u00E3o expedidor do Identidade (optional)</param> 
-        /// <param name="unidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade (optional)</param> 
-        /// <param name="dataEmissaoIdentidade">Data emiss\u00E3o da Identidade (optional)</param> 
-        /// <returns>PessoaResponse</returns>
-        public PessoaResponse Salvar_1 (string nome, string tipo, string dataNascimento, string cpf = null, string cnpj = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null)
-        {
-             ApiResponse<PessoaResponse> localVarResponse = Salvar_1WithHttpInfo(nome, tipo, dataNascimento, cpf, cnpj, sexo, numeroIdentidade, orgaoExpedidorIdentidade, unidadeFederativaIdentidade, dataEmissaoIdentidade);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Realiza o cadastro de um nova Pessoa Este m\u00E9todo permite que seja cadastrado uma nova Pessoa na base de dados do Emissor
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="nome">Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00E3o Social (Nome Empresarial)&#39;</param> 
-        /// <param name="tipo">Tipo de Pessoa (PF ou PJ)</param> 
-        /// <param name="dataNascimento">Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd</param> 
-        /// <param name="cpf">N\u00FAmero do CPF, quando PF (optional)</param> 
-        /// <param name="cnpj">N\u00FAmero do CNPJ, quando PJ (optional)</param> 
-        /// <param name="sexo">Sexo da Pessoa (optional)</param> 
-        /// <param name="numeroIdentidade">N\u00FAmero da Identidade (optional)</param> 
-        /// <param name="orgaoExpedidorIdentidade">Org\u00E3o expedidor do Identidade (optional)</param> 
-        /// <param name="unidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade (optional)</param> 
-        /// <param name="dataEmissaoIdentidade">Data emiss\u00E3o da Identidade (optional)</param> 
-        /// <returns>ApiResponse of PessoaResponse</returns>
-        public ApiResponse< PessoaResponse > Salvar_1WithHttpInfo (string nome, string tipo, string dataNascimento, string cpf = null, string cnpj = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null)
-        {
-            
-            // verify the required parameter 'nome' is set
-            if (nome == null)
-                throw new ApiException(400, "Missing required parameter 'nome' when calling CadastroClienteApi->Salvar_1");
-            
-            // verify the required parameter 'tipo' is set
-            if (tipo == null)
-                throw new ApiException(400, "Missing required parameter 'tipo' when calling CadastroClienteApi->Salvar_1");
-            
-            // verify the required parameter 'dataNascimento' is set
-            if (dataNascimento == null)
-                throw new ApiException(400, "Missing required parameter 'dataNascimento' when calling CadastroClienteApi->Salvar_1");
-            
-    
-            var localVarPath = "/api/pessoas";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            
-            if (nome != null) localVarQueryParams.Add("nome", Configuration.ApiClient.ParameterToString(nome)); // query parameter
-            if (tipo != null) localVarQueryParams.Add("tipo", Configuration.ApiClient.ParameterToString(tipo)); // query parameter
-            if (cpf != null) localVarQueryParams.Add("cpf", Configuration.ApiClient.ParameterToString(cpf)); // query parameter
-            if (cnpj != null) localVarQueryParams.Add("cnpj", Configuration.ApiClient.ParameterToString(cnpj)); // query parameter
-            if (dataNascimento != null) localVarQueryParams.Add("dataNascimento", Configuration.ApiClient.ParameterToString(dataNascimento)); // query parameter
-            if (sexo != null) localVarQueryParams.Add("sexo", Configuration.ApiClient.ParameterToString(sexo)); // query parameter
-            if (numeroIdentidade != null) localVarQueryParams.Add("numeroIdentidade", Configuration.ApiClient.ParameterToString(numeroIdentidade)); // query parameter
-            if (orgaoExpedidorIdentidade != null) localVarQueryParams.Add("orgaoExpedidorIdentidade", Configuration.ApiClient.ParameterToString(orgaoExpedidorIdentidade)); // query parameter
-            if (unidadeFederativaIdentidade != null) localVarQueryParams.Add("unidadeFederativaIdentidade", Configuration.ApiClient.ParameterToString(unidadeFederativaIdentidade)); // query parameter
-            if (dataEmissaoIdentidade != null) localVarQueryParams.Add("dataEmissaoIdentidade", Configuration.ApiClient.ParameterToString(dataEmissaoIdentidade)); // query parameter
-            
-            
-            
-            
-
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Salvar_1: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Salvar_1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<PessoaResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PessoaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PessoaResponse)));
-            
-        }
-
-        
-        /// <summary>
-        /// Realiza o cadastro de um nova Pessoa Este m\u00E9todo permite que seja cadastrado uma nova Pessoa na base de dados do Emissor
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="nome">Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00E3o Social (Nome Empresarial)&#39;</param>
-        /// <param name="tipo">Tipo de Pessoa (PF ou PJ)</param>
-        /// <param name="dataNascimento">Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd</param>
-        /// <param name="cpf">N\u00FAmero do CPF, quando PF (optional)</param>
-        /// <param name="cnpj">N\u00FAmero do CNPJ, quando PJ (optional)</param>
-        /// <param name="sexo">Sexo da Pessoa (optional)</param>
-        /// <param name="numeroIdentidade">N\u00FAmero da Identidade (optional)</param>
-        /// <param name="orgaoExpedidorIdentidade">Org\u00E3o expedidor do Identidade (optional)</param>
-        /// <param name="unidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade (optional)</param>
-        /// <param name="dataEmissaoIdentidade">Data emiss\u00E3o da Identidade (optional)</param>
-        /// <returns>Task of PessoaResponse</returns>
-        public async System.Threading.Tasks.Task<PessoaResponse> Salvar_1Async (string nome, string tipo, string dataNascimento, string cpf = null, string cnpj = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null)
-        {
-             ApiResponse<PessoaResponse> localVarResponse = await Salvar_1AsyncWithHttpInfo(nome, tipo, dataNascimento, cpf, cnpj, sexo, numeroIdentidade, orgaoExpedidorIdentidade, unidadeFederativaIdentidade, dataEmissaoIdentidade);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Realiza o cadastro de um nova Pessoa Este m\u00E9todo permite que seja cadastrado uma nova Pessoa na base de dados do Emissor
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="nome">Apresenta o &#39;Nome Completo da PF&#39; ou o &#39;Nome Completo da Raz\u00E3o Social (Nome Empresarial)&#39;</param>
-        /// <param name="tipo">Tipo de Pessoa (PF ou PJ)</param>
-        /// <param name="dataNascimento">Data de Nascimento da Pessoa, quando PF, ou a Data de Abertura da Empresa, quando PJ. Essa data deve ser informada no formato aaaa-MM-dd</param>
-        /// <param name="cpf">N\u00FAmero do CPF, quando PF (optional)</param>
-        /// <param name="cnpj">N\u00FAmero do CNPJ, quando PJ (optional)</param>
-        /// <param name="sexo">Sexo da Pessoa (optional)</param>
-        /// <param name="numeroIdentidade">N\u00FAmero da Identidade (optional)</param>
-        /// <param name="orgaoExpedidorIdentidade">Org\u00E3o expedidor do Identidade (optional)</param>
-        /// <param name="unidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade (optional)</param>
-        /// <param name="dataEmissaoIdentidade">Data emiss\u00E3o da Identidade (optional)</param>
-        /// <returns>Task of ApiResponse (PessoaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PessoaResponse>> Salvar_1AsyncWithHttpInfo (string nome, string tipo, string dataNascimento, string cpf = null, string cnpj = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null)
-        {
-            // verify the required parameter 'nome' is set
-            if (nome == null) throw new ApiException(400, "Missing required parameter 'nome' when calling Salvar_1");
-            // verify the required parameter 'tipo' is set
-            if (tipo == null) throw new ApiException(400, "Missing required parameter 'tipo' when calling Salvar_1");
-            // verify the required parameter 'dataNascimento' is set
-            if (dataNascimento == null) throw new ApiException(400, "Missing required parameter 'dataNascimento' when calling Salvar_1");
-            
-    
-            var localVarPath = "/api/pessoas";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            
-            if (nome != null) localVarQueryParams.Add("nome", Configuration.ApiClient.ParameterToString(nome)); // query parameter
-            if (tipo != null) localVarQueryParams.Add("tipo", Configuration.ApiClient.ParameterToString(tipo)); // query parameter
-            if (cpf != null) localVarQueryParams.Add("cpf", Configuration.ApiClient.ParameterToString(cpf)); // query parameter
-            if (cnpj != null) localVarQueryParams.Add("cnpj", Configuration.ApiClient.ParameterToString(cnpj)); // query parameter
-            if (dataNascimento != null) localVarQueryParams.Add("dataNascimento", Configuration.ApiClient.ParameterToString(dataNascimento)); // query parameter
-            if (sexo != null) localVarQueryParams.Add("sexo", Configuration.ApiClient.ParameterToString(sexo)); // query parameter
-            if (numeroIdentidade != null) localVarQueryParams.Add("numeroIdentidade", Configuration.ApiClient.ParameterToString(numeroIdentidade)); // query parameter
-            if (orgaoExpedidorIdentidade != null) localVarQueryParams.Add("orgaoExpedidorIdentidade", Configuration.ApiClient.ParameterToString(orgaoExpedidorIdentidade)); // query parameter
-            if (unidadeFederativaIdentidade != null) localVarQueryParams.Add("unidadeFederativaIdentidade", Configuration.ApiClient.ParameterToString(unidadeFederativaIdentidade)); // query parameter
-            if (dataEmissaoIdentidade != null) localVarQueryParams.Add("dataEmissaoIdentidade", Configuration.ApiClient.ParameterToString(dataEmissaoIdentidade)); // query parameter
-            
-            
-            
-            
-
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Salvar_1: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Salvar_1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<PessoaResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PessoaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PessoaResponse)));
-            
-        }
-        
-        /// <summary>
-        /// Salvar os detalhes de uma determinada Pessoa Este m\u00E9todo permite que seja incluido na base do emissor os detalhes de uma determinada Pessoa
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idPessoa">Apresenta o c\u00F3digo identificador da pessoa</param> 
-        /// <param name="nomeMae">Apresenta o nome da m\u00E3e da pessoa fisica (optional)</param> 
-        /// <param name="idEstadoCivil">Id Estado civil da pessoa fisica (optional)</param> 
-        /// <param name="idProfissao">Profiss\u00E3o da pessoa fisica (optional)</param> 
-        /// <param name="idNaturezaOcupacao">Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica (optional)</param> 
-        /// <param name="idNacionalidade">Id Nacionalidade da pessoa fisica (optional)</param> 
-        /// <param name="numeroBanco">N\u00FAmero do banco (optional)</param> 
-        /// <param name="numeroAgencia">N\u00FAmero da ag\u00EAncia (optional)</param> 
-        /// <param name="numeroContaCorrente">N\u00FAmero da conta corrente (optional)</param> 
-        /// <param name="email">Email da pessoa fisica (optional)</param> 
-        /// <param name="nomeEmpresa">Nome que deve ser impresso no cart\u00E3o (optional)</param> 
-        /// <param name="nomeReferencia1">Nome de refer\u00EAncia 1 (optional)</param> 
-        /// <param name="enderecoReferencia1">Endere\u00E7o de refer\u00EAncia 1 (optional)</param> 
-        /// <param name="nomeReferencia2">Nome de refer\u00EAncia 2 (optional)</param> 
-        /// <param name="enderecoReferencia2">Endere\u00E7o de refer\u00EAncia 2 (optional)</param> 
-        /// <param name="naturalidadeCidade">Apresenta o nome da cidade de nascimento da pessoa f\u00EDsica (optional)</param> 
-        /// <param name="naturalidadeEstado">Apresenta a sigla do estado de nascimento da pessoa f\u00EDsica (optional)</param> 
-        /// <param name="grauInstrucao">Apresenta o grau de instru\u00E7\u00E3o da pessoa f\u00EDsica (optional)</param> 
-        /// <param name="numeroDependentes">Apresenta o n\u00FAmero de dependentes da pessoa f\u00EDsica (optional)</param> 
-        /// <param name="nomePai">Apresenta o nome do pai da pessoa f\u00EDsica (optional)</param> 
-        /// <param name="chequeEspecial">Indica se pessoa f\u00EDsica aderir ao cheque especial (optional)</param> 
-        /// <param name="impedidoFinanciamento">Flag para s\u00F3cios do banco que s\u00E3o portadores do cart\u00E3o, mas n\u00E3o podem operar transa\u00E7\u00F5es de cr\u00E9dito(Lei n. 4.595/64) (optional)</param> 
-        /// <param name="numeroCnh">N\u00FAmero da CNH da pessoa (optional)</param> 
-        /// <returns>PessoaDetalheResponse</returns>
-        public PessoaDetalheResponse Salvar_2 (long? idPessoa, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string nomeReferencia1 = null, string enderecoReferencia1 = null, string nomeReferencia2 = null, string enderecoReferencia2 = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null, string numeroCnh = null)
-        {
-             ApiResponse<PessoaDetalheResponse> localVarResponse = Salvar_2WithHttpInfo(idPessoa, nomeMae, idEstadoCivil, idProfissao, idNaturezaOcupacao, idNacionalidade, numeroBanco, numeroAgencia, numeroContaCorrente, email, nomeEmpresa, nomeReferencia1, enderecoReferencia1, nomeReferencia2, enderecoReferencia2, naturalidadeCidade, naturalidadeEstado, grauInstrucao, numeroDependentes, nomePai, chequeEspecial, impedidoFinanciamento, numeroCnh);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Salvar os detalhes de uma determinada Pessoa Este m\u00E9todo permite que seja incluido na base do emissor os detalhes de uma determinada Pessoa
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idPessoa">Apresenta o c\u00F3digo identificador da pessoa</param> 
-        /// <param name="nomeMae">Apresenta o nome da m\u00E3e da pessoa fisica (optional)</param> 
-        /// <param name="idEstadoCivil">Id Estado civil da pessoa fisica (optional)</param> 
-        /// <param name="idProfissao">Profiss\u00E3o da pessoa fisica (optional)</param> 
-        /// <param name="idNaturezaOcupacao">Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica (optional)</param> 
-        /// <param name="idNacionalidade">Id Nacionalidade da pessoa fisica (optional)</param> 
-        /// <param name="numeroBanco">N\u00FAmero do banco (optional)</param> 
-        /// <param name="numeroAgencia">N\u00FAmero da ag\u00EAncia (optional)</param> 
-        /// <param name="numeroContaCorrente">N\u00FAmero da conta corrente (optional)</param> 
-        /// <param name="email">Email da pessoa fisica (optional)</param> 
-        /// <param name="nomeEmpresa">Nome que deve ser impresso no cart\u00E3o (optional)</param> 
-        /// <param name="nomeReferencia1">Nome de refer\u00EAncia 1 (optional)</param> 
-        /// <param name="enderecoReferencia1">Endere\u00E7o de refer\u00EAncia 1 (optional)</param> 
-        /// <param name="nomeReferencia2">Nome de refer\u00EAncia 2 (optional)</param> 
-        /// <param name="enderecoReferencia2">Endere\u00E7o de refer\u00EAncia 2 (optional)</param> 
-        /// <param name="naturalidadeCidade">Apresenta o nome da cidade de nascimento da pessoa f\u00EDsica (optional)</param> 
-        /// <param name="naturalidadeEstado">Apresenta a sigla do estado de nascimento da pessoa f\u00EDsica (optional)</param> 
-        /// <param name="grauInstrucao">Apresenta o grau de instru\u00E7\u00E3o da pessoa f\u00EDsica (optional)</param> 
-        /// <param name="numeroDependentes">Apresenta o n\u00FAmero de dependentes da pessoa f\u00EDsica (optional)</param> 
-        /// <param name="nomePai">Apresenta o nome do pai da pessoa f\u00EDsica (optional)</param> 
-        /// <param name="chequeEspecial">Indica se pessoa f\u00EDsica aderir ao cheque especial (optional)</param> 
-        /// <param name="impedidoFinanciamento">Flag para s\u00F3cios do banco que s\u00E3o portadores do cart\u00E3o, mas n\u00E3o podem operar transa\u00E7\u00F5es de cr\u00E9dito(Lei n. 4.595/64) (optional)</param> 
-        /// <param name="numeroCnh">N\u00FAmero da CNH da pessoa (optional)</param> 
-        /// <returns>ApiResponse of PessoaDetalheResponse</returns>
-        public ApiResponse< PessoaDetalheResponse > Salvar_2WithHttpInfo (long? idPessoa, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string nomeReferencia1 = null, string enderecoReferencia1 = null, string nomeReferencia2 = null, string enderecoReferencia2 = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null, string numeroCnh = null)
-        {
-            
-            // verify the required parameter 'idPessoa' is set
-            if (idPessoa == null)
-                throw new ApiException(400, "Missing required parameter 'idPessoa' when calling CadastroClienteApi->Salvar_2");
-            
-    
-            var localVarPath = "/api/pessoas-detalhes";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            
-            if (idPessoa != null) localVarQueryParams.Add("idPessoa", Configuration.ApiClient.ParameterToString(idPessoa)); // query parameter
-            if (nomeMae != null) localVarQueryParams.Add("nomeMae", Configuration.ApiClient.ParameterToString(nomeMae)); // query parameter
-            if (idEstadoCivil != null) localVarQueryParams.Add("idEstadoCivil", Configuration.ApiClient.ParameterToString(idEstadoCivil)); // query parameter
-            if (idProfissao != null) localVarQueryParams.Add("idProfissao", Configuration.ApiClient.ParameterToString(idProfissao)); // query parameter
-            if (idNaturezaOcupacao != null) localVarQueryParams.Add("idNaturezaOcupacao", Configuration.ApiClient.ParameterToString(idNaturezaOcupacao)); // query parameter
-            if (idNacionalidade != null) localVarQueryParams.Add("idNacionalidade", Configuration.ApiClient.ParameterToString(idNacionalidade)); // query parameter
-            if (numeroBanco != null) localVarQueryParams.Add("numeroBanco", Configuration.ApiClient.ParameterToString(numeroBanco)); // query parameter
-            if (numeroAgencia != null) localVarQueryParams.Add("numeroAgencia", Configuration.ApiClient.ParameterToString(numeroAgencia)); // query parameter
-            if (numeroContaCorrente != null) localVarQueryParams.Add("numeroContaCorrente", Configuration.ApiClient.ParameterToString(numeroContaCorrente)); // query parameter
-            if (email != null) localVarQueryParams.Add("email", Configuration.ApiClient.ParameterToString(email)); // query parameter
-            if (nomeEmpresa != null) localVarQueryParams.Add("nomeEmpresa", Configuration.ApiClient.ParameterToString(nomeEmpresa)); // query parameter
-            if (nomeReferencia1 != null) localVarQueryParams.Add("nomeReferencia1", Configuration.ApiClient.ParameterToString(nomeReferencia1)); // query parameter
-            if (enderecoReferencia1 != null) localVarQueryParams.Add("enderecoReferencia1", Configuration.ApiClient.ParameterToString(enderecoReferencia1)); // query parameter
-            if (nomeReferencia2 != null) localVarQueryParams.Add("nomeReferencia2", Configuration.ApiClient.ParameterToString(nomeReferencia2)); // query parameter
-            if (enderecoReferencia2 != null) localVarQueryParams.Add("enderecoReferencia2", Configuration.ApiClient.ParameterToString(enderecoReferencia2)); // query parameter
-            if (naturalidadeCidade != null) localVarQueryParams.Add("naturalidadeCidade", Configuration.ApiClient.ParameterToString(naturalidadeCidade)); // query parameter
-            if (naturalidadeEstado != null) localVarQueryParams.Add("naturalidadeEstado", Configuration.ApiClient.ParameterToString(naturalidadeEstado)); // query parameter
-            if (grauInstrucao != null) localVarQueryParams.Add("grauInstrucao", Configuration.ApiClient.ParameterToString(grauInstrucao)); // query parameter
-            if (numeroDependentes != null) localVarQueryParams.Add("numeroDependentes", Configuration.ApiClient.ParameterToString(numeroDependentes)); // query parameter
-            if (nomePai != null) localVarQueryParams.Add("nomePai", Configuration.ApiClient.ParameterToString(nomePai)); // query parameter
-            if (chequeEspecial != null) localVarQueryParams.Add("chequeEspecial", Configuration.ApiClient.ParameterToString(chequeEspecial)); // query parameter
-            if (impedidoFinanciamento != null) localVarQueryParams.Add("impedidoFinanciamento", Configuration.ApiClient.ParameterToString(impedidoFinanciamento)); // query parameter
-            if (numeroCnh != null) localVarQueryParams.Add("numeroCnh", Configuration.ApiClient.ParameterToString(numeroCnh)); // query parameter
-            
-            
-            
-            
-
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Salvar_2: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Salvar_2: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<PessoaDetalheResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PessoaDetalheResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PessoaDetalheResponse)));
-            
-        }
-
-        
-        /// <summary>
-        /// Salvar os detalhes de uma determinada Pessoa Este m\u00E9todo permite que seja incluido na base do emissor os detalhes de uma determinada Pessoa
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idPessoa">Apresenta o c\u00F3digo identificador da pessoa</param>
-        /// <param name="nomeMae">Apresenta o nome da m\u00E3e da pessoa fisica (optional)</param>
-        /// <param name="idEstadoCivil">Id Estado civil da pessoa fisica (optional)</param>
-        /// <param name="idProfissao">Profiss\u00E3o da pessoa fisica (optional)</param>
-        /// <param name="idNaturezaOcupacao">Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica (optional)</param>
-        /// <param name="idNacionalidade">Id Nacionalidade da pessoa fisica (optional)</param>
-        /// <param name="numeroBanco">N\u00FAmero do banco (optional)</param>
-        /// <param name="numeroAgencia">N\u00FAmero da ag\u00EAncia (optional)</param>
-        /// <param name="numeroContaCorrente">N\u00FAmero da conta corrente (optional)</param>
-        /// <param name="email">Email da pessoa fisica (optional)</param>
-        /// <param name="nomeEmpresa">Nome que deve ser impresso no cart\u00E3o (optional)</param>
-        /// <param name="nomeReferencia1">Nome de refer\u00EAncia 1 (optional)</param>
-        /// <param name="enderecoReferencia1">Endere\u00E7o de refer\u00EAncia 1 (optional)</param>
-        /// <param name="nomeReferencia2">Nome de refer\u00EAncia 2 (optional)</param>
-        /// <param name="enderecoReferencia2">Endere\u00E7o de refer\u00EAncia 2 (optional)</param>
-        /// <param name="naturalidadeCidade">Apresenta o nome da cidade de nascimento da pessoa f\u00EDsica (optional)</param>
-        /// <param name="naturalidadeEstado">Apresenta a sigla do estado de nascimento da pessoa f\u00EDsica (optional)</param>
-        /// <param name="grauInstrucao">Apresenta o grau de instru\u00E7\u00E3o da pessoa f\u00EDsica (optional)</param>
-        /// <param name="numeroDependentes">Apresenta o n\u00FAmero de dependentes da pessoa f\u00EDsica (optional)</param>
-        /// <param name="nomePai">Apresenta o nome do pai da pessoa f\u00EDsica (optional)</param>
-        /// <param name="chequeEspecial">Indica se pessoa f\u00EDsica aderir ao cheque especial (optional)</param>
-        /// <param name="impedidoFinanciamento">Flag para s\u00F3cios do banco que s\u00E3o portadores do cart\u00E3o, mas n\u00E3o podem operar transa\u00E7\u00F5es de cr\u00E9dito(Lei n. 4.595/64) (optional)</param>
-        /// <param name="numeroCnh">N\u00FAmero da CNH da pessoa (optional)</param>
-        /// <returns>Task of PessoaDetalheResponse</returns>
-        public async System.Threading.Tasks.Task<PessoaDetalheResponse> Salvar_2Async (long? idPessoa, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string nomeReferencia1 = null, string enderecoReferencia1 = null, string nomeReferencia2 = null, string enderecoReferencia2 = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null, string numeroCnh = null)
-        {
-             ApiResponse<PessoaDetalheResponse> localVarResponse = await Salvar_2AsyncWithHttpInfo(idPessoa, nomeMae, idEstadoCivil, idProfissao, idNaturezaOcupacao, idNacionalidade, numeroBanco, numeroAgencia, numeroContaCorrente, email, nomeEmpresa, nomeReferencia1, enderecoReferencia1, nomeReferencia2, enderecoReferencia2, naturalidadeCidade, naturalidadeEstado, grauInstrucao, numeroDependentes, nomePai, chequeEspecial, impedidoFinanciamento, numeroCnh);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Salvar os detalhes de uma determinada Pessoa Este m\u00E9todo permite que seja incluido na base do emissor os detalhes de uma determinada Pessoa
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idPessoa">Apresenta o c\u00F3digo identificador da pessoa</param>
-        /// <param name="nomeMae">Apresenta o nome da m\u00E3e da pessoa fisica (optional)</param>
-        /// <param name="idEstadoCivil">Id Estado civil da pessoa fisica (optional)</param>
-        /// <param name="idProfissao">Profiss\u00E3o da pessoa fisica (optional)</param>
-        /// <param name="idNaturezaOcupacao">Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica (optional)</param>
-        /// <param name="idNacionalidade">Id Nacionalidade da pessoa fisica (optional)</param>
-        /// <param name="numeroBanco">N\u00FAmero do banco (optional)</param>
-        /// <param name="numeroAgencia">N\u00FAmero da ag\u00EAncia (optional)</param>
-        /// <param name="numeroContaCorrente">N\u00FAmero da conta corrente (optional)</param>
-        /// <param name="email">Email da pessoa fisica (optional)</param>
-        /// <param name="nomeEmpresa">Nome que deve ser impresso no cart\u00E3o (optional)</param>
-        /// <param name="nomeReferencia1">Nome de refer\u00EAncia 1 (optional)</param>
-        /// <param name="enderecoReferencia1">Endere\u00E7o de refer\u00EAncia 1 (optional)</param>
-        /// <param name="nomeReferencia2">Nome de refer\u00EAncia 2 (optional)</param>
-        /// <param name="enderecoReferencia2">Endere\u00E7o de refer\u00EAncia 2 (optional)</param>
-        /// <param name="naturalidadeCidade">Apresenta o nome da cidade de nascimento da pessoa f\u00EDsica (optional)</param>
-        /// <param name="naturalidadeEstado">Apresenta a sigla do estado de nascimento da pessoa f\u00EDsica (optional)</param>
-        /// <param name="grauInstrucao">Apresenta o grau de instru\u00E7\u00E3o da pessoa f\u00EDsica (optional)</param>
-        /// <param name="numeroDependentes">Apresenta o n\u00FAmero de dependentes da pessoa f\u00EDsica (optional)</param>
-        /// <param name="nomePai">Apresenta o nome do pai da pessoa f\u00EDsica (optional)</param>
-        /// <param name="chequeEspecial">Indica se pessoa f\u00EDsica aderir ao cheque especial (optional)</param>
-        /// <param name="impedidoFinanciamento">Flag para s\u00F3cios do banco que s\u00E3o portadores do cart\u00E3o, mas n\u00E3o podem operar transa\u00E7\u00F5es de cr\u00E9dito(Lei n. 4.595/64) (optional)</param>
-        /// <param name="numeroCnh">N\u00FAmero da CNH da pessoa (optional)</param>
-        /// <returns>Task of ApiResponse (PessoaDetalheResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PessoaDetalheResponse>> Salvar_2AsyncWithHttpInfo (long? idPessoa, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string nomeReferencia1 = null, string enderecoReferencia1 = null, string nomeReferencia2 = null, string enderecoReferencia2 = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null, string numeroCnh = null)
-        {
-            // verify the required parameter 'idPessoa' is set
-            if (idPessoa == null) throw new ApiException(400, "Missing required parameter 'idPessoa' when calling Salvar_2");
-            
-    
-            var localVarPath = "/api/pessoas-detalhes";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            
-            if (idPessoa != null) localVarQueryParams.Add("idPessoa", Configuration.ApiClient.ParameterToString(idPessoa)); // query parameter
-            if (nomeMae != null) localVarQueryParams.Add("nomeMae", Configuration.ApiClient.ParameterToString(nomeMae)); // query parameter
-            if (idEstadoCivil != null) localVarQueryParams.Add("idEstadoCivil", Configuration.ApiClient.ParameterToString(idEstadoCivil)); // query parameter
-            if (idProfissao != null) localVarQueryParams.Add("idProfissao", Configuration.ApiClient.ParameterToString(idProfissao)); // query parameter
-            if (idNaturezaOcupacao != null) localVarQueryParams.Add("idNaturezaOcupacao", Configuration.ApiClient.ParameterToString(idNaturezaOcupacao)); // query parameter
-            if (idNacionalidade != null) localVarQueryParams.Add("idNacionalidade", Configuration.ApiClient.ParameterToString(idNacionalidade)); // query parameter
-            if (numeroBanco != null) localVarQueryParams.Add("numeroBanco", Configuration.ApiClient.ParameterToString(numeroBanco)); // query parameter
-            if (numeroAgencia != null) localVarQueryParams.Add("numeroAgencia", Configuration.ApiClient.ParameterToString(numeroAgencia)); // query parameter
-            if (numeroContaCorrente != null) localVarQueryParams.Add("numeroContaCorrente", Configuration.ApiClient.ParameterToString(numeroContaCorrente)); // query parameter
-            if (email != null) localVarQueryParams.Add("email", Configuration.ApiClient.ParameterToString(email)); // query parameter
-            if (nomeEmpresa != null) localVarQueryParams.Add("nomeEmpresa", Configuration.ApiClient.ParameterToString(nomeEmpresa)); // query parameter
-            if (nomeReferencia1 != null) localVarQueryParams.Add("nomeReferencia1", Configuration.ApiClient.ParameterToString(nomeReferencia1)); // query parameter
-            if (enderecoReferencia1 != null) localVarQueryParams.Add("enderecoReferencia1", Configuration.ApiClient.ParameterToString(enderecoReferencia1)); // query parameter
-            if (nomeReferencia2 != null) localVarQueryParams.Add("nomeReferencia2", Configuration.ApiClient.ParameterToString(nomeReferencia2)); // query parameter
-            if (enderecoReferencia2 != null) localVarQueryParams.Add("enderecoReferencia2", Configuration.ApiClient.ParameterToString(enderecoReferencia2)); // query parameter
-            if (naturalidadeCidade != null) localVarQueryParams.Add("naturalidadeCidade", Configuration.ApiClient.ParameterToString(naturalidadeCidade)); // query parameter
-            if (naturalidadeEstado != null) localVarQueryParams.Add("naturalidadeEstado", Configuration.ApiClient.ParameterToString(naturalidadeEstado)); // query parameter
-            if (grauInstrucao != null) localVarQueryParams.Add("grauInstrucao", Configuration.ApiClient.ParameterToString(grauInstrucao)); // query parameter
-            if (numeroDependentes != null) localVarQueryParams.Add("numeroDependentes", Configuration.ApiClient.ParameterToString(numeroDependentes)); // query parameter
-            if (nomePai != null) localVarQueryParams.Add("nomePai", Configuration.ApiClient.ParameterToString(nomePai)); // query parameter
-            if (chequeEspecial != null) localVarQueryParams.Add("chequeEspecial", Configuration.ApiClient.ParameterToString(chequeEspecial)); // query parameter
-            if (impedidoFinanciamento != null) localVarQueryParams.Add("impedidoFinanciamento", Configuration.ApiClient.ParameterToString(impedidoFinanciamento)); // query parameter
-            if (numeroCnh != null) localVarQueryParams.Add("numeroCnh", Configuration.ApiClient.ParameterToString(numeroCnh)); // query parameter
-            
-            
-            
-            
-
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Salvar_2: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Salvar_2: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<PessoaDetalheResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PessoaDetalheResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PessoaDetalheResponse)));
             
         }
         
@@ -9609,9 +9567,9 @@ namespace Conductor.Pier.Api
         /// <param name="telefone">N\u00FAmero do telefone (optional)</param> 
         /// <param name="ramal">N\u00FAmero do ramal (optional)</param> 
         /// <returns>TelefoneResponse</returns>
-        public TelefoneResponse Salvar_3 (long? idTipoTelefone = null, long? idPessoa = null, string ddd = null, string telefone = null, string ramal = null)
+        public TelefoneResponse SalvarTelefone (long? idTipoTelefone = null, long? idPessoa = null, string ddd = null, string telefone = null, string ramal = null)
         {
-             ApiResponse<TelefoneResponse> localVarResponse = Salvar_3WithHttpInfo(idTipoTelefone, idPessoa, ddd, telefone, ramal);
+             ApiResponse<TelefoneResponse> localVarResponse = SalvarTelefoneWithHttpInfo(idTipoTelefone, idPessoa, ddd, telefone, ramal);
              return localVarResponse.Data;
         }
 
@@ -9625,7 +9583,7 @@ namespace Conductor.Pier.Api
         /// <param name="telefone">N\u00FAmero do telefone (optional)</param> 
         /// <param name="ramal">N\u00FAmero do ramal (optional)</param> 
         /// <returns>ApiResponse of TelefoneResponse</returns>
-        public ApiResponse< TelefoneResponse > Salvar_3WithHttpInfo (long? idTipoTelefone = null, long? idPessoa = null, string ddd = null, string telefone = null, string ramal = null)
+        public ApiResponse< TelefoneResponse > SalvarTelefoneWithHttpInfo (long? idTipoTelefone = null, long? idPessoa = null, string ddd = null, string telefone = null, string ramal = null)
         {
             
     
@@ -9676,9 +9634,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Salvar_3: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarTelefone: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Salvar_3: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarTelefone: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<TelefoneResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -9697,9 +9655,9 @@ namespace Conductor.Pier.Api
         /// <param name="telefone">N\u00FAmero do telefone (optional)</param>
         /// <param name="ramal">N\u00FAmero do ramal (optional)</param>
         /// <returns>Task of TelefoneResponse</returns>
-        public async System.Threading.Tasks.Task<TelefoneResponse> Salvar_3Async (long? idTipoTelefone = null, long? idPessoa = null, string ddd = null, string telefone = null, string ramal = null)
+        public async System.Threading.Tasks.Task<TelefoneResponse> SalvarTelefoneAsync (long? idTipoTelefone = null, long? idPessoa = null, string ddd = null, string telefone = null, string ramal = null)
         {
-             ApiResponse<TelefoneResponse> localVarResponse = await Salvar_3AsyncWithHttpInfo(idTipoTelefone, idPessoa, ddd, telefone, ramal);
+             ApiResponse<TelefoneResponse> localVarResponse = await SalvarTelefoneAsyncWithHttpInfo(idTipoTelefone, idPessoa, ddd, telefone, ramal);
              return localVarResponse.Data;
 
         }
@@ -9714,7 +9672,7 @@ namespace Conductor.Pier.Api
         /// <param name="telefone">N\u00FAmero do telefone (optional)</param>
         /// <param name="ramal">N\u00FAmero do ramal (optional)</param>
         /// <returns>Task of ApiResponse (TelefoneResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TelefoneResponse>> Salvar_3AsyncWithHttpInfo (long? idTipoTelefone = null, long? idPessoa = null, string ddd = null, string telefone = null, string ramal = null)
+        public async System.Threading.Tasks.Task<ApiResponse<TelefoneResponse>> SalvarTelefoneAsyncWithHttpInfo (long? idTipoTelefone = null, long? idPessoa = null, string ddd = null, string telefone = null, string ramal = null)
         {
             
     
@@ -9765,13 +9723,195 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Salvar_3: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarTelefone: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Salvar_3: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarTelefone: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<TelefoneResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (TelefoneResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TelefoneResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Realiza o cadastro de Adicionais para uma Conta Este m\u00E9todo permite que sejam cadastrados um portador Adicional para uma determinada Conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param> 
+        /// <param name="persist">persist</param> 
+        /// <returns>AdicionalDetalheResponse</returns>
+        public AdicionalDetalheResponse VincularAdicionalConta (long? id, AdicionalPersist persist)
+        {
+             ApiResponse<AdicionalDetalheResponse> localVarResponse = VincularAdicionalContaWithHttpInfo(id, persist);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Realiza o cadastro de Adicionais para uma Conta Este m\u00E9todo permite que sejam cadastrados um portador Adicional para uma determinada Conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param> 
+        /// <param name="persist">persist</param> 
+        /// <returns>ApiResponse of AdicionalDetalheResponse</returns>
+        public ApiResponse< AdicionalDetalheResponse > VincularAdicionalContaWithHttpInfo (long? id, AdicionalPersist persist)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling CadastroClienteApi->VincularAdicionalConta");
+            
+            // verify the required parameter 'persist' is set
+            if (persist == null)
+                throw new ApiException(400, "Missing required parameter 'persist' when calling CadastroClienteApi->VincularAdicionalConta");
+            
+    
+            var localVarPath = "/api/contas/{id}/cadastrar-adicional";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            if (persist.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(persist); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = persist; // byte array
+            }
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling VincularAdicionalConta: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling VincularAdicionalConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<AdicionalDetalheResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AdicionalDetalheResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AdicionalDetalheResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Realiza o cadastro de Adicionais para uma Conta Este m\u00E9todo permite que sejam cadastrados um portador Adicional para uma determinada Conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
+        /// <param name="persist">persist</param>
+        /// <returns>Task of AdicionalDetalheResponse</returns>
+        public async System.Threading.Tasks.Task<AdicionalDetalheResponse> VincularAdicionalContaAsync (long? id, AdicionalPersist persist)
+        {
+             ApiResponse<AdicionalDetalheResponse> localVarResponse = await VincularAdicionalContaAsyncWithHttpInfo(id, persist);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Realiza o cadastro de Adicionais para uma Conta Este m\u00E9todo permite que sejam cadastrados um portador Adicional para uma determinada Conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
+        /// <param name="persist">persist</param>
+        /// <returns>Task of ApiResponse (AdicionalDetalheResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AdicionalDetalheResponse>> VincularAdicionalContaAsyncWithHttpInfo (long? id, AdicionalPersist persist)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling VincularAdicionalConta");
+            // verify the required parameter 'persist' is set
+            if (persist == null) throw new ApiException(400, "Missing required parameter 'persist' when calling VincularAdicionalConta");
+            
+    
+            var localVarPath = "/api/contas/{id}/cadastrar-adicional";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            if (persist.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(persist); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = persist; // byte array
+            }
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling VincularAdicionalConta: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling VincularAdicionalConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AdicionalDetalheResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AdicionalDetalheResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AdicionalDetalheResponse)));
             
         }
         

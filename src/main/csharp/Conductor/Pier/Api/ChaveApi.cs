@@ -30,7 +30,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">Tipo chave id (optional)</param>
         /// <param name="descricao">Tipo chave descricao (optional)</param>
         /// <returns>PageTipoChaveResponse</returns>
-        PageTipoChaveResponse ListarTipoChave (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null);
+        PageTipoChaveResponse ListarTiposChaves (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null);
   
         /// <summary>
         /// Listar tipos chaves
@@ -45,7 +45,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">Tipo chave id (optional)</param>
         /// <param name="descricao">Tipo chave descricao (optional)</param>
         /// <returns>ApiResponse of PageTipoChaveResponse</returns>
-        ApiResponse<PageTipoChaveResponse> ListarTipoChaveWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null);
+        ApiResponse<PageTipoChaveResponse> ListarTiposChavesWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null);
         
         #endregion Synchronous Operations
         
@@ -64,7 +64,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">Tipo chave id (optional)</param>
         /// <param name="descricao">Tipo chave descricao (optional)</param>
         /// <returns>Task of PageTipoChaveResponse</returns>
-        System.Threading.Tasks.Task<PageTipoChaveResponse> ListarTipoChaveAsync (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null);
+        System.Threading.Tasks.Task<PageTipoChaveResponse> ListarTiposChavesAsync (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null);
 
         /// <summary>
         /// Listar tipos chaves
@@ -79,7 +79,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">Tipo chave id (optional)</param>
         /// <param name="descricao">Tipo chave descricao (optional)</param>
         /// <returns>Task of ApiResponse (PageTipoChaveResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageTipoChaveResponse>> ListarTipoChaveAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null);
+        System.Threading.Tasks.Task<ApiResponse<PageTipoChaveResponse>> ListarTiposChavesAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null);
         
         #endregion Asynchronous Operations
         
@@ -183,9 +183,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">Tipo chave id (optional)</param> 
         /// <param name="descricao">Tipo chave descricao (optional)</param> 
         /// <returns>PageTipoChaveResponse</returns>
-        public PageTipoChaveResponse ListarTipoChave (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null)
+        public PageTipoChaveResponse ListarTiposChaves (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null)
         {
-             ApiResponse<PageTipoChaveResponse> localVarResponse = ListarTipoChaveWithHttpInfo(sort, page, limit, id, descricao);
+             ApiResponse<PageTipoChaveResponse> localVarResponse = ListarTiposChavesWithHttpInfo(sort, page, limit, id, descricao);
              return localVarResponse.Data;
         }
 
@@ -199,7 +199,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">Tipo chave id (optional)</param> 
         /// <param name="descricao">Tipo chave descricao (optional)</param> 
         /// <returns>ApiResponse of PageTipoChaveResponse</returns>
-        public ApiResponse< PageTipoChaveResponse > ListarTipoChaveWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null)
+        public ApiResponse< PageTipoChaveResponse > ListarTiposChavesWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null)
         {
             
     
@@ -250,9 +250,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarTipoChave: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarTiposChaves: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarTipoChave: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarTiposChaves: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageTipoChaveResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -271,9 +271,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">Tipo chave id (optional)</param>
         /// <param name="descricao">Tipo chave descricao (optional)</param>
         /// <returns>Task of PageTipoChaveResponse</returns>
-        public async System.Threading.Tasks.Task<PageTipoChaveResponse> ListarTipoChaveAsync (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null)
+        public async System.Threading.Tasks.Task<PageTipoChaveResponse> ListarTiposChavesAsync (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null)
         {
-             ApiResponse<PageTipoChaveResponse> localVarResponse = await ListarTipoChaveAsyncWithHttpInfo(sort, page, limit, id, descricao);
+             ApiResponse<PageTipoChaveResponse> localVarResponse = await ListarTiposChavesAsyncWithHttpInfo(sort, page, limit, id, descricao);
              return localVarResponse.Data;
 
         }
@@ -288,7 +288,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">Tipo chave id (optional)</param>
         /// <param name="descricao">Tipo chave descricao (optional)</param>
         /// <returns>Task of ApiResponse (PageTipoChaveResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageTipoChaveResponse>> ListarTipoChaveAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageTipoChaveResponse>> ListarTiposChavesAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null)
         {
             
     
@@ -339,9 +339,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarTipoChave: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarTiposChaves: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarTipoChave: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarTiposChaves: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageTipoChaveResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

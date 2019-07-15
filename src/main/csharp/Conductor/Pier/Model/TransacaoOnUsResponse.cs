@@ -30,7 +30,7 @@ namespace Conductor.Pier.Model
         /// <param name="NomePortadorCartao">Nome do Portador do Cart\u00E3o que originou a transa\u00E7\u00E3o.</param>
         /// <param name="TerminalRequisitante">Apresenta a identifica\u00E7\u00E3o do terminal requisitante (required).</param>
 
-        public TransacaoOnUsResponse(string NsuOrigem = null, string NsuAutorizacao = null, List<MapOfstringAndstring> PlanoDeParcelamento = null, string CodigoAutorizacao = null, string NumeroMascaradoCartao = null, string NomePortadorCartao = null, string TerminalRequisitante = null)
+        public TransacaoOnUsResponse(string NsuOrigem = null, string NsuAutorizacao = null, List<MapOfstringAndobject> PlanoDeParcelamento = null, string CodigoAutorizacao = null, string NumeroMascaradoCartao = null, string NomePortadorCartao = null, string TerminalRequisitante = null)
         {
             // to ensure "TerminalRequisitante" is required (not null)
             if (TerminalRequisitante == null)
@@ -70,7 +70,7 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>Descri\u00E7\u00E3o do Plano de Parcelamento atribu\u00EDdo a Transa\u00E7\u00E3o</value>
         [DataMember(Name="planoDeParcelamento", EmitDefaultValue=false)]
-        public List<MapOfstringAndstring> PlanoDeParcelamento { get; set; }
+        public List<MapOfstringAndobject> PlanoDeParcelamento { get; set; }
     
         /// <summary>
         /// C\u00F3digo de Autoriza\u00E7\u00E3o gerado pelo Autorizador

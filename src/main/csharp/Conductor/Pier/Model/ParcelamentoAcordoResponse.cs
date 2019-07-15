@@ -29,8 +29,9 @@ namespace Conductor.Pier.Model
         /// <param name="ValorEntrada">Valor da entrada do acordo.</param>
         /// <param name="ValorParcela">Valor da parcela do acordo.</param>
         /// <param name="ValorPrimeiraParcela">Valor da primeira parcela do acordo.</param>
+        /// <param name="NumeroParcelas">N\u00FAmero de parcelas do acordo.</param>
 
-        public ParcelamentoAcordoResponse(double? PercentualEntrada = null, double? PercentualDesconto = null, double? ValorDesconto = null, double? ValorLiquido = null, double? ValorEntrada = null, double? ValorParcela = null, double? ValorPrimeiraParcela = null)
+        public ParcelamentoAcordoResponse(double? PercentualEntrada = null, double? PercentualDesconto = null, double? ValorDesconto = null, double? ValorLiquido = null, double? ValorEntrada = null, double? ValorParcela = null, double? ValorPrimeiraParcela = null, int? NumeroParcelas = null)
         {
             this.PercentualEntrada = PercentualEntrada;
             this.PercentualDesconto = PercentualDesconto;
@@ -39,6 +40,7 @@ namespace Conductor.Pier.Model
             this.ValorEntrada = ValorEntrada;
             this.ValorParcela = ValorParcela;
             this.ValorPrimeiraParcela = ValorPrimeiraParcela;
+            this.NumeroParcelas = NumeroParcelas;
             
         }
         
@@ -93,6 +95,13 @@ namespace Conductor.Pier.Model
         public double? ValorPrimeiraParcela { get; set; }
     
         /// <summary>
+        /// N\u00FAmero de parcelas do acordo
+        /// </summary>
+        /// <value>N\u00FAmero de parcelas do acordo</value>
+        [DataMember(Name="numeroParcelas", EmitDefaultValue=false)]
+        public int? NumeroParcelas { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -107,6 +116,7 @@ namespace Conductor.Pier.Model
             sb.Append("  ValorEntrada: ").Append(ValorEntrada).Append("\n");
             sb.Append("  ValorParcela: ").Append(ValorParcela).Append("\n");
             sb.Append("  ValorPrimeiraParcela: ").Append(ValorPrimeiraParcela).Append("\n");
+            sb.Append("  NumeroParcelas: ").Append(NumeroParcelas).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -178,6 +188,11 @@ namespace Conductor.Pier.Model
                     this.ValorPrimeiraParcela == other.ValorPrimeiraParcela ||
                     this.ValorPrimeiraParcela != null &&
                     this.ValorPrimeiraParcela.Equals(other.ValorPrimeiraParcela)
+                ) && 
+                (
+                    this.NumeroParcelas == other.NumeroParcelas ||
+                    this.NumeroParcelas != null &&
+                    this.NumeroParcelas.Equals(other.NumeroParcelas)
                 );
         }
 
@@ -213,6 +228,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.ValorPrimeiraParcela != null)
                     hash = hash * 59 + this.ValorPrimeiraParcela.GetHashCode();
+                
+                if (this.NumeroParcelas != null)
+                    hash = hash * 59 + this.NumeroParcelas.GetHashCode();
                 
                 return hash;
             }

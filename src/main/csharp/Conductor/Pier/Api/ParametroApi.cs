@@ -26,7 +26,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="codigo">C\u00F3digo para pesquisa</param>
         /// <returns>ParametroEmissorResponse</returns>
-        ParametroEmissorResponse Consultar (string codigo);
+        ParametroEmissorResponse ConsultarParametroEmissor (string codigo);
   
         /// <summary>
         /// Consultar par\u00E2metro do emissor
@@ -37,7 +37,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="codigo">C\u00F3digo para pesquisa</param>
         /// <returns>ApiResponse of ParametroEmissorResponse</returns>
-        ApiResponse<ParametroEmissorResponse> ConsultarWithHttpInfo (string codigo);
+        ApiResponse<ParametroEmissorResponse> ConsultarParametroEmissorWithHttpInfo (string codigo);
         
         /// <summary>
         /// Consultar um par\u00E2metro de produto
@@ -48,7 +48,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id</param>
         /// <returns>ParametrosProdutoResponse</returns>
-        ParametrosProdutoResponse Consultar_0 (long? id);
+        ParametrosProdutoResponse ConsultarParametrosProdutos (long? id);
   
         /// <summary>
         /// Consultar um par\u00E2metro de produto
@@ -59,7 +59,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id</param>
         /// <returns>ApiResponse of ParametrosProdutoResponse</returns>
-        ApiResponse<ParametrosProdutoResponse> Consultar_0WithHttpInfo (long? id);
+        ApiResponse<ParametrosProdutoResponse> ConsultarParametrosProdutosWithHttpInfo (long? id);
         
         /// <summary>
         /// Listar os par\u00E2metros de produtos
@@ -77,7 +77,7 @@ namespace Conductor.Pier.Api
         /// <param name="idProduto">Identificador do produto (optional)</param>
         /// <param name="descricao">Descri\u00E7\u00E3o do par\u00E2metro de produto (optional)</param>
         /// <returns>PageParametroProdutoResponse</returns>
-        PageParametroProdutoResponse ListarParametrosProduto (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string codigo = null, string tipo = null, long? idProduto = null, string descricao = null);
+        PageParametroProdutoResponse ListarParametrosProdutos (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string codigo = null, string tipo = null, long? idProduto = null, string descricao = null);
   
         /// <summary>
         /// Listar os par\u00E2metros de produtos
@@ -95,7 +95,7 @@ namespace Conductor.Pier.Api
         /// <param name="idProduto">Identificador do produto (optional)</param>
         /// <param name="descricao">Descri\u00E7\u00E3o do par\u00E2metro de produto (optional)</param>
         /// <returns>ApiResponse of PageParametroProdutoResponse</returns>
-        ApiResponse<PageParametroProdutoResponse> ListarParametrosProdutoWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string codigo = null, string tipo = null, long? idProduto = null, string descricao = null);
+        ApiResponse<PageParametroProdutoResponse> ListarParametrosProdutosWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string codigo = null, string tipo = null, long? idProduto = null, string descricao = null);
         
         #endregion Synchronous Operations
         
@@ -110,7 +110,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="codigo">C\u00F3digo para pesquisa</param>
         /// <returns>Task of ParametroEmissorResponse</returns>
-        System.Threading.Tasks.Task<ParametroEmissorResponse> ConsultarAsync (string codigo);
+        System.Threading.Tasks.Task<ParametroEmissorResponse> ConsultarParametroEmissorAsync (string codigo);
 
         /// <summary>
         /// Consultar par\u00E2metro do emissor
@@ -121,7 +121,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="codigo">C\u00F3digo para pesquisa</param>
         /// <returns>Task of ApiResponse (ParametroEmissorResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ParametroEmissorResponse>> ConsultarAsyncWithHttpInfo (string codigo);
+        System.Threading.Tasks.Task<ApiResponse<ParametroEmissorResponse>> ConsultarParametroEmissorAsyncWithHttpInfo (string codigo);
         
         /// <summary>
         /// Consultar um par\u00E2metro de produto
@@ -132,7 +132,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id</param>
         /// <returns>Task of ParametrosProdutoResponse</returns>
-        System.Threading.Tasks.Task<ParametrosProdutoResponse> Consultar_0Async (long? id);
+        System.Threading.Tasks.Task<ParametrosProdutoResponse> ConsultarParametrosProdutosAsync (long? id);
 
         /// <summary>
         /// Consultar um par\u00E2metro de produto
@@ -143,7 +143,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id</param>
         /// <returns>Task of ApiResponse (ParametrosProdutoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ParametrosProdutoResponse>> Consultar_0AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<ParametrosProdutoResponse>> ConsultarParametrosProdutosAsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Listar os par\u00E2metros de produtos
@@ -161,7 +161,7 @@ namespace Conductor.Pier.Api
         /// <param name="idProduto">Identificador do produto (optional)</param>
         /// <param name="descricao">Descri\u00E7\u00E3o do par\u00E2metro de produto (optional)</param>
         /// <returns>Task of PageParametroProdutoResponse</returns>
-        System.Threading.Tasks.Task<PageParametroProdutoResponse> ListarParametrosProdutoAsync (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string codigo = null, string tipo = null, long? idProduto = null, string descricao = null);
+        System.Threading.Tasks.Task<PageParametroProdutoResponse> ListarParametrosProdutosAsync (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string codigo = null, string tipo = null, long? idProduto = null, string descricao = null);
 
         /// <summary>
         /// Listar os par\u00E2metros de produtos
@@ -179,7 +179,7 @@ namespace Conductor.Pier.Api
         /// <param name="idProduto">Identificador do produto (optional)</param>
         /// <param name="descricao">Descri\u00E7\u00E3o do par\u00E2metro de produto (optional)</param>
         /// <returns>Task of ApiResponse (PageParametroProdutoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageParametroProdutoResponse>> ListarParametrosProdutoAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string codigo = null, string tipo = null, long? idProduto = null, string descricao = null);
+        System.Threading.Tasks.Task<ApiResponse<PageParametroProdutoResponse>> ListarParametrosProdutosAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string codigo = null, string tipo = null, long? idProduto = null, string descricao = null);
         
         #endregion Asynchronous Operations
         
@@ -279,9 +279,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="codigo">C\u00F3digo para pesquisa</param> 
         /// <returns>ParametroEmissorResponse</returns>
-        public ParametroEmissorResponse Consultar (string codigo)
+        public ParametroEmissorResponse ConsultarParametroEmissor (string codigo)
         {
-             ApiResponse<ParametroEmissorResponse> localVarResponse = ConsultarWithHttpInfo(codigo);
+             ApiResponse<ParametroEmissorResponse> localVarResponse = ConsultarParametroEmissorWithHttpInfo(codigo);
              return localVarResponse.Data;
         }
 
@@ -291,12 +291,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="codigo">C\u00F3digo para pesquisa</param> 
         /// <returns>ApiResponse of ParametroEmissorResponse</returns>
-        public ApiResponse< ParametroEmissorResponse > ConsultarWithHttpInfo (string codigo)
+        public ApiResponse< ParametroEmissorResponse > ConsultarParametroEmissorWithHttpInfo (string codigo)
         {
             
             // verify the required parameter 'codigo' is set
             if (codigo == null)
-                throw new ApiException(400, "Missing required parameter 'codigo' when calling ParametroApi->Consultar");
+                throw new ApiException(400, "Missing required parameter 'codigo' when calling ParametroApi->ConsultarParametroEmissor");
             
     
             var localVarPath = "/api/parametros-emissor/{codigo}";
@@ -342,9 +342,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarParametroEmissor: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarParametroEmissor: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<ParametroEmissorResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -359,9 +359,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="codigo">C\u00F3digo para pesquisa</param>
         /// <returns>Task of ParametroEmissorResponse</returns>
-        public async System.Threading.Tasks.Task<ParametroEmissorResponse> ConsultarAsync (string codigo)
+        public async System.Threading.Tasks.Task<ParametroEmissorResponse> ConsultarParametroEmissorAsync (string codigo)
         {
-             ApiResponse<ParametroEmissorResponse> localVarResponse = await ConsultarAsyncWithHttpInfo(codigo);
+             ApiResponse<ParametroEmissorResponse> localVarResponse = await ConsultarParametroEmissorAsyncWithHttpInfo(codigo);
              return localVarResponse.Data;
 
         }
@@ -372,10 +372,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="codigo">C\u00F3digo para pesquisa</param>
         /// <returns>Task of ApiResponse (ParametroEmissorResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ParametroEmissorResponse>> ConsultarAsyncWithHttpInfo (string codigo)
+        public async System.Threading.Tasks.Task<ApiResponse<ParametroEmissorResponse>> ConsultarParametroEmissorAsyncWithHttpInfo (string codigo)
         {
             // verify the required parameter 'codigo' is set
-            if (codigo == null) throw new ApiException(400, "Missing required parameter 'codigo' when calling Consultar");
+            if (codigo == null) throw new ApiException(400, "Missing required parameter 'codigo' when calling ConsultarParametroEmissor");
             
     
             var localVarPath = "/api/parametros-emissor/{codigo}";
@@ -421,9 +421,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarParametroEmissor: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarParametroEmissor: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<ParametroEmissorResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -437,9 +437,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id</param> 
         /// <returns>ParametrosProdutoResponse</returns>
-        public ParametrosProdutoResponse Consultar_0 (long? id)
+        public ParametrosProdutoResponse ConsultarParametrosProdutos (long? id)
         {
-             ApiResponse<ParametrosProdutoResponse> localVarResponse = Consultar_0WithHttpInfo(id);
+             ApiResponse<ParametrosProdutoResponse> localVarResponse = ConsultarParametrosProdutosWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -449,12 +449,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id</param> 
         /// <returns>ApiResponse of ParametrosProdutoResponse</returns>
-        public ApiResponse< ParametrosProdutoResponse > Consultar_0WithHttpInfo (long? id)
+        public ApiResponse< ParametrosProdutoResponse > ConsultarParametrosProdutosWithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling ParametroApi->Consultar_0");
+                throw new ApiException(400, "Missing required parameter 'id' when calling ParametroApi->ConsultarParametrosProdutos");
             
     
             var localVarPath = "/api/parametros-produto/{id}";
@@ -500,9 +500,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar_0: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarParametrosProdutos: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar_0: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarParametrosProdutos: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<ParametrosProdutoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -517,9 +517,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id</param>
         /// <returns>Task of ParametrosProdutoResponse</returns>
-        public async System.Threading.Tasks.Task<ParametrosProdutoResponse> Consultar_0Async (long? id)
+        public async System.Threading.Tasks.Task<ParametrosProdutoResponse> ConsultarParametrosProdutosAsync (long? id)
         {
-             ApiResponse<ParametrosProdutoResponse> localVarResponse = await Consultar_0AsyncWithHttpInfo(id);
+             ApiResponse<ParametrosProdutoResponse> localVarResponse = await ConsultarParametrosProdutosAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -530,10 +530,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id</param>
         /// <returns>Task of ApiResponse (ParametrosProdutoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ParametrosProdutoResponse>> Consultar_0AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<ParametrosProdutoResponse>> ConsultarParametrosProdutosAsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling Consultar_0");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarParametrosProdutos");
             
     
             var localVarPath = "/api/parametros-produto/{id}";
@@ -579,9 +579,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar_0: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarParametrosProdutos: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar_0: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarParametrosProdutos: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<ParametrosProdutoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -602,9 +602,9 @@ namespace Conductor.Pier.Api
         /// <param name="idProduto">Identificador do produto (optional)</param> 
         /// <param name="descricao">Descri\u00E7\u00E3o do par\u00E2metro de produto (optional)</param> 
         /// <returns>PageParametroProdutoResponse</returns>
-        public PageParametroProdutoResponse ListarParametrosProduto (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string codigo = null, string tipo = null, long? idProduto = null, string descricao = null)
+        public PageParametroProdutoResponse ListarParametrosProdutos (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string codigo = null, string tipo = null, long? idProduto = null, string descricao = null)
         {
-             ApiResponse<PageParametroProdutoResponse> localVarResponse = ListarParametrosProdutoWithHttpInfo(sort, page, limit, id, codigo, tipo, idProduto, descricao);
+             ApiResponse<PageParametroProdutoResponse> localVarResponse = ListarParametrosProdutosWithHttpInfo(sort, page, limit, id, codigo, tipo, idProduto, descricao);
              return localVarResponse.Data;
         }
 
@@ -621,7 +621,7 @@ namespace Conductor.Pier.Api
         /// <param name="idProduto">Identificador do produto (optional)</param> 
         /// <param name="descricao">Descri\u00E7\u00E3o do par\u00E2metro de produto (optional)</param> 
         /// <returns>ApiResponse of PageParametroProdutoResponse</returns>
-        public ApiResponse< PageParametroProdutoResponse > ListarParametrosProdutoWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string codigo = null, string tipo = null, long? idProduto = null, string descricao = null)
+        public ApiResponse< PageParametroProdutoResponse > ListarParametrosProdutosWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string codigo = null, string tipo = null, long? idProduto = null, string descricao = null)
         {
             
     
@@ -675,9 +675,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarParametrosProduto: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarParametrosProdutos: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarParametrosProduto: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarParametrosProdutos: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageParametroProdutoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -699,9 +699,9 @@ namespace Conductor.Pier.Api
         /// <param name="idProduto">Identificador do produto (optional)</param>
         /// <param name="descricao">Descri\u00E7\u00E3o do par\u00E2metro de produto (optional)</param>
         /// <returns>Task of PageParametroProdutoResponse</returns>
-        public async System.Threading.Tasks.Task<PageParametroProdutoResponse> ListarParametrosProdutoAsync (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string codigo = null, string tipo = null, long? idProduto = null, string descricao = null)
+        public async System.Threading.Tasks.Task<PageParametroProdutoResponse> ListarParametrosProdutosAsync (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string codigo = null, string tipo = null, long? idProduto = null, string descricao = null)
         {
-             ApiResponse<PageParametroProdutoResponse> localVarResponse = await ListarParametrosProdutoAsyncWithHttpInfo(sort, page, limit, id, codigo, tipo, idProduto, descricao);
+             ApiResponse<PageParametroProdutoResponse> localVarResponse = await ListarParametrosProdutosAsyncWithHttpInfo(sort, page, limit, id, codigo, tipo, idProduto, descricao);
              return localVarResponse.Data;
 
         }
@@ -719,7 +719,7 @@ namespace Conductor.Pier.Api
         /// <param name="idProduto">Identificador do produto (optional)</param>
         /// <param name="descricao">Descri\u00E7\u00E3o do par\u00E2metro de produto (optional)</param>
         /// <returns>Task of ApiResponse (PageParametroProdutoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageParametroProdutoResponse>> ListarParametrosProdutoAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string codigo = null, string tipo = null, long? idProduto = null, string descricao = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageParametroProdutoResponse>> ListarParametrosProdutosAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string codigo = null, string tipo = null, long? idProduto = null, string descricao = null)
         {
             
     
@@ -773,9 +773,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarParametrosProduto: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarParametrosProdutos: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarParametrosProduto: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarParametrosProdutos: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageParametroProdutoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

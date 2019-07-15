@@ -26,7 +26,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do acordo (id)</param>
         /// <returns>AcordoDetalheResponse</returns>
-        AcordoDetalheResponse Consultar (long? id);
+        AcordoDetalheResponse ConsultarAcordo (long? id);
   
         /// <summary>
         /// Consulta os dados de um determinado acordo
@@ -37,7 +37,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do acordo (id)</param>
         /// <returns>ApiResponse of AcordoDetalheResponse</returns>
-        ApiResponse<AcordoDetalheResponse> ConsultarWithHttpInfo (long? id);
+        ApiResponse<AcordoDetalheResponse> ConsultarAcordoWithHttpInfo (long? id);
         
         /// <summary>
         /// Consulta uma parcela do acordo
@@ -48,7 +48,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Identificador da parcela</param>
         /// <returns>ParcelaAcordoResponse</returns>
-        ParcelaAcordoResponse ConsultarPorId (long? id);
+        ParcelaAcordoResponse ConsultarParcelaAcordo (long? id);
   
         /// <summary>
         /// Consulta uma parcela do acordo
@@ -59,7 +59,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Identificador da parcela</param>
         /// <returns>ApiResponse of ParcelaAcordoResponse</returns>
-        ApiResponse<ParcelaAcordoResponse> ConsultarPorIdWithHttpInfo (long? id);
+        ApiResponse<ParcelaAcordoResponse> ConsultarParcelaAcordoWithHttpInfo (long? id);
         
         /// <summary>
         /// Enviar termo do acordo por e-mail.
@@ -71,7 +71,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do acordo (id).</param>
         /// <param name="emailRequest">emailRequest</param>
         /// <returns>string</returns>
-        string EnviarEmailTermo (long? id, AcordoEmailRequest emailRequest);
+        string EnviarTermoPorEmail (long? id, AcordoEmailRequest emailRequest);
   
         /// <summary>
         /// Enviar termo do acordo por e-mail.
@@ -83,7 +83,31 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do acordo (id).</param>
         /// <param name="emailRequest">emailRequest</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> EnviarEmailTermoWithHttpInfo (long? id, AcordoEmailRequest emailRequest);
+        ApiResponse<string> EnviarTermoPorEmailWithHttpInfo (long? id, AcordoEmailRequest emailRequest);
+        
+        /// <summary>
+        /// Realiza a gera\u00E7\u00E3o de um boleto de entrada para o c\u00F3digo de identifica\u00E7\u00E3o do acordo informado
+        /// </summary>
+        /// <remarks>
+        /// Realiza a gera\u00E7\u00E3o de um boleto de entrada para o c\u00F3digo de identifica\u00E7\u00E3o do acordo informado.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <param name="acordoBoletoPersist">acordoBoletoPersist (optional)</param>
+        /// <returns>BoletoResponse</returns>
+        BoletoResponse GerarBoletoEntrada (long? id, AcordoBoletoPersist acordoBoletoPersist = null);
+  
+        /// <summary>
+        /// Realiza a gera\u00E7\u00E3o de um boleto de entrada para o c\u00F3digo de identifica\u00E7\u00E3o do acordo informado
+        /// </summary>
+        /// <remarks>
+        /// Realiza a gera\u00E7\u00E3o de um boleto de entrada para o c\u00F3digo de identifica\u00E7\u00E3o do acordo informado.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <param name="acordoBoletoPersist">acordoBoletoPersist (optional)</param>
+        /// <returns>ApiResponse of BoletoResponse</returns>
+        ApiResponse<BoletoResponse> GerarBoletoEntradaWithHttpInfo (long? id, AcordoBoletoPersist acordoBoletoPersist = null);
         
         /// <summary>
         /// Gerar boleto da parcela do acordo
@@ -94,7 +118,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Identificador da parcela</param>
         /// <returns>BoletoParcelaAcordoResponse</returns>
-        BoletoParcelaAcordoResponse GerarBoleto (long? id);
+        BoletoParcelaAcordoResponse GerarBoletoParcelaAcordo (long? id);
   
         /// <summary>
         /// Gerar boleto da parcela do acordo
@@ -105,7 +129,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Identificador da parcela</param>
         /// <returns>ApiResponse of BoletoParcelaAcordoResponse</returns>
-        ApiResponse<BoletoParcelaAcordoResponse> GerarBoletoWithHttpInfo (long? id);
+        ApiResponse<BoletoParcelaAcordoResponse> GerarBoletoParcelaAcordoWithHttpInfo (long? id);
         
         /// <summary>
         /// Gerar arquivo do termo de acordo
@@ -116,7 +140,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do acordo (id).</param>
         /// <returns>List&lt;ByteArray&gt;</returns>
-        List<ByteArray> GerarTermo (long? id);
+        List<ByteArray> GerarTermoAcordo (long? id);
   
         /// <summary>
         /// Gerar arquivo do termo de acordo
@@ -127,7 +151,29 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do acordo (id).</param>
         /// <returns>ApiResponse of List&lt;ByteArray&gt;</returns>
-        ApiResponse<List<ByteArray>> GerarTermoWithHttpInfo (long? id);
+        ApiResponse<List<ByteArray>> GerarTermoAcordoWithHttpInfo (long? id);
+        
+        /// <summary>
+        /// Insere um novo acordo.
+        /// </summary>
+        /// <remarks>
+        /// Recurso para a cria\u00E7\u00E3o de um novo acordo de cobran\u00E7a.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="acordoPersist">acordoPersist</param>
+        /// <returns>AcordoDetalheResponse</returns>
+        AcordoDetalheResponse IncluirAcordo (AcordoPersist acordoPersist);
+  
+        /// <summary>
+        /// Insere um novo acordo.
+        /// </summary>
+        /// <remarks>
+        /// Recurso para a cria\u00E7\u00E3o de um novo acordo de cobran\u00E7a.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="acordoPersist">acordoPersist</param>
+        /// <returns>ApiResponse of AcordoDetalheResponse</returns>
+        ApiResponse<AcordoDetalheResponse> IncluirAcordoWithHttpInfo (AcordoPersist acordoPersist);
         
         /// <summary>
         /// Lista os acordos existentes na base
@@ -144,7 +190,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataAcordo">Data do acordo (optional)</param>
         /// <param name="quantidadeParcelas">Quantidade de parcelas (optional)</param>
         /// <returns>PageAcordoResponse</returns>
-        PageAcordoResponse Listar (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? statusAcordo = null, string dataAcordo = null, int? quantidadeParcelas = null);
+        PageAcordoResponse ListarAcordos (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? statusAcordo = null, string dataAcordo = null, int? quantidadeParcelas = null);
   
         /// <summary>
         /// Lista os acordos existentes na base
@@ -161,7 +207,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataAcordo">Data do acordo (optional)</param>
         /// <param name="quantidadeParcelas">Quantidade de parcelas (optional)</param>
         /// <returns>ApiResponse of PageAcordoResponse</returns>
-        ApiResponse<PageAcordoResponse> ListarWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? statusAcordo = null, string dataAcordo = null, int? quantidadeParcelas = null);
+        ApiResponse<PageAcordoResponse> ListarAcordosWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? statusAcordo = null, string dataAcordo = null, int? quantidadeParcelas = null);
         
         /// <summary>
         /// Listar parcelas do acordo
@@ -178,7 +224,7 @@ namespace Conductor.Pier.Api
         /// <param name="numeroParcela">N\u00FAmero da parcela (optional)</param>
         /// <param name="dataVencimento">Data vencimento da parcela do acordo (optional)</param>
         /// <returns>PageAcordoParcelaResponse</returns>
-        PageAcordoParcelaResponse Listar_0 (List<string> sort = null, int? page = null, int? limit = null, long? idAcordo = null, string nossoNumero = null, int? numeroParcela = null, string dataVencimento = null);
+        PageAcordoParcelaResponse ListarParcelasAcordo (List<string> sort = null, int? page = null, int? limit = null, long? idAcordo = null, string nossoNumero = null, int? numeroParcela = null, string dataVencimento = null);
   
         /// <summary>
         /// Listar parcelas do acordo
@@ -195,7 +241,7 @@ namespace Conductor.Pier.Api
         /// <param name="numeroParcela">N\u00FAmero da parcela (optional)</param>
         /// <param name="dataVencimento">Data vencimento da parcela do acordo (optional)</param>
         /// <returns>ApiResponse of PageAcordoParcelaResponse</returns>
-        ApiResponse<PageAcordoParcelaResponse> Listar_0WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idAcordo = null, string nossoNumero = null, int? numeroParcela = null, string dataVencimento = null);
+        ApiResponse<PageAcordoParcelaResponse> ListarParcelasAcordoWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idAcordo = null, string nossoNumero = null, int? numeroParcela = null, string dataVencimento = null);
         
         /// <summary>
         /// Quebra o acordo pelo id informado
@@ -228,7 +274,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">request</param>
         /// <returns>PlanoParcelamentoAcordoResponse</returns>
-        PlanoParcelamentoAcordoResponse SimularPlanosParcelamentos (PlanoParcelamentoAcordoRequest request);
+        PlanoParcelamentoAcordoResponse SimularPlanosParcelamentosAcordos (PlanoParcelamentoAcordoRequest request);
   
         /// <summary>
         /// Realiza simula\u00E7\u00F5es de planos de parcelamento para acordos
@@ -239,7 +285,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">request</param>
         /// <returns>ApiResponse of PlanoParcelamentoAcordoResponse</returns>
-        ApiResponse<PlanoParcelamentoAcordoResponse> SimularPlanosParcelamentosWithHttpInfo (PlanoParcelamentoAcordoRequest request);
+        ApiResponse<PlanoParcelamentoAcordoResponse> SimularPlanosParcelamentosAcordosWithHttpInfo (PlanoParcelamentoAcordoRequest request);
         
         /// <summary>
         /// Visualiza os boletos das parcelas do acordo
@@ -250,7 +296,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do acordo (id)</param>
         /// <returns>Object</returns>
-        Object VisualizarBoletos (long? id);
+        Object VisualizarBoletosAcordo (long? id);
   
         /// <summary>
         /// Visualiza os boletos das parcelas do acordo
@@ -261,7 +307,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do acordo (id)</param>
         /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> VisualizarBoletosWithHttpInfo (long? id);
+        ApiResponse<Object> VisualizarBoletosAcordoWithHttpInfo (long? id);
         
         #endregion Synchronous Operations
         
@@ -276,7 +322,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do acordo (id)</param>
         /// <returns>Task of AcordoDetalheResponse</returns>
-        System.Threading.Tasks.Task<AcordoDetalheResponse> ConsultarAsync (long? id);
+        System.Threading.Tasks.Task<AcordoDetalheResponse> ConsultarAcordoAsync (long? id);
 
         /// <summary>
         /// Consulta os dados de um determinado acordo
@@ -287,7 +333,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do acordo (id)</param>
         /// <returns>Task of ApiResponse (AcordoDetalheResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AcordoDetalheResponse>> ConsultarAsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<AcordoDetalheResponse>> ConsultarAcordoAsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Consulta uma parcela do acordo
@@ -298,7 +344,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Identificador da parcela</param>
         /// <returns>Task of ParcelaAcordoResponse</returns>
-        System.Threading.Tasks.Task<ParcelaAcordoResponse> ConsultarPorIdAsync (long? id);
+        System.Threading.Tasks.Task<ParcelaAcordoResponse> ConsultarParcelaAcordoAsync (long? id);
 
         /// <summary>
         /// Consulta uma parcela do acordo
@@ -309,7 +355,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Identificador da parcela</param>
         /// <returns>Task of ApiResponse (ParcelaAcordoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ParcelaAcordoResponse>> ConsultarPorIdAsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<ParcelaAcordoResponse>> ConsultarParcelaAcordoAsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Enviar termo do acordo por e-mail.
@@ -321,7 +367,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do acordo (id).</param>
         /// <param name="emailRequest">emailRequest</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> EnviarEmailTermoAsync (long? id, AcordoEmailRequest emailRequest);
+        System.Threading.Tasks.Task<string> EnviarTermoPorEmailAsync (long? id, AcordoEmailRequest emailRequest);
 
         /// <summary>
         /// Enviar termo do acordo por e-mail.
@@ -333,7 +379,31 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do acordo (id).</param>
         /// <param name="emailRequest">emailRequest</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> EnviarEmailTermoAsyncWithHttpInfo (long? id, AcordoEmailRequest emailRequest);
+        System.Threading.Tasks.Task<ApiResponse<string>> EnviarTermoPorEmailAsyncWithHttpInfo (long? id, AcordoEmailRequest emailRequest);
+        
+        /// <summary>
+        /// Realiza a gera\u00E7\u00E3o de um boleto de entrada para o c\u00F3digo de identifica\u00E7\u00E3o do acordo informado
+        /// </summary>
+        /// <remarks>
+        /// Realiza a gera\u00E7\u00E3o de um boleto de entrada para o c\u00F3digo de identifica\u00E7\u00E3o do acordo informado.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <param name="acordoBoletoPersist">acordoBoletoPersist (optional)</param>
+        /// <returns>Task of BoletoResponse</returns>
+        System.Threading.Tasks.Task<BoletoResponse> GerarBoletoEntradaAsync (long? id, AcordoBoletoPersist acordoBoletoPersist = null);
+
+        /// <summary>
+        /// Realiza a gera\u00E7\u00E3o de um boleto de entrada para o c\u00F3digo de identifica\u00E7\u00E3o do acordo informado
+        /// </summary>
+        /// <remarks>
+        /// Realiza a gera\u00E7\u00E3o de um boleto de entrada para o c\u00F3digo de identifica\u00E7\u00E3o do acordo informado.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <param name="acordoBoletoPersist">acordoBoletoPersist (optional)</param>
+        /// <returns>Task of ApiResponse (BoletoResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<BoletoResponse>> GerarBoletoEntradaAsyncWithHttpInfo (long? id, AcordoBoletoPersist acordoBoletoPersist = null);
         
         /// <summary>
         /// Gerar boleto da parcela do acordo
@@ -344,7 +414,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Identificador da parcela</param>
         /// <returns>Task of BoletoParcelaAcordoResponse</returns>
-        System.Threading.Tasks.Task<BoletoParcelaAcordoResponse> GerarBoletoAsync (long? id);
+        System.Threading.Tasks.Task<BoletoParcelaAcordoResponse> GerarBoletoParcelaAcordoAsync (long? id);
 
         /// <summary>
         /// Gerar boleto da parcela do acordo
@@ -355,7 +425,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Identificador da parcela</param>
         /// <returns>Task of ApiResponse (BoletoParcelaAcordoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BoletoParcelaAcordoResponse>> GerarBoletoAsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<BoletoParcelaAcordoResponse>> GerarBoletoParcelaAcordoAsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Gerar arquivo do termo de acordo
@@ -366,7 +436,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do acordo (id).</param>
         /// <returns>Task of List&lt;ByteArray&gt;</returns>
-        System.Threading.Tasks.Task<List<ByteArray>> GerarTermoAsync (long? id);
+        System.Threading.Tasks.Task<List<ByteArray>> GerarTermoAcordoAsync (long? id);
 
         /// <summary>
         /// Gerar arquivo do termo de acordo
@@ -377,7 +447,29 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do acordo (id).</param>
         /// <returns>Task of ApiResponse (List&lt;ByteArray&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<ByteArray>>> GerarTermoAsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<List<ByteArray>>> GerarTermoAcordoAsyncWithHttpInfo (long? id);
+        
+        /// <summary>
+        /// Insere um novo acordo.
+        /// </summary>
+        /// <remarks>
+        /// Recurso para a cria\u00E7\u00E3o de um novo acordo de cobran\u00E7a.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="acordoPersist">acordoPersist</param>
+        /// <returns>Task of AcordoDetalheResponse</returns>
+        System.Threading.Tasks.Task<AcordoDetalheResponse> IncluirAcordoAsync (AcordoPersist acordoPersist);
+
+        /// <summary>
+        /// Insere um novo acordo.
+        /// </summary>
+        /// <remarks>
+        /// Recurso para a cria\u00E7\u00E3o de um novo acordo de cobran\u00E7a.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="acordoPersist">acordoPersist</param>
+        /// <returns>Task of ApiResponse (AcordoDetalheResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AcordoDetalheResponse>> IncluirAcordoAsyncWithHttpInfo (AcordoPersist acordoPersist);
         
         /// <summary>
         /// Lista os acordos existentes na base
@@ -394,7 +486,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataAcordo">Data do acordo (optional)</param>
         /// <param name="quantidadeParcelas">Quantidade de parcelas (optional)</param>
         /// <returns>Task of PageAcordoResponse</returns>
-        System.Threading.Tasks.Task<PageAcordoResponse> ListarAsync (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? statusAcordo = null, string dataAcordo = null, int? quantidadeParcelas = null);
+        System.Threading.Tasks.Task<PageAcordoResponse> ListarAcordosAsync (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? statusAcordo = null, string dataAcordo = null, int? quantidadeParcelas = null);
 
         /// <summary>
         /// Lista os acordos existentes na base
@@ -411,7 +503,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataAcordo">Data do acordo (optional)</param>
         /// <param name="quantidadeParcelas">Quantidade de parcelas (optional)</param>
         /// <returns>Task of ApiResponse (PageAcordoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageAcordoResponse>> ListarAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? statusAcordo = null, string dataAcordo = null, int? quantidadeParcelas = null);
+        System.Threading.Tasks.Task<ApiResponse<PageAcordoResponse>> ListarAcordosAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? statusAcordo = null, string dataAcordo = null, int? quantidadeParcelas = null);
         
         /// <summary>
         /// Listar parcelas do acordo
@@ -428,7 +520,7 @@ namespace Conductor.Pier.Api
         /// <param name="numeroParcela">N\u00FAmero da parcela (optional)</param>
         /// <param name="dataVencimento">Data vencimento da parcela do acordo (optional)</param>
         /// <returns>Task of PageAcordoParcelaResponse</returns>
-        System.Threading.Tasks.Task<PageAcordoParcelaResponse> Listar_0Async (List<string> sort = null, int? page = null, int? limit = null, long? idAcordo = null, string nossoNumero = null, int? numeroParcela = null, string dataVencimento = null);
+        System.Threading.Tasks.Task<PageAcordoParcelaResponse> ListarParcelasAcordoAsync (List<string> sort = null, int? page = null, int? limit = null, long? idAcordo = null, string nossoNumero = null, int? numeroParcela = null, string dataVencimento = null);
 
         /// <summary>
         /// Listar parcelas do acordo
@@ -445,7 +537,7 @@ namespace Conductor.Pier.Api
         /// <param name="numeroParcela">N\u00FAmero da parcela (optional)</param>
         /// <param name="dataVencimento">Data vencimento da parcela do acordo (optional)</param>
         /// <returns>Task of ApiResponse (PageAcordoParcelaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageAcordoParcelaResponse>> Listar_0AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idAcordo = null, string nossoNumero = null, int? numeroParcela = null, string dataVencimento = null);
+        System.Threading.Tasks.Task<ApiResponse<PageAcordoParcelaResponse>> ListarParcelasAcordoAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idAcordo = null, string nossoNumero = null, int? numeroParcela = null, string dataVencimento = null);
         
         /// <summary>
         /// Quebra o acordo pelo id informado
@@ -478,7 +570,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">request</param>
         /// <returns>Task of PlanoParcelamentoAcordoResponse</returns>
-        System.Threading.Tasks.Task<PlanoParcelamentoAcordoResponse> SimularPlanosParcelamentosAsync (PlanoParcelamentoAcordoRequest request);
+        System.Threading.Tasks.Task<PlanoParcelamentoAcordoResponse> SimularPlanosParcelamentosAcordosAsync (PlanoParcelamentoAcordoRequest request);
 
         /// <summary>
         /// Realiza simula\u00E7\u00F5es de planos de parcelamento para acordos
@@ -489,7 +581,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">request</param>
         /// <returns>Task of ApiResponse (PlanoParcelamentoAcordoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PlanoParcelamentoAcordoResponse>> SimularPlanosParcelamentosAsyncWithHttpInfo (PlanoParcelamentoAcordoRequest request);
+        System.Threading.Tasks.Task<ApiResponse<PlanoParcelamentoAcordoResponse>> SimularPlanosParcelamentosAcordosAsyncWithHttpInfo (PlanoParcelamentoAcordoRequest request);
         
         /// <summary>
         /// Visualiza os boletos das parcelas do acordo
@@ -500,7 +592,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do acordo (id)</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> VisualizarBoletosAsync (long? id);
+        System.Threading.Tasks.Task<Object> VisualizarBoletosAcordoAsync (long? id);
 
         /// <summary>
         /// Visualiza os boletos das parcelas do acordo
@@ -511,7 +603,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do acordo (id)</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> VisualizarBoletosAsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<Object>> VisualizarBoletosAcordoAsyncWithHttpInfo (long? id);
         
         #endregion Asynchronous Operations
         
@@ -611,9 +703,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do acordo (id)</param> 
         /// <returns>AcordoDetalheResponse</returns>
-        public AcordoDetalheResponse Consultar (long? id)
+        public AcordoDetalheResponse ConsultarAcordo (long? id)
         {
-             ApiResponse<AcordoDetalheResponse> localVarResponse = ConsultarWithHttpInfo(id);
+             ApiResponse<AcordoDetalheResponse> localVarResponse = ConsultarAcordoWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -623,12 +715,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do acordo (id)</param> 
         /// <returns>ApiResponse of AcordoDetalheResponse</returns>
-        public ApiResponse< AcordoDetalheResponse > ConsultarWithHttpInfo (long? id)
+        public ApiResponse< AcordoDetalheResponse > ConsultarAcordoWithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling AcordoApi->Consultar");
+                throw new ApiException(400, "Missing required parameter 'id' when calling AcordoApi->ConsultarAcordo");
             
     
             var localVarPath = "/api/acordos/{id}";
@@ -674,9 +766,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarAcordo: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarAcordo: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<AcordoDetalheResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -691,9 +783,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do acordo (id)</param>
         /// <returns>Task of AcordoDetalheResponse</returns>
-        public async System.Threading.Tasks.Task<AcordoDetalheResponse> ConsultarAsync (long? id)
+        public async System.Threading.Tasks.Task<AcordoDetalheResponse> ConsultarAcordoAsync (long? id)
         {
-             ApiResponse<AcordoDetalheResponse> localVarResponse = await ConsultarAsyncWithHttpInfo(id);
+             ApiResponse<AcordoDetalheResponse> localVarResponse = await ConsultarAcordoAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -704,10 +796,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do acordo (id)</param>
         /// <returns>Task of ApiResponse (AcordoDetalheResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AcordoDetalheResponse>> ConsultarAsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<AcordoDetalheResponse>> ConsultarAcordoAsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling Consultar");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarAcordo");
             
     
             var localVarPath = "/api/acordos/{id}";
@@ -753,9 +845,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarAcordo: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarAcordo: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<AcordoDetalheResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -769,9 +861,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Identificador da parcela</param> 
         /// <returns>ParcelaAcordoResponse</returns>
-        public ParcelaAcordoResponse ConsultarPorId (long? id)
+        public ParcelaAcordoResponse ConsultarParcelaAcordo (long? id)
         {
-             ApiResponse<ParcelaAcordoResponse> localVarResponse = ConsultarPorIdWithHttpInfo(id);
+             ApiResponse<ParcelaAcordoResponse> localVarResponse = ConsultarParcelaAcordoWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -781,12 +873,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Identificador da parcela</param> 
         /// <returns>ApiResponse of ParcelaAcordoResponse</returns>
-        public ApiResponse< ParcelaAcordoResponse > ConsultarPorIdWithHttpInfo (long? id)
+        public ApiResponse< ParcelaAcordoResponse > ConsultarParcelaAcordoWithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling AcordoApi->ConsultarPorId");
+                throw new ApiException(400, "Missing required parameter 'id' when calling AcordoApi->ConsultarParcelaAcordo");
             
     
             var localVarPath = "/api/parcelas-acordos/{id}";
@@ -832,9 +924,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarPorId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarParcelaAcordo: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarPorId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarParcelaAcordo: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<ParcelaAcordoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -849,9 +941,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Identificador da parcela</param>
         /// <returns>Task of ParcelaAcordoResponse</returns>
-        public async System.Threading.Tasks.Task<ParcelaAcordoResponse> ConsultarPorIdAsync (long? id)
+        public async System.Threading.Tasks.Task<ParcelaAcordoResponse> ConsultarParcelaAcordoAsync (long? id)
         {
-             ApiResponse<ParcelaAcordoResponse> localVarResponse = await ConsultarPorIdAsyncWithHttpInfo(id);
+             ApiResponse<ParcelaAcordoResponse> localVarResponse = await ConsultarParcelaAcordoAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -862,10 +954,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Identificador da parcela</param>
         /// <returns>Task of ApiResponse (ParcelaAcordoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ParcelaAcordoResponse>> ConsultarPorIdAsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<ParcelaAcordoResponse>> ConsultarParcelaAcordoAsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarPorId");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarParcelaAcordo");
             
     
             var localVarPath = "/api/parcelas-acordos/{id}";
@@ -911,9 +1003,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarPorId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarParcelaAcordo: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarPorId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarParcelaAcordo: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<ParcelaAcordoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -928,9 +1020,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do acordo (id).</param> 
         /// <param name="emailRequest">emailRequest</param> 
         /// <returns>string</returns>
-        public string EnviarEmailTermo (long? id, AcordoEmailRequest emailRequest)
+        public string EnviarTermoPorEmail (long? id, AcordoEmailRequest emailRequest)
         {
-             ApiResponse<string> localVarResponse = EnviarEmailTermoWithHttpInfo(id, emailRequest);
+             ApiResponse<string> localVarResponse = EnviarTermoPorEmailWithHttpInfo(id, emailRequest);
              return localVarResponse.Data;
         }
 
@@ -941,16 +1033,16 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do acordo (id).</param> 
         /// <param name="emailRequest">emailRequest</param> 
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > EnviarEmailTermoWithHttpInfo (long? id, AcordoEmailRequest emailRequest)
+        public ApiResponse< string > EnviarTermoPorEmailWithHttpInfo (long? id, AcordoEmailRequest emailRequest)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling AcordoApi->EnviarEmailTermo");
+                throw new ApiException(400, "Missing required parameter 'id' when calling AcordoApi->EnviarTermoPorEmail");
             
             // verify the required parameter 'emailRequest' is set
             if (emailRequest == null)
-                throw new ApiException(400, "Missing required parameter 'emailRequest' when calling AcordoApi->EnviarEmailTermo");
+                throw new ApiException(400, "Missing required parameter 'emailRequest' when calling AcordoApi->EnviarTermoPorEmail");
             
     
             var localVarPath = "/api/acordos/{id}/enviar-termo";
@@ -1003,9 +1095,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling EnviarEmailTermo: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling EnviarTermoPorEmail: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling EnviarEmailTermo: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling EnviarTermoPorEmail: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1021,9 +1113,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do acordo (id).</param>
         /// <param name="emailRequest">emailRequest</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> EnviarEmailTermoAsync (long? id, AcordoEmailRequest emailRequest)
+        public async System.Threading.Tasks.Task<string> EnviarTermoPorEmailAsync (long? id, AcordoEmailRequest emailRequest)
         {
-             ApiResponse<string> localVarResponse = await EnviarEmailTermoAsyncWithHttpInfo(id, emailRequest);
+             ApiResponse<string> localVarResponse = await EnviarTermoPorEmailAsyncWithHttpInfo(id, emailRequest);
              return localVarResponse.Data;
 
         }
@@ -1035,12 +1127,12 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do acordo (id).</param>
         /// <param name="emailRequest">emailRequest</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> EnviarEmailTermoAsyncWithHttpInfo (long? id, AcordoEmailRequest emailRequest)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> EnviarTermoPorEmailAsyncWithHttpInfo (long? id, AcordoEmailRequest emailRequest)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling EnviarEmailTermo");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling EnviarTermoPorEmail");
             // verify the required parameter 'emailRequest' is set
-            if (emailRequest == null) throw new ApiException(400, "Missing required parameter 'emailRequest' when calling EnviarEmailTermo");
+            if (emailRequest == null) throw new ApiException(400, "Missing required parameter 'emailRequest' when calling EnviarTermoPorEmail");
             
     
             var localVarPath = "/api/acordos/{id}/enviar-termo";
@@ -1093,13 +1185,189 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling EnviarEmailTermo: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling EnviarTermoPorEmail: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling EnviarEmailTermo: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling EnviarTermoPorEmail: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+            
+        }
+        
+        /// <summary>
+        /// Realiza a gera\u00E7\u00E3o de um boleto de entrada para o c\u00F3digo de identifica\u00E7\u00E3o do acordo informado Realiza a gera\u00E7\u00E3o de um boleto de entrada para o c\u00F3digo de identifica\u00E7\u00E3o do acordo informado.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param> 
+        /// <param name="acordoBoletoPersist">acordoBoletoPersist (optional)</param> 
+        /// <returns>BoletoResponse</returns>
+        public BoletoResponse GerarBoletoEntrada (long? id, AcordoBoletoPersist acordoBoletoPersist = null)
+        {
+             ApiResponse<BoletoResponse> localVarResponse = GerarBoletoEntradaWithHttpInfo(id, acordoBoletoPersist);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Realiza a gera\u00E7\u00E3o de um boleto de entrada para o c\u00F3digo de identifica\u00E7\u00E3o do acordo informado Realiza a gera\u00E7\u00E3o de um boleto de entrada para o c\u00F3digo de identifica\u00E7\u00E3o do acordo informado.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param> 
+        /// <param name="acordoBoletoPersist">acordoBoletoPersist (optional)</param> 
+        /// <returns>ApiResponse of BoletoResponse</returns>
+        public ApiResponse< BoletoResponse > GerarBoletoEntradaWithHttpInfo (long? id, AcordoBoletoPersist acordoBoletoPersist = null)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling AcordoApi->GerarBoletoEntrada");
+            
+    
+            var localVarPath = "/api/acordos/{id}/boletos";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json;charset=UTF-8"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            if (acordoBoletoPersist.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(acordoBoletoPersist); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = acordoBoletoPersist; // byte array
+            }
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GerarBoletoEntrada: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GerarBoletoEntrada: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<BoletoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (BoletoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(BoletoResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Realiza a gera\u00E7\u00E3o de um boleto de entrada para o c\u00F3digo de identifica\u00E7\u00E3o do acordo informado Realiza a gera\u00E7\u00E3o de um boleto de entrada para o c\u00F3digo de identifica\u00E7\u00E3o do acordo informado.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <param name="acordoBoletoPersist">acordoBoletoPersist (optional)</param>
+        /// <returns>Task of BoletoResponse</returns>
+        public async System.Threading.Tasks.Task<BoletoResponse> GerarBoletoEntradaAsync (long? id, AcordoBoletoPersist acordoBoletoPersist = null)
+        {
+             ApiResponse<BoletoResponse> localVarResponse = await GerarBoletoEntradaAsyncWithHttpInfo(id, acordoBoletoPersist);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Realiza a gera\u00E7\u00E3o de um boleto de entrada para o c\u00F3digo de identifica\u00E7\u00E3o do acordo informado Realiza a gera\u00E7\u00E3o de um boleto de entrada para o c\u00F3digo de identifica\u00E7\u00E3o do acordo informado.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <param name="acordoBoletoPersist">acordoBoletoPersist (optional)</param>
+        /// <returns>Task of ApiResponse (BoletoResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<BoletoResponse>> GerarBoletoEntradaAsyncWithHttpInfo (long? id, AcordoBoletoPersist acordoBoletoPersist = null)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling GerarBoletoEntrada");
+            
+    
+            var localVarPath = "/api/acordos/{id}/boletos";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json;charset=UTF-8"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            if (acordoBoletoPersist.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(acordoBoletoPersist); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = acordoBoletoPersist; // byte array
+            }
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GerarBoletoEntrada: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GerarBoletoEntrada: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BoletoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (BoletoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(BoletoResponse)));
             
         }
         
@@ -1109,9 +1377,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Identificador da parcela</param> 
         /// <returns>BoletoParcelaAcordoResponse</returns>
-        public BoletoParcelaAcordoResponse GerarBoleto (long? id)
+        public BoletoParcelaAcordoResponse GerarBoletoParcelaAcordo (long? id)
         {
-             ApiResponse<BoletoParcelaAcordoResponse> localVarResponse = GerarBoletoWithHttpInfo(id);
+             ApiResponse<BoletoParcelaAcordoResponse> localVarResponse = GerarBoletoParcelaAcordoWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -1121,12 +1389,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Identificador da parcela</param> 
         /// <returns>ApiResponse of BoletoParcelaAcordoResponse</returns>
-        public ApiResponse< BoletoParcelaAcordoResponse > GerarBoletoWithHttpInfo (long? id)
+        public ApiResponse< BoletoParcelaAcordoResponse > GerarBoletoParcelaAcordoWithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling AcordoApi->GerarBoleto");
+                throw new ApiException(400, "Missing required parameter 'id' when calling AcordoApi->GerarBoletoParcelaAcordo");
             
     
             var localVarPath = "/api/parcelas-acordos/{id}/boletos";
@@ -1172,9 +1440,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GerarBoleto: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GerarBoletoParcelaAcordo: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GerarBoleto: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GerarBoletoParcelaAcordo: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<BoletoParcelaAcordoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1189,9 +1457,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Identificador da parcela</param>
         /// <returns>Task of BoletoParcelaAcordoResponse</returns>
-        public async System.Threading.Tasks.Task<BoletoParcelaAcordoResponse> GerarBoletoAsync (long? id)
+        public async System.Threading.Tasks.Task<BoletoParcelaAcordoResponse> GerarBoletoParcelaAcordoAsync (long? id)
         {
-             ApiResponse<BoletoParcelaAcordoResponse> localVarResponse = await GerarBoletoAsyncWithHttpInfo(id);
+             ApiResponse<BoletoParcelaAcordoResponse> localVarResponse = await GerarBoletoParcelaAcordoAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -1202,10 +1470,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Identificador da parcela</param>
         /// <returns>Task of ApiResponse (BoletoParcelaAcordoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<BoletoParcelaAcordoResponse>> GerarBoletoAsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<BoletoParcelaAcordoResponse>> GerarBoletoParcelaAcordoAsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling GerarBoleto");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling GerarBoletoParcelaAcordo");
             
     
             var localVarPath = "/api/parcelas-acordos/{id}/boletos";
@@ -1251,9 +1519,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GerarBoleto: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GerarBoletoParcelaAcordo: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GerarBoleto: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GerarBoletoParcelaAcordo: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<BoletoParcelaAcordoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1267,9 +1535,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do acordo (id).</param> 
         /// <returns>List&lt;ByteArray&gt;</returns>
-        public List<ByteArray> GerarTermo (long? id)
+        public List<ByteArray> GerarTermoAcordo (long? id)
         {
-             ApiResponse<List<ByteArray>> localVarResponse = GerarTermoWithHttpInfo(id);
+             ApiResponse<List<ByteArray>> localVarResponse = GerarTermoAcordoWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -1279,12 +1547,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do acordo (id).</param> 
         /// <returns>ApiResponse of List&lt;ByteArray&gt;</returns>
-        public ApiResponse< List<ByteArray> > GerarTermoWithHttpInfo (long? id)
+        public ApiResponse< List<ByteArray> > GerarTermoAcordoWithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling AcordoApi->GerarTermo");
+                throw new ApiException(400, "Missing required parameter 'id' when calling AcordoApi->GerarTermoAcordo");
             
     
             var localVarPath = "/api/acordos/{id}/arquivo.pdf";
@@ -1330,9 +1598,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GerarTermo: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GerarTermoAcordo: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GerarTermo: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GerarTermoAcordo: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<List<ByteArray>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1347,9 +1615,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do acordo (id).</param>
         /// <returns>Task of List&lt;ByteArray&gt;</returns>
-        public async System.Threading.Tasks.Task<List<ByteArray>> GerarTermoAsync (long? id)
+        public async System.Threading.Tasks.Task<List<ByteArray>> GerarTermoAcordoAsync (long? id)
         {
-             ApiResponse<List<ByteArray>> localVarResponse = await GerarTermoAsyncWithHttpInfo(id);
+             ApiResponse<List<ByteArray>> localVarResponse = await GerarTermoAcordoAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -1360,10 +1628,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do acordo (id).</param>
         /// <returns>Task of ApiResponse (List&lt;ByteArray&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<ByteArray>>> GerarTermoAsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<List<ByteArray>>> GerarTermoAcordoAsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling GerarTermo");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling GerarTermoAcordo");
             
     
             var localVarPath = "/api/acordos/{id}/arquivo.pdf";
@@ -1409,13 +1677,183 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GerarTermo: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GerarTermoAcordo: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GerarTermo: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GerarTermoAcordo: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<List<ByteArray>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (List<ByteArray>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<ByteArray>)));
+            
+        }
+        
+        /// <summary>
+        /// Insere um novo acordo. Recurso para a cria\u00E7\u00E3o de um novo acordo de cobran\u00E7a.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="acordoPersist">acordoPersist</param> 
+        /// <returns>AcordoDetalheResponse</returns>
+        public AcordoDetalheResponse IncluirAcordo (AcordoPersist acordoPersist)
+        {
+             ApiResponse<AcordoDetalheResponse> localVarResponse = IncluirAcordoWithHttpInfo(acordoPersist);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Insere um novo acordo. Recurso para a cria\u00E7\u00E3o de um novo acordo de cobran\u00E7a.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="acordoPersist">acordoPersist</param> 
+        /// <returns>ApiResponse of AcordoDetalheResponse</returns>
+        public ApiResponse< AcordoDetalheResponse > IncluirAcordoWithHttpInfo (AcordoPersist acordoPersist)
+        {
+            
+            // verify the required parameter 'acordoPersist' is set
+            if (acordoPersist == null)
+                throw new ApiException(400, "Missing required parameter 'acordoPersist' when calling AcordoApi->IncluirAcordo");
+            
+    
+            var localVarPath = "/api/acordos";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json;charset=UTF-8"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            if (acordoPersist.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(acordoPersist); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = acordoPersist; // byte array
+            }
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling IncluirAcordo: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling IncluirAcordo: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<AcordoDetalheResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AcordoDetalheResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AcordoDetalheResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Insere um novo acordo. Recurso para a cria\u00E7\u00E3o de um novo acordo de cobran\u00E7a.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="acordoPersist">acordoPersist</param>
+        /// <returns>Task of AcordoDetalheResponse</returns>
+        public async System.Threading.Tasks.Task<AcordoDetalheResponse> IncluirAcordoAsync (AcordoPersist acordoPersist)
+        {
+             ApiResponse<AcordoDetalheResponse> localVarResponse = await IncluirAcordoAsyncWithHttpInfo(acordoPersist);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Insere um novo acordo. Recurso para a cria\u00E7\u00E3o de um novo acordo de cobran\u00E7a.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="acordoPersist">acordoPersist</param>
+        /// <returns>Task of ApiResponse (AcordoDetalheResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AcordoDetalheResponse>> IncluirAcordoAsyncWithHttpInfo (AcordoPersist acordoPersist)
+        {
+            // verify the required parameter 'acordoPersist' is set
+            if (acordoPersist == null) throw new ApiException(400, "Missing required parameter 'acordoPersist' when calling IncluirAcordo");
+            
+    
+            var localVarPath = "/api/acordos";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json;charset=UTF-8"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            if (acordoPersist.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(acordoPersist); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = acordoPersist; // byte array
+            }
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling IncluirAcordo: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling IncluirAcordo: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AcordoDetalheResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AcordoDetalheResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AcordoDetalheResponse)));
             
         }
         
@@ -1431,9 +1869,9 @@ namespace Conductor.Pier.Api
         /// <param name="dataAcordo">Data do acordo (optional)</param> 
         /// <param name="quantidadeParcelas">Quantidade de parcelas (optional)</param> 
         /// <returns>PageAcordoResponse</returns>
-        public PageAcordoResponse Listar (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? statusAcordo = null, string dataAcordo = null, int? quantidadeParcelas = null)
+        public PageAcordoResponse ListarAcordos (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? statusAcordo = null, string dataAcordo = null, int? quantidadeParcelas = null)
         {
-             ApiResponse<PageAcordoResponse> localVarResponse = ListarWithHttpInfo(sort, page, limit, idConta, statusAcordo, dataAcordo, quantidadeParcelas);
+             ApiResponse<PageAcordoResponse> localVarResponse = ListarAcordosWithHttpInfo(sort, page, limit, idConta, statusAcordo, dataAcordo, quantidadeParcelas);
              return localVarResponse.Data;
         }
 
@@ -1449,7 +1887,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataAcordo">Data do acordo (optional)</param> 
         /// <param name="quantidadeParcelas">Quantidade de parcelas (optional)</param> 
         /// <returns>ApiResponse of PageAcordoResponse</returns>
-        public ApiResponse< PageAcordoResponse > ListarWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? statusAcordo = null, string dataAcordo = null, int? quantidadeParcelas = null)
+        public ApiResponse< PageAcordoResponse > ListarAcordosWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? statusAcordo = null, string dataAcordo = null, int? quantidadeParcelas = null)
         {
             
     
@@ -1502,9 +1940,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Listar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarAcordos: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Listar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarAcordos: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageAcordoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1525,9 +1963,9 @@ namespace Conductor.Pier.Api
         /// <param name="dataAcordo">Data do acordo (optional)</param>
         /// <param name="quantidadeParcelas">Quantidade de parcelas (optional)</param>
         /// <returns>Task of PageAcordoResponse</returns>
-        public async System.Threading.Tasks.Task<PageAcordoResponse> ListarAsync (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? statusAcordo = null, string dataAcordo = null, int? quantidadeParcelas = null)
+        public async System.Threading.Tasks.Task<PageAcordoResponse> ListarAcordosAsync (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? statusAcordo = null, string dataAcordo = null, int? quantidadeParcelas = null)
         {
-             ApiResponse<PageAcordoResponse> localVarResponse = await ListarAsyncWithHttpInfo(sort, page, limit, idConta, statusAcordo, dataAcordo, quantidadeParcelas);
+             ApiResponse<PageAcordoResponse> localVarResponse = await ListarAcordosAsyncWithHttpInfo(sort, page, limit, idConta, statusAcordo, dataAcordo, quantidadeParcelas);
              return localVarResponse.Data;
 
         }
@@ -1544,7 +1982,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataAcordo">Data do acordo (optional)</param>
         /// <param name="quantidadeParcelas">Quantidade de parcelas (optional)</param>
         /// <returns>Task of ApiResponse (PageAcordoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageAcordoResponse>> ListarAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? statusAcordo = null, string dataAcordo = null, int? quantidadeParcelas = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageAcordoResponse>> ListarAcordosAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? statusAcordo = null, string dataAcordo = null, int? quantidadeParcelas = null)
         {
             
     
@@ -1597,9 +2035,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Listar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarAcordos: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Listar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarAcordos: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageAcordoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1619,9 +2057,9 @@ namespace Conductor.Pier.Api
         /// <param name="numeroParcela">N\u00FAmero da parcela (optional)</param> 
         /// <param name="dataVencimento">Data vencimento da parcela do acordo (optional)</param> 
         /// <returns>PageAcordoParcelaResponse</returns>
-        public PageAcordoParcelaResponse Listar_0 (List<string> sort = null, int? page = null, int? limit = null, long? idAcordo = null, string nossoNumero = null, int? numeroParcela = null, string dataVencimento = null)
+        public PageAcordoParcelaResponse ListarParcelasAcordo (List<string> sort = null, int? page = null, int? limit = null, long? idAcordo = null, string nossoNumero = null, int? numeroParcela = null, string dataVencimento = null)
         {
-             ApiResponse<PageAcordoParcelaResponse> localVarResponse = Listar_0WithHttpInfo(sort, page, limit, idAcordo, nossoNumero, numeroParcela, dataVencimento);
+             ApiResponse<PageAcordoParcelaResponse> localVarResponse = ListarParcelasAcordoWithHttpInfo(sort, page, limit, idAcordo, nossoNumero, numeroParcela, dataVencimento);
              return localVarResponse.Data;
         }
 
@@ -1637,7 +2075,7 @@ namespace Conductor.Pier.Api
         /// <param name="numeroParcela">N\u00FAmero da parcela (optional)</param> 
         /// <param name="dataVencimento">Data vencimento da parcela do acordo (optional)</param> 
         /// <returns>ApiResponse of PageAcordoParcelaResponse</returns>
-        public ApiResponse< PageAcordoParcelaResponse > Listar_0WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idAcordo = null, string nossoNumero = null, int? numeroParcela = null, string dataVencimento = null)
+        public ApiResponse< PageAcordoParcelaResponse > ListarParcelasAcordoWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idAcordo = null, string nossoNumero = null, int? numeroParcela = null, string dataVencimento = null)
         {
             
     
@@ -1690,9 +2128,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Listar_0: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarParcelasAcordo: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Listar_0: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarParcelasAcordo: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageAcordoParcelaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1713,9 +2151,9 @@ namespace Conductor.Pier.Api
         /// <param name="numeroParcela">N\u00FAmero da parcela (optional)</param>
         /// <param name="dataVencimento">Data vencimento da parcela do acordo (optional)</param>
         /// <returns>Task of PageAcordoParcelaResponse</returns>
-        public async System.Threading.Tasks.Task<PageAcordoParcelaResponse> Listar_0Async (List<string> sort = null, int? page = null, int? limit = null, long? idAcordo = null, string nossoNumero = null, int? numeroParcela = null, string dataVencimento = null)
+        public async System.Threading.Tasks.Task<PageAcordoParcelaResponse> ListarParcelasAcordoAsync (List<string> sort = null, int? page = null, int? limit = null, long? idAcordo = null, string nossoNumero = null, int? numeroParcela = null, string dataVencimento = null)
         {
-             ApiResponse<PageAcordoParcelaResponse> localVarResponse = await Listar_0AsyncWithHttpInfo(sort, page, limit, idAcordo, nossoNumero, numeroParcela, dataVencimento);
+             ApiResponse<PageAcordoParcelaResponse> localVarResponse = await ListarParcelasAcordoAsyncWithHttpInfo(sort, page, limit, idAcordo, nossoNumero, numeroParcela, dataVencimento);
              return localVarResponse.Data;
 
         }
@@ -1732,7 +2170,7 @@ namespace Conductor.Pier.Api
         /// <param name="numeroParcela">N\u00FAmero da parcela (optional)</param>
         /// <param name="dataVencimento">Data vencimento da parcela do acordo (optional)</param>
         /// <returns>Task of ApiResponse (PageAcordoParcelaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageAcordoParcelaResponse>> Listar_0AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idAcordo = null, string nossoNumero = null, int? numeroParcela = null, string dataVencimento = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageAcordoParcelaResponse>> ListarParcelasAcordoAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idAcordo = null, string nossoNumero = null, int? numeroParcela = null, string dataVencimento = null)
         {
             
     
@@ -1785,9 +2223,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Listar_0: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarParcelasAcordo: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Listar_0: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarParcelasAcordo: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageAcordoParcelaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1959,9 +2397,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">request</param> 
         /// <returns>PlanoParcelamentoAcordoResponse</returns>
-        public PlanoParcelamentoAcordoResponse SimularPlanosParcelamentos (PlanoParcelamentoAcordoRequest request)
+        public PlanoParcelamentoAcordoResponse SimularPlanosParcelamentosAcordos (PlanoParcelamentoAcordoRequest request)
         {
-             ApiResponse<PlanoParcelamentoAcordoResponse> localVarResponse = SimularPlanosParcelamentosWithHttpInfo(request);
+             ApiResponse<PlanoParcelamentoAcordoResponse> localVarResponse = SimularPlanosParcelamentosAcordosWithHttpInfo(request);
              return localVarResponse.Data;
         }
 
@@ -1971,12 +2409,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">request</param> 
         /// <returns>ApiResponse of PlanoParcelamentoAcordoResponse</returns>
-        public ApiResponse< PlanoParcelamentoAcordoResponse > SimularPlanosParcelamentosWithHttpInfo (PlanoParcelamentoAcordoRequest request)
+        public ApiResponse< PlanoParcelamentoAcordoResponse > SimularPlanosParcelamentosAcordosWithHttpInfo (PlanoParcelamentoAcordoRequest request)
         {
             
             // verify the required parameter 'request' is set
             if (request == null)
-                throw new ApiException(400, "Missing required parameter 'request' when calling AcordoApi->SimularPlanosParcelamentos");
+                throw new ApiException(400, "Missing required parameter 'request' when calling AcordoApi->SimularPlanosParcelamentosAcordos");
             
     
             var localVarPath = "/api/acordos/planos-parcelamentos";
@@ -2028,9 +2466,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SimularPlanosParcelamentos: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SimularPlanosParcelamentosAcordos: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SimularPlanosParcelamentos: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SimularPlanosParcelamentosAcordos: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PlanoParcelamentoAcordoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2045,9 +2483,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">request</param>
         /// <returns>Task of PlanoParcelamentoAcordoResponse</returns>
-        public async System.Threading.Tasks.Task<PlanoParcelamentoAcordoResponse> SimularPlanosParcelamentosAsync (PlanoParcelamentoAcordoRequest request)
+        public async System.Threading.Tasks.Task<PlanoParcelamentoAcordoResponse> SimularPlanosParcelamentosAcordosAsync (PlanoParcelamentoAcordoRequest request)
         {
-             ApiResponse<PlanoParcelamentoAcordoResponse> localVarResponse = await SimularPlanosParcelamentosAsyncWithHttpInfo(request);
+             ApiResponse<PlanoParcelamentoAcordoResponse> localVarResponse = await SimularPlanosParcelamentosAcordosAsyncWithHttpInfo(request);
              return localVarResponse.Data;
 
         }
@@ -2058,10 +2496,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">request</param>
         /// <returns>Task of ApiResponse (PlanoParcelamentoAcordoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PlanoParcelamentoAcordoResponse>> SimularPlanosParcelamentosAsyncWithHttpInfo (PlanoParcelamentoAcordoRequest request)
+        public async System.Threading.Tasks.Task<ApiResponse<PlanoParcelamentoAcordoResponse>> SimularPlanosParcelamentosAcordosAsyncWithHttpInfo (PlanoParcelamentoAcordoRequest request)
         {
             // verify the required parameter 'request' is set
-            if (request == null) throw new ApiException(400, "Missing required parameter 'request' when calling SimularPlanosParcelamentos");
+            if (request == null) throw new ApiException(400, "Missing required parameter 'request' when calling SimularPlanosParcelamentosAcordos");
             
     
             var localVarPath = "/api/acordos/planos-parcelamentos";
@@ -2113,9 +2551,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SimularPlanosParcelamentos: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SimularPlanosParcelamentosAcordos: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SimularPlanosParcelamentos: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SimularPlanosParcelamentosAcordos: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PlanoParcelamentoAcordoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2129,9 +2567,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do acordo (id)</param> 
         /// <returns>Object</returns>
-        public Object VisualizarBoletos (long? id)
+        public Object VisualizarBoletosAcordo (long? id)
         {
-             ApiResponse<Object> localVarResponse = VisualizarBoletosWithHttpInfo(id);
+             ApiResponse<Object> localVarResponse = VisualizarBoletosAcordoWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -2141,12 +2579,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do acordo (id)</param> 
         /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > VisualizarBoletosWithHttpInfo (long? id)
+        public ApiResponse< Object > VisualizarBoletosAcordoWithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling AcordoApi->VisualizarBoletos");
+                throw new ApiException(400, "Missing required parameter 'id' when calling AcordoApi->VisualizarBoletosAcordo");
             
     
             var localVarPath = "/api/acordos/{id}/boletos.pdf";
@@ -2192,9 +2630,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling VisualizarBoletos: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling VisualizarBoletosAcordo: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling VisualizarBoletos: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling VisualizarBoletosAcordo: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2209,9 +2647,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do acordo (id)</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> VisualizarBoletosAsync (long? id)
+        public async System.Threading.Tasks.Task<Object> VisualizarBoletosAcordoAsync (long? id)
         {
-             ApiResponse<Object> localVarResponse = await VisualizarBoletosAsyncWithHttpInfo(id);
+             ApiResponse<Object> localVarResponse = await VisualizarBoletosAcordoAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -2222,10 +2660,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do acordo (id)</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> VisualizarBoletosAsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> VisualizarBoletosAcordoAsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling VisualizarBoletos");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling VisualizarBoletosAcordo");
             
     
             var localVarPath = "/api/acordos/{id}/boletos.pdf";
@@ -2271,9 +2709,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling VisualizarBoletos: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling VisualizarBoletosAcordo: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling VisualizarBoletos: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling VisualizarBoletosAcordo: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

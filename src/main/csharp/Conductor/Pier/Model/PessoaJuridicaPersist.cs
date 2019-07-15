@@ -22,14 +22,14 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="PessoaJuridicaPersist" /> class.
         /// Initializes a new instance of the <see cref="PessoaJuridicaPersist" />class.
         /// </summary>
-        /// <param name="Contato">Pessoa jur\u00EDdica contato.</param>
-        /// <param name="RazaoSocial">Raz\u00E3o social pessoa jur\u00EDdica (required).</param>
-        /// <param name="NumeroReceitaFederal">CGC(CNPJ) pessoa jur\u00EDdica (required).</param>
-        /// <param name="InscricaoEstadual">Inscri\u00E7\u00E3o estadual pessoa jur\u00EDdica.</param>
+        /// <param name="Contato">Contato da pessoa jur\u00EDdica.</param>
+        /// <param name="RazaoSocial">Raz\u00E3o social (required).</param>
+        /// <param name="NumeroReceitaFederal">CGC(CNPJ) da pessoa jur\u00EDdica (required).</param>
+        /// <param name="InscricaoEstadual">Inscri\u00E7\u00E3o estadual da pessoa jur\u00EDdica.</param>
         /// <param name="Banco">Banco da pessoa jur\u00EDdica (required).</param>
         /// <param name="Agencia">Ag\u00EAncia da pessoa jur\u00EDdica (required).</param>
         /// <param name="DigitoAgencia">D\u00EDgito da agencia.</param>
-        /// <param name="ContaCorrente">Conta corrente pessoa jur\u00EDdica.</param>
+        /// <param name="ContaCorrente">Conta corrente da pessoa jur\u00EDdica.</param>
         /// <param name="DigitoContaCorrente">D\u00EDgito conta corrente.</param>
 
         public PessoaJuridicaPersist(string Contato = null, string RazaoSocial = null, string NumeroReceitaFederal = null, string InscricaoEstadual = null, int? Banco = null, int? Agencia = null, string DigitoAgencia = null, string ContaCorrente = null, string DigitoContaCorrente = null)
@@ -80,30 +80,30 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Pessoa jur\u00EDdica contato
+        /// Contato da pessoa jur\u00EDdica
         /// </summary>
-        /// <value>Pessoa jur\u00EDdica contato</value>
+        /// <value>Contato da pessoa jur\u00EDdica</value>
         [DataMember(Name="contato", EmitDefaultValue=false)]
         public string Contato { get; set; }
     
         /// <summary>
-        /// Raz\u00E3o social pessoa jur\u00EDdica
+        /// Raz\u00E3o social
         /// </summary>
-        /// <value>Raz\u00E3o social pessoa jur\u00EDdica</value>
+        /// <value>Raz\u00E3o social</value>
         [DataMember(Name="razaoSocial", EmitDefaultValue=false)]
         public string RazaoSocial { get; set; }
     
         /// <summary>
-        /// CGC(CNPJ) pessoa jur\u00EDdica
+        /// CGC(CNPJ) da pessoa jur\u00EDdica
         /// </summary>
-        /// <value>CGC(CNPJ) pessoa jur\u00EDdica</value>
+        /// <value>CGC(CNPJ) da pessoa jur\u00EDdica</value>
         [DataMember(Name="numeroReceitaFederal", EmitDefaultValue=false)]
         public string NumeroReceitaFederal { get; set; }
     
         /// <summary>
-        /// Inscri\u00E7\u00E3o estadual pessoa jur\u00EDdica
+        /// Inscri\u00E7\u00E3o estadual da pessoa jur\u00EDdica
         /// </summary>
-        /// <value>Inscri\u00E7\u00E3o estadual pessoa jur\u00EDdica</value>
+        /// <value>Inscri\u00E7\u00E3o estadual da pessoa jur\u00EDdica</value>
         [DataMember(Name="inscricaoEstadual", EmitDefaultValue=false)]
         public string InscricaoEstadual { get; set; }
     
@@ -129,9 +129,9 @@ namespace Conductor.Pier.Model
         public string DigitoAgencia { get; set; }
     
         /// <summary>
-        /// Conta corrente pessoa jur\u00EDdica
+        /// Conta corrente da pessoa jur\u00EDdica
         /// </summary>
-        /// <value>Conta corrente pessoa jur\u00EDdica</value>
+        /// <value>Conta corrente da pessoa jur\u00EDdica</value>
         [DataMember(Name="contaCorrente", EmitDefaultValue=false)]
         public string ContaCorrente { get; set; }
     

@@ -30,7 +30,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataVencimento"> (optional)</param>
         /// <param name="dataVencimentoFim"> (optional)</param>
         /// <returns>PageRelatorioMovimentosControleProcessos</returns>
-        PageRelatorioMovimentosControleProcessos MovimentosControleProcessos (List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataVencimentoFim = null);
+        PageRelatorioMovimentosControleProcessos GerarRelatorioMovimentacaoControleProcessos (List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataVencimentoFim = null);
   
         /// <summary>
         /// Relat\u00F3rio com hist\u00F3rico de controles processos atualizados pelo batch
@@ -45,7 +45,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataVencimento"> (optional)</param>
         /// <param name="dataVencimentoFim"> (optional)</param>
         /// <returns>ApiResponse of PageRelatorioMovimentosControleProcessos</returns>
-        ApiResponse<PageRelatorioMovimentosControleProcessos> MovimentosControleProcessosWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataVencimentoFim = null);
+        ApiResponse<PageRelatorioMovimentosControleProcessos> GerarRelatorioMovimentacaoControleProcessosWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataVencimentoFim = null);
         
         #endregion Synchronous Operations
         
@@ -64,7 +64,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataVencimento"> (optional)</param>
         /// <param name="dataVencimentoFim"> (optional)</param>
         /// <returns>Task of PageRelatorioMovimentosControleProcessos</returns>
-        System.Threading.Tasks.Task<PageRelatorioMovimentosControleProcessos> MovimentosControleProcessosAsync (List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataVencimentoFim = null);
+        System.Threading.Tasks.Task<PageRelatorioMovimentosControleProcessos> GerarRelatorioMovimentacaoControleProcessosAsync (List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataVencimentoFim = null);
 
         /// <summary>
         /// Relat\u00F3rio com hist\u00F3rico de controles processos atualizados pelo batch
@@ -79,7 +79,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataVencimento"> (optional)</param>
         /// <param name="dataVencimentoFim"> (optional)</param>
         /// <returns>Task of ApiResponse (PageRelatorioMovimentosControleProcessos)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageRelatorioMovimentosControleProcessos>> MovimentosControleProcessosAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataVencimentoFim = null);
+        System.Threading.Tasks.Task<ApiResponse<PageRelatorioMovimentosControleProcessos>> GerarRelatorioMovimentacaoControleProcessosAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataVencimentoFim = null);
         
         #endregion Asynchronous Operations
         
@@ -183,9 +183,9 @@ namespace Conductor.Pier.Api
         /// <param name="dataVencimento"> (optional)</param> 
         /// <param name="dataVencimentoFim"> (optional)</param> 
         /// <returns>PageRelatorioMovimentosControleProcessos</returns>
-        public PageRelatorioMovimentosControleProcessos MovimentosControleProcessos (List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataVencimentoFim = null)
+        public PageRelatorioMovimentosControleProcessos GerarRelatorioMovimentacaoControleProcessos (List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataVencimentoFim = null)
         {
-             ApiResponse<PageRelatorioMovimentosControleProcessos> localVarResponse = MovimentosControleProcessosWithHttpInfo(sort, page, limit, dataVencimento, dataVencimentoFim);
+             ApiResponse<PageRelatorioMovimentosControleProcessos> localVarResponse = GerarRelatorioMovimentacaoControleProcessosWithHttpInfo(sort, page, limit, dataVencimento, dataVencimentoFim);
              return localVarResponse.Data;
         }
 
@@ -199,7 +199,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataVencimento"> (optional)</param> 
         /// <param name="dataVencimentoFim"> (optional)</param> 
         /// <returns>ApiResponse of PageRelatorioMovimentosControleProcessos</returns>
-        public ApiResponse< PageRelatorioMovimentosControleProcessos > MovimentosControleProcessosWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataVencimentoFim = null)
+        public ApiResponse< PageRelatorioMovimentosControleProcessos > GerarRelatorioMovimentacaoControleProcessosWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataVencimentoFim = null)
         {
             
     
@@ -250,9 +250,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling MovimentosControleProcessos: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GerarRelatorioMovimentacaoControleProcessos: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling MovimentosControleProcessos: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GerarRelatorioMovimentacaoControleProcessos: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageRelatorioMovimentosControleProcessos>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -271,9 +271,9 @@ namespace Conductor.Pier.Api
         /// <param name="dataVencimento"> (optional)</param>
         /// <param name="dataVencimentoFim"> (optional)</param>
         /// <returns>Task of PageRelatorioMovimentosControleProcessos</returns>
-        public async System.Threading.Tasks.Task<PageRelatorioMovimentosControleProcessos> MovimentosControleProcessosAsync (List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataVencimentoFim = null)
+        public async System.Threading.Tasks.Task<PageRelatorioMovimentosControleProcessos> GerarRelatorioMovimentacaoControleProcessosAsync (List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataVencimentoFim = null)
         {
-             ApiResponse<PageRelatorioMovimentosControleProcessos> localVarResponse = await MovimentosControleProcessosAsyncWithHttpInfo(sort, page, limit, dataVencimento, dataVencimentoFim);
+             ApiResponse<PageRelatorioMovimentosControleProcessos> localVarResponse = await GerarRelatorioMovimentacaoControleProcessosAsyncWithHttpInfo(sort, page, limit, dataVencimento, dataVencimentoFim);
              return localVarResponse.Data;
 
         }
@@ -288,7 +288,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataVencimento"> (optional)</param>
         /// <param name="dataVencimentoFim"> (optional)</param>
         /// <returns>Task of ApiResponse (PageRelatorioMovimentosControleProcessos)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageRelatorioMovimentosControleProcessos>> MovimentosControleProcessosAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataVencimentoFim = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageRelatorioMovimentosControleProcessos>> GerarRelatorioMovimentacaoControleProcessosAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataVencimentoFim = null)
         {
             
     
@@ -339,9 +339,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling MovimentosControleProcessos: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GerarRelatorioMovimentacaoControleProcessos: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling MovimentosControleProcessos: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GerarRelatorioMovimentacaoControleProcessos: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageRelatorioMovimentosControleProcessos>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

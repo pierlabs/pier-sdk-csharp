@@ -99,8 +99,11 @@ namespace Conductor.Pier.Model
         /// <param name="AgenciaBeneficiario">Origem da ag\u00EAncia do benefici\u00E1rio envolvendo transfer\u00EAncias.</param>
         /// <param name="ContaBeneficiario">Conta origem do benefici\u00E1rio envolvendo transfer\u00EAncias.</param>
         /// <param name="DvContaBeneficiario">D\u00EDgito da conta do benefici\u00E1rio origem envolvendo transfer\u00EAncias.</param>
+        /// <param name="Operadora">Descri\u00E7\u00E3o da operadora do celular.</param>
+        /// <param name="Celular">N\u00FAmero da operadora.</param>
+        /// <param name="Ddd">DDD do celular.</param>
 
-        public OperacaoBancariaPersist(long? IdTipoOperacaoBancaria = null, long? IdContaDestino = null, long? IdCartaoOrigem = null, long? IdCartaoDestino = null, string BancoPagador = null, string AgenciaPagadora = null, string ContaPagadora = null, string DvContaPagadora = null, string NomePagador = null, string CpfCnpjBeneficiario = null, long? IdEventoAjusteOrigem = null, long? IdEventoAjusteDestino = null, string IdExterno = null, string CodigoIspb = null, double? ValorOperacao = null, double? ValorTarifa = null, string DataHoraOperacao = null, string DataAgendamento = null, string DataRealizacao = null, StatusEnum? Status = null, long? IdDadosBancariosConta = null, long? IdOperacaoBancariaOriginal = null, string Observacao = null, long? NumeroBilheteUnico = null, long? IdDocumento = null, long? IdCelularRecarga = null, string NomeBeneficiario = null, string BancoBeneficiario = null, string AgenciaBeneficiario = null, string ContaBeneficiario = null, string DvContaBeneficiario = null)
+        public OperacaoBancariaPersist(long? IdTipoOperacaoBancaria = null, long? IdContaDestino = null, long? IdCartaoOrigem = null, long? IdCartaoDestino = null, string BancoPagador = null, string AgenciaPagadora = null, string ContaPagadora = null, string DvContaPagadora = null, string NomePagador = null, string CpfCnpjBeneficiario = null, long? IdEventoAjusteOrigem = null, long? IdEventoAjusteDestino = null, string IdExterno = null, string CodigoIspb = null, double? ValorOperacao = null, double? ValorTarifa = null, string DataHoraOperacao = null, string DataAgendamento = null, string DataRealizacao = null, StatusEnum? Status = null, long? IdDadosBancariosConta = null, long? IdOperacaoBancariaOriginal = null, string Observacao = null, long? NumeroBilheteUnico = null, long? IdDocumento = null, long? IdCelularRecarga = null, string NomeBeneficiario = null, string BancoBeneficiario = null, string AgenciaBeneficiario = null, string ContaBeneficiario = null, string DvContaBeneficiario = null, string Operadora = null, string Celular = null, string Ddd = null)
         {
             // to ensure "IdTipoOperacaoBancaria" is required (not null)
             if (IdTipoOperacaoBancaria == null)
@@ -157,6 +160,9 @@ namespace Conductor.Pier.Model
             this.AgenciaBeneficiario = AgenciaBeneficiario;
             this.ContaBeneficiario = ContaBeneficiario;
             this.DvContaBeneficiario = DvContaBeneficiario;
+            this.Operadora = Operadora;
+            this.Celular = Celular;
+            this.Ddd = Ddd;
             
         }
         
@@ -372,6 +378,27 @@ namespace Conductor.Pier.Model
         public string DvContaBeneficiario { get; set; }
     
         /// <summary>
+        /// Descri\u00E7\u00E3o da operadora do celular
+        /// </summary>
+        /// <value>Descri\u00E7\u00E3o da operadora do celular</value>
+        [DataMember(Name="operadora", EmitDefaultValue=false)]
+        public string Operadora { get; set; }
+    
+        /// <summary>
+        /// N\u00FAmero da operadora
+        /// </summary>
+        /// <value>N\u00FAmero da operadora</value>
+        [DataMember(Name="celular", EmitDefaultValue=false)]
+        public string Celular { get; set; }
+    
+        /// <summary>
+        /// DDD do celular
+        /// </summary>
+        /// <value>DDD do celular</value>
+        [DataMember(Name="ddd", EmitDefaultValue=false)]
+        public string Ddd { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -410,6 +437,9 @@ namespace Conductor.Pier.Model
             sb.Append("  AgenciaBeneficiario: ").Append(AgenciaBeneficiario).Append("\n");
             sb.Append("  ContaBeneficiario: ").Append(ContaBeneficiario).Append("\n");
             sb.Append("  DvContaBeneficiario: ").Append(DvContaBeneficiario).Append("\n");
+            sb.Append("  Operadora: ").Append(Operadora).Append("\n");
+            sb.Append("  Celular: ").Append(Celular).Append("\n");
+            sb.Append("  Ddd: ").Append(Ddd).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -601,6 +631,21 @@ namespace Conductor.Pier.Model
                     this.DvContaBeneficiario == other.DvContaBeneficiario ||
                     this.DvContaBeneficiario != null &&
                     this.DvContaBeneficiario.Equals(other.DvContaBeneficiario)
+                ) && 
+                (
+                    this.Operadora == other.Operadora ||
+                    this.Operadora != null &&
+                    this.Operadora.Equals(other.Operadora)
+                ) && 
+                (
+                    this.Celular == other.Celular ||
+                    this.Celular != null &&
+                    this.Celular.Equals(other.Celular)
+                ) && 
+                (
+                    this.Ddd == other.Ddd ||
+                    this.Ddd != null &&
+                    this.Ddd.Equals(other.Ddd)
                 );
         }
 
@@ -708,6 +753,15 @@ namespace Conductor.Pier.Model
                 
                 if (this.DvContaBeneficiario != null)
                     hash = hash * 59 + this.DvContaBeneficiario.GetHashCode();
+                
+                if (this.Operadora != null)
+                    hash = hash * 59 + this.Operadora.GetHashCode();
+                
+                if (this.Celular != null)
+                    hash = hash * 59 + this.Celular.GetHashCode();
+                
+                if (this.Ddd != null)
+                    hash = hash * 59 + this.Ddd.GetHashCode();
                 
                 return hash;
             }

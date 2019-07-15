@@ -28,7 +28,7 @@ namespace Conductor.Pier.Api
         /// <param name="idOperacaoBancaria">Identificador da opera\u00E7\u00E3o banc\u00E1ria</param>
         /// <param name="parcialUpdate">parcialUpdate</param>
         /// <returns>OperacaoBancariaResponse</returns>
-        OperacaoBancariaResponse AtualizarParcialOperacoesBancarias (long? id, long? idOperacaoBancaria, OperacaoBancariaParcialUpdate parcialUpdate);
+        OperacaoBancariaResponse AtualizarParcialmenteOperacaoBancaria (long? id, long? idOperacaoBancaria, OperacaoBancariaParcialUpdate parcialUpdate);
   
         /// <summary>
         /// Atualiza\u00E7\u00E3o parcial da opera\u00E7\u00E3o banc\u00E1ria
@@ -41,7 +41,7 @@ namespace Conductor.Pier.Api
         /// <param name="idOperacaoBancaria">Identificador da opera\u00E7\u00E3o banc\u00E1ria</param>
         /// <param name="parcialUpdate">parcialUpdate</param>
         /// <returns>ApiResponse of OperacaoBancariaResponse</returns>
-        ApiResponse<OperacaoBancariaResponse> AtualizarParcialOperacoesBancariasWithHttpInfo (long? id, long? idOperacaoBancaria, OperacaoBancariaParcialUpdate parcialUpdate);
+        ApiResponse<OperacaoBancariaResponse> AtualizarParcialmenteOperacaoBancariaWithHttpInfo (long? id, long? idOperacaoBancaria, OperacaoBancariaParcialUpdate parcialUpdate);
         
         /// <summary>
         /// Consulta de opera\u00E7\u00F5es banc\u00E1rias
@@ -60,7 +60,7 @@ namespace Conductor.Pier.Api
         /// <param name="idTipoOperacaoBancaria">Identificador do tipo da opera\u00E7\u00E3o banc\u00E1ria (optional)</param>
         /// <param name="statusOperacao">Status da opera\u00E7\u00E3o banc\u00E1ria (optional)</param>
         /// <returns>PageOperacaoBancariaResponse</returns>
-        PageOperacaoBancariaResponse Consultar (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idOperacao = null, string dataGeracaoInicial = null, string dataGeracaoFinal = null, long? idTipoOperacaoBancaria = null, string statusOperacao = null);
+        PageOperacaoBancariaResponse ConsultarOperacaoBancaria (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idOperacao = null, string dataGeracaoInicial = null, string dataGeracaoFinal = null, long? idTipoOperacaoBancaria = null, string statusOperacao = null);
   
         /// <summary>
         /// Consulta de opera\u00E7\u00F5es banc\u00E1rias
@@ -79,7 +79,7 @@ namespace Conductor.Pier.Api
         /// <param name="idTipoOperacaoBancaria">Identificador do tipo da opera\u00E7\u00E3o banc\u00E1ria (optional)</param>
         /// <param name="statusOperacao">Status da opera\u00E7\u00E3o banc\u00E1ria (optional)</param>
         /// <returns>ApiResponse of PageOperacaoBancariaResponse</returns>
-        ApiResponse<PageOperacaoBancariaResponse> ConsultarWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idOperacao = null, string dataGeracaoInicial = null, string dataGeracaoFinal = null, long? idTipoOperacaoBancaria = null, string statusOperacao = null);
+        ApiResponse<PageOperacaoBancariaResponse> ConsultarOperacaoBancariaWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idOperacao = null, string dataGeracaoInicial = null, string dataGeracaoFinal = null, long? idTipoOperacaoBancaria = null, string statusOperacao = null);
         
         /// <summary>
         /// Busca um tipo de opera\u00E7\u00E3o banc\u00E1ria
@@ -90,7 +90,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Identificador do tipo de opera\u00E7\u00E3o banc\u00E1ria</param>
         /// <returns>TipoOperacaoBancariaResponse</returns>
-        TipoOperacaoBancariaResponse Consultar_0 (long? id);
+        TipoOperacaoBancariaResponse ConsultarTipoOperacaoBancaria (long? id);
   
         /// <summary>
         /// Busca um tipo de opera\u00E7\u00E3o banc\u00E1ria
@@ -101,7 +101,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Identificador do tipo de opera\u00E7\u00E3o banc\u00E1ria</param>
         /// <returns>ApiResponse of TipoOperacaoBancariaResponse</returns>
-        ApiResponse<TipoOperacaoBancariaResponse> Consultar_0WithHttpInfo (long? id);
+        ApiResponse<TipoOperacaoBancariaResponse> ConsultarTipoOperacaoBancariaWithHttpInfo (long? id);
         
         /// <summary>
         /// Lista tipos de opera\u00E7\u00F5es banc\u00E1rias
@@ -116,7 +116,7 @@ namespace Conductor.Pier.Api
         /// <param name="descricao">Descri\u00E7\u00E3o do tipo da opera\u00E7\u00E3o banc\u00E1ria (optional)</param>
         /// <param name="idTipoTemplate">Identificador do template (optional)</param>
         /// <returns>PageTipoOperacaoBancariaResponse</returns>
-        PageTipoOperacaoBancariaResponse ListarTipoOperacaoBancaria (List<string> sort = null, int? page = null, int? limit = null, string descricao = null, long? idTipoTemplate = null);
+        PageTipoOperacaoBancariaResponse ListarTiposOperacoesBancarias (List<string> sort = null, int? page = null, int? limit = null, string descricao = null, long? idTipoTemplate = null);
   
         /// <summary>
         /// Lista tipos de opera\u00E7\u00F5es banc\u00E1rias
@@ -131,7 +131,7 @@ namespace Conductor.Pier.Api
         /// <param name="descricao">Descri\u00E7\u00E3o do tipo da opera\u00E7\u00E3o banc\u00E1ria (optional)</param>
         /// <param name="idTipoTemplate">Identificador do template (optional)</param>
         /// <returns>ApiResponse of PageTipoOperacaoBancariaResponse</returns>
-        ApiResponse<PageTipoOperacaoBancariaResponse> ListarTipoOperacaoBancariaWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string descricao = null, long? idTipoTemplate = null);
+        ApiResponse<PageTipoOperacaoBancariaResponse> ListarTiposOperacoesBancariasWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string descricao = null, long? idTipoTemplate = null);
         
         /// <summary>
         /// Cadastra opera\u00E7\u00E3o banc\u00E1ria
@@ -143,7 +143,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">Identificador da conta</param>
         /// <param name="persist">persist</param>
         /// <returns>OperacaoBancariaResponse</returns>
-        OperacaoBancariaResponse SalvarOperacoesBancarias (long? id, OperacaoBancariaPersist persist);
+        OperacaoBancariaResponse SalvarOperacaoBancaria (long? id, OperacaoBancariaPersist persist);
   
         /// <summary>
         /// Cadastra opera\u00E7\u00E3o banc\u00E1ria
@@ -155,7 +155,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">Identificador da conta</param>
         /// <param name="persist">persist</param>
         /// <returns>ApiResponse of OperacaoBancariaResponse</returns>
-        ApiResponse<OperacaoBancariaResponse> SalvarOperacoesBancariasWithHttpInfo (long? id, OperacaoBancariaPersist persist);
+        ApiResponse<OperacaoBancariaResponse> SalvarOperacaoBancariaWithHttpInfo (long? id, OperacaoBancariaPersist persist);
         
         #endregion Synchronous Operations
         
@@ -172,7 +172,7 @@ namespace Conductor.Pier.Api
         /// <param name="idOperacaoBancaria">Identificador da opera\u00E7\u00E3o banc\u00E1ria</param>
         /// <param name="parcialUpdate">parcialUpdate</param>
         /// <returns>Task of OperacaoBancariaResponse</returns>
-        System.Threading.Tasks.Task<OperacaoBancariaResponse> AtualizarParcialOperacoesBancariasAsync (long? id, long? idOperacaoBancaria, OperacaoBancariaParcialUpdate parcialUpdate);
+        System.Threading.Tasks.Task<OperacaoBancariaResponse> AtualizarParcialmenteOperacaoBancariaAsync (long? id, long? idOperacaoBancaria, OperacaoBancariaParcialUpdate parcialUpdate);
 
         /// <summary>
         /// Atualiza\u00E7\u00E3o parcial da opera\u00E7\u00E3o banc\u00E1ria
@@ -185,7 +185,7 @@ namespace Conductor.Pier.Api
         /// <param name="idOperacaoBancaria">Identificador da opera\u00E7\u00E3o banc\u00E1ria</param>
         /// <param name="parcialUpdate">parcialUpdate</param>
         /// <returns>Task of ApiResponse (OperacaoBancariaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OperacaoBancariaResponse>> AtualizarParcialOperacoesBancariasAsyncWithHttpInfo (long? id, long? idOperacaoBancaria, OperacaoBancariaParcialUpdate parcialUpdate);
+        System.Threading.Tasks.Task<ApiResponse<OperacaoBancariaResponse>> AtualizarParcialmenteOperacaoBancariaAsyncWithHttpInfo (long? id, long? idOperacaoBancaria, OperacaoBancariaParcialUpdate parcialUpdate);
         
         /// <summary>
         /// Consulta de opera\u00E7\u00F5es banc\u00E1rias
@@ -204,7 +204,7 @@ namespace Conductor.Pier.Api
         /// <param name="idTipoOperacaoBancaria">Identificador do tipo da opera\u00E7\u00E3o banc\u00E1ria (optional)</param>
         /// <param name="statusOperacao">Status da opera\u00E7\u00E3o banc\u00E1ria (optional)</param>
         /// <returns>Task of PageOperacaoBancariaResponse</returns>
-        System.Threading.Tasks.Task<PageOperacaoBancariaResponse> ConsultarAsync (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idOperacao = null, string dataGeracaoInicial = null, string dataGeracaoFinal = null, long? idTipoOperacaoBancaria = null, string statusOperacao = null);
+        System.Threading.Tasks.Task<PageOperacaoBancariaResponse> ConsultarOperacaoBancariaAsync (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idOperacao = null, string dataGeracaoInicial = null, string dataGeracaoFinal = null, long? idTipoOperacaoBancaria = null, string statusOperacao = null);
 
         /// <summary>
         /// Consulta de opera\u00E7\u00F5es banc\u00E1rias
@@ -223,7 +223,7 @@ namespace Conductor.Pier.Api
         /// <param name="idTipoOperacaoBancaria">Identificador do tipo da opera\u00E7\u00E3o banc\u00E1ria (optional)</param>
         /// <param name="statusOperacao">Status da opera\u00E7\u00E3o banc\u00E1ria (optional)</param>
         /// <returns>Task of ApiResponse (PageOperacaoBancariaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageOperacaoBancariaResponse>> ConsultarAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idOperacao = null, string dataGeracaoInicial = null, string dataGeracaoFinal = null, long? idTipoOperacaoBancaria = null, string statusOperacao = null);
+        System.Threading.Tasks.Task<ApiResponse<PageOperacaoBancariaResponse>> ConsultarOperacaoBancariaAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idOperacao = null, string dataGeracaoInicial = null, string dataGeracaoFinal = null, long? idTipoOperacaoBancaria = null, string statusOperacao = null);
         
         /// <summary>
         /// Busca um tipo de opera\u00E7\u00E3o banc\u00E1ria
@@ -234,7 +234,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Identificador do tipo de opera\u00E7\u00E3o banc\u00E1ria</param>
         /// <returns>Task of TipoOperacaoBancariaResponse</returns>
-        System.Threading.Tasks.Task<TipoOperacaoBancariaResponse> Consultar_0Async (long? id);
+        System.Threading.Tasks.Task<TipoOperacaoBancariaResponse> ConsultarTipoOperacaoBancariaAsync (long? id);
 
         /// <summary>
         /// Busca um tipo de opera\u00E7\u00E3o banc\u00E1ria
@@ -245,7 +245,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Identificador do tipo de opera\u00E7\u00E3o banc\u00E1ria</param>
         /// <returns>Task of ApiResponse (TipoOperacaoBancariaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TipoOperacaoBancariaResponse>> Consultar_0AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<TipoOperacaoBancariaResponse>> ConsultarTipoOperacaoBancariaAsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Lista tipos de opera\u00E7\u00F5es banc\u00E1rias
@@ -260,7 +260,7 @@ namespace Conductor.Pier.Api
         /// <param name="descricao">Descri\u00E7\u00E3o do tipo da opera\u00E7\u00E3o banc\u00E1ria (optional)</param>
         /// <param name="idTipoTemplate">Identificador do template (optional)</param>
         /// <returns>Task of PageTipoOperacaoBancariaResponse</returns>
-        System.Threading.Tasks.Task<PageTipoOperacaoBancariaResponse> ListarTipoOperacaoBancariaAsync (List<string> sort = null, int? page = null, int? limit = null, string descricao = null, long? idTipoTemplate = null);
+        System.Threading.Tasks.Task<PageTipoOperacaoBancariaResponse> ListarTiposOperacoesBancariasAsync (List<string> sort = null, int? page = null, int? limit = null, string descricao = null, long? idTipoTemplate = null);
 
         /// <summary>
         /// Lista tipos de opera\u00E7\u00F5es banc\u00E1rias
@@ -275,7 +275,7 @@ namespace Conductor.Pier.Api
         /// <param name="descricao">Descri\u00E7\u00E3o do tipo da opera\u00E7\u00E3o banc\u00E1ria (optional)</param>
         /// <param name="idTipoTemplate">Identificador do template (optional)</param>
         /// <returns>Task of ApiResponse (PageTipoOperacaoBancariaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageTipoOperacaoBancariaResponse>> ListarTipoOperacaoBancariaAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string descricao = null, long? idTipoTemplate = null);
+        System.Threading.Tasks.Task<ApiResponse<PageTipoOperacaoBancariaResponse>> ListarTiposOperacoesBancariasAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string descricao = null, long? idTipoTemplate = null);
         
         /// <summary>
         /// Cadastra opera\u00E7\u00E3o banc\u00E1ria
@@ -287,7 +287,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">Identificador da conta</param>
         /// <param name="persist">persist</param>
         /// <returns>Task of OperacaoBancariaResponse</returns>
-        System.Threading.Tasks.Task<OperacaoBancariaResponse> SalvarOperacoesBancariasAsync (long? id, OperacaoBancariaPersist persist);
+        System.Threading.Tasks.Task<OperacaoBancariaResponse> SalvarOperacaoBancariaAsync (long? id, OperacaoBancariaPersist persist);
 
         /// <summary>
         /// Cadastra opera\u00E7\u00E3o banc\u00E1ria
@@ -299,7 +299,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">Identificador da conta</param>
         /// <param name="persist">persist</param>
         /// <returns>Task of ApiResponse (OperacaoBancariaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OperacaoBancariaResponse>> SalvarOperacoesBancariasAsyncWithHttpInfo (long? id, OperacaoBancariaPersist persist);
+        System.Threading.Tasks.Task<ApiResponse<OperacaoBancariaResponse>> SalvarOperacaoBancariaAsyncWithHttpInfo (long? id, OperacaoBancariaPersist persist);
         
         #endregion Asynchronous Operations
         
@@ -401,9 +401,9 @@ namespace Conductor.Pier.Api
         /// <param name="idOperacaoBancaria">Identificador da opera\u00E7\u00E3o banc\u00E1ria</param> 
         /// <param name="parcialUpdate">parcialUpdate</param> 
         /// <returns>OperacaoBancariaResponse</returns>
-        public OperacaoBancariaResponse AtualizarParcialOperacoesBancarias (long? id, long? idOperacaoBancaria, OperacaoBancariaParcialUpdate parcialUpdate)
+        public OperacaoBancariaResponse AtualizarParcialmenteOperacaoBancaria (long? id, long? idOperacaoBancaria, OperacaoBancariaParcialUpdate parcialUpdate)
         {
-             ApiResponse<OperacaoBancariaResponse> localVarResponse = AtualizarParcialOperacoesBancariasWithHttpInfo(id, idOperacaoBancaria, parcialUpdate);
+             ApiResponse<OperacaoBancariaResponse> localVarResponse = AtualizarParcialmenteOperacaoBancariaWithHttpInfo(id, idOperacaoBancaria, parcialUpdate);
              return localVarResponse.Data;
         }
 
@@ -415,20 +415,20 @@ namespace Conductor.Pier.Api
         /// <param name="idOperacaoBancaria">Identificador da opera\u00E7\u00E3o banc\u00E1ria</param> 
         /// <param name="parcialUpdate">parcialUpdate</param> 
         /// <returns>ApiResponse of OperacaoBancariaResponse</returns>
-        public ApiResponse< OperacaoBancariaResponse > AtualizarParcialOperacoesBancariasWithHttpInfo (long? id, long? idOperacaoBancaria, OperacaoBancariaParcialUpdate parcialUpdate)
+        public ApiResponse< OperacaoBancariaResponse > AtualizarParcialmenteOperacaoBancariaWithHttpInfo (long? id, long? idOperacaoBancaria, OperacaoBancariaParcialUpdate parcialUpdate)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling OperacoesBancariasApi->AtualizarParcialOperacoesBancarias");
+                throw new ApiException(400, "Missing required parameter 'id' when calling OperacoesBancariasApi->AtualizarParcialmenteOperacaoBancaria");
             
             // verify the required parameter 'idOperacaoBancaria' is set
             if (idOperacaoBancaria == null)
-                throw new ApiException(400, "Missing required parameter 'idOperacaoBancaria' when calling OperacoesBancariasApi->AtualizarParcialOperacoesBancarias");
+                throw new ApiException(400, "Missing required parameter 'idOperacaoBancaria' when calling OperacoesBancariasApi->AtualizarParcialmenteOperacaoBancaria");
             
             // verify the required parameter 'parcialUpdate' is set
             if (parcialUpdate == null)
-                throw new ApiException(400, "Missing required parameter 'parcialUpdate' when calling OperacoesBancariasApi->AtualizarParcialOperacoesBancarias");
+                throw new ApiException(400, "Missing required parameter 'parcialUpdate' when calling OperacoesBancariasApi->AtualizarParcialmenteOperacaoBancaria");
             
     
             var localVarPath = "/api/contas/{id}/operacoes-bancarias/{idOperacaoBancaria}";
@@ -482,9 +482,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling AtualizarParcialOperacoesBancarias: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling AtualizarParcialmenteOperacaoBancaria: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling AtualizarParcialOperacoesBancarias: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling AtualizarParcialmenteOperacaoBancaria: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<OperacaoBancariaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -501,9 +501,9 @@ namespace Conductor.Pier.Api
         /// <param name="idOperacaoBancaria">Identificador da opera\u00E7\u00E3o banc\u00E1ria</param>
         /// <param name="parcialUpdate">parcialUpdate</param>
         /// <returns>Task of OperacaoBancariaResponse</returns>
-        public async System.Threading.Tasks.Task<OperacaoBancariaResponse> AtualizarParcialOperacoesBancariasAsync (long? id, long? idOperacaoBancaria, OperacaoBancariaParcialUpdate parcialUpdate)
+        public async System.Threading.Tasks.Task<OperacaoBancariaResponse> AtualizarParcialmenteOperacaoBancariaAsync (long? id, long? idOperacaoBancaria, OperacaoBancariaParcialUpdate parcialUpdate)
         {
-             ApiResponse<OperacaoBancariaResponse> localVarResponse = await AtualizarParcialOperacoesBancariasAsyncWithHttpInfo(id, idOperacaoBancaria, parcialUpdate);
+             ApiResponse<OperacaoBancariaResponse> localVarResponse = await AtualizarParcialmenteOperacaoBancariaAsyncWithHttpInfo(id, idOperacaoBancaria, parcialUpdate);
              return localVarResponse.Data;
 
         }
@@ -516,14 +516,14 @@ namespace Conductor.Pier.Api
         /// <param name="idOperacaoBancaria">Identificador da opera\u00E7\u00E3o banc\u00E1ria</param>
         /// <param name="parcialUpdate">parcialUpdate</param>
         /// <returns>Task of ApiResponse (OperacaoBancariaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OperacaoBancariaResponse>> AtualizarParcialOperacoesBancariasAsyncWithHttpInfo (long? id, long? idOperacaoBancaria, OperacaoBancariaParcialUpdate parcialUpdate)
+        public async System.Threading.Tasks.Task<ApiResponse<OperacaoBancariaResponse>> AtualizarParcialmenteOperacaoBancariaAsyncWithHttpInfo (long? id, long? idOperacaoBancaria, OperacaoBancariaParcialUpdate parcialUpdate)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AtualizarParcialOperacoesBancarias");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AtualizarParcialmenteOperacaoBancaria");
             // verify the required parameter 'idOperacaoBancaria' is set
-            if (idOperacaoBancaria == null) throw new ApiException(400, "Missing required parameter 'idOperacaoBancaria' when calling AtualizarParcialOperacoesBancarias");
+            if (idOperacaoBancaria == null) throw new ApiException(400, "Missing required parameter 'idOperacaoBancaria' when calling AtualizarParcialmenteOperacaoBancaria");
             // verify the required parameter 'parcialUpdate' is set
-            if (parcialUpdate == null) throw new ApiException(400, "Missing required parameter 'parcialUpdate' when calling AtualizarParcialOperacoesBancarias");
+            if (parcialUpdate == null) throw new ApiException(400, "Missing required parameter 'parcialUpdate' when calling AtualizarParcialmenteOperacaoBancaria");
             
     
             var localVarPath = "/api/contas/{id}/operacoes-bancarias/{idOperacaoBancaria}";
@@ -577,9 +577,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling AtualizarParcialOperacoesBancarias: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling AtualizarParcialmenteOperacaoBancaria: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling AtualizarParcialOperacoesBancarias: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling AtualizarParcialmenteOperacaoBancaria: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<OperacaoBancariaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -601,9 +601,9 @@ namespace Conductor.Pier.Api
         /// <param name="idTipoOperacaoBancaria">Identificador do tipo da opera\u00E7\u00E3o banc\u00E1ria (optional)</param> 
         /// <param name="statusOperacao">Status da opera\u00E7\u00E3o banc\u00E1ria (optional)</param> 
         /// <returns>PageOperacaoBancariaResponse</returns>
-        public PageOperacaoBancariaResponse Consultar (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idOperacao = null, string dataGeracaoInicial = null, string dataGeracaoFinal = null, long? idTipoOperacaoBancaria = null, string statusOperacao = null)
+        public PageOperacaoBancariaResponse ConsultarOperacaoBancaria (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idOperacao = null, string dataGeracaoInicial = null, string dataGeracaoFinal = null, long? idTipoOperacaoBancaria = null, string statusOperacao = null)
         {
-             ApiResponse<PageOperacaoBancariaResponse> localVarResponse = ConsultarWithHttpInfo(id, sort, page, limit, idOperacao, dataGeracaoInicial, dataGeracaoFinal, idTipoOperacaoBancaria, statusOperacao);
+             ApiResponse<PageOperacaoBancariaResponse> localVarResponse = ConsultarOperacaoBancariaWithHttpInfo(id, sort, page, limit, idOperacao, dataGeracaoInicial, dataGeracaoFinal, idTipoOperacaoBancaria, statusOperacao);
              return localVarResponse.Data;
         }
 
@@ -621,12 +621,12 @@ namespace Conductor.Pier.Api
         /// <param name="idTipoOperacaoBancaria">Identificador do tipo da opera\u00E7\u00E3o banc\u00E1ria (optional)</param> 
         /// <param name="statusOperacao">Status da opera\u00E7\u00E3o banc\u00E1ria (optional)</param> 
         /// <returns>ApiResponse of PageOperacaoBancariaResponse</returns>
-        public ApiResponse< PageOperacaoBancariaResponse > ConsultarWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idOperacao = null, string dataGeracaoInicial = null, string dataGeracaoFinal = null, long? idTipoOperacaoBancaria = null, string statusOperacao = null)
+        public ApiResponse< PageOperacaoBancariaResponse > ConsultarOperacaoBancariaWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idOperacao = null, string dataGeracaoInicial = null, string dataGeracaoFinal = null, long? idTipoOperacaoBancaria = null, string statusOperacao = null)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling OperacoesBancariasApi->Consultar");
+                throw new ApiException(400, "Missing required parameter 'id' when calling OperacoesBancariasApi->ConsultarOperacaoBancaria");
             
     
             var localVarPath = "/api/contas/{id}/operacoes-bancarias";
@@ -680,9 +680,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarOperacaoBancaria: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarOperacaoBancaria: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageOperacaoBancariaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -705,9 +705,9 @@ namespace Conductor.Pier.Api
         /// <param name="idTipoOperacaoBancaria">Identificador do tipo da opera\u00E7\u00E3o banc\u00E1ria (optional)</param>
         /// <param name="statusOperacao">Status da opera\u00E7\u00E3o banc\u00E1ria (optional)</param>
         /// <returns>Task of PageOperacaoBancariaResponse</returns>
-        public async System.Threading.Tasks.Task<PageOperacaoBancariaResponse> ConsultarAsync (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idOperacao = null, string dataGeracaoInicial = null, string dataGeracaoFinal = null, long? idTipoOperacaoBancaria = null, string statusOperacao = null)
+        public async System.Threading.Tasks.Task<PageOperacaoBancariaResponse> ConsultarOperacaoBancariaAsync (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idOperacao = null, string dataGeracaoInicial = null, string dataGeracaoFinal = null, long? idTipoOperacaoBancaria = null, string statusOperacao = null)
         {
-             ApiResponse<PageOperacaoBancariaResponse> localVarResponse = await ConsultarAsyncWithHttpInfo(id, sort, page, limit, idOperacao, dataGeracaoInicial, dataGeracaoFinal, idTipoOperacaoBancaria, statusOperacao);
+             ApiResponse<PageOperacaoBancariaResponse> localVarResponse = await ConsultarOperacaoBancariaAsyncWithHttpInfo(id, sort, page, limit, idOperacao, dataGeracaoInicial, dataGeracaoFinal, idTipoOperacaoBancaria, statusOperacao);
              return localVarResponse.Data;
 
         }
@@ -726,10 +726,10 @@ namespace Conductor.Pier.Api
         /// <param name="idTipoOperacaoBancaria">Identificador do tipo da opera\u00E7\u00E3o banc\u00E1ria (optional)</param>
         /// <param name="statusOperacao">Status da opera\u00E7\u00E3o banc\u00E1ria (optional)</param>
         /// <returns>Task of ApiResponse (PageOperacaoBancariaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageOperacaoBancariaResponse>> ConsultarAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idOperacao = null, string dataGeracaoInicial = null, string dataGeracaoFinal = null, long? idTipoOperacaoBancaria = null, string statusOperacao = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageOperacaoBancariaResponse>> ConsultarOperacaoBancariaAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idOperacao = null, string dataGeracaoInicial = null, string dataGeracaoFinal = null, long? idTipoOperacaoBancaria = null, string statusOperacao = null)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling Consultar");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarOperacaoBancaria");
             
     
             var localVarPath = "/api/contas/{id}/operacoes-bancarias";
@@ -783,9 +783,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarOperacaoBancaria: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarOperacaoBancaria: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageOperacaoBancariaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -799,9 +799,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Identificador do tipo de opera\u00E7\u00E3o banc\u00E1ria</param> 
         /// <returns>TipoOperacaoBancariaResponse</returns>
-        public TipoOperacaoBancariaResponse Consultar_0 (long? id)
+        public TipoOperacaoBancariaResponse ConsultarTipoOperacaoBancaria (long? id)
         {
-             ApiResponse<TipoOperacaoBancariaResponse> localVarResponse = Consultar_0WithHttpInfo(id);
+             ApiResponse<TipoOperacaoBancariaResponse> localVarResponse = ConsultarTipoOperacaoBancariaWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -811,12 +811,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Identificador do tipo de opera\u00E7\u00E3o banc\u00E1ria</param> 
         /// <returns>ApiResponse of TipoOperacaoBancariaResponse</returns>
-        public ApiResponse< TipoOperacaoBancariaResponse > Consultar_0WithHttpInfo (long? id)
+        public ApiResponse< TipoOperacaoBancariaResponse > ConsultarTipoOperacaoBancariaWithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling OperacoesBancariasApi->Consultar_0");
+                throw new ApiException(400, "Missing required parameter 'id' when calling OperacoesBancariasApi->ConsultarTipoOperacaoBancaria");
             
     
             var localVarPath = "/api/tipos-operacoes-bancarias/{id}";
@@ -862,9 +862,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar_0: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarTipoOperacaoBancaria: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar_0: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarTipoOperacaoBancaria: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<TipoOperacaoBancariaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -879,9 +879,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Identificador do tipo de opera\u00E7\u00E3o banc\u00E1ria</param>
         /// <returns>Task of TipoOperacaoBancariaResponse</returns>
-        public async System.Threading.Tasks.Task<TipoOperacaoBancariaResponse> Consultar_0Async (long? id)
+        public async System.Threading.Tasks.Task<TipoOperacaoBancariaResponse> ConsultarTipoOperacaoBancariaAsync (long? id)
         {
-             ApiResponse<TipoOperacaoBancariaResponse> localVarResponse = await Consultar_0AsyncWithHttpInfo(id);
+             ApiResponse<TipoOperacaoBancariaResponse> localVarResponse = await ConsultarTipoOperacaoBancariaAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -892,10 +892,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Identificador do tipo de opera\u00E7\u00E3o banc\u00E1ria</param>
         /// <returns>Task of ApiResponse (TipoOperacaoBancariaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TipoOperacaoBancariaResponse>> Consultar_0AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<TipoOperacaoBancariaResponse>> ConsultarTipoOperacaoBancariaAsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling Consultar_0");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarTipoOperacaoBancaria");
             
     
             var localVarPath = "/api/tipos-operacoes-bancarias/{id}";
@@ -941,9 +941,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar_0: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarTipoOperacaoBancaria: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar_0: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarTipoOperacaoBancaria: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<TipoOperacaoBancariaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -961,9 +961,9 @@ namespace Conductor.Pier.Api
         /// <param name="descricao">Descri\u00E7\u00E3o do tipo da opera\u00E7\u00E3o banc\u00E1ria (optional)</param> 
         /// <param name="idTipoTemplate">Identificador do template (optional)</param> 
         /// <returns>PageTipoOperacaoBancariaResponse</returns>
-        public PageTipoOperacaoBancariaResponse ListarTipoOperacaoBancaria (List<string> sort = null, int? page = null, int? limit = null, string descricao = null, long? idTipoTemplate = null)
+        public PageTipoOperacaoBancariaResponse ListarTiposOperacoesBancarias (List<string> sort = null, int? page = null, int? limit = null, string descricao = null, long? idTipoTemplate = null)
         {
-             ApiResponse<PageTipoOperacaoBancariaResponse> localVarResponse = ListarTipoOperacaoBancariaWithHttpInfo(sort, page, limit, descricao, idTipoTemplate);
+             ApiResponse<PageTipoOperacaoBancariaResponse> localVarResponse = ListarTiposOperacoesBancariasWithHttpInfo(sort, page, limit, descricao, idTipoTemplate);
              return localVarResponse.Data;
         }
 
@@ -977,7 +977,7 @@ namespace Conductor.Pier.Api
         /// <param name="descricao">Descri\u00E7\u00E3o do tipo da opera\u00E7\u00E3o banc\u00E1ria (optional)</param> 
         /// <param name="idTipoTemplate">Identificador do template (optional)</param> 
         /// <returns>ApiResponse of PageTipoOperacaoBancariaResponse</returns>
-        public ApiResponse< PageTipoOperacaoBancariaResponse > ListarTipoOperacaoBancariaWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string descricao = null, long? idTipoTemplate = null)
+        public ApiResponse< PageTipoOperacaoBancariaResponse > ListarTiposOperacoesBancariasWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string descricao = null, long? idTipoTemplate = null)
         {
             
     
@@ -1028,9 +1028,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarTipoOperacaoBancaria: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarTiposOperacoesBancarias: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarTipoOperacaoBancaria: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarTiposOperacoesBancarias: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageTipoOperacaoBancariaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1049,9 +1049,9 @@ namespace Conductor.Pier.Api
         /// <param name="descricao">Descri\u00E7\u00E3o do tipo da opera\u00E7\u00E3o banc\u00E1ria (optional)</param>
         /// <param name="idTipoTemplate">Identificador do template (optional)</param>
         /// <returns>Task of PageTipoOperacaoBancariaResponse</returns>
-        public async System.Threading.Tasks.Task<PageTipoOperacaoBancariaResponse> ListarTipoOperacaoBancariaAsync (List<string> sort = null, int? page = null, int? limit = null, string descricao = null, long? idTipoTemplate = null)
+        public async System.Threading.Tasks.Task<PageTipoOperacaoBancariaResponse> ListarTiposOperacoesBancariasAsync (List<string> sort = null, int? page = null, int? limit = null, string descricao = null, long? idTipoTemplate = null)
         {
-             ApiResponse<PageTipoOperacaoBancariaResponse> localVarResponse = await ListarTipoOperacaoBancariaAsyncWithHttpInfo(sort, page, limit, descricao, idTipoTemplate);
+             ApiResponse<PageTipoOperacaoBancariaResponse> localVarResponse = await ListarTiposOperacoesBancariasAsyncWithHttpInfo(sort, page, limit, descricao, idTipoTemplate);
              return localVarResponse.Data;
 
         }
@@ -1066,7 +1066,7 @@ namespace Conductor.Pier.Api
         /// <param name="descricao">Descri\u00E7\u00E3o do tipo da opera\u00E7\u00E3o banc\u00E1ria (optional)</param>
         /// <param name="idTipoTemplate">Identificador do template (optional)</param>
         /// <returns>Task of ApiResponse (PageTipoOperacaoBancariaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageTipoOperacaoBancariaResponse>> ListarTipoOperacaoBancariaAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string descricao = null, long? idTipoTemplate = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageTipoOperacaoBancariaResponse>> ListarTiposOperacoesBancariasAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string descricao = null, long? idTipoTemplate = null)
         {
             
     
@@ -1117,9 +1117,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarTipoOperacaoBancaria: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarTiposOperacoesBancarias: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarTipoOperacaoBancaria: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarTiposOperacoesBancarias: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageTipoOperacaoBancariaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1134,9 +1134,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">Identificador da conta</param> 
         /// <param name="persist">persist</param> 
         /// <returns>OperacaoBancariaResponse</returns>
-        public OperacaoBancariaResponse SalvarOperacoesBancarias (long? id, OperacaoBancariaPersist persist)
+        public OperacaoBancariaResponse SalvarOperacaoBancaria (long? id, OperacaoBancariaPersist persist)
         {
-             ApiResponse<OperacaoBancariaResponse> localVarResponse = SalvarOperacoesBancariasWithHttpInfo(id, persist);
+             ApiResponse<OperacaoBancariaResponse> localVarResponse = SalvarOperacaoBancariaWithHttpInfo(id, persist);
              return localVarResponse.Data;
         }
 
@@ -1147,16 +1147,16 @@ namespace Conductor.Pier.Api
         /// <param name="id">Identificador da conta</param> 
         /// <param name="persist">persist</param> 
         /// <returns>ApiResponse of OperacaoBancariaResponse</returns>
-        public ApiResponse< OperacaoBancariaResponse > SalvarOperacoesBancariasWithHttpInfo (long? id, OperacaoBancariaPersist persist)
+        public ApiResponse< OperacaoBancariaResponse > SalvarOperacaoBancariaWithHttpInfo (long? id, OperacaoBancariaPersist persist)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling OperacoesBancariasApi->SalvarOperacoesBancarias");
+                throw new ApiException(400, "Missing required parameter 'id' when calling OperacoesBancariasApi->SalvarOperacaoBancaria");
             
             // verify the required parameter 'persist' is set
             if (persist == null)
-                throw new ApiException(400, "Missing required parameter 'persist' when calling OperacoesBancariasApi->SalvarOperacoesBancarias");
+                throw new ApiException(400, "Missing required parameter 'persist' when calling OperacoesBancariasApi->SalvarOperacaoBancaria");
             
     
             var localVarPath = "/api/contas/{id}/operacoes-bancarias";
@@ -1209,9 +1209,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarOperacoesBancarias: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarOperacaoBancaria: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarOperacoesBancarias: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarOperacaoBancaria: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<OperacaoBancariaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1227,9 +1227,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">Identificador da conta</param>
         /// <param name="persist">persist</param>
         /// <returns>Task of OperacaoBancariaResponse</returns>
-        public async System.Threading.Tasks.Task<OperacaoBancariaResponse> SalvarOperacoesBancariasAsync (long? id, OperacaoBancariaPersist persist)
+        public async System.Threading.Tasks.Task<OperacaoBancariaResponse> SalvarOperacaoBancariaAsync (long? id, OperacaoBancariaPersist persist)
         {
-             ApiResponse<OperacaoBancariaResponse> localVarResponse = await SalvarOperacoesBancariasAsyncWithHttpInfo(id, persist);
+             ApiResponse<OperacaoBancariaResponse> localVarResponse = await SalvarOperacaoBancariaAsyncWithHttpInfo(id, persist);
              return localVarResponse.Data;
 
         }
@@ -1241,12 +1241,12 @@ namespace Conductor.Pier.Api
         /// <param name="id">Identificador da conta</param>
         /// <param name="persist">persist</param>
         /// <returns>Task of ApiResponse (OperacaoBancariaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OperacaoBancariaResponse>> SalvarOperacoesBancariasAsyncWithHttpInfo (long? id, OperacaoBancariaPersist persist)
+        public async System.Threading.Tasks.Task<ApiResponse<OperacaoBancariaResponse>> SalvarOperacaoBancariaAsyncWithHttpInfo (long? id, OperacaoBancariaPersist persist)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling SalvarOperacoesBancarias");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling SalvarOperacaoBancaria");
             // verify the required parameter 'persist' is set
-            if (persist == null) throw new ApiException(400, "Missing required parameter 'persist' when calling SalvarOperacoesBancarias");
+            if (persist == null) throw new ApiException(400, "Missing required parameter 'persist' when calling SalvarOperacaoBancaria");
             
     
             var localVarPath = "/api/contas/{id}/operacoes-bancarias";
@@ -1299,9 +1299,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarOperacoesBancarias: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarOperacaoBancaria: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarOperacoesBancarias: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarOperacaoBancaria: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<OperacaoBancariaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

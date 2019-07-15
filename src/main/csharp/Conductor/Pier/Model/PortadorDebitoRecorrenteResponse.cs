@@ -22,6 +22,7 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="PortadorDebitoRecorrenteResponse" /> class.
         /// Initializes a new instance of the <see cref="PortadorDebitoRecorrenteResponse" />class.
         /// </summary>
+        /// <param name="DataFimDescontoAnuidade">Data referente ao final do desconto da anuidade.</param>
         /// <param name="DataHoraFim">Data e hora do fim da recorr\u00EAncia do d\u00E9bito.</param>
         /// <param name="DataHoraInicio">Data e hora do in\u00EDcio da recorr\u00EAncia do d\u00E9bito.</param>
         /// <param name="FlagCartaoDesbloqueado">Flag para identifica\u00E7\u00E3o de cart\u00E3o desbloqueado.</param>
@@ -37,8 +38,9 @@ namespace Conductor.Pier.Model
         /// <param name="ValorOriginal">Valor total sem aplica\u00E7\u00E3o da porcentagem de desconto.</param>
         /// <param name="ValorParcela">Valor da parcela com aplica\u00E7\u00E3o da porcentagem de desconto.</param>
 
-        public PortadorDebitoRecorrenteResponse(string DataHoraFim = null, string DataHoraInicio = null, bool? FlagCartaoDesbloqueado = null, bool? FlagLancatarifa = null, long? Id = null, long? IdAnuidade = null, long? IdConta = null, long? IdProduto = null, int? NumeroParcela = null, int? ParcelaPerdida = null, double? PercentualDesconto = null, int? Portador = null, double? ValorOriginal = null, double? ValorParcela = null)
+        public PortadorDebitoRecorrenteResponse(string DataFimDescontoAnuidade = null, string DataHoraFim = null, string DataHoraInicio = null, bool? FlagCartaoDesbloqueado = null, bool? FlagLancatarifa = null, long? Id = null, long? IdAnuidade = null, long? IdConta = null, long? IdProduto = null, int? NumeroParcela = null, int? ParcelaPerdida = null, double? PercentualDesconto = null, int? Portador = null, double? ValorOriginal = null, double? ValorParcela = null)
         {
+            this.DataFimDescontoAnuidade = DataFimDescontoAnuidade;
             this.DataHoraFim = DataHoraFim;
             this.DataHoraInicio = DataHoraInicio;
             this.FlagCartaoDesbloqueado = FlagCartaoDesbloqueado;
@@ -56,6 +58,13 @@ namespace Conductor.Pier.Model
             
         }
         
+    
+        /// <summary>
+        /// Data referente ao final do desconto da anuidade
+        /// </summary>
+        /// <value>Data referente ao final do desconto da anuidade</value>
+        [DataMember(Name="dataFimDescontoAnuidade", EmitDefaultValue=false)]
+        public string DataFimDescontoAnuidade { get; set; }
     
         /// <summary>
         /// Data e hora do fim da recorr\u00EAncia do d\u00E9bito
@@ -163,6 +172,7 @@ namespace Conductor.Pier.Model
         {
             var sb = new StringBuilder();
             sb.Append("class PortadorDebitoRecorrenteResponse {\n");
+            sb.Append("  DataFimDescontoAnuidade: ").Append(DataFimDescontoAnuidade).Append("\n");
             sb.Append("  DataHoraFim: ").Append(DataHoraFim).Append("\n");
             sb.Append("  DataHoraInicio: ").Append(DataHoraInicio).Append("\n");
             sb.Append("  FlagCartaoDesbloqueado: ").Append(FlagCartaoDesbloqueado).Append("\n");
@@ -214,6 +224,11 @@ namespace Conductor.Pier.Model
                 return false;
 
             return 
+                (
+                    this.DataFimDescontoAnuidade == other.DataFimDescontoAnuidade ||
+                    this.DataFimDescontoAnuidade != null &&
+                    this.DataFimDescontoAnuidade.Equals(other.DataFimDescontoAnuidade)
+                ) && 
                 (
                     this.DataHoraFim == other.DataHoraFim ||
                     this.DataHoraFim != null &&
@@ -297,6 +312,9 @@ namespace Conductor.Pier.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
+                if (this.DataFimDescontoAnuidade != null)
+                    hash = hash * 59 + this.DataFimDescontoAnuidade.GetHashCode();
                 
                 if (this.DataHoraFim != null)
                     hash = hash * 59 + this.DataHoraFim.GetHashCode();

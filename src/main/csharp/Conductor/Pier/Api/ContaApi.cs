@@ -18,46 +18,6 @@ namespace Conductor.Pier.Api
         #region Synchronous Operations
         
         /// <summary>
-        /// Lan\u00E7a um ajuste para a conta do id informado
-        /// </summary>
-        /// <remarks>
-        /// Este recurso insere um ajuste para a conta do id informado
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Id Conta</param>
-        /// <param name="idTipoAjuste">C\u00F3digo identificador do tipo de ajuste</param>
-        /// <param name="dataAjuste">Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ</param>
-        /// <param name="valorAjuste">Valor do ajuste</param>
-        /// <param name="login">login (optional)</param>
-        /// <param name="identificadorExterno">Identificador Externo (optional)</param>
-        /// <param name="idTransacaoOriginal">Identificador da transa\u00E7\u00E3o original (estorno) (optional)</param>
-        /// <param name="idEstabelecimento">Identificador do estabelecimento quando o pagamento for efetuado em loja (optional)</param>
-        /// <param name="flagAtendimento">Flag para lan\u00E7ar o atendimento (optional)</param>
-        /// <param name="mensagemAtendimento">Mensagem enviada no atendimento (optional)</param>
-        /// <returns>AjusteFinanceiroResponse</returns>
-        AjusteFinanceiroResponse AjustarConta (long? id, long? idTipoAjuste, string dataAjuste, double? valorAjuste, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null, bool? flagAtendimento = null, string mensagemAtendimento = null);
-  
-        /// <summary>
-        /// Lan\u00E7a um ajuste para a conta do id informado
-        /// </summary>
-        /// <remarks>
-        /// Este recurso insere um ajuste para a conta do id informado
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Id Conta</param>
-        /// <param name="idTipoAjuste">C\u00F3digo identificador do tipo de ajuste</param>
-        /// <param name="dataAjuste">Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ</param>
-        /// <param name="valorAjuste">Valor do ajuste</param>
-        /// <param name="login">login (optional)</param>
-        /// <param name="identificadorExterno">Identificador Externo (optional)</param>
-        /// <param name="idTransacaoOriginal">Identificador da transa\u00E7\u00E3o original (estorno) (optional)</param>
-        /// <param name="idEstabelecimento">Identificador do estabelecimento quando o pagamento for efetuado em loja (optional)</param>
-        /// <param name="flagAtendimento">Flag para lan\u00E7ar o atendimento (optional)</param>
-        /// <param name="mensagemAtendimento">Mensagem enviada no atendimento (optional)</param>
-        /// <returns>ApiResponse of AjusteFinanceiroResponse</returns>
-        ApiResponse<AjusteFinanceiroResponse> AjustarContaWithHttpInfo (long? id, long? idTipoAjuste, string dataAjuste, double? valorAjuste, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null, bool? flagAtendimento = null, string mensagemAtendimento = null);
-        
-        /// <summary>
         /// Altera parcialmente um controle de uma subconta
         /// </summary>
         /// <remarks>
@@ -91,7 +51,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
         /// <param name="request">request</param>
         /// <returns>string</returns>
-        string AlterarProduto (long? id, AlterarProdutoRequest request);
+        string AlterarProdutoConta (long? id, AlterarProdutoRequest request);
   
         /// <summary>
         /// Altera o produto associado \u00E0 conta
@@ -103,7 +63,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
         /// <param name="request">request</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> AlterarProdutoWithHttpInfo (long? id, AlterarProdutoRequest request);
+        ApiResponse<string> AlterarProdutoContaWithHttpInfo (long? id, AlterarProdutoRequest request);
         
         /// <summary>
         /// Realiza a altera\u00E7\u00E3o de uma Pessoa tilular da conta
@@ -154,46 +114,6 @@ namespace Conductor.Pier.Api
         ApiResponse<ContaResponse> AlterarVencimentoWithHttpInfo (long? id, int? novoDiaVencimento);
         
         /// <summary>
-        /// Atribuir Anuidade
-        /// </summary>
-        /// <remarks>
-        /// Esse recurso permite configurar qual a regra de Anuidade que ser\u00E1 atribu\u00EDda a uma determinada Conta
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
-        /// <param name="idAnuidade">Identificador da anuidade</param>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="DDD">DDD do celular (optional)</param>
-        /// <param name="celular">N\u00FAmero do celular (optional)</param>
-        /// <param name="idOperadora">Identificador da operadora do celular (optional)</param>
-        /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param>
-        /// <param name="colaborador">Matr\u00EDcula do colaborador (optional)</param>
-        /// <returns>Object</returns>
-        Object AtivarAnuidade (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null, string colaborador = null);
-  
-        /// <summary>
-        /// Atribuir Anuidade
-        /// </summary>
-        /// <remarks>
-        /// Esse recurso permite configurar qual a regra de Anuidade que ser\u00E1 atribu\u00EDda a uma determinada Conta
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
-        /// <param name="idAnuidade">Identificador da anuidade</param>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="DDD">DDD do celular (optional)</param>
-        /// <param name="celular">N\u00FAmero do celular (optional)</param>
-        /// <param name="idOperadora">Identificador da operadora do celular (optional)</param>
-        /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param>
-        /// <param name="colaborador">Matr\u00EDcula do colaborador (optional)</param>
-        /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> AtivarAnuidadeWithHttpInfo (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null, string colaborador = null);
-        
-        /// <summary>
         /// Ativa o servi\u00E7o de envio de fatura por email
         /// </summary>
         /// <remarks>
@@ -214,6 +134,46 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> AtivarEnvioFaturaEmailWithHttpInfo (long? id);
+        
+        /// <summary>
+        /// Atribuir Anuidade
+        /// </summary>
+        /// <remarks>
+        /// Esse recurso permite configurar qual a regra de Anuidade que ser\u00E1 atribu\u00EDda a uma determinada Conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
+        /// <param name="idAnuidade">Identificador da anuidade</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="DDD">DDD do celular (optional)</param>
+        /// <param name="celular">N\u00FAmero do celular (optional)</param>
+        /// <param name="idOperadora">Identificador da operadora do celular (optional)</param>
+        /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param>
+        /// <param name="colaborador">Matr\u00EDcula do colaborador (optional)</param>
+        /// <returns>Object</returns>
+        Object AtribuirAnuidade (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null, string colaborador = null);
+  
+        /// <summary>
+        /// Atribuir Anuidade
+        /// </summary>
+        /// <remarks>
+        /// Esse recurso permite configurar qual a regra de Anuidade que ser\u00E1 atribu\u00EDda a uma determinada Conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
+        /// <param name="idAnuidade">Identificador da anuidade</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="DDD">DDD do celular (optional)</param>
+        /// <param name="celular">N\u00FAmero do celular (optional)</param>
+        /// <param name="idOperadora">Identificador da operadora do celular (optional)</param>
+        /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param>
+        /// <param name="colaborador">Matr\u00EDcula do colaborador (optional)</param>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> AtribuirAnuidadeWithHttpInfo (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null, string colaborador = null);
         
         /// <summary>
         /// Realiza a atribui\u00E7\u00E3o de um cart\u00E3o pr\u00E9-pago a uma conta
@@ -273,7 +233,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
         /// <param name="contaPartialUpdate">contaPartialUpdate</param>
         /// <returns>ContaResponse</returns>
-        ContaResponse AtualizarParcial (long? id, ContaPartialUpdate contaPartialUpdate);
+        ContaResponse AtualizarContaParcialmente (long? id, ContaPartialUpdate contaPartialUpdate);
   
         /// <summary>
         /// Realiza a atualiza\u00E7\u00E3o parcial da conta
@@ -285,7 +245,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
         /// <param name="contaPartialUpdate">contaPartialUpdate</param>
         /// <returns>ApiResponse of ContaResponse</returns>
-        ApiResponse<ContaResponse> AtualizarParcialWithHttpInfo (long? id, ContaPartialUpdate contaPartialUpdate);
+        ApiResponse<ContaResponse> AtualizarContaParcialmenteWithHttpInfo (long? id, ContaPartialUpdate contaPartialUpdate);
         
         /// <summary>
         /// Atualiza parcialmente o registro de uma seguran\u00E7a mobile
@@ -312,6 +272,32 @@ namespace Conductor.Pier.Api
         /// <param name="parcialUpdate">parcialUpdate</param>
         /// <returns>ApiResponse of SegurancaMobileResponse</returns>
         ApiResponse<SegurancaMobileResponse> AtualizarParcialSegurancaMobileWithHttpInfo (long? id, long? idSegurancaMobile, SegurancaMobileParcialUpdate parcialUpdate);
+        
+        /// <summary>
+        /// Atualizar parcialmente uma tarifa de d\u00E9bito da conta
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite atualizar parcialmente uma tarifa de d\u00E9bito da conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta</param>
+        /// <param name="idDebitoTarifa">Identificador do registro de d\u00E9bito tarifa da conta</param>
+        /// <param name="contaDebitoTarifaUpdate">contaDebitoTarifaUpdate</param>
+        /// <returns>ContaDebitoTarifaResponse</returns>
+        ContaDebitoTarifaResponse AtualizarParcialmenteContaDebitoTarifa (long? id, long? idDebitoTarifa, ContaDebitoTarifaUpdate contaDebitoTarifaUpdate);
+  
+        /// <summary>
+        /// Atualizar parcialmente uma tarifa de d\u00E9bito da conta
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite atualizar parcialmente uma tarifa de d\u00E9bito da conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta</param>
+        /// <param name="idDebitoTarifa">Identificador do registro de d\u00E9bito tarifa da conta</param>
+        /// <param name="contaDebitoTarifaUpdate">contaDebitoTarifaUpdate</param>
+        /// <returns>ApiResponse of ContaDebitoTarifaResponse</returns>
+        ApiResponse<ContaDebitoTarifaResponse> AtualizarParcialmenteContaDebitoTarifaWithHttpInfo (long? id, long? idDebitoTarifa, ContaDebitoTarifaUpdate contaDebitoTarifaUpdate);
         
         /// <summary>
         /// Atualiza parcialmente o registro de um favorito de recarga de celular
@@ -349,7 +335,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
         /// <param name="idStatus">C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Conta</param>
         /// <returns>ContaResponse</returns>
-        ContaResponse Bloquear (long? id, long? idStatus);
+        ContaResponse BloquearConta (long? id, long? idStatus);
   
         /// <summary>
         /// Realiza o bloqueio de uma determinada Conta
@@ -361,7 +347,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
         /// <param name="idStatus">C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Conta</param>
         /// <returns>ApiResponse of ContaResponse</returns>
-        ApiResponse<ContaResponse> BloquearWithHttpInfo (long? id, long? idStatus);
+        ApiResponse<ContaResponse> BloquearContaWithHttpInfo (long? id, long? idStatus);
         
         /// <summary>
         /// Cadastro ades\u00E3o de pagamento no s\u00E1bado
@@ -443,7 +429,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
         /// <param name="idStatus">C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Conta</param>
         /// <returns>ContaResponse</returns>
-        ContaResponse Cancelar (long? id, long? idStatus);
+        ContaResponse CancelarConta (long? id, long? idStatus);
   
         /// <summary>
         /// Realiza o cancelamento de uma determinada Conta
@@ -455,81 +441,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
         /// <param name="idStatus">C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Conta</param>
         /// <returns>ApiResponse of ContaResponse</returns>
-        ApiResponse<ContaResponse> CancelarWithHttpInfo (long? id, long? idStatus);
-        
-        /// <summary>
-        /// Realiza o cancelamento de uma parcela agendada
-        /// </summary>
-        /// <remarks>
-        /// Este recurso permite cancelar uma parcela agendada, sem interferir nas demais parcelas
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">ID da Parcela</param>
-        /// <param name="idAgendamento">idAgendamento</param>
-        /// <param name="idParcela">idParcela</param>
-        /// <returns>string</returns>
-        string CancelarParcela (long? id, long? idAgendamento, long? idParcela);
-  
-        /// <summary>
-        /// Realiza o cancelamento de uma parcela agendada
-        /// </summary>
-        /// <remarks>
-        /// Este recurso permite cancelar uma parcela agendada, sem interferir nas demais parcelas
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">ID da Parcela</param>
-        /// <param name="idAgendamento">idAgendamento</param>
-        /// <param name="idParcela">idParcela</param>
-        /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> CancelarParcelaWithHttpInfo (long? id, long? idAgendamento, long? idParcela);
-        
-        /// <summary>
-        /// Realiza o cancelamento completo de um agendamento
-        /// </summary>
-        /// <remarks>
-        /// Este recurso permite cancelar um agendamento existente, bem como todas suas parcelas em aberto
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idAgendamento">Id do Agendamento</param>
-        /// <param name="id">id</param>
-        /// <returns>string</returns>
-        string CarcelarAgendamento (long? idAgendamento, long? id);
-  
-        /// <summary>
-        /// Realiza o cancelamento completo de um agendamento
-        /// </summary>
-        /// <remarks>
-        /// Este recurso permite cancelar um agendamento existente, bem como todas suas parcelas em aberto
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idAgendamento">Id do Agendamento</param>
-        /// <param name="id">id</param>
-        /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> CarcelarAgendamentoWithHttpInfo (long? idAgendamento, long? id);
-        
-        /// <summary>
-        /// Consulta o extrato anual de tarifas de uma conta
-        /// </summary>
-        /// <remarks>
-        /// Esse recurso permite consultar o extrato anual de tarifas cobradas de uma determinada conta
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Identificador da conta</param>
-        /// <param name="ano">Ano base para gera\u00E7\u00E3o do extrato de tarifas</param>
-        /// <returns>ExtratoTarifasResponse</returns>
-        ExtratoTarifasResponse ConsultaExtratoTarifasAnual (long? id, int? ano);
-  
-        /// <summary>
-        /// Consulta o extrato anual de tarifas de uma conta
-        /// </summary>
-        /// <remarks>
-        /// Esse recurso permite consultar o extrato anual de tarifas cobradas de uma determinada conta
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Identificador da conta</param>
-        /// <param name="ano">Ano base para gera\u00E7\u00E3o do extrato de tarifas</param>
-        /// <returns>ApiResponse of ExtratoTarifasResponse</returns>
-        ApiResponse<ExtratoTarifasResponse> ConsultaExtratoTarifasAnualWithHttpInfo (long? id, int? ano);
+        ApiResponse<ContaResponse> CancelarContaWithHttpInfo (long? id, long? idStatus);
         
         /// <summary>
         /// Consulta ades\u00E3o de pagamento no s\u00E1bado
@@ -586,7 +498,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
         /// <returns>BoletoResponse</returns>
-        BoletoResponse ConsultarBoletoEmitido (long? id);
+        BoletoResponse ConsultarBoletosEmitidos (long? id);
   
         /// <summary>
         /// Consulta os dados de um determinado boleto da fatura
@@ -597,7 +509,29 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
         /// <returns>ApiResponse of BoletoResponse</returns>
-        ApiResponse<BoletoResponse> ConsultarBoletoEmitidoWithHttpInfo (long? id);
+        ApiResponse<BoletoResponse> ConsultarBoletosEmitidosWithHttpInfo (long? id);
+        
+        /// <summary>
+        /// Apresenta dados de uma determinada conta
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite consultar dados de uma determinada conta a partir de seu codigo de identifica\u00E7\u00E3o (id)
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
+        /// <returns>ContaDetalheResponse</returns>
+        ContaDetalheResponse ConsultarConta (long? id);
+  
+        /// <summary>
+        /// Apresenta dados de uma determinada conta
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite consultar dados de uma determinada conta a partir de seu codigo de identifica\u00E7\u00E3o (id)
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
+        /// <returns>ApiResponse of ContaDetalheResponse</returns>
+        ApiResponse<ContaDetalheResponse> ConsultarContaWithHttpInfo (long? id);
         
         /// <summary>
         /// Apresenta o controle de uma subconta
@@ -635,7 +569,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataVencimento">Data do vencimento (optional)</param>
         /// <param name="idEscritorioCobranca">C\u00F3digo de identifica\u00E7\u00E3o do escrit\u00F3rio de cobran\u00E7a (optional)</param>
         /// <returns>DividaClienteResponse</returns>
-        DividaClienteResponse ConsultarDividaAtualizadaCliente (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, long? idEscritorioCobranca = null);
+        DividaClienteResponse ConsultarDividaAtualizada (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, long? idEscritorioCobranca = null);
   
         /// <summary>
         /// Consulta a d\u00EDvida atualizada do cliente
@@ -651,61 +585,91 @@ namespace Conductor.Pier.Api
         /// <param name="dataVencimento">Data do vencimento (optional)</param>
         /// <param name="idEscritorioCobranca">C\u00F3digo de identifica\u00E7\u00E3o do escrit\u00F3rio de cobran\u00E7a (optional)</param>
         /// <returns>ApiResponse of DividaClienteResponse</returns>
-        ApiResponse<DividaClienteResponse> ConsultarDividaAtualizadaClienteWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, long? idEscritorioCobranca = null);
+        ApiResponse<DividaClienteResponse> ConsultarDividaAtualizadaWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, long? idEscritorioCobranca = null);
         
         /// <summary>
-        /// Realiza a consulta das parcelas de um determinado agendamento
+        /// Consulta extrato da conta
         /// </summary>
         /// <remarks>
-        /// Este recurso lista todas as parcelas de um agendamento, independente de seus status
+        /// Consulta extrato da conta
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idAgendamento">Id do Agendamento</param>
-        /// <param name="id">id</param>
+        /// <param name="id">Identificador da conta</param>
         /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="idsTiposTransacoes">C\u00F3digos identificadores dos tipos de transa\u00E7\u00F5es para transfer\u00EAncia de valores e que possuir\u00E3o na descri\u00E7\u00E3o do extrato, os dados da conta destino da transfer\u00EAncia. (optional)</param>
+        /// <param name="idsTiposTransacoesTransferencias">C\u00F3digos identificadores dos tipos de transa\u00E7\u00F5es que ser\u00E3o consultadas no extrato  (optional)</param>
         /// <param name="page">P\u00E1gina (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <returns>PageParcelaAgendamentoResponse</returns>
-        PageParcelaAgendamentoResponse ConsultarParcelasAgendamento (long? idAgendamento, long? id, List<string> sort = null, int? page = null, int? limit = null);
+        /// <param name="dataInicio">Data de in\u00EDcio para consulta do extrato da conta formato yyyy-MM-dd (optional)</param>
+        /// <param name="dataFim">Data de fim para consulta do extrato da conta formato yyyy-MM-dd (optional)</param>
+        /// <param name="idPessoaFisicaSolicitante">C\u00F3digo identificador da pessoa que solicitou o extrato (optional)</param>
+        /// <returns>PageExtratoResponse</returns>
+        PageExtratoResponse ConsultarExtratoConta (long? id, List<string> sort = null, List<long?> idsTiposTransacoes = null, List<long?> idsTiposTransacoesTransferencias = null, int? page = null, int? limit = null, string dataInicio = null, string dataFim = null, long? idPessoaFisicaSolicitante = null);
   
         /// <summary>
-        /// Realiza a consulta das parcelas de um determinado agendamento
+        /// Consulta extrato da conta
         /// </summary>
         /// <remarks>
-        /// Este recurso lista todas as parcelas de um agendamento, independente de seus status
+        /// Consulta extrato da conta
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idAgendamento">Id do Agendamento</param>
-        /// <param name="id">id</param>
+        /// <param name="id">Identificador da conta</param>
         /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="idsTiposTransacoes">C\u00F3digos identificadores dos tipos de transa\u00E7\u00F5es para transfer\u00EAncia de valores e que possuir\u00E3o na descri\u00E7\u00E3o do extrato, os dados da conta destino da transfer\u00EAncia. (optional)</param>
+        /// <param name="idsTiposTransacoesTransferencias">C\u00F3digos identificadores dos tipos de transa\u00E7\u00F5es que ser\u00E3o consultadas no extrato  (optional)</param>
         /// <param name="page">P\u00E1gina (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <returns>ApiResponse of PageParcelaAgendamentoResponse</returns>
-        ApiResponse<PageParcelaAgendamentoResponse> ConsultarParcelasAgendamentoWithHttpInfo (long? idAgendamento, long? id, List<string> sort = null, int? page = null, int? limit = null);
+        /// <param name="dataInicio">Data de in\u00EDcio para consulta do extrato da conta formato yyyy-MM-dd (optional)</param>
+        /// <param name="dataFim">Data de fim para consulta do extrato da conta formato yyyy-MM-dd (optional)</param>
+        /// <param name="idPessoaFisicaSolicitante">C\u00F3digo identificador da pessoa que solicitou o extrato (optional)</param>
+        /// <returns>ApiResponse of PageExtratoResponse</returns>
+        ApiResponse<PageExtratoResponse> ConsultarExtratoContaWithHttpInfo (long? id, List<string> sort = null, List<long?> idsTiposTransacoes = null, List<long?> idsTiposTransacoesTransferencias = null, int? page = null, int? limit = null, string dataInicio = null, string dataFim = null, long? idPessoaFisicaSolicitante = null);
         
         /// <summary>
-        /// Consulta uma transa\u00E7\u00E3o processada da conta.
+        /// Consulta o extrato anual de tarifas de uma conta
         /// </summary>
         /// <remarks>
-        /// Este recurso permite consultar os detalhes de uma transa\u00E7\u00E3o processada pertencente a uma conta.
+        /// Esse recurso permite consultar o extrato anual de tarifas cobradas de uma determinada conta
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param>
-        /// <param name="idTransacao">C\u00F3digo de Identifica\u00E7\u00E3o da transa\u00E7\u00E3o (id).</param>
-        /// <returns>TransacoesCorrentesResponse</returns>
-        TransacoesCorrentesResponse ConsultarProcessada (long? id, long? idTransacao);
+        /// <param name="id">Identificador da conta</param>
+        /// <param name="ano">Ano base para gera\u00E7\u00E3o do extrato de tarifas</param>
+        /// <returns>ExtratoTarifasResponse</returns>
+        ExtratoTarifasResponse ConsultarExtratoTarifasAnual (long? id, int? ano);
   
         /// <summary>
-        /// Consulta uma transa\u00E7\u00E3o processada da conta.
+        /// Consulta o extrato anual de tarifas de uma conta
         /// </summary>
         /// <remarks>
-        /// Este recurso permite consultar os detalhes de uma transa\u00E7\u00E3o processada pertencente a uma conta.
+        /// Esse recurso permite consultar o extrato anual de tarifas cobradas de uma determinada conta
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param>
-        /// <param name="idTransacao">C\u00F3digo de Identifica\u00E7\u00E3o da transa\u00E7\u00E3o (id).</param>
-        /// <returns>ApiResponse of TransacoesCorrentesResponse</returns>
-        ApiResponse<TransacoesCorrentesResponse> ConsultarProcessadaWithHttpInfo (long? id, long? idTransacao);
+        /// <param name="id">Identificador da conta</param>
+        /// <param name="ano">Ano base para gera\u00E7\u00E3o do extrato de tarifas</param>
+        /// <returns>ApiResponse of ExtratoTarifasResponse</returns>
+        ApiResponse<ExtratoTarifasResponse> ConsultarExtratoTarifasAnualWithHttpInfo (long? id, int? ano);
+        
+        /// <summary>
+        /// Apresenta dados de um determinado tipo de fun\u00E7\u00E3o para contas
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite consultar dados de um determinado tipo de fun\u00E7\u00E3o para contas a partir de seu codigo de identifica\u00E7\u00E3o (id)
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do tipo de fun\u00E7\u00E3o para contas (id)</param>
+        /// <returns>string</returns>
+        string ConsultarFuncaoConta (int? id);
+  
+        /// <summary>
+        /// Apresenta dados de um determinado tipo de fun\u00E7\u00E3o para contas
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite consultar dados de um determinado tipo de fun\u00E7\u00E3o para contas a partir de seu codigo de identifica\u00E7\u00E3o (id)
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do tipo de fun\u00E7\u00E3o para contas (id)</param>
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> ConsultarFuncaoContaWithHttpInfo (int? id);
         
         /// <summary>
         /// Consulta a quita\u00E7\u00E3o de d\u00E9bitos do portador no ano referente
@@ -760,6 +724,34 @@ namespace Conductor.Pier.Api
         ApiResponse<PageTaxasRefinanciamentoResponse> ConsultarTaxasTarifasWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null);
         
         /// <summary>
+        /// Permite listar uma linha do tempo com os eventos da conta
+        /// </summary>
+        /// <remarks>
+        /// Esta opera\u00E7\u00E3o tem como objetivo permitir a listagem, em formato de timeline, dos eventos vinculados a uma detemrinada conta. Transa\u00E7\u00F5es, fechamento da fatura, pagamentos, gera\u00E7\u00E3o de cart\u00F5es e altera\u00E7\u00E3o de limite s\u00E3o exemplos de eventos contemplados por esta funcionalidade. Neste m\u00E9todo, as opera\u00E7\u00F5es s\u00E3o ordenadas de forma decrescente
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Id Conta</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <returns>PageTransacaoResponse</returns>
+        PageTransacaoResponse ConsultarTimeline (long? id, List<string> sort = null, int? page = null, int? limit = null);
+  
+        /// <summary>
+        /// Permite listar uma linha do tempo com os eventos da conta
+        /// </summary>
+        /// <remarks>
+        /// Esta opera\u00E7\u00E3o tem como objetivo permitir a listagem, em formato de timeline, dos eventos vinculados a uma detemrinada conta. Transa\u00E7\u00F5es, fechamento da fatura, pagamentos, gera\u00E7\u00E3o de cart\u00F5es e altera\u00E7\u00E3o de limite s\u00E3o exemplos de eventos contemplados por esta funcionalidade. Neste m\u00E9todo, as opera\u00E7\u00F5es s\u00E3o ordenadas de forma decrescente
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Id Conta</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <returns>ApiResponse of PageTransacaoResponse</returns>
+        ApiResponse<PageTransacaoResponse> ConsultarTimelineWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null);
+        
+        /// <summary>
         /// Consulta um tipo de v\u00EDnculo
         /// </summary>
         /// <remarks>
@@ -782,86 +774,28 @@ namespace Conductor.Pier.Api
         ApiResponse<TipoVinculoContaResponse> ConsultarTipoVinculoContaWithHttpInfo (long? id);
         
         /// <summary>
-        /// Apresenta dados de um determinado tipo de fun\u00E7\u00E3o para contas
+        /// Consulta uma transa\u00E7\u00E3o processada da conta.
         /// </summary>
         /// <remarks>
-        /// Este m\u00E9todo permite consultar dados de um determinado tipo de fun\u00E7\u00E3o para contas a partir de seu codigo de identifica\u00E7\u00E3o (id)
+        /// Este recurso permite consultar os detalhes de uma transa\u00E7\u00E3o processada pertencente a uma conta.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do tipo de fun\u00E7\u00E3o para contas (id)</param>
-        /// <returns>string</returns>
-        string Consultar_0 (int? id);
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param>
+        /// <param name="idTransacao">C\u00F3digo de Identifica\u00E7\u00E3o da transa\u00E7\u00E3o (id).</param>
+        /// <returns>TransacoesCorrentesResponse</returns>
+        TransacoesCorrentesResponse ConsultarTransacaoProcessadaConta (long? id, long? idTransacao);
   
         /// <summary>
-        /// Apresenta dados de um determinado tipo de fun\u00E7\u00E3o para contas
+        /// Consulta uma transa\u00E7\u00E3o processada da conta.
         /// </summary>
         /// <remarks>
-        /// Este m\u00E9todo permite consultar dados de um determinado tipo de fun\u00E7\u00E3o para contas a partir de seu codigo de identifica\u00E7\u00E3o (id)
+        /// Este recurso permite consultar os detalhes de uma transa\u00E7\u00E3o processada pertencente a uma conta.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do tipo de fun\u00E7\u00E3o para contas (id)</param>
-        /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> Consultar_0WithHttpInfo (int? id);
-        
-        /// <summary>
-        /// Apresenta dados de uma determinada conta
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite consultar dados de uma determinada conta a partir de seu codigo de identifica\u00E7\u00E3o (id)
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
-        /// <returns>ContaDetalheResponse</returns>
-        ContaDetalheResponse Consultar_1 (long? id);
-  
-        /// <summary>
-        /// Apresenta dados de uma determinada conta
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite consultar dados de uma determinada conta a partir de seu codigo de identifica\u00E7\u00E3o (id)
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
-        /// <returns>ApiResponse of ContaDetalheResponse</returns>
-        ApiResponse<ContaDetalheResponse> Consultar_1WithHttpInfo (long? id);
-        
-        /// <summary>
-        /// Consulta extrato da conta
-        /// </summary>
-        /// <remarks>
-        /// Consulta extrato da conta
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Identificador da conta</param>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="idsTiposTransacoes">C\u00F3digos identificadores dos tipos de transa\u00E7\u00F5es para transfer\u00EAncia de valores e que possuir\u00E3o na descri\u00E7\u00E3o do extrato, os dados da conta destino da transfer\u00EAncia. (optional)</param>
-        /// <param name="idsTiposTransacoesTransferencias">C\u00F3digos identificadores dos tipos de transa\u00E7\u00F5es que ser\u00E3o consultadas no extrato  (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="dataInicio">Data de in\u00EDcio para consulta do extrato da conta formato yyyy-MM-dd (optional)</param>
-        /// <param name="dataFim">Data de fim para consulta do extrato da conta formato yyyy-MM-dd (optional)</param>
-        /// <param name="idPessoaFisicaSolicitante">C\u00F3digo identificador da pessoa que solicitou o extrato (optional)</param>
-        /// <returns>PageExtratoResponse</returns>
-        PageExtratoResponse Consultar_2 (long? id, List<string> sort = null, List<long?> idsTiposTransacoes = null, List<long?> idsTiposTransacoesTransferencias = null, int? page = null, int? limit = null, string dataInicio = null, string dataFim = null, long? idPessoaFisicaSolicitante = null);
-  
-        /// <summary>
-        /// Consulta extrato da conta
-        /// </summary>
-        /// <remarks>
-        /// Consulta extrato da conta
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Identificador da conta</param>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="idsTiposTransacoes">C\u00F3digos identificadores dos tipos de transa\u00E7\u00F5es para transfer\u00EAncia de valores e que possuir\u00E3o na descri\u00E7\u00E3o do extrato, os dados da conta destino da transfer\u00EAncia. (optional)</param>
-        /// <param name="idsTiposTransacoesTransferencias">C\u00F3digos identificadores dos tipos de transa\u00E7\u00F5es que ser\u00E3o consultadas no extrato  (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="dataInicio">Data de in\u00EDcio para consulta do extrato da conta formato yyyy-MM-dd (optional)</param>
-        /// <param name="dataFim">Data de fim para consulta do extrato da conta formato yyyy-MM-dd (optional)</param>
-        /// <param name="idPessoaFisicaSolicitante">C\u00F3digo identificador da pessoa que solicitou o extrato (optional)</param>
-        /// <returns>ApiResponse of PageExtratoResponse</returns>
-        ApiResponse<PageExtratoResponse> Consultar_2WithHttpInfo (long? id, List<string> sort = null, List<long?> idsTiposTransacoes = null, List<long?> idsTiposTransacoesTransferencias = null, int? page = null, int? limit = null, string dataInicio = null, string dataFim = null, long? idPessoaFisicaSolicitante = null);
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param>
+        /// <param name="idTransacao">C\u00F3digo de Identifica\u00E7\u00E3o da transa\u00E7\u00E3o (id).</param>
+        /// <returns>ApiResponse of TransacoesCorrentesResponse</returns>
+        ApiResponse<TransacoesCorrentesResponse> ConsultarTransacaoProcessadaContaWithHttpInfo (long? id, long? idTransacao);
         
         /// <summary>
         /// Consulta os detalhes de uma determinada transfer\u00EAncia
@@ -873,7 +807,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
         /// <param name="idTransferencia">C\u00F3digo de Identifica\u00E7\u00E3o da transfer\u00EAncia (id_transferencia)</param>
         /// <returns>TransferenciaDetalheResponse</returns>
-        TransferenciaDetalheResponse Consultar_3 (long? id, long? idTransferencia);
+        TransferenciaDetalheResponse ConsultarTransferenciaDeCreditoEntreCartoes (long? id, long? idTransferencia);
   
         /// <summary>
         /// Consulta os detalhes de uma determinada transfer\u00EAncia
@@ -885,7 +819,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
         /// <param name="idTransferencia">C\u00F3digo de Identifica\u00E7\u00E3o da transfer\u00EAncia (id_transferencia)</param>
         /// <returns>ApiResponse of TransferenciaDetalheResponse</returns>
-        ApiResponse<TransferenciaDetalheResponse> Consultar_3WithHttpInfo (long? id, long? idTransferencia);
+        ApiResponse<TransferenciaDetalheResponse> ConsultarTransferenciaDeCreditoEntreCartoesWithHttpInfo (long? id, long? idTransferencia);
         
         /// <summary>
         /// Cadastrar contas MultiApp
@@ -1012,7 +946,7 @@ namespace Conductor.Pier.Api
         /// <param name="idPessoa">C\u00F3digo de identifica\u00E7\u00E3o da pessoa (id)</param>
         /// <param name="idTipoPlastico">C\u00F3digo de identifica\u00E7\u00E3o do TipoPlastico (id) (optional)</param>
         /// <returns>CartaoImpressaoResponse</returns>
-        CartaoImpressaoResponse GerarCartao (long? id, long? idPessoa, long? idTipoPlastico = null);
+        CartaoImpressaoResponse GerarCartaoDaPessoa (long? id, long? idPessoa, long? idTipoPlastico = null);
   
         /// <summary>
         /// Realiza a gera\u00E7\u00E3o de um novo cart\u00E3o para impress\u00E3o avulsa
@@ -1025,7 +959,7 @@ namespace Conductor.Pier.Api
         /// <param name="idPessoa">C\u00F3digo de identifica\u00E7\u00E3o da pessoa (id)</param>
         /// <param name="idTipoPlastico">C\u00F3digo de identifica\u00E7\u00E3o do TipoPlastico (id) (optional)</param>
         /// <returns>ApiResponse of CartaoImpressaoResponse</returns>
-        ApiResponse<CartaoImpressaoResponse> GerarCartaoWithHttpInfo (long? id, long? idPessoa, long? idTipoPlastico = null);
+        ApiResponse<CartaoImpressaoResponse> GerarCartaoDaPessoaWithHttpInfo (long? id, long? idPessoa, long? idTipoPlastico = null);
         
         /// <summary>
         /// Realiza o envio para gera\u00E7\u00E3o de um novo cart\u00E3o na gr\u00E1fica
@@ -1037,7 +971,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
         /// <param name="cartaoEmbossingRequest">cartaoEmbossingRequest</param>
         /// <returns>CartaoEmbossingResponse</returns>
-        CartaoEmbossingResponse GerarCartaoEmbossing (long? id, CartaoEmbossingRequest cartaoEmbossingRequest);
+        CartaoEmbossingResponse GerarCartaoGrafica (long? id, CartaoEmbossingRequest cartaoEmbossingRequest);
   
         /// <summary>
         /// Realiza o envio para gera\u00E7\u00E3o de um novo cart\u00E3o na gr\u00E1fica
@@ -1049,7 +983,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
         /// <param name="cartaoEmbossingRequest">cartaoEmbossingRequest</param>
         /// <returns>ApiResponse of CartaoEmbossingResponse</returns>
-        ApiResponse<CartaoEmbossingResponse> GerarCartaoEmbossingWithHttpInfo (long? id, CartaoEmbossingRequest cartaoEmbossingRequest);
+        ApiResponse<CartaoEmbossingResponse> GerarCartaoGraficaWithHttpInfo (long? id, CartaoEmbossingRequest cartaoEmbossingRequest);
         
         /// <summary>
         /// Realiza a gera\u00E7\u00E3o de um cart\u00E3o provisorio
@@ -1098,6 +1032,34 @@ namespace Conductor.Pier.Api
         ApiResponse<CartaoImpressaoResponse> GerarCartaoVirtualWithHttpInfo (long? id, string dataValidade);
         
         /// <summary>
+        /// Listar uma tarifa de d\u00E9bito para uma conta
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite listar as tarifas de d\u00E9bito de uma conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <returns>PageContaDebitoTarifaResponse</returns>
+        PageContaDebitoTarifaResponse ListarContaDebitoTarifa (long? id, List<string> sort = null, int? page = null, int? limit = null);
+  
+        /// <summary>
+        /// Listar uma tarifa de d\u00E9bito para uma conta
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite listar as tarifas de d\u00E9bito de uma conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <returns>ApiResponse of PageContaDebitoTarifaResponse</returns>
+        ApiResponse<PageContaDebitoTarifaResponse> ListarContaDebitoTarifaWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null);
+        
+        /// <summary>
         /// Lista contas existentes na base de dados do Emissor
         /// </summary>
         /// <remarks>
@@ -1118,7 +1080,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataUltimaAlteracaoVencimento">Apresenta a data da ultima altera\u00E7\u00E3o de vencimento (optional)</param>
         /// <param name="funcaoAtiva"> (optional)</param>
         /// <returns>PageContaResponse</returns>
-        PageContaResponse Listar (List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, string dataStatusConta = null, string dataCadastro = null, string dataUltimaAlteracaoVencimento = null, string funcaoAtiva = null);
+        PageContaResponse ListarContas (List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, string dataStatusConta = null, string dataCadastro = null, string dataUltimaAlteracaoVencimento = null, string funcaoAtiva = null);
   
         /// <summary>
         /// Lista contas existentes na base de dados do Emissor
@@ -1141,7 +1103,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataUltimaAlteracaoVencimento">Apresenta a data da ultima altera\u00E7\u00E3o de vencimento (optional)</param>
         /// <param name="funcaoAtiva"> (optional)</param>
         /// <returns>ApiResponse of PageContaResponse</returns>
-        ApiResponse<PageContaResponse> ListarWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, string dataStatusConta = null, string dataCadastro = null, string dataUltimaAlteracaoVencimento = null, string funcaoAtiva = null);
+        ApiResponse<PageContaResponse> ListarContasWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, string dataStatusConta = null, string dataCadastro = null, string dataUltimaAlteracaoVencimento = null, string funcaoAtiva = null);
         
         /// <summary>
         /// Lista os controles de subcontas
@@ -1194,8 +1156,9 @@ namespace Conductor.Pier.Api
         /// <param name="numeroCelular">N\u00FAmero do celular (optional)</param>
         /// <param name="nome">Nome do propriet\u00E1rio do celular (optional)</param>
         /// <param name="ativo">Indicador de status do favorito (optional)</param>
+        /// <param name="descricaoOperadora">Descri\u00E7\u00E3o da operadora (optional)</param>
         /// <returns>PageRecargaCelularFavoritoResponse</returns>
-        PageRecargaCelularFavoritoResponse ListarFavoritosRecargasCelular (long? id, List<string> sort = null, int? page = null, int? limit = null, string dddCelular = null, string numeroCelular = null, string nome = null, bool? ativo = null);
+        PageRecargaCelularFavoritoResponse ListarFavoritosRecargasCelular (long? id, List<string> sort = null, int? page = null, int? limit = null, string dddCelular = null, string numeroCelular = null, string nome = null, bool? ativo = null, string descricaoOperadora = null);
   
         /// <summary>
         /// Lista registros de favoritos de recarga de celular
@@ -1212,8 +1175,29 @@ namespace Conductor.Pier.Api
         /// <param name="numeroCelular">N\u00FAmero do celular (optional)</param>
         /// <param name="nome">Nome do propriet\u00E1rio do celular (optional)</param>
         /// <param name="ativo">Indicador de status do favorito (optional)</param>
+        /// <param name="descricaoOperadora">Descri\u00E7\u00E3o da operadora (optional)</param>
         /// <returns>ApiResponse of PageRecargaCelularFavoritoResponse</returns>
-        ApiResponse<PageRecargaCelularFavoritoResponse> ListarFavoritosRecargasCelularWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, string dddCelular = null, string numeroCelular = null, string nome = null, bool? ativo = null);
+        ApiResponse<PageRecargaCelularFavoritoResponse> ListarFavoritosRecargasCelularWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, string dddCelular = null, string numeroCelular = null, string nome = null, bool? ativo = null, string descricaoOperadora = null);
+        
+        /// <summary>
+        /// Lista os tipos de fun\u00E7\u00F5es para contas do Emissor
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite listar os tipos de fun\u00E7\u00F5es para as contas do Emissor
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>string</returns>
+        string ListarFuncoesContas ();
+  
+        /// <summary>
+        /// Lista os tipos de fun\u00E7\u00F5es para contas do Emissor
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite listar os tipos de fun\u00E7\u00F5es para as contas do Emissor
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> ListarFuncoesContasWithHttpInfo ();
         
         /// <summary>
         /// Lista o hist\u00F3rico de altera\u00E7\u00F5es de limites da conta
@@ -1283,7 +1267,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00E1gina (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
         /// <returns>PageHistoricoAtrasoFaturaResponse</returns>
-        PageHistoricoAtrasoFaturaResponse ListarHistoricoAtrasosFaturas (long? id, List<string> sort = null, int? page = null, int? limit = null);
+        PageHistoricoAtrasoFaturaResponse ListarHistoricoFaturasAtrasadas (long? id, List<string> sort = null, int? page = null, int? limit = null);
   
         /// <summary>
         /// Lista o historico de atrasos das faturas
@@ -1297,77 +1281,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00E1gina (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
         /// <returns>ApiResponse of PageHistoricoAtrasoFaturaResponse</returns>
-        ApiResponse<PageHistoricoAtrasoFaturaResponse> ListarHistoricoAtrasosFaturasWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null);
-        
-        /// <summary>
-        /// Lista as transa\u00E7\u00F5es n\u00E3o processadas da conta
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es n\u00E3o processadas da Conta.
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="dataInicio">Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Par\u00E2mentro Ignorado se dataFim n\u00E3o for definida) (optional)</param>
-        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Par\u00E2mentro Ignorado se dataInicio n\u00E3o for definida) (optional)</param>
-        /// <returns>PageTransacaoNaoProcessadaResponse</returns>
-        PageTransacaoNaoProcessadaResponse ListarNaoProcessadas (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataInicio = null, string dataFim = null);
-  
-        /// <summary>
-        /// Lista as transa\u00E7\u00F5es n\u00E3o processadas da conta
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es n\u00E3o processadas da Conta.
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="dataInicio">Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Par\u00E2mentro Ignorado se dataFim n\u00E3o for definida) (optional)</param>
-        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Par\u00E2mentro Ignorado se dataInicio n\u00E3o for definida) (optional)</param>
-        /// <returns>ApiResponse of PageTransacaoNaoProcessadaResponse</returns>
-        ApiResponse<PageTransacaoNaoProcessadaResponse> ListarNaoProcessadasWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataInicio = null, string dataFim = null);
-        
-        /// <summary>
-        /// Lista as transa\u00E7\u00F5es processadas da conta
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es processadas da Conta
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="dataVencimento">Data de vencimento do extrato no formato yyyy-MM-dd (optional)</param>
-        /// <param name="dataInicio">Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param>
-        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param>
-        /// <param name="idTipoTransacao">transacoes_processadas_request_tipo_transacao (optional)</param>
-        /// <param name="recuperaEncargos">Adiciona as transa\u00E7\u00F5es de encargos na consulta (optional)</param>
-        /// <returns>PageTransacoesCorrentesResponse</returns>
-        PageTransacoesCorrentesResponse ListarProcessadas (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null, long? idTipoTransacao = null, int? recuperaEncargos = null);
-  
-        /// <summary>
-        /// Lista as transa\u00E7\u00F5es processadas da conta
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es processadas da Conta
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="dataVencimento">Data de vencimento do extrato no formato yyyy-MM-dd (optional)</param>
-        /// <param name="dataInicio">Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param>
-        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param>
-        /// <param name="idTipoTransacao">transacoes_processadas_request_tipo_transacao (optional)</param>
-        /// <param name="recuperaEncargos">Adiciona as transa\u00E7\u00F5es de encargos na consulta (optional)</param>
-        /// <returns>ApiResponse of PageTransacoesCorrentesResponse</returns>
-        ApiResponse<PageTransacoesCorrentesResponse> ListarProcessadasWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null, long? idTipoTransacao = null, int? recuperaEncargos = null);
+        ApiResponse<PageHistoricoAtrasoFaturaResponse> ListarHistoricoFaturasAtrasadasWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null);
         
         /// <summary>
         /// Lista registros da seguran\u00E7a mobile
@@ -1486,6 +1400,156 @@ namespace Conductor.Pier.Api
         ApiResponse<PageTipoVinculoContaResponse> ListarTipoVinculoWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string descricao = null);
         
         /// <summary>
+        /// Lista as transa\u00E7\u00F5es n\u00E3o processadas e processadas da conta
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es n\u00E3o processadas e processadas da Conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="status">Status da transa\u00E7\u00E3o (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="dataVencimento">Data de vencimento do extrato no formato yyyy-MM-dd (optional)</param>
+        /// <param name="dataInicio">Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param>
+        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param>
+        /// <param name="idTipoTransacao">transacoes_processadas_nao_processadas_request_tipo_transacao (optional)</param>
+        /// <param name="flagCredito">Flag que indica se a transa\u00E7\u00E3o \u00E9 cr\u00E9dito (optional)</param>
+        /// <param name="flagFaturado">Flag que indica se a transa\u00E7\u00E3o foi faturada (optional)</param>
+        /// <param name="flagProcessada">Flag que indica se a transa\u00E7\u00E3o foi processada (optional)</param>
+        /// <param name="plano">Plano da transa\u00E7\u00E3o (optional)</param>
+        /// <param name="codigoMCC">C\u00F3digo MCC da transa\u00E7\u00E3o (optional)</param>
+        /// <param name="grupoMCC">Grupo MCC da transa\u00E7\u00E3o (optional)</param>
+        /// <returns>PageTransacaoProcessadaNaoProcessadaResponse</returns>
+        PageTransacaoProcessadaNaoProcessadaResponse ListarTransacoesConta (long? id, List<string> sort = null, List<int?> status = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null, long? idTipoTransacao = null, bool? flagCredito = null, bool? flagFaturado = null, bool? flagProcessada = null, int? plano = null, long? codigoMCC = null, long? grupoMCC = null);
+  
+        /// <summary>
+        /// Lista as transa\u00E7\u00F5es n\u00E3o processadas e processadas da conta
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es n\u00E3o processadas e processadas da Conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="status">Status da transa\u00E7\u00E3o (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="dataVencimento">Data de vencimento do extrato no formato yyyy-MM-dd (optional)</param>
+        /// <param name="dataInicio">Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param>
+        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param>
+        /// <param name="idTipoTransacao">transacoes_processadas_nao_processadas_request_tipo_transacao (optional)</param>
+        /// <param name="flagCredito">Flag que indica se a transa\u00E7\u00E3o \u00E9 cr\u00E9dito (optional)</param>
+        /// <param name="flagFaturado">Flag que indica se a transa\u00E7\u00E3o foi faturada (optional)</param>
+        /// <param name="flagProcessada">Flag que indica se a transa\u00E7\u00E3o foi processada (optional)</param>
+        /// <param name="plano">Plano da transa\u00E7\u00E3o (optional)</param>
+        /// <param name="codigoMCC">C\u00F3digo MCC da transa\u00E7\u00E3o (optional)</param>
+        /// <param name="grupoMCC">Grupo MCC da transa\u00E7\u00E3o (optional)</param>
+        /// <returns>ApiResponse of PageTransacaoProcessadaNaoProcessadaResponse</returns>
+        ApiResponse<PageTransacaoProcessadaNaoProcessadaResponse> ListarTransacoesContaWithHttpInfo (long? id, List<string> sort = null, List<int?> status = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null, long? idTipoTransacao = null, bool? flagCredito = null, bool? flagFaturado = null, bool? flagProcessada = null, int? plano = null, long? codigoMCC = null, long? grupoMCC = null);
+        
+        /// <summary>
+        /// Lista as transa\u00E7\u00F5es n\u00E3o processadas da conta
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es n\u00E3o processadas da Conta.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="dataInicio">Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Par\u00E2mentro Ignorado se dataFim n\u00E3o for definida) (optional)</param>
+        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Par\u00E2mentro Ignorado se dataInicio n\u00E3o for definida) (optional)</param>
+        /// <returns>PageTransacaoNaoProcessadaResponse</returns>
+        PageTransacaoNaoProcessadaResponse ListarTransacoesNaoProcessadasConta (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataInicio = null, string dataFim = null);
+  
+        /// <summary>
+        /// Lista as transa\u00E7\u00F5es n\u00E3o processadas da conta
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es n\u00E3o processadas da Conta.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="dataInicio">Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Par\u00E2mentro Ignorado se dataFim n\u00E3o for definida) (optional)</param>
+        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Par\u00E2mentro Ignorado se dataInicio n\u00E3o for definida) (optional)</param>
+        /// <returns>ApiResponse of PageTransacaoNaoProcessadaResponse</returns>
+        ApiResponse<PageTransacaoNaoProcessadaResponse> ListarTransacoesNaoProcessadasContaWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataInicio = null, string dataFim = null);
+        
+        /// <summary>
+        /// Listar as transa\u00E7\u00F5es negadas da conta
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es negadas da Conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo identificador da conta</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idCartao">C\u00F3digo identificador do cart\u00E3o (optional)</param>
+        /// <returns>PageTransacaoNegadaResponse</returns>
+        PageTransacaoNegadaResponse ListarTransacoesNegadas (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null);
+  
+        /// <summary>
+        /// Listar as transa\u00E7\u00F5es negadas da conta
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es negadas da Conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo identificador da conta</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idCartao">C\u00F3digo identificador do cart\u00E3o (optional)</param>
+        /// <returns>ApiResponse of PageTransacaoNegadaResponse</returns>
+        ApiResponse<PageTransacaoNegadaResponse> ListarTransacoesNegadasWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null);
+        
+        /// <summary>
+        /// Lista as transa\u00E7\u00F5es processadas da conta
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es processadas da Conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="dataVencimento">Data de vencimento do extrato no formato yyyy-MM-dd (optional)</param>
+        /// <param name="dataInicio">Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param>
+        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param>
+        /// <param name="idTipoTransacao">transacoes_processadas_request_tipo_transacao (optional)</param>
+        /// <param name="recuperaEncargos">Adiciona as transa\u00E7\u00F5es de encargos na consulta (optional)</param>
+        /// <returns>PageTransacoesCorrentesResponse</returns>
+        PageTransacoesCorrentesResponse ListarTransacoesProcessadasConta (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null, long? idTipoTransacao = null, int? recuperaEncargos = null);
+  
+        /// <summary>
+        /// Lista as transa\u00E7\u00F5es processadas da conta
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es processadas da Conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="dataVencimento">Data de vencimento do extrato no formato yyyy-MM-dd (optional)</param>
+        /// <param name="dataInicio">Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param>
+        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param>
+        /// <param name="idTipoTransacao">transacoes_processadas_request_tipo_transacao (optional)</param>
+        /// <param name="recuperaEncargos">Adiciona as transa\u00E7\u00F5es de encargos na consulta (optional)</param>
+        /// <returns>ApiResponse of PageTransacoesCorrentesResponse</returns>
+        ApiResponse<PageTransacoesCorrentesResponse> ListarTransacoesProcessadasContaWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null, long? idTipoTransacao = null, int? recuperaEncargos = null);
+        
+        /// <summary>
         /// Este recurso permite que uma proje\u00E7\u00E3o de compra ainda n\u00E3o processada seja recuperada. Os valores das compras s\u00E3o agrupados e exibidos em blocos mensais.
         /// </summary>
         /// <remarks>
@@ -1497,7 +1561,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00E1gina (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
         /// <returns>PageProjecaoCompraNaoProcessadaResponse</returns>
-        PageProjecaoCompraNaoProcessadaResponse ListarTransacoesProjetadas (long? id, List<string> sort = null, int? page = null, int? limit = null);
+        PageProjecaoCompraNaoProcessadaResponse ListarTransacoesProjetadasConta (long? id, List<string> sort = null, int? page = null, int? limit = null);
   
         /// <summary>
         /// Este recurso permite que uma proje\u00E7\u00E3o de compra ainda n\u00E3o processada seja recuperada. Os valores das compras s\u00E3o agrupados e exibidos em blocos mensais.
@@ -1511,7 +1575,45 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00E1gina (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
         /// <returns>ApiResponse of PageProjecaoCompraNaoProcessadaResponse</returns>
-        ApiResponse<PageProjecaoCompraNaoProcessadaResponse> ListarTransacoesProjetadasWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null);
+        ApiResponse<PageProjecaoCompraNaoProcessadaResponse> ListarTransacoesProjetadasContaWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null);
+        
+        /// <summary>
+        /// Lista as transfer\u00EAncias realizadas pela conta
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que sejam listadas as transfer\u00EAncias realizadas pela conta existentes na base do emissor
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idTransferencia">C\u00F3digo de identifica\u00E7\u00E3o da transfer\u00EAncia (id) (optional)</param>
+        /// <param name="idContaOrigem">C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 debitado para a transfer\u00EAncia. (id) (optional)</param>
+        /// <param name="idContaDestino">C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 creditado para a transfer\u00EAncia. (id) (optional)</param>
+        /// <param name="valorTransferencia">Valor estabelecido para ser transferido (optional)</param>
+        /// <param name="dataTransferencia">Data estabelecida para ocorrer a transfer\u00EAncia (optional)</param>
+        /// <returns>PageTransferenciaResponse</returns>
+        PageTransferenciaResponse ListarTransferenciasDeCreditoEntreCartoes (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idTransferencia = null, long? idContaOrigem = null, long? idContaDestino = null, double? valorTransferencia = null, string dataTransferencia = null);
+  
+        /// <summary>
+        /// Lista as transfer\u00EAncias realizadas pela conta
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que sejam listadas as transfer\u00EAncias realizadas pela conta existentes na base do emissor
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idTransferencia">C\u00F3digo de identifica\u00E7\u00E3o da transfer\u00EAncia (id) (optional)</param>
+        /// <param name="idContaOrigem">C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 debitado para a transfer\u00EAncia. (id) (optional)</param>
+        /// <param name="idContaDestino">C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 creditado para a transfer\u00EAncia. (id) (optional)</param>
+        /// <param name="valorTransferencia">Valor estabelecido para ser transferido (optional)</param>
+        /// <param name="dataTransferencia">Data estabelecida para ocorrer a transfer\u00EAncia (optional)</param>
+        /// <returns>ApiResponse of PageTransferenciaResponse</returns>
+        ApiResponse<PageTransferenciaResponse> ListarTransferenciasDeCreditoEntreCartoesWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idTransferencia = null, long? idContaOrigem = null, long? idContaDestino = null, double? valorTransferencia = null, string dataTransferencia = null);
         
         /// <summary>
         /// Lista v\u00EDnculos de contas
@@ -1544,152 +1646,6 @@ namespace Conductor.Pier.Api
         ApiResponse<PageVinculoContaResponse> ListarVinculoContaWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idTipoVinculo = null);
         
         /// <summary>
-        /// Lista os tipos de fun\u00E7\u00F5es para contas do Emissor
-        /// </summary>
-        /// <remarks>
-        /// Este recurso permite listar os tipos de fun\u00E7\u00F5es para as contas do Emissor
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>string</returns>
-        string Listar_0 ();
-  
-        /// <summary>
-        /// Lista os tipos de fun\u00E7\u00F5es para contas do Emissor
-        /// </summary>
-        /// <remarks>
-        /// Este recurso permite listar os tipos de fun\u00E7\u00F5es para as contas do Emissor
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> Listar_0WithHttpInfo ();
-        
-        /// <summary>
-        /// Realiza a listagem de todos os agendamentos
-        /// </summary>
-        /// <remarks>
-        /// Este recurso permite listar todos os agendamentos
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">id</param>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="tipoOperacao">Tipo opera\u00E7\u00E3o  (optional)</param>
-        /// <param name="tipoRecorrencia">Tipo Recorr\u00EAncia (optional)</param>
-        /// <param name="quantidadeAgendamento">Quantidade agendamento  (optional)</param>
-        /// <param name="diaRecorrencia">Dia recorr\u00EAncia (optional)</param>
-        /// <param name="valor">Valor Agendamento (optional)</param>
-        /// <returns>string</returns>
-        string Listar_1 (long? id, List<string> sort = null, int? page = null, int? limit = null, int? tipoOperacao = null, int? tipoRecorrencia = null, int? quantidadeAgendamento = null, int? diaRecorrencia = null, double? valor = null);
-  
-        /// <summary>
-        /// Realiza a listagem de todos os agendamentos
-        /// </summary>
-        /// <remarks>
-        /// Este recurso permite listar todos os agendamentos
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">id</param>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="tipoOperacao">Tipo opera\u00E7\u00E3o  (optional)</param>
-        /// <param name="tipoRecorrencia">Tipo Recorr\u00EAncia (optional)</param>
-        /// <param name="quantidadeAgendamento">Quantidade agendamento  (optional)</param>
-        /// <param name="diaRecorrencia">Dia recorr\u00EAncia (optional)</param>
-        /// <param name="valor">Valor Agendamento (optional)</param>
-        /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> Listar_1WithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, int? tipoOperacao = null, int? tipoRecorrencia = null, int? quantidadeAgendamento = null, int? diaRecorrencia = null, double? valor = null);
-        
-        /// <summary>
-        /// Lista as transa\u00E7\u00F5es n\u00E3o processadas e processadas da conta
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es n\u00E3o processadas e processadas da Conta
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="status">Status da transa\u00E7\u00E3o (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="dataVencimento">Data de vencimento do extrato no formato yyyy-MM-dd (optional)</param>
-        /// <param name="dataInicio">Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param>
-        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param>
-        /// <param name="idTipoTransacao">transacoes_processadas_nao_processadas_request_tipo_transacao (optional)</param>
-        /// <param name="flagCredito">Flag que indica se a transa\u00E7\u00E3o \u00E9 cr\u00E9dito (optional)</param>
-        /// <param name="flagFaturado">Flag que indica se a transa\u00E7\u00E3o foi faturada (optional)</param>
-        /// <param name="flagProcessada">Flag que indica se a transa\u00E7\u00E3o foi processada (optional)</param>
-        /// <param name="plano">Plano da transa\u00E7\u00E3o (optional)</param>
-        /// <param name="codigoMCC">C\u00F3digo MCC da transa\u00E7\u00E3o (optional)</param>
-        /// <param name="grupoMCC">Grupo MCC da transa\u00E7\u00E3o (optional)</param>
-        /// <returns>PageTransacaoProcessadaNaoProcessadaResponse</returns>
-        PageTransacaoProcessadaNaoProcessadaResponse Listar_2 (long? id, List<string> sort = null, List<int?> status = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null, long? idTipoTransacao = null, bool? flagCredito = null, bool? flagFaturado = null, bool? flagProcessada = null, int? plano = null, long? codigoMCC = null, long? grupoMCC = null);
-  
-        /// <summary>
-        /// Lista as transa\u00E7\u00F5es n\u00E3o processadas e processadas da conta
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es n\u00E3o processadas e processadas da Conta
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="status">Status da transa\u00E7\u00E3o (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="dataVencimento">Data de vencimento do extrato no formato yyyy-MM-dd (optional)</param>
-        /// <param name="dataInicio">Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param>
-        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param>
-        /// <param name="idTipoTransacao">transacoes_processadas_nao_processadas_request_tipo_transacao (optional)</param>
-        /// <param name="flagCredito">Flag que indica se a transa\u00E7\u00E3o \u00E9 cr\u00E9dito (optional)</param>
-        /// <param name="flagFaturado">Flag que indica se a transa\u00E7\u00E3o foi faturada (optional)</param>
-        /// <param name="flagProcessada">Flag que indica se a transa\u00E7\u00E3o foi processada (optional)</param>
-        /// <param name="plano">Plano da transa\u00E7\u00E3o (optional)</param>
-        /// <param name="codigoMCC">C\u00F3digo MCC da transa\u00E7\u00E3o (optional)</param>
-        /// <param name="grupoMCC">Grupo MCC da transa\u00E7\u00E3o (optional)</param>
-        /// <returns>ApiResponse of PageTransacaoProcessadaNaoProcessadaResponse</returns>
-        ApiResponse<PageTransacaoProcessadaNaoProcessadaResponse> Listar_2WithHttpInfo (long? id, List<string> sort = null, List<int?> status = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null, long? idTipoTransacao = null, bool? flagCredito = null, bool? flagFaturado = null, bool? flagProcessada = null, int? plano = null, long? codigoMCC = null, long? grupoMCC = null);
-        
-        /// <summary>
-        /// Lista as transfer\u00EAncias realizadas pela conta
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite que sejam listadas as transfer\u00EAncias realizadas pela conta existentes na base do emissor
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="idTransferencia">C\u00F3digo de identifica\u00E7\u00E3o da transfer\u00EAncia (id) (optional)</param>
-        /// <param name="idContaOrigem">C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 debitado para a transfer\u00EAncia. (id) (optional)</param>
-        /// <param name="idContaDestino">C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 creditado para a transfer\u00EAncia. (id) (optional)</param>
-        /// <param name="valorTransferencia">Valor estabelecido para ser transferido (optional)</param>
-        /// <param name="dataTransferencia">Data estabelecida para ocorrer a transfer\u00EAncia (optional)</param>
-        /// <returns>PageTransferenciaResponse</returns>
-        PageTransferenciaResponse Listar_3 (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idTransferencia = null, long? idContaOrigem = null, long? idContaDestino = null, double? valorTransferencia = null, string dataTransferencia = null);
-  
-        /// <summary>
-        /// Lista as transfer\u00EAncias realizadas pela conta
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite que sejam listadas as transfer\u00EAncias realizadas pela conta existentes na base do emissor
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="idTransferencia">C\u00F3digo de identifica\u00E7\u00E3o da transfer\u00EAncia (id) (optional)</param>
-        /// <param name="idContaOrigem">C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 debitado para a transfer\u00EAncia. (id) (optional)</param>
-        /// <param name="idContaDestino">C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 creditado para a transfer\u00EAncia. (id) (optional)</param>
-        /// <param name="valorTransferencia">Valor estabelecido para ser transferido (optional)</param>
-        /// <param name="dataTransferencia">Data estabelecida para ocorrer a transfer\u00EAncia (optional)</param>
-        /// <returns>ApiResponse of PageTransferenciaResponse</returns>
-        ApiResponse<PageTransferenciaResponse> Listar_3WithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idTransferencia = null, long? idContaOrigem = null, long? idContaDestino = null, double? valorTransferencia = null, string dataTransferencia = null);
-        
-        /// <summary>
         /// Realiza a normaliza\u00E7\u00E3o de uma conta
         /// </summary>
         /// <remarks>
@@ -1699,7 +1655,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o de uma Conta (id)</param>
         /// <param name="login">login (optional)</param>
         /// <returns>Object</returns>
-        Object Normalizacao (long? id, string login = null);
+        Object NormalizarConta (long? id, string login = null);
   
         /// <summary>
         /// Realiza a normaliza\u00E7\u00E3o de uma conta
@@ -1711,7 +1667,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o de uma Conta (id)</param>
         /// <param name="login">login (optional)</param>
         /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> NormalizacaoWithHttpInfo (long? id, string login = null);
+        ApiResponse<Object> NormalizarContaWithHttpInfo (long? id, string login = null);
         
         /// <summary>
         /// Realiza a reativa\u00E7\u00E3o de contas
@@ -1722,7 +1678,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
         /// <returns>Object</returns>
-        Object Reativar (long? id);
+        Object ReativarConta (long? id);
   
         /// <summary>
         /// Realiza a reativa\u00E7\u00E3o de contas
@@ -1733,29 +1689,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
         /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> ReativarWithHttpInfo (long? id);
-        
-        /// <summary>
-        /// Realiza o cadastro de uma nova conta
-        /// </summary>
-        /// <remarks>
-        /// Esse recurso permite cadastrar uma nova conta para uma pessoa j\u00E1 existente na base de dados do emissor
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="contaPersist">contaPersist</param>
-        /// <returns>ContaResponse</returns>
-        ContaResponse Salvar (ContaPersist contaPersist);
-  
-        /// <summary>
-        /// Realiza o cadastro de uma nova conta
-        /// </summary>
-        /// <remarks>
-        /// Esse recurso permite cadastrar uma nova conta para uma pessoa j\u00E1 existente na base de dados do emissor
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="contaPersist">contaPersist</param>
-        /// <returns>ApiResponse of ContaResponse</returns>
-        ApiResponse<ContaResponse> SalvarWithHttpInfo (ContaPersist contaPersist);
+        ApiResponse<Object> ReativarContaWithHttpInfo (long? id);
         
         /// <summary>
         /// Realiza um cadastro de uma nova ades\u00E3o do servi\u00E7o
@@ -1782,28 +1716,90 @@ namespace Conductor.Pier.Api
         ApiResponse<AdesaoServicoResponse> SalvarAdesaoServicosWithHttpInfo (long? id, AdesaoServicoPersist adesaoServicoPersist);
         
         /// <summary>
-        /// Realiza o agendamento de transacoes
+        /// Lan\u00E7a um ajuste para a conta do id informado
         /// </summary>
         /// <remarks>
-        /// Este recurso permite agendar opera\u00E7\u00F5es financeiras
+        /// Este recurso insere um ajuste para a conta do id informado
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="agendamentoPersist">agendamentoPersist</param>
-        /// <param name="id">id</param>
-        /// <returns>AgendamentoResponse</returns>
-        AgendamentoResponse SalvarAgendamento (AgendamentoPersist agendamentoPersist, long? id);
+        /// <param name="id">Id Conta</param>
+        /// <param name="idTipoAjuste">C\u00F3digo identificador do tipo de ajuste</param>
+        /// <param name="dataAjuste">Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ</param>
+        /// <param name="valorAjuste">Valor do ajuste</param>
+        /// <param name="login">login (optional)</param>
+        /// <param name="identificadorExterno">Identificador Externo (optional)</param>
+        /// <param name="idTransacaoOriginal">Identificador da transa\u00E7\u00E3o original (estorno) (optional)</param>
+        /// <param name="idEstabelecimento">Identificador do estabelecimento quando o pagamento for efetuado em loja (optional)</param>
+        /// <param name="flagAtendimento">Flag para lan\u00E7ar o atendimento (optional)</param>
+        /// <param name="mensagemAtendimento">Mensagem enviada no atendimento (optional)</param>
+        /// <returns>AjusteFinanceiroResponse</returns>
+        AjusteFinanceiroResponse SalvarAjusteFinanceiroConta (long? id, long? idTipoAjuste, string dataAjuste, double? valorAjuste, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null, bool? flagAtendimento = null, string mensagemAtendimento = null);
   
         /// <summary>
-        /// Realiza o agendamento de transacoes
+        /// Lan\u00E7a um ajuste para a conta do id informado
         /// </summary>
         /// <remarks>
-        /// Este recurso permite agendar opera\u00E7\u00F5es financeiras
+        /// Este recurso insere um ajuste para a conta do id informado
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="agendamentoPersist">agendamentoPersist</param>
-        /// <param name="id">id</param>
-        /// <returns>ApiResponse of AgendamentoResponse</returns>
-        ApiResponse<AgendamentoResponse> SalvarAgendamentoWithHttpInfo (AgendamentoPersist agendamentoPersist, long? id);
+        /// <param name="id">Id Conta</param>
+        /// <param name="idTipoAjuste">C\u00F3digo identificador do tipo de ajuste</param>
+        /// <param name="dataAjuste">Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ</param>
+        /// <param name="valorAjuste">Valor do ajuste</param>
+        /// <param name="login">login (optional)</param>
+        /// <param name="identificadorExterno">Identificador Externo (optional)</param>
+        /// <param name="idTransacaoOriginal">Identificador da transa\u00E7\u00E3o original (estorno) (optional)</param>
+        /// <param name="idEstabelecimento">Identificador do estabelecimento quando o pagamento for efetuado em loja (optional)</param>
+        /// <param name="flagAtendimento">Flag para lan\u00E7ar o atendimento (optional)</param>
+        /// <param name="mensagemAtendimento">Mensagem enviada no atendimento (optional)</param>
+        /// <returns>ApiResponse of AjusteFinanceiroResponse</returns>
+        ApiResponse<AjusteFinanceiroResponse> SalvarAjusteFinanceiroContaWithHttpInfo (long? id, long? idTipoAjuste, string dataAjuste, double? valorAjuste, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null, bool? flagAtendimento = null, string mensagemAtendimento = null);
+        
+        /// <summary>
+        /// Realiza o cadastro de uma nova conta
+        /// </summary>
+        /// <remarks>
+        /// Esse recurso permite cadastrar uma nova conta para uma pessoa j\u00E1 existente na base de dados do emissor
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contaPersist">contaPersist</param>
+        /// <returns>ContaResponse</returns>
+        ContaResponse SalvarConta (ContaPersist contaPersist);
+  
+        /// <summary>
+        /// Realiza o cadastro de uma nova conta
+        /// </summary>
+        /// <remarks>
+        /// Esse recurso permite cadastrar uma nova conta para uma pessoa j\u00E1 existente na base de dados do emissor
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contaPersist">contaPersist</param>
+        /// <returns>ApiResponse of ContaResponse</returns>
+        ApiResponse<ContaResponse> SalvarContaWithHttpInfo (ContaPersist contaPersist);
+        
+        /// <summary>
+        /// Salvar uma tarifa de d\u00E9bito para uma conta
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite salvar uma tarifa de d\u00E9bito para a conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta</param>
+        /// <param name="contaDebitoTarifaPersist">contaDebitoTarifaPersist</param>
+        /// <returns>ContaDebitoTarifaResponse</returns>
+        ContaDebitoTarifaResponse SalvarContaDebitoTarifa (long? id, ContaDebitoTarifaPersist contaDebitoTarifaPersist);
+  
+        /// <summary>
+        /// Salvar uma tarifa de d\u00E9bito para uma conta
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite salvar uma tarifa de d\u00E9bito para a conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta</param>
+        /// <param name="contaDebitoTarifaPersist">contaDebitoTarifaPersist</param>
+        /// <returns>ApiResponse of ContaDebitoTarifaResponse</returns>
+        ApiResponse<ContaDebitoTarifaResponse> SalvarContaDebitoTarifaWithHttpInfo (long? id, ContaDebitoTarifaPersist contaDebitoTarifaPersist);
         
         /// <summary>
         /// Cadastra um controle para uma subconta
@@ -1902,34 +1898,6 @@ namespace Conductor.Pier.Api
         ApiResponse<EmprestimoPessoalResponse> SimularEmprestimoFinanciamentoWithHttpInfo (long? id, EmprestimoPessoalRequest request);
         
         /// <summary>
-        /// Permite listar uma linha do tempo com os eventos da conta
-        /// </summary>
-        /// <remarks>
-        /// Esta opera\u00E7\u00E3o tem como objetivo permitir a listagem, em formato de timeline, dos eventos vinculados a uma detemrinada conta. Transa\u00E7\u00F5es, fechamento da fatura, pagamentos, gera\u00E7\u00E3o de cart\u00F5es e altera\u00E7\u00E3o de limite s\u00E3o exemplos de eventos contemplados por esta funcionalidade. Neste m\u00E9todo, as opera\u00E7\u00F5es s\u00E3o ordenadas de forma decrescente
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Id Conta</param>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <returns>PageTransacaoResponse</returns>
-        PageTransacaoResponse Transacoes (long? id, List<string> sort = null, int? page = null, int? limit = null);
-  
-        /// <summary>
-        /// Permite listar uma linha do tempo com os eventos da conta
-        /// </summary>
-        /// <remarks>
-        /// Esta opera\u00E7\u00E3o tem como objetivo permitir a listagem, em formato de timeline, dos eventos vinculados a uma detemrinada conta. Transa\u00E7\u00F5es, fechamento da fatura, pagamentos, gera\u00E7\u00E3o de cart\u00F5es e altera\u00E7\u00E3o de limite s\u00E3o exemplos de eventos contemplados por esta funcionalidade. Neste m\u00E9todo, as opera\u00E7\u00F5es s\u00E3o ordenadas de forma decrescente
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Id Conta</param>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <returns>ApiResponse of PageTransacaoResponse</returns>
-        ApiResponse<PageTransacaoResponse> TransacoesWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null);
-        
-        /// <summary>
         /// Realiza uma transfer\u00EAncia de Cr\u00E9dito para outro cliente do mesmo Emissor
         /// </summary>
         /// <remarks>
@@ -1940,7 +1908,7 @@ namespace Conductor.Pier.Api
         /// <param name="idContaDestino">C\u00F3digo de Identifica\u00E7\u00E3o do cliente portador do cart\u00E3o que ser\u00E1 creditado (id)</param>
         /// <param name="valorTransferencia">Valor da Transfer\u00EAncia</param>
         /// <returns>TransferenciaDetalheResponse</returns>
-        TransferenciaDetalheResponse Transferir (long? id, long? idContaDestino, double? valorTransferencia);
+        TransferenciaDetalheResponse TransferirCreditoEntreCartoes (long? id, long? idContaDestino, double? valorTransferencia);
   
         /// <summary>
         /// Realiza uma transfer\u00EAncia de Cr\u00E9dito para outro cliente do mesmo Emissor
@@ -1953,7 +1921,7 @@ namespace Conductor.Pier.Api
         /// <param name="idContaDestino">C\u00F3digo de Identifica\u00E7\u00E3o do cliente portador do cart\u00E3o que ser\u00E1 creditado (id)</param>
         /// <param name="valorTransferencia">Valor da Transfer\u00EAncia</param>
         /// <returns>ApiResponse of TransferenciaDetalheResponse</returns>
-        ApiResponse<TransferenciaDetalheResponse> TransferirWithHttpInfo (long? id, long? idContaDestino, double? valorTransferencia);
+        ApiResponse<TransferenciaDetalheResponse> TransferirCreditoEntreCartoesWithHttpInfo (long? id, long? idContaDestino, double? valorTransferencia);
         
         /// <summary>
         /// Transferir cr\u00E9dito entre portadores
@@ -1965,7 +1933,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">Id da conta</param>
         /// <param name="transferencia">transferencia</param>
         /// <returns>TransferenciaPortadoresResponse</returns>
-        TransferenciaPortadoresResponse TransferirCreditoPortadores (long? id, TransferenciaPortadoresPersist transferencia);
+        TransferenciaPortadoresResponse TransferirCreditoEntrePortadores (long? id, TransferenciaPortadoresPersist transferencia);
   
         /// <summary>
         /// Transferir cr\u00E9dito entre portadores
@@ -1977,51 +1945,11 @@ namespace Conductor.Pier.Api
         /// <param name="id">Id da conta</param>
         /// <param name="transferencia">transferencia</param>
         /// <returns>ApiResponse of TransferenciaPortadoresResponse</returns>
-        ApiResponse<TransferenciaPortadoresResponse> TransferirCreditoPortadoresWithHttpInfo (long? id, TransferenciaPortadoresPersist transferencia);
+        ApiResponse<TransferenciaPortadoresResponse> TransferirCreditoEntrePortadoresWithHttpInfo (long? id, TransferenciaPortadoresPersist transferencia);
         
         #endregion Synchronous Operations
         
         #region Asynchronous Operations
-        
-        /// <summary>
-        /// Lan\u00E7a um ajuste para a conta do id informado
-        /// </summary>
-        /// <remarks>
-        /// Este recurso insere um ajuste para a conta do id informado
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Id Conta</param>
-        /// <param name="idTipoAjuste">C\u00F3digo identificador do tipo de ajuste</param>
-        /// <param name="dataAjuste">Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ</param>
-        /// <param name="valorAjuste">Valor do ajuste</param>
-        /// <param name="login">login (optional)</param>
-        /// <param name="identificadorExterno">Identificador Externo (optional)</param>
-        /// <param name="idTransacaoOriginal">Identificador da transa\u00E7\u00E3o original (estorno) (optional)</param>
-        /// <param name="idEstabelecimento">Identificador do estabelecimento quando o pagamento for efetuado em loja (optional)</param>
-        /// <param name="flagAtendimento">Flag para lan\u00E7ar o atendimento (optional)</param>
-        /// <param name="mensagemAtendimento">Mensagem enviada no atendimento (optional)</param>
-        /// <returns>Task of AjusteFinanceiroResponse</returns>
-        System.Threading.Tasks.Task<AjusteFinanceiroResponse> AjustarContaAsync (long? id, long? idTipoAjuste, string dataAjuste, double? valorAjuste, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null, bool? flagAtendimento = null, string mensagemAtendimento = null);
-
-        /// <summary>
-        /// Lan\u00E7a um ajuste para a conta do id informado
-        /// </summary>
-        /// <remarks>
-        /// Este recurso insere um ajuste para a conta do id informado
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Id Conta</param>
-        /// <param name="idTipoAjuste">C\u00F3digo identificador do tipo de ajuste</param>
-        /// <param name="dataAjuste">Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ</param>
-        /// <param name="valorAjuste">Valor do ajuste</param>
-        /// <param name="login">login (optional)</param>
-        /// <param name="identificadorExterno">Identificador Externo (optional)</param>
-        /// <param name="idTransacaoOriginal">Identificador da transa\u00E7\u00E3o original (estorno) (optional)</param>
-        /// <param name="idEstabelecimento">Identificador do estabelecimento quando o pagamento for efetuado em loja (optional)</param>
-        /// <param name="flagAtendimento">Flag para lan\u00E7ar o atendimento (optional)</param>
-        /// <param name="mensagemAtendimento">Mensagem enviada no atendimento (optional)</param>
-        /// <returns>Task of ApiResponse (AjusteFinanceiroResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AjusteFinanceiroResponse>> AjustarContaAsyncWithHttpInfo (long? id, long? idTipoAjuste, string dataAjuste, double? valorAjuste, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null, bool? flagAtendimento = null, string mensagemAtendimento = null);
         
         /// <summary>
         /// Altera parcialmente um controle de uma subconta
@@ -2057,7 +1985,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
         /// <param name="request">request</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> AlterarProdutoAsync (long? id, AlterarProdutoRequest request);
+        System.Threading.Tasks.Task<string> AlterarProdutoContaAsync (long? id, AlterarProdutoRequest request);
 
         /// <summary>
         /// Altera o produto associado \u00E0 conta
@@ -2069,7 +1997,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
         /// <param name="request">request</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> AlterarProdutoAsyncWithHttpInfo (long? id, AlterarProdutoRequest request);
+        System.Threading.Tasks.Task<ApiResponse<string>> AlterarProdutoContaAsyncWithHttpInfo (long? id, AlterarProdutoRequest request);
         
         /// <summary>
         /// Realiza a altera\u00E7\u00E3o de uma Pessoa tilular da conta
@@ -2120,46 +2048,6 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<ContaResponse>> AlterarVencimentoAsyncWithHttpInfo (long? id, int? novoDiaVencimento);
         
         /// <summary>
-        /// Atribuir Anuidade
-        /// </summary>
-        /// <remarks>
-        /// Esse recurso permite configurar qual a regra de Anuidade que ser\u00E1 atribu\u00EDda a uma determinada Conta
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
-        /// <param name="idAnuidade">Identificador da anuidade</param>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="DDD">DDD do celular (optional)</param>
-        /// <param name="celular">N\u00FAmero do celular (optional)</param>
-        /// <param name="idOperadora">Identificador da operadora do celular (optional)</param>
-        /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param>
-        /// <param name="colaborador">Matr\u00EDcula do colaborador (optional)</param>
-        /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> AtivarAnuidadeAsync (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null, string colaborador = null);
-
-        /// <summary>
-        /// Atribuir Anuidade
-        /// </summary>
-        /// <remarks>
-        /// Esse recurso permite configurar qual a regra de Anuidade que ser\u00E1 atribu\u00EDda a uma determinada Conta
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
-        /// <param name="idAnuidade">Identificador da anuidade</param>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="DDD">DDD do celular (optional)</param>
-        /// <param name="celular">N\u00FAmero do celular (optional)</param>
-        /// <param name="idOperadora">Identificador da operadora do celular (optional)</param>
-        /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param>
-        /// <param name="colaborador">Matr\u00EDcula do colaborador (optional)</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> AtivarAnuidadeAsyncWithHttpInfo (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null, string colaborador = null);
-        
-        /// <summary>
         /// Ativa o servi\u00E7o de envio de fatura por email
         /// </summary>
         /// <remarks>
@@ -2180,6 +2068,46 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> AtivarEnvioFaturaEmailAsyncWithHttpInfo (long? id);
+        
+        /// <summary>
+        /// Atribuir Anuidade
+        /// </summary>
+        /// <remarks>
+        /// Esse recurso permite configurar qual a regra de Anuidade que ser\u00E1 atribu\u00EDda a uma determinada Conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
+        /// <param name="idAnuidade">Identificador da anuidade</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="DDD">DDD do celular (optional)</param>
+        /// <param name="celular">N\u00FAmero do celular (optional)</param>
+        /// <param name="idOperadora">Identificador da operadora do celular (optional)</param>
+        /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param>
+        /// <param name="colaborador">Matr\u00EDcula do colaborador (optional)</param>
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> AtribuirAnuidadeAsync (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null, string colaborador = null);
+
+        /// <summary>
+        /// Atribuir Anuidade
+        /// </summary>
+        /// <remarks>
+        /// Esse recurso permite configurar qual a regra de Anuidade que ser\u00E1 atribu\u00EDda a uma determinada Conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
+        /// <param name="idAnuidade">Identificador da anuidade</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="DDD">DDD do celular (optional)</param>
+        /// <param name="celular">N\u00FAmero do celular (optional)</param>
+        /// <param name="idOperadora">Identificador da operadora do celular (optional)</param>
+        /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param>
+        /// <param name="colaborador">Matr\u00EDcula do colaborador (optional)</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> AtribuirAnuidadeAsyncWithHttpInfo (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null, string colaborador = null);
         
         /// <summary>
         /// Realiza a atribui\u00E7\u00E3o de um cart\u00E3o pr\u00E9-pago a uma conta
@@ -2239,7 +2167,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
         /// <param name="contaPartialUpdate">contaPartialUpdate</param>
         /// <returns>Task of ContaResponse</returns>
-        System.Threading.Tasks.Task<ContaResponse> AtualizarParcialAsync (long? id, ContaPartialUpdate contaPartialUpdate);
+        System.Threading.Tasks.Task<ContaResponse> AtualizarContaParcialmenteAsync (long? id, ContaPartialUpdate contaPartialUpdate);
 
         /// <summary>
         /// Realiza a atualiza\u00E7\u00E3o parcial da conta
@@ -2251,7 +2179,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
         /// <param name="contaPartialUpdate">contaPartialUpdate</param>
         /// <returns>Task of ApiResponse (ContaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ContaResponse>> AtualizarParcialAsyncWithHttpInfo (long? id, ContaPartialUpdate contaPartialUpdate);
+        System.Threading.Tasks.Task<ApiResponse<ContaResponse>> AtualizarContaParcialmenteAsyncWithHttpInfo (long? id, ContaPartialUpdate contaPartialUpdate);
         
         /// <summary>
         /// Atualiza parcialmente o registro de uma seguran\u00E7a mobile
@@ -2278,6 +2206,32 @@ namespace Conductor.Pier.Api
         /// <param name="parcialUpdate">parcialUpdate</param>
         /// <returns>Task of ApiResponse (SegurancaMobileResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<SegurancaMobileResponse>> AtualizarParcialSegurancaMobileAsyncWithHttpInfo (long? id, long? idSegurancaMobile, SegurancaMobileParcialUpdate parcialUpdate);
+        
+        /// <summary>
+        /// Atualizar parcialmente uma tarifa de d\u00E9bito da conta
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite atualizar parcialmente uma tarifa de d\u00E9bito da conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta</param>
+        /// <param name="idDebitoTarifa">Identificador do registro de d\u00E9bito tarifa da conta</param>
+        /// <param name="contaDebitoTarifaUpdate">contaDebitoTarifaUpdate</param>
+        /// <returns>Task of ContaDebitoTarifaResponse</returns>
+        System.Threading.Tasks.Task<ContaDebitoTarifaResponse> AtualizarParcialmenteContaDebitoTarifaAsync (long? id, long? idDebitoTarifa, ContaDebitoTarifaUpdate contaDebitoTarifaUpdate);
+
+        /// <summary>
+        /// Atualizar parcialmente uma tarifa de d\u00E9bito da conta
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite atualizar parcialmente uma tarifa de d\u00E9bito da conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta</param>
+        /// <param name="idDebitoTarifa">Identificador do registro de d\u00E9bito tarifa da conta</param>
+        /// <param name="contaDebitoTarifaUpdate">contaDebitoTarifaUpdate</param>
+        /// <returns>Task of ApiResponse (ContaDebitoTarifaResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ContaDebitoTarifaResponse>> AtualizarParcialmenteContaDebitoTarifaAsyncWithHttpInfo (long? id, long? idDebitoTarifa, ContaDebitoTarifaUpdate contaDebitoTarifaUpdate);
         
         /// <summary>
         /// Atualiza parcialmente o registro de um favorito de recarga de celular
@@ -2315,7 +2269,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
         /// <param name="idStatus">C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Conta</param>
         /// <returns>Task of ContaResponse</returns>
-        System.Threading.Tasks.Task<ContaResponse> BloquearAsync (long? id, long? idStatus);
+        System.Threading.Tasks.Task<ContaResponse> BloquearContaAsync (long? id, long? idStatus);
 
         /// <summary>
         /// Realiza o bloqueio de uma determinada Conta
@@ -2327,7 +2281,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
         /// <param name="idStatus">C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Conta</param>
         /// <returns>Task of ApiResponse (ContaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ContaResponse>> BloquearAsyncWithHttpInfo (long? id, long? idStatus);
+        System.Threading.Tasks.Task<ApiResponse<ContaResponse>> BloquearContaAsyncWithHttpInfo (long? id, long? idStatus);
         
         /// <summary>
         /// Cadastro ades\u00E3o de pagamento no s\u00E1bado
@@ -2409,7 +2363,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
         /// <param name="idStatus">C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Conta</param>
         /// <returns>Task of ContaResponse</returns>
-        System.Threading.Tasks.Task<ContaResponse> CancelarAsync (long? id, long? idStatus);
+        System.Threading.Tasks.Task<ContaResponse> CancelarContaAsync (long? id, long? idStatus);
 
         /// <summary>
         /// Realiza o cancelamento de uma determinada Conta
@@ -2421,81 +2375,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
         /// <param name="idStatus">C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Conta</param>
         /// <returns>Task of ApiResponse (ContaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ContaResponse>> CancelarAsyncWithHttpInfo (long? id, long? idStatus);
-        
-        /// <summary>
-        /// Realiza o cancelamento de uma parcela agendada
-        /// </summary>
-        /// <remarks>
-        /// Este recurso permite cancelar uma parcela agendada, sem interferir nas demais parcelas
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">ID da Parcela</param>
-        /// <param name="idAgendamento">idAgendamento</param>
-        /// <param name="idParcela">idParcela</param>
-        /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> CancelarParcelaAsync (long? id, long? idAgendamento, long? idParcela);
-
-        /// <summary>
-        /// Realiza o cancelamento de uma parcela agendada
-        /// </summary>
-        /// <remarks>
-        /// Este recurso permite cancelar uma parcela agendada, sem interferir nas demais parcelas
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">ID da Parcela</param>
-        /// <param name="idAgendamento">idAgendamento</param>
-        /// <param name="idParcela">idParcela</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> CancelarParcelaAsyncWithHttpInfo (long? id, long? idAgendamento, long? idParcela);
-        
-        /// <summary>
-        /// Realiza o cancelamento completo de um agendamento
-        /// </summary>
-        /// <remarks>
-        /// Este recurso permite cancelar um agendamento existente, bem como todas suas parcelas em aberto
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idAgendamento">Id do Agendamento</param>
-        /// <param name="id">id</param>
-        /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> CarcelarAgendamentoAsync (long? idAgendamento, long? id);
-
-        /// <summary>
-        /// Realiza o cancelamento completo de um agendamento
-        /// </summary>
-        /// <remarks>
-        /// Este recurso permite cancelar um agendamento existente, bem como todas suas parcelas em aberto
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idAgendamento">Id do Agendamento</param>
-        /// <param name="id">id</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> CarcelarAgendamentoAsyncWithHttpInfo (long? idAgendamento, long? id);
-        
-        /// <summary>
-        /// Consulta o extrato anual de tarifas de uma conta
-        /// </summary>
-        /// <remarks>
-        /// Esse recurso permite consultar o extrato anual de tarifas cobradas de uma determinada conta
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Identificador da conta</param>
-        /// <param name="ano">Ano base para gera\u00E7\u00E3o do extrato de tarifas</param>
-        /// <returns>Task of ExtratoTarifasResponse</returns>
-        System.Threading.Tasks.Task<ExtratoTarifasResponse> ConsultaExtratoTarifasAnualAsync (long? id, int? ano);
-
-        /// <summary>
-        /// Consulta o extrato anual de tarifas de uma conta
-        /// </summary>
-        /// <remarks>
-        /// Esse recurso permite consultar o extrato anual de tarifas cobradas de uma determinada conta
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Identificador da conta</param>
-        /// <param name="ano">Ano base para gera\u00E7\u00E3o do extrato de tarifas</param>
-        /// <returns>Task of ApiResponse (ExtratoTarifasResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ExtratoTarifasResponse>> ConsultaExtratoTarifasAnualAsyncWithHttpInfo (long? id, int? ano);
+        System.Threading.Tasks.Task<ApiResponse<ContaResponse>> CancelarContaAsyncWithHttpInfo (long? id, long? idStatus);
         
         /// <summary>
         /// Consulta ades\u00E3o de pagamento no s\u00E1bado
@@ -2552,7 +2432,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
         /// <returns>Task of BoletoResponse</returns>
-        System.Threading.Tasks.Task<BoletoResponse> ConsultarBoletoEmitidoAsync (long? id);
+        System.Threading.Tasks.Task<BoletoResponse> ConsultarBoletosEmitidosAsync (long? id);
 
         /// <summary>
         /// Consulta os dados de um determinado boleto da fatura
@@ -2563,7 +2443,29 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
         /// <returns>Task of ApiResponse (BoletoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BoletoResponse>> ConsultarBoletoEmitidoAsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<BoletoResponse>> ConsultarBoletosEmitidosAsyncWithHttpInfo (long? id);
+        
+        /// <summary>
+        /// Apresenta dados de uma determinada conta
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite consultar dados de uma determinada conta a partir de seu codigo de identifica\u00E7\u00E3o (id)
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
+        /// <returns>Task of ContaDetalheResponse</returns>
+        System.Threading.Tasks.Task<ContaDetalheResponse> ConsultarContaAsync (long? id);
+
+        /// <summary>
+        /// Apresenta dados de uma determinada conta
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite consultar dados de uma determinada conta a partir de seu codigo de identifica\u00E7\u00E3o (id)
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
+        /// <returns>Task of ApiResponse (ContaDetalheResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ContaDetalheResponse>> ConsultarContaAsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Apresenta o controle de uma subconta
@@ -2601,7 +2503,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataVencimento">Data do vencimento (optional)</param>
         /// <param name="idEscritorioCobranca">C\u00F3digo de identifica\u00E7\u00E3o do escrit\u00F3rio de cobran\u00E7a (optional)</param>
         /// <returns>Task of DividaClienteResponse</returns>
-        System.Threading.Tasks.Task<DividaClienteResponse> ConsultarDividaAtualizadaClienteAsync (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, long? idEscritorioCobranca = null);
+        System.Threading.Tasks.Task<DividaClienteResponse> ConsultarDividaAtualizadaAsync (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, long? idEscritorioCobranca = null);
 
         /// <summary>
         /// Consulta a d\u00EDvida atualizada do cliente
@@ -2617,61 +2519,91 @@ namespace Conductor.Pier.Api
         /// <param name="dataVencimento">Data do vencimento (optional)</param>
         /// <param name="idEscritorioCobranca">C\u00F3digo de identifica\u00E7\u00E3o do escrit\u00F3rio de cobran\u00E7a (optional)</param>
         /// <returns>Task of ApiResponse (DividaClienteResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DividaClienteResponse>> ConsultarDividaAtualizadaClienteAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, long? idEscritorioCobranca = null);
+        System.Threading.Tasks.Task<ApiResponse<DividaClienteResponse>> ConsultarDividaAtualizadaAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, long? idEscritorioCobranca = null);
         
         /// <summary>
-        /// Realiza a consulta das parcelas de um determinado agendamento
+        /// Consulta extrato da conta
         /// </summary>
         /// <remarks>
-        /// Este recurso lista todas as parcelas de um agendamento, independente de seus status
+        /// Consulta extrato da conta
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idAgendamento">Id do Agendamento</param>
-        /// <param name="id">id</param>
+        /// <param name="id">Identificador da conta</param>
         /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="idsTiposTransacoes">C\u00F3digos identificadores dos tipos de transa\u00E7\u00F5es para transfer\u00EAncia de valores e que possuir\u00E3o na descri\u00E7\u00E3o do extrato, os dados da conta destino da transfer\u00EAncia. (optional)</param>
+        /// <param name="idsTiposTransacoesTransferencias">C\u00F3digos identificadores dos tipos de transa\u00E7\u00F5es que ser\u00E3o consultadas no extrato  (optional)</param>
         /// <param name="page">P\u00E1gina (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <returns>Task of PageParcelaAgendamentoResponse</returns>
-        System.Threading.Tasks.Task<PageParcelaAgendamentoResponse> ConsultarParcelasAgendamentoAsync (long? idAgendamento, long? id, List<string> sort = null, int? page = null, int? limit = null);
+        /// <param name="dataInicio">Data de in\u00EDcio para consulta do extrato da conta formato yyyy-MM-dd (optional)</param>
+        /// <param name="dataFim">Data de fim para consulta do extrato da conta formato yyyy-MM-dd (optional)</param>
+        /// <param name="idPessoaFisicaSolicitante">C\u00F3digo identificador da pessoa que solicitou o extrato (optional)</param>
+        /// <returns>Task of PageExtratoResponse</returns>
+        System.Threading.Tasks.Task<PageExtratoResponse> ConsultarExtratoContaAsync (long? id, List<string> sort = null, List<long?> idsTiposTransacoes = null, List<long?> idsTiposTransacoesTransferencias = null, int? page = null, int? limit = null, string dataInicio = null, string dataFim = null, long? idPessoaFisicaSolicitante = null);
 
         /// <summary>
-        /// Realiza a consulta das parcelas de um determinado agendamento
+        /// Consulta extrato da conta
         /// </summary>
         /// <remarks>
-        /// Este recurso lista todas as parcelas de um agendamento, independente de seus status
+        /// Consulta extrato da conta
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idAgendamento">Id do Agendamento</param>
-        /// <param name="id">id</param>
+        /// <param name="id">Identificador da conta</param>
         /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="idsTiposTransacoes">C\u00F3digos identificadores dos tipos de transa\u00E7\u00F5es para transfer\u00EAncia de valores e que possuir\u00E3o na descri\u00E7\u00E3o do extrato, os dados da conta destino da transfer\u00EAncia. (optional)</param>
+        /// <param name="idsTiposTransacoesTransferencias">C\u00F3digos identificadores dos tipos de transa\u00E7\u00F5es que ser\u00E3o consultadas no extrato  (optional)</param>
         /// <param name="page">P\u00E1gina (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <returns>Task of ApiResponse (PageParcelaAgendamentoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageParcelaAgendamentoResponse>> ConsultarParcelasAgendamentoAsyncWithHttpInfo (long? idAgendamento, long? id, List<string> sort = null, int? page = null, int? limit = null);
+        /// <param name="dataInicio">Data de in\u00EDcio para consulta do extrato da conta formato yyyy-MM-dd (optional)</param>
+        /// <param name="dataFim">Data de fim para consulta do extrato da conta formato yyyy-MM-dd (optional)</param>
+        /// <param name="idPessoaFisicaSolicitante">C\u00F3digo identificador da pessoa que solicitou o extrato (optional)</param>
+        /// <returns>Task of ApiResponse (PageExtratoResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PageExtratoResponse>> ConsultarExtratoContaAsyncWithHttpInfo (long? id, List<string> sort = null, List<long?> idsTiposTransacoes = null, List<long?> idsTiposTransacoesTransferencias = null, int? page = null, int? limit = null, string dataInicio = null, string dataFim = null, long? idPessoaFisicaSolicitante = null);
         
         /// <summary>
-        /// Consulta uma transa\u00E7\u00E3o processada da conta.
+        /// Consulta o extrato anual de tarifas de uma conta
         /// </summary>
         /// <remarks>
-        /// Este recurso permite consultar os detalhes de uma transa\u00E7\u00E3o processada pertencente a uma conta.
+        /// Esse recurso permite consultar o extrato anual de tarifas cobradas de uma determinada conta
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param>
-        /// <param name="idTransacao">C\u00F3digo de Identifica\u00E7\u00E3o da transa\u00E7\u00E3o (id).</param>
-        /// <returns>Task of TransacoesCorrentesResponse</returns>
-        System.Threading.Tasks.Task<TransacoesCorrentesResponse> ConsultarProcessadaAsync (long? id, long? idTransacao);
+        /// <param name="id">Identificador da conta</param>
+        /// <param name="ano">Ano base para gera\u00E7\u00E3o do extrato de tarifas</param>
+        /// <returns>Task of ExtratoTarifasResponse</returns>
+        System.Threading.Tasks.Task<ExtratoTarifasResponse> ConsultarExtratoTarifasAnualAsync (long? id, int? ano);
 
         /// <summary>
-        /// Consulta uma transa\u00E7\u00E3o processada da conta.
+        /// Consulta o extrato anual de tarifas de uma conta
         /// </summary>
         /// <remarks>
-        /// Este recurso permite consultar os detalhes de uma transa\u00E7\u00E3o processada pertencente a uma conta.
+        /// Esse recurso permite consultar o extrato anual de tarifas cobradas de uma determinada conta
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param>
-        /// <param name="idTransacao">C\u00F3digo de Identifica\u00E7\u00E3o da transa\u00E7\u00E3o (id).</param>
-        /// <returns>Task of ApiResponse (TransacoesCorrentesResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TransacoesCorrentesResponse>> ConsultarProcessadaAsyncWithHttpInfo (long? id, long? idTransacao);
+        /// <param name="id">Identificador da conta</param>
+        /// <param name="ano">Ano base para gera\u00E7\u00E3o do extrato de tarifas</param>
+        /// <returns>Task of ApiResponse (ExtratoTarifasResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ExtratoTarifasResponse>> ConsultarExtratoTarifasAnualAsyncWithHttpInfo (long? id, int? ano);
+        
+        /// <summary>
+        /// Apresenta dados de um determinado tipo de fun\u00E7\u00E3o para contas
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite consultar dados de um determinado tipo de fun\u00E7\u00E3o para contas a partir de seu codigo de identifica\u00E7\u00E3o (id)
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do tipo de fun\u00E7\u00E3o para contas (id)</param>
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> ConsultarFuncaoContaAsync (int? id);
+
+        /// <summary>
+        /// Apresenta dados de um determinado tipo de fun\u00E7\u00E3o para contas
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite consultar dados de um determinado tipo de fun\u00E7\u00E3o para contas a partir de seu codigo de identifica\u00E7\u00E3o (id)
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do tipo de fun\u00E7\u00E3o para contas (id)</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> ConsultarFuncaoContaAsyncWithHttpInfo (int? id);
         
         /// <summary>
         /// Consulta a quita\u00E7\u00E3o de d\u00E9bitos do portador no ano referente
@@ -2726,6 +2658,34 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<PageTaxasRefinanciamentoResponse>> ConsultarTaxasTarifasAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null);
         
         /// <summary>
+        /// Permite listar uma linha do tempo com os eventos da conta
+        /// </summary>
+        /// <remarks>
+        /// Esta opera\u00E7\u00E3o tem como objetivo permitir a listagem, em formato de timeline, dos eventos vinculados a uma detemrinada conta. Transa\u00E7\u00F5es, fechamento da fatura, pagamentos, gera\u00E7\u00E3o de cart\u00F5es e altera\u00E7\u00E3o de limite s\u00E3o exemplos de eventos contemplados por esta funcionalidade. Neste m\u00E9todo, as opera\u00E7\u00F5es s\u00E3o ordenadas de forma decrescente
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Id Conta</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <returns>Task of PageTransacaoResponse</returns>
+        System.Threading.Tasks.Task<PageTransacaoResponse> ConsultarTimelineAsync (long? id, List<string> sort = null, int? page = null, int? limit = null);
+
+        /// <summary>
+        /// Permite listar uma linha do tempo com os eventos da conta
+        /// </summary>
+        /// <remarks>
+        /// Esta opera\u00E7\u00E3o tem como objetivo permitir a listagem, em formato de timeline, dos eventos vinculados a uma detemrinada conta. Transa\u00E7\u00F5es, fechamento da fatura, pagamentos, gera\u00E7\u00E3o de cart\u00F5es e altera\u00E7\u00E3o de limite s\u00E3o exemplos de eventos contemplados por esta funcionalidade. Neste m\u00E9todo, as opera\u00E7\u00F5es s\u00E3o ordenadas de forma decrescente
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Id Conta</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <returns>Task of ApiResponse (PageTransacaoResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PageTransacaoResponse>> ConsultarTimelineAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null);
+        
+        /// <summary>
         /// Consulta um tipo de v\u00EDnculo
         /// </summary>
         /// <remarks>
@@ -2748,86 +2708,28 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<TipoVinculoContaResponse>> ConsultarTipoVinculoContaAsyncWithHttpInfo (long? id);
         
         /// <summary>
-        /// Apresenta dados de um determinado tipo de fun\u00E7\u00E3o para contas
+        /// Consulta uma transa\u00E7\u00E3o processada da conta.
         /// </summary>
         /// <remarks>
-        /// Este m\u00E9todo permite consultar dados de um determinado tipo de fun\u00E7\u00E3o para contas a partir de seu codigo de identifica\u00E7\u00E3o (id)
+        /// Este recurso permite consultar os detalhes de uma transa\u00E7\u00E3o processada pertencente a uma conta.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do tipo de fun\u00E7\u00E3o para contas (id)</param>
-        /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> Consultar_0Async (int? id);
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param>
+        /// <param name="idTransacao">C\u00F3digo de Identifica\u00E7\u00E3o da transa\u00E7\u00E3o (id).</param>
+        /// <returns>Task of TransacoesCorrentesResponse</returns>
+        System.Threading.Tasks.Task<TransacoesCorrentesResponse> ConsultarTransacaoProcessadaContaAsync (long? id, long? idTransacao);
 
         /// <summary>
-        /// Apresenta dados de um determinado tipo de fun\u00E7\u00E3o para contas
+        /// Consulta uma transa\u00E7\u00E3o processada da conta.
         /// </summary>
         /// <remarks>
-        /// Este m\u00E9todo permite consultar dados de um determinado tipo de fun\u00E7\u00E3o para contas a partir de seu codigo de identifica\u00E7\u00E3o (id)
+        /// Este recurso permite consultar os detalhes de uma transa\u00E7\u00E3o processada pertencente a uma conta.
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do tipo de fun\u00E7\u00E3o para contas (id)</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> Consultar_0AsyncWithHttpInfo (int? id);
-        
-        /// <summary>
-        /// Apresenta dados de uma determinada conta
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite consultar dados de uma determinada conta a partir de seu codigo de identifica\u00E7\u00E3o (id)
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
-        /// <returns>Task of ContaDetalheResponse</returns>
-        System.Threading.Tasks.Task<ContaDetalheResponse> Consultar_1Async (long? id);
-
-        /// <summary>
-        /// Apresenta dados de uma determinada conta
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite consultar dados de uma determinada conta a partir de seu codigo de identifica\u00E7\u00E3o (id)
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
-        /// <returns>Task of ApiResponse (ContaDetalheResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ContaDetalheResponse>> Consultar_1AsyncWithHttpInfo (long? id);
-        
-        /// <summary>
-        /// Consulta extrato da conta
-        /// </summary>
-        /// <remarks>
-        /// Consulta extrato da conta
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Identificador da conta</param>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="idsTiposTransacoes">C\u00F3digos identificadores dos tipos de transa\u00E7\u00F5es para transfer\u00EAncia de valores e que possuir\u00E3o na descri\u00E7\u00E3o do extrato, os dados da conta destino da transfer\u00EAncia. (optional)</param>
-        /// <param name="idsTiposTransacoesTransferencias">C\u00F3digos identificadores dos tipos de transa\u00E7\u00F5es que ser\u00E3o consultadas no extrato  (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="dataInicio">Data de in\u00EDcio para consulta do extrato da conta formato yyyy-MM-dd (optional)</param>
-        /// <param name="dataFim">Data de fim para consulta do extrato da conta formato yyyy-MM-dd (optional)</param>
-        /// <param name="idPessoaFisicaSolicitante">C\u00F3digo identificador da pessoa que solicitou o extrato (optional)</param>
-        /// <returns>Task of PageExtratoResponse</returns>
-        System.Threading.Tasks.Task<PageExtratoResponse> Consultar_2Async (long? id, List<string> sort = null, List<long?> idsTiposTransacoes = null, List<long?> idsTiposTransacoesTransferencias = null, int? page = null, int? limit = null, string dataInicio = null, string dataFim = null, long? idPessoaFisicaSolicitante = null);
-
-        /// <summary>
-        /// Consulta extrato da conta
-        /// </summary>
-        /// <remarks>
-        /// Consulta extrato da conta
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Identificador da conta</param>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="idsTiposTransacoes">C\u00F3digos identificadores dos tipos de transa\u00E7\u00F5es para transfer\u00EAncia de valores e que possuir\u00E3o na descri\u00E7\u00E3o do extrato, os dados da conta destino da transfer\u00EAncia. (optional)</param>
-        /// <param name="idsTiposTransacoesTransferencias">C\u00F3digos identificadores dos tipos de transa\u00E7\u00F5es que ser\u00E3o consultadas no extrato  (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="dataInicio">Data de in\u00EDcio para consulta do extrato da conta formato yyyy-MM-dd (optional)</param>
-        /// <param name="dataFim">Data de fim para consulta do extrato da conta formato yyyy-MM-dd (optional)</param>
-        /// <param name="idPessoaFisicaSolicitante">C\u00F3digo identificador da pessoa que solicitou o extrato (optional)</param>
-        /// <returns>Task of ApiResponse (PageExtratoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageExtratoResponse>> Consultar_2AsyncWithHttpInfo (long? id, List<string> sort = null, List<long?> idsTiposTransacoes = null, List<long?> idsTiposTransacoesTransferencias = null, int? page = null, int? limit = null, string dataInicio = null, string dataFim = null, long? idPessoaFisicaSolicitante = null);
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param>
+        /// <param name="idTransacao">C\u00F3digo de Identifica\u00E7\u00E3o da transa\u00E7\u00E3o (id).</param>
+        /// <returns>Task of ApiResponse (TransacoesCorrentesResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TransacoesCorrentesResponse>> ConsultarTransacaoProcessadaContaAsyncWithHttpInfo (long? id, long? idTransacao);
         
         /// <summary>
         /// Consulta os detalhes de uma determinada transfer\u00EAncia
@@ -2839,7 +2741,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
         /// <param name="idTransferencia">C\u00F3digo de Identifica\u00E7\u00E3o da transfer\u00EAncia (id_transferencia)</param>
         /// <returns>Task of TransferenciaDetalheResponse</returns>
-        System.Threading.Tasks.Task<TransferenciaDetalheResponse> Consultar_3Async (long? id, long? idTransferencia);
+        System.Threading.Tasks.Task<TransferenciaDetalheResponse> ConsultarTransferenciaDeCreditoEntreCartoesAsync (long? id, long? idTransferencia);
 
         /// <summary>
         /// Consulta os detalhes de uma determinada transfer\u00EAncia
@@ -2851,7 +2753,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
         /// <param name="idTransferencia">C\u00F3digo de Identifica\u00E7\u00E3o da transfer\u00EAncia (id_transferencia)</param>
         /// <returns>Task of ApiResponse (TransferenciaDetalheResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TransferenciaDetalheResponse>> Consultar_3AsyncWithHttpInfo (long? id, long? idTransferencia);
+        System.Threading.Tasks.Task<ApiResponse<TransferenciaDetalheResponse>> ConsultarTransferenciaDeCreditoEntreCartoesAsyncWithHttpInfo (long? id, long? idTransferencia);
         
         /// <summary>
         /// Cadastrar contas MultiApp
@@ -2978,7 +2880,7 @@ namespace Conductor.Pier.Api
         /// <param name="idPessoa">C\u00F3digo de identifica\u00E7\u00E3o da pessoa (id)</param>
         /// <param name="idTipoPlastico">C\u00F3digo de identifica\u00E7\u00E3o do TipoPlastico (id) (optional)</param>
         /// <returns>Task of CartaoImpressaoResponse</returns>
-        System.Threading.Tasks.Task<CartaoImpressaoResponse> GerarCartaoAsync (long? id, long? idPessoa, long? idTipoPlastico = null);
+        System.Threading.Tasks.Task<CartaoImpressaoResponse> GerarCartaoDaPessoaAsync (long? id, long? idPessoa, long? idTipoPlastico = null);
 
         /// <summary>
         /// Realiza a gera\u00E7\u00E3o de um novo cart\u00E3o para impress\u00E3o avulsa
@@ -2991,7 +2893,7 @@ namespace Conductor.Pier.Api
         /// <param name="idPessoa">C\u00F3digo de identifica\u00E7\u00E3o da pessoa (id)</param>
         /// <param name="idTipoPlastico">C\u00F3digo de identifica\u00E7\u00E3o do TipoPlastico (id) (optional)</param>
         /// <returns>Task of ApiResponse (CartaoImpressaoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CartaoImpressaoResponse>> GerarCartaoAsyncWithHttpInfo (long? id, long? idPessoa, long? idTipoPlastico = null);
+        System.Threading.Tasks.Task<ApiResponse<CartaoImpressaoResponse>> GerarCartaoDaPessoaAsyncWithHttpInfo (long? id, long? idPessoa, long? idTipoPlastico = null);
         
         /// <summary>
         /// Realiza o envio para gera\u00E7\u00E3o de um novo cart\u00E3o na gr\u00E1fica
@@ -3003,7 +2905,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
         /// <param name="cartaoEmbossingRequest">cartaoEmbossingRequest</param>
         /// <returns>Task of CartaoEmbossingResponse</returns>
-        System.Threading.Tasks.Task<CartaoEmbossingResponse> GerarCartaoEmbossingAsync (long? id, CartaoEmbossingRequest cartaoEmbossingRequest);
+        System.Threading.Tasks.Task<CartaoEmbossingResponse> GerarCartaoGraficaAsync (long? id, CartaoEmbossingRequest cartaoEmbossingRequest);
 
         /// <summary>
         /// Realiza o envio para gera\u00E7\u00E3o de um novo cart\u00E3o na gr\u00E1fica
@@ -3015,7 +2917,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
         /// <param name="cartaoEmbossingRequest">cartaoEmbossingRequest</param>
         /// <returns>Task of ApiResponse (CartaoEmbossingResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CartaoEmbossingResponse>> GerarCartaoEmbossingAsyncWithHttpInfo (long? id, CartaoEmbossingRequest cartaoEmbossingRequest);
+        System.Threading.Tasks.Task<ApiResponse<CartaoEmbossingResponse>> GerarCartaoGraficaAsyncWithHttpInfo (long? id, CartaoEmbossingRequest cartaoEmbossingRequest);
         
         /// <summary>
         /// Realiza a gera\u00E7\u00E3o de um cart\u00E3o provisorio
@@ -3064,6 +2966,34 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<CartaoImpressaoResponse>> GerarCartaoVirtualAsyncWithHttpInfo (long? id, string dataValidade);
         
         /// <summary>
+        /// Listar uma tarifa de d\u00E9bito para uma conta
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite listar as tarifas de d\u00E9bito de uma conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <returns>Task of PageContaDebitoTarifaResponse</returns>
+        System.Threading.Tasks.Task<PageContaDebitoTarifaResponse> ListarContaDebitoTarifaAsync (long? id, List<string> sort = null, int? page = null, int? limit = null);
+
+        /// <summary>
+        /// Listar uma tarifa de d\u00E9bito para uma conta
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite listar as tarifas de d\u00E9bito de uma conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <returns>Task of ApiResponse (PageContaDebitoTarifaResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PageContaDebitoTarifaResponse>> ListarContaDebitoTarifaAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null);
+        
+        /// <summary>
         /// Lista contas existentes na base de dados do Emissor
         /// </summary>
         /// <remarks>
@@ -3084,7 +3014,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataUltimaAlteracaoVencimento">Apresenta a data da ultima altera\u00E7\u00E3o de vencimento (optional)</param>
         /// <param name="funcaoAtiva"> (optional)</param>
         /// <returns>Task of PageContaResponse</returns>
-        System.Threading.Tasks.Task<PageContaResponse> ListarAsync (List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, string dataStatusConta = null, string dataCadastro = null, string dataUltimaAlteracaoVencimento = null, string funcaoAtiva = null);
+        System.Threading.Tasks.Task<PageContaResponse> ListarContasAsync (List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, string dataStatusConta = null, string dataCadastro = null, string dataUltimaAlteracaoVencimento = null, string funcaoAtiva = null);
 
         /// <summary>
         /// Lista contas existentes na base de dados do Emissor
@@ -3107,7 +3037,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataUltimaAlteracaoVencimento">Apresenta a data da ultima altera\u00E7\u00E3o de vencimento (optional)</param>
         /// <param name="funcaoAtiva"> (optional)</param>
         /// <returns>Task of ApiResponse (PageContaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageContaResponse>> ListarAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, string dataStatusConta = null, string dataCadastro = null, string dataUltimaAlteracaoVencimento = null, string funcaoAtiva = null);
+        System.Threading.Tasks.Task<ApiResponse<PageContaResponse>> ListarContasAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, string dataStatusConta = null, string dataCadastro = null, string dataUltimaAlteracaoVencimento = null, string funcaoAtiva = null);
         
         /// <summary>
         /// Lista os controles de subcontas
@@ -3160,8 +3090,9 @@ namespace Conductor.Pier.Api
         /// <param name="numeroCelular">N\u00FAmero do celular (optional)</param>
         /// <param name="nome">Nome do propriet\u00E1rio do celular (optional)</param>
         /// <param name="ativo">Indicador de status do favorito (optional)</param>
+        /// <param name="descricaoOperadora">Descri\u00E7\u00E3o da operadora (optional)</param>
         /// <returns>Task of PageRecargaCelularFavoritoResponse</returns>
-        System.Threading.Tasks.Task<PageRecargaCelularFavoritoResponse> ListarFavoritosRecargasCelularAsync (long? id, List<string> sort = null, int? page = null, int? limit = null, string dddCelular = null, string numeroCelular = null, string nome = null, bool? ativo = null);
+        System.Threading.Tasks.Task<PageRecargaCelularFavoritoResponse> ListarFavoritosRecargasCelularAsync (long? id, List<string> sort = null, int? page = null, int? limit = null, string dddCelular = null, string numeroCelular = null, string nome = null, bool? ativo = null, string descricaoOperadora = null);
 
         /// <summary>
         /// Lista registros de favoritos de recarga de celular
@@ -3178,8 +3109,29 @@ namespace Conductor.Pier.Api
         /// <param name="numeroCelular">N\u00FAmero do celular (optional)</param>
         /// <param name="nome">Nome do propriet\u00E1rio do celular (optional)</param>
         /// <param name="ativo">Indicador de status do favorito (optional)</param>
+        /// <param name="descricaoOperadora">Descri\u00E7\u00E3o da operadora (optional)</param>
         /// <returns>Task of ApiResponse (PageRecargaCelularFavoritoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageRecargaCelularFavoritoResponse>> ListarFavoritosRecargasCelularAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, string dddCelular = null, string numeroCelular = null, string nome = null, bool? ativo = null);
+        System.Threading.Tasks.Task<ApiResponse<PageRecargaCelularFavoritoResponse>> ListarFavoritosRecargasCelularAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, string dddCelular = null, string numeroCelular = null, string nome = null, bool? ativo = null, string descricaoOperadora = null);
+        
+        /// <summary>
+        /// Lista os tipos de fun\u00E7\u00F5es para contas do Emissor
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite listar os tipos de fun\u00E7\u00F5es para as contas do Emissor
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> ListarFuncoesContasAsync ();
+
+        /// <summary>
+        /// Lista os tipos de fun\u00E7\u00F5es para contas do Emissor
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite listar os tipos de fun\u00E7\u00F5es para as contas do Emissor
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> ListarFuncoesContasAsyncWithHttpInfo ();
         
         /// <summary>
         /// Lista o hist\u00F3rico de altera\u00E7\u00F5es de limites da conta
@@ -3249,7 +3201,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00E1gina (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
         /// <returns>Task of PageHistoricoAtrasoFaturaResponse</returns>
-        System.Threading.Tasks.Task<PageHistoricoAtrasoFaturaResponse> ListarHistoricoAtrasosFaturasAsync (long? id, List<string> sort = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<PageHistoricoAtrasoFaturaResponse> ListarHistoricoFaturasAtrasadasAsync (long? id, List<string> sort = null, int? page = null, int? limit = null);
 
         /// <summary>
         /// Lista o historico de atrasos das faturas
@@ -3263,77 +3215,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00E1gina (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
         /// <returns>Task of ApiResponse (PageHistoricoAtrasoFaturaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageHistoricoAtrasoFaturaResponse>> ListarHistoricoAtrasosFaturasAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null);
-        
-        /// <summary>
-        /// Lista as transa\u00E7\u00F5es n\u00E3o processadas da conta
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es n\u00E3o processadas da Conta.
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="dataInicio">Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Par\u00E2mentro Ignorado se dataFim n\u00E3o for definida) (optional)</param>
-        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Par\u00E2mentro Ignorado se dataInicio n\u00E3o for definida) (optional)</param>
-        /// <returns>Task of PageTransacaoNaoProcessadaResponse</returns>
-        System.Threading.Tasks.Task<PageTransacaoNaoProcessadaResponse> ListarNaoProcessadasAsync (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataInicio = null, string dataFim = null);
-
-        /// <summary>
-        /// Lista as transa\u00E7\u00F5es n\u00E3o processadas da conta
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es n\u00E3o processadas da Conta.
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="dataInicio">Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Par\u00E2mentro Ignorado se dataFim n\u00E3o for definida) (optional)</param>
-        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Par\u00E2mentro Ignorado se dataInicio n\u00E3o for definida) (optional)</param>
-        /// <returns>Task of ApiResponse (PageTransacaoNaoProcessadaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageTransacaoNaoProcessadaResponse>> ListarNaoProcessadasAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataInicio = null, string dataFim = null);
-        
-        /// <summary>
-        /// Lista as transa\u00E7\u00F5es processadas da conta
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es processadas da Conta
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="dataVencimento">Data de vencimento do extrato no formato yyyy-MM-dd (optional)</param>
-        /// <param name="dataInicio">Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param>
-        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param>
-        /// <param name="idTipoTransacao">transacoes_processadas_request_tipo_transacao (optional)</param>
-        /// <param name="recuperaEncargos">Adiciona as transa\u00E7\u00F5es de encargos na consulta (optional)</param>
-        /// <returns>Task of PageTransacoesCorrentesResponse</returns>
-        System.Threading.Tasks.Task<PageTransacoesCorrentesResponse> ListarProcessadasAsync (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null, long? idTipoTransacao = null, int? recuperaEncargos = null);
-
-        /// <summary>
-        /// Lista as transa\u00E7\u00F5es processadas da conta
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es processadas da Conta
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="dataVencimento">Data de vencimento do extrato no formato yyyy-MM-dd (optional)</param>
-        /// <param name="dataInicio">Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param>
-        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param>
-        /// <param name="idTipoTransacao">transacoes_processadas_request_tipo_transacao (optional)</param>
-        /// <param name="recuperaEncargos">Adiciona as transa\u00E7\u00F5es de encargos na consulta (optional)</param>
-        /// <returns>Task of ApiResponse (PageTransacoesCorrentesResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageTransacoesCorrentesResponse>> ListarProcessadasAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null, long? idTipoTransacao = null, int? recuperaEncargos = null);
+        System.Threading.Tasks.Task<ApiResponse<PageHistoricoAtrasoFaturaResponse>> ListarHistoricoFaturasAtrasadasAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null);
         
         /// <summary>
         /// Lista registros da seguran\u00E7a mobile
@@ -3452,6 +3334,156 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<PageTipoVinculoContaResponse>> ListarTipoVinculoAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string descricao = null);
         
         /// <summary>
+        /// Lista as transa\u00E7\u00F5es n\u00E3o processadas e processadas da conta
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es n\u00E3o processadas e processadas da Conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="status">Status da transa\u00E7\u00E3o (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="dataVencimento">Data de vencimento do extrato no formato yyyy-MM-dd (optional)</param>
+        /// <param name="dataInicio">Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param>
+        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param>
+        /// <param name="idTipoTransacao">transacoes_processadas_nao_processadas_request_tipo_transacao (optional)</param>
+        /// <param name="flagCredito">Flag que indica se a transa\u00E7\u00E3o \u00E9 cr\u00E9dito (optional)</param>
+        /// <param name="flagFaturado">Flag que indica se a transa\u00E7\u00E3o foi faturada (optional)</param>
+        /// <param name="flagProcessada">Flag que indica se a transa\u00E7\u00E3o foi processada (optional)</param>
+        /// <param name="plano">Plano da transa\u00E7\u00E3o (optional)</param>
+        /// <param name="codigoMCC">C\u00F3digo MCC da transa\u00E7\u00E3o (optional)</param>
+        /// <param name="grupoMCC">Grupo MCC da transa\u00E7\u00E3o (optional)</param>
+        /// <returns>Task of PageTransacaoProcessadaNaoProcessadaResponse</returns>
+        System.Threading.Tasks.Task<PageTransacaoProcessadaNaoProcessadaResponse> ListarTransacoesContaAsync (long? id, List<string> sort = null, List<int?> status = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null, long? idTipoTransacao = null, bool? flagCredito = null, bool? flagFaturado = null, bool? flagProcessada = null, int? plano = null, long? codigoMCC = null, long? grupoMCC = null);
+
+        /// <summary>
+        /// Lista as transa\u00E7\u00F5es n\u00E3o processadas e processadas da conta
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es n\u00E3o processadas e processadas da Conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="status">Status da transa\u00E7\u00E3o (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="dataVencimento">Data de vencimento do extrato no formato yyyy-MM-dd (optional)</param>
+        /// <param name="dataInicio">Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param>
+        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param>
+        /// <param name="idTipoTransacao">transacoes_processadas_nao_processadas_request_tipo_transacao (optional)</param>
+        /// <param name="flagCredito">Flag que indica se a transa\u00E7\u00E3o \u00E9 cr\u00E9dito (optional)</param>
+        /// <param name="flagFaturado">Flag que indica se a transa\u00E7\u00E3o foi faturada (optional)</param>
+        /// <param name="flagProcessada">Flag que indica se a transa\u00E7\u00E3o foi processada (optional)</param>
+        /// <param name="plano">Plano da transa\u00E7\u00E3o (optional)</param>
+        /// <param name="codigoMCC">C\u00F3digo MCC da transa\u00E7\u00E3o (optional)</param>
+        /// <param name="grupoMCC">Grupo MCC da transa\u00E7\u00E3o (optional)</param>
+        /// <returns>Task of ApiResponse (PageTransacaoProcessadaNaoProcessadaResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PageTransacaoProcessadaNaoProcessadaResponse>> ListarTransacoesContaAsyncWithHttpInfo (long? id, List<string> sort = null, List<int?> status = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null, long? idTipoTransacao = null, bool? flagCredito = null, bool? flagFaturado = null, bool? flagProcessada = null, int? plano = null, long? codigoMCC = null, long? grupoMCC = null);
+        
+        /// <summary>
+        /// Lista as transa\u00E7\u00F5es n\u00E3o processadas da conta
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es n\u00E3o processadas da Conta.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="dataInicio">Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Par\u00E2mentro Ignorado se dataFim n\u00E3o for definida) (optional)</param>
+        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Par\u00E2mentro Ignorado se dataInicio n\u00E3o for definida) (optional)</param>
+        /// <returns>Task of PageTransacaoNaoProcessadaResponse</returns>
+        System.Threading.Tasks.Task<PageTransacaoNaoProcessadaResponse> ListarTransacoesNaoProcessadasContaAsync (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataInicio = null, string dataFim = null);
+
+        /// <summary>
+        /// Lista as transa\u00E7\u00F5es n\u00E3o processadas da conta
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es n\u00E3o processadas da Conta.
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="dataInicio">Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Par\u00E2mentro Ignorado se dataFim n\u00E3o for definida) (optional)</param>
+        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Par\u00E2mentro Ignorado se dataInicio n\u00E3o for definida) (optional)</param>
+        /// <returns>Task of ApiResponse (PageTransacaoNaoProcessadaResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PageTransacaoNaoProcessadaResponse>> ListarTransacoesNaoProcessadasContaAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataInicio = null, string dataFim = null);
+        
+        /// <summary>
+        /// Listar as transa\u00E7\u00F5es negadas da conta
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es negadas da Conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo identificador da conta</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idCartao">C\u00F3digo identificador do cart\u00E3o (optional)</param>
+        /// <returns>Task of PageTransacaoNegadaResponse</returns>
+        System.Threading.Tasks.Task<PageTransacaoNegadaResponse> ListarTransacoesNegadasAsync (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null);
+
+        /// <summary>
+        /// Listar as transa\u00E7\u00F5es negadas da conta
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es negadas da Conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo identificador da conta</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idCartao">C\u00F3digo identificador do cart\u00E3o (optional)</param>
+        /// <returns>Task of ApiResponse (PageTransacaoNegadaResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PageTransacaoNegadaResponse>> ListarTransacoesNegadasAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null);
+        
+        /// <summary>
+        /// Lista as transa\u00E7\u00F5es processadas da conta
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es processadas da Conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="dataVencimento">Data de vencimento do extrato no formato yyyy-MM-dd (optional)</param>
+        /// <param name="dataInicio">Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param>
+        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param>
+        /// <param name="idTipoTransacao">transacoes_processadas_request_tipo_transacao (optional)</param>
+        /// <param name="recuperaEncargos">Adiciona as transa\u00E7\u00F5es de encargos na consulta (optional)</param>
+        /// <returns>Task of PageTransacoesCorrentesResponse</returns>
+        System.Threading.Tasks.Task<PageTransacoesCorrentesResponse> ListarTransacoesProcessadasContaAsync (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null, long? idTipoTransacao = null, int? recuperaEncargos = null);
+
+        /// <summary>
+        /// Lista as transa\u00E7\u00F5es processadas da conta
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es processadas da Conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="dataVencimento">Data de vencimento do extrato no formato yyyy-MM-dd (optional)</param>
+        /// <param name="dataInicio">Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param>
+        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param>
+        /// <param name="idTipoTransacao">transacoes_processadas_request_tipo_transacao (optional)</param>
+        /// <param name="recuperaEncargos">Adiciona as transa\u00E7\u00F5es de encargos na consulta (optional)</param>
+        /// <returns>Task of ApiResponse (PageTransacoesCorrentesResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PageTransacoesCorrentesResponse>> ListarTransacoesProcessadasContaAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null, long? idTipoTransacao = null, int? recuperaEncargos = null);
+        
+        /// <summary>
         /// Este recurso permite que uma proje\u00E7\u00E3o de compra ainda n\u00E3o processada seja recuperada. Os valores das compras s\u00E3o agrupados e exibidos em blocos mensais.
         /// </summary>
         /// <remarks>
@@ -3463,7 +3495,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00E1gina (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
         /// <returns>Task of PageProjecaoCompraNaoProcessadaResponse</returns>
-        System.Threading.Tasks.Task<PageProjecaoCompraNaoProcessadaResponse> ListarTransacoesProjetadasAsync (long? id, List<string> sort = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<PageProjecaoCompraNaoProcessadaResponse> ListarTransacoesProjetadasContaAsync (long? id, List<string> sort = null, int? page = null, int? limit = null);
 
         /// <summary>
         /// Este recurso permite que uma proje\u00E7\u00E3o de compra ainda n\u00E3o processada seja recuperada. Os valores das compras s\u00E3o agrupados e exibidos em blocos mensais.
@@ -3477,7 +3509,45 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00E1gina (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
         /// <returns>Task of ApiResponse (PageProjecaoCompraNaoProcessadaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageProjecaoCompraNaoProcessadaResponse>> ListarTransacoesProjetadasAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<ApiResponse<PageProjecaoCompraNaoProcessadaResponse>> ListarTransacoesProjetadasContaAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null);
+        
+        /// <summary>
+        /// Lista as transfer\u00EAncias realizadas pela conta
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que sejam listadas as transfer\u00EAncias realizadas pela conta existentes na base do emissor
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idTransferencia">C\u00F3digo de identifica\u00E7\u00E3o da transfer\u00EAncia (id) (optional)</param>
+        /// <param name="idContaOrigem">C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 debitado para a transfer\u00EAncia. (id) (optional)</param>
+        /// <param name="idContaDestino">C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 creditado para a transfer\u00EAncia. (id) (optional)</param>
+        /// <param name="valorTransferencia">Valor estabelecido para ser transferido (optional)</param>
+        /// <param name="dataTransferencia">Data estabelecida para ocorrer a transfer\u00EAncia (optional)</param>
+        /// <returns>Task of PageTransferenciaResponse</returns>
+        System.Threading.Tasks.Task<PageTransferenciaResponse> ListarTransferenciasDeCreditoEntreCartoesAsync (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idTransferencia = null, long? idContaOrigem = null, long? idContaDestino = null, double? valorTransferencia = null, string dataTransferencia = null);
+
+        /// <summary>
+        /// Lista as transfer\u00EAncias realizadas pela conta
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que sejam listadas as transfer\u00EAncias realizadas pela conta existentes na base do emissor
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idTransferencia">C\u00F3digo de identifica\u00E7\u00E3o da transfer\u00EAncia (id) (optional)</param>
+        /// <param name="idContaOrigem">C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 debitado para a transfer\u00EAncia. (id) (optional)</param>
+        /// <param name="idContaDestino">C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 creditado para a transfer\u00EAncia. (id) (optional)</param>
+        /// <param name="valorTransferencia">Valor estabelecido para ser transferido (optional)</param>
+        /// <param name="dataTransferencia">Data estabelecida para ocorrer a transfer\u00EAncia (optional)</param>
+        /// <returns>Task of ApiResponse (PageTransferenciaResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PageTransferenciaResponse>> ListarTransferenciasDeCreditoEntreCartoesAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idTransferencia = null, long? idContaOrigem = null, long? idContaDestino = null, double? valorTransferencia = null, string dataTransferencia = null);
         
         /// <summary>
         /// Lista v\u00EDnculos de contas
@@ -3510,152 +3580,6 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<PageVinculoContaResponse>> ListarVinculoContaAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, long? idTipoVinculo = null);
         
         /// <summary>
-        /// Lista os tipos de fun\u00E7\u00F5es para contas do Emissor
-        /// </summary>
-        /// <remarks>
-        /// Este recurso permite listar os tipos de fun\u00E7\u00F5es para as contas do Emissor
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> Listar_0Async ();
-
-        /// <summary>
-        /// Lista os tipos de fun\u00E7\u00F5es para contas do Emissor
-        /// </summary>
-        /// <remarks>
-        /// Este recurso permite listar os tipos de fun\u00E7\u00F5es para as contas do Emissor
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> Listar_0AsyncWithHttpInfo ();
-        
-        /// <summary>
-        /// Realiza a listagem de todos os agendamentos
-        /// </summary>
-        /// <remarks>
-        /// Este recurso permite listar todos os agendamentos
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">id</param>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="tipoOperacao">Tipo opera\u00E7\u00E3o  (optional)</param>
-        /// <param name="tipoRecorrencia">Tipo Recorr\u00EAncia (optional)</param>
-        /// <param name="quantidadeAgendamento">Quantidade agendamento  (optional)</param>
-        /// <param name="diaRecorrencia">Dia recorr\u00EAncia (optional)</param>
-        /// <param name="valor">Valor Agendamento (optional)</param>
-        /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> Listar_1Async (long? id, List<string> sort = null, int? page = null, int? limit = null, int? tipoOperacao = null, int? tipoRecorrencia = null, int? quantidadeAgendamento = null, int? diaRecorrencia = null, double? valor = null);
-
-        /// <summary>
-        /// Realiza a listagem de todos os agendamentos
-        /// </summary>
-        /// <remarks>
-        /// Este recurso permite listar todos os agendamentos
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">id</param>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="tipoOperacao">Tipo opera\u00E7\u00E3o  (optional)</param>
-        /// <param name="tipoRecorrencia">Tipo Recorr\u00EAncia (optional)</param>
-        /// <param name="quantidadeAgendamento">Quantidade agendamento  (optional)</param>
-        /// <param name="diaRecorrencia">Dia recorr\u00EAncia (optional)</param>
-        /// <param name="valor">Valor Agendamento (optional)</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> Listar_1AsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, int? tipoOperacao = null, int? tipoRecorrencia = null, int? quantidadeAgendamento = null, int? diaRecorrencia = null, double? valor = null);
-        
-        /// <summary>
-        /// Lista as transa\u00E7\u00F5es n\u00E3o processadas e processadas da conta
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es n\u00E3o processadas e processadas da Conta
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="status">Status da transa\u00E7\u00E3o (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="dataVencimento">Data de vencimento do extrato no formato yyyy-MM-dd (optional)</param>
-        /// <param name="dataInicio">Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param>
-        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param>
-        /// <param name="idTipoTransacao">transacoes_processadas_nao_processadas_request_tipo_transacao (optional)</param>
-        /// <param name="flagCredito">Flag que indica se a transa\u00E7\u00E3o \u00E9 cr\u00E9dito (optional)</param>
-        /// <param name="flagFaturado">Flag que indica se a transa\u00E7\u00E3o foi faturada (optional)</param>
-        /// <param name="flagProcessada">Flag que indica se a transa\u00E7\u00E3o foi processada (optional)</param>
-        /// <param name="plano">Plano da transa\u00E7\u00E3o (optional)</param>
-        /// <param name="codigoMCC">C\u00F3digo MCC da transa\u00E7\u00E3o (optional)</param>
-        /// <param name="grupoMCC">Grupo MCC da transa\u00E7\u00E3o (optional)</param>
-        /// <returns>Task of PageTransacaoProcessadaNaoProcessadaResponse</returns>
-        System.Threading.Tasks.Task<PageTransacaoProcessadaNaoProcessadaResponse> Listar_2Async (long? id, List<string> sort = null, List<int?> status = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null, long? idTipoTransacao = null, bool? flagCredito = null, bool? flagFaturado = null, bool? flagProcessada = null, int? plano = null, long? codigoMCC = null, long? grupoMCC = null);
-
-        /// <summary>
-        /// Lista as transa\u00E7\u00F5es n\u00E3o processadas e processadas da conta
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es n\u00E3o processadas e processadas da Conta
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="status">Status da transa\u00E7\u00E3o (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="dataVencimento">Data de vencimento do extrato no formato yyyy-MM-dd (optional)</param>
-        /// <param name="dataInicio">Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param>
-        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param>
-        /// <param name="idTipoTransacao">transacoes_processadas_nao_processadas_request_tipo_transacao (optional)</param>
-        /// <param name="flagCredito">Flag que indica se a transa\u00E7\u00E3o \u00E9 cr\u00E9dito (optional)</param>
-        /// <param name="flagFaturado">Flag que indica se a transa\u00E7\u00E3o foi faturada (optional)</param>
-        /// <param name="flagProcessada">Flag que indica se a transa\u00E7\u00E3o foi processada (optional)</param>
-        /// <param name="plano">Plano da transa\u00E7\u00E3o (optional)</param>
-        /// <param name="codigoMCC">C\u00F3digo MCC da transa\u00E7\u00E3o (optional)</param>
-        /// <param name="grupoMCC">Grupo MCC da transa\u00E7\u00E3o (optional)</param>
-        /// <returns>Task of ApiResponse (PageTransacaoProcessadaNaoProcessadaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageTransacaoProcessadaNaoProcessadaResponse>> Listar_2AsyncWithHttpInfo (long? id, List<string> sort = null, List<int?> status = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null, long? idTipoTransacao = null, bool? flagCredito = null, bool? flagFaturado = null, bool? flagProcessada = null, int? plano = null, long? codigoMCC = null, long? grupoMCC = null);
-        
-        /// <summary>
-        /// Lista as transfer\u00EAncias realizadas pela conta
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite que sejam listadas as transfer\u00EAncias realizadas pela conta existentes na base do emissor
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="idTransferencia">C\u00F3digo de identifica\u00E7\u00E3o da transfer\u00EAncia (id) (optional)</param>
-        /// <param name="idContaOrigem">C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 debitado para a transfer\u00EAncia. (id) (optional)</param>
-        /// <param name="idContaDestino">C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 creditado para a transfer\u00EAncia. (id) (optional)</param>
-        /// <param name="valorTransferencia">Valor estabelecido para ser transferido (optional)</param>
-        /// <param name="dataTransferencia">Data estabelecida para ocorrer a transfer\u00EAncia (optional)</param>
-        /// <returns>Task of PageTransferenciaResponse</returns>
-        System.Threading.Tasks.Task<PageTransferenciaResponse> Listar_3Async (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idTransferencia = null, long? idContaOrigem = null, long? idContaDestino = null, double? valorTransferencia = null, string dataTransferencia = null);
-
-        /// <summary>
-        /// Lista as transfer\u00EAncias realizadas pela conta
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite que sejam listadas as transfer\u00EAncias realizadas pela conta existentes na base do emissor
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="idTransferencia">C\u00F3digo de identifica\u00E7\u00E3o da transfer\u00EAncia (id) (optional)</param>
-        /// <param name="idContaOrigem">C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 debitado para a transfer\u00EAncia. (id) (optional)</param>
-        /// <param name="idContaDestino">C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 creditado para a transfer\u00EAncia. (id) (optional)</param>
-        /// <param name="valorTransferencia">Valor estabelecido para ser transferido (optional)</param>
-        /// <param name="dataTransferencia">Data estabelecida para ocorrer a transfer\u00EAncia (optional)</param>
-        /// <returns>Task of ApiResponse (PageTransferenciaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageTransferenciaResponse>> Listar_3AsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idTransferencia = null, long? idContaOrigem = null, long? idContaDestino = null, double? valorTransferencia = null, string dataTransferencia = null);
-        
-        /// <summary>
         /// Realiza a normaliza\u00E7\u00E3o de uma conta
         /// </summary>
         /// <remarks>
@@ -3665,7 +3589,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o de uma Conta (id)</param>
         /// <param name="login">login (optional)</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> NormalizacaoAsync (long? id, string login = null);
+        System.Threading.Tasks.Task<Object> NormalizarContaAsync (long? id, string login = null);
 
         /// <summary>
         /// Realiza a normaliza\u00E7\u00E3o de uma conta
@@ -3677,7 +3601,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o de uma Conta (id)</param>
         /// <param name="login">login (optional)</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> NormalizacaoAsyncWithHttpInfo (long? id, string login = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> NormalizarContaAsyncWithHttpInfo (long? id, string login = null);
         
         /// <summary>
         /// Realiza a reativa\u00E7\u00E3o de contas
@@ -3688,7 +3612,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> ReativarAsync (long? id);
+        System.Threading.Tasks.Task<Object> ReativarContaAsync (long? id);
 
         /// <summary>
         /// Realiza a reativa\u00E7\u00E3o de contas
@@ -3699,29 +3623,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ReativarAsyncWithHttpInfo (long? id);
-        
-        /// <summary>
-        /// Realiza o cadastro de uma nova conta
-        /// </summary>
-        /// <remarks>
-        /// Esse recurso permite cadastrar uma nova conta para uma pessoa j\u00E1 existente na base de dados do emissor
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="contaPersist">contaPersist</param>
-        /// <returns>Task of ContaResponse</returns>
-        System.Threading.Tasks.Task<ContaResponse> SalvarAsync (ContaPersist contaPersist);
-
-        /// <summary>
-        /// Realiza o cadastro de uma nova conta
-        /// </summary>
-        /// <remarks>
-        /// Esse recurso permite cadastrar uma nova conta para uma pessoa j\u00E1 existente na base de dados do emissor
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="contaPersist">contaPersist</param>
-        /// <returns>Task of ApiResponse (ContaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ContaResponse>> SalvarAsyncWithHttpInfo (ContaPersist contaPersist);
+        System.Threading.Tasks.Task<ApiResponse<Object>> ReativarContaAsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Realiza um cadastro de uma nova ades\u00E3o do servi\u00E7o
@@ -3748,28 +3650,90 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<AdesaoServicoResponse>> SalvarAdesaoServicosAsyncWithHttpInfo (long? id, AdesaoServicoPersist adesaoServicoPersist);
         
         /// <summary>
-        /// Realiza o agendamento de transacoes
+        /// Lan\u00E7a um ajuste para a conta do id informado
         /// </summary>
         /// <remarks>
-        /// Este recurso permite agendar opera\u00E7\u00F5es financeiras
+        /// Este recurso insere um ajuste para a conta do id informado
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="agendamentoPersist">agendamentoPersist</param>
-        /// <param name="id">id</param>
-        /// <returns>Task of AgendamentoResponse</returns>
-        System.Threading.Tasks.Task<AgendamentoResponse> SalvarAgendamentoAsync (AgendamentoPersist agendamentoPersist, long? id);
+        /// <param name="id">Id Conta</param>
+        /// <param name="idTipoAjuste">C\u00F3digo identificador do tipo de ajuste</param>
+        /// <param name="dataAjuste">Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ</param>
+        /// <param name="valorAjuste">Valor do ajuste</param>
+        /// <param name="login">login (optional)</param>
+        /// <param name="identificadorExterno">Identificador Externo (optional)</param>
+        /// <param name="idTransacaoOriginal">Identificador da transa\u00E7\u00E3o original (estorno) (optional)</param>
+        /// <param name="idEstabelecimento">Identificador do estabelecimento quando o pagamento for efetuado em loja (optional)</param>
+        /// <param name="flagAtendimento">Flag para lan\u00E7ar o atendimento (optional)</param>
+        /// <param name="mensagemAtendimento">Mensagem enviada no atendimento (optional)</param>
+        /// <returns>Task of AjusteFinanceiroResponse</returns>
+        System.Threading.Tasks.Task<AjusteFinanceiroResponse> SalvarAjusteFinanceiroContaAsync (long? id, long? idTipoAjuste, string dataAjuste, double? valorAjuste, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null, bool? flagAtendimento = null, string mensagemAtendimento = null);
 
         /// <summary>
-        /// Realiza o agendamento de transacoes
+        /// Lan\u00E7a um ajuste para a conta do id informado
         /// </summary>
         /// <remarks>
-        /// Este recurso permite agendar opera\u00E7\u00F5es financeiras
+        /// Este recurso insere um ajuste para a conta do id informado
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="agendamentoPersist">agendamentoPersist</param>
-        /// <param name="id">id</param>
-        /// <returns>Task of ApiResponse (AgendamentoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AgendamentoResponse>> SalvarAgendamentoAsyncWithHttpInfo (AgendamentoPersist agendamentoPersist, long? id);
+        /// <param name="id">Id Conta</param>
+        /// <param name="idTipoAjuste">C\u00F3digo identificador do tipo de ajuste</param>
+        /// <param name="dataAjuste">Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ</param>
+        /// <param name="valorAjuste">Valor do ajuste</param>
+        /// <param name="login">login (optional)</param>
+        /// <param name="identificadorExterno">Identificador Externo (optional)</param>
+        /// <param name="idTransacaoOriginal">Identificador da transa\u00E7\u00E3o original (estorno) (optional)</param>
+        /// <param name="idEstabelecimento">Identificador do estabelecimento quando o pagamento for efetuado em loja (optional)</param>
+        /// <param name="flagAtendimento">Flag para lan\u00E7ar o atendimento (optional)</param>
+        /// <param name="mensagemAtendimento">Mensagem enviada no atendimento (optional)</param>
+        /// <returns>Task of ApiResponse (AjusteFinanceiroResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AjusteFinanceiroResponse>> SalvarAjusteFinanceiroContaAsyncWithHttpInfo (long? id, long? idTipoAjuste, string dataAjuste, double? valorAjuste, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null, bool? flagAtendimento = null, string mensagemAtendimento = null);
+        
+        /// <summary>
+        /// Realiza o cadastro de uma nova conta
+        /// </summary>
+        /// <remarks>
+        /// Esse recurso permite cadastrar uma nova conta para uma pessoa j\u00E1 existente na base de dados do emissor
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contaPersist">contaPersist</param>
+        /// <returns>Task of ContaResponse</returns>
+        System.Threading.Tasks.Task<ContaResponse> SalvarContaAsync (ContaPersist contaPersist);
+
+        /// <summary>
+        /// Realiza o cadastro de uma nova conta
+        /// </summary>
+        /// <remarks>
+        /// Esse recurso permite cadastrar uma nova conta para uma pessoa j\u00E1 existente na base de dados do emissor
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contaPersist">contaPersist</param>
+        /// <returns>Task of ApiResponse (ContaResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ContaResponse>> SalvarContaAsyncWithHttpInfo (ContaPersist contaPersist);
+        
+        /// <summary>
+        /// Salvar uma tarifa de d\u00E9bito para uma conta
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite salvar uma tarifa de d\u00E9bito para a conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta</param>
+        /// <param name="contaDebitoTarifaPersist">contaDebitoTarifaPersist</param>
+        /// <returns>Task of ContaDebitoTarifaResponse</returns>
+        System.Threading.Tasks.Task<ContaDebitoTarifaResponse> SalvarContaDebitoTarifaAsync (long? id, ContaDebitoTarifaPersist contaDebitoTarifaPersist);
+
+        /// <summary>
+        /// Salvar uma tarifa de d\u00E9bito para uma conta
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite salvar uma tarifa de d\u00E9bito para a conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta</param>
+        /// <param name="contaDebitoTarifaPersist">contaDebitoTarifaPersist</param>
+        /// <returns>Task of ApiResponse (ContaDebitoTarifaResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ContaDebitoTarifaResponse>> SalvarContaDebitoTarifaAsyncWithHttpInfo (long? id, ContaDebitoTarifaPersist contaDebitoTarifaPersist);
         
         /// <summary>
         /// Cadastra um controle para uma subconta
@@ -3868,34 +3832,6 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<EmprestimoPessoalResponse>> SimularEmprestimoFinanciamentoAsyncWithHttpInfo (long? id, EmprestimoPessoalRequest request);
         
         /// <summary>
-        /// Permite listar uma linha do tempo com os eventos da conta
-        /// </summary>
-        /// <remarks>
-        /// Esta opera\u00E7\u00E3o tem como objetivo permitir a listagem, em formato de timeline, dos eventos vinculados a uma detemrinada conta. Transa\u00E7\u00F5es, fechamento da fatura, pagamentos, gera\u00E7\u00E3o de cart\u00F5es e altera\u00E7\u00E3o de limite s\u00E3o exemplos de eventos contemplados por esta funcionalidade. Neste m\u00E9todo, as opera\u00E7\u00F5es s\u00E3o ordenadas de forma decrescente
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Id Conta</param>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <returns>Task of PageTransacaoResponse</returns>
-        System.Threading.Tasks.Task<PageTransacaoResponse> TransacoesAsync (long? id, List<string> sort = null, int? page = null, int? limit = null);
-
-        /// <summary>
-        /// Permite listar uma linha do tempo com os eventos da conta
-        /// </summary>
-        /// <remarks>
-        /// Esta opera\u00E7\u00E3o tem como objetivo permitir a listagem, em formato de timeline, dos eventos vinculados a uma detemrinada conta. Transa\u00E7\u00F5es, fechamento da fatura, pagamentos, gera\u00E7\u00E3o de cart\u00F5es e altera\u00E7\u00E3o de limite s\u00E3o exemplos de eventos contemplados por esta funcionalidade. Neste m\u00E9todo, as opera\u00E7\u00F5es s\u00E3o ordenadas de forma decrescente
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Id Conta</param>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <returns>Task of ApiResponse (PageTransacaoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageTransacaoResponse>> TransacoesAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null);
-        
-        /// <summary>
         /// Realiza uma transfer\u00EAncia de Cr\u00E9dito para outro cliente do mesmo Emissor
         /// </summary>
         /// <remarks>
@@ -3906,7 +3842,7 @@ namespace Conductor.Pier.Api
         /// <param name="idContaDestino">C\u00F3digo de Identifica\u00E7\u00E3o do cliente portador do cart\u00E3o que ser\u00E1 creditado (id)</param>
         /// <param name="valorTransferencia">Valor da Transfer\u00EAncia</param>
         /// <returns>Task of TransferenciaDetalheResponse</returns>
-        System.Threading.Tasks.Task<TransferenciaDetalheResponse> TransferirAsync (long? id, long? idContaDestino, double? valorTransferencia);
+        System.Threading.Tasks.Task<TransferenciaDetalheResponse> TransferirCreditoEntreCartoesAsync (long? id, long? idContaDestino, double? valorTransferencia);
 
         /// <summary>
         /// Realiza uma transfer\u00EAncia de Cr\u00E9dito para outro cliente do mesmo Emissor
@@ -3919,7 +3855,7 @@ namespace Conductor.Pier.Api
         /// <param name="idContaDestino">C\u00F3digo de Identifica\u00E7\u00E3o do cliente portador do cart\u00E3o que ser\u00E1 creditado (id)</param>
         /// <param name="valorTransferencia">Valor da Transfer\u00EAncia</param>
         /// <returns>Task of ApiResponse (TransferenciaDetalheResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TransferenciaDetalheResponse>> TransferirAsyncWithHttpInfo (long? id, long? idContaDestino, double? valorTransferencia);
+        System.Threading.Tasks.Task<ApiResponse<TransferenciaDetalheResponse>> TransferirCreditoEntreCartoesAsyncWithHttpInfo (long? id, long? idContaDestino, double? valorTransferencia);
         
         /// <summary>
         /// Transferir cr\u00E9dito entre portadores
@@ -3931,7 +3867,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">Id da conta</param>
         /// <param name="transferencia">transferencia</param>
         /// <returns>Task of TransferenciaPortadoresResponse</returns>
-        System.Threading.Tasks.Task<TransferenciaPortadoresResponse> TransferirCreditoPortadoresAsync (long? id, TransferenciaPortadoresPersist transferencia);
+        System.Threading.Tasks.Task<TransferenciaPortadoresResponse> TransferirCreditoEntrePortadoresAsync (long? id, TransferenciaPortadoresPersist transferencia);
 
         /// <summary>
         /// Transferir cr\u00E9dito entre portadores
@@ -3943,7 +3879,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">Id da conta</param>
         /// <param name="transferencia">transferencia</param>
         /// <returns>Task of ApiResponse (TransferenciaPortadoresResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TransferenciaPortadoresResponse>> TransferirCreditoPortadoresAsyncWithHttpInfo (long? id, TransferenciaPortadoresPersist transferencia);
+        System.Threading.Tasks.Task<ApiResponse<TransferenciaPortadoresResponse>> TransferirCreditoEntrePortadoresAsyncWithHttpInfo (long? id, TransferenciaPortadoresPersist transferencia);
         
         #endregion Asynchronous Operations
         
@@ -4036,236 +3972,6 @@ namespace Conductor.Pier.Api
             this.Configuration.AddDefaultHeader(key, value);
         }
    
-        
-        /// <summary>
-        /// Lan\u00E7a um ajuste para a conta do id informado Este recurso insere um ajuste para a conta do id informado
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Id Conta</param> 
-        /// <param name="idTipoAjuste">C\u00F3digo identificador do tipo de ajuste</param> 
-        /// <param name="dataAjuste">Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ</param> 
-        /// <param name="valorAjuste">Valor do ajuste</param> 
-        /// <param name="login">login (optional)</param> 
-        /// <param name="identificadorExterno">Identificador Externo (optional)</param> 
-        /// <param name="idTransacaoOriginal">Identificador da transa\u00E7\u00E3o original (estorno) (optional)</param> 
-        /// <param name="idEstabelecimento">Identificador do estabelecimento quando o pagamento for efetuado em loja (optional)</param> 
-        /// <param name="flagAtendimento">Flag para lan\u00E7ar o atendimento (optional)</param> 
-        /// <param name="mensagemAtendimento">Mensagem enviada no atendimento (optional)</param> 
-        /// <returns>AjusteFinanceiroResponse</returns>
-        public AjusteFinanceiroResponse AjustarConta (long? id, long? idTipoAjuste, string dataAjuste, double? valorAjuste, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null, bool? flagAtendimento = null, string mensagemAtendimento = null)
-        {
-             ApiResponse<AjusteFinanceiroResponse> localVarResponse = AjustarContaWithHttpInfo(id, idTipoAjuste, dataAjuste, valorAjuste, login, identificadorExterno, idTransacaoOriginal, idEstabelecimento, flagAtendimento, mensagemAtendimento);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Lan\u00E7a um ajuste para a conta do id informado Este recurso insere um ajuste para a conta do id informado
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Id Conta</param> 
-        /// <param name="idTipoAjuste">C\u00F3digo identificador do tipo de ajuste</param> 
-        /// <param name="dataAjuste">Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ</param> 
-        /// <param name="valorAjuste">Valor do ajuste</param> 
-        /// <param name="login">login (optional)</param> 
-        /// <param name="identificadorExterno">Identificador Externo (optional)</param> 
-        /// <param name="idTransacaoOriginal">Identificador da transa\u00E7\u00E3o original (estorno) (optional)</param> 
-        /// <param name="idEstabelecimento">Identificador do estabelecimento quando o pagamento for efetuado em loja (optional)</param> 
-        /// <param name="flagAtendimento">Flag para lan\u00E7ar o atendimento (optional)</param> 
-        /// <param name="mensagemAtendimento">Mensagem enviada no atendimento (optional)</param> 
-        /// <returns>ApiResponse of AjusteFinanceiroResponse</returns>
-        public ApiResponse< AjusteFinanceiroResponse > AjustarContaWithHttpInfo (long? id, long? idTipoAjuste, string dataAjuste, double? valorAjuste, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null, bool? flagAtendimento = null, string mensagemAtendimento = null)
-        {
-            
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->AjustarConta");
-            
-            // verify the required parameter 'idTipoAjuste' is set
-            if (idTipoAjuste == null)
-                throw new ApiException(400, "Missing required parameter 'idTipoAjuste' when calling ContaApi->AjustarConta");
-            
-            // verify the required parameter 'dataAjuste' is set
-            if (dataAjuste == null)
-                throw new ApiException(400, "Missing required parameter 'dataAjuste' when calling ContaApi->AjustarConta");
-            
-            // verify the required parameter 'valorAjuste' is set
-            if (valorAjuste == null)
-                throw new ApiException(400, "Missing required parameter 'valorAjuste' when calling ContaApi->AjustarConta");
-            
-    
-            var localVarPath = "/api/contas/{id}/ajustes-financeiros";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            
-            if (idTipoAjuste != null) localVarQueryParams.Add("idTipoAjuste", Configuration.ApiClient.ParameterToString(idTipoAjuste)); // query parameter
-            if (dataAjuste != null) localVarQueryParams.Add("dataAjuste", Configuration.ApiClient.ParameterToString(dataAjuste)); // query parameter
-            if (valorAjuste != null) localVarQueryParams.Add("valorAjuste", Configuration.ApiClient.ParameterToString(valorAjuste)); // query parameter
-            if (identificadorExterno != null) localVarQueryParams.Add("identificadorExterno", Configuration.ApiClient.ParameterToString(identificadorExterno)); // query parameter
-            if (idTransacaoOriginal != null) localVarQueryParams.Add("idTransacaoOriginal", Configuration.ApiClient.ParameterToString(idTransacaoOriginal)); // query parameter
-            if (idEstabelecimento != null) localVarQueryParams.Add("idEstabelecimento", Configuration.ApiClient.ParameterToString(idEstabelecimento)); // query parameter
-            if (flagAtendimento != null) localVarQueryParams.Add("flagAtendimento", Configuration.ApiClient.ParameterToString(flagAtendimento)); // query parameter
-            if (mensagemAtendimento != null) localVarQueryParams.Add("mensagemAtendimento", Configuration.ApiClient.ParameterToString(mensagemAtendimento)); // query parameter
-            
-            if (login != null) localVarHeaderParams.Add("login", Configuration.ApiClient.ParameterToString(login)); // header parameter
-            
-            
-            
-
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling AjustarConta: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling AjustarConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<AjusteFinanceiroResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (AjusteFinanceiroResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AjusteFinanceiroResponse)));
-            
-        }
-
-        
-        /// <summary>
-        /// Lan\u00E7a um ajuste para a conta do id informado Este recurso insere um ajuste para a conta do id informado
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Id Conta</param>
-        /// <param name="idTipoAjuste">C\u00F3digo identificador do tipo de ajuste</param>
-        /// <param name="dataAjuste">Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ</param>
-        /// <param name="valorAjuste">Valor do ajuste</param>
-        /// <param name="login">login (optional)</param>
-        /// <param name="identificadorExterno">Identificador Externo (optional)</param>
-        /// <param name="idTransacaoOriginal">Identificador da transa\u00E7\u00E3o original (estorno) (optional)</param>
-        /// <param name="idEstabelecimento">Identificador do estabelecimento quando o pagamento for efetuado em loja (optional)</param>
-        /// <param name="flagAtendimento">Flag para lan\u00E7ar o atendimento (optional)</param>
-        /// <param name="mensagemAtendimento">Mensagem enviada no atendimento (optional)</param>
-        /// <returns>Task of AjusteFinanceiroResponse</returns>
-        public async System.Threading.Tasks.Task<AjusteFinanceiroResponse> AjustarContaAsync (long? id, long? idTipoAjuste, string dataAjuste, double? valorAjuste, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null, bool? flagAtendimento = null, string mensagemAtendimento = null)
-        {
-             ApiResponse<AjusteFinanceiroResponse> localVarResponse = await AjustarContaAsyncWithHttpInfo(id, idTipoAjuste, dataAjuste, valorAjuste, login, identificadorExterno, idTransacaoOriginal, idEstabelecimento, flagAtendimento, mensagemAtendimento);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Lan\u00E7a um ajuste para a conta do id informado Este recurso insere um ajuste para a conta do id informado
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Id Conta</param>
-        /// <param name="idTipoAjuste">C\u00F3digo identificador do tipo de ajuste</param>
-        /// <param name="dataAjuste">Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ</param>
-        /// <param name="valorAjuste">Valor do ajuste</param>
-        /// <param name="login">login (optional)</param>
-        /// <param name="identificadorExterno">Identificador Externo (optional)</param>
-        /// <param name="idTransacaoOriginal">Identificador da transa\u00E7\u00E3o original (estorno) (optional)</param>
-        /// <param name="idEstabelecimento">Identificador do estabelecimento quando o pagamento for efetuado em loja (optional)</param>
-        /// <param name="flagAtendimento">Flag para lan\u00E7ar o atendimento (optional)</param>
-        /// <param name="mensagemAtendimento">Mensagem enviada no atendimento (optional)</param>
-        /// <returns>Task of ApiResponse (AjusteFinanceiroResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AjusteFinanceiroResponse>> AjustarContaAsyncWithHttpInfo (long? id, long? idTipoAjuste, string dataAjuste, double? valorAjuste, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null, bool? flagAtendimento = null, string mensagemAtendimento = null)
-        {
-            // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AjustarConta");
-            // verify the required parameter 'idTipoAjuste' is set
-            if (idTipoAjuste == null) throw new ApiException(400, "Missing required parameter 'idTipoAjuste' when calling AjustarConta");
-            // verify the required parameter 'dataAjuste' is set
-            if (dataAjuste == null) throw new ApiException(400, "Missing required parameter 'dataAjuste' when calling AjustarConta");
-            // verify the required parameter 'valorAjuste' is set
-            if (valorAjuste == null) throw new ApiException(400, "Missing required parameter 'valorAjuste' when calling AjustarConta");
-            
-    
-            var localVarPath = "/api/contas/{id}/ajustes-financeiros";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            
-            if (idTipoAjuste != null) localVarQueryParams.Add("idTipoAjuste", Configuration.ApiClient.ParameterToString(idTipoAjuste)); // query parameter
-            if (dataAjuste != null) localVarQueryParams.Add("dataAjuste", Configuration.ApiClient.ParameterToString(dataAjuste)); // query parameter
-            if (valorAjuste != null) localVarQueryParams.Add("valorAjuste", Configuration.ApiClient.ParameterToString(valorAjuste)); // query parameter
-            if (identificadorExterno != null) localVarQueryParams.Add("identificadorExterno", Configuration.ApiClient.ParameterToString(identificadorExterno)); // query parameter
-            if (idTransacaoOriginal != null) localVarQueryParams.Add("idTransacaoOriginal", Configuration.ApiClient.ParameterToString(idTransacaoOriginal)); // query parameter
-            if (idEstabelecimento != null) localVarQueryParams.Add("idEstabelecimento", Configuration.ApiClient.ParameterToString(idEstabelecimento)); // query parameter
-            if (flagAtendimento != null) localVarQueryParams.Add("flagAtendimento", Configuration.ApiClient.ParameterToString(flagAtendimento)); // query parameter
-            if (mensagemAtendimento != null) localVarQueryParams.Add("mensagemAtendimento", Configuration.ApiClient.ParameterToString(mensagemAtendimento)); // query parameter
-            
-            if (login != null) localVarHeaderParams.Add("login", Configuration.ApiClient.ParameterToString(login)); // header parameter
-            
-            
-            
-
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling AjustarConta: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling AjustarConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<AjusteFinanceiroResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (AjusteFinanceiroResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AjusteFinanceiroResponse)));
-            
-        }
         
         /// <summary>
         /// Altera parcialmente um controle de uma subconta Este recurso permite atualizar parcialmente um controle de subconta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o. O controle de subconta serve para registrar informa\u00E7\u00F5es adicionais da subconta como apelido, prop\u00F3sito da cria\u00E7\u00E3o da subconta e se ela pode ser gerenciada pela pr\u00F3pria subconta ou apenas pela conta pai.
@@ -4456,9 +4162,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param> 
         /// <param name="request">request</param> 
         /// <returns>string</returns>
-        public string AlterarProduto (long? id, AlterarProdutoRequest request)
+        public string AlterarProdutoConta (long? id, AlterarProdutoRequest request)
         {
-             ApiResponse<string> localVarResponse = AlterarProdutoWithHttpInfo(id, request);
+             ApiResponse<string> localVarResponse = AlterarProdutoContaWithHttpInfo(id, request);
              return localVarResponse.Data;
         }
 
@@ -4469,16 +4175,16 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param> 
         /// <param name="request">request</param> 
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > AlterarProdutoWithHttpInfo (long? id, AlterarProdutoRequest request)
+        public ApiResponse< string > AlterarProdutoContaWithHttpInfo (long? id, AlterarProdutoRequest request)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->AlterarProduto");
+                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->AlterarProdutoConta");
             
             // verify the required parameter 'request' is set
             if (request == null)
-                throw new ApiException(400, "Missing required parameter 'request' when calling ContaApi->AlterarProduto");
+                throw new ApiException(400, "Missing required parameter 'request' when calling ContaApi->AlterarProdutoConta");
             
     
             var localVarPath = "/api/contas/{id}/alterar-produto";
@@ -4531,9 +4237,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling AlterarProduto: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarProdutoConta: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling AlterarProduto: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarProdutoConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4549,9 +4255,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
         /// <param name="request">request</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> AlterarProdutoAsync (long? id, AlterarProdutoRequest request)
+        public async System.Threading.Tasks.Task<string> AlterarProdutoContaAsync (long? id, AlterarProdutoRequest request)
         {
-             ApiResponse<string> localVarResponse = await AlterarProdutoAsyncWithHttpInfo(id, request);
+             ApiResponse<string> localVarResponse = await AlterarProdutoContaAsyncWithHttpInfo(id, request);
              return localVarResponse.Data;
 
         }
@@ -4563,12 +4269,12 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
         /// <param name="request">request</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> AlterarProdutoAsyncWithHttpInfo (long? id, AlterarProdutoRequest request)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> AlterarProdutoContaAsyncWithHttpInfo (long? id, AlterarProdutoRequest request)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AlterarProduto");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AlterarProdutoConta");
             // verify the required parameter 'request' is set
-            if (request == null) throw new ApiException(400, "Missing required parameter 'request' when calling AlterarProduto");
+            if (request == null) throw new ApiException(400, "Missing required parameter 'request' when calling AlterarProdutoConta");
             
     
             var localVarPath = "/api/contas/{id}/alterar-produto";
@@ -4621,9 +4327,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling AlterarProduto: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarProdutoConta: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling AlterarProduto: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarProdutoConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4972,224 +4678,6 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Atribuir Anuidade Esse recurso permite configurar qual a regra de Anuidade que ser\u00E1 atribu\u00EDda a uma determinada Conta
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param> 
-        /// <param name="idAnuidade">Identificador da anuidade</param> 
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
-        /// <param name="page">P\u00E1gina (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
-        /// <param name="DDD">DDD do celular (optional)</param> 
-        /// <param name="celular">N\u00FAmero do celular (optional)</param> 
-        /// <param name="idOperadora">Identificador da operadora do celular (optional)</param> 
-        /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param> 
-        /// <param name="colaborador">Matr\u00EDcula do colaborador (optional)</param> 
-        /// <returns>Object</returns>
-        public Object AtivarAnuidade (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null, string colaborador = null)
-        {
-             ApiResponse<Object> localVarResponse = AtivarAnuidadeWithHttpInfo(id, idAnuidade, sort, page, limit, DDD, celular, idOperadora, idOrigemComercial, colaborador);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Atribuir Anuidade Esse recurso permite configurar qual a regra de Anuidade que ser\u00E1 atribu\u00EDda a uma determinada Conta
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param> 
-        /// <param name="idAnuidade">Identificador da anuidade</param> 
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
-        /// <param name="page">P\u00E1gina (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
-        /// <param name="DDD">DDD do celular (optional)</param> 
-        /// <param name="celular">N\u00FAmero do celular (optional)</param> 
-        /// <param name="idOperadora">Identificador da operadora do celular (optional)</param> 
-        /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param> 
-        /// <param name="colaborador">Matr\u00EDcula do colaborador (optional)</param> 
-        /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > AtivarAnuidadeWithHttpInfo (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null, string colaborador = null)
-        {
-            
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->AtivarAnuidade");
-            
-            // verify the required parameter 'idAnuidade' is set
-            if (idAnuidade == null)
-                throw new ApiException(400, "Missing required parameter 'idAnuidade' when calling ContaApi->AtivarAnuidade");
-            
-    
-            var localVarPath = "/api/contas/{id}/atribuir-anuidade";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            
-            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
-            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
-            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
-            if (idAnuidade != null) localVarQueryParams.Add("idAnuidade", Configuration.ApiClient.ParameterToString(idAnuidade)); // query parameter
-            if (DDD != null) localVarQueryParams.Add("DDD", Configuration.ApiClient.ParameterToString(DDD)); // query parameter
-            if (celular != null) localVarQueryParams.Add("celular", Configuration.ApiClient.ParameterToString(celular)); // query parameter
-            if (idOperadora != null) localVarQueryParams.Add("idOperadora", Configuration.ApiClient.ParameterToString(idOperadora)); // query parameter
-            if (idOrigemComercial != null) localVarQueryParams.Add("idOrigemComercial", Configuration.ApiClient.ParameterToString(idOrigemComercial)); // query parameter
-            if (colaborador != null) localVarQueryParams.Add("colaborador", Configuration.ApiClient.ParameterToString(colaborador)); // query parameter
-            
-            
-            
-            
-
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling AtivarAnuidade: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling AtivarAnuidade: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
-            
-        }
-
-        
-        /// <summary>
-        /// Atribuir Anuidade Esse recurso permite configurar qual a regra de Anuidade que ser\u00E1 atribu\u00EDda a uma determinada Conta
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
-        /// <param name="idAnuidade">Identificador da anuidade</param>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="DDD">DDD do celular (optional)</param>
-        /// <param name="celular">N\u00FAmero do celular (optional)</param>
-        /// <param name="idOperadora">Identificador da operadora do celular (optional)</param>
-        /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param>
-        /// <param name="colaborador">Matr\u00EDcula do colaborador (optional)</param>
-        /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> AtivarAnuidadeAsync (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null, string colaborador = null)
-        {
-             ApiResponse<Object> localVarResponse = await AtivarAnuidadeAsyncWithHttpInfo(id, idAnuidade, sort, page, limit, DDD, celular, idOperadora, idOrigemComercial, colaborador);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Atribuir Anuidade Esse recurso permite configurar qual a regra de Anuidade que ser\u00E1 atribu\u00EDda a uma determinada Conta
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
-        /// <param name="idAnuidade">Identificador da anuidade</param>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="DDD">DDD do celular (optional)</param>
-        /// <param name="celular">N\u00FAmero do celular (optional)</param>
-        /// <param name="idOperadora">Identificador da operadora do celular (optional)</param>
-        /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param>
-        /// <param name="colaborador">Matr\u00EDcula do colaborador (optional)</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> AtivarAnuidadeAsyncWithHttpInfo (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null, string colaborador = null)
-        {
-            // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AtivarAnuidade");
-            // verify the required parameter 'idAnuidade' is set
-            if (idAnuidade == null) throw new ApiException(400, "Missing required parameter 'idAnuidade' when calling AtivarAnuidade");
-            
-    
-            var localVarPath = "/api/contas/{id}/atribuir-anuidade";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            
-            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
-            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
-            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
-            if (idAnuidade != null) localVarQueryParams.Add("idAnuidade", Configuration.ApiClient.ParameterToString(idAnuidade)); // query parameter
-            if (DDD != null) localVarQueryParams.Add("DDD", Configuration.ApiClient.ParameterToString(DDD)); // query parameter
-            if (celular != null) localVarQueryParams.Add("celular", Configuration.ApiClient.ParameterToString(celular)); // query parameter
-            if (idOperadora != null) localVarQueryParams.Add("idOperadora", Configuration.ApiClient.ParameterToString(idOperadora)); // query parameter
-            if (idOrigemComercial != null) localVarQueryParams.Add("idOrigemComercial", Configuration.ApiClient.ParameterToString(idOrigemComercial)); // query parameter
-            if (colaborador != null) localVarQueryParams.Add("colaborador", Configuration.ApiClient.ParameterToString(colaborador)); // query parameter
-            
-            
-            
-            
-
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling AtivarAnuidade: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling AtivarAnuidade: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
-            
-        }
-        
-        /// <summary>
         /// Ativa o servi\u00E7o de envio de fatura por email Este recurso ativa o servi\u00E7o de envio de fatura por email
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5340,6 +4828,224 @@ namespace Conductor.Pier.Api
                 throw new ApiException (localVarStatusCode, "Error calling AtivarEnvioFaturaEmail: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling AtivarEnvioFaturaEmail: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+            
+        }
+        
+        /// <summary>
+        /// Atribuir Anuidade Esse recurso permite configurar qual a regra de Anuidade que ser\u00E1 atribu\u00EDda a uma determinada Conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param> 
+        /// <param name="idAnuidade">Identificador da anuidade</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="page">P\u00E1gina (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <param name="DDD">DDD do celular (optional)</param> 
+        /// <param name="celular">N\u00FAmero do celular (optional)</param> 
+        /// <param name="idOperadora">Identificador da operadora do celular (optional)</param> 
+        /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param> 
+        /// <param name="colaborador">Matr\u00EDcula do colaborador (optional)</param> 
+        /// <returns>Object</returns>
+        public Object AtribuirAnuidade (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null, string colaborador = null)
+        {
+             ApiResponse<Object> localVarResponse = AtribuirAnuidadeWithHttpInfo(id, idAnuidade, sort, page, limit, DDD, celular, idOperadora, idOrigemComercial, colaborador);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Atribuir Anuidade Esse recurso permite configurar qual a regra de Anuidade que ser\u00E1 atribu\u00EDda a uma determinada Conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param> 
+        /// <param name="idAnuidade">Identificador da anuidade</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="page">P\u00E1gina (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <param name="DDD">DDD do celular (optional)</param> 
+        /// <param name="celular">N\u00FAmero do celular (optional)</param> 
+        /// <param name="idOperadora">Identificador da operadora do celular (optional)</param> 
+        /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param> 
+        /// <param name="colaborador">Matr\u00EDcula do colaborador (optional)</param> 
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > AtribuirAnuidadeWithHttpInfo (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null, string colaborador = null)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->AtribuirAnuidade");
+            
+            // verify the required parameter 'idAnuidade' is set
+            if (idAnuidade == null)
+                throw new ApiException(400, "Missing required parameter 'idAnuidade' when calling ContaApi->AtribuirAnuidade");
+            
+    
+            var localVarPath = "/api/contas/{id}/atribuir-anuidade";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (idAnuidade != null) localVarQueryParams.Add("idAnuidade", Configuration.ApiClient.ParameterToString(idAnuidade)); // query parameter
+            if (DDD != null) localVarQueryParams.Add("DDD", Configuration.ApiClient.ParameterToString(DDD)); // query parameter
+            if (celular != null) localVarQueryParams.Add("celular", Configuration.ApiClient.ParameterToString(celular)); // query parameter
+            if (idOperadora != null) localVarQueryParams.Add("idOperadora", Configuration.ApiClient.ParameterToString(idOperadora)); // query parameter
+            if (idOrigemComercial != null) localVarQueryParams.Add("idOrigemComercial", Configuration.ApiClient.ParameterToString(idOrigemComercial)); // query parameter
+            if (colaborador != null) localVarQueryParams.Add("colaborador", Configuration.ApiClient.ParameterToString(colaborador)); // query parameter
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling AtribuirAnuidade: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling AtribuirAnuidade: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+            
+        }
+
+        
+        /// <summary>
+        /// Atribuir Anuidade Esse recurso permite configurar qual a regra de Anuidade que ser\u00E1 atribu\u00EDda a uma determinada Conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
+        /// <param name="idAnuidade">Identificador da anuidade</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="DDD">DDD do celular (optional)</param>
+        /// <param name="celular">N\u00FAmero do celular (optional)</param>
+        /// <param name="idOperadora">Identificador da operadora do celular (optional)</param>
+        /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param>
+        /// <param name="colaborador">Matr\u00EDcula do colaborador (optional)</param>
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> AtribuirAnuidadeAsync (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null, string colaborador = null)
+        {
+             ApiResponse<Object> localVarResponse = await AtribuirAnuidadeAsyncWithHttpInfo(id, idAnuidade, sort, page, limit, DDD, celular, idOperadora, idOrigemComercial, colaborador);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Atribuir Anuidade Esse recurso permite configurar qual a regra de Anuidade que ser\u00E1 atribu\u00EDda a uma determinada Conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
+        /// <param name="idAnuidade">Identificador da anuidade</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="DDD">DDD do celular (optional)</param>
+        /// <param name="celular">N\u00FAmero do celular (optional)</param>
+        /// <param name="idOperadora">Identificador da operadora do celular (optional)</param>
+        /// <param name="idOrigemComercial">Identificador da origem comercial (optional)</param>
+        /// <param name="colaborador">Matr\u00EDcula do colaborador (optional)</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> AtribuirAnuidadeAsyncWithHttpInfo (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null, string colaborador = null)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AtribuirAnuidade");
+            // verify the required parameter 'idAnuidade' is set
+            if (idAnuidade == null) throw new ApiException(400, "Missing required parameter 'idAnuidade' when calling AtribuirAnuidade");
+            
+    
+            var localVarPath = "/api/contas/{id}/atribuir-anuidade";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (idAnuidade != null) localVarQueryParams.Add("idAnuidade", Configuration.ApiClient.ParameterToString(idAnuidade)); // query parameter
+            if (DDD != null) localVarQueryParams.Add("DDD", Configuration.ApiClient.ParameterToString(DDD)); // query parameter
+            if (celular != null) localVarQueryParams.Add("celular", Configuration.ApiClient.ParameterToString(celular)); // query parameter
+            if (idOperadora != null) localVarQueryParams.Add("idOperadora", Configuration.ApiClient.ParameterToString(idOperadora)); // query parameter
+            if (idOrigemComercial != null) localVarQueryParams.Add("idOrigemComercial", Configuration.ApiClient.ParameterToString(idOrigemComercial)); // query parameter
+            if (colaborador != null) localVarQueryParams.Add("colaborador", Configuration.ApiClient.ParameterToString(colaborador)); // query parameter
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling AtribuirAnuidade: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling AtribuirAnuidade: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5718,9 +5424,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param> 
         /// <param name="contaPartialUpdate">contaPartialUpdate</param> 
         /// <returns>ContaResponse</returns>
-        public ContaResponse AtualizarParcial (long? id, ContaPartialUpdate contaPartialUpdate)
+        public ContaResponse AtualizarContaParcialmente (long? id, ContaPartialUpdate contaPartialUpdate)
         {
-             ApiResponse<ContaResponse> localVarResponse = AtualizarParcialWithHttpInfo(id, contaPartialUpdate);
+             ApiResponse<ContaResponse> localVarResponse = AtualizarContaParcialmenteWithHttpInfo(id, contaPartialUpdate);
              return localVarResponse.Data;
         }
 
@@ -5731,16 +5437,16 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param> 
         /// <param name="contaPartialUpdate">contaPartialUpdate</param> 
         /// <returns>ApiResponse of ContaResponse</returns>
-        public ApiResponse< ContaResponse > AtualizarParcialWithHttpInfo (long? id, ContaPartialUpdate contaPartialUpdate)
+        public ApiResponse< ContaResponse > AtualizarContaParcialmenteWithHttpInfo (long? id, ContaPartialUpdate contaPartialUpdate)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->AtualizarParcial");
+                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->AtualizarContaParcialmente");
             
             // verify the required parameter 'contaPartialUpdate' is set
             if (contaPartialUpdate == null)
-                throw new ApiException(400, "Missing required parameter 'contaPartialUpdate' when calling ContaApi->AtualizarParcial");
+                throw new ApiException(400, "Missing required parameter 'contaPartialUpdate' when calling ContaApi->AtualizarContaParcialmente");
             
     
             var localVarPath = "/api/contas/{id}";
@@ -5793,9 +5499,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling AtualizarParcial: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling AtualizarContaParcialmente: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling AtualizarParcial: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling AtualizarContaParcialmente: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<ContaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5811,9 +5517,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
         /// <param name="contaPartialUpdate">contaPartialUpdate</param>
         /// <returns>Task of ContaResponse</returns>
-        public async System.Threading.Tasks.Task<ContaResponse> AtualizarParcialAsync (long? id, ContaPartialUpdate contaPartialUpdate)
+        public async System.Threading.Tasks.Task<ContaResponse> AtualizarContaParcialmenteAsync (long? id, ContaPartialUpdate contaPartialUpdate)
         {
-             ApiResponse<ContaResponse> localVarResponse = await AtualizarParcialAsyncWithHttpInfo(id, contaPartialUpdate);
+             ApiResponse<ContaResponse> localVarResponse = await AtualizarContaParcialmenteAsyncWithHttpInfo(id, contaPartialUpdate);
              return localVarResponse.Data;
 
         }
@@ -5825,12 +5531,12 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
         /// <param name="contaPartialUpdate">contaPartialUpdate</param>
         /// <returns>Task of ApiResponse (ContaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ContaResponse>> AtualizarParcialAsyncWithHttpInfo (long? id, ContaPartialUpdate contaPartialUpdate)
+        public async System.Threading.Tasks.Task<ApiResponse<ContaResponse>> AtualizarContaParcialmenteAsyncWithHttpInfo (long? id, ContaPartialUpdate contaPartialUpdate)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AtualizarParcial");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AtualizarContaParcialmente");
             // verify the required parameter 'contaPartialUpdate' is set
-            if (contaPartialUpdate == null) throw new ApiException(400, "Missing required parameter 'contaPartialUpdate' when calling AtualizarParcial");
+            if (contaPartialUpdate == null) throw new ApiException(400, "Missing required parameter 'contaPartialUpdate' when calling AtualizarContaParcialmente");
             
     
             var localVarPath = "/api/contas/{id}";
@@ -5883,9 +5589,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling AtualizarParcial: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling AtualizarContaParcialmente: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling AtualizarParcial: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling AtualizarContaParcialmente: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<ContaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6084,6 +5790,200 @@ namespace Conductor.Pier.Api
             return new ApiResponse<SegurancaMobileResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (SegurancaMobileResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SegurancaMobileResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Atualizar parcialmente uma tarifa de d\u00E9bito da conta Este recurso permite atualizar parcialmente uma tarifa de d\u00E9bito da conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta</param> 
+        /// <param name="idDebitoTarifa">Identificador do registro de d\u00E9bito tarifa da conta</param> 
+        /// <param name="contaDebitoTarifaUpdate">contaDebitoTarifaUpdate</param> 
+        /// <returns>ContaDebitoTarifaResponse</returns>
+        public ContaDebitoTarifaResponse AtualizarParcialmenteContaDebitoTarifa (long? id, long? idDebitoTarifa, ContaDebitoTarifaUpdate contaDebitoTarifaUpdate)
+        {
+             ApiResponse<ContaDebitoTarifaResponse> localVarResponse = AtualizarParcialmenteContaDebitoTarifaWithHttpInfo(id, idDebitoTarifa, contaDebitoTarifaUpdate);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Atualizar parcialmente uma tarifa de d\u00E9bito da conta Este recurso permite atualizar parcialmente uma tarifa de d\u00E9bito da conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta</param> 
+        /// <param name="idDebitoTarifa">Identificador do registro de d\u00E9bito tarifa da conta</param> 
+        /// <param name="contaDebitoTarifaUpdate">contaDebitoTarifaUpdate</param> 
+        /// <returns>ApiResponse of ContaDebitoTarifaResponse</returns>
+        public ApiResponse< ContaDebitoTarifaResponse > AtualizarParcialmenteContaDebitoTarifaWithHttpInfo (long? id, long? idDebitoTarifa, ContaDebitoTarifaUpdate contaDebitoTarifaUpdate)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->AtualizarParcialmenteContaDebitoTarifa");
+            
+            // verify the required parameter 'idDebitoTarifa' is set
+            if (idDebitoTarifa == null)
+                throw new ApiException(400, "Missing required parameter 'idDebitoTarifa' when calling ContaApi->AtualizarParcialmenteContaDebitoTarifa");
+            
+            // verify the required parameter 'contaDebitoTarifaUpdate' is set
+            if (contaDebitoTarifaUpdate == null)
+                throw new ApiException(400, "Missing required parameter 'contaDebitoTarifaUpdate' when calling ContaApi->AtualizarParcialmenteContaDebitoTarifa");
+            
+    
+            var localVarPath = "/api/contas/{id}/tarifas/debitos/{idDebitoTarifa}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (idDebitoTarifa != null) localVarPathParams.Add("idDebitoTarifa", Configuration.ApiClient.ParameterToString(idDebitoTarifa)); // path parameter
+            
+            
+            
+            
+            if (contaDebitoTarifaUpdate.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(contaDebitoTarifaUpdate); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = contaDebitoTarifaUpdate; // byte array
+            }
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling AtualizarParcialmenteContaDebitoTarifa: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling AtualizarParcialmenteContaDebitoTarifa: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<ContaDebitoTarifaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ContaDebitoTarifaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContaDebitoTarifaResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Atualizar parcialmente uma tarifa de d\u00E9bito da conta Este recurso permite atualizar parcialmente uma tarifa de d\u00E9bito da conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta</param>
+        /// <param name="idDebitoTarifa">Identificador do registro de d\u00E9bito tarifa da conta</param>
+        /// <param name="contaDebitoTarifaUpdate">contaDebitoTarifaUpdate</param>
+        /// <returns>Task of ContaDebitoTarifaResponse</returns>
+        public async System.Threading.Tasks.Task<ContaDebitoTarifaResponse> AtualizarParcialmenteContaDebitoTarifaAsync (long? id, long? idDebitoTarifa, ContaDebitoTarifaUpdate contaDebitoTarifaUpdate)
+        {
+             ApiResponse<ContaDebitoTarifaResponse> localVarResponse = await AtualizarParcialmenteContaDebitoTarifaAsyncWithHttpInfo(id, idDebitoTarifa, contaDebitoTarifaUpdate);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Atualizar parcialmente uma tarifa de d\u00E9bito da conta Este recurso permite atualizar parcialmente uma tarifa de d\u00E9bito da conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta</param>
+        /// <param name="idDebitoTarifa">Identificador do registro de d\u00E9bito tarifa da conta</param>
+        /// <param name="contaDebitoTarifaUpdate">contaDebitoTarifaUpdate</param>
+        /// <returns>Task of ApiResponse (ContaDebitoTarifaResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ContaDebitoTarifaResponse>> AtualizarParcialmenteContaDebitoTarifaAsyncWithHttpInfo (long? id, long? idDebitoTarifa, ContaDebitoTarifaUpdate contaDebitoTarifaUpdate)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AtualizarParcialmenteContaDebitoTarifa");
+            // verify the required parameter 'idDebitoTarifa' is set
+            if (idDebitoTarifa == null) throw new ApiException(400, "Missing required parameter 'idDebitoTarifa' when calling AtualizarParcialmenteContaDebitoTarifa");
+            // verify the required parameter 'contaDebitoTarifaUpdate' is set
+            if (contaDebitoTarifaUpdate == null) throw new ApiException(400, "Missing required parameter 'contaDebitoTarifaUpdate' when calling AtualizarParcialmenteContaDebitoTarifa");
+            
+    
+            var localVarPath = "/api/contas/{id}/tarifas/debitos/{idDebitoTarifa}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (idDebitoTarifa != null) localVarPathParams.Add("idDebitoTarifa", Configuration.ApiClient.ParameterToString(idDebitoTarifa)); // path parameter
+            
+            
+            
+            
+            if (contaDebitoTarifaUpdate.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(contaDebitoTarifaUpdate); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = contaDebitoTarifaUpdate; // byte array
+            }
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling AtualizarParcialmenteContaDebitoTarifa: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling AtualizarParcialmenteContaDebitoTarifa: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ContaDebitoTarifaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ContaDebitoTarifaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContaDebitoTarifaResponse)));
             
         }
         
@@ -6288,9 +6188,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param> 
         /// <param name="idStatus">C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Conta</param> 
         /// <returns>ContaResponse</returns>
-        public ContaResponse Bloquear (long? id, long? idStatus)
+        public ContaResponse BloquearConta (long? id, long? idStatus)
         {
-             ApiResponse<ContaResponse> localVarResponse = BloquearWithHttpInfo(id, idStatus);
+             ApiResponse<ContaResponse> localVarResponse = BloquearContaWithHttpInfo(id, idStatus);
              return localVarResponse.Data;
         }
 
@@ -6301,16 +6201,16 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param> 
         /// <param name="idStatus">C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Conta</param> 
         /// <returns>ApiResponse of ContaResponse</returns>
-        public ApiResponse< ContaResponse > BloquearWithHttpInfo (long? id, long? idStatus)
+        public ApiResponse< ContaResponse > BloquearContaWithHttpInfo (long? id, long? idStatus)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->Bloquear");
+                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->BloquearConta");
             
             // verify the required parameter 'idStatus' is set
             if (idStatus == null)
-                throw new ApiException(400, "Missing required parameter 'idStatus' when calling ContaApi->Bloquear");
+                throw new ApiException(400, "Missing required parameter 'idStatus' when calling ContaApi->BloquearConta");
             
     
             var localVarPath = "/api/contas/{id}/bloquear";
@@ -6357,9 +6257,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Bloquear: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling BloquearConta: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Bloquear: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling BloquearConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<ContaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6375,9 +6275,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
         /// <param name="idStatus">C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Conta</param>
         /// <returns>Task of ContaResponse</returns>
-        public async System.Threading.Tasks.Task<ContaResponse> BloquearAsync (long? id, long? idStatus)
+        public async System.Threading.Tasks.Task<ContaResponse> BloquearContaAsync (long? id, long? idStatus)
         {
-             ApiResponse<ContaResponse> localVarResponse = await BloquearAsyncWithHttpInfo(id, idStatus);
+             ApiResponse<ContaResponse> localVarResponse = await BloquearContaAsyncWithHttpInfo(id, idStatus);
              return localVarResponse.Data;
 
         }
@@ -6389,12 +6289,12 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
         /// <param name="idStatus">C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Conta</param>
         /// <returns>Task of ApiResponse (ContaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ContaResponse>> BloquearAsyncWithHttpInfo (long? id, long? idStatus)
+        public async System.Threading.Tasks.Task<ApiResponse<ContaResponse>> BloquearContaAsyncWithHttpInfo (long? id, long? idStatus)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling Bloquear");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling BloquearConta");
             // verify the required parameter 'idStatus' is set
-            if (idStatus == null) throw new ApiException(400, "Missing required parameter 'idStatus' when calling Bloquear");
+            if (idStatus == null) throw new ApiException(400, "Missing required parameter 'idStatus' when calling BloquearConta");
             
     
             var localVarPath = "/api/contas/{id}/bloquear";
@@ -6441,9 +6341,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Bloquear: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling BloquearConta: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Bloquear: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling BloquearConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<ContaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6980,9 +6880,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param> 
         /// <param name="idStatus">C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Conta</param> 
         /// <returns>ContaResponse</returns>
-        public ContaResponse Cancelar (long? id, long? idStatus)
+        public ContaResponse CancelarConta (long? id, long? idStatus)
         {
-             ApiResponse<ContaResponse> localVarResponse = CancelarWithHttpInfo(id, idStatus);
+             ApiResponse<ContaResponse> localVarResponse = CancelarContaWithHttpInfo(id, idStatus);
              return localVarResponse.Data;
         }
 
@@ -6993,16 +6893,16 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param> 
         /// <param name="idStatus">C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Conta</param> 
         /// <returns>ApiResponse of ContaResponse</returns>
-        public ApiResponse< ContaResponse > CancelarWithHttpInfo (long? id, long? idStatus)
+        public ApiResponse< ContaResponse > CancelarContaWithHttpInfo (long? id, long? idStatus)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->Cancelar");
+                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->CancelarConta");
             
             // verify the required parameter 'idStatus' is set
             if (idStatus == null)
-                throw new ApiException(400, "Missing required parameter 'idStatus' when calling ContaApi->Cancelar");
+                throw new ApiException(400, "Missing required parameter 'idStatus' when calling ContaApi->CancelarConta");
             
     
             var localVarPath = "/api/contas/{id}/cancelar";
@@ -7049,9 +6949,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Cancelar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling CancelarConta: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Cancelar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling CancelarConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<ContaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -7067,9 +6967,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
         /// <param name="idStatus">C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Conta</param>
         /// <returns>Task of ContaResponse</returns>
-        public async System.Threading.Tasks.Task<ContaResponse> CancelarAsync (long? id, long? idStatus)
+        public async System.Threading.Tasks.Task<ContaResponse> CancelarContaAsync (long? id, long? idStatus)
         {
-             ApiResponse<ContaResponse> localVarResponse = await CancelarAsyncWithHttpInfo(id, idStatus);
+             ApiResponse<ContaResponse> localVarResponse = await CancelarContaAsyncWithHttpInfo(id, idStatus);
              return localVarResponse.Data;
 
         }
@@ -7081,12 +6981,12 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
         /// <param name="idStatus">C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Conta</param>
         /// <returns>Task of ApiResponse (ContaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ContaResponse>> CancelarAsyncWithHttpInfo (long? id, long? idStatus)
+        public async System.Threading.Tasks.Task<ApiResponse<ContaResponse>> CancelarContaAsyncWithHttpInfo (long? id, long? idStatus)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling Cancelar");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling CancelarConta");
             // verify the required parameter 'idStatus' is set
-            if (idStatus == null) throw new ApiException(400, "Missing required parameter 'idStatus' when calling Cancelar");
+            if (idStatus == null) throw new ApiException(400, "Missing required parameter 'idStatus' when calling CancelarConta");
             
     
             var localVarPath = "/api/contas/{id}/cancelar";
@@ -7133,535 +7033,13 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Cancelar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling CancelarConta: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Cancelar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling CancelarConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<ContaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ContaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContaResponse)));
-            
-        }
-        
-        /// <summary>
-        /// Realiza o cancelamento de uma parcela agendada Este recurso permite cancelar uma parcela agendada, sem interferir nas demais parcelas
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">ID da Parcela</param> 
-        /// <param name="idAgendamento">idAgendamento</param> 
-        /// <param name="idParcela">idParcela</param> 
-        /// <returns>string</returns>
-        public string CancelarParcela (long? id, long? idAgendamento, long? idParcela)
-        {
-             ApiResponse<string> localVarResponse = CancelarParcelaWithHttpInfo(id, idAgendamento, idParcela);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Realiza o cancelamento de uma parcela agendada Este recurso permite cancelar uma parcela agendada, sem interferir nas demais parcelas
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">ID da Parcela</param> 
-        /// <param name="idAgendamento">idAgendamento</param> 
-        /// <param name="idParcela">idParcela</param> 
-        /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > CancelarParcelaWithHttpInfo (long? id, long? idAgendamento, long? idParcela)
-        {
-            
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->CancelarParcela");
-            
-            // verify the required parameter 'idAgendamento' is set
-            if (idAgendamento == null)
-                throw new ApiException(400, "Missing required parameter 'idAgendamento' when calling ContaApi->CancelarParcela");
-            
-            // verify the required parameter 'idParcela' is set
-            if (idParcela == null)
-                throw new ApiException(400, "Missing required parameter 'idParcela' when calling ContaApi->CancelarParcela");
-            
-    
-            var localVarPath = "/api/contas/{id}/agendamentos/{idAgendamento}/parcelas/{idParcela}";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            if (idAgendamento != null) localVarPathParams.Add("idAgendamento", Configuration.ApiClient.ParameterToString(idAgendamento)); // path parameter
-            if (idParcela != null) localVarPathParams.Add("idParcela", Configuration.ApiClient.ParameterToString(idParcela)); // path parameter
-            
-            
-            
-            
-            
-
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling CancelarParcela: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling CancelarParcela: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
-            
-        }
-
-        
-        /// <summary>
-        /// Realiza o cancelamento de uma parcela agendada Este recurso permite cancelar uma parcela agendada, sem interferir nas demais parcelas
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">ID da Parcela</param>
-        /// <param name="idAgendamento">idAgendamento</param>
-        /// <param name="idParcela">idParcela</param>
-        /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> CancelarParcelaAsync (long? id, long? idAgendamento, long? idParcela)
-        {
-             ApiResponse<string> localVarResponse = await CancelarParcelaAsyncWithHttpInfo(id, idAgendamento, idParcela);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Realiza o cancelamento de uma parcela agendada Este recurso permite cancelar uma parcela agendada, sem interferir nas demais parcelas
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">ID da Parcela</param>
-        /// <param name="idAgendamento">idAgendamento</param>
-        /// <param name="idParcela">idParcela</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> CancelarParcelaAsyncWithHttpInfo (long? id, long? idAgendamento, long? idParcela)
-        {
-            // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling CancelarParcela");
-            // verify the required parameter 'idAgendamento' is set
-            if (idAgendamento == null) throw new ApiException(400, "Missing required parameter 'idAgendamento' when calling CancelarParcela");
-            // verify the required parameter 'idParcela' is set
-            if (idParcela == null) throw new ApiException(400, "Missing required parameter 'idParcela' when calling CancelarParcela");
-            
-    
-            var localVarPath = "/api/contas/{id}/agendamentos/{idAgendamento}/parcelas/{idParcela}";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            if (idAgendamento != null) localVarPathParams.Add("idAgendamento", Configuration.ApiClient.ParameterToString(idAgendamento)); // path parameter
-            if (idParcela != null) localVarPathParams.Add("idParcela", Configuration.ApiClient.ParameterToString(idParcela)); // path parameter
-            
-            
-            
-            
-            
-
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling CancelarParcela: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling CancelarParcela: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
-            
-        }
-        
-        /// <summary>
-        /// Realiza o cancelamento completo de um agendamento Este recurso permite cancelar um agendamento existente, bem como todas suas parcelas em aberto
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idAgendamento">Id do Agendamento</param> 
-        /// <param name="id">id</param> 
-        /// <returns>string</returns>
-        public string CarcelarAgendamento (long? idAgendamento, long? id)
-        {
-             ApiResponse<string> localVarResponse = CarcelarAgendamentoWithHttpInfo(idAgendamento, id);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Realiza o cancelamento completo de um agendamento Este recurso permite cancelar um agendamento existente, bem como todas suas parcelas em aberto
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idAgendamento">Id do Agendamento</param> 
-        /// <param name="id">id</param> 
-        /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > CarcelarAgendamentoWithHttpInfo (long? idAgendamento, long? id)
-        {
-            
-            // verify the required parameter 'idAgendamento' is set
-            if (idAgendamento == null)
-                throw new ApiException(400, "Missing required parameter 'idAgendamento' when calling ContaApi->CarcelarAgendamento");
-            
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->CarcelarAgendamento");
-            
-    
-            var localVarPath = "/api/contas/{id}/agendamentos/{idAgendamento}";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (idAgendamento != null) localVarPathParams.Add("idAgendamento", Configuration.ApiClient.ParameterToString(idAgendamento)); // path parameter
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            
-            
-            
-            
-            
-
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling CarcelarAgendamento: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling CarcelarAgendamento: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
-            
-        }
-
-        
-        /// <summary>
-        /// Realiza o cancelamento completo de um agendamento Este recurso permite cancelar um agendamento existente, bem como todas suas parcelas em aberto
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idAgendamento">Id do Agendamento</param>
-        /// <param name="id">id</param>
-        /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> CarcelarAgendamentoAsync (long? idAgendamento, long? id)
-        {
-             ApiResponse<string> localVarResponse = await CarcelarAgendamentoAsyncWithHttpInfo(idAgendamento, id);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Realiza o cancelamento completo de um agendamento Este recurso permite cancelar um agendamento existente, bem como todas suas parcelas em aberto
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idAgendamento">Id do Agendamento</param>
-        /// <param name="id">id</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> CarcelarAgendamentoAsyncWithHttpInfo (long? idAgendamento, long? id)
-        {
-            // verify the required parameter 'idAgendamento' is set
-            if (idAgendamento == null) throw new ApiException(400, "Missing required parameter 'idAgendamento' when calling CarcelarAgendamento");
-            // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling CarcelarAgendamento");
-            
-    
-            var localVarPath = "/api/contas/{id}/agendamentos/{idAgendamento}";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (idAgendamento != null) localVarPathParams.Add("idAgendamento", Configuration.ApiClient.ParameterToString(idAgendamento)); // path parameter
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            
-            
-            
-            
-            
-
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling CarcelarAgendamento: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling CarcelarAgendamento: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
-            
-        }
-        
-        /// <summary>
-        /// Consulta o extrato anual de tarifas de uma conta Esse recurso permite consultar o extrato anual de tarifas cobradas de uma determinada conta
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Identificador da conta</param> 
-        /// <param name="ano">Ano base para gera\u00E7\u00E3o do extrato de tarifas</param> 
-        /// <returns>ExtratoTarifasResponse</returns>
-        public ExtratoTarifasResponse ConsultaExtratoTarifasAnual (long? id, int? ano)
-        {
-             ApiResponse<ExtratoTarifasResponse> localVarResponse = ConsultaExtratoTarifasAnualWithHttpInfo(id, ano);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Consulta o extrato anual de tarifas de uma conta Esse recurso permite consultar o extrato anual de tarifas cobradas de uma determinada conta
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Identificador da conta</param> 
-        /// <param name="ano">Ano base para gera\u00E7\u00E3o do extrato de tarifas</param> 
-        /// <returns>ApiResponse of ExtratoTarifasResponse</returns>
-        public ApiResponse< ExtratoTarifasResponse > ConsultaExtratoTarifasAnualWithHttpInfo (long? id, int? ano)
-        {
-            
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->ConsultaExtratoTarifasAnual");
-            
-            // verify the required parameter 'ano' is set
-            if (ano == null)
-                throw new ApiException(400, "Missing required parameter 'ano' when calling ContaApi->ConsultaExtratoTarifasAnual");
-            
-    
-            var localVarPath = "/api/contas/{id}/extrato-tarifas/{ano}";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            if (ano != null) localVarPathParams.Add("ano", Configuration.ApiClient.ParameterToString(ano)); // path parameter
-            
-            
-            
-            
-            
-
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultaExtratoTarifasAnual: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultaExtratoTarifasAnual: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<ExtratoTarifasResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ExtratoTarifasResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExtratoTarifasResponse)));
-            
-        }
-
-        
-        /// <summary>
-        /// Consulta o extrato anual de tarifas de uma conta Esse recurso permite consultar o extrato anual de tarifas cobradas de uma determinada conta
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Identificador da conta</param>
-        /// <param name="ano">Ano base para gera\u00E7\u00E3o do extrato de tarifas</param>
-        /// <returns>Task of ExtratoTarifasResponse</returns>
-        public async System.Threading.Tasks.Task<ExtratoTarifasResponse> ConsultaExtratoTarifasAnualAsync (long? id, int? ano)
-        {
-             ApiResponse<ExtratoTarifasResponse> localVarResponse = await ConsultaExtratoTarifasAnualAsyncWithHttpInfo(id, ano);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Consulta o extrato anual de tarifas de uma conta Esse recurso permite consultar o extrato anual de tarifas cobradas de uma determinada conta
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Identificador da conta</param>
-        /// <param name="ano">Ano base para gera\u00E7\u00E3o do extrato de tarifas</param>
-        /// <returns>Task of ApiResponse (ExtratoTarifasResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ExtratoTarifasResponse>> ConsultaExtratoTarifasAnualAsyncWithHttpInfo (long? id, int? ano)
-        {
-            // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultaExtratoTarifasAnual");
-            // verify the required parameter 'ano' is set
-            if (ano == null) throw new ApiException(400, "Missing required parameter 'ano' when calling ConsultaExtratoTarifasAnual");
-            
-    
-            var localVarPath = "/api/contas/{id}/extrato-tarifas/{ano}";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            if (ano != null) localVarPathParams.Add("ano", Configuration.ApiClient.ParameterToString(ano)); // path parameter
-            
-            
-            
-            
-            
-
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultaExtratoTarifasAnual: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultaExtratoTarifasAnual: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<ExtratoTarifasResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ExtratoTarifasResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExtratoTarifasResponse)));
             
         }
         
@@ -7999,9 +7377,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param> 
         /// <returns>BoletoResponse</returns>
-        public BoletoResponse ConsultarBoletoEmitido (long? id)
+        public BoletoResponse ConsultarBoletosEmitidos (long? id)
         {
-             ApiResponse<BoletoResponse> localVarResponse = ConsultarBoletoEmitidoWithHttpInfo(id);
+             ApiResponse<BoletoResponse> localVarResponse = ConsultarBoletosEmitidosWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -8011,12 +7389,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param> 
         /// <returns>ApiResponse of BoletoResponse</returns>
-        public ApiResponse< BoletoResponse > ConsultarBoletoEmitidoWithHttpInfo (long? id)
+        public ApiResponse< BoletoResponse > ConsultarBoletosEmitidosWithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->ConsultarBoletoEmitido");
+                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->ConsultarBoletosEmitidos");
             
     
             var localVarPath = "/api/contas/{id}/consultar-dados-pagamento-fatura";
@@ -8062,9 +7440,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarBoletoEmitido: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarBoletosEmitidos: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarBoletoEmitido: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarBoletosEmitidos: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<BoletoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -8079,9 +7457,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
         /// <returns>Task of BoletoResponse</returns>
-        public async System.Threading.Tasks.Task<BoletoResponse> ConsultarBoletoEmitidoAsync (long? id)
+        public async System.Threading.Tasks.Task<BoletoResponse> ConsultarBoletosEmitidosAsync (long? id)
         {
-             ApiResponse<BoletoResponse> localVarResponse = await ConsultarBoletoEmitidoAsyncWithHttpInfo(id);
+             ApiResponse<BoletoResponse> localVarResponse = await ConsultarBoletosEmitidosAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -8092,10 +7470,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
         /// <returns>Task of ApiResponse (BoletoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<BoletoResponse>> ConsultarBoletoEmitidoAsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<BoletoResponse>> ConsultarBoletosEmitidosAsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarBoletoEmitido");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarBoletosEmitidos");
             
     
             var localVarPath = "/api/contas/{id}/consultar-dados-pagamento-fatura";
@@ -8141,13 +7519,171 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarBoletoEmitido: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarBoletosEmitidos: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarBoletoEmitido: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarBoletosEmitidos: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<BoletoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (BoletoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(BoletoResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Apresenta dados de uma determinada conta Este m\u00E9todo permite consultar dados de uma determinada conta a partir de seu codigo de identifica\u00E7\u00E3o (id)
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param> 
+        /// <returns>ContaDetalheResponse</returns>
+        public ContaDetalheResponse ConsultarConta (long? id)
+        {
+             ApiResponse<ContaDetalheResponse> localVarResponse = ConsultarContaWithHttpInfo(id);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Apresenta dados de uma determinada conta Este m\u00E9todo permite consultar dados de uma determinada conta a partir de seu codigo de identifica\u00E7\u00E3o (id)
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param> 
+        /// <returns>ApiResponse of ContaDetalheResponse</returns>
+        public ApiResponse< ContaDetalheResponse > ConsultarContaWithHttpInfo (long? id)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->ConsultarConta");
+            
+    
+            var localVarPath = "/api/contas/{id}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarConta: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<ContaDetalheResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ContaDetalheResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContaDetalheResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Apresenta dados de uma determinada conta Este m\u00E9todo permite consultar dados de uma determinada conta a partir de seu codigo de identifica\u00E7\u00E3o (id)
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
+        /// <returns>Task of ContaDetalheResponse</returns>
+        public async System.Threading.Tasks.Task<ContaDetalheResponse> ConsultarContaAsync (long? id)
+        {
+             ApiResponse<ContaDetalheResponse> localVarResponse = await ConsultarContaAsyncWithHttpInfo(id);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Apresenta dados de uma determinada conta Este m\u00E9todo permite consultar dados de uma determinada conta a partir de seu codigo de identifica\u00E7\u00E3o (id)
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
+        /// <returns>Task of ApiResponse (ContaDetalheResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ContaDetalheResponse>> ConsultarContaAsyncWithHttpInfo (long? id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarConta");
+            
+    
+            var localVarPath = "/api/contas/{id}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarConta: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ContaDetalheResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ContaDetalheResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContaDetalheResponse)));
             
         }
         
@@ -8320,9 +7856,9 @@ namespace Conductor.Pier.Api
         /// <param name="dataVencimento">Data do vencimento (optional)</param> 
         /// <param name="idEscritorioCobranca">C\u00F3digo de identifica\u00E7\u00E3o do escrit\u00F3rio de cobran\u00E7a (optional)</param> 
         /// <returns>DividaClienteResponse</returns>
-        public DividaClienteResponse ConsultarDividaAtualizadaCliente (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, long? idEscritorioCobranca = null)
+        public DividaClienteResponse ConsultarDividaAtualizada (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, long? idEscritorioCobranca = null)
         {
-             ApiResponse<DividaClienteResponse> localVarResponse = ConsultarDividaAtualizadaClienteWithHttpInfo(id, sort, page, limit, dataVencimento, idEscritorioCobranca);
+             ApiResponse<DividaClienteResponse> localVarResponse = ConsultarDividaAtualizadaWithHttpInfo(id, sort, page, limit, dataVencimento, idEscritorioCobranca);
              return localVarResponse.Data;
         }
 
@@ -8337,12 +7873,12 @@ namespace Conductor.Pier.Api
         /// <param name="dataVencimento">Data do vencimento (optional)</param> 
         /// <param name="idEscritorioCobranca">C\u00F3digo de identifica\u00E7\u00E3o do escrit\u00F3rio de cobran\u00E7a (optional)</param> 
         /// <returns>ApiResponse of DividaClienteResponse</returns>
-        public ApiResponse< DividaClienteResponse > ConsultarDividaAtualizadaClienteWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, long? idEscritorioCobranca = null)
+        public ApiResponse< DividaClienteResponse > ConsultarDividaAtualizadaWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, long? idEscritorioCobranca = null)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->ConsultarDividaAtualizadaCliente");
+                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->ConsultarDividaAtualizada");
             
     
             var localVarPath = "/api/contas/{id}/recuperar-divida-atualizada";
@@ -8393,9 +7929,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarDividaAtualizadaCliente: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarDividaAtualizada: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarDividaAtualizadaCliente: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarDividaAtualizada: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<DividaClienteResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -8415,9 +7951,9 @@ namespace Conductor.Pier.Api
         /// <param name="dataVencimento">Data do vencimento (optional)</param>
         /// <param name="idEscritorioCobranca">C\u00F3digo de identifica\u00E7\u00E3o do escrit\u00F3rio de cobran\u00E7a (optional)</param>
         /// <returns>Task of DividaClienteResponse</returns>
-        public async System.Threading.Tasks.Task<DividaClienteResponse> ConsultarDividaAtualizadaClienteAsync (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, long? idEscritorioCobranca = null)
+        public async System.Threading.Tasks.Task<DividaClienteResponse> ConsultarDividaAtualizadaAsync (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, long? idEscritorioCobranca = null)
         {
-             ApiResponse<DividaClienteResponse> localVarResponse = await ConsultarDividaAtualizadaClienteAsyncWithHttpInfo(id, sort, page, limit, dataVencimento, idEscritorioCobranca);
+             ApiResponse<DividaClienteResponse> localVarResponse = await ConsultarDividaAtualizadaAsyncWithHttpInfo(id, sort, page, limit, dataVencimento, idEscritorioCobranca);
              return localVarResponse.Data;
 
         }
@@ -8433,10 +7969,10 @@ namespace Conductor.Pier.Api
         /// <param name="dataVencimento">Data do vencimento (optional)</param>
         /// <param name="idEscritorioCobranca">C\u00F3digo de identifica\u00E7\u00E3o do escrit\u00F3rio de cobran\u00E7a (optional)</param>
         /// <returns>Task of ApiResponse (DividaClienteResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DividaClienteResponse>> ConsultarDividaAtualizadaClienteAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, long? idEscritorioCobranca = null)
+        public async System.Threading.Tasks.Task<ApiResponse<DividaClienteResponse>> ConsultarDividaAtualizadaAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, long? idEscritorioCobranca = null)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarDividaAtualizadaCliente");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarDividaAtualizada");
             
     
             var localVarPath = "/api/contas/{id}/recuperar-divida-atualizada";
@@ -8487,9 +8023,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarDividaAtualizadaCliente: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarDividaAtualizada: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarDividaAtualizadaCliente: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarDividaAtualizada: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<DividaClienteResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -8498,44 +8034,48 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Realiza a consulta das parcelas de um determinado agendamento Este recurso lista todas as parcelas de um agendamento, independente de seus status
+        /// Consulta extrato da conta Consulta extrato da conta
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idAgendamento">Id do Agendamento</param> 
-        /// <param name="id">id</param> 
+        /// <param name="id">Identificador da conta</param> 
         /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="idsTiposTransacoes">C\u00F3digos identificadores dos tipos de transa\u00E7\u00F5es para transfer\u00EAncia de valores e que possuir\u00E3o na descri\u00E7\u00E3o do extrato, os dados da conta destino da transfer\u00EAncia. (optional)</param> 
+        /// <param name="idsTiposTransacoesTransferencias">C\u00F3digos identificadores dos tipos de transa\u00E7\u00F5es que ser\u00E3o consultadas no extrato  (optional)</param> 
         /// <param name="page">P\u00E1gina (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
-        /// <returns>PageParcelaAgendamentoResponse</returns>
-        public PageParcelaAgendamentoResponse ConsultarParcelasAgendamento (long? idAgendamento, long? id, List<string> sort = null, int? page = null, int? limit = null)
+        /// <param name="dataInicio">Data de in\u00EDcio para consulta do extrato da conta formato yyyy-MM-dd (optional)</param> 
+        /// <param name="dataFim">Data de fim para consulta do extrato da conta formato yyyy-MM-dd (optional)</param> 
+        /// <param name="idPessoaFisicaSolicitante">C\u00F3digo identificador da pessoa que solicitou o extrato (optional)</param> 
+        /// <returns>PageExtratoResponse</returns>
+        public PageExtratoResponse ConsultarExtratoConta (long? id, List<string> sort = null, List<long?> idsTiposTransacoes = null, List<long?> idsTiposTransacoesTransferencias = null, int? page = null, int? limit = null, string dataInicio = null, string dataFim = null, long? idPessoaFisicaSolicitante = null)
         {
-             ApiResponse<PageParcelaAgendamentoResponse> localVarResponse = ConsultarParcelasAgendamentoWithHttpInfo(idAgendamento, id, sort, page, limit);
+             ApiResponse<PageExtratoResponse> localVarResponse = ConsultarExtratoContaWithHttpInfo(id, sort, idsTiposTransacoes, idsTiposTransacoesTransferencias, page, limit, dataInicio, dataFim, idPessoaFisicaSolicitante);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Realiza a consulta das parcelas de um determinado agendamento Este recurso lista todas as parcelas de um agendamento, independente de seus status
+        /// Consulta extrato da conta Consulta extrato da conta
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idAgendamento">Id do Agendamento</param> 
-        /// <param name="id">id</param> 
+        /// <param name="id">Identificador da conta</param> 
         /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="idsTiposTransacoes">C\u00F3digos identificadores dos tipos de transa\u00E7\u00F5es para transfer\u00EAncia de valores e que possuir\u00E3o na descri\u00E7\u00E3o do extrato, os dados da conta destino da transfer\u00EAncia. (optional)</param> 
+        /// <param name="idsTiposTransacoesTransferencias">C\u00F3digos identificadores dos tipos de transa\u00E7\u00F5es que ser\u00E3o consultadas no extrato  (optional)</param> 
         /// <param name="page">P\u00E1gina (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
-        /// <returns>ApiResponse of PageParcelaAgendamentoResponse</returns>
-        public ApiResponse< PageParcelaAgendamentoResponse > ConsultarParcelasAgendamentoWithHttpInfo (long? idAgendamento, long? id, List<string> sort = null, int? page = null, int? limit = null)
+        /// <param name="dataInicio">Data de in\u00EDcio para consulta do extrato da conta formato yyyy-MM-dd (optional)</param> 
+        /// <param name="dataFim">Data de fim para consulta do extrato da conta formato yyyy-MM-dd (optional)</param> 
+        /// <param name="idPessoaFisicaSolicitante">C\u00F3digo identificador da pessoa que solicitou o extrato (optional)</param> 
+        /// <returns>ApiResponse of PageExtratoResponse</returns>
+        public ApiResponse< PageExtratoResponse > ConsultarExtratoContaWithHttpInfo (long? id, List<string> sort = null, List<long?> idsTiposTransacoes = null, List<long?> idsTiposTransacoesTransferencias = null, int? page = null, int? limit = null, string dataInicio = null, string dataFim = null, long? idPessoaFisicaSolicitante = null)
         {
-            
-            // verify the required parameter 'idAgendamento' is set
-            if (idAgendamento == null)
-                throw new ApiException(400, "Missing required parameter 'idAgendamento' when calling ContaApi->ConsultarParcelasAgendamento");
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->ConsultarParcelasAgendamento");
+                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->ConsultarExtratoConta");
             
     
-            var localVarPath = "/api/contas/{id}/agendamentos/{idAgendamento}/parcelas";
+            var localVarPath = "/api/contas/{id}/extratos";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -8561,12 +8101,16 @@ namespace Conductor.Pier.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (idAgendamento != null) localVarPathParams.Add("idAgendamento", Configuration.ApiClient.ParameterToString(idAgendamento)); // path parameter
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             
             if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (idsTiposTransacoes != null) localVarQueryParams.Add("idsTiposTransacoes", Configuration.ApiClient.ParameterToString(idsTiposTransacoes)); // query parameter
+            if (idsTiposTransacoesTransferencias != null) localVarQueryParams.Add("idsTiposTransacoesTransferencias", Configuration.ApiClient.ParameterToString(idsTiposTransacoesTransferencias)); // query parameter
             if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
             if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (dataInicio != null) localVarQueryParams.Add("dataInicio", Configuration.ApiClient.ParameterToString(dataInicio)); // query parameter
+            if (dataFim != null) localVarQueryParams.Add("dataFim", Configuration.ApiClient.ParameterToString(dataFim)); // query parameter
+            if (idPessoaFisicaSolicitante != null) localVarQueryParams.Add("idPessoaFisicaSolicitante", Configuration.ApiClient.ParameterToString(idPessoaFisicaSolicitante)); // query parameter
             
             
             
@@ -8582,53 +8126,59 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarParcelasAgendamento: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarExtratoConta: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarParcelasAgendamento: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarExtratoConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<PageParcelaAgendamentoResponse>(localVarStatusCode,
+            return new ApiResponse<PageExtratoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PageParcelaAgendamentoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageParcelaAgendamentoResponse)));
+                (PageExtratoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageExtratoResponse)));
             
         }
 
         
         /// <summary>
-        /// Realiza a consulta das parcelas de um determinado agendamento Este recurso lista todas as parcelas de um agendamento, independente de seus status
+        /// Consulta extrato da conta Consulta extrato da conta
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idAgendamento">Id do Agendamento</param>
-        /// <param name="id">id</param>
+        /// <param name="id">Identificador da conta</param>
         /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="idsTiposTransacoes">C\u00F3digos identificadores dos tipos de transa\u00E7\u00F5es para transfer\u00EAncia de valores e que possuir\u00E3o na descri\u00E7\u00E3o do extrato, os dados da conta destino da transfer\u00EAncia. (optional)</param>
+        /// <param name="idsTiposTransacoesTransferencias">C\u00F3digos identificadores dos tipos de transa\u00E7\u00F5es que ser\u00E3o consultadas no extrato  (optional)</param>
         /// <param name="page">P\u00E1gina (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <returns>Task of PageParcelaAgendamentoResponse</returns>
-        public async System.Threading.Tasks.Task<PageParcelaAgendamentoResponse> ConsultarParcelasAgendamentoAsync (long? idAgendamento, long? id, List<string> sort = null, int? page = null, int? limit = null)
+        /// <param name="dataInicio">Data de in\u00EDcio para consulta do extrato da conta formato yyyy-MM-dd (optional)</param>
+        /// <param name="dataFim">Data de fim para consulta do extrato da conta formato yyyy-MM-dd (optional)</param>
+        /// <param name="idPessoaFisicaSolicitante">C\u00F3digo identificador da pessoa que solicitou o extrato (optional)</param>
+        /// <returns>Task of PageExtratoResponse</returns>
+        public async System.Threading.Tasks.Task<PageExtratoResponse> ConsultarExtratoContaAsync (long? id, List<string> sort = null, List<long?> idsTiposTransacoes = null, List<long?> idsTiposTransacoesTransferencias = null, int? page = null, int? limit = null, string dataInicio = null, string dataFim = null, long? idPessoaFisicaSolicitante = null)
         {
-             ApiResponse<PageParcelaAgendamentoResponse> localVarResponse = await ConsultarParcelasAgendamentoAsyncWithHttpInfo(idAgendamento, id, sort, page, limit);
+             ApiResponse<PageExtratoResponse> localVarResponse = await ConsultarExtratoContaAsyncWithHttpInfo(id, sort, idsTiposTransacoes, idsTiposTransacoesTransferencias, page, limit, dataInicio, dataFim, idPessoaFisicaSolicitante);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Realiza a consulta das parcelas de um determinado agendamento Este recurso lista todas as parcelas de um agendamento, independente de seus status
+        /// Consulta extrato da conta Consulta extrato da conta
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idAgendamento">Id do Agendamento</param>
-        /// <param name="id">id</param>
+        /// <param name="id">Identificador da conta</param>
         /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="idsTiposTransacoes">C\u00F3digos identificadores dos tipos de transa\u00E7\u00F5es para transfer\u00EAncia de valores e que possuir\u00E3o na descri\u00E7\u00E3o do extrato, os dados da conta destino da transfer\u00EAncia. (optional)</param>
+        /// <param name="idsTiposTransacoesTransferencias">C\u00F3digos identificadores dos tipos de transa\u00E7\u00F5es que ser\u00E3o consultadas no extrato  (optional)</param>
         /// <param name="page">P\u00E1gina (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <returns>Task of ApiResponse (PageParcelaAgendamentoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageParcelaAgendamentoResponse>> ConsultarParcelasAgendamentoAsyncWithHttpInfo (long? idAgendamento, long? id, List<string> sort = null, int? page = null, int? limit = null)
+        /// <param name="dataInicio">Data de in\u00EDcio para consulta do extrato da conta formato yyyy-MM-dd (optional)</param>
+        /// <param name="dataFim">Data de fim para consulta do extrato da conta formato yyyy-MM-dd (optional)</param>
+        /// <param name="idPessoaFisicaSolicitante">C\u00F3digo identificador da pessoa que solicitou o extrato (optional)</param>
+        /// <returns>Task of ApiResponse (PageExtratoResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PageExtratoResponse>> ConsultarExtratoContaAsyncWithHttpInfo (long? id, List<string> sort = null, List<long?> idsTiposTransacoes = null, List<long?> idsTiposTransacoesTransferencias = null, int? page = null, int? limit = null, string dataInicio = null, string dataFim = null, long? idPessoaFisicaSolicitante = null)
         {
-            // verify the required parameter 'idAgendamento' is set
-            if (idAgendamento == null) throw new ApiException(400, "Missing required parameter 'idAgendamento' when calling ConsultarParcelasAgendamento");
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarParcelasAgendamento");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarExtratoConta");
             
     
-            var localVarPath = "/api/contas/{id}/agendamentos/{idAgendamento}/parcelas";
+            var localVarPath = "/api/contas/{id}/extratos";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -8654,12 +8204,16 @@ namespace Conductor.Pier.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (idAgendamento != null) localVarPathParams.Add("idAgendamento", Configuration.ApiClient.ParameterToString(idAgendamento)); // path parameter
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             
             if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (idsTiposTransacoes != null) localVarQueryParams.Add("idsTiposTransacoes", Configuration.ApiClient.ParameterToString(idsTiposTransacoes)); // query parameter
+            if (idsTiposTransacoesTransferencias != null) localVarQueryParams.Add("idsTiposTransacoesTransferencias", Configuration.ApiClient.ParameterToString(idsTiposTransacoesTransferencias)); // query parameter
             if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
             if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (dataInicio != null) localVarQueryParams.Add("dataInicio", Configuration.ApiClient.ParameterToString(dataInicio)); // query parameter
+            if (dataFim != null) localVarQueryParams.Add("dataFim", Configuration.ApiClient.ParameterToString(dataFim)); // query parameter
+            if (idPessoaFisicaSolicitante != null) localVarQueryParams.Add("idPessoaFisicaSolicitante", Configuration.ApiClient.ParameterToString(idPessoaFisicaSolicitante)); // query parameter
             
             
             
@@ -8675,49 +8229,49 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarParcelasAgendamento: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarExtratoConta: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarParcelasAgendamento: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarExtratoConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<PageParcelaAgendamentoResponse>(localVarStatusCode,
+            return new ApiResponse<PageExtratoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PageParcelaAgendamentoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageParcelaAgendamentoResponse)));
+                (PageExtratoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageExtratoResponse)));
             
         }
         
         /// <summary>
-        /// Consulta uma transa\u00E7\u00E3o processada da conta. Este recurso permite consultar os detalhes de uma transa\u00E7\u00E3o processada pertencente a uma conta.
+        /// Consulta o extrato anual de tarifas de uma conta Esse recurso permite consultar o extrato anual de tarifas cobradas de uma determinada conta
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param> 
-        /// <param name="idTransacao">C\u00F3digo de Identifica\u00E7\u00E3o da transa\u00E7\u00E3o (id).</param> 
-        /// <returns>TransacoesCorrentesResponse</returns>
-        public TransacoesCorrentesResponse ConsultarProcessada (long? id, long? idTransacao)
+        /// <param name="id">Identificador da conta</param> 
+        /// <param name="ano">Ano base para gera\u00E7\u00E3o do extrato de tarifas</param> 
+        /// <returns>ExtratoTarifasResponse</returns>
+        public ExtratoTarifasResponse ConsultarExtratoTarifasAnual (long? id, int? ano)
         {
-             ApiResponse<TransacoesCorrentesResponse> localVarResponse = ConsultarProcessadaWithHttpInfo(id, idTransacao);
+             ApiResponse<ExtratoTarifasResponse> localVarResponse = ConsultarExtratoTarifasAnualWithHttpInfo(id, ano);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Consulta uma transa\u00E7\u00E3o processada da conta. Este recurso permite consultar os detalhes de uma transa\u00E7\u00E3o processada pertencente a uma conta.
+        /// Consulta o extrato anual de tarifas de uma conta Esse recurso permite consultar o extrato anual de tarifas cobradas de uma determinada conta
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param> 
-        /// <param name="idTransacao">C\u00F3digo de Identifica\u00E7\u00E3o da transa\u00E7\u00E3o (id).</param> 
-        /// <returns>ApiResponse of TransacoesCorrentesResponse</returns>
-        public ApiResponse< TransacoesCorrentesResponse > ConsultarProcessadaWithHttpInfo (long? id, long? idTransacao)
+        /// <param name="id">Identificador da conta</param> 
+        /// <param name="ano">Ano base para gera\u00E7\u00E3o do extrato de tarifas</param> 
+        /// <returns>ApiResponse of ExtratoTarifasResponse</returns>
+        public ApiResponse< ExtratoTarifasResponse > ConsultarExtratoTarifasAnualWithHttpInfo (long? id, int? ano)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->ConsultarProcessada");
+                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->ConsultarExtratoTarifasAnual");
             
-            // verify the required parameter 'idTransacao' is set
-            if (idTransacao == null)
-                throw new ApiException(400, "Missing required parameter 'idTransacao' when calling ContaApi->ConsultarProcessada");
+            // verify the required parameter 'ano' is set
+            if (ano == null)
+                throw new ApiException(400, "Missing required parameter 'ano' when calling ContaApi->ConsultarExtratoTarifasAnual");
             
     
-            var localVarPath = "/api/contas/{id}/transacoes-processadas/{idTransacao}";
+            var localVarPath = "/api/contas/{id}/extrato-tarifas/{ano}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -8744,7 +8298,7 @@ namespace Conductor.Pier.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            if (idTransacao != null) localVarPathParams.Add("idTransacao", Configuration.ApiClient.ParameterToString(idTransacao)); // path parameter
+            if (ano != null) localVarPathParams.Add("ano", Configuration.ApiClient.ParameterToString(ano)); // path parameter
             
             
             
@@ -8761,47 +8315,47 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarProcessada: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarExtratoTarifasAnual: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarProcessada: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarExtratoTarifasAnual: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<TransacoesCorrentesResponse>(localVarStatusCode,
+            return new ApiResponse<ExtratoTarifasResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TransacoesCorrentesResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TransacoesCorrentesResponse)));
+                (ExtratoTarifasResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExtratoTarifasResponse)));
             
         }
 
         
         /// <summary>
-        /// Consulta uma transa\u00E7\u00E3o processada da conta. Este recurso permite consultar os detalhes de uma transa\u00E7\u00E3o processada pertencente a uma conta.
+        /// Consulta o extrato anual de tarifas de uma conta Esse recurso permite consultar o extrato anual de tarifas cobradas de uma determinada conta
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param>
-        /// <param name="idTransacao">C\u00F3digo de Identifica\u00E7\u00E3o da transa\u00E7\u00E3o (id).</param>
-        /// <returns>Task of TransacoesCorrentesResponse</returns>
-        public async System.Threading.Tasks.Task<TransacoesCorrentesResponse> ConsultarProcessadaAsync (long? id, long? idTransacao)
+        /// <param name="id">Identificador da conta</param>
+        /// <param name="ano">Ano base para gera\u00E7\u00E3o do extrato de tarifas</param>
+        /// <returns>Task of ExtratoTarifasResponse</returns>
+        public async System.Threading.Tasks.Task<ExtratoTarifasResponse> ConsultarExtratoTarifasAnualAsync (long? id, int? ano)
         {
-             ApiResponse<TransacoesCorrentesResponse> localVarResponse = await ConsultarProcessadaAsyncWithHttpInfo(id, idTransacao);
+             ApiResponse<ExtratoTarifasResponse> localVarResponse = await ConsultarExtratoTarifasAnualAsyncWithHttpInfo(id, ano);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Consulta uma transa\u00E7\u00E3o processada da conta. Este recurso permite consultar os detalhes de uma transa\u00E7\u00E3o processada pertencente a uma conta.
+        /// Consulta o extrato anual de tarifas de uma conta Esse recurso permite consultar o extrato anual de tarifas cobradas de uma determinada conta
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param>
-        /// <param name="idTransacao">C\u00F3digo de Identifica\u00E7\u00E3o da transa\u00E7\u00E3o (id).</param>
-        /// <returns>Task of ApiResponse (TransacoesCorrentesResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TransacoesCorrentesResponse>> ConsultarProcessadaAsyncWithHttpInfo (long? id, long? idTransacao)
+        /// <param name="id">Identificador da conta</param>
+        /// <param name="ano">Ano base para gera\u00E7\u00E3o do extrato de tarifas</param>
+        /// <returns>Task of ApiResponse (ExtratoTarifasResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ExtratoTarifasResponse>> ConsultarExtratoTarifasAnualAsyncWithHttpInfo (long? id, int? ano)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarProcessada");
-            // verify the required parameter 'idTransacao' is set
-            if (idTransacao == null) throw new ApiException(400, "Missing required parameter 'idTransacao' when calling ConsultarProcessada");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarExtratoTarifasAnual");
+            // verify the required parameter 'ano' is set
+            if (ano == null) throw new ApiException(400, "Missing required parameter 'ano' when calling ConsultarExtratoTarifasAnual");
             
     
-            var localVarPath = "/api/contas/{id}/transacoes-processadas/{idTransacao}";
+            var localVarPath = "/api/contas/{id}/extrato-tarifas/{ano}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -8828,7 +8382,7 @@ namespace Conductor.Pier.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            if (idTransacao != null) localVarPathParams.Add("idTransacao", Configuration.ApiClient.ParameterToString(idTransacao)); // path parameter
+            if (ano != null) localVarPathParams.Add("ano", Configuration.ApiClient.ParameterToString(ano)); // path parameter
             
             
             
@@ -8845,13 +8399,171 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarProcessada: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarExtratoTarifasAnual: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarProcessada: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarExtratoTarifasAnual: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<TransacoesCorrentesResponse>(localVarStatusCode,
+            return new ApiResponse<ExtratoTarifasResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TransacoesCorrentesResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TransacoesCorrentesResponse)));
+                (ExtratoTarifasResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExtratoTarifasResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Apresenta dados de um determinado tipo de fun\u00E7\u00E3o para contas Este m\u00E9todo permite consultar dados de um determinado tipo de fun\u00E7\u00E3o para contas a partir de seu codigo de identifica\u00E7\u00E3o (id)
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do tipo de fun\u00E7\u00E3o para contas (id)</param> 
+        /// <returns>string</returns>
+        public string ConsultarFuncaoConta (int? id)
+        {
+             ApiResponse<string> localVarResponse = ConsultarFuncaoContaWithHttpInfo(id);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Apresenta dados de um determinado tipo de fun\u00E7\u00E3o para contas Este m\u00E9todo permite consultar dados de um determinado tipo de fun\u00E7\u00E3o para contas a partir de seu codigo de identifica\u00E7\u00E3o (id)
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do tipo de fun\u00E7\u00E3o para contas (id)</param> 
+        /// <returns>ApiResponse of string</returns>
+        public ApiResponse< string > ConsultarFuncaoContaWithHttpInfo (int? id)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->ConsultarFuncaoConta");
+            
+    
+            var localVarPath = "/api/contas/tipos-funcoes/{id}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarFuncaoConta: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarFuncaoConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+            
+        }
+
+        
+        /// <summary>
+        /// Apresenta dados de um determinado tipo de fun\u00E7\u00E3o para contas Este m\u00E9todo permite consultar dados de um determinado tipo de fun\u00E7\u00E3o para contas a partir de seu codigo de identifica\u00E7\u00E3o (id)
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do tipo de fun\u00E7\u00E3o para contas (id)</param>
+        /// <returns>Task of string</returns>
+        public async System.Threading.Tasks.Task<string> ConsultarFuncaoContaAsync (int? id)
+        {
+             ApiResponse<string> localVarResponse = await ConsultarFuncaoContaAsyncWithHttpInfo(id);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Apresenta dados de um determinado tipo de fun\u00E7\u00E3o para contas Este m\u00E9todo permite consultar dados de um determinado tipo de fun\u00E7\u00E3o para contas a partir de seu codigo de identifica\u00E7\u00E3o (id)
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do tipo de fun\u00E7\u00E3o para contas (id)</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<string>> ConsultarFuncaoContaAsyncWithHttpInfo (int? id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarFuncaoConta");
+            
+    
+            var localVarPath = "/api/contas/tipos-funcoes/{id}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarFuncaoConta: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarFuncaoConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
         }
         
@@ -9202,6 +8914,182 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
+        /// Permite listar uma linha do tempo com os eventos da conta Esta opera\u00E7\u00E3o tem como objetivo permitir a listagem, em formato de timeline, dos eventos vinculados a uma detemrinada conta. Transa\u00E7\u00F5es, fechamento da fatura, pagamentos, gera\u00E7\u00E3o de cart\u00F5es e altera\u00E7\u00E3o de limite s\u00E3o exemplos de eventos contemplados por esta funcionalidade. Neste m\u00E9todo, as opera\u00E7\u00F5es s\u00E3o ordenadas de forma decrescente
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Id Conta</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="page">P\u00E1gina (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <returns>PageTransacaoResponse</returns>
+        public PageTransacaoResponse ConsultarTimeline (long? id, List<string> sort = null, int? page = null, int? limit = null)
+        {
+             ApiResponse<PageTransacaoResponse> localVarResponse = ConsultarTimelineWithHttpInfo(id, sort, page, limit);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Permite listar uma linha do tempo com os eventos da conta Esta opera\u00E7\u00E3o tem como objetivo permitir a listagem, em formato de timeline, dos eventos vinculados a uma detemrinada conta. Transa\u00E7\u00F5es, fechamento da fatura, pagamentos, gera\u00E7\u00E3o de cart\u00F5es e altera\u00E7\u00E3o de limite s\u00E3o exemplos de eventos contemplados por esta funcionalidade. Neste m\u00E9todo, as opera\u00E7\u00F5es s\u00E3o ordenadas de forma decrescente
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Id Conta</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="page">P\u00E1gina (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <returns>ApiResponse of PageTransacaoResponse</returns>
+        public ApiResponse< PageTransacaoResponse > ConsultarTimelineWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->ConsultarTimeline");
+            
+    
+            var localVarPath = "/api/contas/{id}/timeline";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarTimeline: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarTimeline: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<PageTransacaoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageTransacaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageTransacaoResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Permite listar uma linha do tempo com os eventos da conta Esta opera\u00E7\u00E3o tem como objetivo permitir a listagem, em formato de timeline, dos eventos vinculados a uma detemrinada conta. Transa\u00E7\u00F5es, fechamento da fatura, pagamentos, gera\u00E7\u00E3o de cart\u00F5es e altera\u00E7\u00E3o de limite s\u00E3o exemplos de eventos contemplados por esta funcionalidade. Neste m\u00E9todo, as opera\u00E7\u00F5es s\u00E3o ordenadas de forma decrescente
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Id Conta</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <returns>Task of PageTransacaoResponse</returns>
+        public async System.Threading.Tasks.Task<PageTransacaoResponse> ConsultarTimelineAsync (long? id, List<string> sort = null, int? page = null, int? limit = null)
+        {
+             ApiResponse<PageTransacaoResponse> localVarResponse = await ConsultarTimelineAsyncWithHttpInfo(id, sort, page, limit);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Permite listar uma linha do tempo com os eventos da conta Esta opera\u00E7\u00E3o tem como objetivo permitir a listagem, em formato de timeline, dos eventos vinculados a uma detemrinada conta. Transa\u00E7\u00F5es, fechamento da fatura, pagamentos, gera\u00E7\u00E3o de cart\u00F5es e altera\u00E7\u00E3o de limite s\u00E3o exemplos de eventos contemplados por esta funcionalidade. Neste m\u00E9todo, as opera\u00E7\u00F5es s\u00E3o ordenadas de forma decrescente
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Id Conta</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <returns>Task of ApiResponse (PageTransacaoResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PageTransacaoResponse>> ConsultarTimelineAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarTimeline");
+            
+    
+            var localVarPath = "/api/contas/{id}/timeline";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarTimeline: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarTimeline: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PageTransacaoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageTransacaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageTransacaoResponse)));
+            
+        }
+        
+        /// <summary>
         /// Consulta um tipo de v\u00EDnculo Este recurso permite consultar um tipo de v\u00EDnculo cadastrado na base do emissor a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id)
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
@@ -9360,32 +9248,38 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Apresenta dados de um determinado tipo de fun\u00E7\u00E3o para contas Este m\u00E9todo permite consultar dados de um determinado tipo de fun\u00E7\u00E3o para contas a partir de seu codigo de identifica\u00E7\u00E3o (id)
+        /// Consulta uma transa\u00E7\u00E3o processada da conta. Este recurso permite consultar os detalhes de uma transa\u00E7\u00E3o processada pertencente a uma conta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do tipo de fun\u00E7\u00E3o para contas (id)</param> 
-        /// <returns>string</returns>
-        public string Consultar_0 (int? id)
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param> 
+        /// <param name="idTransacao">C\u00F3digo de Identifica\u00E7\u00E3o da transa\u00E7\u00E3o (id).</param> 
+        /// <returns>TransacoesCorrentesResponse</returns>
+        public TransacoesCorrentesResponse ConsultarTransacaoProcessadaConta (long? id, long? idTransacao)
         {
-             ApiResponse<string> localVarResponse = Consultar_0WithHttpInfo(id);
+             ApiResponse<TransacoesCorrentesResponse> localVarResponse = ConsultarTransacaoProcessadaContaWithHttpInfo(id, idTransacao);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Apresenta dados de um determinado tipo de fun\u00E7\u00E3o para contas Este m\u00E9todo permite consultar dados de um determinado tipo de fun\u00E7\u00E3o para contas a partir de seu codigo de identifica\u00E7\u00E3o (id)
+        /// Consulta uma transa\u00E7\u00E3o processada da conta. Este recurso permite consultar os detalhes de uma transa\u00E7\u00E3o processada pertencente a uma conta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do tipo de fun\u00E7\u00E3o para contas (id)</param> 
-        /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > Consultar_0WithHttpInfo (int? id)
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param> 
+        /// <param name="idTransacao">C\u00F3digo de Identifica\u00E7\u00E3o da transa\u00E7\u00E3o (id).</param> 
+        /// <returns>ApiResponse of TransacoesCorrentesResponse</returns>
+        public ApiResponse< TransacoesCorrentesResponse > ConsultarTransacaoProcessadaContaWithHttpInfo (long? id, long? idTransacao)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->Consultar_0");
+                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->ConsultarTransacaoProcessadaConta");
+            
+            // verify the required parameter 'idTransacao' is set
+            if (idTransacao == null)
+                throw new ApiException(400, "Missing required parameter 'idTransacao' when calling ContaApi->ConsultarTransacaoProcessadaConta");
             
     
-            var localVarPath = "/api/contas/tipos-funcoes/{id}";
+            var localVarPath = "/api/contas/{id}/transacoes-processadas/{idTransacao}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -9412,6 +9306,7 @@ namespace Conductor.Pier.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (idTransacao != null) localVarPathParams.Add("idTransacao", Configuration.ApiClient.ParameterToString(idTransacao)); // path parameter
             
             
             
@@ -9428,43 +9323,47 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar_0: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarTransacaoProcessadaConta: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar_0: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarTransacaoProcessadaConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<string>(localVarStatusCode,
+            return new ApiResponse<TransacoesCorrentesResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+                (TransacoesCorrentesResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TransacoesCorrentesResponse)));
             
         }
 
         
         /// <summary>
-        /// Apresenta dados de um determinado tipo de fun\u00E7\u00E3o para contas Este m\u00E9todo permite consultar dados de um determinado tipo de fun\u00E7\u00E3o para contas a partir de seu codigo de identifica\u00E7\u00E3o (id)
+        /// Consulta uma transa\u00E7\u00E3o processada da conta. Este recurso permite consultar os detalhes de uma transa\u00E7\u00E3o processada pertencente a uma conta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do tipo de fun\u00E7\u00E3o para contas (id)</param>
-        /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> Consultar_0Async (int? id)
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param>
+        /// <param name="idTransacao">C\u00F3digo de Identifica\u00E7\u00E3o da transa\u00E7\u00E3o (id).</param>
+        /// <returns>Task of TransacoesCorrentesResponse</returns>
+        public async System.Threading.Tasks.Task<TransacoesCorrentesResponse> ConsultarTransacaoProcessadaContaAsync (long? id, long? idTransacao)
         {
-             ApiResponse<string> localVarResponse = await Consultar_0AsyncWithHttpInfo(id);
+             ApiResponse<TransacoesCorrentesResponse> localVarResponse = await ConsultarTransacaoProcessadaContaAsyncWithHttpInfo(id, idTransacao);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Apresenta dados de um determinado tipo de fun\u00E7\u00E3o para contas Este m\u00E9todo permite consultar dados de um determinado tipo de fun\u00E7\u00E3o para contas a partir de seu codigo de identifica\u00E7\u00E3o (id)
+        /// Consulta uma transa\u00E7\u00E3o processada da conta. Este recurso permite consultar os detalhes de uma transa\u00E7\u00E3o processada pertencente a uma conta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do tipo de fun\u00E7\u00E3o para contas (id)</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> Consultar_0AsyncWithHttpInfo (int? id)
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param>
+        /// <param name="idTransacao">C\u00F3digo de Identifica\u00E7\u00E3o da transa\u00E7\u00E3o (id).</param>
+        /// <returns>Task of ApiResponse (TransacoesCorrentesResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<TransacoesCorrentesResponse>> ConsultarTransacaoProcessadaContaAsyncWithHttpInfo (long? id, long? idTransacao)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling Consultar_0");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarTransacaoProcessadaConta");
+            // verify the required parameter 'idTransacao' is set
+            if (idTransacao == null) throw new ApiException(400, "Missing required parameter 'idTransacao' when calling ConsultarTransacaoProcessadaConta");
             
     
-            var localVarPath = "/api/contas/tipos-funcoes/{id}";
+            var localVarPath = "/api/contas/{id}/transacoes-processadas/{idTransacao}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -9491,6 +9390,7 @@ namespace Conductor.Pier.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (idTransacao != null) localVarPathParams.Add("idTransacao", Configuration.ApiClient.ParameterToString(idTransacao)); // path parameter
             
             
             
@@ -9507,377 +9407,13 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar_0: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarTransacaoProcessadaConta: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar_0: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarTransacaoProcessadaConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
+            return new ApiResponse<TransacoesCorrentesResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
-            
-        }
-        
-        /// <summary>
-        /// Apresenta dados de uma determinada conta Este m\u00E9todo permite consultar dados de uma determinada conta a partir de seu codigo de identifica\u00E7\u00E3o (id)
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param> 
-        /// <returns>ContaDetalheResponse</returns>
-        public ContaDetalheResponse Consultar_1 (long? id)
-        {
-             ApiResponse<ContaDetalheResponse> localVarResponse = Consultar_1WithHttpInfo(id);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Apresenta dados de uma determinada conta Este m\u00E9todo permite consultar dados de uma determinada conta a partir de seu codigo de identifica\u00E7\u00E3o (id)
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param> 
-        /// <returns>ApiResponse of ContaDetalheResponse</returns>
-        public ApiResponse< ContaDetalheResponse > Consultar_1WithHttpInfo (long? id)
-        {
-            
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->Consultar_1");
-            
-    
-            var localVarPath = "/api/contas/{id}";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            
-            
-            
-            
-            
-
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar_1: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar_1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<ContaDetalheResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ContaDetalheResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContaDetalheResponse)));
-            
-        }
-
-        
-        /// <summary>
-        /// Apresenta dados de uma determinada conta Este m\u00E9todo permite consultar dados de uma determinada conta a partir de seu codigo de identifica\u00E7\u00E3o (id)
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
-        /// <returns>Task of ContaDetalheResponse</returns>
-        public async System.Threading.Tasks.Task<ContaDetalheResponse> Consultar_1Async (long? id)
-        {
-             ApiResponse<ContaDetalheResponse> localVarResponse = await Consultar_1AsyncWithHttpInfo(id);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Apresenta dados de uma determinada conta Este m\u00E9todo permite consultar dados de uma determinada conta a partir de seu codigo de identifica\u00E7\u00E3o (id)
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
-        /// <returns>Task of ApiResponse (ContaDetalheResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ContaDetalheResponse>> Consultar_1AsyncWithHttpInfo (long? id)
-        {
-            // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling Consultar_1");
-            
-    
-            var localVarPath = "/api/contas/{id}";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            
-            
-            
-            
-            
-
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar_1: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar_1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<ContaDetalheResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ContaDetalheResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContaDetalheResponse)));
-            
-        }
-        
-        /// <summary>
-        /// Consulta extrato da conta Consulta extrato da conta
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Identificador da conta</param> 
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
-        /// <param name="idsTiposTransacoes">C\u00F3digos identificadores dos tipos de transa\u00E7\u00F5es para transfer\u00EAncia de valores e que possuir\u00E3o na descri\u00E7\u00E3o do extrato, os dados da conta destino da transfer\u00EAncia. (optional)</param> 
-        /// <param name="idsTiposTransacoesTransferencias">C\u00F3digos identificadores dos tipos de transa\u00E7\u00F5es que ser\u00E3o consultadas no extrato  (optional)</param> 
-        /// <param name="page">P\u00E1gina (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
-        /// <param name="dataInicio">Data de in\u00EDcio para consulta do extrato da conta formato yyyy-MM-dd (optional)</param> 
-        /// <param name="dataFim">Data de fim para consulta do extrato da conta formato yyyy-MM-dd (optional)</param> 
-        /// <param name="idPessoaFisicaSolicitante">C\u00F3digo identificador da pessoa que solicitou o extrato (optional)</param> 
-        /// <returns>PageExtratoResponse</returns>
-        public PageExtratoResponse Consultar_2 (long? id, List<string> sort = null, List<long?> idsTiposTransacoes = null, List<long?> idsTiposTransacoesTransferencias = null, int? page = null, int? limit = null, string dataInicio = null, string dataFim = null, long? idPessoaFisicaSolicitante = null)
-        {
-             ApiResponse<PageExtratoResponse> localVarResponse = Consultar_2WithHttpInfo(id, sort, idsTiposTransacoes, idsTiposTransacoesTransferencias, page, limit, dataInicio, dataFim, idPessoaFisicaSolicitante);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Consulta extrato da conta Consulta extrato da conta
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Identificador da conta</param> 
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
-        /// <param name="idsTiposTransacoes">C\u00F3digos identificadores dos tipos de transa\u00E7\u00F5es para transfer\u00EAncia de valores e que possuir\u00E3o na descri\u00E7\u00E3o do extrato, os dados da conta destino da transfer\u00EAncia. (optional)</param> 
-        /// <param name="idsTiposTransacoesTransferencias">C\u00F3digos identificadores dos tipos de transa\u00E7\u00F5es que ser\u00E3o consultadas no extrato  (optional)</param> 
-        /// <param name="page">P\u00E1gina (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
-        /// <param name="dataInicio">Data de in\u00EDcio para consulta do extrato da conta formato yyyy-MM-dd (optional)</param> 
-        /// <param name="dataFim">Data de fim para consulta do extrato da conta formato yyyy-MM-dd (optional)</param> 
-        /// <param name="idPessoaFisicaSolicitante">C\u00F3digo identificador da pessoa que solicitou o extrato (optional)</param> 
-        /// <returns>ApiResponse of PageExtratoResponse</returns>
-        public ApiResponse< PageExtratoResponse > Consultar_2WithHttpInfo (long? id, List<string> sort = null, List<long?> idsTiposTransacoes = null, List<long?> idsTiposTransacoesTransferencias = null, int? page = null, int? limit = null, string dataInicio = null, string dataFim = null, long? idPessoaFisicaSolicitante = null)
-        {
-            
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->Consultar_2");
-            
-    
-            var localVarPath = "/api/contas/{id}/extratos";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            
-            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
-            if (idsTiposTransacoes != null) localVarQueryParams.Add("idsTiposTransacoes", Configuration.ApiClient.ParameterToString(idsTiposTransacoes)); // query parameter
-            if (idsTiposTransacoesTransferencias != null) localVarQueryParams.Add("idsTiposTransacoesTransferencias", Configuration.ApiClient.ParameterToString(idsTiposTransacoesTransferencias)); // query parameter
-            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
-            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
-            if (dataInicio != null) localVarQueryParams.Add("dataInicio", Configuration.ApiClient.ParameterToString(dataInicio)); // query parameter
-            if (dataFim != null) localVarQueryParams.Add("dataFim", Configuration.ApiClient.ParameterToString(dataFim)); // query parameter
-            if (idPessoaFisicaSolicitante != null) localVarQueryParams.Add("idPessoaFisicaSolicitante", Configuration.ApiClient.ParameterToString(idPessoaFisicaSolicitante)); // query parameter
-            
-            
-            
-            
-
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar_2: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar_2: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<PageExtratoResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PageExtratoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageExtratoResponse)));
-            
-        }
-
-        
-        /// <summary>
-        /// Consulta extrato da conta Consulta extrato da conta
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Identificador da conta</param>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="idsTiposTransacoes">C\u00F3digos identificadores dos tipos de transa\u00E7\u00F5es para transfer\u00EAncia de valores e que possuir\u00E3o na descri\u00E7\u00E3o do extrato, os dados da conta destino da transfer\u00EAncia. (optional)</param>
-        /// <param name="idsTiposTransacoesTransferencias">C\u00F3digos identificadores dos tipos de transa\u00E7\u00F5es que ser\u00E3o consultadas no extrato  (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="dataInicio">Data de in\u00EDcio para consulta do extrato da conta formato yyyy-MM-dd (optional)</param>
-        /// <param name="dataFim">Data de fim para consulta do extrato da conta formato yyyy-MM-dd (optional)</param>
-        /// <param name="idPessoaFisicaSolicitante">C\u00F3digo identificador da pessoa que solicitou o extrato (optional)</param>
-        /// <returns>Task of PageExtratoResponse</returns>
-        public async System.Threading.Tasks.Task<PageExtratoResponse> Consultar_2Async (long? id, List<string> sort = null, List<long?> idsTiposTransacoes = null, List<long?> idsTiposTransacoesTransferencias = null, int? page = null, int? limit = null, string dataInicio = null, string dataFim = null, long? idPessoaFisicaSolicitante = null)
-        {
-             ApiResponse<PageExtratoResponse> localVarResponse = await Consultar_2AsyncWithHttpInfo(id, sort, idsTiposTransacoes, idsTiposTransacoesTransferencias, page, limit, dataInicio, dataFim, idPessoaFisicaSolicitante);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Consulta extrato da conta Consulta extrato da conta
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Identificador da conta</param>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="idsTiposTransacoes">C\u00F3digos identificadores dos tipos de transa\u00E7\u00F5es para transfer\u00EAncia de valores e que possuir\u00E3o na descri\u00E7\u00E3o do extrato, os dados da conta destino da transfer\u00EAncia. (optional)</param>
-        /// <param name="idsTiposTransacoesTransferencias">C\u00F3digos identificadores dos tipos de transa\u00E7\u00F5es que ser\u00E3o consultadas no extrato  (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="dataInicio">Data de in\u00EDcio para consulta do extrato da conta formato yyyy-MM-dd (optional)</param>
-        /// <param name="dataFim">Data de fim para consulta do extrato da conta formato yyyy-MM-dd (optional)</param>
-        /// <param name="idPessoaFisicaSolicitante">C\u00F3digo identificador da pessoa que solicitou o extrato (optional)</param>
-        /// <returns>Task of ApiResponse (PageExtratoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageExtratoResponse>> Consultar_2AsyncWithHttpInfo (long? id, List<string> sort = null, List<long?> idsTiposTransacoes = null, List<long?> idsTiposTransacoesTransferencias = null, int? page = null, int? limit = null, string dataInicio = null, string dataFim = null, long? idPessoaFisicaSolicitante = null)
-        {
-            // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling Consultar_2");
-            
-    
-            var localVarPath = "/api/contas/{id}/extratos";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            
-            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
-            if (idsTiposTransacoes != null) localVarQueryParams.Add("idsTiposTransacoes", Configuration.ApiClient.ParameterToString(idsTiposTransacoes)); // query parameter
-            if (idsTiposTransacoesTransferencias != null) localVarQueryParams.Add("idsTiposTransacoesTransferencias", Configuration.ApiClient.ParameterToString(idsTiposTransacoesTransferencias)); // query parameter
-            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
-            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
-            if (dataInicio != null) localVarQueryParams.Add("dataInicio", Configuration.ApiClient.ParameterToString(dataInicio)); // query parameter
-            if (dataFim != null) localVarQueryParams.Add("dataFim", Configuration.ApiClient.ParameterToString(dataFim)); // query parameter
-            if (idPessoaFisicaSolicitante != null) localVarQueryParams.Add("idPessoaFisicaSolicitante", Configuration.ApiClient.ParameterToString(idPessoaFisicaSolicitante)); // query parameter
-            
-            
-            
-            
-
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar_2: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar_2: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<PageExtratoResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PageExtratoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageExtratoResponse)));
+                (TransacoesCorrentesResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TransacoesCorrentesResponse)));
             
         }
         
@@ -9888,9 +9424,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param> 
         /// <param name="idTransferencia">C\u00F3digo de Identifica\u00E7\u00E3o da transfer\u00EAncia (id_transferencia)</param> 
         /// <returns>TransferenciaDetalheResponse</returns>
-        public TransferenciaDetalheResponse Consultar_3 (long? id, long? idTransferencia)
+        public TransferenciaDetalheResponse ConsultarTransferenciaDeCreditoEntreCartoes (long? id, long? idTransferencia)
         {
-             ApiResponse<TransferenciaDetalheResponse> localVarResponse = Consultar_3WithHttpInfo(id, idTransferencia);
+             ApiResponse<TransferenciaDetalheResponse> localVarResponse = ConsultarTransferenciaDeCreditoEntreCartoesWithHttpInfo(id, idTransferencia);
              return localVarResponse.Data;
         }
 
@@ -9901,16 +9437,16 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param> 
         /// <param name="idTransferencia">C\u00F3digo de Identifica\u00E7\u00E3o da transfer\u00EAncia (id_transferencia)</param> 
         /// <returns>ApiResponse of TransferenciaDetalheResponse</returns>
-        public ApiResponse< TransferenciaDetalheResponse > Consultar_3WithHttpInfo (long? id, long? idTransferencia)
+        public ApiResponse< TransferenciaDetalheResponse > ConsultarTransferenciaDeCreditoEntreCartoesWithHttpInfo (long? id, long? idTransferencia)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->Consultar_3");
+                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->ConsultarTransferenciaDeCreditoEntreCartoes");
             
             // verify the required parameter 'idTransferencia' is set
             if (idTransferencia == null)
-                throw new ApiException(400, "Missing required parameter 'idTransferencia' when calling ContaApi->Consultar_3");
+                throw new ApiException(400, "Missing required parameter 'idTransferencia' when calling ContaApi->ConsultarTransferenciaDeCreditoEntreCartoes");
             
     
             var localVarPath = "/api/contas/{id}/transferencias-creditos-cartoes/{id_transferencia}";
@@ -9957,9 +9493,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar_3: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarTransferenciaDeCreditoEntreCartoes: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar_3: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarTransferenciaDeCreditoEntreCartoes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<TransferenciaDetalheResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -9975,9 +9511,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
         /// <param name="idTransferencia">C\u00F3digo de Identifica\u00E7\u00E3o da transfer\u00EAncia (id_transferencia)</param>
         /// <returns>Task of TransferenciaDetalheResponse</returns>
-        public async System.Threading.Tasks.Task<TransferenciaDetalheResponse> Consultar_3Async (long? id, long? idTransferencia)
+        public async System.Threading.Tasks.Task<TransferenciaDetalheResponse> ConsultarTransferenciaDeCreditoEntreCartoesAsync (long? id, long? idTransferencia)
         {
-             ApiResponse<TransferenciaDetalheResponse> localVarResponse = await Consultar_3AsyncWithHttpInfo(id, idTransferencia);
+             ApiResponse<TransferenciaDetalheResponse> localVarResponse = await ConsultarTransferenciaDeCreditoEntreCartoesAsyncWithHttpInfo(id, idTransferencia);
              return localVarResponse.Data;
 
         }
@@ -9989,12 +9525,12 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
         /// <param name="idTransferencia">C\u00F3digo de Identifica\u00E7\u00E3o da transfer\u00EAncia (id_transferencia)</param>
         /// <returns>Task of ApiResponse (TransferenciaDetalheResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TransferenciaDetalheResponse>> Consultar_3AsyncWithHttpInfo (long? id, long? idTransferencia)
+        public async System.Threading.Tasks.Task<ApiResponse<TransferenciaDetalheResponse>> ConsultarTransferenciaDeCreditoEntreCartoesAsyncWithHttpInfo (long? id, long? idTransferencia)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling Consultar_3");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarTransferenciaDeCreditoEntreCartoes");
             // verify the required parameter 'idTransferencia' is set
-            if (idTransferencia == null) throw new ApiException(400, "Missing required parameter 'idTransferencia' when calling Consultar_3");
+            if (idTransferencia == null) throw new ApiException(400, "Missing required parameter 'idTransferencia' when calling ConsultarTransferenciaDeCreditoEntreCartoes");
             
     
             var localVarPath = "/api/contas/{id}/transferencias-creditos-cartoes/{id_transferencia}";
@@ -10041,9 +9577,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar_3: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarTransferenciaDeCreditoEntreCartoes: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar_3: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarTransferenciaDeCreditoEntreCartoes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<TransferenciaDetalheResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -10885,9 +10421,9 @@ namespace Conductor.Pier.Api
         /// <param name="idPessoa">C\u00F3digo de identifica\u00E7\u00E3o da pessoa (id)</param> 
         /// <param name="idTipoPlastico">C\u00F3digo de identifica\u00E7\u00E3o do TipoPlastico (id) (optional)</param> 
         /// <returns>CartaoImpressaoResponse</returns>
-        public CartaoImpressaoResponse GerarCartao (long? id, long? idPessoa, long? idTipoPlastico = null)
+        public CartaoImpressaoResponse GerarCartaoDaPessoa (long? id, long? idPessoa, long? idTipoPlastico = null)
         {
-             ApiResponse<CartaoImpressaoResponse> localVarResponse = GerarCartaoWithHttpInfo(id, idPessoa, idTipoPlastico);
+             ApiResponse<CartaoImpressaoResponse> localVarResponse = GerarCartaoDaPessoaWithHttpInfo(id, idPessoa, idTipoPlastico);
              return localVarResponse.Data;
         }
 
@@ -10899,16 +10435,16 @@ namespace Conductor.Pier.Api
         /// <param name="idPessoa">C\u00F3digo de identifica\u00E7\u00E3o da pessoa (id)</param> 
         /// <param name="idTipoPlastico">C\u00F3digo de identifica\u00E7\u00E3o do TipoPlastico (id) (optional)</param> 
         /// <returns>ApiResponse of CartaoImpressaoResponse</returns>
-        public ApiResponse< CartaoImpressaoResponse > GerarCartaoWithHttpInfo (long? id, long? idPessoa, long? idTipoPlastico = null)
+        public ApiResponse< CartaoImpressaoResponse > GerarCartaoDaPessoaWithHttpInfo (long? id, long? idPessoa, long? idTipoPlastico = null)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->GerarCartao");
+                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->GerarCartaoDaPessoa");
             
             // verify the required parameter 'idPessoa' is set
             if (idPessoa == null)
-                throw new ApiException(400, "Missing required parameter 'idPessoa' when calling ContaApi->GerarCartao");
+                throw new ApiException(400, "Missing required parameter 'idPessoa' when calling ContaApi->GerarCartaoDaPessoa");
             
     
             var localVarPath = "/api/contas/{id}/pessoas/{id_pessoa}/gerar-cartao";
@@ -10956,9 +10492,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GerarCartao: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GerarCartaoDaPessoa: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GerarCartao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GerarCartaoDaPessoa: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<CartaoImpressaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -10975,9 +10511,9 @@ namespace Conductor.Pier.Api
         /// <param name="idPessoa">C\u00F3digo de identifica\u00E7\u00E3o da pessoa (id)</param>
         /// <param name="idTipoPlastico">C\u00F3digo de identifica\u00E7\u00E3o do TipoPlastico (id) (optional)</param>
         /// <returns>Task of CartaoImpressaoResponse</returns>
-        public async System.Threading.Tasks.Task<CartaoImpressaoResponse> GerarCartaoAsync (long? id, long? idPessoa, long? idTipoPlastico = null)
+        public async System.Threading.Tasks.Task<CartaoImpressaoResponse> GerarCartaoDaPessoaAsync (long? id, long? idPessoa, long? idTipoPlastico = null)
         {
-             ApiResponse<CartaoImpressaoResponse> localVarResponse = await GerarCartaoAsyncWithHttpInfo(id, idPessoa, idTipoPlastico);
+             ApiResponse<CartaoImpressaoResponse> localVarResponse = await GerarCartaoDaPessoaAsyncWithHttpInfo(id, idPessoa, idTipoPlastico);
              return localVarResponse.Data;
 
         }
@@ -10990,12 +10526,12 @@ namespace Conductor.Pier.Api
         /// <param name="idPessoa">C\u00F3digo de identifica\u00E7\u00E3o da pessoa (id)</param>
         /// <param name="idTipoPlastico">C\u00F3digo de identifica\u00E7\u00E3o do TipoPlastico (id) (optional)</param>
         /// <returns>Task of ApiResponse (CartaoImpressaoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CartaoImpressaoResponse>> GerarCartaoAsyncWithHttpInfo (long? id, long? idPessoa, long? idTipoPlastico = null)
+        public async System.Threading.Tasks.Task<ApiResponse<CartaoImpressaoResponse>> GerarCartaoDaPessoaAsyncWithHttpInfo (long? id, long? idPessoa, long? idTipoPlastico = null)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling GerarCartao");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling GerarCartaoDaPessoa");
             // verify the required parameter 'idPessoa' is set
-            if (idPessoa == null) throw new ApiException(400, "Missing required parameter 'idPessoa' when calling GerarCartao");
+            if (idPessoa == null) throw new ApiException(400, "Missing required parameter 'idPessoa' when calling GerarCartaoDaPessoa");
             
     
             var localVarPath = "/api/contas/{id}/pessoas/{id_pessoa}/gerar-cartao";
@@ -11043,9 +10579,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GerarCartao: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GerarCartaoDaPessoa: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GerarCartao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GerarCartaoDaPessoa: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<CartaoImpressaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -11060,9 +10596,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param> 
         /// <param name="cartaoEmbossingRequest">cartaoEmbossingRequest</param> 
         /// <returns>CartaoEmbossingResponse</returns>
-        public CartaoEmbossingResponse GerarCartaoEmbossing (long? id, CartaoEmbossingRequest cartaoEmbossingRequest)
+        public CartaoEmbossingResponse GerarCartaoGrafica (long? id, CartaoEmbossingRequest cartaoEmbossingRequest)
         {
-             ApiResponse<CartaoEmbossingResponse> localVarResponse = GerarCartaoEmbossingWithHttpInfo(id, cartaoEmbossingRequest);
+             ApiResponse<CartaoEmbossingResponse> localVarResponse = GerarCartaoGraficaWithHttpInfo(id, cartaoEmbossingRequest);
              return localVarResponse.Data;
         }
 
@@ -11073,16 +10609,16 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param> 
         /// <param name="cartaoEmbossingRequest">cartaoEmbossingRequest</param> 
         /// <returns>ApiResponse of CartaoEmbossingResponse</returns>
-        public ApiResponse< CartaoEmbossingResponse > GerarCartaoEmbossingWithHttpInfo (long? id, CartaoEmbossingRequest cartaoEmbossingRequest)
+        public ApiResponse< CartaoEmbossingResponse > GerarCartaoGraficaWithHttpInfo (long? id, CartaoEmbossingRequest cartaoEmbossingRequest)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->GerarCartaoEmbossing");
+                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->GerarCartaoGrafica");
             
             // verify the required parameter 'cartaoEmbossingRequest' is set
             if (cartaoEmbossingRequest == null)
-                throw new ApiException(400, "Missing required parameter 'cartaoEmbossingRequest' when calling ContaApi->GerarCartaoEmbossing");
+                throw new ApiException(400, "Missing required parameter 'cartaoEmbossingRequest' when calling ContaApi->GerarCartaoGrafica");
             
     
             var localVarPath = "/api/contas/{id}/gerar-cartao-grafica";
@@ -11135,9 +10671,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GerarCartaoEmbossing: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GerarCartaoGrafica: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GerarCartaoEmbossing: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GerarCartaoGrafica: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<CartaoEmbossingResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -11153,9 +10689,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
         /// <param name="cartaoEmbossingRequest">cartaoEmbossingRequest</param>
         /// <returns>Task of CartaoEmbossingResponse</returns>
-        public async System.Threading.Tasks.Task<CartaoEmbossingResponse> GerarCartaoEmbossingAsync (long? id, CartaoEmbossingRequest cartaoEmbossingRequest)
+        public async System.Threading.Tasks.Task<CartaoEmbossingResponse> GerarCartaoGraficaAsync (long? id, CartaoEmbossingRequest cartaoEmbossingRequest)
         {
-             ApiResponse<CartaoEmbossingResponse> localVarResponse = await GerarCartaoEmbossingAsyncWithHttpInfo(id, cartaoEmbossingRequest);
+             ApiResponse<CartaoEmbossingResponse> localVarResponse = await GerarCartaoGraficaAsyncWithHttpInfo(id, cartaoEmbossingRequest);
              return localVarResponse.Data;
 
         }
@@ -11167,12 +10703,12 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
         /// <param name="cartaoEmbossingRequest">cartaoEmbossingRequest</param>
         /// <returns>Task of ApiResponse (CartaoEmbossingResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CartaoEmbossingResponse>> GerarCartaoEmbossingAsyncWithHttpInfo (long? id, CartaoEmbossingRequest cartaoEmbossingRequest)
+        public async System.Threading.Tasks.Task<ApiResponse<CartaoEmbossingResponse>> GerarCartaoGraficaAsyncWithHttpInfo (long? id, CartaoEmbossingRequest cartaoEmbossingRequest)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling GerarCartaoEmbossing");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling GerarCartaoGrafica");
             // verify the required parameter 'cartaoEmbossingRequest' is set
-            if (cartaoEmbossingRequest == null) throw new ApiException(400, "Missing required parameter 'cartaoEmbossingRequest' when calling GerarCartaoEmbossing");
+            if (cartaoEmbossingRequest == null) throw new ApiException(400, "Missing required parameter 'cartaoEmbossingRequest' when calling GerarCartaoGrafica");
             
     
             var localVarPath = "/api/contas/{id}/gerar-cartao-grafica";
@@ -11225,9 +10761,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GerarCartaoEmbossing: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GerarCartaoGrafica: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GerarCartaoEmbossing: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GerarCartaoGrafica: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<CartaoEmbossingResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -11564,6 +11100,182 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
+        /// Listar uma tarifa de d\u00E9bito para uma conta Este recurso permite listar as tarifas de d\u00E9bito de uma conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="page">P\u00E1gina (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <returns>PageContaDebitoTarifaResponse</returns>
+        public PageContaDebitoTarifaResponse ListarContaDebitoTarifa (long? id, List<string> sort = null, int? page = null, int? limit = null)
+        {
+             ApiResponse<PageContaDebitoTarifaResponse> localVarResponse = ListarContaDebitoTarifaWithHttpInfo(id, sort, page, limit);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Listar uma tarifa de d\u00E9bito para uma conta Este recurso permite listar as tarifas de d\u00E9bito de uma conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="page">P\u00E1gina (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <returns>ApiResponse of PageContaDebitoTarifaResponse</returns>
+        public ApiResponse< PageContaDebitoTarifaResponse > ListarContaDebitoTarifaWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->ListarContaDebitoTarifa");
+            
+    
+            var localVarPath = "/api/contas/{id}/tarifas/debitos";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarContaDebitoTarifa: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarContaDebitoTarifa: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<PageContaDebitoTarifaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageContaDebitoTarifaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageContaDebitoTarifaResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Listar uma tarifa de d\u00E9bito para uma conta Este recurso permite listar as tarifas de d\u00E9bito de uma conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <returns>Task of PageContaDebitoTarifaResponse</returns>
+        public async System.Threading.Tasks.Task<PageContaDebitoTarifaResponse> ListarContaDebitoTarifaAsync (long? id, List<string> sort = null, int? page = null, int? limit = null)
+        {
+             ApiResponse<PageContaDebitoTarifaResponse> localVarResponse = await ListarContaDebitoTarifaAsyncWithHttpInfo(id, sort, page, limit);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Listar uma tarifa de d\u00E9bito para uma conta Este recurso permite listar as tarifas de d\u00E9bito de uma conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <returns>Task of ApiResponse (PageContaDebitoTarifaResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PageContaDebitoTarifaResponse>> ListarContaDebitoTarifaAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ListarContaDebitoTarifa");
+            
+    
+            var localVarPath = "/api/contas/{id}/tarifas/debitos";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarContaDebitoTarifa: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarContaDebitoTarifa: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PageContaDebitoTarifaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageContaDebitoTarifaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageContaDebitoTarifaResponse)));
+            
+        }
+        
+        /// <summary>
         /// Lista contas existentes na base de dados do Emissor Este recurso permite listar contas existentes na base de dados do Emissor
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
@@ -11581,9 +11293,9 @@ namespace Conductor.Pier.Api
         /// <param name="dataUltimaAlteracaoVencimento">Apresenta a data da ultima altera\u00E7\u00E3o de vencimento (optional)</param> 
         /// <param name="funcaoAtiva"> (optional)</param> 
         /// <returns>PageContaResponse</returns>
-        public PageContaResponse Listar (List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, string dataStatusConta = null, string dataCadastro = null, string dataUltimaAlteracaoVencimento = null, string funcaoAtiva = null)
+        public PageContaResponse ListarContas (List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, string dataStatusConta = null, string dataCadastro = null, string dataUltimaAlteracaoVencimento = null, string funcaoAtiva = null)
         {
-             ApiResponse<PageContaResponse> localVarResponse = ListarWithHttpInfo(sort, page, limit, idProduto, idOrigemComercial, idPessoa, idStatusConta, diaVencimento, melhorDiaCompra, dataStatusConta, dataCadastro, dataUltimaAlteracaoVencimento, funcaoAtiva);
+             ApiResponse<PageContaResponse> localVarResponse = ListarContasWithHttpInfo(sort, page, limit, idProduto, idOrigemComercial, idPessoa, idStatusConta, diaVencimento, melhorDiaCompra, dataStatusConta, dataCadastro, dataUltimaAlteracaoVencimento, funcaoAtiva);
              return localVarResponse.Data;
         }
 
@@ -11605,7 +11317,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataUltimaAlteracaoVencimento">Apresenta a data da ultima altera\u00E7\u00E3o de vencimento (optional)</param> 
         /// <param name="funcaoAtiva"> (optional)</param> 
         /// <returns>ApiResponse of PageContaResponse</returns>
-        public ApiResponse< PageContaResponse > ListarWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, string dataStatusConta = null, string dataCadastro = null, string dataUltimaAlteracaoVencimento = null, string funcaoAtiva = null)
+        public ApiResponse< PageContaResponse > ListarContasWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, string dataStatusConta = null, string dataCadastro = null, string dataUltimaAlteracaoVencimento = null, string funcaoAtiva = null)
         {
             
     
@@ -11664,9 +11376,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Listar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarContas: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Listar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarContas: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageContaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -11693,9 +11405,9 @@ namespace Conductor.Pier.Api
         /// <param name="dataUltimaAlteracaoVencimento">Apresenta a data da ultima altera\u00E7\u00E3o de vencimento (optional)</param>
         /// <param name="funcaoAtiva"> (optional)</param>
         /// <returns>Task of PageContaResponse</returns>
-        public async System.Threading.Tasks.Task<PageContaResponse> ListarAsync (List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, string dataStatusConta = null, string dataCadastro = null, string dataUltimaAlteracaoVencimento = null, string funcaoAtiva = null)
+        public async System.Threading.Tasks.Task<PageContaResponse> ListarContasAsync (List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, string dataStatusConta = null, string dataCadastro = null, string dataUltimaAlteracaoVencimento = null, string funcaoAtiva = null)
         {
-             ApiResponse<PageContaResponse> localVarResponse = await ListarAsyncWithHttpInfo(sort, page, limit, idProduto, idOrigemComercial, idPessoa, idStatusConta, diaVencimento, melhorDiaCompra, dataStatusConta, dataCadastro, dataUltimaAlteracaoVencimento, funcaoAtiva);
+             ApiResponse<PageContaResponse> localVarResponse = await ListarContasAsyncWithHttpInfo(sort, page, limit, idProduto, idOrigemComercial, idPessoa, idStatusConta, diaVencimento, melhorDiaCompra, dataStatusConta, dataCadastro, dataUltimaAlteracaoVencimento, funcaoAtiva);
              return localVarResponse.Data;
 
         }
@@ -11718,7 +11430,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataUltimaAlteracaoVencimento">Apresenta a data da ultima altera\u00E7\u00E3o de vencimento (optional)</param>
         /// <param name="funcaoAtiva"> (optional)</param>
         /// <returns>Task of ApiResponse (PageContaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageContaResponse>> ListarAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, string dataStatusConta = null, string dataCadastro = null, string dataUltimaAlteracaoVencimento = null, string funcaoAtiva = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageContaResponse>> ListarContasAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, string dataStatusConta = null, string dataCadastro = null, string dataUltimaAlteracaoVencimento = null, string funcaoAtiva = null)
         {
             
     
@@ -11777,9 +11489,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Listar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarContas: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Listar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarContas: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageContaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -11993,10 +11705,11 @@ namespace Conductor.Pier.Api
         /// <param name="numeroCelular">N\u00FAmero do celular (optional)</param> 
         /// <param name="nome">Nome do propriet\u00E1rio do celular (optional)</param> 
         /// <param name="ativo">Indicador de status do favorito (optional)</param> 
+        /// <param name="descricaoOperadora">Descri\u00E7\u00E3o da operadora (optional)</param> 
         /// <returns>PageRecargaCelularFavoritoResponse</returns>
-        public PageRecargaCelularFavoritoResponse ListarFavoritosRecargasCelular (long? id, List<string> sort = null, int? page = null, int? limit = null, string dddCelular = null, string numeroCelular = null, string nome = null, bool? ativo = null)
+        public PageRecargaCelularFavoritoResponse ListarFavoritosRecargasCelular (long? id, List<string> sort = null, int? page = null, int? limit = null, string dddCelular = null, string numeroCelular = null, string nome = null, bool? ativo = null, string descricaoOperadora = null)
         {
-             ApiResponse<PageRecargaCelularFavoritoResponse> localVarResponse = ListarFavoritosRecargasCelularWithHttpInfo(id, sort, page, limit, dddCelular, numeroCelular, nome, ativo);
+             ApiResponse<PageRecargaCelularFavoritoResponse> localVarResponse = ListarFavoritosRecargasCelularWithHttpInfo(id, sort, page, limit, dddCelular, numeroCelular, nome, ativo, descricaoOperadora);
              return localVarResponse.Data;
         }
 
@@ -12012,8 +11725,9 @@ namespace Conductor.Pier.Api
         /// <param name="numeroCelular">N\u00FAmero do celular (optional)</param> 
         /// <param name="nome">Nome do propriet\u00E1rio do celular (optional)</param> 
         /// <param name="ativo">Indicador de status do favorito (optional)</param> 
+        /// <param name="descricaoOperadora">Descri\u00E7\u00E3o da operadora (optional)</param> 
         /// <returns>ApiResponse of PageRecargaCelularFavoritoResponse</returns>
-        public ApiResponse< PageRecargaCelularFavoritoResponse > ListarFavoritosRecargasCelularWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, string dddCelular = null, string numeroCelular = null, string nome = null, bool? ativo = null)
+        public ApiResponse< PageRecargaCelularFavoritoResponse > ListarFavoritosRecargasCelularWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, string dddCelular = null, string numeroCelular = null, string nome = null, bool? ativo = null, string descricaoOperadora = null)
         {
             
             // verify the required parameter 'id' is set
@@ -12056,6 +11770,7 @@ namespace Conductor.Pier.Api
             if (numeroCelular != null) localVarQueryParams.Add("numeroCelular", Configuration.ApiClient.ParameterToString(numeroCelular)); // query parameter
             if (nome != null) localVarQueryParams.Add("nome", Configuration.ApiClient.ParameterToString(nome)); // query parameter
             if (ativo != null) localVarQueryParams.Add("ativo", Configuration.ApiClient.ParameterToString(ativo)); // query parameter
+            if (descricaoOperadora != null) localVarQueryParams.Add("descricaoOperadora", Configuration.ApiClient.ParameterToString(descricaoOperadora)); // query parameter
             
             
             
@@ -12094,10 +11809,11 @@ namespace Conductor.Pier.Api
         /// <param name="numeroCelular">N\u00FAmero do celular (optional)</param>
         /// <param name="nome">Nome do propriet\u00E1rio do celular (optional)</param>
         /// <param name="ativo">Indicador de status do favorito (optional)</param>
+        /// <param name="descricaoOperadora">Descri\u00E7\u00E3o da operadora (optional)</param>
         /// <returns>Task of PageRecargaCelularFavoritoResponse</returns>
-        public async System.Threading.Tasks.Task<PageRecargaCelularFavoritoResponse> ListarFavoritosRecargasCelularAsync (long? id, List<string> sort = null, int? page = null, int? limit = null, string dddCelular = null, string numeroCelular = null, string nome = null, bool? ativo = null)
+        public async System.Threading.Tasks.Task<PageRecargaCelularFavoritoResponse> ListarFavoritosRecargasCelularAsync (long? id, List<string> sort = null, int? page = null, int? limit = null, string dddCelular = null, string numeroCelular = null, string nome = null, bool? ativo = null, string descricaoOperadora = null)
         {
-             ApiResponse<PageRecargaCelularFavoritoResponse> localVarResponse = await ListarFavoritosRecargasCelularAsyncWithHttpInfo(id, sort, page, limit, dddCelular, numeroCelular, nome, ativo);
+             ApiResponse<PageRecargaCelularFavoritoResponse> localVarResponse = await ListarFavoritosRecargasCelularAsyncWithHttpInfo(id, sort, page, limit, dddCelular, numeroCelular, nome, ativo, descricaoOperadora);
              return localVarResponse.Data;
 
         }
@@ -12114,8 +11830,9 @@ namespace Conductor.Pier.Api
         /// <param name="numeroCelular">N\u00FAmero do celular (optional)</param>
         /// <param name="nome">Nome do propriet\u00E1rio do celular (optional)</param>
         /// <param name="ativo">Indicador de status do favorito (optional)</param>
+        /// <param name="descricaoOperadora">Descri\u00E7\u00E3o da operadora (optional)</param>
         /// <returns>Task of ApiResponse (PageRecargaCelularFavoritoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageRecargaCelularFavoritoResponse>> ListarFavoritosRecargasCelularAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, string dddCelular = null, string numeroCelular = null, string nome = null, bool? ativo = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageRecargaCelularFavoritoResponse>> ListarFavoritosRecargasCelularAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, string dddCelular = null, string numeroCelular = null, string nome = null, bool? ativo = null, string descricaoOperadora = null)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ListarFavoritosRecargasCelular");
@@ -12156,6 +11873,7 @@ namespace Conductor.Pier.Api
             if (numeroCelular != null) localVarQueryParams.Add("numeroCelular", Configuration.ApiClient.ParameterToString(numeroCelular)); // query parameter
             if (nome != null) localVarQueryParams.Add("nome", Configuration.ApiClient.ParameterToString(nome)); // query parameter
             if (ativo != null) localVarQueryParams.Add("ativo", Configuration.ApiClient.ParameterToString(ativo)); // query parameter
+            if (descricaoOperadora != null) localVarQueryParams.Add("descricaoOperadora", Configuration.ApiClient.ParameterToString(descricaoOperadora)); // query parameter
             
             
             
@@ -12178,6 +11896,152 @@ namespace Conductor.Pier.Api
             return new ApiResponse<PageRecargaCelularFavoritoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (PageRecargaCelularFavoritoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageRecargaCelularFavoritoResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Lista os tipos de fun\u00E7\u00F5es para contas do Emissor Este recurso permite listar os tipos de fun\u00E7\u00F5es para as contas do Emissor
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>string</returns>
+        public string ListarFuncoesContas ()
+        {
+             ApiResponse<string> localVarResponse = ListarFuncoesContasWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Lista os tipos de fun\u00E7\u00F5es para contas do Emissor Este recurso permite listar os tipos de fun\u00E7\u00F5es para as contas do Emissor
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of string</returns>
+        public ApiResponse< string > ListarFuncoesContasWithHttpInfo ()
+        {
+            
+    
+            var localVarPath = "/api/contas/tipos-funcoes";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarFuncoesContas: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarFuncoesContas: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+            
+        }
+
+        
+        /// <summary>
+        /// Lista os tipos de fun\u00E7\u00F5es para contas do Emissor Este recurso permite listar os tipos de fun\u00E7\u00F5es para as contas do Emissor
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of string</returns>
+        public async System.Threading.Tasks.Task<string> ListarFuncoesContasAsync ()
+        {
+             ApiResponse<string> localVarResponse = await ListarFuncoesContasAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Lista os tipos de fun\u00E7\u00F5es para contas do Emissor Este recurso permite listar os tipos de fun\u00E7\u00F5es para as contas do Emissor
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (string)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<string>> ListarFuncoesContasAsyncWithHttpInfo ()
+        {
+            
+    
+            var localVarPath = "/api/contas/tipos-funcoes";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarFuncoesContas: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarFuncoesContas: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
         }
         
@@ -12542,9 +12406,9 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00E1gina (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
         /// <returns>PageHistoricoAtrasoFaturaResponse</returns>
-        public PageHistoricoAtrasoFaturaResponse ListarHistoricoAtrasosFaturas (long? id, List<string> sort = null, int? page = null, int? limit = null)
+        public PageHistoricoAtrasoFaturaResponse ListarHistoricoFaturasAtrasadas (long? id, List<string> sort = null, int? page = null, int? limit = null)
         {
-             ApiResponse<PageHistoricoAtrasoFaturaResponse> localVarResponse = ListarHistoricoAtrasosFaturasWithHttpInfo(id, sort, page, limit);
+             ApiResponse<PageHistoricoAtrasoFaturaResponse> localVarResponse = ListarHistoricoFaturasAtrasadasWithHttpInfo(id, sort, page, limit);
              return localVarResponse.Data;
         }
 
@@ -12557,12 +12421,12 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00E1gina (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
         /// <returns>ApiResponse of PageHistoricoAtrasoFaturaResponse</returns>
-        public ApiResponse< PageHistoricoAtrasoFaturaResponse > ListarHistoricoAtrasosFaturasWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null)
+        public ApiResponse< PageHistoricoAtrasoFaturaResponse > ListarHistoricoFaturasAtrasadasWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->ListarHistoricoAtrasosFaturas");
+                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->ListarHistoricoFaturasAtrasadas");
             
     
             var localVarPath = "/api/contas/{id}/historicos-faturas-atrasos";
@@ -12611,9 +12475,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarHistoricoAtrasosFaturas: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarHistoricoFaturasAtrasadas: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarHistoricoAtrasosFaturas: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarHistoricoFaturasAtrasadas: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageHistoricoAtrasoFaturaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -12631,9 +12495,9 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00E1gina (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
         /// <returns>Task of PageHistoricoAtrasoFaturaResponse</returns>
-        public async System.Threading.Tasks.Task<PageHistoricoAtrasoFaturaResponse> ListarHistoricoAtrasosFaturasAsync (long? id, List<string> sort = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<PageHistoricoAtrasoFaturaResponse> ListarHistoricoFaturasAtrasadasAsync (long? id, List<string> sort = null, int? page = null, int? limit = null)
         {
-             ApiResponse<PageHistoricoAtrasoFaturaResponse> localVarResponse = await ListarHistoricoAtrasosFaturasAsyncWithHttpInfo(id, sort, page, limit);
+             ApiResponse<PageHistoricoAtrasoFaturaResponse> localVarResponse = await ListarHistoricoFaturasAtrasadasAsyncWithHttpInfo(id, sort, page, limit);
              return localVarResponse.Data;
 
         }
@@ -12647,10 +12511,10 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00E1gina (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
         /// <returns>Task of ApiResponse (PageHistoricoAtrasoFaturaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageHistoricoAtrasoFaturaResponse>> ListarHistoricoAtrasosFaturasAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageHistoricoAtrasoFaturaResponse>> ListarHistoricoFaturasAtrasadasAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ListarHistoricoAtrasosFaturas");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ListarHistoricoFaturasAtrasadas");
             
     
             var localVarPath = "/api/contas/{id}/historicos-faturas-atrasos";
@@ -12699,407 +12563,13 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarHistoricoAtrasosFaturas: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarHistoricoFaturasAtrasadas: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarHistoricoAtrasosFaturas: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarHistoricoFaturasAtrasadas: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageHistoricoAtrasoFaturaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (PageHistoricoAtrasoFaturaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageHistoricoAtrasoFaturaResponse)));
-            
-        }
-        
-        /// <summary>
-        /// Lista as transa\u00E7\u00F5es n\u00E3o processadas da conta Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es n\u00E3o processadas da Conta.
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param> 
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
-        /// <param name="page">P\u00E1gina (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
-        /// <param name="dataInicio">Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Par\u00E2mentro Ignorado se dataFim n\u00E3o for definida) (optional)</param> 
-        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Par\u00E2mentro Ignorado se dataInicio n\u00E3o for definida) (optional)</param> 
-        /// <returns>PageTransacaoNaoProcessadaResponse</returns>
-        public PageTransacaoNaoProcessadaResponse ListarNaoProcessadas (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataInicio = null, string dataFim = null)
-        {
-             ApiResponse<PageTransacaoNaoProcessadaResponse> localVarResponse = ListarNaoProcessadasWithHttpInfo(id, sort, page, limit, dataInicio, dataFim);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Lista as transa\u00E7\u00F5es n\u00E3o processadas da conta Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es n\u00E3o processadas da Conta.
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param> 
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
-        /// <param name="page">P\u00E1gina (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
-        /// <param name="dataInicio">Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Par\u00E2mentro Ignorado se dataFim n\u00E3o for definida) (optional)</param> 
-        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Par\u00E2mentro Ignorado se dataInicio n\u00E3o for definida) (optional)</param> 
-        /// <returns>ApiResponse of PageTransacaoNaoProcessadaResponse</returns>
-        public ApiResponse< PageTransacaoNaoProcessadaResponse > ListarNaoProcessadasWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataInicio = null, string dataFim = null)
-        {
-            
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->ListarNaoProcessadas");
-            
-    
-            var localVarPath = "/api/contas/{id}/transacoes/listar-nao-processadas";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            
-            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
-            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
-            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
-            if (dataInicio != null) localVarQueryParams.Add("dataInicio", Configuration.ApiClient.ParameterToString(dataInicio)); // query parameter
-            if (dataFim != null) localVarQueryParams.Add("dataFim", Configuration.ApiClient.ParameterToString(dataFim)); // query parameter
-            
-            
-            
-            
-
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarNaoProcessadas: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarNaoProcessadas: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<PageTransacaoNaoProcessadaResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PageTransacaoNaoProcessadaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageTransacaoNaoProcessadaResponse)));
-            
-        }
-
-        
-        /// <summary>
-        /// Lista as transa\u00E7\u00F5es n\u00E3o processadas da conta Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es n\u00E3o processadas da Conta.
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="dataInicio">Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Par\u00E2mentro Ignorado se dataFim n\u00E3o for definida) (optional)</param>
-        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Par\u00E2mentro Ignorado se dataInicio n\u00E3o for definida) (optional)</param>
-        /// <returns>Task of PageTransacaoNaoProcessadaResponse</returns>
-        public async System.Threading.Tasks.Task<PageTransacaoNaoProcessadaResponse> ListarNaoProcessadasAsync (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataInicio = null, string dataFim = null)
-        {
-             ApiResponse<PageTransacaoNaoProcessadaResponse> localVarResponse = await ListarNaoProcessadasAsyncWithHttpInfo(id, sort, page, limit, dataInicio, dataFim);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Lista as transa\u00E7\u00F5es n\u00E3o processadas da conta Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es n\u00E3o processadas da Conta.
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="dataInicio">Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Par\u00E2mentro Ignorado se dataFim n\u00E3o for definida) (optional)</param>
-        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Par\u00E2mentro Ignorado se dataInicio n\u00E3o for definida) (optional)</param>
-        /// <returns>Task of ApiResponse (PageTransacaoNaoProcessadaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageTransacaoNaoProcessadaResponse>> ListarNaoProcessadasAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataInicio = null, string dataFim = null)
-        {
-            // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ListarNaoProcessadas");
-            
-    
-            var localVarPath = "/api/contas/{id}/transacoes/listar-nao-processadas";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            
-            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
-            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
-            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
-            if (dataInicio != null) localVarQueryParams.Add("dataInicio", Configuration.ApiClient.ParameterToString(dataInicio)); // query parameter
-            if (dataFim != null) localVarQueryParams.Add("dataFim", Configuration.ApiClient.ParameterToString(dataFim)); // query parameter
-            
-            
-            
-            
-
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarNaoProcessadas: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarNaoProcessadas: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<PageTransacaoNaoProcessadaResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PageTransacaoNaoProcessadaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageTransacaoNaoProcessadaResponse)));
-            
-        }
-        
-        /// <summary>
-        /// Lista as transa\u00E7\u00F5es processadas da conta Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es processadas da Conta
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param> 
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
-        /// <param name="page">P\u00E1gina (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
-        /// <param name="dataVencimento">Data de vencimento do extrato no formato yyyy-MM-dd (optional)</param> 
-        /// <param name="dataInicio">Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param> 
-        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param> 
-        /// <param name="idTipoTransacao">transacoes_processadas_request_tipo_transacao (optional)</param> 
-        /// <param name="recuperaEncargos">Adiciona as transa\u00E7\u00F5es de encargos na consulta (optional)</param> 
-        /// <returns>PageTransacoesCorrentesResponse</returns>
-        public PageTransacoesCorrentesResponse ListarProcessadas (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null, long? idTipoTransacao = null, int? recuperaEncargos = null)
-        {
-             ApiResponse<PageTransacoesCorrentesResponse> localVarResponse = ListarProcessadasWithHttpInfo(id, sort, page, limit, dataVencimento, dataInicio, dataFim, idTipoTransacao, recuperaEncargos);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Lista as transa\u00E7\u00F5es processadas da conta Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es processadas da Conta
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param> 
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
-        /// <param name="page">P\u00E1gina (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
-        /// <param name="dataVencimento">Data de vencimento do extrato no formato yyyy-MM-dd (optional)</param> 
-        /// <param name="dataInicio">Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param> 
-        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param> 
-        /// <param name="idTipoTransacao">transacoes_processadas_request_tipo_transacao (optional)</param> 
-        /// <param name="recuperaEncargos">Adiciona as transa\u00E7\u00F5es de encargos na consulta (optional)</param> 
-        /// <returns>ApiResponse of PageTransacoesCorrentesResponse</returns>
-        public ApiResponse< PageTransacoesCorrentesResponse > ListarProcessadasWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null, long? idTipoTransacao = null, int? recuperaEncargos = null)
-        {
-            
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->ListarProcessadas");
-            
-    
-            var localVarPath = "/api/contas/{id}/transacoes/listar-processadas";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            
-            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
-            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
-            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
-            if (dataVencimento != null) localVarQueryParams.Add("dataVencimento", Configuration.ApiClient.ParameterToString(dataVencimento)); // query parameter
-            if (dataInicio != null) localVarQueryParams.Add("dataInicio", Configuration.ApiClient.ParameterToString(dataInicio)); // query parameter
-            if (dataFim != null) localVarQueryParams.Add("dataFim", Configuration.ApiClient.ParameterToString(dataFim)); // query parameter
-            if (idTipoTransacao != null) localVarQueryParams.Add("idTipoTransacao", Configuration.ApiClient.ParameterToString(idTipoTransacao)); // query parameter
-            if (recuperaEncargos != null) localVarQueryParams.Add("recuperaEncargos", Configuration.ApiClient.ParameterToString(recuperaEncargos)); // query parameter
-            
-            
-            
-            
-
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarProcessadas: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarProcessadas: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<PageTransacoesCorrentesResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PageTransacoesCorrentesResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageTransacoesCorrentesResponse)));
-            
-        }
-
-        
-        /// <summary>
-        /// Lista as transa\u00E7\u00F5es processadas da conta Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es processadas da Conta
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="dataVencimento">Data de vencimento do extrato no formato yyyy-MM-dd (optional)</param>
-        /// <param name="dataInicio">Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param>
-        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param>
-        /// <param name="idTipoTransacao">transacoes_processadas_request_tipo_transacao (optional)</param>
-        /// <param name="recuperaEncargos">Adiciona as transa\u00E7\u00F5es de encargos na consulta (optional)</param>
-        /// <returns>Task of PageTransacoesCorrentesResponse</returns>
-        public async System.Threading.Tasks.Task<PageTransacoesCorrentesResponse> ListarProcessadasAsync (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null, long? idTipoTransacao = null, int? recuperaEncargos = null)
-        {
-             ApiResponse<PageTransacoesCorrentesResponse> localVarResponse = await ListarProcessadasAsyncWithHttpInfo(id, sort, page, limit, dataVencimento, dataInicio, dataFim, idTipoTransacao, recuperaEncargos);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Lista as transa\u00E7\u00F5es processadas da conta Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es processadas da Conta
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="dataVencimento">Data de vencimento do extrato no formato yyyy-MM-dd (optional)</param>
-        /// <param name="dataInicio">Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param>
-        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param>
-        /// <param name="idTipoTransacao">transacoes_processadas_request_tipo_transacao (optional)</param>
-        /// <param name="recuperaEncargos">Adiciona as transa\u00E7\u00F5es de encargos na consulta (optional)</param>
-        /// <returns>Task of ApiResponse (PageTransacoesCorrentesResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageTransacoesCorrentesResponse>> ListarProcessadasAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null, long? idTipoTransacao = null, int? recuperaEncargos = null)
-        {
-            // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ListarProcessadas");
-            
-    
-            var localVarPath = "/api/contas/{id}/transacoes/listar-processadas";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            
-            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
-            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
-            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
-            if (dataVencimento != null) localVarQueryParams.Add("dataVencimento", Configuration.ApiClient.ParameterToString(dataVencimento)); // query parameter
-            if (dataInicio != null) localVarQueryParams.Add("dataInicio", Configuration.ApiClient.ParameterToString(dataInicio)); // query parameter
-            if (dataFim != null) localVarQueryParams.Add("dataFim", Configuration.ApiClient.ParameterToString(dataFim)); // query parameter
-            if (idTipoTransacao != null) localVarQueryParams.Add("idTipoTransacao", Configuration.ApiClient.ParameterToString(idTipoTransacao)); // query parameter
-            if (recuperaEncargos != null) localVarQueryParams.Add("recuperaEncargos", Configuration.ApiClient.ParameterToString(recuperaEncargos)); // query parameter
-            
-            
-            
-            
-
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarProcessadas: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarProcessadas: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<PageTransacoesCorrentesResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PageTransacoesCorrentesResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageTransacoesCorrentesResponse)));
             
         }
         
@@ -13722,6 +13192,824 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
+        /// Lista as transa\u00E7\u00F5es n\u00E3o processadas e processadas da conta Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es n\u00E3o processadas e processadas da Conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="status">Status da transa\u00E7\u00E3o (optional)</param> 
+        /// <param name="page">P\u00E1gina (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <param name="dataVencimento">Data de vencimento do extrato no formato yyyy-MM-dd (optional)</param> 
+        /// <param name="dataInicio">Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param> 
+        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param> 
+        /// <param name="idTipoTransacao">transacoes_processadas_nao_processadas_request_tipo_transacao (optional)</param> 
+        /// <param name="flagCredito">Flag que indica se a transa\u00E7\u00E3o \u00E9 cr\u00E9dito (optional)</param> 
+        /// <param name="flagFaturado">Flag que indica se a transa\u00E7\u00E3o foi faturada (optional)</param> 
+        /// <param name="flagProcessada">Flag que indica se a transa\u00E7\u00E3o foi processada (optional)</param> 
+        /// <param name="plano">Plano da transa\u00E7\u00E3o (optional)</param> 
+        /// <param name="codigoMCC">C\u00F3digo MCC da transa\u00E7\u00E3o (optional)</param> 
+        /// <param name="grupoMCC">Grupo MCC da transa\u00E7\u00E3o (optional)</param> 
+        /// <returns>PageTransacaoProcessadaNaoProcessadaResponse</returns>
+        public PageTransacaoProcessadaNaoProcessadaResponse ListarTransacoesConta (long? id, List<string> sort = null, List<int?> status = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null, long? idTipoTransacao = null, bool? flagCredito = null, bool? flagFaturado = null, bool? flagProcessada = null, int? plano = null, long? codigoMCC = null, long? grupoMCC = null)
+        {
+             ApiResponse<PageTransacaoProcessadaNaoProcessadaResponse> localVarResponse = ListarTransacoesContaWithHttpInfo(id, sort, status, page, limit, dataVencimento, dataInicio, dataFim, idTipoTransacao, flagCredito, flagFaturado, flagProcessada, plano, codigoMCC, grupoMCC);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Lista as transa\u00E7\u00F5es n\u00E3o processadas e processadas da conta Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es n\u00E3o processadas e processadas da Conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="status">Status da transa\u00E7\u00E3o (optional)</param> 
+        /// <param name="page">P\u00E1gina (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <param name="dataVencimento">Data de vencimento do extrato no formato yyyy-MM-dd (optional)</param> 
+        /// <param name="dataInicio">Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param> 
+        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param> 
+        /// <param name="idTipoTransacao">transacoes_processadas_nao_processadas_request_tipo_transacao (optional)</param> 
+        /// <param name="flagCredito">Flag que indica se a transa\u00E7\u00E3o \u00E9 cr\u00E9dito (optional)</param> 
+        /// <param name="flagFaturado">Flag que indica se a transa\u00E7\u00E3o foi faturada (optional)</param> 
+        /// <param name="flagProcessada">Flag que indica se a transa\u00E7\u00E3o foi processada (optional)</param> 
+        /// <param name="plano">Plano da transa\u00E7\u00E3o (optional)</param> 
+        /// <param name="codigoMCC">C\u00F3digo MCC da transa\u00E7\u00E3o (optional)</param> 
+        /// <param name="grupoMCC">Grupo MCC da transa\u00E7\u00E3o (optional)</param> 
+        /// <returns>ApiResponse of PageTransacaoProcessadaNaoProcessadaResponse</returns>
+        public ApiResponse< PageTransacaoProcessadaNaoProcessadaResponse > ListarTransacoesContaWithHttpInfo (long? id, List<string> sort = null, List<int?> status = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null, long? idTipoTransacao = null, bool? flagCredito = null, bool? flagFaturado = null, bool? flagProcessada = null, int? plano = null, long? codigoMCC = null, long? grupoMCC = null)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->ListarTransacoesConta");
+            
+    
+            var localVarPath = "/api/contas/{id}/transacoes";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (status != null) localVarQueryParams.Add("status", Configuration.ApiClient.ParameterToString(status)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (dataVencimento != null) localVarQueryParams.Add("dataVencimento", Configuration.ApiClient.ParameterToString(dataVencimento)); // query parameter
+            if (dataInicio != null) localVarQueryParams.Add("dataInicio", Configuration.ApiClient.ParameterToString(dataInicio)); // query parameter
+            if (dataFim != null) localVarQueryParams.Add("dataFim", Configuration.ApiClient.ParameterToString(dataFim)); // query parameter
+            if (idTipoTransacao != null) localVarQueryParams.Add("idTipoTransacao", Configuration.ApiClient.ParameterToString(idTipoTransacao)); // query parameter
+            if (flagCredito != null) localVarQueryParams.Add("flagCredito", Configuration.ApiClient.ParameterToString(flagCredito)); // query parameter
+            if (flagFaturado != null) localVarQueryParams.Add("flagFaturado", Configuration.ApiClient.ParameterToString(flagFaturado)); // query parameter
+            if (flagProcessada != null) localVarQueryParams.Add("flagProcessada", Configuration.ApiClient.ParameterToString(flagProcessada)); // query parameter
+            if (plano != null) localVarQueryParams.Add("plano", Configuration.ApiClient.ParameterToString(plano)); // query parameter
+            if (codigoMCC != null) localVarQueryParams.Add("codigoMCC", Configuration.ApiClient.ParameterToString(codigoMCC)); // query parameter
+            if (grupoMCC != null) localVarQueryParams.Add("grupoMCC", Configuration.ApiClient.ParameterToString(grupoMCC)); // query parameter
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarTransacoesConta: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarTransacoesConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<PageTransacaoProcessadaNaoProcessadaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageTransacaoProcessadaNaoProcessadaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageTransacaoProcessadaNaoProcessadaResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Lista as transa\u00E7\u00F5es n\u00E3o processadas e processadas da conta Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es n\u00E3o processadas e processadas da Conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="status">Status da transa\u00E7\u00E3o (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="dataVencimento">Data de vencimento do extrato no formato yyyy-MM-dd (optional)</param>
+        /// <param name="dataInicio">Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param>
+        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param>
+        /// <param name="idTipoTransacao">transacoes_processadas_nao_processadas_request_tipo_transacao (optional)</param>
+        /// <param name="flagCredito">Flag que indica se a transa\u00E7\u00E3o \u00E9 cr\u00E9dito (optional)</param>
+        /// <param name="flagFaturado">Flag que indica se a transa\u00E7\u00E3o foi faturada (optional)</param>
+        /// <param name="flagProcessada">Flag que indica se a transa\u00E7\u00E3o foi processada (optional)</param>
+        /// <param name="plano">Plano da transa\u00E7\u00E3o (optional)</param>
+        /// <param name="codigoMCC">C\u00F3digo MCC da transa\u00E7\u00E3o (optional)</param>
+        /// <param name="grupoMCC">Grupo MCC da transa\u00E7\u00E3o (optional)</param>
+        /// <returns>Task of PageTransacaoProcessadaNaoProcessadaResponse</returns>
+        public async System.Threading.Tasks.Task<PageTransacaoProcessadaNaoProcessadaResponse> ListarTransacoesContaAsync (long? id, List<string> sort = null, List<int?> status = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null, long? idTipoTransacao = null, bool? flagCredito = null, bool? flagFaturado = null, bool? flagProcessada = null, int? plano = null, long? codigoMCC = null, long? grupoMCC = null)
+        {
+             ApiResponse<PageTransacaoProcessadaNaoProcessadaResponse> localVarResponse = await ListarTransacoesContaAsyncWithHttpInfo(id, sort, status, page, limit, dataVencimento, dataInicio, dataFim, idTipoTransacao, flagCredito, flagFaturado, flagProcessada, plano, codigoMCC, grupoMCC);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Lista as transa\u00E7\u00F5es n\u00E3o processadas e processadas da conta Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es n\u00E3o processadas e processadas da Conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="status">Status da transa\u00E7\u00E3o (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="dataVencimento">Data de vencimento do extrato no formato yyyy-MM-dd (optional)</param>
+        /// <param name="dataInicio">Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param>
+        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param>
+        /// <param name="idTipoTransacao">transacoes_processadas_nao_processadas_request_tipo_transacao (optional)</param>
+        /// <param name="flagCredito">Flag que indica se a transa\u00E7\u00E3o \u00E9 cr\u00E9dito (optional)</param>
+        /// <param name="flagFaturado">Flag que indica se a transa\u00E7\u00E3o foi faturada (optional)</param>
+        /// <param name="flagProcessada">Flag que indica se a transa\u00E7\u00E3o foi processada (optional)</param>
+        /// <param name="plano">Plano da transa\u00E7\u00E3o (optional)</param>
+        /// <param name="codigoMCC">C\u00F3digo MCC da transa\u00E7\u00E3o (optional)</param>
+        /// <param name="grupoMCC">Grupo MCC da transa\u00E7\u00E3o (optional)</param>
+        /// <returns>Task of ApiResponse (PageTransacaoProcessadaNaoProcessadaResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PageTransacaoProcessadaNaoProcessadaResponse>> ListarTransacoesContaAsyncWithHttpInfo (long? id, List<string> sort = null, List<int?> status = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null, long? idTipoTransacao = null, bool? flagCredito = null, bool? flagFaturado = null, bool? flagProcessada = null, int? plano = null, long? codigoMCC = null, long? grupoMCC = null)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ListarTransacoesConta");
+            
+    
+            var localVarPath = "/api/contas/{id}/transacoes";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (status != null) localVarQueryParams.Add("status", Configuration.ApiClient.ParameterToString(status)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (dataVencimento != null) localVarQueryParams.Add("dataVencimento", Configuration.ApiClient.ParameterToString(dataVencimento)); // query parameter
+            if (dataInicio != null) localVarQueryParams.Add("dataInicio", Configuration.ApiClient.ParameterToString(dataInicio)); // query parameter
+            if (dataFim != null) localVarQueryParams.Add("dataFim", Configuration.ApiClient.ParameterToString(dataFim)); // query parameter
+            if (idTipoTransacao != null) localVarQueryParams.Add("idTipoTransacao", Configuration.ApiClient.ParameterToString(idTipoTransacao)); // query parameter
+            if (flagCredito != null) localVarQueryParams.Add("flagCredito", Configuration.ApiClient.ParameterToString(flagCredito)); // query parameter
+            if (flagFaturado != null) localVarQueryParams.Add("flagFaturado", Configuration.ApiClient.ParameterToString(flagFaturado)); // query parameter
+            if (flagProcessada != null) localVarQueryParams.Add("flagProcessada", Configuration.ApiClient.ParameterToString(flagProcessada)); // query parameter
+            if (plano != null) localVarQueryParams.Add("plano", Configuration.ApiClient.ParameterToString(plano)); // query parameter
+            if (codigoMCC != null) localVarQueryParams.Add("codigoMCC", Configuration.ApiClient.ParameterToString(codigoMCC)); // query parameter
+            if (grupoMCC != null) localVarQueryParams.Add("grupoMCC", Configuration.ApiClient.ParameterToString(grupoMCC)); // query parameter
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarTransacoesConta: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarTransacoesConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PageTransacaoProcessadaNaoProcessadaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageTransacaoProcessadaNaoProcessadaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageTransacaoProcessadaNaoProcessadaResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Lista as transa\u00E7\u00F5es n\u00E3o processadas da conta Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es n\u00E3o processadas da Conta.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="page">P\u00E1gina (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <param name="dataInicio">Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Par\u00E2mentro Ignorado se dataFim n\u00E3o for definida) (optional)</param> 
+        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Par\u00E2mentro Ignorado se dataInicio n\u00E3o for definida) (optional)</param> 
+        /// <returns>PageTransacaoNaoProcessadaResponse</returns>
+        public PageTransacaoNaoProcessadaResponse ListarTransacoesNaoProcessadasConta (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataInicio = null, string dataFim = null)
+        {
+             ApiResponse<PageTransacaoNaoProcessadaResponse> localVarResponse = ListarTransacoesNaoProcessadasContaWithHttpInfo(id, sort, page, limit, dataInicio, dataFim);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Lista as transa\u00E7\u00F5es n\u00E3o processadas da conta Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es n\u00E3o processadas da Conta.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="page">P\u00E1gina (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <param name="dataInicio">Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Par\u00E2mentro Ignorado se dataFim n\u00E3o for definida) (optional)</param> 
+        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Par\u00E2mentro Ignorado se dataInicio n\u00E3o for definida) (optional)</param> 
+        /// <returns>ApiResponse of PageTransacaoNaoProcessadaResponse</returns>
+        public ApiResponse< PageTransacaoNaoProcessadaResponse > ListarTransacoesNaoProcessadasContaWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataInicio = null, string dataFim = null)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->ListarTransacoesNaoProcessadasConta");
+            
+    
+            var localVarPath = "/api/contas/{id}/transacoes/listar-nao-processadas";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (dataInicio != null) localVarQueryParams.Add("dataInicio", Configuration.ApiClient.ParameterToString(dataInicio)); // query parameter
+            if (dataFim != null) localVarQueryParams.Add("dataFim", Configuration.ApiClient.ParameterToString(dataFim)); // query parameter
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarTransacoesNaoProcessadasConta: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarTransacoesNaoProcessadasConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<PageTransacaoNaoProcessadaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageTransacaoNaoProcessadaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageTransacaoNaoProcessadaResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Lista as transa\u00E7\u00F5es n\u00E3o processadas da conta Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es n\u00E3o processadas da Conta.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="dataInicio">Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Par\u00E2mentro Ignorado se dataFim n\u00E3o for definida) (optional)</param>
+        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Par\u00E2mentro Ignorado se dataInicio n\u00E3o for definida) (optional)</param>
+        /// <returns>Task of PageTransacaoNaoProcessadaResponse</returns>
+        public async System.Threading.Tasks.Task<PageTransacaoNaoProcessadaResponse> ListarTransacoesNaoProcessadasContaAsync (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataInicio = null, string dataFim = null)
+        {
+             ApiResponse<PageTransacaoNaoProcessadaResponse> localVarResponse = await ListarTransacoesNaoProcessadasContaAsyncWithHttpInfo(id, sort, page, limit, dataInicio, dataFim);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Lista as transa\u00E7\u00F5es n\u00E3o processadas da conta Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es n\u00E3o processadas da Conta.
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="dataInicio">Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Par\u00E2mentro Ignorado se dataFim n\u00E3o for definida) (optional)</param>
+        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Par\u00E2mentro Ignorado se dataInicio n\u00E3o for definida) (optional)</param>
+        /// <returns>Task of ApiResponse (PageTransacaoNaoProcessadaResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PageTransacaoNaoProcessadaResponse>> ListarTransacoesNaoProcessadasContaAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataInicio = null, string dataFim = null)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ListarTransacoesNaoProcessadasConta");
+            
+    
+            var localVarPath = "/api/contas/{id}/transacoes/listar-nao-processadas";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (dataInicio != null) localVarQueryParams.Add("dataInicio", Configuration.ApiClient.ParameterToString(dataInicio)); // query parameter
+            if (dataFim != null) localVarQueryParams.Add("dataFim", Configuration.ApiClient.ParameterToString(dataFim)); // query parameter
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarTransacoesNaoProcessadasConta: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarTransacoesNaoProcessadasConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PageTransacaoNaoProcessadaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageTransacaoNaoProcessadaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageTransacaoNaoProcessadaResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Listar as transa\u00E7\u00F5es negadas da conta Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es negadas da Conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo identificador da conta</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="page">P\u00E1gina (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <param name="idCartao">C\u00F3digo identificador do cart\u00E3o (optional)</param> 
+        /// <returns>PageTransacaoNegadaResponse</returns>
+        public PageTransacaoNegadaResponse ListarTransacoesNegadas (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null)
+        {
+             ApiResponse<PageTransacaoNegadaResponse> localVarResponse = ListarTransacoesNegadasWithHttpInfo(id, sort, page, limit, idCartao);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Listar as transa\u00E7\u00F5es negadas da conta Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es negadas da Conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo identificador da conta</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="page">P\u00E1gina (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <param name="idCartao">C\u00F3digo identificador do cart\u00E3o (optional)</param> 
+        /// <returns>ApiResponse of PageTransacaoNegadaResponse</returns>
+        public ApiResponse< PageTransacaoNegadaResponse > ListarTransacoesNegadasWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->ListarTransacoesNegadas");
+            
+    
+            var localVarPath = "/api/contas/{id}/transacoes/negadas";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (idCartao != null) localVarQueryParams.Add("idCartao", Configuration.ApiClient.ParameterToString(idCartao)); // query parameter
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarTransacoesNegadas: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarTransacoesNegadas: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<PageTransacaoNegadaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageTransacaoNegadaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageTransacaoNegadaResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Listar as transa\u00E7\u00F5es negadas da conta Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es negadas da Conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo identificador da conta</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idCartao">C\u00F3digo identificador do cart\u00E3o (optional)</param>
+        /// <returns>Task of PageTransacaoNegadaResponse</returns>
+        public async System.Threading.Tasks.Task<PageTransacaoNegadaResponse> ListarTransacoesNegadasAsync (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null)
+        {
+             ApiResponse<PageTransacaoNegadaResponse> localVarResponse = await ListarTransacoesNegadasAsyncWithHttpInfo(id, sort, page, limit, idCartao);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Listar as transa\u00E7\u00F5es negadas da conta Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es negadas da Conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo identificador da conta</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idCartao">C\u00F3digo identificador do cart\u00E3o (optional)</param>
+        /// <returns>Task of ApiResponse (PageTransacaoNegadaResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PageTransacaoNegadaResponse>> ListarTransacoesNegadasAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ListarTransacoesNegadas");
+            
+    
+            var localVarPath = "/api/contas/{id}/transacoes/negadas";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (idCartao != null) localVarQueryParams.Add("idCartao", Configuration.ApiClient.ParameterToString(idCartao)); // query parameter
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarTransacoesNegadas: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarTransacoesNegadas: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PageTransacaoNegadaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageTransacaoNegadaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageTransacaoNegadaResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Lista as transa\u00E7\u00F5es processadas da conta Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es processadas da Conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="page">P\u00E1gina (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <param name="dataVencimento">Data de vencimento do extrato no formato yyyy-MM-dd (optional)</param> 
+        /// <param name="dataInicio">Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param> 
+        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param> 
+        /// <param name="idTipoTransacao">transacoes_processadas_request_tipo_transacao (optional)</param> 
+        /// <param name="recuperaEncargos">Adiciona as transa\u00E7\u00F5es de encargos na consulta (optional)</param> 
+        /// <returns>PageTransacoesCorrentesResponse</returns>
+        public PageTransacoesCorrentesResponse ListarTransacoesProcessadasConta (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null, long? idTipoTransacao = null, int? recuperaEncargos = null)
+        {
+             ApiResponse<PageTransacoesCorrentesResponse> localVarResponse = ListarTransacoesProcessadasContaWithHttpInfo(id, sort, page, limit, dataVencimento, dataInicio, dataFim, idTipoTransacao, recuperaEncargos);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Lista as transa\u00E7\u00F5es processadas da conta Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es processadas da Conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="page">P\u00E1gina (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <param name="dataVencimento">Data de vencimento do extrato no formato yyyy-MM-dd (optional)</param> 
+        /// <param name="dataInicio">Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param> 
+        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param> 
+        /// <param name="idTipoTransacao">transacoes_processadas_request_tipo_transacao (optional)</param> 
+        /// <param name="recuperaEncargos">Adiciona as transa\u00E7\u00F5es de encargos na consulta (optional)</param> 
+        /// <returns>ApiResponse of PageTransacoesCorrentesResponse</returns>
+        public ApiResponse< PageTransacoesCorrentesResponse > ListarTransacoesProcessadasContaWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null, long? idTipoTransacao = null, int? recuperaEncargos = null)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->ListarTransacoesProcessadasConta");
+            
+    
+            var localVarPath = "/api/contas/{id}/transacoes/listar-processadas";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (dataVencimento != null) localVarQueryParams.Add("dataVencimento", Configuration.ApiClient.ParameterToString(dataVencimento)); // query parameter
+            if (dataInicio != null) localVarQueryParams.Add("dataInicio", Configuration.ApiClient.ParameterToString(dataInicio)); // query parameter
+            if (dataFim != null) localVarQueryParams.Add("dataFim", Configuration.ApiClient.ParameterToString(dataFim)); // query parameter
+            if (idTipoTransacao != null) localVarQueryParams.Add("idTipoTransacao", Configuration.ApiClient.ParameterToString(idTipoTransacao)); // query parameter
+            if (recuperaEncargos != null) localVarQueryParams.Add("recuperaEncargos", Configuration.ApiClient.ParameterToString(recuperaEncargos)); // query parameter
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarTransacoesProcessadasConta: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarTransacoesProcessadasConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<PageTransacoesCorrentesResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageTransacoesCorrentesResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageTransacoesCorrentesResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Lista as transa\u00E7\u00F5es processadas da conta Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es processadas da Conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="dataVencimento">Data de vencimento do extrato no formato yyyy-MM-dd (optional)</param>
+        /// <param name="dataInicio">Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param>
+        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param>
+        /// <param name="idTipoTransacao">transacoes_processadas_request_tipo_transacao (optional)</param>
+        /// <param name="recuperaEncargos">Adiciona as transa\u00E7\u00F5es de encargos na consulta (optional)</param>
+        /// <returns>Task of PageTransacoesCorrentesResponse</returns>
+        public async System.Threading.Tasks.Task<PageTransacoesCorrentesResponse> ListarTransacoesProcessadasContaAsync (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null, long? idTipoTransacao = null, int? recuperaEncargos = null)
+        {
+             ApiResponse<PageTransacoesCorrentesResponse> localVarResponse = await ListarTransacoesProcessadasContaAsyncWithHttpInfo(id, sort, page, limit, dataVencimento, dataInicio, dataFim, idTipoTransacao, recuperaEncargos);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Lista as transa\u00E7\u00F5es processadas da conta Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es processadas da Conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id).</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="dataVencimento">Data de vencimento do extrato no formato yyyy-MM-dd (optional)</param>
+        /// <param name="dataInicio">Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param>
+        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param>
+        /// <param name="idTipoTransacao">transacoes_processadas_request_tipo_transacao (optional)</param>
+        /// <param name="recuperaEncargos">Adiciona as transa\u00E7\u00F5es de encargos na consulta (optional)</param>
+        /// <returns>Task of ApiResponse (PageTransacoesCorrentesResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PageTransacoesCorrentesResponse>> ListarTransacoesProcessadasContaAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null, long? idTipoTransacao = null, int? recuperaEncargos = null)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ListarTransacoesProcessadasConta");
+            
+    
+            var localVarPath = "/api/contas/{id}/transacoes/listar-processadas";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (dataVencimento != null) localVarQueryParams.Add("dataVencimento", Configuration.ApiClient.ParameterToString(dataVencimento)); // query parameter
+            if (dataInicio != null) localVarQueryParams.Add("dataInicio", Configuration.ApiClient.ParameterToString(dataInicio)); // query parameter
+            if (dataFim != null) localVarQueryParams.Add("dataFim", Configuration.ApiClient.ParameterToString(dataFim)); // query parameter
+            if (idTipoTransacao != null) localVarQueryParams.Add("idTipoTransacao", Configuration.ApiClient.ParameterToString(idTipoTransacao)); // query parameter
+            if (recuperaEncargos != null) localVarQueryParams.Add("recuperaEncargos", Configuration.ApiClient.ParameterToString(recuperaEncargos)); // query parameter
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarTransacoesProcessadasConta: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarTransacoesProcessadasConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PageTransacoesCorrentesResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageTransacoesCorrentesResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageTransacoesCorrentesResponse)));
+            
+        }
+        
+        /// <summary>
         /// Este recurso permite que uma proje\u00E7\u00E3o de compra ainda n\u00E3o processada seja recuperada. Os valores das compras s\u00E3o agrupados e exibidos em blocos mensais. Este recurso permite que uma proje\u00E7\u00E3o de compra ainda n\u00E3o processada seja recuperada. Os valores das compras s\u00E3o agrupados e exibidos em blocos mensais.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
@@ -13730,9 +14018,9 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00E1gina (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
         /// <returns>PageProjecaoCompraNaoProcessadaResponse</returns>
-        public PageProjecaoCompraNaoProcessadaResponse ListarTransacoesProjetadas (long? id, List<string> sort = null, int? page = null, int? limit = null)
+        public PageProjecaoCompraNaoProcessadaResponse ListarTransacoesProjetadasConta (long? id, List<string> sort = null, int? page = null, int? limit = null)
         {
-             ApiResponse<PageProjecaoCompraNaoProcessadaResponse> localVarResponse = ListarTransacoesProjetadasWithHttpInfo(id, sort, page, limit);
+             ApiResponse<PageProjecaoCompraNaoProcessadaResponse> localVarResponse = ListarTransacoesProjetadasContaWithHttpInfo(id, sort, page, limit);
              return localVarResponse.Data;
         }
 
@@ -13745,12 +14033,12 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00E1gina (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
         /// <returns>ApiResponse of PageProjecaoCompraNaoProcessadaResponse</returns>
-        public ApiResponse< PageProjecaoCompraNaoProcessadaResponse > ListarTransacoesProjetadasWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null)
+        public ApiResponse< PageProjecaoCompraNaoProcessadaResponse > ListarTransacoesProjetadasContaWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->ListarTransacoesProjetadas");
+                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->ListarTransacoesProjetadasConta");
             
     
             var localVarPath = "/api/contas/{id}/transacoes/projetadas";
@@ -13799,9 +14087,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarTransacoesProjetadas: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarTransacoesProjetadasConta: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarTransacoesProjetadas: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarTransacoesProjetadasConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageProjecaoCompraNaoProcessadaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -13819,9 +14107,9 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00E1gina (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
         /// <returns>Task of PageProjecaoCompraNaoProcessadaResponse</returns>
-        public async System.Threading.Tasks.Task<PageProjecaoCompraNaoProcessadaResponse> ListarTransacoesProjetadasAsync (long? id, List<string> sort = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<PageProjecaoCompraNaoProcessadaResponse> ListarTransacoesProjetadasContaAsync (long? id, List<string> sort = null, int? page = null, int? limit = null)
         {
-             ApiResponse<PageProjecaoCompraNaoProcessadaResponse> localVarResponse = await ListarTransacoesProjetadasAsyncWithHttpInfo(id, sort, page, limit);
+             ApiResponse<PageProjecaoCompraNaoProcessadaResponse> localVarResponse = await ListarTransacoesProjetadasContaAsyncWithHttpInfo(id, sort, page, limit);
              return localVarResponse.Data;
 
         }
@@ -13835,10 +14123,10 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00E1gina (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
         /// <returns>Task of ApiResponse (PageProjecaoCompraNaoProcessadaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageProjecaoCompraNaoProcessadaResponse>> ListarTransacoesProjetadasAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageProjecaoCompraNaoProcessadaResponse>> ListarTransacoesProjetadasContaAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ListarTransacoesProjetadas");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ListarTransacoesProjetadasConta");
             
     
             var localVarPath = "/api/contas/{id}/transacoes/projetadas";
@@ -13887,13 +14175,219 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarTransacoesProjetadas: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarTransacoesProjetadasConta: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarTransacoesProjetadas: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarTransacoesProjetadasConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageProjecaoCompraNaoProcessadaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (PageProjecaoCompraNaoProcessadaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageProjecaoCompraNaoProcessadaResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Lista as transfer\u00EAncias realizadas pela conta Este m\u00E9todo permite que sejam listadas as transfer\u00EAncias realizadas pela conta existentes na base do emissor
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="page">P\u00E1gina (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <param name="idTransferencia">C\u00F3digo de identifica\u00E7\u00E3o da transfer\u00EAncia (id) (optional)</param> 
+        /// <param name="idContaOrigem">C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 debitado para a transfer\u00EAncia. (id) (optional)</param> 
+        /// <param name="idContaDestino">C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 creditado para a transfer\u00EAncia. (id) (optional)</param> 
+        /// <param name="valorTransferencia">Valor estabelecido para ser transferido (optional)</param> 
+        /// <param name="dataTransferencia">Data estabelecida para ocorrer a transfer\u00EAncia (optional)</param> 
+        /// <returns>PageTransferenciaResponse</returns>
+        public PageTransferenciaResponse ListarTransferenciasDeCreditoEntreCartoes (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idTransferencia = null, long? idContaOrigem = null, long? idContaDestino = null, double? valorTransferencia = null, string dataTransferencia = null)
+        {
+             ApiResponse<PageTransferenciaResponse> localVarResponse = ListarTransferenciasDeCreditoEntreCartoesWithHttpInfo(id, sort, page, limit, idTransferencia, idContaOrigem, idContaDestino, valorTransferencia, dataTransferencia);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Lista as transfer\u00EAncias realizadas pela conta Este m\u00E9todo permite que sejam listadas as transfer\u00EAncias realizadas pela conta existentes na base do emissor
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="page">P\u00E1gina (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <param name="idTransferencia">C\u00F3digo de identifica\u00E7\u00E3o da transfer\u00EAncia (id) (optional)</param> 
+        /// <param name="idContaOrigem">C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 debitado para a transfer\u00EAncia. (id) (optional)</param> 
+        /// <param name="idContaDestino">C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 creditado para a transfer\u00EAncia. (id) (optional)</param> 
+        /// <param name="valorTransferencia">Valor estabelecido para ser transferido (optional)</param> 
+        /// <param name="dataTransferencia">Data estabelecida para ocorrer a transfer\u00EAncia (optional)</param> 
+        /// <returns>ApiResponse of PageTransferenciaResponse</returns>
+        public ApiResponse< PageTransferenciaResponse > ListarTransferenciasDeCreditoEntreCartoesWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idTransferencia = null, long? idContaOrigem = null, long? idContaDestino = null, double? valorTransferencia = null, string dataTransferencia = null)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->ListarTransferenciasDeCreditoEntreCartoes");
+            
+    
+            var localVarPath = "/api/contas/{id}/transferencias-creditos-cartoes";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (idTransferencia != null) localVarQueryParams.Add("idTransferencia", Configuration.ApiClient.ParameterToString(idTransferencia)); // query parameter
+            if (idContaOrigem != null) localVarQueryParams.Add("idContaOrigem", Configuration.ApiClient.ParameterToString(idContaOrigem)); // query parameter
+            if (idContaDestino != null) localVarQueryParams.Add("idContaDestino", Configuration.ApiClient.ParameterToString(idContaDestino)); // query parameter
+            if (valorTransferencia != null) localVarQueryParams.Add("valorTransferencia", Configuration.ApiClient.ParameterToString(valorTransferencia)); // query parameter
+            if (dataTransferencia != null) localVarQueryParams.Add("dataTransferencia", Configuration.ApiClient.ParameterToString(dataTransferencia)); // query parameter
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarTransferenciasDeCreditoEntreCartoes: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarTransferenciasDeCreditoEntreCartoes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<PageTransferenciaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageTransferenciaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageTransferenciaResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Lista as transfer\u00EAncias realizadas pela conta Este m\u00E9todo permite que sejam listadas as transfer\u00EAncias realizadas pela conta existentes na base do emissor
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idTransferencia">C\u00F3digo de identifica\u00E7\u00E3o da transfer\u00EAncia (id) (optional)</param>
+        /// <param name="idContaOrigem">C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 debitado para a transfer\u00EAncia. (id) (optional)</param>
+        /// <param name="idContaDestino">C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 creditado para a transfer\u00EAncia. (id) (optional)</param>
+        /// <param name="valorTransferencia">Valor estabelecido para ser transferido (optional)</param>
+        /// <param name="dataTransferencia">Data estabelecida para ocorrer a transfer\u00EAncia (optional)</param>
+        /// <returns>Task of PageTransferenciaResponse</returns>
+        public async System.Threading.Tasks.Task<PageTransferenciaResponse> ListarTransferenciasDeCreditoEntreCartoesAsync (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idTransferencia = null, long? idContaOrigem = null, long? idContaDestino = null, double? valorTransferencia = null, string dataTransferencia = null)
+        {
+             ApiResponse<PageTransferenciaResponse> localVarResponse = await ListarTransferenciasDeCreditoEntreCartoesAsyncWithHttpInfo(id, sort, page, limit, idTransferencia, idContaOrigem, idContaDestino, valorTransferencia, dataTransferencia);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Lista as transfer\u00EAncias realizadas pela conta Este m\u00E9todo permite que sejam listadas as transfer\u00EAncias realizadas pela conta existentes na base do emissor
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idTransferencia">C\u00F3digo de identifica\u00E7\u00E3o da transfer\u00EAncia (id) (optional)</param>
+        /// <param name="idContaOrigem">C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 debitado para a transfer\u00EAncia. (id) (optional)</param>
+        /// <param name="idContaDestino">C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 creditado para a transfer\u00EAncia. (id) (optional)</param>
+        /// <param name="valorTransferencia">Valor estabelecido para ser transferido (optional)</param>
+        /// <param name="dataTransferencia">Data estabelecida para ocorrer a transfer\u00EAncia (optional)</param>
+        /// <returns>Task of ApiResponse (PageTransferenciaResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PageTransferenciaResponse>> ListarTransferenciasDeCreditoEntreCartoesAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idTransferencia = null, long? idContaOrigem = null, long? idContaDestino = null, double? valorTransferencia = null, string dataTransferencia = null)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ListarTransferenciasDeCreditoEntreCartoes");
+            
+    
+            var localVarPath = "/api/contas/{id}/transferencias-creditos-cartoes";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (idTransferencia != null) localVarQueryParams.Add("idTransferencia", Configuration.ApiClient.ParameterToString(idTransferencia)); // query parameter
+            if (idContaOrigem != null) localVarQueryParams.Add("idContaOrigem", Configuration.ApiClient.ParameterToString(idContaOrigem)); // query parameter
+            if (idContaDestino != null) localVarQueryParams.Add("idContaDestino", Configuration.ApiClient.ParameterToString(idContaDestino)); // query parameter
+            if (valorTransferencia != null) localVarQueryParams.Add("valorTransferencia", Configuration.ApiClient.ParameterToString(valorTransferencia)); // query parameter
+            if (dataTransferencia != null) localVarQueryParams.Add("dataTransferencia", Configuration.ApiClient.ParameterToString(dataTransferencia)); // query parameter
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarTransferenciasDeCreditoEntreCartoes: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarTransferenciasDeCreditoEntreCartoes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PageTransferenciaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageTransferenciaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageTransferenciaResponse)));
             
         }
         
@@ -14074,815 +14568,15 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Lista os tipos de fun\u00E7\u00F5es para contas do Emissor Este recurso permite listar os tipos de fun\u00E7\u00F5es para as contas do Emissor
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>string</returns>
-        public string Listar_0 ()
-        {
-             ApiResponse<string> localVarResponse = Listar_0WithHttpInfo();
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Lista os tipos de fun\u00E7\u00F5es para contas do Emissor Este recurso permite listar os tipos de fun\u00E7\u00F5es para as contas do Emissor
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > Listar_0WithHttpInfo ()
-        {
-            
-    
-            var localVarPath = "/api/contas/tipos-funcoes";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            
-            
-            
-            
-            
-
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Listar_0: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Listar_0: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
-            
-        }
-
-        
-        /// <summary>
-        /// Lista os tipos de fun\u00E7\u00F5es para contas do Emissor Este recurso permite listar os tipos de fun\u00E7\u00F5es para as contas do Emissor
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> Listar_0Async ()
-        {
-             ApiResponse<string> localVarResponse = await Listar_0AsyncWithHttpInfo();
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Lista os tipos de fun\u00E7\u00F5es para contas do Emissor Este recurso permite listar os tipos de fun\u00E7\u00F5es para as contas do Emissor
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> Listar_0AsyncWithHttpInfo ()
-        {
-            
-    
-            var localVarPath = "/api/contas/tipos-funcoes";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            
-            
-            
-            
-            
-
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Listar_0: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Listar_0: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
-            
-        }
-        
-        /// <summary>
-        /// Realiza a listagem de todos os agendamentos Este recurso permite listar todos os agendamentos
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">id</param> 
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
-        /// <param name="page">P\u00E1gina (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
-        /// <param name="tipoOperacao">Tipo opera\u00E7\u00E3o  (optional)</param> 
-        /// <param name="tipoRecorrencia">Tipo Recorr\u00EAncia (optional)</param> 
-        /// <param name="quantidadeAgendamento">Quantidade agendamento  (optional)</param> 
-        /// <param name="diaRecorrencia">Dia recorr\u00EAncia (optional)</param> 
-        /// <param name="valor">Valor Agendamento (optional)</param> 
-        /// <returns>string</returns>
-        public string Listar_1 (long? id, List<string> sort = null, int? page = null, int? limit = null, int? tipoOperacao = null, int? tipoRecorrencia = null, int? quantidadeAgendamento = null, int? diaRecorrencia = null, double? valor = null)
-        {
-             ApiResponse<string> localVarResponse = Listar_1WithHttpInfo(id, sort, page, limit, tipoOperacao, tipoRecorrencia, quantidadeAgendamento, diaRecorrencia, valor);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Realiza a listagem de todos os agendamentos Este recurso permite listar todos os agendamentos
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">id</param> 
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
-        /// <param name="page">P\u00E1gina (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
-        /// <param name="tipoOperacao">Tipo opera\u00E7\u00E3o  (optional)</param> 
-        /// <param name="tipoRecorrencia">Tipo Recorr\u00EAncia (optional)</param> 
-        /// <param name="quantidadeAgendamento">Quantidade agendamento  (optional)</param> 
-        /// <param name="diaRecorrencia">Dia recorr\u00EAncia (optional)</param> 
-        /// <param name="valor">Valor Agendamento (optional)</param> 
-        /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > Listar_1WithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, int? tipoOperacao = null, int? tipoRecorrencia = null, int? quantidadeAgendamento = null, int? diaRecorrencia = null, double? valor = null)
-        {
-            
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->Listar_1");
-            
-    
-            var localVarPath = "/api/contas/{id}/agendamentos";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            
-            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
-            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
-            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
-            if (tipoOperacao != null) localVarQueryParams.Add("tipoOperacao", Configuration.ApiClient.ParameterToString(tipoOperacao)); // query parameter
-            if (tipoRecorrencia != null) localVarQueryParams.Add("tipoRecorrencia", Configuration.ApiClient.ParameterToString(tipoRecorrencia)); // query parameter
-            if (quantidadeAgendamento != null) localVarQueryParams.Add("quantidadeAgendamento", Configuration.ApiClient.ParameterToString(quantidadeAgendamento)); // query parameter
-            if (diaRecorrencia != null) localVarQueryParams.Add("diaRecorrencia", Configuration.ApiClient.ParameterToString(diaRecorrencia)); // query parameter
-            if (valor != null) localVarQueryParams.Add("valor", Configuration.ApiClient.ParameterToString(valor)); // query parameter
-            
-            
-            
-            
-
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Listar_1: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Listar_1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
-            
-        }
-
-        
-        /// <summary>
-        /// Realiza a listagem de todos os agendamentos Este recurso permite listar todos os agendamentos
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">id</param>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="tipoOperacao">Tipo opera\u00E7\u00E3o  (optional)</param>
-        /// <param name="tipoRecorrencia">Tipo Recorr\u00EAncia (optional)</param>
-        /// <param name="quantidadeAgendamento">Quantidade agendamento  (optional)</param>
-        /// <param name="diaRecorrencia">Dia recorr\u00EAncia (optional)</param>
-        /// <param name="valor">Valor Agendamento (optional)</param>
-        /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> Listar_1Async (long? id, List<string> sort = null, int? page = null, int? limit = null, int? tipoOperacao = null, int? tipoRecorrencia = null, int? quantidadeAgendamento = null, int? diaRecorrencia = null, double? valor = null)
-        {
-             ApiResponse<string> localVarResponse = await Listar_1AsyncWithHttpInfo(id, sort, page, limit, tipoOperacao, tipoRecorrencia, quantidadeAgendamento, diaRecorrencia, valor);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Realiza a listagem de todos os agendamentos Este recurso permite listar todos os agendamentos
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">id</param>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="tipoOperacao">Tipo opera\u00E7\u00E3o  (optional)</param>
-        /// <param name="tipoRecorrencia">Tipo Recorr\u00EAncia (optional)</param>
-        /// <param name="quantidadeAgendamento">Quantidade agendamento  (optional)</param>
-        /// <param name="diaRecorrencia">Dia recorr\u00EAncia (optional)</param>
-        /// <param name="valor">Valor Agendamento (optional)</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> Listar_1AsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, int? tipoOperacao = null, int? tipoRecorrencia = null, int? quantidadeAgendamento = null, int? diaRecorrencia = null, double? valor = null)
-        {
-            // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling Listar_1");
-            
-    
-            var localVarPath = "/api/contas/{id}/agendamentos";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            
-            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
-            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
-            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
-            if (tipoOperacao != null) localVarQueryParams.Add("tipoOperacao", Configuration.ApiClient.ParameterToString(tipoOperacao)); // query parameter
-            if (tipoRecorrencia != null) localVarQueryParams.Add("tipoRecorrencia", Configuration.ApiClient.ParameterToString(tipoRecorrencia)); // query parameter
-            if (quantidadeAgendamento != null) localVarQueryParams.Add("quantidadeAgendamento", Configuration.ApiClient.ParameterToString(quantidadeAgendamento)); // query parameter
-            if (diaRecorrencia != null) localVarQueryParams.Add("diaRecorrencia", Configuration.ApiClient.ParameterToString(diaRecorrencia)); // query parameter
-            if (valor != null) localVarQueryParams.Add("valor", Configuration.ApiClient.ParameterToString(valor)); // query parameter
-            
-            
-            
-            
-
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Listar_1: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Listar_1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
-            
-        }
-        
-        /// <summary>
-        /// Lista as transa\u00E7\u00F5es n\u00E3o processadas e processadas da conta Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es n\u00E3o processadas e processadas da Conta
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param> 
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
-        /// <param name="status">Status da transa\u00E7\u00E3o (optional)</param> 
-        /// <param name="page">P\u00E1gina (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
-        /// <param name="dataVencimento">Data de vencimento do extrato no formato yyyy-MM-dd (optional)</param> 
-        /// <param name="dataInicio">Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param> 
-        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param> 
-        /// <param name="idTipoTransacao">transacoes_processadas_nao_processadas_request_tipo_transacao (optional)</param> 
-        /// <param name="flagCredito">Flag que indica se a transa\u00E7\u00E3o \u00E9 cr\u00E9dito (optional)</param> 
-        /// <param name="flagFaturado">Flag que indica se a transa\u00E7\u00E3o foi faturada (optional)</param> 
-        /// <param name="flagProcessada">Flag que indica se a transa\u00E7\u00E3o foi processada (optional)</param> 
-        /// <param name="plano">Plano da transa\u00E7\u00E3o (optional)</param> 
-        /// <param name="codigoMCC">C\u00F3digo MCC da transa\u00E7\u00E3o (optional)</param> 
-        /// <param name="grupoMCC">Grupo MCC da transa\u00E7\u00E3o (optional)</param> 
-        /// <returns>PageTransacaoProcessadaNaoProcessadaResponse</returns>
-        public PageTransacaoProcessadaNaoProcessadaResponse Listar_2 (long? id, List<string> sort = null, List<int?> status = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null, long? idTipoTransacao = null, bool? flagCredito = null, bool? flagFaturado = null, bool? flagProcessada = null, int? plano = null, long? codigoMCC = null, long? grupoMCC = null)
-        {
-             ApiResponse<PageTransacaoProcessadaNaoProcessadaResponse> localVarResponse = Listar_2WithHttpInfo(id, sort, status, page, limit, dataVencimento, dataInicio, dataFim, idTipoTransacao, flagCredito, flagFaturado, flagProcessada, plano, codigoMCC, grupoMCC);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Lista as transa\u00E7\u00F5es n\u00E3o processadas e processadas da conta Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es n\u00E3o processadas e processadas da Conta
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param> 
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
-        /// <param name="status">Status da transa\u00E7\u00E3o (optional)</param> 
-        /// <param name="page">P\u00E1gina (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
-        /// <param name="dataVencimento">Data de vencimento do extrato no formato yyyy-MM-dd (optional)</param> 
-        /// <param name="dataInicio">Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param> 
-        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param> 
-        /// <param name="idTipoTransacao">transacoes_processadas_nao_processadas_request_tipo_transacao (optional)</param> 
-        /// <param name="flagCredito">Flag que indica se a transa\u00E7\u00E3o \u00E9 cr\u00E9dito (optional)</param> 
-        /// <param name="flagFaturado">Flag que indica se a transa\u00E7\u00E3o foi faturada (optional)</param> 
-        /// <param name="flagProcessada">Flag que indica se a transa\u00E7\u00E3o foi processada (optional)</param> 
-        /// <param name="plano">Plano da transa\u00E7\u00E3o (optional)</param> 
-        /// <param name="codigoMCC">C\u00F3digo MCC da transa\u00E7\u00E3o (optional)</param> 
-        /// <param name="grupoMCC">Grupo MCC da transa\u00E7\u00E3o (optional)</param> 
-        /// <returns>ApiResponse of PageTransacaoProcessadaNaoProcessadaResponse</returns>
-        public ApiResponse< PageTransacaoProcessadaNaoProcessadaResponse > Listar_2WithHttpInfo (long? id, List<string> sort = null, List<int?> status = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null, long? idTipoTransacao = null, bool? flagCredito = null, bool? flagFaturado = null, bool? flagProcessada = null, int? plano = null, long? codigoMCC = null, long? grupoMCC = null)
-        {
-            
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->Listar_2");
-            
-    
-            var localVarPath = "/api/contas/{id}/transacoes";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            
-            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
-            if (status != null) localVarQueryParams.Add("status", Configuration.ApiClient.ParameterToString(status)); // query parameter
-            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
-            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
-            if (dataVencimento != null) localVarQueryParams.Add("dataVencimento", Configuration.ApiClient.ParameterToString(dataVencimento)); // query parameter
-            if (dataInicio != null) localVarQueryParams.Add("dataInicio", Configuration.ApiClient.ParameterToString(dataInicio)); // query parameter
-            if (dataFim != null) localVarQueryParams.Add("dataFim", Configuration.ApiClient.ParameterToString(dataFim)); // query parameter
-            if (idTipoTransacao != null) localVarQueryParams.Add("idTipoTransacao", Configuration.ApiClient.ParameterToString(idTipoTransacao)); // query parameter
-            if (flagCredito != null) localVarQueryParams.Add("flagCredito", Configuration.ApiClient.ParameterToString(flagCredito)); // query parameter
-            if (flagFaturado != null) localVarQueryParams.Add("flagFaturado", Configuration.ApiClient.ParameterToString(flagFaturado)); // query parameter
-            if (flagProcessada != null) localVarQueryParams.Add("flagProcessada", Configuration.ApiClient.ParameterToString(flagProcessada)); // query parameter
-            if (plano != null) localVarQueryParams.Add("plano", Configuration.ApiClient.ParameterToString(plano)); // query parameter
-            if (codigoMCC != null) localVarQueryParams.Add("codigoMCC", Configuration.ApiClient.ParameterToString(codigoMCC)); // query parameter
-            if (grupoMCC != null) localVarQueryParams.Add("grupoMCC", Configuration.ApiClient.ParameterToString(grupoMCC)); // query parameter
-            
-            
-            
-            
-
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Listar_2: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Listar_2: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<PageTransacaoProcessadaNaoProcessadaResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PageTransacaoProcessadaNaoProcessadaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageTransacaoProcessadaNaoProcessadaResponse)));
-            
-        }
-
-        
-        /// <summary>
-        /// Lista as transa\u00E7\u00F5es n\u00E3o processadas e processadas da conta Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es n\u00E3o processadas e processadas da Conta
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="status">Status da transa\u00E7\u00E3o (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="dataVencimento">Data de vencimento do extrato no formato yyyy-MM-dd (optional)</param>
-        /// <param name="dataInicio">Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param>
-        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param>
-        /// <param name="idTipoTransacao">transacoes_processadas_nao_processadas_request_tipo_transacao (optional)</param>
-        /// <param name="flagCredito">Flag que indica se a transa\u00E7\u00E3o \u00E9 cr\u00E9dito (optional)</param>
-        /// <param name="flagFaturado">Flag que indica se a transa\u00E7\u00E3o foi faturada (optional)</param>
-        /// <param name="flagProcessada">Flag que indica se a transa\u00E7\u00E3o foi processada (optional)</param>
-        /// <param name="plano">Plano da transa\u00E7\u00E3o (optional)</param>
-        /// <param name="codigoMCC">C\u00F3digo MCC da transa\u00E7\u00E3o (optional)</param>
-        /// <param name="grupoMCC">Grupo MCC da transa\u00E7\u00E3o (optional)</param>
-        /// <returns>Task of PageTransacaoProcessadaNaoProcessadaResponse</returns>
-        public async System.Threading.Tasks.Task<PageTransacaoProcessadaNaoProcessadaResponse> Listar_2Async (long? id, List<string> sort = null, List<int?> status = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null, long? idTipoTransacao = null, bool? flagCredito = null, bool? flagFaturado = null, bool? flagProcessada = null, int? plano = null, long? codigoMCC = null, long? grupoMCC = null)
-        {
-             ApiResponse<PageTransacaoProcessadaNaoProcessadaResponse> localVarResponse = await Listar_2AsyncWithHttpInfo(id, sort, status, page, limit, dataVencimento, dataInicio, dataFim, idTipoTransacao, flagCredito, flagFaturado, flagProcessada, plano, codigoMCC, grupoMCC);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Lista as transa\u00E7\u00F5es n\u00E3o processadas e processadas da conta Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es n\u00E3o processadas e processadas da Conta
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="status">Status da transa\u00E7\u00E3o (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="dataVencimento">Data de vencimento do extrato no formato yyyy-MM-dd (optional)</param>
-        /// <param name="dataInicio">Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param>
-        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param>
-        /// <param name="idTipoTransacao">transacoes_processadas_nao_processadas_request_tipo_transacao (optional)</param>
-        /// <param name="flagCredito">Flag que indica se a transa\u00E7\u00E3o \u00E9 cr\u00E9dito (optional)</param>
-        /// <param name="flagFaturado">Flag que indica se a transa\u00E7\u00E3o foi faturada (optional)</param>
-        /// <param name="flagProcessada">Flag que indica se a transa\u00E7\u00E3o foi processada (optional)</param>
-        /// <param name="plano">Plano da transa\u00E7\u00E3o (optional)</param>
-        /// <param name="codigoMCC">C\u00F3digo MCC da transa\u00E7\u00E3o (optional)</param>
-        /// <param name="grupoMCC">Grupo MCC da transa\u00E7\u00E3o (optional)</param>
-        /// <returns>Task of ApiResponse (PageTransacaoProcessadaNaoProcessadaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageTransacaoProcessadaNaoProcessadaResponse>> Listar_2AsyncWithHttpInfo (long? id, List<string> sort = null, List<int?> status = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null, long? idTipoTransacao = null, bool? flagCredito = null, bool? flagFaturado = null, bool? flagProcessada = null, int? plano = null, long? codigoMCC = null, long? grupoMCC = null)
-        {
-            // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling Listar_2");
-            
-    
-            var localVarPath = "/api/contas/{id}/transacoes";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            
-            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
-            if (status != null) localVarQueryParams.Add("status", Configuration.ApiClient.ParameterToString(status)); // query parameter
-            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
-            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
-            if (dataVencimento != null) localVarQueryParams.Add("dataVencimento", Configuration.ApiClient.ParameterToString(dataVencimento)); // query parameter
-            if (dataInicio != null) localVarQueryParams.Add("dataInicio", Configuration.ApiClient.ParameterToString(dataInicio)); // query parameter
-            if (dataFim != null) localVarQueryParams.Add("dataFim", Configuration.ApiClient.ParameterToString(dataFim)); // query parameter
-            if (idTipoTransacao != null) localVarQueryParams.Add("idTipoTransacao", Configuration.ApiClient.ParameterToString(idTipoTransacao)); // query parameter
-            if (flagCredito != null) localVarQueryParams.Add("flagCredito", Configuration.ApiClient.ParameterToString(flagCredito)); // query parameter
-            if (flagFaturado != null) localVarQueryParams.Add("flagFaturado", Configuration.ApiClient.ParameterToString(flagFaturado)); // query parameter
-            if (flagProcessada != null) localVarQueryParams.Add("flagProcessada", Configuration.ApiClient.ParameterToString(flagProcessada)); // query parameter
-            if (plano != null) localVarQueryParams.Add("plano", Configuration.ApiClient.ParameterToString(plano)); // query parameter
-            if (codigoMCC != null) localVarQueryParams.Add("codigoMCC", Configuration.ApiClient.ParameterToString(codigoMCC)); // query parameter
-            if (grupoMCC != null) localVarQueryParams.Add("grupoMCC", Configuration.ApiClient.ParameterToString(grupoMCC)); // query parameter
-            
-            
-            
-            
-
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Listar_2: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Listar_2: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<PageTransacaoProcessadaNaoProcessadaResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PageTransacaoProcessadaNaoProcessadaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageTransacaoProcessadaNaoProcessadaResponse)));
-            
-        }
-        
-        /// <summary>
-        /// Lista as transfer\u00EAncias realizadas pela conta Este m\u00E9todo permite que sejam listadas as transfer\u00EAncias realizadas pela conta existentes na base do emissor
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param> 
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
-        /// <param name="page">P\u00E1gina (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
-        /// <param name="idTransferencia">C\u00F3digo de identifica\u00E7\u00E3o da transfer\u00EAncia (id) (optional)</param> 
-        /// <param name="idContaOrigem">C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 debitado para a transfer\u00EAncia. (id) (optional)</param> 
-        /// <param name="idContaDestino">C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 creditado para a transfer\u00EAncia. (id) (optional)</param> 
-        /// <param name="valorTransferencia">Valor estabelecido para ser transferido (optional)</param> 
-        /// <param name="dataTransferencia">Data estabelecida para ocorrer a transfer\u00EAncia (optional)</param> 
-        /// <returns>PageTransferenciaResponse</returns>
-        public PageTransferenciaResponse Listar_3 (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idTransferencia = null, long? idContaOrigem = null, long? idContaDestino = null, double? valorTransferencia = null, string dataTransferencia = null)
-        {
-             ApiResponse<PageTransferenciaResponse> localVarResponse = Listar_3WithHttpInfo(id, sort, page, limit, idTransferencia, idContaOrigem, idContaDestino, valorTransferencia, dataTransferencia);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Lista as transfer\u00EAncias realizadas pela conta Este m\u00E9todo permite que sejam listadas as transfer\u00EAncias realizadas pela conta existentes na base do emissor
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param> 
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
-        /// <param name="page">P\u00E1gina (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
-        /// <param name="idTransferencia">C\u00F3digo de identifica\u00E7\u00E3o da transfer\u00EAncia (id) (optional)</param> 
-        /// <param name="idContaOrigem">C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 debitado para a transfer\u00EAncia. (id) (optional)</param> 
-        /// <param name="idContaDestino">C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 creditado para a transfer\u00EAncia. (id) (optional)</param> 
-        /// <param name="valorTransferencia">Valor estabelecido para ser transferido (optional)</param> 
-        /// <param name="dataTransferencia">Data estabelecida para ocorrer a transfer\u00EAncia (optional)</param> 
-        /// <returns>ApiResponse of PageTransferenciaResponse</returns>
-        public ApiResponse< PageTransferenciaResponse > Listar_3WithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idTransferencia = null, long? idContaOrigem = null, long? idContaDestino = null, double? valorTransferencia = null, string dataTransferencia = null)
-        {
-            
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->Listar_3");
-            
-    
-            var localVarPath = "/api/contas/{id}/transferencias-creditos-cartoes";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            
-            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
-            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
-            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
-            if (idTransferencia != null) localVarQueryParams.Add("idTransferencia", Configuration.ApiClient.ParameterToString(idTransferencia)); // query parameter
-            if (idContaOrigem != null) localVarQueryParams.Add("idContaOrigem", Configuration.ApiClient.ParameterToString(idContaOrigem)); // query parameter
-            if (idContaDestino != null) localVarQueryParams.Add("idContaDestino", Configuration.ApiClient.ParameterToString(idContaDestino)); // query parameter
-            if (valorTransferencia != null) localVarQueryParams.Add("valorTransferencia", Configuration.ApiClient.ParameterToString(valorTransferencia)); // query parameter
-            if (dataTransferencia != null) localVarQueryParams.Add("dataTransferencia", Configuration.ApiClient.ParameterToString(dataTransferencia)); // query parameter
-            
-            
-            
-            
-
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Listar_3: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Listar_3: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<PageTransferenciaResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PageTransferenciaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageTransferenciaResponse)));
-            
-        }
-
-        
-        /// <summary>
-        /// Lista as transfer\u00EAncias realizadas pela conta Este m\u00E9todo permite que sejam listadas as transfer\u00EAncias realizadas pela conta existentes na base do emissor
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="idTransferencia">C\u00F3digo de identifica\u00E7\u00E3o da transfer\u00EAncia (id) (optional)</param>
-        /// <param name="idContaOrigem">C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 debitado para a transfer\u00EAncia. (id) (optional)</param>
-        /// <param name="idContaDestino">C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 creditado para a transfer\u00EAncia. (id) (optional)</param>
-        /// <param name="valorTransferencia">Valor estabelecido para ser transferido (optional)</param>
-        /// <param name="dataTransferencia">Data estabelecida para ocorrer a transfer\u00EAncia (optional)</param>
-        /// <returns>Task of PageTransferenciaResponse</returns>
-        public async System.Threading.Tasks.Task<PageTransferenciaResponse> Listar_3Async (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idTransferencia = null, long? idContaOrigem = null, long? idContaDestino = null, double? valorTransferencia = null, string dataTransferencia = null)
-        {
-             ApiResponse<PageTransferenciaResponse> localVarResponse = await Listar_3AsyncWithHttpInfo(id, sort, page, limit, idTransferencia, idContaOrigem, idContaDestino, valorTransferencia, dataTransferencia);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Lista as transfer\u00EAncias realizadas pela conta Este m\u00E9todo permite que sejam listadas as transfer\u00EAncias realizadas pela conta existentes na base do emissor
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="idTransferencia">C\u00F3digo de identifica\u00E7\u00E3o da transfer\u00EAncia (id) (optional)</param>
-        /// <param name="idContaOrigem">C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 debitado para a transfer\u00EAncia. (id) (optional)</param>
-        /// <param name="idContaDestino">C\u00F3digo de identifica\u00E7\u00E3o da conta em que o valor ser\u00E1 creditado para a transfer\u00EAncia. (id) (optional)</param>
-        /// <param name="valorTransferencia">Valor estabelecido para ser transferido (optional)</param>
-        /// <param name="dataTransferencia">Data estabelecida para ocorrer a transfer\u00EAncia (optional)</param>
-        /// <returns>Task of ApiResponse (PageTransferenciaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageTransferenciaResponse>> Listar_3AsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idTransferencia = null, long? idContaOrigem = null, long? idContaDestino = null, double? valorTransferencia = null, string dataTransferencia = null)
-        {
-            // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling Listar_3");
-            
-    
-            var localVarPath = "/api/contas/{id}/transferencias-creditos-cartoes";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            
-            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
-            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
-            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
-            if (idTransferencia != null) localVarQueryParams.Add("idTransferencia", Configuration.ApiClient.ParameterToString(idTransferencia)); // query parameter
-            if (idContaOrigem != null) localVarQueryParams.Add("idContaOrigem", Configuration.ApiClient.ParameterToString(idContaOrigem)); // query parameter
-            if (idContaDestino != null) localVarQueryParams.Add("idContaDestino", Configuration.ApiClient.ParameterToString(idContaDestino)); // query parameter
-            if (valorTransferencia != null) localVarQueryParams.Add("valorTransferencia", Configuration.ApiClient.ParameterToString(valorTransferencia)); // query parameter
-            if (dataTransferencia != null) localVarQueryParams.Add("dataTransferencia", Configuration.ApiClient.ParameterToString(dataTransferencia)); // query parameter
-            
-            
-            
-            
-
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Listar_3: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Listar_3: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<PageTransferenciaResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PageTransferenciaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageTransferenciaResponse)));
-            
-        }
-        
-        /// <summary>
         /// Realiza a normaliza\u00E7\u00E3o de uma conta Este m\u00E9todo permite que uma conta seja normalizada, ajustando assim o seu status e lan\u00E7ando os ajustes necess\u00E1rios
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o de uma Conta (id)</param> 
         /// <param name="login">login (optional)</param> 
         /// <returns>Object</returns>
-        public Object Normalizacao (long? id, string login = null)
+        public Object NormalizarConta (long? id, string login = null)
         {
-             ApiResponse<Object> localVarResponse = NormalizacaoWithHttpInfo(id, login);
+             ApiResponse<Object> localVarResponse = NormalizarContaWithHttpInfo(id, login);
              return localVarResponse.Data;
         }
 
@@ -14893,12 +14587,12 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o de uma Conta (id)</param> 
         /// <param name="login">login (optional)</param> 
         /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > NormalizacaoWithHttpInfo (long? id, string login = null)
+        public ApiResponse< Object > NormalizarContaWithHttpInfo (long? id, string login = null)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->Normalizacao");
+                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->NormalizarConta");
             
     
             var localVarPath = "/api/contas/{id}/normalizacao";
@@ -14951,9 +14645,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Normalizacao: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling NormalizarConta: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Normalizacao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling NormalizarConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -14969,9 +14663,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o de uma Conta (id)</param>
         /// <param name="login">login (optional)</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> NormalizacaoAsync (long? id, string login = null)
+        public async System.Threading.Tasks.Task<Object> NormalizarContaAsync (long? id, string login = null)
         {
-             ApiResponse<Object> localVarResponse = await NormalizacaoAsyncWithHttpInfo(id, login);
+             ApiResponse<Object> localVarResponse = await NormalizarContaAsyncWithHttpInfo(id, login);
              return localVarResponse.Data;
 
         }
@@ -14983,10 +14677,10 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o de uma Conta (id)</param>
         /// <param name="login">login (optional)</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> NormalizacaoAsyncWithHttpInfo (long? id, string login = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> NormalizarContaAsyncWithHttpInfo (long? id, string login = null)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling Normalizacao");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling NormalizarConta");
             
     
             var localVarPath = "/api/contas/{id}/normalizacao";
@@ -15039,9 +14733,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Normalizacao: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling NormalizarConta: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Normalizacao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling NormalizarConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -15055,9 +14749,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param> 
         /// <returns>Object</returns>
-        public Object Reativar (long? id)
+        public Object ReativarConta (long? id)
         {
-             ApiResponse<Object> localVarResponse = ReativarWithHttpInfo(id);
+             ApiResponse<Object> localVarResponse = ReativarContaWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -15067,12 +14761,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param> 
         /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > ReativarWithHttpInfo (long? id)
+        public ApiResponse< Object > ReativarContaWithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->Reativar");
+                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->ReativarConta");
             
     
             var localVarPath = "/api/contas/{id}/reativar";
@@ -15118,9 +14812,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Reativar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ReativarConta: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Reativar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ReativarConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -15135,9 +14829,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> ReativarAsync (long? id)
+        public async System.Threading.Tasks.Task<Object> ReativarContaAsync (long? id)
         {
-             ApiResponse<Object> localVarResponse = await ReativarAsyncWithHttpInfo(id);
+             ApiResponse<Object> localVarResponse = await ReativarContaAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -15148,10 +14842,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Id Conta</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> ReativarAsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> ReativarContaAsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling Reativar");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ReativarConta");
             
     
             var localVarPath = "/api/contas/{id}/reativar";
@@ -15197,183 +14891,13 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Reativar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ReativarConta: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Reativar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ReativarConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
-            
-        }
-        
-        /// <summary>
-        /// Realiza o cadastro de uma nova conta Esse recurso permite cadastrar uma nova conta para uma pessoa j\u00E1 existente na base de dados do emissor
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="contaPersist">contaPersist</param> 
-        /// <returns>ContaResponse</returns>
-        public ContaResponse Salvar (ContaPersist contaPersist)
-        {
-             ApiResponse<ContaResponse> localVarResponse = SalvarWithHttpInfo(contaPersist);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Realiza o cadastro de uma nova conta Esse recurso permite cadastrar uma nova conta para uma pessoa j\u00E1 existente na base de dados do emissor
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="contaPersist">contaPersist</param> 
-        /// <returns>ApiResponse of ContaResponse</returns>
-        public ApiResponse< ContaResponse > SalvarWithHttpInfo (ContaPersist contaPersist)
-        {
-            
-            // verify the required parameter 'contaPersist' is set
-            if (contaPersist == null)
-                throw new ApiException(400, "Missing required parameter 'contaPersist' when calling ContaApi->Salvar");
-            
-    
-            var localVarPath = "/api/contas";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            
-            
-            
-            
-            if (contaPersist.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(contaPersist); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = contaPersist; // byte array
-            }
-
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Salvar: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Salvar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<ContaResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ContaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContaResponse)));
-            
-        }
-
-        
-        /// <summary>
-        /// Realiza o cadastro de uma nova conta Esse recurso permite cadastrar uma nova conta para uma pessoa j\u00E1 existente na base de dados do emissor
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="contaPersist">contaPersist</param>
-        /// <returns>Task of ContaResponse</returns>
-        public async System.Threading.Tasks.Task<ContaResponse> SalvarAsync (ContaPersist contaPersist)
-        {
-             ApiResponse<ContaResponse> localVarResponse = await SalvarAsyncWithHttpInfo(contaPersist);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Realiza o cadastro de uma nova conta Esse recurso permite cadastrar uma nova conta para uma pessoa j\u00E1 existente na base de dados do emissor
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="contaPersist">contaPersist</param>
-        /// <returns>Task of ApiResponse (ContaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ContaResponse>> SalvarAsyncWithHttpInfo (ContaPersist contaPersist)
-        {
-            // verify the required parameter 'contaPersist' is set
-            if (contaPersist == null) throw new ApiException(400, "Missing required parameter 'contaPersist' when calling Salvar");
-            
-    
-            var localVarPath = "/api/contas";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            
-            
-            
-            
-            if (contaPersist.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(contaPersist); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = contaPersist; // byte array
-            }
-
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Salvar: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Salvar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<ContaResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ContaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContaResponse)));
             
         }
         
@@ -15560,38 +15084,62 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Realiza o agendamento de transacoes Este recurso permite agendar opera\u00E7\u00F5es financeiras
+        /// Lan\u00E7a um ajuste para a conta do id informado Este recurso insere um ajuste para a conta do id informado
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="agendamentoPersist">agendamentoPersist</param> 
-        /// <param name="id">id</param> 
-        /// <returns>AgendamentoResponse</returns>
-        public AgendamentoResponse SalvarAgendamento (AgendamentoPersist agendamentoPersist, long? id)
+        /// <param name="id">Id Conta</param> 
+        /// <param name="idTipoAjuste">C\u00F3digo identificador do tipo de ajuste</param> 
+        /// <param name="dataAjuste">Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ</param> 
+        /// <param name="valorAjuste">Valor do ajuste</param> 
+        /// <param name="login">login (optional)</param> 
+        /// <param name="identificadorExterno">Identificador Externo (optional)</param> 
+        /// <param name="idTransacaoOriginal">Identificador da transa\u00E7\u00E3o original (estorno) (optional)</param> 
+        /// <param name="idEstabelecimento">Identificador do estabelecimento quando o pagamento for efetuado em loja (optional)</param> 
+        /// <param name="flagAtendimento">Flag para lan\u00E7ar o atendimento (optional)</param> 
+        /// <param name="mensagemAtendimento">Mensagem enviada no atendimento (optional)</param> 
+        /// <returns>AjusteFinanceiroResponse</returns>
+        public AjusteFinanceiroResponse SalvarAjusteFinanceiroConta (long? id, long? idTipoAjuste, string dataAjuste, double? valorAjuste, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null, bool? flagAtendimento = null, string mensagemAtendimento = null)
         {
-             ApiResponse<AgendamentoResponse> localVarResponse = SalvarAgendamentoWithHttpInfo(agendamentoPersist, id);
+             ApiResponse<AjusteFinanceiroResponse> localVarResponse = SalvarAjusteFinanceiroContaWithHttpInfo(id, idTipoAjuste, dataAjuste, valorAjuste, login, identificadorExterno, idTransacaoOriginal, idEstabelecimento, flagAtendimento, mensagemAtendimento);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Realiza o agendamento de transacoes Este recurso permite agendar opera\u00E7\u00F5es financeiras
+        /// Lan\u00E7a um ajuste para a conta do id informado Este recurso insere um ajuste para a conta do id informado
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="agendamentoPersist">agendamentoPersist</param> 
-        /// <param name="id">id</param> 
-        /// <returns>ApiResponse of AgendamentoResponse</returns>
-        public ApiResponse< AgendamentoResponse > SalvarAgendamentoWithHttpInfo (AgendamentoPersist agendamentoPersist, long? id)
+        /// <param name="id">Id Conta</param> 
+        /// <param name="idTipoAjuste">C\u00F3digo identificador do tipo de ajuste</param> 
+        /// <param name="dataAjuste">Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ</param> 
+        /// <param name="valorAjuste">Valor do ajuste</param> 
+        /// <param name="login">login (optional)</param> 
+        /// <param name="identificadorExterno">Identificador Externo (optional)</param> 
+        /// <param name="idTransacaoOriginal">Identificador da transa\u00E7\u00E3o original (estorno) (optional)</param> 
+        /// <param name="idEstabelecimento">Identificador do estabelecimento quando o pagamento for efetuado em loja (optional)</param> 
+        /// <param name="flagAtendimento">Flag para lan\u00E7ar o atendimento (optional)</param> 
+        /// <param name="mensagemAtendimento">Mensagem enviada no atendimento (optional)</param> 
+        /// <returns>ApiResponse of AjusteFinanceiroResponse</returns>
+        public ApiResponse< AjusteFinanceiroResponse > SalvarAjusteFinanceiroContaWithHttpInfo (long? id, long? idTipoAjuste, string dataAjuste, double? valorAjuste, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null, bool? flagAtendimento = null, string mensagemAtendimento = null)
         {
-            
-            // verify the required parameter 'agendamentoPersist' is set
-            if (agendamentoPersist == null)
-                throw new ApiException(400, "Missing required parameter 'agendamentoPersist' when calling ContaApi->SalvarAgendamento");
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->SalvarAgendamento");
+                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->SalvarAjusteFinanceiroConta");
+            
+            // verify the required parameter 'idTipoAjuste' is set
+            if (idTipoAjuste == null)
+                throw new ApiException(400, "Missing required parameter 'idTipoAjuste' when calling ContaApi->SalvarAjusteFinanceiroConta");
+            
+            // verify the required parameter 'dataAjuste' is set
+            if (dataAjuste == null)
+                throw new ApiException(400, "Missing required parameter 'dataAjuste' when calling ContaApi->SalvarAjusteFinanceiroConta");
+            
+            // verify the required parameter 'valorAjuste' is set
+            if (valorAjuste == null)
+                throw new ApiException(400, "Missing required parameter 'valorAjuste' when calling ContaApi->SalvarAjusteFinanceiroConta");
             
     
-            var localVarPath = "/api/contas/{id}/agendamentos";
+            var localVarPath = "/api/contas/{id}/ajustes-financeiros";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -15619,16 +15167,215 @@ namespace Conductor.Pier.Api
             localVarPathParams.Add("format", "json");
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             
+            if (idTipoAjuste != null) localVarQueryParams.Add("idTipoAjuste", Configuration.ApiClient.ParameterToString(idTipoAjuste)); // query parameter
+            if (dataAjuste != null) localVarQueryParams.Add("dataAjuste", Configuration.ApiClient.ParameterToString(dataAjuste)); // query parameter
+            if (valorAjuste != null) localVarQueryParams.Add("valorAjuste", Configuration.ApiClient.ParameterToString(valorAjuste)); // query parameter
+            if (identificadorExterno != null) localVarQueryParams.Add("identificadorExterno", Configuration.ApiClient.ParameterToString(identificadorExterno)); // query parameter
+            if (idTransacaoOriginal != null) localVarQueryParams.Add("idTransacaoOriginal", Configuration.ApiClient.ParameterToString(idTransacaoOriginal)); // query parameter
+            if (idEstabelecimento != null) localVarQueryParams.Add("idEstabelecimento", Configuration.ApiClient.ParameterToString(idEstabelecimento)); // query parameter
+            if (flagAtendimento != null) localVarQueryParams.Add("flagAtendimento", Configuration.ApiClient.ParameterToString(flagAtendimento)); // query parameter
+            if (mensagemAtendimento != null) localVarQueryParams.Add("mensagemAtendimento", Configuration.ApiClient.ParameterToString(mensagemAtendimento)); // query parameter
+            
+            if (login != null) localVarHeaderParams.Add("login", Configuration.ApiClient.ParameterToString(login)); // header parameter
             
             
             
-            if (agendamentoPersist.GetType() != typeof(byte[]))
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarAjusteFinanceiroConta: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarAjusteFinanceiroConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<AjusteFinanceiroResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AjusteFinanceiroResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AjusteFinanceiroResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Lan\u00E7a um ajuste para a conta do id informado Este recurso insere um ajuste para a conta do id informado
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Id Conta</param>
+        /// <param name="idTipoAjuste">C\u00F3digo identificador do tipo de ajuste</param>
+        /// <param name="dataAjuste">Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ</param>
+        /// <param name="valorAjuste">Valor do ajuste</param>
+        /// <param name="login">login (optional)</param>
+        /// <param name="identificadorExterno">Identificador Externo (optional)</param>
+        /// <param name="idTransacaoOriginal">Identificador da transa\u00E7\u00E3o original (estorno) (optional)</param>
+        /// <param name="idEstabelecimento">Identificador do estabelecimento quando o pagamento for efetuado em loja (optional)</param>
+        /// <param name="flagAtendimento">Flag para lan\u00E7ar o atendimento (optional)</param>
+        /// <param name="mensagemAtendimento">Mensagem enviada no atendimento (optional)</param>
+        /// <returns>Task of AjusteFinanceiroResponse</returns>
+        public async System.Threading.Tasks.Task<AjusteFinanceiroResponse> SalvarAjusteFinanceiroContaAsync (long? id, long? idTipoAjuste, string dataAjuste, double? valorAjuste, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null, bool? flagAtendimento = null, string mensagemAtendimento = null)
+        {
+             ApiResponse<AjusteFinanceiroResponse> localVarResponse = await SalvarAjusteFinanceiroContaAsyncWithHttpInfo(id, idTipoAjuste, dataAjuste, valorAjuste, login, identificadorExterno, idTransacaoOriginal, idEstabelecimento, flagAtendimento, mensagemAtendimento);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Lan\u00E7a um ajuste para a conta do id informado Este recurso insere um ajuste para a conta do id informado
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Id Conta</param>
+        /// <param name="idTipoAjuste">C\u00F3digo identificador do tipo de ajuste</param>
+        /// <param name="dataAjuste">Data do ajuste no formato yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ</param>
+        /// <param name="valorAjuste">Valor do ajuste</param>
+        /// <param name="login">login (optional)</param>
+        /// <param name="identificadorExterno">Identificador Externo (optional)</param>
+        /// <param name="idTransacaoOriginal">Identificador da transa\u00E7\u00E3o original (estorno) (optional)</param>
+        /// <param name="idEstabelecimento">Identificador do estabelecimento quando o pagamento for efetuado em loja (optional)</param>
+        /// <param name="flagAtendimento">Flag para lan\u00E7ar o atendimento (optional)</param>
+        /// <param name="mensagemAtendimento">Mensagem enviada no atendimento (optional)</param>
+        /// <returns>Task of ApiResponse (AjusteFinanceiroResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AjusteFinanceiroResponse>> SalvarAjusteFinanceiroContaAsyncWithHttpInfo (long? id, long? idTipoAjuste, string dataAjuste, double? valorAjuste, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null, bool? flagAtendimento = null, string mensagemAtendimento = null)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling SalvarAjusteFinanceiroConta");
+            // verify the required parameter 'idTipoAjuste' is set
+            if (idTipoAjuste == null) throw new ApiException(400, "Missing required parameter 'idTipoAjuste' when calling SalvarAjusteFinanceiroConta");
+            // verify the required parameter 'dataAjuste' is set
+            if (dataAjuste == null) throw new ApiException(400, "Missing required parameter 'dataAjuste' when calling SalvarAjusteFinanceiroConta");
+            // verify the required parameter 'valorAjuste' is set
+            if (valorAjuste == null) throw new ApiException(400, "Missing required parameter 'valorAjuste' when calling SalvarAjusteFinanceiroConta");
+            
+    
+            var localVarPath = "/api/contas/{id}/ajustes-financeiros";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            if (idTipoAjuste != null) localVarQueryParams.Add("idTipoAjuste", Configuration.ApiClient.ParameterToString(idTipoAjuste)); // query parameter
+            if (dataAjuste != null) localVarQueryParams.Add("dataAjuste", Configuration.ApiClient.ParameterToString(dataAjuste)); // query parameter
+            if (valorAjuste != null) localVarQueryParams.Add("valorAjuste", Configuration.ApiClient.ParameterToString(valorAjuste)); // query parameter
+            if (identificadorExterno != null) localVarQueryParams.Add("identificadorExterno", Configuration.ApiClient.ParameterToString(identificadorExterno)); // query parameter
+            if (idTransacaoOriginal != null) localVarQueryParams.Add("idTransacaoOriginal", Configuration.ApiClient.ParameterToString(idTransacaoOriginal)); // query parameter
+            if (idEstabelecimento != null) localVarQueryParams.Add("idEstabelecimento", Configuration.ApiClient.ParameterToString(idEstabelecimento)); // query parameter
+            if (flagAtendimento != null) localVarQueryParams.Add("flagAtendimento", Configuration.ApiClient.ParameterToString(flagAtendimento)); // query parameter
+            if (mensagemAtendimento != null) localVarQueryParams.Add("mensagemAtendimento", Configuration.ApiClient.ParameterToString(mensagemAtendimento)); // query parameter
+            
+            if (login != null) localVarHeaderParams.Add("login", Configuration.ApiClient.ParameterToString(login)); // header parameter
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarAjusteFinanceiroConta: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarAjusteFinanceiroConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AjusteFinanceiroResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AjusteFinanceiroResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AjusteFinanceiroResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Realiza o cadastro de uma nova conta Esse recurso permite cadastrar uma nova conta para uma pessoa j\u00E1 existente na base de dados do emissor
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contaPersist">contaPersist</param> 
+        /// <returns>ContaResponse</returns>
+        public ContaResponse SalvarConta (ContaPersist contaPersist)
+        {
+             ApiResponse<ContaResponse> localVarResponse = SalvarContaWithHttpInfo(contaPersist);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Realiza o cadastro de uma nova conta Esse recurso permite cadastrar uma nova conta para uma pessoa j\u00E1 existente na base de dados do emissor
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contaPersist">contaPersist</param> 
+        /// <returns>ApiResponse of ContaResponse</returns>
+        public ApiResponse< ContaResponse > SalvarContaWithHttpInfo (ContaPersist contaPersist)
+        {
+            
+            // verify the required parameter 'contaPersist' is set
+            if (contaPersist == null)
+                throw new ApiException(400, "Missing required parameter 'contaPersist' when calling ContaApi->SalvarConta");
+            
+    
+            var localVarPath = "/api/contas";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            if (contaPersist.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(agendamentoPersist); // http body (model) parameter
+                localVarPostBody = Configuration.ApiClient.Serialize(contaPersist); // http body (model) parameter
             }
             else
             {
-                localVarPostBody = agendamentoPersist; // byte array
+                localVarPostBody = contaPersist; // byte array
             }
 
             
@@ -15641,47 +15388,134 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarAgendamento: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarConta: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarAgendamento: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<AgendamentoResponse>(localVarStatusCode,
+            return new ApiResponse<ContaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (AgendamentoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AgendamentoResponse)));
+                (ContaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContaResponse)));
             
         }
 
         
         /// <summary>
-        /// Realiza o agendamento de transacoes Este recurso permite agendar opera\u00E7\u00F5es financeiras
+        /// Realiza o cadastro de uma nova conta Esse recurso permite cadastrar uma nova conta para uma pessoa j\u00E1 existente na base de dados do emissor
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="agendamentoPersist">agendamentoPersist</param>
-        /// <param name="id">id</param>
-        /// <returns>Task of AgendamentoResponse</returns>
-        public async System.Threading.Tasks.Task<AgendamentoResponse> SalvarAgendamentoAsync (AgendamentoPersist agendamentoPersist, long? id)
+        /// <param name="contaPersist">contaPersist</param>
+        /// <returns>Task of ContaResponse</returns>
+        public async System.Threading.Tasks.Task<ContaResponse> SalvarContaAsync (ContaPersist contaPersist)
         {
-             ApiResponse<AgendamentoResponse> localVarResponse = await SalvarAgendamentoAsyncWithHttpInfo(agendamentoPersist, id);
+             ApiResponse<ContaResponse> localVarResponse = await SalvarContaAsyncWithHttpInfo(contaPersist);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Realiza o agendamento de transacoes Este recurso permite agendar opera\u00E7\u00F5es financeiras
+        /// Realiza o cadastro de uma nova conta Esse recurso permite cadastrar uma nova conta para uma pessoa j\u00E1 existente na base de dados do emissor
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="agendamentoPersist">agendamentoPersist</param>
-        /// <param name="id">id</param>
-        /// <returns>Task of ApiResponse (AgendamentoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AgendamentoResponse>> SalvarAgendamentoAsyncWithHttpInfo (AgendamentoPersist agendamentoPersist, long? id)
+        /// <param name="contaPersist">contaPersist</param>
+        /// <returns>Task of ApiResponse (ContaResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ContaResponse>> SalvarContaAsyncWithHttpInfo (ContaPersist contaPersist)
         {
-            // verify the required parameter 'agendamentoPersist' is set
-            if (agendamentoPersist == null) throw new ApiException(400, "Missing required parameter 'agendamentoPersist' when calling SalvarAgendamento");
-            // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling SalvarAgendamento");
+            // verify the required parameter 'contaPersist' is set
+            if (contaPersist == null) throw new ApiException(400, "Missing required parameter 'contaPersist' when calling SalvarConta");
             
     
-            var localVarPath = "/api/contas/{id}/agendamentos";
+            var localVarPath = "/api/contas";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            if (contaPersist.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(contaPersist); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = contaPersist; // byte array
+            }
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarConta: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ContaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ContaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContaResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Salvar uma tarifa de d\u00E9bito para uma conta Este recurso permite salvar uma tarifa de d\u00E9bito para a conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta</param> 
+        /// <param name="contaDebitoTarifaPersist">contaDebitoTarifaPersist</param> 
+        /// <returns>ContaDebitoTarifaResponse</returns>
+        public ContaDebitoTarifaResponse SalvarContaDebitoTarifa (long? id, ContaDebitoTarifaPersist contaDebitoTarifaPersist)
+        {
+             ApiResponse<ContaDebitoTarifaResponse> localVarResponse = SalvarContaDebitoTarifaWithHttpInfo(id, contaDebitoTarifaPersist);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Salvar uma tarifa de d\u00E9bito para uma conta Este recurso permite salvar uma tarifa de d\u00E9bito para a conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta</param> 
+        /// <param name="contaDebitoTarifaPersist">contaDebitoTarifaPersist</param> 
+        /// <returns>ApiResponse of ContaDebitoTarifaResponse</returns>
+        public ApiResponse< ContaDebitoTarifaResponse > SalvarContaDebitoTarifaWithHttpInfo (long? id, ContaDebitoTarifaPersist contaDebitoTarifaPersist)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->SalvarContaDebitoTarifa");
+            
+            // verify the required parameter 'contaDebitoTarifaPersist' is set
+            if (contaDebitoTarifaPersist == null)
+                throw new ApiException(400, "Missing required parameter 'contaDebitoTarifaPersist' when calling ContaApi->SalvarContaDebitoTarifa");
+            
+    
+            var localVarPath = "/api/contas/{id}/tarifas/debitos";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -15712,13 +15546,103 @@ namespace Conductor.Pier.Api
             
             
             
-            if (agendamentoPersist.GetType() != typeof(byte[]))
+            if (contaDebitoTarifaPersist.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(agendamentoPersist); // http body (model) parameter
+                localVarPostBody = Configuration.ApiClient.Serialize(contaDebitoTarifaPersist); // http body (model) parameter
             }
             else
             {
-                localVarPostBody = agendamentoPersist; // byte array
+                localVarPostBody = contaDebitoTarifaPersist; // byte array
+            }
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarContaDebitoTarifa: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarContaDebitoTarifa: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<ContaDebitoTarifaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ContaDebitoTarifaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContaDebitoTarifaResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Salvar uma tarifa de d\u00E9bito para uma conta Este recurso permite salvar uma tarifa de d\u00E9bito para a conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta</param>
+        /// <param name="contaDebitoTarifaPersist">contaDebitoTarifaPersist</param>
+        /// <returns>Task of ContaDebitoTarifaResponse</returns>
+        public async System.Threading.Tasks.Task<ContaDebitoTarifaResponse> SalvarContaDebitoTarifaAsync (long? id, ContaDebitoTarifaPersist contaDebitoTarifaPersist)
+        {
+             ApiResponse<ContaDebitoTarifaResponse> localVarResponse = await SalvarContaDebitoTarifaAsyncWithHttpInfo(id, contaDebitoTarifaPersist);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Salvar uma tarifa de d\u00E9bito para uma conta Este recurso permite salvar uma tarifa de d\u00E9bito para a conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta</param>
+        /// <param name="contaDebitoTarifaPersist">contaDebitoTarifaPersist</param>
+        /// <returns>Task of ApiResponse (ContaDebitoTarifaResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ContaDebitoTarifaResponse>> SalvarContaDebitoTarifaAsyncWithHttpInfo (long? id, ContaDebitoTarifaPersist contaDebitoTarifaPersist)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling SalvarContaDebitoTarifa");
+            // verify the required parameter 'contaDebitoTarifaPersist' is set
+            if (contaDebitoTarifaPersist == null) throw new ApiException(400, "Missing required parameter 'contaDebitoTarifaPersist' when calling SalvarContaDebitoTarifa");
+            
+    
+            var localVarPath = "/api/contas/{id}/tarifas/debitos";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            if (contaDebitoTarifaPersist.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(contaDebitoTarifaPersist); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = contaDebitoTarifaPersist; // byte array
             }
 
             
@@ -15731,13 +15655,13 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarAgendamento: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarContaDebitoTarifa: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarAgendamento: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarContaDebitoTarifa: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<AgendamentoResponse>(localVarStatusCode,
+            return new ApiResponse<ContaDebitoTarifaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (AgendamentoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AgendamentoResponse)));
+                (ContaDebitoTarifaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContaDebitoTarifaResponse)));
             
         }
         
@@ -16470,182 +16394,6 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Permite listar uma linha do tempo com os eventos da conta Esta opera\u00E7\u00E3o tem como objetivo permitir a listagem, em formato de timeline, dos eventos vinculados a uma detemrinada conta. Transa\u00E7\u00F5es, fechamento da fatura, pagamentos, gera\u00E7\u00E3o de cart\u00F5es e altera\u00E7\u00E3o de limite s\u00E3o exemplos de eventos contemplados por esta funcionalidade. Neste m\u00E9todo, as opera\u00E7\u00F5es s\u00E3o ordenadas de forma decrescente
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Id Conta</param> 
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
-        /// <param name="page">P\u00E1gina (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
-        /// <returns>PageTransacaoResponse</returns>
-        public PageTransacaoResponse Transacoes (long? id, List<string> sort = null, int? page = null, int? limit = null)
-        {
-             ApiResponse<PageTransacaoResponse> localVarResponse = TransacoesWithHttpInfo(id, sort, page, limit);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Permite listar uma linha do tempo com os eventos da conta Esta opera\u00E7\u00E3o tem como objetivo permitir a listagem, em formato de timeline, dos eventos vinculados a uma detemrinada conta. Transa\u00E7\u00F5es, fechamento da fatura, pagamentos, gera\u00E7\u00E3o de cart\u00F5es e altera\u00E7\u00E3o de limite s\u00E3o exemplos de eventos contemplados por esta funcionalidade. Neste m\u00E9todo, as opera\u00E7\u00F5es s\u00E3o ordenadas de forma decrescente
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Id Conta</param> 
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
-        /// <param name="page">P\u00E1gina (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
-        /// <returns>ApiResponse of PageTransacaoResponse</returns>
-        public ApiResponse< PageTransacaoResponse > TransacoesWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null)
-        {
-            
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->Transacoes");
-            
-    
-            var localVarPath = "/api/contas/{id}/timeline";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            
-            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
-            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
-            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
-            
-            
-            
-            
-
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Transacoes: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Transacoes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<PageTransacaoResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PageTransacaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageTransacaoResponse)));
-            
-        }
-
-        
-        /// <summary>
-        /// Permite listar uma linha do tempo com os eventos da conta Esta opera\u00E7\u00E3o tem como objetivo permitir a listagem, em formato de timeline, dos eventos vinculados a uma detemrinada conta. Transa\u00E7\u00F5es, fechamento da fatura, pagamentos, gera\u00E7\u00E3o de cart\u00F5es e altera\u00E7\u00E3o de limite s\u00E3o exemplos de eventos contemplados por esta funcionalidade. Neste m\u00E9todo, as opera\u00E7\u00F5es s\u00E3o ordenadas de forma decrescente
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Id Conta</param>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <returns>Task of PageTransacaoResponse</returns>
-        public async System.Threading.Tasks.Task<PageTransacaoResponse> TransacoesAsync (long? id, List<string> sort = null, int? page = null, int? limit = null)
-        {
-             ApiResponse<PageTransacaoResponse> localVarResponse = await TransacoesAsyncWithHttpInfo(id, sort, page, limit);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Permite listar uma linha do tempo com os eventos da conta Esta opera\u00E7\u00E3o tem como objetivo permitir a listagem, em formato de timeline, dos eventos vinculados a uma detemrinada conta. Transa\u00E7\u00F5es, fechamento da fatura, pagamentos, gera\u00E7\u00E3o de cart\u00F5es e altera\u00E7\u00E3o de limite s\u00E3o exemplos de eventos contemplados por esta funcionalidade. Neste m\u00E9todo, as opera\u00E7\u00F5es s\u00E3o ordenadas de forma decrescente
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Id Conta</param>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <returns>Task of ApiResponse (PageTransacaoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageTransacaoResponse>> TransacoesAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null)
-        {
-            // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling Transacoes");
-            
-    
-            var localVarPath = "/api/contas/{id}/timeline";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            
-            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
-            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
-            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
-            
-            
-            
-            
-
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Transacoes: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Transacoes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<PageTransacaoResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PageTransacaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageTransacaoResponse)));
-            
-        }
-        
-        /// <summary>
         /// Realiza uma transfer\u00EAncia de Cr\u00E9dito para outro cliente do mesmo Emissor Este m\u00E9todo permite que um portador de um cart\u00E3o possa realizar auma transfer\u00EAncia de cr\u00E9dito para outro cliente do mesmo emissor
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
@@ -16653,9 +16401,9 @@ namespace Conductor.Pier.Api
         /// <param name="idContaDestino">C\u00F3digo de Identifica\u00E7\u00E3o do cliente portador do cart\u00E3o que ser\u00E1 creditado (id)</param> 
         /// <param name="valorTransferencia">Valor da Transfer\u00EAncia</param> 
         /// <returns>TransferenciaDetalheResponse</returns>
-        public TransferenciaDetalheResponse Transferir (long? id, long? idContaDestino, double? valorTransferencia)
+        public TransferenciaDetalheResponse TransferirCreditoEntreCartoes (long? id, long? idContaDestino, double? valorTransferencia)
         {
-             ApiResponse<TransferenciaDetalheResponse> localVarResponse = TransferirWithHttpInfo(id, idContaDestino, valorTransferencia);
+             ApiResponse<TransferenciaDetalheResponse> localVarResponse = TransferirCreditoEntreCartoesWithHttpInfo(id, idContaDestino, valorTransferencia);
              return localVarResponse.Data;
         }
 
@@ -16667,20 +16415,20 @@ namespace Conductor.Pier.Api
         /// <param name="idContaDestino">C\u00F3digo de Identifica\u00E7\u00E3o do cliente portador do cart\u00E3o que ser\u00E1 creditado (id)</param> 
         /// <param name="valorTransferencia">Valor da Transfer\u00EAncia</param> 
         /// <returns>ApiResponse of TransferenciaDetalheResponse</returns>
-        public ApiResponse< TransferenciaDetalheResponse > TransferirWithHttpInfo (long? id, long? idContaDestino, double? valorTransferencia)
+        public ApiResponse< TransferenciaDetalheResponse > TransferirCreditoEntreCartoesWithHttpInfo (long? id, long? idContaDestino, double? valorTransferencia)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->Transferir");
+                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->TransferirCreditoEntreCartoes");
             
             // verify the required parameter 'idContaDestino' is set
             if (idContaDestino == null)
-                throw new ApiException(400, "Missing required parameter 'idContaDestino' when calling ContaApi->Transferir");
+                throw new ApiException(400, "Missing required parameter 'idContaDestino' when calling ContaApi->TransferirCreditoEntreCartoes");
             
             // verify the required parameter 'valorTransferencia' is set
             if (valorTransferencia == null)
-                throw new ApiException(400, "Missing required parameter 'valorTransferencia' when calling ContaApi->Transferir");
+                throw new ApiException(400, "Missing required parameter 'valorTransferencia' when calling ContaApi->TransferirCreditoEntreCartoes");
             
     
             var localVarPath = "/api/contas/{id}/transferencias-creditos-cartoes";
@@ -16728,9 +16476,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Transferir: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling TransferirCreditoEntreCartoes: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Transferir: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling TransferirCreditoEntreCartoes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<TransferenciaDetalheResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -16747,9 +16495,9 @@ namespace Conductor.Pier.Api
         /// <param name="idContaDestino">C\u00F3digo de Identifica\u00E7\u00E3o do cliente portador do cart\u00E3o que ser\u00E1 creditado (id)</param>
         /// <param name="valorTransferencia">Valor da Transfer\u00EAncia</param>
         /// <returns>Task of TransferenciaDetalheResponse</returns>
-        public async System.Threading.Tasks.Task<TransferenciaDetalheResponse> TransferirAsync (long? id, long? idContaDestino, double? valorTransferencia)
+        public async System.Threading.Tasks.Task<TransferenciaDetalheResponse> TransferirCreditoEntreCartoesAsync (long? id, long? idContaDestino, double? valorTransferencia)
         {
-             ApiResponse<TransferenciaDetalheResponse> localVarResponse = await TransferirAsyncWithHttpInfo(id, idContaDestino, valorTransferencia);
+             ApiResponse<TransferenciaDetalheResponse> localVarResponse = await TransferirCreditoEntreCartoesAsyncWithHttpInfo(id, idContaDestino, valorTransferencia);
              return localVarResponse.Data;
 
         }
@@ -16762,14 +16510,14 @@ namespace Conductor.Pier.Api
         /// <param name="idContaDestino">C\u00F3digo de Identifica\u00E7\u00E3o do cliente portador do cart\u00E3o que ser\u00E1 creditado (id)</param>
         /// <param name="valorTransferencia">Valor da Transfer\u00EAncia</param>
         /// <returns>Task of ApiResponse (TransferenciaDetalheResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TransferenciaDetalheResponse>> TransferirAsyncWithHttpInfo (long? id, long? idContaDestino, double? valorTransferencia)
+        public async System.Threading.Tasks.Task<ApiResponse<TransferenciaDetalheResponse>> TransferirCreditoEntreCartoesAsyncWithHttpInfo (long? id, long? idContaDestino, double? valorTransferencia)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling Transferir");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling TransferirCreditoEntreCartoes");
             // verify the required parameter 'idContaDestino' is set
-            if (idContaDestino == null) throw new ApiException(400, "Missing required parameter 'idContaDestino' when calling Transferir");
+            if (idContaDestino == null) throw new ApiException(400, "Missing required parameter 'idContaDestino' when calling TransferirCreditoEntreCartoes");
             // verify the required parameter 'valorTransferencia' is set
-            if (valorTransferencia == null) throw new ApiException(400, "Missing required parameter 'valorTransferencia' when calling Transferir");
+            if (valorTransferencia == null) throw new ApiException(400, "Missing required parameter 'valorTransferencia' when calling TransferirCreditoEntreCartoes");
             
     
             var localVarPath = "/api/contas/{id}/transferencias-creditos-cartoes";
@@ -16817,9 +16565,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Transferir: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling TransferirCreditoEntreCartoes: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Transferir: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling TransferirCreditoEntreCartoes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<TransferenciaDetalheResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -16834,9 +16582,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">Id da conta</param> 
         /// <param name="transferencia">transferencia</param> 
         /// <returns>TransferenciaPortadoresResponse</returns>
-        public TransferenciaPortadoresResponse TransferirCreditoPortadores (long? id, TransferenciaPortadoresPersist transferencia)
+        public TransferenciaPortadoresResponse TransferirCreditoEntrePortadores (long? id, TransferenciaPortadoresPersist transferencia)
         {
-             ApiResponse<TransferenciaPortadoresResponse> localVarResponse = TransferirCreditoPortadoresWithHttpInfo(id, transferencia);
+             ApiResponse<TransferenciaPortadoresResponse> localVarResponse = TransferirCreditoEntrePortadoresWithHttpInfo(id, transferencia);
              return localVarResponse.Data;
         }
 
@@ -16847,16 +16595,16 @@ namespace Conductor.Pier.Api
         /// <param name="id">Id da conta</param> 
         /// <param name="transferencia">transferencia</param> 
         /// <returns>ApiResponse of TransferenciaPortadoresResponse</returns>
-        public ApiResponse< TransferenciaPortadoresResponse > TransferirCreditoPortadoresWithHttpInfo (long? id, TransferenciaPortadoresPersist transferencia)
+        public ApiResponse< TransferenciaPortadoresResponse > TransferirCreditoEntrePortadoresWithHttpInfo (long? id, TransferenciaPortadoresPersist transferencia)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->TransferirCreditoPortadores");
+                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->TransferirCreditoEntrePortadores");
             
             // verify the required parameter 'transferencia' is set
             if (transferencia == null)
-                throw new ApiException(400, "Missing required parameter 'transferencia' when calling ContaApi->TransferirCreditoPortadores");
+                throw new ApiException(400, "Missing required parameter 'transferencia' when calling ContaApi->TransferirCreditoEntrePortadores");
             
     
             var localVarPath = "/api/contas/{id}/transferencias-creditos-portadores";
@@ -16909,9 +16657,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling TransferirCreditoPortadores: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling TransferirCreditoEntrePortadores: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling TransferirCreditoPortadores: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling TransferirCreditoEntrePortadores: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<TransferenciaPortadoresResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -16927,9 +16675,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">Id da conta</param>
         /// <param name="transferencia">transferencia</param>
         /// <returns>Task of TransferenciaPortadoresResponse</returns>
-        public async System.Threading.Tasks.Task<TransferenciaPortadoresResponse> TransferirCreditoPortadoresAsync (long? id, TransferenciaPortadoresPersist transferencia)
+        public async System.Threading.Tasks.Task<TransferenciaPortadoresResponse> TransferirCreditoEntrePortadoresAsync (long? id, TransferenciaPortadoresPersist transferencia)
         {
-             ApiResponse<TransferenciaPortadoresResponse> localVarResponse = await TransferirCreditoPortadoresAsyncWithHttpInfo(id, transferencia);
+             ApiResponse<TransferenciaPortadoresResponse> localVarResponse = await TransferirCreditoEntrePortadoresAsyncWithHttpInfo(id, transferencia);
              return localVarResponse.Data;
 
         }
@@ -16941,12 +16689,12 @@ namespace Conductor.Pier.Api
         /// <param name="id">Id da conta</param>
         /// <param name="transferencia">transferencia</param>
         /// <returns>Task of ApiResponse (TransferenciaPortadoresResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TransferenciaPortadoresResponse>> TransferirCreditoPortadoresAsyncWithHttpInfo (long? id, TransferenciaPortadoresPersist transferencia)
+        public async System.Threading.Tasks.Task<ApiResponse<TransferenciaPortadoresResponse>> TransferirCreditoEntrePortadoresAsyncWithHttpInfo (long? id, TransferenciaPortadoresPersist transferencia)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling TransferirCreditoPortadores");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling TransferirCreditoEntrePortadores");
             // verify the required parameter 'transferencia' is set
-            if (transferencia == null) throw new ApiException(400, "Missing required parameter 'transferencia' when calling TransferirCreditoPortadores");
+            if (transferencia == null) throw new ApiException(400, "Missing required parameter 'transferencia' when calling TransferirCreditoEntrePortadores");
             
     
             var localVarPath = "/api/contas/{id}/transferencias-creditos-portadores";
@@ -16999,9 +16747,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling TransferirCreditoPortadores: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling TransferirCreditoEntrePortadores: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling TransferirCreditoPortadores: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling TransferirCreditoEntrePortadores: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<TransferenciaPortadoresResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

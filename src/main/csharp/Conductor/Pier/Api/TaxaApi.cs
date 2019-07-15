@@ -32,7 +32,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataEntrada">Data Entrada da taxa (optional)</param>
         /// <param name="vencimento">Vencimento da Taxa (optional)</param>
         /// <returns>PageTaxasRefinanciamentoResponse</returns>
-        PageTaxasRefinanciamentoResponse Listar (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idProduto = null, string dataEntrada = null, string vencimento = null);
+        PageTaxasRefinanciamentoResponse ListarTaxasRefinanciamento (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idProduto = null, string dataEntrada = null, string vencimento = null);
   
         /// <summary>
         /// Listar as taxas de refinanciamento
@@ -49,7 +49,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataEntrada">Data Entrada da taxa (optional)</param>
         /// <param name="vencimento">Vencimento da Taxa (optional)</param>
         /// <returns>ApiResponse of PageTaxasRefinanciamentoResponse</returns>
-        ApiResponse<PageTaxasRefinanciamentoResponse> ListarWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idProduto = null, string dataEntrada = null, string vencimento = null);
+        ApiResponse<PageTaxasRefinanciamentoResponse> ListarTaxasRefinanciamentoWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idProduto = null, string dataEntrada = null, string vencimento = null);
         
         #endregion Synchronous Operations
         
@@ -70,7 +70,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataEntrada">Data Entrada da taxa (optional)</param>
         /// <param name="vencimento">Vencimento da Taxa (optional)</param>
         /// <returns>Task of PageTaxasRefinanciamentoResponse</returns>
-        System.Threading.Tasks.Task<PageTaxasRefinanciamentoResponse> ListarAsync (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idProduto = null, string dataEntrada = null, string vencimento = null);
+        System.Threading.Tasks.Task<PageTaxasRefinanciamentoResponse> ListarTaxasRefinanciamentoAsync (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idProduto = null, string dataEntrada = null, string vencimento = null);
 
         /// <summary>
         /// Listar as taxas de refinanciamento
@@ -87,7 +87,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataEntrada">Data Entrada da taxa (optional)</param>
         /// <param name="vencimento">Vencimento da Taxa (optional)</param>
         /// <returns>Task of ApiResponse (PageTaxasRefinanciamentoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageTaxasRefinanciamentoResponse>> ListarAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idProduto = null, string dataEntrada = null, string vencimento = null);
+        System.Threading.Tasks.Task<ApiResponse<PageTaxasRefinanciamentoResponse>> ListarTaxasRefinanciamentoAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idProduto = null, string dataEntrada = null, string vencimento = null);
         
         #endregion Asynchronous Operations
         
@@ -193,9 +193,9 @@ namespace Conductor.Pier.Api
         /// <param name="dataEntrada">Data Entrada da taxa (optional)</param> 
         /// <param name="vencimento">Vencimento da Taxa (optional)</param> 
         /// <returns>PageTaxasRefinanciamentoResponse</returns>
-        public PageTaxasRefinanciamentoResponse Listar (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idProduto = null, string dataEntrada = null, string vencimento = null)
+        public PageTaxasRefinanciamentoResponse ListarTaxasRefinanciamento (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idProduto = null, string dataEntrada = null, string vencimento = null)
         {
-             ApiResponse<PageTaxasRefinanciamentoResponse> localVarResponse = ListarWithHttpInfo(sort, page, limit, id, idProduto, dataEntrada, vencimento);
+             ApiResponse<PageTaxasRefinanciamentoResponse> localVarResponse = ListarTaxasRefinanciamentoWithHttpInfo(sort, page, limit, id, idProduto, dataEntrada, vencimento);
              return localVarResponse.Data;
         }
 
@@ -211,7 +211,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataEntrada">Data Entrada da taxa (optional)</param> 
         /// <param name="vencimento">Vencimento da Taxa (optional)</param> 
         /// <returns>ApiResponse of PageTaxasRefinanciamentoResponse</returns>
-        public ApiResponse< PageTaxasRefinanciamentoResponse > ListarWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idProduto = null, string dataEntrada = null, string vencimento = null)
+        public ApiResponse< PageTaxasRefinanciamentoResponse > ListarTaxasRefinanciamentoWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idProduto = null, string dataEntrada = null, string vencimento = null)
         {
             
     
@@ -264,9 +264,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Listar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarTaxasRefinanciamento: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Listar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarTaxasRefinanciamento: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageTaxasRefinanciamentoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -287,9 +287,9 @@ namespace Conductor.Pier.Api
         /// <param name="dataEntrada">Data Entrada da taxa (optional)</param>
         /// <param name="vencimento">Vencimento da Taxa (optional)</param>
         /// <returns>Task of PageTaxasRefinanciamentoResponse</returns>
-        public async System.Threading.Tasks.Task<PageTaxasRefinanciamentoResponse> ListarAsync (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idProduto = null, string dataEntrada = null, string vencimento = null)
+        public async System.Threading.Tasks.Task<PageTaxasRefinanciamentoResponse> ListarTaxasRefinanciamentoAsync (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idProduto = null, string dataEntrada = null, string vencimento = null)
         {
-             ApiResponse<PageTaxasRefinanciamentoResponse> localVarResponse = await ListarAsyncWithHttpInfo(sort, page, limit, id, idProduto, dataEntrada, vencimento);
+             ApiResponse<PageTaxasRefinanciamentoResponse> localVarResponse = await ListarTaxasRefinanciamentoAsyncWithHttpInfo(sort, page, limit, id, idProduto, dataEntrada, vencimento);
              return localVarResponse.Data;
 
         }
@@ -306,7 +306,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataEntrada">Data Entrada da taxa (optional)</param>
         /// <param name="vencimento">Vencimento da Taxa (optional)</param>
         /// <returns>Task of ApiResponse (PageTaxasRefinanciamentoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageTaxasRefinanciamentoResponse>> ListarAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idProduto = null, string dataEntrada = null, string vencimento = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageTaxasRefinanciamentoResponse>> ListarTaxasRefinanciamentoAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idProduto = null, string dataEntrada = null, string vencimento = null)
         {
             
     
@@ -359,9 +359,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Listar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarTaxasRefinanciamento: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Listar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarTaxasRefinanciamento: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageTaxasRefinanciamentoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

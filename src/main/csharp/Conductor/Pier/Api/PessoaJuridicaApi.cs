@@ -28,7 +28,7 @@ namespace Conductor.Pier.Api
         /// <param name="request">request</param>
         /// <param name="login">login (optional)</param>
         /// <returns>PessoaJuridicaResponse</returns>
-        PessoaJuridicaResponse Alterar (long? id, PessoaJuridicaUpdate request, string login = null);
+        PessoaJuridicaResponse AlterarPessoaJuridica (long? id, PessoaJuridicaUpdate request, string login = null);
   
         /// <summary>
         /// Alterar pessoa jur\u00EDdica
@@ -41,7 +41,7 @@ namespace Conductor.Pier.Api
         /// <param name="request">request</param>
         /// <param name="login">login (optional)</param>
         /// <returns>ApiResponse of PessoaJuridicaResponse</returns>
-        ApiResponse<PessoaJuridicaResponse> AlterarWithHttpInfo (long? id, PessoaJuridicaUpdate request, string login = null);
+        ApiResponse<PessoaJuridicaResponse> AlterarPessoaJuridicaWithHttpInfo (long? id, PessoaJuridicaUpdate request, string login = null);
         
         /// <summary>
         /// Consultar pessoa jur\u00EDdica
@@ -52,7 +52,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Pessoa Juridica id</param>
         /// <returns>PessoaJuridicaResponse</returns>
-        PessoaJuridicaResponse Consultar (long? id);
+        PessoaJuridicaResponse ConsultarPessoaJuridica (long? id);
   
         /// <summary>
         /// Consultar pessoa jur\u00EDdica
@@ -63,7 +63,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Pessoa Juridica id</param>
         /// <returns>ApiResponse of PessoaJuridicaResponse</returns>
-        ApiResponse<PessoaJuridicaResponse> ConsultarWithHttpInfo (long? id);
+        ApiResponse<PessoaJuridicaResponse> ConsultarPessoaJuridicaWithHttpInfo (long? id);
         
         /// <summary>
         /// Listar pessoas jur\u00EDdicas
@@ -75,17 +75,17 @@ namespace Conductor.Pier.Api
         /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
         /// <param name="page">P\u00E1gina (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="contato">Pessoa jur\u00EDdica jur\u00EDdica (optional)</param>
-        /// <param name="razaoSocial">Raz\u00E3o social pessoa jur\u00EDdica (optional)</param>
-        /// <param name="numeroReceitaFederal">CGC(CNPJ) pessoa jur\u00EDdica (optional)</param>
-        /// <param name="inscricaoEstadual">Inscri\u00E7\u00E3o estadual pessoa jur\u00EDdica (optional)</param>
+        /// <param name="contato">Contato da pessoa jur\u00EDdica (optional)</param>
+        /// <param name="razaoSocial">Raz\u00E3o social (optional)</param>
+        /// <param name="numeroReceitaFederal">CGC(CNPJ) da pessoa jur\u00EDdica (optional)</param>
+        /// <param name="inscricaoEstadual">Inscri\u00E7\u00E3o estadual da pessoa jur\u00EDdica (optional)</param>
         /// <param name="banco">Banco da pessoa jur\u00EDdica (optional)</param>
         /// <param name="agencia">Ag\u00EAncia da pessoa jur\u00EDdica (optional)</param>
-        /// <param name="digitoAgencia">D\u00EDgito da jur\u00EDdica (optional)</param>
-        /// <param name="contaCorrente">Conta corrente pessoa jur\u00EDdica (optional)</param>
-        /// <param name="digitoContaCorrente">D\u00EDgito conta jur\u00EDdica (optional)</param>
+        /// <param name="digitoAgencia">D\u00EDgito da ag\u00EAncia (optional)</param>
+        /// <param name="contaCorrente">Conta corrente da pessoa jur\u00EDdica (optional)</param>
+        /// <param name="digitoContaCorrente">D\u00EDgito conta da conta corrente (optional)</param>
         /// <returns>PagePessoaJuridicaResponse</returns>
-        PagePessoaJuridicaResponse Listar (List<string> sort = null, int? page = null, int? limit = null, string contato = null, string razaoSocial = null, string numeroReceitaFederal = null, string inscricaoEstadual = null, int? banco = null, int? agencia = null, string digitoAgencia = null, string contaCorrente = null, string digitoContaCorrente = null);
+        PagePessoaJuridicaResponse ListarPessoasJuridicas (List<string> sort = null, int? page = null, int? limit = null, string contato = null, string razaoSocial = null, string numeroReceitaFederal = null, string inscricaoEstadual = null, int? banco = null, int? agencia = null, string digitoAgencia = null, string contaCorrente = null, string digitoContaCorrente = null);
   
         /// <summary>
         /// Listar pessoas jur\u00EDdicas
@@ -97,17 +97,17 @@ namespace Conductor.Pier.Api
         /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
         /// <param name="page">P\u00E1gina (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="contato">Pessoa jur\u00EDdica jur\u00EDdica (optional)</param>
-        /// <param name="razaoSocial">Raz\u00E3o social pessoa jur\u00EDdica (optional)</param>
-        /// <param name="numeroReceitaFederal">CGC(CNPJ) pessoa jur\u00EDdica (optional)</param>
-        /// <param name="inscricaoEstadual">Inscri\u00E7\u00E3o estadual pessoa jur\u00EDdica (optional)</param>
+        /// <param name="contato">Contato da pessoa jur\u00EDdica (optional)</param>
+        /// <param name="razaoSocial">Raz\u00E3o social (optional)</param>
+        /// <param name="numeroReceitaFederal">CGC(CNPJ) da pessoa jur\u00EDdica (optional)</param>
+        /// <param name="inscricaoEstadual">Inscri\u00E7\u00E3o estadual da pessoa jur\u00EDdica (optional)</param>
         /// <param name="banco">Banco da pessoa jur\u00EDdica (optional)</param>
         /// <param name="agencia">Ag\u00EAncia da pessoa jur\u00EDdica (optional)</param>
-        /// <param name="digitoAgencia">D\u00EDgito da jur\u00EDdica (optional)</param>
-        /// <param name="contaCorrente">Conta corrente pessoa jur\u00EDdica (optional)</param>
-        /// <param name="digitoContaCorrente">D\u00EDgito conta jur\u00EDdica (optional)</param>
+        /// <param name="digitoAgencia">D\u00EDgito da ag\u00EAncia (optional)</param>
+        /// <param name="contaCorrente">Conta corrente da pessoa jur\u00EDdica (optional)</param>
+        /// <param name="digitoContaCorrente">D\u00EDgito conta da conta corrente (optional)</param>
         /// <returns>ApiResponse of PagePessoaJuridicaResponse</returns>
-        ApiResponse<PagePessoaJuridicaResponse> ListarWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string contato = null, string razaoSocial = null, string numeroReceitaFederal = null, string inscricaoEstadual = null, int? banco = null, int? agencia = null, string digitoAgencia = null, string contaCorrente = null, string digitoContaCorrente = null);
+        ApiResponse<PagePessoaJuridicaResponse> ListarPessoasJuridicasWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string contato = null, string razaoSocial = null, string numeroReceitaFederal = null, string inscricaoEstadual = null, int? banco = null, int? agencia = null, string digitoAgencia = null, string contaCorrente = null, string digitoContaCorrente = null);
         
         /// <summary>
         /// Salva uma pessoa Juridica 
@@ -119,7 +119,7 @@ namespace Conductor.Pier.Api
         /// <param name="pessoaJuridicaPersist">pessoaJuridicaPersist</param>
         /// <param name="login">login (optional)</param>
         /// <returns>PessoaJuridicaResponse</returns>
-        PessoaJuridicaResponse Salvar (PessoaJuridicaPersist pessoaJuridicaPersist, string login = null);
+        PessoaJuridicaResponse SalvarPessoaJuridica (PessoaJuridicaPersist pessoaJuridicaPersist, string login = null);
   
         /// <summary>
         /// Salva uma pessoa Juridica 
@@ -131,7 +131,7 @@ namespace Conductor.Pier.Api
         /// <param name="pessoaJuridicaPersist">pessoaJuridicaPersist</param>
         /// <param name="login">login (optional)</param>
         /// <returns>ApiResponse of PessoaJuridicaResponse</returns>
-        ApiResponse<PessoaJuridicaResponse> SalvarWithHttpInfo (PessoaJuridicaPersist pessoaJuridicaPersist, string login = null);
+        ApiResponse<PessoaJuridicaResponse> SalvarPessoaJuridicaWithHttpInfo (PessoaJuridicaPersist pessoaJuridicaPersist, string login = null);
         
         #endregion Synchronous Operations
         
@@ -148,7 +148,7 @@ namespace Conductor.Pier.Api
         /// <param name="request">request</param>
         /// <param name="login">login (optional)</param>
         /// <returns>Task of PessoaJuridicaResponse</returns>
-        System.Threading.Tasks.Task<PessoaJuridicaResponse> AlterarAsync (long? id, PessoaJuridicaUpdate request, string login = null);
+        System.Threading.Tasks.Task<PessoaJuridicaResponse> AlterarPessoaJuridicaAsync (long? id, PessoaJuridicaUpdate request, string login = null);
 
         /// <summary>
         /// Alterar pessoa jur\u00EDdica
@@ -161,7 +161,7 @@ namespace Conductor.Pier.Api
         /// <param name="request">request</param>
         /// <param name="login">login (optional)</param>
         /// <returns>Task of ApiResponse (PessoaJuridicaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PessoaJuridicaResponse>> AlterarAsyncWithHttpInfo (long? id, PessoaJuridicaUpdate request, string login = null);
+        System.Threading.Tasks.Task<ApiResponse<PessoaJuridicaResponse>> AlterarPessoaJuridicaAsyncWithHttpInfo (long? id, PessoaJuridicaUpdate request, string login = null);
         
         /// <summary>
         /// Consultar pessoa jur\u00EDdica
@@ -172,7 +172,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Pessoa Juridica id</param>
         /// <returns>Task of PessoaJuridicaResponse</returns>
-        System.Threading.Tasks.Task<PessoaJuridicaResponse> ConsultarAsync (long? id);
+        System.Threading.Tasks.Task<PessoaJuridicaResponse> ConsultarPessoaJuridicaAsync (long? id);
 
         /// <summary>
         /// Consultar pessoa jur\u00EDdica
@@ -183,7 +183,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Pessoa Juridica id</param>
         /// <returns>Task of ApiResponse (PessoaJuridicaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PessoaJuridicaResponse>> ConsultarAsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<PessoaJuridicaResponse>> ConsultarPessoaJuridicaAsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Listar pessoas jur\u00EDdicas
@@ -195,17 +195,17 @@ namespace Conductor.Pier.Api
         /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
         /// <param name="page">P\u00E1gina (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="contato">Pessoa jur\u00EDdica jur\u00EDdica (optional)</param>
-        /// <param name="razaoSocial">Raz\u00E3o social pessoa jur\u00EDdica (optional)</param>
-        /// <param name="numeroReceitaFederal">CGC(CNPJ) pessoa jur\u00EDdica (optional)</param>
-        /// <param name="inscricaoEstadual">Inscri\u00E7\u00E3o estadual pessoa jur\u00EDdica (optional)</param>
+        /// <param name="contato">Contato da pessoa jur\u00EDdica (optional)</param>
+        /// <param name="razaoSocial">Raz\u00E3o social (optional)</param>
+        /// <param name="numeroReceitaFederal">CGC(CNPJ) da pessoa jur\u00EDdica (optional)</param>
+        /// <param name="inscricaoEstadual">Inscri\u00E7\u00E3o estadual da pessoa jur\u00EDdica (optional)</param>
         /// <param name="banco">Banco da pessoa jur\u00EDdica (optional)</param>
         /// <param name="agencia">Ag\u00EAncia da pessoa jur\u00EDdica (optional)</param>
-        /// <param name="digitoAgencia">D\u00EDgito da jur\u00EDdica (optional)</param>
-        /// <param name="contaCorrente">Conta corrente pessoa jur\u00EDdica (optional)</param>
-        /// <param name="digitoContaCorrente">D\u00EDgito conta jur\u00EDdica (optional)</param>
+        /// <param name="digitoAgencia">D\u00EDgito da ag\u00EAncia (optional)</param>
+        /// <param name="contaCorrente">Conta corrente da pessoa jur\u00EDdica (optional)</param>
+        /// <param name="digitoContaCorrente">D\u00EDgito conta da conta corrente (optional)</param>
         /// <returns>Task of PagePessoaJuridicaResponse</returns>
-        System.Threading.Tasks.Task<PagePessoaJuridicaResponse> ListarAsync (List<string> sort = null, int? page = null, int? limit = null, string contato = null, string razaoSocial = null, string numeroReceitaFederal = null, string inscricaoEstadual = null, int? banco = null, int? agencia = null, string digitoAgencia = null, string contaCorrente = null, string digitoContaCorrente = null);
+        System.Threading.Tasks.Task<PagePessoaJuridicaResponse> ListarPessoasJuridicasAsync (List<string> sort = null, int? page = null, int? limit = null, string contato = null, string razaoSocial = null, string numeroReceitaFederal = null, string inscricaoEstadual = null, int? banco = null, int? agencia = null, string digitoAgencia = null, string contaCorrente = null, string digitoContaCorrente = null);
 
         /// <summary>
         /// Listar pessoas jur\u00EDdicas
@@ -217,17 +217,17 @@ namespace Conductor.Pier.Api
         /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
         /// <param name="page">P\u00E1gina (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="contato">Pessoa jur\u00EDdica jur\u00EDdica (optional)</param>
-        /// <param name="razaoSocial">Raz\u00E3o social pessoa jur\u00EDdica (optional)</param>
-        /// <param name="numeroReceitaFederal">CGC(CNPJ) pessoa jur\u00EDdica (optional)</param>
-        /// <param name="inscricaoEstadual">Inscri\u00E7\u00E3o estadual pessoa jur\u00EDdica (optional)</param>
+        /// <param name="contato">Contato da pessoa jur\u00EDdica (optional)</param>
+        /// <param name="razaoSocial">Raz\u00E3o social (optional)</param>
+        /// <param name="numeroReceitaFederal">CGC(CNPJ) da pessoa jur\u00EDdica (optional)</param>
+        /// <param name="inscricaoEstadual">Inscri\u00E7\u00E3o estadual da pessoa jur\u00EDdica (optional)</param>
         /// <param name="banco">Banco da pessoa jur\u00EDdica (optional)</param>
         /// <param name="agencia">Ag\u00EAncia da pessoa jur\u00EDdica (optional)</param>
-        /// <param name="digitoAgencia">D\u00EDgito da jur\u00EDdica (optional)</param>
-        /// <param name="contaCorrente">Conta corrente pessoa jur\u00EDdica (optional)</param>
-        /// <param name="digitoContaCorrente">D\u00EDgito conta jur\u00EDdica (optional)</param>
+        /// <param name="digitoAgencia">D\u00EDgito da ag\u00EAncia (optional)</param>
+        /// <param name="contaCorrente">Conta corrente da pessoa jur\u00EDdica (optional)</param>
+        /// <param name="digitoContaCorrente">D\u00EDgito conta da conta corrente (optional)</param>
         /// <returns>Task of ApiResponse (PagePessoaJuridicaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PagePessoaJuridicaResponse>> ListarAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string contato = null, string razaoSocial = null, string numeroReceitaFederal = null, string inscricaoEstadual = null, int? banco = null, int? agencia = null, string digitoAgencia = null, string contaCorrente = null, string digitoContaCorrente = null);
+        System.Threading.Tasks.Task<ApiResponse<PagePessoaJuridicaResponse>> ListarPessoasJuridicasAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string contato = null, string razaoSocial = null, string numeroReceitaFederal = null, string inscricaoEstadual = null, int? banco = null, int? agencia = null, string digitoAgencia = null, string contaCorrente = null, string digitoContaCorrente = null);
         
         /// <summary>
         /// Salva uma pessoa Juridica 
@@ -239,7 +239,7 @@ namespace Conductor.Pier.Api
         /// <param name="pessoaJuridicaPersist">pessoaJuridicaPersist</param>
         /// <param name="login">login (optional)</param>
         /// <returns>Task of PessoaJuridicaResponse</returns>
-        System.Threading.Tasks.Task<PessoaJuridicaResponse> SalvarAsync (PessoaJuridicaPersist pessoaJuridicaPersist, string login = null);
+        System.Threading.Tasks.Task<PessoaJuridicaResponse> SalvarPessoaJuridicaAsync (PessoaJuridicaPersist pessoaJuridicaPersist, string login = null);
 
         /// <summary>
         /// Salva uma pessoa Juridica 
@@ -251,7 +251,7 @@ namespace Conductor.Pier.Api
         /// <param name="pessoaJuridicaPersist">pessoaJuridicaPersist</param>
         /// <param name="login">login (optional)</param>
         /// <returns>Task of ApiResponse (PessoaJuridicaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PessoaJuridicaResponse>> SalvarAsyncWithHttpInfo (PessoaJuridicaPersist pessoaJuridicaPersist, string login = null);
+        System.Threading.Tasks.Task<ApiResponse<PessoaJuridicaResponse>> SalvarPessoaJuridicaAsyncWithHttpInfo (PessoaJuridicaPersist pessoaJuridicaPersist, string login = null);
         
         #endregion Asynchronous Operations
         
@@ -353,9 +353,9 @@ namespace Conductor.Pier.Api
         /// <param name="request">request</param> 
         /// <param name="login">login (optional)</param> 
         /// <returns>PessoaJuridicaResponse</returns>
-        public PessoaJuridicaResponse Alterar (long? id, PessoaJuridicaUpdate request, string login = null)
+        public PessoaJuridicaResponse AlterarPessoaJuridica (long? id, PessoaJuridicaUpdate request, string login = null)
         {
-             ApiResponse<PessoaJuridicaResponse> localVarResponse = AlterarWithHttpInfo(id, request, login);
+             ApiResponse<PessoaJuridicaResponse> localVarResponse = AlterarPessoaJuridicaWithHttpInfo(id, request, login);
              return localVarResponse.Data;
         }
 
@@ -367,16 +367,16 @@ namespace Conductor.Pier.Api
         /// <param name="request">request</param> 
         /// <param name="login">login (optional)</param> 
         /// <returns>ApiResponse of PessoaJuridicaResponse</returns>
-        public ApiResponse< PessoaJuridicaResponse > AlterarWithHttpInfo (long? id, PessoaJuridicaUpdate request, string login = null)
+        public ApiResponse< PessoaJuridicaResponse > AlterarPessoaJuridicaWithHttpInfo (long? id, PessoaJuridicaUpdate request, string login = null)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling PessoaJuridicaApi->Alterar");
+                throw new ApiException(400, "Missing required parameter 'id' when calling PessoaJuridicaApi->AlterarPessoaJuridica");
             
             // verify the required parameter 'request' is set
             if (request == null)
-                throw new ApiException(400, "Missing required parameter 'request' when calling PessoaJuridicaApi->Alterar");
+                throw new ApiException(400, "Missing required parameter 'request' when calling PessoaJuridicaApi->AlterarPessoaJuridica");
             
     
             var localVarPath = "/api/pessoas-juridicas/{id}";
@@ -430,9 +430,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Alterar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarPessoaJuridica: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Alterar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarPessoaJuridica: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PessoaJuridicaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -449,9 +449,9 @@ namespace Conductor.Pier.Api
         /// <param name="request">request</param>
         /// <param name="login">login (optional)</param>
         /// <returns>Task of PessoaJuridicaResponse</returns>
-        public async System.Threading.Tasks.Task<PessoaJuridicaResponse> AlterarAsync (long? id, PessoaJuridicaUpdate request, string login = null)
+        public async System.Threading.Tasks.Task<PessoaJuridicaResponse> AlterarPessoaJuridicaAsync (long? id, PessoaJuridicaUpdate request, string login = null)
         {
-             ApiResponse<PessoaJuridicaResponse> localVarResponse = await AlterarAsyncWithHttpInfo(id, request, login);
+             ApiResponse<PessoaJuridicaResponse> localVarResponse = await AlterarPessoaJuridicaAsyncWithHttpInfo(id, request, login);
              return localVarResponse.Data;
 
         }
@@ -464,12 +464,12 @@ namespace Conductor.Pier.Api
         /// <param name="request">request</param>
         /// <param name="login">login (optional)</param>
         /// <returns>Task of ApiResponse (PessoaJuridicaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PessoaJuridicaResponse>> AlterarAsyncWithHttpInfo (long? id, PessoaJuridicaUpdate request, string login = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PessoaJuridicaResponse>> AlterarPessoaJuridicaAsyncWithHttpInfo (long? id, PessoaJuridicaUpdate request, string login = null)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling Alterar");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AlterarPessoaJuridica");
             // verify the required parameter 'request' is set
-            if (request == null) throw new ApiException(400, "Missing required parameter 'request' when calling Alterar");
+            if (request == null) throw new ApiException(400, "Missing required parameter 'request' when calling AlterarPessoaJuridica");
             
     
             var localVarPath = "/api/pessoas-juridicas/{id}";
@@ -523,9 +523,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Alterar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarPessoaJuridica: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Alterar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarPessoaJuridica: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PessoaJuridicaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -539,9 +539,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Pessoa Juridica id</param> 
         /// <returns>PessoaJuridicaResponse</returns>
-        public PessoaJuridicaResponse Consultar (long? id)
+        public PessoaJuridicaResponse ConsultarPessoaJuridica (long? id)
         {
-             ApiResponse<PessoaJuridicaResponse> localVarResponse = ConsultarWithHttpInfo(id);
+             ApiResponse<PessoaJuridicaResponse> localVarResponse = ConsultarPessoaJuridicaWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -551,12 +551,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Pessoa Juridica id</param> 
         /// <returns>ApiResponse of PessoaJuridicaResponse</returns>
-        public ApiResponse< PessoaJuridicaResponse > ConsultarWithHttpInfo (long? id)
+        public ApiResponse< PessoaJuridicaResponse > ConsultarPessoaJuridicaWithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling PessoaJuridicaApi->Consultar");
+                throw new ApiException(400, "Missing required parameter 'id' when calling PessoaJuridicaApi->ConsultarPessoaJuridica");
             
     
             var localVarPath = "/api/pessoas-juridicas/{id}";
@@ -602,9 +602,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarPessoaJuridica: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarPessoaJuridica: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PessoaJuridicaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -619,9 +619,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Pessoa Juridica id</param>
         /// <returns>Task of PessoaJuridicaResponse</returns>
-        public async System.Threading.Tasks.Task<PessoaJuridicaResponse> ConsultarAsync (long? id)
+        public async System.Threading.Tasks.Task<PessoaJuridicaResponse> ConsultarPessoaJuridicaAsync (long? id)
         {
-             ApiResponse<PessoaJuridicaResponse> localVarResponse = await ConsultarAsyncWithHttpInfo(id);
+             ApiResponse<PessoaJuridicaResponse> localVarResponse = await ConsultarPessoaJuridicaAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -632,10 +632,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Pessoa Juridica id</param>
         /// <returns>Task of ApiResponse (PessoaJuridicaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PessoaJuridicaResponse>> ConsultarAsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<PessoaJuridicaResponse>> ConsultarPessoaJuridicaAsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling Consultar");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarPessoaJuridica");
             
     
             var localVarPath = "/api/pessoas-juridicas/{id}";
@@ -681,9 +681,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarPessoaJuridica: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarPessoaJuridica: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PessoaJuridicaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -698,19 +698,19 @@ namespace Conductor.Pier.Api
         /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
         /// <param name="page">P\u00E1gina (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
-        /// <param name="contato">Pessoa jur\u00EDdica jur\u00EDdica (optional)</param> 
-        /// <param name="razaoSocial">Raz\u00E3o social pessoa jur\u00EDdica (optional)</param> 
-        /// <param name="numeroReceitaFederal">CGC(CNPJ) pessoa jur\u00EDdica (optional)</param> 
-        /// <param name="inscricaoEstadual">Inscri\u00E7\u00E3o estadual pessoa jur\u00EDdica (optional)</param> 
+        /// <param name="contato">Contato da pessoa jur\u00EDdica (optional)</param> 
+        /// <param name="razaoSocial">Raz\u00E3o social (optional)</param> 
+        /// <param name="numeroReceitaFederal">CGC(CNPJ) da pessoa jur\u00EDdica (optional)</param> 
+        /// <param name="inscricaoEstadual">Inscri\u00E7\u00E3o estadual da pessoa jur\u00EDdica (optional)</param> 
         /// <param name="banco">Banco da pessoa jur\u00EDdica (optional)</param> 
         /// <param name="agencia">Ag\u00EAncia da pessoa jur\u00EDdica (optional)</param> 
-        /// <param name="digitoAgencia">D\u00EDgito da jur\u00EDdica (optional)</param> 
-        /// <param name="contaCorrente">Conta corrente pessoa jur\u00EDdica (optional)</param> 
-        /// <param name="digitoContaCorrente">D\u00EDgito conta jur\u00EDdica (optional)</param> 
+        /// <param name="digitoAgencia">D\u00EDgito da ag\u00EAncia (optional)</param> 
+        /// <param name="contaCorrente">Conta corrente da pessoa jur\u00EDdica (optional)</param> 
+        /// <param name="digitoContaCorrente">D\u00EDgito conta da conta corrente (optional)</param> 
         /// <returns>PagePessoaJuridicaResponse</returns>
-        public PagePessoaJuridicaResponse Listar (List<string> sort = null, int? page = null, int? limit = null, string contato = null, string razaoSocial = null, string numeroReceitaFederal = null, string inscricaoEstadual = null, int? banco = null, int? agencia = null, string digitoAgencia = null, string contaCorrente = null, string digitoContaCorrente = null)
+        public PagePessoaJuridicaResponse ListarPessoasJuridicas (List<string> sort = null, int? page = null, int? limit = null, string contato = null, string razaoSocial = null, string numeroReceitaFederal = null, string inscricaoEstadual = null, int? banco = null, int? agencia = null, string digitoAgencia = null, string contaCorrente = null, string digitoContaCorrente = null)
         {
-             ApiResponse<PagePessoaJuridicaResponse> localVarResponse = ListarWithHttpInfo(sort, page, limit, contato, razaoSocial, numeroReceitaFederal, inscricaoEstadual, banco, agencia, digitoAgencia, contaCorrente, digitoContaCorrente);
+             ApiResponse<PagePessoaJuridicaResponse> localVarResponse = ListarPessoasJuridicasWithHttpInfo(sort, page, limit, contato, razaoSocial, numeroReceitaFederal, inscricaoEstadual, banco, agencia, digitoAgencia, contaCorrente, digitoContaCorrente);
              return localVarResponse.Data;
         }
 
@@ -721,17 +721,17 @@ namespace Conductor.Pier.Api
         /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
         /// <param name="page">P\u00E1gina (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
-        /// <param name="contato">Pessoa jur\u00EDdica jur\u00EDdica (optional)</param> 
-        /// <param name="razaoSocial">Raz\u00E3o social pessoa jur\u00EDdica (optional)</param> 
-        /// <param name="numeroReceitaFederal">CGC(CNPJ) pessoa jur\u00EDdica (optional)</param> 
-        /// <param name="inscricaoEstadual">Inscri\u00E7\u00E3o estadual pessoa jur\u00EDdica (optional)</param> 
+        /// <param name="contato">Contato da pessoa jur\u00EDdica (optional)</param> 
+        /// <param name="razaoSocial">Raz\u00E3o social (optional)</param> 
+        /// <param name="numeroReceitaFederal">CGC(CNPJ) da pessoa jur\u00EDdica (optional)</param> 
+        /// <param name="inscricaoEstadual">Inscri\u00E7\u00E3o estadual da pessoa jur\u00EDdica (optional)</param> 
         /// <param name="banco">Banco da pessoa jur\u00EDdica (optional)</param> 
         /// <param name="agencia">Ag\u00EAncia da pessoa jur\u00EDdica (optional)</param> 
-        /// <param name="digitoAgencia">D\u00EDgito da jur\u00EDdica (optional)</param> 
-        /// <param name="contaCorrente">Conta corrente pessoa jur\u00EDdica (optional)</param> 
-        /// <param name="digitoContaCorrente">D\u00EDgito conta jur\u00EDdica (optional)</param> 
+        /// <param name="digitoAgencia">D\u00EDgito da ag\u00EAncia (optional)</param> 
+        /// <param name="contaCorrente">Conta corrente da pessoa jur\u00EDdica (optional)</param> 
+        /// <param name="digitoContaCorrente">D\u00EDgito conta da conta corrente (optional)</param> 
         /// <returns>ApiResponse of PagePessoaJuridicaResponse</returns>
-        public ApiResponse< PagePessoaJuridicaResponse > ListarWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string contato = null, string razaoSocial = null, string numeroReceitaFederal = null, string inscricaoEstadual = null, int? banco = null, int? agencia = null, string digitoAgencia = null, string contaCorrente = null, string digitoContaCorrente = null)
+        public ApiResponse< PagePessoaJuridicaResponse > ListarPessoasJuridicasWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string contato = null, string razaoSocial = null, string numeroReceitaFederal = null, string inscricaoEstadual = null, int? banco = null, int? agencia = null, string digitoAgencia = null, string contaCorrente = null, string digitoContaCorrente = null)
         {
             
     
@@ -789,9 +789,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Listar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarPessoasJuridicas: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Listar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarPessoasJuridicas: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PagePessoaJuridicaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -807,19 +807,19 @@ namespace Conductor.Pier.Api
         /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
         /// <param name="page">P\u00E1gina (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="contato">Pessoa jur\u00EDdica jur\u00EDdica (optional)</param>
-        /// <param name="razaoSocial">Raz\u00E3o social pessoa jur\u00EDdica (optional)</param>
-        /// <param name="numeroReceitaFederal">CGC(CNPJ) pessoa jur\u00EDdica (optional)</param>
-        /// <param name="inscricaoEstadual">Inscri\u00E7\u00E3o estadual pessoa jur\u00EDdica (optional)</param>
+        /// <param name="contato">Contato da pessoa jur\u00EDdica (optional)</param>
+        /// <param name="razaoSocial">Raz\u00E3o social (optional)</param>
+        /// <param name="numeroReceitaFederal">CGC(CNPJ) da pessoa jur\u00EDdica (optional)</param>
+        /// <param name="inscricaoEstadual">Inscri\u00E7\u00E3o estadual da pessoa jur\u00EDdica (optional)</param>
         /// <param name="banco">Banco da pessoa jur\u00EDdica (optional)</param>
         /// <param name="agencia">Ag\u00EAncia da pessoa jur\u00EDdica (optional)</param>
-        /// <param name="digitoAgencia">D\u00EDgito da jur\u00EDdica (optional)</param>
-        /// <param name="contaCorrente">Conta corrente pessoa jur\u00EDdica (optional)</param>
-        /// <param name="digitoContaCorrente">D\u00EDgito conta jur\u00EDdica (optional)</param>
+        /// <param name="digitoAgencia">D\u00EDgito da ag\u00EAncia (optional)</param>
+        /// <param name="contaCorrente">Conta corrente da pessoa jur\u00EDdica (optional)</param>
+        /// <param name="digitoContaCorrente">D\u00EDgito conta da conta corrente (optional)</param>
         /// <returns>Task of PagePessoaJuridicaResponse</returns>
-        public async System.Threading.Tasks.Task<PagePessoaJuridicaResponse> ListarAsync (List<string> sort = null, int? page = null, int? limit = null, string contato = null, string razaoSocial = null, string numeroReceitaFederal = null, string inscricaoEstadual = null, int? banco = null, int? agencia = null, string digitoAgencia = null, string contaCorrente = null, string digitoContaCorrente = null)
+        public async System.Threading.Tasks.Task<PagePessoaJuridicaResponse> ListarPessoasJuridicasAsync (List<string> sort = null, int? page = null, int? limit = null, string contato = null, string razaoSocial = null, string numeroReceitaFederal = null, string inscricaoEstadual = null, int? banco = null, int? agencia = null, string digitoAgencia = null, string contaCorrente = null, string digitoContaCorrente = null)
         {
-             ApiResponse<PagePessoaJuridicaResponse> localVarResponse = await ListarAsyncWithHttpInfo(sort, page, limit, contato, razaoSocial, numeroReceitaFederal, inscricaoEstadual, banco, agencia, digitoAgencia, contaCorrente, digitoContaCorrente);
+             ApiResponse<PagePessoaJuridicaResponse> localVarResponse = await ListarPessoasJuridicasAsyncWithHttpInfo(sort, page, limit, contato, razaoSocial, numeroReceitaFederal, inscricaoEstadual, banco, agencia, digitoAgencia, contaCorrente, digitoContaCorrente);
              return localVarResponse.Data;
 
         }
@@ -831,17 +831,17 @@ namespace Conductor.Pier.Api
         /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
         /// <param name="page">P\u00E1gina (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="contato">Pessoa jur\u00EDdica jur\u00EDdica (optional)</param>
-        /// <param name="razaoSocial">Raz\u00E3o social pessoa jur\u00EDdica (optional)</param>
-        /// <param name="numeroReceitaFederal">CGC(CNPJ) pessoa jur\u00EDdica (optional)</param>
-        /// <param name="inscricaoEstadual">Inscri\u00E7\u00E3o estadual pessoa jur\u00EDdica (optional)</param>
+        /// <param name="contato">Contato da pessoa jur\u00EDdica (optional)</param>
+        /// <param name="razaoSocial">Raz\u00E3o social (optional)</param>
+        /// <param name="numeroReceitaFederal">CGC(CNPJ) da pessoa jur\u00EDdica (optional)</param>
+        /// <param name="inscricaoEstadual">Inscri\u00E7\u00E3o estadual da pessoa jur\u00EDdica (optional)</param>
         /// <param name="banco">Banco da pessoa jur\u00EDdica (optional)</param>
         /// <param name="agencia">Ag\u00EAncia da pessoa jur\u00EDdica (optional)</param>
-        /// <param name="digitoAgencia">D\u00EDgito da jur\u00EDdica (optional)</param>
-        /// <param name="contaCorrente">Conta corrente pessoa jur\u00EDdica (optional)</param>
-        /// <param name="digitoContaCorrente">D\u00EDgito conta jur\u00EDdica (optional)</param>
+        /// <param name="digitoAgencia">D\u00EDgito da ag\u00EAncia (optional)</param>
+        /// <param name="contaCorrente">Conta corrente da pessoa jur\u00EDdica (optional)</param>
+        /// <param name="digitoContaCorrente">D\u00EDgito conta da conta corrente (optional)</param>
         /// <returns>Task of ApiResponse (PagePessoaJuridicaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PagePessoaJuridicaResponse>> ListarAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string contato = null, string razaoSocial = null, string numeroReceitaFederal = null, string inscricaoEstadual = null, int? banco = null, int? agencia = null, string digitoAgencia = null, string contaCorrente = null, string digitoContaCorrente = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PagePessoaJuridicaResponse>> ListarPessoasJuridicasAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string contato = null, string razaoSocial = null, string numeroReceitaFederal = null, string inscricaoEstadual = null, int? banco = null, int? agencia = null, string digitoAgencia = null, string contaCorrente = null, string digitoContaCorrente = null)
         {
             
     
@@ -899,9 +899,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Listar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarPessoasJuridicas: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Listar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarPessoasJuridicas: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PagePessoaJuridicaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -916,9 +916,9 @@ namespace Conductor.Pier.Api
         /// <param name="pessoaJuridicaPersist">pessoaJuridicaPersist</param> 
         /// <param name="login">login (optional)</param> 
         /// <returns>PessoaJuridicaResponse</returns>
-        public PessoaJuridicaResponse Salvar (PessoaJuridicaPersist pessoaJuridicaPersist, string login = null)
+        public PessoaJuridicaResponse SalvarPessoaJuridica (PessoaJuridicaPersist pessoaJuridicaPersist, string login = null)
         {
-             ApiResponse<PessoaJuridicaResponse> localVarResponse = SalvarWithHttpInfo(pessoaJuridicaPersist, login);
+             ApiResponse<PessoaJuridicaResponse> localVarResponse = SalvarPessoaJuridicaWithHttpInfo(pessoaJuridicaPersist, login);
              return localVarResponse.Data;
         }
 
@@ -929,12 +929,12 @@ namespace Conductor.Pier.Api
         /// <param name="pessoaJuridicaPersist">pessoaJuridicaPersist</param> 
         /// <param name="login">login (optional)</param> 
         /// <returns>ApiResponse of PessoaJuridicaResponse</returns>
-        public ApiResponse< PessoaJuridicaResponse > SalvarWithHttpInfo (PessoaJuridicaPersist pessoaJuridicaPersist, string login = null)
+        public ApiResponse< PessoaJuridicaResponse > SalvarPessoaJuridicaWithHttpInfo (PessoaJuridicaPersist pessoaJuridicaPersist, string login = null)
         {
             
             // verify the required parameter 'pessoaJuridicaPersist' is set
             if (pessoaJuridicaPersist == null)
-                throw new ApiException(400, "Missing required parameter 'pessoaJuridicaPersist' when calling PessoaJuridicaApi->Salvar");
+                throw new ApiException(400, "Missing required parameter 'pessoaJuridicaPersist' when calling PessoaJuridicaApi->SalvarPessoaJuridica");
             
     
             var localVarPath = "/api/pessoas-juridicas";
@@ -987,9 +987,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Salvar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarPessoaJuridica: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Salvar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarPessoaJuridica: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PessoaJuridicaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1005,9 +1005,9 @@ namespace Conductor.Pier.Api
         /// <param name="pessoaJuridicaPersist">pessoaJuridicaPersist</param>
         /// <param name="login">login (optional)</param>
         /// <returns>Task of PessoaJuridicaResponse</returns>
-        public async System.Threading.Tasks.Task<PessoaJuridicaResponse> SalvarAsync (PessoaJuridicaPersist pessoaJuridicaPersist, string login = null)
+        public async System.Threading.Tasks.Task<PessoaJuridicaResponse> SalvarPessoaJuridicaAsync (PessoaJuridicaPersist pessoaJuridicaPersist, string login = null)
         {
-             ApiResponse<PessoaJuridicaResponse> localVarResponse = await SalvarAsyncWithHttpInfo(pessoaJuridicaPersist, login);
+             ApiResponse<PessoaJuridicaResponse> localVarResponse = await SalvarPessoaJuridicaAsyncWithHttpInfo(pessoaJuridicaPersist, login);
              return localVarResponse.Data;
 
         }
@@ -1019,10 +1019,10 @@ namespace Conductor.Pier.Api
         /// <param name="pessoaJuridicaPersist">pessoaJuridicaPersist</param>
         /// <param name="login">login (optional)</param>
         /// <returns>Task of ApiResponse (PessoaJuridicaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PessoaJuridicaResponse>> SalvarAsyncWithHttpInfo (PessoaJuridicaPersist pessoaJuridicaPersist, string login = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PessoaJuridicaResponse>> SalvarPessoaJuridicaAsyncWithHttpInfo (PessoaJuridicaPersist pessoaJuridicaPersist, string login = null)
         {
             // verify the required parameter 'pessoaJuridicaPersist' is set
-            if (pessoaJuridicaPersist == null) throw new ApiException(400, "Missing required parameter 'pessoaJuridicaPersist' when calling Salvar");
+            if (pessoaJuridicaPersist == null) throw new ApiException(400, "Missing required parameter 'pessoaJuridicaPersist' when calling SalvarPessoaJuridica");
             
     
             var localVarPath = "/api/pessoas-juridicas";
@@ -1075,9 +1075,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Salvar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarPessoaJuridica: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Salvar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarPessoaJuridica: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PessoaJuridicaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

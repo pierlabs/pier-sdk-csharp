@@ -72,6 +72,7 @@ namespace Conductor.Pier.Model
         /// <param name="AgenciaPagadora">N\u00FAmero da ag\u00EAncia do pagador.</param>
         /// <param name="BancoBeneficiario">Origem do banco envolvendo transfer\u00EAncias.</param>
         /// <param name="BancoPagador">N\u00FAmero do banco do pagador.</param>
+        /// <param name="Celular">N\u00FAmero da operadora.</param>
         /// <param name="CodigoIspb">C\u00F3digo ISPB do banco de destino.</param>
         /// <param name="ContaBeneficiario">Conta origem envolvendo transfer\u00EAncias.</param>
         /// <param name="ContaPagadora">N\u00FAmero da conta do pagador.</param>
@@ -79,6 +80,7 @@ namespace Conductor.Pier.Model
         /// <param name="DataAgendamento">Data de agendameto da opera\u00E7\u00E3o banc\u00E1ria.</param>
         /// <param name="DataHoraOperacao">Data e hora da opera\u00E7\u00E3o banc\u00E1ria.</param>
         /// <param name="DataRealizacao">Data de realiza\u00E7\u00E3o da opera\u00E7\u00E3o banc\u00E1ria.</param>
+        /// <param name="Ddd">DDD do celular.</param>
         /// <param name="DvContaBeneficiario">D\u00EDgito da conta origem envolvendo transfer\u00EAncias.</param>
         /// <param name="DvContaPagadora">D\u00EDgito verificador da conta do pagador.</param>
         /// <param name="Id">C\u00F3digo identificador do registro de opera\u00E7\u00E3o banc\u00E1ria.</param>
@@ -98,16 +100,18 @@ namespace Conductor.Pier.Model
         /// <param name="NomePagador">Nome do pagador.</param>
         /// <param name="NumeroBilheteUnico">N\u00FAmero bilhete \u00FAnico.</param>
         /// <param name="Observacao">Observa\u00E7\u00E3o.</param>
+        /// <param name="Operadora">Descri\u00E7\u00E3o da operadora do celular.</param>
         /// <param name="Status">Status da opera\u00E7\u00E3o.</param>
         /// <param name="ValorOperacao">Valor da opera\u00E7\u00E3o banc\u00E1ria.</param>
         /// <param name="ValorTarifa">Valor da tarifa cobrada pela opera\u00E7\u00E3o.</param>
 
-        public OperacaoBancariaResponse(string AgenciaBeneficiario = null, string AgenciaPagadora = null, string BancoBeneficiario = null, string BancoPagador = null, string CodigoIspb = null, string ContaBeneficiario = null, string ContaPagadora = null, string CpfCnpjBeneficiario = null, string DataAgendamento = null, string DataHoraOperacao = null, string DataRealizacao = null, string DvContaBeneficiario = null, string DvContaPagadora = null, long? Id = null, long? IdCartaoDestino = null, long? IdCartaoOrigem = null, long? IdCelularRecarga = null, long? IdContaDestino = null, long? IdContaOrigem = null, long? IdDadosBancariosConta = null, long? IdDocumento = null, long? IdEventoAjusteDestino = null, long? IdEventoAjusteOrigem = null, string IdExterno = null, long? IdOperacaoBancariaOriginal = null, long? IdTipoOperacaoBancaria = null, string NomeBeneficiario = null, string NomePagador = null, long? NumeroBilheteUnico = null, string Observacao = null, StatusEnum? Status = null, double? ValorOperacao = null, double? ValorTarifa = null)
+        public OperacaoBancariaResponse(string AgenciaBeneficiario = null, string AgenciaPagadora = null, string BancoBeneficiario = null, string BancoPagador = null, string Celular = null, string CodigoIspb = null, string ContaBeneficiario = null, string ContaPagadora = null, string CpfCnpjBeneficiario = null, string DataAgendamento = null, string DataHoraOperacao = null, string DataRealizacao = null, string Ddd = null, string DvContaBeneficiario = null, string DvContaPagadora = null, long? Id = null, long? IdCartaoDestino = null, long? IdCartaoOrigem = null, long? IdCelularRecarga = null, long? IdContaDestino = null, long? IdContaOrigem = null, long? IdDadosBancariosConta = null, long? IdDocumento = null, long? IdEventoAjusteDestino = null, long? IdEventoAjusteOrigem = null, string IdExterno = null, long? IdOperacaoBancariaOriginal = null, long? IdTipoOperacaoBancaria = null, string NomeBeneficiario = null, string NomePagador = null, long? NumeroBilheteUnico = null, string Observacao = null, string Operadora = null, StatusEnum? Status = null, double? ValorOperacao = null, double? ValorTarifa = null)
         {
             this.AgenciaBeneficiario = AgenciaBeneficiario;
             this.AgenciaPagadora = AgenciaPagadora;
             this.BancoBeneficiario = BancoBeneficiario;
             this.BancoPagador = BancoPagador;
+            this.Celular = Celular;
             this.CodigoIspb = CodigoIspb;
             this.ContaBeneficiario = ContaBeneficiario;
             this.ContaPagadora = ContaPagadora;
@@ -115,6 +119,7 @@ namespace Conductor.Pier.Model
             this.DataAgendamento = DataAgendamento;
             this.DataHoraOperacao = DataHoraOperacao;
             this.DataRealizacao = DataRealizacao;
+            this.Ddd = Ddd;
             this.DvContaBeneficiario = DvContaBeneficiario;
             this.DvContaPagadora = DvContaPagadora;
             this.Id = Id;
@@ -134,6 +139,7 @@ namespace Conductor.Pier.Model
             this.NomePagador = NomePagador;
             this.NumeroBilheteUnico = NumeroBilheteUnico;
             this.Observacao = Observacao;
+            this.Operadora = Operadora;
             this.Status = Status;
             this.ValorOperacao = ValorOperacao;
             this.ValorTarifa = ValorTarifa;
@@ -168,6 +174,13 @@ namespace Conductor.Pier.Model
         /// <value>N\u00FAmero do banco do pagador</value>
         [DataMember(Name="bancoPagador", EmitDefaultValue=false)]
         public string BancoPagador { get; set; }
+    
+        /// <summary>
+        /// N\u00FAmero da operadora
+        /// </summary>
+        /// <value>N\u00FAmero da operadora</value>
+        [DataMember(Name="celular", EmitDefaultValue=false)]
+        public string Celular { get; set; }
     
         /// <summary>
         /// C\u00F3digo ISPB do banco de destino
@@ -217,6 +230,13 @@ namespace Conductor.Pier.Model
         /// <value>Data de realiza\u00E7\u00E3o da opera\u00E7\u00E3o banc\u00E1ria</value>
         [DataMember(Name="dataRealizacao", EmitDefaultValue=false)]
         public string DataRealizacao { get; set; }
+    
+        /// <summary>
+        /// DDD do celular
+        /// </summary>
+        /// <value>DDD do celular</value>
+        [DataMember(Name="ddd", EmitDefaultValue=false)]
+        public string Ddd { get; set; }
     
         /// <summary>
         /// D\u00EDgito da conta origem envolvendo transfer\u00EAncias
@@ -352,6 +372,13 @@ namespace Conductor.Pier.Model
         public string Observacao { get; set; }
     
         /// <summary>
+        /// Descri\u00E7\u00E3o da operadora do celular
+        /// </summary>
+        /// <value>Descri\u00E7\u00E3o da operadora do celular</value>
+        [DataMember(Name="operadora", EmitDefaultValue=false)]
+        public string Operadora { get; set; }
+    
+        /// <summary>
         /// Valor da opera\u00E7\u00E3o banc\u00E1ria
         /// </summary>
         /// <value>Valor da opera\u00E7\u00E3o banc\u00E1ria</value>
@@ -377,6 +404,7 @@ namespace Conductor.Pier.Model
             sb.Append("  AgenciaPagadora: ").Append(AgenciaPagadora).Append("\n");
             sb.Append("  BancoBeneficiario: ").Append(BancoBeneficiario).Append("\n");
             sb.Append("  BancoPagador: ").Append(BancoPagador).Append("\n");
+            sb.Append("  Celular: ").Append(Celular).Append("\n");
             sb.Append("  CodigoIspb: ").Append(CodigoIspb).Append("\n");
             sb.Append("  ContaBeneficiario: ").Append(ContaBeneficiario).Append("\n");
             sb.Append("  ContaPagadora: ").Append(ContaPagadora).Append("\n");
@@ -384,6 +412,7 @@ namespace Conductor.Pier.Model
             sb.Append("  DataAgendamento: ").Append(DataAgendamento).Append("\n");
             sb.Append("  DataHoraOperacao: ").Append(DataHoraOperacao).Append("\n");
             sb.Append("  DataRealizacao: ").Append(DataRealizacao).Append("\n");
+            sb.Append("  Ddd: ").Append(Ddd).Append("\n");
             sb.Append("  DvContaBeneficiario: ").Append(DvContaBeneficiario).Append("\n");
             sb.Append("  DvContaPagadora: ").Append(DvContaPagadora).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
@@ -403,6 +432,7 @@ namespace Conductor.Pier.Model
             sb.Append("  NomePagador: ").Append(NomePagador).Append("\n");
             sb.Append("  NumeroBilheteUnico: ").Append(NumeroBilheteUnico).Append("\n");
             sb.Append("  Observacao: ").Append(Observacao).Append("\n");
+            sb.Append("  Operadora: ").Append(Operadora).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  ValorOperacao: ").Append(ValorOperacao).Append("\n");
             sb.Append("  ValorTarifa: ").Append(ValorTarifa).Append("\n");
@@ -464,6 +494,11 @@ namespace Conductor.Pier.Model
                     this.BancoPagador.Equals(other.BancoPagador)
                 ) && 
                 (
+                    this.Celular == other.Celular ||
+                    this.Celular != null &&
+                    this.Celular.Equals(other.Celular)
+                ) && 
+                (
                     this.CodigoIspb == other.CodigoIspb ||
                     this.CodigoIspb != null &&
                     this.CodigoIspb.Equals(other.CodigoIspb)
@@ -497,6 +532,11 @@ namespace Conductor.Pier.Model
                     this.DataRealizacao == other.DataRealizacao ||
                     this.DataRealizacao != null &&
                     this.DataRealizacao.Equals(other.DataRealizacao)
+                ) && 
+                (
+                    this.Ddd == other.Ddd ||
+                    this.Ddd != null &&
+                    this.Ddd.Equals(other.Ddd)
                 ) && 
                 (
                     this.DvContaBeneficiario == other.DvContaBeneficiario ||
@@ -594,6 +634,11 @@ namespace Conductor.Pier.Model
                     this.Observacao.Equals(other.Observacao)
                 ) && 
                 (
+                    this.Operadora == other.Operadora ||
+                    this.Operadora != null &&
+                    this.Operadora.Equals(other.Operadora)
+                ) && 
+                (
                     this.Status == other.Status ||
                     this.Status != null &&
                     this.Status.Equals(other.Status)
@@ -634,6 +679,9 @@ namespace Conductor.Pier.Model
                 if (this.BancoPagador != null)
                     hash = hash * 59 + this.BancoPagador.GetHashCode();
                 
+                if (this.Celular != null)
+                    hash = hash * 59 + this.Celular.GetHashCode();
+                
                 if (this.CodigoIspb != null)
                     hash = hash * 59 + this.CodigoIspb.GetHashCode();
                 
@@ -654,6 +702,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.DataRealizacao != null)
                     hash = hash * 59 + this.DataRealizacao.GetHashCode();
+                
+                if (this.Ddd != null)
+                    hash = hash * 59 + this.Ddd.GetHashCode();
                 
                 if (this.DvContaBeneficiario != null)
                     hash = hash * 59 + this.DvContaBeneficiario.GetHashCode();
@@ -711,6 +762,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.Observacao != null)
                     hash = hash * 59 + this.Observacao.GetHashCode();
+                
+                if (this.Operadora != null)
+                    hash = hash * 59 + this.Operadora.GetHashCode();
                 
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();

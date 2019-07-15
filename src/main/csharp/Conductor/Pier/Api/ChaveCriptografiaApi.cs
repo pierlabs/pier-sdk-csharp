@@ -46,7 +46,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="chaveCriptografiaRequest">chaveCriptografiaRequest</param>
         /// <returns>ChaveCriptografiaResponse</returns>
-        ChaveCriptografiaResponse Descriptografar (ChaveCriptografiaRequest chaveCriptografiaRequest);
+        ChaveCriptografiaResponse DescriptografarChave (ChaveCriptografiaRequest chaveCriptografiaRequest);
   
         /// <summary>
         /// Descriptografa o conteudo recebido
@@ -57,7 +57,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="chaveCriptografiaRequest">chaveCriptografiaRequest</param>
         /// <returns>ApiResponse of ChaveCriptografiaResponse</returns>
-        ApiResponse<ChaveCriptografiaResponse> DescriptografarWithHttpInfo (ChaveCriptografiaRequest chaveCriptografiaRequest);
+        ApiResponse<ChaveCriptografiaResponse> DescriptografarChaveWithHttpInfo (ChaveCriptografiaRequest chaveCriptografiaRequest);
         
         #endregion Synchronous Operations
         
@@ -92,7 +92,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="chaveCriptografiaRequest">chaveCriptografiaRequest</param>
         /// <returns>Task of ChaveCriptografiaResponse</returns>
-        System.Threading.Tasks.Task<ChaveCriptografiaResponse> DescriptografarAsync (ChaveCriptografiaRequest chaveCriptografiaRequest);
+        System.Threading.Tasks.Task<ChaveCriptografiaResponse> DescriptografarChaveAsync (ChaveCriptografiaRequest chaveCriptografiaRequest);
 
         /// <summary>
         /// Descriptografa o conteudo recebido
@@ -103,7 +103,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="chaveCriptografiaRequest">chaveCriptografiaRequest</param>
         /// <returns>Task of ApiResponse (ChaveCriptografiaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ChaveCriptografiaResponse>> DescriptografarAsyncWithHttpInfo (ChaveCriptografiaRequest chaveCriptografiaRequest);
+        System.Threading.Tasks.Task<ApiResponse<ChaveCriptografiaResponse>> DescriptografarChaveAsyncWithHttpInfo (ChaveCriptografiaRequest chaveCriptografiaRequest);
         
         #endregion Asynchronous Operations
         
@@ -349,9 +349,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="chaveCriptografiaRequest">chaveCriptografiaRequest</param> 
         /// <returns>ChaveCriptografiaResponse</returns>
-        public ChaveCriptografiaResponse Descriptografar (ChaveCriptografiaRequest chaveCriptografiaRequest)
+        public ChaveCriptografiaResponse DescriptografarChave (ChaveCriptografiaRequest chaveCriptografiaRequest)
         {
-             ApiResponse<ChaveCriptografiaResponse> localVarResponse = DescriptografarWithHttpInfo(chaveCriptografiaRequest);
+             ApiResponse<ChaveCriptografiaResponse> localVarResponse = DescriptografarChaveWithHttpInfo(chaveCriptografiaRequest);
              return localVarResponse.Data;
         }
 
@@ -361,12 +361,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="chaveCriptografiaRequest">chaveCriptografiaRequest</param> 
         /// <returns>ApiResponse of ChaveCriptografiaResponse</returns>
-        public ApiResponse< ChaveCriptografiaResponse > DescriptografarWithHttpInfo (ChaveCriptografiaRequest chaveCriptografiaRequest)
+        public ApiResponse< ChaveCriptografiaResponse > DescriptografarChaveWithHttpInfo (ChaveCriptografiaRequest chaveCriptografiaRequest)
         {
             
             // verify the required parameter 'chaveCriptografiaRequest' is set
             if (chaveCriptografiaRequest == null)
-                throw new ApiException(400, "Missing required parameter 'chaveCriptografiaRequest' when calling ChaveCriptografiaApi->Descriptografar");
+                throw new ApiException(400, "Missing required parameter 'chaveCriptografiaRequest' when calling ChaveCriptografiaApi->DescriptografarChave");
             
     
             var localVarPath = "/api/chaves-criptografia/descriptografar";
@@ -418,9 +418,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Descriptografar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling DescriptografarChave: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Descriptografar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DescriptografarChave: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<ChaveCriptografiaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -435,9 +435,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="chaveCriptografiaRequest">chaveCriptografiaRequest</param>
         /// <returns>Task of ChaveCriptografiaResponse</returns>
-        public async System.Threading.Tasks.Task<ChaveCriptografiaResponse> DescriptografarAsync (ChaveCriptografiaRequest chaveCriptografiaRequest)
+        public async System.Threading.Tasks.Task<ChaveCriptografiaResponse> DescriptografarChaveAsync (ChaveCriptografiaRequest chaveCriptografiaRequest)
         {
-             ApiResponse<ChaveCriptografiaResponse> localVarResponse = await DescriptografarAsyncWithHttpInfo(chaveCriptografiaRequest);
+             ApiResponse<ChaveCriptografiaResponse> localVarResponse = await DescriptografarChaveAsyncWithHttpInfo(chaveCriptografiaRequest);
              return localVarResponse.Data;
 
         }
@@ -448,10 +448,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="chaveCriptografiaRequest">chaveCriptografiaRequest</param>
         /// <returns>Task of ApiResponse (ChaveCriptografiaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ChaveCriptografiaResponse>> DescriptografarAsyncWithHttpInfo (ChaveCriptografiaRequest chaveCriptografiaRequest)
+        public async System.Threading.Tasks.Task<ApiResponse<ChaveCriptografiaResponse>> DescriptografarChaveAsyncWithHttpInfo (ChaveCriptografiaRequest chaveCriptografiaRequest)
         {
             // verify the required parameter 'chaveCriptografiaRequest' is set
-            if (chaveCriptografiaRequest == null) throw new ApiException(400, "Missing required parameter 'chaveCriptografiaRequest' when calling Descriptografar");
+            if (chaveCriptografiaRequest == null) throw new ApiException(400, "Missing required parameter 'chaveCriptografiaRequest' when calling DescriptografarChave");
             
     
             var localVarPath = "/api/chaves-criptografia/descriptografar";
@@ -503,9 +503,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Descriptografar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling DescriptografarChave: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Descriptografar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DescriptografarChave: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<ChaveCriptografiaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

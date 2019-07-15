@@ -18,32 +18,6 @@ namespace Conductor.Pier.Api
         #region Synchronous Operations
         
         /// <summary>
-        /// Altera um controle de limites de um cart\u00E3o
-        /// </summary>
-        /// <remarks>
-        /// Este recurso permite que seja alterado o controle de limites de um cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)</param>
-        /// <param name="idControleLimite">C\u00F3digo de identifica\u00E7\u00E3o do controle de limites do cart\u00E3o (id)</param>
-        /// <param name="controleLimitesCartaoUpdate">controleLimitesCartaoUpdate</param>
-        /// <returns>ControleLimiteCartaoResponse</returns>
-        ControleLimiteCartaoResponse Alterar (long? id, long? idControleLimite, ControleLimiteCartaoUpdate controleLimitesCartaoUpdate);
-  
-        /// <summary>
-        /// Altera um controle de limites de um cart\u00E3o
-        /// </summary>
-        /// <remarks>
-        /// Este recurso permite que seja alterado o controle de limites de um cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)</param>
-        /// <param name="idControleLimite">C\u00F3digo de identifica\u00E7\u00E3o do controle de limites do cart\u00E3o (id)</param>
-        /// <param name="controleLimitesCartaoUpdate">controleLimitesCartaoUpdate</param>
-        /// <returns>ApiResponse of ControleLimiteCartaoResponse</returns>
-        ApiResponse<ControleLimiteCartaoResponse> AlterarWithHttpInfo (long? id, long? idControleLimite, ControleLimiteCartaoUpdate controleLimitesCartaoUpdate);
-        
-        /// <summary>
         /// Altera qualquer parte do log de configura\u00E7\u00E3o
         /// </summary>
         /// <remarks>
@@ -70,52 +44,54 @@ namespace Conductor.Pier.Api
         ApiResponse<ConfiguracaoControleCartaoResponse> AlterarConfiguracaoControleCartaoWithHttpInfo (long? idConfiguracaoCartao, long? id, ConfiguracaoControleCartaoUpdate configuracaoControleCartaoUpdate);
         
         /// <summary>
-        /// Ativa um controle de limites de um cart\u00E3o
+        /// Altera um controle de limites de um cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este recurso permite que seja ativado o controle de limites de um cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
+        /// Este recurso permite que seja alterado o controle de limites de um cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)</param>
         /// <param name="idControleLimite">C\u00F3digo de identifica\u00E7\u00E3o do controle de limites do cart\u00E3o (id)</param>
+        /// <param name="controleLimitesCartaoUpdate">controleLimitesCartaoUpdate</param>
         /// <returns>ControleLimiteCartaoResponse</returns>
-        ControleLimiteCartaoResponse AtivarControleLimiteCartao (long? id, long? idControleLimite);
+        ControleLimiteCartaoResponse AlterarControleDeLimite (long? id, long? idControleLimite, ControleLimiteCartaoUpdate controleLimitesCartaoUpdate);
   
         /// <summary>
-        /// Ativa um controle de limites de um cart\u00E3o
+        /// Altera um controle de limites de um cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este recurso permite que seja ativado o controle de limites de um cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
+        /// Este recurso permite que seja alterado o controle de limites de um cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)</param>
         /// <param name="idControleLimite">C\u00F3digo de identifica\u00E7\u00E3o do controle de limites do cart\u00E3o (id)</param>
+        /// <param name="controleLimitesCartaoUpdate">controleLimitesCartaoUpdate</param>
         /// <returns>ApiResponse of ControleLimiteCartaoResponse</returns>
-        ApiResponse<ControleLimiteCartaoResponse> AtivarControleLimiteCartaoWithHttpInfo (long? id, long? idControleLimite);
+        ApiResponse<ControleLimiteCartaoResponse> AlterarControleDeLimiteWithHttpInfo (long? id, long? idControleLimite, ControleLimiteCartaoUpdate controleLimitesCartaoUpdate);
         
         /// <summary>
-        /// Apresenta o controle de limites do cart\u00E3o
+        /// Ativa um controle de limites de um cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este recurso permite que seja mostrado o controle de limites do cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
+        /// Este recurso permite que seja ativado o controle de limites de um cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)</param>
         /// <param name="idControleLimite">C\u00F3digo de identifica\u00E7\u00E3o do controle de limites do cart\u00E3o (id)</param>
         /// <returns>ControleLimiteCartaoResponse</returns>
-        ControleLimiteCartaoResponse Consultar (long? id, long? idControleLimite);
+        ControleLimiteCartaoResponse AtivarControleDeLimite (long? id, long? idControleLimite);
   
         /// <summary>
-        /// Apresenta o controle de limites do cart\u00E3o
+        /// Ativa um controle de limites de um cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este recurso permite que seja mostrado o controle de limites do cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
+        /// Este recurso permite que seja ativado o controle de limites de um cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)</param>
         /// <param name="idControleLimite">C\u00F3digo de identifica\u00E7\u00E3o do controle de limites do cart\u00E3o (id)</param>
         /// <returns>ApiResponse of ControleLimiteCartaoResponse</returns>
-        ApiResponse<ControleLimiteCartaoResponse> ConsultarWithHttpInfo (long? id, long? idControleLimite);
+        ApiResponse<ControleLimiteCartaoResponse> AtivarControleDeLimiteWithHttpInfo (long? id, long? idControleLimite);
         
         /// <summary>
         /// Exibe as configura\u00E7\u00F5es de bloqueio para um cart\u00E3o espec\u00EDfico.
@@ -142,6 +118,30 @@ namespace Conductor.Pier.Api
         ApiResponse<ConfiguracaoControleCartaoResponse> ConsultarConfiguracaoControleCartaoWithHttpInfo (long? idConfiguracaoCartao, long? id);
         
         /// <summary>
+        /// Apresenta o controle de limites do cart\u00E3o
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite que seja mostrado o controle de limites do cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)</param>
+        /// <param name="idControleLimite">C\u00F3digo de identifica\u00E7\u00E3o do controle de limites do cart\u00E3o (id)</param>
+        /// <returns>ControleLimiteCartaoResponse</returns>
+        ControleLimiteCartaoResponse ConsultarControleDeLimite (long? id, long? idControleLimite);
+  
+        /// <summary>
+        /// Apresenta o controle de limites do cart\u00E3o
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite que seja mostrado o controle de limites do cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)</param>
+        /// <param name="idControleLimite">C\u00F3digo de identifica\u00E7\u00E3o do controle de limites do cart\u00E3o (id)</param>
+        /// <returns>ApiResponse of ControleLimiteCartaoResponse</returns>
+        ApiResponse<ControleLimiteCartaoResponse> ConsultarControleDeLimiteWithHttpInfo (long? id, long? idControleLimite);
+        
+        /// <summary>
         /// Exibe todos os mcc de bloqueio vinculado a um cart\u00E3o espec\u00EDfico.
         /// </summary>
         /// <remarks>
@@ -151,7 +151,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de controle de grupo MCC do cart\u00E3o.</param>
         /// <param name="idControleCartaoGrupoMCC">idControleCartaoGrupoMCC</param>
         /// <returns>ControleCartaoGrupoMCCResponse</returns>
-        ControleCartaoGrupoMCCResponse ConsultarControleGrupoMccCartao (long? id, long? idControleCartaoGrupoMCC);
+        ControleCartaoGrupoMCCResponse ConsultarControleGrupoMCCPorCartao (long? id, long? idControleCartaoGrupoMCC);
   
         /// <summary>
         /// Exibe todos os mcc de bloqueio vinculado a um cart\u00E3o espec\u00EDfico.
@@ -163,7 +163,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de controle de grupo MCC do cart\u00E3o.</param>
         /// <param name="idControleCartaoGrupoMCC">idControleCartaoGrupoMCC</param>
         /// <returns>ApiResponse of ControleCartaoGrupoMCCResponse</returns>
-        ApiResponse<ControleCartaoGrupoMCCResponse> ConsultarControleGrupoMccCartaoWithHttpInfo (long? id, long? idControleCartaoGrupoMCC);
+        ApiResponse<ControleCartaoGrupoMCCResponse> ConsultarControleGrupoMCCPorCartaoWithHttpInfo (long? id, long? idControleCartaoGrupoMCC);
         
         /// <summary>
         /// Deletar uma configura\u00E7\u00E3o de um cart\u00E3o.
@@ -199,7 +199,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de controle de grupo MCC do cart\u00E3o.</param>
         /// <param name="idControleCartaoGrupoMCC">idControleCartaoGrupoMCC</param>
         /// <returns>ControleCartaoGrupoMCCResponse</returns>
-        ControleCartaoGrupoMCCResponse DeletarControleGrupoMccCartao (long? id, long? idControleCartaoGrupoMCC);
+        ControleCartaoGrupoMCCResponse DeletarControleGrupoMCCPorCartao (long? id, long? idControleCartaoGrupoMCC);
   
         /// <summary>
         /// Deletar o vinculo do mcc com um cart\u00E3o.
@@ -211,7 +211,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de controle de grupo MCC do cart\u00E3o.</param>
         /// <param name="idControleCartaoGrupoMCC">idControleCartaoGrupoMCC</param>
         /// <returns>ApiResponse of ControleCartaoGrupoMCCResponse</returns>
-        ApiResponse<ControleCartaoGrupoMCCResponse> DeletarControleGrupoMccCartaoWithHttpInfo (long? id, long? idControleCartaoGrupoMCC);
+        ApiResponse<ControleCartaoGrupoMCCResponse> DeletarControleGrupoMCCPorCartaoWithHttpInfo (long? id, long? idControleCartaoGrupoMCC);
         
         /// <summary>
         /// Desativa um controle de limites de um cart\u00E3o
@@ -223,7 +223,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)</param>
         /// <param name="idControleLimite">C\u00F3digo de identifica\u00E7\u00E3o do controle de limites do cart\u00E3o (id)</param>
         /// <returns>ControleLimiteCartaoResponse</returns>
-        ControleLimiteCartaoResponse DesativarControleLimiteCartao (long? id, long? idControleLimite);
+        ControleLimiteCartaoResponse DesativarControleDeLimite (long? id, long? idControleLimite);
   
         /// <summary>
         /// Desativa um controle de limites de um cart\u00E3o
@@ -235,35 +235,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)</param>
         /// <param name="idControleLimite">C\u00F3digo de identifica\u00E7\u00E3o do controle de limites do cart\u00E3o (id)</param>
         /// <returns>ApiResponse of ControleLimiteCartaoResponse</returns>
-        ApiResponse<ControleLimiteCartaoResponse> DesativarControleLimiteCartaoWithHttpInfo (long? id, long? idControleLimite);
-        
-        /// <summary>
-        /// Lista o controle de limites dos cart\u00F5es
-        /// </summary>
-        /// <remarks>
-        /// Este recurso permite que sejam listados todos os controles de limites por cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="idCartao">Id do cart\u00E3o (optional)</param>
-        /// <returns>PageControleLimiteCartaoResponse</returns>
-        PageControleLimiteCartaoResponse Listar (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null);
-  
-        /// <summary>
-        /// Lista o controle de limites dos cart\u00F5es
-        /// </summary>
-        /// <remarks>
-        /// Este recurso permite que sejam listados todos os controles de limites por cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="idCartao">Id do cart\u00E3o (optional)</param>
-        /// <returns>ApiResponse of PageControleLimiteCartaoResponse</returns>
-        ApiResponse<PageControleLimiteCartaoResponse> ListarWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null);
+        ApiResponse<ControleLimiteCartaoResponse> DesativarControleDeLimiteWithHttpInfo (long? id, long? idControleLimite);
         
         /// <summary>
         /// Lista os cart\u00F5es configurados pelo remetente
@@ -314,7 +286,7 @@ namespace Conductor.Pier.Api
         /// <param name="idCartao">C\u00F3digo Identificador do cartao na base (id) (optional)</param>
         /// <param name="idGrupoMCC">C\u00F3digo Identificador do grupo mcc na base. (optional)</param>
         /// <returns>PageControleCartaoGrupoMCCResponse</returns>
-        PageControleCartaoGrupoMCCResponse ListarControleGrupoMccCartao (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, long? idGrupoMCC = null);
+        PageControleCartaoGrupoMCCResponse ListarControleGrupoMCCPorCartao (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, long? idGrupoMCC = null);
   
         /// <summary>
         /// Lista os cart\u00F5es vinculados aos estabelecimentos.
@@ -329,31 +301,35 @@ namespace Conductor.Pier.Api
         /// <param name="idCartao">C\u00F3digo Identificador do cartao na base (id) (optional)</param>
         /// <param name="idGrupoMCC">C\u00F3digo Identificador do grupo mcc na base. (optional)</param>
         /// <returns>ApiResponse of PageControleCartaoGrupoMCCResponse</returns>
-        ApiResponse<PageControleCartaoGrupoMCCResponse> ListarControleGrupoMccCartaoWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, long? idGrupoMCC = null);
+        ApiResponse<PageControleCartaoGrupoMCCResponse> ListarControleGrupoMCCPorCartaoWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, long? idGrupoMCC = null);
         
         /// <summary>
-        /// Cadastra um controle de limites para um cart\u00E3o
+        /// Lista o controle de limites dos cart\u00F5es
         /// </summary>
         /// <remarks>
-        /// Este recurso permite que seja cadastrado um controle de limites para um cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
+        /// Este recurso permite que sejam listados todos os controles de limites por cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)</param>
-        /// <param name="controleLimitesCartaoPersist">controleLimitesCartaoPersist</param>
-        /// <returns>ControleLimiteCartaoResponse</returns>
-        ControleLimiteCartaoResponse Salvar (long? id, ControleLimitesCartaoPersist controleLimitesCartaoPersist);
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idCartao">Id do cart\u00E3o (optional)</param>
+        /// <returns>PageControleLimiteCartaoResponse</returns>
+        PageControleLimiteCartaoResponse ListarControlesDeLimites (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null);
   
         /// <summary>
-        /// Cadastra um controle de limites para um cart\u00E3o
+        /// Lista o controle de limites dos cart\u00F5es
         /// </summary>
         /// <remarks>
-        /// Este recurso permite que seja cadastrado um controle de limites para um cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
+        /// Este recurso permite que sejam listados todos os controles de limites por cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)</param>
-        /// <param name="controleLimitesCartaoPersist">controleLimitesCartaoPersist</param>
-        /// <returns>ApiResponse of ControleLimiteCartaoResponse</returns>
-        ApiResponse<ControleLimiteCartaoResponse> SalvarWithHttpInfo (long? id, ControleLimitesCartaoPersist controleLimitesCartaoPersist);
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idCartao">Id do cart\u00E3o (optional)</param>
+        /// <returns>ApiResponse of PageControleLimiteCartaoResponse</returns>
+        ApiResponse<PageControleLimiteCartaoResponse> ListarControlesDeLimitesWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null);
         
         /// <summary>
         /// Registra a configura\u00E7\u00E3o do cart\u00E3o.
@@ -380,6 +356,30 @@ namespace Conductor.Pier.Api
         ApiResponse<ConfiguracaoControleCartaoResponse> SalvarConfiguracaoControleCartaoWithHttpInfo (long? id, ConfiguracaoControleCartaoPersist configuracaoControleCartaoPersist);
         
         /// <summary>
+        /// Cadastra um controle de limites para um cart\u00E3o
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite que seja cadastrado um controle de limites para um cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)</param>
+        /// <param name="controleLimitesCartaoPersist">controleLimitesCartaoPersist</param>
+        /// <returns>ControleLimiteCartaoResponse</returns>
+        ControleLimiteCartaoResponse SalvarControleDeLimite (long? id, ControleLimitesCartaoPersist controleLimitesCartaoPersist);
+  
+        /// <summary>
+        /// Cadastra um controle de limites para um cart\u00E3o
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite que seja cadastrado um controle de limites para um cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)</param>
+        /// <param name="controleLimitesCartaoPersist">controleLimitesCartaoPersist</param>
+        /// <returns>ApiResponse of ControleLimiteCartaoResponse</returns>
+        ApiResponse<ControleLimiteCartaoResponse> SalvarControleDeLimiteWithHttpInfo (long? id, ControleLimitesCartaoPersist controleLimitesCartaoPersist);
+        
+        /// <summary>
         /// Registra o grupo mcc ao cart\u00E3o.
         /// </summary>
         /// <remarks>
@@ -389,7 +389,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">id</param>
         /// <param name="controleCartaoMCCPersist">controleCartaoMCCPersist</param>
         /// <returns>ControleCartaoGrupoMCCResponse</returns>
-        ControleCartaoGrupoMCCResponse SalvarControleGrupoMccCartao (long? id, ControleCartaoGrupoMCCPersist controleCartaoMCCPersist);
+        ControleCartaoGrupoMCCResponse SalvarControleGrupoMCCPorCartao (long? id, ControleCartaoGrupoMCCPersist controleCartaoMCCPersist);
   
         /// <summary>
         /// Registra o grupo mcc ao cart\u00E3o.
@@ -401,37 +401,11 @@ namespace Conductor.Pier.Api
         /// <param name="id">id</param>
         /// <param name="controleCartaoMCCPersist">controleCartaoMCCPersist</param>
         /// <returns>ApiResponse of ControleCartaoGrupoMCCResponse</returns>
-        ApiResponse<ControleCartaoGrupoMCCResponse> SalvarControleGrupoMccCartaoWithHttpInfo (long? id, ControleCartaoGrupoMCCPersist controleCartaoMCCPersist);
+        ApiResponse<ControleCartaoGrupoMCCResponse> SalvarControleGrupoMCCPorCartaoWithHttpInfo (long? id, ControleCartaoGrupoMCCPersist controleCartaoMCCPersist);
         
         #endregion Synchronous Operations
         
         #region Asynchronous Operations
-        
-        /// <summary>
-        /// Altera um controle de limites de um cart\u00E3o
-        /// </summary>
-        /// <remarks>
-        /// Este recurso permite que seja alterado o controle de limites de um cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)</param>
-        /// <param name="idControleLimite">C\u00F3digo de identifica\u00E7\u00E3o do controle de limites do cart\u00E3o (id)</param>
-        /// <param name="controleLimitesCartaoUpdate">controleLimitesCartaoUpdate</param>
-        /// <returns>Task of ControleLimiteCartaoResponse</returns>
-        System.Threading.Tasks.Task<ControleLimiteCartaoResponse> AlterarAsync (long? id, long? idControleLimite, ControleLimiteCartaoUpdate controleLimitesCartaoUpdate);
-
-        /// <summary>
-        /// Altera um controle de limites de um cart\u00E3o
-        /// </summary>
-        /// <remarks>
-        /// Este recurso permite que seja alterado o controle de limites de um cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)</param>
-        /// <param name="idControleLimite">C\u00F3digo de identifica\u00E7\u00E3o do controle de limites do cart\u00E3o (id)</param>
-        /// <param name="controleLimitesCartaoUpdate">controleLimitesCartaoUpdate</param>
-        /// <returns>Task of ApiResponse (ControleLimiteCartaoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ControleLimiteCartaoResponse>> AlterarAsyncWithHttpInfo (long? id, long? idControleLimite, ControleLimiteCartaoUpdate controleLimitesCartaoUpdate);
         
         /// <summary>
         /// Altera qualquer parte do log de configura\u00E7\u00E3o
@@ -460,52 +434,54 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<ConfiguracaoControleCartaoResponse>> AlterarConfiguracaoControleCartaoAsyncWithHttpInfo (long? idConfiguracaoCartao, long? id, ConfiguracaoControleCartaoUpdate configuracaoControleCartaoUpdate);
         
         /// <summary>
-        /// Ativa um controle de limites de um cart\u00E3o
+        /// Altera um controle de limites de um cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este recurso permite que seja ativado o controle de limites de um cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
+        /// Este recurso permite que seja alterado o controle de limites de um cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)</param>
         /// <param name="idControleLimite">C\u00F3digo de identifica\u00E7\u00E3o do controle de limites do cart\u00E3o (id)</param>
+        /// <param name="controleLimitesCartaoUpdate">controleLimitesCartaoUpdate</param>
         /// <returns>Task of ControleLimiteCartaoResponse</returns>
-        System.Threading.Tasks.Task<ControleLimiteCartaoResponse> AtivarControleLimiteCartaoAsync (long? id, long? idControleLimite);
+        System.Threading.Tasks.Task<ControleLimiteCartaoResponse> AlterarControleDeLimiteAsync (long? id, long? idControleLimite, ControleLimiteCartaoUpdate controleLimitesCartaoUpdate);
 
         /// <summary>
-        /// Ativa um controle de limites de um cart\u00E3o
+        /// Altera um controle de limites de um cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este recurso permite que seja ativado o controle de limites de um cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
+        /// Este recurso permite que seja alterado o controle de limites de um cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)</param>
         /// <param name="idControleLimite">C\u00F3digo de identifica\u00E7\u00E3o do controle de limites do cart\u00E3o (id)</param>
+        /// <param name="controleLimitesCartaoUpdate">controleLimitesCartaoUpdate</param>
         /// <returns>Task of ApiResponse (ControleLimiteCartaoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ControleLimiteCartaoResponse>> AtivarControleLimiteCartaoAsyncWithHttpInfo (long? id, long? idControleLimite);
+        System.Threading.Tasks.Task<ApiResponse<ControleLimiteCartaoResponse>> AlterarControleDeLimiteAsyncWithHttpInfo (long? id, long? idControleLimite, ControleLimiteCartaoUpdate controleLimitesCartaoUpdate);
         
         /// <summary>
-        /// Apresenta o controle de limites do cart\u00E3o
+        /// Ativa um controle de limites de um cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este recurso permite que seja mostrado o controle de limites do cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
+        /// Este recurso permite que seja ativado o controle de limites de um cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)</param>
         /// <param name="idControleLimite">C\u00F3digo de identifica\u00E7\u00E3o do controle de limites do cart\u00E3o (id)</param>
         /// <returns>Task of ControleLimiteCartaoResponse</returns>
-        System.Threading.Tasks.Task<ControleLimiteCartaoResponse> ConsultarAsync (long? id, long? idControleLimite);
+        System.Threading.Tasks.Task<ControleLimiteCartaoResponse> AtivarControleDeLimiteAsync (long? id, long? idControleLimite);
 
         /// <summary>
-        /// Apresenta o controle de limites do cart\u00E3o
+        /// Ativa um controle de limites de um cart\u00E3o
         /// </summary>
         /// <remarks>
-        /// Este recurso permite que seja mostrado o controle de limites do cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
+        /// Este recurso permite que seja ativado o controle de limites de um cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)</param>
         /// <param name="idControleLimite">C\u00F3digo de identifica\u00E7\u00E3o do controle de limites do cart\u00E3o (id)</param>
         /// <returns>Task of ApiResponse (ControleLimiteCartaoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ControleLimiteCartaoResponse>> ConsultarAsyncWithHttpInfo (long? id, long? idControleLimite);
+        System.Threading.Tasks.Task<ApiResponse<ControleLimiteCartaoResponse>> AtivarControleDeLimiteAsyncWithHttpInfo (long? id, long? idControleLimite);
         
         /// <summary>
         /// Exibe as configura\u00E7\u00F5es de bloqueio para um cart\u00E3o espec\u00EDfico.
@@ -532,6 +508,30 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<ConfiguracaoControleCartaoResponse>> ConsultarConfiguracaoControleCartaoAsyncWithHttpInfo (long? idConfiguracaoCartao, long? id);
         
         /// <summary>
+        /// Apresenta o controle de limites do cart\u00E3o
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite que seja mostrado o controle de limites do cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)</param>
+        /// <param name="idControleLimite">C\u00F3digo de identifica\u00E7\u00E3o do controle de limites do cart\u00E3o (id)</param>
+        /// <returns>Task of ControleLimiteCartaoResponse</returns>
+        System.Threading.Tasks.Task<ControleLimiteCartaoResponse> ConsultarControleDeLimiteAsync (long? id, long? idControleLimite);
+
+        /// <summary>
+        /// Apresenta o controle de limites do cart\u00E3o
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite que seja mostrado o controle de limites do cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)</param>
+        /// <param name="idControleLimite">C\u00F3digo de identifica\u00E7\u00E3o do controle de limites do cart\u00E3o (id)</param>
+        /// <returns>Task of ApiResponse (ControleLimiteCartaoResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ControleLimiteCartaoResponse>> ConsultarControleDeLimiteAsyncWithHttpInfo (long? id, long? idControleLimite);
+        
+        /// <summary>
         /// Exibe todos os mcc de bloqueio vinculado a um cart\u00E3o espec\u00EDfico.
         /// </summary>
         /// <remarks>
@@ -541,7 +541,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de controle de grupo MCC do cart\u00E3o.</param>
         /// <param name="idControleCartaoGrupoMCC">idControleCartaoGrupoMCC</param>
         /// <returns>Task of ControleCartaoGrupoMCCResponse</returns>
-        System.Threading.Tasks.Task<ControleCartaoGrupoMCCResponse> ConsultarControleGrupoMccCartaoAsync (long? id, long? idControleCartaoGrupoMCC);
+        System.Threading.Tasks.Task<ControleCartaoGrupoMCCResponse> ConsultarControleGrupoMCCPorCartaoAsync (long? id, long? idControleCartaoGrupoMCC);
 
         /// <summary>
         /// Exibe todos os mcc de bloqueio vinculado a um cart\u00E3o espec\u00EDfico.
@@ -553,7 +553,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de controle de grupo MCC do cart\u00E3o.</param>
         /// <param name="idControleCartaoGrupoMCC">idControleCartaoGrupoMCC</param>
         /// <returns>Task of ApiResponse (ControleCartaoGrupoMCCResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ControleCartaoGrupoMCCResponse>> ConsultarControleGrupoMccCartaoAsyncWithHttpInfo (long? id, long? idControleCartaoGrupoMCC);
+        System.Threading.Tasks.Task<ApiResponse<ControleCartaoGrupoMCCResponse>> ConsultarControleGrupoMCCPorCartaoAsyncWithHttpInfo (long? id, long? idControleCartaoGrupoMCC);
         
         /// <summary>
         /// Deletar uma configura\u00E7\u00E3o de um cart\u00E3o.
@@ -589,7 +589,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de controle de grupo MCC do cart\u00E3o.</param>
         /// <param name="idControleCartaoGrupoMCC">idControleCartaoGrupoMCC</param>
         /// <returns>Task of ControleCartaoGrupoMCCResponse</returns>
-        System.Threading.Tasks.Task<ControleCartaoGrupoMCCResponse> DeletarControleGrupoMccCartaoAsync (long? id, long? idControleCartaoGrupoMCC);
+        System.Threading.Tasks.Task<ControleCartaoGrupoMCCResponse> DeletarControleGrupoMCCPorCartaoAsync (long? id, long? idControleCartaoGrupoMCC);
 
         /// <summary>
         /// Deletar o vinculo do mcc com um cart\u00E3o.
@@ -601,7 +601,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de controle de grupo MCC do cart\u00E3o.</param>
         /// <param name="idControleCartaoGrupoMCC">idControleCartaoGrupoMCC</param>
         /// <returns>Task of ApiResponse (ControleCartaoGrupoMCCResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ControleCartaoGrupoMCCResponse>> DeletarControleGrupoMccCartaoAsyncWithHttpInfo (long? id, long? idControleCartaoGrupoMCC);
+        System.Threading.Tasks.Task<ApiResponse<ControleCartaoGrupoMCCResponse>> DeletarControleGrupoMCCPorCartaoAsyncWithHttpInfo (long? id, long? idControleCartaoGrupoMCC);
         
         /// <summary>
         /// Desativa um controle de limites de um cart\u00E3o
@@ -613,7 +613,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)</param>
         /// <param name="idControleLimite">C\u00F3digo de identifica\u00E7\u00E3o do controle de limites do cart\u00E3o (id)</param>
         /// <returns>Task of ControleLimiteCartaoResponse</returns>
-        System.Threading.Tasks.Task<ControleLimiteCartaoResponse> DesativarControleLimiteCartaoAsync (long? id, long? idControleLimite);
+        System.Threading.Tasks.Task<ControleLimiteCartaoResponse> DesativarControleDeLimiteAsync (long? id, long? idControleLimite);
 
         /// <summary>
         /// Desativa um controle de limites de um cart\u00E3o
@@ -625,35 +625,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)</param>
         /// <param name="idControleLimite">C\u00F3digo de identifica\u00E7\u00E3o do controle de limites do cart\u00E3o (id)</param>
         /// <returns>Task of ApiResponse (ControleLimiteCartaoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ControleLimiteCartaoResponse>> DesativarControleLimiteCartaoAsyncWithHttpInfo (long? id, long? idControleLimite);
-        
-        /// <summary>
-        /// Lista o controle de limites dos cart\u00F5es
-        /// </summary>
-        /// <remarks>
-        /// Este recurso permite que sejam listados todos os controles de limites por cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="idCartao">Id do cart\u00E3o (optional)</param>
-        /// <returns>Task of PageControleLimiteCartaoResponse</returns>
-        System.Threading.Tasks.Task<PageControleLimiteCartaoResponse> ListarAsync (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null);
-
-        /// <summary>
-        /// Lista o controle de limites dos cart\u00F5es
-        /// </summary>
-        /// <remarks>
-        /// Este recurso permite que sejam listados todos os controles de limites por cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="idCartao">Id do cart\u00E3o (optional)</param>
-        /// <returns>Task of ApiResponse (PageControleLimiteCartaoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageControleLimiteCartaoResponse>> ListarAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null);
+        System.Threading.Tasks.Task<ApiResponse<ControleLimiteCartaoResponse>> DesativarControleDeLimiteAsyncWithHttpInfo (long? id, long? idControleLimite);
         
         /// <summary>
         /// Lista os cart\u00F5es configurados pelo remetente
@@ -704,7 +676,7 @@ namespace Conductor.Pier.Api
         /// <param name="idCartao">C\u00F3digo Identificador do cartao na base (id) (optional)</param>
         /// <param name="idGrupoMCC">C\u00F3digo Identificador do grupo mcc na base. (optional)</param>
         /// <returns>Task of PageControleCartaoGrupoMCCResponse</returns>
-        System.Threading.Tasks.Task<PageControleCartaoGrupoMCCResponse> ListarControleGrupoMccCartaoAsync (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, long? idGrupoMCC = null);
+        System.Threading.Tasks.Task<PageControleCartaoGrupoMCCResponse> ListarControleGrupoMCCPorCartaoAsync (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, long? idGrupoMCC = null);
 
         /// <summary>
         /// Lista os cart\u00F5es vinculados aos estabelecimentos.
@@ -719,31 +691,35 @@ namespace Conductor.Pier.Api
         /// <param name="idCartao">C\u00F3digo Identificador do cartao na base (id) (optional)</param>
         /// <param name="idGrupoMCC">C\u00F3digo Identificador do grupo mcc na base. (optional)</param>
         /// <returns>Task of ApiResponse (PageControleCartaoGrupoMCCResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageControleCartaoGrupoMCCResponse>> ListarControleGrupoMccCartaoAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, long? idGrupoMCC = null);
+        System.Threading.Tasks.Task<ApiResponse<PageControleCartaoGrupoMCCResponse>> ListarControleGrupoMCCPorCartaoAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, long? idGrupoMCC = null);
         
         /// <summary>
-        /// Cadastra um controle de limites para um cart\u00E3o
+        /// Lista o controle de limites dos cart\u00F5es
         /// </summary>
         /// <remarks>
-        /// Este recurso permite que seja cadastrado um controle de limites para um cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
+        /// Este recurso permite que sejam listados todos os controles de limites por cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)</param>
-        /// <param name="controleLimitesCartaoPersist">controleLimitesCartaoPersist</param>
-        /// <returns>Task of ControleLimiteCartaoResponse</returns>
-        System.Threading.Tasks.Task<ControleLimiteCartaoResponse> SalvarAsync (long? id, ControleLimitesCartaoPersist controleLimitesCartaoPersist);
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idCartao">Id do cart\u00E3o (optional)</param>
+        /// <returns>Task of PageControleLimiteCartaoResponse</returns>
+        System.Threading.Tasks.Task<PageControleLimiteCartaoResponse> ListarControlesDeLimitesAsync (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null);
 
         /// <summary>
-        /// Cadastra um controle de limites para um cart\u00E3o
+        /// Lista o controle de limites dos cart\u00F5es
         /// </summary>
         /// <remarks>
-        /// Este recurso permite que seja cadastrado um controle de limites para um cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
+        /// Este recurso permite que sejam listados todos os controles de limites por cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)</param>
-        /// <param name="controleLimitesCartaoPersist">controleLimitesCartaoPersist</param>
-        /// <returns>Task of ApiResponse (ControleLimiteCartaoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ControleLimiteCartaoResponse>> SalvarAsyncWithHttpInfo (long? id, ControleLimitesCartaoPersist controleLimitesCartaoPersist);
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idCartao">Id do cart\u00E3o (optional)</param>
+        /// <returns>Task of ApiResponse (PageControleLimiteCartaoResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PageControleLimiteCartaoResponse>> ListarControlesDeLimitesAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null);
         
         /// <summary>
         /// Registra a configura\u00E7\u00E3o do cart\u00E3o.
@@ -770,6 +746,30 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<ConfiguracaoControleCartaoResponse>> SalvarConfiguracaoControleCartaoAsyncWithHttpInfo (long? id, ConfiguracaoControleCartaoPersist configuracaoControleCartaoPersist);
         
         /// <summary>
+        /// Cadastra um controle de limites para um cart\u00E3o
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite que seja cadastrado um controle de limites para um cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)</param>
+        /// <param name="controleLimitesCartaoPersist">controleLimitesCartaoPersist</param>
+        /// <returns>Task of ControleLimiteCartaoResponse</returns>
+        System.Threading.Tasks.Task<ControleLimiteCartaoResponse> SalvarControleDeLimiteAsync (long? id, ControleLimitesCartaoPersist controleLimitesCartaoPersist);
+
+        /// <summary>
+        /// Cadastra um controle de limites para um cart\u00E3o
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite que seja cadastrado um controle de limites para um cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)</param>
+        /// <param name="controleLimitesCartaoPersist">controleLimitesCartaoPersist</param>
+        /// <returns>Task of ApiResponse (ControleLimiteCartaoResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ControleLimiteCartaoResponse>> SalvarControleDeLimiteAsyncWithHttpInfo (long? id, ControleLimitesCartaoPersist controleLimitesCartaoPersist);
+        
+        /// <summary>
         /// Registra o grupo mcc ao cart\u00E3o.
         /// </summary>
         /// <remarks>
@@ -779,7 +779,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">id</param>
         /// <param name="controleCartaoMCCPersist">controleCartaoMCCPersist</param>
         /// <returns>Task of ControleCartaoGrupoMCCResponse</returns>
-        System.Threading.Tasks.Task<ControleCartaoGrupoMCCResponse> SalvarControleGrupoMccCartaoAsync (long? id, ControleCartaoGrupoMCCPersist controleCartaoMCCPersist);
+        System.Threading.Tasks.Task<ControleCartaoGrupoMCCResponse> SalvarControleGrupoMCCPorCartaoAsync (long? id, ControleCartaoGrupoMCCPersist controleCartaoMCCPersist);
 
         /// <summary>
         /// Registra o grupo mcc ao cart\u00E3o.
@@ -791,7 +791,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">id</param>
         /// <param name="controleCartaoMCCPersist">controleCartaoMCCPersist</param>
         /// <returns>Task of ApiResponse (ControleCartaoGrupoMCCResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ControleCartaoGrupoMCCResponse>> SalvarControleGrupoMccCartaoAsyncWithHttpInfo (long? id, ControleCartaoGrupoMCCPersist controleCartaoMCCPersist);
+        System.Threading.Tasks.Task<ApiResponse<ControleCartaoGrupoMCCResponse>> SalvarControleGrupoMCCPorCartaoAsyncWithHttpInfo (long? id, ControleCartaoGrupoMCCPersist controleCartaoMCCPersist);
         
         #endregion Asynchronous Operations
         
@@ -884,200 +884,6 @@ namespace Conductor.Pier.Api
             this.Configuration.AddDefaultHeader(key, value);
         }
    
-        
-        /// <summary>
-        /// Altera um controle de limites de um cart\u00E3o Este recurso permite que seja alterado o controle de limites de um cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)</param> 
-        /// <param name="idControleLimite">C\u00F3digo de identifica\u00E7\u00E3o do controle de limites do cart\u00E3o (id)</param> 
-        /// <param name="controleLimitesCartaoUpdate">controleLimitesCartaoUpdate</param> 
-        /// <returns>ControleLimiteCartaoResponse</returns>
-        public ControleLimiteCartaoResponse Alterar (long? id, long? idControleLimite, ControleLimiteCartaoUpdate controleLimitesCartaoUpdate)
-        {
-             ApiResponse<ControleLimiteCartaoResponse> localVarResponse = AlterarWithHttpInfo(id, idControleLimite, controleLimitesCartaoUpdate);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Altera um controle de limites de um cart\u00E3o Este recurso permite que seja alterado o controle de limites de um cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)</param> 
-        /// <param name="idControleLimite">C\u00F3digo de identifica\u00E7\u00E3o do controle de limites do cart\u00E3o (id)</param> 
-        /// <param name="controleLimitesCartaoUpdate">controleLimitesCartaoUpdate</param> 
-        /// <returns>ApiResponse of ControleLimiteCartaoResponse</returns>
-        public ApiResponse< ControleLimiteCartaoResponse > AlterarWithHttpInfo (long? id, long? idControleLimite, ControleLimiteCartaoUpdate controleLimitesCartaoUpdate)
-        {
-            
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling ControleCartaoApi->Alterar");
-            
-            // verify the required parameter 'idControleLimite' is set
-            if (idControleLimite == null)
-                throw new ApiException(400, "Missing required parameter 'idControleLimite' when calling ControleCartaoApi->Alterar");
-            
-            // verify the required parameter 'controleLimitesCartaoUpdate' is set
-            if (controleLimitesCartaoUpdate == null)
-                throw new ApiException(400, "Missing required parameter 'controleLimitesCartaoUpdate' when calling ControleCartaoApi->Alterar");
-            
-    
-            var localVarPath = "/api/cartoes/{id}/controles-limites/{idControleLimite}";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            if (idControleLimite != null) localVarPathParams.Add("idControleLimite", Configuration.ApiClient.ParameterToString(idControleLimite)); // path parameter
-            
-            
-            
-            
-            if (controleLimitesCartaoUpdate.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(controleLimitesCartaoUpdate); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = controleLimitesCartaoUpdate; // byte array
-            }
-
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Alterar: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Alterar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<ControleLimiteCartaoResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ControleLimiteCartaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ControleLimiteCartaoResponse)));
-            
-        }
-
-        
-        /// <summary>
-        /// Altera um controle de limites de um cart\u00E3o Este recurso permite que seja alterado o controle de limites de um cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)</param>
-        /// <param name="idControleLimite">C\u00F3digo de identifica\u00E7\u00E3o do controle de limites do cart\u00E3o (id)</param>
-        /// <param name="controleLimitesCartaoUpdate">controleLimitesCartaoUpdate</param>
-        /// <returns>Task of ControleLimiteCartaoResponse</returns>
-        public async System.Threading.Tasks.Task<ControleLimiteCartaoResponse> AlterarAsync (long? id, long? idControleLimite, ControleLimiteCartaoUpdate controleLimitesCartaoUpdate)
-        {
-             ApiResponse<ControleLimiteCartaoResponse> localVarResponse = await AlterarAsyncWithHttpInfo(id, idControleLimite, controleLimitesCartaoUpdate);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Altera um controle de limites de um cart\u00E3o Este recurso permite que seja alterado o controle de limites de um cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)</param>
-        /// <param name="idControleLimite">C\u00F3digo de identifica\u00E7\u00E3o do controle de limites do cart\u00E3o (id)</param>
-        /// <param name="controleLimitesCartaoUpdate">controleLimitesCartaoUpdate</param>
-        /// <returns>Task of ApiResponse (ControleLimiteCartaoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ControleLimiteCartaoResponse>> AlterarAsyncWithHttpInfo (long? id, long? idControleLimite, ControleLimiteCartaoUpdate controleLimitesCartaoUpdate)
-        {
-            // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling Alterar");
-            // verify the required parameter 'idControleLimite' is set
-            if (idControleLimite == null) throw new ApiException(400, "Missing required parameter 'idControleLimite' when calling Alterar");
-            // verify the required parameter 'controleLimitesCartaoUpdate' is set
-            if (controleLimitesCartaoUpdate == null) throw new ApiException(400, "Missing required parameter 'controleLimitesCartaoUpdate' when calling Alterar");
-            
-    
-            var localVarPath = "/api/cartoes/{id}/controles-limites/{idControleLimite}";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            if (idControleLimite != null) localVarPathParams.Add("idControleLimite", Configuration.ApiClient.ParameterToString(idControleLimite)); // path parameter
-            
-            
-            
-            
-            if (controleLimitesCartaoUpdate.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(controleLimitesCartaoUpdate); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = controleLimitesCartaoUpdate; // byte array
-            }
-
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Alterar: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Alterar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<ControleLimiteCartaoResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ControleLimiteCartaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ControleLimiteCartaoResponse)));
-            
-        }
         
         /// <summary>
         /// Altera qualquer parte do log de configura\u00E7\u00E3o Esse m\u00E9todo permite alterar qualquer parte da configura\u00E7\u00E3o de bloqueio do cart\u00E3o ao validar o ticket de transa\u00E7\u00E3o.
@@ -1274,15 +1080,209 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
+        /// Altera um controle de limites de um cart\u00E3o Este recurso permite que seja alterado o controle de limites de um cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)</param> 
+        /// <param name="idControleLimite">C\u00F3digo de identifica\u00E7\u00E3o do controle de limites do cart\u00E3o (id)</param> 
+        /// <param name="controleLimitesCartaoUpdate">controleLimitesCartaoUpdate</param> 
+        /// <returns>ControleLimiteCartaoResponse</returns>
+        public ControleLimiteCartaoResponse AlterarControleDeLimite (long? id, long? idControleLimite, ControleLimiteCartaoUpdate controleLimitesCartaoUpdate)
+        {
+             ApiResponse<ControleLimiteCartaoResponse> localVarResponse = AlterarControleDeLimiteWithHttpInfo(id, idControleLimite, controleLimitesCartaoUpdate);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Altera um controle de limites de um cart\u00E3o Este recurso permite que seja alterado o controle de limites de um cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)</param> 
+        /// <param name="idControleLimite">C\u00F3digo de identifica\u00E7\u00E3o do controle de limites do cart\u00E3o (id)</param> 
+        /// <param name="controleLimitesCartaoUpdate">controleLimitesCartaoUpdate</param> 
+        /// <returns>ApiResponse of ControleLimiteCartaoResponse</returns>
+        public ApiResponse< ControleLimiteCartaoResponse > AlterarControleDeLimiteWithHttpInfo (long? id, long? idControleLimite, ControleLimiteCartaoUpdate controleLimitesCartaoUpdate)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling ControleCartaoApi->AlterarControleDeLimite");
+            
+            // verify the required parameter 'idControleLimite' is set
+            if (idControleLimite == null)
+                throw new ApiException(400, "Missing required parameter 'idControleLimite' when calling ControleCartaoApi->AlterarControleDeLimite");
+            
+            // verify the required parameter 'controleLimitesCartaoUpdate' is set
+            if (controleLimitesCartaoUpdate == null)
+                throw new ApiException(400, "Missing required parameter 'controleLimitesCartaoUpdate' when calling ControleCartaoApi->AlterarControleDeLimite");
+            
+    
+            var localVarPath = "/api/cartoes/{id}/controles-limites/{idControleLimite}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (idControleLimite != null) localVarPathParams.Add("idControleLimite", Configuration.ApiClient.ParameterToString(idControleLimite)); // path parameter
+            
+            
+            
+            
+            if (controleLimitesCartaoUpdate.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(controleLimitesCartaoUpdate); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = controleLimitesCartaoUpdate; // byte array
+            }
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling AlterarControleDeLimite: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling AlterarControleDeLimite: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<ControleLimiteCartaoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ControleLimiteCartaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ControleLimiteCartaoResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Altera um controle de limites de um cart\u00E3o Este recurso permite que seja alterado o controle de limites de um cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)</param>
+        /// <param name="idControleLimite">C\u00F3digo de identifica\u00E7\u00E3o do controle de limites do cart\u00E3o (id)</param>
+        /// <param name="controleLimitesCartaoUpdate">controleLimitesCartaoUpdate</param>
+        /// <returns>Task of ControleLimiteCartaoResponse</returns>
+        public async System.Threading.Tasks.Task<ControleLimiteCartaoResponse> AlterarControleDeLimiteAsync (long? id, long? idControleLimite, ControleLimiteCartaoUpdate controleLimitesCartaoUpdate)
+        {
+             ApiResponse<ControleLimiteCartaoResponse> localVarResponse = await AlterarControleDeLimiteAsyncWithHttpInfo(id, idControleLimite, controleLimitesCartaoUpdate);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Altera um controle de limites de um cart\u00E3o Este recurso permite que seja alterado o controle de limites de um cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)</param>
+        /// <param name="idControleLimite">C\u00F3digo de identifica\u00E7\u00E3o do controle de limites do cart\u00E3o (id)</param>
+        /// <param name="controleLimitesCartaoUpdate">controleLimitesCartaoUpdate</param>
+        /// <returns>Task of ApiResponse (ControleLimiteCartaoResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ControleLimiteCartaoResponse>> AlterarControleDeLimiteAsyncWithHttpInfo (long? id, long? idControleLimite, ControleLimiteCartaoUpdate controleLimitesCartaoUpdate)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AlterarControleDeLimite");
+            // verify the required parameter 'idControleLimite' is set
+            if (idControleLimite == null) throw new ApiException(400, "Missing required parameter 'idControleLimite' when calling AlterarControleDeLimite");
+            // verify the required parameter 'controleLimitesCartaoUpdate' is set
+            if (controleLimitesCartaoUpdate == null) throw new ApiException(400, "Missing required parameter 'controleLimitesCartaoUpdate' when calling AlterarControleDeLimite");
+            
+    
+            var localVarPath = "/api/cartoes/{id}/controles-limites/{idControleLimite}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (idControleLimite != null) localVarPathParams.Add("idControleLimite", Configuration.ApiClient.ParameterToString(idControleLimite)); // path parameter
+            
+            
+            
+            
+            if (controleLimitesCartaoUpdate.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(controleLimitesCartaoUpdate); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = controleLimitesCartaoUpdate; // byte array
+            }
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling AlterarControleDeLimite: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling AlterarControleDeLimite: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ControleLimiteCartaoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ControleLimiteCartaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ControleLimiteCartaoResponse)));
+            
+        }
+        
+        /// <summary>
         /// Ativa um controle de limites de um cart\u00E3o Este recurso permite que seja ativado o controle de limites de um cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)</param> 
         /// <param name="idControleLimite">C\u00F3digo de identifica\u00E7\u00E3o do controle de limites do cart\u00E3o (id)</param> 
         /// <returns>ControleLimiteCartaoResponse</returns>
-        public ControleLimiteCartaoResponse AtivarControleLimiteCartao (long? id, long? idControleLimite)
+        public ControleLimiteCartaoResponse AtivarControleDeLimite (long? id, long? idControleLimite)
         {
-             ApiResponse<ControleLimiteCartaoResponse> localVarResponse = AtivarControleLimiteCartaoWithHttpInfo(id, idControleLimite);
+             ApiResponse<ControleLimiteCartaoResponse> localVarResponse = AtivarControleDeLimiteWithHttpInfo(id, idControleLimite);
              return localVarResponse.Data;
         }
 
@@ -1293,16 +1293,16 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)</param> 
         /// <param name="idControleLimite">C\u00F3digo de identifica\u00E7\u00E3o do controle de limites do cart\u00E3o (id)</param> 
         /// <returns>ApiResponse of ControleLimiteCartaoResponse</returns>
-        public ApiResponse< ControleLimiteCartaoResponse > AtivarControleLimiteCartaoWithHttpInfo (long? id, long? idControleLimite)
+        public ApiResponse< ControleLimiteCartaoResponse > AtivarControleDeLimiteWithHttpInfo (long? id, long? idControleLimite)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling ControleCartaoApi->AtivarControleLimiteCartao");
+                throw new ApiException(400, "Missing required parameter 'id' when calling ControleCartaoApi->AtivarControleDeLimite");
             
             // verify the required parameter 'idControleLimite' is set
             if (idControleLimite == null)
-                throw new ApiException(400, "Missing required parameter 'idControleLimite' when calling ControleCartaoApi->AtivarControleLimiteCartao");
+                throw new ApiException(400, "Missing required parameter 'idControleLimite' when calling ControleCartaoApi->AtivarControleDeLimite");
             
     
             var localVarPath = "/api/cartoes/{id}/controles-limites/{idControleLimite}/ativar";
@@ -1349,9 +1349,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling AtivarControleLimiteCartao: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling AtivarControleDeLimite: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling AtivarControleLimiteCartao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling AtivarControleDeLimite: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<ControleLimiteCartaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1367,9 +1367,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)</param>
         /// <param name="idControleLimite">C\u00F3digo de identifica\u00E7\u00E3o do controle de limites do cart\u00E3o (id)</param>
         /// <returns>Task of ControleLimiteCartaoResponse</returns>
-        public async System.Threading.Tasks.Task<ControleLimiteCartaoResponse> AtivarControleLimiteCartaoAsync (long? id, long? idControleLimite)
+        public async System.Threading.Tasks.Task<ControleLimiteCartaoResponse> AtivarControleDeLimiteAsync (long? id, long? idControleLimite)
         {
-             ApiResponse<ControleLimiteCartaoResponse> localVarResponse = await AtivarControleLimiteCartaoAsyncWithHttpInfo(id, idControleLimite);
+             ApiResponse<ControleLimiteCartaoResponse> localVarResponse = await AtivarControleDeLimiteAsyncWithHttpInfo(id, idControleLimite);
              return localVarResponse.Data;
 
         }
@@ -1381,12 +1381,12 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)</param>
         /// <param name="idControleLimite">C\u00F3digo de identifica\u00E7\u00E3o do controle de limites do cart\u00E3o (id)</param>
         /// <returns>Task of ApiResponse (ControleLimiteCartaoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ControleLimiteCartaoResponse>> AtivarControleLimiteCartaoAsyncWithHttpInfo (long? id, long? idControleLimite)
+        public async System.Threading.Tasks.Task<ApiResponse<ControleLimiteCartaoResponse>> AtivarControleDeLimiteAsyncWithHttpInfo (long? id, long? idControleLimite)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AtivarControleLimiteCartao");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AtivarControleDeLimite");
             // verify the required parameter 'idControleLimite' is set
-            if (idControleLimite == null) throw new ApiException(400, "Missing required parameter 'idControleLimite' when calling AtivarControleLimiteCartao");
+            if (idControleLimite == null) throw new ApiException(400, "Missing required parameter 'idControleLimite' when calling AtivarControleDeLimite");
             
     
             var localVarPath = "/api/cartoes/{id}/controles-limites/{idControleLimite}/ativar";
@@ -1433,179 +1433,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling AtivarControleLimiteCartao: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling AtivarControleDeLimite: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling AtivarControleLimiteCartao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<ControleLimiteCartaoResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ControleLimiteCartaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ControleLimiteCartaoResponse)));
-            
-        }
-        
-        /// <summary>
-        /// Apresenta o controle de limites do cart\u00E3o Este recurso permite que seja mostrado o controle de limites do cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)</param> 
-        /// <param name="idControleLimite">C\u00F3digo de identifica\u00E7\u00E3o do controle de limites do cart\u00E3o (id)</param> 
-        /// <returns>ControleLimiteCartaoResponse</returns>
-        public ControleLimiteCartaoResponse Consultar (long? id, long? idControleLimite)
-        {
-             ApiResponse<ControleLimiteCartaoResponse> localVarResponse = ConsultarWithHttpInfo(id, idControleLimite);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Apresenta o controle de limites do cart\u00E3o Este recurso permite que seja mostrado o controle de limites do cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)</param> 
-        /// <param name="idControleLimite">C\u00F3digo de identifica\u00E7\u00E3o do controle de limites do cart\u00E3o (id)</param> 
-        /// <returns>ApiResponse of ControleLimiteCartaoResponse</returns>
-        public ApiResponse< ControleLimiteCartaoResponse > ConsultarWithHttpInfo (long? id, long? idControleLimite)
-        {
-            
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling ControleCartaoApi->Consultar");
-            
-            // verify the required parameter 'idControleLimite' is set
-            if (idControleLimite == null)
-                throw new ApiException(400, "Missing required parameter 'idControleLimite' when calling ControleCartaoApi->Consultar");
-            
-    
-            var localVarPath = "/api/cartoes/{id}/controles-limites/{idControleLimite}";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            if (idControleLimite != null) localVarPathParams.Add("idControleLimite", Configuration.ApiClient.ParameterToString(idControleLimite)); // path parameter
-            
-            
-            
-            
-            
-
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<ControleLimiteCartaoResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ControleLimiteCartaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ControleLimiteCartaoResponse)));
-            
-        }
-
-        
-        /// <summary>
-        /// Apresenta o controle de limites do cart\u00E3o Este recurso permite que seja mostrado o controle de limites do cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)</param>
-        /// <param name="idControleLimite">C\u00F3digo de identifica\u00E7\u00E3o do controle de limites do cart\u00E3o (id)</param>
-        /// <returns>Task of ControleLimiteCartaoResponse</returns>
-        public async System.Threading.Tasks.Task<ControleLimiteCartaoResponse> ConsultarAsync (long? id, long? idControleLimite)
-        {
-             ApiResponse<ControleLimiteCartaoResponse> localVarResponse = await ConsultarAsyncWithHttpInfo(id, idControleLimite);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Apresenta o controle de limites do cart\u00E3o Este recurso permite que seja mostrado o controle de limites do cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)</param>
-        /// <param name="idControleLimite">C\u00F3digo de identifica\u00E7\u00E3o do controle de limites do cart\u00E3o (id)</param>
-        /// <returns>Task of ApiResponse (ControleLimiteCartaoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ControleLimiteCartaoResponse>> ConsultarAsyncWithHttpInfo (long? id, long? idControleLimite)
-        {
-            // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling Consultar");
-            // verify the required parameter 'idControleLimite' is set
-            if (idControleLimite == null) throw new ApiException(400, "Missing required parameter 'idControleLimite' when calling Consultar");
-            
-    
-            var localVarPath = "/api/cartoes/{id}/controles-limites/{idControleLimite}";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            if (idControleLimite != null) localVarPathParams.Add("idControleLimite", Configuration.ApiClient.ParameterToString(idControleLimite)); // path parameter
-            
-            
-            
-            
-            
-
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling AtivarControleDeLimite: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<ControleLimiteCartaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1784,15 +1614,185 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
+        /// Apresenta o controle de limites do cart\u00E3o Este recurso permite que seja mostrado o controle de limites do cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)</param> 
+        /// <param name="idControleLimite">C\u00F3digo de identifica\u00E7\u00E3o do controle de limites do cart\u00E3o (id)</param> 
+        /// <returns>ControleLimiteCartaoResponse</returns>
+        public ControleLimiteCartaoResponse ConsultarControleDeLimite (long? id, long? idControleLimite)
+        {
+             ApiResponse<ControleLimiteCartaoResponse> localVarResponse = ConsultarControleDeLimiteWithHttpInfo(id, idControleLimite);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Apresenta o controle de limites do cart\u00E3o Este recurso permite que seja mostrado o controle de limites do cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)</param> 
+        /// <param name="idControleLimite">C\u00F3digo de identifica\u00E7\u00E3o do controle de limites do cart\u00E3o (id)</param> 
+        /// <returns>ApiResponse of ControleLimiteCartaoResponse</returns>
+        public ApiResponse< ControleLimiteCartaoResponse > ConsultarControleDeLimiteWithHttpInfo (long? id, long? idControleLimite)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling ControleCartaoApi->ConsultarControleDeLimite");
+            
+            // verify the required parameter 'idControleLimite' is set
+            if (idControleLimite == null)
+                throw new ApiException(400, "Missing required parameter 'idControleLimite' when calling ControleCartaoApi->ConsultarControleDeLimite");
+            
+    
+            var localVarPath = "/api/cartoes/{id}/controles-limites/{idControleLimite}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (idControleLimite != null) localVarPathParams.Add("idControleLimite", Configuration.ApiClient.ParameterToString(idControleLimite)); // path parameter
+            
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarControleDeLimite: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarControleDeLimite: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<ControleLimiteCartaoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ControleLimiteCartaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ControleLimiteCartaoResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Apresenta o controle de limites do cart\u00E3o Este recurso permite que seja mostrado o controle de limites do cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)</param>
+        /// <param name="idControleLimite">C\u00F3digo de identifica\u00E7\u00E3o do controle de limites do cart\u00E3o (id)</param>
+        /// <returns>Task of ControleLimiteCartaoResponse</returns>
+        public async System.Threading.Tasks.Task<ControleLimiteCartaoResponse> ConsultarControleDeLimiteAsync (long? id, long? idControleLimite)
+        {
+             ApiResponse<ControleLimiteCartaoResponse> localVarResponse = await ConsultarControleDeLimiteAsyncWithHttpInfo(id, idControleLimite);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Apresenta o controle de limites do cart\u00E3o Este recurso permite que seja mostrado o controle de limites do cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)</param>
+        /// <param name="idControleLimite">C\u00F3digo de identifica\u00E7\u00E3o do controle de limites do cart\u00E3o (id)</param>
+        /// <returns>Task of ApiResponse (ControleLimiteCartaoResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ControleLimiteCartaoResponse>> ConsultarControleDeLimiteAsyncWithHttpInfo (long? id, long? idControleLimite)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarControleDeLimite");
+            // verify the required parameter 'idControleLimite' is set
+            if (idControleLimite == null) throw new ApiException(400, "Missing required parameter 'idControleLimite' when calling ConsultarControleDeLimite");
+            
+    
+            var localVarPath = "/api/cartoes/{id}/controles-limites/{idControleLimite}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (idControleLimite != null) localVarPathParams.Add("idControleLimite", Configuration.ApiClient.ParameterToString(idControleLimite)); // path parameter
+            
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarControleDeLimite: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarControleDeLimite: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ControleLimiteCartaoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ControleLimiteCartaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ControleLimiteCartaoResponse)));
+            
+        }
+        
+        /// <summary>
         /// Exibe todos os mcc de bloqueio vinculado a um cart\u00E3o espec\u00EDfico. Este m\u00E9todo permite consultar a informa\u00E7\u00E3o de todos os mcc que est\u00E3o vinculado a um Cart\u00E3o pelo seu c\u00F3digo de identifica\u00E7\u00E3o (id).
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de controle de grupo MCC do cart\u00E3o.</param> 
         /// <param name="idControleCartaoGrupoMCC">idControleCartaoGrupoMCC</param> 
         /// <returns>ControleCartaoGrupoMCCResponse</returns>
-        public ControleCartaoGrupoMCCResponse ConsultarControleGrupoMccCartao (long? id, long? idControleCartaoGrupoMCC)
+        public ControleCartaoGrupoMCCResponse ConsultarControleGrupoMCCPorCartao (long? id, long? idControleCartaoGrupoMCC)
         {
-             ApiResponse<ControleCartaoGrupoMCCResponse> localVarResponse = ConsultarControleGrupoMccCartaoWithHttpInfo(id, idControleCartaoGrupoMCC);
+             ApiResponse<ControleCartaoGrupoMCCResponse> localVarResponse = ConsultarControleGrupoMCCPorCartaoWithHttpInfo(id, idControleCartaoGrupoMCC);
              return localVarResponse.Data;
         }
 
@@ -1803,16 +1803,16 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de controle de grupo MCC do cart\u00E3o.</param> 
         /// <param name="idControleCartaoGrupoMCC">idControleCartaoGrupoMCC</param> 
         /// <returns>ApiResponse of ControleCartaoGrupoMCCResponse</returns>
-        public ApiResponse< ControleCartaoGrupoMCCResponse > ConsultarControleGrupoMccCartaoWithHttpInfo (long? id, long? idControleCartaoGrupoMCC)
+        public ApiResponse< ControleCartaoGrupoMCCResponse > ConsultarControleGrupoMCCPorCartaoWithHttpInfo (long? id, long? idControleCartaoGrupoMCC)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling ControleCartaoApi->ConsultarControleGrupoMccCartao");
+                throw new ApiException(400, "Missing required parameter 'id' when calling ControleCartaoApi->ConsultarControleGrupoMCCPorCartao");
             
             // verify the required parameter 'idControleCartaoGrupoMCC' is set
             if (idControleCartaoGrupoMCC == null)
-                throw new ApiException(400, "Missing required parameter 'idControleCartaoGrupoMCC' when calling ControleCartaoApi->ConsultarControleGrupoMccCartao");
+                throw new ApiException(400, "Missing required parameter 'idControleCartaoGrupoMCC' when calling ControleCartaoApi->ConsultarControleGrupoMCCPorCartao");
             
     
             var localVarPath = "/api/cartoes/{id}/controles-grupomcc/{idControleCartaoGrupoMCC}";
@@ -1859,9 +1859,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarControleGrupoMccCartao: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarControleGrupoMCCPorCartao: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarControleGrupoMccCartao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarControleGrupoMCCPorCartao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<ControleCartaoGrupoMCCResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1877,9 +1877,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de controle de grupo MCC do cart\u00E3o.</param>
         /// <param name="idControleCartaoGrupoMCC">idControleCartaoGrupoMCC</param>
         /// <returns>Task of ControleCartaoGrupoMCCResponse</returns>
-        public async System.Threading.Tasks.Task<ControleCartaoGrupoMCCResponse> ConsultarControleGrupoMccCartaoAsync (long? id, long? idControleCartaoGrupoMCC)
+        public async System.Threading.Tasks.Task<ControleCartaoGrupoMCCResponse> ConsultarControleGrupoMCCPorCartaoAsync (long? id, long? idControleCartaoGrupoMCC)
         {
-             ApiResponse<ControleCartaoGrupoMCCResponse> localVarResponse = await ConsultarControleGrupoMccCartaoAsyncWithHttpInfo(id, idControleCartaoGrupoMCC);
+             ApiResponse<ControleCartaoGrupoMCCResponse> localVarResponse = await ConsultarControleGrupoMCCPorCartaoAsyncWithHttpInfo(id, idControleCartaoGrupoMCC);
              return localVarResponse.Data;
 
         }
@@ -1891,12 +1891,12 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de controle de grupo MCC do cart\u00E3o.</param>
         /// <param name="idControleCartaoGrupoMCC">idControleCartaoGrupoMCC</param>
         /// <returns>Task of ApiResponse (ControleCartaoGrupoMCCResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ControleCartaoGrupoMCCResponse>> ConsultarControleGrupoMccCartaoAsyncWithHttpInfo (long? id, long? idControleCartaoGrupoMCC)
+        public async System.Threading.Tasks.Task<ApiResponse<ControleCartaoGrupoMCCResponse>> ConsultarControleGrupoMCCPorCartaoAsyncWithHttpInfo (long? id, long? idControleCartaoGrupoMCC)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarControleGrupoMccCartao");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarControleGrupoMCCPorCartao");
             // verify the required parameter 'idControleCartaoGrupoMCC' is set
-            if (idControleCartaoGrupoMCC == null) throw new ApiException(400, "Missing required parameter 'idControleCartaoGrupoMCC' when calling ConsultarControleGrupoMccCartao");
+            if (idControleCartaoGrupoMCC == null) throw new ApiException(400, "Missing required parameter 'idControleCartaoGrupoMCC' when calling ConsultarControleGrupoMCCPorCartao");
             
     
             var localVarPath = "/api/cartoes/{id}/controles-grupomcc/{idControleCartaoGrupoMCC}";
@@ -1943,9 +1943,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarControleGrupoMccCartao: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarControleGrupoMCCPorCartao: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarControleGrupoMccCartao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarControleGrupoMCCPorCartao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<ControleCartaoGrupoMCCResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2130,9 +2130,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de controle de grupo MCC do cart\u00E3o.</param> 
         /// <param name="idControleCartaoGrupoMCC">idControleCartaoGrupoMCC</param> 
         /// <returns>ControleCartaoGrupoMCCResponse</returns>
-        public ControleCartaoGrupoMCCResponse DeletarControleGrupoMccCartao (long? id, long? idControleCartaoGrupoMCC)
+        public ControleCartaoGrupoMCCResponse DeletarControleGrupoMCCPorCartao (long? id, long? idControleCartaoGrupoMCC)
         {
-             ApiResponse<ControleCartaoGrupoMCCResponse> localVarResponse = DeletarControleGrupoMccCartaoWithHttpInfo(id, idControleCartaoGrupoMCC);
+             ApiResponse<ControleCartaoGrupoMCCResponse> localVarResponse = DeletarControleGrupoMCCPorCartaoWithHttpInfo(id, idControleCartaoGrupoMCC);
              return localVarResponse.Data;
         }
 
@@ -2143,16 +2143,16 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de controle de grupo MCC do cart\u00E3o.</param> 
         /// <param name="idControleCartaoGrupoMCC">idControleCartaoGrupoMCC</param> 
         /// <returns>ApiResponse of ControleCartaoGrupoMCCResponse</returns>
-        public ApiResponse< ControleCartaoGrupoMCCResponse > DeletarControleGrupoMccCartaoWithHttpInfo (long? id, long? idControleCartaoGrupoMCC)
+        public ApiResponse< ControleCartaoGrupoMCCResponse > DeletarControleGrupoMCCPorCartaoWithHttpInfo (long? id, long? idControleCartaoGrupoMCC)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling ControleCartaoApi->DeletarControleGrupoMccCartao");
+                throw new ApiException(400, "Missing required parameter 'id' when calling ControleCartaoApi->DeletarControleGrupoMCCPorCartao");
             
             // verify the required parameter 'idControleCartaoGrupoMCC' is set
             if (idControleCartaoGrupoMCC == null)
-                throw new ApiException(400, "Missing required parameter 'idControleCartaoGrupoMCC' when calling ControleCartaoApi->DeletarControleGrupoMccCartao");
+                throw new ApiException(400, "Missing required parameter 'idControleCartaoGrupoMCC' when calling ControleCartaoApi->DeletarControleGrupoMCCPorCartao");
             
     
             var localVarPath = "/api/cartoes/{id}/controles-grupomcc/{idControleCartaoGrupoMCC}";
@@ -2199,9 +2199,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeletarControleGrupoMccCartao: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling DeletarControleGrupoMCCPorCartao: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DeletarControleGrupoMccCartao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DeletarControleGrupoMCCPorCartao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<ControleCartaoGrupoMCCResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2217,9 +2217,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de controle de grupo MCC do cart\u00E3o.</param>
         /// <param name="idControleCartaoGrupoMCC">idControleCartaoGrupoMCC</param>
         /// <returns>Task of ControleCartaoGrupoMCCResponse</returns>
-        public async System.Threading.Tasks.Task<ControleCartaoGrupoMCCResponse> DeletarControleGrupoMccCartaoAsync (long? id, long? idControleCartaoGrupoMCC)
+        public async System.Threading.Tasks.Task<ControleCartaoGrupoMCCResponse> DeletarControleGrupoMCCPorCartaoAsync (long? id, long? idControleCartaoGrupoMCC)
         {
-             ApiResponse<ControleCartaoGrupoMCCResponse> localVarResponse = await DeletarControleGrupoMccCartaoAsyncWithHttpInfo(id, idControleCartaoGrupoMCC);
+             ApiResponse<ControleCartaoGrupoMCCResponse> localVarResponse = await DeletarControleGrupoMCCPorCartaoAsyncWithHttpInfo(id, idControleCartaoGrupoMCC);
              return localVarResponse.Data;
 
         }
@@ -2231,12 +2231,12 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de controle de grupo MCC do cart\u00E3o.</param>
         /// <param name="idControleCartaoGrupoMCC">idControleCartaoGrupoMCC</param>
         /// <returns>Task of ApiResponse (ControleCartaoGrupoMCCResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ControleCartaoGrupoMCCResponse>> DeletarControleGrupoMccCartaoAsyncWithHttpInfo (long? id, long? idControleCartaoGrupoMCC)
+        public async System.Threading.Tasks.Task<ApiResponse<ControleCartaoGrupoMCCResponse>> DeletarControleGrupoMCCPorCartaoAsyncWithHttpInfo (long? id, long? idControleCartaoGrupoMCC)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling DeletarControleGrupoMccCartao");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling DeletarControleGrupoMCCPorCartao");
             // verify the required parameter 'idControleCartaoGrupoMCC' is set
-            if (idControleCartaoGrupoMCC == null) throw new ApiException(400, "Missing required parameter 'idControleCartaoGrupoMCC' when calling DeletarControleGrupoMccCartao");
+            if (idControleCartaoGrupoMCC == null) throw new ApiException(400, "Missing required parameter 'idControleCartaoGrupoMCC' when calling DeletarControleGrupoMCCPorCartao");
             
     
             var localVarPath = "/api/cartoes/{id}/controles-grupomcc/{idControleCartaoGrupoMCC}";
@@ -2283,9 +2283,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeletarControleGrupoMccCartao: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling DeletarControleGrupoMCCPorCartao: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DeletarControleGrupoMccCartao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DeletarControleGrupoMCCPorCartao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<ControleCartaoGrupoMCCResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2300,9 +2300,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)</param> 
         /// <param name="idControleLimite">C\u00F3digo de identifica\u00E7\u00E3o do controle de limites do cart\u00E3o (id)</param> 
         /// <returns>ControleLimiteCartaoResponse</returns>
-        public ControleLimiteCartaoResponse DesativarControleLimiteCartao (long? id, long? idControleLimite)
+        public ControleLimiteCartaoResponse DesativarControleDeLimite (long? id, long? idControleLimite)
         {
-             ApiResponse<ControleLimiteCartaoResponse> localVarResponse = DesativarControleLimiteCartaoWithHttpInfo(id, idControleLimite);
+             ApiResponse<ControleLimiteCartaoResponse> localVarResponse = DesativarControleDeLimiteWithHttpInfo(id, idControleLimite);
              return localVarResponse.Data;
         }
 
@@ -2313,16 +2313,16 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)</param> 
         /// <param name="idControleLimite">C\u00F3digo de identifica\u00E7\u00E3o do controle de limites do cart\u00E3o (id)</param> 
         /// <returns>ApiResponse of ControleLimiteCartaoResponse</returns>
-        public ApiResponse< ControleLimiteCartaoResponse > DesativarControleLimiteCartaoWithHttpInfo (long? id, long? idControleLimite)
+        public ApiResponse< ControleLimiteCartaoResponse > DesativarControleDeLimiteWithHttpInfo (long? id, long? idControleLimite)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling ControleCartaoApi->DesativarControleLimiteCartao");
+                throw new ApiException(400, "Missing required parameter 'id' when calling ControleCartaoApi->DesativarControleDeLimite");
             
             // verify the required parameter 'idControleLimite' is set
             if (idControleLimite == null)
-                throw new ApiException(400, "Missing required parameter 'idControleLimite' when calling ControleCartaoApi->DesativarControleLimiteCartao");
+                throw new ApiException(400, "Missing required parameter 'idControleLimite' when calling ControleCartaoApi->DesativarControleDeLimite");
             
     
             var localVarPath = "/api/cartoes/{id}/controles-limites/{idControleLimite}/desativar";
@@ -2369,9 +2369,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DesativarControleLimiteCartao: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling DesativarControleDeLimite: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DesativarControleLimiteCartao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DesativarControleDeLimite: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<ControleLimiteCartaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2387,9 +2387,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)</param>
         /// <param name="idControleLimite">C\u00F3digo de identifica\u00E7\u00E3o do controle de limites do cart\u00E3o (id)</param>
         /// <returns>Task of ControleLimiteCartaoResponse</returns>
-        public async System.Threading.Tasks.Task<ControleLimiteCartaoResponse> DesativarControleLimiteCartaoAsync (long? id, long? idControleLimite)
+        public async System.Threading.Tasks.Task<ControleLimiteCartaoResponse> DesativarControleDeLimiteAsync (long? id, long? idControleLimite)
         {
-             ApiResponse<ControleLimiteCartaoResponse> localVarResponse = await DesativarControleLimiteCartaoAsyncWithHttpInfo(id, idControleLimite);
+             ApiResponse<ControleLimiteCartaoResponse> localVarResponse = await DesativarControleDeLimiteAsyncWithHttpInfo(id, idControleLimite);
              return localVarResponse.Data;
 
         }
@@ -2401,12 +2401,12 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)</param>
         /// <param name="idControleLimite">C\u00F3digo de identifica\u00E7\u00E3o do controle de limites do cart\u00E3o (id)</param>
         /// <returns>Task of ApiResponse (ControleLimiteCartaoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ControleLimiteCartaoResponse>> DesativarControleLimiteCartaoAsyncWithHttpInfo (long? id, long? idControleLimite)
+        public async System.Threading.Tasks.Task<ApiResponse<ControleLimiteCartaoResponse>> DesativarControleDeLimiteAsyncWithHttpInfo (long? id, long? idControleLimite)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling DesativarControleLimiteCartao");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling DesativarControleDeLimite");
             // verify the required parameter 'idControleLimite' is set
-            if (idControleLimite == null) throw new ApiException(400, "Missing required parameter 'idControleLimite' when calling DesativarControleLimiteCartao");
+            if (idControleLimite == null) throw new ApiException(400, "Missing required parameter 'idControleLimite' when calling DesativarControleDeLimite");
             
     
             var localVarPath = "/api/cartoes/{id}/controles-limites/{idControleLimite}/desativar";
@@ -2453,183 +2453,13 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DesativarControleLimiteCartao: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling DesativarControleDeLimite: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DesativarControleLimiteCartao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DesativarControleDeLimite: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<ControleLimiteCartaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ControleLimiteCartaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ControleLimiteCartaoResponse)));
-            
-        }
-        
-        /// <summary>
-        /// Lista o controle de limites dos cart\u00F5es Este recurso permite que sejam listados todos os controles de limites por cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
-        /// <param name="page">P\u00E1gina (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
-        /// <param name="idCartao">Id do cart\u00E3o (optional)</param> 
-        /// <returns>PageControleLimiteCartaoResponse</returns>
-        public PageControleLimiteCartaoResponse Listar (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null)
-        {
-             ApiResponse<PageControleLimiteCartaoResponse> localVarResponse = ListarWithHttpInfo(sort, page, limit, idCartao);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Lista o controle de limites dos cart\u00F5es Este recurso permite que sejam listados todos os controles de limites por cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
-        /// <param name="page">P\u00E1gina (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
-        /// <param name="idCartao">Id do cart\u00E3o (optional)</param> 
-        /// <returns>ApiResponse of PageControleLimiteCartaoResponse</returns>
-        public ApiResponse< PageControleLimiteCartaoResponse > ListarWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null)
-        {
-            
-    
-            var localVarPath = "/api/cartoes/controles-limites";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            
-            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
-            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
-            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
-            if (idCartao != null) localVarQueryParams.Add("idCartao", Configuration.ApiClient.ParameterToString(idCartao)); // query parameter
-            
-            
-            
-            
-
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Listar: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Listar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<PageControleLimiteCartaoResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PageControleLimiteCartaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageControleLimiteCartaoResponse)));
-            
-        }
-
-        
-        /// <summary>
-        /// Lista o controle de limites dos cart\u00F5es Este recurso permite que sejam listados todos os controles de limites por cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="idCartao">Id do cart\u00E3o (optional)</param>
-        /// <returns>Task of PageControleLimiteCartaoResponse</returns>
-        public async System.Threading.Tasks.Task<PageControleLimiteCartaoResponse> ListarAsync (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null)
-        {
-             ApiResponse<PageControleLimiteCartaoResponse> localVarResponse = await ListarAsyncWithHttpInfo(sort, page, limit, idCartao);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Lista o controle de limites dos cart\u00F5es Este recurso permite que sejam listados todos os controles de limites por cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="idCartao">Id do cart\u00E3o (optional)</param>
-        /// <returns>Task of ApiResponse (PageControleLimiteCartaoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageControleLimiteCartaoResponse>> ListarAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null)
-        {
-            
-    
-            var localVarPath = "/api/cartoes/controles-limites";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            
-            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
-            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
-            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
-            if (idCartao != null) localVarQueryParams.Add("idCartao", Configuration.ApiClient.ParameterToString(idCartao)); // query parameter
-            
-            
-            
-            
-
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Listar: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Listar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<PageControleLimiteCartaoResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PageControleLimiteCartaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageControleLimiteCartaoResponse)));
             
         }
         
@@ -2837,9 +2667,9 @@ namespace Conductor.Pier.Api
         /// <param name="idCartao">C\u00F3digo Identificador do cartao na base (id) (optional)</param> 
         /// <param name="idGrupoMCC">C\u00F3digo Identificador do grupo mcc na base. (optional)</param> 
         /// <returns>PageControleCartaoGrupoMCCResponse</returns>
-        public PageControleCartaoGrupoMCCResponse ListarControleGrupoMccCartao (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, long? idGrupoMCC = null)
+        public PageControleCartaoGrupoMCCResponse ListarControleGrupoMCCPorCartao (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, long? idGrupoMCC = null)
         {
-             ApiResponse<PageControleCartaoGrupoMCCResponse> localVarResponse = ListarControleGrupoMccCartaoWithHttpInfo(sort, page, limit, idCartao, idGrupoMCC);
+             ApiResponse<PageControleCartaoGrupoMCCResponse> localVarResponse = ListarControleGrupoMCCPorCartaoWithHttpInfo(sort, page, limit, idCartao, idGrupoMCC);
              return localVarResponse.Data;
         }
 
@@ -2853,7 +2683,7 @@ namespace Conductor.Pier.Api
         /// <param name="idCartao">C\u00F3digo Identificador do cartao na base (id) (optional)</param> 
         /// <param name="idGrupoMCC">C\u00F3digo Identificador do grupo mcc na base. (optional)</param> 
         /// <returns>ApiResponse of PageControleCartaoGrupoMCCResponse</returns>
-        public ApiResponse< PageControleCartaoGrupoMCCResponse > ListarControleGrupoMccCartaoWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, long? idGrupoMCC = null)
+        public ApiResponse< PageControleCartaoGrupoMCCResponse > ListarControleGrupoMCCPorCartaoWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, long? idGrupoMCC = null)
         {
             
     
@@ -2904,9 +2734,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarControleGrupoMccCartao: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarControleGrupoMCCPorCartao: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarControleGrupoMccCartao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarControleGrupoMCCPorCartao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageControleCartaoGrupoMCCResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2925,9 +2755,9 @@ namespace Conductor.Pier.Api
         /// <param name="idCartao">C\u00F3digo Identificador do cartao na base (id) (optional)</param>
         /// <param name="idGrupoMCC">C\u00F3digo Identificador do grupo mcc na base. (optional)</param>
         /// <returns>Task of PageControleCartaoGrupoMCCResponse</returns>
-        public async System.Threading.Tasks.Task<PageControleCartaoGrupoMCCResponse> ListarControleGrupoMccCartaoAsync (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, long? idGrupoMCC = null)
+        public async System.Threading.Tasks.Task<PageControleCartaoGrupoMCCResponse> ListarControleGrupoMCCPorCartaoAsync (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, long? idGrupoMCC = null)
         {
-             ApiResponse<PageControleCartaoGrupoMCCResponse> localVarResponse = await ListarControleGrupoMccCartaoAsyncWithHttpInfo(sort, page, limit, idCartao, idGrupoMCC);
+             ApiResponse<PageControleCartaoGrupoMCCResponse> localVarResponse = await ListarControleGrupoMCCPorCartaoAsyncWithHttpInfo(sort, page, limit, idCartao, idGrupoMCC);
              return localVarResponse.Data;
 
         }
@@ -2942,7 +2772,7 @@ namespace Conductor.Pier.Api
         /// <param name="idCartao">C\u00F3digo Identificador do cartao na base (id) (optional)</param>
         /// <param name="idGrupoMCC">C\u00F3digo Identificador do grupo mcc na base. (optional)</param>
         /// <returns>Task of ApiResponse (PageControleCartaoGrupoMCCResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageControleCartaoGrupoMCCResponse>> ListarControleGrupoMccCartaoAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, long? idGrupoMCC = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageControleCartaoGrupoMCCResponse>> ListarControleGrupoMCCPorCartaoAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, long? idGrupoMCC = null)
         {
             
     
@@ -2993,9 +2823,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarControleGrupoMccCartao: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarControleGrupoMCCPorCartao: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarControleGrupoMccCartao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarControleGrupoMCCPorCartao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageControleCartaoGrupoMCCResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3004,38 +2834,34 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Cadastra um controle de limites para um cart\u00E3o Este recurso permite que seja cadastrado um controle de limites para um cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
+        /// Lista o controle de limites dos cart\u00F5es Este recurso permite que sejam listados todos os controles de limites por cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)</param> 
-        /// <param name="controleLimitesCartaoPersist">controleLimitesCartaoPersist</param> 
-        /// <returns>ControleLimiteCartaoResponse</returns>
-        public ControleLimiteCartaoResponse Salvar (long? id, ControleLimitesCartaoPersist controleLimitesCartaoPersist)
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="page">P\u00E1gina (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <param name="idCartao">Id do cart\u00E3o (optional)</param> 
+        /// <returns>PageControleLimiteCartaoResponse</returns>
+        public PageControleLimiteCartaoResponse ListarControlesDeLimites (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null)
         {
-             ApiResponse<ControleLimiteCartaoResponse> localVarResponse = SalvarWithHttpInfo(id, controleLimitesCartaoPersist);
+             ApiResponse<PageControleLimiteCartaoResponse> localVarResponse = ListarControlesDeLimitesWithHttpInfo(sort, page, limit, idCartao);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Cadastra um controle de limites para um cart\u00E3o Este recurso permite que seja cadastrado um controle de limites para um cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
+        /// Lista o controle de limites dos cart\u00F5es Este recurso permite que sejam listados todos os controles de limites por cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)</param> 
-        /// <param name="controleLimitesCartaoPersist">controleLimitesCartaoPersist</param> 
-        /// <returns>ApiResponse of ControleLimiteCartaoResponse</returns>
-        public ApiResponse< ControleLimiteCartaoResponse > SalvarWithHttpInfo (long? id, ControleLimitesCartaoPersist controleLimitesCartaoPersist)
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="page">P\u00E1gina (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <param name="idCartao">Id do cart\u00E3o (optional)</param> 
+        /// <returns>ApiResponse of PageControleLimiteCartaoResponse</returns>
+        public ApiResponse< PageControleLimiteCartaoResponse > ListarControlesDeLimitesWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null)
         {
             
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling ControleCartaoApi->Salvar");
-            
-            // verify the required parameter 'controleLimitesCartaoPersist' is set
-            if (controleLimitesCartaoPersist == null)
-                throw new ApiException(400, "Missing required parameter 'controleLimitesCartaoPersist' when calling ControleCartaoApi->Salvar");
-            
     
-            var localVarPath = "/api/cartoes/{id}/controles-limites";
+            var localVarPath = "/api/cartoes/controles-limites";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3061,71 +2887,67 @@ namespace Conductor.Pier.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (idCartao != null) localVarQueryParams.Add("idCartao", Configuration.ApiClient.ParameterToString(idCartao)); // query parameter
             
             
             
             
-            if (controleLimitesCartaoPersist.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(controleLimitesCartaoPersist); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = controleLimitesCartaoPersist; // byte array
-            }
 
             
     
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Salvar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarControlesDeLimites: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Salvar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarControlesDeLimites: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<ControleLimiteCartaoResponse>(localVarStatusCode,
+            return new ApiResponse<PageControleLimiteCartaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ControleLimiteCartaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ControleLimiteCartaoResponse)));
+                (PageControleLimiteCartaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageControleLimiteCartaoResponse)));
             
         }
 
         
         /// <summary>
-        /// Cadastra um controle de limites para um cart\u00E3o Este recurso permite que seja cadastrado um controle de limites para um cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
+        /// Lista o controle de limites dos cart\u00F5es Este recurso permite que sejam listados todos os controles de limites por cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)</param>
-        /// <param name="controleLimitesCartaoPersist">controleLimitesCartaoPersist</param>
-        /// <returns>Task of ControleLimiteCartaoResponse</returns>
-        public async System.Threading.Tasks.Task<ControleLimiteCartaoResponse> SalvarAsync (long? id, ControleLimitesCartaoPersist controleLimitesCartaoPersist)
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idCartao">Id do cart\u00E3o (optional)</param>
+        /// <returns>Task of PageControleLimiteCartaoResponse</returns>
+        public async System.Threading.Tasks.Task<PageControleLimiteCartaoResponse> ListarControlesDeLimitesAsync (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null)
         {
-             ApiResponse<ControleLimiteCartaoResponse> localVarResponse = await SalvarAsyncWithHttpInfo(id, controleLimitesCartaoPersist);
+             ApiResponse<PageControleLimiteCartaoResponse> localVarResponse = await ListarControlesDeLimitesAsyncWithHttpInfo(sort, page, limit, idCartao);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Cadastra um controle de limites para um cart\u00E3o Este recurso permite que seja cadastrado um controle de limites para um cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
+        /// Lista o controle de limites dos cart\u00F5es Este recurso permite que sejam listados todos os controles de limites por cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)</param>
-        /// <param name="controleLimitesCartaoPersist">controleLimitesCartaoPersist</param>
-        /// <returns>Task of ApiResponse (ControleLimiteCartaoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ControleLimiteCartaoResponse>> SalvarAsyncWithHttpInfo (long? id, ControleLimitesCartaoPersist controleLimitesCartaoPersist)
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idCartao">Id do cart\u00E3o (optional)</param>
+        /// <returns>Task of ApiResponse (PageControleLimiteCartaoResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PageControleLimiteCartaoResponse>> ListarControlesDeLimitesAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null)
         {
-            // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling Salvar");
-            // verify the required parameter 'controleLimitesCartaoPersist' is set
-            if (controleLimitesCartaoPersist == null) throw new ApiException(400, "Missing required parameter 'controleLimitesCartaoPersist' when calling Salvar");
             
     
-            var localVarPath = "/api/cartoes/{id}/controles-limites";
+            var localVarPath = "/api/cartoes/controles-limites";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3151,37 +2973,33 @@ namespace Conductor.Pier.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (idCartao != null) localVarQueryParams.Add("idCartao", Configuration.ApiClient.ParameterToString(idCartao)); // query parameter
             
             
             
             
-            if (controleLimitesCartaoPersist.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(controleLimitesCartaoPersist); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = controleLimitesCartaoPersist; // byte array
-            }
 
             
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Salvar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarControlesDeLimites: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Salvar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarControlesDeLimites: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<ControleLimiteCartaoResponse>(localVarStatusCode,
+            return new ApiResponse<PageControleLimiteCartaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ControleLimiteCartaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ControleLimiteCartaoResponse)));
+                (PageControleLimiteCartaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageControleLimiteCartaoResponse)));
             
         }
         
@@ -3368,15 +3186,197 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
+        /// Cadastra um controle de limites para um cart\u00E3o Este recurso permite que seja cadastrado um controle de limites para um cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)</param> 
+        /// <param name="controleLimitesCartaoPersist">controleLimitesCartaoPersist</param> 
+        /// <returns>ControleLimiteCartaoResponse</returns>
+        public ControleLimiteCartaoResponse SalvarControleDeLimite (long? id, ControleLimitesCartaoPersist controleLimitesCartaoPersist)
+        {
+             ApiResponse<ControleLimiteCartaoResponse> localVarResponse = SalvarControleDeLimiteWithHttpInfo(id, controleLimitesCartaoPersist);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Cadastra um controle de limites para um cart\u00E3o Este recurso permite que seja cadastrado um controle de limites para um cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)</param> 
+        /// <param name="controleLimitesCartaoPersist">controleLimitesCartaoPersist</param> 
+        /// <returns>ApiResponse of ControleLimiteCartaoResponse</returns>
+        public ApiResponse< ControleLimiteCartaoResponse > SalvarControleDeLimiteWithHttpInfo (long? id, ControleLimitesCartaoPersist controleLimitesCartaoPersist)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling ControleCartaoApi->SalvarControleDeLimite");
+            
+            // verify the required parameter 'controleLimitesCartaoPersist' is set
+            if (controleLimitesCartaoPersist == null)
+                throw new ApiException(400, "Missing required parameter 'controleLimitesCartaoPersist' when calling ControleCartaoApi->SalvarControleDeLimite");
+            
+    
+            var localVarPath = "/api/cartoes/{id}/controles-limites";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            if (controleLimitesCartaoPersist.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(controleLimitesCartaoPersist); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = controleLimitesCartaoPersist; // byte array
+            }
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarControleDeLimite: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarControleDeLimite: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<ControleLimiteCartaoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ControleLimiteCartaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ControleLimiteCartaoResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Cadastra um controle de limites para um cart\u00E3o Este recurso permite que seja cadastrado um controle de limites para um cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)</param>
+        /// <param name="controleLimitesCartaoPersist">controleLimitesCartaoPersist</param>
+        /// <returns>Task of ControleLimiteCartaoResponse</returns>
+        public async System.Threading.Tasks.Task<ControleLimiteCartaoResponse> SalvarControleDeLimiteAsync (long? id, ControleLimitesCartaoPersist controleLimitesCartaoPersist)
+        {
+             ApiResponse<ControleLimiteCartaoResponse> localVarResponse = await SalvarControleDeLimiteAsyncWithHttpInfo(id, controleLimitesCartaoPersist);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Cadastra um controle de limites para um cart\u00E3o Este recurso permite que seja cadastrado um controle de limites para um cart\u00E3o, o controle de limites tem por finalidade gerenciar a utiliza\u00E7\u00E3o do limite dipon\u00EDvel global da conta, limitando o gasto di\u00E1rio, semanal ou mensal, por cart\u00E3o
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (id)</param>
+        /// <param name="controleLimitesCartaoPersist">controleLimitesCartaoPersist</param>
+        /// <returns>Task of ApiResponse (ControleLimiteCartaoResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ControleLimiteCartaoResponse>> SalvarControleDeLimiteAsyncWithHttpInfo (long? id, ControleLimitesCartaoPersist controleLimitesCartaoPersist)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling SalvarControleDeLimite");
+            // verify the required parameter 'controleLimitesCartaoPersist' is set
+            if (controleLimitesCartaoPersist == null) throw new ApiException(400, "Missing required parameter 'controleLimitesCartaoPersist' when calling SalvarControleDeLimite");
+            
+    
+            var localVarPath = "/api/cartoes/{id}/controles-limites";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            if (controleLimitesCartaoPersist.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(controleLimitesCartaoPersist); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = controleLimitesCartaoPersist; // byte array
+            }
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarControleDeLimite: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarControleDeLimite: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ControleLimiteCartaoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ControleLimiteCartaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ControleLimiteCartaoResponse)));
+            
+        }
+        
+        /// <summary>
         /// Registra o grupo mcc ao cart\u00E3o. Cria o vinculo de grupo mcc com o cart\u00E3o para controle transa\u00E7\u00F5es por grupo de mcc.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id</param> 
         /// <param name="controleCartaoMCCPersist">controleCartaoMCCPersist</param> 
         /// <returns>ControleCartaoGrupoMCCResponse</returns>
-        public ControleCartaoGrupoMCCResponse SalvarControleGrupoMccCartao (long? id, ControleCartaoGrupoMCCPersist controleCartaoMCCPersist)
+        public ControleCartaoGrupoMCCResponse SalvarControleGrupoMCCPorCartao (long? id, ControleCartaoGrupoMCCPersist controleCartaoMCCPersist)
         {
-             ApiResponse<ControleCartaoGrupoMCCResponse> localVarResponse = SalvarControleGrupoMccCartaoWithHttpInfo(id, controleCartaoMCCPersist);
+             ApiResponse<ControleCartaoGrupoMCCResponse> localVarResponse = SalvarControleGrupoMCCPorCartaoWithHttpInfo(id, controleCartaoMCCPersist);
              return localVarResponse.Data;
         }
 
@@ -3387,16 +3387,16 @@ namespace Conductor.Pier.Api
         /// <param name="id">id</param> 
         /// <param name="controleCartaoMCCPersist">controleCartaoMCCPersist</param> 
         /// <returns>ApiResponse of ControleCartaoGrupoMCCResponse</returns>
-        public ApiResponse< ControleCartaoGrupoMCCResponse > SalvarControleGrupoMccCartaoWithHttpInfo (long? id, ControleCartaoGrupoMCCPersist controleCartaoMCCPersist)
+        public ApiResponse< ControleCartaoGrupoMCCResponse > SalvarControleGrupoMCCPorCartaoWithHttpInfo (long? id, ControleCartaoGrupoMCCPersist controleCartaoMCCPersist)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling ControleCartaoApi->SalvarControleGrupoMccCartao");
+                throw new ApiException(400, "Missing required parameter 'id' when calling ControleCartaoApi->SalvarControleGrupoMCCPorCartao");
             
             // verify the required parameter 'controleCartaoMCCPersist' is set
             if (controleCartaoMCCPersist == null)
-                throw new ApiException(400, "Missing required parameter 'controleCartaoMCCPersist' when calling ControleCartaoApi->SalvarControleGrupoMccCartao");
+                throw new ApiException(400, "Missing required parameter 'controleCartaoMCCPersist' when calling ControleCartaoApi->SalvarControleGrupoMCCPorCartao");
             
     
             var localVarPath = "/api/cartoes/{id}/controles-grupomcc";
@@ -3449,9 +3449,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarControleGrupoMccCartao: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarControleGrupoMCCPorCartao: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarControleGrupoMccCartao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarControleGrupoMCCPorCartao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<ControleCartaoGrupoMCCResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3467,9 +3467,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">id</param>
         /// <param name="controleCartaoMCCPersist">controleCartaoMCCPersist</param>
         /// <returns>Task of ControleCartaoGrupoMCCResponse</returns>
-        public async System.Threading.Tasks.Task<ControleCartaoGrupoMCCResponse> SalvarControleGrupoMccCartaoAsync (long? id, ControleCartaoGrupoMCCPersist controleCartaoMCCPersist)
+        public async System.Threading.Tasks.Task<ControleCartaoGrupoMCCResponse> SalvarControleGrupoMCCPorCartaoAsync (long? id, ControleCartaoGrupoMCCPersist controleCartaoMCCPersist)
         {
-             ApiResponse<ControleCartaoGrupoMCCResponse> localVarResponse = await SalvarControleGrupoMccCartaoAsyncWithHttpInfo(id, controleCartaoMCCPersist);
+             ApiResponse<ControleCartaoGrupoMCCResponse> localVarResponse = await SalvarControleGrupoMCCPorCartaoAsyncWithHttpInfo(id, controleCartaoMCCPersist);
              return localVarResponse.Data;
 
         }
@@ -3481,12 +3481,12 @@ namespace Conductor.Pier.Api
         /// <param name="id">id</param>
         /// <param name="controleCartaoMCCPersist">controleCartaoMCCPersist</param>
         /// <returns>Task of ApiResponse (ControleCartaoGrupoMCCResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ControleCartaoGrupoMCCResponse>> SalvarControleGrupoMccCartaoAsyncWithHttpInfo (long? id, ControleCartaoGrupoMCCPersist controleCartaoMCCPersist)
+        public async System.Threading.Tasks.Task<ApiResponse<ControleCartaoGrupoMCCResponse>> SalvarControleGrupoMCCPorCartaoAsyncWithHttpInfo (long? id, ControleCartaoGrupoMCCPersist controleCartaoMCCPersist)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling SalvarControleGrupoMccCartao");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling SalvarControleGrupoMCCPorCartao");
             // verify the required parameter 'controleCartaoMCCPersist' is set
-            if (controleCartaoMCCPersist == null) throw new ApiException(400, "Missing required parameter 'controleCartaoMCCPersist' when calling SalvarControleGrupoMccCartao");
+            if (controleCartaoMCCPersist == null) throw new ApiException(400, "Missing required parameter 'controleCartaoMCCPersist' when calling SalvarControleGrupoMCCPorCartao");
             
     
             var localVarPath = "/api/cartoes/{id}/controles-grupomcc";
@@ -3539,9 +3539,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarControleGrupoMccCartao: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarControleGrupoMCCPorCartao: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarControleGrupoMccCartao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarControleGrupoMCCPorCartao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<ControleCartaoGrupoMCCResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

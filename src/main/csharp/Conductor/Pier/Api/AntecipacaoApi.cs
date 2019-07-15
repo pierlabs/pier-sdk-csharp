@@ -27,7 +27,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">Id Produto</param>
         /// <param name="taxaAntecipacaoRequest">taxaAntecipacaoRequest</param>
         /// <returns>ParametroProdutoResponse</returns>
-        ParametroProdutoResponse ConfigurarTaxaAntecipacao (long? id, TaxaAntecipacaoRequest taxaAntecipacaoRequest);
+        ParametroProdutoResponse ConfigurarTaxaAntecipacaoProduto (long? id, TaxaAntecipacaoRequest taxaAntecipacaoRequest);
   
         /// <summary>
         /// Configura a Taxa de Antecipa\u00E7\u00E3o de um Produto
@@ -39,7 +39,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">Id Produto</param>
         /// <param name="taxaAntecipacaoRequest">taxaAntecipacaoRequest</param>
         /// <returns>ApiResponse of ParametroProdutoResponse</returns>
-        ApiResponse<ParametroProdutoResponse> ConfigurarTaxaAntecipacaoWithHttpInfo (long? id, TaxaAntecipacaoRequest taxaAntecipacaoRequest);
+        ApiResponse<ParametroProdutoResponse> ConfigurarTaxaAntecipacaoProdutoWithHttpInfo (long? id, TaxaAntecipacaoRequest taxaAntecipacaoRequest);
         
         /// <summary>
         /// Consulta a Taxa de Antecipa\u00E7\u00E3o de um Produto
@@ -51,7 +51,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">Id Produto</param>
         /// <param name="tipoTransacao">Tipo da Transa\u00E7\u00E3o (ON-US ou OFF-US)</param>
         /// <returns>ParametroProdutoResponse</returns>
-        ParametroProdutoResponse ConsultarTaxaAntecipacao (long? id, string tipoTransacao);
+        ParametroProdutoResponse ConsultarTaxaAntecipacaoProduto (long? id, string tipoTransacao);
   
         /// <summary>
         /// Consulta a Taxa de Antecipa\u00E7\u00E3o de um Produto
@@ -63,7 +63,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">Id Produto</param>
         /// <param name="tipoTransacao">Tipo da Transa\u00E7\u00E3o (ON-US ou OFF-US)</param>
         /// <returns>ApiResponse of ParametroProdutoResponse</returns>
-        ApiResponse<ParametroProdutoResponse> ConsultarTaxaAntecipacaoWithHttpInfo (long? id, string tipoTransacao);
+        ApiResponse<ParametroProdutoResponse> ConsultarTaxaAntecipacaoProdutoWithHttpInfo (long? id, string tipoTransacao);
         
         /// <summary>
         /// Faz a efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o
@@ -77,7 +77,7 @@ namespace Conductor.Pier.Api
         /// <param name="quantidadeParcelas">Quantidade de parcelas para serem antecipadas</param>
         /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param>
         /// <returns>AntecipacaoResponse</returns>
-        AntecipacaoResponse EfetivarAntecipacao (long? idConta, long? id, long? quantidadeParcelas, string complemento = null);
+        AntecipacaoResponse EfetivarAntecipacaoCompra (long? idConta, long? id, long? quantidadeParcelas, string complemento = null);
   
         /// <summary>
         /// Faz a efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o
@@ -91,7 +91,7 @@ namespace Conductor.Pier.Api
         /// <param name="quantidadeParcelas">Quantidade de parcelas para serem antecipadas</param>
         /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param>
         /// <returns>ApiResponse of AntecipacaoResponse</returns>
-        ApiResponse<AntecipacaoResponse> EfetivarAntecipacaoWithHttpInfo (long? idConta, long? id, long? quantidadeParcelas, string complemento = null);
+        ApiResponse<AntecipacaoResponse> EfetivarAntecipacaoCompraWithHttpInfo (long? idConta, long? id, long? quantidadeParcelas, string complemento = null);
         
         /// <summary>
         /// Faz a efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o
@@ -103,7 +103,7 @@ namespace Conductor.Pier.Api
         /// <param name="idConta">C\u00F3digo de Identifica\u00E7\u00E3o da Conta</param>
         /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param>
         /// <returns>AntecipacaoResponse</returns>
-        AntecipacaoResponse EfetivarAntecipacoes (long? idConta, string complemento = null);
+        AntecipacaoResponse EfetivarAntecipacoesEmLotes (long? idConta, string complemento = null);
   
         /// <summary>
         /// Faz a efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o
@@ -115,7 +115,7 @@ namespace Conductor.Pier.Api
         /// <param name="idConta">C\u00F3digo de Identifica\u00E7\u00E3o da Conta</param>
         /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param>
         /// <returns>ApiResponse of AntecipacaoResponse</returns>
-        ApiResponse<AntecipacaoResponse> EfetivarAntecipacoesWithHttpInfo (long? idConta, string complemento = null);
+        ApiResponse<AntecipacaoResponse> EfetivarAntecipacoesEmLotesWithHttpInfo (long? idConta, string complemento = null);
         
         /// <summary>
         /// Listar compras com parcelas antecip\u00E1veis
@@ -133,7 +133,7 @@ namespace Conductor.Pier.Api
         /// <param name="juros">Indica se a compra \u00E9 com ou sem juros (optional)</param>
         /// <param name="tipoOrigemTransacao">Indica se a compra \u00E9 ON-US ou OFF-US (optional)</param>
         /// <returns>PageCompraResponse</returns>
-        PageCompraResponse Listar (long? idConta, List<string> sort = null, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null);
+        PageCompraResponse ListarComprasAntecipaveis (long? idConta, List<string> sort = null, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null);
   
         /// <summary>
         /// Listar compras com parcelas antecip\u00E1veis
@@ -151,7 +151,7 @@ namespace Conductor.Pier.Api
         /// <param name="juros">Indica se a compra \u00E9 com ou sem juros (optional)</param>
         /// <param name="tipoOrigemTransacao">Indica se a compra \u00E9 ON-US ou OFF-US (optional)</param>
         /// <returns>ApiResponse of PageCompraResponse</returns>
-        ApiResponse<PageCompraResponse> ListarWithHttpInfo (long? idConta, List<string> sort = null, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null);
+        ApiResponse<PageCompraResponse> ListarComprasAntecipaveisWithHttpInfo (long? idConta, List<string> sort = null, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null);
         
         /// <summary>
         /// Simular antecipa\u00E7\u00E3o de parcelas
@@ -164,7 +164,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do evento</param>
         /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param>
         /// <returns>AntecipacaoSimuladaResponse</returns>
-        AntecipacaoSimuladaResponse SimularAntecipacao (long? idConta, long? id, string complemento = null);
+        AntecipacaoSimuladaResponse SimularAntecipacaoCompra (long? idConta, long? id, string complemento = null);
   
         /// <summary>
         /// Simular antecipa\u00E7\u00E3o de parcelas
@@ -177,7 +177,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do evento</param>
         /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param>
         /// <returns>ApiResponse of AntecipacaoSimuladaResponse</returns>
-        ApiResponse<AntecipacaoSimuladaResponse> SimularAntecipacaoWithHttpInfo (long? idConta, long? id, string complemento = null);
+        ApiResponse<AntecipacaoSimuladaResponse> SimularAntecipacaoCompraWithHttpInfo (long? idConta, long? id, string complemento = null);
         
         /// <summary>
         /// Simular antecipa\u00E7\u00E3o de todas as parcelas antecip\u00E1veis
@@ -189,7 +189,7 @@ namespace Conductor.Pier.Api
         /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta</param>
         /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param>
         /// <returns>AntecipacaoSimuladaLoteResponse</returns>
-        AntecipacaoSimuladaLoteResponse SimularAntecipacoes (long? idConta, string complemento = null);
+        AntecipacaoSimuladaLoteResponse SimularAntecipacoesEmLote (long? idConta, string complemento = null);
   
         /// <summary>
         /// Simular antecipa\u00E7\u00E3o de todas as parcelas antecip\u00E1veis
@@ -201,7 +201,7 @@ namespace Conductor.Pier.Api
         /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta</param>
         /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param>
         /// <returns>ApiResponse of AntecipacaoSimuladaLoteResponse</returns>
-        ApiResponse<AntecipacaoSimuladaLoteResponse> SimularAntecipacoesWithHttpInfo (long? idConta, string complemento = null);
+        ApiResponse<AntecipacaoSimuladaLoteResponse> SimularAntecipacoesEmLoteWithHttpInfo (long? idConta, string complemento = null);
         
         #endregion Synchronous Operations
         
@@ -217,7 +217,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">Id Produto</param>
         /// <param name="taxaAntecipacaoRequest">taxaAntecipacaoRequest</param>
         /// <returns>Task of ParametroProdutoResponse</returns>
-        System.Threading.Tasks.Task<ParametroProdutoResponse> ConfigurarTaxaAntecipacaoAsync (long? id, TaxaAntecipacaoRequest taxaAntecipacaoRequest);
+        System.Threading.Tasks.Task<ParametroProdutoResponse> ConfigurarTaxaAntecipacaoProdutoAsync (long? id, TaxaAntecipacaoRequest taxaAntecipacaoRequest);
 
         /// <summary>
         /// Configura a Taxa de Antecipa\u00E7\u00E3o de um Produto
@@ -229,7 +229,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">Id Produto</param>
         /// <param name="taxaAntecipacaoRequest">taxaAntecipacaoRequest</param>
         /// <returns>Task of ApiResponse (ParametroProdutoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ParametroProdutoResponse>> ConfigurarTaxaAntecipacaoAsyncWithHttpInfo (long? id, TaxaAntecipacaoRequest taxaAntecipacaoRequest);
+        System.Threading.Tasks.Task<ApiResponse<ParametroProdutoResponse>> ConfigurarTaxaAntecipacaoProdutoAsyncWithHttpInfo (long? id, TaxaAntecipacaoRequest taxaAntecipacaoRequest);
         
         /// <summary>
         /// Consulta a Taxa de Antecipa\u00E7\u00E3o de um Produto
@@ -241,7 +241,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">Id Produto</param>
         /// <param name="tipoTransacao">Tipo da Transa\u00E7\u00E3o (ON-US ou OFF-US)</param>
         /// <returns>Task of ParametroProdutoResponse</returns>
-        System.Threading.Tasks.Task<ParametroProdutoResponse> ConsultarTaxaAntecipacaoAsync (long? id, string tipoTransacao);
+        System.Threading.Tasks.Task<ParametroProdutoResponse> ConsultarTaxaAntecipacaoProdutoAsync (long? id, string tipoTransacao);
 
         /// <summary>
         /// Consulta a Taxa de Antecipa\u00E7\u00E3o de um Produto
@@ -253,7 +253,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">Id Produto</param>
         /// <param name="tipoTransacao">Tipo da Transa\u00E7\u00E3o (ON-US ou OFF-US)</param>
         /// <returns>Task of ApiResponse (ParametroProdutoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ParametroProdutoResponse>> ConsultarTaxaAntecipacaoAsyncWithHttpInfo (long? id, string tipoTransacao);
+        System.Threading.Tasks.Task<ApiResponse<ParametroProdutoResponse>> ConsultarTaxaAntecipacaoProdutoAsyncWithHttpInfo (long? id, string tipoTransacao);
         
         /// <summary>
         /// Faz a efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o
@@ -267,7 +267,7 @@ namespace Conductor.Pier.Api
         /// <param name="quantidadeParcelas">Quantidade de parcelas para serem antecipadas</param>
         /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param>
         /// <returns>Task of AntecipacaoResponse</returns>
-        System.Threading.Tasks.Task<AntecipacaoResponse> EfetivarAntecipacaoAsync (long? idConta, long? id, long? quantidadeParcelas, string complemento = null);
+        System.Threading.Tasks.Task<AntecipacaoResponse> EfetivarAntecipacaoCompraAsync (long? idConta, long? id, long? quantidadeParcelas, string complemento = null);
 
         /// <summary>
         /// Faz a efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o
@@ -281,7 +281,7 @@ namespace Conductor.Pier.Api
         /// <param name="quantidadeParcelas">Quantidade de parcelas para serem antecipadas</param>
         /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param>
         /// <returns>Task of ApiResponse (AntecipacaoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AntecipacaoResponse>> EfetivarAntecipacaoAsyncWithHttpInfo (long? idConta, long? id, long? quantidadeParcelas, string complemento = null);
+        System.Threading.Tasks.Task<ApiResponse<AntecipacaoResponse>> EfetivarAntecipacaoCompraAsyncWithHttpInfo (long? idConta, long? id, long? quantidadeParcelas, string complemento = null);
         
         /// <summary>
         /// Faz a efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o
@@ -293,7 +293,7 @@ namespace Conductor.Pier.Api
         /// <param name="idConta">C\u00F3digo de Identifica\u00E7\u00E3o da Conta</param>
         /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param>
         /// <returns>Task of AntecipacaoResponse</returns>
-        System.Threading.Tasks.Task<AntecipacaoResponse> EfetivarAntecipacoesAsync (long? idConta, string complemento = null);
+        System.Threading.Tasks.Task<AntecipacaoResponse> EfetivarAntecipacoesEmLotesAsync (long? idConta, string complemento = null);
 
         /// <summary>
         /// Faz a efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o
@@ -305,7 +305,7 @@ namespace Conductor.Pier.Api
         /// <param name="idConta">C\u00F3digo de Identifica\u00E7\u00E3o da Conta</param>
         /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param>
         /// <returns>Task of ApiResponse (AntecipacaoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AntecipacaoResponse>> EfetivarAntecipacoesAsyncWithHttpInfo (long? idConta, string complemento = null);
+        System.Threading.Tasks.Task<ApiResponse<AntecipacaoResponse>> EfetivarAntecipacoesEmLotesAsyncWithHttpInfo (long? idConta, string complemento = null);
         
         /// <summary>
         /// Listar compras com parcelas antecip\u00E1veis
@@ -323,7 +323,7 @@ namespace Conductor.Pier.Api
         /// <param name="juros">Indica se a compra \u00E9 com ou sem juros (optional)</param>
         /// <param name="tipoOrigemTransacao">Indica se a compra \u00E9 ON-US ou OFF-US (optional)</param>
         /// <returns>Task of PageCompraResponse</returns>
-        System.Threading.Tasks.Task<PageCompraResponse> ListarAsync (long? idConta, List<string> sort = null, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null);
+        System.Threading.Tasks.Task<PageCompraResponse> ListarComprasAntecipaveisAsync (long? idConta, List<string> sort = null, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null);
 
         /// <summary>
         /// Listar compras com parcelas antecip\u00E1veis
@@ -341,7 +341,7 @@ namespace Conductor.Pier.Api
         /// <param name="juros">Indica se a compra \u00E9 com ou sem juros (optional)</param>
         /// <param name="tipoOrigemTransacao">Indica se a compra \u00E9 ON-US ou OFF-US (optional)</param>
         /// <returns>Task of ApiResponse (PageCompraResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageCompraResponse>> ListarAsyncWithHttpInfo (long? idConta, List<string> sort = null, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null);
+        System.Threading.Tasks.Task<ApiResponse<PageCompraResponse>> ListarComprasAntecipaveisAsyncWithHttpInfo (long? idConta, List<string> sort = null, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null);
         
         /// <summary>
         /// Simular antecipa\u00E7\u00E3o de parcelas
@@ -354,7 +354,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do evento</param>
         /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param>
         /// <returns>Task of AntecipacaoSimuladaResponse</returns>
-        System.Threading.Tasks.Task<AntecipacaoSimuladaResponse> SimularAntecipacaoAsync (long? idConta, long? id, string complemento = null);
+        System.Threading.Tasks.Task<AntecipacaoSimuladaResponse> SimularAntecipacaoCompraAsync (long? idConta, long? id, string complemento = null);
 
         /// <summary>
         /// Simular antecipa\u00E7\u00E3o de parcelas
@@ -367,7 +367,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do evento</param>
         /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param>
         /// <returns>Task of ApiResponse (AntecipacaoSimuladaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AntecipacaoSimuladaResponse>> SimularAntecipacaoAsyncWithHttpInfo (long? idConta, long? id, string complemento = null);
+        System.Threading.Tasks.Task<ApiResponse<AntecipacaoSimuladaResponse>> SimularAntecipacaoCompraAsyncWithHttpInfo (long? idConta, long? id, string complemento = null);
         
         /// <summary>
         /// Simular antecipa\u00E7\u00E3o de todas as parcelas antecip\u00E1veis
@@ -379,7 +379,7 @@ namespace Conductor.Pier.Api
         /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta</param>
         /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param>
         /// <returns>Task of AntecipacaoSimuladaLoteResponse</returns>
-        System.Threading.Tasks.Task<AntecipacaoSimuladaLoteResponse> SimularAntecipacoesAsync (long? idConta, string complemento = null);
+        System.Threading.Tasks.Task<AntecipacaoSimuladaLoteResponse> SimularAntecipacoesEmLoteAsync (long? idConta, string complemento = null);
 
         /// <summary>
         /// Simular antecipa\u00E7\u00E3o de todas as parcelas antecip\u00E1veis
@@ -391,7 +391,7 @@ namespace Conductor.Pier.Api
         /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta</param>
         /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param>
         /// <returns>Task of ApiResponse (AntecipacaoSimuladaLoteResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AntecipacaoSimuladaLoteResponse>> SimularAntecipacoesAsyncWithHttpInfo (long? idConta, string complemento = null);
+        System.Threading.Tasks.Task<ApiResponse<AntecipacaoSimuladaLoteResponse>> SimularAntecipacoesEmLoteAsyncWithHttpInfo (long? idConta, string complemento = null);
         
         #endregion Asynchronous Operations
         
@@ -492,9 +492,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">Id Produto</param> 
         /// <param name="taxaAntecipacaoRequest">taxaAntecipacaoRequest</param> 
         /// <returns>ParametroProdutoResponse</returns>
-        public ParametroProdutoResponse ConfigurarTaxaAntecipacao (long? id, TaxaAntecipacaoRequest taxaAntecipacaoRequest)
+        public ParametroProdutoResponse ConfigurarTaxaAntecipacaoProduto (long? id, TaxaAntecipacaoRequest taxaAntecipacaoRequest)
         {
-             ApiResponse<ParametroProdutoResponse> localVarResponse = ConfigurarTaxaAntecipacaoWithHttpInfo(id, taxaAntecipacaoRequest);
+             ApiResponse<ParametroProdutoResponse> localVarResponse = ConfigurarTaxaAntecipacaoProdutoWithHttpInfo(id, taxaAntecipacaoRequest);
              return localVarResponse.Data;
         }
 
@@ -505,16 +505,16 @@ namespace Conductor.Pier.Api
         /// <param name="id">Id Produto</param> 
         /// <param name="taxaAntecipacaoRequest">taxaAntecipacaoRequest</param> 
         /// <returns>ApiResponse of ParametroProdutoResponse</returns>
-        public ApiResponse< ParametroProdutoResponse > ConfigurarTaxaAntecipacaoWithHttpInfo (long? id, TaxaAntecipacaoRequest taxaAntecipacaoRequest)
+        public ApiResponse< ParametroProdutoResponse > ConfigurarTaxaAntecipacaoProdutoWithHttpInfo (long? id, TaxaAntecipacaoRequest taxaAntecipacaoRequest)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling AntecipacaoApi->ConfigurarTaxaAntecipacao");
+                throw new ApiException(400, "Missing required parameter 'id' when calling AntecipacaoApi->ConfigurarTaxaAntecipacaoProduto");
             
             // verify the required parameter 'taxaAntecipacaoRequest' is set
             if (taxaAntecipacaoRequest == null)
-                throw new ApiException(400, "Missing required parameter 'taxaAntecipacaoRequest' when calling AntecipacaoApi->ConfigurarTaxaAntecipacao");
+                throw new ApiException(400, "Missing required parameter 'taxaAntecipacaoRequest' when calling AntecipacaoApi->ConfigurarTaxaAntecipacaoProduto");
             
     
             var localVarPath = "/api/produtos/{id}/configurar-taxa-antecipacao";
@@ -567,9 +567,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConfigurarTaxaAntecipacao: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConfigurarTaxaAntecipacaoProduto: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConfigurarTaxaAntecipacao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConfigurarTaxaAntecipacaoProduto: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<ParametroProdutoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -585,9 +585,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">Id Produto</param>
         /// <param name="taxaAntecipacaoRequest">taxaAntecipacaoRequest</param>
         /// <returns>Task of ParametroProdutoResponse</returns>
-        public async System.Threading.Tasks.Task<ParametroProdutoResponse> ConfigurarTaxaAntecipacaoAsync (long? id, TaxaAntecipacaoRequest taxaAntecipacaoRequest)
+        public async System.Threading.Tasks.Task<ParametroProdutoResponse> ConfigurarTaxaAntecipacaoProdutoAsync (long? id, TaxaAntecipacaoRequest taxaAntecipacaoRequest)
         {
-             ApiResponse<ParametroProdutoResponse> localVarResponse = await ConfigurarTaxaAntecipacaoAsyncWithHttpInfo(id, taxaAntecipacaoRequest);
+             ApiResponse<ParametroProdutoResponse> localVarResponse = await ConfigurarTaxaAntecipacaoProdutoAsyncWithHttpInfo(id, taxaAntecipacaoRequest);
              return localVarResponse.Data;
 
         }
@@ -599,12 +599,12 @@ namespace Conductor.Pier.Api
         /// <param name="id">Id Produto</param>
         /// <param name="taxaAntecipacaoRequest">taxaAntecipacaoRequest</param>
         /// <returns>Task of ApiResponse (ParametroProdutoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ParametroProdutoResponse>> ConfigurarTaxaAntecipacaoAsyncWithHttpInfo (long? id, TaxaAntecipacaoRequest taxaAntecipacaoRequest)
+        public async System.Threading.Tasks.Task<ApiResponse<ParametroProdutoResponse>> ConfigurarTaxaAntecipacaoProdutoAsyncWithHttpInfo (long? id, TaxaAntecipacaoRequest taxaAntecipacaoRequest)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConfigurarTaxaAntecipacao");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConfigurarTaxaAntecipacaoProduto");
             // verify the required parameter 'taxaAntecipacaoRequest' is set
-            if (taxaAntecipacaoRequest == null) throw new ApiException(400, "Missing required parameter 'taxaAntecipacaoRequest' when calling ConfigurarTaxaAntecipacao");
+            if (taxaAntecipacaoRequest == null) throw new ApiException(400, "Missing required parameter 'taxaAntecipacaoRequest' when calling ConfigurarTaxaAntecipacaoProduto");
             
     
             var localVarPath = "/api/produtos/{id}/configurar-taxa-antecipacao";
@@ -657,9 +657,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConfigurarTaxaAntecipacao: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConfigurarTaxaAntecipacaoProduto: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConfigurarTaxaAntecipacao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConfigurarTaxaAntecipacaoProduto: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<ParametroProdutoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -674,9 +674,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">Id Produto</param> 
         /// <param name="tipoTransacao">Tipo da Transa\u00E7\u00E3o (ON-US ou OFF-US)</param> 
         /// <returns>ParametroProdutoResponse</returns>
-        public ParametroProdutoResponse ConsultarTaxaAntecipacao (long? id, string tipoTransacao)
+        public ParametroProdutoResponse ConsultarTaxaAntecipacaoProduto (long? id, string tipoTransacao)
         {
-             ApiResponse<ParametroProdutoResponse> localVarResponse = ConsultarTaxaAntecipacaoWithHttpInfo(id, tipoTransacao);
+             ApiResponse<ParametroProdutoResponse> localVarResponse = ConsultarTaxaAntecipacaoProdutoWithHttpInfo(id, tipoTransacao);
              return localVarResponse.Data;
         }
 
@@ -687,16 +687,16 @@ namespace Conductor.Pier.Api
         /// <param name="id">Id Produto</param> 
         /// <param name="tipoTransacao">Tipo da Transa\u00E7\u00E3o (ON-US ou OFF-US)</param> 
         /// <returns>ApiResponse of ParametroProdutoResponse</returns>
-        public ApiResponse< ParametroProdutoResponse > ConsultarTaxaAntecipacaoWithHttpInfo (long? id, string tipoTransacao)
+        public ApiResponse< ParametroProdutoResponse > ConsultarTaxaAntecipacaoProdutoWithHttpInfo (long? id, string tipoTransacao)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling AntecipacaoApi->ConsultarTaxaAntecipacao");
+                throw new ApiException(400, "Missing required parameter 'id' when calling AntecipacaoApi->ConsultarTaxaAntecipacaoProduto");
             
             // verify the required parameter 'tipoTransacao' is set
             if (tipoTransacao == null)
-                throw new ApiException(400, "Missing required parameter 'tipoTransacao' when calling AntecipacaoApi->ConsultarTaxaAntecipacao");
+                throw new ApiException(400, "Missing required parameter 'tipoTransacao' when calling AntecipacaoApi->ConsultarTaxaAntecipacaoProduto");
             
     
             var localVarPath = "/api/produtos/{id}/consultar-taxa-antecipacao";
@@ -743,9 +743,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarTaxaAntecipacao: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarTaxaAntecipacaoProduto: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarTaxaAntecipacao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarTaxaAntecipacaoProduto: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<ParametroProdutoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -761,9 +761,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">Id Produto</param>
         /// <param name="tipoTransacao">Tipo da Transa\u00E7\u00E3o (ON-US ou OFF-US)</param>
         /// <returns>Task of ParametroProdutoResponse</returns>
-        public async System.Threading.Tasks.Task<ParametroProdutoResponse> ConsultarTaxaAntecipacaoAsync (long? id, string tipoTransacao)
+        public async System.Threading.Tasks.Task<ParametroProdutoResponse> ConsultarTaxaAntecipacaoProdutoAsync (long? id, string tipoTransacao)
         {
-             ApiResponse<ParametroProdutoResponse> localVarResponse = await ConsultarTaxaAntecipacaoAsyncWithHttpInfo(id, tipoTransacao);
+             ApiResponse<ParametroProdutoResponse> localVarResponse = await ConsultarTaxaAntecipacaoProdutoAsyncWithHttpInfo(id, tipoTransacao);
              return localVarResponse.Data;
 
         }
@@ -775,12 +775,12 @@ namespace Conductor.Pier.Api
         /// <param name="id">Id Produto</param>
         /// <param name="tipoTransacao">Tipo da Transa\u00E7\u00E3o (ON-US ou OFF-US)</param>
         /// <returns>Task of ApiResponse (ParametroProdutoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ParametroProdutoResponse>> ConsultarTaxaAntecipacaoAsyncWithHttpInfo (long? id, string tipoTransacao)
+        public async System.Threading.Tasks.Task<ApiResponse<ParametroProdutoResponse>> ConsultarTaxaAntecipacaoProdutoAsyncWithHttpInfo (long? id, string tipoTransacao)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarTaxaAntecipacao");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarTaxaAntecipacaoProduto");
             // verify the required parameter 'tipoTransacao' is set
-            if (tipoTransacao == null) throw new ApiException(400, "Missing required parameter 'tipoTransacao' when calling ConsultarTaxaAntecipacao");
+            if (tipoTransacao == null) throw new ApiException(400, "Missing required parameter 'tipoTransacao' when calling ConsultarTaxaAntecipacaoProduto");
             
     
             var localVarPath = "/api/produtos/{id}/consultar-taxa-antecipacao";
@@ -827,9 +827,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarTaxaAntecipacao: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarTaxaAntecipacaoProduto: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarTaxaAntecipacao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarTaxaAntecipacaoProduto: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<ParametroProdutoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -846,9 +846,9 @@ namespace Conductor.Pier.Api
         /// <param name="quantidadeParcelas">Quantidade de parcelas para serem antecipadas</param> 
         /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param> 
         /// <returns>AntecipacaoResponse</returns>
-        public AntecipacaoResponse EfetivarAntecipacao (long? idConta, long? id, long? quantidadeParcelas, string complemento = null)
+        public AntecipacaoResponse EfetivarAntecipacaoCompra (long? idConta, long? id, long? quantidadeParcelas, string complemento = null)
         {
-             ApiResponse<AntecipacaoResponse> localVarResponse = EfetivarAntecipacaoWithHttpInfo(idConta, id, quantidadeParcelas, complemento);
+             ApiResponse<AntecipacaoResponse> localVarResponse = EfetivarAntecipacaoCompraWithHttpInfo(idConta, id, quantidadeParcelas, complemento);
              return localVarResponse.Data;
         }
 
@@ -861,20 +861,20 @@ namespace Conductor.Pier.Api
         /// <param name="quantidadeParcelas">Quantidade de parcelas para serem antecipadas</param> 
         /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param> 
         /// <returns>ApiResponse of AntecipacaoResponse</returns>
-        public ApiResponse< AntecipacaoResponse > EfetivarAntecipacaoWithHttpInfo (long? idConta, long? id, long? quantidadeParcelas, string complemento = null)
+        public ApiResponse< AntecipacaoResponse > EfetivarAntecipacaoCompraWithHttpInfo (long? idConta, long? id, long? quantidadeParcelas, string complemento = null)
         {
             
             // verify the required parameter 'idConta' is set
             if (idConta == null)
-                throw new ApiException(400, "Missing required parameter 'idConta' when calling AntecipacaoApi->EfetivarAntecipacao");
+                throw new ApiException(400, "Missing required parameter 'idConta' when calling AntecipacaoApi->EfetivarAntecipacaoCompra");
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling AntecipacaoApi->EfetivarAntecipacao");
+                throw new ApiException(400, "Missing required parameter 'id' when calling AntecipacaoApi->EfetivarAntecipacaoCompra");
             
             // verify the required parameter 'quantidadeParcelas' is set
             if (quantidadeParcelas == null)
-                throw new ApiException(400, "Missing required parameter 'quantidadeParcelas' when calling AntecipacaoApi->EfetivarAntecipacao");
+                throw new ApiException(400, "Missing required parameter 'quantidadeParcelas' when calling AntecipacaoApi->EfetivarAntecipacaoCompra");
             
     
             var localVarPath = "/api/compras-antecipaveis/{id}/efetivar-antecipacao";
@@ -923,9 +923,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling EfetivarAntecipacao: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling EfetivarAntecipacaoCompra: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling EfetivarAntecipacao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling EfetivarAntecipacaoCompra: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<AntecipacaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -943,9 +943,9 @@ namespace Conductor.Pier.Api
         /// <param name="quantidadeParcelas">Quantidade de parcelas para serem antecipadas</param>
         /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param>
         /// <returns>Task of AntecipacaoResponse</returns>
-        public async System.Threading.Tasks.Task<AntecipacaoResponse> EfetivarAntecipacaoAsync (long? idConta, long? id, long? quantidadeParcelas, string complemento = null)
+        public async System.Threading.Tasks.Task<AntecipacaoResponse> EfetivarAntecipacaoCompraAsync (long? idConta, long? id, long? quantidadeParcelas, string complemento = null)
         {
-             ApiResponse<AntecipacaoResponse> localVarResponse = await EfetivarAntecipacaoAsyncWithHttpInfo(idConta, id, quantidadeParcelas, complemento);
+             ApiResponse<AntecipacaoResponse> localVarResponse = await EfetivarAntecipacaoCompraAsyncWithHttpInfo(idConta, id, quantidadeParcelas, complemento);
              return localVarResponse.Data;
 
         }
@@ -959,14 +959,14 @@ namespace Conductor.Pier.Api
         /// <param name="quantidadeParcelas">Quantidade de parcelas para serem antecipadas</param>
         /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param>
         /// <returns>Task of ApiResponse (AntecipacaoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AntecipacaoResponse>> EfetivarAntecipacaoAsyncWithHttpInfo (long? idConta, long? id, long? quantidadeParcelas, string complemento = null)
+        public async System.Threading.Tasks.Task<ApiResponse<AntecipacaoResponse>> EfetivarAntecipacaoCompraAsyncWithHttpInfo (long? idConta, long? id, long? quantidadeParcelas, string complemento = null)
         {
             // verify the required parameter 'idConta' is set
-            if (idConta == null) throw new ApiException(400, "Missing required parameter 'idConta' when calling EfetivarAntecipacao");
+            if (idConta == null) throw new ApiException(400, "Missing required parameter 'idConta' when calling EfetivarAntecipacaoCompra");
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling EfetivarAntecipacao");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling EfetivarAntecipacaoCompra");
             // verify the required parameter 'quantidadeParcelas' is set
-            if (quantidadeParcelas == null) throw new ApiException(400, "Missing required parameter 'quantidadeParcelas' when calling EfetivarAntecipacao");
+            if (quantidadeParcelas == null) throw new ApiException(400, "Missing required parameter 'quantidadeParcelas' when calling EfetivarAntecipacaoCompra");
             
     
             var localVarPath = "/api/compras-antecipaveis/{id}/efetivar-antecipacao";
@@ -1015,9 +1015,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling EfetivarAntecipacao: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling EfetivarAntecipacaoCompra: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling EfetivarAntecipacao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling EfetivarAntecipacaoCompra: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<AntecipacaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1032,9 +1032,9 @@ namespace Conductor.Pier.Api
         /// <param name="idConta">C\u00F3digo de Identifica\u00E7\u00E3o da Conta</param> 
         /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param> 
         /// <returns>AntecipacaoResponse</returns>
-        public AntecipacaoResponse EfetivarAntecipacoes (long? idConta, string complemento = null)
+        public AntecipacaoResponse EfetivarAntecipacoesEmLotes (long? idConta, string complemento = null)
         {
-             ApiResponse<AntecipacaoResponse> localVarResponse = EfetivarAntecipacoesWithHttpInfo(idConta, complemento);
+             ApiResponse<AntecipacaoResponse> localVarResponse = EfetivarAntecipacoesEmLotesWithHttpInfo(idConta, complemento);
              return localVarResponse.Data;
         }
 
@@ -1045,12 +1045,12 @@ namespace Conductor.Pier.Api
         /// <param name="idConta">C\u00F3digo de Identifica\u00E7\u00E3o da Conta</param> 
         /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param> 
         /// <returns>ApiResponse of AntecipacaoResponse</returns>
-        public ApiResponse< AntecipacaoResponse > EfetivarAntecipacoesWithHttpInfo (long? idConta, string complemento = null)
+        public ApiResponse< AntecipacaoResponse > EfetivarAntecipacoesEmLotesWithHttpInfo (long? idConta, string complemento = null)
         {
             
             // verify the required parameter 'idConta' is set
             if (idConta == null)
-                throw new ApiException(400, "Missing required parameter 'idConta' when calling AntecipacaoApi->EfetivarAntecipacoes");
+                throw new ApiException(400, "Missing required parameter 'idConta' when calling AntecipacaoApi->EfetivarAntecipacoesEmLotes");
             
     
             var localVarPath = "/api/compras-antecipaveis/efetivar-antecipacao";
@@ -1097,9 +1097,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling EfetivarAntecipacoes: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling EfetivarAntecipacoesEmLotes: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling EfetivarAntecipacoes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling EfetivarAntecipacoesEmLotes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<AntecipacaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1115,9 +1115,9 @@ namespace Conductor.Pier.Api
         /// <param name="idConta">C\u00F3digo de Identifica\u00E7\u00E3o da Conta</param>
         /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param>
         /// <returns>Task of AntecipacaoResponse</returns>
-        public async System.Threading.Tasks.Task<AntecipacaoResponse> EfetivarAntecipacoesAsync (long? idConta, string complemento = null)
+        public async System.Threading.Tasks.Task<AntecipacaoResponse> EfetivarAntecipacoesEmLotesAsync (long? idConta, string complemento = null)
         {
-             ApiResponse<AntecipacaoResponse> localVarResponse = await EfetivarAntecipacoesAsyncWithHttpInfo(idConta, complemento);
+             ApiResponse<AntecipacaoResponse> localVarResponse = await EfetivarAntecipacoesEmLotesAsyncWithHttpInfo(idConta, complemento);
              return localVarResponse.Data;
 
         }
@@ -1129,10 +1129,10 @@ namespace Conductor.Pier.Api
         /// <param name="idConta">C\u00F3digo de Identifica\u00E7\u00E3o da Conta</param>
         /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param>
         /// <returns>Task of ApiResponse (AntecipacaoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AntecipacaoResponse>> EfetivarAntecipacoesAsyncWithHttpInfo (long? idConta, string complemento = null)
+        public async System.Threading.Tasks.Task<ApiResponse<AntecipacaoResponse>> EfetivarAntecipacoesEmLotesAsyncWithHttpInfo (long? idConta, string complemento = null)
         {
             // verify the required parameter 'idConta' is set
-            if (idConta == null) throw new ApiException(400, "Missing required parameter 'idConta' when calling EfetivarAntecipacoes");
+            if (idConta == null) throw new ApiException(400, "Missing required parameter 'idConta' when calling EfetivarAntecipacoesEmLotes");
             
     
             var localVarPath = "/api/compras-antecipaveis/efetivar-antecipacao";
@@ -1179,9 +1179,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling EfetivarAntecipacoes: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling EfetivarAntecipacoesEmLotes: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling EfetivarAntecipacoes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling EfetivarAntecipacoesEmLotes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<AntecipacaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1202,9 +1202,9 @@ namespace Conductor.Pier.Api
         /// <param name="juros">Indica se a compra \u00E9 com ou sem juros (optional)</param> 
         /// <param name="tipoOrigemTransacao">Indica se a compra \u00E9 ON-US ou OFF-US (optional)</param> 
         /// <returns>PageCompraResponse</returns>
-        public PageCompraResponse Listar (long? idConta, List<string> sort = null, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null)
+        public PageCompraResponse ListarComprasAntecipaveis (long? idConta, List<string> sort = null, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null)
         {
-             ApiResponse<PageCompraResponse> localVarResponse = ListarWithHttpInfo(idConta, sort, page, limit, idCompra, parcelada, juros, tipoOrigemTransacao);
+             ApiResponse<PageCompraResponse> localVarResponse = ListarComprasAntecipaveisWithHttpInfo(idConta, sort, page, limit, idCompra, parcelada, juros, tipoOrigemTransacao);
              return localVarResponse.Data;
         }
 
@@ -1221,12 +1221,12 @@ namespace Conductor.Pier.Api
         /// <param name="juros">Indica se a compra \u00E9 com ou sem juros (optional)</param> 
         /// <param name="tipoOrigemTransacao">Indica se a compra \u00E9 ON-US ou OFF-US (optional)</param> 
         /// <returns>ApiResponse of PageCompraResponse</returns>
-        public ApiResponse< PageCompraResponse > ListarWithHttpInfo (long? idConta, List<string> sort = null, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null)
+        public ApiResponse< PageCompraResponse > ListarComprasAntecipaveisWithHttpInfo (long? idConta, List<string> sort = null, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null)
         {
             
             // verify the required parameter 'idConta' is set
             if (idConta == null)
-                throw new ApiException(400, "Missing required parameter 'idConta' when calling AntecipacaoApi->Listar");
+                throw new ApiException(400, "Missing required parameter 'idConta' when calling AntecipacaoApi->ListarComprasAntecipaveis");
             
     
             var localVarPath = "/api/compras-antecipaveis";
@@ -1279,9 +1279,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Listar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarComprasAntecipaveis: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Listar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarComprasAntecipaveis: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageCompraResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1303,9 +1303,9 @@ namespace Conductor.Pier.Api
         /// <param name="juros">Indica se a compra \u00E9 com ou sem juros (optional)</param>
         /// <param name="tipoOrigemTransacao">Indica se a compra \u00E9 ON-US ou OFF-US (optional)</param>
         /// <returns>Task of PageCompraResponse</returns>
-        public async System.Threading.Tasks.Task<PageCompraResponse> ListarAsync (long? idConta, List<string> sort = null, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null)
+        public async System.Threading.Tasks.Task<PageCompraResponse> ListarComprasAntecipaveisAsync (long? idConta, List<string> sort = null, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null)
         {
-             ApiResponse<PageCompraResponse> localVarResponse = await ListarAsyncWithHttpInfo(idConta, sort, page, limit, idCompra, parcelada, juros, tipoOrigemTransacao);
+             ApiResponse<PageCompraResponse> localVarResponse = await ListarComprasAntecipaveisAsyncWithHttpInfo(idConta, sort, page, limit, idCompra, parcelada, juros, tipoOrigemTransacao);
              return localVarResponse.Data;
 
         }
@@ -1323,10 +1323,10 @@ namespace Conductor.Pier.Api
         /// <param name="juros">Indica se a compra \u00E9 com ou sem juros (optional)</param>
         /// <param name="tipoOrigemTransacao">Indica se a compra \u00E9 ON-US ou OFF-US (optional)</param>
         /// <returns>Task of ApiResponse (PageCompraResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageCompraResponse>> ListarAsyncWithHttpInfo (long? idConta, List<string> sort = null, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageCompraResponse>> ListarComprasAntecipaveisAsyncWithHttpInfo (long? idConta, List<string> sort = null, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null)
         {
             // verify the required parameter 'idConta' is set
-            if (idConta == null) throw new ApiException(400, "Missing required parameter 'idConta' when calling Listar");
+            if (idConta == null) throw new ApiException(400, "Missing required parameter 'idConta' when calling ListarComprasAntecipaveis");
             
     
             var localVarPath = "/api/compras-antecipaveis";
@@ -1379,9 +1379,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Listar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarComprasAntecipaveis: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Listar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarComprasAntecipaveis: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageCompraResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1397,9 +1397,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do evento</param> 
         /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param> 
         /// <returns>AntecipacaoSimuladaResponse</returns>
-        public AntecipacaoSimuladaResponse SimularAntecipacao (long? idConta, long? id, string complemento = null)
+        public AntecipacaoSimuladaResponse SimularAntecipacaoCompra (long? idConta, long? id, string complemento = null)
         {
-             ApiResponse<AntecipacaoSimuladaResponse> localVarResponse = SimularAntecipacaoWithHttpInfo(idConta, id, complemento);
+             ApiResponse<AntecipacaoSimuladaResponse> localVarResponse = SimularAntecipacaoCompraWithHttpInfo(idConta, id, complemento);
              return localVarResponse.Data;
         }
 
@@ -1411,16 +1411,16 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do evento</param> 
         /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param> 
         /// <returns>ApiResponse of AntecipacaoSimuladaResponse</returns>
-        public ApiResponse< AntecipacaoSimuladaResponse > SimularAntecipacaoWithHttpInfo (long? idConta, long? id, string complemento = null)
+        public ApiResponse< AntecipacaoSimuladaResponse > SimularAntecipacaoCompraWithHttpInfo (long? idConta, long? id, string complemento = null)
         {
             
             // verify the required parameter 'idConta' is set
             if (idConta == null)
-                throw new ApiException(400, "Missing required parameter 'idConta' when calling AntecipacaoApi->SimularAntecipacao");
+                throw new ApiException(400, "Missing required parameter 'idConta' when calling AntecipacaoApi->SimularAntecipacaoCompra");
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling AntecipacaoApi->SimularAntecipacao");
+                throw new ApiException(400, "Missing required parameter 'id' when calling AntecipacaoApi->SimularAntecipacaoCompra");
             
     
             var localVarPath = "/api/compras-antecipaveis/{id}/simular-antecipacao";
@@ -1468,9 +1468,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SimularAntecipacao: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SimularAntecipacaoCompra: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SimularAntecipacao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SimularAntecipacaoCompra: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<AntecipacaoSimuladaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1487,9 +1487,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do evento</param>
         /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param>
         /// <returns>Task of AntecipacaoSimuladaResponse</returns>
-        public async System.Threading.Tasks.Task<AntecipacaoSimuladaResponse> SimularAntecipacaoAsync (long? idConta, long? id, string complemento = null)
+        public async System.Threading.Tasks.Task<AntecipacaoSimuladaResponse> SimularAntecipacaoCompraAsync (long? idConta, long? id, string complemento = null)
         {
-             ApiResponse<AntecipacaoSimuladaResponse> localVarResponse = await SimularAntecipacaoAsyncWithHttpInfo(idConta, id, complemento);
+             ApiResponse<AntecipacaoSimuladaResponse> localVarResponse = await SimularAntecipacaoCompraAsyncWithHttpInfo(idConta, id, complemento);
              return localVarResponse.Data;
 
         }
@@ -1502,12 +1502,12 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do evento</param>
         /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param>
         /// <returns>Task of ApiResponse (AntecipacaoSimuladaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AntecipacaoSimuladaResponse>> SimularAntecipacaoAsyncWithHttpInfo (long? idConta, long? id, string complemento = null)
+        public async System.Threading.Tasks.Task<ApiResponse<AntecipacaoSimuladaResponse>> SimularAntecipacaoCompraAsyncWithHttpInfo (long? idConta, long? id, string complemento = null)
         {
             // verify the required parameter 'idConta' is set
-            if (idConta == null) throw new ApiException(400, "Missing required parameter 'idConta' when calling SimularAntecipacao");
+            if (idConta == null) throw new ApiException(400, "Missing required parameter 'idConta' when calling SimularAntecipacaoCompra");
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling SimularAntecipacao");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling SimularAntecipacaoCompra");
             
     
             var localVarPath = "/api/compras-antecipaveis/{id}/simular-antecipacao";
@@ -1555,9 +1555,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SimularAntecipacao: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SimularAntecipacaoCompra: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SimularAntecipacao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SimularAntecipacaoCompra: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<AntecipacaoSimuladaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1572,9 +1572,9 @@ namespace Conductor.Pier.Api
         /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta</param> 
         /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param> 
         /// <returns>AntecipacaoSimuladaLoteResponse</returns>
-        public AntecipacaoSimuladaLoteResponse SimularAntecipacoes (long? idConta, string complemento = null)
+        public AntecipacaoSimuladaLoteResponse SimularAntecipacoesEmLote (long? idConta, string complemento = null)
         {
-             ApiResponse<AntecipacaoSimuladaLoteResponse> localVarResponse = SimularAntecipacoesWithHttpInfo(idConta, complemento);
+             ApiResponse<AntecipacaoSimuladaLoteResponse> localVarResponse = SimularAntecipacoesEmLoteWithHttpInfo(idConta, complemento);
              return localVarResponse.Data;
         }
 
@@ -1585,12 +1585,12 @@ namespace Conductor.Pier.Api
         /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta</param> 
         /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param> 
         /// <returns>ApiResponse of AntecipacaoSimuladaLoteResponse</returns>
-        public ApiResponse< AntecipacaoSimuladaLoteResponse > SimularAntecipacoesWithHttpInfo (long? idConta, string complemento = null)
+        public ApiResponse< AntecipacaoSimuladaLoteResponse > SimularAntecipacoesEmLoteWithHttpInfo (long? idConta, string complemento = null)
         {
             
             // verify the required parameter 'idConta' is set
             if (idConta == null)
-                throw new ApiException(400, "Missing required parameter 'idConta' when calling AntecipacaoApi->SimularAntecipacoes");
+                throw new ApiException(400, "Missing required parameter 'idConta' when calling AntecipacaoApi->SimularAntecipacoesEmLote");
             
     
             var localVarPath = "/api/compras-antecipaveis/simular-antecipacao";
@@ -1637,9 +1637,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SimularAntecipacoes: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SimularAntecipacoesEmLote: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SimularAntecipacoes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SimularAntecipacoesEmLote: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<AntecipacaoSimuladaLoteResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1655,9 +1655,9 @@ namespace Conductor.Pier.Api
         /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta</param>
         /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param>
         /// <returns>Task of AntecipacaoSimuladaLoteResponse</returns>
-        public async System.Threading.Tasks.Task<AntecipacaoSimuladaLoteResponse> SimularAntecipacoesAsync (long? idConta, string complemento = null)
+        public async System.Threading.Tasks.Task<AntecipacaoSimuladaLoteResponse> SimularAntecipacoesEmLoteAsync (long? idConta, string complemento = null)
         {
-             ApiResponse<AntecipacaoSimuladaLoteResponse> localVarResponse = await SimularAntecipacoesAsyncWithHttpInfo(idConta, complemento);
+             ApiResponse<AntecipacaoSimuladaLoteResponse> localVarResponse = await SimularAntecipacoesEmLoteAsyncWithHttpInfo(idConta, complemento);
              return localVarResponse.Data;
 
         }
@@ -1669,10 +1669,10 @@ namespace Conductor.Pier.Api
         /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta</param>
         /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param>
         /// <returns>Task of ApiResponse (AntecipacaoSimuladaLoteResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AntecipacaoSimuladaLoteResponse>> SimularAntecipacoesAsyncWithHttpInfo (long? idConta, string complemento = null)
+        public async System.Threading.Tasks.Task<ApiResponse<AntecipacaoSimuladaLoteResponse>> SimularAntecipacoesEmLoteAsyncWithHttpInfo (long? idConta, string complemento = null)
         {
             // verify the required parameter 'idConta' is set
-            if (idConta == null) throw new ApiException(400, "Missing required parameter 'idConta' when calling SimularAntecipacoes");
+            if (idConta == null) throw new ApiException(400, "Missing required parameter 'idConta' when calling SimularAntecipacoesEmLote");
             
     
             var localVarPath = "/api/compras-antecipaveis/simular-antecipacao";
@@ -1719,9 +1719,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SimularAntecipacoes: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SimularAntecipacoesEmLote: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SimularAntecipacoes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SimularAntecipacoesEmLote: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<AntecipacaoSimuladaLoteResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

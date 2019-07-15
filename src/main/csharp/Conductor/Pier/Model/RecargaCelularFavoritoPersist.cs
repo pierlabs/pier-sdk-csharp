@@ -26,8 +26,9 @@ namespace Conductor.Pier.Model
         /// <param name="NumeroCelular">N\u00FAmero do celular (required).</param>
         /// <param name="Ativo">Indicador de status.</param>
         /// <param name="Nome">Nome do propriet\u00E1rio do celular.</param>
+        /// <param name="DescricaoOperadora">Descri\u00E7\u00E3o da operadora.</param>
 
-        public RecargaCelularFavoritoPersist(string DddCelular = null, string NumeroCelular = null, bool? Ativo = null, string Nome = null)
+        public RecargaCelularFavoritoPersist(string DddCelular = null, string NumeroCelular = null, bool? Ativo = null, string Nome = null, string DescricaoOperadora = null)
         {
             // to ensure "DddCelular" is required (not null)
             if (DddCelular == null)
@@ -49,6 +50,7 @@ namespace Conductor.Pier.Model
             }
             this.Ativo = Ativo;
             this.Nome = Nome;
+            this.DescricaoOperadora = DescricaoOperadora;
             
         }
         
@@ -82,6 +84,13 @@ namespace Conductor.Pier.Model
         public string Nome { get; set; }
     
         /// <summary>
+        /// Descri\u00E7\u00E3o da operadora
+        /// </summary>
+        /// <value>Descri\u00E7\u00E3o da operadora</value>
+        [DataMember(Name="descricaoOperadora", EmitDefaultValue=false)]
+        public string DescricaoOperadora { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -93,6 +102,7 @@ namespace Conductor.Pier.Model
             sb.Append("  NumeroCelular: ").Append(NumeroCelular).Append("\n");
             sb.Append("  Ativo: ").Append(Ativo).Append("\n");
             sb.Append("  Nome: ").Append(Nome).Append("\n");
+            sb.Append("  DescricaoOperadora: ").Append(DescricaoOperadora).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -149,6 +159,11 @@ namespace Conductor.Pier.Model
                     this.Nome == other.Nome ||
                     this.Nome != null &&
                     this.Nome.Equals(other.Nome)
+                ) && 
+                (
+                    this.DescricaoOperadora == other.DescricaoOperadora ||
+                    this.DescricaoOperadora != null &&
+                    this.DescricaoOperadora.Equals(other.DescricaoOperadora)
                 );
         }
 
@@ -175,6 +190,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.Nome != null)
                     hash = hash * 59 + this.Nome.GetHashCode();
+                
+                if (this.DescricaoOperadora != null)
+                    hash = hash * 59 + this.DescricaoOperadora.GetHashCode();
                 
                 return hash;
             }

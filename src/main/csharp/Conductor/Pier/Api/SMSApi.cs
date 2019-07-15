@@ -27,7 +27,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do Servi\u00E7o SMS Conta</param>
         /// <param name="idServicoSMSConta">idServicoSMSConta</param>
         /// <returns>Object</returns>
-        Object DesativarServicoSMSConta (long? id, long? idServicoSMSConta);
+        Object DesativarServicoSMSParaConta (long? id, long? idServicoSMSConta);
   
         /// <summary>
         /// Desativa um servi\u00E7o SMS da conta
@@ -39,7 +39,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do Servi\u00E7o SMS Conta</param>
         /// <param name="idServicoSMSConta">idServicoSMSConta</param>
         /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> DesativarServicoSMSContaWithHttpInfo (long? id, long? idServicoSMSConta);
+        ApiResponse<Object> DesativarServicoSMSParaContaWithHttpInfo (long? id, long? idServicoSMSConta);
         
         /// <summary>
         /// Listar SMS
@@ -55,7 +55,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataInicio">Data in\u00EDcio do per\u00EDodo da consulta (optional)</param>
         /// <param name="dataFim">Data fim do per\u00EDodo da consulta (optional)</param>
         /// <returns>PageSMSEnvioResponse</returns>
-        PageSMSEnvioResponse ListarSMS (long? idConta, List<string> sort = null, int? page = null, int? limit = null, string dataInicio = null, string dataFim = null);
+        PageSMSEnvioResponse ListarSMS1 (long? idConta, List<string> sort = null, int? page = null, int? limit = null, string dataInicio = null, string dataFim = null);
   
         /// <summary>
         /// Listar SMS
@@ -71,7 +71,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataInicio">Data in\u00EDcio do per\u00EDodo da consulta (optional)</param>
         /// <param name="dataFim">Data fim do per\u00EDodo da consulta (optional)</param>
         /// <returns>ApiResponse of PageSMSEnvioResponse</returns>
-        ApiResponse<PageSMSEnvioResponse> ListarSMSWithHttpInfo (long? idConta, List<string> sort = null, int? page = null, int? limit = null, string dataInicio = null, string dataFim = null);
+        ApiResponse<PageSMSEnvioResponse> ListarSMS1WithHttpInfo (long? idConta, List<string> sort = null, int? page = null, int? limit = null, string dataInicio = null, string dataFim = null);
         
         /// <summary>
         /// Lista os servi\u00E7os SMS da conta
@@ -87,7 +87,7 @@ namespace Conductor.Pier.Api
         /// <param name="idSMSTipoServico">C\u00F3digo Identificador do tipo de Servi\u00E7o SMS (Id_SMSTipoServico) (optional)</param>
         /// <param name="flagAtivo">Se o par\u00E2metro for verdadeiro o recurso s\u00F3 retornar\u00E1 os servi\u00E7os ativos para a conta requisitada. Caso seja falso, retornar\u00E1 os servi\u00E7os inativos. Se o par\u00E2metro for nulo, retornar\u00E1 servi\u00E7os ativos e inativos (optional)</param>
         /// <returns>PageSMSContaResponse</returns>
-        PageSMSContaResponse ListarServicosSmsConta (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idSMSTipoServico = null, bool? flagAtivo = null);
+        PageSMSContaResponse ListarServicosSMSPorConta (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idSMSTipoServico = null, bool? flagAtivo = null);
   
         /// <summary>
         /// Lista os servi\u00E7os SMS da conta
@@ -103,7 +103,7 @@ namespace Conductor.Pier.Api
         /// <param name="idSMSTipoServico">C\u00F3digo Identificador do tipo de Servi\u00E7o SMS (Id_SMSTipoServico) (optional)</param>
         /// <param name="flagAtivo">Se o par\u00E2metro for verdadeiro o recurso s\u00F3 retornar\u00E1 os servi\u00E7os ativos para a conta requisitada. Caso seja falso, retornar\u00E1 os servi\u00E7os inativos. Se o par\u00E2metro for nulo, retornar\u00E1 servi\u00E7os ativos e inativos (optional)</param>
         /// <returns>ApiResponse of PageSMSContaResponse</returns>
-        ApiResponse<PageSMSContaResponse> ListarServicosSmsContaWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idSMSTipoServico = null, bool? flagAtivo = null);
+        ApiResponse<PageSMSContaResponse> ListarServicosSMSPorContaWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idSMSTipoServico = null, bool? flagAtivo = null);
         
         /// <summary>
         /// Lista os Tipos de Servi\u00E7os SMS
@@ -141,7 +141,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">id</param>
         /// <param name="smsContaPersist">smsContaPersist</param>
         /// <returns>Object</returns>
-        Object SalvarServicoSMSConta (long? id, SMSContaPersist smsContaPersist);
+        Object SalvarServicoSMSParaConta (long? id, SMSContaPersist smsContaPersist);
   
         /// <summary>
         /// Salva um Servi\u00E7o SMS para uma conta.
@@ -153,7 +153,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">id</param>
         /// <param name="smsContaPersist">smsContaPersist</param>
         /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> SalvarServicoSMSContaWithHttpInfo (long? id, SMSContaPersist smsContaPersist);
+        ApiResponse<Object> SalvarServicoSMSParaContaWithHttpInfo (long? id, SMSContaPersist smsContaPersist);
         
         #endregion Synchronous Operations
         
@@ -169,7 +169,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do Servi\u00E7o SMS Conta</param>
         /// <param name="idServicoSMSConta">idServicoSMSConta</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> DesativarServicoSMSContaAsync (long? id, long? idServicoSMSConta);
+        System.Threading.Tasks.Task<Object> DesativarServicoSMSParaContaAsync (long? id, long? idServicoSMSConta);
 
         /// <summary>
         /// Desativa um servi\u00E7o SMS da conta
@@ -181,7 +181,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do Servi\u00E7o SMS Conta</param>
         /// <param name="idServicoSMSConta">idServicoSMSConta</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DesativarServicoSMSContaAsyncWithHttpInfo (long? id, long? idServicoSMSConta);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DesativarServicoSMSParaContaAsyncWithHttpInfo (long? id, long? idServicoSMSConta);
         
         /// <summary>
         /// Listar SMS
@@ -197,7 +197,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataInicio">Data in\u00EDcio do per\u00EDodo da consulta (optional)</param>
         /// <param name="dataFim">Data fim do per\u00EDodo da consulta (optional)</param>
         /// <returns>Task of PageSMSEnvioResponse</returns>
-        System.Threading.Tasks.Task<PageSMSEnvioResponse> ListarSMSAsync (long? idConta, List<string> sort = null, int? page = null, int? limit = null, string dataInicio = null, string dataFim = null);
+        System.Threading.Tasks.Task<PageSMSEnvioResponse> ListarSMS1Async (long? idConta, List<string> sort = null, int? page = null, int? limit = null, string dataInicio = null, string dataFim = null);
 
         /// <summary>
         /// Listar SMS
@@ -213,7 +213,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataInicio">Data in\u00EDcio do per\u00EDodo da consulta (optional)</param>
         /// <param name="dataFim">Data fim do per\u00EDodo da consulta (optional)</param>
         /// <returns>Task of ApiResponse (PageSMSEnvioResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageSMSEnvioResponse>> ListarSMSAsyncWithHttpInfo (long? idConta, List<string> sort = null, int? page = null, int? limit = null, string dataInicio = null, string dataFim = null);
+        System.Threading.Tasks.Task<ApiResponse<PageSMSEnvioResponse>> ListarSMS1AsyncWithHttpInfo (long? idConta, List<string> sort = null, int? page = null, int? limit = null, string dataInicio = null, string dataFim = null);
         
         /// <summary>
         /// Lista os servi\u00E7os SMS da conta
@@ -229,7 +229,7 @@ namespace Conductor.Pier.Api
         /// <param name="idSMSTipoServico">C\u00F3digo Identificador do tipo de Servi\u00E7o SMS (Id_SMSTipoServico) (optional)</param>
         /// <param name="flagAtivo">Se o par\u00E2metro for verdadeiro o recurso s\u00F3 retornar\u00E1 os servi\u00E7os ativos para a conta requisitada. Caso seja falso, retornar\u00E1 os servi\u00E7os inativos. Se o par\u00E2metro for nulo, retornar\u00E1 servi\u00E7os ativos e inativos (optional)</param>
         /// <returns>Task of PageSMSContaResponse</returns>
-        System.Threading.Tasks.Task<PageSMSContaResponse> ListarServicosSmsContaAsync (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idSMSTipoServico = null, bool? flagAtivo = null);
+        System.Threading.Tasks.Task<PageSMSContaResponse> ListarServicosSMSPorContaAsync (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idSMSTipoServico = null, bool? flagAtivo = null);
 
         /// <summary>
         /// Lista os servi\u00E7os SMS da conta
@@ -245,7 +245,7 @@ namespace Conductor.Pier.Api
         /// <param name="idSMSTipoServico">C\u00F3digo Identificador do tipo de Servi\u00E7o SMS (Id_SMSTipoServico) (optional)</param>
         /// <param name="flagAtivo">Se o par\u00E2metro for verdadeiro o recurso s\u00F3 retornar\u00E1 os servi\u00E7os ativos para a conta requisitada. Caso seja falso, retornar\u00E1 os servi\u00E7os inativos. Se o par\u00E2metro for nulo, retornar\u00E1 servi\u00E7os ativos e inativos (optional)</param>
         /// <returns>Task of ApiResponse (PageSMSContaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageSMSContaResponse>> ListarServicosSmsContaAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idSMSTipoServico = null, bool? flagAtivo = null);
+        System.Threading.Tasks.Task<ApiResponse<PageSMSContaResponse>> ListarServicosSMSPorContaAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idSMSTipoServico = null, bool? flagAtivo = null);
         
         /// <summary>
         /// Lista os Tipos de Servi\u00E7os SMS
@@ -283,7 +283,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">id</param>
         /// <param name="smsContaPersist">smsContaPersist</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> SalvarServicoSMSContaAsync (long? id, SMSContaPersist smsContaPersist);
+        System.Threading.Tasks.Task<Object> SalvarServicoSMSParaContaAsync (long? id, SMSContaPersist smsContaPersist);
 
         /// <summary>
         /// Salva um Servi\u00E7o SMS para uma conta.
@@ -295,7 +295,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">id</param>
         /// <param name="smsContaPersist">smsContaPersist</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> SalvarServicoSMSContaAsyncWithHttpInfo (long? id, SMSContaPersist smsContaPersist);
+        System.Threading.Tasks.Task<ApiResponse<Object>> SalvarServicoSMSParaContaAsyncWithHttpInfo (long? id, SMSContaPersist smsContaPersist);
         
         #endregion Asynchronous Operations
         
@@ -396,9 +396,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do Servi\u00E7o SMS Conta</param> 
         /// <param name="idServicoSMSConta">idServicoSMSConta</param> 
         /// <returns>Object</returns>
-        public Object DesativarServicoSMSConta (long? id, long? idServicoSMSConta)
+        public Object DesativarServicoSMSParaConta (long? id, long? idServicoSMSConta)
         {
-             ApiResponse<Object> localVarResponse = DesativarServicoSMSContaWithHttpInfo(id, idServicoSMSConta);
+             ApiResponse<Object> localVarResponse = DesativarServicoSMSParaContaWithHttpInfo(id, idServicoSMSConta);
              return localVarResponse.Data;
         }
 
@@ -409,16 +409,16 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do Servi\u00E7o SMS Conta</param> 
         /// <param name="idServicoSMSConta">idServicoSMSConta</param> 
         /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > DesativarServicoSMSContaWithHttpInfo (long? id, long? idServicoSMSConta)
+        public ApiResponse< Object > DesativarServicoSMSParaContaWithHttpInfo (long? id, long? idServicoSMSConta)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling SMSApi->DesativarServicoSMSConta");
+                throw new ApiException(400, "Missing required parameter 'id' when calling SMSApi->DesativarServicoSMSParaConta");
             
             // verify the required parameter 'idServicoSMSConta' is set
             if (idServicoSMSConta == null)
-                throw new ApiException(400, "Missing required parameter 'idServicoSMSConta' when calling SMSApi->DesativarServicoSMSConta");
+                throw new ApiException(400, "Missing required parameter 'idServicoSMSConta' when calling SMSApi->DesativarServicoSMSParaConta");
             
     
             var localVarPath = "/api/contas/{id}/servicos-sms/{idServicoSMSConta}";
@@ -465,9 +465,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DesativarServicoSMSConta: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling DesativarServicoSMSParaConta: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DesativarServicoSMSConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DesativarServicoSMSParaConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -483,9 +483,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do Servi\u00E7o SMS Conta</param>
         /// <param name="idServicoSMSConta">idServicoSMSConta</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> DesativarServicoSMSContaAsync (long? id, long? idServicoSMSConta)
+        public async System.Threading.Tasks.Task<Object> DesativarServicoSMSParaContaAsync (long? id, long? idServicoSMSConta)
         {
-             ApiResponse<Object> localVarResponse = await DesativarServicoSMSContaAsyncWithHttpInfo(id, idServicoSMSConta);
+             ApiResponse<Object> localVarResponse = await DesativarServicoSMSParaContaAsyncWithHttpInfo(id, idServicoSMSConta);
              return localVarResponse.Data;
 
         }
@@ -497,12 +497,12 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do Servi\u00E7o SMS Conta</param>
         /// <param name="idServicoSMSConta">idServicoSMSConta</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DesativarServicoSMSContaAsyncWithHttpInfo (long? id, long? idServicoSMSConta)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DesativarServicoSMSParaContaAsyncWithHttpInfo (long? id, long? idServicoSMSConta)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling DesativarServicoSMSConta");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling DesativarServicoSMSParaConta");
             // verify the required parameter 'idServicoSMSConta' is set
-            if (idServicoSMSConta == null) throw new ApiException(400, "Missing required parameter 'idServicoSMSConta' when calling DesativarServicoSMSConta");
+            if (idServicoSMSConta == null) throw new ApiException(400, "Missing required parameter 'idServicoSMSConta' when calling DesativarServicoSMSParaConta");
             
     
             var localVarPath = "/api/contas/{id}/servicos-sms/{idServicoSMSConta}";
@@ -549,9 +549,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DesativarServicoSMSConta: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling DesativarServicoSMSParaConta: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DesativarServicoSMSConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DesativarServicoSMSParaConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -570,9 +570,9 @@ namespace Conductor.Pier.Api
         /// <param name="dataInicio">Data in\u00EDcio do per\u00EDodo da consulta (optional)</param> 
         /// <param name="dataFim">Data fim do per\u00EDodo da consulta (optional)</param> 
         /// <returns>PageSMSEnvioResponse</returns>
-        public PageSMSEnvioResponse ListarSMS (long? idConta, List<string> sort = null, int? page = null, int? limit = null, string dataInicio = null, string dataFim = null)
+        public PageSMSEnvioResponse ListarSMS1 (long? idConta, List<string> sort = null, int? page = null, int? limit = null, string dataInicio = null, string dataFim = null)
         {
-             ApiResponse<PageSMSEnvioResponse> localVarResponse = ListarSMSWithHttpInfo(idConta, sort, page, limit, dataInicio, dataFim);
+             ApiResponse<PageSMSEnvioResponse> localVarResponse = ListarSMS1WithHttpInfo(idConta, sort, page, limit, dataInicio, dataFim);
              return localVarResponse.Data;
         }
 
@@ -587,12 +587,12 @@ namespace Conductor.Pier.Api
         /// <param name="dataInicio">Data in\u00EDcio do per\u00EDodo da consulta (optional)</param> 
         /// <param name="dataFim">Data fim do per\u00EDodo da consulta (optional)</param> 
         /// <returns>ApiResponse of PageSMSEnvioResponse</returns>
-        public ApiResponse< PageSMSEnvioResponse > ListarSMSWithHttpInfo (long? idConta, List<string> sort = null, int? page = null, int? limit = null, string dataInicio = null, string dataFim = null)
+        public ApiResponse< PageSMSEnvioResponse > ListarSMS1WithHttpInfo (long? idConta, List<string> sort = null, int? page = null, int? limit = null, string dataInicio = null, string dataFim = null)
         {
             
             // verify the required parameter 'idConta' is set
             if (idConta == null)
-                throw new ApiException(400, "Missing required parameter 'idConta' when calling SMSApi->ListarSMS");
+                throw new ApiException(400, "Missing required parameter 'idConta' when calling SMSApi->ListarSMS1");
             
     
             var localVarPath = "/api/sms";
@@ -643,9 +643,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarSMS: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarSMS1: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarSMS: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarSMS1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageSMSEnvioResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -665,9 +665,9 @@ namespace Conductor.Pier.Api
         /// <param name="dataInicio">Data in\u00EDcio do per\u00EDodo da consulta (optional)</param>
         /// <param name="dataFim">Data fim do per\u00EDodo da consulta (optional)</param>
         /// <returns>Task of PageSMSEnvioResponse</returns>
-        public async System.Threading.Tasks.Task<PageSMSEnvioResponse> ListarSMSAsync (long? idConta, List<string> sort = null, int? page = null, int? limit = null, string dataInicio = null, string dataFim = null)
+        public async System.Threading.Tasks.Task<PageSMSEnvioResponse> ListarSMS1Async (long? idConta, List<string> sort = null, int? page = null, int? limit = null, string dataInicio = null, string dataFim = null)
         {
-             ApiResponse<PageSMSEnvioResponse> localVarResponse = await ListarSMSAsyncWithHttpInfo(idConta, sort, page, limit, dataInicio, dataFim);
+             ApiResponse<PageSMSEnvioResponse> localVarResponse = await ListarSMS1AsyncWithHttpInfo(idConta, sort, page, limit, dataInicio, dataFim);
              return localVarResponse.Data;
 
         }
@@ -683,10 +683,10 @@ namespace Conductor.Pier.Api
         /// <param name="dataInicio">Data in\u00EDcio do per\u00EDodo da consulta (optional)</param>
         /// <param name="dataFim">Data fim do per\u00EDodo da consulta (optional)</param>
         /// <returns>Task of ApiResponse (PageSMSEnvioResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageSMSEnvioResponse>> ListarSMSAsyncWithHttpInfo (long? idConta, List<string> sort = null, int? page = null, int? limit = null, string dataInicio = null, string dataFim = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageSMSEnvioResponse>> ListarSMS1AsyncWithHttpInfo (long? idConta, List<string> sort = null, int? page = null, int? limit = null, string dataInicio = null, string dataFim = null)
         {
             // verify the required parameter 'idConta' is set
-            if (idConta == null) throw new ApiException(400, "Missing required parameter 'idConta' when calling ListarSMS");
+            if (idConta == null) throw new ApiException(400, "Missing required parameter 'idConta' when calling ListarSMS1");
             
     
             var localVarPath = "/api/sms";
@@ -737,9 +737,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarSMS: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarSMS1: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarSMS: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarSMS1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageSMSEnvioResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -758,9 +758,9 @@ namespace Conductor.Pier.Api
         /// <param name="idSMSTipoServico">C\u00F3digo Identificador do tipo de Servi\u00E7o SMS (Id_SMSTipoServico) (optional)</param> 
         /// <param name="flagAtivo">Se o par\u00E2metro for verdadeiro o recurso s\u00F3 retornar\u00E1 os servi\u00E7os ativos para a conta requisitada. Caso seja falso, retornar\u00E1 os servi\u00E7os inativos. Se o par\u00E2metro for nulo, retornar\u00E1 servi\u00E7os ativos e inativos (optional)</param> 
         /// <returns>PageSMSContaResponse</returns>
-        public PageSMSContaResponse ListarServicosSmsConta (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idSMSTipoServico = null, bool? flagAtivo = null)
+        public PageSMSContaResponse ListarServicosSMSPorConta (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idSMSTipoServico = null, bool? flagAtivo = null)
         {
-             ApiResponse<PageSMSContaResponse> localVarResponse = ListarServicosSmsContaWithHttpInfo(id, sort, page, limit, idSMSTipoServico, flagAtivo);
+             ApiResponse<PageSMSContaResponse> localVarResponse = ListarServicosSMSPorContaWithHttpInfo(id, sort, page, limit, idSMSTipoServico, flagAtivo);
              return localVarResponse.Data;
         }
 
@@ -775,12 +775,12 @@ namespace Conductor.Pier.Api
         /// <param name="idSMSTipoServico">C\u00F3digo Identificador do tipo de Servi\u00E7o SMS (Id_SMSTipoServico) (optional)</param> 
         /// <param name="flagAtivo">Se o par\u00E2metro for verdadeiro o recurso s\u00F3 retornar\u00E1 os servi\u00E7os ativos para a conta requisitada. Caso seja falso, retornar\u00E1 os servi\u00E7os inativos. Se o par\u00E2metro for nulo, retornar\u00E1 servi\u00E7os ativos e inativos (optional)</param> 
         /// <returns>ApiResponse of PageSMSContaResponse</returns>
-        public ApiResponse< PageSMSContaResponse > ListarServicosSmsContaWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idSMSTipoServico = null, bool? flagAtivo = null)
+        public ApiResponse< PageSMSContaResponse > ListarServicosSMSPorContaWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idSMSTipoServico = null, bool? flagAtivo = null)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling SMSApi->ListarServicosSmsConta");
+                throw new ApiException(400, "Missing required parameter 'id' when calling SMSApi->ListarServicosSMSPorConta");
             
     
             var localVarPath = "/api/contas/{id}/servicos-sms";
@@ -831,9 +831,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarServicosSmsConta: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarServicosSMSPorConta: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarServicosSmsConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarServicosSMSPorConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageSMSContaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -853,9 +853,9 @@ namespace Conductor.Pier.Api
         /// <param name="idSMSTipoServico">C\u00F3digo Identificador do tipo de Servi\u00E7o SMS (Id_SMSTipoServico) (optional)</param>
         /// <param name="flagAtivo">Se o par\u00E2metro for verdadeiro o recurso s\u00F3 retornar\u00E1 os servi\u00E7os ativos para a conta requisitada. Caso seja falso, retornar\u00E1 os servi\u00E7os inativos. Se o par\u00E2metro for nulo, retornar\u00E1 servi\u00E7os ativos e inativos (optional)</param>
         /// <returns>Task of PageSMSContaResponse</returns>
-        public async System.Threading.Tasks.Task<PageSMSContaResponse> ListarServicosSmsContaAsync (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idSMSTipoServico = null, bool? flagAtivo = null)
+        public async System.Threading.Tasks.Task<PageSMSContaResponse> ListarServicosSMSPorContaAsync (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idSMSTipoServico = null, bool? flagAtivo = null)
         {
-             ApiResponse<PageSMSContaResponse> localVarResponse = await ListarServicosSmsContaAsyncWithHttpInfo(id, sort, page, limit, idSMSTipoServico, flagAtivo);
+             ApiResponse<PageSMSContaResponse> localVarResponse = await ListarServicosSMSPorContaAsyncWithHttpInfo(id, sort, page, limit, idSMSTipoServico, flagAtivo);
              return localVarResponse.Data;
 
         }
@@ -871,10 +871,10 @@ namespace Conductor.Pier.Api
         /// <param name="idSMSTipoServico">C\u00F3digo Identificador do tipo de Servi\u00E7o SMS (Id_SMSTipoServico) (optional)</param>
         /// <param name="flagAtivo">Se o par\u00E2metro for verdadeiro o recurso s\u00F3 retornar\u00E1 os servi\u00E7os ativos para a conta requisitada. Caso seja falso, retornar\u00E1 os servi\u00E7os inativos. Se o par\u00E2metro for nulo, retornar\u00E1 servi\u00E7os ativos e inativos (optional)</param>
         /// <returns>Task of ApiResponse (PageSMSContaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageSMSContaResponse>> ListarServicosSmsContaAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idSMSTipoServico = null, bool? flagAtivo = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageSMSContaResponse>> ListarServicosSMSPorContaAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, long? idSMSTipoServico = null, bool? flagAtivo = null)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ListarServicosSmsConta");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ListarServicosSMSPorConta");
             
     
             var localVarPath = "/api/contas/{id}/servicos-sms";
@@ -925,9 +925,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarServicosSmsConta: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarServicosSMSPorConta: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarServicosSmsConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarServicosSMSPorConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageSMSContaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1106,9 +1106,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">id</param> 
         /// <param name="smsContaPersist">smsContaPersist</param> 
         /// <returns>Object</returns>
-        public Object SalvarServicoSMSConta (long? id, SMSContaPersist smsContaPersist)
+        public Object SalvarServicoSMSParaConta (long? id, SMSContaPersist smsContaPersist)
         {
-             ApiResponse<Object> localVarResponse = SalvarServicoSMSContaWithHttpInfo(id, smsContaPersist);
+             ApiResponse<Object> localVarResponse = SalvarServicoSMSParaContaWithHttpInfo(id, smsContaPersist);
              return localVarResponse.Data;
         }
 
@@ -1119,16 +1119,16 @@ namespace Conductor.Pier.Api
         /// <param name="id">id</param> 
         /// <param name="smsContaPersist">smsContaPersist</param> 
         /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > SalvarServicoSMSContaWithHttpInfo (long? id, SMSContaPersist smsContaPersist)
+        public ApiResponse< Object > SalvarServicoSMSParaContaWithHttpInfo (long? id, SMSContaPersist smsContaPersist)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling SMSApi->SalvarServicoSMSConta");
+                throw new ApiException(400, "Missing required parameter 'id' when calling SMSApi->SalvarServicoSMSParaConta");
             
             // verify the required parameter 'smsContaPersist' is set
             if (smsContaPersist == null)
-                throw new ApiException(400, "Missing required parameter 'smsContaPersist' when calling SMSApi->SalvarServicoSMSConta");
+                throw new ApiException(400, "Missing required parameter 'smsContaPersist' when calling SMSApi->SalvarServicoSMSParaConta");
             
     
             var localVarPath = "/api/contas/{id}/servicos-sms";
@@ -1181,9 +1181,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarServicoSMSConta: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarServicoSMSParaConta: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarServicoSMSConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarServicoSMSParaConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1199,9 +1199,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">id</param>
         /// <param name="smsContaPersist">smsContaPersist</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> SalvarServicoSMSContaAsync (long? id, SMSContaPersist smsContaPersist)
+        public async System.Threading.Tasks.Task<Object> SalvarServicoSMSParaContaAsync (long? id, SMSContaPersist smsContaPersist)
         {
-             ApiResponse<Object> localVarResponse = await SalvarServicoSMSContaAsyncWithHttpInfo(id, smsContaPersist);
+             ApiResponse<Object> localVarResponse = await SalvarServicoSMSParaContaAsyncWithHttpInfo(id, smsContaPersist);
              return localVarResponse.Data;
 
         }
@@ -1213,12 +1213,12 @@ namespace Conductor.Pier.Api
         /// <param name="id">id</param>
         /// <param name="smsContaPersist">smsContaPersist</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> SalvarServicoSMSContaAsyncWithHttpInfo (long? id, SMSContaPersist smsContaPersist)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> SalvarServicoSMSParaContaAsyncWithHttpInfo (long? id, SMSContaPersist smsContaPersist)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling SalvarServicoSMSConta");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling SalvarServicoSMSParaConta");
             // verify the required parameter 'smsContaPersist' is set
-            if (smsContaPersist == null) throw new ApiException(400, "Missing required parameter 'smsContaPersist' when calling SalvarServicoSMSConta");
+            if (smsContaPersist == null) throw new ApiException(400, "Missing required parameter 'smsContaPersist' when calling SalvarServicoSMSParaConta");
             
     
             var localVarPath = "/api/contas/{id}/servicos-sms";
@@ -1271,9 +1271,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarServicoSMSConta: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarServicoSMSParaConta: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarServicoSMSConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarServicoSMSParaConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

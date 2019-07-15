@@ -24,15 +24,17 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <param name="Ativo">Indicador de status do favorito.</param>
         /// <param name="DddCelular">N\u00FAmero DDD do favorito.</param>
+        /// <param name="DescricaoOperadora">Descri\u00E7\u00E3o da operadora.</param>
         /// <param name="Id">Identificador do favorito.</param>
         /// <param name="IdConta">Identificador da conta.</param>
         /// <param name="Nome">Nome do favorito.</param>
         /// <param name="NumeroCelular">N\u00FAmero do celular do favorito.</param>
 
-        public RecargaCelularFavoritoResponse(bool? Ativo = null, string DddCelular = null, long? Id = null, long? IdConta = null, string Nome = null, string NumeroCelular = null)
+        public RecargaCelularFavoritoResponse(bool? Ativo = null, string DddCelular = null, string DescricaoOperadora = null, long? Id = null, long? IdConta = null, string Nome = null, string NumeroCelular = null)
         {
             this.Ativo = Ativo;
             this.DddCelular = DddCelular;
+            this.DescricaoOperadora = DescricaoOperadora;
             this.Id = Id;
             this.IdConta = IdConta;
             this.Nome = Nome;
@@ -54,6 +56,13 @@ namespace Conductor.Pier.Model
         /// <value>N\u00FAmero DDD do favorito</value>
         [DataMember(Name="dddCelular", EmitDefaultValue=false)]
         public string DddCelular { get; set; }
+    
+        /// <summary>
+        /// Descri\u00E7\u00E3o da operadora
+        /// </summary>
+        /// <value>Descri\u00E7\u00E3o da operadora</value>
+        [DataMember(Name="descricaoOperadora", EmitDefaultValue=false)]
+        public string DescricaoOperadora { get; set; }
     
         /// <summary>
         /// Identificador do favorito
@@ -93,6 +102,7 @@ namespace Conductor.Pier.Model
             sb.Append("class RecargaCelularFavoritoResponse {\n");
             sb.Append("  Ativo: ").Append(Ativo).Append("\n");
             sb.Append("  DddCelular: ").Append(DddCelular).Append("\n");
+            sb.Append("  DescricaoOperadora: ").Append(DescricaoOperadora).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  IdConta: ").Append(IdConta).Append("\n");
             sb.Append("  Nome: ").Append(Nome).Append("\n");
@@ -145,6 +155,11 @@ namespace Conductor.Pier.Model
                     this.DddCelular.Equals(other.DddCelular)
                 ) && 
                 (
+                    this.DescricaoOperadora == other.DescricaoOperadora ||
+                    this.DescricaoOperadora != null &&
+                    this.DescricaoOperadora.Equals(other.DescricaoOperadora)
+                ) && 
+                (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
@@ -183,6 +198,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.DddCelular != null)
                     hash = hash * 59 + this.DddCelular.GetHashCode();
+                
+                if (this.DescricaoOperadora != null)
+                    hash = hash * 59 + this.DescricaoOperadora.GetHashCode();
                 
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();

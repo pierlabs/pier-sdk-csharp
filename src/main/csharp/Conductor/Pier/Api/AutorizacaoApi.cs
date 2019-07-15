@@ -26,7 +26,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="autorizacaoOnUsRequest">autorizacaoOnUsRequest</param>
         /// <returns>TransacaoOnUsResponse</returns>
-        TransacaoOnUsResponse Autorizar (AutorizacaoOnUsRequest autorizacaoOnUsRequest);
+        TransacaoOnUsResponse AutorizarTransacao (AutorizacaoOnUsRequest autorizacaoOnUsRequest);
   
         /// <summary>
         /// Autoriza transa\u00E7\u00E3o financeira pelo numero do cart\u00E3o
@@ -37,31 +37,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="autorizacaoOnUsRequest">autorizacaoOnUsRequest</param>
         /// <returns>ApiResponse of TransacaoOnUsResponse</returns>
-        ApiResponse<TransacaoOnUsResponse> AutorizarWithHttpInfo (AutorizacaoOnUsRequest autorizacaoOnUsRequest);
-        
-        /// <summary>
-        /// Autoriza transa\u00E7\u00E3o financeira por idConta
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo faz uma autoriza\u00E7\u00E3o de transa\u00E7\u00E3o financeira com o idConta
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Id Conta</param>
-        /// <param name="transacaoOnUsPorIdCartaoRequest">transacaoOnUsPorIdCartaoRequest</param>
-        /// <returns>TransacaoOnUsResponse</returns>
-        TransacaoOnUsResponse AutorizarPorConta (long? id, TransacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest);
-  
-        /// <summary>
-        /// Autoriza transa\u00E7\u00E3o financeira por idConta
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo faz uma autoriza\u00E7\u00E3o de transa\u00E7\u00E3o financeira com o idConta
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Id Conta</param>
-        /// <param name="transacaoOnUsPorIdCartaoRequest">transacaoOnUsPorIdCartaoRequest</param>
-        /// <returns>ApiResponse of TransacaoOnUsResponse</returns>
-        ApiResponse<TransacaoOnUsResponse> AutorizarPorContaWithHttpInfo (long? id, TransacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest);
+        ApiResponse<TransacaoOnUsResponse> AutorizarTransacaoWithHttpInfo (AutorizacaoOnUsRequest autorizacaoOnUsRequest);
         
         /// <summary>
         /// Autoriza transa\u00E7\u00E3o financeira pelo idCartao
@@ -73,7 +49,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">Id Cartao</param>
         /// <param name="transacaoOnUsPorIdCartaoRequest">transacaoOnUsPorIdCartaoRequest</param>
         /// <returns>TransacaoOnUsResponse</returns>
-        TransacaoOnUsResponse Autorizar_0 (long? id, TransacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest);
+        TransacaoOnUsResponse AutorizarTransacaoPorCartao (long? id, TransacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest);
   
         /// <summary>
         /// Autoriza transa\u00E7\u00E3o financeira pelo idCartao
@@ -85,7 +61,31 @@ namespace Conductor.Pier.Api
         /// <param name="id">Id Cartao</param>
         /// <param name="transacaoOnUsPorIdCartaoRequest">transacaoOnUsPorIdCartaoRequest</param>
         /// <returns>ApiResponse of TransacaoOnUsResponse</returns>
-        ApiResponse<TransacaoOnUsResponse> Autorizar_0WithHttpInfo (long? id, TransacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest);
+        ApiResponse<TransacaoOnUsResponse> AutorizarTransacaoPorCartaoWithHttpInfo (long? id, TransacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest);
+        
+        /// <summary>
+        /// Autoriza transa\u00E7\u00E3o financeira por idConta
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo faz uma autoriza\u00E7\u00E3o de transa\u00E7\u00E3o financeira com o idConta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Id Conta</param>
+        /// <param name="transacaoOnUsPorIdCartaoRequest">transacaoOnUsPorIdCartaoRequest</param>
+        /// <returns>TransacaoOnUsResponse</returns>
+        TransacaoOnUsResponse AutorizarTransacaoPorConta (long? id, TransacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest);
+  
+        /// <summary>
+        /// Autoriza transa\u00E7\u00E3o financeira por idConta
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo faz uma autoriza\u00E7\u00E3o de transa\u00E7\u00E3o financeira com o idConta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Id Conta</param>
+        /// <param name="transacaoOnUsPorIdCartaoRequest">transacaoOnUsPorIdCartaoRequest</param>
+        /// <returns>ApiResponse of TransacaoOnUsResponse</returns>
+        ApiResponse<TransacaoOnUsResponse> AutorizarTransacaoPorContaWithHttpInfo (long? id, TransacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest);
         
         /// <summary>
         /// Cancela transa\u00E7\u00E3o financeira
@@ -96,7 +96,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancelamentoRequest">cancelamentoRequest</param>
         /// <returns>TransacaoOnUsResponse</returns>
-        TransacaoOnUsResponse Cancelar (CancelamentoTransacaoOnUsRequest cancelamentoRequest);
+        TransacaoOnUsResponse CancelarTransacao (CancelamentoTransacaoOnUsRequest cancelamentoRequest);
   
         /// <summary>
         /// Cancela transa\u00E7\u00E3o financeira
@@ -107,31 +107,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancelamentoRequest">cancelamentoRequest</param>
         /// <returns>ApiResponse of TransacaoOnUsResponse</returns>
-        ApiResponse<TransacaoOnUsResponse> CancelarWithHttpInfo (CancelamentoTransacaoOnUsRequest cancelamentoRequest);
-        
-        /// <summary>
-        /// Cancela transa\u00E7\u00E3o financeira por idConta
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite que seja cancelada uma transa\u00E7\u00E3o a partir do idConta
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Id Conta</param>
-        /// <param name="cancelamentoRequest">cancelamentoRequest</param>
-        /// <returns>TransacaoOnUsResponse</returns>
-        TransacaoOnUsResponse CancelarPorIdConta (long? id, CancelamentoTransacaoPorIdCartaoRequest cancelamentoRequest);
-  
-        /// <summary>
-        /// Cancela transa\u00E7\u00E3o financeira por idConta
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite que seja cancelada uma transa\u00E7\u00E3o a partir do idConta
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Id Conta</param>
-        /// <param name="cancelamentoRequest">cancelamentoRequest</param>
-        /// <returns>ApiResponse of TransacaoOnUsResponse</returns>
-        ApiResponse<TransacaoOnUsResponse> CancelarPorIdContaWithHttpInfo (long? id, CancelamentoTransacaoPorIdCartaoRequest cancelamentoRequest);
+        ApiResponse<TransacaoOnUsResponse> CancelarTransacaoWithHttpInfo (CancelamentoTransacaoOnUsRequest cancelamentoRequest);
         
         /// <summary>
         /// Cancela transa\u00E7\u00E3o financeira por idCartao
@@ -143,7 +119,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">Id Cartao</param>
         /// <param name="cancelamentoRequest">cancelamentoRequest</param>
         /// <returns>TransacaoOnUsResponse</returns>
-        TransacaoOnUsResponse Cancelar_0 (long? id, CancelamentoTransacaoPorIdCartaoRequest cancelamentoRequest);
+        TransacaoOnUsResponse CancelarTransacaoPorCartao (long? id, CancelamentoTransacaoPorIdCartaoRequest cancelamentoRequest);
   
         /// <summary>
         /// Cancela transa\u00E7\u00E3o financeira por idCartao
@@ -155,7 +131,31 @@ namespace Conductor.Pier.Api
         /// <param name="id">Id Cartao</param>
         /// <param name="cancelamentoRequest">cancelamentoRequest</param>
         /// <returns>ApiResponse of TransacaoOnUsResponse</returns>
-        ApiResponse<TransacaoOnUsResponse> Cancelar_0WithHttpInfo (long? id, CancelamentoTransacaoPorIdCartaoRequest cancelamentoRequest);
+        ApiResponse<TransacaoOnUsResponse> CancelarTransacaoPorCartaoWithHttpInfo (long? id, CancelamentoTransacaoPorIdCartaoRequest cancelamentoRequest);
+        
+        /// <summary>
+        /// Cancela transa\u00E7\u00E3o financeira por idConta
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que seja cancelada uma transa\u00E7\u00E3o a partir do idConta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Id Conta</param>
+        /// <param name="cancelamentoRequest">cancelamentoRequest</param>
+        /// <returns>TransacaoOnUsResponse</returns>
+        TransacaoOnUsResponse CancelarTransacaoPorConta (long? id, CancelamentoTransacaoPorIdCartaoRequest cancelamentoRequest);
+  
+        /// <summary>
+        /// Cancela transa\u00E7\u00E3o financeira por idConta
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que seja cancelada uma transa\u00E7\u00E3o a partir do idConta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Id Conta</param>
+        /// <param name="cancelamentoRequest">cancelamentoRequest</param>
+        /// <returns>ApiResponse of TransacaoOnUsResponse</returns>
+        ApiResponse<TransacaoOnUsResponse> CancelarTransacaoPorContaWithHttpInfo (long? id, CancelamentoTransacaoPorIdCartaoRequest cancelamentoRequest);
         
         /// <summary>
         /// Retorna c\u00F3digos de processamento de autoriza\u00E7\u00E3o
@@ -165,7 +165,7 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List&lt;Object&gt;</returns>
-        List<Object> ListarCodigosProcessamentoAutorizacao ();
+        List<Object> ConsultarCodigosProcessamentoAutorizacao ();
   
         /// <summary>
         /// Retorna c\u00F3digos de processamento de autoriza\u00E7\u00E3o
@@ -175,7 +175,7 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List&lt;Object&gt;</returns>
-        ApiResponse<List<Object>> ListarCodigosProcessamentoAutorizacaoWithHttpInfo ();
+        ApiResponse<List<Object>> ConsultarCodigosProcessamentoAutorizacaoWithHttpInfo ();
         
         /// <summary>
         /// Lista os tipos de transa\u00E7\u00F5es
@@ -206,7 +206,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transacoesRequest">transacoesRequest</param>
         /// <returns>TransacaoOnUsResponse</returns>
-        TransacaoOnUsResponse Simular (TransacaoOnUsRequest transacoesRequest);
+        TransacaoOnUsResponse SimularTransacao (TransacaoOnUsRequest transacoesRequest);
   
         /// <summary>
         /// Simula planos de transa\u00E7\u00F5es
@@ -217,7 +217,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transacoesRequest">transacoesRequest</param>
         /// <returns>ApiResponse of TransacaoOnUsResponse</returns>
-        ApiResponse<TransacaoOnUsResponse> SimularWithHttpInfo (TransacaoOnUsRequest transacoesRequest);
+        ApiResponse<TransacaoOnUsResponse> SimularTransacaoWithHttpInfo (TransacaoOnUsRequest transacoesRequest);
         
         #endregion Synchronous Operations
         
@@ -232,7 +232,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="autorizacaoOnUsRequest">autorizacaoOnUsRequest</param>
         /// <returns>Task of TransacaoOnUsResponse</returns>
-        System.Threading.Tasks.Task<TransacaoOnUsResponse> AutorizarAsync (AutorizacaoOnUsRequest autorizacaoOnUsRequest);
+        System.Threading.Tasks.Task<TransacaoOnUsResponse> AutorizarTransacaoAsync (AutorizacaoOnUsRequest autorizacaoOnUsRequest);
 
         /// <summary>
         /// Autoriza transa\u00E7\u00E3o financeira pelo numero do cart\u00E3o
@@ -243,31 +243,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="autorizacaoOnUsRequest">autorizacaoOnUsRequest</param>
         /// <returns>Task of ApiResponse (TransacaoOnUsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TransacaoOnUsResponse>> AutorizarAsyncWithHttpInfo (AutorizacaoOnUsRequest autorizacaoOnUsRequest);
-        
-        /// <summary>
-        /// Autoriza transa\u00E7\u00E3o financeira por idConta
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo faz uma autoriza\u00E7\u00E3o de transa\u00E7\u00E3o financeira com o idConta
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Id Conta</param>
-        /// <param name="transacaoOnUsPorIdCartaoRequest">transacaoOnUsPorIdCartaoRequest</param>
-        /// <returns>Task of TransacaoOnUsResponse</returns>
-        System.Threading.Tasks.Task<TransacaoOnUsResponse> AutorizarPorContaAsync (long? id, TransacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest);
-
-        /// <summary>
-        /// Autoriza transa\u00E7\u00E3o financeira por idConta
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo faz uma autoriza\u00E7\u00E3o de transa\u00E7\u00E3o financeira com o idConta
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Id Conta</param>
-        /// <param name="transacaoOnUsPorIdCartaoRequest">transacaoOnUsPorIdCartaoRequest</param>
-        /// <returns>Task of ApiResponse (TransacaoOnUsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TransacaoOnUsResponse>> AutorizarPorContaAsyncWithHttpInfo (long? id, TransacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest);
+        System.Threading.Tasks.Task<ApiResponse<TransacaoOnUsResponse>> AutorizarTransacaoAsyncWithHttpInfo (AutorizacaoOnUsRequest autorizacaoOnUsRequest);
         
         /// <summary>
         /// Autoriza transa\u00E7\u00E3o financeira pelo idCartao
@@ -279,7 +255,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">Id Cartao</param>
         /// <param name="transacaoOnUsPorIdCartaoRequest">transacaoOnUsPorIdCartaoRequest</param>
         /// <returns>Task of TransacaoOnUsResponse</returns>
-        System.Threading.Tasks.Task<TransacaoOnUsResponse> Autorizar_0Async (long? id, TransacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest);
+        System.Threading.Tasks.Task<TransacaoOnUsResponse> AutorizarTransacaoPorCartaoAsync (long? id, TransacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest);
 
         /// <summary>
         /// Autoriza transa\u00E7\u00E3o financeira pelo idCartao
@@ -291,7 +267,31 @@ namespace Conductor.Pier.Api
         /// <param name="id">Id Cartao</param>
         /// <param name="transacaoOnUsPorIdCartaoRequest">transacaoOnUsPorIdCartaoRequest</param>
         /// <returns>Task of ApiResponse (TransacaoOnUsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TransacaoOnUsResponse>> Autorizar_0AsyncWithHttpInfo (long? id, TransacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest);
+        System.Threading.Tasks.Task<ApiResponse<TransacaoOnUsResponse>> AutorizarTransacaoPorCartaoAsyncWithHttpInfo (long? id, TransacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest);
+        
+        /// <summary>
+        /// Autoriza transa\u00E7\u00E3o financeira por idConta
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo faz uma autoriza\u00E7\u00E3o de transa\u00E7\u00E3o financeira com o idConta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Id Conta</param>
+        /// <param name="transacaoOnUsPorIdCartaoRequest">transacaoOnUsPorIdCartaoRequest</param>
+        /// <returns>Task of TransacaoOnUsResponse</returns>
+        System.Threading.Tasks.Task<TransacaoOnUsResponse> AutorizarTransacaoPorContaAsync (long? id, TransacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest);
+
+        /// <summary>
+        /// Autoriza transa\u00E7\u00E3o financeira por idConta
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo faz uma autoriza\u00E7\u00E3o de transa\u00E7\u00E3o financeira com o idConta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Id Conta</param>
+        /// <param name="transacaoOnUsPorIdCartaoRequest">transacaoOnUsPorIdCartaoRequest</param>
+        /// <returns>Task of ApiResponse (TransacaoOnUsResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TransacaoOnUsResponse>> AutorizarTransacaoPorContaAsyncWithHttpInfo (long? id, TransacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest);
         
         /// <summary>
         /// Cancela transa\u00E7\u00E3o financeira
@@ -302,7 +302,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancelamentoRequest">cancelamentoRequest</param>
         /// <returns>Task of TransacaoOnUsResponse</returns>
-        System.Threading.Tasks.Task<TransacaoOnUsResponse> CancelarAsync (CancelamentoTransacaoOnUsRequest cancelamentoRequest);
+        System.Threading.Tasks.Task<TransacaoOnUsResponse> CancelarTransacaoAsync (CancelamentoTransacaoOnUsRequest cancelamentoRequest);
 
         /// <summary>
         /// Cancela transa\u00E7\u00E3o financeira
@@ -313,31 +313,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancelamentoRequest">cancelamentoRequest</param>
         /// <returns>Task of ApiResponse (TransacaoOnUsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TransacaoOnUsResponse>> CancelarAsyncWithHttpInfo (CancelamentoTransacaoOnUsRequest cancelamentoRequest);
-        
-        /// <summary>
-        /// Cancela transa\u00E7\u00E3o financeira por idConta
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite que seja cancelada uma transa\u00E7\u00E3o a partir do idConta
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Id Conta</param>
-        /// <param name="cancelamentoRequest">cancelamentoRequest</param>
-        /// <returns>Task of TransacaoOnUsResponse</returns>
-        System.Threading.Tasks.Task<TransacaoOnUsResponse> CancelarPorIdContaAsync (long? id, CancelamentoTransacaoPorIdCartaoRequest cancelamentoRequest);
-
-        /// <summary>
-        /// Cancela transa\u00E7\u00E3o financeira por idConta
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite que seja cancelada uma transa\u00E7\u00E3o a partir do idConta
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Id Conta</param>
-        /// <param name="cancelamentoRequest">cancelamentoRequest</param>
-        /// <returns>Task of ApiResponse (TransacaoOnUsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TransacaoOnUsResponse>> CancelarPorIdContaAsyncWithHttpInfo (long? id, CancelamentoTransacaoPorIdCartaoRequest cancelamentoRequest);
+        System.Threading.Tasks.Task<ApiResponse<TransacaoOnUsResponse>> CancelarTransacaoAsyncWithHttpInfo (CancelamentoTransacaoOnUsRequest cancelamentoRequest);
         
         /// <summary>
         /// Cancela transa\u00E7\u00E3o financeira por idCartao
@@ -349,7 +325,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">Id Cartao</param>
         /// <param name="cancelamentoRequest">cancelamentoRequest</param>
         /// <returns>Task of TransacaoOnUsResponse</returns>
-        System.Threading.Tasks.Task<TransacaoOnUsResponse> Cancelar_0Async (long? id, CancelamentoTransacaoPorIdCartaoRequest cancelamentoRequest);
+        System.Threading.Tasks.Task<TransacaoOnUsResponse> CancelarTransacaoPorCartaoAsync (long? id, CancelamentoTransacaoPorIdCartaoRequest cancelamentoRequest);
 
         /// <summary>
         /// Cancela transa\u00E7\u00E3o financeira por idCartao
@@ -361,7 +337,31 @@ namespace Conductor.Pier.Api
         /// <param name="id">Id Cartao</param>
         /// <param name="cancelamentoRequest">cancelamentoRequest</param>
         /// <returns>Task of ApiResponse (TransacaoOnUsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TransacaoOnUsResponse>> Cancelar_0AsyncWithHttpInfo (long? id, CancelamentoTransacaoPorIdCartaoRequest cancelamentoRequest);
+        System.Threading.Tasks.Task<ApiResponse<TransacaoOnUsResponse>> CancelarTransacaoPorCartaoAsyncWithHttpInfo (long? id, CancelamentoTransacaoPorIdCartaoRequest cancelamentoRequest);
+        
+        /// <summary>
+        /// Cancela transa\u00E7\u00E3o financeira por idConta
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que seja cancelada uma transa\u00E7\u00E3o a partir do idConta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Id Conta</param>
+        /// <param name="cancelamentoRequest">cancelamentoRequest</param>
+        /// <returns>Task of TransacaoOnUsResponse</returns>
+        System.Threading.Tasks.Task<TransacaoOnUsResponse> CancelarTransacaoPorContaAsync (long? id, CancelamentoTransacaoPorIdCartaoRequest cancelamentoRequest);
+
+        /// <summary>
+        /// Cancela transa\u00E7\u00E3o financeira por idConta
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que seja cancelada uma transa\u00E7\u00E3o a partir do idConta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Id Conta</param>
+        /// <param name="cancelamentoRequest">cancelamentoRequest</param>
+        /// <returns>Task of ApiResponse (TransacaoOnUsResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TransacaoOnUsResponse>> CancelarTransacaoPorContaAsyncWithHttpInfo (long? id, CancelamentoTransacaoPorIdCartaoRequest cancelamentoRequest);
         
         /// <summary>
         /// Retorna c\u00F3digos de processamento de autoriza\u00E7\u00E3o
@@ -371,7 +371,7 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of List&lt;Object&gt;</returns>
-        System.Threading.Tasks.Task<List<Object>> ListarCodigosProcessamentoAutorizacaoAsync ();
+        System.Threading.Tasks.Task<List<Object>> ConsultarCodigosProcessamentoAutorizacaoAsync ();
 
         /// <summary>
         /// Retorna c\u00F3digos de processamento de autoriza\u00E7\u00E3o
@@ -381,7 +381,7 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (List&lt;Object&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<Object>>> ListarCodigosProcessamentoAutorizacaoAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<List<Object>>> ConsultarCodigosProcessamentoAutorizacaoAsyncWithHttpInfo ();
         
         /// <summary>
         /// Lista os tipos de transa\u00E7\u00F5es
@@ -412,7 +412,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transacoesRequest">transacoesRequest</param>
         /// <returns>Task of TransacaoOnUsResponse</returns>
-        System.Threading.Tasks.Task<TransacaoOnUsResponse> SimularAsync (TransacaoOnUsRequest transacoesRequest);
+        System.Threading.Tasks.Task<TransacaoOnUsResponse> SimularTransacaoAsync (TransacaoOnUsRequest transacoesRequest);
 
         /// <summary>
         /// Simula planos de transa\u00E7\u00F5es
@@ -423,7 +423,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transacoesRequest">transacoesRequest</param>
         /// <returns>Task of ApiResponse (TransacaoOnUsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TransacaoOnUsResponse>> SimularAsyncWithHttpInfo (TransacaoOnUsRequest transacoesRequest);
+        System.Threading.Tasks.Task<ApiResponse<TransacaoOnUsResponse>> SimularTransacaoAsyncWithHttpInfo (TransacaoOnUsRequest transacoesRequest);
         
         #endregion Asynchronous Operations
         
@@ -523,9 +523,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="autorizacaoOnUsRequest">autorizacaoOnUsRequest</param> 
         /// <returns>TransacaoOnUsResponse</returns>
-        public TransacaoOnUsResponse Autorizar (AutorizacaoOnUsRequest autorizacaoOnUsRequest)
+        public TransacaoOnUsResponse AutorizarTransacao (AutorizacaoOnUsRequest autorizacaoOnUsRequest)
         {
-             ApiResponse<TransacaoOnUsResponse> localVarResponse = AutorizarWithHttpInfo(autorizacaoOnUsRequest);
+             ApiResponse<TransacaoOnUsResponse> localVarResponse = AutorizarTransacaoWithHttpInfo(autorizacaoOnUsRequest);
              return localVarResponse.Data;
         }
 
@@ -535,12 +535,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="autorizacaoOnUsRequest">autorizacaoOnUsRequest</param> 
         /// <returns>ApiResponse of TransacaoOnUsResponse</returns>
-        public ApiResponse< TransacaoOnUsResponse > AutorizarWithHttpInfo (AutorizacaoOnUsRequest autorizacaoOnUsRequest)
+        public ApiResponse< TransacaoOnUsResponse > AutorizarTransacaoWithHttpInfo (AutorizacaoOnUsRequest autorizacaoOnUsRequest)
         {
             
             // verify the required parameter 'autorizacaoOnUsRequest' is set
             if (autorizacaoOnUsRequest == null)
-                throw new ApiException(400, "Missing required parameter 'autorizacaoOnUsRequest' when calling AutorizacaoApi->Autorizar");
+                throw new ApiException(400, "Missing required parameter 'autorizacaoOnUsRequest' when calling AutorizacaoApi->AutorizarTransacao");
             
     
             var localVarPath = "/api/autorizar-transacao";
@@ -592,9 +592,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Autorizar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling AutorizarTransacao: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Autorizar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling AutorizarTransacao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<TransacaoOnUsResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -609,9 +609,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="autorizacaoOnUsRequest">autorizacaoOnUsRequest</param>
         /// <returns>Task of TransacaoOnUsResponse</returns>
-        public async System.Threading.Tasks.Task<TransacaoOnUsResponse> AutorizarAsync (AutorizacaoOnUsRequest autorizacaoOnUsRequest)
+        public async System.Threading.Tasks.Task<TransacaoOnUsResponse> AutorizarTransacaoAsync (AutorizacaoOnUsRequest autorizacaoOnUsRequest)
         {
-             ApiResponse<TransacaoOnUsResponse> localVarResponse = await AutorizarAsyncWithHttpInfo(autorizacaoOnUsRequest);
+             ApiResponse<TransacaoOnUsResponse> localVarResponse = await AutorizarTransacaoAsyncWithHttpInfo(autorizacaoOnUsRequest);
              return localVarResponse.Data;
 
         }
@@ -622,10 +622,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="autorizacaoOnUsRequest">autorizacaoOnUsRequest</param>
         /// <returns>Task of ApiResponse (TransacaoOnUsResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TransacaoOnUsResponse>> AutorizarAsyncWithHttpInfo (AutorizacaoOnUsRequest autorizacaoOnUsRequest)
+        public async System.Threading.Tasks.Task<ApiResponse<TransacaoOnUsResponse>> AutorizarTransacaoAsyncWithHttpInfo (AutorizacaoOnUsRequest autorizacaoOnUsRequest)
         {
             // verify the required parameter 'autorizacaoOnUsRequest' is set
-            if (autorizacaoOnUsRequest == null) throw new ApiException(400, "Missing required parameter 'autorizacaoOnUsRequest' when calling Autorizar");
+            if (autorizacaoOnUsRequest == null) throw new ApiException(400, "Missing required parameter 'autorizacaoOnUsRequest' when calling AutorizarTransacao");
             
     
             var localVarPath = "/api/autorizar-transacao";
@@ -677,191 +677,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Autorizar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling AutorizarTransacao: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Autorizar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<TransacaoOnUsResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TransacaoOnUsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TransacaoOnUsResponse)));
-            
-        }
-        
-        /// <summary>
-        /// Autoriza transa\u00E7\u00E3o financeira por idConta Este m\u00E9todo faz uma autoriza\u00E7\u00E3o de transa\u00E7\u00E3o financeira com o idConta
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Id Conta</param> 
-        /// <param name="transacaoOnUsPorIdCartaoRequest">transacaoOnUsPorIdCartaoRequest</param> 
-        /// <returns>TransacaoOnUsResponse</returns>
-        public TransacaoOnUsResponse AutorizarPorConta (long? id, TransacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest)
-        {
-             ApiResponse<TransacaoOnUsResponse> localVarResponse = AutorizarPorContaWithHttpInfo(id, transacaoOnUsPorIdCartaoRequest);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Autoriza transa\u00E7\u00E3o financeira por idConta Este m\u00E9todo faz uma autoriza\u00E7\u00E3o de transa\u00E7\u00E3o financeira com o idConta
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Id Conta</param> 
-        /// <param name="transacaoOnUsPorIdCartaoRequest">transacaoOnUsPorIdCartaoRequest</param> 
-        /// <returns>ApiResponse of TransacaoOnUsResponse</returns>
-        public ApiResponse< TransacaoOnUsResponse > AutorizarPorContaWithHttpInfo (long? id, TransacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest)
-        {
-            
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling AutorizacaoApi->AutorizarPorConta");
-            
-            // verify the required parameter 'transacaoOnUsPorIdCartaoRequest' is set
-            if (transacaoOnUsPorIdCartaoRequest == null)
-                throw new ApiException(400, "Missing required parameter 'transacaoOnUsPorIdCartaoRequest' when calling AutorizacaoApi->AutorizarPorConta");
-            
-    
-            var localVarPath = "/api/contas/{id}/autorizar-transacao";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            
-            
-            
-            
-            if (transacaoOnUsPorIdCartaoRequest.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(transacaoOnUsPorIdCartaoRequest); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = transacaoOnUsPorIdCartaoRequest; // byte array
-            }
-
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling AutorizarPorConta: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling AutorizarPorConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<TransacaoOnUsResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TransacaoOnUsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TransacaoOnUsResponse)));
-            
-        }
-
-        
-        /// <summary>
-        /// Autoriza transa\u00E7\u00E3o financeira por idConta Este m\u00E9todo faz uma autoriza\u00E7\u00E3o de transa\u00E7\u00E3o financeira com o idConta
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Id Conta</param>
-        /// <param name="transacaoOnUsPorIdCartaoRequest">transacaoOnUsPorIdCartaoRequest</param>
-        /// <returns>Task of TransacaoOnUsResponse</returns>
-        public async System.Threading.Tasks.Task<TransacaoOnUsResponse> AutorizarPorContaAsync (long? id, TransacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest)
-        {
-             ApiResponse<TransacaoOnUsResponse> localVarResponse = await AutorizarPorContaAsyncWithHttpInfo(id, transacaoOnUsPorIdCartaoRequest);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Autoriza transa\u00E7\u00E3o financeira por idConta Este m\u00E9todo faz uma autoriza\u00E7\u00E3o de transa\u00E7\u00E3o financeira com o idConta
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Id Conta</param>
-        /// <param name="transacaoOnUsPorIdCartaoRequest">transacaoOnUsPorIdCartaoRequest</param>
-        /// <returns>Task of ApiResponse (TransacaoOnUsResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TransacaoOnUsResponse>> AutorizarPorContaAsyncWithHttpInfo (long? id, TransacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest)
-        {
-            // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AutorizarPorConta");
-            // verify the required parameter 'transacaoOnUsPorIdCartaoRequest' is set
-            if (transacaoOnUsPorIdCartaoRequest == null) throw new ApiException(400, "Missing required parameter 'transacaoOnUsPorIdCartaoRequest' when calling AutorizarPorConta");
-            
-    
-            var localVarPath = "/api/contas/{id}/autorizar-transacao";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            
-            
-            
-            
-            if (transacaoOnUsPorIdCartaoRequest.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(transacaoOnUsPorIdCartaoRequest); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = transacaoOnUsPorIdCartaoRequest; // byte array
-            }
-
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling AutorizarPorConta: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling AutorizarPorConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling AutorizarTransacao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<TransacaoOnUsResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -876,9 +694,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">Id Cartao</param> 
         /// <param name="transacaoOnUsPorIdCartaoRequest">transacaoOnUsPorIdCartaoRequest</param> 
         /// <returns>TransacaoOnUsResponse</returns>
-        public TransacaoOnUsResponse Autorizar_0 (long? id, TransacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest)
+        public TransacaoOnUsResponse AutorizarTransacaoPorCartao (long? id, TransacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest)
         {
-             ApiResponse<TransacaoOnUsResponse> localVarResponse = Autorizar_0WithHttpInfo(id, transacaoOnUsPorIdCartaoRequest);
+             ApiResponse<TransacaoOnUsResponse> localVarResponse = AutorizarTransacaoPorCartaoWithHttpInfo(id, transacaoOnUsPorIdCartaoRequest);
              return localVarResponse.Data;
         }
 
@@ -889,16 +707,16 @@ namespace Conductor.Pier.Api
         /// <param name="id">Id Cartao</param> 
         /// <param name="transacaoOnUsPorIdCartaoRequest">transacaoOnUsPorIdCartaoRequest</param> 
         /// <returns>ApiResponse of TransacaoOnUsResponse</returns>
-        public ApiResponse< TransacaoOnUsResponse > Autorizar_0WithHttpInfo (long? id, TransacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest)
+        public ApiResponse< TransacaoOnUsResponse > AutorizarTransacaoPorCartaoWithHttpInfo (long? id, TransacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling AutorizacaoApi->Autorizar_0");
+                throw new ApiException(400, "Missing required parameter 'id' when calling AutorizacaoApi->AutorizarTransacaoPorCartao");
             
             // verify the required parameter 'transacaoOnUsPorIdCartaoRequest' is set
             if (transacaoOnUsPorIdCartaoRequest == null)
-                throw new ApiException(400, "Missing required parameter 'transacaoOnUsPorIdCartaoRequest' when calling AutorizacaoApi->Autorizar_0");
+                throw new ApiException(400, "Missing required parameter 'transacaoOnUsPorIdCartaoRequest' when calling AutorizacaoApi->AutorizarTransacaoPorCartao");
             
     
             var localVarPath = "/api/cartoes/{id}/autorizar-transacao";
@@ -951,9 +769,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Autorizar_0: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling AutorizarTransacaoPorCartao: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Autorizar_0: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling AutorizarTransacaoPorCartao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<TransacaoOnUsResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -969,9 +787,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">Id Cartao</param>
         /// <param name="transacaoOnUsPorIdCartaoRequest">transacaoOnUsPorIdCartaoRequest</param>
         /// <returns>Task of TransacaoOnUsResponse</returns>
-        public async System.Threading.Tasks.Task<TransacaoOnUsResponse> Autorizar_0Async (long? id, TransacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest)
+        public async System.Threading.Tasks.Task<TransacaoOnUsResponse> AutorizarTransacaoPorCartaoAsync (long? id, TransacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest)
         {
-             ApiResponse<TransacaoOnUsResponse> localVarResponse = await Autorizar_0AsyncWithHttpInfo(id, transacaoOnUsPorIdCartaoRequest);
+             ApiResponse<TransacaoOnUsResponse> localVarResponse = await AutorizarTransacaoPorCartaoAsyncWithHttpInfo(id, transacaoOnUsPorIdCartaoRequest);
              return localVarResponse.Data;
 
         }
@@ -983,12 +801,12 @@ namespace Conductor.Pier.Api
         /// <param name="id">Id Cartao</param>
         /// <param name="transacaoOnUsPorIdCartaoRequest">transacaoOnUsPorIdCartaoRequest</param>
         /// <returns>Task of ApiResponse (TransacaoOnUsResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TransacaoOnUsResponse>> Autorizar_0AsyncWithHttpInfo (long? id, TransacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest)
+        public async System.Threading.Tasks.Task<ApiResponse<TransacaoOnUsResponse>> AutorizarTransacaoPorCartaoAsyncWithHttpInfo (long? id, TransacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling Autorizar_0");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AutorizarTransacaoPorCartao");
             // verify the required parameter 'transacaoOnUsPorIdCartaoRequest' is set
-            if (transacaoOnUsPorIdCartaoRequest == null) throw new ApiException(400, "Missing required parameter 'transacaoOnUsPorIdCartaoRequest' when calling Autorizar_0");
+            if (transacaoOnUsPorIdCartaoRequest == null) throw new ApiException(400, "Missing required parameter 'transacaoOnUsPorIdCartaoRequest' when calling AutorizarTransacaoPorCartao");
             
     
             var localVarPath = "/api/cartoes/{id}/autorizar-transacao";
@@ -1041,9 +859,191 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Autorizar_0: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling AutorizarTransacaoPorCartao: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Autorizar_0: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling AutorizarTransacaoPorCartao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TransacaoOnUsResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (TransacaoOnUsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TransacaoOnUsResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Autoriza transa\u00E7\u00E3o financeira por idConta Este m\u00E9todo faz uma autoriza\u00E7\u00E3o de transa\u00E7\u00E3o financeira com o idConta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Id Conta</param> 
+        /// <param name="transacaoOnUsPorIdCartaoRequest">transacaoOnUsPorIdCartaoRequest</param> 
+        /// <returns>TransacaoOnUsResponse</returns>
+        public TransacaoOnUsResponse AutorizarTransacaoPorConta (long? id, TransacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest)
+        {
+             ApiResponse<TransacaoOnUsResponse> localVarResponse = AutorizarTransacaoPorContaWithHttpInfo(id, transacaoOnUsPorIdCartaoRequest);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Autoriza transa\u00E7\u00E3o financeira por idConta Este m\u00E9todo faz uma autoriza\u00E7\u00E3o de transa\u00E7\u00E3o financeira com o idConta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Id Conta</param> 
+        /// <param name="transacaoOnUsPorIdCartaoRequest">transacaoOnUsPorIdCartaoRequest</param> 
+        /// <returns>ApiResponse of TransacaoOnUsResponse</returns>
+        public ApiResponse< TransacaoOnUsResponse > AutorizarTransacaoPorContaWithHttpInfo (long? id, TransacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling AutorizacaoApi->AutorizarTransacaoPorConta");
+            
+            // verify the required parameter 'transacaoOnUsPorIdCartaoRequest' is set
+            if (transacaoOnUsPorIdCartaoRequest == null)
+                throw new ApiException(400, "Missing required parameter 'transacaoOnUsPorIdCartaoRequest' when calling AutorizacaoApi->AutorizarTransacaoPorConta");
+            
+    
+            var localVarPath = "/api/contas/{id}/autorizar-transacao";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            if (transacaoOnUsPorIdCartaoRequest.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(transacaoOnUsPorIdCartaoRequest); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = transacaoOnUsPorIdCartaoRequest; // byte array
+            }
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling AutorizarTransacaoPorConta: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling AutorizarTransacaoPorConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<TransacaoOnUsResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (TransacaoOnUsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TransacaoOnUsResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Autoriza transa\u00E7\u00E3o financeira por idConta Este m\u00E9todo faz uma autoriza\u00E7\u00E3o de transa\u00E7\u00E3o financeira com o idConta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Id Conta</param>
+        /// <param name="transacaoOnUsPorIdCartaoRequest">transacaoOnUsPorIdCartaoRequest</param>
+        /// <returns>Task of TransacaoOnUsResponse</returns>
+        public async System.Threading.Tasks.Task<TransacaoOnUsResponse> AutorizarTransacaoPorContaAsync (long? id, TransacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest)
+        {
+             ApiResponse<TransacaoOnUsResponse> localVarResponse = await AutorizarTransacaoPorContaAsyncWithHttpInfo(id, transacaoOnUsPorIdCartaoRequest);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Autoriza transa\u00E7\u00E3o financeira por idConta Este m\u00E9todo faz uma autoriza\u00E7\u00E3o de transa\u00E7\u00E3o financeira com o idConta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Id Conta</param>
+        /// <param name="transacaoOnUsPorIdCartaoRequest">transacaoOnUsPorIdCartaoRequest</param>
+        /// <returns>Task of ApiResponse (TransacaoOnUsResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<TransacaoOnUsResponse>> AutorizarTransacaoPorContaAsyncWithHttpInfo (long? id, TransacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AutorizarTransacaoPorConta");
+            // verify the required parameter 'transacaoOnUsPorIdCartaoRequest' is set
+            if (transacaoOnUsPorIdCartaoRequest == null) throw new ApiException(400, "Missing required parameter 'transacaoOnUsPorIdCartaoRequest' when calling AutorizarTransacaoPorConta");
+            
+    
+            var localVarPath = "/api/contas/{id}/autorizar-transacao";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            if (transacaoOnUsPorIdCartaoRequest.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(transacaoOnUsPorIdCartaoRequest); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = transacaoOnUsPorIdCartaoRequest; // byte array
+            }
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling AutorizarTransacaoPorConta: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling AutorizarTransacaoPorConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<TransacaoOnUsResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1057,9 +1057,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancelamentoRequest">cancelamentoRequest</param> 
         /// <returns>TransacaoOnUsResponse</returns>
-        public TransacaoOnUsResponse Cancelar (CancelamentoTransacaoOnUsRequest cancelamentoRequest)
+        public TransacaoOnUsResponse CancelarTransacao (CancelamentoTransacaoOnUsRequest cancelamentoRequest)
         {
-             ApiResponse<TransacaoOnUsResponse> localVarResponse = CancelarWithHttpInfo(cancelamentoRequest);
+             ApiResponse<TransacaoOnUsResponse> localVarResponse = CancelarTransacaoWithHttpInfo(cancelamentoRequest);
              return localVarResponse.Data;
         }
 
@@ -1069,12 +1069,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancelamentoRequest">cancelamentoRequest</param> 
         /// <returns>ApiResponse of TransacaoOnUsResponse</returns>
-        public ApiResponse< TransacaoOnUsResponse > CancelarWithHttpInfo (CancelamentoTransacaoOnUsRequest cancelamentoRequest)
+        public ApiResponse< TransacaoOnUsResponse > CancelarTransacaoWithHttpInfo (CancelamentoTransacaoOnUsRequest cancelamentoRequest)
         {
             
             // verify the required parameter 'cancelamentoRequest' is set
             if (cancelamentoRequest == null)
-                throw new ApiException(400, "Missing required parameter 'cancelamentoRequest' when calling AutorizacaoApi->Cancelar");
+                throw new ApiException(400, "Missing required parameter 'cancelamentoRequest' when calling AutorizacaoApi->CancelarTransacao");
             
     
             var localVarPath = "/api/cancelar-transacao";
@@ -1126,9 +1126,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Cancelar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling CancelarTransacao: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Cancelar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling CancelarTransacao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<TransacaoOnUsResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1143,9 +1143,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancelamentoRequest">cancelamentoRequest</param>
         /// <returns>Task of TransacaoOnUsResponse</returns>
-        public async System.Threading.Tasks.Task<TransacaoOnUsResponse> CancelarAsync (CancelamentoTransacaoOnUsRequest cancelamentoRequest)
+        public async System.Threading.Tasks.Task<TransacaoOnUsResponse> CancelarTransacaoAsync (CancelamentoTransacaoOnUsRequest cancelamentoRequest)
         {
-             ApiResponse<TransacaoOnUsResponse> localVarResponse = await CancelarAsyncWithHttpInfo(cancelamentoRequest);
+             ApiResponse<TransacaoOnUsResponse> localVarResponse = await CancelarTransacaoAsyncWithHttpInfo(cancelamentoRequest);
              return localVarResponse.Data;
 
         }
@@ -1156,10 +1156,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancelamentoRequest">cancelamentoRequest</param>
         /// <returns>Task of ApiResponse (TransacaoOnUsResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TransacaoOnUsResponse>> CancelarAsyncWithHttpInfo (CancelamentoTransacaoOnUsRequest cancelamentoRequest)
+        public async System.Threading.Tasks.Task<ApiResponse<TransacaoOnUsResponse>> CancelarTransacaoAsyncWithHttpInfo (CancelamentoTransacaoOnUsRequest cancelamentoRequest)
         {
             // verify the required parameter 'cancelamentoRequest' is set
-            if (cancelamentoRequest == null) throw new ApiException(400, "Missing required parameter 'cancelamentoRequest' when calling Cancelar");
+            if (cancelamentoRequest == null) throw new ApiException(400, "Missing required parameter 'cancelamentoRequest' when calling CancelarTransacao");
             
     
             var localVarPath = "/api/cancelar-transacao";
@@ -1211,191 +1211,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Cancelar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling CancelarTransacao: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Cancelar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<TransacaoOnUsResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TransacaoOnUsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TransacaoOnUsResponse)));
-            
-        }
-        
-        /// <summary>
-        /// Cancela transa\u00E7\u00E3o financeira por idConta Este m\u00E9todo permite que seja cancelada uma transa\u00E7\u00E3o a partir do idConta
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Id Conta</param> 
-        /// <param name="cancelamentoRequest">cancelamentoRequest</param> 
-        /// <returns>TransacaoOnUsResponse</returns>
-        public TransacaoOnUsResponse CancelarPorIdConta (long? id, CancelamentoTransacaoPorIdCartaoRequest cancelamentoRequest)
-        {
-             ApiResponse<TransacaoOnUsResponse> localVarResponse = CancelarPorIdContaWithHttpInfo(id, cancelamentoRequest);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Cancela transa\u00E7\u00E3o financeira por idConta Este m\u00E9todo permite que seja cancelada uma transa\u00E7\u00E3o a partir do idConta
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Id Conta</param> 
-        /// <param name="cancelamentoRequest">cancelamentoRequest</param> 
-        /// <returns>ApiResponse of TransacaoOnUsResponse</returns>
-        public ApiResponse< TransacaoOnUsResponse > CancelarPorIdContaWithHttpInfo (long? id, CancelamentoTransacaoPorIdCartaoRequest cancelamentoRequest)
-        {
-            
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling AutorizacaoApi->CancelarPorIdConta");
-            
-            // verify the required parameter 'cancelamentoRequest' is set
-            if (cancelamentoRequest == null)
-                throw new ApiException(400, "Missing required parameter 'cancelamentoRequest' when calling AutorizacaoApi->CancelarPorIdConta");
-            
-    
-            var localVarPath = "/api/contas/{id}/cancelar-transacao";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            
-            
-            
-            
-            if (cancelamentoRequest.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(cancelamentoRequest); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = cancelamentoRequest; // byte array
-            }
-
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling CancelarPorIdConta: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling CancelarPorIdConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<TransacaoOnUsResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TransacaoOnUsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TransacaoOnUsResponse)));
-            
-        }
-
-        
-        /// <summary>
-        /// Cancela transa\u00E7\u00E3o financeira por idConta Este m\u00E9todo permite que seja cancelada uma transa\u00E7\u00E3o a partir do idConta
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Id Conta</param>
-        /// <param name="cancelamentoRequest">cancelamentoRequest</param>
-        /// <returns>Task of TransacaoOnUsResponse</returns>
-        public async System.Threading.Tasks.Task<TransacaoOnUsResponse> CancelarPorIdContaAsync (long? id, CancelamentoTransacaoPorIdCartaoRequest cancelamentoRequest)
-        {
-             ApiResponse<TransacaoOnUsResponse> localVarResponse = await CancelarPorIdContaAsyncWithHttpInfo(id, cancelamentoRequest);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Cancela transa\u00E7\u00E3o financeira por idConta Este m\u00E9todo permite que seja cancelada uma transa\u00E7\u00E3o a partir do idConta
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">Id Conta</param>
-        /// <param name="cancelamentoRequest">cancelamentoRequest</param>
-        /// <returns>Task of ApiResponse (TransacaoOnUsResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TransacaoOnUsResponse>> CancelarPorIdContaAsyncWithHttpInfo (long? id, CancelamentoTransacaoPorIdCartaoRequest cancelamentoRequest)
-        {
-            // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling CancelarPorIdConta");
-            // verify the required parameter 'cancelamentoRequest' is set
-            if (cancelamentoRequest == null) throw new ApiException(400, "Missing required parameter 'cancelamentoRequest' when calling CancelarPorIdConta");
-            
-    
-            var localVarPath = "/api/contas/{id}/cancelar-transacao";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            
-            
-            
-            
-            if (cancelamentoRequest.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(cancelamentoRequest); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = cancelamentoRequest; // byte array
-            }
-
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling CancelarPorIdConta: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling CancelarPorIdConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling CancelarTransacao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<TransacaoOnUsResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1410,9 +1228,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">Id Cartao</param> 
         /// <param name="cancelamentoRequest">cancelamentoRequest</param> 
         /// <returns>TransacaoOnUsResponse</returns>
-        public TransacaoOnUsResponse Cancelar_0 (long? id, CancelamentoTransacaoPorIdCartaoRequest cancelamentoRequest)
+        public TransacaoOnUsResponse CancelarTransacaoPorCartao (long? id, CancelamentoTransacaoPorIdCartaoRequest cancelamentoRequest)
         {
-             ApiResponse<TransacaoOnUsResponse> localVarResponse = Cancelar_0WithHttpInfo(id, cancelamentoRequest);
+             ApiResponse<TransacaoOnUsResponse> localVarResponse = CancelarTransacaoPorCartaoWithHttpInfo(id, cancelamentoRequest);
              return localVarResponse.Data;
         }
 
@@ -1423,16 +1241,16 @@ namespace Conductor.Pier.Api
         /// <param name="id">Id Cartao</param> 
         /// <param name="cancelamentoRequest">cancelamentoRequest</param> 
         /// <returns>ApiResponse of TransacaoOnUsResponse</returns>
-        public ApiResponse< TransacaoOnUsResponse > Cancelar_0WithHttpInfo (long? id, CancelamentoTransacaoPorIdCartaoRequest cancelamentoRequest)
+        public ApiResponse< TransacaoOnUsResponse > CancelarTransacaoPorCartaoWithHttpInfo (long? id, CancelamentoTransacaoPorIdCartaoRequest cancelamentoRequest)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling AutorizacaoApi->Cancelar_0");
+                throw new ApiException(400, "Missing required parameter 'id' when calling AutorizacaoApi->CancelarTransacaoPorCartao");
             
             // verify the required parameter 'cancelamentoRequest' is set
             if (cancelamentoRequest == null)
-                throw new ApiException(400, "Missing required parameter 'cancelamentoRequest' when calling AutorizacaoApi->Cancelar_0");
+                throw new ApiException(400, "Missing required parameter 'cancelamentoRequest' when calling AutorizacaoApi->CancelarTransacaoPorCartao");
             
     
             var localVarPath = "/api/cartoes/{id}/cancelar-transacao";
@@ -1485,9 +1303,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Cancelar_0: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling CancelarTransacaoPorCartao: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Cancelar_0: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling CancelarTransacaoPorCartao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<TransacaoOnUsResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1503,9 +1321,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">Id Cartao</param>
         /// <param name="cancelamentoRequest">cancelamentoRequest</param>
         /// <returns>Task of TransacaoOnUsResponse</returns>
-        public async System.Threading.Tasks.Task<TransacaoOnUsResponse> Cancelar_0Async (long? id, CancelamentoTransacaoPorIdCartaoRequest cancelamentoRequest)
+        public async System.Threading.Tasks.Task<TransacaoOnUsResponse> CancelarTransacaoPorCartaoAsync (long? id, CancelamentoTransacaoPorIdCartaoRequest cancelamentoRequest)
         {
-             ApiResponse<TransacaoOnUsResponse> localVarResponse = await Cancelar_0AsyncWithHttpInfo(id, cancelamentoRequest);
+             ApiResponse<TransacaoOnUsResponse> localVarResponse = await CancelarTransacaoPorCartaoAsyncWithHttpInfo(id, cancelamentoRequest);
              return localVarResponse.Data;
 
         }
@@ -1517,12 +1335,12 @@ namespace Conductor.Pier.Api
         /// <param name="id">Id Cartao</param>
         /// <param name="cancelamentoRequest">cancelamentoRequest</param>
         /// <returns>Task of ApiResponse (TransacaoOnUsResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TransacaoOnUsResponse>> Cancelar_0AsyncWithHttpInfo (long? id, CancelamentoTransacaoPorIdCartaoRequest cancelamentoRequest)
+        public async System.Threading.Tasks.Task<ApiResponse<TransacaoOnUsResponse>> CancelarTransacaoPorCartaoAsyncWithHttpInfo (long? id, CancelamentoTransacaoPorIdCartaoRequest cancelamentoRequest)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling Cancelar_0");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling CancelarTransacaoPorCartao");
             // verify the required parameter 'cancelamentoRequest' is set
-            if (cancelamentoRequest == null) throw new ApiException(400, "Missing required parameter 'cancelamentoRequest' when calling Cancelar_0");
+            if (cancelamentoRequest == null) throw new ApiException(400, "Missing required parameter 'cancelamentoRequest' when calling CancelarTransacaoPorCartao");
             
     
             var localVarPath = "/api/cartoes/{id}/cancelar-transacao";
@@ -1575,9 +1393,191 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Cancelar_0: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling CancelarTransacaoPorCartao: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Cancelar_0: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling CancelarTransacaoPorCartao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TransacaoOnUsResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (TransacaoOnUsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TransacaoOnUsResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Cancela transa\u00E7\u00E3o financeira por idConta Este m\u00E9todo permite que seja cancelada uma transa\u00E7\u00E3o a partir do idConta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Id Conta</param> 
+        /// <param name="cancelamentoRequest">cancelamentoRequest</param> 
+        /// <returns>TransacaoOnUsResponse</returns>
+        public TransacaoOnUsResponse CancelarTransacaoPorConta (long? id, CancelamentoTransacaoPorIdCartaoRequest cancelamentoRequest)
+        {
+             ApiResponse<TransacaoOnUsResponse> localVarResponse = CancelarTransacaoPorContaWithHttpInfo(id, cancelamentoRequest);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Cancela transa\u00E7\u00E3o financeira por idConta Este m\u00E9todo permite que seja cancelada uma transa\u00E7\u00E3o a partir do idConta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Id Conta</param> 
+        /// <param name="cancelamentoRequest">cancelamentoRequest</param> 
+        /// <returns>ApiResponse of TransacaoOnUsResponse</returns>
+        public ApiResponse< TransacaoOnUsResponse > CancelarTransacaoPorContaWithHttpInfo (long? id, CancelamentoTransacaoPorIdCartaoRequest cancelamentoRequest)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling AutorizacaoApi->CancelarTransacaoPorConta");
+            
+            // verify the required parameter 'cancelamentoRequest' is set
+            if (cancelamentoRequest == null)
+                throw new ApiException(400, "Missing required parameter 'cancelamentoRequest' when calling AutorizacaoApi->CancelarTransacaoPorConta");
+            
+    
+            var localVarPath = "/api/contas/{id}/cancelar-transacao";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            if (cancelamentoRequest.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(cancelamentoRequest); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = cancelamentoRequest; // byte array
+            }
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling CancelarTransacaoPorConta: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling CancelarTransacaoPorConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<TransacaoOnUsResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (TransacaoOnUsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TransacaoOnUsResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Cancela transa\u00E7\u00E3o financeira por idConta Este m\u00E9todo permite que seja cancelada uma transa\u00E7\u00E3o a partir do idConta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Id Conta</param>
+        /// <param name="cancelamentoRequest">cancelamentoRequest</param>
+        /// <returns>Task of TransacaoOnUsResponse</returns>
+        public async System.Threading.Tasks.Task<TransacaoOnUsResponse> CancelarTransacaoPorContaAsync (long? id, CancelamentoTransacaoPorIdCartaoRequest cancelamentoRequest)
+        {
+             ApiResponse<TransacaoOnUsResponse> localVarResponse = await CancelarTransacaoPorContaAsyncWithHttpInfo(id, cancelamentoRequest);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Cancela transa\u00E7\u00E3o financeira por idConta Este m\u00E9todo permite que seja cancelada uma transa\u00E7\u00E3o a partir do idConta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Id Conta</param>
+        /// <param name="cancelamentoRequest">cancelamentoRequest</param>
+        /// <returns>Task of ApiResponse (TransacaoOnUsResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<TransacaoOnUsResponse>> CancelarTransacaoPorContaAsyncWithHttpInfo (long? id, CancelamentoTransacaoPorIdCartaoRequest cancelamentoRequest)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling CancelarTransacaoPorConta");
+            // verify the required parameter 'cancelamentoRequest' is set
+            if (cancelamentoRequest == null) throw new ApiException(400, "Missing required parameter 'cancelamentoRequest' when calling CancelarTransacaoPorConta");
+            
+    
+            var localVarPath = "/api/contas/{id}/cancelar-transacao";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            if (cancelamentoRequest.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(cancelamentoRequest); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = cancelamentoRequest; // byte array
+            }
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling CancelarTransacaoPorConta: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling CancelarTransacaoPorConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<TransacaoOnUsResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1590,9 +1590,9 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List&lt;Object&gt;</returns>
-        public List<Object> ListarCodigosProcessamentoAutorizacao ()
+        public List<Object> ConsultarCodigosProcessamentoAutorizacao ()
         {
-             ApiResponse<List<Object>> localVarResponse = ListarCodigosProcessamentoAutorizacaoWithHttpInfo();
+             ApiResponse<List<Object>> localVarResponse = ConsultarCodigosProcessamentoAutorizacaoWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -1601,7 +1601,7 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List&lt;Object&gt;</returns>
-        public ApiResponse< List<Object> > ListarCodigosProcessamentoAutorizacaoWithHttpInfo ()
+        public ApiResponse< List<Object> > ConsultarCodigosProcessamentoAutorizacaoWithHttpInfo ()
         {
             
     
@@ -1647,9 +1647,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarCodigosProcessamentoAutorizacao: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarCodigosProcessamentoAutorizacao: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarCodigosProcessamentoAutorizacao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarCodigosProcessamentoAutorizacao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<List<Object>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1663,9 +1663,9 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of List&lt;Object&gt;</returns>
-        public async System.Threading.Tasks.Task<List<Object>> ListarCodigosProcessamentoAutorizacaoAsync ()
+        public async System.Threading.Tasks.Task<List<Object>> ConsultarCodigosProcessamentoAutorizacaoAsync ()
         {
-             ApiResponse<List<Object>> localVarResponse = await ListarCodigosProcessamentoAutorizacaoAsyncWithHttpInfo();
+             ApiResponse<List<Object>> localVarResponse = await ConsultarCodigosProcessamentoAutorizacaoAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -1675,7 +1675,7 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (List&lt;Object&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<Object>>> ListarCodigosProcessamentoAutorizacaoAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<List<Object>>> ConsultarCodigosProcessamentoAutorizacaoAsyncWithHttpInfo ()
         {
             
     
@@ -1721,9 +1721,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarCodigosProcessamentoAutorizacao: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarCodigosProcessamentoAutorizacao: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarCodigosProcessamentoAutorizacao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarCodigosProcessamentoAutorizacao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<List<Object>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1883,9 +1883,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transacoesRequest">transacoesRequest</param> 
         /// <returns>TransacaoOnUsResponse</returns>
-        public TransacaoOnUsResponse Simular (TransacaoOnUsRequest transacoesRequest)
+        public TransacaoOnUsResponse SimularTransacao (TransacaoOnUsRequest transacoesRequest)
         {
-             ApiResponse<TransacaoOnUsResponse> localVarResponse = SimularWithHttpInfo(transacoesRequest);
+             ApiResponse<TransacaoOnUsResponse> localVarResponse = SimularTransacaoWithHttpInfo(transacoesRequest);
              return localVarResponse.Data;
         }
 
@@ -1895,12 +1895,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transacoesRequest">transacoesRequest</param> 
         /// <returns>ApiResponse of TransacaoOnUsResponse</returns>
-        public ApiResponse< TransacaoOnUsResponse > SimularWithHttpInfo (TransacaoOnUsRequest transacoesRequest)
+        public ApiResponse< TransacaoOnUsResponse > SimularTransacaoWithHttpInfo (TransacaoOnUsRequest transacoesRequest)
         {
             
             // verify the required parameter 'transacoesRequest' is set
             if (transacoesRequest == null)
-                throw new ApiException(400, "Missing required parameter 'transacoesRequest' when calling AutorizacaoApi->Simular");
+                throw new ApiException(400, "Missing required parameter 'transacoesRequest' when calling AutorizacaoApi->SimularTransacao");
             
     
             var localVarPath = "/api/simular-transacao";
@@ -1952,9 +1952,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Simular: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SimularTransacao: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Simular: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SimularTransacao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<TransacaoOnUsResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1969,9 +1969,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transacoesRequest">transacoesRequest</param>
         /// <returns>Task of TransacaoOnUsResponse</returns>
-        public async System.Threading.Tasks.Task<TransacaoOnUsResponse> SimularAsync (TransacaoOnUsRequest transacoesRequest)
+        public async System.Threading.Tasks.Task<TransacaoOnUsResponse> SimularTransacaoAsync (TransacaoOnUsRequest transacoesRequest)
         {
-             ApiResponse<TransacaoOnUsResponse> localVarResponse = await SimularAsyncWithHttpInfo(transacoesRequest);
+             ApiResponse<TransacaoOnUsResponse> localVarResponse = await SimularTransacaoAsyncWithHttpInfo(transacoesRequest);
              return localVarResponse.Data;
 
         }
@@ -1982,10 +1982,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transacoesRequest">transacoesRequest</param>
         /// <returns>Task of ApiResponse (TransacaoOnUsResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TransacaoOnUsResponse>> SimularAsyncWithHttpInfo (TransacaoOnUsRequest transacoesRequest)
+        public async System.Threading.Tasks.Task<ApiResponse<TransacaoOnUsResponse>> SimularTransacaoAsyncWithHttpInfo (TransacaoOnUsRequest transacoesRequest)
         {
             // verify the required parameter 'transacoesRequest' is set
-            if (transacoesRequest == null) throw new ApiException(400, "Missing required parameter 'transacoesRequest' when calling Simular");
+            if (transacoesRequest == null) throw new ApiException(400, "Missing required parameter 'transacoesRequest' when calling SimularTransacao");
             
     
             var localVarPath = "/api/simular-transacao";
@@ -2037,9 +2037,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Simular: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SimularTransacao: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Simular: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SimularTransacao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<TransacaoOnUsResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

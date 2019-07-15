@@ -18,28 +18,6 @@ namespace Conductor.Pier.Api
         #region Synchronous Operations
         
         /// <summary>
-        /// Apresenta os dados de um determinado Status Conta
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite consultar os par\u00E2metros de um determinado Status Conta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id)
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Status da Conta (id)</param>
-        /// <returns>StatusContaResponse</returns>
-        StatusContaResponse Consultar (long? id);
-  
-        /// <summary>
-        /// Apresenta os dados de um determinado Status Conta
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite consultar os par\u00E2metros de um determinado Status Conta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id)
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Status da Conta (id)</param>
-        /// <returns>ApiResponse of StatusContaResponse</returns>
-        ApiResponse<StatusContaResponse> ConsultarWithHttpInfo (long? id);
-        
-        /// <summary>
         /// Apresenta os dados de um determinado Estagio Cart\u00E3o
         /// </summary>
         /// <remarks>
@@ -84,6 +62,28 @@ namespace Conductor.Pier.Api
         ApiResponse<StatusCartaoResponse> ConsultarStatusCartaoWithHttpInfo (long? id);
         
         /// <summary>
+        /// Apresenta os dados de um determinado Status Conta
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite consultar os par\u00E2metros de um determinado Status Conta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id)
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Status da Conta (id)</param>
+        /// <returns>StatusContaResponse</returns>
+        StatusContaResponse ConsultarStatusConta (long? id);
+  
+        /// <summary>
+        /// Apresenta os dados de um determinado Status Conta
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite consultar os par\u00E2metros de um determinado Status Conta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id)
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Status da Conta (id)</param>
+        /// <returns>ApiResponse of StatusContaResponse</returns>
+        ApiResponse<StatusContaResponse> ConsultarStatusContaWithHttpInfo (long? id);
+        
+        /// <summary>
         /// Apresenta os dados de um determinado Status Impress\u00E3o
         /// </summary>
         /// <remarks>
@@ -92,7 +92,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Status de Impress\u00E3o do Cart\u00E3o (id)</param>
         /// <returns>StatusImpressaoResponse</returns>
-        StatusImpressaoResponse Consultar_0 (long? id);
+        StatusImpressaoResponse ConsultarStatusImpressaoCartao (long? id);
   
         /// <summary>
         /// Apresenta os dados de um determinado Status Impress\u00E3o
@@ -103,55 +103,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Status de Impress\u00E3o do Cart\u00E3o (id)</param>
         /// <returns>ApiResponse of StatusImpressaoResponse</returns>
-        ApiResponse<StatusImpressaoResponse> Consultar_0WithHttpInfo (long? id);
-        
-        /// <summary>
-        /// Lista os Status Contas cadastrados para o Emissor
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite que sejam listados os Status Contas existentes na base de dados do Emissor
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Status da Conta (id) (optional)</param>
-        /// <param name="nome">Nome atribu\u00EDdo ao Status da Conta (optional)</param>
-        /// <param name="permiteAlterarVencimento">Par\u00E2metro que define se o Status da conta permite a solicita\u00E7\u00E3o da altera\u00E7\u00E3o do Dia para Vencimento das Faturas, sendo: 0: Inativo e 1: Ativo (optional)</param>
-        /// <param name="permiteAlterarLimite">Par\u00E2metro que define se o Status da conta permite altera\u00E7\u00E3o de Limites, sendo: 0: Inativo e 1: Ativo (optional)</param>
-        /// <param name="permiteEmitirNovaViaCartao">Par\u00E2metro que define se o Status da conta permite solicitar uma nova via de Cart\u00E3o, sendo: 0: Inativo e 1: Ativo (optional)</param>
-        /// <param name="permiteFazerTransferencia">Par\u00E2metro que define se o Status da conta permite originar Transfer\u00EAncias de Cr\u00E9dito para outras Contas do mesmo Emissor ou para uma Conta Banc\u00E1ria, sendo: 0: Inativo e 1: Ativo (optional)</param>
-        /// <param name="permiteReceberTransferencia">Par\u00E2metro que define se o Status da conta permite  receber Transfer\u00EAncias de Cr\u00E9dito originadas de outras Contas do mesmo emissor, sendo: 0: Inativo e 1: Ativo (optional)</param>
-        /// <param name="permiteCriarAcordoCobranca">Par\u00E2metro que define se o Status da conta permite ter um Acordo de Cobran\u00E7a de D\u00EDvida criado para ela, sendo: 0: Inativo e 1: Ativo (optional)</param>
-        /// <param name="permiteAtribuirComoBloqueio">Par\u00E2metro que define se o Status da conta permite ser atribu\u00EDdo para Bloquear temporariamente uma Conta, sendo: 0: Inativo e 1: Ativo (optional)</param>
-        /// <param name="permiteDesbloquear">Par\u00E2metro que define se o Status da conta permite ser desbloqueada, sendo: 0: Inativo e 1: Ativo (optional)</param>
-        /// <param name="permiteAtribuirComoCancelamento">Par\u00E2metro que define se o Status da conta permite ser atribu\u00EDdo para realizar o cancelamento definitivo de uma conta, sendo: 0: Inativo e 1: Ativo (optional)</param>
-        /// <returns>PageStatusContaResponse</returns>
-        PageStatusContaResponse Listar (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, int? permiteAlterarVencimento = null, int? permiteAlterarLimite = null, int? permiteEmitirNovaViaCartao = null, int? permiteFazerTransferencia = null, int? permiteReceberTransferencia = null, int? permiteCriarAcordoCobranca = null, int? permiteAtribuirComoBloqueio = null, int? permiteDesbloquear = null, int? permiteAtribuirComoCancelamento = null);
-  
-        /// <summary>
-        /// Lista os Status Contas cadastrados para o Emissor
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite que sejam listados os Status Contas existentes na base de dados do Emissor
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Status da Conta (id) (optional)</param>
-        /// <param name="nome">Nome atribu\u00EDdo ao Status da Conta (optional)</param>
-        /// <param name="permiteAlterarVencimento">Par\u00E2metro que define se o Status da conta permite a solicita\u00E7\u00E3o da altera\u00E7\u00E3o do Dia para Vencimento das Faturas, sendo: 0: Inativo e 1: Ativo (optional)</param>
-        /// <param name="permiteAlterarLimite">Par\u00E2metro que define se o Status da conta permite altera\u00E7\u00E3o de Limites, sendo: 0: Inativo e 1: Ativo (optional)</param>
-        /// <param name="permiteEmitirNovaViaCartao">Par\u00E2metro que define se o Status da conta permite solicitar uma nova via de Cart\u00E3o, sendo: 0: Inativo e 1: Ativo (optional)</param>
-        /// <param name="permiteFazerTransferencia">Par\u00E2metro que define se o Status da conta permite originar Transfer\u00EAncias de Cr\u00E9dito para outras Contas do mesmo Emissor ou para uma Conta Banc\u00E1ria, sendo: 0: Inativo e 1: Ativo (optional)</param>
-        /// <param name="permiteReceberTransferencia">Par\u00E2metro que define se o Status da conta permite  receber Transfer\u00EAncias de Cr\u00E9dito originadas de outras Contas do mesmo emissor, sendo: 0: Inativo e 1: Ativo (optional)</param>
-        /// <param name="permiteCriarAcordoCobranca">Par\u00E2metro que define se o Status da conta permite ter um Acordo de Cobran\u00E7a de D\u00EDvida criado para ela, sendo: 0: Inativo e 1: Ativo (optional)</param>
-        /// <param name="permiteAtribuirComoBloqueio">Par\u00E2metro que define se o Status da conta permite ser atribu\u00EDdo para Bloquear temporariamente uma Conta, sendo: 0: Inativo e 1: Ativo (optional)</param>
-        /// <param name="permiteDesbloquear">Par\u00E2metro que define se o Status da conta permite ser desbloqueada, sendo: 0: Inativo e 1: Ativo (optional)</param>
-        /// <param name="permiteAtribuirComoCancelamento">Par\u00E2metro que define se o Status da conta permite ser atribu\u00EDdo para realizar o cancelamento definitivo de uma conta, sendo: 0: Inativo e 1: Ativo (optional)</param>
-        /// <returns>ApiResponse of PageStatusContaResponse</returns>
-        ApiResponse<PageStatusContaResponse> ListarWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, int? permiteAlterarVencimento = null, int? permiteAlterarLimite = null, int? permiteEmitirNovaViaCartao = null, int? permiteFazerTransferencia = null, int? permiteReceberTransferencia = null, int? permiteCriarAcordoCobranca = null, int? permiteAtribuirComoBloqueio = null, int? permiteDesbloquear = null, int? permiteAtribuirComoCancelamento = null);
+        ApiResponse<StatusImpressaoResponse> ConsultarStatusImpressaoCartaoWithHttpInfo (long? id);
         
         /// <summary>
         /// Lista as op\u00E7\u00F5es de Est\u00E1gios do Cart\u00E3o
@@ -248,6 +200,54 @@ namespace Conductor.Pier.Api
         ApiResponse<PageStatusCartaoResponse> ListarStatusCartoesWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, int? permiteDesbloquear = null, int? permiteAtribuirComoBloqueio = null, int? permiteAtribuirComoCancelamento = null, int? cobrarTarifaAoEmitirNovaVia = null);
         
         /// <summary>
+        /// Lista os Status Contas cadastrados para o Emissor
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que sejam listados os Status Contas existentes na base de dados do Emissor
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Status da Conta (id) (optional)</param>
+        /// <param name="nome">Nome atribu\u00EDdo ao Status da Conta (optional)</param>
+        /// <param name="permiteAlterarVencimento">Par\u00E2metro que define se o Status da conta permite a solicita\u00E7\u00E3o da altera\u00E7\u00E3o do Dia para Vencimento das Faturas, sendo: 0: Inativo e 1: Ativo (optional)</param>
+        /// <param name="permiteAlterarLimite">Par\u00E2metro que define se o Status da conta permite altera\u00E7\u00E3o de Limites, sendo: 0: Inativo e 1: Ativo (optional)</param>
+        /// <param name="permiteEmitirNovaViaCartao">Par\u00E2metro que define se o Status da conta permite solicitar uma nova via de Cart\u00E3o, sendo: 0: Inativo e 1: Ativo (optional)</param>
+        /// <param name="permiteFazerTransferencia">Par\u00E2metro que define se o Status da conta permite originar Transfer\u00EAncias de Cr\u00E9dito para outras Contas do mesmo Emissor ou para uma Conta Banc\u00E1ria, sendo: 0: Inativo e 1: Ativo (optional)</param>
+        /// <param name="permiteReceberTransferencia">Par\u00E2metro que define se o Status da conta permite  receber Transfer\u00EAncias de Cr\u00E9dito originadas de outras Contas do mesmo emissor, sendo: 0: Inativo e 1: Ativo (optional)</param>
+        /// <param name="permiteCriarAcordoCobranca">Par\u00E2metro que define se o Status da conta permite ter um Acordo de Cobran\u00E7a de D\u00EDvida criado para ela, sendo: 0: Inativo e 1: Ativo (optional)</param>
+        /// <param name="permiteAtribuirComoBloqueio">Par\u00E2metro que define se o Status da conta permite ser atribu\u00EDdo para Bloquear temporariamente uma Conta, sendo: 0: Inativo e 1: Ativo (optional)</param>
+        /// <param name="permiteDesbloquear">Par\u00E2metro que define se o Status da conta permite ser desbloqueada, sendo: 0: Inativo e 1: Ativo (optional)</param>
+        /// <param name="permiteAtribuirComoCancelamento">Par\u00E2metro que define se o Status da conta permite ser atribu\u00EDdo para realizar o cancelamento definitivo de uma conta, sendo: 0: Inativo e 1: Ativo (optional)</param>
+        /// <returns>PageStatusContaResponse</returns>
+        PageStatusContaResponse ListarStatusConta (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, int? permiteAlterarVencimento = null, int? permiteAlterarLimite = null, int? permiteEmitirNovaViaCartao = null, int? permiteFazerTransferencia = null, int? permiteReceberTransferencia = null, int? permiteCriarAcordoCobranca = null, int? permiteAtribuirComoBloqueio = null, int? permiteDesbloquear = null, int? permiteAtribuirComoCancelamento = null);
+  
+        /// <summary>
+        /// Lista os Status Contas cadastrados para o Emissor
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que sejam listados os Status Contas existentes na base de dados do Emissor
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Status da Conta (id) (optional)</param>
+        /// <param name="nome">Nome atribu\u00EDdo ao Status da Conta (optional)</param>
+        /// <param name="permiteAlterarVencimento">Par\u00E2metro que define se o Status da conta permite a solicita\u00E7\u00E3o da altera\u00E7\u00E3o do Dia para Vencimento das Faturas, sendo: 0: Inativo e 1: Ativo (optional)</param>
+        /// <param name="permiteAlterarLimite">Par\u00E2metro que define se o Status da conta permite altera\u00E7\u00E3o de Limites, sendo: 0: Inativo e 1: Ativo (optional)</param>
+        /// <param name="permiteEmitirNovaViaCartao">Par\u00E2metro que define se o Status da conta permite solicitar uma nova via de Cart\u00E3o, sendo: 0: Inativo e 1: Ativo (optional)</param>
+        /// <param name="permiteFazerTransferencia">Par\u00E2metro que define se o Status da conta permite originar Transfer\u00EAncias de Cr\u00E9dito para outras Contas do mesmo Emissor ou para uma Conta Banc\u00E1ria, sendo: 0: Inativo e 1: Ativo (optional)</param>
+        /// <param name="permiteReceberTransferencia">Par\u00E2metro que define se o Status da conta permite  receber Transfer\u00EAncias de Cr\u00E9dito originadas de outras Contas do mesmo emissor, sendo: 0: Inativo e 1: Ativo (optional)</param>
+        /// <param name="permiteCriarAcordoCobranca">Par\u00E2metro que define se o Status da conta permite ter um Acordo de Cobran\u00E7a de D\u00EDvida criado para ela, sendo: 0: Inativo e 1: Ativo (optional)</param>
+        /// <param name="permiteAtribuirComoBloqueio">Par\u00E2metro que define se o Status da conta permite ser atribu\u00EDdo para Bloquear temporariamente uma Conta, sendo: 0: Inativo e 1: Ativo (optional)</param>
+        /// <param name="permiteDesbloquear">Par\u00E2metro que define se o Status da conta permite ser desbloqueada, sendo: 0: Inativo e 1: Ativo (optional)</param>
+        /// <param name="permiteAtribuirComoCancelamento">Par\u00E2metro que define se o Status da conta permite ser atribu\u00EDdo para realizar o cancelamento definitivo de uma conta, sendo: 0: Inativo e 1: Ativo (optional)</param>
+        /// <returns>ApiResponse of PageStatusContaResponse</returns>
+        ApiResponse<PageStatusContaResponse> ListarStatusContaWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, int? permiteAlterarVencimento = null, int? permiteAlterarLimite = null, int? permiteEmitirNovaViaCartao = null, int? permiteFazerTransferencia = null, int? permiteReceberTransferencia = null, int? permiteCriarAcordoCobranca = null, int? permiteAtribuirComoBloqueio = null, int? permiteDesbloquear = null, int? permiteAtribuirComoCancelamento = null);
+        
+        /// <summary>
         /// Lista as op\u00E7\u00F5es de Status Impress\u00E3o
         /// </summary>
         /// <remarks>
@@ -260,7 +260,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">Id do est\u00E1gio cart\u00E3o (optional)</param>
         /// <param name="nome">Nome do status impress\u00E3o (optional)</param>
         /// <returns>PageStatusImpressaoResponse</returns>
-        PageStatusImpressaoResponse Listar_0 (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null);
+        PageStatusImpressaoResponse ListarStatusImpressaoCartao (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null);
   
         /// <summary>
         /// Lista as op\u00E7\u00F5es de Status Impress\u00E3o
@@ -275,33 +275,11 @@ namespace Conductor.Pier.Api
         /// <param name="id">Id do est\u00E1gio cart\u00E3o (optional)</param>
         /// <param name="nome">Nome do status impress\u00E3o (optional)</param>
         /// <returns>ApiResponse of PageStatusImpressaoResponse</returns>
-        ApiResponse<PageStatusImpressaoResponse> Listar_0WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null);
+        ApiResponse<PageStatusImpressaoResponse> ListarStatusImpressaoCartaoWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null);
         
         #endregion Synchronous Operations
         
         #region Asynchronous Operations
-        
-        /// <summary>
-        /// Apresenta os dados de um determinado Status Conta
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite consultar os par\u00E2metros de um determinado Status Conta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id)
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Status da Conta (id)</param>
-        /// <returns>Task of StatusContaResponse</returns>
-        System.Threading.Tasks.Task<StatusContaResponse> ConsultarAsync (long? id);
-
-        /// <summary>
-        /// Apresenta os dados de um determinado Status Conta
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite consultar os par\u00E2metros de um determinado Status Conta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id)
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Status da Conta (id)</param>
-        /// <returns>Task of ApiResponse (StatusContaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<StatusContaResponse>> ConsultarAsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Apresenta os dados de um determinado Estagio Cart\u00E3o
@@ -348,6 +326,28 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<StatusCartaoResponse>> ConsultarStatusCartaoAsyncWithHttpInfo (long? id);
         
         /// <summary>
+        /// Apresenta os dados de um determinado Status Conta
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite consultar os par\u00E2metros de um determinado Status Conta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id)
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Status da Conta (id)</param>
+        /// <returns>Task of StatusContaResponse</returns>
+        System.Threading.Tasks.Task<StatusContaResponse> ConsultarStatusContaAsync (long? id);
+
+        /// <summary>
+        /// Apresenta os dados de um determinado Status Conta
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite consultar os par\u00E2metros de um determinado Status Conta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id)
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Status da Conta (id)</param>
+        /// <returns>Task of ApiResponse (StatusContaResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<StatusContaResponse>> ConsultarStatusContaAsyncWithHttpInfo (long? id);
+        
+        /// <summary>
         /// Apresenta os dados de um determinado Status Impress\u00E3o
         /// </summary>
         /// <remarks>
@@ -356,7 +356,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Status de Impress\u00E3o do Cart\u00E3o (id)</param>
         /// <returns>Task of StatusImpressaoResponse</returns>
-        System.Threading.Tasks.Task<StatusImpressaoResponse> Consultar_0Async (long? id);
+        System.Threading.Tasks.Task<StatusImpressaoResponse> ConsultarStatusImpressaoCartaoAsync (long? id);
 
         /// <summary>
         /// Apresenta os dados de um determinado Status Impress\u00E3o
@@ -367,55 +367,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Status de Impress\u00E3o do Cart\u00E3o (id)</param>
         /// <returns>Task of ApiResponse (StatusImpressaoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<StatusImpressaoResponse>> Consultar_0AsyncWithHttpInfo (long? id);
-        
-        /// <summary>
-        /// Lista os Status Contas cadastrados para o Emissor
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite que sejam listados os Status Contas existentes na base de dados do Emissor
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Status da Conta (id) (optional)</param>
-        /// <param name="nome">Nome atribu\u00EDdo ao Status da Conta (optional)</param>
-        /// <param name="permiteAlterarVencimento">Par\u00E2metro que define se o Status da conta permite a solicita\u00E7\u00E3o da altera\u00E7\u00E3o do Dia para Vencimento das Faturas, sendo: 0: Inativo e 1: Ativo (optional)</param>
-        /// <param name="permiteAlterarLimite">Par\u00E2metro que define se o Status da conta permite altera\u00E7\u00E3o de Limites, sendo: 0: Inativo e 1: Ativo (optional)</param>
-        /// <param name="permiteEmitirNovaViaCartao">Par\u00E2metro que define se o Status da conta permite solicitar uma nova via de Cart\u00E3o, sendo: 0: Inativo e 1: Ativo (optional)</param>
-        /// <param name="permiteFazerTransferencia">Par\u00E2metro que define se o Status da conta permite originar Transfer\u00EAncias de Cr\u00E9dito para outras Contas do mesmo Emissor ou para uma Conta Banc\u00E1ria, sendo: 0: Inativo e 1: Ativo (optional)</param>
-        /// <param name="permiteReceberTransferencia">Par\u00E2metro que define se o Status da conta permite  receber Transfer\u00EAncias de Cr\u00E9dito originadas de outras Contas do mesmo emissor, sendo: 0: Inativo e 1: Ativo (optional)</param>
-        /// <param name="permiteCriarAcordoCobranca">Par\u00E2metro que define se o Status da conta permite ter um Acordo de Cobran\u00E7a de D\u00EDvida criado para ela, sendo: 0: Inativo e 1: Ativo (optional)</param>
-        /// <param name="permiteAtribuirComoBloqueio">Par\u00E2metro que define se o Status da conta permite ser atribu\u00EDdo para Bloquear temporariamente uma Conta, sendo: 0: Inativo e 1: Ativo (optional)</param>
-        /// <param name="permiteDesbloquear">Par\u00E2metro que define se o Status da conta permite ser desbloqueada, sendo: 0: Inativo e 1: Ativo (optional)</param>
-        /// <param name="permiteAtribuirComoCancelamento">Par\u00E2metro que define se o Status da conta permite ser atribu\u00EDdo para realizar o cancelamento definitivo de uma conta, sendo: 0: Inativo e 1: Ativo (optional)</param>
-        /// <returns>Task of PageStatusContaResponse</returns>
-        System.Threading.Tasks.Task<PageStatusContaResponse> ListarAsync (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, int? permiteAlterarVencimento = null, int? permiteAlterarLimite = null, int? permiteEmitirNovaViaCartao = null, int? permiteFazerTransferencia = null, int? permiteReceberTransferencia = null, int? permiteCriarAcordoCobranca = null, int? permiteAtribuirComoBloqueio = null, int? permiteDesbloquear = null, int? permiteAtribuirComoCancelamento = null);
-
-        /// <summary>
-        /// Lista os Status Contas cadastrados para o Emissor
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite que sejam listados os Status Contas existentes na base de dados do Emissor
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Status da Conta (id) (optional)</param>
-        /// <param name="nome">Nome atribu\u00EDdo ao Status da Conta (optional)</param>
-        /// <param name="permiteAlterarVencimento">Par\u00E2metro que define se o Status da conta permite a solicita\u00E7\u00E3o da altera\u00E7\u00E3o do Dia para Vencimento das Faturas, sendo: 0: Inativo e 1: Ativo (optional)</param>
-        /// <param name="permiteAlterarLimite">Par\u00E2metro que define se o Status da conta permite altera\u00E7\u00E3o de Limites, sendo: 0: Inativo e 1: Ativo (optional)</param>
-        /// <param name="permiteEmitirNovaViaCartao">Par\u00E2metro que define se o Status da conta permite solicitar uma nova via de Cart\u00E3o, sendo: 0: Inativo e 1: Ativo (optional)</param>
-        /// <param name="permiteFazerTransferencia">Par\u00E2metro que define se o Status da conta permite originar Transfer\u00EAncias de Cr\u00E9dito para outras Contas do mesmo Emissor ou para uma Conta Banc\u00E1ria, sendo: 0: Inativo e 1: Ativo (optional)</param>
-        /// <param name="permiteReceberTransferencia">Par\u00E2metro que define se o Status da conta permite  receber Transfer\u00EAncias de Cr\u00E9dito originadas de outras Contas do mesmo emissor, sendo: 0: Inativo e 1: Ativo (optional)</param>
-        /// <param name="permiteCriarAcordoCobranca">Par\u00E2metro que define se o Status da conta permite ter um Acordo de Cobran\u00E7a de D\u00EDvida criado para ela, sendo: 0: Inativo e 1: Ativo (optional)</param>
-        /// <param name="permiteAtribuirComoBloqueio">Par\u00E2metro que define se o Status da conta permite ser atribu\u00EDdo para Bloquear temporariamente uma Conta, sendo: 0: Inativo e 1: Ativo (optional)</param>
-        /// <param name="permiteDesbloquear">Par\u00E2metro que define se o Status da conta permite ser desbloqueada, sendo: 0: Inativo e 1: Ativo (optional)</param>
-        /// <param name="permiteAtribuirComoCancelamento">Par\u00E2metro que define se o Status da conta permite ser atribu\u00EDdo para realizar o cancelamento definitivo de uma conta, sendo: 0: Inativo e 1: Ativo (optional)</param>
-        /// <returns>Task of ApiResponse (PageStatusContaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageStatusContaResponse>> ListarAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, int? permiteAlterarVencimento = null, int? permiteAlterarLimite = null, int? permiteEmitirNovaViaCartao = null, int? permiteFazerTransferencia = null, int? permiteReceberTransferencia = null, int? permiteCriarAcordoCobranca = null, int? permiteAtribuirComoBloqueio = null, int? permiteDesbloquear = null, int? permiteAtribuirComoCancelamento = null);
+        System.Threading.Tasks.Task<ApiResponse<StatusImpressaoResponse>> ConsultarStatusImpressaoCartaoAsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Lista as op\u00E7\u00F5es de Est\u00E1gios do Cart\u00E3o
@@ -512,6 +464,54 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<PageStatusCartaoResponse>> ListarStatusCartoesAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, int? permiteDesbloquear = null, int? permiteAtribuirComoBloqueio = null, int? permiteAtribuirComoCancelamento = null, int? cobrarTarifaAoEmitirNovaVia = null);
         
         /// <summary>
+        /// Lista os Status Contas cadastrados para o Emissor
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que sejam listados os Status Contas existentes na base de dados do Emissor
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Status da Conta (id) (optional)</param>
+        /// <param name="nome">Nome atribu\u00EDdo ao Status da Conta (optional)</param>
+        /// <param name="permiteAlterarVencimento">Par\u00E2metro que define se o Status da conta permite a solicita\u00E7\u00E3o da altera\u00E7\u00E3o do Dia para Vencimento das Faturas, sendo: 0: Inativo e 1: Ativo (optional)</param>
+        /// <param name="permiteAlterarLimite">Par\u00E2metro que define se o Status da conta permite altera\u00E7\u00E3o de Limites, sendo: 0: Inativo e 1: Ativo (optional)</param>
+        /// <param name="permiteEmitirNovaViaCartao">Par\u00E2metro que define se o Status da conta permite solicitar uma nova via de Cart\u00E3o, sendo: 0: Inativo e 1: Ativo (optional)</param>
+        /// <param name="permiteFazerTransferencia">Par\u00E2metro que define se o Status da conta permite originar Transfer\u00EAncias de Cr\u00E9dito para outras Contas do mesmo Emissor ou para uma Conta Banc\u00E1ria, sendo: 0: Inativo e 1: Ativo (optional)</param>
+        /// <param name="permiteReceberTransferencia">Par\u00E2metro que define se o Status da conta permite  receber Transfer\u00EAncias de Cr\u00E9dito originadas de outras Contas do mesmo emissor, sendo: 0: Inativo e 1: Ativo (optional)</param>
+        /// <param name="permiteCriarAcordoCobranca">Par\u00E2metro que define se o Status da conta permite ter um Acordo de Cobran\u00E7a de D\u00EDvida criado para ela, sendo: 0: Inativo e 1: Ativo (optional)</param>
+        /// <param name="permiteAtribuirComoBloqueio">Par\u00E2metro que define se o Status da conta permite ser atribu\u00EDdo para Bloquear temporariamente uma Conta, sendo: 0: Inativo e 1: Ativo (optional)</param>
+        /// <param name="permiteDesbloquear">Par\u00E2metro que define se o Status da conta permite ser desbloqueada, sendo: 0: Inativo e 1: Ativo (optional)</param>
+        /// <param name="permiteAtribuirComoCancelamento">Par\u00E2metro que define se o Status da conta permite ser atribu\u00EDdo para realizar o cancelamento definitivo de uma conta, sendo: 0: Inativo e 1: Ativo (optional)</param>
+        /// <returns>Task of PageStatusContaResponse</returns>
+        System.Threading.Tasks.Task<PageStatusContaResponse> ListarStatusContaAsync (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, int? permiteAlterarVencimento = null, int? permiteAlterarLimite = null, int? permiteEmitirNovaViaCartao = null, int? permiteFazerTransferencia = null, int? permiteReceberTransferencia = null, int? permiteCriarAcordoCobranca = null, int? permiteAtribuirComoBloqueio = null, int? permiteDesbloquear = null, int? permiteAtribuirComoCancelamento = null);
+
+        /// <summary>
+        /// Lista os Status Contas cadastrados para o Emissor
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que sejam listados os Status Contas existentes na base de dados do Emissor
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Status da Conta (id) (optional)</param>
+        /// <param name="nome">Nome atribu\u00EDdo ao Status da Conta (optional)</param>
+        /// <param name="permiteAlterarVencimento">Par\u00E2metro que define se o Status da conta permite a solicita\u00E7\u00E3o da altera\u00E7\u00E3o do Dia para Vencimento das Faturas, sendo: 0: Inativo e 1: Ativo (optional)</param>
+        /// <param name="permiteAlterarLimite">Par\u00E2metro que define se o Status da conta permite altera\u00E7\u00E3o de Limites, sendo: 0: Inativo e 1: Ativo (optional)</param>
+        /// <param name="permiteEmitirNovaViaCartao">Par\u00E2metro que define se o Status da conta permite solicitar uma nova via de Cart\u00E3o, sendo: 0: Inativo e 1: Ativo (optional)</param>
+        /// <param name="permiteFazerTransferencia">Par\u00E2metro que define se o Status da conta permite originar Transfer\u00EAncias de Cr\u00E9dito para outras Contas do mesmo Emissor ou para uma Conta Banc\u00E1ria, sendo: 0: Inativo e 1: Ativo (optional)</param>
+        /// <param name="permiteReceberTransferencia">Par\u00E2metro que define se o Status da conta permite  receber Transfer\u00EAncias de Cr\u00E9dito originadas de outras Contas do mesmo emissor, sendo: 0: Inativo e 1: Ativo (optional)</param>
+        /// <param name="permiteCriarAcordoCobranca">Par\u00E2metro que define se o Status da conta permite ter um Acordo de Cobran\u00E7a de D\u00EDvida criado para ela, sendo: 0: Inativo e 1: Ativo (optional)</param>
+        /// <param name="permiteAtribuirComoBloqueio">Par\u00E2metro que define se o Status da conta permite ser atribu\u00EDdo para Bloquear temporariamente uma Conta, sendo: 0: Inativo e 1: Ativo (optional)</param>
+        /// <param name="permiteDesbloquear">Par\u00E2metro que define se o Status da conta permite ser desbloqueada, sendo: 0: Inativo e 1: Ativo (optional)</param>
+        /// <param name="permiteAtribuirComoCancelamento">Par\u00E2metro que define se o Status da conta permite ser atribu\u00EDdo para realizar o cancelamento definitivo de uma conta, sendo: 0: Inativo e 1: Ativo (optional)</param>
+        /// <returns>Task of ApiResponse (PageStatusContaResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PageStatusContaResponse>> ListarStatusContaAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, int? permiteAlterarVencimento = null, int? permiteAlterarLimite = null, int? permiteEmitirNovaViaCartao = null, int? permiteFazerTransferencia = null, int? permiteReceberTransferencia = null, int? permiteCriarAcordoCobranca = null, int? permiteAtribuirComoBloqueio = null, int? permiteDesbloquear = null, int? permiteAtribuirComoCancelamento = null);
+        
+        /// <summary>
         /// Lista as op\u00E7\u00F5es de Status Impress\u00E3o
         /// </summary>
         /// <remarks>
@@ -524,7 +524,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">Id do est\u00E1gio cart\u00E3o (optional)</param>
         /// <param name="nome">Nome do status impress\u00E3o (optional)</param>
         /// <returns>Task of PageStatusImpressaoResponse</returns>
-        System.Threading.Tasks.Task<PageStatusImpressaoResponse> Listar_0Async (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null);
+        System.Threading.Tasks.Task<PageStatusImpressaoResponse> ListarStatusImpressaoCartaoAsync (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null);
 
         /// <summary>
         /// Lista as op\u00E7\u00F5es de Status Impress\u00E3o
@@ -539,7 +539,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">Id do est\u00E1gio cart\u00E3o (optional)</param>
         /// <param name="nome">Nome do status impress\u00E3o (optional)</param>
         /// <returns>Task of ApiResponse (PageStatusImpressaoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageStatusImpressaoResponse>> Listar_0AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null);
+        System.Threading.Tasks.Task<ApiResponse<PageStatusImpressaoResponse>> ListarStatusImpressaoCartaoAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null);
         
         #endregion Asynchronous Operations
         
@@ -632,164 +632,6 @@ namespace Conductor.Pier.Api
             this.Configuration.AddDefaultHeader(key, value);
         }
    
-        
-        /// <summary>
-        /// Apresenta os dados de um determinado Status Conta Este m\u00E9todo permite consultar os par\u00E2metros de um determinado Status Conta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id)
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Status da Conta (id)</param> 
-        /// <returns>StatusContaResponse</returns>
-        public StatusContaResponse Consultar (long? id)
-        {
-             ApiResponse<StatusContaResponse> localVarResponse = ConsultarWithHttpInfo(id);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Apresenta os dados de um determinado Status Conta Este m\u00E9todo permite consultar os par\u00E2metros de um determinado Status Conta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id)
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Status da Conta (id)</param> 
-        /// <returns>ApiResponse of StatusContaResponse</returns>
-        public ApiResponse< StatusContaResponse > ConsultarWithHttpInfo (long? id)
-        {
-            
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling StatusParametroApi->Consultar");
-            
-    
-            var localVarPath = "/api/status-contas/{id}";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            
-            
-            
-            
-            
-
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<StatusContaResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (StatusContaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(StatusContaResponse)));
-            
-        }
-
-        
-        /// <summary>
-        /// Apresenta os dados de um determinado Status Conta Este m\u00E9todo permite consultar os par\u00E2metros de um determinado Status Conta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id)
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Status da Conta (id)</param>
-        /// <returns>Task of StatusContaResponse</returns>
-        public async System.Threading.Tasks.Task<StatusContaResponse> ConsultarAsync (long? id)
-        {
-             ApiResponse<StatusContaResponse> localVarResponse = await ConsultarAsyncWithHttpInfo(id);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Apresenta os dados de um determinado Status Conta Este m\u00E9todo permite consultar os par\u00E2metros de um determinado Status Conta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id)
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Status da Conta (id)</param>
-        /// <returns>Task of ApiResponse (StatusContaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<StatusContaResponse>> ConsultarAsyncWithHttpInfo (long? id)
-        {
-            // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling Consultar");
-            
-    
-            var localVarPath = "/api/status-contas/{id}";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            
-            
-            
-            
-            
-
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<StatusContaResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (StatusContaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(StatusContaResponse)));
-            
-        }
         
         /// <summary>
         /// Apresenta os dados de um determinado Estagio Cart\u00E3o Este m\u00E9todo permite consultar os par\u00E2metros de um determinado Est\u00E1gio de Entrega do Cart\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id)
@@ -1108,14 +950,172 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
+        /// Apresenta os dados de um determinado Status Conta Este m\u00E9todo permite consultar os par\u00E2metros de um determinado Status Conta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id)
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Status da Conta (id)</param> 
+        /// <returns>StatusContaResponse</returns>
+        public StatusContaResponse ConsultarStatusConta (long? id)
+        {
+             ApiResponse<StatusContaResponse> localVarResponse = ConsultarStatusContaWithHttpInfo(id);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Apresenta os dados de um determinado Status Conta Este m\u00E9todo permite consultar os par\u00E2metros de um determinado Status Conta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id)
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Status da Conta (id)</param> 
+        /// <returns>ApiResponse of StatusContaResponse</returns>
+        public ApiResponse< StatusContaResponse > ConsultarStatusContaWithHttpInfo (long? id)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling StatusParametroApi->ConsultarStatusConta");
+            
+    
+            var localVarPath = "/api/status-contas/{id}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarStatusConta: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarStatusConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<StatusContaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (StatusContaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(StatusContaResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Apresenta os dados de um determinado Status Conta Este m\u00E9todo permite consultar os par\u00E2metros de um determinado Status Conta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id)
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Status da Conta (id)</param>
+        /// <returns>Task of StatusContaResponse</returns>
+        public async System.Threading.Tasks.Task<StatusContaResponse> ConsultarStatusContaAsync (long? id)
+        {
+             ApiResponse<StatusContaResponse> localVarResponse = await ConsultarStatusContaAsyncWithHttpInfo(id);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Apresenta os dados de um determinado Status Conta Este m\u00E9todo permite consultar os par\u00E2metros de um determinado Status Conta a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id)
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Status da Conta (id)</param>
+        /// <returns>Task of ApiResponse (StatusContaResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<StatusContaResponse>> ConsultarStatusContaAsyncWithHttpInfo (long? id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarStatusConta");
+            
+    
+            var localVarPath = "/api/status-contas/{id}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarStatusConta: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarStatusConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<StatusContaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (StatusContaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(StatusContaResponse)));
+            
+        }
+        
+        /// <summary>
         /// Apresenta os dados de um determinado Status Impress\u00E3o Este m\u00E9todo permite consultar os par\u00E2metros de um determinado Status de Impress\u00E3o do Cart\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id)
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Status de Impress\u00E3o do Cart\u00E3o (id)</param> 
         /// <returns>StatusImpressaoResponse</returns>
-        public StatusImpressaoResponse Consultar_0 (long? id)
+        public StatusImpressaoResponse ConsultarStatusImpressaoCartao (long? id)
         {
-             ApiResponse<StatusImpressaoResponse> localVarResponse = Consultar_0WithHttpInfo(id);
+             ApiResponse<StatusImpressaoResponse> localVarResponse = ConsultarStatusImpressaoCartaoWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -1125,12 +1125,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Status de Impress\u00E3o do Cart\u00E3o (id)</param> 
         /// <returns>ApiResponse of StatusImpressaoResponse</returns>
-        public ApiResponse< StatusImpressaoResponse > Consultar_0WithHttpInfo (long? id)
+        public ApiResponse< StatusImpressaoResponse > ConsultarStatusImpressaoCartaoWithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling StatusParametroApi->Consultar_0");
+                throw new ApiException(400, "Missing required parameter 'id' when calling StatusParametroApi->ConsultarStatusImpressaoCartao");
             
     
             var localVarPath = "/api/status-impressoes/{id}";
@@ -1176,9 +1176,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar_0: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarStatusImpressaoCartao: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar_0: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarStatusImpressaoCartao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<StatusImpressaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1193,9 +1193,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Status de Impress\u00E3o do Cart\u00E3o (id)</param>
         /// <returns>Task of StatusImpressaoResponse</returns>
-        public async System.Threading.Tasks.Task<StatusImpressaoResponse> Consultar_0Async (long? id)
+        public async System.Threading.Tasks.Task<StatusImpressaoResponse> ConsultarStatusImpressaoCartaoAsync (long? id)
         {
-             ApiResponse<StatusImpressaoResponse> localVarResponse = await Consultar_0AsyncWithHttpInfo(id);
+             ApiResponse<StatusImpressaoResponse> localVarResponse = await ConsultarStatusImpressaoCartaoAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -1206,10 +1206,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Status de Impress\u00E3o do Cart\u00E3o (id)</param>
         /// <returns>Task of ApiResponse (StatusImpressaoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<StatusImpressaoResponse>> Consultar_0AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<StatusImpressaoResponse>> ConsultarStatusImpressaoCartaoAsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling Consultar_0");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarStatusImpressaoCartao");
             
     
             var localVarPath = "/api/status-impressoes/{id}";
@@ -1255,243 +1255,13 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar_0: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarStatusImpressaoCartao: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar_0: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarStatusImpressaoCartao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<StatusImpressaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (StatusImpressaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(StatusImpressaoResponse)));
-            
-        }
-        
-        /// <summary>
-        /// Lista os Status Contas cadastrados para o Emissor Este m\u00E9todo permite que sejam listados os Status Contas existentes na base de dados do Emissor
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
-        /// <param name="page">P\u00E1gina (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Status da Conta (id) (optional)</param> 
-        /// <param name="nome">Nome atribu\u00EDdo ao Status da Conta (optional)</param> 
-        /// <param name="permiteAlterarVencimento">Par\u00E2metro que define se o Status da conta permite a solicita\u00E7\u00E3o da altera\u00E7\u00E3o do Dia para Vencimento das Faturas, sendo: 0: Inativo e 1: Ativo (optional)</param> 
-        /// <param name="permiteAlterarLimite">Par\u00E2metro que define se o Status da conta permite altera\u00E7\u00E3o de Limites, sendo: 0: Inativo e 1: Ativo (optional)</param> 
-        /// <param name="permiteEmitirNovaViaCartao">Par\u00E2metro que define se o Status da conta permite solicitar uma nova via de Cart\u00E3o, sendo: 0: Inativo e 1: Ativo (optional)</param> 
-        /// <param name="permiteFazerTransferencia">Par\u00E2metro que define se o Status da conta permite originar Transfer\u00EAncias de Cr\u00E9dito para outras Contas do mesmo Emissor ou para uma Conta Banc\u00E1ria, sendo: 0: Inativo e 1: Ativo (optional)</param> 
-        /// <param name="permiteReceberTransferencia">Par\u00E2metro que define se o Status da conta permite  receber Transfer\u00EAncias de Cr\u00E9dito originadas de outras Contas do mesmo emissor, sendo: 0: Inativo e 1: Ativo (optional)</param> 
-        /// <param name="permiteCriarAcordoCobranca">Par\u00E2metro que define se o Status da conta permite ter um Acordo de Cobran\u00E7a de D\u00EDvida criado para ela, sendo: 0: Inativo e 1: Ativo (optional)</param> 
-        /// <param name="permiteAtribuirComoBloqueio">Par\u00E2metro que define se o Status da conta permite ser atribu\u00EDdo para Bloquear temporariamente uma Conta, sendo: 0: Inativo e 1: Ativo (optional)</param> 
-        /// <param name="permiteDesbloquear">Par\u00E2metro que define se o Status da conta permite ser desbloqueada, sendo: 0: Inativo e 1: Ativo (optional)</param> 
-        /// <param name="permiteAtribuirComoCancelamento">Par\u00E2metro que define se o Status da conta permite ser atribu\u00EDdo para realizar o cancelamento definitivo de uma conta, sendo: 0: Inativo e 1: Ativo (optional)</param> 
-        /// <returns>PageStatusContaResponse</returns>
-        public PageStatusContaResponse Listar (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, int? permiteAlterarVencimento = null, int? permiteAlterarLimite = null, int? permiteEmitirNovaViaCartao = null, int? permiteFazerTransferencia = null, int? permiteReceberTransferencia = null, int? permiteCriarAcordoCobranca = null, int? permiteAtribuirComoBloqueio = null, int? permiteDesbloquear = null, int? permiteAtribuirComoCancelamento = null)
-        {
-             ApiResponse<PageStatusContaResponse> localVarResponse = ListarWithHttpInfo(sort, page, limit, id, nome, permiteAlterarVencimento, permiteAlterarLimite, permiteEmitirNovaViaCartao, permiteFazerTransferencia, permiteReceberTransferencia, permiteCriarAcordoCobranca, permiteAtribuirComoBloqueio, permiteDesbloquear, permiteAtribuirComoCancelamento);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Lista os Status Contas cadastrados para o Emissor Este m\u00E9todo permite que sejam listados os Status Contas existentes na base de dados do Emissor
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
-        /// <param name="page">P\u00E1gina (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Status da Conta (id) (optional)</param> 
-        /// <param name="nome">Nome atribu\u00EDdo ao Status da Conta (optional)</param> 
-        /// <param name="permiteAlterarVencimento">Par\u00E2metro que define se o Status da conta permite a solicita\u00E7\u00E3o da altera\u00E7\u00E3o do Dia para Vencimento das Faturas, sendo: 0: Inativo e 1: Ativo (optional)</param> 
-        /// <param name="permiteAlterarLimite">Par\u00E2metro que define se o Status da conta permite altera\u00E7\u00E3o de Limites, sendo: 0: Inativo e 1: Ativo (optional)</param> 
-        /// <param name="permiteEmitirNovaViaCartao">Par\u00E2metro que define se o Status da conta permite solicitar uma nova via de Cart\u00E3o, sendo: 0: Inativo e 1: Ativo (optional)</param> 
-        /// <param name="permiteFazerTransferencia">Par\u00E2metro que define se o Status da conta permite originar Transfer\u00EAncias de Cr\u00E9dito para outras Contas do mesmo Emissor ou para uma Conta Banc\u00E1ria, sendo: 0: Inativo e 1: Ativo (optional)</param> 
-        /// <param name="permiteReceberTransferencia">Par\u00E2metro que define se o Status da conta permite  receber Transfer\u00EAncias de Cr\u00E9dito originadas de outras Contas do mesmo emissor, sendo: 0: Inativo e 1: Ativo (optional)</param> 
-        /// <param name="permiteCriarAcordoCobranca">Par\u00E2metro que define se o Status da conta permite ter um Acordo de Cobran\u00E7a de D\u00EDvida criado para ela, sendo: 0: Inativo e 1: Ativo (optional)</param> 
-        /// <param name="permiteAtribuirComoBloqueio">Par\u00E2metro que define se o Status da conta permite ser atribu\u00EDdo para Bloquear temporariamente uma Conta, sendo: 0: Inativo e 1: Ativo (optional)</param> 
-        /// <param name="permiteDesbloquear">Par\u00E2metro que define se o Status da conta permite ser desbloqueada, sendo: 0: Inativo e 1: Ativo (optional)</param> 
-        /// <param name="permiteAtribuirComoCancelamento">Par\u00E2metro que define se o Status da conta permite ser atribu\u00EDdo para realizar o cancelamento definitivo de uma conta, sendo: 0: Inativo e 1: Ativo (optional)</param> 
-        /// <returns>ApiResponse of PageStatusContaResponse</returns>
-        public ApiResponse< PageStatusContaResponse > ListarWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, int? permiteAlterarVencimento = null, int? permiteAlterarLimite = null, int? permiteEmitirNovaViaCartao = null, int? permiteFazerTransferencia = null, int? permiteReceberTransferencia = null, int? permiteCriarAcordoCobranca = null, int? permiteAtribuirComoBloqueio = null, int? permiteDesbloquear = null, int? permiteAtribuirComoCancelamento = null)
-        {
-            
-    
-            var localVarPath = "/api/status-contas";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            
-            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
-            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
-            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
-            if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
-            if (nome != null) localVarQueryParams.Add("nome", Configuration.ApiClient.ParameterToString(nome)); // query parameter
-            if (permiteAlterarVencimento != null) localVarQueryParams.Add("permiteAlterarVencimento", Configuration.ApiClient.ParameterToString(permiteAlterarVencimento)); // query parameter
-            if (permiteAlterarLimite != null) localVarQueryParams.Add("permiteAlterarLimite", Configuration.ApiClient.ParameterToString(permiteAlterarLimite)); // query parameter
-            if (permiteEmitirNovaViaCartao != null) localVarQueryParams.Add("permiteEmitirNovaViaCartao", Configuration.ApiClient.ParameterToString(permiteEmitirNovaViaCartao)); // query parameter
-            if (permiteFazerTransferencia != null) localVarQueryParams.Add("permiteFazerTransferencia", Configuration.ApiClient.ParameterToString(permiteFazerTransferencia)); // query parameter
-            if (permiteReceberTransferencia != null) localVarQueryParams.Add("permiteReceberTransferencia", Configuration.ApiClient.ParameterToString(permiteReceberTransferencia)); // query parameter
-            if (permiteCriarAcordoCobranca != null) localVarQueryParams.Add("permiteCriarAcordoCobranca", Configuration.ApiClient.ParameterToString(permiteCriarAcordoCobranca)); // query parameter
-            if (permiteAtribuirComoBloqueio != null) localVarQueryParams.Add("permiteAtribuirComoBloqueio", Configuration.ApiClient.ParameterToString(permiteAtribuirComoBloqueio)); // query parameter
-            if (permiteDesbloquear != null) localVarQueryParams.Add("permiteDesbloquear", Configuration.ApiClient.ParameterToString(permiteDesbloquear)); // query parameter
-            if (permiteAtribuirComoCancelamento != null) localVarQueryParams.Add("permiteAtribuirComoCancelamento", Configuration.ApiClient.ParameterToString(permiteAtribuirComoCancelamento)); // query parameter
-            
-            
-            
-            
-
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Listar: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Listar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<PageStatusContaResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PageStatusContaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageStatusContaResponse)));
-            
-        }
-
-        
-        /// <summary>
-        /// Lista os Status Contas cadastrados para o Emissor Este m\u00E9todo permite que sejam listados os Status Contas existentes na base de dados do Emissor
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Status da Conta (id) (optional)</param>
-        /// <param name="nome">Nome atribu\u00EDdo ao Status da Conta (optional)</param>
-        /// <param name="permiteAlterarVencimento">Par\u00E2metro que define se o Status da conta permite a solicita\u00E7\u00E3o da altera\u00E7\u00E3o do Dia para Vencimento das Faturas, sendo: 0: Inativo e 1: Ativo (optional)</param>
-        /// <param name="permiteAlterarLimite">Par\u00E2metro que define se o Status da conta permite altera\u00E7\u00E3o de Limites, sendo: 0: Inativo e 1: Ativo (optional)</param>
-        /// <param name="permiteEmitirNovaViaCartao">Par\u00E2metro que define se o Status da conta permite solicitar uma nova via de Cart\u00E3o, sendo: 0: Inativo e 1: Ativo (optional)</param>
-        /// <param name="permiteFazerTransferencia">Par\u00E2metro que define se o Status da conta permite originar Transfer\u00EAncias de Cr\u00E9dito para outras Contas do mesmo Emissor ou para uma Conta Banc\u00E1ria, sendo: 0: Inativo e 1: Ativo (optional)</param>
-        /// <param name="permiteReceberTransferencia">Par\u00E2metro que define se o Status da conta permite  receber Transfer\u00EAncias de Cr\u00E9dito originadas de outras Contas do mesmo emissor, sendo: 0: Inativo e 1: Ativo (optional)</param>
-        /// <param name="permiteCriarAcordoCobranca">Par\u00E2metro que define se o Status da conta permite ter um Acordo de Cobran\u00E7a de D\u00EDvida criado para ela, sendo: 0: Inativo e 1: Ativo (optional)</param>
-        /// <param name="permiteAtribuirComoBloqueio">Par\u00E2metro que define se o Status da conta permite ser atribu\u00EDdo para Bloquear temporariamente uma Conta, sendo: 0: Inativo e 1: Ativo (optional)</param>
-        /// <param name="permiteDesbloquear">Par\u00E2metro que define se o Status da conta permite ser desbloqueada, sendo: 0: Inativo e 1: Ativo (optional)</param>
-        /// <param name="permiteAtribuirComoCancelamento">Par\u00E2metro que define se o Status da conta permite ser atribu\u00EDdo para realizar o cancelamento definitivo de uma conta, sendo: 0: Inativo e 1: Ativo (optional)</param>
-        /// <returns>Task of PageStatusContaResponse</returns>
-        public async System.Threading.Tasks.Task<PageStatusContaResponse> ListarAsync (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, int? permiteAlterarVencimento = null, int? permiteAlterarLimite = null, int? permiteEmitirNovaViaCartao = null, int? permiteFazerTransferencia = null, int? permiteReceberTransferencia = null, int? permiteCriarAcordoCobranca = null, int? permiteAtribuirComoBloqueio = null, int? permiteDesbloquear = null, int? permiteAtribuirComoCancelamento = null)
-        {
-             ApiResponse<PageStatusContaResponse> localVarResponse = await ListarAsyncWithHttpInfo(sort, page, limit, id, nome, permiteAlterarVencimento, permiteAlterarLimite, permiteEmitirNovaViaCartao, permiteFazerTransferencia, permiteReceberTransferencia, permiteCriarAcordoCobranca, permiteAtribuirComoBloqueio, permiteDesbloquear, permiteAtribuirComoCancelamento);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Lista os Status Contas cadastrados para o Emissor Este m\u00E9todo permite que sejam listados os Status Contas existentes na base de dados do Emissor
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Status da Conta (id) (optional)</param>
-        /// <param name="nome">Nome atribu\u00EDdo ao Status da Conta (optional)</param>
-        /// <param name="permiteAlterarVencimento">Par\u00E2metro que define se o Status da conta permite a solicita\u00E7\u00E3o da altera\u00E7\u00E3o do Dia para Vencimento das Faturas, sendo: 0: Inativo e 1: Ativo (optional)</param>
-        /// <param name="permiteAlterarLimite">Par\u00E2metro que define se o Status da conta permite altera\u00E7\u00E3o de Limites, sendo: 0: Inativo e 1: Ativo (optional)</param>
-        /// <param name="permiteEmitirNovaViaCartao">Par\u00E2metro que define se o Status da conta permite solicitar uma nova via de Cart\u00E3o, sendo: 0: Inativo e 1: Ativo (optional)</param>
-        /// <param name="permiteFazerTransferencia">Par\u00E2metro que define se o Status da conta permite originar Transfer\u00EAncias de Cr\u00E9dito para outras Contas do mesmo Emissor ou para uma Conta Banc\u00E1ria, sendo: 0: Inativo e 1: Ativo (optional)</param>
-        /// <param name="permiteReceberTransferencia">Par\u00E2metro que define se o Status da conta permite  receber Transfer\u00EAncias de Cr\u00E9dito originadas de outras Contas do mesmo emissor, sendo: 0: Inativo e 1: Ativo (optional)</param>
-        /// <param name="permiteCriarAcordoCobranca">Par\u00E2metro que define se o Status da conta permite ter um Acordo de Cobran\u00E7a de D\u00EDvida criado para ela, sendo: 0: Inativo e 1: Ativo (optional)</param>
-        /// <param name="permiteAtribuirComoBloqueio">Par\u00E2metro que define se o Status da conta permite ser atribu\u00EDdo para Bloquear temporariamente uma Conta, sendo: 0: Inativo e 1: Ativo (optional)</param>
-        /// <param name="permiteDesbloquear">Par\u00E2metro que define se o Status da conta permite ser desbloqueada, sendo: 0: Inativo e 1: Ativo (optional)</param>
-        /// <param name="permiteAtribuirComoCancelamento">Par\u00E2metro que define se o Status da conta permite ser atribu\u00EDdo para realizar o cancelamento definitivo de uma conta, sendo: 0: Inativo e 1: Ativo (optional)</param>
-        /// <returns>Task of ApiResponse (PageStatusContaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageStatusContaResponse>> ListarAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, int? permiteAlterarVencimento = null, int? permiteAlterarLimite = null, int? permiteEmitirNovaViaCartao = null, int? permiteFazerTransferencia = null, int? permiteReceberTransferencia = null, int? permiteCriarAcordoCobranca = null, int? permiteAtribuirComoBloqueio = null, int? permiteDesbloquear = null, int? permiteAtribuirComoCancelamento = null)
-        {
-            
-    
-            var localVarPath = "/api/status-contas";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            
-            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
-            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
-            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
-            if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
-            if (nome != null) localVarQueryParams.Add("nome", Configuration.ApiClient.ParameterToString(nome)); // query parameter
-            if (permiteAlterarVencimento != null) localVarQueryParams.Add("permiteAlterarVencimento", Configuration.ApiClient.ParameterToString(permiteAlterarVencimento)); // query parameter
-            if (permiteAlterarLimite != null) localVarQueryParams.Add("permiteAlterarLimite", Configuration.ApiClient.ParameterToString(permiteAlterarLimite)); // query parameter
-            if (permiteEmitirNovaViaCartao != null) localVarQueryParams.Add("permiteEmitirNovaViaCartao", Configuration.ApiClient.ParameterToString(permiteEmitirNovaViaCartao)); // query parameter
-            if (permiteFazerTransferencia != null) localVarQueryParams.Add("permiteFazerTransferencia", Configuration.ApiClient.ParameterToString(permiteFazerTransferencia)); // query parameter
-            if (permiteReceberTransferencia != null) localVarQueryParams.Add("permiteReceberTransferencia", Configuration.ApiClient.ParameterToString(permiteReceberTransferencia)); // query parameter
-            if (permiteCriarAcordoCobranca != null) localVarQueryParams.Add("permiteCriarAcordoCobranca", Configuration.ApiClient.ParameterToString(permiteCriarAcordoCobranca)); // query parameter
-            if (permiteAtribuirComoBloqueio != null) localVarQueryParams.Add("permiteAtribuirComoBloqueio", Configuration.ApiClient.ParameterToString(permiteAtribuirComoBloqueio)); // query parameter
-            if (permiteDesbloquear != null) localVarQueryParams.Add("permiteDesbloquear", Configuration.ApiClient.ParameterToString(permiteDesbloquear)); // query parameter
-            if (permiteAtribuirComoCancelamento != null) localVarQueryParams.Add("permiteAtribuirComoCancelamento", Configuration.ApiClient.ParameterToString(permiteAtribuirComoCancelamento)); // query parameter
-            
-            
-            
-            
-
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Listar: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Listar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<PageStatusContaResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PageStatusContaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageStatusContaResponse)));
             
         }
         
@@ -2036,6 +1806,236 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
+        /// Lista os Status Contas cadastrados para o Emissor Este m\u00E9todo permite que sejam listados os Status Contas existentes na base de dados do Emissor
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="page">P\u00E1gina (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Status da Conta (id) (optional)</param> 
+        /// <param name="nome">Nome atribu\u00EDdo ao Status da Conta (optional)</param> 
+        /// <param name="permiteAlterarVencimento">Par\u00E2metro que define se o Status da conta permite a solicita\u00E7\u00E3o da altera\u00E7\u00E3o do Dia para Vencimento das Faturas, sendo: 0: Inativo e 1: Ativo (optional)</param> 
+        /// <param name="permiteAlterarLimite">Par\u00E2metro que define se o Status da conta permite altera\u00E7\u00E3o de Limites, sendo: 0: Inativo e 1: Ativo (optional)</param> 
+        /// <param name="permiteEmitirNovaViaCartao">Par\u00E2metro que define se o Status da conta permite solicitar uma nova via de Cart\u00E3o, sendo: 0: Inativo e 1: Ativo (optional)</param> 
+        /// <param name="permiteFazerTransferencia">Par\u00E2metro que define se o Status da conta permite originar Transfer\u00EAncias de Cr\u00E9dito para outras Contas do mesmo Emissor ou para uma Conta Banc\u00E1ria, sendo: 0: Inativo e 1: Ativo (optional)</param> 
+        /// <param name="permiteReceberTransferencia">Par\u00E2metro que define se o Status da conta permite  receber Transfer\u00EAncias de Cr\u00E9dito originadas de outras Contas do mesmo emissor, sendo: 0: Inativo e 1: Ativo (optional)</param> 
+        /// <param name="permiteCriarAcordoCobranca">Par\u00E2metro que define se o Status da conta permite ter um Acordo de Cobran\u00E7a de D\u00EDvida criado para ela, sendo: 0: Inativo e 1: Ativo (optional)</param> 
+        /// <param name="permiteAtribuirComoBloqueio">Par\u00E2metro que define se o Status da conta permite ser atribu\u00EDdo para Bloquear temporariamente uma Conta, sendo: 0: Inativo e 1: Ativo (optional)</param> 
+        /// <param name="permiteDesbloquear">Par\u00E2metro que define se o Status da conta permite ser desbloqueada, sendo: 0: Inativo e 1: Ativo (optional)</param> 
+        /// <param name="permiteAtribuirComoCancelamento">Par\u00E2metro que define se o Status da conta permite ser atribu\u00EDdo para realizar o cancelamento definitivo de uma conta, sendo: 0: Inativo e 1: Ativo (optional)</param> 
+        /// <returns>PageStatusContaResponse</returns>
+        public PageStatusContaResponse ListarStatusConta (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, int? permiteAlterarVencimento = null, int? permiteAlterarLimite = null, int? permiteEmitirNovaViaCartao = null, int? permiteFazerTransferencia = null, int? permiteReceberTransferencia = null, int? permiteCriarAcordoCobranca = null, int? permiteAtribuirComoBloqueio = null, int? permiteDesbloquear = null, int? permiteAtribuirComoCancelamento = null)
+        {
+             ApiResponse<PageStatusContaResponse> localVarResponse = ListarStatusContaWithHttpInfo(sort, page, limit, id, nome, permiteAlterarVencimento, permiteAlterarLimite, permiteEmitirNovaViaCartao, permiteFazerTransferencia, permiteReceberTransferencia, permiteCriarAcordoCobranca, permiteAtribuirComoBloqueio, permiteDesbloquear, permiteAtribuirComoCancelamento);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Lista os Status Contas cadastrados para o Emissor Este m\u00E9todo permite que sejam listados os Status Contas existentes na base de dados do Emissor
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="page">P\u00E1gina (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Status da Conta (id) (optional)</param> 
+        /// <param name="nome">Nome atribu\u00EDdo ao Status da Conta (optional)</param> 
+        /// <param name="permiteAlterarVencimento">Par\u00E2metro que define se o Status da conta permite a solicita\u00E7\u00E3o da altera\u00E7\u00E3o do Dia para Vencimento das Faturas, sendo: 0: Inativo e 1: Ativo (optional)</param> 
+        /// <param name="permiteAlterarLimite">Par\u00E2metro que define se o Status da conta permite altera\u00E7\u00E3o de Limites, sendo: 0: Inativo e 1: Ativo (optional)</param> 
+        /// <param name="permiteEmitirNovaViaCartao">Par\u00E2metro que define se o Status da conta permite solicitar uma nova via de Cart\u00E3o, sendo: 0: Inativo e 1: Ativo (optional)</param> 
+        /// <param name="permiteFazerTransferencia">Par\u00E2metro que define se o Status da conta permite originar Transfer\u00EAncias de Cr\u00E9dito para outras Contas do mesmo Emissor ou para uma Conta Banc\u00E1ria, sendo: 0: Inativo e 1: Ativo (optional)</param> 
+        /// <param name="permiteReceberTransferencia">Par\u00E2metro que define se o Status da conta permite  receber Transfer\u00EAncias de Cr\u00E9dito originadas de outras Contas do mesmo emissor, sendo: 0: Inativo e 1: Ativo (optional)</param> 
+        /// <param name="permiteCriarAcordoCobranca">Par\u00E2metro que define se o Status da conta permite ter um Acordo de Cobran\u00E7a de D\u00EDvida criado para ela, sendo: 0: Inativo e 1: Ativo (optional)</param> 
+        /// <param name="permiteAtribuirComoBloqueio">Par\u00E2metro que define se o Status da conta permite ser atribu\u00EDdo para Bloquear temporariamente uma Conta, sendo: 0: Inativo e 1: Ativo (optional)</param> 
+        /// <param name="permiteDesbloquear">Par\u00E2metro que define se o Status da conta permite ser desbloqueada, sendo: 0: Inativo e 1: Ativo (optional)</param> 
+        /// <param name="permiteAtribuirComoCancelamento">Par\u00E2metro que define se o Status da conta permite ser atribu\u00EDdo para realizar o cancelamento definitivo de uma conta, sendo: 0: Inativo e 1: Ativo (optional)</param> 
+        /// <returns>ApiResponse of PageStatusContaResponse</returns>
+        public ApiResponse< PageStatusContaResponse > ListarStatusContaWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, int? permiteAlterarVencimento = null, int? permiteAlterarLimite = null, int? permiteEmitirNovaViaCartao = null, int? permiteFazerTransferencia = null, int? permiteReceberTransferencia = null, int? permiteCriarAcordoCobranca = null, int? permiteAtribuirComoBloqueio = null, int? permiteDesbloquear = null, int? permiteAtribuirComoCancelamento = null)
+        {
+            
+    
+            var localVarPath = "/api/status-contas";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
+            if (nome != null) localVarQueryParams.Add("nome", Configuration.ApiClient.ParameterToString(nome)); // query parameter
+            if (permiteAlterarVencimento != null) localVarQueryParams.Add("permiteAlterarVencimento", Configuration.ApiClient.ParameterToString(permiteAlterarVencimento)); // query parameter
+            if (permiteAlterarLimite != null) localVarQueryParams.Add("permiteAlterarLimite", Configuration.ApiClient.ParameterToString(permiteAlterarLimite)); // query parameter
+            if (permiteEmitirNovaViaCartao != null) localVarQueryParams.Add("permiteEmitirNovaViaCartao", Configuration.ApiClient.ParameterToString(permiteEmitirNovaViaCartao)); // query parameter
+            if (permiteFazerTransferencia != null) localVarQueryParams.Add("permiteFazerTransferencia", Configuration.ApiClient.ParameterToString(permiteFazerTransferencia)); // query parameter
+            if (permiteReceberTransferencia != null) localVarQueryParams.Add("permiteReceberTransferencia", Configuration.ApiClient.ParameterToString(permiteReceberTransferencia)); // query parameter
+            if (permiteCriarAcordoCobranca != null) localVarQueryParams.Add("permiteCriarAcordoCobranca", Configuration.ApiClient.ParameterToString(permiteCriarAcordoCobranca)); // query parameter
+            if (permiteAtribuirComoBloqueio != null) localVarQueryParams.Add("permiteAtribuirComoBloqueio", Configuration.ApiClient.ParameterToString(permiteAtribuirComoBloqueio)); // query parameter
+            if (permiteDesbloquear != null) localVarQueryParams.Add("permiteDesbloquear", Configuration.ApiClient.ParameterToString(permiteDesbloquear)); // query parameter
+            if (permiteAtribuirComoCancelamento != null) localVarQueryParams.Add("permiteAtribuirComoCancelamento", Configuration.ApiClient.ParameterToString(permiteAtribuirComoCancelamento)); // query parameter
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarStatusConta: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarStatusConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<PageStatusContaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageStatusContaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageStatusContaResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Lista os Status Contas cadastrados para o Emissor Este m\u00E9todo permite que sejam listados os Status Contas existentes na base de dados do Emissor
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Status da Conta (id) (optional)</param>
+        /// <param name="nome">Nome atribu\u00EDdo ao Status da Conta (optional)</param>
+        /// <param name="permiteAlterarVencimento">Par\u00E2metro que define se o Status da conta permite a solicita\u00E7\u00E3o da altera\u00E7\u00E3o do Dia para Vencimento das Faturas, sendo: 0: Inativo e 1: Ativo (optional)</param>
+        /// <param name="permiteAlterarLimite">Par\u00E2metro que define se o Status da conta permite altera\u00E7\u00E3o de Limites, sendo: 0: Inativo e 1: Ativo (optional)</param>
+        /// <param name="permiteEmitirNovaViaCartao">Par\u00E2metro que define se o Status da conta permite solicitar uma nova via de Cart\u00E3o, sendo: 0: Inativo e 1: Ativo (optional)</param>
+        /// <param name="permiteFazerTransferencia">Par\u00E2metro que define se o Status da conta permite originar Transfer\u00EAncias de Cr\u00E9dito para outras Contas do mesmo Emissor ou para uma Conta Banc\u00E1ria, sendo: 0: Inativo e 1: Ativo (optional)</param>
+        /// <param name="permiteReceberTransferencia">Par\u00E2metro que define se o Status da conta permite  receber Transfer\u00EAncias de Cr\u00E9dito originadas de outras Contas do mesmo emissor, sendo: 0: Inativo e 1: Ativo (optional)</param>
+        /// <param name="permiteCriarAcordoCobranca">Par\u00E2metro que define se o Status da conta permite ter um Acordo de Cobran\u00E7a de D\u00EDvida criado para ela, sendo: 0: Inativo e 1: Ativo (optional)</param>
+        /// <param name="permiteAtribuirComoBloqueio">Par\u00E2metro que define se o Status da conta permite ser atribu\u00EDdo para Bloquear temporariamente uma Conta, sendo: 0: Inativo e 1: Ativo (optional)</param>
+        /// <param name="permiteDesbloquear">Par\u00E2metro que define se o Status da conta permite ser desbloqueada, sendo: 0: Inativo e 1: Ativo (optional)</param>
+        /// <param name="permiteAtribuirComoCancelamento">Par\u00E2metro que define se o Status da conta permite ser atribu\u00EDdo para realizar o cancelamento definitivo de uma conta, sendo: 0: Inativo e 1: Ativo (optional)</param>
+        /// <returns>Task of PageStatusContaResponse</returns>
+        public async System.Threading.Tasks.Task<PageStatusContaResponse> ListarStatusContaAsync (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, int? permiteAlterarVencimento = null, int? permiteAlterarLimite = null, int? permiteEmitirNovaViaCartao = null, int? permiteFazerTransferencia = null, int? permiteReceberTransferencia = null, int? permiteCriarAcordoCobranca = null, int? permiteAtribuirComoBloqueio = null, int? permiteDesbloquear = null, int? permiteAtribuirComoCancelamento = null)
+        {
+             ApiResponse<PageStatusContaResponse> localVarResponse = await ListarStatusContaAsyncWithHttpInfo(sort, page, limit, id, nome, permiteAlterarVencimento, permiteAlterarLimite, permiteEmitirNovaViaCartao, permiteFazerTransferencia, permiteReceberTransferencia, permiteCriarAcordoCobranca, permiteAtribuirComoBloqueio, permiteDesbloquear, permiteAtribuirComoCancelamento);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Lista os Status Contas cadastrados para o Emissor Este m\u00E9todo permite que sejam listados os Status Contas existentes na base de dados do Emissor
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Status da Conta (id) (optional)</param>
+        /// <param name="nome">Nome atribu\u00EDdo ao Status da Conta (optional)</param>
+        /// <param name="permiteAlterarVencimento">Par\u00E2metro que define se o Status da conta permite a solicita\u00E7\u00E3o da altera\u00E7\u00E3o do Dia para Vencimento das Faturas, sendo: 0: Inativo e 1: Ativo (optional)</param>
+        /// <param name="permiteAlterarLimite">Par\u00E2metro que define se o Status da conta permite altera\u00E7\u00E3o de Limites, sendo: 0: Inativo e 1: Ativo (optional)</param>
+        /// <param name="permiteEmitirNovaViaCartao">Par\u00E2metro que define se o Status da conta permite solicitar uma nova via de Cart\u00E3o, sendo: 0: Inativo e 1: Ativo (optional)</param>
+        /// <param name="permiteFazerTransferencia">Par\u00E2metro que define se o Status da conta permite originar Transfer\u00EAncias de Cr\u00E9dito para outras Contas do mesmo Emissor ou para uma Conta Banc\u00E1ria, sendo: 0: Inativo e 1: Ativo (optional)</param>
+        /// <param name="permiteReceberTransferencia">Par\u00E2metro que define se o Status da conta permite  receber Transfer\u00EAncias de Cr\u00E9dito originadas de outras Contas do mesmo emissor, sendo: 0: Inativo e 1: Ativo (optional)</param>
+        /// <param name="permiteCriarAcordoCobranca">Par\u00E2metro que define se o Status da conta permite ter um Acordo de Cobran\u00E7a de D\u00EDvida criado para ela, sendo: 0: Inativo e 1: Ativo (optional)</param>
+        /// <param name="permiteAtribuirComoBloqueio">Par\u00E2metro que define se o Status da conta permite ser atribu\u00EDdo para Bloquear temporariamente uma Conta, sendo: 0: Inativo e 1: Ativo (optional)</param>
+        /// <param name="permiteDesbloquear">Par\u00E2metro que define se o Status da conta permite ser desbloqueada, sendo: 0: Inativo e 1: Ativo (optional)</param>
+        /// <param name="permiteAtribuirComoCancelamento">Par\u00E2metro que define se o Status da conta permite ser atribu\u00EDdo para realizar o cancelamento definitivo de uma conta, sendo: 0: Inativo e 1: Ativo (optional)</param>
+        /// <returns>Task of ApiResponse (PageStatusContaResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PageStatusContaResponse>> ListarStatusContaAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, int? permiteAlterarVencimento = null, int? permiteAlterarLimite = null, int? permiteEmitirNovaViaCartao = null, int? permiteFazerTransferencia = null, int? permiteReceberTransferencia = null, int? permiteCriarAcordoCobranca = null, int? permiteAtribuirComoBloqueio = null, int? permiteDesbloquear = null, int? permiteAtribuirComoCancelamento = null)
+        {
+            
+    
+            var localVarPath = "/api/status-contas";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
+            if (nome != null) localVarQueryParams.Add("nome", Configuration.ApiClient.ParameterToString(nome)); // query parameter
+            if (permiteAlterarVencimento != null) localVarQueryParams.Add("permiteAlterarVencimento", Configuration.ApiClient.ParameterToString(permiteAlterarVencimento)); // query parameter
+            if (permiteAlterarLimite != null) localVarQueryParams.Add("permiteAlterarLimite", Configuration.ApiClient.ParameterToString(permiteAlterarLimite)); // query parameter
+            if (permiteEmitirNovaViaCartao != null) localVarQueryParams.Add("permiteEmitirNovaViaCartao", Configuration.ApiClient.ParameterToString(permiteEmitirNovaViaCartao)); // query parameter
+            if (permiteFazerTransferencia != null) localVarQueryParams.Add("permiteFazerTransferencia", Configuration.ApiClient.ParameterToString(permiteFazerTransferencia)); // query parameter
+            if (permiteReceberTransferencia != null) localVarQueryParams.Add("permiteReceberTransferencia", Configuration.ApiClient.ParameterToString(permiteReceberTransferencia)); // query parameter
+            if (permiteCriarAcordoCobranca != null) localVarQueryParams.Add("permiteCriarAcordoCobranca", Configuration.ApiClient.ParameterToString(permiteCriarAcordoCobranca)); // query parameter
+            if (permiteAtribuirComoBloqueio != null) localVarQueryParams.Add("permiteAtribuirComoBloqueio", Configuration.ApiClient.ParameterToString(permiteAtribuirComoBloqueio)); // query parameter
+            if (permiteDesbloquear != null) localVarQueryParams.Add("permiteDesbloquear", Configuration.ApiClient.ParameterToString(permiteDesbloquear)); // query parameter
+            if (permiteAtribuirComoCancelamento != null) localVarQueryParams.Add("permiteAtribuirComoCancelamento", Configuration.ApiClient.ParameterToString(permiteAtribuirComoCancelamento)); // query parameter
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarStatusConta: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarStatusConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PageStatusContaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageStatusContaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageStatusContaResponse)));
+            
+        }
+        
+        /// <summary>
         /// Lista as op\u00E7\u00F5es de Status Impress\u00E3o Este m\u00E9todo permite que sejam listadas as op\u00E7\u00F5es de Status Impress\u00E3o que podem ser atribu\u00EDdas aos Cart\u00F5es
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
@@ -2045,9 +2045,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">Id do est\u00E1gio cart\u00E3o (optional)</param> 
         /// <param name="nome">Nome do status impress\u00E3o (optional)</param> 
         /// <returns>PageStatusImpressaoResponse</returns>
-        public PageStatusImpressaoResponse Listar_0 (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null)
+        public PageStatusImpressaoResponse ListarStatusImpressaoCartao (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null)
         {
-             ApiResponse<PageStatusImpressaoResponse> localVarResponse = Listar_0WithHttpInfo(sort, page, limit, id, nome);
+             ApiResponse<PageStatusImpressaoResponse> localVarResponse = ListarStatusImpressaoCartaoWithHttpInfo(sort, page, limit, id, nome);
              return localVarResponse.Data;
         }
 
@@ -2061,7 +2061,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">Id do est\u00E1gio cart\u00E3o (optional)</param> 
         /// <param name="nome">Nome do status impress\u00E3o (optional)</param> 
         /// <returns>ApiResponse of PageStatusImpressaoResponse</returns>
-        public ApiResponse< PageStatusImpressaoResponse > Listar_0WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null)
+        public ApiResponse< PageStatusImpressaoResponse > ListarStatusImpressaoCartaoWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null)
         {
             
     
@@ -2112,9 +2112,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Listar_0: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarStatusImpressaoCartao: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Listar_0: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarStatusImpressaoCartao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageStatusImpressaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2133,9 +2133,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">Id do est\u00E1gio cart\u00E3o (optional)</param>
         /// <param name="nome">Nome do status impress\u00E3o (optional)</param>
         /// <returns>Task of PageStatusImpressaoResponse</returns>
-        public async System.Threading.Tasks.Task<PageStatusImpressaoResponse> Listar_0Async (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null)
+        public async System.Threading.Tasks.Task<PageStatusImpressaoResponse> ListarStatusImpressaoCartaoAsync (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null)
         {
-             ApiResponse<PageStatusImpressaoResponse> localVarResponse = await Listar_0AsyncWithHttpInfo(sort, page, limit, id, nome);
+             ApiResponse<PageStatusImpressaoResponse> localVarResponse = await ListarStatusImpressaoCartaoAsyncWithHttpInfo(sort, page, limit, id, nome);
              return localVarResponse.Data;
 
         }
@@ -2150,7 +2150,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">Id do est\u00E1gio cart\u00E3o (optional)</param>
         /// <param name="nome">Nome do status impress\u00E3o (optional)</param>
         /// <returns>Task of ApiResponse (PageStatusImpressaoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageStatusImpressaoResponse>> Listar_0AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageStatusImpressaoResponse>> ListarStatusImpressaoCartaoAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null)
         {
             
     
@@ -2201,9 +2201,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Listar_0: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarStatusImpressaoCartao: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Listar_0: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarStatusImpressaoCartao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageStatusImpressaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

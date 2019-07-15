@@ -106,7 +106,7 @@ namespace Conductor.Pier.Api
         /// <param name="ativo">Identifica se o d\u00E9bito recorrente est\u00E1 ativo (optional)</param>
         /// <param name="dataHoraUltimoPagamento">Data e hora do \u00FAltimo pagamento efetuado yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00 (optional)</param>
         /// <returns>PageContaDebitoRecorrenteResponse</returns>
-        PageContaDebitoRecorrenteResponse Listar (long? idConta = null, long? idTipoDebitoRecorrente = null, List<string> sort = null, int? page = null, int? limit = null, string dataHoraInicio = null, string dataHoraFim = null, bool? ativo = null, string dataHoraUltimoPagamento = null);
+        PageContaDebitoRecorrenteResponse ListarDebitosRecorrentesConta (long? idConta = null, long? idTipoDebitoRecorrente = null, List<string> sort = null, int? page = null, int? limit = null, string dataHoraInicio = null, string dataHoraFim = null, bool? ativo = null, string dataHoraUltimoPagamento = null);
   
         /// <summary>
         /// Lista os d\u00E9bitos recorrentes de uma Conta
@@ -125,7 +125,7 @@ namespace Conductor.Pier.Api
         /// <param name="ativo">Identifica se o d\u00E9bito recorrente est\u00E1 ativo (optional)</param>
         /// <param name="dataHoraUltimoPagamento">Data e hora do \u00FAltimo pagamento efetuado yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00 (optional)</param>
         /// <returns>ApiResponse of PageContaDebitoRecorrenteResponse</returns>
-        ApiResponse<PageContaDebitoRecorrenteResponse> ListarWithHttpInfo (long? idConta = null, long? idTipoDebitoRecorrente = null, List<string> sort = null, int? page = null, int? limit = null, string dataHoraInicio = null, string dataHoraFim = null, bool? ativo = null, string dataHoraUltimoPagamento = null);
+        ApiResponse<PageContaDebitoRecorrenteResponse> ListarDebitosRecorrentesContaWithHttpInfo (long? idConta = null, long? idTipoDebitoRecorrente = null, List<string> sort = null, int? page = null, int? limit = null, string dataHoraInicio = null, string dataHoraFim = null, bool? ativo = null, string dataHoraUltimoPagamento = null);
         
         /// <summary>
         /// Lista os d\u00E9bitos recorrentes por portador de uma determinada conta
@@ -170,7 +170,7 @@ namespace Conductor.Pier.Api
         /// <param name="valor">Valor do tipo de d\u00E9bito recorrente (optional)</param>
         /// <param name="flagAtivo">Flag que identifica se o tipo d\u00E9bito recorrente est\u00E1 ativo (optional)</param>
         /// <returns>PageTipoDebitoRecorrenteResponse</returns>
-        PageTipoDebitoRecorrenteResponse Listar_0 (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, double? valor = null, bool? flagAtivo = null);
+        PageTipoDebitoRecorrenteResponse ListarTiposDebitosRecorrentes (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, double? valor = null, bool? flagAtivo = null);
   
         /// <summary>
         /// Listar Tipos Debitos Recorrentes
@@ -187,7 +187,7 @@ namespace Conductor.Pier.Api
         /// <param name="valor">Valor do tipo de d\u00E9bito recorrente (optional)</param>
         /// <param name="flagAtivo">Flag que identifica se o tipo d\u00E9bito recorrente est\u00E1 ativo (optional)</param>
         /// <returns>ApiResponse of PageTipoDebitoRecorrenteResponse</returns>
-        ApiResponse<PageTipoDebitoRecorrenteResponse> Listar_0WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, double? valor = null, bool? flagAtivo = null);
+        ApiResponse<PageTipoDebitoRecorrenteResponse> ListarTiposDebitosRecorrentesWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, double? valor = null, bool? flagAtivo = null);
         
         /// <summary>
         /// Salva os d\u00E9bitos recorrentes por portador de uma determinada conta
@@ -306,7 +306,7 @@ namespace Conductor.Pier.Api
         /// <param name="ativo">Identifica se o d\u00E9bito recorrente est\u00E1 ativo (optional)</param>
         /// <param name="dataHoraUltimoPagamento">Data e hora do \u00FAltimo pagamento efetuado yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00 (optional)</param>
         /// <returns>Task of PageContaDebitoRecorrenteResponse</returns>
-        System.Threading.Tasks.Task<PageContaDebitoRecorrenteResponse> ListarAsync (long? idConta = null, long? idTipoDebitoRecorrente = null, List<string> sort = null, int? page = null, int? limit = null, string dataHoraInicio = null, string dataHoraFim = null, bool? ativo = null, string dataHoraUltimoPagamento = null);
+        System.Threading.Tasks.Task<PageContaDebitoRecorrenteResponse> ListarDebitosRecorrentesContaAsync (long? idConta = null, long? idTipoDebitoRecorrente = null, List<string> sort = null, int? page = null, int? limit = null, string dataHoraInicio = null, string dataHoraFim = null, bool? ativo = null, string dataHoraUltimoPagamento = null);
 
         /// <summary>
         /// Lista os d\u00E9bitos recorrentes de uma Conta
@@ -325,7 +325,7 @@ namespace Conductor.Pier.Api
         /// <param name="ativo">Identifica se o d\u00E9bito recorrente est\u00E1 ativo (optional)</param>
         /// <param name="dataHoraUltimoPagamento">Data e hora do \u00FAltimo pagamento efetuado yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00 (optional)</param>
         /// <returns>Task of ApiResponse (PageContaDebitoRecorrenteResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageContaDebitoRecorrenteResponse>> ListarAsyncWithHttpInfo (long? idConta = null, long? idTipoDebitoRecorrente = null, List<string> sort = null, int? page = null, int? limit = null, string dataHoraInicio = null, string dataHoraFim = null, bool? ativo = null, string dataHoraUltimoPagamento = null);
+        System.Threading.Tasks.Task<ApiResponse<PageContaDebitoRecorrenteResponse>> ListarDebitosRecorrentesContaAsyncWithHttpInfo (long? idConta = null, long? idTipoDebitoRecorrente = null, List<string> sort = null, int? page = null, int? limit = null, string dataHoraInicio = null, string dataHoraFim = null, bool? ativo = null, string dataHoraUltimoPagamento = null);
         
         /// <summary>
         /// Lista os d\u00E9bitos recorrentes por portador de uma determinada conta
@@ -370,7 +370,7 @@ namespace Conductor.Pier.Api
         /// <param name="valor">Valor do tipo de d\u00E9bito recorrente (optional)</param>
         /// <param name="flagAtivo">Flag que identifica se o tipo d\u00E9bito recorrente est\u00E1 ativo (optional)</param>
         /// <returns>Task of PageTipoDebitoRecorrenteResponse</returns>
-        System.Threading.Tasks.Task<PageTipoDebitoRecorrenteResponse> Listar_0Async (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, double? valor = null, bool? flagAtivo = null);
+        System.Threading.Tasks.Task<PageTipoDebitoRecorrenteResponse> ListarTiposDebitosRecorrentesAsync (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, double? valor = null, bool? flagAtivo = null);
 
         /// <summary>
         /// Listar Tipos Debitos Recorrentes
@@ -387,7 +387,7 @@ namespace Conductor.Pier.Api
         /// <param name="valor">Valor do tipo de d\u00E9bito recorrente (optional)</param>
         /// <param name="flagAtivo">Flag que identifica se o tipo d\u00E9bito recorrente est\u00E1 ativo (optional)</param>
         /// <returns>Task of ApiResponse (PageTipoDebitoRecorrenteResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageTipoDebitoRecorrenteResponse>> Listar_0AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, double? valor = null, bool? flagAtivo = null);
+        System.Threading.Tasks.Task<ApiResponse<PageTipoDebitoRecorrenteResponse>> ListarTiposDebitosRecorrentesAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, double? valor = null, bool? flagAtivo = null);
         
         /// <summary>
         /// Salva os d\u00E9bitos recorrentes por portador de uma determinada conta
@@ -1065,9 +1065,9 @@ namespace Conductor.Pier.Api
         /// <param name="ativo">Identifica se o d\u00E9bito recorrente est\u00E1 ativo (optional)</param> 
         /// <param name="dataHoraUltimoPagamento">Data e hora do \u00FAltimo pagamento efetuado yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00 (optional)</param> 
         /// <returns>PageContaDebitoRecorrenteResponse</returns>
-        public PageContaDebitoRecorrenteResponse Listar (long? idConta = null, long? idTipoDebitoRecorrente = null, List<string> sort = null, int? page = null, int? limit = null, string dataHoraInicio = null, string dataHoraFim = null, bool? ativo = null, string dataHoraUltimoPagamento = null)
+        public PageContaDebitoRecorrenteResponse ListarDebitosRecorrentesConta (long? idConta = null, long? idTipoDebitoRecorrente = null, List<string> sort = null, int? page = null, int? limit = null, string dataHoraInicio = null, string dataHoraFim = null, bool? ativo = null, string dataHoraUltimoPagamento = null)
         {
-             ApiResponse<PageContaDebitoRecorrenteResponse> localVarResponse = ListarWithHttpInfo(idConta, idTipoDebitoRecorrente, sort, page, limit, dataHoraInicio, dataHoraFim, ativo, dataHoraUltimoPagamento);
+             ApiResponse<PageContaDebitoRecorrenteResponse> localVarResponse = ListarDebitosRecorrentesContaWithHttpInfo(idConta, idTipoDebitoRecorrente, sort, page, limit, dataHoraInicio, dataHoraFim, ativo, dataHoraUltimoPagamento);
              return localVarResponse.Data;
         }
 
@@ -1085,7 +1085,7 @@ namespace Conductor.Pier.Api
         /// <param name="ativo">Identifica se o d\u00E9bito recorrente est\u00E1 ativo (optional)</param> 
         /// <param name="dataHoraUltimoPagamento">Data e hora do \u00FAltimo pagamento efetuado yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00 (optional)</param> 
         /// <returns>ApiResponse of PageContaDebitoRecorrenteResponse</returns>
-        public ApiResponse< PageContaDebitoRecorrenteResponse > ListarWithHttpInfo (long? idConta = null, long? idTipoDebitoRecorrente = null, List<string> sort = null, int? page = null, int? limit = null, string dataHoraInicio = null, string dataHoraFim = null, bool? ativo = null, string dataHoraUltimoPagamento = null)
+        public ApiResponse< PageContaDebitoRecorrenteResponse > ListarDebitosRecorrentesContaWithHttpInfo (long? idConta = null, long? idTipoDebitoRecorrente = null, List<string> sort = null, int? page = null, int? limit = null, string dataHoraInicio = null, string dataHoraFim = null, bool? ativo = null, string dataHoraUltimoPagamento = null)
         {
             
     
@@ -1140,9 +1140,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Listar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarDebitosRecorrentesConta: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Listar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarDebitosRecorrentesConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageContaDebitoRecorrenteResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1165,9 +1165,9 @@ namespace Conductor.Pier.Api
         /// <param name="ativo">Identifica se o d\u00E9bito recorrente est\u00E1 ativo (optional)</param>
         /// <param name="dataHoraUltimoPagamento">Data e hora do \u00FAltimo pagamento efetuado yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00 (optional)</param>
         /// <returns>Task of PageContaDebitoRecorrenteResponse</returns>
-        public async System.Threading.Tasks.Task<PageContaDebitoRecorrenteResponse> ListarAsync (long? idConta = null, long? idTipoDebitoRecorrente = null, List<string> sort = null, int? page = null, int? limit = null, string dataHoraInicio = null, string dataHoraFim = null, bool? ativo = null, string dataHoraUltimoPagamento = null)
+        public async System.Threading.Tasks.Task<PageContaDebitoRecorrenteResponse> ListarDebitosRecorrentesContaAsync (long? idConta = null, long? idTipoDebitoRecorrente = null, List<string> sort = null, int? page = null, int? limit = null, string dataHoraInicio = null, string dataHoraFim = null, bool? ativo = null, string dataHoraUltimoPagamento = null)
         {
-             ApiResponse<PageContaDebitoRecorrenteResponse> localVarResponse = await ListarAsyncWithHttpInfo(idConta, idTipoDebitoRecorrente, sort, page, limit, dataHoraInicio, dataHoraFim, ativo, dataHoraUltimoPagamento);
+             ApiResponse<PageContaDebitoRecorrenteResponse> localVarResponse = await ListarDebitosRecorrentesContaAsyncWithHttpInfo(idConta, idTipoDebitoRecorrente, sort, page, limit, dataHoraInicio, dataHoraFim, ativo, dataHoraUltimoPagamento);
              return localVarResponse.Data;
 
         }
@@ -1186,7 +1186,7 @@ namespace Conductor.Pier.Api
         /// <param name="ativo">Identifica se o d\u00E9bito recorrente est\u00E1 ativo (optional)</param>
         /// <param name="dataHoraUltimoPagamento">Data e hora do \u00FAltimo pagamento efetuado yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ. Ex: 2000-10-31T01:30:00.000-05:00 (optional)</param>
         /// <returns>Task of ApiResponse (PageContaDebitoRecorrenteResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageContaDebitoRecorrenteResponse>> ListarAsyncWithHttpInfo (long? idConta = null, long? idTipoDebitoRecorrente = null, List<string> sort = null, int? page = null, int? limit = null, string dataHoraInicio = null, string dataHoraFim = null, bool? ativo = null, string dataHoraUltimoPagamento = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageContaDebitoRecorrenteResponse>> ListarDebitosRecorrentesContaAsyncWithHttpInfo (long? idConta = null, long? idTipoDebitoRecorrente = null, List<string> sort = null, int? page = null, int? limit = null, string dataHoraInicio = null, string dataHoraFim = null, bool? ativo = null, string dataHoraUltimoPagamento = null)
         {
             
     
@@ -1241,9 +1241,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Listar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarDebitosRecorrentesConta: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Listar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarDebitosRecorrentesConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageContaDebitoRecorrenteResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1439,9 +1439,9 @@ namespace Conductor.Pier.Api
         /// <param name="valor">Valor do tipo de d\u00E9bito recorrente (optional)</param> 
         /// <param name="flagAtivo">Flag que identifica se o tipo d\u00E9bito recorrente est\u00E1 ativo (optional)</param> 
         /// <returns>PageTipoDebitoRecorrenteResponse</returns>
-        public PageTipoDebitoRecorrenteResponse Listar_0 (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, double? valor = null, bool? flagAtivo = null)
+        public PageTipoDebitoRecorrenteResponse ListarTiposDebitosRecorrentes (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, double? valor = null, bool? flagAtivo = null)
         {
-             ApiResponse<PageTipoDebitoRecorrenteResponse> localVarResponse = Listar_0WithHttpInfo(sort, page, limit, id, descricao, valor, flagAtivo);
+             ApiResponse<PageTipoDebitoRecorrenteResponse> localVarResponse = ListarTiposDebitosRecorrentesWithHttpInfo(sort, page, limit, id, descricao, valor, flagAtivo);
              return localVarResponse.Data;
         }
 
@@ -1457,7 +1457,7 @@ namespace Conductor.Pier.Api
         /// <param name="valor">Valor do tipo de d\u00E9bito recorrente (optional)</param> 
         /// <param name="flagAtivo">Flag que identifica se o tipo d\u00E9bito recorrente est\u00E1 ativo (optional)</param> 
         /// <returns>ApiResponse of PageTipoDebitoRecorrenteResponse</returns>
-        public ApiResponse< PageTipoDebitoRecorrenteResponse > Listar_0WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, double? valor = null, bool? flagAtivo = null)
+        public ApiResponse< PageTipoDebitoRecorrenteResponse > ListarTiposDebitosRecorrentesWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, double? valor = null, bool? flagAtivo = null)
         {
             
     
@@ -1510,9 +1510,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Listar_0: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarTiposDebitosRecorrentes: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Listar_0: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarTiposDebitosRecorrentes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageTipoDebitoRecorrenteResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1533,9 +1533,9 @@ namespace Conductor.Pier.Api
         /// <param name="valor">Valor do tipo de d\u00E9bito recorrente (optional)</param>
         /// <param name="flagAtivo">Flag que identifica se o tipo d\u00E9bito recorrente est\u00E1 ativo (optional)</param>
         /// <returns>Task of PageTipoDebitoRecorrenteResponse</returns>
-        public async System.Threading.Tasks.Task<PageTipoDebitoRecorrenteResponse> Listar_0Async (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, double? valor = null, bool? flagAtivo = null)
+        public async System.Threading.Tasks.Task<PageTipoDebitoRecorrenteResponse> ListarTiposDebitosRecorrentesAsync (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, double? valor = null, bool? flagAtivo = null)
         {
-             ApiResponse<PageTipoDebitoRecorrenteResponse> localVarResponse = await Listar_0AsyncWithHttpInfo(sort, page, limit, id, descricao, valor, flagAtivo);
+             ApiResponse<PageTipoDebitoRecorrenteResponse> localVarResponse = await ListarTiposDebitosRecorrentesAsyncWithHttpInfo(sort, page, limit, id, descricao, valor, flagAtivo);
              return localVarResponse.Data;
 
         }
@@ -1552,7 +1552,7 @@ namespace Conductor.Pier.Api
         /// <param name="valor">Valor do tipo de d\u00E9bito recorrente (optional)</param>
         /// <param name="flagAtivo">Flag que identifica se o tipo d\u00E9bito recorrente est\u00E1 ativo (optional)</param>
         /// <returns>Task of ApiResponse (PageTipoDebitoRecorrenteResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageTipoDebitoRecorrenteResponse>> Listar_0AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, double? valor = null, bool? flagAtivo = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageTipoDebitoRecorrenteResponse>> ListarTiposDebitosRecorrentesAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, double? valor = null, bool? flagAtivo = null)
         {
             
     
@@ -1605,9 +1605,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Listar_0: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarTiposDebitosRecorrentes: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Listar_0: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarTiposDebitosRecorrentes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageTipoDebitoRecorrenteResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

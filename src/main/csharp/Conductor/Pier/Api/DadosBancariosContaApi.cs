@@ -27,7 +27,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">id</param>
         /// <param name="update">update</param>
         /// <returns>DadosBancariosContaResponse</returns>
-        DadosBancariosContaResponse Alterar (long? id, DadosBancariosContaUpdate update);
+        DadosBancariosContaResponse AlterarDadosBancarios (long? id, DadosBancariosContaUpdate update);
   
         /// <summary>
         /// Atualiza os dados da conta bancaria
@@ -39,29 +39,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">id</param>
         /// <param name="update">update</param>
         /// <returns>ApiResponse of DadosBancariosContaResponse</returns>
-        ApiResponse<DadosBancariosContaResponse> AlterarWithHttpInfo (long? id, DadosBancariosContaUpdate update);
-        
-        /// <summary>
-        /// Apresenta dados de um determinado tipo de conta banc\u00E1ria
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite consultar dados de um determinado tipo de conta banc\u00E1ria a partir de seu codigo de identifica\u00E7\u00E3o (id)
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do tipo de conta banc\u00E1ria (id)</param>
-        /// <returns>CdtTipoContaBancaria</returns>
-        CdtTipoContaBancaria Consultar (long? id);
-  
-        /// <summary>
-        /// Apresenta dados de um determinado tipo de conta banc\u00E1ria
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite consultar dados de um determinado tipo de conta banc\u00E1ria a partir de seu codigo de identifica\u00E7\u00E3o (id)
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do tipo de conta banc\u00E1ria (id)</param>
-        /// <returns>ApiResponse of CdtTipoContaBancaria</returns>
-        ApiResponse<CdtTipoContaBancaria> ConsultarWithHttpInfo (long? id);
+        ApiResponse<DadosBancariosContaResponse> AlterarDadosBancariosWithHttpInfo (long? id, DadosBancariosContaUpdate update);
         
         /// <summary>
         /// Apresenta os dados banc\u00E1rios de uma determinada conta
@@ -72,7 +50,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do dado banc\u00E1rio da conta (id)</param>
         /// <returns>DadosBancariosContaResponse</returns>
-        DadosBancariosContaResponse Consultar_0 (long? id);
+        DadosBancariosContaResponse ConsultarDadosBancarios (long? id);
   
         /// <summary>
         /// Apresenta os dados banc\u00E1rios de uma determinada conta
@@ -83,7 +61,29 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do dado banc\u00E1rio da conta (id)</param>
         /// <returns>ApiResponse of DadosBancariosContaResponse</returns>
-        ApiResponse<DadosBancariosContaResponse> Consultar_0WithHttpInfo (long? id);
+        ApiResponse<DadosBancariosContaResponse> ConsultarDadosBancariosWithHttpInfo (long? id);
+        
+        /// <summary>
+        /// Apresenta dados de um determinado tipo de conta banc\u00E1ria
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite consultar dados de um determinado tipo de conta banc\u00E1ria a partir de seu codigo de identifica\u00E7\u00E3o (id)
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do tipo de conta banc\u00E1ria (id)</param>
+        /// <returns>CdtTipoContaBancaria</returns>
+        CdtTipoContaBancaria ConsultarTipoContaBancaria (long? id);
+  
+        /// <summary>
+        /// Apresenta dados de um determinado tipo de conta banc\u00E1ria
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite consultar dados de um determinado tipo de conta banc\u00E1ria a partir de seu codigo de identifica\u00E7\u00E3o (id)
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do tipo de conta banc\u00E1ria (id)</param>
+        /// <returns>ApiResponse of CdtTipoContaBancaria</returns>
+        ApiResponse<CdtTipoContaBancaria> ConsultarTipoContaBancariaWithHttpInfo (long? id);
         
         /// <summary>
         /// Apresenta os dados banc\u00E1rios a partir dos filtros informados
@@ -102,7 +102,7 @@ namespace Conductor.Pier.Api
         /// <param name="numeroContaCorrente">Conta Corrente (optional)</param>
         /// <param name="idTipoContaBancaria">C\u00F3digo de Identifica\u00E7\u00E3o do tipo de conta banc\u00E1ria (id).  (optional)</param>
         /// <returns>PageDadosBancariosContaResponse</returns>
-        PageDadosBancariosContaResponse Listar (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idConta = null, long? codigoBanco = null, long? numeroAgencia = null, string numeroContaCorrente = null, long? idTipoContaBancaria = null);
+        PageDadosBancariosContaResponse ListarDadosBancarios (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idConta = null, long? codigoBanco = null, long? numeroAgencia = null, string numeroContaCorrente = null, long? idTipoContaBancaria = null);
   
         /// <summary>
         /// Apresenta os dados banc\u00E1rios a partir dos filtros informados
@@ -121,7 +121,7 @@ namespace Conductor.Pier.Api
         /// <param name="numeroContaCorrente">Conta Corrente (optional)</param>
         /// <param name="idTipoContaBancaria">C\u00F3digo de Identifica\u00E7\u00E3o do tipo de conta banc\u00E1ria (id).  (optional)</param>
         /// <returns>ApiResponse of PageDadosBancariosContaResponse</returns>
-        ApiResponse<PageDadosBancariosContaResponse> ListarWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idConta = null, long? codigoBanco = null, long? numeroAgencia = null, string numeroContaCorrente = null, long? idTipoContaBancaria = null);
+        ApiResponse<PageDadosBancariosContaResponse> ListarDadosBancariosWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idConta = null, long? codigoBanco = null, long? numeroAgencia = null, string numeroContaCorrente = null, long? idTipoContaBancaria = null);
         
         /// <summary>
         /// Lista os tipos de contas banc\u00E1rias
@@ -135,7 +135,7 @@ namespace Conductor.Pier.Api
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
         /// <param name="descricao">Descri\u00E7\u00E3o do tipo de conta banc\u00E1ria (optional)</param>
         /// <returns>CdtTipoContaBancaria</returns>
-        CdtTipoContaBancaria Listar_0 (List<string> sort = null, int? page = null, int? limit = null, string descricao = null);
+        CdtTipoContaBancaria ListarTiposContasBancarias (List<string> sort = null, int? page = null, int? limit = null, string descricao = null);
   
         /// <summary>
         /// Lista os tipos de contas banc\u00E1rias
@@ -149,7 +149,7 @@ namespace Conductor.Pier.Api
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
         /// <param name="descricao">Descri\u00E7\u00E3o do tipo de conta banc\u00E1ria (optional)</param>
         /// <returns>ApiResponse of CdtTipoContaBancaria</returns>
-        ApiResponse<CdtTipoContaBancaria> Listar_0WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string descricao = null);
+        ApiResponse<CdtTipoContaBancaria> ListarTiposContasBancariasWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string descricao = null);
         
         /// <summary>
         /// Cadastra registro de dados banc\u00E1rios
@@ -160,7 +160,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dadosBancariosContaPersist">dadosBancariosContaPersist</param>
         /// <returns>DadosBancariosContaResponse</returns>
-        DadosBancariosContaResponse Salvar (DadosBancariosContaPersist dadosBancariosContaPersist);
+        DadosBancariosContaResponse SalvarDadosBancarios (DadosBancariosContaPersist dadosBancariosContaPersist);
   
         /// <summary>
         /// Cadastra registro de dados banc\u00E1rios
@@ -171,7 +171,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dadosBancariosContaPersist">dadosBancariosContaPersist</param>
         /// <returns>ApiResponse of DadosBancariosContaResponse</returns>
-        ApiResponse<DadosBancariosContaResponse> SalvarWithHttpInfo (DadosBancariosContaPersist dadosBancariosContaPersist);
+        ApiResponse<DadosBancariosContaResponse> SalvarDadosBancariosWithHttpInfo (DadosBancariosContaPersist dadosBancariosContaPersist);
         
         #endregion Synchronous Operations
         
@@ -187,7 +187,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">id</param>
         /// <param name="update">update</param>
         /// <returns>Task of DadosBancariosContaResponse</returns>
-        System.Threading.Tasks.Task<DadosBancariosContaResponse> AlterarAsync (long? id, DadosBancariosContaUpdate update);
+        System.Threading.Tasks.Task<DadosBancariosContaResponse> AlterarDadosBancariosAsync (long? id, DadosBancariosContaUpdate update);
 
         /// <summary>
         /// Atualiza os dados da conta bancaria
@@ -199,29 +199,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">id</param>
         /// <param name="update">update</param>
         /// <returns>Task of ApiResponse (DadosBancariosContaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DadosBancariosContaResponse>> AlterarAsyncWithHttpInfo (long? id, DadosBancariosContaUpdate update);
-        
-        /// <summary>
-        /// Apresenta dados de um determinado tipo de conta banc\u00E1ria
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite consultar dados de um determinado tipo de conta banc\u00E1ria a partir de seu codigo de identifica\u00E7\u00E3o (id)
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do tipo de conta banc\u00E1ria (id)</param>
-        /// <returns>Task of CdtTipoContaBancaria</returns>
-        System.Threading.Tasks.Task<CdtTipoContaBancaria> ConsultarAsync (long? id);
-
-        /// <summary>
-        /// Apresenta dados de um determinado tipo de conta banc\u00E1ria
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite consultar dados de um determinado tipo de conta banc\u00E1ria a partir de seu codigo de identifica\u00E7\u00E3o (id)
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do tipo de conta banc\u00E1ria (id)</param>
-        /// <returns>Task of ApiResponse (CdtTipoContaBancaria)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CdtTipoContaBancaria>> ConsultarAsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<DadosBancariosContaResponse>> AlterarDadosBancariosAsyncWithHttpInfo (long? id, DadosBancariosContaUpdate update);
         
         /// <summary>
         /// Apresenta os dados banc\u00E1rios de uma determinada conta
@@ -232,7 +210,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do dado banc\u00E1rio da conta (id)</param>
         /// <returns>Task of DadosBancariosContaResponse</returns>
-        System.Threading.Tasks.Task<DadosBancariosContaResponse> Consultar_0Async (long? id);
+        System.Threading.Tasks.Task<DadosBancariosContaResponse> ConsultarDadosBancariosAsync (long? id);
 
         /// <summary>
         /// Apresenta os dados banc\u00E1rios de uma determinada conta
@@ -243,7 +221,29 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do dado banc\u00E1rio da conta (id)</param>
         /// <returns>Task of ApiResponse (DadosBancariosContaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DadosBancariosContaResponse>> Consultar_0AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<DadosBancariosContaResponse>> ConsultarDadosBancariosAsyncWithHttpInfo (long? id);
+        
+        /// <summary>
+        /// Apresenta dados de um determinado tipo de conta banc\u00E1ria
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite consultar dados de um determinado tipo de conta banc\u00E1ria a partir de seu codigo de identifica\u00E7\u00E3o (id)
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do tipo de conta banc\u00E1ria (id)</param>
+        /// <returns>Task of CdtTipoContaBancaria</returns>
+        System.Threading.Tasks.Task<CdtTipoContaBancaria> ConsultarTipoContaBancariaAsync (long? id);
+
+        /// <summary>
+        /// Apresenta dados de um determinado tipo de conta banc\u00E1ria
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite consultar dados de um determinado tipo de conta banc\u00E1ria a partir de seu codigo de identifica\u00E7\u00E3o (id)
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do tipo de conta banc\u00E1ria (id)</param>
+        /// <returns>Task of ApiResponse (CdtTipoContaBancaria)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CdtTipoContaBancaria>> ConsultarTipoContaBancariaAsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Apresenta os dados banc\u00E1rios a partir dos filtros informados
@@ -262,7 +262,7 @@ namespace Conductor.Pier.Api
         /// <param name="numeroContaCorrente">Conta Corrente (optional)</param>
         /// <param name="idTipoContaBancaria">C\u00F3digo de Identifica\u00E7\u00E3o do tipo de conta banc\u00E1ria (id).  (optional)</param>
         /// <returns>Task of PageDadosBancariosContaResponse</returns>
-        System.Threading.Tasks.Task<PageDadosBancariosContaResponse> ListarAsync (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idConta = null, long? codigoBanco = null, long? numeroAgencia = null, string numeroContaCorrente = null, long? idTipoContaBancaria = null);
+        System.Threading.Tasks.Task<PageDadosBancariosContaResponse> ListarDadosBancariosAsync (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idConta = null, long? codigoBanco = null, long? numeroAgencia = null, string numeroContaCorrente = null, long? idTipoContaBancaria = null);
 
         /// <summary>
         /// Apresenta os dados banc\u00E1rios a partir dos filtros informados
@@ -281,7 +281,7 @@ namespace Conductor.Pier.Api
         /// <param name="numeroContaCorrente">Conta Corrente (optional)</param>
         /// <param name="idTipoContaBancaria">C\u00F3digo de Identifica\u00E7\u00E3o do tipo de conta banc\u00E1ria (id).  (optional)</param>
         /// <returns>Task of ApiResponse (PageDadosBancariosContaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageDadosBancariosContaResponse>> ListarAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idConta = null, long? codigoBanco = null, long? numeroAgencia = null, string numeroContaCorrente = null, long? idTipoContaBancaria = null);
+        System.Threading.Tasks.Task<ApiResponse<PageDadosBancariosContaResponse>> ListarDadosBancariosAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idConta = null, long? codigoBanco = null, long? numeroAgencia = null, string numeroContaCorrente = null, long? idTipoContaBancaria = null);
         
         /// <summary>
         /// Lista os tipos de contas banc\u00E1rias
@@ -295,7 +295,7 @@ namespace Conductor.Pier.Api
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
         /// <param name="descricao">Descri\u00E7\u00E3o do tipo de conta banc\u00E1ria (optional)</param>
         /// <returns>Task of CdtTipoContaBancaria</returns>
-        System.Threading.Tasks.Task<CdtTipoContaBancaria> Listar_0Async (List<string> sort = null, int? page = null, int? limit = null, string descricao = null);
+        System.Threading.Tasks.Task<CdtTipoContaBancaria> ListarTiposContasBancariasAsync (List<string> sort = null, int? page = null, int? limit = null, string descricao = null);
 
         /// <summary>
         /// Lista os tipos de contas banc\u00E1rias
@@ -309,7 +309,7 @@ namespace Conductor.Pier.Api
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
         /// <param name="descricao">Descri\u00E7\u00E3o do tipo de conta banc\u00E1ria (optional)</param>
         /// <returns>Task of ApiResponse (CdtTipoContaBancaria)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CdtTipoContaBancaria>> Listar_0AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string descricao = null);
+        System.Threading.Tasks.Task<ApiResponse<CdtTipoContaBancaria>> ListarTiposContasBancariasAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string descricao = null);
         
         /// <summary>
         /// Cadastra registro de dados banc\u00E1rios
@@ -320,7 +320,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dadosBancariosContaPersist">dadosBancariosContaPersist</param>
         /// <returns>Task of DadosBancariosContaResponse</returns>
-        System.Threading.Tasks.Task<DadosBancariosContaResponse> SalvarAsync (DadosBancariosContaPersist dadosBancariosContaPersist);
+        System.Threading.Tasks.Task<DadosBancariosContaResponse> SalvarDadosBancariosAsync (DadosBancariosContaPersist dadosBancariosContaPersist);
 
         /// <summary>
         /// Cadastra registro de dados banc\u00E1rios
@@ -331,7 +331,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dadosBancariosContaPersist">dadosBancariosContaPersist</param>
         /// <returns>Task of ApiResponse (DadosBancariosContaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DadosBancariosContaResponse>> SalvarAsyncWithHttpInfo (DadosBancariosContaPersist dadosBancariosContaPersist);
+        System.Threading.Tasks.Task<ApiResponse<DadosBancariosContaResponse>> SalvarDadosBancariosAsyncWithHttpInfo (DadosBancariosContaPersist dadosBancariosContaPersist);
         
         #endregion Asynchronous Operations
         
@@ -432,9 +432,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">id</param> 
         /// <param name="update">update</param> 
         /// <returns>DadosBancariosContaResponse</returns>
-        public DadosBancariosContaResponse Alterar (long? id, DadosBancariosContaUpdate update)
+        public DadosBancariosContaResponse AlterarDadosBancarios (long? id, DadosBancariosContaUpdate update)
         {
-             ApiResponse<DadosBancariosContaResponse> localVarResponse = AlterarWithHttpInfo(id, update);
+             ApiResponse<DadosBancariosContaResponse> localVarResponse = AlterarDadosBancariosWithHttpInfo(id, update);
              return localVarResponse.Data;
         }
 
@@ -445,16 +445,16 @@ namespace Conductor.Pier.Api
         /// <param name="id">id</param> 
         /// <param name="update">update</param> 
         /// <returns>ApiResponse of DadosBancariosContaResponse</returns>
-        public ApiResponse< DadosBancariosContaResponse > AlterarWithHttpInfo (long? id, DadosBancariosContaUpdate update)
+        public ApiResponse< DadosBancariosContaResponse > AlterarDadosBancariosWithHttpInfo (long? id, DadosBancariosContaUpdate update)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling DadosBancariosContaApi->Alterar");
+                throw new ApiException(400, "Missing required parameter 'id' when calling DadosBancariosContaApi->AlterarDadosBancarios");
             
             // verify the required parameter 'update' is set
             if (update == null)
-                throw new ApiException(400, "Missing required parameter 'update' when calling DadosBancariosContaApi->Alterar");
+                throw new ApiException(400, "Missing required parameter 'update' when calling DadosBancariosContaApi->AlterarDadosBancarios");
             
     
             var localVarPath = "/api/dados-bancarios-conta/{id}";
@@ -507,9 +507,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Alterar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarDadosBancarios: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Alterar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarDadosBancarios: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<DadosBancariosContaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -525,9 +525,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">id</param>
         /// <param name="update">update</param>
         /// <returns>Task of DadosBancariosContaResponse</returns>
-        public async System.Threading.Tasks.Task<DadosBancariosContaResponse> AlterarAsync (long? id, DadosBancariosContaUpdate update)
+        public async System.Threading.Tasks.Task<DadosBancariosContaResponse> AlterarDadosBancariosAsync (long? id, DadosBancariosContaUpdate update)
         {
-             ApiResponse<DadosBancariosContaResponse> localVarResponse = await AlterarAsyncWithHttpInfo(id, update);
+             ApiResponse<DadosBancariosContaResponse> localVarResponse = await AlterarDadosBancariosAsyncWithHttpInfo(id, update);
              return localVarResponse.Data;
 
         }
@@ -539,12 +539,12 @@ namespace Conductor.Pier.Api
         /// <param name="id">id</param>
         /// <param name="update">update</param>
         /// <returns>Task of ApiResponse (DadosBancariosContaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DadosBancariosContaResponse>> AlterarAsyncWithHttpInfo (long? id, DadosBancariosContaUpdate update)
+        public async System.Threading.Tasks.Task<ApiResponse<DadosBancariosContaResponse>> AlterarDadosBancariosAsyncWithHttpInfo (long? id, DadosBancariosContaUpdate update)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling Alterar");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AlterarDadosBancarios");
             // verify the required parameter 'update' is set
-            if (update == null) throw new ApiException(400, "Missing required parameter 'update' when calling Alterar");
+            if (update == null) throw new ApiException(400, "Missing required parameter 'update' when calling AlterarDadosBancarios");
             
     
             var localVarPath = "/api/dados-bancarios-conta/{id}";
@@ -597,171 +597,13 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Alterar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarDadosBancarios: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Alterar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarDadosBancarios: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<DadosBancariosContaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (DadosBancariosContaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DadosBancariosContaResponse)));
-            
-        }
-        
-        /// <summary>
-        /// Apresenta dados de um determinado tipo de conta banc\u00E1ria Este m\u00E9todo permite consultar dados de um determinado tipo de conta banc\u00E1ria a partir de seu codigo de identifica\u00E7\u00E3o (id)
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do tipo de conta banc\u00E1ria (id)</param> 
-        /// <returns>CdtTipoContaBancaria</returns>
-        public CdtTipoContaBancaria Consultar (long? id)
-        {
-             ApiResponse<CdtTipoContaBancaria> localVarResponse = ConsultarWithHttpInfo(id);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Apresenta dados de um determinado tipo de conta banc\u00E1ria Este m\u00E9todo permite consultar dados de um determinado tipo de conta banc\u00E1ria a partir de seu codigo de identifica\u00E7\u00E3o (id)
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do tipo de conta banc\u00E1ria (id)</param> 
-        /// <returns>ApiResponse of CdtTipoContaBancaria</returns>
-        public ApiResponse< CdtTipoContaBancaria > ConsultarWithHttpInfo (long? id)
-        {
-            
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling DadosBancariosContaApi->Consultar");
-            
-    
-            var localVarPath = "/api/dados-bancarios-conta/tipos-contas-bancarias/{id}";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            
-            
-            
-            
-            
-
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<CdtTipoContaBancaria>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CdtTipoContaBancaria) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CdtTipoContaBancaria)));
-            
-        }
-
-        
-        /// <summary>
-        /// Apresenta dados de um determinado tipo de conta banc\u00E1ria Este m\u00E9todo permite consultar dados de um determinado tipo de conta banc\u00E1ria a partir de seu codigo de identifica\u00E7\u00E3o (id)
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do tipo de conta banc\u00E1ria (id)</param>
-        /// <returns>Task of CdtTipoContaBancaria</returns>
-        public async System.Threading.Tasks.Task<CdtTipoContaBancaria> ConsultarAsync (long? id)
-        {
-             ApiResponse<CdtTipoContaBancaria> localVarResponse = await ConsultarAsyncWithHttpInfo(id);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Apresenta dados de um determinado tipo de conta banc\u00E1ria Este m\u00E9todo permite consultar dados de um determinado tipo de conta banc\u00E1ria a partir de seu codigo de identifica\u00E7\u00E3o (id)
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do tipo de conta banc\u00E1ria (id)</param>
-        /// <returns>Task of ApiResponse (CdtTipoContaBancaria)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CdtTipoContaBancaria>> ConsultarAsyncWithHttpInfo (long? id)
-        {
-            // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling Consultar");
-            
-    
-            var localVarPath = "/api/dados-bancarios-conta/tipos-contas-bancarias/{id}";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            
-            
-            
-            
-            
-
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<CdtTipoContaBancaria>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CdtTipoContaBancaria) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CdtTipoContaBancaria)));
             
         }
         
@@ -771,9 +613,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do dado banc\u00E1rio da conta (id)</param> 
         /// <returns>DadosBancariosContaResponse</returns>
-        public DadosBancariosContaResponse Consultar_0 (long? id)
+        public DadosBancariosContaResponse ConsultarDadosBancarios (long? id)
         {
-             ApiResponse<DadosBancariosContaResponse> localVarResponse = Consultar_0WithHttpInfo(id);
+             ApiResponse<DadosBancariosContaResponse> localVarResponse = ConsultarDadosBancariosWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -783,12 +625,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do dado banc\u00E1rio da conta (id)</param> 
         /// <returns>ApiResponse of DadosBancariosContaResponse</returns>
-        public ApiResponse< DadosBancariosContaResponse > Consultar_0WithHttpInfo (long? id)
+        public ApiResponse< DadosBancariosContaResponse > ConsultarDadosBancariosWithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling DadosBancariosContaApi->Consultar_0");
+                throw new ApiException(400, "Missing required parameter 'id' when calling DadosBancariosContaApi->ConsultarDadosBancarios");
             
     
             var localVarPath = "/api/dados-bancarios-conta/{id}";
@@ -834,9 +676,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar_0: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarDadosBancarios: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar_0: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarDadosBancarios: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<DadosBancariosContaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -851,9 +693,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do dado banc\u00E1rio da conta (id)</param>
         /// <returns>Task of DadosBancariosContaResponse</returns>
-        public async System.Threading.Tasks.Task<DadosBancariosContaResponse> Consultar_0Async (long? id)
+        public async System.Threading.Tasks.Task<DadosBancariosContaResponse> ConsultarDadosBancariosAsync (long? id)
         {
-             ApiResponse<DadosBancariosContaResponse> localVarResponse = await Consultar_0AsyncWithHttpInfo(id);
+             ApiResponse<DadosBancariosContaResponse> localVarResponse = await ConsultarDadosBancariosAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -864,10 +706,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do dado banc\u00E1rio da conta (id)</param>
         /// <returns>Task of ApiResponse (DadosBancariosContaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DadosBancariosContaResponse>> Consultar_0AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<DadosBancariosContaResponse>> ConsultarDadosBancariosAsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling Consultar_0");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarDadosBancarios");
             
     
             var localVarPath = "/api/dados-bancarios-conta/{id}";
@@ -913,13 +755,171 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar_0: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarDadosBancarios: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar_0: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarDadosBancarios: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<DadosBancariosContaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (DadosBancariosContaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DadosBancariosContaResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Apresenta dados de um determinado tipo de conta banc\u00E1ria Este m\u00E9todo permite consultar dados de um determinado tipo de conta banc\u00E1ria a partir de seu codigo de identifica\u00E7\u00E3o (id)
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do tipo de conta banc\u00E1ria (id)</param> 
+        /// <returns>CdtTipoContaBancaria</returns>
+        public CdtTipoContaBancaria ConsultarTipoContaBancaria (long? id)
+        {
+             ApiResponse<CdtTipoContaBancaria> localVarResponse = ConsultarTipoContaBancariaWithHttpInfo(id);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Apresenta dados de um determinado tipo de conta banc\u00E1ria Este m\u00E9todo permite consultar dados de um determinado tipo de conta banc\u00E1ria a partir de seu codigo de identifica\u00E7\u00E3o (id)
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do tipo de conta banc\u00E1ria (id)</param> 
+        /// <returns>ApiResponse of CdtTipoContaBancaria</returns>
+        public ApiResponse< CdtTipoContaBancaria > ConsultarTipoContaBancariaWithHttpInfo (long? id)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling DadosBancariosContaApi->ConsultarTipoContaBancaria");
+            
+    
+            var localVarPath = "/api/dados-bancarios-conta/tipos-contas-bancarias/{id}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarTipoContaBancaria: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarTipoContaBancaria: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<CdtTipoContaBancaria>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CdtTipoContaBancaria) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CdtTipoContaBancaria)));
+            
+        }
+
+        
+        /// <summary>
+        /// Apresenta dados de um determinado tipo de conta banc\u00E1ria Este m\u00E9todo permite consultar dados de um determinado tipo de conta banc\u00E1ria a partir de seu codigo de identifica\u00E7\u00E3o (id)
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do tipo de conta banc\u00E1ria (id)</param>
+        /// <returns>Task of CdtTipoContaBancaria</returns>
+        public async System.Threading.Tasks.Task<CdtTipoContaBancaria> ConsultarTipoContaBancariaAsync (long? id)
+        {
+             ApiResponse<CdtTipoContaBancaria> localVarResponse = await ConsultarTipoContaBancariaAsyncWithHttpInfo(id);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Apresenta dados de um determinado tipo de conta banc\u00E1ria Este m\u00E9todo permite consultar dados de um determinado tipo de conta banc\u00E1ria a partir de seu codigo de identifica\u00E7\u00E3o (id)
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do tipo de conta banc\u00E1ria (id)</param>
+        /// <returns>Task of ApiResponse (CdtTipoContaBancaria)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CdtTipoContaBancaria>> ConsultarTipoContaBancariaAsyncWithHttpInfo (long? id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarTipoContaBancaria");
+            
+    
+            var localVarPath = "/api/dados-bancarios-conta/tipos-contas-bancarias/{id}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarTipoContaBancaria: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarTipoContaBancaria: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CdtTipoContaBancaria>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CdtTipoContaBancaria) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CdtTipoContaBancaria)));
             
         }
         
@@ -937,9 +937,9 @@ namespace Conductor.Pier.Api
         /// <param name="numeroContaCorrente">Conta Corrente (optional)</param> 
         /// <param name="idTipoContaBancaria">C\u00F3digo de Identifica\u00E7\u00E3o do tipo de conta banc\u00E1ria (id).  (optional)</param> 
         /// <returns>PageDadosBancariosContaResponse</returns>
-        public PageDadosBancariosContaResponse Listar (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idConta = null, long? codigoBanco = null, long? numeroAgencia = null, string numeroContaCorrente = null, long? idTipoContaBancaria = null)
+        public PageDadosBancariosContaResponse ListarDadosBancarios (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idConta = null, long? codigoBanco = null, long? numeroAgencia = null, string numeroContaCorrente = null, long? idTipoContaBancaria = null)
         {
-             ApiResponse<PageDadosBancariosContaResponse> localVarResponse = ListarWithHttpInfo(sort, page, limit, id, idConta, codigoBanco, numeroAgencia, numeroContaCorrente, idTipoContaBancaria);
+             ApiResponse<PageDadosBancariosContaResponse> localVarResponse = ListarDadosBancariosWithHttpInfo(sort, page, limit, id, idConta, codigoBanco, numeroAgencia, numeroContaCorrente, idTipoContaBancaria);
              return localVarResponse.Data;
         }
 
@@ -957,7 +957,7 @@ namespace Conductor.Pier.Api
         /// <param name="numeroContaCorrente">Conta Corrente (optional)</param> 
         /// <param name="idTipoContaBancaria">C\u00F3digo de Identifica\u00E7\u00E3o do tipo de conta banc\u00E1ria (id).  (optional)</param> 
         /// <returns>ApiResponse of PageDadosBancariosContaResponse</returns>
-        public ApiResponse< PageDadosBancariosContaResponse > ListarWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idConta = null, long? codigoBanco = null, long? numeroAgencia = null, string numeroContaCorrente = null, long? idTipoContaBancaria = null)
+        public ApiResponse< PageDadosBancariosContaResponse > ListarDadosBancariosWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idConta = null, long? codigoBanco = null, long? numeroAgencia = null, string numeroContaCorrente = null, long? idTipoContaBancaria = null)
         {
             
     
@@ -1012,9 +1012,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Listar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarDadosBancarios: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Listar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarDadosBancarios: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageDadosBancariosContaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1037,9 +1037,9 @@ namespace Conductor.Pier.Api
         /// <param name="numeroContaCorrente">Conta Corrente (optional)</param>
         /// <param name="idTipoContaBancaria">C\u00F3digo de Identifica\u00E7\u00E3o do tipo de conta banc\u00E1ria (id).  (optional)</param>
         /// <returns>Task of PageDadosBancariosContaResponse</returns>
-        public async System.Threading.Tasks.Task<PageDadosBancariosContaResponse> ListarAsync (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idConta = null, long? codigoBanco = null, long? numeroAgencia = null, string numeroContaCorrente = null, long? idTipoContaBancaria = null)
+        public async System.Threading.Tasks.Task<PageDadosBancariosContaResponse> ListarDadosBancariosAsync (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idConta = null, long? codigoBanco = null, long? numeroAgencia = null, string numeroContaCorrente = null, long? idTipoContaBancaria = null)
         {
-             ApiResponse<PageDadosBancariosContaResponse> localVarResponse = await ListarAsyncWithHttpInfo(sort, page, limit, id, idConta, codigoBanco, numeroAgencia, numeroContaCorrente, idTipoContaBancaria);
+             ApiResponse<PageDadosBancariosContaResponse> localVarResponse = await ListarDadosBancariosAsyncWithHttpInfo(sort, page, limit, id, idConta, codigoBanco, numeroAgencia, numeroContaCorrente, idTipoContaBancaria);
              return localVarResponse.Data;
 
         }
@@ -1058,7 +1058,7 @@ namespace Conductor.Pier.Api
         /// <param name="numeroContaCorrente">Conta Corrente (optional)</param>
         /// <param name="idTipoContaBancaria">C\u00F3digo de Identifica\u00E7\u00E3o do tipo de conta banc\u00E1ria (id).  (optional)</param>
         /// <returns>Task of ApiResponse (PageDadosBancariosContaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageDadosBancariosContaResponse>> ListarAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idConta = null, long? codigoBanco = null, long? numeroAgencia = null, string numeroContaCorrente = null, long? idTipoContaBancaria = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageDadosBancariosContaResponse>> ListarDadosBancariosAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idConta = null, long? codigoBanco = null, long? numeroAgencia = null, string numeroContaCorrente = null, long? idTipoContaBancaria = null)
         {
             
     
@@ -1113,9 +1113,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Listar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarDadosBancarios: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Listar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarDadosBancarios: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageDadosBancariosContaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1132,9 +1132,9 @@ namespace Conductor.Pier.Api
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
         /// <param name="descricao">Descri\u00E7\u00E3o do tipo de conta banc\u00E1ria (optional)</param> 
         /// <returns>CdtTipoContaBancaria</returns>
-        public CdtTipoContaBancaria Listar_0 (List<string> sort = null, int? page = null, int? limit = null, string descricao = null)
+        public CdtTipoContaBancaria ListarTiposContasBancarias (List<string> sort = null, int? page = null, int? limit = null, string descricao = null)
         {
-             ApiResponse<CdtTipoContaBancaria> localVarResponse = Listar_0WithHttpInfo(sort, page, limit, descricao);
+             ApiResponse<CdtTipoContaBancaria> localVarResponse = ListarTiposContasBancariasWithHttpInfo(sort, page, limit, descricao);
              return localVarResponse.Data;
         }
 
@@ -1147,7 +1147,7 @@ namespace Conductor.Pier.Api
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
         /// <param name="descricao">Descri\u00E7\u00E3o do tipo de conta banc\u00E1ria (optional)</param> 
         /// <returns>ApiResponse of CdtTipoContaBancaria</returns>
-        public ApiResponse< CdtTipoContaBancaria > Listar_0WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string descricao = null)
+        public ApiResponse< CdtTipoContaBancaria > ListarTiposContasBancariasWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string descricao = null)
         {
             
     
@@ -1197,9 +1197,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Listar_0: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarTiposContasBancarias: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Listar_0: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarTiposContasBancarias: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<CdtTipoContaBancaria>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1217,9 +1217,9 @@ namespace Conductor.Pier.Api
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
         /// <param name="descricao">Descri\u00E7\u00E3o do tipo de conta banc\u00E1ria (optional)</param>
         /// <returns>Task of CdtTipoContaBancaria</returns>
-        public async System.Threading.Tasks.Task<CdtTipoContaBancaria> Listar_0Async (List<string> sort = null, int? page = null, int? limit = null, string descricao = null)
+        public async System.Threading.Tasks.Task<CdtTipoContaBancaria> ListarTiposContasBancariasAsync (List<string> sort = null, int? page = null, int? limit = null, string descricao = null)
         {
-             ApiResponse<CdtTipoContaBancaria> localVarResponse = await Listar_0AsyncWithHttpInfo(sort, page, limit, descricao);
+             ApiResponse<CdtTipoContaBancaria> localVarResponse = await ListarTiposContasBancariasAsyncWithHttpInfo(sort, page, limit, descricao);
              return localVarResponse.Data;
 
         }
@@ -1233,7 +1233,7 @@ namespace Conductor.Pier.Api
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
         /// <param name="descricao">Descri\u00E7\u00E3o do tipo de conta banc\u00E1ria (optional)</param>
         /// <returns>Task of ApiResponse (CdtTipoContaBancaria)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CdtTipoContaBancaria>> Listar_0AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string descricao = null)
+        public async System.Threading.Tasks.Task<ApiResponse<CdtTipoContaBancaria>> ListarTiposContasBancariasAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string descricao = null)
         {
             
     
@@ -1283,9 +1283,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Listar_0: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarTiposContasBancarias: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Listar_0: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarTiposContasBancarias: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<CdtTipoContaBancaria>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1299,9 +1299,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dadosBancariosContaPersist">dadosBancariosContaPersist</param> 
         /// <returns>DadosBancariosContaResponse</returns>
-        public DadosBancariosContaResponse Salvar (DadosBancariosContaPersist dadosBancariosContaPersist)
+        public DadosBancariosContaResponse SalvarDadosBancarios (DadosBancariosContaPersist dadosBancariosContaPersist)
         {
-             ApiResponse<DadosBancariosContaResponse> localVarResponse = SalvarWithHttpInfo(dadosBancariosContaPersist);
+             ApiResponse<DadosBancariosContaResponse> localVarResponse = SalvarDadosBancariosWithHttpInfo(dadosBancariosContaPersist);
              return localVarResponse.Data;
         }
 
@@ -1311,12 +1311,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dadosBancariosContaPersist">dadosBancariosContaPersist</param> 
         /// <returns>ApiResponse of DadosBancariosContaResponse</returns>
-        public ApiResponse< DadosBancariosContaResponse > SalvarWithHttpInfo (DadosBancariosContaPersist dadosBancariosContaPersist)
+        public ApiResponse< DadosBancariosContaResponse > SalvarDadosBancariosWithHttpInfo (DadosBancariosContaPersist dadosBancariosContaPersist)
         {
             
             // verify the required parameter 'dadosBancariosContaPersist' is set
             if (dadosBancariosContaPersist == null)
-                throw new ApiException(400, "Missing required parameter 'dadosBancariosContaPersist' when calling DadosBancariosContaApi->Salvar");
+                throw new ApiException(400, "Missing required parameter 'dadosBancariosContaPersist' when calling DadosBancariosContaApi->SalvarDadosBancarios");
             
     
             var localVarPath = "/api/dados-bancarios-conta";
@@ -1368,9 +1368,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Salvar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarDadosBancarios: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Salvar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarDadosBancarios: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<DadosBancariosContaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1385,9 +1385,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dadosBancariosContaPersist">dadosBancariosContaPersist</param>
         /// <returns>Task of DadosBancariosContaResponse</returns>
-        public async System.Threading.Tasks.Task<DadosBancariosContaResponse> SalvarAsync (DadosBancariosContaPersist dadosBancariosContaPersist)
+        public async System.Threading.Tasks.Task<DadosBancariosContaResponse> SalvarDadosBancariosAsync (DadosBancariosContaPersist dadosBancariosContaPersist)
         {
-             ApiResponse<DadosBancariosContaResponse> localVarResponse = await SalvarAsyncWithHttpInfo(dadosBancariosContaPersist);
+             ApiResponse<DadosBancariosContaResponse> localVarResponse = await SalvarDadosBancariosAsyncWithHttpInfo(dadosBancariosContaPersist);
              return localVarResponse.Data;
 
         }
@@ -1398,10 +1398,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dadosBancariosContaPersist">dadosBancariosContaPersist</param>
         /// <returns>Task of ApiResponse (DadosBancariosContaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DadosBancariosContaResponse>> SalvarAsyncWithHttpInfo (DadosBancariosContaPersist dadosBancariosContaPersist)
+        public async System.Threading.Tasks.Task<ApiResponse<DadosBancariosContaResponse>> SalvarDadosBancariosAsyncWithHttpInfo (DadosBancariosContaPersist dadosBancariosContaPersist)
         {
             // verify the required parameter 'dadosBancariosContaPersist' is set
-            if (dadosBancariosContaPersist == null) throw new ApiException(400, "Missing required parameter 'dadosBancariosContaPersist' when calling Salvar");
+            if (dadosBancariosContaPersist == null) throw new ApiException(400, "Missing required parameter 'dadosBancariosContaPersist' when calling SalvarDadosBancarios");
             
     
             var localVarPath = "/api/dados-bancarios-conta";
@@ -1453,9 +1453,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Salvar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarDadosBancarios: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Salvar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarDadosBancarios: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<DadosBancariosContaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

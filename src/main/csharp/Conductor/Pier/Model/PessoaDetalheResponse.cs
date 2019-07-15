@@ -46,8 +46,11 @@ namespace Conductor.Pier.Model
         /// <param name="NomePai">Apresenta o nome do pai da pessoa f\u00EDsica.</param>
         /// <param name="ChequeEspecial">Indica se pessoa f\u00EDsica aderir ao cheque especial.</param>
         /// <param name="NumeroCnh">N\u00FAmero da CNH da pessoa.</param>
+        /// <param name="PessoaPoliticamenteExposta">Flag para identificar se a pessoa \u00E9 politicamente exposta.</param>
+        /// <param name="PatrimonioTotal">Patrim\u00F4nio total da pessoa.</param>
+        /// <param name="NomeConjuge">Nome do c\u00F4njuge da pessoa.</param>
 
-        public PessoaDetalheResponse(long? IdPessoa = null, string NomeMae = null, long? IdEstadoCivil = null, string IdProfissao = null, long? IdNaturezaOcupacao = null, long? IdNacionalidade = null, int? NumeroBanco = null, int? NumeroAgencia = null, string NumeroContaCorrente = null, string Email = null, string NomeEmpresa = null, string NomeReferencia1 = null, string EnderecoReferencia1 = null, string NomeReferencia2 = null, string EnderecoReferencia2 = null, double? Salario = null, bool? ImpedidoFinanciamento = null, string NaturalidadeCidade = null, string NaturalidadeEstado = null, int? GrauInstrucao = null, int? NumeroDependentes = null, string NomePai = null, int? ChequeEspecial = null, string NumeroCnh = null)
+        public PessoaDetalheResponse(long? IdPessoa = null, string NomeMae = null, long? IdEstadoCivil = null, string IdProfissao = null, long? IdNaturezaOcupacao = null, long? IdNacionalidade = null, int? NumeroBanco = null, int? NumeroAgencia = null, string NumeroContaCorrente = null, string Email = null, string NomeEmpresa = null, string NomeReferencia1 = null, string EnderecoReferencia1 = null, string NomeReferencia2 = null, string EnderecoReferencia2 = null, double? Salario = null, bool? ImpedidoFinanciamento = null, string NaturalidadeCidade = null, string NaturalidadeEstado = null, int? GrauInstrucao = null, int? NumeroDependentes = null, string NomePai = null, int? ChequeEspecial = null, string NumeroCnh = null, bool? PessoaPoliticamenteExposta = null, double? PatrimonioTotal = null, string NomeConjuge = null)
         {
             this.IdPessoa = IdPessoa;
             this.NomeMae = NomeMae;
@@ -73,6 +76,9 @@ namespace Conductor.Pier.Model
             this.NomePai = NomePai;
             this.ChequeEspecial = ChequeEspecial;
             this.NumeroCnh = NumeroCnh;
+            this.PessoaPoliticamenteExposta = PessoaPoliticamenteExposta;
+            this.PatrimonioTotal = PatrimonioTotal;
+            this.NomeConjuge = NomeConjuge;
             
         }
         
@@ -246,6 +252,27 @@ namespace Conductor.Pier.Model
         public string NumeroCnh { get; set; }
     
         /// <summary>
+        /// Flag para identificar se a pessoa \u00E9 politicamente exposta
+        /// </summary>
+        /// <value>Flag para identificar se a pessoa \u00E9 politicamente exposta</value>
+        [DataMember(Name="pessoaPoliticamenteExposta", EmitDefaultValue=false)]
+        public bool? PessoaPoliticamenteExposta { get; set; }
+    
+        /// <summary>
+        /// Patrim\u00F4nio total da pessoa
+        /// </summary>
+        /// <value>Patrim\u00F4nio total da pessoa</value>
+        [DataMember(Name="patrimonioTotal", EmitDefaultValue=false)]
+        public double? PatrimonioTotal { get; set; }
+    
+        /// <summary>
+        /// Nome do c\u00F4njuge da pessoa
+        /// </summary>
+        /// <value>Nome do c\u00F4njuge da pessoa</value>
+        [DataMember(Name="nomeConjuge", EmitDefaultValue=false)]
+        public string NomeConjuge { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -277,6 +304,9 @@ namespace Conductor.Pier.Model
             sb.Append("  NomePai: ").Append(NomePai).Append("\n");
             sb.Append("  ChequeEspecial: ").Append(ChequeEspecial).Append("\n");
             sb.Append("  NumeroCnh: ").Append(NumeroCnh).Append("\n");
+            sb.Append("  PessoaPoliticamenteExposta: ").Append(PessoaPoliticamenteExposta).Append("\n");
+            sb.Append("  PatrimonioTotal: ").Append(PatrimonioTotal).Append("\n");
+            sb.Append("  NomeConjuge: ").Append(NomeConjuge).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -433,6 +463,21 @@ namespace Conductor.Pier.Model
                     this.NumeroCnh == other.NumeroCnh ||
                     this.NumeroCnh != null &&
                     this.NumeroCnh.Equals(other.NumeroCnh)
+                ) && 
+                (
+                    this.PessoaPoliticamenteExposta == other.PessoaPoliticamenteExposta ||
+                    this.PessoaPoliticamenteExposta != null &&
+                    this.PessoaPoliticamenteExposta.Equals(other.PessoaPoliticamenteExposta)
+                ) && 
+                (
+                    this.PatrimonioTotal == other.PatrimonioTotal ||
+                    this.PatrimonioTotal != null &&
+                    this.PatrimonioTotal.Equals(other.PatrimonioTotal)
+                ) && 
+                (
+                    this.NomeConjuge == other.NomeConjuge ||
+                    this.NomeConjuge != null &&
+                    this.NomeConjuge.Equals(other.NomeConjuge)
                 );
         }
 
@@ -519,6 +564,15 @@ namespace Conductor.Pier.Model
                 
                 if (this.NumeroCnh != null)
                     hash = hash * 59 + this.NumeroCnh.GetHashCode();
+                
+                if (this.PessoaPoliticamenteExposta != null)
+                    hash = hash * 59 + this.PessoaPoliticamenteExposta.GetHashCode();
+                
+                if (this.PatrimonioTotal != null)
+                    hash = hash * 59 + this.PatrimonioTotal.GetHashCode();
+                
+                if (this.NomeConjuge != null)
+                    hash = hash * 59 + this.NomeConjuge.GetHashCode();
                 
                 return hash;
             }

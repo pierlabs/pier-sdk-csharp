@@ -18,240 +18,240 @@ namespace Conductor.Pier.Api
         #region Synchronous Operations
         
         /// <summary>
-        /// Credor resource alterar
+        /// Alterar credor
         /// </summary>
         /// <remarks>
-        /// Credor resource alterar notes
+        /// Permite a altera\u00E7\u00E3o de dados de um credor
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id</param>
         /// <param name="request">request</param>
         /// <param name="login">login (optional)</param>
         /// <returns>CredorResponse</returns>
-        CredorResponse Alterar (long? id, CredorUpdate request, string login = null);
+        CredorResponse AlterarCredor (long? id, CredorUpdate request, string login = null);
   
         /// <summary>
-        /// Credor resource alterar
+        /// Alterar credor
         /// </summary>
         /// <remarks>
-        /// Credor resource alterar notes
+        /// Permite a altera\u00E7\u00E3o de dados de um credor
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id</param>
         /// <param name="request">request</param>
         /// <param name="login">login (optional)</param>
         /// <returns>ApiResponse of CredorResponse</returns>
-        ApiResponse<CredorResponse> AlterarWithHttpInfo (long? id, CredorUpdate request, string login = null);
+        ApiResponse<CredorResponse> AlterarCredorWithHttpInfo (long? id, CredorUpdate request, string login = null);
         
         /// <summary>
-        /// Credor resource consultar
+        /// Consultar credor
         /// </summary>
         /// <remarks>
-        /// Credor resource consultar notes
+        /// Permite a consulta de um credor a partir de seu identificador
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id</param>
         /// <returns>CredorResponse</returns>
-        CredorResponse Consultar (long? id);
+        CredorResponse ConsultarCredor (long? id);
   
         /// <summary>
-        /// Credor resource consultar
+        /// Consultar credor
         /// </summary>
         /// <remarks>
-        /// Credor resource consultar notes
+        /// Permite a consulta de um credor a partir de seu identificador
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id</param>
         /// <returns>ApiResponse of CredorResponse</returns>
-        ApiResponse<CredorResponse> ConsultarWithHttpInfo (long? id);
+        ApiResponse<CredorResponse> ConsultarCredorWithHttpInfo (long? id);
         
         /// <summary>
-        /// Credor resource listar
+        /// Listar credores
         /// </summary>
         /// <remarks>
-        /// Credor resource listar notes
+        /// Permite listar, filtrar ou ordenar credores
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
         /// <param name="page">P\u00E1gina (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="id">credor request id (optional)</param>
-        /// <param name="nomeCredor">Credor request nome credor (optional)</param>
-        /// <param name="banco">credor request banco (optional)</param>
-        /// <param name="agencia">Credor request ag\u00EAncia (optional)</param>
-        /// <param name="digitoAgencia">Credor request d\u00EDgito ag\u00EAncia (optional)</param>
-        /// <param name="contaCorrente">Credor request conta corrente (optional)</param>
-        /// <param name="digitoContaCorrente">Credor request d\u00EDgito conta corrente (optional)</param>
-        /// <param name="credorBanco">Credor request credor banco (optional)</param>
-        /// <param name="idPessoaJuridica">Credor request id pessoa juridica (optional)</param>
-        /// <returns>CredorResponse</returns>
-        CredorResponse ListarCredor (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nomeCredor = null, int? banco = null, int? agencia = null, string digitoAgencia = null, string contaCorrente = null, string digitoContaCorrente = null, bool? credorBanco = null, long? idPessoaJuridica = null);
+        /// <param name="id">Identificador do credor (optional)</param>
+        /// <param name="nomeCredor">Nome do redor (optional)</param>
+        /// <param name="banco">Banco do credor (optional)</param>
+        /// <param name="agencia">Ag\u00EAncia do credor (optional)</param>
+        /// <param name="digitoAgencia">Digito da ag\u00EAncia (optional)</param>
+        /// <param name="contaCorrente">Conta corrente do credor (optional)</param>
+        /// <param name="digitoContaCorrente">Digito da conta corrente (optional)</param>
+        /// <param name="credorBanco">Flag de controle interno (optional)</param>
+        /// <param name="idPessoaJuridica">Identificador da pessoa jur\u00EDdica associada ao credor (optional)</param>
+        /// <returns>PageCredorResponse</returns>
+        PageCredorResponse ListarCredores (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nomeCredor = null, int? banco = null, int? agencia = null, string digitoAgencia = null, string contaCorrente = null, string digitoContaCorrente = null, bool? credorBanco = null, long? idPessoaJuridica = null);
   
         /// <summary>
-        /// Credor resource listar
+        /// Listar credores
         /// </summary>
         /// <remarks>
-        /// Credor resource listar notes
+        /// Permite listar, filtrar ou ordenar credores
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
         /// <param name="page">P\u00E1gina (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="id">credor request id (optional)</param>
-        /// <param name="nomeCredor">Credor request nome credor (optional)</param>
-        /// <param name="banco">credor request banco (optional)</param>
-        /// <param name="agencia">Credor request ag\u00EAncia (optional)</param>
-        /// <param name="digitoAgencia">Credor request d\u00EDgito ag\u00EAncia (optional)</param>
-        /// <param name="contaCorrente">Credor request conta corrente (optional)</param>
-        /// <param name="digitoContaCorrente">Credor request d\u00EDgito conta corrente (optional)</param>
-        /// <param name="credorBanco">Credor request credor banco (optional)</param>
-        /// <param name="idPessoaJuridica">Credor request id pessoa juridica (optional)</param>
-        /// <returns>ApiResponse of CredorResponse</returns>
-        ApiResponse<CredorResponse> ListarCredorWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nomeCredor = null, int? banco = null, int? agencia = null, string digitoAgencia = null, string contaCorrente = null, string digitoContaCorrente = null, bool? credorBanco = null, long? idPessoaJuridica = null);
+        /// <param name="id">Identificador do credor (optional)</param>
+        /// <param name="nomeCredor">Nome do redor (optional)</param>
+        /// <param name="banco">Banco do credor (optional)</param>
+        /// <param name="agencia">Ag\u00EAncia do credor (optional)</param>
+        /// <param name="digitoAgencia">Digito da ag\u00EAncia (optional)</param>
+        /// <param name="contaCorrente">Conta corrente do credor (optional)</param>
+        /// <param name="digitoContaCorrente">Digito da conta corrente (optional)</param>
+        /// <param name="credorBanco">Flag de controle interno (optional)</param>
+        /// <param name="idPessoaJuridica">Identificador da pessoa jur\u00EDdica associada ao credor (optional)</param>
+        /// <returns>ApiResponse of PageCredorResponse</returns>
+        ApiResponse<PageCredorResponse> ListarCredoresWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nomeCredor = null, int? banco = null, int? agencia = null, string digitoAgencia = null, string contaCorrente = null, string digitoContaCorrente = null, bool? credorBanco = null, long? idPessoaJuridica = null);
         
         /// <summary>
-        /// Credor resource salvar
+        /// Salvar credor
         /// </summary>
         /// <remarks>
-        /// Credor resource salvar notes
+        /// Permite a persist\u00EAncias de um novo credor
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="credorPersist">credorPersist</param>
         /// <param name="login">login (optional)</param>
         /// <returns>CredorResponse</returns>
-        CredorResponse Salvar (CredorPersist credorPersist, string login = null);
+        CredorResponse SalvarCredor (CredorPersist credorPersist, string login = null);
   
         /// <summary>
-        /// Credor resource salvar
+        /// Salvar credor
         /// </summary>
         /// <remarks>
-        /// Credor resource salvar notes
+        /// Permite a persist\u00EAncias de um novo credor
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="credorPersist">credorPersist</param>
         /// <param name="login">login (optional)</param>
         /// <returns>ApiResponse of CredorResponse</returns>
-        ApiResponse<CredorResponse> SalvarWithHttpInfo (CredorPersist credorPersist, string login = null);
+        ApiResponse<CredorResponse> SalvarCredorWithHttpInfo (CredorPersist credorPersist, string login = null);
         
         #endregion Synchronous Operations
         
         #region Asynchronous Operations
         
         /// <summary>
-        /// Credor resource alterar
+        /// Alterar credor
         /// </summary>
         /// <remarks>
-        /// Credor resource alterar notes
+        /// Permite a altera\u00E7\u00E3o de dados de um credor
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id</param>
         /// <param name="request">request</param>
         /// <param name="login">login (optional)</param>
         /// <returns>Task of CredorResponse</returns>
-        System.Threading.Tasks.Task<CredorResponse> AlterarAsync (long? id, CredorUpdate request, string login = null);
+        System.Threading.Tasks.Task<CredorResponse> AlterarCredorAsync (long? id, CredorUpdate request, string login = null);
 
         /// <summary>
-        /// Credor resource alterar
+        /// Alterar credor
         /// </summary>
         /// <remarks>
-        /// Credor resource alterar notes
+        /// Permite a altera\u00E7\u00E3o de dados de um credor
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id</param>
         /// <param name="request">request</param>
         /// <param name="login">login (optional)</param>
         /// <returns>Task of ApiResponse (CredorResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CredorResponse>> AlterarAsyncWithHttpInfo (long? id, CredorUpdate request, string login = null);
+        System.Threading.Tasks.Task<ApiResponse<CredorResponse>> AlterarCredorAsyncWithHttpInfo (long? id, CredorUpdate request, string login = null);
         
         /// <summary>
-        /// Credor resource consultar
+        /// Consultar credor
         /// </summary>
         /// <remarks>
-        /// Credor resource consultar notes
+        /// Permite a consulta de um credor a partir de seu identificador
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id</param>
         /// <returns>Task of CredorResponse</returns>
-        System.Threading.Tasks.Task<CredorResponse> ConsultarAsync (long? id);
+        System.Threading.Tasks.Task<CredorResponse> ConsultarCredorAsync (long? id);
 
         /// <summary>
-        /// Credor resource consultar
+        /// Consultar credor
         /// </summary>
         /// <remarks>
-        /// Credor resource consultar notes
+        /// Permite a consulta de um credor a partir de seu identificador
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id</param>
         /// <returns>Task of ApiResponse (CredorResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CredorResponse>> ConsultarAsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<CredorResponse>> ConsultarCredorAsyncWithHttpInfo (long? id);
         
         /// <summary>
-        /// Credor resource listar
+        /// Listar credores
         /// </summary>
         /// <remarks>
-        /// Credor resource listar notes
+        /// Permite listar, filtrar ou ordenar credores
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
         /// <param name="page">P\u00E1gina (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="id">credor request id (optional)</param>
-        /// <param name="nomeCredor">Credor request nome credor (optional)</param>
-        /// <param name="banco">credor request banco (optional)</param>
-        /// <param name="agencia">Credor request ag\u00EAncia (optional)</param>
-        /// <param name="digitoAgencia">Credor request d\u00EDgito ag\u00EAncia (optional)</param>
-        /// <param name="contaCorrente">Credor request conta corrente (optional)</param>
-        /// <param name="digitoContaCorrente">Credor request d\u00EDgito conta corrente (optional)</param>
-        /// <param name="credorBanco">Credor request credor banco (optional)</param>
-        /// <param name="idPessoaJuridica">Credor request id pessoa juridica (optional)</param>
-        /// <returns>Task of CredorResponse</returns>
-        System.Threading.Tasks.Task<CredorResponse> ListarCredorAsync (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nomeCredor = null, int? banco = null, int? agencia = null, string digitoAgencia = null, string contaCorrente = null, string digitoContaCorrente = null, bool? credorBanco = null, long? idPessoaJuridica = null);
+        /// <param name="id">Identificador do credor (optional)</param>
+        /// <param name="nomeCredor">Nome do redor (optional)</param>
+        /// <param name="banco">Banco do credor (optional)</param>
+        /// <param name="agencia">Ag\u00EAncia do credor (optional)</param>
+        /// <param name="digitoAgencia">Digito da ag\u00EAncia (optional)</param>
+        /// <param name="contaCorrente">Conta corrente do credor (optional)</param>
+        /// <param name="digitoContaCorrente">Digito da conta corrente (optional)</param>
+        /// <param name="credorBanco">Flag de controle interno (optional)</param>
+        /// <param name="idPessoaJuridica">Identificador da pessoa jur\u00EDdica associada ao credor (optional)</param>
+        /// <returns>Task of PageCredorResponse</returns>
+        System.Threading.Tasks.Task<PageCredorResponse> ListarCredoresAsync (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nomeCredor = null, int? banco = null, int? agencia = null, string digitoAgencia = null, string contaCorrente = null, string digitoContaCorrente = null, bool? credorBanco = null, long? idPessoaJuridica = null);
 
         /// <summary>
-        /// Credor resource listar
+        /// Listar credores
         /// </summary>
         /// <remarks>
-        /// Credor resource listar notes
+        /// Permite listar, filtrar ou ordenar credores
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
         /// <param name="page">P\u00E1gina (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="id">credor request id (optional)</param>
-        /// <param name="nomeCredor">Credor request nome credor (optional)</param>
-        /// <param name="banco">credor request banco (optional)</param>
-        /// <param name="agencia">Credor request ag\u00EAncia (optional)</param>
-        /// <param name="digitoAgencia">Credor request d\u00EDgito ag\u00EAncia (optional)</param>
-        /// <param name="contaCorrente">Credor request conta corrente (optional)</param>
-        /// <param name="digitoContaCorrente">Credor request d\u00EDgito conta corrente (optional)</param>
-        /// <param name="credorBanco">Credor request credor banco (optional)</param>
-        /// <param name="idPessoaJuridica">Credor request id pessoa juridica (optional)</param>
-        /// <returns>Task of ApiResponse (CredorResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CredorResponse>> ListarCredorAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nomeCredor = null, int? banco = null, int? agencia = null, string digitoAgencia = null, string contaCorrente = null, string digitoContaCorrente = null, bool? credorBanco = null, long? idPessoaJuridica = null);
+        /// <param name="id">Identificador do credor (optional)</param>
+        /// <param name="nomeCredor">Nome do redor (optional)</param>
+        /// <param name="banco">Banco do credor (optional)</param>
+        /// <param name="agencia">Ag\u00EAncia do credor (optional)</param>
+        /// <param name="digitoAgencia">Digito da ag\u00EAncia (optional)</param>
+        /// <param name="contaCorrente">Conta corrente do credor (optional)</param>
+        /// <param name="digitoContaCorrente">Digito da conta corrente (optional)</param>
+        /// <param name="credorBanco">Flag de controle interno (optional)</param>
+        /// <param name="idPessoaJuridica">Identificador da pessoa jur\u00EDdica associada ao credor (optional)</param>
+        /// <returns>Task of ApiResponse (PageCredorResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PageCredorResponse>> ListarCredoresAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nomeCredor = null, int? banco = null, int? agencia = null, string digitoAgencia = null, string contaCorrente = null, string digitoContaCorrente = null, bool? credorBanco = null, long? idPessoaJuridica = null);
         
         /// <summary>
-        /// Credor resource salvar
+        /// Salvar credor
         /// </summary>
         /// <remarks>
-        /// Credor resource salvar notes
+        /// Permite a persist\u00EAncias de um novo credor
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="credorPersist">credorPersist</param>
         /// <param name="login">login (optional)</param>
         /// <returns>Task of CredorResponse</returns>
-        System.Threading.Tasks.Task<CredorResponse> SalvarAsync (CredorPersist credorPersist, string login = null);
+        System.Threading.Tasks.Task<CredorResponse> SalvarCredorAsync (CredorPersist credorPersist, string login = null);
 
         /// <summary>
-        /// Credor resource salvar
+        /// Salvar credor
         /// </summary>
         /// <remarks>
-        /// Credor resource salvar notes
+        /// Permite a persist\u00EAncias de um novo credor
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="credorPersist">credorPersist</param>
         /// <param name="login">login (optional)</param>
         /// <returns>Task of ApiResponse (CredorResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CredorResponse>> SalvarAsyncWithHttpInfo (CredorPersist credorPersist, string login = null);
+        System.Threading.Tasks.Task<ApiResponse<CredorResponse>> SalvarCredorAsyncWithHttpInfo (CredorPersist credorPersist, string login = null);
         
         #endregion Asynchronous Operations
         
@@ -346,37 +346,37 @@ namespace Conductor.Pier.Api
    
         
         /// <summary>
-        /// Credor resource alterar Credor resource alterar notes
+        /// Alterar credor Permite a altera\u00E7\u00E3o de dados de um credor
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id</param> 
         /// <param name="request">request</param> 
         /// <param name="login">login (optional)</param> 
         /// <returns>CredorResponse</returns>
-        public CredorResponse Alterar (long? id, CredorUpdate request, string login = null)
+        public CredorResponse AlterarCredor (long? id, CredorUpdate request, string login = null)
         {
-             ApiResponse<CredorResponse> localVarResponse = AlterarWithHttpInfo(id, request, login);
+             ApiResponse<CredorResponse> localVarResponse = AlterarCredorWithHttpInfo(id, request, login);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Credor resource alterar Credor resource alterar notes
+        /// Alterar credor Permite a altera\u00E7\u00E3o de dados de um credor
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id</param> 
         /// <param name="request">request</param> 
         /// <param name="login">login (optional)</param> 
         /// <returns>ApiResponse of CredorResponse</returns>
-        public ApiResponse< CredorResponse > AlterarWithHttpInfo (long? id, CredorUpdate request, string login = null)
+        public ApiResponse< CredorResponse > AlterarCredorWithHttpInfo (long? id, CredorUpdate request, string login = null)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling CredorApi->Alterar");
+                throw new ApiException(400, "Missing required parameter 'id' when calling CredorApi->AlterarCredor");
             
             // verify the required parameter 'request' is set
             if (request == null)
-                throw new ApiException(400, "Missing required parameter 'request' when calling CredorApi->Alterar");
+                throw new ApiException(400, "Missing required parameter 'request' when calling CredorApi->AlterarCredor");
             
     
             var localVarPath = "/api/credores/{id}";
@@ -430,9 +430,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Alterar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarCredor: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Alterar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarCredor: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<CredorResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -442,34 +442,34 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Credor resource alterar Credor resource alterar notes
+        /// Alterar credor Permite a altera\u00E7\u00E3o de dados de um credor
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id</param>
         /// <param name="request">request</param>
         /// <param name="login">login (optional)</param>
         /// <returns>Task of CredorResponse</returns>
-        public async System.Threading.Tasks.Task<CredorResponse> AlterarAsync (long? id, CredorUpdate request, string login = null)
+        public async System.Threading.Tasks.Task<CredorResponse> AlterarCredorAsync (long? id, CredorUpdate request, string login = null)
         {
-             ApiResponse<CredorResponse> localVarResponse = await AlterarAsyncWithHttpInfo(id, request, login);
+             ApiResponse<CredorResponse> localVarResponse = await AlterarCredorAsyncWithHttpInfo(id, request, login);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Credor resource alterar Credor resource alterar notes
+        /// Alterar credor Permite a altera\u00E7\u00E3o de dados de um credor
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id</param>
         /// <param name="request">request</param>
         /// <param name="login">login (optional)</param>
         /// <returns>Task of ApiResponse (CredorResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CredorResponse>> AlterarAsyncWithHttpInfo (long? id, CredorUpdate request, string login = null)
+        public async System.Threading.Tasks.Task<ApiResponse<CredorResponse>> AlterarCredorAsyncWithHttpInfo (long? id, CredorUpdate request, string login = null)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling Alterar");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AlterarCredor");
             // verify the required parameter 'request' is set
-            if (request == null) throw new ApiException(400, "Missing required parameter 'request' when calling Alterar");
+            if (request == null) throw new ApiException(400, "Missing required parameter 'request' when calling AlterarCredor");
             
     
             var localVarPath = "/api/credores/{id}";
@@ -523,9 +523,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Alterar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarCredor: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Alterar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarCredor: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<CredorResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -534,29 +534,29 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Credor resource consultar Credor resource consultar notes
+        /// Consultar credor Permite a consulta de um credor a partir de seu identificador
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id</param> 
         /// <returns>CredorResponse</returns>
-        public CredorResponse Consultar (long? id)
+        public CredorResponse ConsultarCredor (long? id)
         {
-             ApiResponse<CredorResponse> localVarResponse = ConsultarWithHttpInfo(id);
+             ApiResponse<CredorResponse> localVarResponse = ConsultarCredorWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Credor resource consultar Credor resource consultar notes
+        /// Consultar credor Permite a consulta de um credor a partir de seu identificador
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id</param> 
         /// <returns>ApiResponse of CredorResponse</returns>
-        public ApiResponse< CredorResponse > ConsultarWithHttpInfo (long? id)
+        public ApiResponse< CredorResponse > ConsultarCredorWithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling CredorApi->Consultar");
+                throw new ApiException(400, "Missing required parameter 'id' when calling CredorApi->ConsultarCredor");
             
     
             var localVarPath = "/api/credores/{id}";
@@ -602,9 +602,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarCredor: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarCredor: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<CredorResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -614,28 +614,28 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Credor resource consultar Credor resource consultar notes
+        /// Consultar credor Permite a consulta de um credor a partir de seu identificador
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id</param>
         /// <returns>Task of CredorResponse</returns>
-        public async System.Threading.Tasks.Task<CredorResponse> ConsultarAsync (long? id)
+        public async System.Threading.Tasks.Task<CredorResponse> ConsultarCredorAsync (long? id)
         {
-             ApiResponse<CredorResponse> localVarResponse = await ConsultarAsyncWithHttpInfo(id);
+             ApiResponse<CredorResponse> localVarResponse = await ConsultarCredorAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Credor resource consultar Credor resource consultar notes
+        /// Consultar credor Permite a consulta de um credor a partir de seu identificador
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id</param>
         /// <returns>Task of ApiResponse (CredorResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CredorResponse>> ConsultarAsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<CredorResponse>> ConsultarCredorAsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling Consultar");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarCredor");
             
     
             var localVarPath = "/api/credores/{id}";
@@ -681,9 +681,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarCredor: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarCredor: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<CredorResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -692,46 +692,46 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Credor resource listar Credor resource listar notes
+        /// Listar credores Permite listar, filtrar ou ordenar credores
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
         /// <param name="page">P\u00E1gina (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
-        /// <param name="id">credor request id (optional)</param> 
-        /// <param name="nomeCredor">Credor request nome credor (optional)</param> 
-        /// <param name="banco">credor request banco (optional)</param> 
-        /// <param name="agencia">Credor request ag\u00EAncia (optional)</param> 
-        /// <param name="digitoAgencia">Credor request d\u00EDgito ag\u00EAncia (optional)</param> 
-        /// <param name="contaCorrente">Credor request conta corrente (optional)</param> 
-        /// <param name="digitoContaCorrente">Credor request d\u00EDgito conta corrente (optional)</param> 
-        /// <param name="credorBanco">Credor request credor banco (optional)</param> 
-        /// <param name="idPessoaJuridica">Credor request id pessoa juridica (optional)</param> 
-        /// <returns>CredorResponse</returns>
-        public CredorResponse ListarCredor (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nomeCredor = null, int? banco = null, int? agencia = null, string digitoAgencia = null, string contaCorrente = null, string digitoContaCorrente = null, bool? credorBanco = null, long? idPessoaJuridica = null)
+        /// <param name="id">Identificador do credor (optional)</param> 
+        /// <param name="nomeCredor">Nome do redor (optional)</param> 
+        /// <param name="banco">Banco do credor (optional)</param> 
+        /// <param name="agencia">Ag\u00EAncia do credor (optional)</param> 
+        /// <param name="digitoAgencia">Digito da ag\u00EAncia (optional)</param> 
+        /// <param name="contaCorrente">Conta corrente do credor (optional)</param> 
+        /// <param name="digitoContaCorrente">Digito da conta corrente (optional)</param> 
+        /// <param name="credorBanco">Flag de controle interno (optional)</param> 
+        /// <param name="idPessoaJuridica">Identificador da pessoa jur\u00EDdica associada ao credor (optional)</param> 
+        /// <returns>PageCredorResponse</returns>
+        public PageCredorResponse ListarCredores (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nomeCredor = null, int? banco = null, int? agencia = null, string digitoAgencia = null, string contaCorrente = null, string digitoContaCorrente = null, bool? credorBanco = null, long? idPessoaJuridica = null)
         {
-             ApiResponse<CredorResponse> localVarResponse = ListarCredorWithHttpInfo(sort, page, limit, id, nomeCredor, banco, agencia, digitoAgencia, contaCorrente, digitoContaCorrente, credorBanco, idPessoaJuridica);
+             ApiResponse<PageCredorResponse> localVarResponse = ListarCredoresWithHttpInfo(sort, page, limit, id, nomeCredor, banco, agencia, digitoAgencia, contaCorrente, digitoContaCorrente, credorBanco, idPessoaJuridica);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Credor resource listar Credor resource listar notes
+        /// Listar credores Permite listar, filtrar ou ordenar credores
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
         /// <param name="page">P\u00E1gina (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
-        /// <param name="id">credor request id (optional)</param> 
-        /// <param name="nomeCredor">Credor request nome credor (optional)</param> 
-        /// <param name="banco">credor request banco (optional)</param> 
-        /// <param name="agencia">Credor request ag\u00EAncia (optional)</param> 
-        /// <param name="digitoAgencia">Credor request d\u00EDgito ag\u00EAncia (optional)</param> 
-        /// <param name="contaCorrente">Credor request conta corrente (optional)</param> 
-        /// <param name="digitoContaCorrente">Credor request d\u00EDgito conta corrente (optional)</param> 
-        /// <param name="credorBanco">Credor request credor banco (optional)</param> 
-        /// <param name="idPessoaJuridica">Credor request id pessoa juridica (optional)</param> 
-        /// <returns>ApiResponse of CredorResponse</returns>
-        public ApiResponse< CredorResponse > ListarCredorWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nomeCredor = null, int? banco = null, int? agencia = null, string digitoAgencia = null, string contaCorrente = null, string digitoContaCorrente = null, bool? credorBanco = null, long? idPessoaJuridica = null)
+        /// <param name="id">Identificador do credor (optional)</param> 
+        /// <param name="nomeCredor">Nome do redor (optional)</param> 
+        /// <param name="banco">Banco do credor (optional)</param> 
+        /// <param name="agencia">Ag\u00EAncia do credor (optional)</param> 
+        /// <param name="digitoAgencia">Digito da ag\u00EAncia (optional)</param> 
+        /// <param name="contaCorrente">Conta corrente do credor (optional)</param> 
+        /// <param name="digitoContaCorrente">Digito da conta corrente (optional)</param> 
+        /// <param name="credorBanco">Flag de controle interno (optional)</param> 
+        /// <param name="idPessoaJuridica">Identificador da pessoa jur\u00EDdica associada ao credor (optional)</param> 
+        /// <returns>ApiResponse of PageCredorResponse</returns>
+        public ApiResponse< PageCredorResponse > ListarCredoresWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nomeCredor = null, int? banco = null, int? agencia = null, string digitoAgencia = null, string contaCorrente = null, string digitoContaCorrente = null, bool? credorBanco = null, long? idPessoaJuridica = null)
         {
             
     
@@ -789,59 +789,59 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarCredor: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarCredores: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarCredor: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarCredores: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<CredorResponse>(localVarStatusCode,
+            return new ApiResponse<PageCredorResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CredorResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CredorResponse)));
+                (PageCredorResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageCredorResponse)));
             
         }
 
         
         /// <summary>
-        /// Credor resource listar Credor resource listar notes
+        /// Listar credores Permite listar, filtrar ou ordenar credores
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
         /// <param name="page">P\u00E1gina (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="id">credor request id (optional)</param>
-        /// <param name="nomeCredor">Credor request nome credor (optional)</param>
-        /// <param name="banco">credor request banco (optional)</param>
-        /// <param name="agencia">Credor request ag\u00EAncia (optional)</param>
-        /// <param name="digitoAgencia">Credor request d\u00EDgito ag\u00EAncia (optional)</param>
-        /// <param name="contaCorrente">Credor request conta corrente (optional)</param>
-        /// <param name="digitoContaCorrente">Credor request d\u00EDgito conta corrente (optional)</param>
-        /// <param name="credorBanco">Credor request credor banco (optional)</param>
-        /// <param name="idPessoaJuridica">Credor request id pessoa juridica (optional)</param>
-        /// <returns>Task of CredorResponse</returns>
-        public async System.Threading.Tasks.Task<CredorResponse> ListarCredorAsync (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nomeCredor = null, int? banco = null, int? agencia = null, string digitoAgencia = null, string contaCorrente = null, string digitoContaCorrente = null, bool? credorBanco = null, long? idPessoaJuridica = null)
+        /// <param name="id">Identificador do credor (optional)</param>
+        /// <param name="nomeCredor">Nome do redor (optional)</param>
+        /// <param name="banco">Banco do credor (optional)</param>
+        /// <param name="agencia">Ag\u00EAncia do credor (optional)</param>
+        /// <param name="digitoAgencia">Digito da ag\u00EAncia (optional)</param>
+        /// <param name="contaCorrente">Conta corrente do credor (optional)</param>
+        /// <param name="digitoContaCorrente">Digito da conta corrente (optional)</param>
+        /// <param name="credorBanco">Flag de controle interno (optional)</param>
+        /// <param name="idPessoaJuridica">Identificador da pessoa jur\u00EDdica associada ao credor (optional)</param>
+        /// <returns>Task of PageCredorResponse</returns>
+        public async System.Threading.Tasks.Task<PageCredorResponse> ListarCredoresAsync (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nomeCredor = null, int? banco = null, int? agencia = null, string digitoAgencia = null, string contaCorrente = null, string digitoContaCorrente = null, bool? credorBanco = null, long? idPessoaJuridica = null)
         {
-             ApiResponse<CredorResponse> localVarResponse = await ListarCredorAsyncWithHttpInfo(sort, page, limit, id, nomeCredor, banco, agencia, digitoAgencia, contaCorrente, digitoContaCorrente, credorBanco, idPessoaJuridica);
+             ApiResponse<PageCredorResponse> localVarResponse = await ListarCredoresAsyncWithHttpInfo(sort, page, limit, id, nomeCredor, banco, agencia, digitoAgencia, contaCorrente, digitoContaCorrente, credorBanco, idPessoaJuridica);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Credor resource listar Credor resource listar notes
+        /// Listar credores Permite listar, filtrar ou ordenar credores
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
         /// <param name="page">P\u00E1gina (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="id">credor request id (optional)</param>
-        /// <param name="nomeCredor">Credor request nome credor (optional)</param>
-        /// <param name="banco">credor request banco (optional)</param>
-        /// <param name="agencia">Credor request ag\u00EAncia (optional)</param>
-        /// <param name="digitoAgencia">Credor request d\u00EDgito ag\u00EAncia (optional)</param>
-        /// <param name="contaCorrente">Credor request conta corrente (optional)</param>
-        /// <param name="digitoContaCorrente">Credor request d\u00EDgito conta corrente (optional)</param>
-        /// <param name="credorBanco">Credor request credor banco (optional)</param>
-        /// <param name="idPessoaJuridica">Credor request id pessoa juridica (optional)</param>
-        /// <returns>Task of ApiResponse (CredorResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CredorResponse>> ListarCredorAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nomeCredor = null, int? banco = null, int? agencia = null, string digitoAgencia = null, string contaCorrente = null, string digitoContaCorrente = null, bool? credorBanco = null, long? idPessoaJuridica = null)
+        /// <param name="id">Identificador do credor (optional)</param>
+        /// <param name="nomeCredor">Nome do redor (optional)</param>
+        /// <param name="banco">Banco do credor (optional)</param>
+        /// <param name="agencia">Ag\u00EAncia do credor (optional)</param>
+        /// <param name="digitoAgencia">Digito da ag\u00EAncia (optional)</param>
+        /// <param name="contaCorrente">Conta corrente do credor (optional)</param>
+        /// <param name="digitoContaCorrente">Digito da conta corrente (optional)</param>
+        /// <param name="credorBanco">Flag de controle interno (optional)</param>
+        /// <param name="idPessoaJuridica">Identificador da pessoa jur\u00EDdica associada ao credor (optional)</param>
+        /// <returns>Task of ApiResponse (PageCredorResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PageCredorResponse>> ListarCredoresAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nomeCredor = null, int? banco = null, int? agencia = null, string digitoAgencia = null, string contaCorrente = null, string digitoContaCorrente = null, bool? credorBanco = null, long? idPessoaJuridica = null)
         {
             
     
@@ -899,42 +899,42 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarCredor: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarCredores: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarCredor: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarCredores: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<CredorResponse>(localVarStatusCode,
+            return new ApiResponse<PageCredorResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CredorResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CredorResponse)));
+                (PageCredorResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageCredorResponse)));
             
         }
         
         /// <summary>
-        /// Credor resource salvar Credor resource salvar notes
+        /// Salvar credor Permite a persist\u00EAncias de um novo credor
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="credorPersist">credorPersist</param> 
         /// <param name="login">login (optional)</param> 
         /// <returns>CredorResponse</returns>
-        public CredorResponse Salvar (CredorPersist credorPersist, string login = null)
+        public CredorResponse SalvarCredor (CredorPersist credorPersist, string login = null)
         {
-             ApiResponse<CredorResponse> localVarResponse = SalvarWithHttpInfo(credorPersist, login);
+             ApiResponse<CredorResponse> localVarResponse = SalvarCredorWithHttpInfo(credorPersist, login);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Credor resource salvar Credor resource salvar notes
+        /// Salvar credor Permite a persist\u00EAncias de um novo credor
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="credorPersist">credorPersist</param> 
         /// <param name="login">login (optional)</param> 
         /// <returns>ApiResponse of CredorResponse</returns>
-        public ApiResponse< CredorResponse > SalvarWithHttpInfo (CredorPersist credorPersist, string login = null)
+        public ApiResponse< CredorResponse > SalvarCredorWithHttpInfo (CredorPersist credorPersist, string login = null)
         {
             
             // verify the required parameter 'credorPersist' is set
             if (credorPersist == null)
-                throw new ApiException(400, "Missing required parameter 'credorPersist' when calling CredorApi->Salvar");
+                throw new ApiException(400, "Missing required parameter 'credorPersist' when calling CredorApi->SalvarCredor");
             
     
             var localVarPath = "/api/credores";
@@ -987,9 +987,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Salvar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarCredor: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Salvar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarCredor: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<CredorResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -999,30 +999,30 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Credor resource salvar Credor resource salvar notes
+        /// Salvar credor Permite a persist\u00EAncias de um novo credor
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="credorPersist">credorPersist</param>
         /// <param name="login">login (optional)</param>
         /// <returns>Task of CredorResponse</returns>
-        public async System.Threading.Tasks.Task<CredorResponse> SalvarAsync (CredorPersist credorPersist, string login = null)
+        public async System.Threading.Tasks.Task<CredorResponse> SalvarCredorAsync (CredorPersist credorPersist, string login = null)
         {
-             ApiResponse<CredorResponse> localVarResponse = await SalvarAsyncWithHttpInfo(credorPersist, login);
+             ApiResponse<CredorResponse> localVarResponse = await SalvarCredorAsyncWithHttpInfo(credorPersist, login);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Credor resource salvar Credor resource salvar notes
+        /// Salvar credor Permite a persist\u00EAncias de um novo credor
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="credorPersist">credorPersist</param>
         /// <param name="login">login (optional)</param>
         /// <returns>Task of ApiResponse (CredorResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CredorResponse>> SalvarAsyncWithHttpInfo (CredorPersist credorPersist, string login = null)
+        public async System.Threading.Tasks.Task<ApiResponse<CredorResponse>> SalvarCredorAsyncWithHttpInfo (CredorPersist credorPersist, string login = null)
         {
             // verify the required parameter 'credorPersist' is set
-            if (credorPersist == null) throw new ApiException(400, "Missing required parameter 'credorPersist' when calling Salvar");
+            if (credorPersist == null) throw new ApiException(400, "Missing required parameter 'credorPersist' when calling SalvarCredor");
             
     
             var localVarPath = "/api/credores";
@@ -1075,9 +1075,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Salvar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarCredor: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Salvar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarCredor: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<CredorResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

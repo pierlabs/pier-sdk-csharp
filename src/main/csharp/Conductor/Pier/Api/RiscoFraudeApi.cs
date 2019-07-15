@@ -26,7 +26,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude</param>
         /// <returns>RiscoFraudeDetalhadoResponse</returns>
-        RiscoFraudeDetalhadoResponse Consultar (long? id);
+        RiscoFraudeDetalhadoResponse ConsultarRiscoFraude (long? id);
   
         /// <summary>
         /// Consultar uma transa\u00E7\u00E3o classificada com risco de fraude
@@ -37,7 +37,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude</param>
         /// <returns>ApiResponse of RiscoFraudeDetalhadoResponse</returns>
-        ApiResponse<RiscoFraudeDetalhadoResponse> ConsultarWithHttpInfo (long? id);
+        ApiResponse<RiscoFraudeDetalhadoResponse> ConsultarRiscoFraudeWithHttpInfo (long? id);
         
         /// <summary>
         /// Listar os tipos de resolu\u00E7\u00E3o de fraude
@@ -49,7 +49,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00E1gina solicitada (Default =0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>TipoResolucaoResponse</returns>
-        TipoResolucaoResponse ListarTiposResolucao (int? page = null, int? limit = null);
+        TipoResolucaoResponse ListarTiposResolucoes (int? page = null, int? limit = null);
   
         /// <summary>
         /// Listar os tipos de resolu\u00E7\u00E3o de fraude
@@ -61,7 +61,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00E1gina solicitada (Default =0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>ApiResponse of TipoResolucaoResponse</returns>
-        ApiResponse<TipoResolucaoResponse> ListarTiposResolucaoWithHttpInfo (int? page = null, int? limit = null);
+        ApiResponse<TipoResolucaoResponse> ListarTiposResolucoesWithHttpInfo (int? page = null, int? limit = null);
         
         /// <summary>
         /// Negar autenticidade de uma transa\u00E7\u00E3o classificada como risco de fraude
@@ -72,7 +72,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude</param>
         /// <returns>Object</returns>
-        Object Negar (long? id);
+        Object NegarRiscoFraude (long? id);
   
         /// <summary>
         /// Negar autenticidade de uma transa\u00E7\u00E3o classificada como risco de fraude
@@ -83,7 +83,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude</param>
         /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> NegarWithHttpInfo (long? id);
+        ApiResponse<Object> NegarRiscoFraudeWithHttpInfo (long? id);
         
         /// <summary>
         /// Reconhecer autenticidade de uma transa\u00E7\u00E3o classificada como risco de fraude
@@ -94,7 +94,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude</param>
         /// <returns>Object</returns>
-        Object Reconhecer (long? id);
+        Object ReconhecerRiscoFraude (long? id);
   
         /// <summary>
         /// Reconhecer autenticidade de uma transa\u00E7\u00E3o classificada como risco de fraude
@@ -105,7 +105,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude</param>
         /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> ReconhecerWithHttpInfo (long? id);
+        ApiResponse<Object> ReconhecerRiscoFraudeWithHttpInfo (long? id);
         
         /// <summary>
         /// Val\u00EDda os dados informados, consultando as informa\u00E7\u00F5es na base do emissor
@@ -116,7 +116,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">request</param>
         /// <returns>Object</returns>
-        Object ValidarDadosPortador (DadosPortadorRequest request);
+        Object ValidarPortadorRiscoFraude (DadosPortadorRequest request);
   
         /// <summary>
         /// Val\u00EDda os dados informados, consultando as informa\u00E7\u00F5es na base do emissor
@@ -127,7 +127,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">request</param>
         /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> ValidarDadosPortadorWithHttpInfo (DadosPortadorRequest request);
+        ApiResponse<Object> ValidarPortadorRiscoFraudeWithHttpInfo (DadosPortadorRequest request);
         
         #endregion Synchronous Operations
         
@@ -142,7 +142,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude</param>
         /// <returns>Task of RiscoFraudeDetalhadoResponse</returns>
-        System.Threading.Tasks.Task<RiscoFraudeDetalhadoResponse> ConsultarAsync (long? id);
+        System.Threading.Tasks.Task<RiscoFraudeDetalhadoResponse> ConsultarRiscoFraudeAsync (long? id);
 
         /// <summary>
         /// Consultar uma transa\u00E7\u00E3o classificada com risco de fraude
@@ -153,7 +153,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude</param>
         /// <returns>Task of ApiResponse (RiscoFraudeDetalhadoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RiscoFraudeDetalhadoResponse>> ConsultarAsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<RiscoFraudeDetalhadoResponse>> ConsultarRiscoFraudeAsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Listar os tipos de resolu\u00E7\u00E3o de fraude
@@ -165,7 +165,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00E1gina solicitada (Default =0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of TipoResolucaoResponse</returns>
-        System.Threading.Tasks.Task<TipoResolucaoResponse> ListarTiposResolucaoAsync (int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<TipoResolucaoResponse> ListarTiposResolucoesAsync (int? page = null, int? limit = null);
 
         /// <summary>
         /// Listar os tipos de resolu\u00E7\u00E3o de fraude
@@ -177,7 +177,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00E1gina solicitada (Default =0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of ApiResponse (TipoResolucaoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TipoResolucaoResponse>> ListarTiposResolucaoAsyncWithHttpInfo (int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<ApiResponse<TipoResolucaoResponse>> ListarTiposResolucoesAsyncWithHttpInfo (int? page = null, int? limit = null);
         
         /// <summary>
         /// Negar autenticidade de uma transa\u00E7\u00E3o classificada como risco de fraude
@@ -188,7 +188,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> NegarAsync (long? id);
+        System.Threading.Tasks.Task<Object> NegarRiscoFraudeAsync (long? id);
 
         /// <summary>
         /// Negar autenticidade de uma transa\u00E7\u00E3o classificada como risco de fraude
@@ -199,7 +199,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> NegarAsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<Object>> NegarRiscoFraudeAsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Reconhecer autenticidade de uma transa\u00E7\u00E3o classificada como risco de fraude
@@ -210,7 +210,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> ReconhecerAsync (long? id);
+        System.Threading.Tasks.Task<Object> ReconhecerRiscoFraudeAsync (long? id);
 
         /// <summary>
         /// Reconhecer autenticidade de uma transa\u00E7\u00E3o classificada como risco de fraude
@@ -221,7 +221,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ReconhecerAsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<Object>> ReconhecerRiscoFraudeAsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Val\u00EDda os dados informados, consultando as informa\u00E7\u00F5es na base do emissor
@@ -232,7 +232,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">request</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> ValidarDadosPortadorAsync (DadosPortadorRequest request);
+        System.Threading.Tasks.Task<Object> ValidarPortadorRiscoFraudeAsync (DadosPortadorRequest request);
 
         /// <summary>
         /// Val\u00EDda os dados informados, consultando as informa\u00E7\u00F5es na base do emissor
@@ -243,7 +243,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">request</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ValidarDadosPortadorAsyncWithHttpInfo (DadosPortadorRequest request);
+        System.Threading.Tasks.Task<ApiResponse<Object>> ValidarPortadorRiscoFraudeAsyncWithHttpInfo (DadosPortadorRequest request);
         
         #endregion Asynchronous Operations
         
@@ -343,9 +343,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude</param> 
         /// <returns>RiscoFraudeDetalhadoResponse</returns>
-        public RiscoFraudeDetalhadoResponse Consultar (long? id)
+        public RiscoFraudeDetalhadoResponse ConsultarRiscoFraude (long? id)
         {
-             ApiResponse<RiscoFraudeDetalhadoResponse> localVarResponse = ConsultarWithHttpInfo(id);
+             ApiResponse<RiscoFraudeDetalhadoResponse> localVarResponse = ConsultarRiscoFraudeWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -355,12 +355,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude</param> 
         /// <returns>ApiResponse of RiscoFraudeDetalhadoResponse</returns>
-        public ApiResponse< RiscoFraudeDetalhadoResponse > ConsultarWithHttpInfo (long? id)
+        public ApiResponse< RiscoFraudeDetalhadoResponse > ConsultarRiscoFraudeWithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling RiscoFraudeApi->Consultar");
+                throw new ApiException(400, "Missing required parameter 'id' when calling RiscoFraudeApi->ConsultarRiscoFraude");
             
     
             var localVarPath = "/api/riscos-fraudes/{id}";
@@ -406,9 +406,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarRiscoFraude: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarRiscoFraude: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<RiscoFraudeDetalhadoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -423,9 +423,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude</param>
         /// <returns>Task of RiscoFraudeDetalhadoResponse</returns>
-        public async System.Threading.Tasks.Task<RiscoFraudeDetalhadoResponse> ConsultarAsync (long? id)
+        public async System.Threading.Tasks.Task<RiscoFraudeDetalhadoResponse> ConsultarRiscoFraudeAsync (long? id)
         {
-             ApiResponse<RiscoFraudeDetalhadoResponse> localVarResponse = await ConsultarAsyncWithHttpInfo(id);
+             ApiResponse<RiscoFraudeDetalhadoResponse> localVarResponse = await ConsultarRiscoFraudeAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -436,10 +436,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude</param>
         /// <returns>Task of ApiResponse (RiscoFraudeDetalhadoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RiscoFraudeDetalhadoResponse>> ConsultarAsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<RiscoFraudeDetalhadoResponse>> ConsultarRiscoFraudeAsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling Consultar");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarRiscoFraude");
             
     
             var localVarPath = "/api/riscos-fraudes/{id}";
@@ -485,9 +485,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarRiscoFraude: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarRiscoFraude: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<RiscoFraudeDetalhadoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -502,9 +502,9 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00E1gina solicitada (Default =0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
         /// <returns>TipoResolucaoResponse</returns>
-        public TipoResolucaoResponse ListarTiposResolucao (int? page = null, int? limit = null)
+        public TipoResolucaoResponse ListarTiposResolucoes (int? page = null, int? limit = null)
         {
-             ApiResponse<TipoResolucaoResponse> localVarResponse = ListarTiposResolucaoWithHttpInfo(page, limit);
+             ApiResponse<TipoResolucaoResponse> localVarResponse = ListarTiposResolucoesWithHttpInfo(page, limit);
              return localVarResponse.Data;
         }
 
@@ -515,7 +515,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00E1gina solicitada (Default =0) (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param> 
         /// <returns>ApiResponse of TipoResolucaoResponse</returns>
-        public ApiResponse< TipoResolucaoResponse > ListarTiposResolucaoWithHttpInfo (int? page = null, int? limit = null)
+        public ApiResponse< TipoResolucaoResponse > ListarTiposResolucoesWithHttpInfo (int? page = null, int? limit = null)
         {
             
     
@@ -563,9 +563,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarTiposResolucao: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarTiposResolucoes: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarTiposResolucao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarTiposResolucoes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<TipoResolucaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -581,9 +581,9 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00E1gina solicitada (Default =0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of TipoResolucaoResponse</returns>
-        public async System.Threading.Tasks.Task<TipoResolucaoResponse> ListarTiposResolucaoAsync (int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<TipoResolucaoResponse> ListarTiposResolucoesAsync (int? page = null, int? limit = null)
         {
-             ApiResponse<TipoResolucaoResponse> localVarResponse = await ListarTiposResolucaoAsyncWithHttpInfo(page, limit);
+             ApiResponse<TipoResolucaoResponse> localVarResponse = await ListarTiposResolucoesAsyncWithHttpInfo(page, limit);
              return localVarResponse.Data;
 
         }
@@ -595,7 +595,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00E1gina solicitada (Default =0) (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default = 50, Max = 50) (optional)</param>
         /// <returns>Task of ApiResponse (TipoResolucaoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TipoResolucaoResponse>> ListarTiposResolucaoAsyncWithHttpInfo (int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<ApiResponse<TipoResolucaoResponse>> ListarTiposResolucoesAsyncWithHttpInfo (int? page = null, int? limit = null)
         {
             
     
@@ -643,9 +643,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarTiposResolucao: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarTiposResolucoes: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarTiposResolucao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarTiposResolucoes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<TipoResolucaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -659,9 +659,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude</param> 
         /// <returns>Object</returns>
-        public Object Negar (long? id)
+        public Object NegarRiscoFraude (long? id)
         {
-             ApiResponse<Object> localVarResponse = NegarWithHttpInfo(id);
+             ApiResponse<Object> localVarResponse = NegarRiscoFraudeWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -671,12 +671,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude</param> 
         /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > NegarWithHttpInfo (long? id)
+        public ApiResponse< Object > NegarRiscoFraudeWithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling RiscoFraudeApi->Negar");
+                throw new ApiException(400, "Missing required parameter 'id' when calling RiscoFraudeApi->NegarRiscoFraude");
             
     
             var localVarPath = "/api/riscos-fraudes/{id}/negar";
@@ -722,9 +722,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Negar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling NegarRiscoFraude: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Negar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling NegarRiscoFraude: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -739,9 +739,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> NegarAsync (long? id)
+        public async System.Threading.Tasks.Task<Object> NegarRiscoFraudeAsync (long? id)
         {
-             ApiResponse<Object> localVarResponse = await NegarAsyncWithHttpInfo(id);
+             ApiResponse<Object> localVarResponse = await NegarRiscoFraudeAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -752,10 +752,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> NegarAsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> NegarRiscoFraudeAsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling Negar");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling NegarRiscoFraude");
             
     
             var localVarPath = "/api/riscos-fraudes/{id}/negar";
@@ -801,9 +801,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Negar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling NegarRiscoFraude: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Negar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling NegarRiscoFraude: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -817,9 +817,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude</param> 
         /// <returns>Object</returns>
-        public Object Reconhecer (long? id)
+        public Object ReconhecerRiscoFraude (long? id)
         {
-             ApiResponse<Object> localVarResponse = ReconhecerWithHttpInfo(id);
+             ApiResponse<Object> localVarResponse = ReconhecerRiscoFraudeWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -829,12 +829,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude</param> 
         /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > ReconhecerWithHttpInfo (long? id)
+        public ApiResponse< Object > ReconhecerRiscoFraudeWithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling RiscoFraudeApi->Reconhecer");
+                throw new ApiException(400, "Missing required parameter 'id' when calling RiscoFraudeApi->ReconhecerRiscoFraude");
             
     
             var localVarPath = "/api/riscos-fraudes/{id}/reconhecer";
@@ -880,9 +880,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Reconhecer: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ReconhecerRiscoFraude: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Reconhecer: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ReconhecerRiscoFraude: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -897,9 +897,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> ReconhecerAsync (long? id)
+        public async System.Threading.Tasks.Task<Object> ReconhecerRiscoFraudeAsync (long? id)
         {
-             ApiResponse<Object> localVarResponse = await ReconhecerAsyncWithHttpInfo(id);
+             ApiResponse<Object> localVarResponse = await ReconhecerRiscoFraudeAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -910,10 +910,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do risco de fraude</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> ReconhecerAsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> ReconhecerRiscoFraudeAsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling Reconhecer");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ReconhecerRiscoFraude");
             
     
             var localVarPath = "/api/riscos-fraudes/{id}/reconhecer";
@@ -959,9 +959,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Reconhecer: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ReconhecerRiscoFraude: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Reconhecer: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ReconhecerRiscoFraude: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -975,9 +975,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">request</param> 
         /// <returns>Object</returns>
-        public Object ValidarDadosPortador (DadosPortadorRequest request)
+        public Object ValidarPortadorRiscoFraude (DadosPortadorRequest request)
         {
-             ApiResponse<Object> localVarResponse = ValidarDadosPortadorWithHttpInfo(request);
+             ApiResponse<Object> localVarResponse = ValidarPortadorRiscoFraudeWithHttpInfo(request);
              return localVarResponse.Data;
         }
 
@@ -987,12 +987,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">request</param> 
         /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > ValidarDadosPortadorWithHttpInfo (DadosPortadorRequest request)
+        public ApiResponse< Object > ValidarPortadorRiscoFraudeWithHttpInfo (DadosPortadorRequest request)
         {
             
             // verify the required parameter 'request' is set
             if (request == null)
-                throw new ApiException(400, "Missing required parameter 'request' when calling RiscoFraudeApi->ValidarDadosPortador");
+                throw new ApiException(400, "Missing required parameter 'request' when calling RiscoFraudeApi->ValidarPortadorRiscoFraude");
             
     
             var localVarPath = "/api/riscos-fraudes/validar-dados-portador";
@@ -1044,9 +1044,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ValidarDadosPortador: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ValidarPortadorRiscoFraude: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ValidarDadosPortador: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ValidarPortadorRiscoFraude: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1061,9 +1061,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">request</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> ValidarDadosPortadorAsync (DadosPortadorRequest request)
+        public async System.Threading.Tasks.Task<Object> ValidarPortadorRiscoFraudeAsync (DadosPortadorRequest request)
         {
-             ApiResponse<Object> localVarResponse = await ValidarDadosPortadorAsyncWithHttpInfo(request);
+             ApiResponse<Object> localVarResponse = await ValidarPortadorRiscoFraudeAsyncWithHttpInfo(request);
              return localVarResponse.Data;
 
         }
@@ -1074,10 +1074,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">request</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> ValidarDadosPortadorAsyncWithHttpInfo (DadosPortadorRequest request)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> ValidarPortadorRiscoFraudeAsyncWithHttpInfo (DadosPortadorRequest request)
         {
             // verify the required parameter 'request' is set
-            if (request == null) throw new ApiException(400, "Missing required parameter 'request' when calling ValidarDadosPortador");
+            if (request == null) throw new ApiException(400, "Missing required parameter 'request' when calling ValidarPortadorRiscoFraude");
             
     
             var localVarPath = "/api/riscos-fraudes/validar-dados-portador";
@@ -1129,9 +1129,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ValidarDadosPortador: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ValidarPortadorRiscoFraude: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ValidarDadosPortador: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ValidarPortadorRiscoFraude: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

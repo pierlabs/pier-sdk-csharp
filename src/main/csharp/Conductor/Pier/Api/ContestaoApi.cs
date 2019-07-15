@@ -33,7 +33,7 @@ namespace Conductor.Pier.Api
         /// <param name="flagPermiteAlteracao">Flag de verifica\u00E7\u00E3o de permiss\u00E3o para altera\u00E7\u00E3o (optional)</param>
         /// <param name="flagSistema">Flag do sistema (optional)</param>
         /// <returns>PageStatusContestacaoResponse</returns>
-        PageStatusContestacaoResponse ListarStatusContestacao (List<string> sort = null, int? page = null, int? limit = null, long? idStatusContestacao = null, long? idStatusContestacaoOrigem = null, string descricao = null, int? flagPermiteAlteracao = null, int? flagSistema = null);
+        PageStatusContestacaoResponse ListarStatusContestacoes (List<string> sort = null, int? page = null, int? limit = null, long? idStatusContestacao = null, long? idStatusContestacaoOrigem = null, string descricao = null, int? flagPermiteAlteracao = null, int? flagSistema = null);
   
         /// <summary>
         /// Lista status das contesta\u00E7\u00F5es
@@ -51,7 +51,7 @@ namespace Conductor.Pier.Api
         /// <param name="flagPermiteAlteracao">Flag de verifica\u00E7\u00E3o de permiss\u00E3o para altera\u00E7\u00E3o (optional)</param>
         /// <param name="flagSistema">Flag do sistema (optional)</param>
         /// <returns>ApiResponse of PageStatusContestacaoResponse</returns>
-        ApiResponse<PageStatusContestacaoResponse> ListarStatusContestacaoWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idStatusContestacao = null, long? idStatusContestacaoOrigem = null, string descricao = null, int? flagPermiteAlteracao = null, int? flagSistema = null);
+        ApiResponse<PageStatusContestacaoResponse> ListarStatusContestacoesWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idStatusContestacao = null, long? idStatusContestacaoOrigem = null, string descricao = null, int? flagPermiteAlteracao = null, int? flagSistema = null);
         
         /// <summary>
         /// Listar tipo da contesta\u00E7\u00E3o
@@ -66,7 +66,7 @@ namespace Conductor.Pier.Api
         /// <param name="idTipoResolucaoContestacao">Id tipo da resolucao da contesta\u00E7\u00E3o (optional)</param>
         /// <param name="descricao">Descri\u00E7\u00E3o do tipo de resolu\u00E7\u00E3o da contesta\u00E7\u00E3o (optional)</param>
         /// <returns>PageTipoResolucaoContestacaoResponse</returns>
-        PageTipoResolucaoContestacaoResponse ListarTipoResolucaoContestacao (List<string> sort = null, int? page = null, int? limit = null, long? idTipoResolucaoContestacao = null, string descricao = null);
+        PageTipoResolucaoContestacaoResponse ListarTiposResolucoesContestacoes (List<string> sort = null, int? page = null, int? limit = null, long? idTipoResolucaoContestacao = null, string descricao = null);
   
         /// <summary>
         /// Listar tipo da contesta\u00E7\u00E3o
@@ -81,7 +81,7 @@ namespace Conductor.Pier.Api
         /// <param name="idTipoResolucaoContestacao">Id tipo da resolucao da contesta\u00E7\u00E3o (optional)</param>
         /// <param name="descricao">Descri\u00E7\u00E3o do tipo de resolu\u00E7\u00E3o da contesta\u00E7\u00E3o (optional)</param>
         /// <returns>ApiResponse of PageTipoResolucaoContestacaoResponse</returns>
-        ApiResponse<PageTipoResolucaoContestacaoResponse> ListarTipoResolucaoContestacaoWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idTipoResolucaoContestacao = null, string descricao = null);
+        ApiResponse<PageTipoResolucaoContestacaoResponse> ListarTiposResolucoesContestacoesWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idTipoResolucaoContestacao = null, string descricao = null);
         
         #endregion Synchronous Operations
         
@@ -103,7 +103,7 @@ namespace Conductor.Pier.Api
         /// <param name="flagPermiteAlteracao">Flag de verifica\u00E7\u00E3o de permiss\u00E3o para altera\u00E7\u00E3o (optional)</param>
         /// <param name="flagSistema">Flag do sistema (optional)</param>
         /// <returns>Task of PageStatusContestacaoResponse</returns>
-        System.Threading.Tasks.Task<PageStatusContestacaoResponse> ListarStatusContestacaoAsync (List<string> sort = null, int? page = null, int? limit = null, long? idStatusContestacao = null, long? idStatusContestacaoOrigem = null, string descricao = null, int? flagPermiteAlteracao = null, int? flagSistema = null);
+        System.Threading.Tasks.Task<PageStatusContestacaoResponse> ListarStatusContestacoesAsync (List<string> sort = null, int? page = null, int? limit = null, long? idStatusContestacao = null, long? idStatusContestacaoOrigem = null, string descricao = null, int? flagPermiteAlteracao = null, int? flagSistema = null);
 
         /// <summary>
         /// Lista status das contesta\u00E7\u00F5es
@@ -121,7 +121,7 @@ namespace Conductor.Pier.Api
         /// <param name="flagPermiteAlteracao">Flag de verifica\u00E7\u00E3o de permiss\u00E3o para altera\u00E7\u00E3o (optional)</param>
         /// <param name="flagSistema">Flag do sistema (optional)</param>
         /// <returns>Task of ApiResponse (PageStatusContestacaoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageStatusContestacaoResponse>> ListarStatusContestacaoAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idStatusContestacao = null, long? idStatusContestacaoOrigem = null, string descricao = null, int? flagPermiteAlteracao = null, int? flagSistema = null);
+        System.Threading.Tasks.Task<ApiResponse<PageStatusContestacaoResponse>> ListarStatusContestacoesAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idStatusContestacao = null, long? idStatusContestacaoOrigem = null, string descricao = null, int? flagPermiteAlteracao = null, int? flagSistema = null);
         
         /// <summary>
         /// Listar tipo da contesta\u00E7\u00E3o
@@ -136,7 +136,7 @@ namespace Conductor.Pier.Api
         /// <param name="idTipoResolucaoContestacao">Id tipo da resolucao da contesta\u00E7\u00E3o (optional)</param>
         /// <param name="descricao">Descri\u00E7\u00E3o do tipo de resolu\u00E7\u00E3o da contesta\u00E7\u00E3o (optional)</param>
         /// <returns>Task of PageTipoResolucaoContestacaoResponse</returns>
-        System.Threading.Tasks.Task<PageTipoResolucaoContestacaoResponse> ListarTipoResolucaoContestacaoAsync (List<string> sort = null, int? page = null, int? limit = null, long? idTipoResolucaoContestacao = null, string descricao = null);
+        System.Threading.Tasks.Task<PageTipoResolucaoContestacaoResponse> ListarTiposResolucoesContestacoesAsync (List<string> sort = null, int? page = null, int? limit = null, long? idTipoResolucaoContestacao = null, string descricao = null);
 
         /// <summary>
         /// Listar tipo da contesta\u00E7\u00E3o
@@ -151,7 +151,7 @@ namespace Conductor.Pier.Api
         /// <param name="idTipoResolucaoContestacao">Id tipo da resolucao da contesta\u00E7\u00E3o (optional)</param>
         /// <param name="descricao">Descri\u00E7\u00E3o do tipo de resolu\u00E7\u00E3o da contesta\u00E7\u00E3o (optional)</param>
         /// <returns>Task of ApiResponse (PageTipoResolucaoContestacaoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageTipoResolucaoContestacaoResponse>> ListarTipoResolucaoContestacaoAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idTipoResolucaoContestacao = null, string descricao = null);
+        System.Threading.Tasks.Task<ApiResponse<PageTipoResolucaoContestacaoResponse>> ListarTiposResolucoesContestacoesAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idTipoResolucaoContestacao = null, string descricao = null);
         
         #endregion Asynchronous Operations
         
@@ -258,9 +258,9 @@ namespace Conductor.Pier.Api
         /// <param name="flagPermiteAlteracao">Flag de verifica\u00E7\u00E3o de permiss\u00E3o para altera\u00E7\u00E3o (optional)</param> 
         /// <param name="flagSistema">Flag do sistema (optional)</param> 
         /// <returns>PageStatusContestacaoResponse</returns>
-        public PageStatusContestacaoResponse ListarStatusContestacao (List<string> sort = null, int? page = null, int? limit = null, long? idStatusContestacao = null, long? idStatusContestacaoOrigem = null, string descricao = null, int? flagPermiteAlteracao = null, int? flagSistema = null)
+        public PageStatusContestacaoResponse ListarStatusContestacoes (List<string> sort = null, int? page = null, int? limit = null, long? idStatusContestacao = null, long? idStatusContestacaoOrigem = null, string descricao = null, int? flagPermiteAlteracao = null, int? flagSistema = null)
         {
-             ApiResponse<PageStatusContestacaoResponse> localVarResponse = ListarStatusContestacaoWithHttpInfo(sort, page, limit, idStatusContestacao, idStatusContestacaoOrigem, descricao, flagPermiteAlteracao, flagSistema);
+             ApiResponse<PageStatusContestacaoResponse> localVarResponse = ListarStatusContestacoesWithHttpInfo(sort, page, limit, idStatusContestacao, idStatusContestacaoOrigem, descricao, flagPermiteAlteracao, flagSistema);
              return localVarResponse.Data;
         }
 
@@ -277,7 +277,7 @@ namespace Conductor.Pier.Api
         /// <param name="flagPermiteAlteracao">Flag de verifica\u00E7\u00E3o de permiss\u00E3o para altera\u00E7\u00E3o (optional)</param> 
         /// <param name="flagSistema">Flag do sistema (optional)</param> 
         /// <returns>ApiResponse of PageStatusContestacaoResponse</returns>
-        public ApiResponse< PageStatusContestacaoResponse > ListarStatusContestacaoWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idStatusContestacao = null, long? idStatusContestacaoOrigem = null, string descricao = null, int? flagPermiteAlteracao = null, int? flagSistema = null)
+        public ApiResponse< PageStatusContestacaoResponse > ListarStatusContestacoesWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idStatusContestacao = null, long? idStatusContestacaoOrigem = null, string descricao = null, int? flagPermiteAlteracao = null, int? flagSistema = null)
         {
             
     
@@ -331,9 +331,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarStatusContestacao: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarStatusContestacoes: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarStatusContestacao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarStatusContestacoes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageStatusContestacaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -355,9 +355,9 @@ namespace Conductor.Pier.Api
         /// <param name="flagPermiteAlteracao">Flag de verifica\u00E7\u00E3o de permiss\u00E3o para altera\u00E7\u00E3o (optional)</param>
         /// <param name="flagSistema">Flag do sistema (optional)</param>
         /// <returns>Task of PageStatusContestacaoResponse</returns>
-        public async System.Threading.Tasks.Task<PageStatusContestacaoResponse> ListarStatusContestacaoAsync (List<string> sort = null, int? page = null, int? limit = null, long? idStatusContestacao = null, long? idStatusContestacaoOrigem = null, string descricao = null, int? flagPermiteAlteracao = null, int? flagSistema = null)
+        public async System.Threading.Tasks.Task<PageStatusContestacaoResponse> ListarStatusContestacoesAsync (List<string> sort = null, int? page = null, int? limit = null, long? idStatusContestacao = null, long? idStatusContestacaoOrigem = null, string descricao = null, int? flagPermiteAlteracao = null, int? flagSistema = null)
         {
-             ApiResponse<PageStatusContestacaoResponse> localVarResponse = await ListarStatusContestacaoAsyncWithHttpInfo(sort, page, limit, idStatusContestacao, idStatusContestacaoOrigem, descricao, flagPermiteAlteracao, flagSistema);
+             ApiResponse<PageStatusContestacaoResponse> localVarResponse = await ListarStatusContestacoesAsyncWithHttpInfo(sort, page, limit, idStatusContestacao, idStatusContestacaoOrigem, descricao, flagPermiteAlteracao, flagSistema);
              return localVarResponse.Data;
 
         }
@@ -375,7 +375,7 @@ namespace Conductor.Pier.Api
         /// <param name="flagPermiteAlteracao">Flag de verifica\u00E7\u00E3o de permiss\u00E3o para altera\u00E7\u00E3o (optional)</param>
         /// <param name="flagSistema">Flag do sistema (optional)</param>
         /// <returns>Task of ApiResponse (PageStatusContestacaoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageStatusContestacaoResponse>> ListarStatusContestacaoAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idStatusContestacao = null, long? idStatusContestacaoOrigem = null, string descricao = null, int? flagPermiteAlteracao = null, int? flagSistema = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageStatusContestacaoResponse>> ListarStatusContestacoesAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idStatusContestacao = null, long? idStatusContestacaoOrigem = null, string descricao = null, int? flagPermiteAlteracao = null, int? flagSistema = null)
         {
             
     
@@ -429,9 +429,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarStatusContestacao: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarStatusContestacoes: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarStatusContestacao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarStatusContestacoes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageStatusContestacaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -449,9 +449,9 @@ namespace Conductor.Pier.Api
         /// <param name="idTipoResolucaoContestacao">Id tipo da resolucao da contesta\u00E7\u00E3o (optional)</param> 
         /// <param name="descricao">Descri\u00E7\u00E3o do tipo de resolu\u00E7\u00E3o da contesta\u00E7\u00E3o (optional)</param> 
         /// <returns>PageTipoResolucaoContestacaoResponse</returns>
-        public PageTipoResolucaoContestacaoResponse ListarTipoResolucaoContestacao (List<string> sort = null, int? page = null, int? limit = null, long? idTipoResolucaoContestacao = null, string descricao = null)
+        public PageTipoResolucaoContestacaoResponse ListarTiposResolucoesContestacoes (List<string> sort = null, int? page = null, int? limit = null, long? idTipoResolucaoContestacao = null, string descricao = null)
         {
-             ApiResponse<PageTipoResolucaoContestacaoResponse> localVarResponse = ListarTipoResolucaoContestacaoWithHttpInfo(sort, page, limit, idTipoResolucaoContestacao, descricao);
+             ApiResponse<PageTipoResolucaoContestacaoResponse> localVarResponse = ListarTiposResolucoesContestacoesWithHttpInfo(sort, page, limit, idTipoResolucaoContestacao, descricao);
              return localVarResponse.Data;
         }
 
@@ -465,7 +465,7 @@ namespace Conductor.Pier.Api
         /// <param name="idTipoResolucaoContestacao">Id tipo da resolucao da contesta\u00E7\u00E3o (optional)</param> 
         /// <param name="descricao">Descri\u00E7\u00E3o do tipo de resolu\u00E7\u00E3o da contesta\u00E7\u00E3o (optional)</param> 
         /// <returns>ApiResponse of PageTipoResolucaoContestacaoResponse</returns>
-        public ApiResponse< PageTipoResolucaoContestacaoResponse > ListarTipoResolucaoContestacaoWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idTipoResolucaoContestacao = null, string descricao = null)
+        public ApiResponse< PageTipoResolucaoContestacaoResponse > ListarTiposResolucoesContestacoesWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idTipoResolucaoContestacao = null, string descricao = null)
         {
             
     
@@ -516,9 +516,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarTipoResolucaoContestacao: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarTiposResolucoesContestacoes: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarTipoResolucaoContestacao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarTiposResolucoesContestacoes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageTipoResolucaoContestacaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -537,9 +537,9 @@ namespace Conductor.Pier.Api
         /// <param name="idTipoResolucaoContestacao">Id tipo da resolucao da contesta\u00E7\u00E3o (optional)</param>
         /// <param name="descricao">Descri\u00E7\u00E3o do tipo de resolu\u00E7\u00E3o da contesta\u00E7\u00E3o (optional)</param>
         /// <returns>Task of PageTipoResolucaoContestacaoResponse</returns>
-        public async System.Threading.Tasks.Task<PageTipoResolucaoContestacaoResponse> ListarTipoResolucaoContestacaoAsync (List<string> sort = null, int? page = null, int? limit = null, long? idTipoResolucaoContestacao = null, string descricao = null)
+        public async System.Threading.Tasks.Task<PageTipoResolucaoContestacaoResponse> ListarTiposResolucoesContestacoesAsync (List<string> sort = null, int? page = null, int? limit = null, long? idTipoResolucaoContestacao = null, string descricao = null)
         {
-             ApiResponse<PageTipoResolucaoContestacaoResponse> localVarResponse = await ListarTipoResolucaoContestacaoAsyncWithHttpInfo(sort, page, limit, idTipoResolucaoContestacao, descricao);
+             ApiResponse<PageTipoResolucaoContestacaoResponse> localVarResponse = await ListarTiposResolucoesContestacoesAsyncWithHttpInfo(sort, page, limit, idTipoResolucaoContestacao, descricao);
              return localVarResponse.Data;
 
         }
@@ -554,7 +554,7 @@ namespace Conductor.Pier.Api
         /// <param name="idTipoResolucaoContestacao">Id tipo da resolucao da contesta\u00E7\u00E3o (optional)</param>
         /// <param name="descricao">Descri\u00E7\u00E3o do tipo de resolu\u00E7\u00E3o da contesta\u00E7\u00E3o (optional)</param>
         /// <returns>Task of ApiResponse (PageTipoResolucaoContestacaoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageTipoResolucaoContestacaoResponse>> ListarTipoResolucaoContestacaoAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idTipoResolucaoContestacao = null, string descricao = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageTipoResolucaoContestacaoResponse>> ListarTiposResolucoesContestacoesAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idTipoResolucaoContestacao = null, string descricao = null)
         {
             
     
@@ -605,9 +605,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarTipoResolucaoContestacao: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarTiposResolucoesContestacoes: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarTipoResolucaoContestacao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarTiposResolucoesContestacoes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageTipoResolucaoContestacaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

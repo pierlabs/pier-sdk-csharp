@@ -34,8 +34,9 @@ namespace Conductor.Pier.Model
         /// <param name="PercentualDesconto">Percentual de desconto de cada parcela.</param>
         /// <param name="FlagCartaoDesbloqueado">Falg para identifica\u00E7\u00E3o de cart\u00E3o desbloqueado.</param>
         /// <param name="FlagLancatarifa">Falg para identifica\u00E7\u00E3o de lan\u00E7amento de tarifa.</param>
+        /// <param name="DataFimDescontoAnuidade">Data referente ao final do desconto da anuidade.</param>
 
-        public PortadorDebitoRecorrentePersist(int? Portador = null, long? IdProduto = null, long? IdAnuidade = null, string DataHoraInicio = null, string DataHoraFim = null, int? NumeroParcela = null, int? ParcelaPerdida = null, double? ValorParcela = null, double? ValorOriginal = null, double? PercentualDesconto = null, bool? FlagCartaoDesbloqueado = null, bool? FlagLancatarifa = null)
+        public PortadorDebitoRecorrentePersist(int? Portador = null, long? IdProduto = null, long? IdAnuidade = null, string DataHoraInicio = null, string DataHoraFim = null, int? NumeroParcela = null, int? ParcelaPerdida = null, double? ValorParcela = null, double? ValorOriginal = null, double? PercentualDesconto = null, bool? FlagCartaoDesbloqueado = null, bool? FlagLancatarifa = null, string DataFimDescontoAnuidade = null)
         {
             this.Portador = Portador;
             this.IdProduto = IdProduto;
@@ -49,6 +50,7 @@ namespace Conductor.Pier.Model
             this.PercentualDesconto = PercentualDesconto;
             this.FlagCartaoDesbloqueado = FlagCartaoDesbloqueado;
             this.FlagLancatarifa = FlagLancatarifa;
+            this.DataFimDescontoAnuidade = DataFimDescontoAnuidade;
             
         }
         
@@ -138,6 +140,13 @@ namespace Conductor.Pier.Model
         public bool? FlagLancatarifa { get; set; }
     
         /// <summary>
+        /// Data referente ao final do desconto da anuidade
+        /// </summary>
+        /// <value>Data referente ao final do desconto da anuidade</value>
+        [DataMember(Name="dataFimDescontoAnuidade", EmitDefaultValue=false)]
+        public string DataFimDescontoAnuidade { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -157,6 +166,7 @@ namespace Conductor.Pier.Model
             sb.Append("  PercentualDesconto: ").Append(PercentualDesconto).Append("\n");
             sb.Append("  FlagCartaoDesbloqueado: ").Append(FlagCartaoDesbloqueado).Append("\n");
             sb.Append("  FlagLancatarifa: ").Append(FlagLancatarifa).Append("\n");
+            sb.Append("  DataFimDescontoAnuidade: ").Append(DataFimDescontoAnuidade).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -253,6 +263,11 @@ namespace Conductor.Pier.Model
                     this.FlagLancatarifa == other.FlagLancatarifa ||
                     this.FlagLancatarifa != null &&
                     this.FlagLancatarifa.Equals(other.FlagLancatarifa)
+                ) && 
+                (
+                    this.DataFimDescontoAnuidade == other.DataFimDescontoAnuidade ||
+                    this.DataFimDescontoAnuidade != null &&
+                    this.DataFimDescontoAnuidade.Equals(other.DataFimDescontoAnuidade)
                 );
         }
 
@@ -303,6 +318,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.FlagLancatarifa != null)
                     hash = hash * 59 + this.FlagLancatarifa.GetHashCode();
+                
+                if (this.DataFimDescontoAnuidade != null)
+                    hash = hash * 59 + this.DataFimDescontoAnuidade.GetHashCode();
                 
                 return hash;
             }

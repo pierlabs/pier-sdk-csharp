@@ -26,7 +26,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Aviso Viagem (id)</param>
         /// <returns>AvisoViagemResponse</returns>
-        AvisoViagemResponse Consultar (long? id);
+        AvisoViagemResponse ConsultarAvisoViagem (long? id);
   
         /// <summary>
         /// Consultar um aviso viagem de acordo com o id passado
@@ -37,7 +37,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Aviso Viagem (id)</param>
         /// <returns>ApiResponse of AvisoViagemResponse</returns>
-        ApiResponse<AvisoViagemResponse> ConsultarWithHttpInfo (long? id);
+        ApiResponse<AvisoViagemResponse> ConsultarAvisoViagemWithHttpInfo (long? id);
         
         /// <summary>
         /// Desabilitar um aviso viagem de acordo com o id passado
@@ -48,7 +48,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Aviso Viagem (id)</param>
         /// <returns>AvisoViagemResponse</returns>
-        AvisoViagemResponse Desabilitar (long? id);
+        AvisoViagemResponse DesabilitarAvisoViagem (long? id);
   
         /// <summary>
         /// Desabilitar um aviso viagem de acordo com o id passado
@@ -59,7 +59,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Aviso Viagem (id)</param>
         /// <returns>ApiResponse of AvisoViagemResponse</returns>
-        ApiResponse<AvisoViagemResponse> DesabilitarWithHttpInfo (long? id);
+        ApiResponse<AvisoViagemResponse> DesabilitarAvisoViagemWithHttpInfo (long? id);
         
         /// <summary>
         /// Habilitar um aviso viagem de acordo com o id passado
@@ -70,7 +70,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Aviso Viagem (id)</param>
         /// <returns>AvisoViagemResponse</returns>
-        AvisoViagemResponse Habilitar (long? id);
+        AvisoViagemResponse HabilitarAvisoViagem (long? id);
   
         /// <summary>
         /// Habilitar um aviso viagem de acordo com o id passado
@@ -81,7 +81,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Aviso Viagem (id)</param>
         /// <returns>ApiResponse of AvisoViagemResponse</returns>
-        ApiResponse<AvisoViagemResponse> HabilitarWithHttpInfo (long? id);
+        ApiResponse<AvisoViagemResponse> HabilitarAvisoViagemWithHttpInfo (long? id);
         
         /// <summary>
         /// Lista os avisos viagens gerados pelo Emissor
@@ -100,7 +100,7 @@ namespace Conductor.Pier.Api
         /// <param name="flagAtivo">Identifica se o aviso viagem esta ativo ou n\u00E3o (optional)</param>
         /// <param name="paisDescricao">Descri\u00E7\u00E3o do pa\u00EDs (optional)</param>
         /// <returns>PageAvisoViagemResponse</returns>
-        PageAvisoViagemResponse Listar (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, string codigoPais = null, string dataInicio = null, string dataFim = null, int? flagAtivo = null, string paisDescricao = null);
+        PageAvisoViagemResponse ListarAvisosViagem (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, string codigoPais = null, string dataInicio = null, string dataFim = null, int? flagAtivo = null, string paisDescricao = null);
   
         /// <summary>
         /// Lista os avisos viagens gerados pelo Emissor
@@ -119,7 +119,7 @@ namespace Conductor.Pier.Api
         /// <param name="flagAtivo">Identifica se o aviso viagem esta ativo ou n\u00E3o (optional)</param>
         /// <param name="paisDescricao">Descri\u00E7\u00E3o do pa\u00EDs (optional)</param>
         /// <returns>ApiResponse of PageAvisoViagemResponse</returns>
-        ApiResponse<PageAvisoViagemResponse> ListarWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, string codigoPais = null, string dataInicio = null, string dataFim = null, int? flagAtivo = null, string paisDescricao = null);
+        ApiResponse<PageAvisoViagemResponse> ListarAvisosViagemWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, string codigoPais = null, string dataInicio = null, string dataFim = null, int? flagAtivo = null, string paisDescricao = null);
         
         /// <summary>
         /// Realiza o cadastro de um novo Aviso Viagem
@@ -133,7 +133,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataInicio">Data inicio do aviso viagem</param>
         /// <param name="dataFim">Data fim do aviso viagem</param>
         /// <returns>AvisoViagemResponse</returns>
-        AvisoViagemResponse Salvar (long? idCartao, string codigoPais, string dataInicio, string dataFim);
+        AvisoViagemResponse SalvarAvisoViagem (long? idCartao, string codigoPais, string dataInicio, string dataFim);
   
         /// <summary>
         /// Realiza o cadastro de um novo Aviso Viagem
@@ -147,7 +147,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataInicio">Data inicio do aviso viagem</param>
         /// <param name="dataFim">Data fim do aviso viagem</param>
         /// <returns>ApiResponse of AvisoViagemResponse</returns>
-        ApiResponse<AvisoViagemResponse> SalvarWithHttpInfo (long? idCartao, string codigoPais, string dataInicio, string dataFim);
+        ApiResponse<AvisoViagemResponse> SalvarAvisoViagemWithHttpInfo (long? idCartao, string codigoPais, string dataInicio, string dataFim);
         
         #endregion Synchronous Operations
         
@@ -162,7 +162,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Aviso Viagem (id)</param>
         /// <returns>Task of AvisoViagemResponse</returns>
-        System.Threading.Tasks.Task<AvisoViagemResponse> ConsultarAsync (long? id);
+        System.Threading.Tasks.Task<AvisoViagemResponse> ConsultarAvisoViagemAsync (long? id);
 
         /// <summary>
         /// Consultar um aviso viagem de acordo com o id passado
@@ -173,7 +173,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Aviso Viagem (id)</param>
         /// <returns>Task of ApiResponse (AvisoViagemResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AvisoViagemResponse>> ConsultarAsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<AvisoViagemResponse>> ConsultarAvisoViagemAsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Desabilitar um aviso viagem de acordo com o id passado
@@ -184,7 +184,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Aviso Viagem (id)</param>
         /// <returns>Task of AvisoViagemResponse</returns>
-        System.Threading.Tasks.Task<AvisoViagemResponse> DesabilitarAsync (long? id);
+        System.Threading.Tasks.Task<AvisoViagemResponse> DesabilitarAvisoViagemAsync (long? id);
 
         /// <summary>
         /// Desabilitar um aviso viagem de acordo com o id passado
@@ -195,7 +195,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Aviso Viagem (id)</param>
         /// <returns>Task of ApiResponse (AvisoViagemResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AvisoViagemResponse>> DesabilitarAsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<AvisoViagemResponse>> DesabilitarAvisoViagemAsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Habilitar um aviso viagem de acordo com o id passado
@@ -206,7 +206,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Aviso Viagem (id)</param>
         /// <returns>Task of AvisoViagemResponse</returns>
-        System.Threading.Tasks.Task<AvisoViagemResponse> HabilitarAsync (long? id);
+        System.Threading.Tasks.Task<AvisoViagemResponse> HabilitarAvisoViagemAsync (long? id);
 
         /// <summary>
         /// Habilitar um aviso viagem de acordo com o id passado
@@ -217,7 +217,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Aviso Viagem (id)</param>
         /// <returns>Task of ApiResponse (AvisoViagemResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AvisoViagemResponse>> HabilitarAsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<AvisoViagemResponse>> HabilitarAvisoViagemAsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Lista os avisos viagens gerados pelo Emissor
@@ -236,7 +236,7 @@ namespace Conductor.Pier.Api
         /// <param name="flagAtivo">Identifica se o aviso viagem esta ativo ou n\u00E3o (optional)</param>
         /// <param name="paisDescricao">Descri\u00E7\u00E3o do pa\u00EDs (optional)</param>
         /// <returns>Task of PageAvisoViagemResponse</returns>
-        System.Threading.Tasks.Task<PageAvisoViagemResponse> ListarAsync (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, string codigoPais = null, string dataInicio = null, string dataFim = null, int? flagAtivo = null, string paisDescricao = null);
+        System.Threading.Tasks.Task<PageAvisoViagemResponse> ListarAvisosViagemAsync (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, string codigoPais = null, string dataInicio = null, string dataFim = null, int? flagAtivo = null, string paisDescricao = null);
 
         /// <summary>
         /// Lista os avisos viagens gerados pelo Emissor
@@ -255,7 +255,7 @@ namespace Conductor.Pier.Api
         /// <param name="flagAtivo">Identifica se o aviso viagem esta ativo ou n\u00E3o (optional)</param>
         /// <param name="paisDescricao">Descri\u00E7\u00E3o do pa\u00EDs (optional)</param>
         /// <returns>Task of ApiResponse (PageAvisoViagemResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageAvisoViagemResponse>> ListarAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, string codigoPais = null, string dataInicio = null, string dataFim = null, int? flagAtivo = null, string paisDescricao = null);
+        System.Threading.Tasks.Task<ApiResponse<PageAvisoViagemResponse>> ListarAvisosViagemAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, string codigoPais = null, string dataInicio = null, string dataFim = null, int? flagAtivo = null, string paisDescricao = null);
         
         /// <summary>
         /// Realiza o cadastro de um novo Aviso Viagem
@@ -269,7 +269,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataInicio">Data inicio do aviso viagem</param>
         /// <param name="dataFim">Data fim do aviso viagem</param>
         /// <returns>Task of AvisoViagemResponse</returns>
-        System.Threading.Tasks.Task<AvisoViagemResponse> SalvarAsync (long? idCartao, string codigoPais, string dataInicio, string dataFim);
+        System.Threading.Tasks.Task<AvisoViagemResponse> SalvarAvisoViagemAsync (long? idCartao, string codigoPais, string dataInicio, string dataFim);
 
         /// <summary>
         /// Realiza o cadastro de um novo Aviso Viagem
@@ -283,7 +283,7 @@ namespace Conductor.Pier.Api
         /// <param name="dataInicio">Data inicio do aviso viagem</param>
         /// <param name="dataFim">Data fim do aviso viagem</param>
         /// <returns>Task of ApiResponse (AvisoViagemResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AvisoViagemResponse>> SalvarAsyncWithHttpInfo (long? idCartao, string codigoPais, string dataInicio, string dataFim);
+        System.Threading.Tasks.Task<ApiResponse<AvisoViagemResponse>> SalvarAvisoViagemAsyncWithHttpInfo (long? idCartao, string codigoPais, string dataInicio, string dataFim);
         
         #endregion Asynchronous Operations
         
@@ -383,9 +383,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Aviso Viagem (id)</param> 
         /// <returns>AvisoViagemResponse</returns>
-        public AvisoViagemResponse Consultar (long? id)
+        public AvisoViagemResponse ConsultarAvisoViagem (long? id)
         {
-             ApiResponse<AvisoViagemResponse> localVarResponse = ConsultarWithHttpInfo(id);
+             ApiResponse<AvisoViagemResponse> localVarResponse = ConsultarAvisoViagemWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -395,12 +395,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Aviso Viagem (id)</param> 
         /// <returns>ApiResponse of AvisoViagemResponse</returns>
-        public ApiResponse< AvisoViagemResponse > ConsultarWithHttpInfo (long? id)
+        public ApiResponse< AvisoViagemResponse > ConsultarAvisoViagemWithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling AvisoViagemApi->Consultar");
+                throw new ApiException(400, "Missing required parameter 'id' when calling AvisoViagemApi->ConsultarAvisoViagem");
             
     
             var localVarPath = "/api/avisos-viagens/{id}";
@@ -446,9 +446,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarAvisoViagem: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarAvisoViagem: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<AvisoViagemResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -463,9 +463,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Aviso Viagem (id)</param>
         /// <returns>Task of AvisoViagemResponse</returns>
-        public async System.Threading.Tasks.Task<AvisoViagemResponse> ConsultarAsync (long? id)
+        public async System.Threading.Tasks.Task<AvisoViagemResponse> ConsultarAvisoViagemAsync (long? id)
         {
-             ApiResponse<AvisoViagemResponse> localVarResponse = await ConsultarAsyncWithHttpInfo(id);
+             ApiResponse<AvisoViagemResponse> localVarResponse = await ConsultarAvisoViagemAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -476,10 +476,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Aviso Viagem (id)</param>
         /// <returns>Task of ApiResponse (AvisoViagemResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AvisoViagemResponse>> ConsultarAsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<AvisoViagemResponse>> ConsultarAvisoViagemAsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling Consultar");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarAvisoViagem");
             
     
             var localVarPath = "/api/avisos-viagens/{id}";
@@ -525,9 +525,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarAvisoViagem: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarAvisoViagem: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<AvisoViagemResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -541,9 +541,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Aviso Viagem (id)</param> 
         /// <returns>AvisoViagemResponse</returns>
-        public AvisoViagemResponse Desabilitar (long? id)
+        public AvisoViagemResponse DesabilitarAvisoViagem (long? id)
         {
-             ApiResponse<AvisoViagemResponse> localVarResponse = DesabilitarWithHttpInfo(id);
+             ApiResponse<AvisoViagemResponse> localVarResponse = DesabilitarAvisoViagemWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -553,12 +553,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Aviso Viagem (id)</param> 
         /// <returns>ApiResponse of AvisoViagemResponse</returns>
-        public ApiResponse< AvisoViagemResponse > DesabilitarWithHttpInfo (long? id)
+        public ApiResponse< AvisoViagemResponse > DesabilitarAvisoViagemWithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling AvisoViagemApi->Desabilitar");
+                throw new ApiException(400, "Missing required parameter 'id' when calling AvisoViagemApi->DesabilitarAvisoViagem");
             
     
             var localVarPath = "/api/avisos-viagens/{id}/desabilitar";
@@ -604,9 +604,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Desabilitar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling DesabilitarAvisoViagem: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Desabilitar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DesabilitarAvisoViagem: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<AvisoViagemResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -621,9 +621,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Aviso Viagem (id)</param>
         /// <returns>Task of AvisoViagemResponse</returns>
-        public async System.Threading.Tasks.Task<AvisoViagemResponse> DesabilitarAsync (long? id)
+        public async System.Threading.Tasks.Task<AvisoViagemResponse> DesabilitarAvisoViagemAsync (long? id)
         {
-             ApiResponse<AvisoViagemResponse> localVarResponse = await DesabilitarAsyncWithHttpInfo(id);
+             ApiResponse<AvisoViagemResponse> localVarResponse = await DesabilitarAvisoViagemAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -634,10 +634,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Aviso Viagem (id)</param>
         /// <returns>Task of ApiResponse (AvisoViagemResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AvisoViagemResponse>> DesabilitarAsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<AvisoViagemResponse>> DesabilitarAvisoViagemAsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling Desabilitar");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling DesabilitarAvisoViagem");
             
     
             var localVarPath = "/api/avisos-viagens/{id}/desabilitar";
@@ -683,9 +683,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Desabilitar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling DesabilitarAvisoViagem: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Desabilitar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DesabilitarAvisoViagem: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<AvisoViagemResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -699,9 +699,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Aviso Viagem (id)</param> 
         /// <returns>AvisoViagemResponse</returns>
-        public AvisoViagemResponse Habilitar (long? id)
+        public AvisoViagemResponse HabilitarAvisoViagem (long? id)
         {
-             ApiResponse<AvisoViagemResponse> localVarResponse = HabilitarWithHttpInfo(id);
+             ApiResponse<AvisoViagemResponse> localVarResponse = HabilitarAvisoViagemWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -711,12 +711,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Aviso Viagem (id)</param> 
         /// <returns>ApiResponse of AvisoViagemResponse</returns>
-        public ApiResponse< AvisoViagemResponse > HabilitarWithHttpInfo (long? id)
+        public ApiResponse< AvisoViagemResponse > HabilitarAvisoViagemWithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling AvisoViagemApi->Habilitar");
+                throw new ApiException(400, "Missing required parameter 'id' when calling AvisoViagemApi->HabilitarAvisoViagem");
             
     
             var localVarPath = "/api/avisos-viagens/{id}/habilitar";
@@ -762,9 +762,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Habilitar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling HabilitarAvisoViagem: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Habilitar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling HabilitarAvisoViagem: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<AvisoViagemResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -779,9 +779,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Aviso Viagem (id)</param>
         /// <returns>Task of AvisoViagemResponse</returns>
-        public async System.Threading.Tasks.Task<AvisoViagemResponse> HabilitarAsync (long? id)
+        public async System.Threading.Tasks.Task<AvisoViagemResponse> HabilitarAvisoViagemAsync (long? id)
         {
-             ApiResponse<AvisoViagemResponse> localVarResponse = await HabilitarAsyncWithHttpInfo(id);
+             ApiResponse<AvisoViagemResponse> localVarResponse = await HabilitarAvisoViagemAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -792,10 +792,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Aviso Viagem (id)</param>
         /// <returns>Task of ApiResponse (AvisoViagemResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AvisoViagemResponse>> HabilitarAsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<AvisoViagemResponse>> HabilitarAvisoViagemAsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling Habilitar");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling HabilitarAvisoViagem");
             
     
             var localVarPath = "/api/avisos-viagens/{id}/habilitar";
@@ -841,9 +841,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Habilitar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling HabilitarAvisoViagem: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Habilitar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling HabilitarAvisoViagem: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<AvisoViagemResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -865,9 +865,9 @@ namespace Conductor.Pier.Api
         /// <param name="flagAtivo">Identifica se o aviso viagem esta ativo ou n\u00E3o (optional)</param> 
         /// <param name="paisDescricao">Descri\u00E7\u00E3o do pa\u00EDs (optional)</param> 
         /// <returns>PageAvisoViagemResponse</returns>
-        public PageAvisoViagemResponse Listar (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, string codigoPais = null, string dataInicio = null, string dataFim = null, int? flagAtivo = null, string paisDescricao = null)
+        public PageAvisoViagemResponse ListarAvisosViagem (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, string codigoPais = null, string dataInicio = null, string dataFim = null, int? flagAtivo = null, string paisDescricao = null)
         {
-             ApiResponse<PageAvisoViagemResponse> localVarResponse = ListarWithHttpInfo(sort, page, limit, idCartao, codigoPais, dataInicio, dataFim, flagAtivo, paisDescricao);
+             ApiResponse<PageAvisoViagemResponse> localVarResponse = ListarAvisosViagemWithHttpInfo(sort, page, limit, idCartao, codigoPais, dataInicio, dataFim, flagAtivo, paisDescricao);
              return localVarResponse.Data;
         }
 
@@ -885,7 +885,7 @@ namespace Conductor.Pier.Api
         /// <param name="flagAtivo">Identifica se o aviso viagem esta ativo ou n\u00E3o (optional)</param> 
         /// <param name="paisDescricao">Descri\u00E7\u00E3o do pa\u00EDs (optional)</param> 
         /// <returns>ApiResponse of PageAvisoViagemResponse</returns>
-        public ApiResponse< PageAvisoViagemResponse > ListarWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, string codigoPais = null, string dataInicio = null, string dataFim = null, int? flagAtivo = null, string paisDescricao = null)
+        public ApiResponse< PageAvisoViagemResponse > ListarAvisosViagemWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, string codigoPais = null, string dataInicio = null, string dataFim = null, int? flagAtivo = null, string paisDescricao = null)
         {
             
     
@@ -940,9 +940,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Listar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarAvisosViagem: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Listar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarAvisosViagem: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageAvisoViagemResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -965,9 +965,9 @@ namespace Conductor.Pier.Api
         /// <param name="flagAtivo">Identifica se o aviso viagem esta ativo ou n\u00E3o (optional)</param>
         /// <param name="paisDescricao">Descri\u00E7\u00E3o do pa\u00EDs (optional)</param>
         /// <returns>Task of PageAvisoViagemResponse</returns>
-        public async System.Threading.Tasks.Task<PageAvisoViagemResponse> ListarAsync (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, string codigoPais = null, string dataInicio = null, string dataFim = null, int? flagAtivo = null, string paisDescricao = null)
+        public async System.Threading.Tasks.Task<PageAvisoViagemResponse> ListarAvisosViagemAsync (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, string codigoPais = null, string dataInicio = null, string dataFim = null, int? flagAtivo = null, string paisDescricao = null)
         {
-             ApiResponse<PageAvisoViagemResponse> localVarResponse = await ListarAsyncWithHttpInfo(sort, page, limit, idCartao, codigoPais, dataInicio, dataFim, flagAtivo, paisDescricao);
+             ApiResponse<PageAvisoViagemResponse> localVarResponse = await ListarAvisosViagemAsyncWithHttpInfo(sort, page, limit, idCartao, codigoPais, dataInicio, dataFim, flagAtivo, paisDescricao);
              return localVarResponse.Data;
 
         }
@@ -986,7 +986,7 @@ namespace Conductor.Pier.Api
         /// <param name="flagAtivo">Identifica se o aviso viagem esta ativo ou n\u00E3o (optional)</param>
         /// <param name="paisDescricao">Descri\u00E7\u00E3o do pa\u00EDs (optional)</param>
         /// <returns>Task of ApiResponse (PageAvisoViagemResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageAvisoViagemResponse>> ListarAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, string codigoPais = null, string dataInicio = null, string dataFim = null, int? flagAtivo = null, string paisDescricao = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageAvisoViagemResponse>> ListarAvisosViagemAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, string codigoPais = null, string dataInicio = null, string dataFim = null, int? flagAtivo = null, string paisDescricao = null)
         {
             
     
@@ -1041,9 +1041,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Listar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarAvisosViagem: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Listar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarAvisosViagem: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageAvisoViagemResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1060,9 +1060,9 @@ namespace Conductor.Pier.Api
         /// <param name="dataInicio">Data inicio do aviso viagem</param> 
         /// <param name="dataFim">Data fim do aviso viagem</param> 
         /// <returns>AvisoViagemResponse</returns>
-        public AvisoViagemResponse Salvar (long? idCartao, string codigoPais, string dataInicio, string dataFim)
+        public AvisoViagemResponse SalvarAvisoViagem (long? idCartao, string codigoPais, string dataInicio, string dataFim)
         {
-             ApiResponse<AvisoViagemResponse> localVarResponse = SalvarWithHttpInfo(idCartao, codigoPais, dataInicio, dataFim);
+             ApiResponse<AvisoViagemResponse> localVarResponse = SalvarAvisoViagemWithHttpInfo(idCartao, codigoPais, dataInicio, dataFim);
              return localVarResponse.Data;
         }
 
@@ -1075,24 +1075,24 @@ namespace Conductor.Pier.Api
         /// <param name="dataInicio">Data inicio do aviso viagem</param> 
         /// <param name="dataFim">Data fim do aviso viagem</param> 
         /// <returns>ApiResponse of AvisoViagemResponse</returns>
-        public ApiResponse< AvisoViagemResponse > SalvarWithHttpInfo (long? idCartao, string codigoPais, string dataInicio, string dataFim)
+        public ApiResponse< AvisoViagemResponse > SalvarAvisoViagemWithHttpInfo (long? idCartao, string codigoPais, string dataInicio, string dataFim)
         {
             
             // verify the required parameter 'idCartao' is set
             if (idCartao == null)
-                throw new ApiException(400, "Missing required parameter 'idCartao' when calling AvisoViagemApi->Salvar");
+                throw new ApiException(400, "Missing required parameter 'idCartao' when calling AvisoViagemApi->SalvarAvisoViagem");
             
             // verify the required parameter 'codigoPais' is set
             if (codigoPais == null)
-                throw new ApiException(400, "Missing required parameter 'codigoPais' when calling AvisoViagemApi->Salvar");
+                throw new ApiException(400, "Missing required parameter 'codigoPais' when calling AvisoViagemApi->SalvarAvisoViagem");
             
             // verify the required parameter 'dataInicio' is set
             if (dataInicio == null)
-                throw new ApiException(400, "Missing required parameter 'dataInicio' when calling AvisoViagemApi->Salvar");
+                throw new ApiException(400, "Missing required parameter 'dataInicio' when calling AvisoViagemApi->SalvarAvisoViagem");
             
             // verify the required parameter 'dataFim' is set
             if (dataFim == null)
-                throw new ApiException(400, "Missing required parameter 'dataFim' when calling AvisoViagemApi->Salvar");
+                throw new ApiException(400, "Missing required parameter 'dataFim' when calling AvisoViagemApi->SalvarAvisoViagem");
             
     
             var localVarPath = "/api/avisos-viagens";
@@ -1141,9 +1141,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Salvar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarAvisoViagem: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Salvar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarAvisoViagem: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<AvisoViagemResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1161,9 +1161,9 @@ namespace Conductor.Pier.Api
         /// <param name="dataInicio">Data inicio do aviso viagem</param>
         /// <param name="dataFim">Data fim do aviso viagem</param>
         /// <returns>Task of AvisoViagemResponse</returns>
-        public async System.Threading.Tasks.Task<AvisoViagemResponse> SalvarAsync (long? idCartao, string codigoPais, string dataInicio, string dataFim)
+        public async System.Threading.Tasks.Task<AvisoViagemResponse> SalvarAvisoViagemAsync (long? idCartao, string codigoPais, string dataInicio, string dataFim)
         {
-             ApiResponse<AvisoViagemResponse> localVarResponse = await SalvarAsyncWithHttpInfo(idCartao, codigoPais, dataInicio, dataFim);
+             ApiResponse<AvisoViagemResponse> localVarResponse = await SalvarAvisoViagemAsyncWithHttpInfo(idCartao, codigoPais, dataInicio, dataFim);
              return localVarResponse.Data;
 
         }
@@ -1177,16 +1177,16 @@ namespace Conductor.Pier.Api
         /// <param name="dataInicio">Data inicio do aviso viagem</param>
         /// <param name="dataFim">Data fim do aviso viagem</param>
         /// <returns>Task of ApiResponse (AvisoViagemResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AvisoViagemResponse>> SalvarAsyncWithHttpInfo (long? idCartao, string codigoPais, string dataInicio, string dataFim)
+        public async System.Threading.Tasks.Task<ApiResponse<AvisoViagemResponse>> SalvarAvisoViagemAsyncWithHttpInfo (long? idCartao, string codigoPais, string dataInicio, string dataFim)
         {
             // verify the required parameter 'idCartao' is set
-            if (idCartao == null) throw new ApiException(400, "Missing required parameter 'idCartao' when calling Salvar");
+            if (idCartao == null) throw new ApiException(400, "Missing required parameter 'idCartao' when calling SalvarAvisoViagem");
             // verify the required parameter 'codigoPais' is set
-            if (codigoPais == null) throw new ApiException(400, "Missing required parameter 'codigoPais' when calling Salvar");
+            if (codigoPais == null) throw new ApiException(400, "Missing required parameter 'codigoPais' when calling SalvarAvisoViagem");
             // verify the required parameter 'dataInicio' is set
-            if (dataInicio == null) throw new ApiException(400, "Missing required parameter 'dataInicio' when calling Salvar");
+            if (dataInicio == null) throw new ApiException(400, "Missing required parameter 'dataInicio' when calling SalvarAvisoViagem");
             // verify the required parameter 'dataFim' is set
-            if (dataFim == null) throw new ApiException(400, "Missing required parameter 'dataFim' when calling Salvar");
+            if (dataFim == null) throw new ApiException(400, "Missing required parameter 'dataFim' when calling SalvarAvisoViagem");
             
     
             var localVarPath = "/api/avisos-viagens";
@@ -1235,9 +1235,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Salvar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarAvisoViagem: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Salvar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarAvisoViagem: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<AvisoViagemResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

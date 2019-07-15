@@ -27,7 +27,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Aplicacao (id)</param>
         /// <param name="update">update</param>
         /// <returns>AplicacaoMobileResponse</returns>
-        AplicacaoMobileResponse Atualizar (long? id, AplicacaoMobileUpdate update);
+        AplicacaoMobileResponse AlterarAplicacoesMobile (long? id, AplicacaoMobileUpdate update);
   
         /// <summary>
         /// Atualiza Aplicacao Mobile
@@ -39,7 +39,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Aplicacao (id)</param>
         /// <param name="update">update</param>
         /// <returns>ApiResponse of AplicacaoMobileResponse</returns>
-        ApiResponse<AplicacaoMobileResponse> AtualizarWithHttpInfo (long? id, AplicacaoMobileUpdate update);
+        ApiResponse<AplicacaoMobileResponse> AlterarAplicacoesMobileWithHttpInfo (long? id, AplicacaoMobileUpdate update);
         
         /// <summary>
         /// Lista os aplicacoes mobile cadastradas
@@ -54,7 +54,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">Identificador da Aplicacao Mobile (optional)</param>
         /// <param name="idPlataformaMobile">Identificador da Plataforma Mobile (optional)</param>
         /// <returns>PageAplicacaoMobileResponse</returns>
-        PageAplicacaoMobileResponse Listar (List<string> sort = null, int? page = null, int? limit = null, string id = null, long? idPlataformaMobile = null);
+        PageAplicacaoMobileResponse ListarAplicacoesMobile (List<string> sort = null, int? page = null, int? limit = null, string id = null, long? idPlataformaMobile = null);
   
         /// <summary>
         /// Lista os aplicacoes mobile cadastradas
@@ -69,7 +69,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">Identificador da Aplicacao Mobile (optional)</param>
         /// <param name="idPlataformaMobile">Identificador da Plataforma Mobile (optional)</param>
         /// <returns>ApiResponse of PageAplicacaoMobileResponse</returns>
-        ApiResponse<PageAplicacaoMobileResponse> ListarWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string id = null, long? idPlataformaMobile = null);
+        ApiResponse<PageAplicacaoMobileResponse> ListarAplicacoesMobileWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string id = null, long? idPlataformaMobile = null);
         
         /// <summary>
         /// Cadastra Aplicacao Mobile
@@ -80,7 +80,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>AplicacaoMobileResponse</returns>
-        AplicacaoMobileResponse Salvar (AplicacaoMobilePersist persist);
+        AplicacaoMobileResponse SalvarAplicacaoMobile (AplicacaoMobilePersist persist);
   
         /// <summary>
         /// Cadastra Aplicacao Mobile
@@ -91,7 +91,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>ApiResponse of AplicacaoMobileResponse</returns>
-        ApiResponse<AplicacaoMobileResponse> SalvarWithHttpInfo (AplicacaoMobilePersist persist);
+        ApiResponse<AplicacaoMobileResponse> SalvarAplicacaoMobileWithHttpInfo (AplicacaoMobilePersist persist);
         
         #endregion Synchronous Operations
         
@@ -107,7 +107,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Aplicacao (id)</param>
         /// <param name="update">update</param>
         /// <returns>Task of AplicacaoMobileResponse</returns>
-        System.Threading.Tasks.Task<AplicacaoMobileResponse> AtualizarAsync (long? id, AplicacaoMobileUpdate update);
+        System.Threading.Tasks.Task<AplicacaoMobileResponse> AlterarAplicacoesMobileAsync (long? id, AplicacaoMobileUpdate update);
 
         /// <summary>
         /// Atualiza Aplicacao Mobile
@@ -119,7 +119,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Aplicacao (id)</param>
         /// <param name="update">update</param>
         /// <returns>Task of ApiResponse (AplicacaoMobileResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AplicacaoMobileResponse>> AtualizarAsyncWithHttpInfo (long? id, AplicacaoMobileUpdate update);
+        System.Threading.Tasks.Task<ApiResponse<AplicacaoMobileResponse>> AlterarAplicacoesMobileAsyncWithHttpInfo (long? id, AplicacaoMobileUpdate update);
         
         /// <summary>
         /// Lista os aplicacoes mobile cadastradas
@@ -134,7 +134,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">Identificador da Aplicacao Mobile (optional)</param>
         /// <param name="idPlataformaMobile">Identificador da Plataforma Mobile (optional)</param>
         /// <returns>Task of PageAplicacaoMobileResponse</returns>
-        System.Threading.Tasks.Task<PageAplicacaoMobileResponse> ListarAsync (List<string> sort = null, int? page = null, int? limit = null, string id = null, long? idPlataformaMobile = null);
+        System.Threading.Tasks.Task<PageAplicacaoMobileResponse> ListarAplicacoesMobileAsync (List<string> sort = null, int? page = null, int? limit = null, string id = null, long? idPlataformaMobile = null);
 
         /// <summary>
         /// Lista os aplicacoes mobile cadastradas
@@ -149,7 +149,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">Identificador da Aplicacao Mobile (optional)</param>
         /// <param name="idPlataformaMobile">Identificador da Plataforma Mobile (optional)</param>
         /// <returns>Task of ApiResponse (PageAplicacaoMobileResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageAplicacaoMobileResponse>> ListarAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string id = null, long? idPlataformaMobile = null);
+        System.Threading.Tasks.Task<ApiResponse<PageAplicacaoMobileResponse>> ListarAplicacoesMobileAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string id = null, long? idPlataformaMobile = null);
         
         /// <summary>
         /// Cadastra Aplicacao Mobile
@@ -160,7 +160,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>Task of AplicacaoMobileResponse</returns>
-        System.Threading.Tasks.Task<AplicacaoMobileResponse> SalvarAsync (AplicacaoMobilePersist persist);
+        System.Threading.Tasks.Task<AplicacaoMobileResponse> SalvarAplicacaoMobileAsync (AplicacaoMobilePersist persist);
 
         /// <summary>
         /// Cadastra Aplicacao Mobile
@@ -171,7 +171,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>Task of ApiResponse (AplicacaoMobileResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AplicacaoMobileResponse>> SalvarAsyncWithHttpInfo (AplicacaoMobilePersist persist);
+        System.Threading.Tasks.Task<ApiResponse<AplicacaoMobileResponse>> SalvarAplicacaoMobileAsyncWithHttpInfo (AplicacaoMobilePersist persist);
         
         #endregion Asynchronous Operations
         
@@ -272,9 +272,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Aplicacao (id)</param> 
         /// <param name="update">update</param> 
         /// <returns>AplicacaoMobileResponse</returns>
-        public AplicacaoMobileResponse Atualizar (long? id, AplicacaoMobileUpdate update)
+        public AplicacaoMobileResponse AlterarAplicacoesMobile (long? id, AplicacaoMobileUpdate update)
         {
-             ApiResponse<AplicacaoMobileResponse> localVarResponse = AtualizarWithHttpInfo(id, update);
+             ApiResponse<AplicacaoMobileResponse> localVarResponse = AlterarAplicacoesMobileWithHttpInfo(id, update);
              return localVarResponse.Data;
         }
 
@@ -285,16 +285,16 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Aplicacao (id)</param> 
         /// <param name="update">update</param> 
         /// <returns>ApiResponse of AplicacaoMobileResponse</returns>
-        public ApiResponse< AplicacaoMobileResponse > AtualizarWithHttpInfo (long? id, AplicacaoMobileUpdate update)
+        public ApiResponse< AplicacaoMobileResponse > AlterarAplicacoesMobileWithHttpInfo (long? id, AplicacaoMobileUpdate update)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling AplicacaoMobileApi->Atualizar");
+                throw new ApiException(400, "Missing required parameter 'id' when calling AplicacaoMobileApi->AlterarAplicacoesMobile");
             
             // verify the required parameter 'update' is set
             if (update == null)
-                throw new ApiException(400, "Missing required parameter 'update' when calling AplicacaoMobileApi->Atualizar");
+                throw new ApiException(400, "Missing required parameter 'update' when calling AplicacaoMobileApi->AlterarAplicacoesMobile");
             
     
             var localVarPath = "/api/aplicacoes-mobile/{id}";
@@ -347,9 +347,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Atualizar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarAplicacoesMobile: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Atualizar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarAplicacoesMobile: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<AplicacaoMobileResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -365,9 +365,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Aplicacao (id)</param>
         /// <param name="update">update</param>
         /// <returns>Task of AplicacaoMobileResponse</returns>
-        public async System.Threading.Tasks.Task<AplicacaoMobileResponse> AtualizarAsync (long? id, AplicacaoMobileUpdate update)
+        public async System.Threading.Tasks.Task<AplicacaoMobileResponse> AlterarAplicacoesMobileAsync (long? id, AplicacaoMobileUpdate update)
         {
-             ApiResponse<AplicacaoMobileResponse> localVarResponse = await AtualizarAsyncWithHttpInfo(id, update);
+             ApiResponse<AplicacaoMobileResponse> localVarResponse = await AlterarAplicacoesMobileAsyncWithHttpInfo(id, update);
              return localVarResponse.Data;
 
         }
@@ -379,12 +379,12 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Aplicacao (id)</param>
         /// <param name="update">update</param>
         /// <returns>Task of ApiResponse (AplicacaoMobileResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AplicacaoMobileResponse>> AtualizarAsyncWithHttpInfo (long? id, AplicacaoMobileUpdate update)
+        public async System.Threading.Tasks.Task<ApiResponse<AplicacaoMobileResponse>> AlterarAplicacoesMobileAsyncWithHttpInfo (long? id, AplicacaoMobileUpdate update)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling Atualizar");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AlterarAplicacoesMobile");
             // verify the required parameter 'update' is set
-            if (update == null) throw new ApiException(400, "Missing required parameter 'update' when calling Atualizar");
+            if (update == null) throw new ApiException(400, "Missing required parameter 'update' when calling AlterarAplicacoesMobile");
             
     
             var localVarPath = "/api/aplicacoes-mobile/{id}";
@@ -437,9 +437,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Atualizar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarAplicacoesMobile: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Atualizar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarAplicacoesMobile: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<AplicacaoMobileResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -457,9 +457,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">Identificador da Aplicacao Mobile (optional)</param> 
         /// <param name="idPlataformaMobile">Identificador da Plataforma Mobile (optional)</param> 
         /// <returns>PageAplicacaoMobileResponse</returns>
-        public PageAplicacaoMobileResponse Listar (List<string> sort = null, int? page = null, int? limit = null, string id = null, long? idPlataformaMobile = null)
+        public PageAplicacaoMobileResponse ListarAplicacoesMobile (List<string> sort = null, int? page = null, int? limit = null, string id = null, long? idPlataformaMobile = null)
         {
-             ApiResponse<PageAplicacaoMobileResponse> localVarResponse = ListarWithHttpInfo(sort, page, limit, id, idPlataformaMobile);
+             ApiResponse<PageAplicacaoMobileResponse> localVarResponse = ListarAplicacoesMobileWithHttpInfo(sort, page, limit, id, idPlataformaMobile);
              return localVarResponse.Data;
         }
 
@@ -473,7 +473,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">Identificador da Aplicacao Mobile (optional)</param> 
         /// <param name="idPlataformaMobile">Identificador da Plataforma Mobile (optional)</param> 
         /// <returns>ApiResponse of PageAplicacaoMobileResponse</returns>
-        public ApiResponse< PageAplicacaoMobileResponse > ListarWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string id = null, long? idPlataformaMobile = null)
+        public ApiResponse< PageAplicacaoMobileResponse > ListarAplicacoesMobileWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string id = null, long? idPlataformaMobile = null)
         {
             
     
@@ -524,9 +524,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Listar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarAplicacoesMobile: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Listar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarAplicacoesMobile: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageAplicacaoMobileResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -545,9 +545,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">Identificador da Aplicacao Mobile (optional)</param>
         /// <param name="idPlataformaMobile">Identificador da Plataforma Mobile (optional)</param>
         /// <returns>Task of PageAplicacaoMobileResponse</returns>
-        public async System.Threading.Tasks.Task<PageAplicacaoMobileResponse> ListarAsync (List<string> sort = null, int? page = null, int? limit = null, string id = null, long? idPlataformaMobile = null)
+        public async System.Threading.Tasks.Task<PageAplicacaoMobileResponse> ListarAplicacoesMobileAsync (List<string> sort = null, int? page = null, int? limit = null, string id = null, long? idPlataformaMobile = null)
         {
-             ApiResponse<PageAplicacaoMobileResponse> localVarResponse = await ListarAsyncWithHttpInfo(sort, page, limit, id, idPlataformaMobile);
+             ApiResponse<PageAplicacaoMobileResponse> localVarResponse = await ListarAplicacoesMobileAsyncWithHttpInfo(sort, page, limit, id, idPlataformaMobile);
              return localVarResponse.Data;
 
         }
@@ -562,7 +562,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">Identificador da Aplicacao Mobile (optional)</param>
         /// <param name="idPlataformaMobile">Identificador da Plataforma Mobile (optional)</param>
         /// <returns>Task of ApiResponse (PageAplicacaoMobileResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageAplicacaoMobileResponse>> ListarAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string id = null, long? idPlataformaMobile = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageAplicacaoMobileResponse>> ListarAplicacoesMobileAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string id = null, long? idPlataformaMobile = null)
         {
             
     
@@ -613,9 +613,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Listar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarAplicacoesMobile: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Listar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarAplicacoesMobile: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageAplicacaoMobileResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -629,9 +629,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param> 
         /// <returns>AplicacaoMobileResponse</returns>
-        public AplicacaoMobileResponse Salvar (AplicacaoMobilePersist persist)
+        public AplicacaoMobileResponse SalvarAplicacaoMobile (AplicacaoMobilePersist persist)
         {
-             ApiResponse<AplicacaoMobileResponse> localVarResponse = SalvarWithHttpInfo(persist);
+             ApiResponse<AplicacaoMobileResponse> localVarResponse = SalvarAplicacaoMobileWithHttpInfo(persist);
              return localVarResponse.Data;
         }
 
@@ -641,12 +641,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param> 
         /// <returns>ApiResponse of AplicacaoMobileResponse</returns>
-        public ApiResponse< AplicacaoMobileResponse > SalvarWithHttpInfo (AplicacaoMobilePersist persist)
+        public ApiResponse< AplicacaoMobileResponse > SalvarAplicacaoMobileWithHttpInfo (AplicacaoMobilePersist persist)
         {
             
             // verify the required parameter 'persist' is set
             if (persist == null)
-                throw new ApiException(400, "Missing required parameter 'persist' when calling AplicacaoMobileApi->Salvar");
+                throw new ApiException(400, "Missing required parameter 'persist' when calling AplicacaoMobileApi->SalvarAplicacaoMobile");
             
     
             var localVarPath = "/api/aplicacoes-mobile";
@@ -698,9 +698,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Salvar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarAplicacaoMobile: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Salvar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarAplicacaoMobile: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<AplicacaoMobileResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -715,9 +715,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>Task of AplicacaoMobileResponse</returns>
-        public async System.Threading.Tasks.Task<AplicacaoMobileResponse> SalvarAsync (AplicacaoMobilePersist persist)
+        public async System.Threading.Tasks.Task<AplicacaoMobileResponse> SalvarAplicacaoMobileAsync (AplicacaoMobilePersist persist)
         {
-             ApiResponse<AplicacaoMobileResponse> localVarResponse = await SalvarAsyncWithHttpInfo(persist);
+             ApiResponse<AplicacaoMobileResponse> localVarResponse = await SalvarAplicacaoMobileAsyncWithHttpInfo(persist);
              return localVarResponse.Data;
 
         }
@@ -728,10 +728,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>Task of ApiResponse (AplicacaoMobileResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AplicacaoMobileResponse>> SalvarAsyncWithHttpInfo (AplicacaoMobilePersist persist)
+        public async System.Threading.Tasks.Task<ApiResponse<AplicacaoMobileResponse>> SalvarAplicacaoMobileAsyncWithHttpInfo (AplicacaoMobilePersist persist)
         {
             // verify the required parameter 'persist' is set
-            if (persist == null) throw new ApiException(400, "Missing required parameter 'persist' when calling Salvar");
+            if (persist == null) throw new ApiException(400, "Missing required parameter 'persist' when calling SalvarAplicacaoMobile");
             
     
             var localVarPath = "/api/aplicacoes-mobile";
@@ -783,9 +783,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Salvar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarAplicacaoMobile: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Salvar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarAplicacaoMobile: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<AplicacaoMobileResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

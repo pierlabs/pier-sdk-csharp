@@ -27,7 +27,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do tipo de template (id)</param>
         /// <param name="persist">persist</param>
         /// <returns>TipoTemplateResponse</returns>
-        TipoTemplateResponse Alterar (long? id, TipoTemplateRequest persist);
+        TipoTemplateResponse AlterarTipoTemplate (long? id, TipoTemplateRequest persist);
   
         /// <summary>
         /// Altera o tipo de template
@@ -39,7 +39,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do tipo de template (id)</param>
         /// <param name="persist">persist</param>
         /// <returns>ApiResponse of TipoTemplateResponse</returns>
-        ApiResponse<TipoTemplateResponse> AlterarWithHttpInfo (long? id, TipoTemplateRequest persist);
+        ApiResponse<TipoTemplateResponse> AlterarTipoTemplateWithHttpInfo (long? id, TipoTemplateRequest persist);
         
         /// <summary>
         /// Atualizar templates dos documentos
@@ -51,7 +51,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do documento template (id)</param>
         /// <param name="persist">persist</param>
         /// <returns>DocumentoTemplateResponse</returns>
-        DocumentoTemplateResponse Atualizar (long? id, DocumentoTemplatePersist persist);
+        DocumentoTemplateResponse AtualizarTemplateDocumento (long? id, DocumentoTemplatePersist persist);
   
         /// <summary>
         /// Atualizar templates dos documentos
@@ -63,7 +63,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do documento template (id)</param>
         /// <param name="persist">persist</param>
         /// <returns>ApiResponse of DocumentoTemplateResponse</returns>
-        ApiResponse<DocumentoTemplateResponse> AtualizarWithHttpInfo (long? id, DocumentoTemplatePersist persist);
+        ApiResponse<DocumentoTemplateResponse> AtualizarTemplateDocumentoWithHttpInfo (long? id, DocumentoTemplatePersist persist);
         
         /// <summary>
         /// Consulta documentos
@@ -74,7 +74,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do documento (id)</param>
         /// <returns>DocumentoDetalhadoResponse</returns>
-        DocumentoDetalhadoResponse Consultar (long? id);
+        DocumentoDetalhadoResponse ConsultarDocumentos (long? id);
   
         /// <summary>
         /// Consulta documentos
@@ -85,7 +85,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do documento (id)</param>
         /// <returns>ApiResponse of DocumentoDetalhadoResponse</returns>
-        ApiResponse<DocumentoDetalhadoResponse> ConsultarWithHttpInfo (long? id);
+        ApiResponse<DocumentoDetalhadoResponse> ConsultarDocumentosWithHttpInfo (long? id);
         
         /// <summary>
         /// Consultar templates dos documentos
@@ -96,7 +96,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do documento template (id)</param>
         /// <returns>DocumentoTemplateResponse</returns>
-        DocumentoTemplateResponse Consultar_0 (long? id);
+        DocumentoTemplateResponse ConsultarTemplateDocumento (long? id);
   
         /// <summary>
         /// Consultar templates dos documentos
@@ -107,7 +107,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do documento template (id)</param>
         /// <returns>ApiResponse of DocumentoTemplateResponse</returns>
-        ApiResponse<DocumentoTemplateResponse> Consultar_0WithHttpInfo (long? id);
+        ApiResponse<DocumentoTemplateResponse> ConsultarTemplateDocumentoWithHttpInfo (long? id);
         
         /// <summary>
         /// Consultar tipo de template
@@ -118,7 +118,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do tipo de template (id)</param>
         /// <returns>TipoTemplateResponse</returns>
-        TipoTemplateResponse Consultar_1 (long? id);
+        TipoTemplateResponse ConsultarTipoTemplate (long? id);
   
         /// <summary>
         /// Consultar tipo de template
@@ -129,7 +129,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do tipo de template (id)</param>
         /// <returns>ApiResponse of TipoTemplateResponse</returns>
-        ApiResponse<TipoTemplateResponse> Consultar_1WithHttpInfo (long? id);
+        ApiResponse<TipoTemplateResponse> ConsultarTipoTemplateWithHttpInfo (long? id);
         
         /// <summary>
         /// Integra um arquivo a reposit\u00F3rios remotos
@@ -140,7 +140,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrarDocumentoRequest">integrarDocumentoRequest</param>
         /// <returns>DocumentoIntegracaoResponse</returns>
-        DocumentoIntegracaoResponse Integrar (IntegrarDocumentoRequest integrarDocumentoRequest);
+        DocumentoIntegracaoResponse IntegrarDocumento (IntegrarDocumentoRequest integrarDocumentoRequest);
   
         /// <summary>
         /// Integra um arquivo a reposit\u00F3rios remotos
@@ -151,7 +151,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrarDocumentoRequest">integrarDocumentoRequest</param>
         /// <returns>ApiResponse of DocumentoIntegracaoResponse</returns>
-        ApiResponse<DocumentoIntegracaoResponse> IntegrarWithHttpInfo (IntegrarDocumentoRequest integrarDocumentoRequest);
+        ApiResponse<DocumentoIntegracaoResponse> IntegrarDocumentoWithHttpInfo (IntegrarDocumentoRequest integrarDocumentoRequest);
         
         /// <summary>
         /// Lista documentos
@@ -167,7 +167,7 @@ namespace Conductor.Pier.Api
         /// <param name="nome">Nome do documento (optional)</param>
         /// <param name="extensao">Extensao do documento (optional)</param>
         /// <returns>PageDocumentoResponse</returns>
-        PageDocumentoResponse Listar (List<string> sort = null, int? page = null, int? limit = null, long? idTemplateDocumento = null, string nome = null, string extensao = null);
+        PageDocumentoResponse ListarDocumentos (List<string> sort = null, int? page = null, int? limit = null, long? idTemplateDocumento = null, string nome = null, string extensao = null);
   
         /// <summary>
         /// Lista documentos
@@ -183,7 +183,7 @@ namespace Conductor.Pier.Api
         /// <param name="nome">Nome do documento (optional)</param>
         /// <param name="extensao">Extensao do documento (optional)</param>
         /// <returns>ApiResponse of PageDocumentoResponse</returns>
-        ApiResponse<PageDocumentoResponse> ListarWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idTemplateDocumento = null, string nome = null, string extensao = null);
+        ApiResponse<PageDocumentoResponse> ListarDocumentosWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idTemplateDocumento = null, string nome = null, string extensao = null);
         
         /// <summary>
         /// Lista os templates dos documentos
@@ -197,7 +197,7 @@ namespace Conductor.Pier.Api
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
         /// <param name="idTipoTemplate">C\u00F3digo de identifica\u00E7\u00E3o do tipo do template (optional)</param>
         /// <returns>PageDocumentoTemplateResponse</returns>
-        PageDocumentoTemplateResponse Listar_0 (List<string> sort = null, int? page = null, int? limit = null, long? idTipoTemplate = null);
+        PageDocumentoTemplateResponse ListarTemplatesDocumentos (List<string> sort = null, int? page = null, int? limit = null, long? idTipoTemplate = null);
   
         /// <summary>
         /// Lista os templates dos documentos
@@ -211,7 +211,7 @@ namespace Conductor.Pier.Api
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
         /// <param name="idTipoTemplate">C\u00F3digo de identifica\u00E7\u00E3o do tipo do template (optional)</param>
         /// <returns>ApiResponse of PageDocumentoTemplateResponse</returns>
-        ApiResponse<PageDocumentoTemplateResponse> Listar_0WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idTipoTemplate = null);
+        ApiResponse<PageDocumentoTemplateResponse> ListarTemplatesDocumentosWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idTipoTemplate = null);
         
         /// <summary>
         /// Lista os tipos de templates
@@ -224,7 +224,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00E1gina (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
         /// <returns>PageTipoTemplateResponse</returns>
-        PageTipoTemplateResponse Listar_1 (List<string> sort = null, int? page = null, int? limit = null);
+        PageTipoTemplateResponse ListarTiposTemplates (List<string> sort = null, int? page = null, int? limit = null);
   
         /// <summary>
         /// Lista os tipos de templates
@@ -237,7 +237,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00E1gina (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
         /// <returns>ApiResponse of PageTipoTemplateResponse</returns>
-        ApiResponse<PageTipoTemplateResponse> Listar_1WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
+        ApiResponse<PageTipoTemplateResponse> ListarTiposTemplatesWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
         
         /// <summary>
         /// Cadastra documentos
@@ -248,7 +248,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>DocumentoDetalhadoResponse</returns>
-        DocumentoDetalhadoResponse Salvar (DocumentoParametrosRequest persist);
+        DocumentoDetalhadoResponse SalvarDocumento (DocumentoParametrosRequest persist);
   
         /// <summary>
         /// Cadastra documentos
@@ -259,7 +259,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>ApiResponse of DocumentoDetalhadoResponse</returns>
-        ApiResponse<DocumentoDetalhadoResponse> SalvarWithHttpInfo (DocumentoParametrosRequest persist);
+        ApiResponse<DocumentoDetalhadoResponse> SalvarDocumentoWithHttpInfo (DocumentoParametrosRequest persist);
         
         /// <summary>
         /// Cadastra os templates dos documentos
@@ -270,7 +270,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>DocumentoTemplateResponse</returns>
-        DocumentoTemplateResponse Salvar_0 (DocumentoTemplatePersist persist);
+        DocumentoTemplateResponse SalvarTemplateDocumento (DocumentoTemplatePersist persist);
   
         /// <summary>
         /// Cadastra os templates dos documentos
@@ -281,7 +281,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>ApiResponse of DocumentoTemplateResponse</returns>
-        ApiResponse<DocumentoTemplateResponse> Salvar_0WithHttpInfo (DocumentoTemplatePersist persist);
+        ApiResponse<DocumentoTemplateResponse> SalvarTemplateDocumentoWithHttpInfo (DocumentoTemplatePersist persist);
         
         /// <summary>
         /// Cadastra os tipos de templates
@@ -292,7 +292,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>TipoTemplateResponse</returns>
-        TipoTemplateResponse Salvar_1 (TipoTemplateRequest persist);
+        TipoTemplateResponse SalvarTipoTemplate (TipoTemplateRequest persist);
   
         /// <summary>
         /// Cadastra os tipos de templates
@@ -303,7 +303,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>ApiResponse of TipoTemplateResponse</returns>
-        ApiResponse<TipoTemplateResponse> Salvar_1WithHttpInfo (TipoTemplateRequest persist);
+        ApiResponse<TipoTemplateResponse> SalvarTipoTemplateWithHttpInfo (TipoTemplateRequest persist);
         
         #endregion Synchronous Operations
         
@@ -319,7 +319,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do tipo de template (id)</param>
         /// <param name="persist">persist</param>
         /// <returns>Task of TipoTemplateResponse</returns>
-        System.Threading.Tasks.Task<TipoTemplateResponse> AlterarAsync (long? id, TipoTemplateRequest persist);
+        System.Threading.Tasks.Task<TipoTemplateResponse> AlterarTipoTemplateAsync (long? id, TipoTemplateRequest persist);
 
         /// <summary>
         /// Altera o tipo de template
@@ -331,7 +331,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do tipo de template (id)</param>
         /// <param name="persist">persist</param>
         /// <returns>Task of ApiResponse (TipoTemplateResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TipoTemplateResponse>> AlterarAsyncWithHttpInfo (long? id, TipoTemplateRequest persist);
+        System.Threading.Tasks.Task<ApiResponse<TipoTemplateResponse>> AlterarTipoTemplateAsyncWithHttpInfo (long? id, TipoTemplateRequest persist);
         
         /// <summary>
         /// Atualizar templates dos documentos
@@ -343,7 +343,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do documento template (id)</param>
         /// <param name="persist">persist</param>
         /// <returns>Task of DocumentoTemplateResponse</returns>
-        System.Threading.Tasks.Task<DocumentoTemplateResponse> AtualizarAsync (long? id, DocumentoTemplatePersist persist);
+        System.Threading.Tasks.Task<DocumentoTemplateResponse> AtualizarTemplateDocumentoAsync (long? id, DocumentoTemplatePersist persist);
 
         /// <summary>
         /// Atualizar templates dos documentos
@@ -355,7 +355,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do documento template (id)</param>
         /// <param name="persist">persist</param>
         /// <returns>Task of ApiResponse (DocumentoTemplateResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DocumentoTemplateResponse>> AtualizarAsyncWithHttpInfo (long? id, DocumentoTemplatePersist persist);
+        System.Threading.Tasks.Task<ApiResponse<DocumentoTemplateResponse>> AtualizarTemplateDocumentoAsyncWithHttpInfo (long? id, DocumentoTemplatePersist persist);
         
         /// <summary>
         /// Consulta documentos
@@ -366,7 +366,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do documento (id)</param>
         /// <returns>Task of DocumentoDetalhadoResponse</returns>
-        System.Threading.Tasks.Task<DocumentoDetalhadoResponse> ConsultarAsync (long? id);
+        System.Threading.Tasks.Task<DocumentoDetalhadoResponse> ConsultarDocumentosAsync (long? id);
 
         /// <summary>
         /// Consulta documentos
@@ -377,7 +377,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do documento (id)</param>
         /// <returns>Task of ApiResponse (DocumentoDetalhadoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DocumentoDetalhadoResponse>> ConsultarAsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<DocumentoDetalhadoResponse>> ConsultarDocumentosAsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Consultar templates dos documentos
@@ -388,7 +388,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do documento template (id)</param>
         /// <returns>Task of DocumentoTemplateResponse</returns>
-        System.Threading.Tasks.Task<DocumentoTemplateResponse> Consultar_0Async (long? id);
+        System.Threading.Tasks.Task<DocumentoTemplateResponse> ConsultarTemplateDocumentoAsync (long? id);
 
         /// <summary>
         /// Consultar templates dos documentos
@@ -399,7 +399,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do documento template (id)</param>
         /// <returns>Task of ApiResponse (DocumentoTemplateResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DocumentoTemplateResponse>> Consultar_0AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<DocumentoTemplateResponse>> ConsultarTemplateDocumentoAsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Consultar tipo de template
@@ -410,7 +410,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do tipo de template (id)</param>
         /// <returns>Task of TipoTemplateResponse</returns>
-        System.Threading.Tasks.Task<TipoTemplateResponse> Consultar_1Async (long? id);
+        System.Threading.Tasks.Task<TipoTemplateResponse> ConsultarTipoTemplateAsync (long? id);
 
         /// <summary>
         /// Consultar tipo de template
@@ -421,7 +421,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do tipo de template (id)</param>
         /// <returns>Task of ApiResponse (TipoTemplateResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TipoTemplateResponse>> Consultar_1AsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<TipoTemplateResponse>> ConsultarTipoTemplateAsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Integra um arquivo a reposit\u00F3rios remotos
@@ -432,7 +432,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrarDocumentoRequest">integrarDocumentoRequest</param>
         /// <returns>Task of DocumentoIntegracaoResponse</returns>
-        System.Threading.Tasks.Task<DocumentoIntegracaoResponse> IntegrarAsync (IntegrarDocumentoRequest integrarDocumentoRequest);
+        System.Threading.Tasks.Task<DocumentoIntegracaoResponse> IntegrarDocumentoAsync (IntegrarDocumentoRequest integrarDocumentoRequest);
 
         /// <summary>
         /// Integra um arquivo a reposit\u00F3rios remotos
@@ -443,7 +443,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrarDocumentoRequest">integrarDocumentoRequest</param>
         /// <returns>Task of ApiResponse (DocumentoIntegracaoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DocumentoIntegracaoResponse>> IntegrarAsyncWithHttpInfo (IntegrarDocumentoRequest integrarDocumentoRequest);
+        System.Threading.Tasks.Task<ApiResponse<DocumentoIntegracaoResponse>> IntegrarDocumentoAsyncWithHttpInfo (IntegrarDocumentoRequest integrarDocumentoRequest);
         
         /// <summary>
         /// Lista documentos
@@ -459,7 +459,7 @@ namespace Conductor.Pier.Api
         /// <param name="nome">Nome do documento (optional)</param>
         /// <param name="extensao">Extensao do documento (optional)</param>
         /// <returns>Task of PageDocumentoResponse</returns>
-        System.Threading.Tasks.Task<PageDocumentoResponse> ListarAsync (List<string> sort = null, int? page = null, int? limit = null, long? idTemplateDocumento = null, string nome = null, string extensao = null);
+        System.Threading.Tasks.Task<PageDocumentoResponse> ListarDocumentosAsync (List<string> sort = null, int? page = null, int? limit = null, long? idTemplateDocumento = null, string nome = null, string extensao = null);
 
         /// <summary>
         /// Lista documentos
@@ -475,7 +475,7 @@ namespace Conductor.Pier.Api
         /// <param name="nome">Nome do documento (optional)</param>
         /// <param name="extensao">Extensao do documento (optional)</param>
         /// <returns>Task of ApiResponse (PageDocumentoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageDocumentoResponse>> ListarAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idTemplateDocumento = null, string nome = null, string extensao = null);
+        System.Threading.Tasks.Task<ApiResponse<PageDocumentoResponse>> ListarDocumentosAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idTemplateDocumento = null, string nome = null, string extensao = null);
         
         /// <summary>
         /// Lista os templates dos documentos
@@ -489,7 +489,7 @@ namespace Conductor.Pier.Api
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
         /// <param name="idTipoTemplate">C\u00F3digo de identifica\u00E7\u00E3o do tipo do template (optional)</param>
         /// <returns>Task of PageDocumentoTemplateResponse</returns>
-        System.Threading.Tasks.Task<PageDocumentoTemplateResponse> Listar_0Async (List<string> sort = null, int? page = null, int? limit = null, long? idTipoTemplate = null);
+        System.Threading.Tasks.Task<PageDocumentoTemplateResponse> ListarTemplatesDocumentosAsync (List<string> sort = null, int? page = null, int? limit = null, long? idTipoTemplate = null);
 
         /// <summary>
         /// Lista os templates dos documentos
@@ -503,7 +503,7 @@ namespace Conductor.Pier.Api
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
         /// <param name="idTipoTemplate">C\u00F3digo de identifica\u00E7\u00E3o do tipo do template (optional)</param>
         /// <returns>Task of ApiResponse (PageDocumentoTemplateResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageDocumentoTemplateResponse>> Listar_0AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idTipoTemplate = null);
+        System.Threading.Tasks.Task<ApiResponse<PageDocumentoTemplateResponse>> ListarTemplatesDocumentosAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idTipoTemplate = null);
         
         /// <summary>
         /// Lista os tipos de templates
@@ -516,7 +516,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00E1gina (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
         /// <returns>Task of PageTipoTemplateResponse</returns>
-        System.Threading.Tasks.Task<PageTipoTemplateResponse> Listar_1Async (List<string> sort = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<PageTipoTemplateResponse> ListarTiposTemplatesAsync (List<string> sort = null, int? page = null, int? limit = null);
 
         /// <summary>
         /// Lista os tipos de templates
@@ -529,7 +529,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00E1gina (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
         /// <returns>Task of ApiResponse (PageTipoTemplateResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageTipoTemplateResponse>> Listar_1AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<ApiResponse<PageTipoTemplateResponse>> ListarTiposTemplatesAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
         
         /// <summary>
         /// Cadastra documentos
@@ -540,7 +540,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>Task of DocumentoDetalhadoResponse</returns>
-        System.Threading.Tasks.Task<DocumentoDetalhadoResponse> SalvarAsync (DocumentoParametrosRequest persist);
+        System.Threading.Tasks.Task<DocumentoDetalhadoResponse> SalvarDocumentoAsync (DocumentoParametrosRequest persist);
 
         /// <summary>
         /// Cadastra documentos
@@ -551,7 +551,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>Task of ApiResponse (DocumentoDetalhadoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DocumentoDetalhadoResponse>> SalvarAsyncWithHttpInfo (DocumentoParametrosRequest persist);
+        System.Threading.Tasks.Task<ApiResponse<DocumentoDetalhadoResponse>> SalvarDocumentoAsyncWithHttpInfo (DocumentoParametrosRequest persist);
         
         /// <summary>
         /// Cadastra os templates dos documentos
@@ -562,7 +562,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>Task of DocumentoTemplateResponse</returns>
-        System.Threading.Tasks.Task<DocumentoTemplateResponse> Salvar_0Async (DocumentoTemplatePersist persist);
+        System.Threading.Tasks.Task<DocumentoTemplateResponse> SalvarTemplateDocumentoAsync (DocumentoTemplatePersist persist);
 
         /// <summary>
         /// Cadastra os templates dos documentos
@@ -573,7 +573,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>Task of ApiResponse (DocumentoTemplateResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DocumentoTemplateResponse>> Salvar_0AsyncWithHttpInfo (DocumentoTemplatePersist persist);
+        System.Threading.Tasks.Task<ApiResponse<DocumentoTemplateResponse>> SalvarTemplateDocumentoAsyncWithHttpInfo (DocumentoTemplatePersist persist);
         
         /// <summary>
         /// Cadastra os tipos de templates
@@ -584,7 +584,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>Task of TipoTemplateResponse</returns>
-        System.Threading.Tasks.Task<TipoTemplateResponse> Salvar_1Async (TipoTemplateRequest persist);
+        System.Threading.Tasks.Task<TipoTemplateResponse> SalvarTipoTemplateAsync (TipoTemplateRequest persist);
 
         /// <summary>
         /// Cadastra os tipos de templates
@@ -595,7 +595,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>Task of ApiResponse (TipoTemplateResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TipoTemplateResponse>> Salvar_1AsyncWithHttpInfo (TipoTemplateRequest persist);
+        System.Threading.Tasks.Task<ApiResponse<TipoTemplateResponse>> SalvarTipoTemplateAsyncWithHttpInfo (TipoTemplateRequest persist);
         
         #endregion Asynchronous Operations
         
@@ -696,9 +696,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do tipo de template (id)</param> 
         /// <param name="persist">persist</param> 
         /// <returns>TipoTemplateResponse</returns>
-        public TipoTemplateResponse Alterar (long? id, TipoTemplateRequest persist)
+        public TipoTemplateResponse AlterarTipoTemplate (long? id, TipoTemplateRequest persist)
         {
-             ApiResponse<TipoTemplateResponse> localVarResponse = AlterarWithHttpInfo(id, persist);
+             ApiResponse<TipoTemplateResponse> localVarResponse = AlterarTipoTemplateWithHttpInfo(id, persist);
              return localVarResponse.Data;
         }
 
@@ -709,16 +709,16 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do tipo de template (id)</param> 
         /// <param name="persist">persist</param> 
         /// <returns>ApiResponse of TipoTemplateResponse</returns>
-        public ApiResponse< TipoTemplateResponse > AlterarWithHttpInfo (long? id, TipoTemplateRequest persist)
+        public ApiResponse< TipoTemplateResponse > AlterarTipoTemplateWithHttpInfo (long? id, TipoTemplateRequest persist)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling DocumentoApi->Alterar");
+                throw new ApiException(400, "Missing required parameter 'id' when calling DocumentoApi->AlterarTipoTemplate");
             
             // verify the required parameter 'persist' is set
             if (persist == null)
-                throw new ApiException(400, "Missing required parameter 'persist' when calling DocumentoApi->Alterar");
+                throw new ApiException(400, "Missing required parameter 'persist' when calling DocumentoApi->AlterarTipoTemplate");
             
     
             var localVarPath = "/api/tipos-templates/{id}";
@@ -771,9 +771,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Alterar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarTipoTemplate: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Alterar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarTipoTemplate: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<TipoTemplateResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -789,9 +789,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do tipo de template (id)</param>
         /// <param name="persist">persist</param>
         /// <returns>Task of TipoTemplateResponse</returns>
-        public async System.Threading.Tasks.Task<TipoTemplateResponse> AlterarAsync (long? id, TipoTemplateRequest persist)
+        public async System.Threading.Tasks.Task<TipoTemplateResponse> AlterarTipoTemplateAsync (long? id, TipoTemplateRequest persist)
         {
-             ApiResponse<TipoTemplateResponse> localVarResponse = await AlterarAsyncWithHttpInfo(id, persist);
+             ApiResponse<TipoTemplateResponse> localVarResponse = await AlterarTipoTemplateAsyncWithHttpInfo(id, persist);
              return localVarResponse.Data;
 
         }
@@ -803,12 +803,12 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do tipo de template (id)</param>
         /// <param name="persist">persist</param>
         /// <returns>Task of ApiResponse (TipoTemplateResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TipoTemplateResponse>> AlterarAsyncWithHttpInfo (long? id, TipoTemplateRequest persist)
+        public async System.Threading.Tasks.Task<ApiResponse<TipoTemplateResponse>> AlterarTipoTemplateAsyncWithHttpInfo (long? id, TipoTemplateRequest persist)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling Alterar");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AlterarTipoTemplate");
             // verify the required parameter 'persist' is set
-            if (persist == null) throw new ApiException(400, "Missing required parameter 'persist' when calling Alterar");
+            if (persist == null) throw new ApiException(400, "Missing required parameter 'persist' when calling AlterarTipoTemplate");
             
     
             var localVarPath = "/api/tipos-templates/{id}";
@@ -861,9 +861,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Alterar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarTipoTemplate: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Alterar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarTipoTemplate: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<TipoTemplateResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -878,9 +878,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do documento template (id)</param> 
         /// <param name="persist">persist</param> 
         /// <returns>DocumentoTemplateResponse</returns>
-        public DocumentoTemplateResponse Atualizar (long? id, DocumentoTemplatePersist persist)
+        public DocumentoTemplateResponse AtualizarTemplateDocumento (long? id, DocumentoTemplatePersist persist)
         {
-             ApiResponse<DocumentoTemplateResponse> localVarResponse = AtualizarWithHttpInfo(id, persist);
+             ApiResponse<DocumentoTemplateResponse> localVarResponse = AtualizarTemplateDocumentoWithHttpInfo(id, persist);
              return localVarResponse.Data;
         }
 
@@ -891,16 +891,16 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do documento template (id)</param> 
         /// <param name="persist">persist</param> 
         /// <returns>ApiResponse of DocumentoTemplateResponse</returns>
-        public ApiResponse< DocumentoTemplateResponse > AtualizarWithHttpInfo (long? id, DocumentoTemplatePersist persist)
+        public ApiResponse< DocumentoTemplateResponse > AtualizarTemplateDocumentoWithHttpInfo (long? id, DocumentoTemplatePersist persist)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling DocumentoApi->Atualizar");
+                throw new ApiException(400, "Missing required parameter 'id' when calling DocumentoApi->AtualizarTemplateDocumento");
             
             // verify the required parameter 'persist' is set
             if (persist == null)
-                throw new ApiException(400, "Missing required parameter 'persist' when calling DocumentoApi->Atualizar");
+                throw new ApiException(400, "Missing required parameter 'persist' when calling DocumentoApi->AtualizarTemplateDocumento");
             
     
             var localVarPath = "/api/templates-documentos/{id}";
@@ -953,9 +953,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Atualizar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling AtualizarTemplateDocumento: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Atualizar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling AtualizarTemplateDocumento: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<DocumentoTemplateResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -971,9 +971,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do documento template (id)</param>
         /// <param name="persist">persist</param>
         /// <returns>Task of DocumentoTemplateResponse</returns>
-        public async System.Threading.Tasks.Task<DocumentoTemplateResponse> AtualizarAsync (long? id, DocumentoTemplatePersist persist)
+        public async System.Threading.Tasks.Task<DocumentoTemplateResponse> AtualizarTemplateDocumentoAsync (long? id, DocumentoTemplatePersist persist)
         {
-             ApiResponse<DocumentoTemplateResponse> localVarResponse = await AtualizarAsyncWithHttpInfo(id, persist);
+             ApiResponse<DocumentoTemplateResponse> localVarResponse = await AtualizarTemplateDocumentoAsyncWithHttpInfo(id, persist);
              return localVarResponse.Data;
 
         }
@@ -985,12 +985,12 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do documento template (id)</param>
         /// <param name="persist">persist</param>
         /// <returns>Task of ApiResponse (DocumentoTemplateResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DocumentoTemplateResponse>> AtualizarAsyncWithHttpInfo (long? id, DocumentoTemplatePersist persist)
+        public async System.Threading.Tasks.Task<ApiResponse<DocumentoTemplateResponse>> AtualizarTemplateDocumentoAsyncWithHttpInfo (long? id, DocumentoTemplatePersist persist)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling Atualizar");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AtualizarTemplateDocumento");
             // verify the required parameter 'persist' is set
-            if (persist == null) throw new ApiException(400, "Missing required parameter 'persist' when calling Atualizar");
+            if (persist == null) throw new ApiException(400, "Missing required parameter 'persist' when calling AtualizarTemplateDocumento");
             
     
             var localVarPath = "/api/templates-documentos/{id}";
@@ -1043,9 +1043,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Atualizar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling AtualizarTemplateDocumento: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Atualizar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling AtualizarTemplateDocumento: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<DocumentoTemplateResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1059,9 +1059,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do documento (id)</param> 
         /// <returns>DocumentoDetalhadoResponse</returns>
-        public DocumentoDetalhadoResponse Consultar (long? id)
+        public DocumentoDetalhadoResponse ConsultarDocumentos (long? id)
         {
-             ApiResponse<DocumentoDetalhadoResponse> localVarResponse = ConsultarWithHttpInfo(id);
+             ApiResponse<DocumentoDetalhadoResponse> localVarResponse = ConsultarDocumentosWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -1071,12 +1071,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do documento (id)</param> 
         /// <returns>ApiResponse of DocumentoDetalhadoResponse</returns>
-        public ApiResponse< DocumentoDetalhadoResponse > ConsultarWithHttpInfo (long? id)
+        public ApiResponse< DocumentoDetalhadoResponse > ConsultarDocumentosWithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling DocumentoApi->Consultar");
+                throw new ApiException(400, "Missing required parameter 'id' when calling DocumentoApi->ConsultarDocumentos");
             
     
             var localVarPath = "/api/documentos/{id}";
@@ -1122,9 +1122,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarDocumentos: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarDocumentos: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<DocumentoDetalhadoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1139,9 +1139,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do documento (id)</param>
         /// <returns>Task of DocumentoDetalhadoResponse</returns>
-        public async System.Threading.Tasks.Task<DocumentoDetalhadoResponse> ConsultarAsync (long? id)
+        public async System.Threading.Tasks.Task<DocumentoDetalhadoResponse> ConsultarDocumentosAsync (long? id)
         {
-             ApiResponse<DocumentoDetalhadoResponse> localVarResponse = await ConsultarAsyncWithHttpInfo(id);
+             ApiResponse<DocumentoDetalhadoResponse> localVarResponse = await ConsultarDocumentosAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -1152,10 +1152,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do documento (id)</param>
         /// <returns>Task of ApiResponse (DocumentoDetalhadoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DocumentoDetalhadoResponse>> ConsultarAsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<DocumentoDetalhadoResponse>> ConsultarDocumentosAsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling Consultar");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarDocumentos");
             
     
             var localVarPath = "/api/documentos/{id}";
@@ -1201,9 +1201,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarDocumentos: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarDocumentos: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<DocumentoDetalhadoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1217,9 +1217,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do documento template (id)</param> 
         /// <returns>DocumentoTemplateResponse</returns>
-        public DocumentoTemplateResponse Consultar_0 (long? id)
+        public DocumentoTemplateResponse ConsultarTemplateDocumento (long? id)
         {
-             ApiResponse<DocumentoTemplateResponse> localVarResponse = Consultar_0WithHttpInfo(id);
+             ApiResponse<DocumentoTemplateResponse> localVarResponse = ConsultarTemplateDocumentoWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -1229,12 +1229,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do documento template (id)</param> 
         /// <returns>ApiResponse of DocumentoTemplateResponse</returns>
-        public ApiResponse< DocumentoTemplateResponse > Consultar_0WithHttpInfo (long? id)
+        public ApiResponse< DocumentoTemplateResponse > ConsultarTemplateDocumentoWithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling DocumentoApi->Consultar_0");
+                throw new ApiException(400, "Missing required parameter 'id' when calling DocumentoApi->ConsultarTemplateDocumento");
             
     
             var localVarPath = "/api/templates-documentos/{id}";
@@ -1280,9 +1280,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar_0: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarTemplateDocumento: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar_0: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarTemplateDocumento: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<DocumentoTemplateResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1297,9 +1297,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do documento template (id)</param>
         /// <returns>Task of DocumentoTemplateResponse</returns>
-        public async System.Threading.Tasks.Task<DocumentoTemplateResponse> Consultar_0Async (long? id)
+        public async System.Threading.Tasks.Task<DocumentoTemplateResponse> ConsultarTemplateDocumentoAsync (long? id)
         {
-             ApiResponse<DocumentoTemplateResponse> localVarResponse = await Consultar_0AsyncWithHttpInfo(id);
+             ApiResponse<DocumentoTemplateResponse> localVarResponse = await ConsultarTemplateDocumentoAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -1310,10 +1310,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do documento template (id)</param>
         /// <returns>Task of ApiResponse (DocumentoTemplateResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DocumentoTemplateResponse>> Consultar_0AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<DocumentoTemplateResponse>> ConsultarTemplateDocumentoAsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling Consultar_0");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarTemplateDocumento");
             
     
             var localVarPath = "/api/templates-documentos/{id}";
@@ -1359,9 +1359,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar_0: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarTemplateDocumento: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar_0: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarTemplateDocumento: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<DocumentoTemplateResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1375,9 +1375,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do tipo de template (id)</param> 
         /// <returns>TipoTemplateResponse</returns>
-        public TipoTemplateResponse Consultar_1 (long? id)
+        public TipoTemplateResponse ConsultarTipoTemplate (long? id)
         {
-             ApiResponse<TipoTemplateResponse> localVarResponse = Consultar_1WithHttpInfo(id);
+             ApiResponse<TipoTemplateResponse> localVarResponse = ConsultarTipoTemplateWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -1387,12 +1387,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do tipo de template (id)</param> 
         /// <returns>ApiResponse of TipoTemplateResponse</returns>
-        public ApiResponse< TipoTemplateResponse > Consultar_1WithHttpInfo (long? id)
+        public ApiResponse< TipoTemplateResponse > ConsultarTipoTemplateWithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling DocumentoApi->Consultar_1");
+                throw new ApiException(400, "Missing required parameter 'id' when calling DocumentoApi->ConsultarTipoTemplate");
             
     
             var localVarPath = "/api/tipos-templates/{id}";
@@ -1438,9 +1438,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar_1: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarTipoTemplate: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar_1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarTipoTemplate: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<TipoTemplateResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1455,9 +1455,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do tipo de template (id)</param>
         /// <returns>Task of TipoTemplateResponse</returns>
-        public async System.Threading.Tasks.Task<TipoTemplateResponse> Consultar_1Async (long? id)
+        public async System.Threading.Tasks.Task<TipoTemplateResponse> ConsultarTipoTemplateAsync (long? id)
         {
-             ApiResponse<TipoTemplateResponse> localVarResponse = await Consultar_1AsyncWithHttpInfo(id);
+             ApiResponse<TipoTemplateResponse> localVarResponse = await ConsultarTipoTemplateAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -1468,10 +1468,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do tipo de template (id)</param>
         /// <returns>Task of ApiResponse (TipoTemplateResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TipoTemplateResponse>> Consultar_1AsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<TipoTemplateResponse>> ConsultarTipoTemplateAsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling Consultar_1");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarTipoTemplate");
             
     
             var localVarPath = "/api/tipos-templates/{id}";
@@ -1517,9 +1517,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar_1: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarTipoTemplate: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar_1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarTipoTemplate: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<TipoTemplateResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1533,9 +1533,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrarDocumentoRequest">integrarDocumentoRequest</param> 
         /// <returns>DocumentoIntegracaoResponse</returns>
-        public DocumentoIntegracaoResponse Integrar (IntegrarDocumentoRequest integrarDocumentoRequest)
+        public DocumentoIntegracaoResponse IntegrarDocumento (IntegrarDocumentoRequest integrarDocumentoRequest)
         {
-             ApiResponse<DocumentoIntegracaoResponse> localVarResponse = IntegrarWithHttpInfo(integrarDocumentoRequest);
+             ApiResponse<DocumentoIntegracaoResponse> localVarResponse = IntegrarDocumentoWithHttpInfo(integrarDocumentoRequest);
              return localVarResponse.Data;
         }
 
@@ -1545,12 +1545,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrarDocumentoRequest">integrarDocumentoRequest</param> 
         /// <returns>ApiResponse of DocumentoIntegracaoResponse</returns>
-        public ApiResponse< DocumentoIntegracaoResponse > IntegrarWithHttpInfo (IntegrarDocumentoRequest integrarDocumentoRequest)
+        public ApiResponse< DocumentoIntegracaoResponse > IntegrarDocumentoWithHttpInfo (IntegrarDocumentoRequest integrarDocumentoRequest)
         {
             
             // verify the required parameter 'integrarDocumentoRequest' is set
             if (integrarDocumentoRequest == null)
-                throw new ApiException(400, "Missing required parameter 'integrarDocumentoRequest' when calling DocumentoApi->Integrar");
+                throw new ApiException(400, "Missing required parameter 'integrarDocumentoRequest' when calling DocumentoApi->IntegrarDocumento");
             
     
             var localVarPath = "/api/documentos/integrar";
@@ -1602,9 +1602,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Integrar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling IntegrarDocumento: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Integrar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling IntegrarDocumento: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<DocumentoIntegracaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1619,9 +1619,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrarDocumentoRequest">integrarDocumentoRequest</param>
         /// <returns>Task of DocumentoIntegracaoResponse</returns>
-        public async System.Threading.Tasks.Task<DocumentoIntegracaoResponse> IntegrarAsync (IntegrarDocumentoRequest integrarDocumentoRequest)
+        public async System.Threading.Tasks.Task<DocumentoIntegracaoResponse> IntegrarDocumentoAsync (IntegrarDocumentoRequest integrarDocumentoRequest)
         {
-             ApiResponse<DocumentoIntegracaoResponse> localVarResponse = await IntegrarAsyncWithHttpInfo(integrarDocumentoRequest);
+             ApiResponse<DocumentoIntegracaoResponse> localVarResponse = await IntegrarDocumentoAsyncWithHttpInfo(integrarDocumentoRequest);
              return localVarResponse.Data;
 
         }
@@ -1632,10 +1632,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrarDocumentoRequest">integrarDocumentoRequest</param>
         /// <returns>Task of ApiResponse (DocumentoIntegracaoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DocumentoIntegracaoResponse>> IntegrarAsyncWithHttpInfo (IntegrarDocumentoRequest integrarDocumentoRequest)
+        public async System.Threading.Tasks.Task<ApiResponse<DocumentoIntegracaoResponse>> IntegrarDocumentoAsyncWithHttpInfo (IntegrarDocumentoRequest integrarDocumentoRequest)
         {
             // verify the required parameter 'integrarDocumentoRequest' is set
-            if (integrarDocumentoRequest == null) throw new ApiException(400, "Missing required parameter 'integrarDocumentoRequest' when calling Integrar");
+            if (integrarDocumentoRequest == null) throw new ApiException(400, "Missing required parameter 'integrarDocumentoRequest' when calling IntegrarDocumento");
             
     
             var localVarPath = "/api/documentos/integrar";
@@ -1687,9 +1687,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Integrar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling IntegrarDocumento: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Integrar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling IntegrarDocumento: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<DocumentoIntegracaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1708,9 +1708,9 @@ namespace Conductor.Pier.Api
         /// <param name="nome">Nome do documento (optional)</param> 
         /// <param name="extensao">Extensao do documento (optional)</param> 
         /// <returns>PageDocumentoResponse</returns>
-        public PageDocumentoResponse Listar (List<string> sort = null, int? page = null, int? limit = null, long? idTemplateDocumento = null, string nome = null, string extensao = null)
+        public PageDocumentoResponse ListarDocumentos (List<string> sort = null, int? page = null, int? limit = null, long? idTemplateDocumento = null, string nome = null, string extensao = null)
         {
-             ApiResponse<PageDocumentoResponse> localVarResponse = ListarWithHttpInfo(sort, page, limit, idTemplateDocumento, nome, extensao);
+             ApiResponse<PageDocumentoResponse> localVarResponse = ListarDocumentosWithHttpInfo(sort, page, limit, idTemplateDocumento, nome, extensao);
              return localVarResponse.Data;
         }
 
@@ -1725,7 +1725,7 @@ namespace Conductor.Pier.Api
         /// <param name="nome">Nome do documento (optional)</param> 
         /// <param name="extensao">Extensao do documento (optional)</param> 
         /// <returns>ApiResponse of PageDocumentoResponse</returns>
-        public ApiResponse< PageDocumentoResponse > ListarWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idTemplateDocumento = null, string nome = null, string extensao = null)
+        public ApiResponse< PageDocumentoResponse > ListarDocumentosWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idTemplateDocumento = null, string nome = null, string extensao = null)
         {
             
     
@@ -1777,9 +1777,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Listar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarDocumentos: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Listar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarDocumentos: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageDocumentoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1799,9 +1799,9 @@ namespace Conductor.Pier.Api
         /// <param name="nome">Nome do documento (optional)</param>
         /// <param name="extensao">Extensao do documento (optional)</param>
         /// <returns>Task of PageDocumentoResponse</returns>
-        public async System.Threading.Tasks.Task<PageDocumentoResponse> ListarAsync (List<string> sort = null, int? page = null, int? limit = null, long? idTemplateDocumento = null, string nome = null, string extensao = null)
+        public async System.Threading.Tasks.Task<PageDocumentoResponse> ListarDocumentosAsync (List<string> sort = null, int? page = null, int? limit = null, long? idTemplateDocumento = null, string nome = null, string extensao = null)
         {
-             ApiResponse<PageDocumentoResponse> localVarResponse = await ListarAsyncWithHttpInfo(sort, page, limit, idTemplateDocumento, nome, extensao);
+             ApiResponse<PageDocumentoResponse> localVarResponse = await ListarDocumentosAsyncWithHttpInfo(sort, page, limit, idTemplateDocumento, nome, extensao);
              return localVarResponse.Data;
 
         }
@@ -1817,7 +1817,7 @@ namespace Conductor.Pier.Api
         /// <param name="nome">Nome do documento (optional)</param>
         /// <param name="extensao">Extensao do documento (optional)</param>
         /// <returns>Task of ApiResponse (PageDocumentoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageDocumentoResponse>> ListarAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idTemplateDocumento = null, string nome = null, string extensao = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageDocumentoResponse>> ListarDocumentosAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idTemplateDocumento = null, string nome = null, string extensao = null)
         {
             
     
@@ -1869,9 +1869,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Listar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarDocumentos: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Listar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarDocumentos: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageDocumentoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1888,9 +1888,9 @@ namespace Conductor.Pier.Api
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
         /// <param name="idTipoTemplate">C\u00F3digo de identifica\u00E7\u00E3o do tipo do template (optional)</param> 
         /// <returns>PageDocumentoTemplateResponse</returns>
-        public PageDocumentoTemplateResponse Listar_0 (List<string> sort = null, int? page = null, int? limit = null, long? idTipoTemplate = null)
+        public PageDocumentoTemplateResponse ListarTemplatesDocumentos (List<string> sort = null, int? page = null, int? limit = null, long? idTipoTemplate = null)
         {
-             ApiResponse<PageDocumentoTemplateResponse> localVarResponse = Listar_0WithHttpInfo(sort, page, limit, idTipoTemplate);
+             ApiResponse<PageDocumentoTemplateResponse> localVarResponse = ListarTemplatesDocumentosWithHttpInfo(sort, page, limit, idTipoTemplate);
              return localVarResponse.Data;
         }
 
@@ -1903,7 +1903,7 @@ namespace Conductor.Pier.Api
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
         /// <param name="idTipoTemplate">C\u00F3digo de identifica\u00E7\u00E3o do tipo do template (optional)</param> 
         /// <returns>ApiResponse of PageDocumentoTemplateResponse</returns>
-        public ApiResponse< PageDocumentoTemplateResponse > Listar_0WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idTipoTemplate = null)
+        public ApiResponse< PageDocumentoTemplateResponse > ListarTemplatesDocumentosWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idTipoTemplate = null)
         {
             
     
@@ -1953,9 +1953,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Listar_0: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarTemplatesDocumentos: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Listar_0: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarTemplatesDocumentos: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageDocumentoTemplateResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1973,9 +1973,9 @@ namespace Conductor.Pier.Api
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
         /// <param name="idTipoTemplate">C\u00F3digo de identifica\u00E7\u00E3o do tipo do template (optional)</param>
         /// <returns>Task of PageDocumentoTemplateResponse</returns>
-        public async System.Threading.Tasks.Task<PageDocumentoTemplateResponse> Listar_0Async (List<string> sort = null, int? page = null, int? limit = null, long? idTipoTemplate = null)
+        public async System.Threading.Tasks.Task<PageDocumentoTemplateResponse> ListarTemplatesDocumentosAsync (List<string> sort = null, int? page = null, int? limit = null, long? idTipoTemplate = null)
         {
-             ApiResponse<PageDocumentoTemplateResponse> localVarResponse = await Listar_0AsyncWithHttpInfo(sort, page, limit, idTipoTemplate);
+             ApiResponse<PageDocumentoTemplateResponse> localVarResponse = await ListarTemplatesDocumentosAsyncWithHttpInfo(sort, page, limit, idTipoTemplate);
              return localVarResponse.Data;
 
         }
@@ -1989,7 +1989,7 @@ namespace Conductor.Pier.Api
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
         /// <param name="idTipoTemplate">C\u00F3digo de identifica\u00E7\u00E3o do tipo do template (optional)</param>
         /// <returns>Task of ApiResponse (PageDocumentoTemplateResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageDocumentoTemplateResponse>> Listar_0AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idTipoTemplate = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageDocumentoTemplateResponse>> ListarTemplatesDocumentosAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idTipoTemplate = null)
         {
             
     
@@ -2039,9 +2039,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Listar_0: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarTemplatesDocumentos: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Listar_0: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarTemplatesDocumentos: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageDocumentoTemplateResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2057,9 +2057,9 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00E1gina (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
         /// <returns>PageTipoTemplateResponse</returns>
-        public PageTipoTemplateResponse Listar_1 (List<string> sort = null, int? page = null, int? limit = null)
+        public PageTipoTemplateResponse ListarTiposTemplates (List<string> sort = null, int? page = null, int? limit = null)
         {
-             ApiResponse<PageTipoTemplateResponse> localVarResponse = Listar_1WithHttpInfo(sort, page, limit);
+             ApiResponse<PageTipoTemplateResponse> localVarResponse = ListarTiposTemplatesWithHttpInfo(sort, page, limit);
              return localVarResponse.Data;
         }
 
@@ -2071,7 +2071,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00E1gina (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
         /// <returns>ApiResponse of PageTipoTemplateResponse</returns>
-        public ApiResponse< PageTipoTemplateResponse > Listar_1WithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
+        public ApiResponse< PageTipoTemplateResponse > ListarTiposTemplatesWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
         {
             
     
@@ -2120,9 +2120,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Listar_1: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarTiposTemplates: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Listar_1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarTiposTemplates: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageTipoTemplateResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2139,9 +2139,9 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00E1gina (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
         /// <returns>Task of PageTipoTemplateResponse</returns>
-        public async System.Threading.Tasks.Task<PageTipoTemplateResponse> Listar_1Async (List<string> sort = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<PageTipoTemplateResponse> ListarTiposTemplatesAsync (List<string> sort = null, int? page = null, int? limit = null)
         {
-             ApiResponse<PageTipoTemplateResponse> localVarResponse = await Listar_1AsyncWithHttpInfo(sort, page, limit);
+             ApiResponse<PageTipoTemplateResponse> localVarResponse = await ListarTiposTemplatesAsyncWithHttpInfo(sort, page, limit);
              return localVarResponse.Data;
 
         }
@@ -2154,7 +2154,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00E1gina (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
         /// <returns>Task of ApiResponse (PageTipoTemplateResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageTipoTemplateResponse>> Listar_1AsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageTipoTemplateResponse>> ListarTiposTemplatesAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
         {
             
     
@@ -2203,9 +2203,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Listar_1: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarTiposTemplates: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Listar_1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarTiposTemplates: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageTipoTemplateResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2219,9 +2219,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param> 
         /// <returns>DocumentoDetalhadoResponse</returns>
-        public DocumentoDetalhadoResponse Salvar (DocumentoParametrosRequest persist)
+        public DocumentoDetalhadoResponse SalvarDocumento (DocumentoParametrosRequest persist)
         {
-             ApiResponse<DocumentoDetalhadoResponse> localVarResponse = SalvarWithHttpInfo(persist);
+             ApiResponse<DocumentoDetalhadoResponse> localVarResponse = SalvarDocumentoWithHttpInfo(persist);
              return localVarResponse.Data;
         }
 
@@ -2231,12 +2231,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param> 
         /// <returns>ApiResponse of DocumentoDetalhadoResponse</returns>
-        public ApiResponse< DocumentoDetalhadoResponse > SalvarWithHttpInfo (DocumentoParametrosRequest persist)
+        public ApiResponse< DocumentoDetalhadoResponse > SalvarDocumentoWithHttpInfo (DocumentoParametrosRequest persist)
         {
             
             // verify the required parameter 'persist' is set
             if (persist == null)
-                throw new ApiException(400, "Missing required parameter 'persist' when calling DocumentoApi->Salvar");
+                throw new ApiException(400, "Missing required parameter 'persist' when calling DocumentoApi->SalvarDocumento");
             
     
             var localVarPath = "/api/documentos";
@@ -2288,9 +2288,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Salvar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarDocumento: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Salvar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarDocumento: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<DocumentoDetalhadoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2305,9 +2305,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>Task of DocumentoDetalhadoResponse</returns>
-        public async System.Threading.Tasks.Task<DocumentoDetalhadoResponse> SalvarAsync (DocumentoParametrosRequest persist)
+        public async System.Threading.Tasks.Task<DocumentoDetalhadoResponse> SalvarDocumentoAsync (DocumentoParametrosRequest persist)
         {
-             ApiResponse<DocumentoDetalhadoResponse> localVarResponse = await SalvarAsyncWithHttpInfo(persist);
+             ApiResponse<DocumentoDetalhadoResponse> localVarResponse = await SalvarDocumentoAsyncWithHttpInfo(persist);
              return localVarResponse.Data;
 
         }
@@ -2318,10 +2318,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>Task of ApiResponse (DocumentoDetalhadoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DocumentoDetalhadoResponse>> SalvarAsyncWithHttpInfo (DocumentoParametrosRequest persist)
+        public async System.Threading.Tasks.Task<ApiResponse<DocumentoDetalhadoResponse>> SalvarDocumentoAsyncWithHttpInfo (DocumentoParametrosRequest persist)
         {
             // verify the required parameter 'persist' is set
-            if (persist == null) throw new ApiException(400, "Missing required parameter 'persist' when calling Salvar");
+            if (persist == null) throw new ApiException(400, "Missing required parameter 'persist' when calling SalvarDocumento");
             
     
             var localVarPath = "/api/documentos";
@@ -2373,9 +2373,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Salvar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarDocumento: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Salvar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarDocumento: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<DocumentoDetalhadoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2389,9 +2389,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param> 
         /// <returns>DocumentoTemplateResponse</returns>
-        public DocumentoTemplateResponse Salvar_0 (DocumentoTemplatePersist persist)
+        public DocumentoTemplateResponse SalvarTemplateDocumento (DocumentoTemplatePersist persist)
         {
-             ApiResponse<DocumentoTemplateResponse> localVarResponse = Salvar_0WithHttpInfo(persist);
+             ApiResponse<DocumentoTemplateResponse> localVarResponse = SalvarTemplateDocumentoWithHttpInfo(persist);
              return localVarResponse.Data;
         }
 
@@ -2401,12 +2401,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param> 
         /// <returns>ApiResponse of DocumentoTemplateResponse</returns>
-        public ApiResponse< DocumentoTemplateResponse > Salvar_0WithHttpInfo (DocumentoTemplatePersist persist)
+        public ApiResponse< DocumentoTemplateResponse > SalvarTemplateDocumentoWithHttpInfo (DocumentoTemplatePersist persist)
         {
             
             // verify the required parameter 'persist' is set
             if (persist == null)
-                throw new ApiException(400, "Missing required parameter 'persist' when calling DocumentoApi->Salvar_0");
+                throw new ApiException(400, "Missing required parameter 'persist' when calling DocumentoApi->SalvarTemplateDocumento");
             
     
             var localVarPath = "/api/templates-documentos";
@@ -2458,9 +2458,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Salvar_0: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarTemplateDocumento: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Salvar_0: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarTemplateDocumento: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<DocumentoTemplateResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2475,9 +2475,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>Task of DocumentoTemplateResponse</returns>
-        public async System.Threading.Tasks.Task<DocumentoTemplateResponse> Salvar_0Async (DocumentoTemplatePersist persist)
+        public async System.Threading.Tasks.Task<DocumentoTemplateResponse> SalvarTemplateDocumentoAsync (DocumentoTemplatePersist persist)
         {
-             ApiResponse<DocumentoTemplateResponse> localVarResponse = await Salvar_0AsyncWithHttpInfo(persist);
+             ApiResponse<DocumentoTemplateResponse> localVarResponse = await SalvarTemplateDocumentoAsyncWithHttpInfo(persist);
              return localVarResponse.Data;
 
         }
@@ -2488,10 +2488,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>Task of ApiResponse (DocumentoTemplateResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DocumentoTemplateResponse>> Salvar_0AsyncWithHttpInfo (DocumentoTemplatePersist persist)
+        public async System.Threading.Tasks.Task<ApiResponse<DocumentoTemplateResponse>> SalvarTemplateDocumentoAsyncWithHttpInfo (DocumentoTemplatePersist persist)
         {
             // verify the required parameter 'persist' is set
-            if (persist == null) throw new ApiException(400, "Missing required parameter 'persist' when calling Salvar_0");
+            if (persist == null) throw new ApiException(400, "Missing required parameter 'persist' when calling SalvarTemplateDocumento");
             
     
             var localVarPath = "/api/templates-documentos";
@@ -2543,9 +2543,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Salvar_0: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarTemplateDocumento: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Salvar_0: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarTemplateDocumento: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<DocumentoTemplateResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2559,9 +2559,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param> 
         /// <returns>TipoTemplateResponse</returns>
-        public TipoTemplateResponse Salvar_1 (TipoTemplateRequest persist)
+        public TipoTemplateResponse SalvarTipoTemplate (TipoTemplateRequest persist)
         {
-             ApiResponse<TipoTemplateResponse> localVarResponse = Salvar_1WithHttpInfo(persist);
+             ApiResponse<TipoTemplateResponse> localVarResponse = SalvarTipoTemplateWithHttpInfo(persist);
              return localVarResponse.Data;
         }
 
@@ -2571,12 +2571,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param> 
         /// <returns>ApiResponse of TipoTemplateResponse</returns>
-        public ApiResponse< TipoTemplateResponse > Salvar_1WithHttpInfo (TipoTemplateRequest persist)
+        public ApiResponse< TipoTemplateResponse > SalvarTipoTemplateWithHttpInfo (TipoTemplateRequest persist)
         {
             
             // verify the required parameter 'persist' is set
             if (persist == null)
-                throw new ApiException(400, "Missing required parameter 'persist' when calling DocumentoApi->Salvar_1");
+                throw new ApiException(400, "Missing required parameter 'persist' when calling DocumentoApi->SalvarTipoTemplate");
             
     
             var localVarPath = "/api/tipos-templates";
@@ -2628,9 +2628,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Salvar_1: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarTipoTemplate: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Salvar_1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarTipoTemplate: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<TipoTemplateResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2645,9 +2645,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>Task of TipoTemplateResponse</returns>
-        public async System.Threading.Tasks.Task<TipoTemplateResponse> Salvar_1Async (TipoTemplateRequest persist)
+        public async System.Threading.Tasks.Task<TipoTemplateResponse> SalvarTipoTemplateAsync (TipoTemplateRequest persist)
         {
-             ApiResponse<TipoTemplateResponse> localVarResponse = await Salvar_1AsyncWithHttpInfo(persist);
+             ApiResponse<TipoTemplateResponse> localVarResponse = await SalvarTipoTemplateAsyncWithHttpInfo(persist);
              return localVarResponse.Data;
 
         }
@@ -2658,10 +2658,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>Task of ApiResponse (TipoTemplateResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TipoTemplateResponse>> Salvar_1AsyncWithHttpInfo (TipoTemplateRequest persist)
+        public async System.Threading.Tasks.Task<ApiResponse<TipoTemplateResponse>> SalvarTipoTemplateAsyncWithHttpInfo (TipoTemplateRequest persist)
         {
             // verify the required parameter 'persist' is set
-            if (persist == null) throw new ApiException(400, "Missing required parameter 'persist' when calling Salvar_1");
+            if (persist == null) throw new ApiException(400, "Missing required parameter 'persist' when calling SalvarTipoTemplate");
             
     
             var localVarPath = "/api/tipos-templates";
@@ -2713,9 +2713,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Salvar_1: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarTipoTemplate: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Salvar_1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarTipoTemplate: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<TipoTemplateResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

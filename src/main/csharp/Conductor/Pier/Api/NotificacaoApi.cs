@@ -18,6 +18,30 @@ namespace Conductor.Pier.Api
         #region Synchronous Operations
         
         /// <summary>
+        /// Altera configura\u00E7\u00F5es de E-mail
+        /// </summary>
+        /// <remarks>
+        /// Esse recurso permite salvar altera\u00E7\u00F5es de configura\u00E7\u00F5es de E-mail
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail</param>
+        /// <param name="persist">persist</param>
+        /// <returns>ConfiguracaoEmailResponse</returns>
+        ConfiguracaoEmailResponse AlterarConfiguracaoEmail (long? id, ConfiguracaoEmailPersist persist);
+  
+        /// <summary>
+        /// Altera configura\u00E7\u00F5es de E-mail
+        /// </summary>
+        /// <remarks>
+        /// Esse recurso permite salvar altera\u00E7\u00F5es de configura\u00E7\u00F5es de E-mail
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail</param>
+        /// <param name="persist">persist</param>
+        /// <returns>ApiResponse of ConfiguracaoEmailResponse</returns>
+        ApiResponse<ConfiguracaoEmailResponse> AlterarConfiguracaoEmailWithHttpInfo (long? id, ConfiguracaoEmailPersist persist);
+        
+        /// <summary>
         /// Altera as informa\u00E7\u00F5es da configura\u00E7\u00E3o sms informada
         /// </summary>
         /// <remarks>
@@ -29,7 +53,7 @@ namespace Conductor.Pier.Api
         /// <param name="usuarioSMS">Apresenta o usu\u00E1rio sms</param>
         /// <param name="senhaSMS">Apresenta a senha sms</param>
         /// <returns>ConfiguracaoSMSResponse</returns>
-        ConfiguracaoSMSResponse Alterar (long? id, long? idEmissor, string usuarioSMS, string senhaSMS);
+        ConfiguracaoSMSResponse AlterarConfiguracaoSMS (long? id, long? idEmissor, string usuarioSMS, string senhaSMS);
   
         /// <summary>
         /// Altera as informa\u00E7\u00F5es da configura\u00E7\u00E3o sms informada
@@ -43,31 +67,7 @@ namespace Conductor.Pier.Api
         /// <param name="usuarioSMS">Apresenta o usu\u00E1rio sms</param>
         /// <param name="senhaSMS">Apresenta a senha sms</param>
         /// <returns>ApiResponse of ConfiguracaoSMSResponse</returns>
-        ApiResponse<ConfiguracaoSMSResponse> AlterarWithHttpInfo (long? id, long? idEmissor, string usuarioSMS, string senhaSMS);
-        
-        /// <summary>
-        /// Altera configura\u00E7\u00F5es de E-mail
-        /// </summary>
-        /// <remarks>
-        /// Esse recurso permite salvar altera\u00E7\u00F5es de configura\u00E7\u00F5es de E-mail
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail</param>
-        /// <param name="persist">persist</param>
-        /// <returns>ConfiguracaoEmailResponse</returns>
-        ConfiguracaoEmailResponse AlterarConfiguracao (long? id, ConfiguracaoEmailPersist persist);
-  
-        /// <summary>
-        /// Altera configura\u00E7\u00F5es de E-mail
-        /// </summary>
-        /// <remarks>
-        /// Esse recurso permite salvar altera\u00E7\u00F5es de configura\u00E7\u00F5es de E-mail
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail</param>
-        /// <param name="persist">persist</param>
-        /// <returns>ApiResponse of ConfiguracaoEmailResponse</returns>
-        ApiResponse<ConfiguracaoEmailResponse> AlterarConfiguracaoWithHttpInfo (long? id, ConfiguracaoEmailPersist persist);
+        ApiResponse<ConfiguracaoSMSResponse> AlterarConfiguracaoSMSWithHttpInfo (long? id, long? idEmissor, string usuarioSMS, string senhaSMS);
         
         /// <summary>
         /// Alterar template de notifica\u00E7\u00E3o
@@ -85,7 +85,7 @@ namespace Conductor.Pier.Api
         /// <param name="assunto">Assunto da Notificaca\u00E7\u00E3o (optional)</param>
         /// <param name="templatePadrao">Template Padr\u00E3o (optional)</param>
         /// <returns>TemplateNotificacaoDetalheResponse</returns>
-        TemplateNotificacaoDetalheResponse AlterarTemplateNotificacao (long? id, string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string remetente = null, string assunto = null, bool? templatePadrao = null);
+        TemplateNotificacaoDetalheResponse AlterarTemplate (long? id, string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string remetente = null, string assunto = null, bool? templatePadrao = null);
   
         /// <summary>
         /// Alterar template de notifica\u00E7\u00E3o
@@ -103,7 +103,7 @@ namespace Conductor.Pier.Api
         /// <param name="assunto">Assunto da Notificaca\u00E7\u00E3o (optional)</param>
         /// <param name="templatePadrao">Template Padr\u00E3o (optional)</param>
         /// <returns>ApiResponse of TemplateNotificacaoDetalheResponse</returns>
-        ApiResponse<TemplateNotificacaoDetalheResponse> AlterarTemplateNotificacaoWithHttpInfo (long? id, string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string remetente = null, string assunto = null, bool? templatePadrao = null);
+        ApiResponse<TemplateNotificacaoDetalheResponse> AlterarTemplateWithHttpInfo (long? id, string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string remetente = null, string assunto = null, bool? templatePadrao = null);
         
         /// <summary>
         /// Atualizar SMS
@@ -118,7 +118,7 @@ namespace Conductor.Pier.Api
         /// <param name="textoStatus">TextoStatus (optional)</param>
         /// <param name="operadora">Operadora (optional)</param>
         /// <returns>NotificacaoSMSResponse</returns>
-        NotificacaoSMSResponse AtualizarSMS (string nsu = null, string status = null, string data = null, string textoStatus = null, string operadora = null);
+        NotificacaoSMSResponse AtualizarStatusSMS (string nsu = null, string status = null, string data = null, string textoStatus = null, string operadora = null);
   
         /// <summary>
         /// Atualizar SMS
@@ -133,29 +133,51 @@ namespace Conductor.Pier.Api
         /// <param name="textoStatus">TextoStatus (optional)</param>
         /// <param name="operadora">Operadora (optional)</param>
         /// <returns>ApiResponse of NotificacaoSMSResponse</returns>
-        ApiResponse<NotificacaoSMSResponse> AtualizarSMSWithHttpInfo (string nsu = null, string status = null, string data = null, string textoStatus = null, string operadora = null);
+        ApiResponse<NotificacaoSMSResponse> AtualizarStatusSMSWithHttpInfo (string nsu = null, string status = null, string data = null, string textoStatus = null, string operadora = null);
         
         /// <summary>
-        /// Apresenta os dados de uma determinada configura\u00E7\u00E3o
+        /// Consulta c\u00F3digo de seguran\u00E7a E-mail
         /// </summary>
         /// <remarks>
-        /// Este m\u00E9todo permite consultar os par\u00E2metros de uma determinada Configura\u00E7\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (idConfiguracaoSMS)
+        /// Esse recurso permite consultar um c\u00F3digo de seguran\u00E7a E-mail espec\u00EDfico por id
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da configura\u00E7\u00E3o sms (id)</param>
-        /// <returns>ConfiguracaoSMSResponse</returns>
-        ConfiguracaoSMSResponse Consultar (long? id);
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail</param>
+        /// <returns>CodigoSegurancaResponse</returns>
+        CodigoSegurancaResponse ConsultarCodigoSegurancaEmail (long? id);
   
         /// <summary>
-        /// Apresenta os dados de uma determinada configura\u00E7\u00E3o
+        /// Consulta c\u00F3digo de seguran\u00E7a E-mail
         /// </summary>
         /// <remarks>
-        /// Este m\u00E9todo permite consultar os par\u00E2metros de uma determinada Configura\u00E7\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (idConfiguracaoSMS)
+        /// Esse recurso permite consultar um c\u00F3digo de seguran\u00E7a E-mail espec\u00EDfico por id
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da configura\u00E7\u00E3o sms (id)</param>
-        /// <returns>ApiResponse of ConfiguracaoSMSResponse</returns>
-        ApiResponse<ConfiguracaoSMSResponse> ConsultarWithHttpInfo (long? id);
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail</param>
+        /// <returns>ApiResponse of CodigoSegurancaResponse</returns>
+        ApiResponse<CodigoSegurancaResponse> ConsultarCodigoSegurancaEmailWithHttpInfo (long? id);
+        
+        /// <summary>
+        /// Consulta c\u00F3digo de seguran\u00E7a SMS
+        /// </summary>
+        /// <remarks>
+        /// Esse recurso permite consultar um c\u00F3digo de seguran\u00E7a SMS espec\u00EDfico por id
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail</param>
+        /// <returns>CodigoSegurancaResponse</returns>
+        CodigoSegurancaResponse ConsultarCodigoSegurancaSMS (long? id);
+  
+        /// <summary>
+        /// Consulta c\u00F3digo de seguran\u00E7a SMS
+        /// </summary>
+        /// <remarks>
+        /// Esse recurso permite consultar um c\u00F3digo de seguran\u00E7a SMS espec\u00EDfico por id
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail</param>
+        /// <returns>ApiResponse of CodigoSegurancaResponse</returns>
+        ApiResponse<CodigoSegurancaResponse> ConsultarCodigoSegurancaSMSWithHttpInfo (long? id);
         
         /// <summary>
         /// Consulta configura\u00E7\u00E3o de E-mail
@@ -166,7 +188,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail</param>
         /// <returns>ConfiguracaoEmailResponse</returns>
-        ConfiguracaoEmailResponse ConsultarConfiguracao (long? id);
+        ConfiguracaoEmailResponse ConsultarConfiguracaoEmail (long? id);
   
         /// <summary>
         /// Consulta configura\u00E7\u00E3o de E-mail
@@ -177,51 +199,29 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail</param>
         /// <returns>ApiResponse of ConfiguracaoEmailResponse</returns>
-        ApiResponse<ConfiguracaoEmailResponse> ConsultarConfiguracaoWithHttpInfo (long? id);
+        ApiResponse<ConfiguracaoEmailResponse> ConsultarConfiguracaoEmailWithHttpInfo (long? id);
         
         /// <summary>
-        /// Consulta c\u00F3digo de seguran\u00E7a E-mail
+        /// Apresenta os dados de uma determinada configura\u00E7\u00E3o
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite consultar um c\u00F3digo de seguran\u00E7a E-mail espec\u00EDfico por id
+        /// Este m\u00E9todo permite consultar os par\u00E2metros de uma determinada Configura\u00E7\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (idConfiguracaoSMS)
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail</param>
-        /// <returns>CodigoSegurancaResponse</returns>
-        CodigoSegurancaResponse ConsultarPorEmail (long? id);
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da configura\u00E7\u00E3o sms (id)</param>
+        /// <returns>ConfiguracaoSMSResponse</returns>
+        ConfiguracaoSMSResponse ConsultarConfiguracaoSMS (long? id);
   
         /// <summary>
-        /// Consulta c\u00F3digo de seguran\u00E7a E-mail
+        /// Apresenta os dados de uma determinada configura\u00E7\u00E3o
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite consultar um c\u00F3digo de seguran\u00E7a E-mail espec\u00EDfico por id
+        /// Este m\u00E9todo permite consultar os par\u00E2metros de uma determinada Configura\u00E7\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (idConfiguracaoSMS)
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail</param>
-        /// <returns>ApiResponse of CodigoSegurancaResponse</returns>
-        ApiResponse<CodigoSegurancaResponse> ConsultarPorEmailWithHttpInfo (long? id);
-        
-        /// <summary>
-        /// Consulta c\u00F3digo de seguran\u00E7a SMS
-        /// </summary>
-        /// <remarks>
-        /// Esse recurso permite consultar um c\u00F3digo de seguran\u00E7a SMS espec\u00EDfico por id
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail</param>
-        /// <returns>CodigoSegurancaResponse</returns>
-        CodigoSegurancaResponse ConsultarPorSMS (long? id);
-  
-        /// <summary>
-        /// Consulta c\u00F3digo de seguran\u00E7a SMS
-        /// </summary>
-        /// <remarks>
-        /// Esse recurso permite consultar um c\u00F3digo de seguran\u00E7a SMS espec\u00EDfico por id
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail</param>
-        /// <returns>ApiResponse of CodigoSegurancaResponse</returns>
-        ApiResponse<CodigoSegurancaResponse> ConsultarPorSMSWithHttpInfo (long? id);
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da configura\u00E7\u00E3o sms (id)</param>
+        /// <returns>ApiResponse of ConfiguracaoSMSResponse</returns>
+        ApiResponse<ConfiguracaoSMSResponse> ConsultarConfiguracaoSMSWithHttpInfo (long? id);
         
         /// <summary>
         /// Consulta template de notifica\u00E7\u00E3o
@@ -232,7 +232,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do layout de e-mail</param>
         /// <returns>TemplateNotificacaoDetalheResponse</returns>
-        TemplateNotificacaoDetalheResponse ConsultarTemplateNotificacao (long? id);
+        TemplateNotificacaoDetalheResponse ConsultarTemplate (long? id);
   
         /// <summary>
         /// Consulta template de notifica\u00E7\u00E3o
@@ -243,7 +243,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do layout de e-mail</param>
         /// <returns>ApiResponse of TemplateNotificacaoDetalheResponse</returns>
-        ApiResponse<TemplateNotificacaoDetalheResponse> ConsultarTemplateNotificacaoWithHttpInfo (long? id);
+        ApiResponse<TemplateNotificacaoDetalheResponse> ConsultarTemplateWithHttpInfo (long? id);
         
         /// <summary>
         /// Deleta as informa\u00E7\u00F5es da configura\u00E7\u00E3o sms informada
@@ -254,7 +254,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da configura\u00E7\u00E3o sms (id)</param>
         /// <returns>ConfiguracaoSMSResponse</returns>
-        ConfiguracaoSMSResponse Deletar (long? id);
+        ConfiguracaoSMSResponse DeletarConfiguracaoSMS (long? id);
   
         /// <summary>
         /// Deleta as informa\u00E7\u00F5es da configura\u00E7\u00E3o sms informada
@@ -265,7 +265,29 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da configura\u00E7\u00E3o sms (id)</param>
         /// <returns>ApiResponse of ConfiguracaoSMSResponse</returns>
-        ApiResponse<ConfiguracaoSMSResponse> DeletarWithHttpInfo (long? id);
+        ApiResponse<ConfiguracaoSMSResponse> DeletarConfiguracaoSMSWithHttpInfo (long? id);
+        
+        /// <summary>
+        /// Enviar notifica\u00E7\u00E3o por email
+        /// </summary>
+        /// <remarks>
+        /// Esse recurso permite enviar uma mensagem de notifica\u00E7\u00E3o por email
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">request</param>
+        /// <returns>Object</returns>
+        Object EnviarEmail (NotificacaoEmailRequest request);
+  
+        /// <summary>
+        /// Enviar notifica\u00E7\u00E3o por email
+        /// </summary>
+        /// <remarks>
+        /// Esse recurso permite enviar uma mensagem de notifica\u00E7\u00E3o por email
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">request</param>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> EnviarEmailWithHttpInfo (NotificacaoEmailRequest request);
         
         /// <summary>
         /// Enviar OTP 3D Secure
@@ -298,7 +320,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="email">email</param>
         /// <returns>string</returns>
-        string GerarTokenEMAIL (string email);
+        string GerarCodigoSegurancaNotificacaoEmail (string email);
   
         /// <summary>
         /// Gerar c\u00F3digo de seguran\u00E7a e enviar por e-mail
@@ -309,7 +331,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="email">email</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> GerarTokenEMAILWithHttpInfo (string email);
+        ApiResponse<string> GerarCodigoSegurancaNotificacaoEmailWithHttpInfo (string email);
         
         /// <summary>
         /// Gerar c\u00F3digo de seguran\u00E7a e enviar por sms
@@ -320,7 +342,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>string</returns>
-        string GerarTokenSMS (CodigoSegurancaSMSPersist persist);
+        string GerarCodigoSegurancaNotificacaoSMS (CodigoSegurancaSMSPersist persist);
   
         /// <summary>
         /// Gerar c\u00F3digo de seguran\u00E7a e enviar por sms
@@ -331,7 +353,85 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> GerarTokenSMSWithHttpInfo (CodigoSegurancaSMSPersist persist);
+        ApiResponse<string> GerarCodigoSegurancaNotificacaoSMSWithHttpInfo (CodigoSegurancaSMSPersist persist);
+        
+        /// <summary>
+        /// Lista os c\u00F3digos de seguran\u00E7a E-Mail
+        /// </summary>
+        /// <remarks>
+        /// Esse recurso permite listar os codigos de seguran\u00E7a por E-Mail
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <returns>PageCodigoSegurancaResponse</returns>
+        PageCodigoSegurancaResponse ListarCodigosSegurancaEmail (List<string> sort = null, int? page = null, int? limit = null);
+  
+        /// <summary>
+        /// Lista os c\u00F3digos de seguran\u00E7a E-Mail
+        /// </summary>
+        /// <remarks>
+        /// Esse recurso permite listar os codigos de seguran\u00E7a por E-Mail
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <returns>ApiResponse of PageCodigoSegurancaResponse</returns>
+        ApiResponse<PageCodigoSegurancaResponse> ListarCodigosSegurancaEmailWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
+        
+        /// <summary>
+        /// Lista os c\u00F3digos de seguran\u00E7a SMS
+        /// </summary>
+        /// <remarks>
+        /// Esse recurso permite listar os codigos de seguran\u00E7a por SMS
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <returns>PageCodigoSegurancaResponse</returns>
+        PageCodigoSegurancaResponse ListarCodigosSegurancaSMS (List<string> sort = null, int? page = null, int? limit = null);
+  
+        /// <summary>
+        /// Lista os c\u00F3digos de seguran\u00E7a SMS
+        /// </summary>
+        /// <remarks>
+        /// Esse recurso permite listar os codigos de seguran\u00E7a por SMS
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <returns>ApiResponse of PageCodigoSegurancaResponse</returns>
+        ApiResponse<PageCodigoSegurancaResponse> ListarCodigosSegurancaSMSWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
+        
+        /// <summary>
+        /// Lista configura\u00E7\u00F5es de E-mails
+        /// </summary>
+        /// <remarks>
+        /// Esse recurso permite listar as configura\u00E7\u00F5es de E-mails
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <returns>PageConfiguracaoEmailResponse</returns>
+        PageConfiguracaoEmailResponse ListarConfiguracaoEmail (List<string> sort = null, int? page = null, int? limit = null);
+  
+        /// <summary>
+        /// Lista configura\u00E7\u00F5es de E-mails
+        /// </summary>
+        /// <remarks>
+        /// Esse recurso permite listar as configura\u00E7\u00F5es de E-mails
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <returns>ApiResponse of PageConfiguracaoEmailResponse</returns>
+        ApiResponse<PageConfiguracaoEmailResponse> ListarConfiguracaoEmailWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
         
         /// <summary>
         /// Este m\u00E9todo permite que sejam listados todas as configura\u00E7\u00F5es de sms existentes
@@ -346,7 +446,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">Id da configura\u00E7\u00E3o (optional)</param>
         /// <param name="idEmissor">Id do emissor (optional)</param>
         /// <returns>PageConfiguracaoSMSResponse</returns>
-        PageConfiguracaoSMSResponse Listar (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idEmissor = null);
+        PageConfiguracaoSMSResponse ListarConfiguracaoSMS (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idEmissor = null);
   
         /// <summary>
         /// Este m\u00E9todo permite que sejam listados todas as configura\u00E7\u00F5es de sms existentes
@@ -361,85 +461,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">Id da configura\u00E7\u00E3o (optional)</param>
         /// <param name="idEmissor">Id do emissor (optional)</param>
         /// <returns>ApiResponse of PageConfiguracaoSMSResponse</returns>
-        ApiResponse<PageConfiguracaoSMSResponse> ListarWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idEmissor = null);
-        
-        /// <summary>
-        /// Lista configura\u00E7\u00F5es de E-mails
-        /// </summary>
-        /// <remarks>
-        /// Esse recurso permite listar as configura\u00E7\u00F5es de E-mails
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <returns>PageConfiguracaoEmailResponse</returns>
-        PageConfiguracaoEmailResponse ListarConfiguracao (List<string> sort = null, int? page = null, int? limit = null);
-  
-        /// <summary>
-        /// Lista configura\u00E7\u00F5es de E-mails
-        /// </summary>
-        /// <remarks>
-        /// Esse recurso permite listar as configura\u00E7\u00F5es de E-mails
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <returns>ApiResponse of PageConfiguracaoEmailResponse</returns>
-        ApiResponse<PageConfiguracaoEmailResponse> ListarConfiguracaoWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
-        
-        /// <summary>
-        /// Lista os c\u00F3digos de seguran\u00E7a E-Mail
-        /// </summary>
-        /// <remarks>
-        /// Esse recurso permite listar os codigos de seguran\u00E7a por E-Mail
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <returns>PageCodigoSegurancaResponse</returns>
-        PageCodigoSegurancaResponse ListarPorEmail (List<string> sort = null, int? page = null, int? limit = null);
-  
-        /// <summary>
-        /// Lista os c\u00F3digos de seguran\u00E7a E-Mail
-        /// </summary>
-        /// <remarks>
-        /// Esse recurso permite listar os codigos de seguran\u00E7a por E-Mail
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <returns>ApiResponse of PageCodigoSegurancaResponse</returns>
-        ApiResponse<PageCodigoSegurancaResponse> ListarPorEmailWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
-        
-        /// <summary>
-        /// Lista os c\u00F3digos de seguran\u00E7a SMS
-        /// </summary>
-        /// <remarks>
-        /// Esse recurso permite listar os codigos de seguran\u00E7a por SMS
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <returns>PageCodigoSegurancaResponse</returns>
-        PageCodigoSegurancaResponse ListarPorSMS (List<string> sort = null, int? page = null, int? limit = null);
-  
-        /// <summary>
-        /// Lista os c\u00F3digos de seguran\u00E7a SMS
-        /// </summary>
-        /// <remarks>
-        /// Esse recurso permite listar os codigos de seguran\u00E7a por SMS
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <returns>ApiResponse of PageCodigoSegurancaResponse</returns>
-        ApiResponse<PageCodigoSegurancaResponse> ListarPorSMSWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
+        ApiResponse<PageConfiguracaoSMSResponse> ListarConfiguracaoSMSWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idEmissor = null);
         
         /// <summary>
         /// Listar Push
@@ -526,7 +548,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00E1gina (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
         /// <returns>PageTemplateNotificacaoResponse</returns>
-        PageTemplateNotificacaoResponse ListarTemplateNotificacao (List<string> sort = null, int? page = null, int? limit = null);
+        PageTemplateNotificacaoResponse ListarTemplates (List<string> sort = null, int? page = null, int? limit = null);
   
         /// <summary>
         /// Lista templates de notifica\u00E7\u00F5es
@@ -539,7 +561,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00E1gina (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
         /// <returns>ApiResponse of PageTemplateNotificacaoResponse</returns>
-        ApiResponse<PageTemplateNotificacaoResponse> ListarTemplateNotificacaoWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
+        ApiResponse<PageTemplateNotificacaoResponse> ListarTemplatesWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
         
         /// <summary>
         /// Lista os tipos templates de notifica\u00E7\u00E3o
@@ -562,28 +584,6 @@ namespace Conductor.Pier.Api
         ApiResponse<List<Object>> ListarTiposLayoutsWithHttpInfo ();
         
         /// <summary>
-        /// Enviar notifica\u00E7\u00E3o por email
-        /// </summary>
-        /// <remarks>
-        /// Esse recurso permite enviar uma mensagem de notifica\u00E7\u00E3o por email
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">request</param>
-        /// <returns>Object</returns>
-        Object NotificacaoEmail (NotificacaoEmailRequest request);
-  
-        /// <summary>
-        /// Enviar notifica\u00E7\u00E3o por email
-        /// </summary>
-        /// <remarks>
-        /// Esse recurso permite enviar uma mensagem de notifica\u00E7\u00E3o por email
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">request</param>
-        /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> NotificacaoEmailWithHttpInfo (NotificacaoEmailRequest request);
-        
-        /// <summary>
         /// Reenviar c\u00F3digo de seguran\u00E7a por sms
         /// </summary>
         /// <remarks>
@@ -592,7 +592,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>string</returns>
-        string ReenviarTokenSMS (CodigoSegurancaSMSPersist persist);
+        string ReenviarCodigoSegurancaNotificacaoSMS (CodigoSegurancaSMSPersist persist);
   
         /// <summary>
         /// Reenviar c\u00F3digo de seguran\u00E7a por sms
@@ -603,7 +603,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> ReenviarTokenSMSWithHttpInfo (CodigoSegurancaSMSPersist persist);
+        ApiResponse<string> ReenviarCodigoSegurancaNotificacaoSMSWithHttpInfo (CodigoSegurancaSMSPersist persist);
         
         /// <summary>
         /// Responder SMS
@@ -616,7 +616,7 @@ namespace Conductor.Pier.Api
         /// <param name="data">Data (optional)</param>
         /// <param name="resposta">TextoStatus (optional)</param>
         /// <returns>NotificacaoSMSResponse</returns>
-        NotificacaoSMSResponse ResponderSMSGet (string nsu = null, string data = null, string resposta = null);
+        NotificacaoSMSResponse ResponderSMS (string nsu = null, string data = null, string resposta = null);
   
         /// <summary>
         /// Responder SMS
@@ -629,7 +629,29 @@ namespace Conductor.Pier.Api
         /// <param name="data">Data (optional)</param>
         /// <param name="resposta">TextoStatus (optional)</param>
         /// <returns>ApiResponse of NotificacaoSMSResponse</returns>
-        ApiResponse<NotificacaoSMSResponse> ResponderSMSGetWithHttpInfo (string nsu = null, string data = null, string resposta = null);
+        ApiResponse<NotificacaoSMSResponse> ResponderSMSWithHttpInfo (string nsu = null, string data = null, string resposta = null);
+        
+        /// <summary>
+        /// Salva configura\u00E7\u00F5es de E-mail
+        /// </summary>
+        /// <remarks>
+        /// Esse recurso salvar configura\u00E7\u00F5es de E-mail
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="persist">persist</param>
+        /// <returns>ConfiguracaoEmailResponse</returns>
+        ConfiguracaoEmailResponse SalvarConfiguracaoEmail (ConfiguracaoEmailPersist persist);
+  
+        /// <summary>
+        /// Salva configura\u00E7\u00F5es de E-mail
+        /// </summary>
+        /// <remarks>
+        /// Esse recurso salvar configura\u00E7\u00F5es de E-mail
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="persist">persist</param>
+        /// <returns>ApiResponse of ConfiguracaoEmailResponse</returns>
+        ApiResponse<ConfiguracaoEmailResponse> SalvarConfiguracaoEmailWithHttpInfo (ConfiguracaoEmailPersist persist);
         
         /// <summary>
         /// Realiza o cadastro uma nova configura\u00E7\u00E3o de sms
@@ -642,7 +664,7 @@ namespace Conductor.Pier.Api
         /// <param name="usuarioSMS">Apresenta o usu\u00E1rio sms</param>
         /// <param name="senhaSMS">Apresenta a senha sms</param>
         /// <returns>ConfiguracaoSMSResponse</returns>
-        ConfiguracaoSMSResponse Salvar (long? idEmissor, string usuarioSMS, string senhaSMS);
+        ConfiguracaoSMSResponse SalvarConfiguracaoSMS (long? idEmissor, string usuarioSMS, string senhaSMS);
   
         /// <summary>
         /// Realiza o cadastro uma nova configura\u00E7\u00E3o de sms
@@ -655,29 +677,7 @@ namespace Conductor.Pier.Api
         /// <param name="usuarioSMS">Apresenta o usu\u00E1rio sms</param>
         /// <param name="senhaSMS">Apresenta a senha sms</param>
         /// <returns>ApiResponse of ConfiguracaoSMSResponse</returns>
-        ApiResponse<ConfiguracaoSMSResponse> SalvarWithHttpInfo (long? idEmissor, string usuarioSMS, string senhaSMS);
-        
-        /// <summary>
-        /// Salva configura\u00E7\u00F5es de E-mail
-        /// </summary>
-        /// <remarks>
-        /// Esse recurso salvar configura\u00E7\u00F5es de E-mail
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="persist">persist</param>
-        /// <returns>ConfiguracaoEmailResponse</returns>
-        ConfiguracaoEmailResponse SalvarConfiguracao (ConfiguracaoEmailPersist persist);
-  
-        /// <summary>
-        /// Salva configura\u00E7\u00F5es de E-mail
-        /// </summary>
-        /// <remarks>
-        /// Esse recurso salvar configura\u00E7\u00F5es de E-mail
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="persist">persist</param>
-        /// <returns>ApiResponse of ConfiguracaoEmailResponse</returns>
-        ApiResponse<ConfiguracaoEmailResponse> SalvarConfiguracaoWithHttpInfo (ConfiguracaoEmailPersist persist);
+        ApiResponse<ConfiguracaoSMSResponse> SalvarConfiguracaoSMSWithHttpInfo (long? idEmissor, string usuarioSMS, string senhaSMS);
         
         /// <summary>
         /// Enviar Push APNS
@@ -688,7 +688,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pushPersists">pushPersists</param>
         /// <returns>NotificacaoResponse</returns>
-        NotificacaoResponse SalvarPush (List<PushAPNS> pushPersists);
+        NotificacaoResponse SalvarPushAPNS (List<PushAPNS> pushPersists);
   
         /// <summary>
         /// Enviar Push APNS
@@ -699,7 +699,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pushPersists">pushPersists</param>
         /// <returns>ApiResponse of NotificacaoResponse</returns>
-        ApiResponse<NotificacaoResponse> SalvarPushWithHttpInfo (List<PushAPNS> pushPersists);
+        ApiResponse<NotificacaoResponse> SalvarPushAPNSWithHttpInfo (List<PushAPNS> pushPersists);
         
         /// <summary>
         /// Enviar Push FCM
@@ -782,7 +782,7 @@ namespace Conductor.Pier.Api
         /// <param name="assunto">Assunto da Notificaca\u00E7\u00E3o (optional)</param>
         /// <param name="templatePadrao">Template Padr\u00E3o (optional)</param>
         /// <returns>TemplateNotificacaoDetalheResponse</returns>
-        TemplateNotificacaoDetalheResponse SalvarTemplateNotificacao (string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string remetente = null, string assunto = null, bool? templatePadrao = null);
+        TemplateNotificacaoDetalheResponse SalvarTemplate (string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string remetente = null, string assunto = null, bool? templatePadrao = null);
   
         /// <summary>
         /// Salva template de notifica\u00E7\u00E3o
@@ -799,7 +799,7 @@ namespace Conductor.Pier.Api
         /// <param name="assunto">Assunto da Notificaca\u00E7\u00E3o (optional)</param>
         /// <param name="templatePadrao">Template Padr\u00E3o (optional)</param>
         /// <returns>ApiResponse of TemplateNotificacaoDetalheResponse</returns>
-        ApiResponse<TemplateNotificacaoDetalheResponse> SalvarTemplateNotificacaoWithHttpInfo (string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string remetente = null, string assunto = null, bool? templatePadrao = null);
+        ApiResponse<TemplateNotificacaoDetalheResponse> SalvarTemplateWithHttpInfo (string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string remetente = null, string assunto = null, bool? templatePadrao = null);
         
         /// <summary>
         /// Validar c\u00F3digo de seguran\u00E7a enviado por e-mail
@@ -810,7 +810,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">request</param>
         /// <returns>string</returns>
-        string ValidarTokenEMAIL (CodigoSegurancaEMAILPersist request);
+        string ValidarCodigoSegurancaNotificacaoEmail (CodigoSegurancaEMAILPersist request);
   
         /// <summary>
         /// Validar c\u00F3digo de seguran\u00E7a enviado por e-mail
@@ -821,7 +821,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">request</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> ValidarTokenEMAILWithHttpInfo (CodigoSegurancaEMAILPersist request);
+        ApiResponse<string> ValidarCodigoSegurancaNotificacaoEmailWithHttpInfo (CodigoSegurancaEMAILPersist request);
         
         /// <summary>
         /// Validar c\u00F3digo de seguran\u00E7a enviado por sms
@@ -832,7 +832,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">request</param>
         /// <returns>string</returns>
-        string ValidarTokenSMS (CodigoSegurancaSMSRequest request);
+        string ValidarCodigoSegurancaNotificacaoSMS (CodigoSegurancaSMSRequest request);
   
         /// <summary>
         /// Validar c\u00F3digo de seguran\u00E7a enviado por sms
@@ -843,11 +843,35 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">request</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> ValidarTokenSMSWithHttpInfo (CodigoSegurancaSMSRequest request);
+        ApiResponse<string> ValidarCodigoSegurancaNotificacaoSMSWithHttpInfo (CodigoSegurancaSMSRequest request);
         
         #endregion Synchronous Operations
         
         #region Asynchronous Operations
+        
+        /// <summary>
+        /// Altera configura\u00E7\u00F5es de E-mail
+        /// </summary>
+        /// <remarks>
+        /// Esse recurso permite salvar altera\u00E7\u00F5es de configura\u00E7\u00F5es de E-mail
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail</param>
+        /// <param name="persist">persist</param>
+        /// <returns>Task of ConfiguracaoEmailResponse</returns>
+        System.Threading.Tasks.Task<ConfiguracaoEmailResponse> AlterarConfiguracaoEmailAsync (long? id, ConfiguracaoEmailPersist persist);
+
+        /// <summary>
+        /// Altera configura\u00E7\u00F5es de E-mail
+        /// </summary>
+        /// <remarks>
+        /// Esse recurso permite salvar altera\u00E7\u00F5es de configura\u00E7\u00F5es de E-mail
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail</param>
+        /// <param name="persist">persist</param>
+        /// <returns>Task of ApiResponse (ConfiguracaoEmailResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ConfiguracaoEmailResponse>> AlterarConfiguracaoEmailAsyncWithHttpInfo (long? id, ConfiguracaoEmailPersist persist);
         
         /// <summary>
         /// Altera as informa\u00E7\u00F5es da configura\u00E7\u00E3o sms informada
@@ -861,7 +885,7 @@ namespace Conductor.Pier.Api
         /// <param name="usuarioSMS">Apresenta o usu\u00E1rio sms</param>
         /// <param name="senhaSMS">Apresenta a senha sms</param>
         /// <returns>Task of ConfiguracaoSMSResponse</returns>
-        System.Threading.Tasks.Task<ConfiguracaoSMSResponse> AlterarAsync (long? id, long? idEmissor, string usuarioSMS, string senhaSMS);
+        System.Threading.Tasks.Task<ConfiguracaoSMSResponse> AlterarConfiguracaoSMSAsync (long? id, long? idEmissor, string usuarioSMS, string senhaSMS);
 
         /// <summary>
         /// Altera as informa\u00E7\u00F5es da configura\u00E7\u00E3o sms informada
@@ -875,31 +899,7 @@ namespace Conductor.Pier.Api
         /// <param name="usuarioSMS">Apresenta o usu\u00E1rio sms</param>
         /// <param name="senhaSMS">Apresenta a senha sms</param>
         /// <returns>Task of ApiResponse (ConfiguracaoSMSResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ConfiguracaoSMSResponse>> AlterarAsyncWithHttpInfo (long? id, long? idEmissor, string usuarioSMS, string senhaSMS);
-        
-        /// <summary>
-        /// Altera configura\u00E7\u00F5es de E-mail
-        /// </summary>
-        /// <remarks>
-        /// Esse recurso permite salvar altera\u00E7\u00F5es de configura\u00E7\u00F5es de E-mail
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail</param>
-        /// <param name="persist">persist</param>
-        /// <returns>Task of ConfiguracaoEmailResponse</returns>
-        System.Threading.Tasks.Task<ConfiguracaoEmailResponse> AlterarConfiguracaoAsync (long? id, ConfiguracaoEmailPersist persist);
-
-        /// <summary>
-        /// Altera configura\u00E7\u00F5es de E-mail
-        /// </summary>
-        /// <remarks>
-        /// Esse recurso permite salvar altera\u00E7\u00F5es de configura\u00E7\u00F5es de E-mail
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail</param>
-        /// <param name="persist">persist</param>
-        /// <returns>Task of ApiResponse (ConfiguracaoEmailResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ConfiguracaoEmailResponse>> AlterarConfiguracaoAsyncWithHttpInfo (long? id, ConfiguracaoEmailPersist persist);
+        System.Threading.Tasks.Task<ApiResponse<ConfiguracaoSMSResponse>> AlterarConfiguracaoSMSAsyncWithHttpInfo (long? id, long? idEmissor, string usuarioSMS, string senhaSMS);
         
         /// <summary>
         /// Alterar template de notifica\u00E7\u00E3o
@@ -917,7 +917,7 @@ namespace Conductor.Pier.Api
         /// <param name="assunto">Assunto da Notificaca\u00E7\u00E3o (optional)</param>
         /// <param name="templatePadrao">Template Padr\u00E3o (optional)</param>
         /// <returns>Task of TemplateNotificacaoDetalheResponse</returns>
-        System.Threading.Tasks.Task<TemplateNotificacaoDetalheResponse> AlterarTemplateNotificacaoAsync (long? id, string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string remetente = null, string assunto = null, bool? templatePadrao = null);
+        System.Threading.Tasks.Task<TemplateNotificacaoDetalheResponse> AlterarTemplateAsync (long? id, string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string remetente = null, string assunto = null, bool? templatePadrao = null);
 
         /// <summary>
         /// Alterar template de notifica\u00E7\u00E3o
@@ -935,7 +935,7 @@ namespace Conductor.Pier.Api
         /// <param name="assunto">Assunto da Notificaca\u00E7\u00E3o (optional)</param>
         /// <param name="templatePadrao">Template Padr\u00E3o (optional)</param>
         /// <returns>Task of ApiResponse (TemplateNotificacaoDetalheResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TemplateNotificacaoDetalheResponse>> AlterarTemplateNotificacaoAsyncWithHttpInfo (long? id, string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string remetente = null, string assunto = null, bool? templatePadrao = null);
+        System.Threading.Tasks.Task<ApiResponse<TemplateNotificacaoDetalheResponse>> AlterarTemplateAsyncWithHttpInfo (long? id, string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string remetente = null, string assunto = null, bool? templatePadrao = null);
         
         /// <summary>
         /// Atualizar SMS
@@ -950,7 +950,7 @@ namespace Conductor.Pier.Api
         /// <param name="textoStatus">TextoStatus (optional)</param>
         /// <param name="operadora">Operadora (optional)</param>
         /// <returns>Task of NotificacaoSMSResponse</returns>
-        System.Threading.Tasks.Task<NotificacaoSMSResponse> AtualizarSMSAsync (string nsu = null, string status = null, string data = null, string textoStatus = null, string operadora = null);
+        System.Threading.Tasks.Task<NotificacaoSMSResponse> AtualizarStatusSMSAsync (string nsu = null, string status = null, string data = null, string textoStatus = null, string operadora = null);
 
         /// <summary>
         /// Atualizar SMS
@@ -965,29 +965,51 @@ namespace Conductor.Pier.Api
         /// <param name="textoStatus">TextoStatus (optional)</param>
         /// <param name="operadora">Operadora (optional)</param>
         /// <returns>Task of ApiResponse (NotificacaoSMSResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<NotificacaoSMSResponse>> AtualizarSMSAsyncWithHttpInfo (string nsu = null, string status = null, string data = null, string textoStatus = null, string operadora = null);
+        System.Threading.Tasks.Task<ApiResponse<NotificacaoSMSResponse>> AtualizarStatusSMSAsyncWithHttpInfo (string nsu = null, string status = null, string data = null, string textoStatus = null, string operadora = null);
         
         /// <summary>
-        /// Apresenta os dados de uma determinada configura\u00E7\u00E3o
+        /// Consulta c\u00F3digo de seguran\u00E7a E-mail
         /// </summary>
         /// <remarks>
-        /// Este m\u00E9todo permite consultar os par\u00E2metros de uma determinada Configura\u00E7\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (idConfiguracaoSMS)
+        /// Esse recurso permite consultar um c\u00F3digo de seguran\u00E7a E-mail espec\u00EDfico por id
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da configura\u00E7\u00E3o sms (id)</param>
-        /// <returns>Task of ConfiguracaoSMSResponse</returns>
-        System.Threading.Tasks.Task<ConfiguracaoSMSResponse> ConsultarAsync (long? id);
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail</param>
+        /// <returns>Task of CodigoSegurancaResponse</returns>
+        System.Threading.Tasks.Task<CodigoSegurancaResponse> ConsultarCodigoSegurancaEmailAsync (long? id);
 
         /// <summary>
-        /// Apresenta os dados de uma determinada configura\u00E7\u00E3o
+        /// Consulta c\u00F3digo de seguran\u00E7a E-mail
         /// </summary>
         /// <remarks>
-        /// Este m\u00E9todo permite consultar os par\u00E2metros de uma determinada Configura\u00E7\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (idConfiguracaoSMS)
+        /// Esse recurso permite consultar um c\u00F3digo de seguran\u00E7a E-mail espec\u00EDfico por id
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da configura\u00E7\u00E3o sms (id)</param>
-        /// <returns>Task of ApiResponse (ConfiguracaoSMSResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ConfiguracaoSMSResponse>> ConsultarAsyncWithHttpInfo (long? id);
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail</param>
+        /// <returns>Task of ApiResponse (CodigoSegurancaResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CodigoSegurancaResponse>> ConsultarCodigoSegurancaEmailAsyncWithHttpInfo (long? id);
+        
+        /// <summary>
+        /// Consulta c\u00F3digo de seguran\u00E7a SMS
+        /// </summary>
+        /// <remarks>
+        /// Esse recurso permite consultar um c\u00F3digo de seguran\u00E7a SMS espec\u00EDfico por id
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail</param>
+        /// <returns>Task of CodigoSegurancaResponse</returns>
+        System.Threading.Tasks.Task<CodigoSegurancaResponse> ConsultarCodigoSegurancaSMSAsync (long? id);
+
+        /// <summary>
+        /// Consulta c\u00F3digo de seguran\u00E7a SMS
+        /// </summary>
+        /// <remarks>
+        /// Esse recurso permite consultar um c\u00F3digo de seguran\u00E7a SMS espec\u00EDfico por id
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail</param>
+        /// <returns>Task of ApiResponse (CodigoSegurancaResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CodigoSegurancaResponse>> ConsultarCodigoSegurancaSMSAsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Consulta configura\u00E7\u00E3o de E-mail
@@ -998,7 +1020,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail</param>
         /// <returns>Task of ConfiguracaoEmailResponse</returns>
-        System.Threading.Tasks.Task<ConfiguracaoEmailResponse> ConsultarConfiguracaoAsync (long? id);
+        System.Threading.Tasks.Task<ConfiguracaoEmailResponse> ConsultarConfiguracaoEmailAsync (long? id);
 
         /// <summary>
         /// Consulta configura\u00E7\u00E3o de E-mail
@@ -1009,51 +1031,29 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail</param>
         /// <returns>Task of ApiResponse (ConfiguracaoEmailResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ConfiguracaoEmailResponse>> ConsultarConfiguracaoAsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<ConfiguracaoEmailResponse>> ConsultarConfiguracaoEmailAsyncWithHttpInfo (long? id);
         
         /// <summary>
-        /// Consulta c\u00F3digo de seguran\u00E7a E-mail
+        /// Apresenta os dados de uma determinada configura\u00E7\u00E3o
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite consultar um c\u00F3digo de seguran\u00E7a E-mail espec\u00EDfico por id
+        /// Este m\u00E9todo permite consultar os par\u00E2metros de uma determinada Configura\u00E7\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (idConfiguracaoSMS)
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail</param>
-        /// <returns>Task of CodigoSegurancaResponse</returns>
-        System.Threading.Tasks.Task<CodigoSegurancaResponse> ConsultarPorEmailAsync (long? id);
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da configura\u00E7\u00E3o sms (id)</param>
+        /// <returns>Task of ConfiguracaoSMSResponse</returns>
+        System.Threading.Tasks.Task<ConfiguracaoSMSResponse> ConsultarConfiguracaoSMSAsync (long? id);
 
         /// <summary>
-        /// Consulta c\u00F3digo de seguran\u00E7a E-mail
+        /// Apresenta os dados de uma determinada configura\u00E7\u00E3o
         /// </summary>
         /// <remarks>
-        /// Esse recurso permite consultar um c\u00F3digo de seguran\u00E7a E-mail espec\u00EDfico por id
+        /// Este m\u00E9todo permite consultar os par\u00E2metros de uma determinada Configura\u00E7\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (idConfiguracaoSMS)
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail</param>
-        /// <returns>Task of ApiResponse (CodigoSegurancaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CodigoSegurancaResponse>> ConsultarPorEmailAsyncWithHttpInfo (long? id);
-        
-        /// <summary>
-        /// Consulta c\u00F3digo de seguran\u00E7a SMS
-        /// </summary>
-        /// <remarks>
-        /// Esse recurso permite consultar um c\u00F3digo de seguran\u00E7a SMS espec\u00EDfico por id
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail</param>
-        /// <returns>Task of CodigoSegurancaResponse</returns>
-        System.Threading.Tasks.Task<CodigoSegurancaResponse> ConsultarPorSMSAsync (long? id);
-
-        /// <summary>
-        /// Consulta c\u00F3digo de seguran\u00E7a SMS
-        /// </summary>
-        /// <remarks>
-        /// Esse recurso permite consultar um c\u00F3digo de seguran\u00E7a SMS espec\u00EDfico por id
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail</param>
-        /// <returns>Task of ApiResponse (CodigoSegurancaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CodigoSegurancaResponse>> ConsultarPorSMSAsyncWithHttpInfo (long? id);
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da configura\u00E7\u00E3o sms (id)</param>
+        /// <returns>Task of ApiResponse (ConfiguracaoSMSResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ConfiguracaoSMSResponse>> ConsultarConfiguracaoSMSAsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Consulta template de notifica\u00E7\u00E3o
@@ -1064,7 +1064,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do layout de e-mail</param>
         /// <returns>Task of TemplateNotificacaoDetalheResponse</returns>
-        System.Threading.Tasks.Task<TemplateNotificacaoDetalheResponse> ConsultarTemplateNotificacaoAsync (long? id);
+        System.Threading.Tasks.Task<TemplateNotificacaoDetalheResponse> ConsultarTemplateAsync (long? id);
 
         /// <summary>
         /// Consulta template de notifica\u00E7\u00E3o
@@ -1075,7 +1075,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do layout de e-mail</param>
         /// <returns>Task of ApiResponse (TemplateNotificacaoDetalheResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TemplateNotificacaoDetalheResponse>> ConsultarTemplateNotificacaoAsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<TemplateNotificacaoDetalheResponse>> ConsultarTemplateAsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Deleta as informa\u00E7\u00F5es da configura\u00E7\u00E3o sms informada
@@ -1086,7 +1086,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da configura\u00E7\u00E3o sms (id)</param>
         /// <returns>Task of ConfiguracaoSMSResponse</returns>
-        System.Threading.Tasks.Task<ConfiguracaoSMSResponse> DeletarAsync (long? id);
+        System.Threading.Tasks.Task<ConfiguracaoSMSResponse> DeletarConfiguracaoSMSAsync (long? id);
 
         /// <summary>
         /// Deleta as informa\u00E7\u00F5es da configura\u00E7\u00E3o sms informada
@@ -1097,7 +1097,29 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da configura\u00E7\u00E3o sms (id)</param>
         /// <returns>Task of ApiResponse (ConfiguracaoSMSResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ConfiguracaoSMSResponse>> DeletarAsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<ConfiguracaoSMSResponse>> DeletarConfiguracaoSMSAsyncWithHttpInfo (long? id);
+        
+        /// <summary>
+        /// Enviar notifica\u00E7\u00E3o por email
+        /// </summary>
+        /// <remarks>
+        /// Esse recurso permite enviar uma mensagem de notifica\u00E7\u00E3o por email
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">request</param>
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> EnviarEmailAsync (NotificacaoEmailRequest request);
+
+        /// <summary>
+        /// Enviar notifica\u00E7\u00E3o por email
+        /// </summary>
+        /// <remarks>
+        /// Esse recurso permite enviar uma mensagem de notifica\u00E7\u00E3o por email
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">request</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> EnviarEmailAsyncWithHttpInfo (NotificacaoEmailRequest request);
         
         /// <summary>
         /// Enviar OTP 3D Secure
@@ -1130,7 +1152,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="email">email</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> GerarTokenEMAILAsync (string email);
+        System.Threading.Tasks.Task<string> GerarCodigoSegurancaNotificacaoEmailAsync (string email);
 
         /// <summary>
         /// Gerar c\u00F3digo de seguran\u00E7a e enviar por e-mail
@@ -1141,7 +1163,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="email">email</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> GerarTokenEMAILAsyncWithHttpInfo (string email);
+        System.Threading.Tasks.Task<ApiResponse<string>> GerarCodigoSegurancaNotificacaoEmailAsyncWithHttpInfo (string email);
         
         /// <summary>
         /// Gerar c\u00F3digo de seguran\u00E7a e enviar por sms
@@ -1152,7 +1174,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> GerarTokenSMSAsync (CodigoSegurancaSMSPersist persist);
+        System.Threading.Tasks.Task<string> GerarCodigoSegurancaNotificacaoSMSAsync (CodigoSegurancaSMSPersist persist);
 
         /// <summary>
         /// Gerar c\u00F3digo de seguran\u00E7a e enviar por sms
@@ -1163,7 +1185,85 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> GerarTokenSMSAsyncWithHttpInfo (CodigoSegurancaSMSPersist persist);
+        System.Threading.Tasks.Task<ApiResponse<string>> GerarCodigoSegurancaNotificacaoSMSAsyncWithHttpInfo (CodigoSegurancaSMSPersist persist);
+        
+        /// <summary>
+        /// Lista os c\u00F3digos de seguran\u00E7a E-Mail
+        /// </summary>
+        /// <remarks>
+        /// Esse recurso permite listar os codigos de seguran\u00E7a por E-Mail
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <returns>Task of PageCodigoSegurancaResponse</returns>
+        System.Threading.Tasks.Task<PageCodigoSegurancaResponse> ListarCodigosSegurancaEmailAsync (List<string> sort = null, int? page = null, int? limit = null);
+
+        /// <summary>
+        /// Lista os c\u00F3digos de seguran\u00E7a E-Mail
+        /// </summary>
+        /// <remarks>
+        /// Esse recurso permite listar os codigos de seguran\u00E7a por E-Mail
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <returns>Task of ApiResponse (PageCodigoSegurancaResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PageCodigoSegurancaResponse>> ListarCodigosSegurancaEmailAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
+        
+        /// <summary>
+        /// Lista os c\u00F3digos de seguran\u00E7a SMS
+        /// </summary>
+        /// <remarks>
+        /// Esse recurso permite listar os codigos de seguran\u00E7a por SMS
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <returns>Task of PageCodigoSegurancaResponse</returns>
+        System.Threading.Tasks.Task<PageCodigoSegurancaResponse> ListarCodigosSegurancaSMSAsync (List<string> sort = null, int? page = null, int? limit = null);
+
+        /// <summary>
+        /// Lista os c\u00F3digos de seguran\u00E7a SMS
+        /// </summary>
+        /// <remarks>
+        /// Esse recurso permite listar os codigos de seguran\u00E7a por SMS
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <returns>Task of ApiResponse (PageCodigoSegurancaResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PageCodigoSegurancaResponse>> ListarCodigosSegurancaSMSAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
+        
+        /// <summary>
+        /// Lista configura\u00E7\u00F5es de E-mails
+        /// </summary>
+        /// <remarks>
+        /// Esse recurso permite listar as configura\u00E7\u00F5es de E-mails
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <returns>Task of PageConfiguracaoEmailResponse</returns>
+        System.Threading.Tasks.Task<PageConfiguracaoEmailResponse> ListarConfiguracaoEmailAsync (List<string> sort = null, int? page = null, int? limit = null);
+
+        /// <summary>
+        /// Lista configura\u00E7\u00F5es de E-mails
+        /// </summary>
+        /// <remarks>
+        /// Esse recurso permite listar as configura\u00E7\u00F5es de E-mails
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <returns>Task of ApiResponse (PageConfiguracaoEmailResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PageConfiguracaoEmailResponse>> ListarConfiguracaoEmailAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
         
         /// <summary>
         /// Este m\u00E9todo permite que sejam listados todas as configura\u00E7\u00F5es de sms existentes
@@ -1178,7 +1278,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">Id da configura\u00E7\u00E3o (optional)</param>
         /// <param name="idEmissor">Id do emissor (optional)</param>
         /// <returns>Task of PageConfiguracaoSMSResponse</returns>
-        System.Threading.Tasks.Task<PageConfiguracaoSMSResponse> ListarAsync (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idEmissor = null);
+        System.Threading.Tasks.Task<PageConfiguracaoSMSResponse> ListarConfiguracaoSMSAsync (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idEmissor = null);
 
         /// <summary>
         /// Este m\u00E9todo permite que sejam listados todas as configura\u00E7\u00F5es de sms existentes
@@ -1193,85 +1293,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">Id da configura\u00E7\u00E3o (optional)</param>
         /// <param name="idEmissor">Id do emissor (optional)</param>
         /// <returns>Task of ApiResponse (PageConfiguracaoSMSResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageConfiguracaoSMSResponse>> ListarAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idEmissor = null);
-        
-        /// <summary>
-        /// Lista configura\u00E7\u00F5es de E-mails
-        /// </summary>
-        /// <remarks>
-        /// Esse recurso permite listar as configura\u00E7\u00F5es de E-mails
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <returns>Task of PageConfiguracaoEmailResponse</returns>
-        System.Threading.Tasks.Task<PageConfiguracaoEmailResponse> ListarConfiguracaoAsync (List<string> sort = null, int? page = null, int? limit = null);
-
-        /// <summary>
-        /// Lista configura\u00E7\u00F5es de E-mails
-        /// </summary>
-        /// <remarks>
-        /// Esse recurso permite listar as configura\u00E7\u00F5es de E-mails
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <returns>Task of ApiResponse (PageConfiguracaoEmailResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageConfiguracaoEmailResponse>> ListarConfiguracaoAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
-        
-        /// <summary>
-        /// Lista os c\u00F3digos de seguran\u00E7a E-Mail
-        /// </summary>
-        /// <remarks>
-        /// Esse recurso permite listar os codigos de seguran\u00E7a por E-Mail
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <returns>Task of PageCodigoSegurancaResponse</returns>
-        System.Threading.Tasks.Task<PageCodigoSegurancaResponse> ListarPorEmailAsync (List<string> sort = null, int? page = null, int? limit = null);
-
-        /// <summary>
-        /// Lista os c\u00F3digos de seguran\u00E7a E-Mail
-        /// </summary>
-        /// <remarks>
-        /// Esse recurso permite listar os codigos de seguran\u00E7a por E-Mail
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <returns>Task of ApiResponse (PageCodigoSegurancaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageCodigoSegurancaResponse>> ListarPorEmailAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
-        
-        /// <summary>
-        /// Lista os c\u00F3digos de seguran\u00E7a SMS
-        /// </summary>
-        /// <remarks>
-        /// Esse recurso permite listar os codigos de seguran\u00E7a por SMS
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <returns>Task of PageCodigoSegurancaResponse</returns>
-        System.Threading.Tasks.Task<PageCodigoSegurancaResponse> ListarPorSMSAsync (List<string> sort = null, int? page = null, int? limit = null);
-
-        /// <summary>
-        /// Lista os c\u00F3digos de seguran\u00E7a SMS
-        /// </summary>
-        /// <remarks>
-        /// Esse recurso permite listar os codigos de seguran\u00E7a por SMS
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <returns>Task of ApiResponse (PageCodigoSegurancaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageCodigoSegurancaResponse>> ListarPorSMSAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<ApiResponse<PageConfiguracaoSMSResponse>> ListarConfiguracaoSMSAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idEmissor = null);
         
         /// <summary>
         /// Listar Push
@@ -1358,7 +1380,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00E1gina (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
         /// <returns>Task of PageTemplateNotificacaoResponse</returns>
-        System.Threading.Tasks.Task<PageTemplateNotificacaoResponse> ListarTemplateNotificacaoAsync (List<string> sort = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<PageTemplateNotificacaoResponse> ListarTemplatesAsync (List<string> sort = null, int? page = null, int? limit = null);
 
         /// <summary>
         /// Lista templates de notifica\u00E7\u00F5es
@@ -1371,7 +1393,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00E1gina (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
         /// <returns>Task of ApiResponse (PageTemplateNotificacaoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageTemplateNotificacaoResponse>> ListarTemplateNotificacaoAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<ApiResponse<PageTemplateNotificacaoResponse>> ListarTemplatesAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
         
         /// <summary>
         /// Lista os tipos templates de notifica\u00E7\u00E3o
@@ -1394,28 +1416,6 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<List<Object>>> ListarTiposLayoutsAsyncWithHttpInfo ();
         
         /// <summary>
-        /// Enviar notifica\u00E7\u00E3o por email
-        /// </summary>
-        /// <remarks>
-        /// Esse recurso permite enviar uma mensagem de notifica\u00E7\u00E3o por email
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">request</param>
-        /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> NotificacaoEmailAsync (NotificacaoEmailRequest request);
-
-        /// <summary>
-        /// Enviar notifica\u00E7\u00E3o por email
-        /// </summary>
-        /// <remarks>
-        /// Esse recurso permite enviar uma mensagem de notifica\u00E7\u00E3o por email
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">request</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> NotificacaoEmailAsyncWithHttpInfo (NotificacaoEmailRequest request);
-        
-        /// <summary>
         /// Reenviar c\u00F3digo de seguran\u00E7a por sms
         /// </summary>
         /// <remarks>
@@ -1424,7 +1424,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> ReenviarTokenSMSAsync (CodigoSegurancaSMSPersist persist);
+        System.Threading.Tasks.Task<string> ReenviarCodigoSegurancaNotificacaoSMSAsync (CodigoSegurancaSMSPersist persist);
 
         /// <summary>
         /// Reenviar c\u00F3digo de seguran\u00E7a por sms
@@ -1435,7 +1435,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> ReenviarTokenSMSAsyncWithHttpInfo (CodigoSegurancaSMSPersist persist);
+        System.Threading.Tasks.Task<ApiResponse<string>> ReenviarCodigoSegurancaNotificacaoSMSAsyncWithHttpInfo (CodigoSegurancaSMSPersist persist);
         
         /// <summary>
         /// Responder SMS
@@ -1448,7 +1448,7 @@ namespace Conductor.Pier.Api
         /// <param name="data">Data (optional)</param>
         /// <param name="resposta">TextoStatus (optional)</param>
         /// <returns>Task of NotificacaoSMSResponse</returns>
-        System.Threading.Tasks.Task<NotificacaoSMSResponse> ResponderSMSGetAsync (string nsu = null, string data = null, string resposta = null);
+        System.Threading.Tasks.Task<NotificacaoSMSResponse> ResponderSMSAsync (string nsu = null, string data = null, string resposta = null);
 
         /// <summary>
         /// Responder SMS
@@ -1461,7 +1461,29 @@ namespace Conductor.Pier.Api
         /// <param name="data">Data (optional)</param>
         /// <param name="resposta">TextoStatus (optional)</param>
         /// <returns>Task of ApiResponse (NotificacaoSMSResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<NotificacaoSMSResponse>> ResponderSMSGetAsyncWithHttpInfo (string nsu = null, string data = null, string resposta = null);
+        System.Threading.Tasks.Task<ApiResponse<NotificacaoSMSResponse>> ResponderSMSAsyncWithHttpInfo (string nsu = null, string data = null, string resposta = null);
+        
+        /// <summary>
+        /// Salva configura\u00E7\u00F5es de E-mail
+        /// </summary>
+        /// <remarks>
+        /// Esse recurso salvar configura\u00E7\u00F5es de E-mail
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="persist">persist</param>
+        /// <returns>Task of ConfiguracaoEmailResponse</returns>
+        System.Threading.Tasks.Task<ConfiguracaoEmailResponse> SalvarConfiguracaoEmailAsync (ConfiguracaoEmailPersist persist);
+
+        /// <summary>
+        /// Salva configura\u00E7\u00F5es de E-mail
+        /// </summary>
+        /// <remarks>
+        /// Esse recurso salvar configura\u00E7\u00F5es de E-mail
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="persist">persist</param>
+        /// <returns>Task of ApiResponse (ConfiguracaoEmailResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ConfiguracaoEmailResponse>> SalvarConfiguracaoEmailAsyncWithHttpInfo (ConfiguracaoEmailPersist persist);
         
         /// <summary>
         /// Realiza o cadastro uma nova configura\u00E7\u00E3o de sms
@@ -1474,7 +1496,7 @@ namespace Conductor.Pier.Api
         /// <param name="usuarioSMS">Apresenta o usu\u00E1rio sms</param>
         /// <param name="senhaSMS">Apresenta a senha sms</param>
         /// <returns>Task of ConfiguracaoSMSResponse</returns>
-        System.Threading.Tasks.Task<ConfiguracaoSMSResponse> SalvarAsync (long? idEmissor, string usuarioSMS, string senhaSMS);
+        System.Threading.Tasks.Task<ConfiguracaoSMSResponse> SalvarConfiguracaoSMSAsync (long? idEmissor, string usuarioSMS, string senhaSMS);
 
         /// <summary>
         /// Realiza o cadastro uma nova configura\u00E7\u00E3o de sms
@@ -1487,29 +1509,7 @@ namespace Conductor.Pier.Api
         /// <param name="usuarioSMS">Apresenta o usu\u00E1rio sms</param>
         /// <param name="senhaSMS">Apresenta a senha sms</param>
         /// <returns>Task of ApiResponse (ConfiguracaoSMSResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ConfiguracaoSMSResponse>> SalvarAsyncWithHttpInfo (long? idEmissor, string usuarioSMS, string senhaSMS);
-        
-        /// <summary>
-        /// Salva configura\u00E7\u00F5es de E-mail
-        /// </summary>
-        /// <remarks>
-        /// Esse recurso salvar configura\u00E7\u00F5es de E-mail
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="persist">persist</param>
-        /// <returns>Task of ConfiguracaoEmailResponse</returns>
-        System.Threading.Tasks.Task<ConfiguracaoEmailResponse> SalvarConfiguracaoAsync (ConfiguracaoEmailPersist persist);
-
-        /// <summary>
-        /// Salva configura\u00E7\u00F5es de E-mail
-        /// </summary>
-        /// <remarks>
-        /// Esse recurso salvar configura\u00E7\u00F5es de E-mail
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="persist">persist</param>
-        /// <returns>Task of ApiResponse (ConfiguracaoEmailResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ConfiguracaoEmailResponse>> SalvarConfiguracaoAsyncWithHttpInfo (ConfiguracaoEmailPersist persist);
+        System.Threading.Tasks.Task<ApiResponse<ConfiguracaoSMSResponse>> SalvarConfiguracaoSMSAsyncWithHttpInfo (long? idEmissor, string usuarioSMS, string senhaSMS);
         
         /// <summary>
         /// Enviar Push APNS
@@ -1520,7 +1520,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pushPersists">pushPersists</param>
         /// <returns>Task of NotificacaoResponse</returns>
-        System.Threading.Tasks.Task<NotificacaoResponse> SalvarPushAsync (List<PushAPNS> pushPersists);
+        System.Threading.Tasks.Task<NotificacaoResponse> SalvarPushAPNSAsync (List<PushAPNS> pushPersists);
 
         /// <summary>
         /// Enviar Push APNS
@@ -1531,7 +1531,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pushPersists">pushPersists</param>
         /// <returns>Task of ApiResponse (NotificacaoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<NotificacaoResponse>> SalvarPushAsyncWithHttpInfo (List<PushAPNS> pushPersists);
+        System.Threading.Tasks.Task<ApiResponse<NotificacaoResponse>> SalvarPushAPNSAsyncWithHttpInfo (List<PushAPNS> pushPersists);
         
         /// <summary>
         /// Enviar Push FCM
@@ -1614,7 +1614,7 @@ namespace Conductor.Pier.Api
         /// <param name="assunto">Assunto da Notificaca\u00E7\u00E3o (optional)</param>
         /// <param name="templatePadrao">Template Padr\u00E3o (optional)</param>
         /// <returns>Task of TemplateNotificacaoDetalheResponse</returns>
-        System.Threading.Tasks.Task<TemplateNotificacaoDetalheResponse> SalvarTemplateNotificacaoAsync (string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string remetente = null, string assunto = null, bool? templatePadrao = null);
+        System.Threading.Tasks.Task<TemplateNotificacaoDetalheResponse> SalvarTemplateAsync (string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string remetente = null, string assunto = null, bool? templatePadrao = null);
 
         /// <summary>
         /// Salva template de notifica\u00E7\u00E3o
@@ -1631,7 +1631,7 @@ namespace Conductor.Pier.Api
         /// <param name="assunto">Assunto da Notificaca\u00E7\u00E3o (optional)</param>
         /// <param name="templatePadrao">Template Padr\u00E3o (optional)</param>
         /// <returns>Task of ApiResponse (TemplateNotificacaoDetalheResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TemplateNotificacaoDetalheResponse>> SalvarTemplateNotificacaoAsyncWithHttpInfo (string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string remetente = null, string assunto = null, bool? templatePadrao = null);
+        System.Threading.Tasks.Task<ApiResponse<TemplateNotificacaoDetalheResponse>> SalvarTemplateAsyncWithHttpInfo (string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string remetente = null, string assunto = null, bool? templatePadrao = null);
         
         /// <summary>
         /// Validar c\u00F3digo de seguran\u00E7a enviado por e-mail
@@ -1642,7 +1642,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">request</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> ValidarTokenEMAILAsync (CodigoSegurancaEMAILPersist request);
+        System.Threading.Tasks.Task<string> ValidarCodigoSegurancaNotificacaoEmailAsync (CodigoSegurancaEMAILPersist request);
 
         /// <summary>
         /// Validar c\u00F3digo de seguran\u00E7a enviado por e-mail
@@ -1653,7 +1653,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">request</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> ValidarTokenEMAILAsyncWithHttpInfo (CodigoSegurancaEMAILPersist request);
+        System.Threading.Tasks.Task<ApiResponse<string>> ValidarCodigoSegurancaNotificacaoEmailAsyncWithHttpInfo (CodigoSegurancaEMAILPersist request);
         
         /// <summary>
         /// Validar c\u00F3digo de seguran\u00E7a enviado por sms
@@ -1664,7 +1664,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">request</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> ValidarTokenSMSAsync (CodigoSegurancaSMSRequest request);
+        System.Threading.Tasks.Task<string> ValidarCodigoSegurancaNotificacaoSMSAsync (CodigoSegurancaSMSRequest request);
 
         /// <summary>
         /// Validar c\u00F3digo de seguran\u00E7a enviado por sms
@@ -1675,7 +1675,7 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">request</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> ValidarTokenSMSAsyncWithHttpInfo (CodigoSegurancaSMSRequest request);
+        System.Threading.Tasks.Task<ApiResponse<string>> ValidarCodigoSegurancaNotificacaoSMSAsyncWithHttpInfo (CodigoSegurancaSMSRequest request);
         
         #endregion Asynchronous Operations
         
@@ -1770,6 +1770,188 @@ namespace Conductor.Pier.Api
    
         
         /// <summary>
+        /// Altera configura\u00E7\u00F5es de E-mail Esse recurso permite salvar altera\u00E7\u00F5es de configura\u00E7\u00F5es de E-mail
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail</param> 
+        /// <param name="persist">persist</param> 
+        /// <returns>ConfiguracaoEmailResponse</returns>
+        public ConfiguracaoEmailResponse AlterarConfiguracaoEmail (long? id, ConfiguracaoEmailPersist persist)
+        {
+             ApiResponse<ConfiguracaoEmailResponse> localVarResponse = AlterarConfiguracaoEmailWithHttpInfo(id, persist);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Altera configura\u00E7\u00F5es de E-mail Esse recurso permite salvar altera\u00E7\u00F5es de configura\u00E7\u00F5es de E-mail
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail</param> 
+        /// <param name="persist">persist</param> 
+        /// <returns>ApiResponse of ConfiguracaoEmailResponse</returns>
+        public ApiResponse< ConfiguracaoEmailResponse > AlterarConfiguracaoEmailWithHttpInfo (long? id, ConfiguracaoEmailPersist persist)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling NotificacaoApi->AlterarConfiguracaoEmail");
+            
+            // verify the required parameter 'persist' is set
+            if (persist == null)
+                throw new ApiException(400, "Missing required parameter 'persist' when calling NotificacaoApi->AlterarConfiguracaoEmail");
+            
+    
+            var localVarPath = "/api/configuracoes-email/{id}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            if (persist.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(persist); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = persist; // byte array
+            }
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling AlterarConfiguracaoEmail: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling AlterarConfiguracaoEmail: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<ConfiguracaoEmailResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ConfiguracaoEmailResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConfiguracaoEmailResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Altera configura\u00E7\u00F5es de E-mail Esse recurso permite salvar altera\u00E7\u00F5es de configura\u00E7\u00F5es de E-mail
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail</param>
+        /// <param name="persist">persist</param>
+        /// <returns>Task of ConfiguracaoEmailResponse</returns>
+        public async System.Threading.Tasks.Task<ConfiguracaoEmailResponse> AlterarConfiguracaoEmailAsync (long? id, ConfiguracaoEmailPersist persist)
+        {
+             ApiResponse<ConfiguracaoEmailResponse> localVarResponse = await AlterarConfiguracaoEmailAsyncWithHttpInfo(id, persist);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Altera configura\u00E7\u00F5es de E-mail Esse recurso permite salvar altera\u00E7\u00F5es de configura\u00E7\u00F5es de E-mail
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail</param>
+        /// <param name="persist">persist</param>
+        /// <returns>Task of ApiResponse (ConfiguracaoEmailResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ConfiguracaoEmailResponse>> AlterarConfiguracaoEmailAsyncWithHttpInfo (long? id, ConfiguracaoEmailPersist persist)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AlterarConfiguracaoEmail");
+            // verify the required parameter 'persist' is set
+            if (persist == null) throw new ApiException(400, "Missing required parameter 'persist' when calling AlterarConfiguracaoEmail");
+            
+    
+            var localVarPath = "/api/configuracoes-email/{id}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            if (persist.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(persist); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = persist; // byte array
+            }
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling AlterarConfiguracaoEmail: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling AlterarConfiguracaoEmail: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ConfiguracaoEmailResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ConfiguracaoEmailResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConfiguracaoEmailResponse)));
+            
+        }
+        
+        /// <summary>
         /// Altera as informa\u00E7\u00F5es da configura\u00E7\u00E3o sms informada Este m\u00E9todo realiza a altera\u00E7\u00E3o na configura\u00E7\u00E3o sms, a partir do id informado
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1778,9 +1960,9 @@ namespace Conductor.Pier.Api
         /// <param name="usuarioSMS">Apresenta o usu\u00E1rio sms</param> 
         /// <param name="senhaSMS">Apresenta a senha sms</param> 
         /// <returns>ConfiguracaoSMSResponse</returns>
-        public ConfiguracaoSMSResponse Alterar (long? id, long? idEmissor, string usuarioSMS, string senhaSMS)
+        public ConfiguracaoSMSResponse AlterarConfiguracaoSMS (long? id, long? idEmissor, string usuarioSMS, string senhaSMS)
         {
-             ApiResponse<ConfiguracaoSMSResponse> localVarResponse = AlterarWithHttpInfo(id, idEmissor, usuarioSMS, senhaSMS);
+             ApiResponse<ConfiguracaoSMSResponse> localVarResponse = AlterarConfiguracaoSMSWithHttpInfo(id, idEmissor, usuarioSMS, senhaSMS);
              return localVarResponse.Data;
         }
 
@@ -1793,24 +1975,24 @@ namespace Conductor.Pier.Api
         /// <param name="usuarioSMS">Apresenta o usu\u00E1rio sms</param> 
         /// <param name="senhaSMS">Apresenta a senha sms</param> 
         /// <returns>ApiResponse of ConfiguracaoSMSResponse</returns>
-        public ApiResponse< ConfiguracaoSMSResponse > AlterarWithHttpInfo (long? id, long? idEmissor, string usuarioSMS, string senhaSMS)
+        public ApiResponse< ConfiguracaoSMSResponse > AlterarConfiguracaoSMSWithHttpInfo (long? id, long? idEmissor, string usuarioSMS, string senhaSMS)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling NotificacaoApi->Alterar");
+                throw new ApiException(400, "Missing required parameter 'id' when calling NotificacaoApi->AlterarConfiguracaoSMS");
             
             // verify the required parameter 'idEmissor' is set
             if (idEmissor == null)
-                throw new ApiException(400, "Missing required parameter 'idEmissor' when calling NotificacaoApi->Alterar");
+                throw new ApiException(400, "Missing required parameter 'idEmissor' when calling NotificacaoApi->AlterarConfiguracaoSMS");
             
             // verify the required parameter 'usuarioSMS' is set
             if (usuarioSMS == null)
-                throw new ApiException(400, "Missing required parameter 'usuarioSMS' when calling NotificacaoApi->Alterar");
+                throw new ApiException(400, "Missing required parameter 'usuarioSMS' when calling NotificacaoApi->AlterarConfiguracaoSMS");
             
             // verify the required parameter 'senhaSMS' is set
             if (senhaSMS == null)
-                throw new ApiException(400, "Missing required parameter 'senhaSMS' when calling NotificacaoApi->Alterar");
+                throw new ApiException(400, "Missing required parameter 'senhaSMS' when calling NotificacaoApi->AlterarConfiguracaoSMS");
             
     
             var localVarPath = "/api/configuracoes-sms/{id}";
@@ -1859,9 +2041,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Alterar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarConfiguracaoSMS: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Alterar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarConfiguracaoSMS: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<ConfiguracaoSMSResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1879,9 +2061,9 @@ namespace Conductor.Pier.Api
         /// <param name="usuarioSMS">Apresenta o usu\u00E1rio sms</param>
         /// <param name="senhaSMS">Apresenta a senha sms</param>
         /// <returns>Task of ConfiguracaoSMSResponse</returns>
-        public async System.Threading.Tasks.Task<ConfiguracaoSMSResponse> AlterarAsync (long? id, long? idEmissor, string usuarioSMS, string senhaSMS)
+        public async System.Threading.Tasks.Task<ConfiguracaoSMSResponse> AlterarConfiguracaoSMSAsync (long? id, long? idEmissor, string usuarioSMS, string senhaSMS)
         {
-             ApiResponse<ConfiguracaoSMSResponse> localVarResponse = await AlterarAsyncWithHttpInfo(id, idEmissor, usuarioSMS, senhaSMS);
+             ApiResponse<ConfiguracaoSMSResponse> localVarResponse = await AlterarConfiguracaoSMSAsyncWithHttpInfo(id, idEmissor, usuarioSMS, senhaSMS);
              return localVarResponse.Data;
 
         }
@@ -1895,16 +2077,16 @@ namespace Conductor.Pier.Api
         /// <param name="usuarioSMS">Apresenta o usu\u00E1rio sms</param>
         /// <param name="senhaSMS">Apresenta a senha sms</param>
         /// <returns>Task of ApiResponse (ConfiguracaoSMSResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ConfiguracaoSMSResponse>> AlterarAsyncWithHttpInfo (long? id, long? idEmissor, string usuarioSMS, string senhaSMS)
+        public async System.Threading.Tasks.Task<ApiResponse<ConfiguracaoSMSResponse>> AlterarConfiguracaoSMSAsyncWithHttpInfo (long? id, long? idEmissor, string usuarioSMS, string senhaSMS)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling Alterar");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AlterarConfiguracaoSMS");
             // verify the required parameter 'idEmissor' is set
-            if (idEmissor == null) throw new ApiException(400, "Missing required parameter 'idEmissor' when calling Alterar");
+            if (idEmissor == null) throw new ApiException(400, "Missing required parameter 'idEmissor' when calling AlterarConfiguracaoSMS");
             // verify the required parameter 'usuarioSMS' is set
-            if (usuarioSMS == null) throw new ApiException(400, "Missing required parameter 'usuarioSMS' when calling Alterar");
+            if (usuarioSMS == null) throw new ApiException(400, "Missing required parameter 'usuarioSMS' when calling AlterarConfiguracaoSMS");
             // verify the required parameter 'senhaSMS' is set
-            if (senhaSMS == null) throw new ApiException(400, "Missing required parameter 'senhaSMS' when calling Alterar");
+            if (senhaSMS == null) throw new ApiException(400, "Missing required parameter 'senhaSMS' when calling AlterarConfiguracaoSMS");
             
     
             var localVarPath = "/api/configuracoes-sms/{id}";
@@ -1953,195 +2135,13 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Alterar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarConfiguracaoSMS: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Alterar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarConfiguracaoSMS: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<ConfiguracaoSMSResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ConfiguracaoSMSResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConfiguracaoSMSResponse)));
-            
-        }
-        
-        /// <summary>
-        /// Altera configura\u00E7\u00F5es de E-mail Esse recurso permite salvar altera\u00E7\u00F5es de configura\u00E7\u00F5es de E-mail
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail</param> 
-        /// <param name="persist">persist</param> 
-        /// <returns>ConfiguracaoEmailResponse</returns>
-        public ConfiguracaoEmailResponse AlterarConfiguracao (long? id, ConfiguracaoEmailPersist persist)
-        {
-             ApiResponse<ConfiguracaoEmailResponse> localVarResponse = AlterarConfiguracaoWithHttpInfo(id, persist);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Altera configura\u00E7\u00F5es de E-mail Esse recurso permite salvar altera\u00E7\u00F5es de configura\u00E7\u00F5es de E-mail
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail</param> 
-        /// <param name="persist">persist</param> 
-        /// <returns>ApiResponse of ConfiguracaoEmailResponse</returns>
-        public ApiResponse< ConfiguracaoEmailResponse > AlterarConfiguracaoWithHttpInfo (long? id, ConfiguracaoEmailPersist persist)
-        {
-            
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling NotificacaoApi->AlterarConfiguracao");
-            
-            // verify the required parameter 'persist' is set
-            if (persist == null)
-                throw new ApiException(400, "Missing required parameter 'persist' when calling NotificacaoApi->AlterarConfiguracao");
-            
-    
-            var localVarPath = "/api/configuracoes-email/{id}";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            
-            
-            
-            
-            if (persist.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(persist); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = persist; // byte array
-            }
-
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling AlterarConfiguracao: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling AlterarConfiguracao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<ConfiguracaoEmailResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ConfiguracaoEmailResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConfiguracaoEmailResponse)));
-            
-        }
-
-        
-        /// <summary>
-        /// Altera configura\u00E7\u00F5es de E-mail Esse recurso permite salvar altera\u00E7\u00F5es de configura\u00E7\u00F5es de E-mail
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail</param>
-        /// <param name="persist">persist</param>
-        /// <returns>Task of ConfiguracaoEmailResponse</returns>
-        public async System.Threading.Tasks.Task<ConfiguracaoEmailResponse> AlterarConfiguracaoAsync (long? id, ConfiguracaoEmailPersist persist)
-        {
-             ApiResponse<ConfiguracaoEmailResponse> localVarResponse = await AlterarConfiguracaoAsyncWithHttpInfo(id, persist);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Altera configura\u00E7\u00F5es de E-mail Esse recurso permite salvar altera\u00E7\u00F5es de configura\u00E7\u00F5es de E-mail
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail</param>
-        /// <param name="persist">persist</param>
-        /// <returns>Task of ApiResponse (ConfiguracaoEmailResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ConfiguracaoEmailResponse>> AlterarConfiguracaoAsyncWithHttpInfo (long? id, ConfiguracaoEmailPersist persist)
-        {
-            // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AlterarConfiguracao");
-            // verify the required parameter 'persist' is set
-            if (persist == null) throw new ApiException(400, "Missing required parameter 'persist' when calling AlterarConfiguracao");
-            
-    
-            var localVarPath = "/api/configuracoes-email/{id}";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            
-            
-            
-            
-            if (persist.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(persist); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = persist; // byte array
-            }
-
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling AlterarConfiguracao: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling AlterarConfiguracao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<ConfiguracaoEmailResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ConfiguracaoEmailResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConfiguracaoEmailResponse)));
             
         }
         
@@ -2158,9 +2158,9 @@ namespace Conductor.Pier.Api
         /// <param name="assunto">Assunto da Notificaca\u00E7\u00E3o (optional)</param> 
         /// <param name="templatePadrao">Template Padr\u00E3o (optional)</param> 
         /// <returns>TemplateNotificacaoDetalheResponse</returns>
-        public TemplateNotificacaoDetalheResponse AlterarTemplateNotificacao (long? id, string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string remetente = null, string assunto = null, bool? templatePadrao = null)
+        public TemplateNotificacaoDetalheResponse AlterarTemplate (long? id, string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string remetente = null, string assunto = null, bool? templatePadrao = null)
         {
-             ApiResponse<TemplateNotificacaoDetalheResponse> localVarResponse = AlterarTemplateNotificacaoWithHttpInfo(id, conteudo, idConfiguracaoEmail, tipoLayout, tipoNotificacao, remetente, assunto, templatePadrao);
+             ApiResponse<TemplateNotificacaoDetalheResponse> localVarResponse = AlterarTemplateWithHttpInfo(id, conteudo, idConfiguracaoEmail, tipoLayout, tipoNotificacao, remetente, assunto, templatePadrao);
              return localVarResponse.Data;
         }
 
@@ -2177,16 +2177,16 @@ namespace Conductor.Pier.Api
         /// <param name="assunto">Assunto da Notificaca\u00E7\u00E3o (optional)</param> 
         /// <param name="templatePadrao">Template Padr\u00E3o (optional)</param> 
         /// <returns>ApiResponse of TemplateNotificacaoDetalheResponse</returns>
-        public ApiResponse< TemplateNotificacaoDetalheResponse > AlterarTemplateNotificacaoWithHttpInfo (long? id, string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string remetente = null, string assunto = null, bool? templatePadrao = null)
+        public ApiResponse< TemplateNotificacaoDetalheResponse > AlterarTemplateWithHttpInfo (long? id, string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string remetente = null, string assunto = null, bool? templatePadrao = null)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling NotificacaoApi->AlterarTemplateNotificacao");
+                throw new ApiException(400, "Missing required parameter 'id' when calling NotificacaoApi->AlterarTemplate");
             
             // verify the required parameter 'conteudo' is set
             if (conteudo == null)
-                throw new ApiException(400, "Missing required parameter 'conteudo' when calling NotificacaoApi->AlterarTemplateNotificacao");
+                throw new ApiException(400, "Missing required parameter 'conteudo' when calling NotificacaoApi->AlterarTemplate");
             
     
             var localVarPath = "/api/templates-notificacoes/{id}";
@@ -2245,9 +2245,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling AlterarTemplateNotificacao: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarTemplate: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling AlterarTemplateNotificacao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarTemplate: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<TemplateNotificacaoDetalheResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2269,9 +2269,9 @@ namespace Conductor.Pier.Api
         /// <param name="assunto">Assunto da Notificaca\u00E7\u00E3o (optional)</param>
         /// <param name="templatePadrao">Template Padr\u00E3o (optional)</param>
         /// <returns>Task of TemplateNotificacaoDetalheResponse</returns>
-        public async System.Threading.Tasks.Task<TemplateNotificacaoDetalheResponse> AlterarTemplateNotificacaoAsync (long? id, string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string remetente = null, string assunto = null, bool? templatePadrao = null)
+        public async System.Threading.Tasks.Task<TemplateNotificacaoDetalheResponse> AlterarTemplateAsync (long? id, string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string remetente = null, string assunto = null, bool? templatePadrao = null)
         {
-             ApiResponse<TemplateNotificacaoDetalheResponse> localVarResponse = await AlterarTemplateNotificacaoAsyncWithHttpInfo(id, conteudo, idConfiguracaoEmail, tipoLayout, tipoNotificacao, remetente, assunto, templatePadrao);
+             ApiResponse<TemplateNotificacaoDetalheResponse> localVarResponse = await AlterarTemplateAsyncWithHttpInfo(id, conteudo, idConfiguracaoEmail, tipoLayout, tipoNotificacao, remetente, assunto, templatePadrao);
              return localVarResponse.Data;
 
         }
@@ -2289,12 +2289,12 @@ namespace Conductor.Pier.Api
         /// <param name="assunto">Assunto da Notificaca\u00E7\u00E3o (optional)</param>
         /// <param name="templatePadrao">Template Padr\u00E3o (optional)</param>
         /// <returns>Task of ApiResponse (TemplateNotificacaoDetalheResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TemplateNotificacaoDetalheResponse>> AlterarTemplateNotificacaoAsyncWithHttpInfo (long? id, string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string remetente = null, string assunto = null, bool? templatePadrao = null)
+        public async System.Threading.Tasks.Task<ApiResponse<TemplateNotificacaoDetalheResponse>> AlterarTemplateAsyncWithHttpInfo (long? id, string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string remetente = null, string assunto = null, bool? templatePadrao = null)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AlterarTemplateNotificacao");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AlterarTemplate");
             // verify the required parameter 'conteudo' is set
-            if (conteudo == null) throw new ApiException(400, "Missing required parameter 'conteudo' when calling AlterarTemplateNotificacao");
+            if (conteudo == null) throw new ApiException(400, "Missing required parameter 'conteudo' when calling AlterarTemplate");
             
     
             var localVarPath = "/api/templates-notificacoes/{id}";
@@ -2353,9 +2353,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling AlterarTemplateNotificacao: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarTemplate: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling AlterarTemplateNotificacao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarTemplate: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<TemplateNotificacaoDetalheResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2373,9 +2373,9 @@ namespace Conductor.Pier.Api
         /// <param name="textoStatus">TextoStatus (optional)</param> 
         /// <param name="operadora">Operadora (optional)</param> 
         /// <returns>NotificacaoSMSResponse</returns>
-        public NotificacaoSMSResponse AtualizarSMS (string nsu = null, string status = null, string data = null, string textoStatus = null, string operadora = null)
+        public NotificacaoSMSResponse AtualizarStatusSMS (string nsu = null, string status = null, string data = null, string textoStatus = null, string operadora = null)
         {
-             ApiResponse<NotificacaoSMSResponse> localVarResponse = AtualizarSMSWithHttpInfo(nsu, status, data, textoStatus, operadora);
+             ApiResponse<NotificacaoSMSResponse> localVarResponse = AtualizarStatusSMSWithHttpInfo(nsu, status, data, textoStatus, operadora);
              return localVarResponse.Data;
         }
 
@@ -2389,7 +2389,7 @@ namespace Conductor.Pier.Api
         /// <param name="textoStatus">TextoStatus (optional)</param> 
         /// <param name="operadora">Operadora (optional)</param> 
         /// <returns>ApiResponse of NotificacaoSMSResponse</returns>
-        public ApiResponse< NotificacaoSMSResponse > AtualizarSMSWithHttpInfo (string nsu = null, string status = null, string data = null, string textoStatus = null, string operadora = null)
+        public ApiResponse< NotificacaoSMSResponse > AtualizarStatusSMSWithHttpInfo (string nsu = null, string status = null, string data = null, string textoStatus = null, string operadora = null)
         {
             
     
@@ -2440,9 +2440,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling AtualizarSMS: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling AtualizarStatusSMS: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling AtualizarSMS: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling AtualizarStatusSMS: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<NotificacaoSMSResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2461,9 +2461,9 @@ namespace Conductor.Pier.Api
         /// <param name="textoStatus">TextoStatus (optional)</param>
         /// <param name="operadora">Operadora (optional)</param>
         /// <returns>Task of NotificacaoSMSResponse</returns>
-        public async System.Threading.Tasks.Task<NotificacaoSMSResponse> AtualizarSMSAsync (string nsu = null, string status = null, string data = null, string textoStatus = null, string operadora = null)
+        public async System.Threading.Tasks.Task<NotificacaoSMSResponse> AtualizarStatusSMSAsync (string nsu = null, string status = null, string data = null, string textoStatus = null, string operadora = null)
         {
-             ApiResponse<NotificacaoSMSResponse> localVarResponse = await AtualizarSMSAsyncWithHttpInfo(nsu, status, data, textoStatus, operadora);
+             ApiResponse<NotificacaoSMSResponse> localVarResponse = await AtualizarStatusSMSAsyncWithHttpInfo(nsu, status, data, textoStatus, operadora);
              return localVarResponse.Data;
 
         }
@@ -2478,7 +2478,7 @@ namespace Conductor.Pier.Api
         /// <param name="textoStatus">TextoStatus (optional)</param>
         /// <param name="operadora">Operadora (optional)</param>
         /// <returns>Task of ApiResponse (NotificacaoSMSResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<NotificacaoSMSResponse>> AtualizarSMSAsyncWithHttpInfo (string nsu = null, string status = null, string data = null, string textoStatus = null, string operadora = null)
+        public async System.Threading.Tasks.Task<ApiResponse<NotificacaoSMSResponse>> AtualizarStatusSMSAsyncWithHttpInfo (string nsu = null, string status = null, string data = null, string textoStatus = null, string operadora = null)
         {
             
     
@@ -2529,9 +2529,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling AtualizarSMS: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling AtualizarStatusSMS: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling AtualizarSMS: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling AtualizarStatusSMS: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<NotificacaoSMSResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2540,32 +2540,32 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Apresenta os dados de uma determinada configura\u00E7\u00E3o Este m\u00E9todo permite consultar os par\u00E2metros de uma determinada Configura\u00E7\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (idConfiguracaoSMS)
+        /// Consulta c\u00F3digo de seguran\u00E7a E-mail Esse recurso permite consultar um c\u00F3digo de seguran\u00E7a E-mail espec\u00EDfico por id
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da configura\u00E7\u00E3o sms (id)</param> 
-        /// <returns>ConfiguracaoSMSResponse</returns>
-        public ConfiguracaoSMSResponse Consultar (long? id)
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail</param> 
+        /// <returns>CodigoSegurancaResponse</returns>
+        public CodigoSegurancaResponse ConsultarCodigoSegurancaEmail (long? id)
         {
-             ApiResponse<ConfiguracaoSMSResponse> localVarResponse = ConsultarWithHttpInfo(id);
+             ApiResponse<CodigoSegurancaResponse> localVarResponse = ConsultarCodigoSegurancaEmailWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Apresenta os dados de uma determinada configura\u00E7\u00E3o Este m\u00E9todo permite consultar os par\u00E2metros de uma determinada Configura\u00E7\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (idConfiguracaoSMS)
+        /// Consulta c\u00F3digo de seguran\u00E7a E-mail Esse recurso permite consultar um c\u00F3digo de seguran\u00E7a E-mail espec\u00EDfico por id
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da configura\u00E7\u00E3o sms (id)</param> 
-        /// <returns>ApiResponse of ConfiguracaoSMSResponse</returns>
-        public ApiResponse< ConfiguracaoSMSResponse > ConsultarWithHttpInfo (long? id)
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail</param> 
+        /// <returns>ApiResponse of CodigoSegurancaResponse</returns>
+        public ApiResponse< CodigoSegurancaResponse > ConsultarCodigoSegurancaEmailWithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling NotificacaoApi->Consultar");
+                throw new ApiException(400, "Missing required parameter 'id' when calling NotificacaoApi->ConsultarCodigoSegurancaEmail");
             
     
-            var localVarPath = "/api/configuracoes-sms/{id}";
+            var localVarPath = "/api/codigos-seguranca-email/{id}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2608,43 +2608,43 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarCodigoSegurancaEmail: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarCodigoSegurancaEmail: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<ConfiguracaoSMSResponse>(localVarStatusCode,
+            return new ApiResponse<CodigoSegurancaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ConfiguracaoSMSResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConfiguracaoSMSResponse)));
+                (CodigoSegurancaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CodigoSegurancaResponse)));
             
         }
 
         
         /// <summary>
-        /// Apresenta os dados de uma determinada configura\u00E7\u00E3o Este m\u00E9todo permite consultar os par\u00E2metros de uma determinada Configura\u00E7\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (idConfiguracaoSMS)
+        /// Consulta c\u00F3digo de seguran\u00E7a E-mail Esse recurso permite consultar um c\u00F3digo de seguran\u00E7a E-mail espec\u00EDfico por id
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da configura\u00E7\u00E3o sms (id)</param>
-        /// <returns>Task of ConfiguracaoSMSResponse</returns>
-        public async System.Threading.Tasks.Task<ConfiguracaoSMSResponse> ConsultarAsync (long? id)
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail</param>
+        /// <returns>Task of CodigoSegurancaResponse</returns>
+        public async System.Threading.Tasks.Task<CodigoSegurancaResponse> ConsultarCodigoSegurancaEmailAsync (long? id)
         {
-             ApiResponse<ConfiguracaoSMSResponse> localVarResponse = await ConsultarAsyncWithHttpInfo(id);
+             ApiResponse<CodigoSegurancaResponse> localVarResponse = await ConsultarCodigoSegurancaEmailAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Apresenta os dados de uma determinada configura\u00E7\u00E3o Este m\u00E9todo permite consultar os par\u00E2metros de uma determinada Configura\u00E7\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (idConfiguracaoSMS)
+        /// Consulta c\u00F3digo de seguran\u00E7a E-mail Esse recurso permite consultar um c\u00F3digo de seguran\u00E7a E-mail espec\u00EDfico por id
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da configura\u00E7\u00E3o sms (id)</param>
-        /// <returns>Task of ApiResponse (ConfiguracaoSMSResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ConfiguracaoSMSResponse>> ConsultarAsyncWithHttpInfo (long? id)
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail</param>
+        /// <returns>Task of ApiResponse (CodigoSegurancaResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CodigoSegurancaResponse>> ConsultarCodigoSegurancaEmailAsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling Consultar");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarCodigoSegurancaEmail");
             
     
-            var localVarPath = "/api/configuracoes-sms/{id}";
+            var localVarPath = "/api/codigos-seguranca-email/{id}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2687,13 +2687,171 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarCodigoSegurancaEmail: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Consultar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarCodigoSegurancaEmail: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<ConfiguracaoSMSResponse>(localVarStatusCode,
+            return new ApiResponse<CodigoSegurancaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ConfiguracaoSMSResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConfiguracaoSMSResponse)));
+                (CodigoSegurancaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CodigoSegurancaResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Consulta c\u00F3digo de seguran\u00E7a SMS Esse recurso permite consultar um c\u00F3digo de seguran\u00E7a SMS espec\u00EDfico por id
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail</param> 
+        /// <returns>CodigoSegurancaResponse</returns>
+        public CodigoSegurancaResponse ConsultarCodigoSegurancaSMS (long? id)
+        {
+             ApiResponse<CodigoSegurancaResponse> localVarResponse = ConsultarCodigoSegurancaSMSWithHttpInfo(id);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Consulta c\u00F3digo de seguran\u00E7a SMS Esse recurso permite consultar um c\u00F3digo de seguran\u00E7a SMS espec\u00EDfico por id
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail</param> 
+        /// <returns>ApiResponse of CodigoSegurancaResponse</returns>
+        public ApiResponse< CodigoSegurancaResponse > ConsultarCodigoSegurancaSMSWithHttpInfo (long? id)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling NotificacaoApi->ConsultarCodigoSegurancaSMS");
+            
+    
+            var localVarPath = "/api/codigos-seguranca-sms/{id}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarCodigoSegurancaSMS: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarCodigoSegurancaSMS: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<CodigoSegurancaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CodigoSegurancaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CodigoSegurancaResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Consulta c\u00F3digo de seguran\u00E7a SMS Esse recurso permite consultar um c\u00F3digo de seguran\u00E7a SMS espec\u00EDfico por id
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail</param>
+        /// <returns>Task of CodigoSegurancaResponse</returns>
+        public async System.Threading.Tasks.Task<CodigoSegurancaResponse> ConsultarCodigoSegurancaSMSAsync (long? id)
+        {
+             ApiResponse<CodigoSegurancaResponse> localVarResponse = await ConsultarCodigoSegurancaSMSAsyncWithHttpInfo(id);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Consulta c\u00F3digo de seguran\u00E7a SMS Esse recurso permite consultar um c\u00F3digo de seguran\u00E7a SMS espec\u00EDfico por id
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail</param>
+        /// <returns>Task of ApiResponse (CodigoSegurancaResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CodigoSegurancaResponse>> ConsultarCodigoSegurancaSMSAsyncWithHttpInfo (long? id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarCodigoSegurancaSMS");
+            
+    
+            var localVarPath = "/api/codigos-seguranca-sms/{id}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarCodigoSegurancaSMS: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarCodigoSegurancaSMS: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CodigoSegurancaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CodigoSegurancaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CodigoSegurancaResponse)));
             
         }
         
@@ -2703,9 +2861,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail</param> 
         /// <returns>ConfiguracaoEmailResponse</returns>
-        public ConfiguracaoEmailResponse ConsultarConfiguracao (long? id)
+        public ConfiguracaoEmailResponse ConsultarConfiguracaoEmail (long? id)
         {
-             ApiResponse<ConfiguracaoEmailResponse> localVarResponse = ConsultarConfiguracaoWithHttpInfo(id);
+             ApiResponse<ConfiguracaoEmailResponse> localVarResponse = ConsultarConfiguracaoEmailWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -2715,12 +2873,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail</param> 
         /// <returns>ApiResponse of ConfiguracaoEmailResponse</returns>
-        public ApiResponse< ConfiguracaoEmailResponse > ConsultarConfiguracaoWithHttpInfo (long? id)
+        public ApiResponse< ConfiguracaoEmailResponse > ConsultarConfiguracaoEmailWithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling NotificacaoApi->ConsultarConfiguracao");
+                throw new ApiException(400, "Missing required parameter 'id' when calling NotificacaoApi->ConsultarConfiguracaoEmail");
             
     
             var localVarPath = "/api/configuracoes-email/{id}";
@@ -2766,9 +2924,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarConfiguracao: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarConfiguracaoEmail: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarConfiguracao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarConfiguracaoEmail: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<ConfiguracaoEmailResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2783,9 +2941,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail</param>
         /// <returns>Task of ConfiguracaoEmailResponse</returns>
-        public async System.Threading.Tasks.Task<ConfiguracaoEmailResponse> ConsultarConfiguracaoAsync (long? id)
+        public async System.Threading.Tasks.Task<ConfiguracaoEmailResponse> ConsultarConfiguracaoEmailAsync (long? id)
         {
-             ApiResponse<ConfiguracaoEmailResponse> localVarResponse = await ConsultarConfiguracaoAsyncWithHttpInfo(id);
+             ApiResponse<ConfiguracaoEmailResponse> localVarResponse = await ConsultarConfiguracaoEmailAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -2796,10 +2954,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail</param>
         /// <returns>Task of ApiResponse (ConfiguracaoEmailResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ConfiguracaoEmailResponse>> ConsultarConfiguracaoAsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<ConfiguracaoEmailResponse>> ConsultarConfiguracaoEmailAsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarConfiguracao");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarConfiguracaoEmail");
             
     
             var localVarPath = "/api/configuracoes-email/{id}";
@@ -2845,9 +3003,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarConfiguracao: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarConfiguracaoEmail: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarConfiguracao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarConfiguracaoEmail: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<ConfiguracaoEmailResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2856,32 +3014,32 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Consulta c\u00F3digo de seguran\u00E7a E-mail Esse recurso permite consultar um c\u00F3digo de seguran\u00E7a E-mail espec\u00EDfico por id
+        /// Apresenta os dados de uma determinada configura\u00E7\u00E3o Este m\u00E9todo permite consultar os par\u00E2metros de uma determinada Configura\u00E7\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (idConfiguracaoSMS)
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail</param> 
-        /// <returns>CodigoSegurancaResponse</returns>
-        public CodigoSegurancaResponse ConsultarPorEmail (long? id)
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da configura\u00E7\u00E3o sms (id)</param> 
+        /// <returns>ConfiguracaoSMSResponse</returns>
+        public ConfiguracaoSMSResponse ConsultarConfiguracaoSMS (long? id)
         {
-             ApiResponse<CodigoSegurancaResponse> localVarResponse = ConsultarPorEmailWithHttpInfo(id);
+             ApiResponse<ConfiguracaoSMSResponse> localVarResponse = ConsultarConfiguracaoSMSWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Consulta c\u00F3digo de seguran\u00E7a E-mail Esse recurso permite consultar um c\u00F3digo de seguran\u00E7a E-mail espec\u00EDfico por id
+        /// Apresenta os dados de uma determinada configura\u00E7\u00E3o Este m\u00E9todo permite consultar os par\u00E2metros de uma determinada Configura\u00E7\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (idConfiguracaoSMS)
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail</param> 
-        /// <returns>ApiResponse of CodigoSegurancaResponse</returns>
-        public ApiResponse< CodigoSegurancaResponse > ConsultarPorEmailWithHttpInfo (long? id)
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da configura\u00E7\u00E3o sms (id)</param> 
+        /// <returns>ApiResponse of ConfiguracaoSMSResponse</returns>
+        public ApiResponse< ConfiguracaoSMSResponse > ConsultarConfiguracaoSMSWithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling NotificacaoApi->ConsultarPorEmail");
+                throw new ApiException(400, "Missing required parameter 'id' when calling NotificacaoApi->ConsultarConfiguracaoSMS");
             
     
-            var localVarPath = "/api/codigos-seguranca-email/{id}";
+            var localVarPath = "/api/configuracoes-sms/{id}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2924,43 +3082,43 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarPorEmail: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarConfiguracaoSMS: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarPorEmail: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarConfiguracaoSMS: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<CodigoSegurancaResponse>(localVarStatusCode,
+            return new ApiResponse<ConfiguracaoSMSResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CodigoSegurancaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CodigoSegurancaResponse)));
+                (ConfiguracaoSMSResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConfiguracaoSMSResponse)));
             
         }
 
         
         /// <summary>
-        /// Consulta c\u00F3digo de seguran\u00E7a E-mail Esse recurso permite consultar um c\u00F3digo de seguran\u00E7a E-mail espec\u00EDfico por id
+        /// Apresenta os dados de uma determinada configura\u00E7\u00E3o Este m\u00E9todo permite consultar os par\u00E2metros de uma determinada Configura\u00E7\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (idConfiguracaoSMS)
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail</param>
-        /// <returns>Task of CodigoSegurancaResponse</returns>
-        public async System.Threading.Tasks.Task<CodigoSegurancaResponse> ConsultarPorEmailAsync (long? id)
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da configura\u00E7\u00E3o sms (id)</param>
+        /// <returns>Task of ConfiguracaoSMSResponse</returns>
+        public async System.Threading.Tasks.Task<ConfiguracaoSMSResponse> ConsultarConfiguracaoSMSAsync (long? id)
         {
-             ApiResponse<CodigoSegurancaResponse> localVarResponse = await ConsultarPorEmailAsyncWithHttpInfo(id);
+             ApiResponse<ConfiguracaoSMSResponse> localVarResponse = await ConsultarConfiguracaoSMSAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Consulta c\u00F3digo de seguran\u00E7a E-mail Esse recurso permite consultar um c\u00F3digo de seguran\u00E7a E-mail espec\u00EDfico por id
+        /// Apresenta os dados de uma determinada configura\u00E7\u00E3o Este m\u00E9todo permite consultar os par\u00E2metros de uma determinada Configura\u00E7\u00E3o a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (idConfiguracaoSMS)
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail</param>
-        /// <returns>Task of ApiResponse (CodigoSegurancaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CodigoSegurancaResponse>> ConsultarPorEmailAsyncWithHttpInfo (long? id)
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da configura\u00E7\u00E3o sms (id)</param>
+        /// <returns>Task of ApiResponse (ConfiguracaoSMSResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ConfiguracaoSMSResponse>> ConsultarConfiguracaoSMSAsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarPorEmail");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarConfiguracaoSMS");
             
     
-            var localVarPath = "/api/codigos-seguranca-email/{id}";
+            var localVarPath = "/api/configuracoes-sms/{id}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3003,171 +3161,13 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarPorEmail: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarConfiguracaoSMS: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarPorEmail: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarConfiguracaoSMS: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<CodigoSegurancaResponse>(localVarStatusCode,
+            return new ApiResponse<ConfiguracaoSMSResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CodigoSegurancaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CodigoSegurancaResponse)));
-            
-        }
-        
-        /// <summary>
-        /// Consulta c\u00F3digo de seguran\u00E7a SMS Esse recurso permite consultar um c\u00F3digo de seguran\u00E7a SMS espec\u00EDfico por id
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail</param> 
-        /// <returns>CodigoSegurancaResponse</returns>
-        public CodigoSegurancaResponse ConsultarPorSMS (long? id)
-        {
-             ApiResponse<CodigoSegurancaResponse> localVarResponse = ConsultarPorSMSWithHttpInfo(id);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Consulta c\u00F3digo de seguran\u00E7a SMS Esse recurso permite consultar um c\u00F3digo de seguran\u00E7a SMS espec\u00EDfico por id
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail</param> 
-        /// <returns>ApiResponse of CodigoSegurancaResponse</returns>
-        public ApiResponse< CodigoSegurancaResponse > ConsultarPorSMSWithHttpInfo (long? id)
-        {
-            
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling NotificacaoApi->ConsultarPorSMS");
-            
-    
-            var localVarPath = "/api/codigos-seguranca-sms/{id}";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            
-            
-            
-            
-            
-
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarPorSMS: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarPorSMS: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<CodigoSegurancaResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CodigoSegurancaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CodigoSegurancaResponse)));
-            
-        }
-
-        
-        /// <summary>
-        /// Consulta c\u00F3digo de seguran\u00E7a SMS Esse recurso permite consultar um c\u00F3digo de seguran\u00E7a SMS espec\u00EDfico por id
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail</param>
-        /// <returns>Task of CodigoSegurancaResponse</returns>
-        public async System.Threading.Tasks.Task<CodigoSegurancaResponse> ConsultarPorSMSAsync (long? id)
-        {
-             ApiResponse<CodigoSegurancaResponse> localVarResponse = await ConsultarPorSMSAsyncWithHttpInfo(id);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Consulta c\u00F3digo de seguran\u00E7a SMS Esse recurso permite consultar um c\u00F3digo de seguran\u00E7a SMS espec\u00EDfico por id
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da configura\u00E7\u00E3o de e-mail</param>
-        /// <returns>Task of ApiResponse (CodigoSegurancaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CodigoSegurancaResponse>> ConsultarPorSMSAsyncWithHttpInfo (long? id)
-        {
-            // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarPorSMS");
-            
-    
-            var localVarPath = "/api/codigos-seguranca-sms/{id}";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            
-            
-            
-            
-            
-
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarPorSMS: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarPorSMS: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<CodigoSegurancaResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CodigoSegurancaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CodigoSegurancaResponse)));
+                (ConfiguracaoSMSResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConfiguracaoSMSResponse)));
             
         }
         
@@ -3177,9 +3177,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do layout de e-mail</param> 
         /// <returns>TemplateNotificacaoDetalheResponse</returns>
-        public TemplateNotificacaoDetalheResponse ConsultarTemplateNotificacao (long? id)
+        public TemplateNotificacaoDetalheResponse ConsultarTemplate (long? id)
         {
-             ApiResponse<TemplateNotificacaoDetalheResponse> localVarResponse = ConsultarTemplateNotificacaoWithHttpInfo(id);
+             ApiResponse<TemplateNotificacaoDetalheResponse> localVarResponse = ConsultarTemplateWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -3189,12 +3189,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do layout de e-mail</param> 
         /// <returns>ApiResponse of TemplateNotificacaoDetalheResponse</returns>
-        public ApiResponse< TemplateNotificacaoDetalheResponse > ConsultarTemplateNotificacaoWithHttpInfo (long? id)
+        public ApiResponse< TemplateNotificacaoDetalheResponse > ConsultarTemplateWithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling NotificacaoApi->ConsultarTemplateNotificacao");
+                throw new ApiException(400, "Missing required parameter 'id' when calling NotificacaoApi->ConsultarTemplate");
             
     
             var localVarPath = "/api/templates-notificacoes/{id}";
@@ -3240,9 +3240,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarTemplateNotificacao: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarTemplate: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarTemplateNotificacao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarTemplate: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<TemplateNotificacaoDetalheResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3257,9 +3257,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do layout de e-mail</param>
         /// <returns>Task of TemplateNotificacaoDetalheResponse</returns>
-        public async System.Threading.Tasks.Task<TemplateNotificacaoDetalheResponse> ConsultarTemplateNotificacaoAsync (long? id)
+        public async System.Threading.Tasks.Task<TemplateNotificacaoDetalheResponse> ConsultarTemplateAsync (long? id)
         {
-             ApiResponse<TemplateNotificacaoDetalheResponse> localVarResponse = await ConsultarTemplateNotificacaoAsyncWithHttpInfo(id);
+             ApiResponse<TemplateNotificacaoDetalheResponse> localVarResponse = await ConsultarTemplateAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -3270,10 +3270,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do layout de e-mail</param>
         /// <returns>Task of ApiResponse (TemplateNotificacaoDetalheResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TemplateNotificacaoDetalheResponse>> ConsultarTemplateNotificacaoAsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<TemplateNotificacaoDetalheResponse>> ConsultarTemplateAsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarTemplateNotificacao");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarTemplate");
             
     
             var localVarPath = "/api/templates-notificacoes/{id}";
@@ -3319,9 +3319,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarTemplateNotificacao: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarTemplate: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarTemplateNotificacao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarTemplate: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<TemplateNotificacaoDetalheResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3335,9 +3335,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da configura\u00E7\u00E3o sms (id)</param> 
         /// <returns>ConfiguracaoSMSResponse</returns>
-        public ConfiguracaoSMSResponse Deletar (long? id)
+        public ConfiguracaoSMSResponse DeletarConfiguracaoSMS (long? id)
         {
-             ApiResponse<ConfiguracaoSMSResponse> localVarResponse = DeletarWithHttpInfo(id);
+             ApiResponse<ConfiguracaoSMSResponse> localVarResponse = DeletarConfiguracaoSMSWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -3347,12 +3347,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da configura\u00E7\u00E3o sms (id)</param> 
         /// <returns>ApiResponse of ConfiguracaoSMSResponse</returns>
-        public ApiResponse< ConfiguracaoSMSResponse > DeletarWithHttpInfo (long? id)
+        public ApiResponse< ConfiguracaoSMSResponse > DeletarConfiguracaoSMSWithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling NotificacaoApi->Deletar");
+                throw new ApiException(400, "Missing required parameter 'id' when calling NotificacaoApi->DeletarConfiguracaoSMS");
             
     
             var localVarPath = "/api/configuracoes-sms/{id}";
@@ -3398,9 +3398,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Deletar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling DeletarConfiguracaoSMS: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Deletar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DeletarConfiguracaoSMS: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<ConfiguracaoSMSResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3415,9 +3415,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da configura\u00E7\u00E3o sms (id)</param>
         /// <returns>Task of ConfiguracaoSMSResponse</returns>
-        public async System.Threading.Tasks.Task<ConfiguracaoSMSResponse> DeletarAsync (long? id)
+        public async System.Threading.Tasks.Task<ConfiguracaoSMSResponse> DeletarConfiguracaoSMSAsync (long? id)
         {
-             ApiResponse<ConfiguracaoSMSResponse> localVarResponse = await DeletarAsyncWithHttpInfo(id);
+             ApiResponse<ConfiguracaoSMSResponse> localVarResponse = await DeletarConfiguracaoSMSAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -3428,10 +3428,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da configura\u00E7\u00E3o sms (id)</param>
         /// <returns>Task of ApiResponse (ConfiguracaoSMSResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ConfiguracaoSMSResponse>> DeletarAsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<ConfiguracaoSMSResponse>> DeletarConfiguracaoSMSAsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling Deletar");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling DeletarConfiguracaoSMS");
             
     
             var localVarPath = "/api/configuracoes-sms/{id}";
@@ -3477,13 +3477,183 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Deletar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling DeletarConfiguracaoSMS: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Deletar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DeletarConfiguracaoSMS: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<ConfiguracaoSMSResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ConfiguracaoSMSResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConfiguracaoSMSResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Enviar notifica\u00E7\u00E3o por email Esse recurso permite enviar uma mensagem de notifica\u00E7\u00E3o por email
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">request</param> 
+        /// <returns>Object</returns>
+        public Object EnviarEmail (NotificacaoEmailRequest request)
+        {
+             ApiResponse<Object> localVarResponse = EnviarEmailWithHttpInfo(request);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Enviar notifica\u00E7\u00E3o por email Esse recurso permite enviar uma mensagem de notifica\u00E7\u00E3o por email
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">request</param> 
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > EnviarEmailWithHttpInfo (NotificacaoEmailRequest request)
+        {
+            
+            // verify the required parameter 'request' is set
+            if (request == null)
+                throw new ApiException(400, "Missing required parameter 'request' when calling NotificacaoApi->EnviarEmail");
+            
+    
+            var localVarPath = "/api/notificacoes-email";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            if (request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = request; // byte array
+            }
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling EnviarEmail: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling EnviarEmail: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+            
+        }
+
+        
+        /// <summary>
+        /// Enviar notifica\u00E7\u00E3o por email Esse recurso permite enviar uma mensagem de notifica\u00E7\u00E3o por email
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">request</param>
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> EnviarEmailAsync (NotificacaoEmailRequest request)
+        {
+             ApiResponse<Object> localVarResponse = await EnviarEmailAsyncWithHttpInfo(request);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Enviar notifica\u00E7\u00E3o por email Esse recurso permite enviar uma mensagem de notifica\u00E7\u00E3o por email
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">request</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> EnviarEmailAsyncWithHttpInfo (NotificacaoEmailRequest request)
+        {
+            // verify the required parameter 'request' is set
+            if (request == null) throw new ApiException(400, "Missing required parameter 'request' when calling EnviarEmail");
+            
+    
+            var localVarPath = "/api/notificacoes-email";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            if (request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = request; // byte array
+            }
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling EnviarEmail: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling EnviarEmail: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
             
         }
         
@@ -3663,9 +3833,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="email">email</param> 
         /// <returns>string</returns>
-        public string GerarTokenEMAIL (string email)
+        public string GerarCodigoSegurancaNotificacaoEmail (string email)
         {
-             ApiResponse<string> localVarResponse = GerarTokenEMAILWithHttpInfo(email);
+             ApiResponse<string> localVarResponse = GerarCodigoSegurancaNotificacaoEmailWithHttpInfo(email);
              return localVarResponse.Data;
         }
 
@@ -3675,12 +3845,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="email">email</param> 
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > GerarTokenEMAILWithHttpInfo (string email)
+        public ApiResponse< string > GerarCodigoSegurancaNotificacaoEmailWithHttpInfo (string email)
         {
             
             // verify the required parameter 'email' is set
             if (email == null)
-                throw new ApiException(400, "Missing required parameter 'email' when calling NotificacaoApi->GerarTokenEMAIL");
+                throw new ApiException(400, "Missing required parameter 'email' when calling NotificacaoApi->GerarCodigoSegurancaNotificacaoEmail");
             
     
             var localVarPath = "/api/notificacoes-email/gerar-codigo-seguranca";
@@ -3732,9 +3902,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GerarTokenEMAIL: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GerarCodigoSegurancaNotificacaoEmail: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GerarTokenEMAIL: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GerarCodigoSegurancaNotificacaoEmail: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3749,9 +3919,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="email">email</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> GerarTokenEMAILAsync (string email)
+        public async System.Threading.Tasks.Task<string> GerarCodigoSegurancaNotificacaoEmailAsync (string email)
         {
-             ApiResponse<string> localVarResponse = await GerarTokenEMAILAsyncWithHttpInfo(email);
+             ApiResponse<string> localVarResponse = await GerarCodigoSegurancaNotificacaoEmailAsyncWithHttpInfo(email);
              return localVarResponse.Data;
 
         }
@@ -3762,10 +3932,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="email">email</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> GerarTokenEMAILAsyncWithHttpInfo (string email)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> GerarCodigoSegurancaNotificacaoEmailAsyncWithHttpInfo (string email)
         {
             // verify the required parameter 'email' is set
-            if (email == null) throw new ApiException(400, "Missing required parameter 'email' when calling GerarTokenEMAIL");
+            if (email == null) throw new ApiException(400, "Missing required parameter 'email' when calling GerarCodigoSegurancaNotificacaoEmail");
             
     
             var localVarPath = "/api/notificacoes-email/gerar-codigo-seguranca";
@@ -3817,9 +3987,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GerarTokenEMAIL: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GerarCodigoSegurancaNotificacaoEmail: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GerarTokenEMAIL: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GerarCodigoSegurancaNotificacaoEmail: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3833,9 +4003,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param> 
         /// <returns>string</returns>
-        public string GerarTokenSMS (CodigoSegurancaSMSPersist persist)
+        public string GerarCodigoSegurancaNotificacaoSMS (CodigoSegurancaSMSPersist persist)
         {
-             ApiResponse<string> localVarResponse = GerarTokenSMSWithHttpInfo(persist);
+             ApiResponse<string> localVarResponse = GerarCodigoSegurancaNotificacaoSMSWithHttpInfo(persist);
              return localVarResponse.Data;
         }
 
@@ -3845,12 +4015,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param> 
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > GerarTokenSMSWithHttpInfo (CodigoSegurancaSMSPersist persist)
+        public ApiResponse< string > GerarCodigoSegurancaNotificacaoSMSWithHttpInfo (CodigoSegurancaSMSPersist persist)
         {
             
             // verify the required parameter 'persist' is set
             if (persist == null)
-                throw new ApiException(400, "Missing required parameter 'persist' when calling NotificacaoApi->GerarTokenSMS");
+                throw new ApiException(400, "Missing required parameter 'persist' when calling NotificacaoApi->GerarCodigoSegurancaNotificacaoSMS");
             
     
             var localVarPath = "/api/notificacoes-sms/gerar-codigo-seguranca";
@@ -3902,9 +4072,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GerarTokenSMS: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GerarCodigoSegurancaNotificacaoSMS: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GerarTokenSMS: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GerarCodigoSegurancaNotificacaoSMS: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3919,9 +4089,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> GerarTokenSMSAsync (CodigoSegurancaSMSPersist persist)
+        public async System.Threading.Tasks.Task<string> GerarCodigoSegurancaNotificacaoSMSAsync (CodigoSegurancaSMSPersist persist)
         {
-             ApiResponse<string> localVarResponse = await GerarTokenSMSAsyncWithHttpInfo(persist);
+             ApiResponse<string> localVarResponse = await GerarCodigoSegurancaNotificacaoSMSAsyncWithHttpInfo(persist);
              return localVarResponse.Data;
 
         }
@@ -3932,10 +4102,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> GerarTokenSMSAsyncWithHttpInfo (CodigoSegurancaSMSPersist persist)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> GerarCodigoSegurancaNotificacaoSMSAsyncWithHttpInfo (CodigoSegurancaSMSPersist persist)
         {
             // verify the required parameter 'persist' is set
-            if (persist == null) throw new ApiException(400, "Missing required parameter 'persist' when calling GerarTokenSMS");
+            if (persist == null) throw new ApiException(400, "Missing required parameter 'persist' when calling GerarCodigoSegurancaNotificacaoSMS");
             
     
             var localVarPath = "/api/notificacoes-sms/gerar-codigo-seguranca";
@@ -3987,13 +4157,505 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GerarTokenSMS: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GerarCodigoSegurancaNotificacaoSMS: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GerarTokenSMS: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GerarCodigoSegurancaNotificacaoSMS: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+            
+        }
+        
+        /// <summary>
+        /// Lista os c\u00F3digos de seguran\u00E7a E-Mail Esse recurso permite listar os codigos de seguran\u00E7a por E-Mail
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="page">P\u00E1gina (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <returns>PageCodigoSegurancaResponse</returns>
+        public PageCodigoSegurancaResponse ListarCodigosSegurancaEmail (List<string> sort = null, int? page = null, int? limit = null)
+        {
+             ApiResponse<PageCodigoSegurancaResponse> localVarResponse = ListarCodigosSegurancaEmailWithHttpInfo(sort, page, limit);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Lista os c\u00F3digos de seguran\u00E7a E-Mail Esse recurso permite listar os codigos de seguran\u00E7a por E-Mail
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="page">P\u00E1gina (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <returns>ApiResponse of PageCodigoSegurancaResponse</returns>
+        public ApiResponse< PageCodigoSegurancaResponse > ListarCodigosSegurancaEmailWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
+        {
+            
+    
+            var localVarPath = "/api/codigos-seguranca-email";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarCodigosSegurancaEmail: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarCodigosSegurancaEmail: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<PageCodigoSegurancaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageCodigoSegurancaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageCodigoSegurancaResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Lista os c\u00F3digos de seguran\u00E7a E-Mail Esse recurso permite listar os codigos de seguran\u00E7a por E-Mail
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <returns>Task of PageCodigoSegurancaResponse</returns>
+        public async System.Threading.Tasks.Task<PageCodigoSegurancaResponse> ListarCodigosSegurancaEmailAsync (List<string> sort = null, int? page = null, int? limit = null)
+        {
+             ApiResponse<PageCodigoSegurancaResponse> localVarResponse = await ListarCodigosSegurancaEmailAsyncWithHttpInfo(sort, page, limit);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Lista os c\u00F3digos de seguran\u00E7a E-Mail Esse recurso permite listar os codigos de seguran\u00E7a por E-Mail
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <returns>Task of ApiResponse (PageCodigoSegurancaResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PageCodigoSegurancaResponse>> ListarCodigosSegurancaEmailAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
+        {
+            
+    
+            var localVarPath = "/api/codigos-seguranca-email";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarCodigosSegurancaEmail: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarCodigosSegurancaEmail: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PageCodigoSegurancaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageCodigoSegurancaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageCodigoSegurancaResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Lista os c\u00F3digos de seguran\u00E7a SMS Esse recurso permite listar os codigos de seguran\u00E7a por SMS
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="page">P\u00E1gina (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <returns>PageCodigoSegurancaResponse</returns>
+        public PageCodigoSegurancaResponse ListarCodigosSegurancaSMS (List<string> sort = null, int? page = null, int? limit = null)
+        {
+             ApiResponse<PageCodigoSegurancaResponse> localVarResponse = ListarCodigosSegurancaSMSWithHttpInfo(sort, page, limit);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Lista os c\u00F3digos de seguran\u00E7a SMS Esse recurso permite listar os codigos de seguran\u00E7a por SMS
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="page">P\u00E1gina (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <returns>ApiResponse of PageCodigoSegurancaResponse</returns>
+        public ApiResponse< PageCodigoSegurancaResponse > ListarCodigosSegurancaSMSWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
+        {
+            
+    
+            var localVarPath = "/api/codigos-seguranca-sms";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarCodigosSegurancaSMS: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarCodigosSegurancaSMS: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<PageCodigoSegurancaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageCodigoSegurancaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageCodigoSegurancaResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Lista os c\u00F3digos de seguran\u00E7a SMS Esse recurso permite listar os codigos de seguran\u00E7a por SMS
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <returns>Task of PageCodigoSegurancaResponse</returns>
+        public async System.Threading.Tasks.Task<PageCodigoSegurancaResponse> ListarCodigosSegurancaSMSAsync (List<string> sort = null, int? page = null, int? limit = null)
+        {
+             ApiResponse<PageCodigoSegurancaResponse> localVarResponse = await ListarCodigosSegurancaSMSAsyncWithHttpInfo(sort, page, limit);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Lista os c\u00F3digos de seguran\u00E7a SMS Esse recurso permite listar os codigos de seguran\u00E7a por SMS
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <returns>Task of ApiResponse (PageCodigoSegurancaResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PageCodigoSegurancaResponse>> ListarCodigosSegurancaSMSAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
+        {
+            
+    
+            var localVarPath = "/api/codigos-seguranca-sms";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarCodigosSegurancaSMS: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarCodigosSegurancaSMS: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PageCodigoSegurancaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageCodigoSegurancaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageCodigoSegurancaResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Lista configura\u00E7\u00F5es de E-mails Esse recurso permite listar as configura\u00E7\u00F5es de E-mails
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="page">P\u00E1gina (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <returns>PageConfiguracaoEmailResponse</returns>
+        public PageConfiguracaoEmailResponse ListarConfiguracaoEmail (List<string> sort = null, int? page = null, int? limit = null)
+        {
+             ApiResponse<PageConfiguracaoEmailResponse> localVarResponse = ListarConfiguracaoEmailWithHttpInfo(sort, page, limit);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Lista configura\u00E7\u00F5es de E-mails Esse recurso permite listar as configura\u00E7\u00F5es de E-mails
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="page">P\u00E1gina (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <returns>ApiResponse of PageConfiguracaoEmailResponse</returns>
+        public ApiResponse< PageConfiguracaoEmailResponse > ListarConfiguracaoEmailWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
+        {
+            
+    
+            var localVarPath = "/api/configuracoes-email";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarConfiguracaoEmail: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarConfiguracaoEmail: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<PageConfiguracaoEmailResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageConfiguracaoEmailResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageConfiguracaoEmailResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Lista configura\u00E7\u00F5es de E-mails Esse recurso permite listar as configura\u00E7\u00F5es de E-mails
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <returns>Task of PageConfiguracaoEmailResponse</returns>
+        public async System.Threading.Tasks.Task<PageConfiguracaoEmailResponse> ListarConfiguracaoEmailAsync (List<string> sort = null, int? page = null, int? limit = null)
+        {
+             ApiResponse<PageConfiguracaoEmailResponse> localVarResponse = await ListarConfiguracaoEmailAsyncWithHttpInfo(sort, page, limit);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Lista configura\u00E7\u00F5es de E-mails Esse recurso permite listar as configura\u00E7\u00F5es de E-mails
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <returns>Task of ApiResponse (PageConfiguracaoEmailResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PageConfiguracaoEmailResponse>> ListarConfiguracaoEmailAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
+        {
+            
+    
+            var localVarPath = "/api/configuracoes-email";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarConfiguracaoEmail: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarConfiguracaoEmail: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PageConfiguracaoEmailResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageConfiguracaoEmailResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageConfiguracaoEmailResponse)));
             
         }
         
@@ -4007,9 +4669,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">Id da configura\u00E7\u00E3o (optional)</param> 
         /// <param name="idEmissor">Id do emissor (optional)</param> 
         /// <returns>PageConfiguracaoSMSResponse</returns>
-        public PageConfiguracaoSMSResponse Listar (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idEmissor = null)
+        public PageConfiguracaoSMSResponse ListarConfiguracaoSMS (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idEmissor = null)
         {
-             ApiResponse<PageConfiguracaoSMSResponse> localVarResponse = ListarWithHttpInfo(sort, page, limit, id, idEmissor);
+             ApiResponse<PageConfiguracaoSMSResponse> localVarResponse = ListarConfiguracaoSMSWithHttpInfo(sort, page, limit, id, idEmissor);
              return localVarResponse.Data;
         }
 
@@ -4023,7 +4685,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">Id da configura\u00E7\u00E3o (optional)</param> 
         /// <param name="idEmissor">Id do emissor (optional)</param> 
         /// <returns>ApiResponse of PageConfiguracaoSMSResponse</returns>
-        public ApiResponse< PageConfiguracaoSMSResponse > ListarWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idEmissor = null)
+        public ApiResponse< PageConfiguracaoSMSResponse > ListarConfiguracaoSMSWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idEmissor = null)
         {
             
     
@@ -4074,9 +4736,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Listar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarConfiguracaoSMS: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Listar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarConfiguracaoSMS: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageConfiguracaoSMSResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4095,9 +4757,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">Id da configura\u00E7\u00E3o (optional)</param>
         /// <param name="idEmissor">Id do emissor (optional)</param>
         /// <returns>Task of PageConfiguracaoSMSResponse</returns>
-        public async System.Threading.Tasks.Task<PageConfiguracaoSMSResponse> ListarAsync (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idEmissor = null)
+        public async System.Threading.Tasks.Task<PageConfiguracaoSMSResponse> ListarConfiguracaoSMSAsync (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idEmissor = null)
         {
-             ApiResponse<PageConfiguracaoSMSResponse> localVarResponse = await ListarAsyncWithHttpInfo(sort, page, limit, id, idEmissor);
+             ApiResponse<PageConfiguracaoSMSResponse> localVarResponse = await ListarConfiguracaoSMSAsyncWithHttpInfo(sort, page, limit, id, idEmissor);
              return localVarResponse.Data;
 
         }
@@ -4112,7 +4774,7 @@ namespace Conductor.Pier.Api
         /// <param name="id">Id da configura\u00E7\u00E3o (optional)</param>
         /// <param name="idEmissor">Id do emissor (optional)</param>
         /// <returns>Task of ApiResponse (PageConfiguracaoSMSResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageConfiguracaoSMSResponse>> ListarAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idEmissor = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageConfiguracaoSMSResponse>> ListarConfiguracaoSMSAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idEmissor = null)
         {
             
     
@@ -4163,505 +4825,13 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Listar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarConfiguracaoSMS: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Listar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarConfiguracaoSMS: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageConfiguracaoSMSResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (PageConfiguracaoSMSResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageConfiguracaoSMSResponse)));
-            
-        }
-        
-        /// <summary>
-        /// Lista configura\u00E7\u00F5es de E-mails Esse recurso permite listar as configura\u00E7\u00F5es de E-mails
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
-        /// <param name="page">P\u00E1gina (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
-        /// <returns>PageConfiguracaoEmailResponse</returns>
-        public PageConfiguracaoEmailResponse ListarConfiguracao (List<string> sort = null, int? page = null, int? limit = null)
-        {
-             ApiResponse<PageConfiguracaoEmailResponse> localVarResponse = ListarConfiguracaoWithHttpInfo(sort, page, limit);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Lista configura\u00E7\u00F5es de E-mails Esse recurso permite listar as configura\u00E7\u00F5es de E-mails
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
-        /// <param name="page">P\u00E1gina (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
-        /// <returns>ApiResponse of PageConfiguracaoEmailResponse</returns>
-        public ApiResponse< PageConfiguracaoEmailResponse > ListarConfiguracaoWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
-        {
-            
-    
-            var localVarPath = "/api/configuracoes-email";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            
-            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
-            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
-            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
-            
-            
-            
-            
-
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarConfiguracao: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarConfiguracao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<PageConfiguracaoEmailResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PageConfiguracaoEmailResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageConfiguracaoEmailResponse)));
-            
-        }
-
-        
-        /// <summary>
-        /// Lista configura\u00E7\u00F5es de E-mails Esse recurso permite listar as configura\u00E7\u00F5es de E-mails
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <returns>Task of PageConfiguracaoEmailResponse</returns>
-        public async System.Threading.Tasks.Task<PageConfiguracaoEmailResponse> ListarConfiguracaoAsync (List<string> sort = null, int? page = null, int? limit = null)
-        {
-             ApiResponse<PageConfiguracaoEmailResponse> localVarResponse = await ListarConfiguracaoAsyncWithHttpInfo(sort, page, limit);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Lista configura\u00E7\u00F5es de E-mails Esse recurso permite listar as configura\u00E7\u00F5es de E-mails
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <returns>Task of ApiResponse (PageConfiguracaoEmailResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageConfiguracaoEmailResponse>> ListarConfiguracaoAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
-        {
-            
-    
-            var localVarPath = "/api/configuracoes-email";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            
-            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
-            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
-            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
-            
-            
-            
-            
-
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarConfiguracao: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarConfiguracao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<PageConfiguracaoEmailResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PageConfiguracaoEmailResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageConfiguracaoEmailResponse)));
-            
-        }
-        
-        /// <summary>
-        /// Lista os c\u00F3digos de seguran\u00E7a E-Mail Esse recurso permite listar os codigos de seguran\u00E7a por E-Mail
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
-        /// <param name="page">P\u00E1gina (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
-        /// <returns>PageCodigoSegurancaResponse</returns>
-        public PageCodigoSegurancaResponse ListarPorEmail (List<string> sort = null, int? page = null, int? limit = null)
-        {
-             ApiResponse<PageCodigoSegurancaResponse> localVarResponse = ListarPorEmailWithHttpInfo(sort, page, limit);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Lista os c\u00F3digos de seguran\u00E7a E-Mail Esse recurso permite listar os codigos de seguran\u00E7a por E-Mail
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
-        /// <param name="page">P\u00E1gina (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
-        /// <returns>ApiResponse of PageCodigoSegurancaResponse</returns>
-        public ApiResponse< PageCodigoSegurancaResponse > ListarPorEmailWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
-        {
-            
-    
-            var localVarPath = "/api/codigos-seguranca-email";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            
-            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
-            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
-            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
-            
-            
-            
-            
-
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarPorEmail: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarPorEmail: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<PageCodigoSegurancaResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PageCodigoSegurancaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageCodigoSegurancaResponse)));
-            
-        }
-
-        
-        /// <summary>
-        /// Lista os c\u00F3digos de seguran\u00E7a E-Mail Esse recurso permite listar os codigos de seguran\u00E7a por E-Mail
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <returns>Task of PageCodigoSegurancaResponse</returns>
-        public async System.Threading.Tasks.Task<PageCodigoSegurancaResponse> ListarPorEmailAsync (List<string> sort = null, int? page = null, int? limit = null)
-        {
-             ApiResponse<PageCodigoSegurancaResponse> localVarResponse = await ListarPorEmailAsyncWithHttpInfo(sort, page, limit);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Lista os c\u00F3digos de seguran\u00E7a E-Mail Esse recurso permite listar os codigos de seguran\u00E7a por E-Mail
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <returns>Task of ApiResponse (PageCodigoSegurancaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageCodigoSegurancaResponse>> ListarPorEmailAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
-        {
-            
-    
-            var localVarPath = "/api/codigos-seguranca-email";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            
-            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
-            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
-            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
-            
-            
-            
-            
-
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarPorEmail: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarPorEmail: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<PageCodigoSegurancaResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PageCodigoSegurancaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageCodigoSegurancaResponse)));
-            
-        }
-        
-        /// <summary>
-        /// Lista os c\u00F3digos de seguran\u00E7a SMS Esse recurso permite listar os codigos de seguran\u00E7a por SMS
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
-        /// <param name="page">P\u00E1gina (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
-        /// <returns>PageCodigoSegurancaResponse</returns>
-        public PageCodigoSegurancaResponse ListarPorSMS (List<string> sort = null, int? page = null, int? limit = null)
-        {
-             ApiResponse<PageCodigoSegurancaResponse> localVarResponse = ListarPorSMSWithHttpInfo(sort, page, limit);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Lista os c\u00F3digos de seguran\u00E7a SMS Esse recurso permite listar os codigos de seguran\u00E7a por SMS
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
-        /// <param name="page">P\u00E1gina (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
-        /// <returns>ApiResponse of PageCodigoSegurancaResponse</returns>
-        public ApiResponse< PageCodigoSegurancaResponse > ListarPorSMSWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
-        {
-            
-    
-            var localVarPath = "/api/codigos-seguranca-sms";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            
-            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
-            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
-            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
-            
-            
-            
-            
-
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarPorSMS: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarPorSMS: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<PageCodigoSegurancaResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PageCodigoSegurancaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageCodigoSegurancaResponse)));
-            
-        }
-
-        
-        /// <summary>
-        /// Lista os c\u00F3digos de seguran\u00E7a SMS Esse recurso permite listar os codigos de seguran\u00E7a por SMS
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <returns>Task of PageCodigoSegurancaResponse</returns>
-        public async System.Threading.Tasks.Task<PageCodigoSegurancaResponse> ListarPorSMSAsync (List<string> sort = null, int? page = null, int? limit = null)
-        {
-             ApiResponse<PageCodigoSegurancaResponse> localVarResponse = await ListarPorSMSAsyncWithHttpInfo(sort, page, limit);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Lista os c\u00F3digos de seguran\u00E7a SMS Esse recurso permite listar os codigos de seguran\u00E7a por SMS
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <returns>Task of ApiResponse (PageCodigoSegurancaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageCodigoSegurancaResponse>> ListarPorSMSAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
-        {
-            
-    
-            var localVarPath = "/api/codigos-seguranca-sms";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            
-            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
-            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
-            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
-            
-            
-            
-            
-
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarPorSMS: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarPorSMS: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<PageCodigoSegurancaResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PageCodigoSegurancaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageCodigoSegurancaResponse)));
             
         }
         
@@ -5067,9 +5237,9 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00E1gina (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
         /// <returns>PageTemplateNotificacaoResponse</returns>
-        public PageTemplateNotificacaoResponse ListarTemplateNotificacao (List<string> sort = null, int? page = null, int? limit = null)
+        public PageTemplateNotificacaoResponse ListarTemplates (List<string> sort = null, int? page = null, int? limit = null)
         {
-             ApiResponse<PageTemplateNotificacaoResponse> localVarResponse = ListarTemplateNotificacaoWithHttpInfo(sort, page, limit);
+             ApiResponse<PageTemplateNotificacaoResponse> localVarResponse = ListarTemplatesWithHttpInfo(sort, page, limit);
              return localVarResponse.Data;
         }
 
@@ -5081,7 +5251,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00E1gina (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
         /// <returns>ApiResponse of PageTemplateNotificacaoResponse</returns>
-        public ApiResponse< PageTemplateNotificacaoResponse > ListarTemplateNotificacaoWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
+        public ApiResponse< PageTemplateNotificacaoResponse > ListarTemplatesWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
         {
             
     
@@ -5130,9 +5300,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarTemplateNotificacao: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarTemplates: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarTemplateNotificacao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarTemplates: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<PageTemplateNotificacaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5149,9 +5319,9 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00E1gina (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
         /// <returns>Task of PageTemplateNotificacaoResponse</returns>
-        public async System.Threading.Tasks.Task<PageTemplateNotificacaoResponse> ListarTemplateNotificacaoAsync (List<string> sort = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<PageTemplateNotificacaoResponse> ListarTemplatesAsync (List<string> sort = null, int? page = null, int? limit = null)
         {
-             ApiResponse<PageTemplateNotificacaoResponse> localVarResponse = await ListarTemplateNotificacaoAsyncWithHttpInfo(sort, page, limit);
+             ApiResponse<PageTemplateNotificacaoResponse> localVarResponse = await ListarTemplatesAsyncWithHttpInfo(sort, page, limit);
              return localVarResponse.Data;
 
         }
@@ -5164,7 +5334,7 @@ namespace Conductor.Pier.Api
         /// <param name="page">P\u00E1gina (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
         /// <returns>Task of ApiResponse (PageTemplateNotificacaoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageTemplateNotificacaoResponse>> ListarTemplateNotificacaoAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageTemplateNotificacaoResponse>> ListarTemplatesAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
         {
             
     
@@ -5213,9 +5383,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarTemplateNotificacao: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ListarTemplates: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarTemplateNotificacao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ListarTemplates: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<PageTemplateNotificacaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5370,184 +5540,14 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Enviar notifica\u00E7\u00E3o por email Esse recurso permite enviar uma mensagem de notifica\u00E7\u00E3o por email
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">request</param> 
-        /// <returns>Object</returns>
-        public Object NotificacaoEmail (NotificacaoEmailRequest request)
-        {
-             ApiResponse<Object> localVarResponse = NotificacaoEmailWithHttpInfo(request);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Enviar notifica\u00E7\u00E3o por email Esse recurso permite enviar uma mensagem de notifica\u00E7\u00E3o por email
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">request</param> 
-        /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > NotificacaoEmailWithHttpInfo (NotificacaoEmailRequest request)
-        {
-            
-            // verify the required parameter 'request' is set
-            if (request == null)
-                throw new ApiException(400, "Missing required parameter 'request' when calling NotificacaoApi->NotificacaoEmail");
-            
-    
-            var localVarPath = "/api/notificacoes-email";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            
-            
-            
-            
-            if (request.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(request); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = request; // byte array
-            }
-
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling NotificacaoEmail: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling NotificacaoEmail: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
-            
-        }
-
-        
-        /// <summary>
-        /// Enviar notifica\u00E7\u00E3o por email Esse recurso permite enviar uma mensagem de notifica\u00E7\u00E3o por email
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">request</param>
-        /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> NotificacaoEmailAsync (NotificacaoEmailRequest request)
-        {
-             ApiResponse<Object> localVarResponse = await NotificacaoEmailAsyncWithHttpInfo(request);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Enviar notifica\u00E7\u00E3o por email Esse recurso permite enviar uma mensagem de notifica\u00E7\u00E3o por email
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">request</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> NotificacaoEmailAsyncWithHttpInfo (NotificacaoEmailRequest request)
-        {
-            // verify the required parameter 'request' is set
-            if (request == null) throw new ApiException(400, "Missing required parameter 'request' when calling NotificacaoEmail");
-            
-    
-            var localVarPath = "/api/notificacoes-email";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            
-            
-            
-            
-            if (request.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(request); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = request; // byte array
-            }
-
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling NotificacaoEmail: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling NotificacaoEmail: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
-            
-        }
-        
-        /// <summary>
         /// Reenviar c\u00F3digo de seguran\u00E7a por sms Esse recurso permite que seja reenviado para um determinado n\u00FAmero de telefone, atrav\u00E9s de SMS, o c\u00F3digo de seguran\u00E7a gerado previamente para ele. Caso o c\u00F3digo de seguran\u00E7a j\u00E1 n\u00E3o esteja mais v\u00E1lido, o recurso retornar\u00E1 uma mensagem orientando que seja solicitada uma nova gera\u00E7\u00E3o para o telefone em quest\u00E3o
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param> 
         /// <returns>string</returns>
-        public string ReenviarTokenSMS (CodigoSegurancaSMSPersist persist)
+        public string ReenviarCodigoSegurancaNotificacaoSMS (CodigoSegurancaSMSPersist persist)
         {
-             ApiResponse<string> localVarResponse = ReenviarTokenSMSWithHttpInfo(persist);
+             ApiResponse<string> localVarResponse = ReenviarCodigoSegurancaNotificacaoSMSWithHttpInfo(persist);
              return localVarResponse.Data;
         }
 
@@ -5557,12 +5557,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param> 
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > ReenviarTokenSMSWithHttpInfo (CodigoSegurancaSMSPersist persist)
+        public ApiResponse< string > ReenviarCodigoSegurancaNotificacaoSMSWithHttpInfo (CodigoSegurancaSMSPersist persist)
         {
             
             // verify the required parameter 'persist' is set
             if (persist == null)
-                throw new ApiException(400, "Missing required parameter 'persist' when calling NotificacaoApi->ReenviarTokenSMS");
+                throw new ApiException(400, "Missing required parameter 'persist' when calling NotificacaoApi->ReenviarCodigoSegurancaNotificacaoSMS");
             
     
             var localVarPath = "/api/notificacoes-sms/reenviar-codigo-seguranca";
@@ -5614,9 +5614,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ReenviarTokenSMS: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ReenviarCodigoSegurancaNotificacaoSMS: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ReenviarTokenSMS: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ReenviarCodigoSegurancaNotificacaoSMS: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5631,9 +5631,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> ReenviarTokenSMSAsync (CodigoSegurancaSMSPersist persist)
+        public async System.Threading.Tasks.Task<string> ReenviarCodigoSegurancaNotificacaoSMSAsync (CodigoSegurancaSMSPersist persist)
         {
-             ApiResponse<string> localVarResponse = await ReenviarTokenSMSAsyncWithHttpInfo(persist);
+             ApiResponse<string> localVarResponse = await ReenviarCodigoSegurancaNotificacaoSMSAsyncWithHttpInfo(persist);
              return localVarResponse.Data;
 
         }
@@ -5644,10 +5644,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="persist">persist</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> ReenviarTokenSMSAsyncWithHttpInfo (CodigoSegurancaSMSPersist persist)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> ReenviarCodigoSegurancaNotificacaoSMSAsyncWithHttpInfo (CodigoSegurancaSMSPersist persist)
         {
             // verify the required parameter 'persist' is set
-            if (persist == null) throw new ApiException(400, "Missing required parameter 'persist' when calling ReenviarTokenSMS");
+            if (persist == null) throw new ApiException(400, "Missing required parameter 'persist' when calling ReenviarCodigoSegurancaNotificacaoSMS");
             
     
             var localVarPath = "/api/notificacoes-sms/reenviar-codigo-seguranca";
@@ -5699,9 +5699,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ReenviarTokenSMS: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ReenviarCodigoSegurancaNotificacaoSMS: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ReenviarTokenSMS: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ReenviarCodigoSegurancaNotificacaoSMS: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5717,9 +5717,9 @@ namespace Conductor.Pier.Api
         /// <param name="data">Data (optional)</param> 
         /// <param name="resposta">TextoStatus (optional)</param> 
         /// <returns>NotificacaoSMSResponse</returns>
-        public NotificacaoSMSResponse ResponderSMSGet (string nsu = null, string data = null, string resposta = null)
+        public NotificacaoSMSResponse ResponderSMS (string nsu = null, string data = null, string resposta = null)
         {
-             ApiResponse<NotificacaoSMSResponse> localVarResponse = ResponderSMSGetWithHttpInfo(nsu, data, resposta);
+             ApiResponse<NotificacaoSMSResponse> localVarResponse = ResponderSMSWithHttpInfo(nsu, data, resposta);
              return localVarResponse.Data;
         }
 
@@ -5731,7 +5731,7 @@ namespace Conductor.Pier.Api
         /// <param name="data">Data (optional)</param> 
         /// <param name="resposta">TextoStatus (optional)</param> 
         /// <returns>ApiResponse of NotificacaoSMSResponse</returns>
-        public ApiResponse< NotificacaoSMSResponse > ResponderSMSGetWithHttpInfo (string nsu = null, string data = null, string resposta = null)
+        public ApiResponse< NotificacaoSMSResponse > ResponderSMSWithHttpInfo (string nsu = null, string data = null, string resposta = null)
         {
             
     
@@ -5780,9 +5780,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ResponderSMSGet: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ResponderSMS: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ResponderSMSGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ResponderSMS: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<NotificacaoSMSResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5799,9 +5799,9 @@ namespace Conductor.Pier.Api
         /// <param name="data">Data (optional)</param>
         /// <param name="resposta">TextoStatus (optional)</param>
         /// <returns>Task of NotificacaoSMSResponse</returns>
-        public async System.Threading.Tasks.Task<NotificacaoSMSResponse> ResponderSMSGetAsync (string nsu = null, string data = null, string resposta = null)
+        public async System.Threading.Tasks.Task<NotificacaoSMSResponse> ResponderSMSAsync (string nsu = null, string data = null, string resposta = null)
         {
-             ApiResponse<NotificacaoSMSResponse> localVarResponse = await ResponderSMSGetAsyncWithHttpInfo(nsu, data, resposta);
+             ApiResponse<NotificacaoSMSResponse> localVarResponse = await ResponderSMSAsyncWithHttpInfo(nsu, data, resposta);
              return localVarResponse.Data;
 
         }
@@ -5814,7 +5814,7 @@ namespace Conductor.Pier.Api
         /// <param name="data">Data (optional)</param>
         /// <param name="resposta">TextoStatus (optional)</param>
         /// <returns>Task of ApiResponse (NotificacaoSMSResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<NotificacaoSMSResponse>> ResponderSMSGetAsyncWithHttpInfo (string nsu = null, string data = null, string resposta = null)
+        public async System.Threading.Tasks.Task<ApiResponse<NotificacaoSMSResponse>> ResponderSMSAsyncWithHttpInfo (string nsu = null, string data = null, string resposta = null)
         {
             
     
@@ -5863,13 +5863,183 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ResponderSMSGet: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ResponderSMS: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ResponderSMSGet: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ResponderSMS: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<NotificacaoSMSResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (NotificacaoSMSResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(NotificacaoSMSResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Salva configura\u00E7\u00F5es de E-mail Esse recurso salvar configura\u00E7\u00F5es de E-mail
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="persist">persist</param> 
+        /// <returns>ConfiguracaoEmailResponse</returns>
+        public ConfiguracaoEmailResponse SalvarConfiguracaoEmail (ConfiguracaoEmailPersist persist)
+        {
+             ApiResponse<ConfiguracaoEmailResponse> localVarResponse = SalvarConfiguracaoEmailWithHttpInfo(persist);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Salva configura\u00E7\u00F5es de E-mail Esse recurso salvar configura\u00E7\u00F5es de E-mail
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="persist">persist</param> 
+        /// <returns>ApiResponse of ConfiguracaoEmailResponse</returns>
+        public ApiResponse< ConfiguracaoEmailResponse > SalvarConfiguracaoEmailWithHttpInfo (ConfiguracaoEmailPersist persist)
+        {
+            
+            // verify the required parameter 'persist' is set
+            if (persist == null)
+                throw new ApiException(400, "Missing required parameter 'persist' when calling NotificacaoApi->SalvarConfiguracaoEmail");
+            
+    
+            var localVarPath = "/api/configuracoes-email";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            if (persist.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(persist); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = persist; // byte array
+            }
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarConfiguracaoEmail: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarConfiguracaoEmail: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<ConfiguracaoEmailResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ConfiguracaoEmailResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConfiguracaoEmailResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Salva configura\u00E7\u00F5es de E-mail Esse recurso salvar configura\u00E7\u00F5es de E-mail
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="persist">persist</param>
+        /// <returns>Task of ConfiguracaoEmailResponse</returns>
+        public async System.Threading.Tasks.Task<ConfiguracaoEmailResponse> SalvarConfiguracaoEmailAsync (ConfiguracaoEmailPersist persist)
+        {
+             ApiResponse<ConfiguracaoEmailResponse> localVarResponse = await SalvarConfiguracaoEmailAsyncWithHttpInfo(persist);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Salva configura\u00E7\u00F5es de E-mail Esse recurso salvar configura\u00E7\u00F5es de E-mail
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="persist">persist</param>
+        /// <returns>Task of ApiResponse (ConfiguracaoEmailResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ConfiguracaoEmailResponse>> SalvarConfiguracaoEmailAsyncWithHttpInfo (ConfiguracaoEmailPersist persist)
+        {
+            // verify the required parameter 'persist' is set
+            if (persist == null) throw new ApiException(400, "Missing required parameter 'persist' when calling SalvarConfiguracaoEmail");
+            
+    
+            var localVarPath = "/api/configuracoes-email";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            if (persist.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(persist); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = persist; // byte array
+            }
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarConfiguracaoEmail: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarConfiguracaoEmail: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ConfiguracaoEmailResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ConfiguracaoEmailResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConfiguracaoEmailResponse)));
             
         }
         
@@ -5881,9 +6051,9 @@ namespace Conductor.Pier.Api
         /// <param name="usuarioSMS">Apresenta o usu\u00E1rio sms</param> 
         /// <param name="senhaSMS">Apresenta a senha sms</param> 
         /// <returns>ConfiguracaoSMSResponse</returns>
-        public ConfiguracaoSMSResponse Salvar (long? idEmissor, string usuarioSMS, string senhaSMS)
+        public ConfiguracaoSMSResponse SalvarConfiguracaoSMS (long? idEmissor, string usuarioSMS, string senhaSMS)
         {
-             ApiResponse<ConfiguracaoSMSResponse> localVarResponse = SalvarWithHttpInfo(idEmissor, usuarioSMS, senhaSMS);
+             ApiResponse<ConfiguracaoSMSResponse> localVarResponse = SalvarConfiguracaoSMSWithHttpInfo(idEmissor, usuarioSMS, senhaSMS);
              return localVarResponse.Data;
         }
 
@@ -5895,20 +6065,20 @@ namespace Conductor.Pier.Api
         /// <param name="usuarioSMS">Apresenta o usu\u00E1rio sms</param> 
         /// <param name="senhaSMS">Apresenta a senha sms</param> 
         /// <returns>ApiResponse of ConfiguracaoSMSResponse</returns>
-        public ApiResponse< ConfiguracaoSMSResponse > SalvarWithHttpInfo (long? idEmissor, string usuarioSMS, string senhaSMS)
+        public ApiResponse< ConfiguracaoSMSResponse > SalvarConfiguracaoSMSWithHttpInfo (long? idEmissor, string usuarioSMS, string senhaSMS)
         {
             
             // verify the required parameter 'idEmissor' is set
             if (idEmissor == null)
-                throw new ApiException(400, "Missing required parameter 'idEmissor' when calling NotificacaoApi->Salvar");
+                throw new ApiException(400, "Missing required parameter 'idEmissor' when calling NotificacaoApi->SalvarConfiguracaoSMS");
             
             // verify the required parameter 'usuarioSMS' is set
             if (usuarioSMS == null)
-                throw new ApiException(400, "Missing required parameter 'usuarioSMS' when calling NotificacaoApi->Salvar");
+                throw new ApiException(400, "Missing required parameter 'usuarioSMS' when calling NotificacaoApi->SalvarConfiguracaoSMS");
             
             // verify the required parameter 'senhaSMS' is set
             if (senhaSMS == null)
-                throw new ApiException(400, "Missing required parameter 'senhaSMS' when calling NotificacaoApi->Salvar");
+                throw new ApiException(400, "Missing required parameter 'senhaSMS' when calling NotificacaoApi->SalvarConfiguracaoSMS");
             
     
             var localVarPath = "/api/configuracoes-sms";
@@ -5956,9 +6126,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Salvar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarConfiguracaoSMS: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Salvar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarConfiguracaoSMS: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<ConfiguracaoSMSResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5975,9 +6145,9 @@ namespace Conductor.Pier.Api
         /// <param name="usuarioSMS">Apresenta o usu\u00E1rio sms</param>
         /// <param name="senhaSMS">Apresenta a senha sms</param>
         /// <returns>Task of ConfiguracaoSMSResponse</returns>
-        public async System.Threading.Tasks.Task<ConfiguracaoSMSResponse> SalvarAsync (long? idEmissor, string usuarioSMS, string senhaSMS)
+        public async System.Threading.Tasks.Task<ConfiguracaoSMSResponse> SalvarConfiguracaoSMSAsync (long? idEmissor, string usuarioSMS, string senhaSMS)
         {
-             ApiResponse<ConfiguracaoSMSResponse> localVarResponse = await SalvarAsyncWithHttpInfo(idEmissor, usuarioSMS, senhaSMS);
+             ApiResponse<ConfiguracaoSMSResponse> localVarResponse = await SalvarConfiguracaoSMSAsyncWithHttpInfo(idEmissor, usuarioSMS, senhaSMS);
              return localVarResponse.Data;
 
         }
@@ -5990,14 +6160,14 @@ namespace Conductor.Pier.Api
         /// <param name="usuarioSMS">Apresenta o usu\u00E1rio sms</param>
         /// <param name="senhaSMS">Apresenta a senha sms</param>
         /// <returns>Task of ApiResponse (ConfiguracaoSMSResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ConfiguracaoSMSResponse>> SalvarAsyncWithHttpInfo (long? idEmissor, string usuarioSMS, string senhaSMS)
+        public async System.Threading.Tasks.Task<ApiResponse<ConfiguracaoSMSResponse>> SalvarConfiguracaoSMSAsyncWithHttpInfo (long? idEmissor, string usuarioSMS, string senhaSMS)
         {
             // verify the required parameter 'idEmissor' is set
-            if (idEmissor == null) throw new ApiException(400, "Missing required parameter 'idEmissor' when calling Salvar");
+            if (idEmissor == null) throw new ApiException(400, "Missing required parameter 'idEmissor' when calling SalvarConfiguracaoSMS");
             // verify the required parameter 'usuarioSMS' is set
-            if (usuarioSMS == null) throw new ApiException(400, "Missing required parameter 'usuarioSMS' when calling Salvar");
+            if (usuarioSMS == null) throw new ApiException(400, "Missing required parameter 'usuarioSMS' when calling SalvarConfiguracaoSMS");
             // verify the required parameter 'senhaSMS' is set
-            if (senhaSMS == null) throw new ApiException(400, "Missing required parameter 'senhaSMS' when calling Salvar");
+            if (senhaSMS == null) throw new ApiException(400, "Missing required parameter 'senhaSMS' when calling SalvarConfiguracaoSMS");
             
     
             var localVarPath = "/api/configuracoes-sms";
@@ -6045,183 +6215,13 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Salvar: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarConfiguracaoSMS: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Salvar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarConfiguracaoSMS: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<ConfiguracaoSMSResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ConfiguracaoSMSResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConfiguracaoSMSResponse)));
-            
-        }
-        
-        /// <summary>
-        /// Salva configura\u00E7\u00F5es de E-mail Esse recurso salvar configura\u00E7\u00F5es de E-mail
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="persist">persist</param> 
-        /// <returns>ConfiguracaoEmailResponse</returns>
-        public ConfiguracaoEmailResponse SalvarConfiguracao (ConfiguracaoEmailPersist persist)
-        {
-             ApiResponse<ConfiguracaoEmailResponse> localVarResponse = SalvarConfiguracaoWithHttpInfo(persist);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Salva configura\u00E7\u00F5es de E-mail Esse recurso salvar configura\u00E7\u00F5es de E-mail
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="persist">persist</param> 
-        /// <returns>ApiResponse of ConfiguracaoEmailResponse</returns>
-        public ApiResponse< ConfiguracaoEmailResponse > SalvarConfiguracaoWithHttpInfo (ConfiguracaoEmailPersist persist)
-        {
-            
-            // verify the required parameter 'persist' is set
-            if (persist == null)
-                throw new ApiException(400, "Missing required parameter 'persist' when calling NotificacaoApi->SalvarConfiguracao");
-            
-    
-            var localVarPath = "/api/configuracoes-email";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            
-            
-            
-            
-            if (persist.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(persist); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = persist; // byte array
-            }
-
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarConfiguracao: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarConfiguracao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<ConfiguracaoEmailResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ConfiguracaoEmailResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConfiguracaoEmailResponse)));
-            
-        }
-
-        
-        /// <summary>
-        /// Salva configura\u00E7\u00F5es de E-mail Esse recurso salvar configura\u00E7\u00F5es de E-mail
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="persist">persist</param>
-        /// <returns>Task of ConfiguracaoEmailResponse</returns>
-        public async System.Threading.Tasks.Task<ConfiguracaoEmailResponse> SalvarConfiguracaoAsync (ConfiguracaoEmailPersist persist)
-        {
-             ApiResponse<ConfiguracaoEmailResponse> localVarResponse = await SalvarConfiguracaoAsyncWithHttpInfo(persist);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Salva configura\u00E7\u00F5es de E-mail Esse recurso salvar configura\u00E7\u00F5es de E-mail
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="persist">persist</param>
-        /// <returns>Task of ApiResponse (ConfiguracaoEmailResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ConfiguracaoEmailResponse>> SalvarConfiguracaoAsyncWithHttpInfo (ConfiguracaoEmailPersist persist)
-        {
-            // verify the required parameter 'persist' is set
-            if (persist == null) throw new ApiException(400, "Missing required parameter 'persist' when calling SalvarConfiguracao");
-            
-    
-            var localVarPath = "/api/configuracoes-email";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            
-            
-            
-            
-            if (persist.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(persist); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = persist; // byte array
-            }
-
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarConfiguracao: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarConfiguracao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<ConfiguracaoEmailResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ConfiguracaoEmailResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConfiguracaoEmailResponse)));
             
         }
         
@@ -6231,9 +6231,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pushPersists">pushPersists</param> 
         /// <returns>NotificacaoResponse</returns>
-        public NotificacaoResponse SalvarPush (List<PushAPNS> pushPersists)
+        public NotificacaoResponse SalvarPushAPNS (List<PushAPNS> pushPersists)
         {
-             ApiResponse<NotificacaoResponse> localVarResponse = SalvarPushWithHttpInfo(pushPersists);
+             ApiResponse<NotificacaoResponse> localVarResponse = SalvarPushAPNSWithHttpInfo(pushPersists);
              return localVarResponse.Data;
         }
 
@@ -6243,12 +6243,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pushPersists">pushPersists</param> 
         /// <returns>ApiResponse of NotificacaoResponse</returns>
-        public ApiResponse< NotificacaoResponse > SalvarPushWithHttpInfo (List<PushAPNS> pushPersists)
+        public ApiResponse< NotificacaoResponse > SalvarPushAPNSWithHttpInfo (List<PushAPNS> pushPersists)
         {
             
             // verify the required parameter 'pushPersists' is set
             if (pushPersists == null)
-                throw new ApiException(400, "Missing required parameter 'pushPersists' when calling NotificacaoApi->SalvarPush");
+                throw new ApiException(400, "Missing required parameter 'pushPersists' when calling NotificacaoApi->SalvarPushAPNS");
             
     
             var localVarPath = "/api/notificacoes/push/apns";
@@ -6300,9 +6300,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarPush: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarPushAPNS: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarPush: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarPushAPNS: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<NotificacaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6317,9 +6317,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pushPersists">pushPersists</param>
         /// <returns>Task of NotificacaoResponse</returns>
-        public async System.Threading.Tasks.Task<NotificacaoResponse> SalvarPushAsync (List<PushAPNS> pushPersists)
+        public async System.Threading.Tasks.Task<NotificacaoResponse> SalvarPushAPNSAsync (List<PushAPNS> pushPersists)
         {
-             ApiResponse<NotificacaoResponse> localVarResponse = await SalvarPushAsyncWithHttpInfo(pushPersists);
+             ApiResponse<NotificacaoResponse> localVarResponse = await SalvarPushAPNSAsyncWithHttpInfo(pushPersists);
              return localVarResponse.Data;
 
         }
@@ -6330,10 +6330,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pushPersists">pushPersists</param>
         /// <returns>Task of ApiResponse (NotificacaoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<NotificacaoResponse>> SalvarPushAsyncWithHttpInfo (List<PushAPNS> pushPersists)
+        public async System.Threading.Tasks.Task<ApiResponse<NotificacaoResponse>> SalvarPushAPNSAsyncWithHttpInfo (List<PushAPNS> pushPersists)
         {
             // verify the required parameter 'pushPersists' is set
-            if (pushPersists == null) throw new ApiException(400, "Missing required parameter 'pushPersists' when calling SalvarPush");
+            if (pushPersists == null) throw new ApiException(400, "Missing required parameter 'pushPersists' when calling SalvarPushAPNS");
             
     
             var localVarPath = "/api/notificacoes/push/apns";
@@ -6385,9 +6385,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarPush: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarPushAPNS: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarPush: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarPushAPNS: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<NotificacaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6917,9 +6917,9 @@ namespace Conductor.Pier.Api
         /// <param name="assunto">Assunto da Notificaca\u00E7\u00E3o (optional)</param> 
         /// <param name="templatePadrao">Template Padr\u00E3o (optional)</param> 
         /// <returns>TemplateNotificacaoDetalheResponse</returns>
-        public TemplateNotificacaoDetalheResponse SalvarTemplateNotificacao (string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string remetente = null, string assunto = null, bool? templatePadrao = null)
+        public TemplateNotificacaoDetalheResponse SalvarTemplate (string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string remetente = null, string assunto = null, bool? templatePadrao = null)
         {
-             ApiResponse<TemplateNotificacaoDetalheResponse> localVarResponse = SalvarTemplateNotificacaoWithHttpInfo(conteudo, idConfiguracaoEmail, tipoLayout, tipoNotificacao, remetente, assunto, templatePadrao);
+             ApiResponse<TemplateNotificacaoDetalheResponse> localVarResponse = SalvarTemplateWithHttpInfo(conteudo, idConfiguracaoEmail, tipoLayout, tipoNotificacao, remetente, assunto, templatePadrao);
              return localVarResponse.Data;
         }
 
@@ -6935,12 +6935,12 @@ namespace Conductor.Pier.Api
         /// <param name="assunto">Assunto da Notificaca\u00E7\u00E3o (optional)</param> 
         /// <param name="templatePadrao">Template Padr\u00E3o (optional)</param> 
         /// <returns>ApiResponse of TemplateNotificacaoDetalheResponse</returns>
-        public ApiResponse< TemplateNotificacaoDetalheResponse > SalvarTemplateNotificacaoWithHttpInfo (string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string remetente = null, string assunto = null, bool? templatePadrao = null)
+        public ApiResponse< TemplateNotificacaoDetalheResponse > SalvarTemplateWithHttpInfo (string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string remetente = null, string assunto = null, bool? templatePadrao = null)
         {
             
             // verify the required parameter 'conteudo' is set
             if (conteudo == null)
-                throw new ApiException(400, "Missing required parameter 'conteudo' when calling NotificacaoApi->SalvarTemplateNotificacao");
+                throw new ApiException(400, "Missing required parameter 'conteudo' when calling NotificacaoApi->SalvarTemplate");
             
     
             var localVarPath = "/api/templates-notificacoes";
@@ -6998,9 +6998,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarTemplateNotificacao: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarTemplate: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarTemplateNotificacao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarTemplate: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<TemplateNotificacaoDetalheResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -7021,9 +7021,9 @@ namespace Conductor.Pier.Api
         /// <param name="assunto">Assunto da Notificaca\u00E7\u00E3o (optional)</param>
         /// <param name="templatePadrao">Template Padr\u00E3o (optional)</param>
         /// <returns>Task of TemplateNotificacaoDetalheResponse</returns>
-        public async System.Threading.Tasks.Task<TemplateNotificacaoDetalheResponse> SalvarTemplateNotificacaoAsync (string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string remetente = null, string assunto = null, bool? templatePadrao = null)
+        public async System.Threading.Tasks.Task<TemplateNotificacaoDetalheResponse> SalvarTemplateAsync (string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string remetente = null, string assunto = null, bool? templatePadrao = null)
         {
-             ApiResponse<TemplateNotificacaoDetalheResponse> localVarResponse = await SalvarTemplateNotificacaoAsyncWithHttpInfo(conteudo, idConfiguracaoEmail, tipoLayout, tipoNotificacao, remetente, assunto, templatePadrao);
+             ApiResponse<TemplateNotificacaoDetalheResponse> localVarResponse = await SalvarTemplateAsyncWithHttpInfo(conteudo, idConfiguracaoEmail, tipoLayout, tipoNotificacao, remetente, assunto, templatePadrao);
              return localVarResponse.Data;
 
         }
@@ -7040,10 +7040,10 @@ namespace Conductor.Pier.Api
         /// <param name="assunto">Assunto da Notificaca\u00E7\u00E3o (optional)</param>
         /// <param name="templatePadrao">Template Padr\u00E3o (optional)</param>
         /// <returns>Task of ApiResponse (TemplateNotificacaoDetalheResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TemplateNotificacaoDetalheResponse>> SalvarTemplateNotificacaoAsyncWithHttpInfo (string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string remetente = null, string assunto = null, bool? templatePadrao = null)
+        public async System.Threading.Tasks.Task<ApiResponse<TemplateNotificacaoDetalheResponse>> SalvarTemplateAsyncWithHttpInfo (string conteudo, long? idConfiguracaoEmail = null, string tipoLayout = null, string tipoNotificacao = null, string remetente = null, string assunto = null, bool? templatePadrao = null)
         {
             // verify the required parameter 'conteudo' is set
-            if (conteudo == null) throw new ApiException(400, "Missing required parameter 'conteudo' when calling SalvarTemplateNotificacao");
+            if (conteudo == null) throw new ApiException(400, "Missing required parameter 'conteudo' when calling SalvarTemplate");
             
     
             var localVarPath = "/api/templates-notificacoes";
@@ -7101,9 +7101,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarTemplateNotificacao: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarTemplate: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarTemplateNotificacao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarTemplate: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<TemplateNotificacaoDetalheResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -7117,9 +7117,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">request</param> 
         /// <returns>string</returns>
-        public string ValidarTokenEMAIL (CodigoSegurancaEMAILPersist request)
+        public string ValidarCodigoSegurancaNotificacaoEmail (CodigoSegurancaEMAILPersist request)
         {
-             ApiResponse<string> localVarResponse = ValidarTokenEMAILWithHttpInfo(request);
+             ApiResponse<string> localVarResponse = ValidarCodigoSegurancaNotificacaoEmailWithHttpInfo(request);
              return localVarResponse.Data;
         }
 
@@ -7129,12 +7129,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">request</param> 
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > ValidarTokenEMAILWithHttpInfo (CodigoSegurancaEMAILPersist request)
+        public ApiResponse< string > ValidarCodigoSegurancaNotificacaoEmailWithHttpInfo (CodigoSegurancaEMAILPersist request)
         {
             
             // verify the required parameter 'request' is set
             if (request == null)
-                throw new ApiException(400, "Missing required parameter 'request' when calling NotificacaoApi->ValidarTokenEMAIL");
+                throw new ApiException(400, "Missing required parameter 'request' when calling NotificacaoApi->ValidarCodigoSegurancaNotificacaoEmail");
             
     
             var localVarPath = "/api/notificacoes-email/validar-codigo-seguranca";
@@ -7186,9 +7186,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ValidarTokenEMAIL: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ValidarCodigoSegurancaNotificacaoEmail: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ValidarTokenEMAIL: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ValidarCodigoSegurancaNotificacaoEmail: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -7203,9 +7203,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">request</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> ValidarTokenEMAILAsync (CodigoSegurancaEMAILPersist request)
+        public async System.Threading.Tasks.Task<string> ValidarCodigoSegurancaNotificacaoEmailAsync (CodigoSegurancaEMAILPersist request)
         {
-             ApiResponse<string> localVarResponse = await ValidarTokenEMAILAsyncWithHttpInfo(request);
+             ApiResponse<string> localVarResponse = await ValidarCodigoSegurancaNotificacaoEmailAsyncWithHttpInfo(request);
              return localVarResponse.Data;
 
         }
@@ -7216,10 +7216,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">request</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> ValidarTokenEMAILAsyncWithHttpInfo (CodigoSegurancaEMAILPersist request)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> ValidarCodigoSegurancaNotificacaoEmailAsyncWithHttpInfo (CodigoSegurancaEMAILPersist request)
         {
             // verify the required parameter 'request' is set
-            if (request == null) throw new ApiException(400, "Missing required parameter 'request' when calling ValidarTokenEMAIL");
+            if (request == null) throw new ApiException(400, "Missing required parameter 'request' when calling ValidarCodigoSegurancaNotificacaoEmail");
             
     
             var localVarPath = "/api/notificacoes-email/validar-codigo-seguranca";
@@ -7271,9 +7271,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ValidarTokenEMAIL: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ValidarCodigoSegurancaNotificacaoEmail: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ValidarTokenEMAIL: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ValidarCodigoSegurancaNotificacaoEmail: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -7287,9 +7287,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">request</param> 
         /// <returns>string</returns>
-        public string ValidarTokenSMS (CodigoSegurancaSMSRequest request)
+        public string ValidarCodigoSegurancaNotificacaoSMS (CodigoSegurancaSMSRequest request)
         {
-             ApiResponse<string> localVarResponse = ValidarTokenSMSWithHttpInfo(request);
+             ApiResponse<string> localVarResponse = ValidarCodigoSegurancaNotificacaoSMSWithHttpInfo(request);
              return localVarResponse.Data;
         }
 
@@ -7299,12 +7299,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">request</param> 
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > ValidarTokenSMSWithHttpInfo (CodigoSegurancaSMSRequest request)
+        public ApiResponse< string > ValidarCodigoSegurancaNotificacaoSMSWithHttpInfo (CodigoSegurancaSMSRequest request)
         {
             
             // verify the required parameter 'request' is set
             if (request == null)
-                throw new ApiException(400, "Missing required parameter 'request' when calling NotificacaoApi->ValidarTokenSMS");
+                throw new ApiException(400, "Missing required parameter 'request' when calling NotificacaoApi->ValidarCodigoSegurancaNotificacaoSMS");
             
     
             var localVarPath = "/api/notificacoes-sms/validar-codigo-seguranca";
@@ -7356,9 +7356,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ValidarTokenSMS: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ValidarCodigoSegurancaNotificacaoSMS: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ValidarTokenSMS: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ValidarCodigoSegurancaNotificacaoSMS: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -7373,9 +7373,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">request</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> ValidarTokenSMSAsync (CodigoSegurancaSMSRequest request)
+        public async System.Threading.Tasks.Task<string> ValidarCodigoSegurancaNotificacaoSMSAsync (CodigoSegurancaSMSRequest request)
         {
-             ApiResponse<string> localVarResponse = await ValidarTokenSMSAsyncWithHttpInfo(request);
+             ApiResponse<string> localVarResponse = await ValidarCodigoSegurancaNotificacaoSMSAsyncWithHttpInfo(request);
              return localVarResponse.Data;
 
         }
@@ -7386,10 +7386,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">request</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> ValidarTokenSMSAsyncWithHttpInfo (CodigoSegurancaSMSRequest request)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> ValidarCodigoSegurancaNotificacaoSMSAsyncWithHttpInfo (CodigoSegurancaSMSRequest request)
         {
             // verify the required parameter 'request' is set
-            if (request == null) throw new ApiException(400, "Missing required parameter 'request' when calling ValidarTokenSMS");
+            if (request == null) throw new ApiException(400, "Missing required parameter 'request' when calling ValidarCodigoSegurancaNotificacaoSMS");
             
     
             var localVarPath = "/api/notificacoes-sms/validar-codigo-seguranca";
@@ -7441,9 +7441,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ValidarTokenSMS: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling ValidarCodigoSegurancaNotificacaoSMS: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ValidarTokenSMS: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling ValidarCodigoSegurancaNotificacaoSMS: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

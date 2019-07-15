@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Telefone de escritorio para cobran\u00E7a
+    /// Telefone do escritorio de cobran\u00E7a
     /// </summary>
     [DataContract]
     public partial class TelefoneEscritorioCobrancaDTO :  IEquatable<TelefoneEscritorioCobrancaDTO>
@@ -22,10 +22,10 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="TelefoneEscritorioCobrancaDTO" /> class.
         /// Initializes a new instance of the <see cref="TelefoneEscritorioCobrancaDTO" />class.
         /// </summary>
-        /// <param name="Id">Telefone escrit\u00F3rio cobranca id.</param>
-        /// <param name="Ddd">Telefone escrit\u00F3rio cobranca ddd (required).</param>
-        /// <param name="Telefone">Telefone escrit\u00F3rio cobranca telefone (required).</param>
-        /// <param name="Ramal">Telefone escrit\u00F3rio cobranca ramal.</param>
+        /// <param name="Id">Identificador do telefone do escrit\u00F3rio de cobran\u00E7a.</param>
+        /// <param name="Ddd">DDD do telefone (required).</param>
+        /// <param name="Telefone">N\u00FAmero do telefone (required).</param>
+        /// <param name="Ramal">Ramal do telefone.</param>
 
         public TelefoneEscritorioCobrancaDTO(long? Id = null, string Ddd = null, string Telefone = null, string Ramal = null)
         {
@@ -54,30 +54,30 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// Telefone escrit\u00F3rio cobranca id
+        /// Identificador do telefone do escrit\u00F3rio de cobran\u00E7a
         /// </summary>
-        /// <value>Telefone escrit\u00F3rio cobranca id</value>
+        /// <value>Identificador do telefone do escrit\u00F3rio de cobran\u00E7a</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Telefone escrit\u00F3rio cobranca ddd
+        /// DDD do telefone
         /// </summary>
-        /// <value>Telefone escrit\u00F3rio cobranca ddd</value>
+        /// <value>DDD do telefone</value>
         [DataMember(Name="ddd", EmitDefaultValue=false)]
         public string Ddd { get; set; }
     
         /// <summary>
-        /// Telefone escrit\u00F3rio cobranca telefone
+        /// N\u00FAmero do telefone
         /// </summary>
-        /// <value>Telefone escrit\u00F3rio cobranca telefone</value>
+        /// <value>N\u00FAmero do telefone</value>
         [DataMember(Name="telefone", EmitDefaultValue=false)]
         public string Telefone { get; set; }
     
         /// <summary>
-        /// Telefone escrit\u00F3rio cobranca ramal
+        /// Ramal do telefone
         /// </summary>
-        /// <value>Telefone escrit\u00F3rio cobranca ramal</value>
+        /// <value>Ramal do telefone</value>
         [DataMember(Name="ramal", EmitDefaultValue=false)]
         public string Ramal { get; set; }
     

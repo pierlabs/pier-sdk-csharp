@@ -37,10 +37,13 @@ namespace Conductor.Pier.Model
         /// <param name="DataQuebraAcordo">Data da quebra do acordo.</param>
         /// <param name="ValorParcela1">Valor da parcela 1.</param>
         /// <param name="ValorParcelaN">Valor da parcela N.</param>
+        /// <param name="ValorEntrada">Valor da entrada do acordo.</param>
         /// <param name="ParcelaPedida">Parcela pedida.</param>
         /// <param name="VencimentoParcelaPedida">Data de vencimento da parcela pedida.</param>
+        /// <param name="IdBoletoEntrada">C\u00F3digo de identifica\u00E7\u00E3o do boleto de entrada..</param>
+        /// <param name="Parcelas">Listagem das parcelas do acordo..</param>
 
-        public AcordoDetalheResponse(long? Id = null, long? IdConta = null, long? StatusAcordo = null, double? ValorAcordo = null, string DataAcordo = null, int? QuantidadeParcelas = null, double? SaldoAtualFinal = null, int? DiasEmAtraso = null, long? StatusConta = null, string AssessoriaAtual = null, double? TotalPagamentos = null, string DataVencimentoCobranca = null, string DataQuebraAcordo = null, double? ValorParcela1 = null, double? ValorParcelaN = null, int? ParcelaPedida = null, string VencimentoParcelaPedida = null)
+        public AcordoDetalheResponse(long? Id = null, long? IdConta = null, long? StatusAcordo = null, double? ValorAcordo = null, string DataAcordo = null, int? QuantidadeParcelas = null, double? SaldoAtualFinal = null, int? DiasEmAtraso = null, long? StatusConta = null, string AssessoriaAtual = null, double? TotalPagamentos = null, string DataVencimentoCobranca = null, string DataQuebraAcordo = null, double? ValorParcela1 = null, double? ValorParcelaN = null, double? ValorEntrada = null, int? ParcelaPedida = null, string VencimentoParcelaPedida = null, long? IdBoletoEntrada = null, List<ParcelaAcordoResponse> Parcelas = null)
         {
             this.Id = Id;
             this.IdConta = IdConta;
@@ -57,8 +60,11 @@ namespace Conductor.Pier.Model
             this.DataQuebraAcordo = DataQuebraAcordo;
             this.ValorParcela1 = ValorParcela1;
             this.ValorParcelaN = ValorParcelaN;
+            this.ValorEntrada = ValorEntrada;
             this.ParcelaPedida = ParcelaPedida;
             this.VencimentoParcelaPedida = VencimentoParcelaPedida;
+            this.IdBoletoEntrada = IdBoletoEntrada;
+            this.Parcelas = Parcelas;
             
         }
         
@@ -169,6 +175,13 @@ namespace Conductor.Pier.Model
         public double? ValorParcelaN { get; set; }
     
         /// <summary>
+        /// Valor da entrada do acordo
+        /// </summary>
+        /// <value>Valor da entrada do acordo</value>
+        [DataMember(Name="valorEntrada", EmitDefaultValue=false)]
+        public double? ValorEntrada { get; set; }
+    
+        /// <summary>
         /// Parcela pedida
         /// </summary>
         /// <value>Parcela pedida</value>
@@ -181,6 +194,20 @@ namespace Conductor.Pier.Model
         /// <value>Data de vencimento da parcela pedida</value>
         [DataMember(Name="vencimentoParcelaPedida", EmitDefaultValue=false)]
         public string VencimentoParcelaPedida { get; set; }
+    
+        /// <summary>
+        /// C\u00F3digo de identifica\u00E7\u00E3o do boleto de entrada.
+        /// </summary>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do boleto de entrada.</value>
+        [DataMember(Name="idBoletoEntrada", EmitDefaultValue=false)]
+        public long? IdBoletoEntrada { get; set; }
+    
+        /// <summary>
+        /// Listagem das parcelas do acordo.
+        /// </summary>
+        /// <value>Listagem das parcelas do acordo.</value>
+        [DataMember(Name="parcelas", EmitDefaultValue=false)]
+        public List<ParcelaAcordoResponse> Parcelas { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -205,8 +232,11 @@ namespace Conductor.Pier.Model
             sb.Append("  DataQuebraAcordo: ").Append(DataQuebraAcordo).Append("\n");
             sb.Append("  ValorParcela1: ").Append(ValorParcela1).Append("\n");
             sb.Append("  ValorParcelaN: ").Append(ValorParcelaN).Append("\n");
+            sb.Append("  ValorEntrada: ").Append(ValorEntrada).Append("\n");
             sb.Append("  ParcelaPedida: ").Append(ParcelaPedida).Append("\n");
             sb.Append("  VencimentoParcelaPedida: ").Append(VencimentoParcelaPedida).Append("\n");
+            sb.Append("  IdBoletoEntrada: ").Append(IdBoletoEntrada).Append("\n");
+            sb.Append("  Parcelas: ").Append(Parcelas).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -320,6 +350,11 @@ namespace Conductor.Pier.Model
                     this.ValorParcelaN.Equals(other.ValorParcelaN)
                 ) && 
                 (
+                    this.ValorEntrada == other.ValorEntrada ||
+                    this.ValorEntrada != null &&
+                    this.ValorEntrada.Equals(other.ValorEntrada)
+                ) && 
+                (
                     this.ParcelaPedida == other.ParcelaPedida ||
                     this.ParcelaPedida != null &&
                     this.ParcelaPedida.Equals(other.ParcelaPedida)
@@ -328,6 +363,16 @@ namespace Conductor.Pier.Model
                     this.VencimentoParcelaPedida == other.VencimentoParcelaPedida ||
                     this.VencimentoParcelaPedida != null &&
                     this.VencimentoParcelaPedida.Equals(other.VencimentoParcelaPedida)
+                ) && 
+                (
+                    this.IdBoletoEntrada == other.IdBoletoEntrada ||
+                    this.IdBoletoEntrada != null &&
+                    this.IdBoletoEntrada.Equals(other.IdBoletoEntrada)
+                ) && 
+                (
+                    this.Parcelas == other.Parcelas ||
+                    this.Parcelas != null &&
+                    this.Parcelas.SequenceEqual(other.Parcelas)
                 );
         }
 
@@ -388,11 +433,20 @@ namespace Conductor.Pier.Model
                 if (this.ValorParcelaN != null)
                     hash = hash * 59 + this.ValorParcelaN.GetHashCode();
                 
+                if (this.ValorEntrada != null)
+                    hash = hash * 59 + this.ValorEntrada.GetHashCode();
+                
                 if (this.ParcelaPedida != null)
                     hash = hash * 59 + this.ParcelaPedida.GetHashCode();
                 
                 if (this.VencimentoParcelaPedida != null)
                     hash = hash * 59 + this.VencimentoParcelaPedida.GetHashCode();
+                
+                if (this.IdBoletoEntrada != null)
+                    hash = hash * 59 + this.IdBoletoEntrada.GetHashCode();
+                
+                if (this.Parcelas != null)
+                    hash = hash * 59 + this.Parcelas.GetHashCode();
                 
                 return hash;
             }

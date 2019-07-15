@@ -15,15 +15,15 @@ namespace Conductor.Pier.Model
     /// 
     /// </summary>
     [DataContract]
-    public partial class MapOfstringAndstring : Dictionary<String, string>,  IEquatable<MapOfstringAndstring>
+    public partial class MapOfstringAndobject : Dictionary<String, Object>,  IEquatable<MapOfstringAndobject>
     { 
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="MapOfstringAndstring" /> class.
-        /// Initializes a new instance of the <see cref="MapOfstringAndstring" />class.
+        /// Initializes a new instance of the <see cref="MapOfstringAndobject" /> class.
+        /// Initializes a new instance of the <see cref="MapOfstringAndobject" />class.
         /// </summary>
 
-        public MapOfstringAndstring()
+        public MapOfstringAndobject()
         {
             
         }
@@ -36,7 +36,7 @@ namespace Conductor.Pier.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class MapOfstringAndstring {\n");
+            sb.Append("class MapOfstringAndobject {\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -59,15 +59,15 @@ namespace Conductor.Pier.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as MapOfstringAndstring);
+            return this.Equals(obj as MapOfstringAndobject);
         }
 
         /// <summary>
-        /// Returns true if MapOfstringAndstring instances are equal
+        /// Returns true if MapOfstringAndobject instances are equal
         /// </summary>
-        /// <param name="other">Instance of MapOfstringAndstring to be compared</param>
+        /// <param name="other">Instance of MapOfstringAndobject to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(MapOfstringAndstring other)
+        public bool Equals(MapOfstringAndobject other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
