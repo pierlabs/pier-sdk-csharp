@@ -32,8 +32,10 @@ namespace Conductor.Pier.Model
         /// <param name="DataValidade">Apresenta a data de Validade do Cart\u00E3o.</param>
         /// <param name="NomeOrigemComercial">Apresenta o nome da Origem Comercial que realizou o cadastro do Titular da Conta a qual o Cart\u00E3o pertence.</param>
         /// <param name="Cpf">Apresenta o CPF do Portador do Cart\u00E3o.</param>
+        /// <param name="IdMifare">C\u00F3digo identificador da tecnologia MIFARE.</param>
+        /// <param name="MatriculaMifare">N\u00FAmero da matricula do portador.</param>
 
-        public CartaoEmbossingResponse(int? FlagVirtual = null, long? IdConta = null, long? IdPessoa = null, long? IdCartao = null, long? IdBandeira = null, long? IdTipoCartao = null, string DataGeracao = null, string DataValidade = null, string NomeOrigemComercial = null, string Cpf = null)
+        public CartaoEmbossingResponse(int? FlagVirtual = null, long? IdConta = null, long? IdPessoa = null, long? IdCartao = null, long? IdBandeira = null, long? IdTipoCartao = null, string DataGeracao = null, string DataValidade = null, string NomeOrigemComercial = null, string Cpf = null, long? IdMifare = null, string MatriculaMifare = null)
         {
             this.FlagVirtual = FlagVirtual;
             this.IdConta = IdConta;
@@ -45,6 +47,8 @@ namespace Conductor.Pier.Model
             this.DataValidade = DataValidade;
             this.NomeOrigemComercial = NomeOrigemComercial;
             this.Cpf = Cpf;
+            this.IdMifare = IdMifare;
+            this.MatriculaMifare = MatriculaMifare;
             
         }
         
@@ -120,6 +124,20 @@ namespace Conductor.Pier.Model
         public string Cpf { get; set; }
     
         /// <summary>
+        /// C\u00F3digo identificador da tecnologia MIFARE
+        /// </summary>
+        /// <value>C\u00F3digo identificador da tecnologia MIFARE</value>
+        [DataMember(Name="idMifare", EmitDefaultValue=false)]
+        public long? IdMifare { get; set; }
+    
+        /// <summary>
+        /// N\u00FAmero da matricula do portador
+        /// </summary>
+        /// <value>N\u00FAmero da matricula do portador</value>
+        [DataMember(Name="matriculaMifare", EmitDefaultValue=false)]
+        public string MatriculaMifare { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -137,6 +155,8 @@ namespace Conductor.Pier.Model
             sb.Append("  DataValidade: ").Append(DataValidade).Append("\n");
             sb.Append("  NomeOrigemComercial: ").Append(NomeOrigemComercial).Append("\n");
             sb.Append("  Cpf: ").Append(Cpf).Append("\n");
+            sb.Append("  IdMifare: ").Append(IdMifare).Append("\n");
+            sb.Append("  MatriculaMifare: ").Append(MatriculaMifare).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -223,6 +243,16 @@ namespace Conductor.Pier.Model
                     this.Cpf == other.Cpf ||
                     this.Cpf != null &&
                     this.Cpf.Equals(other.Cpf)
+                ) && 
+                (
+                    this.IdMifare == other.IdMifare ||
+                    this.IdMifare != null &&
+                    this.IdMifare.Equals(other.IdMifare)
+                ) && 
+                (
+                    this.MatriculaMifare == other.MatriculaMifare ||
+                    this.MatriculaMifare != null &&
+                    this.MatriculaMifare.Equals(other.MatriculaMifare)
                 );
         }
 
@@ -267,6 +297,12 @@ namespace Conductor.Pier.Model
                 
                 if (this.Cpf != null)
                     hash = hash * 59 + this.Cpf.GetHashCode();
+                
+                if (this.IdMifare != null)
+                    hash = hash * 59 + this.IdMifare.GetHashCode();
+                
+                if (this.MatriculaMifare != null)
+                    hash = hash * 59 + this.MatriculaMifare.GetHashCode();
                 
                 return hash;
             }

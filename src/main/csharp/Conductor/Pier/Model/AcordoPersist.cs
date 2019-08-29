@@ -39,8 +39,9 @@ namespace Conductor.Pier.Model
         /// <param name="Responsavel">Nome do respons\u00E1vel por inputar o acordo..</param>
         /// <param name="IsComIOF">Flag indicativa para lan\u00E7amento do IOF no momento da cria\u00E7\u00E3o do acordo.</param>
         /// <param name="NossoNumero">N\u00FAmero do boleto caso ele j\u00E1 tenha sido gerado antes do acordo..</param>
+        /// <param name="ValorIOF">Valor do IOF.</param>
 
-        public AcordoPersist(long? IdConta = null, long? IdEscritorioCobranca = null, double? ValorLiquido = null, double? ValorEntrada = null, double? ValorParcelaUm = null, double? ValorParcelas = null, double? SaldoDevedorCreliq = null, double? SaldoDevedorCorrigido = null, int? QuantidadeParcelas = null, double? PercentualCorrecao = null, double? PercentualDesconto = null, double? ValorDesconto = null, int? DiasAtraso = null, string DataVencimentoEntrada = null, string Responsavel = null, bool? IsComIOF = null, string NossoNumero = null)
+        public AcordoPersist(long? IdConta = null, long? IdEscritorioCobranca = null, double? ValorLiquido = null, double? ValorEntrada = null, double? ValorParcelaUm = null, double? ValorParcelas = null, double? SaldoDevedorCreliq = null, double? SaldoDevedorCorrigido = null, int? QuantidadeParcelas = null, double? PercentualCorrecao = null, double? PercentualDesconto = null, double? ValorDesconto = null, int? DiasAtraso = null, string DataVencimentoEntrada = null, string Responsavel = null, bool? IsComIOF = null, string NossoNumero = null, double? ValorIOF = null)
         {
             this.IdConta = IdConta;
             this.IdEscritorioCobranca = IdEscritorioCobranca;
@@ -59,6 +60,7 @@ namespace Conductor.Pier.Model
             this.Responsavel = Responsavel;
             this.IsComIOF = IsComIOF;
             this.NossoNumero = NossoNumero;
+            this.ValorIOF = ValorIOF;
             
         }
         
@@ -183,6 +185,13 @@ namespace Conductor.Pier.Model
         public string NossoNumero { get; set; }
     
         /// <summary>
+        /// Valor do IOF
+        /// </summary>
+        /// <value>Valor do IOF</value>
+        [DataMember(Name="valorIOF", EmitDefaultValue=false)]
+        public double? ValorIOF { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -207,6 +216,7 @@ namespace Conductor.Pier.Model
             sb.Append("  Responsavel: ").Append(Responsavel).Append("\n");
             sb.Append("  IsComIOF: ").Append(IsComIOF).Append("\n");
             sb.Append("  NossoNumero: ").Append(NossoNumero).Append("\n");
+            sb.Append("  ValorIOF: ").Append(ValorIOF).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -328,6 +338,11 @@ namespace Conductor.Pier.Model
                     this.NossoNumero == other.NossoNumero ||
                     this.NossoNumero != null &&
                     this.NossoNumero.Equals(other.NossoNumero)
+                ) && 
+                (
+                    this.ValorIOF == other.ValorIOF ||
+                    this.ValorIOF != null &&
+                    this.ValorIOF.Equals(other.ValorIOF)
                 );
         }
 
@@ -393,6 +408,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.NossoNumero != null)
                     hash = hash * 59 + this.NossoNumero.GetHashCode();
+                
+                if (this.ValorIOF != null)
+                    hash = hash * 59 + this.ValorIOF.GetHashCode();
                 
                 return hash;
             }

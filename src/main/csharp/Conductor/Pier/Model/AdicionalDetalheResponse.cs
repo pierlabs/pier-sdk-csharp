@@ -41,9 +41,10 @@ namespace Conductor.Pier.Model
         /// <param name="FlagAtivo">Indica se o adicional est\u00E1 ativo =1 ou inativo =0.</param>
         /// <param name="DataCadastroPortador">Indica a data de cadastro do adicional.</param>
         /// <param name="DataCancelamentoPortador">Indica a data de cancelamento do adicional.</param>
+        /// <param name="FlagDeficienteVisual">Flag que identifica uma pessoa como deficiente visual.</param>
         /// <param name="Telefones">Lista dos telefones do adicional.</param>
 
-        public AdicionalDetalheResponse(long? IdConta = null, long? IdPessoa = null, string Nome = null, string NomeImpresso = null, string NumeroReceitaFederal = null, string DataNascimento = null, string Sexo = null, string NumeroIdentidade = null, string OrgaoExpedidorIdentidade = null, string UnidadeFederativaIdentidade = null, string DataEmissaoIdentidade = null, long? IdEstadoCivil = null, long? IdProfissao = null, long? IdNacionalidade = null, long? IdParentesco = null, string Email = null, int? FlagAtivo = null, string DataCadastroPortador = null, string DataCancelamentoPortador = null, List<TelefoneResponse> Telefones = null)
+        public AdicionalDetalheResponse(long? IdConta = null, long? IdPessoa = null, string Nome = null, string NomeImpresso = null, string NumeroReceitaFederal = null, string DataNascimento = null, string Sexo = null, string NumeroIdentidade = null, string OrgaoExpedidorIdentidade = null, string UnidadeFederativaIdentidade = null, string DataEmissaoIdentidade = null, long? IdEstadoCivil = null, long? IdProfissao = null, long? IdNacionalidade = null, long? IdParentesco = null, string Email = null, int? FlagAtivo = null, string DataCadastroPortador = null, string DataCancelamentoPortador = null, bool? FlagDeficienteVisual = null, List<TelefoneResponse> Telefones = null)
         {
             this.IdConta = IdConta;
             this.IdPessoa = IdPessoa;
@@ -64,6 +65,7 @@ namespace Conductor.Pier.Model
             this.FlagAtivo = FlagAtivo;
             this.DataCadastroPortador = DataCadastroPortador;
             this.DataCancelamentoPortador = DataCancelamentoPortador;
+            this.FlagDeficienteVisual = FlagDeficienteVisual;
             this.Telefones = Telefones;
             
         }
@@ -203,6 +205,13 @@ namespace Conductor.Pier.Model
         public string DataCancelamentoPortador { get; set; }
     
         /// <summary>
+        /// Flag que identifica uma pessoa como deficiente visual
+        /// </summary>
+        /// <value>Flag que identifica uma pessoa como deficiente visual</value>
+        [DataMember(Name="flagDeficienteVisual", EmitDefaultValue=false)]
+        public bool? FlagDeficienteVisual { get; set; }
+    
+        /// <summary>
         /// Lista dos telefones do adicional
         /// </summary>
         /// <value>Lista dos telefones do adicional</value>
@@ -236,6 +245,7 @@ namespace Conductor.Pier.Model
             sb.Append("  FlagAtivo: ").Append(FlagAtivo).Append("\n");
             sb.Append("  DataCadastroPortador: ").Append(DataCadastroPortador).Append("\n");
             sb.Append("  DataCancelamentoPortador: ").Append(DataCancelamentoPortador).Append("\n");
+            sb.Append("  FlagDeficienteVisual: ").Append(FlagDeficienteVisual).Append("\n");
             sb.Append("  Telefones: ").Append(Telefones).Append("\n");
             
             sb.Append("}\n");
@@ -370,6 +380,11 @@ namespace Conductor.Pier.Model
                     this.DataCancelamentoPortador.Equals(other.DataCancelamentoPortador)
                 ) && 
                 (
+                    this.FlagDeficienteVisual == other.FlagDeficienteVisual ||
+                    this.FlagDeficienteVisual != null &&
+                    this.FlagDeficienteVisual.Equals(other.FlagDeficienteVisual)
+                ) && 
+                (
                     this.Telefones == other.Telefones ||
                     this.Telefones != null &&
                     this.Telefones.SequenceEqual(other.Telefones)
@@ -444,6 +459,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.DataCancelamentoPortador != null)
                     hash = hash * 59 + this.DataCancelamentoPortador.GetHashCode();
+                
+                if (this.FlagDeficienteVisual != null)
+                    hash = hash * 59 + this.FlagDeficienteVisual.GetHashCode();
                 
                 if (this.Telefones != null)
                     hash = hash * 59 + this.Telefones.GetHashCode();

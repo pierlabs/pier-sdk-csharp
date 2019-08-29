@@ -252,8 +252,9 @@ namespace Conductor.Pier.Api
         /// <param name="permiteSaque">Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es de saque (optional)</param>
         /// <param name="permiteWallet">Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es por meio wallet (optional)</param>
         /// <param name="permiteControleMCC">Indica se o cart\u00E3o est\u00E1 ativo para controle por grupos de MCCs (optional)</param>
+        /// <param name="permiteCompraInternacional">Indica se o cart\u00E3o est\u00E1 habilitado/desabilitado para transa\u00E7\u00F5es internacionais (optional)</param>
         /// <returns>PageConfiguracaoControleCartaoResponse</returns>
-        PageConfiguracaoControleCartaoResponse ListarConfiguracaoControleCartao (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, bool? permiteEcommerce = null, bool? permiteSaque = null, bool? permiteWallet = null, bool? permiteControleMCC = null);
+        PageConfiguracaoControleCartaoResponse ListarConfiguracaoControleCartao (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, bool? permiteEcommerce = null, bool? permiteSaque = null, bool? permiteWallet = null, bool? permiteControleMCC = null, bool? permiteCompraInternacional = null);
   
         /// <summary>
         /// Lista os cart\u00F5es configurados pelo remetente
@@ -270,8 +271,9 @@ namespace Conductor.Pier.Api
         /// <param name="permiteSaque">Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es de saque (optional)</param>
         /// <param name="permiteWallet">Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es por meio wallet (optional)</param>
         /// <param name="permiteControleMCC">Indica se o cart\u00E3o est\u00E1 ativo para controle por grupos de MCCs (optional)</param>
+        /// <param name="permiteCompraInternacional">Indica se o cart\u00E3o est\u00E1 habilitado/desabilitado para transa\u00E7\u00F5es internacionais (optional)</param>
         /// <returns>ApiResponse of PageConfiguracaoControleCartaoResponse</returns>
-        ApiResponse<PageConfiguracaoControleCartaoResponse> ListarConfiguracaoControleCartaoWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, bool? permiteEcommerce = null, bool? permiteSaque = null, bool? permiteWallet = null, bool? permiteControleMCC = null);
+        ApiResponse<PageConfiguracaoControleCartaoResponse> ListarConfiguracaoControleCartaoWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, bool? permiteEcommerce = null, bool? permiteSaque = null, bool? permiteWallet = null, bool? permiteControleMCC = null, bool? permiteCompraInternacional = null);
         
         /// <summary>
         /// Lista os cart\u00F5es vinculados aos estabelecimentos.
@@ -642,8 +644,9 @@ namespace Conductor.Pier.Api
         /// <param name="permiteSaque">Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es de saque (optional)</param>
         /// <param name="permiteWallet">Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es por meio wallet (optional)</param>
         /// <param name="permiteControleMCC">Indica se o cart\u00E3o est\u00E1 ativo para controle por grupos de MCCs (optional)</param>
+        /// <param name="permiteCompraInternacional">Indica se o cart\u00E3o est\u00E1 habilitado/desabilitado para transa\u00E7\u00F5es internacionais (optional)</param>
         /// <returns>Task of PageConfiguracaoControleCartaoResponse</returns>
-        System.Threading.Tasks.Task<PageConfiguracaoControleCartaoResponse> ListarConfiguracaoControleCartaoAsync (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, bool? permiteEcommerce = null, bool? permiteSaque = null, bool? permiteWallet = null, bool? permiteControleMCC = null);
+        System.Threading.Tasks.Task<PageConfiguracaoControleCartaoResponse> ListarConfiguracaoControleCartaoAsync (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, bool? permiteEcommerce = null, bool? permiteSaque = null, bool? permiteWallet = null, bool? permiteControleMCC = null, bool? permiteCompraInternacional = null);
 
         /// <summary>
         /// Lista os cart\u00F5es configurados pelo remetente
@@ -660,8 +663,9 @@ namespace Conductor.Pier.Api
         /// <param name="permiteSaque">Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es de saque (optional)</param>
         /// <param name="permiteWallet">Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es por meio wallet (optional)</param>
         /// <param name="permiteControleMCC">Indica se o cart\u00E3o est\u00E1 ativo para controle por grupos de MCCs (optional)</param>
+        /// <param name="permiteCompraInternacional">Indica se o cart\u00E3o est\u00E1 habilitado/desabilitado para transa\u00E7\u00F5es internacionais (optional)</param>
         /// <returns>Task of ApiResponse (PageConfiguracaoControleCartaoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageConfiguracaoControleCartaoResponse>> ListarConfiguracaoControleCartaoAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, bool? permiteEcommerce = null, bool? permiteSaque = null, bool? permiteWallet = null, bool? permiteControleMCC = null);
+        System.Threading.Tasks.Task<ApiResponse<PageConfiguracaoControleCartaoResponse>> ListarConfiguracaoControleCartaoAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, bool? permiteEcommerce = null, bool? permiteSaque = null, bool? permiteWallet = null, bool? permiteControleMCC = null, bool? permiteCompraInternacional = null);
         
         /// <summary>
         /// Lista os cart\u00F5es vinculados aos estabelecimentos.
@@ -2475,10 +2479,11 @@ namespace Conductor.Pier.Api
         /// <param name="permiteSaque">Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es de saque (optional)</param> 
         /// <param name="permiteWallet">Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es por meio wallet (optional)</param> 
         /// <param name="permiteControleMCC">Indica se o cart\u00E3o est\u00E1 ativo para controle por grupos de MCCs (optional)</param> 
+        /// <param name="permiteCompraInternacional">Indica se o cart\u00E3o est\u00E1 habilitado/desabilitado para transa\u00E7\u00F5es internacionais (optional)</param> 
         /// <returns>PageConfiguracaoControleCartaoResponse</returns>
-        public PageConfiguracaoControleCartaoResponse ListarConfiguracaoControleCartao (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, bool? permiteEcommerce = null, bool? permiteSaque = null, bool? permiteWallet = null, bool? permiteControleMCC = null)
+        public PageConfiguracaoControleCartaoResponse ListarConfiguracaoControleCartao (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, bool? permiteEcommerce = null, bool? permiteSaque = null, bool? permiteWallet = null, bool? permiteControleMCC = null, bool? permiteCompraInternacional = null)
         {
-             ApiResponse<PageConfiguracaoControleCartaoResponse> localVarResponse = ListarConfiguracaoControleCartaoWithHttpInfo(sort, page, limit, idCartao, permiteEcommerce, permiteSaque, permiteWallet, permiteControleMCC);
+             ApiResponse<PageConfiguracaoControleCartaoResponse> localVarResponse = ListarConfiguracaoControleCartaoWithHttpInfo(sort, page, limit, idCartao, permiteEcommerce, permiteSaque, permiteWallet, permiteControleMCC, permiteCompraInternacional);
              return localVarResponse.Data;
         }
 
@@ -2494,8 +2499,9 @@ namespace Conductor.Pier.Api
         /// <param name="permiteSaque">Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es de saque (optional)</param> 
         /// <param name="permiteWallet">Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es por meio wallet (optional)</param> 
         /// <param name="permiteControleMCC">Indica se o cart\u00E3o est\u00E1 ativo para controle por grupos de MCCs (optional)</param> 
+        /// <param name="permiteCompraInternacional">Indica se o cart\u00E3o est\u00E1 habilitado/desabilitado para transa\u00E7\u00F5es internacionais (optional)</param> 
         /// <returns>ApiResponse of PageConfiguracaoControleCartaoResponse</returns>
-        public ApiResponse< PageConfiguracaoControleCartaoResponse > ListarConfiguracaoControleCartaoWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, bool? permiteEcommerce = null, bool? permiteSaque = null, bool? permiteWallet = null, bool? permiteControleMCC = null)
+        public ApiResponse< PageConfiguracaoControleCartaoResponse > ListarConfiguracaoControleCartaoWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, bool? permiteEcommerce = null, bool? permiteSaque = null, bool? permiteWallet = null, bool? permiteControleMCC = null, bool? permiteCompraInternacional = null)
         {
             
     
@@ -2534,6 +2540,7 @@ namespace Conductor.Pier.Api
             if (permiteSaque != null) localVarQueryParams.Add("permiteSaque", Configuration.ApiClient.ParameterToString(permiteSaque)); // query parameter
             if (permiteWallet != null) localVarQueryParams.Add("permiteWallet", Configuration.ApiClient.ParameterToString(permiteWallet)); // query parameter
             if (permiteControleMCC != null) localVarQueryParams.Add("permiteControleMCC", Configuration.ApiClient.ParameterToString(permiteControleMCC)); // query parameter
+            if (permiteCompraInternacional != null) localVarQueryParams.Add("permiteCompraInternacional", Configuration.ApiClient.ParameterToString(permiteCompraInternacional)); // query parameter
             
             
             
@@ -2572,10 +2579,11 @@ namespace Conductor.Pier.Api
         /// <param name="permiteSaque">Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es de saque (optional)</param>
         /// <param name="permiteWallet">Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es por meio wallet (optional)</param>
         /// <param name="permiteControleMCC">Indica se o cart\u00E3o est\u00E1 ativo para controle por grupos de MCCs (optional)</param>
+        /// <param name="permiteCompraInternacional">Indica se o cart\u00E3o est\u00E1 habilitado/desabilitado para transa\u00E7\u00F5es internacionais (optional)</param>
         /// <returns>Task of PageConfiguracaoControleCartaoResponse</returns>
-        public async System.Threading.Tasks.Task<PageConfiguracaoControleCartaoResponse> ListarConfiguracaoControleCartaoAsync (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, bool? permiteEcommerce = null, bool? permiteSaque = null, bool? permiteWallet = null, bool? permiteControleMCC = null)
+        public async System.Threading.Tasks.Task<PageConfiguracaoControleCartaoResponse> ListarConfiguracaoControleCartaoAsync (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, bool? permiteEcommerce = null, bool? permiteSaque = null, bool? permiteWallet = null, bool? permiteControleMCC = null, bool? permiteCompraInternacional = null)
         {
-             ApiResponse<PageConfiguracaoControleCartaoResponse> localVarResponse = await ListarConfiguracaoControleCartaoAsyncWithHttpInfo(sort, page, limit, idCartao, permiteEcommerce, permiteSaque, permiteWallet, permiteControleMCC);
+             ApiResponse<PageConfiguracaoControleCartaoResponse> localVarResponse = await ListarConfiguracaoControleCartaoAsyncWithHttpInfo(sort, page, limit, idCartao, permiteEcommerce, permiteSaque, permiteWallet, permiteControleMCC, permiteCompraInternacional);
              return localVarResponse.Data;
 
         }
@@ -2592,8 +2600,9 @@ namespace Conductor.Pier.Api
         /// <param name="permiteSaque">Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es de saque (optional)</param>
         /// <param name="permiteWallet">Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es por meio wallet (optional)</param>
         /// <param name="permiteControleMCC">Indica se o cart\u00E3o est\u00E1 ativo para controle por grupos de MCCs (optional)</param>
+        /// <param name="permiteCompraInternacional">Indica se o cart\u00E3o est\u00E1 habilitado/desabilitado para transa\u00E7\u00F5es internacionais (optional)</param>
         /// <returns>Task of ApiResponse (PageConfiguracaoControleCartaoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageConfiguracaoControleCartaoResponse>> ListarConfiguracaoControleCartaoAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, bool? permiteEcommerce = null, bool? permiteSaque = null, bool? permiteWallet = null, bool? permiteControleMCC = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageConfiguracaoControleCartaoResponse>> ListarConfiguracaoControleCartaoAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, bool? permiteEcommerce = null, bool? permiteSaque = null, bool? permiteWallet = null, bool? permiteControleMCC = null, bool? permiteCompraInternacional = null)
         {
             
     
@@ -2632,6 +2641,7 @@ namespace Conductor.Pier.Api
             if (permiteSaque != null) localVarQueryParams.Add("permiteSaque", Configuration.ApiClient.ParameterToString(permiteSaque)); // query parameter
             if (permiteWallet != null) localVarQueryParams.Add("permiteWallet", Configuration.ApiClient.ParameterToString(permiteWallet)); // query parameter
             if (permiteControleMCC != null) localVarQueryParams.Add("permiteControleMCC", Configuration.ApiClient.ParameterToString(permiteControleMCC)); // query parameter
+            if (permiteCompraInternacional != null) localVarQueryParams.Add("permiteCompraInternacional", Configuration.ApiClient.ParameterToString(permiteCompraInternacional)); // query parameter
             
             
             

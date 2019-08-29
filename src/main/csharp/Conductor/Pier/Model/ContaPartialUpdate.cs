@@ -26,13 +26,17 @@ namespace Conductor.Pier.Model
         /// <param name="IdContaEmissor">Identificador da conta de controle interno criado pelo emissor.</param>
         /// <param name="DataCadastro">dataCadastro.</param>
         /// <param name="ValorRenda">valorRenda.</param>
+        /// <param name="PossuiOverLimit">Sinaliza se o OverLimit da conta est\uFFFD ativo.</param>
+        /// <param name="UsuarioModificacao">usuarioModificacao.</param>
 
-        public ContaPartialUpdate(string FuncaoAtiva = null, long? IdContaEmissor = null, string DataCadastro = null, double? ValorRenda = null)
+        public ContaPartialUpdate(string FuncaoAtiva = null, long? IdContaEmissor = null, string DataCadastro = null, double? ValorRenda = null, bool? PossuiOverLimit = null, string UsuarioModificacao = null)
         {
             this.FuncaoAtiva = FuncaoAtiva;
             this.IdContaEmissor = IdContaEmissor;
             this.DataCadastro = DataCadastro;
             this.ValorRenda = ValorRenda;
+            this.PossuiOverLimit = PossuiOverLimit;
+            this.UsuarioModificacao = UsuarioModificacao;
             
         }
         
@@ -66,6 +70,20 @@ namespace Conductor.Pier.Model
         public double? ValorRenda { get; set; }
     
         /// <summary>
+        /// Sinaliza se o OverLimit da conta est\uFFFD ativo
+        /// </summary>
+        /// <value>Sinaliza se o OverLimit da conta est\uFFFD ativo</value>
+        [DataMember(Name="possuiOverLimit", EmitDefaultValue=false)]
+        public bool? PossuiOverLimit { get; set; }
+    
+        /// <summary>
+        /// usuarioModificacao
+        /// </summary>
+        /// <value>usuarioModificacao</value>
+        [DataMember(Name="usuarioModificacao", EmitDefaultValue=false)]
+        public string UsuarioModificacao { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -77,6 +95,8 @@ namespace Conductor.Pier.Model
             sb.Append("  IdContaEmissor: ").Append(IdContaEmissor).Append("\n");
             sb.Append("  DataCadastro: ").Append(DataCadastro).Append("\n");
             sb.Append("  ValorRenda: ").Append(ValorRenda).Append("\n");
+            sb.Append("  PossuiOverLimit: ").Append(PossuiOverLimit).Append("\n");
+            sb.Append("  UsuarioModificacao: ").Append(UsuarioModificacao).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -133,6 +153,16 @@ namespace Conductor.Pier.Model
                     this.ValorRenda == other.ValorRenda ||
                     this.ValorRenda != null &&
                     this.ValorRenda.Equals(other.ValorRenda)
+                ) && 
+                (
+                    this.PossuiOverLimit == other.PossuiOverLimit ||
+                    this.PossuiOverLimit != null &&
+                    this.PossuiOverLimit.Equals(other.PossuiOverLimit)
+                ) && 
+                (
+                    this.UsuarioModificacao == other.UsuarioModificacao ||
+                    this.UsuarioModificacao != null &&
+                    this.UsuarioModificacao.Equals(other.UsuarioModificacao)
                 );
         }
 
@@ -159,6 +189,12 @@ namespace Conductor.Pier.Model
                 
                 if (this.ValorRenda != null)
                     hash = hash * 59 + this.ValorRenda.GetHashCode();
+                
+                if (this.PossuiOverLimit != null)
+                    hash = hash * 59 + this.PossuiOverLimit.GetHashCode();
+                
+                if (this.UsuarioModificacao != null)
+                    hash = hash * 59 + this.UsuarioModificacao.GetHashCode();
                 
                 return hash;
             }

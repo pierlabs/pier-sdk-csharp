@@ -85,8 +85,9 @@ namespace Conductor.Pier.Model
         /// <param name="SaldoExtratoAnterior">Apresenta o saldo do extrato anterior da conta.</param>
         /// <param name="AceitaNovaContaPorGrupoProduto">Flag que indica a aceita\u00E7\u00E3o de abertura de nova conta por grupo de produtos.</param>
         /// <param name="FuncaoAtiva">Fun\u00E7\u00E3o ativa da conta.</param>
+        /// <param name="PossuiOverLimit">Sinaliza se o OverLimit da conta est\uFFFD ativo.</param>
 
-        public ContaDetalheResponse(long? Id = null, long? IdPessoa = null, string Nome = null, long? IdProduto = null, long? IdOrigemComercial = null, string NomeOrigemComercial = null, long? IdFantasiaBasica = null, string NomeFantasiaBasica = null, long? IdStatusConta = null, string StatusConta = null, int? DiaVencimento = null, int? MelhorDiaCompra = null, string DataStatusConta = null, string DataCadastro = null, string DataUltimaAlteracaoVencimento = null, string DataHoraUltimaCompra = null, int? NumeroAgencia = null, string NumeroContaCorrente = null, double? ValorRenda = null, string FormaEnvioFatura = null, bool? Titular = null, double? LimiteGlobal = null, double? LimiteSaqueGlobal = null, double? SaldoDisponivelGlobal = null, double? SaldoDisponivelSaque = null, bool? ImpedidoFinanciamento = null, long? DiasAtraso = null, string ProximoVencimentoPadrao = null, long? IdProposta = null, int? QuantidadePagamentos = null, long? Correspondencia = null, string DataInicioAtraso = null, double? RotativoPagaJuros = null, double? TotalPosProx = null, double? SaldoAtualFinal = null, double? SaldoExtratoAnterior = null, bool? AceitaNovaContaPorGrupoProduto = null, FuncaoAtivaEnum? FuncaoAtiva = null)
+        public ContaDetalheResponse(long? Id = null, long? IdPessoa = null, string Nome = null, long? IdProduto = null, long? IdOrigemComercial = null, string NomeOrigemComercial = null, long? IdFantasiaBasica = null, string NomeFantasiaBasica = null, long? IdStatusConta = null, string StatusConta = null, int? DiaVencimento = null, int? MelhorDiaCompra = null, string DataStatusConta = null, string DataCadastro = null, string DataUltimaAlteracaoVencimento = null, string DataHoraUltimaCompra = null, int? NumeroAgencia = null, string NumeroContaCorrente = null, double? ValorRenda = null, string FormaEnvioFatura = null, bool? Titular = null, double? LimiteGlobal = null, double? LimiteSaqueGlobal = null, double? SaldoDisponivelGlobal = null, double? SaldoDisponivelSaque = null, bool? ImpedidoFinanciamento = null, long? DiasAtraso = null, string ProximoVencimentoPadrao = null, long? IdProposta = null, int? QuantidadePagamentos = null, long? Correspondencia = null, string DataInicioAtraso = null, double? RotativoPagaJuros = null, double? TotalPosProx = null, double? SaldoAtualFinal = null, double? SaldoExtratoAnterior = null, bool? AceitaNovaContaPorGrupoProduto = null, FuncaoAtivaEnum? FuncaoAtiva = null, bool? PossuiOverLimit = null)
         {
             this.Id = Id;
             this.IdPessoa = IdPessoa;
@@ -126,6 +127,7 @@ namespace Conductor.Pier.Model
             this.SaldoExtratoAnterior = SaldoExtratoAnterior;
             this.AceitaNovaContaPorGrupoProduto = AceitaNovaContaPorGrupoProduto;
             this.FuncaoAtiva = FuncaoAtiva;
+            this.PossuiOverLimit = PossuiOverLimit;
             
         }
         
@@ -390,6 +392,13 @@ namespace Conductor.Pier.Model
         public bool? AceitaNovaContaPorGrupoProduto { get; set; }
     
         /// <summary>
+        /// Sinaliza se o OverLimit da conta est\uFFFD ativo
+        /// </summary>
+        /// <value>Sinaliza se o OverLimit da conta est\uFFFD ativo</value>
+        [DataMember(Name="possuiOverLimit", EmitDefaultValue=false)]
+        public bool? PossuiOverLimit { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -435,6 +444,7 @@ namespace Conductor.Pier.Model
             sb.Append("  SaldoExtratoAnterior: ").Append(SaldoExtratoAnterior).Append("\n");
             sb.Append("  AceitaNovaContaPorGrupoProduto: ").Append(AceitaNovaContaPorGrupoProduto).Append("\n");
             sb.Append("  FuncaoAtiva: ").Append(FuncaoAtiva).Append("\n");
+            sb.Append("  PossuiOverLimit: ").Append(PossuiOverLimit).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -661,6 +671,11 @@ namespace Conductor.Pier.Model
                     this.FuncaoAtiva == other.FuncaoAtiva ||
                     this.FuncaoAtiva != null &&
                     this.FuncaoAtiva.Equals(other.FuncaoAtiva)
+                ) && 
+                (
+                    this.PossuiOverLimit == other.PossuiOverLimit ||
+                    this.PossuiOverLimit != null &&
+                    this.PossuiOverLimit.Equals(other.PossuiOverLimit)
                 );
         }
 
@@ -789,6 +804,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.FuncaoAtiva != null)
                     hash = hash * 59 + this.FuncaoAtiva.GetHashCode();
+                
+                if (this.PossuiOverLimit != null)
+                    hash = hash * 59 + this.PossuiOverLimit.GetHashCode();
                 
                 return hash;
             }

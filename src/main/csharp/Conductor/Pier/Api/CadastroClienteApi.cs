@@ -114,8 +114,9 @@ namespace Conductor.Pier.Api
         /// <param name="unidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade (optional)</param>
         /// <param name="dataEmissaoIdentidade">Data emiss\u00E3o da Identidade (optional)</param>
         /// <param name="usuarioAlteracao">Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o (optional)</param>
+        /// <param name="flagDeficienteVisual">Flag que identifica uma pessoa como deficiente visual (optional)</param>
         /// <returns>PessoaResponse</returns>
-        PessoaResponse AlterarPessoa (long? id, string nome, string tipo, string dataNascimento, string cpf = null, string cnpj = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null, string usuarioAlteracao = null);
+        PessoaResponse AlterarPessoa (long? id, string nome, string tipo, string dataNascimento, string cpf = null, string cnpj = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null, string usuarioAlteracao = null, bool? flagDeficienteVisual = null);
   
         /// <summary>
         /// Atualiza os dados de uma determinada Pessoa
@@ -136,8 +137,9 @@ namespace Conductor.Pier.Api
         /// <param name="unidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade (optional)</param>
         /// <param name="dataEmissaoIdentidade">Data emiss\u00E3o da Identidade (optional)</param>
         /// <param name="usuarioAlteracao">Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o (optional)</param>
+        /// <param name="flagDeficienteVisual">Flag que identifica uma pessoa como deficiente visual (optional)</param>
         /// <returns>ApiResponse of PessoaResponse</returns>
-        ApiResponse<PessoaResponse> AlterarPessoaWithHttpInfo (long? id, string nome, string tipo, string dataNascimento, string cpf = null, string cnpj = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null, string usuarioAlteracao = null);
+        ApiResponse<PessoaResponse> AlterarPessoaWithHttpInfo (long? id, string nome, string tipo, string dataNascimento, string cpf = null, string cnpj = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null, string usuarioAlteracao = null, bool? flagDeficienteVisual = null);
         
         /// <summary>
         /// Atualiza os detalhes de uma determinada Pessoa
@@ -314,6 +316,30 @@ namespace Conductor.Pier.Api
         /// <param name="update">update</param>
         /// <returns>ApiResponse of IndicacaoAmigoResponse</returns>
         ApiResponse<IndicacaoAmigoResponse> AtualizarIndicacaoAmigoWithHttpInfo (long? id, long? idIndicacao, IndicacaoAmigoUpdate update);
+        
+        /// <summary>
+        /// Atualiza\u00E7\u00E3o parcial do detalhe da pessoa
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite realizar uma atualiza\u00E7\u00E3o parcial dos detalhes da pessoa
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da pessoa</param>
+        /// <param name="pessoaDetalhePartialUpdate">pessoaDetalhePartialUpdate</param>
+        /// <returns>Object</returns>
+        Object AtualizarParcialPessoaDetalhe (long? id, PessoaDetalhePartialUpdate pessoaDetalhePartialUpdate);
+  
+        /// <summary>
+        /// Atualiza\u00E7\u00E3o parcial do detalhe da pessoa
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite realizar uma atualiza\u00E7\u00E3o parcial dos detalhes da pessoa
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da pessoa</param>
+        /// <param name="pessoaDetalhePartialUpdate">pessoaDetalhePartialUpdate</param>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> AtualizarParcialPessoaDetalheWithHttpInfo (long? id, PessoaDetalhePartialUpdate pessoaDetalhePartialUpdate);
         
         /// <summary>
         /// Atualiza conta integrada com o emissor
@@ -756,8 +782,9 @@ namespace Conductor.Pier.Api
         /// <param name="orgaoExpedidorIdentidade">Org\u00E3o expedidor do RG (optional)</param>
         /// <param name="unidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade (optional)</param>
         /// <param name="dataEmissaoIdentidade">Data emiss\u00E3o da identidade no formato aaaa-MM-dd (optional)</param>
+        /// <param name="flagDeficienteVisual">Flag que identifica uma pessoa como deficiente visual (optional)</param>
         /// <returns>PagePessoaResponse</returns>
-        PagePessoaResponse ListarPessoas (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, string tipo = null, string cpf = null, string cnpj = null, string dataNascimento = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null);
+        PagePessoaResponse ListarPessoas (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, string tipo = null, string cpf = null, string cnpj = null, string dataNascimento = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null, bool? flagDeficienteVisual = null);
   
         /// <summary>
         /// Lista as Pessoas cadastradas no Emissor
@@ -780,8 +807,9 @@ namespace Conductor.Pier.Api
         /// <param name="orgaoExpedidorIdentidade">Org\u00E3o expedidor do RG (optional)</param>
         /// <param name="unidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade (optional)</param>
         /// <param name="dataEmissaoIdentidade">Data emiss\u00E3o da identidade no formato aaaa-MM-dd (optional)</param>
+        /// <param name="flagDeficienteVisual">Flag que identifica uma pessoa como deficiente visual (optional)</param>
         /// <returns>ApiResponse of PagePessoaResponse</returns>
-        ApiResponse<PagePessoaResponse> ListarPessoasWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, string tipo = null, string cpf = null, string cnpj = null, string dataNascimento = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null);
+        ApiResponse<PagePessoaResponse> ListarPessoasWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, string tipo = null, string cpf = null, string cnpj = null, string dataNascimento = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null, bool? flagDeficienteVisual = null);
         
         /// <summary>
         /// Lista os Detalhes das Pessoas cadastradas no Emissor
@@ -1013,8 +1041,9 @@ namespace Conductor.Pier.Api
         /// <param name="unidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade (optional)</param>
         /// <param name="dataEmissaoIdentidade">Data emiss\u00E3o da Identidade (optional)</param>
         /// <param name="usuarioAlteracao">Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o (optional)</param>
+        /// <param name="flagDeficienteVisual">Flag que identifica uma pessoa como deficiente visual (optional)</param>
         /// <returns>PessoaResponse</returns>
-        PessoaResponse SalvarPessoa (string nome, string tipo, string dataNascimento, string cpf = null, string cnpj = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null, string usuarioAlteracao = null);
+        PessoaResponse SalvarPessoa (string nome, string tipo, string dataNascimento, string cpf = null, string cnpj = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null, string usuarioAlteracao = null, bool? flagDeficienteVisual = null);
   
         /// <summary>
         /// Realiza o cadastro de um nova Pessoa
@@ -1034,8 +1063,9 @@ namespace Conductor.Pier.Api
         /// <param name="unidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade (optional)</param>
         /// <param name="dataEmissaoIdentidade">Data emiss\u00E3o da Identidade (optional)</param>
         /// <param name="usuarioAlteracao">Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o (optional)</param>
+        /// <param name="flagDeficienteVisual">Flag que identifica uma pessoa como deficiente visual (optional)</param>
         /// <returns>ApiResponse of PessoaResponse</returns>
-        ApiResponse<PessoaResponse> SalvarPessoaWithHttpInfo (string nome, string tipo, string dataNascimento, string cpf = null, string cnpj = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null, string usuarioAlteracao = null);
+        ApiResponse<PessoaResponse> SalvarPessoaWithHttpInfo (string nome, string tipo, string dataNascimento, string cpf = null, string cnpj = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null, string usuarioAlteracao = null, bool? flagDeficienteVisual = null);
         
         /// <summary>
         /// Salvar os detalhes de uma determinada Pessoa
@@ -1358,8 +1388,9 @@ namespace Conductor.Pier.Api
         /// <param name="unidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade (optional)</param>
         /// <param name="dataEmissaoIdentidade">Data emiss\u00E3o da Identidade (optional)</param>
         /// <param name="usuarioAlteracao">Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o (optional)</param>
+        /// <param name="flagDeficienteVisual">Flag que identifica uma pessoa como deficiente visual (optional)</param>
         /// <returns>Task of PessoaResponse</returns>
-        System.Threading.Tasks.Task<PessoaResponse> AlterarPessoaAsync (long? id, string nome, string tipo, string dataNascimento, string cpf = null, string cnpj = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null, string usuarioAlteracao = null);
+        System.Threading.Tasks.Task<PessoaResponse> AlterarPessoaAsync (long? id, string nome, string tipo, string dataNascimento, string cpf = null, string cnpj = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null, string usuarioAlteracao = null, bool? flagDeficienteVisual = null);
 
         /// <summary>
         /// Atualiza os dados de uma determinada Pessoa
@@ -1380,8 +1411,9 @@ namespace Conductor.Pier.Api
         /// <param name="unidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade (optional)</param>
         /// <param name="dataEmissaoIdentidade">Data emiss\u00E3o da Identidade (optional)</param>
         /// <param name="usuarioAlteracao">Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o (optional)</param>
+        /// <param name="flagDeficienteVisual">Flag que identifica uma pessoa como deficiente visual (optional)</param>
         /// <returns>Task of ApiResponse (PessoaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PessoaResponse>> AlterarPessoaAsyncWithHttpInfo (long? id, string nome, string tipo, string dataNascimento, string cpf = null, string cnpj = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null, string usuarioAlteracao = null);
+        System.Threading.Tasks.Task<ApiResponse<PessoaResponse>> AlterarPessoaAsyncWithHttpInfo (long? id, string nome, string tipo, string dataNascimento, string cpf = null, string cnpj = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null, string usuarioAlteracao = null, bool? flagDeficienteVisual = null);
         
         /// <summary>
         /// Atualiza os detalhes de uma determinada Pessoa
@@ -1558,6 +1590,30 @@ namespace Conductor.Pier.Api
         /// <param name="update">update</param>
         /// <returns>Task of ApiResponse (IndicacaoAmigoResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<IndicacaoAmigoResponse>> AtualizarIndicacaoAmigoAsyncWithHttpInfo (long? id, long? idIndicacao, IndicacaoAmigoUpdate update);
+        
+        /// <summary>
+        /// Atualiza\u00E7\u00E3o parcial do detalhe da pessoa
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite realizar uma atualiza\u00E7\u00E3o parcial dos detalhes da pessoa
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da pessoa</param>
+        /// <param name="pessoaDetalhePartialUpdate">pessoaDetalhePartialUpdate</param>
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> AtualizarParcialPessoaDetalheAsync (long? id, PessoaDetalhePartialUpdate pessoaDetalhePartialUpdate);
+
+        /// <summary>
+        /// Atualiza\u00E7\u00E3o parcial do detalhe da pessoa
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite realizar uma atualiza\u00E7\u00E3o parcial dos detalhes da pessoa
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da pessoa</param>
+        /// <param name="pessoaDetalhePartialUpdate">pessoaDetalhePartialUpdate</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> AtualizarParcialPessoaDetalheAsyncWithHttpInfo (long? id, PessoaDetalhePartialUpdate pessoaDetalhePartialUpdate);
         
         /// <summary>
         /// Atualiza conta integrada com o emissor
@@ -2000,8 +2056,9 @@ namespace Conductor.Pier.Api
         /// <param name="orgaoExpedidorIdentidade">Org\u00E3o expedidor do RG (optional)</param>
         /// <param name="unidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade (optional)</param>
         /// <param name="dataEmissaoIdentidade">Data emiss\u00E3o da identidade no formato aaaa-MM-dd (optional)</param>
+        /// <param name="flagDeficienteVisual">Flag que identifica uma pessoa como deficiente visual (optional)</param>
         /// <returns>Task of PagePessoaResponse</returns>
-        System.Threading.Tasks.Task<PagePessoaResponse> ListarPessoasAsync (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, string tipo = null, string cpf = null, string cnpj = null, string dataNascimento = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null);
+        System.Threading.Tasks.Task<PagePessoaResponse> ListarPessoasAsync (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, string tipo = null, string cpf = null, string cnpj = null, string dataNascimento = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null, bool? flagDeficienteVisual = null);
 
         /// <summary>
         /// Lista as Pessoas cadastradas no Emissor
@@ -2024,8 +2081,9 @@ namespace Conductor.Pier.Api
         /// <param name="orgaoExpedidorIdentidade">Org\u00E3o expedidor do RG (optional)</param>
         /// <param name="unidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade (optional)</param>
         /// <param name="dataEmissaoIdentidade">Data emiss\u00E3o da identidade no formato aaaa-MM-dd (optional)</param>
+        /// <param name="flagDeficienteVisual">Flag que identifica uma pessoa como deficiente visual (optional)</param>
         /// <returns>Task of ApiResponse (PagePessoaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PagePessoaResponse>> ListarPessoasAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, string tipo = null, string cpf = null, string cnpj = null, string dataNascimento = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null);
+        System.Threading.Tasks.Task<ApiResponse<PagePessoaResponse>> ListarPessoasAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, string tipo = null, string cpf = null, string cnpj = null, string dataNascimento = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null, bool? flagDeficienteVisual = null);
         
         /// <summary>
         /// Lista os Detalhes das Pessoas cadastradas no Emissor
@@ -2257,8 +2315,9 @@ namespace Conductor.Pier.Api
         /// <param name="unidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade (optional)</param>
         /// <param name="dataEmissaoIdentidade">Data emiss\u00E3o da Identidade (optional)</param>
         /// <param name="usuarioAlteracao">Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o (optional)</param>
+        /// <param name="flagDeficienteVisual">Flag que identifica uma pessoa como deficiente visual (optional)</param>
         /// <returns>Task of PessoaResponse</returns>
-        System.Threading.Tasks.Task<PessoaResponse> SalvarPessoaAsync (string nome, string tipo, string dataNascimento, string cpf = null, string cnpj = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null, string usuarioAlteracao = null);
+        System.Threading.Tasks.Task<PessoaResponse> SalvarPessoaAsync (string nome, string tipo, string dataNascimento, string cpf = null, string cnpj = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null, string usuarioAlteracao = null, bool? flagDeficienteVisual = null);
 
         /// <summary>
         /// Realiza o cadastro de um nova Pessoa
@@ -2278,8 +2337,9 @@ namespace Conductor.Pier.Api
         /// <param name="unidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade (optional)</param>
         /// <param name="dataEmissaoIdentidade">Data emiss\u00E3o da Identidade (optional)</param>
         /// <param name="usuarioAlteracao">Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o (optional)</param>
+        /// <param name="flagDeficienteVisual">Flag que identifica uma pessoa como deficiente visual (optional)</param>
         /// <returns>Task of ApiResponse (PessoaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PessoaResponse>> SalvarPessoaAsyncWithHttpInfo (string nome, string tipo, string dataNascimento, string cpf = null, string cnpj = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null, string usuarioAlteracao = null);
+        System.Threading.Tasks.Task<ApiResponse<PessoaResponse>> SalvarPessoaAsyncWithHttpInfo (string nome, string tipo, string dataNascimento, string cpf = null, string cnpj = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null, string usuarioAlteracao = null, bool? flagDeficienteVisual = null);
         
         /// <summary>
         /// Salvar os detalhes de uma determinada Pessoa
@@ -3051,10 +3111,11 @@ namespace Conductor.Pier.Api
         /// <param name="unidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade (optional)</param> 
         /// <param name="dataEmissaoIdentidade">Data emiss\u00E3o da Identidade (optional)</param> 
         /// <param name="usuarioAlteracao">Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o (optional)</param> 
+        /// <param name="flagDeficienteVisual">Flag que identifica uma pessoa como deficiente visual (optional)</param> 
         /// <returns>PessoaResponse</returns>
-        public PessoaResponse AlterarPessoa (long? id, string nome, string tipo, string dataNascimento, string cpf = null, string cnpj = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null, string usuarioAlteracao = null)
+        public PessoaResponse AlterarPessoa (long? id, string nome, string tipo, string dataNascimento, string cpf = null, string cnpj = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null, string usuarioAlteracao = null, bool? flagDeficienteVisual = null)
         {
-             ApiResponse<PessoaResponse> localVarResponse = AlterarPessoaWithHttpInfo(id, nome, tipo, dataNascimento, cpf, cnpj, sexo, numeroIdentidade, orgaoExpedidorIdentidade, unidadeFederativaIdentidade, dataEmissaoIdentidade, usuarioAlteracao);
+             ApiResponse<PessoaResponse> localVarResponse = AlterarPessoaWithHttpInfo(id, nome, tipo, dataNascimento, cpf, cnpj, sexo, numeroIdentidade, orgaoExpedidorIdentidade, unidadeFederativaIdentidade, dataEmissaoIdentidade, usuarioAlteracao, flagDeficienteVisual);
              return localVarResponse.Data;
         }
 
@@ -3074,8 +3135,9 @@ namespace Conductor.Pier.Api
         /// <param name="unidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade (optional)</param> 
         /// <param name="dataEmissaoIdentidade">Data emiss\u00E3o da Identidade (optional)</param> 
         /// <param name="usuarioAlteracao">Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o (optional)</param> 
+        /// <param name="flagDeficienteVisual">Flag que identifica uma pessoa como deficiente visual (optional)</param> 
         /// <returns>ApiResponse of PessoaResponse</returns>
-        public ApiResponse< PessoaResponse > AlterarPessoaWithHttpInfo (long? id, string nome, string tipo, string dataNascimento, string cpf = null, string cnpj = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null, string usuarioAlteracao = null)
+        public ApiResponse< PessoaResponse > AlterarPessoaWithHttpInfo (long? id, string nome, string tipo, string dataNascimento, string cpf = null, string cnpj = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null, string usuarioAlteracao = null, bool? flagDeficienteVisual = null)
         {
             
             // verify the required parameter 'id' is set
@@ -3134,6 +3196,7 @@ namespace Conductor.Pier.Api
             if (unidadeFederativaIdentidade != null) localVarQueryParams.Add("unidadeFederativaIdentidade", Configuration.ApiClient.ParameterToString(unidadeFederativaIdentidade)); // query parameter
             if (dataEmissaoIdentidade != null) localVarQueryParams.Add("dataEmissaoIdentidade", Configuration.ApiClient.ParameterToString(dataEmissaoIdentidade)); // query parameter
             if (usuarioAlteracao != null) localVarQueryParams.Add("usuarioAlteracao", Configuration.ApiClient.ParameterToString(usuarioAlteracao)); // query parameter
+            if (flagDeficienteVisual != null) localVarQueryParams.Add("flagDeficienteVisual", Configuration.ApiClient.ParameterToString(flagDeficienteVisual)); // query parameter
             
             
             
@@ -3176,10 +3239,11 @@ namespace Conductor.Pier.Api
         /// <param name="unidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade (optional)</param>
         /// <param name="dataEmissaoIdentidade">Data emiss\u00E3o da Identidade (optional)</param>
         /// <param name="usuarioAlteracao">Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o (optional)</param>
+        /// <param name="flagDeficienteVisual">Flag que identifica uma pessoa como deficiente visual (optional)</param>
         /// <returns>Task of PessoaResponse</returns>
-        public async System.Threading.Tasks.Task<PessoaResponse> AlterarPessoaAsync (long? id, string nome, string tipo, string dataNascimento, string cpf = null, string cnpj = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null, string usuarioAlteracao = null)
+        public async System.Threading.Tasks.Task<PessoaResponse> AlterarPessoaAsync (long? id, string nome, string tipo, string dataNascimento, string cpf = null, string cnpj = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null, string usuarioAlteracao = null, bool? flagDeficienteVisual = null)
         {
-             ApiResponse<PessoaResponse> localVarResponse = await AlterarPessoaAsyncWithHttpInfo(id, nome, tipo, dataNascimento, cpf, cnpj, sexo, numeroIdentidade, orgaoExpedidorIdentidade, unidadeFederativaIdentidade, dataEmissaoIdentidade, usuarioAlteracao);
+             ApiResponse<PessoaResponse> localVarResponse = await AlterarPessoaAsyncWithHttpInfo(id, nome, tipo, dataNascimento, cpf, cnpj, sexo, numeroIdentidade, orgaoExpedidorIdentidade, unidadeFederativaIdentidade, dataEmissaoIdentidade, usuarioAlteracao, flagDeficienteVisual);
              return localVarResponse.Data;
 
         }
@@ -3200,8 +3264,9 @@ namespace Conductor.Pier.Api
         /// <param name="unidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade (optional)</param>
         /// <param name="dataEmissaoIdentidade">Data emiss\u00E3o da Identidade (optional)</param>
         /// <param name="usuarioAlteracao">Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o (optional)</param>
+        /// <param name="flagDeficienteVisual">Flag que identifica uma pessoa como deficiente visual (optional)</param>
         /// <returns>Task of ApiResponse (PessoaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PessoaResponse>> AlterarPessoaAsyncWithHttpInfo (long? id, string nome, string tipo, string dataNascimento, string cpf = null, string cnpj = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null, string usuarioAlteracao = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PessoaResponse>> AlterarPessoaAsyncWithHttpInfo (long? id, string nome, string tipo, string dataNascimento, string cpf = null, string cnpj = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null, string usuarioAlteracao = null, bool? flagDeficienteVisual = null)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AlterarPessoa");
@@ -3252,6 +3317,7 @@ namespace Conductor.Pier.Api
             if (unidadeFederativaIdentidade != null) localVarQueryParams.Add("unidadeFederativaIdentidade", Configuration.ApiClient.ParameterToString(unidadeFederativaIdentidade)); // query parameter
             if (dataEmissaoIdentidade != null) localVarQueryParams.Add("dataEmissaoIdentidade", Configuration.ApiClient.ParameterToString(dataEmissaoIdentidade)); // query parameter
             if (usuarioAlteracao != null) localVarQueryParams.Add("usuarioAlteracao", Configuration.ApiClient.ParameterToString(usuarioAlteracao)); // query parameter
+            if (flagDeficienteVisual != null) localVarQueryParams.Add("flagDeficienteVisual", Configuration.ApiClient.ParameterToString(flagDeficienteVisual)); // query parameter
             
             
             
@@ -4310,6 +4376,188 @@ namespace Conductor.Pier.Api
             return new ApiResponse<IndicacaoAmigoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (IndicacaoAmigoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(IndicacaoAmigoResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Atualiza\u00E7\u00E3o parcial do detalhe da pessoa Este recurso permite realizar uma atualiza\u00E7\u00E3o parcial dos detalhes da pessoa
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da pessoa</param> 
+        /// <param name="pessoaDetalhePartialUpdate">pessoaDetalhePartialUpdate</param> 
+        /// <returns>Object</returns>
+        public Object AtualizarParcialPessoaDetalhe (long? id, PessoaDetalhePartialUpdate pessoaDetalhePartialUpdate)
+        {
+             ApiResponse<Object> localVarResponse = AtualizarParcialPessoaDetalheWithHttpInfo(id, pessoaDetalhePartialUpdate);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Atualiza\u00E7\u00E3o parcial do detalhe da pessoa Este recurso permite realizar uma atualiza\u00E7\u00E3o parcial dos detalhes da pessoa
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da pessoa</param> 
+        /// <param name="pessoaDetalhePartialUpdate">pessoaDetalhePartialUpdate</param> 
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > AtualizarParcialPessoaDetalheWithHttpInfo (long? id, PessoaDetalhePartialUpdate pessoaDetalhePartialUpdate)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling CadastroClienteApi->AtualizarParcialPessoaDetalhe");
+            
+            // verify the required parameter 'pessoaDetalhePartialUpdate' is set
+            if (pessoaDetalhePartialUpdate == null)
+                throw new ApiException(400, "Missing required parameter 'pessoaDetalhePartialUpdate' when calling CadastroClienteApi->AtualizarParcialPessoaDetalhe");
+            
+    
+            var localVarPath = "/api/pessoas/{id}/detalhes";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            if (pessoaDetalhePartialUpdate.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(pessoaDetalhePartialUpdate); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = pessoaDetalhePartialUpdate; // byte array
+            }
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling AtualizarParcialPessoaDetalhe: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling AtualizarParcialPessoaDetalhe: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+            
+        }
+
+        
+        /// <summary>
+        /// Atualiza\u00E7\u00E3o parcial do detalhe da pessoa Este recurso permite realizar uma atualiza\u00E7\u00E3o parcial dos detalhes da pessoa
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da pessoa</param>
+        /// <param name="pessoaDetalhePartialUpdate">pessoaDetalhePartialUpdate</param>
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> AtualizarParcialPessoaDetalheAsync (long? id, PessoaDetalhePartialUpdate pessoaDetalhePartialUpdate)
+        {
+             ApiResponse<Object> localVarResponse = await AtualizarParcialPessoaDetalheAsyncWithHttpInfo(id, pessoaDetalhePartialUpdate);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Atualiza\u00E7\u00E3o parcial do detalhe da pessoa Este recurso permite realizar uma atualiza\u00E7\u00E3o parcial dos detalhes da pessoa
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da pessoa</param>
+        /// <param name="pessoaDetalhePartialUpdate">pessoaDetalhePartialUpdate</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> AtualizarParcialPessoaDetalheAsyncWithHttpInfo (long? id, PessoaDetalhePartialUpdate pessoaDetalhePartialUpdate)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AtualizarParcialPessoaDetalhe");
+            // verify the required parameter 'pessoaDetalhePartialUpdate' is set
+            if (pessoaDetalhePartialUpdate == null) throw new ApiException(400, "Missing required parameter 'pessoaDetalhePartialUpdate' when calling AtualizarParcialPessoaDetalhe");
+            
+    
+            var localVarPath = "/api/pessoas/{id}/detalhes";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            if (pessoaDetalhePartialUpdate.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(pessoaDetalhePartialUpdate); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = pessoaDetalhePartialUpdate; // byte array
+            }
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling AtualizarParcialPessoaDetalhe: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling AtualizarParcialPessoaDetalhe: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
             
         }
         
@@ -7007,10 +7255,11 @@ namespace Conductor.Pier.Api
         /// <param name="orgaoExpedidorIdentidade">Org\u00E3o expedidor do RG (optional)</param> 
         /// <param name="unidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade (optional)</param> 
         /// <param name="dataEmissaoIdentidade">Data emiss\u00E3o da identidade no formato aaaa-MM-dd (optional)</param> 
+        /// <param name="flagDeficienteVisual">Flag que identifica uma pessoa como deficiente visual (optional)</param> 
         /// <returns>PagePessoaResponse</returns>
-        public PagePessoaResponse ListarPessoas (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, string tipo = null, string cpf = null, string cnpj = null, string dataNascimento = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null)
+        public PagePessoaResponse ListarPessoas (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, string tipo = null, string cpf = null, string cnpj = null, string dataNascimento = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null, bool? flagDeficienteVisual = null)
         {
-             ApiResponse<PagePessoaResponse> localVarResponse = ListarPessoasWithHttpInfo(sort, page, limit, id, nome, tipo, cpf, cnpj, dataNascimento, sexo, numeroIdentidade, orgaoExpedidorIdentidade, unidadeFederativaIdentidade, dataEmissaoIdentidade);
+             ApiResponse<PagePessoaResponse> localVarResponse = ListarPessoasWithHttpInfo(sort, page, limit, id, nome, tipo, cpf, cnpj, dataNascimento, sexo, numeroIdentidade, orgaoExpedidorIdentidade, unidadeFederativaIdentidade, dataEmissaoIdentidade, flagDeficienteVisual);
              return localVarResponse.Data;
         }
 
@@ -7032,8 +7281,9 @@ namespace Conductor.Pier.Api
         /// <param name="orgaoExpedidorIdentidade">Org\u00E3o expedidor do RG (optional)</param> 
         /// <param name="unidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade (optional)</param> 
         /// <param name="dataEmissaoIdentidade">Data emiss\u00E3o da identidade no formato aaaa-MM-dd (optional)</param> 
+        /// <param name="flagDeficienteVisual">Flag que identifica uma pessoa como deficiente visual (optional)</param> 
         /// <returns>ApiResponse of PagePessoaResponse</returns>
-        public ApiResponse< PagePessoaResponse > ListarPessoasWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, string tipo = null, string cpf = null, string cnpj = null, string dataNascimento = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null)
+        public ApiResponse< PagePessoaResponse > ListarPessoasWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, string tipo = null, string cpf = null, string cnpj = null, string dataNascimento = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null, bool? flagDeficienteVisual = null)
         {
             
     
@@ -7078,6 +7328,7 @@ namespace Conductor.Pier.Api
             if (orgaoExpedidorIdentidade != null) localVarQueryParams.Add("orgaoExpedidorIdentidade", Configuration.ApiClient.ParameterToString(orgaoExpedidorIdentidade)); // query parameter
             if (unidadeFederativaIdentidade != null) localVarQueryParams.Add("unidadeFederativaIdentidade", Configuration.ApiClient.ParameterToString(unidadeFederativaIdentidade)); // query parameter
             if (dataEmissaoIdentidade != null) localVarQueryParams.Add("dataEmissaoIdentidade", Configuration.ApiClient.ParameterToString(dataEmissaoIdentidade)); // query parameter
+            if (flagDeficienteVisual != null) localVarQueryParams.Add("flagDeficienteVisual", Configuration.ApiClient.ParameterToString(flagDeficienteVisual)); // query parameter
             
             
             
@@ -7122,10 +7373,11 @@ namespace Conductor.Pier.Api
         /// <param name="orgaoExpedidorIdentidade">Org\u00E3o expedidor do RG (optional)</param>
         /// <param name="unidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade (optional)</param>
         /// <param name="dataEmissaoIdentidade">Data emiss\u00E3o da identidade no formato aaaa-MM-dd (optional)</param>
+        /// <param name="flagDeficienteVisual">Flag que identifica uma pessoa como deficiente visual (optional)</param>
         /// <returns>Task of PagePessoaResponse</returns>
-        public async System.Threading.Tasks.Task<PagePessoaResponse> ListarPessoasAsync (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, string tipo = null, string cpf = null, string cnpj = null, string dataNascimento = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null)
+        public async System.Threading.Tasks.Task<PagePessoaResponse> ListarPessoasAsync (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, string tipo = null, string cpf = null, string cnpj = null, string dataNascimento = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null, bool? flagDeficienteVisual = null)
         {
-             ApiResponse<PagePessoaResponse> localVarResponse = await ListarPessoasAsyncWithHttpInfo(sort, page, limit, id, nome, tipo, cpf, cnpj, dataNascimento, sexo, numeroIdentidade, orgaoExpedidorIdentidade, unidadeFederativaIdentidade, dataEmissaoIdentidade);
+             ApiResponse<PagePessoaResponse> localVarResponse = await ListarPessoasAsyncWithHttpInfo(sort, page, limit, id, nome, tipo, cpf, cnpj, dataNascimento, sexo, numeroIdentidade, orgaoExpedidorIdentidade, unidadeFederativaIdentidade, dataEmissaoIdentidade, flagDeficienteVisual);
              return localVarResponse.Data;
 
         }
@@ -7148,8 +7400,9 @@ namespace Conductor.Pier.Api
         /// <param name="orgaoExpedidorIdentidade">Org\u00E3o expedidor do RG (optional)</param>
         /// <param name="unidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade (optional)</param>
         /// <param name="dataEmissaoIdentidade">Data emiss\u00E3o da identidade no formato aaaa-MM-dd (optional)</param>
+        /// <param name="flagDeficienteVisual">Flag que identifica uma pessoa como deficiente visual (optional)</param>
         /// <returns>Task of ApiResponse (PagePessoaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PagePessoaResponse>> ListarPessoasAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, string tipo = null, string cpf = null, string cnpj = null, string dataNascimento = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PagePessoaResponse>> ListarPessoasAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string nome = null, string tipo = null, string cpf = null, string cnpj = null, string dataNascimento = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null, bool? flagDeficienteVisual = null)
         {
             
     
@@ -7194,6 +7447,7 @@ namespace Conductor.Pier.Api
             if (orgaoExpedidorIdentidade != null) localVarQueryParams.Add("orgaoExpedidorIdentidade", Configuration.ApiClient.ParameterToString(orgaoExpedidorIdentidade)); // query parameter
             if (unidadeFederativaIdentidade != null) localVarQueryParams.Add("unidadeFederativaIdentidade", Configuration.ApiClient.ParameterToString(unidadeFederativaIdentidade)); // query parameter
             if (dataEmissaoIdentidade != null) localVarQueryParams.Add("dataEmissaoIdentidade", Configuration.ApiClient.ParameterToString(dataEmissaoIdentidade)); // query parameter
+            if (flagDeficienteVisual != null) localVarQueryParams.Add("flagDeficienteVisual", Configuration.ApiClient.ParameterToString(flagDeficienteVisual)); // query parameter
             
             
             
@@ -8330,10 +8584,11 @@ namespace Conductor.Pier.Api
         /// <param name="unidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade (optional)</param> 
         /// <param name="dataEmissaoIdentidade">Data emiss\u00E3o da Identidade (optional)</param> 
         /// <param name="usuarioAlteracao">Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o (optional)</param> 
+        /// <param name="flagDeficienteVisual">Flag que identifica uma pessoa como deficiente visual (optional)</param> 
         /// <returns>PessoaResponse</returns>
-        public PessoaResponse SalvarPessoa (string nome, string tipo, string dataNascimento, string cpf = null, string cnpj = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null, string usuarioAlteracao = null)
+        public PessoaResponse SalvarPessoa (string nome, string tipo, string dataNascimento, string cpf = null, string cnpj = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null, string usuarioAlteracao = null, bool? flagDeficienteVisual = null)
         {
-             ApiResponse<PessoaResponse> localVarResponse = SalvarPessoaWithHttpInfo(nome, tipo, dataNascimento, cpf, cnpj, sexo, numeroIdentidade, orgaoExpedidorIdentidade, unidadeFederativaIdentidade, dataEmissaoIdentidade, usuarioAlteracao);
+             ApiResponse<PessoaResponse> localVarResponse = SalvarPessoaWithHttpInfo(nome, tipo, dataNascimento, cpf, cnpj, sexo, numeroIdentidade, orgaoExpedidorIdentidade, unidadeFederativaIdentidade, dataEmissaoIdentidade, usuarioAlteracao, flagDeficienteVisual);
              return localVarResponse.Data;
         }
 
@@ -8352,8 +8607,9 @@ namespace Conductor.Pier.Api
         /// <param name="unidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade (optional)</param> 
         /// <param name="dataEmissaoIdentidade">Data emiss\u00E3o da Identidade (optional)</param> 
         /// <param name="usuarioAlteracao">Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o (optional)</param> 
+        /// <param name="flagDeficienteVisual">Flag que identifica uma pessoa como deficiente visual (optional)</param> 
         /// <returns>ApiResponse of PessoaResponse</returns>
-        public ApiResponse< PessoaResponse > SalvarPessoaWithHttpInfo (string nome, string tipo, string dataNascimento, string cpf = null, string cnpj = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null, string usuarioAlteracao = null)
+        public ApiResponse< PessoaResponse > SalvarPessoaWithHttpInfo (string nome, string tipo, string dataNascimento, string cpf = null, string cnpj = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null, string usuarioAlteracao = null, bool? flagDeficienteVisual = null)
         {
             
             // verify the required parameter 'nome' is set
@@ -8407,6 +8663,7 @@ namespace Conductor.Pier.Api
             if (unidadeFederativaIdentidade != null) localVarQueryParams.Add("unidadeFederativaIdentidade", Configuration.ApiClient.ParameterToString(unidadeFederativaIdentidade)); // query parameter
             if (dataEmissaoIdentidade != null) localVarQueryParams.Add("dataEmissaoIdentidade", Configuration.ApiClient.ParameterToString(dataEmissaoIdentidade)); // query parameter
             if (usuarioAlteracao != null) localVarQueryParams.Add("usuarioAlteracao", Configuration.ApiClient.ParameterToString(usuarioAlteracao)); // query parameter
+            if (flagDeficienteVisual != null) localVarQueryParams.Add("flagDeficienteVisual", Configuration.ApiClient.ParameterToString(flagDeficienteVisual)); // query parameter
             
             
             
@@ -8448,10 +8705,11 @@ namespace Conductor.Pier.Api
         /// <param name="unidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade (optional)</param>
         /// <param name="dataEmissaoIdentidade">Data emiss\u00E3o da Identidade (optional)</param>
         /// <param name="usuarioAlteracao">Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o (optional)</param>
+        /// <param name="flagDeficienteVisual">Flag que identifica uma pessoa como deficiente visual (optional)</param>
         /// <returns>Task of PessoaResponse</returns>
-        public async System.Threading.Tasks.Task<PessoaResponse> SalvarPessoaAsync (string nome, string tipo, string dataNascimento, string cpf = null, string cnpj = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null, string usuarioAlteracao = null)
+        public async System.Threading.Tasks.Task<PessoaResponse> SalvarPessoaAsync (string nome, string tipo, string dataNascimento, string cpf = null, string cnpj = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null, string usuarioAlteracao = null, bool? flagDeficienteVisual = null)
         {
-             ApiResponse<PessoaResponse> localVarResponse = await SalvarPessoaAsyncWithHttpInfo(nome, tipo, dataNascimento, cpf, cnpj, sexo, numeroIdentidade, orgaoExpedidorIdentidade, unidadeFederativaIdentidade, dataEmissaoIdentidade, usuarioAlteracao);
+             ApiResponse<PessoaResponse> localVarResponse = await SalvarPessoaAsyncWithHttpInfo(nome, tipo, dataNascimento, cpf, cnpj, sexo, numeroIdentidade, orgaoExpedidorIdentidade, unidadeFederativaIdentidade, dataEmissaoIdentidade, usuarioAlteracao, flagDeficienteVisual);
              return localVarResponse.Data;
 
         }
@@ -8471,8 +8729,9 @@ namespace Conductor.Pier.Api
         /// <param name="unidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade (optional)</param>
         /// <param name="dataEmissaoIdentidade">Data emiss\u00E3o da Identidade (optional)</param>
         /// <param name="usuarioAlteracao">Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o (optional)</param>
+        /// <param name="flagDeficienteVisual">Flag que identifica uma pessoa como deficiente visual (optional)</param>
         /// <returns>Task of ApiResponse (PessoaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PessoaResponse>> SalvarPessoaAsyncWithHttpInfo (string nome, string tipo, string dataNascimento, string cpf = null, string cnpj = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null, string usuarioAlteracao = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PessoaResponse>> SalvarPessoaAsyncWithHttpInfo (string nome, string tipo, string dataNascimento, string cpf = null, string cnpj = null, string sexo = null, string numeroIdentidade = null, string orgaoExpedidorIdentidade = null, string unidadeFederativaIdentidade = null, string dataEmissaoIdentidade = null, string usuarioAlteracao = null, bool? flagDeficienteVisual = null)
         {
             // verify the required parameter 'nome' is set
             if (nome == null) throw new ApiException(400, "Missing required parameter 'nome' when calling SalvarPessoa");
@@ -8520,6 +8779,7 @@ namespace Conductor.Pier.Api
             if (unidadeFederativaIdentidade != null) localVarQueryParams.Add("unidadeFederativaIdentidade", Configuration.ApiClient.ParameterToString(unidadeFederativaIdentidade)); // query parameter
             if (dataEmissaoIdentidade != null) localVarQueryParams.Add("dataEmissaoIdentidade", Configuration.ApiClient.ParameterToString(dataEmissaoIdentidade)); // query parameter
             if (usuarioAlteracao != null) localVarQueryParams.Add("usuarioAlteracao", Configuration.ApiClient.ParameterToString(usuarioAlteracao)); // query parameter
+            if (flagDeficienteVisual != null) localVarQueryParams.Add("flagDeficienteVisual", Configuration.ApiClient.ParameterToString(flagDeficienteVisual)); // query parameter
             
             
             

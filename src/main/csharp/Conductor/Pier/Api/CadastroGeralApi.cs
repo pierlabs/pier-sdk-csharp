@@ -677,8 +677,14 @@ namespace Conductor.Pier.Api
         /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
         /// <param name="page">P\u00E1gina (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="nome">Nome do banco (optional)</param>
+        /// <param name="descricao">Descri\u00E7\u00E3o do banco (optional)</param>
+        /// <param name="digitoBanco">D\u00EDgito verificador do banco (optional)</param>
+        /// <param name="ispb">N\u00FAmero identificador de sistema de pagamento brasileiro  (optional)</param>
+        /// <param name="cnpj">N\u00FAmero do CNPJ do banco (optional)</param>
+        /// <param name="flagAtivoBacen">Indica se o banco est\u00E1 ativo no BACEN (optional)</param>
         /// <returns>PageBancoResponse</returns>
-        PageBancoResponse ListarBancos (List<string> sort = null, int? page = null, int? limit = null);
+        PageBancoResponse ListarBancos (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string descricao = null, string digitoBanco = null, string ispb = null, string cnpj = null, bool? flagAtivoBacen = null);
   
         /// <summary>
         /// Lista os Bancos cadastrados para o Emissor
@@ -690,8 +696,14 @@ namespace Conductor.Pier.Api
         /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
         /// <param name="page">P\u00E1gina (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="nome">Nome do banco (optional)</param>
+        /// <param name="descricao">Descri\u00E7\u00E3o do banco (optional)</param>
+        /// <param name="digitoBanco">D\u00EDgito verificador do banco (optional)</param>
+        /// <param name="ispb">N\u00FAmero identificador de sistema de pagamento brasileiro  (optional)</param>
+        /// <param name="cnpj">N\u00FAmero do CNPJ do banco (optional)</param>
+        /// <param name="flagAtivoBacen">Indica se o banco est\u00E1 ativo no BACEN (optional)</param>
         /// <returns>ApiResponse of PageBancoResponse</returns>
-        ApiResponse<PageBancoResponse> ListarBancosWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
+        ApiResponse<PageBancoResponse> ListarBancosWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string descricao = null, string digitoBanco = null, string ispb = null, string cnpj = null, bool? flagAtivoBacen = null);
         
         /// <summary>
         /// Listar Campanhas
@@ -2161,8 +2173,14 @@ namespace Conductor.Pier.Api
         /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
         /// <param name="page">P\u00E1gina (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="nome">Nome do banco (optional)</param>
+        /// <param name="descricao">Descri\u00E7\u00E3o do banco (optional)</param>
+        /// <param name="digitoBanco">D\u00EDgito verificador do banco (optional)</param>
+        /// <param name="ispb">N\u00FAmero identificador de sistema de pagamento brasileiro  (optional)</param>
+        /// <param name="cnpj">N\u00FAmero do CNPJ do banco (optional)</param>
+        /// <param name="flagAtivoBacen">Indica se o banco est\u00E1 ativo no BACEN (optional)</param>
         /// <returns>Task of PageBancoResponse</returns>
-        System.Threading.Tasks.Task<PageBancoResponse> ListarBancosAsync (List<string> sort = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<PageBancoResponse> ListarBancosAsync (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string descricao = null, string digitoBanco = null, string ispb = null, string cnpj = null, bool? flagAtivoBacen = null);
 
         /// <summary>
         /// Lista os Bancos cadastrados para o Emissor
@@ -2174,8 +2192,14 @@ namespace Conductor.Pier.Api
         /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
         /// <param name="page">P\u00E1gina (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="nome">Nome do banco (optional)</param>
+        /// <param name="descricao">Descri\u00E7\u00E3o do banco (optional)</param>
+        /// <param name="digitoBanco">D\u00EDgito verificador do banco (optional)</param>
+        /// <param name="ispb">N\u00FAmero identificador de sistema de pagamento brasileiro  (optional)</param>
+        /// <param name="cnpj">N\u00FAmero do CNPJ do banco (optional)</param>
+        /// <param name="flagAtivoBacen">Indica se o banco est\u00E1 ativo no BACEN (optional)</param>
         /// <returns>Task of ApiResponse (PageBancoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageBancoResponse>> ListarBancosAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
+        System.Threading.Tasks.Task<ApiResponse<PageBancoResponse>> ListarBancosAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string descricao = null, string digitoBanco = null, string ispb = null, string cnpj = null, bool? flagAtivoBacen = null);
         
         /// <summary>
         /// Listar Campanhas
@@ -7694,10 +7718,16 @@ namespace Conductor.Pier.Api
         /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
         /// <param name="page">P\u00E1gina (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <param name="nome">Nome do banco (optional)</param> 
+        /// <param name="descricao">Descri\u00E7\u00E3o do banco (optional)</param> 
+        /// <param name="digitoBanco">D\u00EDgito verificador do banco (optional)</param> 
+        /// <param name="ispb">N\u00FAmero identificador de sistema de pagamento brasileiro  (optional)</param> 
+        /// <param name="cnpj">N\u00FAmero do CNPJ do banco (optional)</param> 
+        /// <param name="flagAtivoBacen">Indica se o banco est\u00E1 ativo no BACEN (optional)</param> 
         /// <returns>PageBancoResponse</returns>
-        public PageBancoResponse ListarBancos (List<string> sort = null, int? page = null, int? limit = null)
+        public PageBancoResponse ListarBancos (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string descricao = null, string digitoBanco = null, string ispb = null, string cnpj = null, bool? flagAtivoBacen = null)
         {
-             ApiResponse<PageBancoResponse> localVarResponse = ListarBancosWithHttpInfo(sort, page, limit);
+             ApiResponse<PageBancoResponse> localVarResponse = ListarBancosWithHttpInfo(sort, page, limit, nome, descricao, digitoBanco, ispb, cnpj, flagAtivoBacen);
              return localVarResponse.Data;
         }
 
@@ -7708,8 +7738,14 @@ namespace Conductor.Pier.Api
         /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
         /// <param name="page">P\u00E1gina (optional)</param> 
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <param name="nome">Nome do banco (optional)</param> 
+        /// <param name="descricao">Descri\u00E7\u00E3o do banco (optional)</param> 
+        /// <param name="digitoBanco">D\u00EDgito verificador do banco (optional)</param> 
+        /// <param name="ispb">N\u00FAmero identificador de sistema de pagamento brasileiro  (optional)</param> 
+        /// <param name="cnpj">N\u00FAmero do CNPJ do banco (optional)</param> 
+        /// <param name="flagAtivoBacen">Indica se o banco est\u00E1 ativo no BACEN (optional)</param> 
         /// <returns>ApiResponse of PageBancoResponse</returns>
-        public ApiResponse< PageBancoResponse > ListarBancosWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
+        public ApiResponse< PageBancoResponse > ListarBancosWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string descricao = null, string digitoBanco = null, string ispb = null, string cnpj = null, bool? flagAtivoBacen = null)
         {
             
     
@@ -7743,6 +7779,12 @@ namespace Conductor.Pier.Api
             if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
             if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
             if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (nome != null) localVarQueryParams.Add("nome", Configuration.ApiClient.ParameterToString(nome)); // query parameter
+            if (descricao != null) localVarQueryParams.Add("descricao", Configuration.ApiClient.ParameterToString(descricao)); // query parameter
+            if (digitoBanco != null) localVarQueryParams.Add("digitoBanco", Configuration.ApiClient.ParameterToString(digitoBanco)); // query parameter
+            if (ispb != null) localVarQueryParams.Add("ispb", Configuration.ApiClient.ParameterToString(ispb)); // query parameter
+            if (cnpj != null) localVarQueryParams.Add("cnpj", Configuration.ApiClient.ParameterToString(cnpj)); // query parameter
+            if (flagAtivoBacen != null) localVarQueryParams.Add("flagAtivoBacen", Configuration.ApiClient.ParameterToString(flagAtivoBacen)); // query parameter
             
             
             
@@ -7776,10 +7818,16 @@ namespace Conductor.Pier.Api
         /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
         /// <param name="page">P\u00E1gina (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="nome">Nome do banco (optional)</param>
+        /// <param name="descricao">Descri\u00E7\u00E3o do banco (optional)</param>
+        /// <param name="digitoBanco">D\u00EDgito verificador do banco (optional)</param>
+        /// <param name="ispb">N\u00FAmero identificador de sistema de pagamento brasileiro  (optional)</param>
+        /// <param name="cnpj">N\u00FAmero do CNPJ do banco (optional)</param>
+        /// <param name="flagAtivoBacen">Indica se o banco est\u00E1 ativo no BACEN (optional)</param>
         /// <returns>Task of PageBancoResponse</returns>
-        public async System.Threading.Tasks.Task<PageBancoResponse> ListarBancosAsync (List<string> sort = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<PageBancoResponse> ListarBancosAsync (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string descricao = null, string digitoBanco = null, string ispb = null, string cnpj = null, bool? flagAtivoBacen = null)
         {
-             ApiResponse<PageBancoResponse> localVarResponse = await ListarBancosAsyncWithHttpInfo(sort, page, limit);
+             ApiResponse<PageBancoResponse> localVarResponse = await ListarBancosAsyncWithHttpInfo(sort, page, limit, nome, descricao, digitoBanco, ispb, cnpj, flagAtivoBacen);
              return localVarResponse.Data;
 
         }
@@ -7791,8 +7839,14 @@ namespace Conductor.Pier.Api
         /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
         /// <param name="page">P\u00E1gina (optional)</param>
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="nome">Nome do banco (optional)</param>
+        /// <param name="descricao">Descri\u00E7\u00E3o do banco (optional)</param>
+        /// <param name="digitoBanco">D\u00EDgito verificador do banco (optional)</param>
+        /// <param name="ispb">N\u00FAmero identificador de sistema de pagamento brasileiro  (optional)</param>
+        /// <param name="cnpj">N\u00FAmero do CNPJ do banco (optional)</param>
+        /// <param name="flagAtivoBacen">Indica se o banco est\u00E1 ativo no BACEN (optional)</param>
         /// <returns>Task of ApiResponse (PageBancoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageBancoResponse>> ListarBancosAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageBancoResponse>> ListarBancosAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string descricao = null, string digitoBanco = null, string ispb = null, string cnpj = null, bool? flagAtivoBacen = null)
         {
             
     
@@ -7826,6 +7880,12 @@ namespace Conductor.Pier.Api
             if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
             if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
             if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (nome != null) localVarQueryParams.Add("nome", Configuration.ApiClient.ParameterToString(nome)); // query parameter
+            if (descricao != null) localVarQueryParams.Add("descricao", Configuration.ApiClient.ParameterToString(descricao)); // query parameter
+            if (digitoBanco != null) localVarQueryParams.Add("digitoBanco", Configuration.ApiClient.ParameterToString(digitoBanco)); // query parameter
+            if (ispb != null) localVarQueryParams.Add("ispb", Configuration.ApiClient.ParameterToString(ispb)); // query parameter
+            if (cnpj != null) localVarQueryParams.Add("cnpj", Configuration.ApiClient.ParameterToString(cnpj)); // query parameter
+            if (flagAtivoBacen != null) localVarQueryParams.Add("flagAtivoBacen", Configuration.ApiClient.ParameterToString(flagAtivoBacen)); // query parameter
             
             
             

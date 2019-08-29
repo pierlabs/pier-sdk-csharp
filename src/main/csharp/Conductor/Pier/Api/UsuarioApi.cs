@@ -28,7 +28,7 @@ namespace Conductor.Pier.Api
         /// <param name="senhaAtual">Senha Atual</param>
         /// <param name="senhaNova">Senha Nova</param>
         /// <returns>string</returns>
-        string AlterarSenha1 (long? id, string senhaAtual, string senhaNova);
+        string AlterarSenha (long? id, string senhaAtual, string senhaNova);
   
         /// <summary>
         /// Alterar senha do usu\u00E1rio na base do PIER ou WS
@@ -41,7 +41,7 @@ namespace Conductor.Pier.Api
         /// <param name="senhaAtual">Senha Atual</param>
         /// <param name="senhaNova">Senha Nova</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> AlterarSenha1WithHttpInfo (long? id, string senhaAtual, string senhaNova);
+        ApiResponse<string> AlterarSenhaWithHttpInfo (long? id, string senhaAtual, string senhaNova);
         
         /// <summary>
         /// Alterar senha do usu\u00E1rio
@@ -470,7 +470,7 @@ namespace Conductor.Pier.Api
         /// <param name="senhaAtual">Senha Atual</param>
         /// <param name="senhaNova">Senha Nova</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> AlterarSenha1Async (long? id, string senhaAtual, string senhaNova);
+        System.Threading.Tasks.Task<string> AlterarSenhaAsync (long? id, string senhaAtual, string senhaNova);
 
         /// <summary>
         /// Alterar senha do usu\u00E1rio na base do PIER ou WS
@@ -483,7 +483,7 @@ namespace Conductor.Pier.Api
         /// <param name="senhaAtual">Senha Atual</param>
         /// <param name="senhaNova">Senha Nova</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> AlterarSenha1AsyncWithHttpInfo (long? id, string senhaAtual, string senhaNova);
+        System.Threading.Tasks.Task<ApiResponse<string>> AlterarSenhaAsyncWithHttpInfo (long? id, string senhaAtual, string senhaNova);
         
         /// <summary>
         /// Alterar senha do usu\u00E1rio
@@ -997,9 +997,9 @@ namespace Conductor.Pier.Api
         /// <param name="senhaAtual">Senha Atual</param> 
         /// <param name="senhaNova">Senha Nova</param> 
         /// <returns>string</returns>
-        public string AlterarSenha1 (long? id, string senhaAtual, string senhaNova)
+        public string AlterarSenha (long? id, string senhaAtual, string senhaNova)
         {
-             ApiResponse<string> localVarResponse = AlterarSenha1WithHttpInfo(id, senhaAtual, senhaNova);
+             ApiResponse<string> localVarResponse = AlterarSenhaWithHttpInfo(id, senhaAtual, senhaNova);
              return localVarResponse.Data;
         }
 
@@ -1011,20 +1011,20 @@ namespace Conductor.Pier.Api
         /// <param name="senhaAtual">Senha Atual</param> 
         /// <param name="senhaNova">Senha Nova</param> 
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > AlterarSenha1WithHttpInfo (long? id, string senhaAtual, string senhaNova)
+        public ApiResponse< string > AlterarSenhaWithHttpInfo (long? id, string senhaAtual, string senhaNova)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling UsuarioApi->AlterarSenha1");
+                throw new ApiException(400, "Missing required parameter 'id' when calling UsuarioApi->AlterarSenha");
             
             // verify the required parameter 'senhaAtual' is set
             if (senhaAtual == null)
-                throw new ApiException(400, "Missing required parameter 'senhaAtual' when calling UsuarioApi->AlterarSenha1");
+                throw new ApiException(400, "Missing required parameter 'senhaAtual' when calling UsuarioApi->AlterarSenha");
             
             // verify the required parameter 'senhaNova' is set
             if (senhaNova == null)
-                throw new ApiException(400, "Missing required parameter 'senhaNova' when calling UsuarioApi->AlterarSenha1");
+                throw new ApiException(400, "Missing required parameter 'senhaNova' when calling UsuarioApi->AlterarSenha");
             
     
             var localVarPath = "/api/usuarios/{id}/alterar-senha";
@@ -1072,9 +1072,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling AlterarSenha1: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarSenha: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling AlterarSenha1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarSenha: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1091,9 +1091,9 @@ namespace Conductor.Pier.Api
         /// <param name="senhaAtual">Senha Atual</param>
         /// <param name="senhaNova">Senha Nova</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> AlterarSenha1Async (long? id, string senhaAtual, string senhaNova)
+        public async System.Threading.Tasks.Task<string> AlterarSenhaAsync (long? id, string senhaAtual, string senhaNova)
         {
-             ApiResponse<string> localVarResponse = await AlterarSenha1AsyncWithHttpInfo(id, senhaAtual, senhaNova);
+             ApiResponse<string> localVarResponse = await AlterarSenhaAsyncWithHttpInfo(id, senhaAtual, senhaNova);
              return localVarResponse.Data;
 
         }
@@ -1106,14 +1106,14 @@ namespace Conductor.Pier.Api
         /// <param name="senhaAtual">Senha Atual</param>
         /// <param name="senhaNova">Senha Nova</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> AlterarSenha1AsyncWithHttpInfo (long? id, string senhaAtual, string senhaNova)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> AlterarSenhaAsyncWithHttpInfo (long? id, string senhaAtual, string senhaNova)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AlterarSenha1");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AlterarSenha");
             // verify the required parameter 'senhaAtual' is set
-            if (senhaAtual == null) throw new ApiException(400, "Missing required parameter 'senhaAtual' when calling AlterarSenha1");
+            if (senhaAtual == null) throw new ApiException(400, "Missing required parameter 'senhaAtual' when calling AlterarSenha");
             // verify the required parameter 'senhaNova' is set
-            if (senhaNova == null) throw new ApiException(400, "Missing required parameter 'senhaNova' when calling AlterarSenha1");
+            if (senhaNova == null) throw new ApiException(400, "Missing required parameter 'senhaNova' when calling AlterarSenha");
             
     
             var localVarPath = "/api/usuarios/{id}/alterar-senha";
@@ -1161,9 +1161,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling AlterarSenha1: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarSenha: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling AlterarSenha1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling AlterarSenha: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

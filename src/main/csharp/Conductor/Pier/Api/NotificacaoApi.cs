@@ -356,6 +356,28 @@ namespace Conductor.Pier.Api
         ApiResponse<string> GerarCodigoSegurancaNotificacaoSMSWithHttpInfo (CodigoSegurancaSMSPersist persist);
         
         /// <summary>
+        /// limparConfiguracoesCachesTww
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idEmissor">idEmissor (optional)</param>
+        /// <returns>Object</returns>
+        Object LimparConfiguracoesCachesTww (long? idEmissor = null);
+  
+        /// <summary>
+        /// limparConfiguracoesCachesTww
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idEmissor">idEmissor (optional)</param>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> LimparConfiguracoesCachesTwwWithHttpInfo (long? idEmissor = null);
+        
+        /// <summary>
         /// Lista os c\u00F3digos de seguran\u00E7a E-Mail
         /// </summary>
         /// <remarks>
@@ -1186,6 +1208,28 @@ namespace Conductor.Pier.Api
         /// <param name="persist">persist</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> GerarCodigoSegurancaNotificacaoSMSAsyncWithHttpInfo (CodigoSegurancaSMSPersist persist);
+        
+        /// <summary>
+        /// limparConfiguracoesCachesTww
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idEmissor">idEmissor (optional)</param>
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> LimparConfiguracoesCachesTwwAsync (long? idEmissor = null);
+
+        /// <summary>
+        /// limparConfiguracoesCachesTww
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idEmissor">idEmissor (optional)</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> LimparConfiguracoesCachesTwwAsyncWithHttpInfo (long? idEmissor = null);
         
         /// <summary>
         /// Lista os c\u00F3digos de seguran\u00E7a E-Mail
@@ -4164,6 +4208,158 @@ namespace Conductor.Pier.Api
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+            
+        }
+        
+        /// <summary>
+        /// limparConfiguracoesCachesTww 
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idEmissor">idEmissor (optional)</param> 
+        /// <returns>Object</returns>
+        public Object LimparConfiguracoesCachesTww (long? idEmissor = null)
+        {
+             ApiResponse<Object> localVarResponse = LimparConfiguracoesCachesTwwWithHttpInfo(idEmissor);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// limparConfiguracoesCachesTww 
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idEmissor">idEmissor (optional)</param> 
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > LimparConfiguracoesCachesTwwWithHttpInfo (long? idEmissor = null)
+        {
+            
+    
+            var localVarPath = "/api/configuracoes-sms/caches";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            
+            if (idEmissor != null) localVarHeaderParams.Add("idEmissor", Configuration.ApiClient.ParameterToString(idEmissor)); // header parameter
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling LimparConfiguracoesCachesTww: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling LimparConfiguracoesCachesTww: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+            
+        }
+
+        
+        /// <summary>
+        /// limparConfiguracoesCachesTww 
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idEmissor">idEmissor (optional)</param>
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> LimparConfiguracoesCachesTwwAsync (long? idEmissor = null)
+        {
+             ApiResponse<Object> localVarResponse = await LimparConfiguracoesCachesTwwAsyncWithHttpInfo(idEmissor);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// limparConfiguracoesCachesTww 
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idEmissor">idEmissor (optional)</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> LimparConfiguracoesCachesTwwAsyncWithHttpInfo (long? idEmissor = null)
+        {
+            
+    
+            var localVarPath = "/api/configuracoes-sms/caches";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            
+            if (idEmissor != null) localVarHeaderParams.Add("idEmissor", Configuration.ApiClient.ParameterToString(idEmissor)); // header parameter
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling LimparConfiguracoesCachesTww: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling LimparConfiguracoesCachesTww: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
             
         }
         

@@ -27,14 +27,18 @@ namespace Conductor.Pier.Model
         /// <param name="Descricao">Descri\u00E7\u00E3o do banco.</param>
         /// <param name="DigitoBanco">Digito do banco.</param>
         /// <param name="Ispb">C\u00F3digo ispb do banco.</param>
+        /// <param name="Cnpj">N\u00FAmero do CNPJ do banco.</param>
+        /// <param name="FlagAtivoBacen">Indica se o banco est\u00E1 ativo no BACEN.</param>
 
-        public BancoResponse(long? Id = null, string Nome = null, string Descricao = null, string DigitoBanco = null, string Ispb = null)
+        public BancoResponse(long? Id = null, string Nome = null, string Descricao = null, string DigitoBanco = null, string Ispb = null, string Cnpj = null, bool? FlagAtivoBacen = null)
         {
             this.Id = Id;
             this.Nome = Nome;
             this.Descricao = Descricao;
             this.DigitoBanco = DigitoBanco;
             this.Ispb = Ispb;
+            this.Cnpj = Cnpj;
+            this.FlagAtivoBacen = FlagAtivoBacen;
             
         }
         
@@ -75,6 +79,20 @@ namespace Conductor.Pier.Model
         public string Ispb { get; set; }
     
         /// <summary>
+        /// N\u00FAmero do CNPJ do banco
+        /// </summary>
+        /// <value>N\u00FAmero do CNPJ do banco</value>
+        [DataMember(Name="cnpj", EmitDefaultValue=false)]
+        public string Cnpj { get; set; }
+    
+        /// <summary>
+        /// Indica se o banco est\u00E1 ativo no BACEN
+        /// </summary>
+        /// <value>Indica se o banco est\u00E1 ativo no BACEN</value>
+        [DataMember(Name="flagAtivoBacen", EmitDefaultValue=false)]
+        public bool? FlagAtivoBacen { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -87,6 +105,8 @@ namespace Conductor.Pier.Model
             sb.Append("  Descricao: ").Append(Descricao).Append("\n");
             sb.Append("  DigitoBanco: ").Append(DigitoBanco).Append("\n");
             sb.Append("  Ispb: ").Append(Ispb).Append("\n");
+            sb.Append("  Cnpj: ").Append(Cnpj).Append("\n");
+            sb.Append("  FlagAtivoBacen: ").Append(FlagAtivoBacen).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -148,6 +168,16 @@ namespace Conductor.Pier.Model
                     this.Ispb == other.Ispb ||
                     this.Ispb != null &&
                     this.Ispb.Equals(other.Ispb)
+                ) && 
+                (
+                    this.Cnpj == other.Cnpj ||
+                    this.Cnpj != null &&
+                    this.Cnpj.Equals(other.Cnpj)
+                ) && 
+                (
+                    this.FlagAtivoBacen == other.FlagAtivoBacen ||
+                    this.FlagAtivoBacen != null &&
+                    this.FlagAtivoBacen.Equals(other.FlagAtivoBacen)
                 );
         }
 
@@ -177,6 +207,12 @@ namespace Conductor.Pier.Model
                 
                 if (this.Ispb != null)
                     hash = hash * 59 + this.Ispb.GetHashCode();
+                
+                if (this.Cnpj != null)
+                    hash = hash * 59 + this.Cnpj.GetHashCode();
+                
+                if (this.FlagAtivoBacen != null)
+                    hash = hash * 59 + this.FlagAtivoBacen.GetHashCode();
                 
                 return hash;
             }

@@ -36,6 +36,7 @@ namespace Conductor.Pier.Model
         /// <param name="LimiteCompraInternacional">Limite de compra internacional.</param>
         /// <param name="LimiteCompraNacional">Limite de compra nacional.</param>
         /// <param name="LimiteGlobalCredito">Limite global de credito do cliente.</param>
+        /// <param name="LimiteMaximo">Valor m\u00E1ximo do limite de cr\u00E9dito para realizar transa\u00E7\u00F5es.</param>
         /// <param name="LimiteParceladoInternacional">Limite parcelado internacional.</param>
         /// <param name="LimiteParceladoNacional">Limite parcelado nacional (valor contrato).</param>
         /// <param name="LimiteParcelasInternacional">Limite parcelas internacional.</param>
@@ -50,7 +51,7 @@ namespace Conductor.Pier.Model
         /// <param name="OrdemAtualizacao">Ordem da altera\u00E7\u00E3o do limite (I - insert, U - update, D - delete).</param>
         /// <param name="TipoAlteracao">Tipo da altera\u00E7\u00E3o do limite (I - insert, U - update, D - delete.</param>
 
-        public LimiteDisponibilidadeLogResponse(string DataAlteracao = null, double? DisponibilidadeCompraInternacional = null, double? DisponibilidadeCompraNacional = null, double? DisponibilidadeGlobalCredito = null, double? DisponibilidadeParceladoNacional = null, double? DisponibilidadeParcelasNacional = null, double? DisponibilidadeSaqueInternacionalGlobal = null, double? DisponibilidadeSaqueNacionalGlobal = null, long? Id = null, long? IdConta = null, long? IdEmissor = null, double? LimiteCompraInternacional = null, double? LimiteCompraNacional = null, double? LimiteGlobalCredito = null, double? LimiteParceladoInternacional = null, double? LimiteParceladoNacional = null, double? LimiteParcelasInternacional = null, double? LimiteParcelasNacional = null, double? LimitePontuacao = null, double? LimiteSaqueInternacionalGlobal = null, double? LimiteSaqueInternacionalPeriodo = null, double? LimiteSaqueNacionalGlobal = null, double? LimiteSaqueNacionalPeriodo = null, string Maquina = null, double? MargemConsignada = null, string OrdemAtualizacao = null, string TipoAlteracao = null)
+        public LimiteDisponibilidadeLogResponse(string DataAlteracao = null, double? DisponibilidadeCompraInternacional = null, double? DisponibilidadeCompraNacional = null, double? DisponibilidadeGlobalCredito = null, double? DisponibilidadeParceladoNacional = null, double? DisponibilidadeParcelasNacional = null, double? DisponibilidadeSaqueInternacionalGlobal = null, double? DisponibilidadeSaqueNacionalGlobal = null, long? Id = null, long? IdConta = null, long? IdEmissor = null, double? LimiteCompraInternacional = null, double? LimiteCompraNacional = null, double? LimiteGlobalCredito = null, double? LimiteMaximo = null, double? LimiteParceladoInternacional = null, double? LimiteParceladoNacional = null, double? LimiteParcelasInternacional = null, double? LimiteParcelasNacional = null, double? LimitePontuacao = null, double? LimiteSaqueInternacionalGlobal = null, double? LimiteSaqueInternacionalPeriodo = null, double? LimiteSaqueNacionalGlobal = null, double? LimiteSaqueNacionalPeriodo = null, string Maquina = null, double? MargemConsignada = null, string OrdemAtualizacao = null, string TipoAlteracao = null)
         {
             this.DataAlteracao = DataAlteracao;
             this.DisponibilidadeCompraInternacional = DisponibilidadeCompraInternacional;
@@ -66,6 +67,7 @@ namespace Conductor.Pier.Model
             this.LimiteCompraInternacional = LimiteCompraInternacional;
             this.LimiteCompraNacional = LimiteCompraNacional;
             this.LimiteGlobalCredito = LimiteGlobalCredito;
+            this.LimiteMaximo = LimiteMaximo;
             this.LimiteParceladoInternacional = LimiteParceladoInternacional;
             this.LimiteParceladoNacional = LimiteParceladoNacional;
             this.LimiteParcelasInternacional = LimiteParcelasInternacional;
@@ -182,6 +184,13 @@ namespace Conductor.Pier.Model
         public double? LimiteGlobalCredito { get; set; }
     
         /// <summary>
+        /// Valor m\u00E1ximo do limite de cr\u00E9dito para realizar transa\u00E7\u00F5es
+        /// </summary>
+        /// <value>Valor m\u00E1ximo do limite de cr\u00E9dito para realizar transa\u00E7\u00F5es</value>
+        [DataMember(Name="limiteMaximo", EmitDefaultValue=false)]
+        public double? LimiteMaximo { get; set; }
+    
+        /// <summary>
         /// Limite parcelado internacional
         /// </summary>
         /// <value>Limite parcelado internacional</value>
@@ -294,6 +303,7 @@ namespace Conductor.Pier.Model
             sb.Append("  LimiteCompraInternacional: ").Append(LimiteCompraInternacional).Append("\n");
             sb.Append("  LimiteCompraNacional: ").Append(LimiteCompraNacional).Append("\n");
             sb.Append("  LimiteGlobalCredito: ").Append(LimiteGlobalCredito).Append("\n");
+            sb.Append("  LimiteMaximo: ").Append(LimiteMaximo).Append("\n");
             sb.Append("  LimiteParceladoInternacional: ").Append(LimiteParceladoInternacional).Append("\n");
             sb.Append("  LimiteParceladoNacional: ").Append(LimiteParceladoNacional).Append("\n");
             sb.Append("  LimiteParcelasInternacional: ").Append(LimiteParcelasInternacional).Append("\n");
@@ -415,6 +425,11 @@ namespace Conductor.Pier.Model
                     this.LimiteGlobalCredito.Equals(other.LimiteGlobalCredito)
                 ) && 
                 (
+                    this.LimiteMaximo == other.LimiteMaximo ||
+                    this.LimiteMaximo != null &&
+                    this.LimiteMaximo.Equals(other.LimiteMaximo)
+                ) && 
+                (
                     this.LimiteParceladoInternacional == other.LimiteParceladoInternacional ||
                     this.LimiteParceladoInternacional != null &&
                     this.LimiteParceladoInternacional.Equals(other.LimiteParceladoInternacional)
@@ -534,6 +549,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.LimiteGlobalCredito != null)
                     hash = hash * 59 + this.LimiteGlobalCredito.GetHashCode();
+                
+                if (this.LimiteMaximo != null)
+                    hash = hash * 59 + this.LimiteMaximo.GetHashCode();
                 
                 if (this.LimiteParceladoInternacional != null)
                     hash = hash * 59 + this.LimiteParceladoInternacional.GetHashCode();

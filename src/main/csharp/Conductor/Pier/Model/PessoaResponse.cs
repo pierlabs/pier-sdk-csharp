@@ -33,8 +33,9 @@ namespace Conductor.Pier.Model
         /// <param name="Sexo">C\u00F3digo de identifica\u00E7\u00E3o do sexo da Pessoa, quando PF, sendo: (&#39;M&#39;: Masculino), (&#39;F&#39;: Feminino), (&#39;O&#39;: Outro), (&#39;N&#39;: N\u00E3o Especificado).</param>
         /// <param name="UnidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade.</param>
         /// <param name="DataEmissaoIdentidade">Data emiss\u00E3o da identidade no formato aaaa-MM-dd.</param>
+        /// <param name="FlagDeficienteVisual">Flag que identifica uma pessoa como deficiente visual.</param>
 
-        public PessoaResponse(long? Id = null, string Nome = null, string Tipo = null, string Cpf = null, string Cnpj = null, string DataNascimento = null, string NumeroIdentidade = null, string OrgaoExpedidorIdentidade = null, string Sexo = null, string UnidadeFederativaIdentidade = null, string DataEmissaoIdentidade = null)
+        public PessoaResponse(long? Id = null, string Nome = null, string Tipo = null, string Cpf = null, string Cnpj = null, string DataNascimento = null, string NumeroIdentidade = null, string OrgaoExpedidorIdentidade = null, string Sexo = null, string UnidadeFederativaIdentidade = null, string DataEmissaoIdentidade = null, bool? FlagDeficienteVisual = null)
         {
             // to ensure "Id" is required (not null)
             if (Id == null)
@@ -71,6 +72,7 @@ namespace Conductor.Pier.Model
             this.Sexo = Sexo;
             this.UnidadeFederativaIdentidade = UnidadeFederativaIdentidade;
             this.DataEmissaoIdentidade = DataEmissaoIdentidade;
+            this.FlagDeficienteVisual = FlagDeficienteVisual;
             
         }
         
@@ -153,6 +155,13 @@ namespace Conductor.Pier.Model
         public string DataEmissaoIdentidade { get; set; }
     
         /// <summary>
+        /// Flag que identifica uma pessoa como deficiente visual
+        /// </summary>
+        /// <value>Flag que identifica uma pessoa como deficiente visual</value>
+        [DataMember(Name="flagDeficienteVisual", EmitDefaultValue=false)]
+        public bool? FlagDeficienteVisual { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -171,6 +180,7 @@ namespace Conductor.Pier.Model
             sb.Append("  Sexo: ").Append(Sexo).Append("\n");
             sb.Append("  UnidadeFederativaIdentidade: ").Append(UnidadeFederativaIdentidade).Append("\n");
             sb.Append("  DataEmissaoIdentidade: ").Append(DataEmissaoIdentidade).Append("\n");
+            sb.Append("  FlagDeficienteVisual: ").Append(FlagDeficienteVisual).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -262,6 +272,11 @@ namespace Conductor.Pier.Model
                     this.DataEmissaoIdentidade == other.DataEmissaoIdentidade ||
                     this.DataEmissaoIdentidade != null &&
                     this.DataEmissaoIdentidade.Equals(other.DataEmissaoIdentidade)
+                ) && 
+                (
+                    this.FlagDeficienteVisual == other.FlagDeficienteVisual ||
+                    this.FlagDeficienteVisual != null &&
+                    this.FlagDeficienteVisual.Equals(other.FlagDeficienteVisual)
                 );
         }
 
@@ -309,6 +324,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.DataEmissaoIdentidade != null)
                     hash = hash * 59 + this.DataEmissaoIdentidade.GetHashCode();
+                
+                if (this.FlagDeficienteVisual != null)
+                    hash = hash * 59 + this.FlagDeficienteVisual.GetHashCode();
                 
                 return hash;
             }

@@ -24,8 +24,10 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <param name="IdConta">C\u00F3digo identificador da conta na base (required).</param>
         /// <param name="IdPessoa">C\u00F3digo de identifica\u00E7\u00E3o da Pessoa que ser\u00E1 a portadora do Cart\u00E3o (required).</param>
+        /// <param name="MatriculaMifare">N\u00FAmero da matricula do portador.</param>
+        /// <param name="IdMifare">C\u00F3digo identificador da tecnologia MIFARE.</param>
 
-        public CartaoMultiAppPersist(long? IdConta = null, long? IdPessoa = null)
+        public CartaoMultiAppPersist(long? IdConta = null, long? IdPessoa = null, string MatriculaMifare = null, long? IdMifare = null)
         {
             // to ensure "IdConta" is required (not null)
             if (IdConta == null)
@@ -45,6 +47,8 @@ namespace Conductor.Pier.Model
             {
                 this.IdPessoa = IdPessoa;
             }
+            this.MatriculaMifare = MatriculaMifare;
+            this.IdMifare = IdMifare;
             
         }
         
@@ -64,6 +68,20 @@ namespace Conductor.Pier.Model
         public long? IdPessoa { get; set; }
     
         /// <summary>
+        /// N\u00FAmero da matricula do portador
+        /// </summary>
+        /// <value>N\u00FAmero da matricula do portador</value>
+        [DataMember(Name="matriculaMifare", EmitDefaultValue=false)]
+        public string MatriculaMifare { get; set; }
+    
+        /// <summary>
+        /// C\u00F3digo identificador da tecnologia MIFARE
+        /// </summary>
+        /// <value>C\u00F3digo identificador da tecnologia MIFARE</value>
+        [DataMember(Name="idMifare", EmitDefaultValue=false)]
+        public long? IdMifare { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -73,6 +91,8 @@ namespace Conductor.Pier.Model
             sb.Append("class CartaoMultiAppPersist {\n");
             sb.Append("  IdConta: ").Append(IdConta).Append("\n");
             sb.Append("  IdPessoa: ").Append(IdPessoa).Append("\n");
+            sb.Append("  MatriculaMifare: ").Append(MatriculaMifare).Append("\n");
+            sb.Append("  IdMifare: ").Append(IdMifare).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -119,6 +139,16 @@ namespace Conductor.Pier.Model
                     this.IdPessoa == other.IdPessoa ||
                     this.IdPessoa != null &&
                     this.IdPessoa.Equals(other.IdPessoa)
+                ) && 
+                (
+                    this.MatriculaMifare == other.MatriculaMifare ||
+                    this.MatriculaMifare != null &&
+                    this.MatriculaMifare.Equals(other.MatriculaMifare)
+                ) && 
+                (
+                    this.IdMifare == other.IdMifare ||
+                    this.IdMifare != null &&
+                    this.IdMifare.Equals(other.IdMifare)
                 );
         }
 
@@ -139,6 +169,12 @@ namespace Conductor.Pier.Model
                 
                 if (this.IdPessoa != null)
                     hash = hash * 59 + this.IdPessoa.GetHashCode();
+                
+                if (this.MatriculaMifare != null)
+                    hash = hash * 59 + this.MatriculaMifare.GetHashCode();
+                
+                if (this.IdMifare != null)
+                    hash = hash * 59 + this.IdMifare.GetHashCode();
                 
                 return hash;
             }

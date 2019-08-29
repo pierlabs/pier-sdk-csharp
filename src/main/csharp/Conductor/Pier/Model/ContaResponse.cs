@@ -60,8 +60,9 @@ namespace Conductor.Pier.Model
         /// <param name="ValorRenda">Apresenta o valor da renda comprovada.</param>
         /// <param name="IdProposta">C\u00F3digo identificador da proposta.</param>
         /// <param name="FuncaoAtiva">Fun\u00E7\u00E3o ativa da conta.</param>
+        /// <param name="PossuiOverLimit">Sinaliza se o OverLimit da conta est\uFFFD ativo.</param>
 
-        public ContaResponse(long? Id = null, long? IdProduto = null, long? IdOrigemComercial = null, long? IdPessoa = null, long? IdStatusConta = null, int? DiaVencimento = null, int? MelhorDiaCompra = null, string DataStatusConta = null, string DataCadastro = null, string DataUltimaAlteracaoVencimento = null, double? ValorRenda = null, long? IdProposta = null, FuncaoAtivaEnum? FuncaoAtiva = null)
+        public ContaResponse(long? Id = null, long? IdProduto = null, long? IdOrigemComercial = null, long? IdPessoa = null, long? IdStatusConta = null, int? DiaVencimento = null, int? MelhorDiaCompra = null, string DataStatusConta = null, string DataCadastro = null, string DataUltimaAlteracaoVencimento = null, double? ValorRenda = null, long? IdProposta = null, FuncaoAtivaEnum? FuncaoAtiva = null, bool? PossuiOverLimit = null)
         {
             this.Id = Id;
             this.IdProduto = IdProduto;
@@ -76,6 +77,7 @@ namespace Conductor.Pier.Model
             this.ValorRenda = ValorRenda;
             this.IdProposta = IdProposta;
             this.FuncaoAtiva = FuncaoAtiva;
+            this.PossuiOverLimit = PossuiOverLimit;
             
         }
         
@@ -165,6 +167,13 @@ namespace Conductor.Pier.Model
         public long? IdProposta { get; set; }
     
         /// <summary>
+        /// Sinaliza se o OverLimit da conta est\uFFFD ativo
+        /// </summary>
+        /// <value>Sinaliza se o OverLimit da conta est\uFFFD ativo</value>
+        [DataMember(Name="possuiOverLimit", EmitDefaultValue=false)]
+        public bool? PossuiOverLimit { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -185,6 +194,7 @@ namespace Conductor.Pier.Model
             sb.Append("  ValorRenda: ").Append(ValorRenda).Append("\n");
             sb.Append("  IdProposta: ").Append(IdProposta).Append("\n");
             sb.Append("  FuncaoAtiva: ").Append(FuncaoAtiva).Append("\n");
+            sb.Append("  PossuiOverLimit: ").Append(PossuiOverLimit).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -286,6 +296,11 @@ namespace Conductor.Pier.Model
                     this.FuncaoAtiva == other.FuncaoAtiva ||
                     this.FuncaoAtiva != null &&
                     this.FuncaoAtiva.Equals(other.FuncaoAtiva)
+                ) && 
+                (
+                    this.PossuiOverLimit == other.PossuiOverLimit ||
+                    this.PossuiOverLimit != null &&
+                    this.PossuiOverLimit.Equals(other.PossuiOverLimit)
                 );
         }
 
@@ -339,6 +354,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.FuncaoAtiva != null)
                     hash = hash * 59 + this.FuncaoAtiva.GetHashCode();
+                
+                if (this.PossuiOverLimit != null)
+                    hash = hash * 59 + this.PossuiOverLimit.GetHashCode();
                 
                 return hash;
             }

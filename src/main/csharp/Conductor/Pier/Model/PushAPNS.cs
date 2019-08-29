@@ -61,32 +61,62 @@ namespace Conductor.Pier.Model
             [EnumMember(Value = "TRANSACAO_ADVICE")]
             TransacaoAdvice,
             
+            [EnumMember(Value = "TRANSACAO_ADVICE_NAO_AUTORIZADO")]
+            TransacaoAdviceNaoAutorizado,
+            
             [EnumMember(Value = "TRANSACAO_ERRO")]
             TransacaoErro,
+            
+            [EnumMember(Value = "TRANSACAO_ERRO_NAO_AUTORIZADO")]
+            TransacaoErroNaoAutorizado,
             
             [EnumMember(Value = "TRANSACAO_SIMULACAO")]
             TransacaoSimulacao,
             
+            [EnumMember(Value = "TRANSACAO_SIMULACAO_NAO_AUTORIZADO")]
+            TransacaoSimulacaoNaoAutorizado,
+            
             [EnumMember(Value = "TRANSACAO_SENHA_CHIP")]
             TransacaoSenhaChip,
+            
+            [EnumMember(Value = "TRANSACAO_SENHA_CHIP_NAO_AUTORIZADO")]
+            TransacaoSenhaChipNaoAutorizado,
             
             [EnumMember(Value = "TRANSACAO_CONSULTA_SALDO")]
             TransacaoConsultaSaldo,
             
+            [EnumMember(Value = "TRANSACAO_CONSULTA_SALDO_NAO_AUTORIZADO")]
+            TransacaoConsultaSaldoNaoAutorizado,
+            
             [EnumMember(Value = "TRANSACAO_CONSULTA_STATUS_CONTA")]
             TransacaoConsultaStatusConta,
+            
+            [EnumMember(Value = "TRANSACAO_CONSULTA_STATUS_CONTA_NAO_AUTORIZADO")]
+            TransacaoConsultaStatusContaNaoAutorizado,
             
             [EnumMember(Value = "TRANSACAO_DESFAZIMENTO")]
             TransacaoDesfazimento,
             
+            [EnumMember(Value = "TRANSACAO_DESFAZIMENTO_NAO_AUTORIZADO")]
+            TransacaoDesfazimentoNaoAutorizado,
+            
             [EnumMember(Value = "TRANSACAO_CANCELAMENTO")]
             TransacaoCancelamento,
+            
+            [EnumMember(Value = "TRANSACAO_CANCELAMENTO_NAO_AUTORIZADO")]
+            TransacaoCancelamentoNaoAutorizado,
             
             [EnumMember(Value = "TRANSACAO_RESPOSTA_SONDA")]
             TransacaoRespostaSonda,
             
+            [EnumMember(Value = "TRANSACAO_RESPOSTA_SONDA_NAO_AUTORIZADO")]
+            TransacaoRespostaSondaNaoAutorizado,
+            
             [EnumMember(Value = "TRANSACAO_TOKEN")]
-            TransacaoToken
+            TransacaoToken,
+            
+            [EnumMember(Value = "TRANSACAO_TOKEN_NAO_AUTORIZADO")]
+            TransacaoTokenNaoAutorizado
         }
 
     

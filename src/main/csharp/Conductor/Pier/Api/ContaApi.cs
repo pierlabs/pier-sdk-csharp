@@ -945,8 +945,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
         /// <param name="idPessoa">C\u00F3digo de identifica\u00E7\u00E3o da pessoa (id)</param>
         /// <param name="idTipoPlastico">C\u00F3digo de identifica\u00E7\u00E3o do TipoPlastico (id) (optional)</param>
+        /// <param name="cartaoMifareRequest">cartaoMifareRequest (optional)</param>
         /// <returns>CartaoImpressaoResponse</returns>
-        CartaoImpressaoResponse GerarCartaoDaPessoa (long? id, long? idPessoa, long? idTipoPlastico = null);
+        CartaoImpressaoResponse GerarCartaoDaPessoa (long? id, long? idPessoa, long? idTipoPlastico = null, CartaoMifareRequest cartaoMifareRequest = null);
   
         /// <summary>
         /// Realiza a gera\u00E7\u00E3o de um novo cart\u00E3o para impress\u00E3o avulsa
@@ -958,8 +959,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
         /// <param name="idPessoa">C\u00F3digo de identifica\u00E7\u00E3o da pessoa (id)</param>
         /// <param name="idTipoPlastico">C\u00F3digo de identifica\u00E7\u00E3o do TipoPlastico (id) (optional)</param>
+        /// <param name="cartaoMifareRequest">cartaoMifareRequest (optional)</param>
         /// <returns>ApiResponse of CartaoImpressaoResponse</returns>
-        ApiResponse<CartaoImpressaoResponse> GerarCartaoDaPessoaWithHttpInfo (long? id, long? idPessoa, long? idTipoPlastico = null);
+        ApiResponse<CartaoImpressaoResponse> GerarCartaoDaPessoaWithHttpInfo (long? id, long? idPessoa, long? idTipoPlastico = null, CartaoMifareRequest cartaoMifareRequest = null);
         
         /// <summary>
         /// Realiza o envio para gera\u00E7\u00E3o de um novo cart\u00E3o na gr\u00E1fica
@@ -993,8 +995,9 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
+        /// <param name="cartaoMifareRequest">cartaoMifareRequest (optional)</param>
         /// <returns>CartaoImpressaoProvisorioResponse</returns>
-        CartaoImpressaoProvisorioResponse GerarCartaoProvisorio (long? id);
+        CartaoImpressaoProvisorioResponse GerarCartaoProvisorio (long? id, CartaoMifareRequest cartaoMifareRequest = null);
   
         /// <summary>
         /// Realiza a gera\u00E7\u00E3o de um cart\u00E3o provisorio
@@ -1004,8 +1007,9 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
+        /// <param name="cartaoMifareRequest">cartaoMifareRequest (optional)</param>
         /// <returns>ApiResponse of CartaoImpressaoProvisorioResponse</returns>
-        ApiResponse<CartaoImpressaoProvisorioResponse> GerarCartaoProvisorioWithHttpInfo (long? id);
+        ApiResponse<CartaoImpressaoProvisorioResponse> GerarCartaoProvisorioWithHttpInfo (long? id, CartaoMifareRequest cartaoMifareRequest = null);
         
         /// <summary>
         /// Realiza a gera\u00E7\u00E3o de um cart\u00E3o virtual
@@ -1400,56 +1404,6 @@ namespace Conductor.Pier.Api
         ApiResponse<PageTipoVinculoContaResponse> ListarTipoVinculoWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string descricao = null);
         
         /// <summary>
-        /// Lista as transa\u00E7\u00F5es n\u00E3o processadas e processadas da conta
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es n\u00E3o processadas e processadas da Conta
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="status">Status da transa\u00E7\u00E3o (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="dataVencimento">Data de vencimento do extrato no formato yyyy-MM-dd (optional)</param>
-        /// <param name="dataInicio">Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param>
-        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param>
-        /// <param name="idTipoTransacao">transacoes_processadas_nao_processadas_request_tipo_transacao (optional)</param>
-        /// <param name="flagCredito">Flag que indica se a transa\u00E7\u00E3o \u00E9 cr\u00E9dito (optional)</param>
-        /// <param name="flagFaturado">Flag que indica se a transa\u00E7\u00E3o foi faturada (optional)</param>
-        /// <param name="flagProcessada">Flag que indica se a transa\u00E7\u00E3o foi processada (optional)</param>
-        /// <param name="plano">Plano da transa\u00E7\u00E3o (optional)</param>
-        /// <param name="codigoMCC">C\u00F3digo MCC da transa\u00E7\u00E3o (optional)</param>
-        /// <param name="grupoMCC">Grupo MCC da transa\u00E7\u00E3o (optional)</param>
-        /// <returns>PageTransacaoProcessadaNaoProcessadaResponse</returns>
-        PageTransacaoProcessadaNaoProcessadaResponse ListarTransacoesConta (long? id, List<string> sort = null, List<int?> status = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null, long? idTipoTransacao = null, bool? flagCredito = null, bool? flagFaturado = null, bool? flagProcessada = null, int? plano = null, long? codigoMCC = null, long? grupoMCC = null);
-  
-        /// <summary>
-        /// Lista as transa\u00E7\u00F5es n\u00E3o processadas e processadas da conta
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es n\u00E3o processadas e processadas da Conta
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="status">Status da transa\u00E7\u00E3o (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="dataVencimento">Data de vencimento do extrato no formato yyyy-MM-dd (optional)</param>
-        /// <param name="dataInicio">Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param>
-        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param>
-        /// <param name="idTipoTransacao">transacoes_processadas_nao_processadas_request_tipo_transacao (optional)</param>
-        /// <param name="flagCredito">Flag que indica se a transa\u00E7\u00E3o \u00E9 cr\u00E9dito (optional)</param>
-        /// <param name="flagFaturado">Flag que indica se a transa\u00E7\u00E3o foi faturada (optional)</param>
-        /// <param name="flagProcessada">Flag que indica se a transa\u00E7\u00E3o foi processada (optional)</param>
-        /// <param name="plano">Plano da transa\u00E7\u00E3o (optional)</param>
-        /// <param name="codigoMCC">C\u00F3digo MCC da transa\u00E7\u00E3o (optional)</param>
-        /// <param name="grupoMCC">Grupo MCC da transa\u00E7\u00E3o (optional)</param>
-        /// <returns>ApiResponse of PageTransacaoProcessadaNaoProcessadaResponse</returns>
-        ApiResponse<PageTransacaoProcessadaNaoProcessadaResponse> ListarTransacoesContaWithHttpInfo (long? id, List<string> sort = null, List<int?> status = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null, long? idTipoTransacao = null, bool? flagCredito = null, bool? flagFaturado = null, bool? flagProcessada = null, int? plano = null, long? codigoMCC = null, long? grupoMCC = null);
-        
-        /// <summary>
         /// Lista as transa\u00E7\u00F5es n\u00E3o processadas da conta
         /// </summary>
         /// <remarks>
@@ -1653,9 +1607,9 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o de uma Conta (id)</param>
-        /// <param name="login">login (optional)</param>
+        /// <param name="login">Login do respons\u00E1vel pela normaliza\u00E7\u00E3o</param>
         /// <returns>Object</returns>
-        Object NormalizarConta (long? id, string login = null);
+        Object NormalizarConta (long? id, string login);
   
         /// <summary>
         /// Realiza a normaliza\u00E7\u00E3o de uma conta
@@ -1665,9 +1619,9 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o de uma Conta (id)</param>
-        /// <param name="login">login (optional)</param>
+        /// <param name="login">Login do respons\u00E1vel pela normaliza\u00E7\u00E3o</param>
         /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> NormalizarContaWithHttpInfo (long? id, string login = null);
+        ApiResponse<Object> NormalizarContaWithHttpInfo (long? id, string login);
         
         /// <summary>
         /// Realiza a reativa\u00E7\u00E3o de contas
@@ -2879,8 +2833,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
         /// <param name="idPessoa">C\u00F3digo de identifica\u00E7\u00E3o da pessoa (id)</param>
         /// <param name="idTipoPlastico">C\u00F3digo de identifica\u00E7\u00E3o do TipoPlastico (id) (optional)</param>
+        /// <param name="cartaoMifareRequest">cartaoMifareRequest (optional)</param>
         /// <returns>Task of CartaoImpressaoResponse</returns>
-        System.Threading.Tasks.Task<CartaoImpressaoResponse> GerarCartaoDaPessoaAsync (long? id, long? idPessoa, long? idTipoPlastico = null);
+        System.Threading.Tasks.Task<CartaoImpressaoResponse> GerarCartaoDaPessoaAsync (long? id, long? idPessoa, long? idTipoPlastico = null, CartaoMifareRequest cartaoMifareRequest = null);
 
         /// <summary>
         /// Realiza a gera\u00E7\u00E3o de um novo cart\u00E3o para impress\u00E3o avulsa
@@ -2892,8 +2847,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
         /// <param name="idPessoa">C\u00F3digo de identifica\u00E7\u00E3o da pessoa (id)</param>
         /// <param name="idTipoPlastico">C\u00F3digo de identifica\u00E7\u00E3o do TipoPlastico (id) (optional)</param>
+        /// <param name="cartaoMifareRequest">cartaoMifareRequest (optional)</param>
         /// <returns>Task of ApiResponse (CartaoImpressaoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CartaoImpressaoResponse>> GerarCartaoDaPessoaAsyncWithHttpInfo (long? id, long? idPessoa, long? idTipoPlastico = null);
+        System.Threading.Tasks.Task<ApiResponse<CartaoImpressaoResponse>> GerarCartaoDaPessoaAsyncWithHttpInfo (long? id, long? idPessoa, long? idTipoPlastico = null, CartaoMifareRequest cartaoMifareRequest = null);
         
         /// <summary>
         /// Realiza o envio para gera\u00E7\u00E3o de um novo cart\u00E3o na gr\u00E1fica
@@ -2927,8 +2883,9 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
+        /// <param name="cartaoMifareRequest">cartaoMifareRequest (optional)</param>
         /// <returns>Task of CartaoImpressaoProvisorioResponse</returns>
-        System.Threading.Tasks.Task<CartaoImpressaoProvisorioResponse> GerarCartaoProvisorioAsync (long? id);
+        System.Threading.Tasks.Task<CartaoImpressaoProvisorioResponse> GerarCartaoProvisorioAsync (long? id, CartaoMifareRequest cartaoMifareRequest = null);
 
         /// <summary>
         /// Realiza a gera\u00E7\u00E3o de um cart\u00E3o provisorio
@@ -2938,8 +2895,9 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
+        /// <param name="cartaoMifareRequest">cartaoMifareRequest (optional)</param>
         /// <returns>Task of ApiResponse (CartaoImpressaoProvisorioResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CartaoImpressaoProvisorioResponse>> GerarCartaoProvisorioAsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<CartaoImpressaoProvisorioResponse>> GerarCartaoProvisorioAsyncWithHttpInfo (long? id, CartaoMifareRequest cartaoMifareRequest = null);
         
         /// <summary>
         /// Realiza a gera\u00E7\u00E3o de um cart\u00E3o virtual
@@ -3334,56 +3292,6 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<PageTipoVinculoContaResponse>> ListarTipoVinculoAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string descricao = null);
         
         /// <summary>
-        /// Lista as transa\u00E7\u00F5es n\u00E3o processadas e processadas da conta
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es n\u00E3o processadas e processadas da Conta
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="status">Status da transa\u00E7\u00E3o (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="dataVencimento">Data de vencimento do extrato no formato yyyy-MM-dd (optional)</param>
-        /// <param name="dataInicio">Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param>
-        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param>
-        /// <param name="idTipoTransacao">transacoes_processadas_nao_processadas_request_tipo_transacao (optional)</param>
-        /// <param name="flagCredito">Flag que indica se a transa\u00E7\u00E3o \u00E9 cr\u00E9dito (optional)</param>
-        /// <param name="flagFaturado">Flag que indica se a transa\u00E7\u00E3o foi faturada (optional)</param>
-        /// <param name="flagProcessada">Flag que indica se a transa\u00E7\u00E3o foi processada (optional)</param>
-        /// <param name="plano">Plano da transa\u00E7\u00E3o (optional)</param>
-        /// <param name="codigoMCC">C\u00F3digo MCC da transa\u00E7\u00E3o (optional)</param>
-        /// <param name="grupoMCC">Grupo MCC da transa\u00E7\u00E3o (optional)</param>
-        /// <returns>Task of PageTransacaoProcessadaNaoProcessadaResponse</returns>
-        System.Threading.Tasks.Task<PageTransacaoProcessadaNaoProcessadaResponse> ListarTransacoesContaAsync (long? id, List<string> sort = null, List<int?> status = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null, long? idTipoTransacao = null, bool? flagCredito = null, bool? flagFaturado = null, bool? flagProcessada = null, int? plano = null, long? codigoMCC = null, long? grupoMCC = null);
-
-        /// <summary>
-        /// Lista as transa\u00E7\u00F5es n\u00E3o processadas e processadas da conta
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es n\u00E3o processadas e processadas da Conta
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="status">Status da transa\u00E7\u00E3o (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="dataVencimento">Data de vencimento do extrato no formato yyyy-MM-dd (optional)</param>
-        /// <param name="dataInicio">Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param>
-        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param>
-        /// <param name="idTipoTransacao">transacoes_processadas_nao_processadas_request_tipo_transacao (optional)</param>
-        /// <param name="flagCredito">Flag que indica se a transa\u00E7\u00E3o \u00E9 cr\u00E9dito (optional)</param>
-        /// <param name="flagFaturado">Flag que indica se a transa\u00E7\u00E3o foi faturada (optional)</param>
-        /// <param name="flagProcessada">Flag que indica se a transa\u00E7\u00E3o foi processada (optional)</param>
-        /// <param name="plano">Plano da transa\u00E7\u00E3o (optional)</param>
-        /// <param name="codigoMCC">C\u00F3digo MCC da transa\u00E7\u00E3o (optional)</param>
-        /// <param name="grupoMCC">Grupo MCC da transa\u00E7\u00E3o (optional)</param>
-        /// <returns>Task of ApiResponse (PageTransacaoProcessadaNaoProcessadaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageTransacaoProcessadaNaoProcessadaResponse>> ListarTransacoesContaAsyncWithHttpInfo (long? id, List<string> sort = null, List<int?> status = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null, long? idTipoTransacao = null, bool? flagCredito = null, bool? flagFaturado = null, bool? flagProcessada = null, int? plano = null, long? codigoMCC = null, long? grupoMCC = null);
-        
-        /// <summary>
         /// Lista as transa\u00E7\u00F5es n\u00E3o processadas da conta
         /// </summary>
         /// <remarks>
@@ -3587,9 +3495,9 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o de uma Conta (id)</param>
-        /// <param name="login">login (optional)</param>
+        /// <param name="login">Login do respons\u00E1vel pela normaliza\u00E7\u00E3o</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> NormalizarContaAsync (long? id, string login = null);
+        System.Threading.Tasks.Task<Object> NormalizarContaAsync (long? id, string login);
 
         /// <summary>
         /// Realiza a normaliza\u00E7\u00E3o de uma conta
@@ -3599,9 +3507,9 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o de uma Conta (id)</param>
-        /// <param name="login">login (optional)</param>
+        /// <param name="login">Login do respons\u00E1vel pela normaliza\u00E7\u00E3o</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> NormalizarContaAsyncWithHttpInfo (long? id, string login = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> NormalizarContaAsyncWithHttpInfo (long? id, string login);
         
         /// <summary>
         /// Realiza a reativa\u00E7\u00E3o de contas
@@ -10420,10 +10328,11 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param> 
         /// <param name="idPessoa">C\u00F3digo de identifica\u00E7\u00E3o da pessoa (id)</param> 
         /// <param name="idTipoPlastico">C\u00F3digo de identifica\u00E7\u00E3o do TipoPlastico (id) (optional)</param> 
+        /// <param name="cartaoMifareRequest">cartaoMifareRequest (optional)</param> 
         /// <returns>CartaoImpressaoResponse</returns>
-        public CartaoImpressaoResponse GerarCartaoDaPessoa (long? id, long? idPessoa, long? idTipoPlastico = null)
+        public CartaoImpressaoResponse GerarCartaoDaPessoa (long? id, long? idPessoa, long? idTipoPlastico = null, CartaoMifareRequest cartaoMifareRequest = null)
         {
-             ApiResponse<CartaoImpressaoResponse> localVarResponse = GerarCartaoDaPessoaWithHttpInfo(id, idPessoa, idTipoPlastico);
+             ApiResponse<CartaoImpressaoResponse> localVarResponse = GerarCartaoDaPessoaWithHttpInfo(id, idPessoa, idTipoPlastico, cartaoMifareRequest);
              return localVarResponse.Data;
         }
 
@@ -10434,8 +10343,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param> 
         /// <param name="idPessoa">C\u00F3digo de identifica\u00E7\u00E3o da pessoa (id)</param> 
         /// <param name="idTipoPlastico">C\u00F3digo de identifica\u00E7\u00E3o do TipoPlastico (id) (optional)</param> 
+        /// <param name="cartaoMifareRequest">cartaoMifareRequest (optional)</param> 
         /// <returns>ApiResponse of CartaoImpressaoResponse</returns>
-        public ApiResponse< CartaoImpressaoResponse > GerarCartaoDaPessoaWithHttpInfo (long? id, long? idPessoa, long? idTipoPlastico = null)
+        public ApiResponse< CartaoImpressaoResponse > GerarCartaoDaPessoaWithHttpInfo (long? id, long? idPessoa, long? idTipoPlastico = null, CartaoMifareRequest cartaoMifareRequest = null)
         {
             
             // verify the required parameter 'id' is set
@@ -10480,7 +10390,14 @@ namespace Conductor.Pier.Api
             
             
             
-            
+            if (cartaoMifareRequest.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(cartaoMifareRequest); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = cartaoMifareRequest; // byte array
+            }
 
             
     
@@ -10510,10 +10427,11 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
         /// <param name="idPessoa">C\u00F3digo de identifica\u00E7\u00E3o da pessoa (id)</param>
         /// <param name="idTipoPlastico">C\u00F3digo de identifica\u00E7\u00E3o do TipoPlastico (id) (optional)</param>
+        /// <param name="cartaoMifareRequest">cartaoMifareRequest (optional)</param>
         /// <returns>Task of CartaoImpressaoResponse</returns>
-        public async System.Threading.Tasks.Task<CartaoImpressaoResponse> GerarCartaoDaPessoaAsync (long? id, long? idPessoa, long? idTipoPlastico = null)
+        public async System.Threading.Tasks.Task<CartaoImpressaoResponse> GerarCartaoDaPessoaAsync (long? id, long? idPessoa, long? idTipoPlastico = null, CartaoMifareRequest cartaoMifareRequest = null)
         {
-             ApiResponse<CartaoImpressaoResponse> localVarResponse = await GerarCartaoDaPessoaAsyncWithHttpInfo(id, idPessoa, idTipoPlastico);
+             ApiResponse<CartaoImpressaoResponse> localVarResponse = await GerarCartaoDaPessoaAsyncWithHttpInfo(id, idPessoa, idTipoPlastico, cartaoMifareRequest);
              return localVarResponse.Data;
 
         }
@@ -10525,8 +10443,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
         /// <param name="idPessoa">C\u00F3digo de identifica\u00E7\u00E3o da pessoa (id)</param>
         /// <param name="idTipoPlastico">C\u00F3digo de identifica\u00E7\u00E3o do TipoPlastico (id) (optional)</param>
+        /// <param name="cartaoMifareRequest">cartaoMifareRequest (optional)</param>
         /// <returns>Task of ApiResponse (CartaoImpressaoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CartaoImpressaoResponse>> GerarCartaoDaPessoaAsyncWithHttpInfo (long? id, long? idPessoa, long? idTipoPlastico = null)
+        public async System.Threading.Tasks.Task<ApiResponse<CartaoImpressaoResponse>> GerarCartaoDaPessoaAsyncWithHttpInfo (long? id, long? idPessoa, long? idTipoPlastico = null, CartaoMifareRequest cartaoMifareRequest = null)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling GerarCartaoDaPessoa");
@@ -10567,7 +10486,14 @@ namespace Conductor.Pier.Api
             
             
             
-            
+            if (cartaoMifareRequest.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(cartaoMifareRequest); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = cartaoMifareRequest; // byte array
+            }
 
             
 
@@ -10776,10 +10702,11 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param> 
+        /// <param name="cartaoMifareRequest">cartaoMifareRequest (optional)</param> 
         /// <returns>CartaoImpressaoProvisorioResponse</returns>
-        public CartaoImpressaoProvisorioResponse GerarCartaoProvisorio (long? id)
+        public CartaoImpressaoProvisorioResponse GerarCartaoProvisorio (long? id, CartaoMifareRequest cartaoMifareRequest = null)
         {
-             ApiResponse<CartaoImpressaoProvisorioResponse> localVarResponse = GerarCartaoProvisorioWithHttpInfo(id);
+             ApiResponse<CartaoImpressaoProvisorioResponse> localVarResponse = GerarCartaoProvisorioWithHttpInfo(id, cartaoMifareRequest);
              return localVarResponse.Data;
         }
 
@@ -10788,8 +10715,9 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param> 
+        /// <param name="cartaoMifareRequest">cartaoMifareRequest (optional)</param> 
         /// <returns>ApiResponse of CartaoImpressaoProvisorioResponse</returns>
-        public ApiResponse< CartaoImpressaoProvisorioResponse > GerarCartaoProvisorioWithHttpInfo (long? id)
+        public ApiResponse< CartaoImpressaoProvisorioResponse > GerarCartaoProvisorioWithHttpInfo (long? id, CartaoMifareRequest cartaoMifareRequest = null)
         {
             
             // verify the required parameter 'id' is set
@@ -10828,7 +10756,14 @@ namespace Conductor.Pier.Api
             
             
             
-            
+            if (cartaoMifareRequest.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(cartaoMifareRequest); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = cartaoMifareRequest; // byte array
+            }
 
             
     
@@ -10856,10 +10791,11 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
+        /// <param name="cartaoMifareRequest">cartaoMifareRequest (optional)</param>
         /// <returns>Task of CartaoImpressaoProvisorioResponse</returns>
-        public async System.Threading.Tasks.Task<CartaoImpressaoProvisorioResponse> GerarCartaoProvisorioAsync (long? id)
+        public async System.Threading.Tasks.Task<CartaoImpressaoProvisorioResponse> GerarCartaoProvisorioAsync (long? id, CartaoMifareRequest cartaoMifareRequest = null)
         {
-             ApiResponse<CartaoImpressaoProvisorioResponse> localVarResponse = await GerarCartaoProvisorioAsyncWithHttpInfo(id);
+             ApiResponse<CartaoImpressaoProvisorioResponse> localVarResponse = await GerarCartaoProvisorioAsyncWithHttpInfo(id, cartaoMifareRequest);
              return localVarResponse.Data;
 
         }
@@ -10869,8 +10805,9 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
+        /// <param name="cartaoMifareRequest">cartaoMifareRequest (optional)</param>
         /// <returns>Task of ApiResponse (CartaoImpressaoProvisorioResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CartaoImpressaoProvisorioResponse>> GerarCartaoProvisorioAsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<CartaoImpressaoProvisorioResponse>> GerarCartaoProvisorioAsyncWithHttpInfo (long? id, CartaoMifareRequest cartaoMifareRequest = null)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling GerarCartaoProvisorio");
@@ -10907,7 +10844,14 @@ namespace Conductor.Pier.Api
             
             
             
-            
+            if (cartaoMifareRequest.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(cartaoMifareRequest); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = cartaoMifareRequest; // byte array
+            }
 
             
 
@@ -13192,248 +13136,6 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Lista as transa\u00E7\u00F5es n\u00E3o processadas e processadas da conta Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es n\u00E3o processadas e processadas da Conta
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param> 
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
-        /// <param name="status">Status da transa\u00E7\u00E3o (optional)</param> 
-        /// <param name="page">P\u00E1gina (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
-        /// <param name="dataVencimento">Data de vencimento do extrato no formato yyyy-MM-dd (optional)</param> 
-        /// <param name="dataInicio">Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param> 
-        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param> 
-        /// <param name="idTipoTransacao">transacoes_processadas_nao_processadas_request_tipo_transacao (optional)</param> 
-        /// <param name="flagCredito">Flag que indica se a transa\u00E7\u00E3o \u00E9 cr\u00E9dito (optional)</param> 
-        /// <param name="flagFaturado">Flag que indica se a transa\u00E7\u00E3o foi faturada (optional)</param> 
-        /// <param name="flagProcessada">Flag que indica se a transa\u00E7\u00E3o foi processada (optional)</param> 
-        /// <param name="plano">Plano da transa\u00E7\u00E3o (optional)</param> 
-        /// <param name="codigoMCC">C\u00F3digo MCC da transa\u00E7\u00E3o (optional)</param> 
-        /// <param name="grupoMCC">Grupo MCC da transa\u00E7\u00E3o (optional)</param> 
-        /// <returns>PageTransacaoProcessadaNaoProcessadaResponse</returns>
-        public PageTransacaoProcessadaNaoProcessadaResponse ListarTransacoesConta (long? id, List<string> sort = null, List<int?> status = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null, long? idTipoTransacao = null, bool? flagCredito = null, bool? flagFaturado = null, bool? flagProcessada = null, int? plano = null, long? codigoMCC = null, long? grupoMCC = null)
-        {
-             ApiResponse<PageTransacaoProcessadaNaoProcessadaResponse> localVarResponse = ListarTransacoesContaWithHttpInfo(id, sort, status, page, limit, dataVencimento, dataInicio, dataFim, idTipoTransacao, flagCredito, flagFaturado, flagProcessada, plano, codigoMCC, grupoMCC);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Lista as transa\u00E7\u00F5es n\u00E3o processadas e processadas da conta Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es n\u00E3o processadas e processadas da Conta
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param> 
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
-        /// <param name="status">Status da transa\u00E7\u00E3o (optional)</param> 
-        /// <param name="page">P\u00E1gina (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
-        /// <param name="dataVencimento">Data de vencimento do extrato no formato yyyy-MM-dd (optional)</param> 
-        /// <param name="dataInicio">Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param> 
-        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param> 
-        /// <param name="idTipoTransacao">transacoes_processadas_nao_processadas_request_tipo_transacao (optional)</param> 
-        /// <param name="flagCredito">Flag que indica se a transa\u00E7\u00E3o \u00E9 cr\u00E9dito (optional)</param> 
-        /// <param name="flagFaturado">Flag que indica se a transa\u00E7\u00E3o foi faturada (optional)</param> 
-        /// <param name="flagProcessada">Flag que indica se a transa\u00E7\u00E3o foi processada (optional)</param> 
-        /// <param name="plano">Plano da transa\u00E7\u00E3o (optional)</param> 
-        /// <param name="codigoMCC">C\u00F3digo MCC da transa\u00E7\u00E3o (optional)</param> 
-        /// <param name="grupoMCC">Grupo MCC da transa\u00E7\u00E3o (optional)</param> 
-        /// <returns>ApiResponse of PageTransacaoProcessadaNaoProcessadaResponse</returns>
-        public ApiResponse< PageTransacaoProcessadaNaoProcessadaResponse > ListarTransacoesContaWithHttpInfo (long? id, List<string> sort = null, List<int?> status = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null, long? idTipoTransacao = null, bool? flagCredito = null, bool? flagFaturado = null, bool? flagProcessada = null, int? plano = null, long? codigoMCC = null, long? grupoMCC = null)
-        {
-            
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->ListarTransacoesConta");
-            
-    
-            var localVarPath = "/api/contas/{id}/transacoes";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            
-            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
-            if (status != null) localVarQueryParams.Add("status", Configuration.ApiClient.ParameterToString(status)); // query parameter
-            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
-            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
-            if (dataVencimento != null) localVarQueryParams.Add("dataVencimento", Configuration.ApiClient.ParameterToString(dataVencimento)); // query parameter
-            if (dataInicio != null) localVarQueryParams.Add("dataInicio", Configuration.ApiClient.ParameterToString(dataInicio)); // query parameter
-            if (dataFim != null) localVarQueryParams.Add("dataFim", Configuration.ApiClient.ParameterToString(dataFim)); // query parameter
-            if (idTipoTransacao != null) localVarQueryParams.Add("idTipoTransacao", Configuration.ApiClient.ParameterToString(idTipoTransacao)); // query parameter
-            if (flagCredito != null) localVarQueryParams.Add("flagCredito", Configuration.ApiClient.ParameterToString(flagCredito)); // query parameter
-            if (flagFaturado != null) localVarQueryParams.Add("flagFaturado", Configuration.ApiClient.ParameterToString(flagFaturado)); // query parameter
-            if (flagProcessada != null) localVarQueryParams.Add("flagProcessada", Configuration.ApiClient.ParameterToString(flagProcessada)); // query parameter
-            if (plano != null) localVarQueryParams.Add("plano", Configuration.ApiClient.ParameterToString(plano)); // query parameter
-            if (codigoMCC != null) localVarQueryParams.Add("codigoMCC", Configuration.ApiClient.ParameterToString(codigoMCC)); // query parameter
-            if (grupoMCC != null) localVarQueryParams.Add("grupoMCC", Configuration.ApiClient.ParameterToString(grupoMCC)); // query parameter
-            
-            
-            
-            
-
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarTransacoesConta: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarTransacoesConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<PageTransacaoProcessadaNaoProcessadaResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PageTransacaoProcessadaNaoProcessadaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageTransacaoProcessadaNaoProcessadaResponse)));
-            
-        }
-
-        
-        /// <summary>
-        /// Lista as transa\u00E7\u00F5es n\u00E3o processadas e processadas da conta Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es n\u00E3o processadas e processadas da Conta
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="status">Status da transa\u00E7\u00E3o (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="dataVencimento">Data de vencimento do extrato no formato yyyy-MM-dd (optional)</param>
-        /// <param name="dataInicio">Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param>
-        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param>
-        /// <param name="idTipoTransacao">transacoes_processadas_nao_processadas_request_tipo_transacao (optional)</param>
-        /// <param name="flagCredito">Flag que indica se a transa\u00E7\u00E3o \u00E9 cr\u00E9dito (optional)</param>
-        /// <param name="flagFaturado">Flag que indica se a transa\u00E7\u00E3o foi faturada (optional)</param>
-        /// <param name="flagProcessada">Flag que indica se a transa\u00E7\u00E3o foi processada (optional)</param>
-        /// <param name="plano">Plano da transa\u00E7\u00E3o (optional)</param>
-        /// <param name="codigoMCC">C\u00F3digo MCC da transa\u00E7\u00E3o (optional)</param>
-        /// <param name="grupoMCC">Grupo MCC da transa\u00E7\u00E3o (optional)</param>
-        /// <returns>Task of PageTransacaoProcessadaNaoProcessadaResponse</returns>
-        public async System.Threading.Tasks.Task<PageTransacaoProcessadaNaoProcessadaResponse> ListarTransacoesContaAsync (long? id, List<string> sort = null, List<int?> status = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null, long? idTipoTransacao = null, bool? flagCredito = null, bool? flagFaturado = null, bool? flagProcessada = null, int? plano = null, long? codigoMCC = null, long? grupoMCC = null)
-        {
-             ApiResponse<PageTransacaoProcessadaNaoProcessadaResponse> localVarResponse = await ListarTransacoesContaAsyncWithHttpInfo(id, sort, status, page, limit, dataVencimento, dataInicio, dataFim, idTipoTransacao, flagCredito, flagFaturado, flagProcessada, plano, codigoMCC, grupoMCC);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Lista as transa\u00E7\u00F5es n\u00E3o processadas e processadas da conta Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es n\u00E3o processadas e processadas da Conta
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da conta (id)</param>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="status">Status da transa\u00E7\u00E3o (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <param name="dataVencimento">Data de vencimento do extrato no formato yyyy-MM-dd (optional)</param>
-        /// <param name="dataInicio">Data de in\u00EDcio da consulta do extrato no formato yyyy-MM-dd (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param>
-        /// <param name="dataFim">Data fim da consulta do extrato no formato yyyy-MM-dd  (Ignorado quando o par\u00E2mentro dataVencimento \u00E9 usado) (optional)</param>
-        /// <param name="idTipoTransacao">transacoes_processadas_nao_processadas_request_tipo_transacao (optional)</param>
-        /// <param name="flagCredito">Flag que indica se a transa\u00E7\u00E3o \u00E9 cr\u00E9dito (optional)</param>
-        /// <param name="flagFaturado">Flag que indica se a transa\u00E7\u00E3o foi faturada (optional)</param>
-        /// <param name="flagProcessada">Flag que indica se a transa\u00E7\u00E3o foi processada (optional)</param>
-        /// <param name="plano">Plano da transa\u00E7\u00E3o (optional)</param>
-        /// <param name="codigoMCC">C\u00F3digo MCC da transa\u00E7\u00E3o (optional)</param>
-        /// <param name="grupoMCC">Grupo MCC da transa\u00E7\u00E3o (optional)</param>
-        /// <returns>Task of ApiResponse (PageTransacaoProcessadaNaoProcessadaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageTransacaoProcessadaNaoProcessadaResponse>> ListarTransacoesContaAsyncWithHttpInfo (long? id, List<string> sort = null, List<int?> status = null, int? page = null, int? limit = null, string dataVencimento = null, string dataInicio = null, string dataFim = null, long? idTipoTransacao = null, bool? flagCredito = null, bool? flagFaturado = null, bool? flagProcessada = null, int? plano = null, long? codigoMCC = null, long? grupoMCC = null)
-        {
-            // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ListarTransacoesConta");
-            
-    
-            var localVarPath = "/api/contas/{id}/transacoes";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            
-            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
-            if (status != null) localVarQueryParams.Add("status", Configuration.ApiClient.ParameterToString(status)); // query parameter
-            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
-            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
-            if (dataVencimento != null) localVarQueryParams.Add("dataVencimento", Configuration.ApiClient.ParameterToString(dataVencimento)); // query parameter
-            if (dataInicio != null) localVarQueryParams.Add("dataInicio", Configuration.ApiClient.ParameterToString(dataInicio)); // query parameter
-            if (dataFim != null) localVarQueryParams.Add("dataFim", Configuration.ApiClient.ParameterToString(dataFim)); // query parameter
-            if (idTipoTransacao != null) localVarQueryParams.Add("idTipoTransacao", Configuration.ApiClient.ParameterToString(idTipoTransacao)); // query parameter
-            if (flagCredito != null) localVarQueryParams.Add("flagCredito", Configuration.ApiClient.ParameterToString(flagCredito)); // query parameter
-            if (flagFaturado != null) localVarQueryParams.Add("flagFaturado", Configuration.ApiClient.ParameterToString(flagFaturado)); // query parameter
-            if (flagProcessada != null) localVarQueryParams.Add("flagProcessada", Configuration.ApiClient.ParameterToString(flagProcessada)); // query parameter
-            if (plano != null) localVarQueryParams.Add("plano", Configuration.ApiClient.ParameterToString(plano)); // query parameter
-            if (codigoMCC != null) localVarQueryParams.Add("codigoMCC", Configuration.ApiClient.ParameterToString(codigoMCC)); // query parameter
-            if (grupoMCC != null) localVarQueryParams.Add("grupoMCC", Configuration.ApiClient.ParameterToString(grupoMCC)); // query parameter
-            
-            
-            
-            
-
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarTransacoesConta: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarTransacoesConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<PageTransacaoProcessadaNaoProcessadaResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PageTransacaoProcessadaNaoProcessadaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageTransacaoProcessadaNaoProcessadaResponse)));
-            
-        }
-        
-        /// <summary>
         /// Lista as transa\u00E7\u00F5es n\u00E3o processadas da conta Este m\u00E9todo permite que sejam listadas todas as transa\u00E7\u00F5es n\u00E3o processadas da Conta.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
@@ -14572,9 +14274,9 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o de uma Conta (id)</param> 
-        /// <param name="login">login (optional)</param> 
+        /// <param name="login">Login do respons\u00E1vel pela normaliza\u00E7\u00E3o</param> 
         /// <returns>Object</returns>
-        public Object NormalizarConta (long? id, string login = null)
+        public Object NormalizarConta (long? id, string login)
         {
              ApiResponse<Object> localVarResponse = NormalizarContaWithHttpInfo(id, login);
              return localVarResponse.Data;
@@ -14585,14 +14287,18 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o de uma Conta (id)</param> 
-        /// <param name="login">login (optional)</param> 
+        /// <param name="login">Login do respons\u00E1vel pela normaliza\u00E7\u00E3o</param> 
         /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > NormalizarContaWithHttpInfo (long? id, string login = null)
+        public ApiResponse< Object > NormalizarContaWithHttpInfo (long? id, string login)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->NormalizarConta");
+            
+            // verify the required parameter 'login' is set
+            if (login == null)
+                throw new ApiException(400, "Missing required parameter 'login' when calling ContaApi->NormalizarConta");
             
     
             var localVarPath = "/api/contas/{id}/normalizacao";
@@ -14624,16 +14330,10 @@ namespace Conductor.Pier.Api
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             
             
+            if (login != null) localVarHeaderParams.Add("login", Configuration.ApiClient.ParameterToString(login)); // header parameter
             
             
-            if (login.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(login); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = login; // byte array
-            }
+            
 
             
     
@@ -14661,9 +14361,9 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o de uma Conta (id)</param>
-        /// <param name="login">login (optional)</param>
+        /// <param name="login">Login do respons\u00E1vel pela normaliza\u00E7\u00E3o</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> NormalizarContaAsync (long? id, string login = null)
+        public async System.Threading.Tasks.Task<Object> NormalizarContaAsync (long? id, string login)
         {
              ApiResponse<Object> localVarResponse = await NormalizarContaAsyncWithHttpInfo(id, login);
              return localVarResponse.Data;
@@ -14675,12 +14375,14 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o de uma Conta (id)</param>
-        /// <param name="login">login (optional)</param>
+        /// <param name="login">Login do respons\u00E1vel pela normaliza\u00E7\u00E3o</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> NormalizarContaAsyncWithHttpInfo (long? id, string login = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> NormalizarContaAsyncWithHttpInfo (long? id, string login)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling NormalizarConta");
+            // verify the required parameter 'login' is set
+            if (login == null) throw new ApiException(400, "Missing required parameter 'login' when calling NormalizarConta");
             
     
             var localVarPath = "/api/contas/{id}/normalizacao";
@@ -14712,16 +14414,10 @@ namespace Conductor.Pier.Api
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             
             
+            if (login != null) localVarHeaderParams.Add("login", Configuration.ApiClient.ParameterToString(login)); // header parameter
             
             
-            if (login.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(login); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = login; // byte array
-            }
+            
 
             
 

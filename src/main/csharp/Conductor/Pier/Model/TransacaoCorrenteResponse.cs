@@ -42,8 +42,11 @@ namespace Conductor.Pier.Model
         /// <param name="FlagSolicitouContestacao">Atributo que identifica se o portador solicitou contesta\u00E7\u00E3o da transa\u00E7\u00E3o.</param>
         /// <param name="TipoTransacao">Atributo que identifica se a transa\u00E7\u00E3o \u00E9 um cr\u00E9dito ou d\u00E9bito.</param>
         /// <param name="IdEventoAjuste">Atributo que representa o evento de ajuste.</param>
+        /// <param name="NumeroCartao">Atributo que representa o numero do cart\u00E3o mascarado.</param>
+        /// <param name="Latitude">Atributo que representa a latitude de onde a transa\u00E7\u00E3o ocorreu.</param>
+        /// <param name="Longitude">Atributo que representa a longetude de onde a transa\u00E7\u00E3o ocorreu.</param>
 
-        public TransacaoCorrenteResponse(int? UltimaParcelaLancada = null, long? IdConta = null, long? IdTipoRegistro = null, int? Ordem = null, long? IdTransacao = null, string Descricao = null, int? Status = null, string DescricaoStatus = null, double? Valor = null, double? ValorDolar = null, int? QuantidadeParcelas = null, double? ValorParcela = null, string DataEvento = null, string Estabelecimento = null, int? FlagCredito = null, string TipoEstabelecimento = null, int? IdGrupoMCC = null, int? FlagSolicitouContestacao = null, int? TipoTransacao = null, int? IdEventoAjuste = null)
+        public TransacaoCorrenteResponse(int? UltimaParcelaLancada = null, long? IdConta = null, long? IdTipoRegistro = null, int? Ordem = null, long? IdTransacao = null, string Descricao = null, int? Status = null, string DescricaoStatus = null, double? Valor = null, double? ValorDolar = null, int? QuantidadeParcelas = null, double? ValorParcela = null, string DataEvento = null, string Estabelecimento = null, int? FlagCredito = null, string TipoEstabelecimento = null, int? IdGrupoMCC = null, int? FlagSolicitouContestacao = null, int? TipoTransacao = null, int? IdEventoAjuste = null, string NumeroCartao = null, string Latitude = null, string Longitude = null)
         {
             this.UltimaParcelaLancada = UltimaParcelaLancada;
             this.IdConta = IdConta;
@@ -65,6 +68,9 @@ namespace Conductor.Pier.Model
             this.FlagSolicitouContestacao = FlagSolicitouContestacao;
             this.TipoTransacao = TipoTransacao;
             this.IdEventoAjuste = IdEventoAjuste;
+            this.NumeroCartao = NumeroCartao;
+            this.Latitude = Latitude;
+            this.Longitude = Longitude;
             
         }
         
@@ -209,6 +215,27 @@ namespace Conductor.Pier.Model
         public int? IdEventoAjuste { get; set; }
     
         /// <summary>
+        /// Atributo que representa o numero do cart\u00E3o mascarado
+        /// </summary>
+        /// <value>Atributo que representa o numero do cart\u00E3o mascarado</value>
+        [DataMember(Name="numeroCartao", EmitDefaultValue=false)]
+        public string NumeroCartao { get; set; }
+    
+        /// <summary>
+        /// Atributo que representa a latitude de onde a transa\u00E7\u00E3o ocorreu
+        /// </summary>
+        /// <value>Atributo que representa a latitude de onde a transa\u00E7\u00E3o ocorreu</value>
+        [DataMember(Name="latitude", EmitDefaultValue=false)]
+        public string Latitude { get; set; }
+    
+        /// <summary>
+        /// Atributo que representa a longetude de onde a transa\u00E7\u00E3o ocorreu
+        /// </summary>
+        /// <value>Atributo que representa a longetude de onde a transa\u00E7\u00E3o ocorreu</value>
+        [DataMember(Name="longitude", EmitDefaultValue=false)]
+        public string Longitude { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -236,6 +263,9 @@ namespace Conductor.Pier.Model
             sb.Append("  FlagSolicitouContestacao: ").Append(FlagSolicitouContestacao).Append("\n");
             sb.Append("  TipoTransacao: ").Append(TipoTransacao).Append("\n");
             sb.Append("  IdEventoAjuste: ").Append(IdEventoAjuste).Append("\n");
+            sb.Append("  NumeroCartao: ").Append(NumeroCartao).Append("\n");
+            sb.Append("  Latitude: ").Append(Latitude).Append("\n");
+            sb.Append("  Longitude: ").Append(Longitude).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -372,6 +402,21 @@ namespace Conductor.Pier.Model
                     this.IdEventoAjuste == other.IdEventoAjuste ||
                     this.IdEventoAjuste != null &&
                     this.IdEventoAjuste.Equals(other.IdEventoAjuste)
+                ) && 
+                (
+                    this.NumeroCartao == other.NumeroCartao ||
+                    this.NumeroCartao != null &&
+                    this.NumeroCartao.Equals(other.NumeroCartao)
+                ) && 
+                (
+                    this.Latitude == other.Latitude ||
+                    this.Latitude != null &&
+                    this.Latitude.Equals(other.Latitude)
+                ) && 
+                (
+                    this.Longitude == other.Longitude ||
+                    this.Longitude != null &&
+                    this.Longitude.Equals(other.Longitude)
                 );
         }
 
@@ -446,6 +491,15 @@ namespace Conductor.Pier.Model
                 
                 if (this.IdEventoAjuste != null)
                     hash = hash * 59 + this.IdEventoAjuste.GetHashCode();
+                
+                if (this.NumeroCartao != null)
+                    hash = hash * 59 + this.NumeroCartao.GetHashCode();
+                
+                if (this.Latitude != null)
+                    hash = hash * 59 + this.Latitude.GetHashCode();
+                
+                if (this.Longitude != null)
+                    hash = hash * 59 + this.Longitude.GetHashCode();
                 
                 return hash;
             }

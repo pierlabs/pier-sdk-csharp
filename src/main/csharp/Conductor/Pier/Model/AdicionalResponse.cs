@@ -37,8 +37,9 @@ namespace Conductor.Pier.Model
         /// <param name="FlagAtivo">Indica se o adicional est\u00E1 ativo =1 ou inativo =0.</param>
         /// <param name="DataCadastroPortador">Indica a data de cadastro do adicional.</param>
         /// <param name="DataCancelamentoPortador">Indica a data de cancelamento do adicional.</param>
+        /// <param name="FlagDeficienteVisual">Flag que identifica uma pessoa como deficiente visual.</param>
 
-        public AdicionalResponse(long? IdConta = null, long? IdPessoa = null, string Nome = null, string NomeImpresso = null, string NumeroReceitaFederal = null, string DataNascimento = null, string Sexo = null, string NumeroIdentidade = null, string OrgaoExpedidorIdentidade = null, string UnidadeFederativaIdentidade = null, string DataEmissaoIdentidade = null, long? IdParentesco = null, int? FlagAtivo = null, string DataCadastroPortador = null, string DataCancelamentoPortador = null)
+        public AdicionalResponse(long? IdConta = null, long? IdPessoa = null, string Nome = null, string NomeImpresso = null, string NumeroReceitaFederal = null, string DataNascimento = null, string Sexo = null, string NumeroIdentidade = null, string OrgaoExpedidorIdentidade = null, string UnidadeFederativaIdentidade = null, string DataEmissaoIdentidade = null, long? IdParentesco = null, int? FlagAtivo = null, string DataCadastroPortador = null, string DataCancelamentoPortador = null, bool? FlagDeficienteVisual = null)
         {
             this.IdConta = IdConta;
             this.IdPessoa = IdPessoa;
@@ -55,6 +56,7 @@ namespace Conductor.Pier.Model
             this.FlagAtivo = FlagAtivo;
             this.DataCadastroPortador = DataCadastroPortador;
             this.DataCancelamentoPortador = DataCancelamentoPortador;
+            this.FlagDeficienteVisual = FlagDeficienteVisual;
             
         }
         
@@ -165,6 +167,13 @@ namespace Conductor.Pier.Model
         public string DataCancelamentoPortador { get; set; }
     
         /// <summary>
+        /// Flag que identifica uma pessoa como deficiente visual
+        /// </summary>
+        /// <value>Flag que identifica uma pessoa como deficiente visual</value>
+        [DataMember(Name="flagDeficienteVisual", EmitDefaultValue=false)]
+        public bool? FlagDeficienteVisual { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -187,6 +196,7 @@ namespace Conductor.Pier.Model
             sb.Append("  FlagAtivo: ").Append(FlagAtivo).Append("\n");
             sb.Append("  DataCadastroPortador: ").Append(DataCadastroPortador).Append("\n");
             sb.Append("  DataCancelamentoPortador: ").Append(DataCancelamentoPortador).Append("\n");
+            sb.Append("  FlagDeficienteVisual: ").Append(FlagDeficienteVisual).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -298,6 +308,11 @@ namespace Conductor.Pier.Model
                     this.DataCancelamentoPortador == other.DataCancelamentoPortador ||
                     this.DataCancelamentoPortador != null &&
                     this.DataCancelamentoPortador.Equals(other.DataCancelamentoPortador)
+                ) && 
+                (
+                    this.FlagDeficienteVisual == other.FlagDeficienteVisual ||
+                    this.FlagDeficienteVisual != null &&
+                    this.FlagDeficienteVisual.Equals(other.FlagDeficienteVisual)
                 );
         }
 
@@ -357,6 +372,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.DataCancelamentoPortador != null)
                     hash = hash * 59 + this.DataCancelamentoPortador.GetHashCode();
+                
+                if (this.FlagDeficienteVisual != null)
+                    hash = hash * 59 + this.FlagDeficienteVisual.GetHashCode();
                 
                 return hash;
             }

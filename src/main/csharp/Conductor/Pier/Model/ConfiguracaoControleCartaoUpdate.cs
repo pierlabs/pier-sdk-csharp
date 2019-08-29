@@ -26,13 +26,15 @@ namespace Conductor.Pier.Model
         /// <param name="PermiteSaque">Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es de saque.</param>
         /// <param name="PermiteWallet">Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es por wallet.</param>
         /// <param name="PermiteControleMCC">Indica se o cart\u00E3o est\u00E1 ativo para controle por grupos de MCCs.</param>
+        /// <param name="PermiteCompraInternacional">Indica se o cart\u00E3o est\u00E1 habilitado/desabilitado para transa\u00E7\u00F5es internacionais.</param>
 
-        public ConfiguracaoControleCartaoUpdate(bool? PermiteEcommerce = null, bool? PermiteSaque = null, bool? PermiteWallet = null, bool? PermiteControleMCC = null)
+        public ConfiguracaoControleCartaoUpdate(bool? PermiteEcommerce = null, bool? PermiteSaque = null, bool? PermiteWallet = null, bool? PermiteControleMCC = null, bool? PermiteCompraInternacional = null)
         {
             this.PermiteEcommerce = PermiteEcommerce;
             this.PermiteSaque = PermiteSaque;
             this.PermiteWallet = PermiteWallet;
             this.PermiteControleMCC = PermiteControleMCC;
+            this.PermiteCompraInternacional = PermiteCompraInternacional;
             
         }
         
@@ -66,6 +68,13 @@ namespace Conductor.Pier.Model
         public bool? PermiteControleMCC { get; set; }
     
         /// <summary>
+        /// Indica se o cart\u00E3o est\u00E1 habilitado/desabilitado para transa\u00E7\u00F5es internacionais
+        /// </summary>
+        /// <value>Indica se o cart\u00E3o est\u00E1 habilitado/desabilitado para transa\u00E7\u00F5es internacionais</value>
+        [DataMember(Name="permiteCompraInternacional", EmitDefaultValue=false)]
+        public bool? PermiteCompraInternacional { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -77,6 +86,7 @@ namespace Conductor.Pier.Model
             sb.Append("  PermiteSaque: ").Append(PermiteSaque).Append("\n");
             sb.Append("  PermiteWallet: ").Append(PermiteWallet).Append("\n");
             sb.Append("  PermiteControleMCC: ").Append(PermiteControleMCC).Append("\n");
+            sb.Append("  PermiteCompraInternacional: ").Append(PermiteCompraInternacional).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -133,6 +143,11 @@ namespace Conductor.Pier.Model
                     this.PermiteControleMCC == other.PermiteControleMCC ||
                     this.PermiteControleMCC != null &&
                     this.PermiteControleMCC.Equals(other.PermiteControleMCC)
+                ) && 
+                (
+                    this.PermiteCompraInternacional == other.PermiteCompraInternacional ||
+                    this.PermiteCompraInternacional != null &&
+                    this.PermiteCompraInternacional.Equals(other.PermiteCompraInternacional)
                 );
         }
 
@@ -159,6 +174,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.PermiteControleMCC != null)
                     hash = hash * 59 + this.PermiteControleMCC.GetHashCode();
+                
+                if (this.PermiteCompraInternacional != null)
+                    hash = hash * 59 + this.PermiteCompraInternacional.GetHashCode();
                 
                 return hash;
             }

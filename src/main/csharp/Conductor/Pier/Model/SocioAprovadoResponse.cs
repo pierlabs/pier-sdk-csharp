@@ -35,9 +35,10 @@ namespace Conductor.Pier.Model
         /// <param name="Profissao">Profiss\u00E3o do s\u00F3cio.</param>
         /// <param name="Nacionalidade">Nacionalidade do s\u00F3cio.</param>
         /// <param name="Email">Email do s\u00F3cio.</param>
+        /// <param name="FlagDeficienteVisual">Flag que identifica uma pessoa como deficiente visual.</param>
         /// <param name="Telefones">Telefones do s\u00F3cio.</param>
 
-        public SocioAprovadoResponse(long? Id = null, string Nome = null, string Cpf = null, string DataNascimento = null, string Sexo = null, string NumeroIdentidade = null, string OrgaoExpedidorIdentidade = null, string UnidadeFederativaIdentidade = null, string DataEmissaoIdentidade = null, string EstadoCivil = null, string Profissao = null, string Nacionalidade = null, string Email = null, List<TelefonePessoaAprovadaResponse> Telefones = null)
+        public SocioAprovadoResponse(long? Id = null, string Nome = null, string Cpf = null, string DataNascimento = null, string Sexo = null, string NumeroIdentidade = null, string OrgaoExpedidorIdentidade = null, string UnidadeFederativaIdentidade = null, string DataEmissaoIdentidade = null, string EstadoCivil = null, string Profissao = null, string Nacionalidade = null, string Email = null, bool? FlagDeficienteVisual = null, List<TelefonePessoaAprovadaResponse> Telefones = null)
         {
             this.Id = Id;
             this.Nome = Nome;
@@ -52,6 +53,7 @@ namespace Conductor.Pier.Model
             this.Profissao = Profissao;
             this.Nacionalidade = Nacionalidade;
             this.Email = Email;
+            this.FlagDeficienteVisual = FlagDeficienteVisual;
             this.Telefones = Telefones;
             
         }
@@ -149,6 +151,13 @@ namespace Conductor.Pier.Model
         public string Email { get; set; }
     
         /// <summary>
+        /// Flag que identifica uma pessoa como deficiente visual
+        /// </summary>
+        /// <value>Flag que identifica uma pessoa como deficiente visual</value>
+        [DataMember(Name="flagDeficienteVisual", EmitDefaultValue=false)]
+        public bool? FlagDeficienteVisual { get; set; }
+    
+        /// <summary>
         /// Telefones do s\u00F3cio
         /// </summary>
         /// <value>Telefones do s\u00F3cio</value>
@@ -176,6 +185,7 @@ namespace Conductor.Pier.Model
             sb.Append("  Profissao: ").Append(Profissao).Append("\n");
             sb.Append("  Nacionalidade: ").Append(Nacionalidade).Append("\n");
             sb.Append("  Email: ").Append(Email).Append("\n");
+            sb.Append("  FlagDeficienteVisual: ").Append(FlagDeficienteVisual).Append("\n");
             sb.Append("  Telefones: ").Append(Telefones).Append("\n");
             
             sb.Append("}\n");
@@ -280,6 +290,11 @@ namespace Conductor.Pier.Model
                     this.Email.Equals(other.Email)
                 ) && 
                 (
+                    this.FlagDeficienteVisual == other.FlagDeficienteVisual ||
+                    this.FlagDeficienteVisual != null &&
+                    this.FlagDeficienteVisual.Equals(other.FlagDeficienteVisual)
+                ) && 
+                (
                     this.Telefones == other.Telefones ||
                     this.Telefones != null &&
                     this.Telefones.SequenceEqual(other.Telefones)
@@ -336,6 +351,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.Email != null)
                     hash = hash * 59 + this.Email.GetHashCode();
+                
+                if (this.FlagDeficienteVisual != null)
+                    hash = hash * 59 + this.FlagDeficienteVisual.GetHashCode();
                 
                 if (this.Telefones != null)
                     hash = hash * 59 + this.Telefones.GetHashCode();

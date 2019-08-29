@@ -66,6 +66,30 @@ namespace Conductor.Pier.Api
         ApiResponse<GrupoEconomicoResponse> AlterarGrupoEconomicoWithHttpInfo (long? id, GrupoEconomicoDTO grupoEconomicoDTO);
         
         /// <summary>
+        /// Alterar Grupo Estabelecimento
+        /// </summary>
+        /// <remarks>
+        /// Altera um grupo de estabelecimento
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <param name="grupoEstabelecimentoUpdate">grupoEstabelecimentoUpdate</param>
+        /// <returns>GrupoEstabelecimentoResponse</returns>
+        GrupoEstabelecimentoResponse AlterarGrupoEstabelecimentos (long? id, GrupoEstabelecimentoUpdate grupoEstabelecimentoUpdate);
+  
+        /// <summary>
+        /// Alterar Grupo Estabelecimento
+        /// </summary>
+        /// <remarks>
+        /// Altera um grupo de estabelecimento
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <param name="grupoEstabelecimentoUpdate">grupoEstabelecimentoUpdate</param>
+        /// <returns>ApiResponse of GrupoEstabelecimentoResponse</returns>
+        ApiResponse<GrupoEstabelecimentoResponse> AlterarGrupoEstabelecimentosWithHttpInfo (long? id, GrupoEstabelecimentoUpdate grupoEstabelecimentoUpdate);
+        
+        /// <summary>
         /// Altera uma Maquineta
         /// </summary>
         /// <remarks>
@@ -250,6 +274,28 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do grupo econ\u00F4mico</param>
         /// <returns>ApiResponse of GrupoEconomicoResponse</returns>
         ApiResponse<GrupoEconomicoResponse> ConsultarGrupoEconomicoWithHttpInfo (long? id);
+        
+        /// <summary>
+        /// Consultar grupo de estabelecimento
+        /// </summary>
+        /// <remarks>
+        /// Consulta um grupo de estabelecimento atrav\u00E9s do seu identificador
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <returns>GrupoEstabelecimentoResponse</returns>
+        GrupoEstabelecimentoResponse ConsultarGrupoEstabelecimentos (long? id);
+  
+        /// <summary>
+        /// Consultar grupo de estabelecimento
+        /// </summary>
+        /// <remarks>
+        /// Consulta um grupo de estabelecimento atrav\u00E9s do seu identificador
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <returns>ApiResponse of GrupoEstabelecimentoResponse</returns>
+        ApiResponse<GrupoEstabelecimentoResponse> ConsultarGrupoEstabelecimentosWithHttpInfo (long? id);
         
         /// <summary>
         /// Apresenta os dados de uma determinada maquineta
@@ -630,6 +676,36 @@ namespace Conductor.Pier.Api
         /// <param name="idGrupoMCC">MCC dto grupo MCC (optional)</param>
         /// <returns>ApiResponse of PageMCCResponse</returns>
         ApiResponse<PageMCCResponse> ListarEstabelecimentosMCCWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, int? duracao = null, double? percentualMinimo = null, double? percentualMaximo = null, long? idGrupoMCC = null);
+        
+        /// <summary>
+        /// Lista os grupos de estabelecimento na base
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que sejam listados todos os grupos de estabelecimento existentes na base do emissor
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="descricao">Descri\u00E7\u00E3o do grupo de estabelecimento (optional)</param>
+        /// <param name="idLayout">idLayout (optional)</param>
+        /// <returns>GrupoEstabelecimentoResponse</returns>
+        GrupoEstabelecimentoResponse ListarGrupoEstabelecimentos (List<string> sort = null, int? page = null, int? limit = null, string descricao = null, long? idLayout = null);
+  
+        /// <summary>
+        /// Lista os grupos de estabelecimento na base
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que sejam listados todos os grupos de estabelecimento existentes na base do emissor
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="descricao">Descri\u00E7\u00E3o do grupo de estabelecimento (optional)</param>
+        /// <param name="idLayout">idLayout (optional)</param>
+        /// <returns>ApiResponse of GrupoEstabelecimentoResponse</returns>
+        ApiResponse<GrupoEstabelecimentoResponse> ListarGrupoEstabelecimentosWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string descricao = null, long? idLayout = null);
         
         /// <summary>
         /// Listar grupos econ\u00F4micos
@@ -1280,6 +1356,28 @@ namespace Conductor.Pier.Api
         ApiResponse<GrupoEconomicoResponse> SalvarGrupoEconomicoWithHttpInfo (GrupoEconomicoDTO grupoEconomicoDTO);
         
         /// <summary>
+        /// Cadastrar Grupo Estabelecimento
+        /// </summary>
+        /// <remarks>
+        /// Cadastra um grupo de estabelecimento
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="grupoEstabelecimentoPersist">grupoEstabelecimentoPersist</param>
+        /// <returns>GrupoEstabelecimentoResponse</returns>
+        GrupoEstabelecimentoResponse SalvarGrupoEstabelecimentos (GrupoEstabelecimentoPersist grupoEstabelecimentoPersist);
+  
+        /// <summary>
+        /// Cadastrar Grupo Estabelecimento
+        /// </summary>
+        /// <remarks>
+        /// Cadastra um grupo de estabelecimento
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="grupoEstabelecimentoPersist">grupoEstabelecimentoPersist</param>
+        /// <returns>ApiResponse of GrupoEstabelecimentoResponse</returns>
+        ApiResponse<GrupoEstabelecimentoResponse> SalvarGrupoEstabelecimentosWithHttpInfo (GrupoEstabelecimentoPersist grupoEstabelecimentoPersist);
+        
+        /// <summary>
         /// Realiza o cadastro de uma nova maquineta para um estabelecimento
         /// </summary>
         /// <remarks>
@@ -1440,6 +1538,30 @@ namespace Conductor.Pier.Api
         /// <param name="grupoEconomicoDTO">grupoEconomicoDTO</param>
         /// <returns>Task of ApiResponse (GrupoEconomicoResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GrupoEconomicoResponse>> AlterarGrupoEconomicoAsyncWithHttpInfo (long? id, GrupoEconomicoDTO grupoEconomicoDTO);
+        
+        /// <summary>
+        /// Alterar Grupo Estabelecimento
+        /// </summary>
+        /// <remarks>
+        /// Altera um grupo de estabelecimento
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <param name="grupoEstabelecimentoUpdate">grupoEstabelecimentoUpdate</param>
+        /// <returns>Task of GrupoEstabelecimentoResponse</returns>
+        System.Threading.Tasks.Task<GrupoEstabelecimentoResponse> AlterarGrupoEstabelecimentosAsync (long? id, GrupoEstabelecimentoUpdate grupoEstabelecimentoUpdate);
+
+        /// <summary>
+        /// Alterar Grupo Estabelecimento
+        /// </summary>
+        /// <remarks>
+        /// Altera um grupo de estabelecimento
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <param name="grupoEstabelecimentoUpdate">grupoEstabelecimentoUpdate</param>
+        /// <returns>Task of ApiResponse (GrupoEstabelecimentoResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GrupoEstabelecimentoResponse>> AlterarGrupoEstabelecimentosAsyncWithHttpInfo (long? id, GrupoEstabelecimentoUpdate grupoEstabelecimentoUpdate);
         
         /// <summary>
         /// Altera uma Maquineta
@@ -1626,6 +1748,28 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do grupo econ\u00F4mico</param>
         /// <returns>Task of ApiResponse (GrupoEconomicoResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GrupoEconomicoResponse>> ConsultarGrupoEconomicoAsyncWithHttpInfo (long? id);
+        
+        /// <summary>
+        /// Consultar grupo de estabelecimento
+        /// </summary>
+        /// <remarks>
+        /// Consulta um grupo de estabelecimento atrav\u00E9s do seu identificador
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <returns>Task of GrupoEstabelecimentoResponse</returns>
+        System.Threading.Tasks.Task<GrupoEstabelecimentoResponse> ConsultarGrupoEstabelecimentosAsync (long? id);
+
+        /// <summary>
+        /// Consultar grupo de estabelecimento
+        /// </summary>
+        /// <remarks>
+        /// Consulta um grupo de estabelecimento atrav\u00E9s do seu identificador
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <returns>Task of ApiResponse (GrupoEstabelecimentoResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GrupoEstabelecimentoResponse>> ConsultarGrupoEstabelecimentosAsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Apresenta os dados de uma determinada maquineta
@@ -2006,6 +2150,36 @@ namespace Conductor.Pier.Api
         /// <param name="idGrupoMCC">MCC dto grupo MCC (optional)</param>
         /// <returns>Task of ApiResponse (PageMCCResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<PageMCCResponse>> ListarEstabelecimentosMCCAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, int? duracao = null, double? percentualMinimo = null, double? percentualMaximo = null, long? idGrupoMCC = null);
+        
+        /// <summary>
+        /// Lista os grupos de estabelecimento na base
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que sejam listados todos os grupos de estabelecimento existentes na base do emissor
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="descricao">Descri\u00E7\u00E3o do grupo de estabelecimento (optional)</param>
+        /// <param name="idLayout">idLayout (optional)</param>
+        /// <returns>Task of GrupoEstabelecimentoResponse</returns>
+        System.Threading.Tasks.Task<GrupoEstabelecimentoResponse> ListarGrupoEstabelecimentosAsync (List<string> sort = null, int? page = null, int? limit = null, string descricao = null, long? idLayout = null);
+
+        /// <summary>
+        /// Lista os grupos de estabelecimento na base
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que sejam listados todos os grupos de estabelecimento existentes na base do emissor
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="descricao">Descri\u00E7\u00E3o do grupo de estabelecimento (optional)</param>
+        /// <param name="idLayout">idLayout (optional)</param>
+        /// <returns>Task of ApiResponse (GrupoEstabelecimentoResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GrupoEstabelecimentoResponse>> ListarGrupoEstabelecimentosAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string descricao = null, long? idLayout = null);
         
         /// <summary>
         /// Listar grupos econ\u00F4micos
@@ -2656,6 +2830,28 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<GrupoEconomicoResponse>> SalvarGrupoEconomicoAsyncWithHttpInfo (GrupoEconomicoDTO grupoEconomicoDTO);
         
         /// <summary>
+        /// Cadastrar Grupo Estabelecimento
+        /// </summary>
+        /// <remarks>
+        /// Cadastra um grupo de estabelecimento
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="grupoEstabelecimentoPersist">grupoEstabelecimentoPersist</param>
+        /// <returns>Task of GrupoEstabelecimentoResponse</returns>
+        System.Threading.Tasks.Task<GrupoEstabelecimentoResponse> SalvarGrupoEstabelecimentosAsync (GrupoEstabelecimentoPersist grupoEstabelecimentoPersist);
+
+        /// <summary>
+        /// Cadastrar Grupo Estabelecimento
+        /// </summary>
+        /// <remarks>
+        /// Cadastra um grupo de estabelecimento
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="grupoEstabelecimentoPersist">grupoEstabelecimentoPersist</param>
+        /// <returns>Task of ApiResponse (GrupoEstabelecimentoResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GrupoEstabelecimentoResponse>> SalvarGrupoEstabelecimentosAsyncWithHttpInfo (GrupoEstabelecimentoPersist grupoEstabelecimentoPersist);
+        
+        /// <summary>
         /// Realiza o cadastro de uma nova maquineta para um estabelecimento
         /// </summary>
         /// <remarks>
@@ -3218,6 +3414,188 @@ namespace Conductor.Pier.Api
             return new ApiResponse<GrupoEconomicoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (GrupoEconomicoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(GrupoEconomicoResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Alterar Grupo Estabelecimento Altera um grupo de estabelecimento
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param> 
+        /// <param name="grupoEstabelecimentoUpdate">grupoEstabelecimentoUpdate</param> 
+        /// <returns>GrupoEstabelecimentoResponse</returns>
+        public GrupoEstabelecimentoResponse AlterarGrupoEstabelecimentos (long? id, GrupoEstabelecimentoUpdate grupoEstabelecimentoUpdate)
+        {
+             ApiResponse<GrupoEstabelecimentoResponse> localVarResponse = AlterarGrupoEstabelecimentosWithHttpInfo(id, grupoEstabelecimentoUpdate);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Alterar Grupo Estabelecimento Altera um grupo de estabelecimento
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param> 
+        /// <param name="grupoEstabelecimentoUpdate">grupoEstabelecimentoUpdate</param> 
+        /// <returns>ApiResponse of GrupoEstabelecimentoResponse</returns>
+        public ApiResponse< GrupoEstabelecimentoResponse > AlterarGrupoEstabelecimentosWithHttpInfo (long? id, GrupoEstabelecimentoUpdate grupoEstabelecimentoUpdate)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling EstabelecimentoApi->AlterarGrupoEstabelecimentos");
+            
+            // verify the required parameter 'grupoEstabelecimentoUpdate' is set
+            if (grupoEstabelecimentoUpdate == null)
+                throw new ApiException(400, "Missing required parameter 'grupoEstabelecimentoUpdate' when calling EstabelecimentoApi->AlterarGrupoEstabelecimentos");
+            
+    
+            var localVarPath = "/api/grupos-estabelecimentos/{id}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            if (grupoEstabelecimentoUpdate.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(grupoEstabelecimentoUpdate); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = grupoEstabelecimentoUpdate; // byte array
+            }
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling AlterarGrupoEstabelecimentos: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling AlterarGrupoEstabelecimentos: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<GrupoEstabelecimentoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (GrupoEstabelecimentoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(GrupoEstabelecimentoResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Alterar Grupo Estabelecimento Altera um grupo de estabelecimento
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <param name="grupoEstabelecimentoUpdate">grupoEstabelecimentoUpdate</param>
+        /// <returns>Task of GrupoEstabelecimentoResponse</returns>
+        public async System.Threading.Tasks.Task<GrupoEstabelecimentoResponse> AlterarGrupoEstabelecimentosAsync (long? id, GrupoEstabelecimentoUpdate grupoEstabelecimentoUpdate)
+        {
+             ApiResponse<GrupoEstabelecimentoResponse> localVarResponse = await AlterarGrupoEstabelecimentosAsyncWithHttpInfo(id, grupoEstabelecimentoUpdate);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Alterar Grupo Estabelecimento Altera um grupo de estabelecimento
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <param name="grupoEstabelecimentoUpdate">grupoEstabelecimentoUpdate</param>
+        /// <returns>Task of ApiResponse (GrupoEstabelecimentoResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<GrupoEstabelecimentoResponse>> AlterarGrupoEstabelecimentosAsyncWithHttpInfo (long? id, GrupoEstabelecimentoUpdate grupoEstabelecimentoUpdate)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AlterarGrupoEstabelecimentos");
+            // verify the required parameter 'grupoEstabelecimentoUpdate' is set
+            if (grupoEstabelecimentoUpdate == null) throw new ApiException(400, "Missing required parameter 'grupoEstabelecimentoUpdate' when calling AlterarGrupoEstabelecimentos");
+            
+    
+            var localVarPath = "/api/grupos-estabelecimentos/{id}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            if (grupoEstabelecimentoUpdate.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(grupoEstabelecimentoUpdate); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = grupoEstabelecimentoUpdate; // byte array
+            }
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling AlterarGrupoEstabelecimentos: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling AlterarGrupoEstabelecimentos: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<GrupoEstabelecimentoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (GrupoEstabelecimentoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(GrupoEstabelecimentoResponse)));
             
         }
         
@@ -4614,6 +4992,164 @@ namespace Conductor.Pier.Api
             return new ApiResponse<GrupoEconomicoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (GrupoEconomicoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(GrupoEconomicoResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Consultar grupo de estabelecimento Consulta um grupo de estabelecimento atrav\u00E9s do seu identificador
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param> 
+        /// <returns>GrupoEstabelecimentoResponse</returns>
+        public GrupoEstabelecimentoResponse ConsultarGrupoEstabelecimentos (long? id)
+        {
+             ApiResponse<GrupoEstabelecimentoResponse> localVarResponse = ConsultarGrupoEstabelecimentosWithHttpInfo(id);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Consultar grupo de estabelecimento Consulta um grupo de estabelecimento atrav\u00E9s do seu identificador
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param> 
+        /// <returns>ApiResponse of GrupoEstabelecimentoResponse</returns>
+        public ApiResponse< GrupoEstabelecimentoResponse > ConsultarGrupoEstabelecimentosWithHttpInfo (long? id)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling EstabelecimentoApi->ConsultarGrupoEstabelecimentos");
+            
+    
+            var localVarPath = "/api/grupos-estabelecimentos/{id}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarGrupoEstabelecimentos: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarGrupoEstabelecimentos: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<GrupoEstabelecimentoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (GrupoEstabelecimentoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(GrupoEstabelecimentoResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Consultar grupo de estabelecimento Consulta um grupo de estabelecimento atrav\u00E9s do seu identificador
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <returns>Task of GrupoEstabelecimentoResponse</returns>
+        public async System.Threading.Tasks.Task<GrupoEstabelecimentoResponse> ConsultarGrupoEstabelecimentosAsync (long? id)
+        {
+             ApiResponse<GrupoEstabelecimentoResponse> localVarResponse = await ConsultarGrupoEstabelecimentosAsyncWithHttpInfo(id);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Consultar grupo de estabelecimento Consulta um grupo de estabelecimento atrav\u00E9s do seu identificador
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <returns>Task of ApiResponse (GrupoEstabelecimentoResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<GrupoEstabelecimentoResponse>> ConsultarGrupoEstabelecimentosAsyncWithHttpInfo (long? id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarGrupoEstabelecimentos");
+            
+    
+            var localVarPath = "/api/grupos-estabelecimentos/{id}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarGrupoEstabelecimentos: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarGrupoEstabelecimentos: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<GrupoEstabelecimentoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (GrupoEstabelecimentoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(GrupoEstabelecimentoResponse)));
             
         }
         
@@ -6974,6 +7510,182 @@ namespace Conductor.Pier.Api
             return new ApiResponse<PageMCCResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (PageMCCResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageMCCResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Lista os grupos de estabelecimento na base Este m\u00E9todo permite que sejam listados todos os grupos de estabelecimento existentes na base do emissor
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="page">P\u00E1gina (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <param name="descricao">Descri\u00E7\u00E3o do grupo de estabelecimento (optional)</param> 
+        /// <param name="idLayout">idLayout (optional)</param> 
+        /// <returns>GrupoEstabelecimentoResponse</returns>
+        public GrupoEstabelecimentoResponse ListarGrupoEstabelecimentos (List<string> sort = null, int? page = null, int? limit = null, string descricao = null, long? idLayout = null)
+        {
+             ApiResponse<GrupoEstabelecimentoResponse> localVarResponse = ListarGrupoEstabelecimentosWithHttpInfo(sort, page, limit, descricao, idLayout);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Lista os grupos de estabelecimento na base Este m\u00E9todo permite que sejam listados todos os grupos de estabelecimento existentes na base do emissor
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="page">P\u00E1gina (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <param name="descricao">Descri\u00E7\u00E3o do grupo de estabelecimento (optional)</param> 
+        /// <param name="idLayout">idLayout (optional)</param> 
+        /// <returns>ApiResponse of GrupoEstabelecimentoResponse</returns>
+        public ApiResponse< GrupoEstabelecimentoResponse > ListarGrupoEstabelecimentosWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string descricao = null, long? idLayout = null)
+        {
+            
+    
+            var localVarPath = "/api/grupos-estabelecimentos";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (descricao != null) localVarQueryParams.Add("descricao", Configuration.ApiClient.ParameterToString(descricao)); // query parameter
+            if (idLayout != null) localVarQueryParams.Add("idLayout", Configuration.ApiClient.ParameterToString(idLayout)); // query parameter
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarGrupoEstabelecimentos: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarGrupoEstabelecimentos: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<GrupoEstabelecimentoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (GrupoEstabelecimentoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(GrupoEstabelecimentoResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Lista os grupos de estabelecimento na base Este m\u00E9todo permite que sejam listados todos os grupos de estabelecimento existentes na base do emissor
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="descricao">Descri\u00E7\u00E3o do grupo de estabelecimento (optional)</param>
+        /// <param name="idLayout">idLayout (optional)</param>
+        /// <returns>Task of GrupoEstabelecimentoResponse</returns>
+        public async System.Threading.Tasks.Task<GrupoEstabelecimentoResponse> ListarGrupoEstabelecimentosAsync (List<string> sort = null, int? page = null, int? limit = null, string descricao = null, long? idLayout = null)
+        {
+             ApiResponse<GrupoEstabelecimentoResponse> localVarResponse = await ListarGrupoEstabelecimentosAsyncWithHttpInfo(sort, page, limit, descricao, idLayout);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Lista os grupos de estabelecimento na base Este m\u00E9todo permite que sejam listados todos os grupos de estabelecimento existentes na base do emissor
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="descricao">Descri\u00E7\u00E3o do grupo de estabelecimento (optional)</param>
+        /// <param name="idLayout">idLayout (optional)</param>
+        /// <returns>Task of ApiResponse (GrupoEstabelecimentoResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<GrupoEstabelecimentoResponse>> ListarGrupoEstabelecimentosAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string descricao = null, long? idLayout = null)
+        {
+            
+    
+            var localVarPath = "/api/grupos-estabelecimentos";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (descricao != null) localVarQueryParams.Add("descricao", Configuration.ApiClient.ParameterToString(descricao)); // query parameter
+            if (idLayout != null) localVarQueryParams.Add("idLayout", Configuration.ApiClient.ParameterToString(idLayout)); // query parameter
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarGrupoEstabelecimentos: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarGrupoEstabelecimentos: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<GrupoEstabelecimentoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (GrupoEstabelecimentoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(GrupoEstabelecimentoResponse)));
             
         }
         
@@ -10600,6 +11312,176 @@ namespace Conductor.Pier.Api
             return new ApiResponse<GrupoEconomicoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (GrupoEconomicoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(GrupoEconomicoResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Cadastrar Grupo Estabelecimento Cadastra um grupo de estabelecimento
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="grupoEstabelecimentoPersist">grupoEstabelecimentoPersist</param> 
+        /// <returns>GrupoEstabelecimentoResponse</returns>
+        public GrupoEstabelecimentoResponse SalvarGrupoEstabelecimentos (GrupoEstabelecimentoPersist grupoEstabelecimentoPersist)
+        {
+             ApiResponse<GrupoEstabelecimentoResponse> localVarResponse = SalvarGrupoEstabelecimentosWithHttpInfo(grupoEstabelecimentoPersist);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Cadastrar Grupo Estabelecimento Cadastra um grupo de estabelecimento
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="grupoEstabelecimentoPersist">grupoEstabelecimentoPersist</param> 
+        /// <returns>ApiResponse of GrupoEstabelecimentoResponse</returns>
+        public ApiResponse< GrupoEstabelecimentoResponse > SalvarGrupoEstabelecimentosWithHttpInfo (GrupoEstabelecimentoPersist grupoEstabelecimentoPersist)
+        {
+            
+            // verify the required parameter 'grupoEstabelecimentoPersist' is set
+            if (grupoEstabelecimentoPersist == null)
+                throw new ApiException(400, "Missing required parameter 'grupoEstabelecimentoPersist' when calling EstabelecimentoApi->SalvarGrupoEstabelecimentos");
+            
+    
+            var localVarPath = "/api/grupos-estabelecimentos";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            if (grupoEstabelecimentoPersist.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(grupoEstabelecimentoPersist); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = grupoEstabelecimentoPersist; // byte array
+            }
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarGrupoEstabelecimentos: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarGrupoEstabelecimentos: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<GrupoEstabelecimentoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (GrupoEstabelecimentoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(GrupoEstabelecimentoResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Cadastrar Grupo Estabelecimento Cadastra um grupo de estabelecimento
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="grupoEstabelecimentoPersist">grupoEstabelecimentoPersist</param>
+        /// <returns>Task of GrupoEstabelecimentoResponse</returns>
+        public async System.Threading.Tasks.Task<GrupoEstabelecimentoResponse> SalvarGrupoEstabelecimentosAsync (GrupoEstabelecimentoPersist grupoEstabelecimentoPersist)
+        {
+             ApiResponse<GrupoEstabelecimentoResponse> localVarResponse = await SalvarGrupoEstabelecimentosAsyncWithHttpInfo(grupoEstabelecimentoPersist);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Cadastrar Grupo Estabelecimento Cadastra um grupo de estabelecimento
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="grupoEstabelecimentoPersist">grupoEstabelecimentoPersist</param>
+        /// <returns>Task of ApiResponse (GrupoEstabelecimentoResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<GrupoEstabelecimentoResponse>> SalvarGrupoEstabelecimentosAsyncWithHttpInfo (GrupoEstabelecimentoPersist grupoEstabelecimentoPersist)
+        {
+            // verify the required parameter 'grupoEstabelecimentoPersist' is set
+            if (grupoEstabelecimentoPersist == null) throw new ApiException(400, "Missing required parameter 'grupoEstabelecimentoPersist' when calling SalvarGrupoEstabelecimentos");
+            
+    
+            var localVarPath = "/api/grupos-estabelecimentos";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            if (grupoEstabelecimentoPersist.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(grupoEstabelecimentoPersist); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = grupoEstabelecimentoPersist; // byte array
+            }
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarGrupoEstabelecimentos: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarGrupoEstabelecimentos: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<GrupoEstabelecimentoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (GrupoEstabelecimentoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(GrupoEstabelecimentoResponse)));
             
         }
         

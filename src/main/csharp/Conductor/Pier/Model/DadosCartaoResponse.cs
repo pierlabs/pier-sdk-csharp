@@ -35,8 +35,10 @@ namespace Conductor.Pier.Model
         /// <param name="StatusConta">Descri\u00E7\u00E3o do status da conta do portador.</param>
         /// <param name="IdStatusCartao">Status do cart\u00E3o.</param>
         /// <param name="StatusCartao">Descri\u00E7\u00E3o do status do cart\u00E3o.</param>
+        /// <param name="IdMifare">C\u00F3digo identificador da tecnologia MIFARE.</param>
+        /// <param name="MatriculaMifare">N\u00FAmero da matricula do portador.</param>
 
-        public DadosCartaoResponse(int? FlagVirtual = null, string NumeroCartao = null, string DataValidade = null, string Cvv2 = null, string NomePlastico = null, long? IdConta = null, long? IdCartao = null, int? NumeroAgencia = null, string NumeroContaCorente = null, long? IdStatusConta = null, string StatusConta = null, long? IdStatusCartao = null, string StatusCartao = null)
+        public DadosCartaoResponse(int? FlagVirtual = null, string NumeroCartao = null, string DataValidade = null, string Cvv2 = null, string NomePlastico = null, long? IdConta = null, long? IdCartao = null, int? NumeroAgencia = null, string NumeroContaCorente = null, long? IdStatusConta = null, string StatusConta = null, long? IdStatusCartao = null, string StatusCartao = null, long? IdMifare = null, string MatriculaMifare = null)
         {
             this.FlagVirtual = FlagVirtual;
             this.NumeroCartao = NumeroCartao;
@@ -51,6 +53,8 @@ namespace Conductor.Pier.Model
             this.StatusConta = StatusConta;
             this.IdStatusCartao = IdStatusCartao;
             this.StatusCartao = StatusCartao;
+            this.IdMifare = IdMifare;
+            this.MatriculaMifare = MatriculaMifare;
             
         }
         
@@ -146,6 +150,20 @@ namespace Conductor.Pier.Model
         public string StatusCartao { get; set; }
     
         /// <summary>
+        /// C\u00F3digo identificador da tecnologia MIFARE
+        /// </summary>
+        /// <value>C\u00F3digo identificador da tecnologia MIFARE</value>
+        [DataMember(Name="idMifare", EmitDefaultValue=false)]
+        public long? IdMifare { get; set; }
+    
+        /// <summary>
+        /// N\u00FAmero da matricula do portador
+        /// </summary>
+        /// <value>N\u00FAmero da matricula do portador</value>
+        [DataMember(Name="matriculaMifare", EmitDefaultValue=false)]
+        public string MatriculaMifare { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -166,6 +184,8 @@ namespace Conductor.Pier.Model
             sb.Append("  StatusConta: ").Append(StatusConta).Append("\n");
             sb.Append("  IdStatusCartao: ").Append(IdStatusCartao).Append("\n");
             sb.Append("  StatusCartao: ").Append(StatusCartao).Append("\n");
+            sb.Append("  IdMifare: ").Append(IdMifare).Append("\n");
+            sb.Append("  MatriculaMifare: ").Append(MatriculaMifare).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -267,6 +287,16 @@ namespace Conductor.Pier.Model
                     this.StatusCartao == other.StatusCartao ||
                     this.StatusCartao != null &&
                     this.StatusCartao.Equals(other.StatusCartao)
+                ) && 
+                (
+                    this.IdMifare == other.IdMifare ||
+                    this.IdMifare != null &&
+                    this.IdMifare.Equals(other.IdMifare)
+                ) && 
+                (
+                    this.MatriculaMifare == other.MatriculaMifare ||
+                    this.MatriculaMifare != null &&
+                    this.MatriculaMifare.Equals(other.MatriculaMifare)
                 );
         }
 
@@ -320,6 +350,12 @@ namespace Conductor.Pier.Model
                 
                 if (this.StatusCartao != null)
                     hash = hash * 59 + this.StatusCartao.GetHashCode();
+                
+                if (this.IdMifare != null)
+                    hash = hash * 59 + this.IdMifare.GetHashCode();
+                
+                if (this.MatriculaMifare != null)
+                    hash = hash * 59 + this.MatriculaMifare.GetHashCode();
                 
                 return hash;
             }

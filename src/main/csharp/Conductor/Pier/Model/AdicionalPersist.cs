@@ -36,9 +36,10 @@ namespace Conductor.Pier.Model
         /// <param name="IdNacionalidade">C\u00F3digo de identifica\u00E7\u00E3o da Nacionalidade do Adicional.</param>
         /// <param name="IdParentesco">C\u00F3digo de identifica\u00E7\u00E3o do Parentesco do Adicional com o Titular.</param>
         /// <param name="Email">C\u00F3digo de identifica\u00E7\u00E3o do Parentesco do Adicional com o Titular.</param>
+        /// <param name="FlagDeficienteVisual">Flag que identifica uma pessoa como deficiente visual.</param>
         /// <param name="Telefones">Lista de telefones do adicional.</param>
 
-        public AdicionalPersist(string Nome = null, string NomeImpresso = null, string NumeroReceitaFederal = null, string DataNascimento = null, string Sexo = null, string NumeroIdentidade = null, string OrgaoExpedidorIdentidade = null, string UnidadeFederativaIdentidade = null, string DataEmissaoIdentidade = null, long? IdEstadoCivil = null, long? IdProfissao = null, long? IdNacionalidade = null, long? IdParentesco = null, string Email = null, List<TelefoneAdicionalPersist> Telefones = null)
+        public AdicionalPersist(string Nome = null, string NomeImpresso = null, string NumeroReceitaFederal = null, string DataNascimento = null, string Sexo = null, string NumeroIdentidade = null, string OrgaoExpedidorIdentidade = null, string UnidadeFederativaIdentidade = null, string DataEmissaoIdentidade = null, long? IdEstadoCivil = null, long? IdProfissao = null, long? IdNacionalidade = null, long? IdParentesco = null, string Email = null, bool? FlagDeficienteVisual = null, List<TelefoneAdicionalPersist> Telefones = null)
         {
             // to ensure "Nome" is required (not null)
             if (Nome == null)
@@ -70,6 +71,7 @@ namespace Conductor.Pier.Model
             this.IdNacionalidade = IdNacionalidade;
             this.IdParentesco = IdParentesco;
             this.Email = Email;
+            this.FlagDeficienteVisual = FlagDeficienteVisual;
             this.Telefones = Telefones;
             
         }
@@ -174,6 +176,13 @@ namespace Conductor.Pier.Model
         public string Email { get; set; }
     
         /// <summary>
+        /// Flag que identifica uma pessoa como deficiente visual
+        /// </summary>
+        /// <value>Flag que identifica uma pessoa como deficiente visual</value>
+        [DataMember(Name="flagDeficienteVisual", EmitDefaultValue=false)]
+        public bool? FlagDeficienteVisual { get; set; }
+    
+        /// <summary>
         /// Lista de telefones do adicional
         /// </summary>
         /// <value>Lista de telefones do adicional</value>
@@ -202,6 +211,7 @@ namespace Conductor.Pier.Model
             sb.Append("  IdNacionalidade: ").Append(IdNacionalidade).Append("\n");
             sb.Append("  IdParentesco: ").Append(IdParentesco).Append("\n");
             sb.Append("  Email: ").Append(Email).Append("\n");
+            sb.Append("  FlagDeficienteVisual: ").Append(FlagDeficienteVisual).Append("\n");
             sb.Append("  Telefones: ").Append(Telefones).Append("\n");
             
             sb.Append("}\n");
@@ -311,6 +321,11 @@ namespace Conductor.Pier.Model
                     this.Email.Equals(other.Email)
                 ) && 
                 (
+                    this.FlagDeficienteVisual == other.FlagDeficienteVisual ||
+                    this.FlagDeficienteVisual != null &&
+                    this.FlagDeficienteVisual.Equals(other.FlagDeficienteVisual)
+                ) && 
+                (
                     this.Telefones == other.Telefones ||
                     this.Telefones != null &&
                     this.Telefones.SequenceEqual(other.Telefones)
@@ -370,6 +385,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.Email != null)
                     hash = hash * 59 + this.Email.GetHashCode();
+                
+                if (this.FlagDeficienteVisual != null)
+                    hash = hash * 59 + this.FlagDeficienteVisual.GetHashCode();
                 
                 if (this.Telefones != null)
                     hash = hash * 59 + this.Telefones.GetHashCode();

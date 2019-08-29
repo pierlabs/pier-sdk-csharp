@@ -12,15 +12,15 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Lista de Transa\u00E7\u00F5es processadas e nao Processadas
+    /// Pagina\u00E7\u00E3o do response do servi\u00E7o motivo fraude
     /// </summary>
     [DataContract]
-    public partial class PageTransacaoProcessadaNaoProcessadaResponse :  IEquatable<PageTransacaoProcessadaNaoProcessadaResponse>
+    public partial class PageMotivoFraudeResponse :  IEquatable<PageMotivoFraudeResponse>
     { 
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="PageTransacaoProcessadaNaoProcessadaResponse" /> class.
-        /// Initializes a new instance of the <see cref="PageTransacaoProcessadaNaoProcessadaResponse" />class.
+        /// Initializes a new instance of the <see cref="PageMotivoFraudeResponse" /> class.
+        /// Initializes a new instance of the <see cref="PageMotivoFraudeResponse" />class.
         /// </summary>
         /// <param name="Content">Content.</param>
         /// <param name="First">First.</param>
@@ -37,7 +37,7 @@ namespace Conductor.Pier.Model
         /// <param name="TotalElements">TotalElements.</param>
         /// <param name="TotalPages">TotalPages.</param>
 
-        public PageTransacaoProcessadaNaoProcessadaResponse(List<TransacaoProcessadaNaoProcessadaResponse> Content = null, bool? First = null, bool? FirstPage = null, bool? HasContent = null, bool? HasNextPage = null, bool? HasPreviousPage = null, bool? Last = null, int? NextPage = null, int? Number = null, int? NumberOfElements = null, int? PreviousPage = null, int? Size = null, long? TotalElements = null, int? TotalPages = null)
+        public PageMotivoFraudeResponse(List<MotivoFraudeResponse> Content = null, bool? First = null, bool? FirstPage = null, bool? HasContent = null, bool? HasNextPage = null, bool? HasPreviousPage = null, bool? Last = null, int? NextPage = null, int? Number = null, int? NumberOfElements = null, int? PreviousPage = null, int? Size = null, long? TotalElements = null, int? TotalPages = null)
         {
             this.Content = Content;
             this.First = First;
@@ -61,7 +61,7 @@ namespace Conductor.Pier.Model
         /// Gets or Sets Content
         /// </summary>
         [DataMember(Name="content", EmitDefaultValue=false)]
-        public List<TransacaoProcessadaNaoProcessadaResponse> Content { get; set; }
+        public List<MotivoFraudeResponse> Content { get; set; }
     
         /// <summary>
         /// Gets or Sets First
@@ -148,7 +148,7 @@ namespace Conductor.Pier.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class PageTransacaoProcessadaNaoProcessadaResponse {\n");
+            sb.Append("class PageMotivoFraudeResponse {\n");
             sb.Append("  Content: ").Append(Content).Append("\n");
             sb.Append("  First: ").Append(First).Append("\n");
             sb.Append("  FirstPage: ").Append(FirstPage).Append("\n");
@@ -185,15 +185,15 @@ namespace Conductor.Pier.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as PageTransacaoProcessadaNaoProcessadaResponse);
+            return this.Equals(obj as PageMotivoFraudeResponse);
         }
 
         /// <summary>
-        /// Returns true if PageTransacaoProcessadaNaoProcessadaResponse instances are equal
+        /// Returns true if PageMotivoFraudeResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of PageTransacaoProcessadaNaoProcessadaResponse to be compared</param>
+        /// <param name="other">Instance of PageMotivoFraudeResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(PageTransacaoProcessadaNaoProcessadaResponse other)
+        public bool Equals(PageMotivoFraudeResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

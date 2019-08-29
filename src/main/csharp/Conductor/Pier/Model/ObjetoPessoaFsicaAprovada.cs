@@ -31,6 +31,7 @@ namespace Conductor.Pier.Model
         /// <param name="OrgaoExpedidorIdentidade">Org\u00E3o expedidor do RG.</param>
         /// <param name="UnidadeFederativaIdentidade">Sigla da Unidade Federativa de onde foi expedido a Identidade.</param>
         /// <param name="DataEmissaoIdentidade">Data emiss\u00E3o da identidade no formato aaaa-MM-dd.</param>
+        /// <param name="FlagDeficienteVisual">Flag que identifica uma pessoa como deficiente visual.</param>
         /// <param name="IdEstadoCivil">Id Estado civil da pessoa fisica.</param>
         /// <param name="IdProfissao">Profiss\u00E3o da pessoa fisica.</param>
         /// <param name="IdNaturezaOcupacao">Id Natureza Ocupa\u00E7\u00E3o da pessoa fisica.</param>
@@ -69,7 +70,7 @@ namespace Conductor.Pier.Model
         /// <param name="ResponsavelDigitacao">Respons\u00E1vel pela digita\u00E7\u00E3o da proposta.</param>
         /// <param name="IdPromotorVenda">C\u00F3digo identificador do promotor de venda.</param>
 
-        public ObjetoPessoaFsicaAprovada(string Nome = null, string NomeMae = null, string DataNascimento = null, string Sexo = null, string Cpf = null, string NumeroIdentidade = null, string OrgaoExpedidorIdentidade = null, string UnidadeFederativaIdentidade = null, string DataEmissaoIdentidade = null, long? IdEstadoCivil = null, string IdProfissao = null, long? IdNaturezaOcupacao = null, long? IdNacionalidade = null, long? IdOrigemComercial = null, long? IdProduto = null, int? NumeroAgencia = null, string NumeroContaCorrente = null, string Email = null, int? DiaVencimento = null, string NomeImpresso = null, string NomeEmpresa = null, double? ValorRenda = null, string CanalEntrada = null, int? ValorPontuacao = null, List<TelefonePessoaAprovadaPersist> Telefones = null, List<EnderecoAprovadoPersist> Enderecos = null, double? LimiteGlobal = null, double? LimiteMaximo = null, double? LimiteParcelas = null, double? LimiteConsignado = null, string NomeReferencia1 = null, string EnderecoReferencia1 = null, string NomeReferencia2 = null, string EnderecoReferencia2 = null, bool? ImpedidoFinanciamento = null, string FuncaoAtiva = null, string NaturalidadeCidade = null, string NaturalidadeEstado = null, int? GrauInstrucao = null, int? NumeroDependentes = null, string NomePai = null, int? ChequeEspecial = null, int? NumeroBanco = null, string Matricula = null, string ResponsavelDigitacao = null, int? IdPromotorVenda = null)
+        public ObjetoPessoaFsicaAprovada(string Nome = null, string NomeMae = null, string DataNascimento = null, string Sexo = null, string Cpf = null, string NumeroIdentidade = null, string OrgaoExpedidorIdentidade = null, string UnidadeFederativaIdentidade = null, string DataEmissaoIdentidade = null, bool? FlagDeficienteVisual = null, long? IdEstadoCivil = null, string IdProfissao = null, long? IdNaturezaOcupacao = null, long? IdNacionalidade = null, long? IdOrigemComercial = null, long? IdProduto = null, int? NumeroAgencia = null, string NumeroContaCorrente = null, string Email = null, int? DiaVencimento = null, string NomeImpresso = null, string NomeEmpresa = null, double? ValorRenda = null, string CanalEntrada = null, int? ValorPontuacao = null, List<TelefonePessoaAprovadaPersist> Telefones = null, List<EnderecoAprovadoPersist> Enderecos = null, double? LimiteGlobal = null, double? LimiteMaximo = null, double? LimiteParcelas = null, double? LimiteConsignado = null, string NomeReferencia1 = null, string EnderecoReferencia1 = null, string NomeReferencia2 = null, string EnderecoReferencia2 = null, bool? ImpedidoFinanciamento = null, string FuncaoAtiva = null, string NaturalidadeCidade = null, string NaturalidadeEstado = null, int? GrauInstrucao = null, int? NumeroDependentes = null, string NomePai = null, int? ChequeEspecial = null, int? NumeroBanco = null, string Matricula = null, string ResponsavelDigitacao = null, int? IdPromotorVenda = null)
         {
             // to ensure "Nome" is required (not null)
             if (Nome == null)
@@ -168,6 +169,7 @@ namespace Conductor.Pier.Model
             this.OrgaoExpedidorIdentidade = OrgaoExpedidorIdentidade;
             this.UnidadeFederativaIdentidade = UnidadeFederativaIdentidade;
             this.DataEmissaoIdentidade = DataEmissaoIdentidade;
+            this.FlagDeficienteVisual = FlagDeficienteVisual;
             this.IdEstadoCivil = IdEstadoCivil;
             this.IdProfissao = IdProfissao;
             this.IdNaturezaOcupacao = IdNaturezaOcupacao;
@@ -263,6 +265,13 @@ namespace Conductor.Pier.Model
         /// <value>Data emiss\u00E3o da identidade no formato aaaa-MM-dd</value>
         [DataMember(Name="dataEmissaoIdentidade", EmitDefaultValue=false)]
         public string DataEmissaoIdentidade { get; set; }
+    
+        /// <summary>
+        /// Flag que identifica uma pessoa como deficiente visual
+        /// </summary>
+        /// <value>Flag que identifica uma pessoa como deficiente visual</value>
+        [DataMember(Name="flagDeficienteVisual", EmitDefaultValue=false)]
+        public bool? FlagDeficienteVisual { get; set; }
     
         /// <summary>
         /// Id Estado civil da pessoa fisica
@@ -540,6 +549,7 @@ namespace Conductor.Pier.Model
             sb.Append("  OrgaoExpedidorIdentidade: ").Append(OrgaoExpedidorIdentidade).Append("\n");
             sb.Append("  UnidadeFederativaIdentidade: ").Append(UnidadeFederativaIdentidade).Append("\n");
             sb.Append("  DataEmissaoIdentidade: ").Append(DataEmissaoIdentidade).Append("\n");
+            sb.Append("  FlagDeficienteVisual: ").Append(FlagDeficienteVisual).Append("\n");
             sb.Append("  IdEstadoCivil: ").Append(IdEstadoCivil).Append("\n");
             sb.Append("  IdProfissao: ").Append(IdProfissao).Append("\n");
             sb.Append("  IdNaturezaOcupacao: ").Append(IdNaturezaOcupacao).Append("\n");
@@ -658,6 +668,11 @@ namespace Conductor.Pier.Model
                     this.DataEmissaoIdentidade == other.DataEmissaoIdentidade ||
                     this.DataEmissaoIdentidade != null &&
                     this.DataEmissaoIdentidade.Equals(other.DataEmissaoIdentidade)
+                ) && 
+                (
+                    this.FlagDeficienteVisual == other.FlagDeficienteVisual ||
+                    this.FlagDeficienteVisual != null &&
+                    this.FlagDeficienteVisual.Equals(other.FlagDeficienteVisual)
                 ) && 
                 (
                     this.IdEstadoCivil == other.IdEstadoCivil ||
@@ -884,6 +899,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.DataEmissaoIdentidade != null)
                     hash = hash * 59 + this.DataEmissaoIdentidade.GetHashCode();
+                
+                if (this.FlagDeficienteVisual != null)
+                    hash = hash * 59 + this.FlagDeficienteVisual.GetHashCode();
                 
                 if (this.IdEstadoCivil != null)
                     hash = hash * 59 + this.IdEstadoCivil.GetHashCode();

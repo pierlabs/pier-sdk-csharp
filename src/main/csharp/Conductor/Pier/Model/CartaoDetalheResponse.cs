@@ -22,7 +22,6 @@ namespace Conductor.Pier.Model
         /// Initializes a new instance of the <see cref="CartaoDetalheResponse" /> class.
         /// Initializes a new instance of the <see cref="CartaoDetalheResponse" />class.
         /// </summary>
-        /// <param name="Portador">Apresenta o n\u00FAmero do portador do cart\u00E3o.</param>
         /// <param name="Id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o.</param>
         /// <param name="FlagTitular">Apresenta o tipo do Portador do cart\u00E3o, sendo: (1: Titular, 0: Adicional).</param>
         /// <param name="IdPessoa">C\u00F3digo de Identifica\u00E7\u00E3o da Pessoa a qual o cart\u00E3o pertence.</param>
@@ -42,15 +41,19 @@ namespace Conductor.Pier.Model
         /// <param name="ImpressaoAvulsa">Quando ativa, indica que o cart\u00E3o fora impresso na Origem Comercial.</param>
         /// <param name="DataImpressao">Apresenta a data em que o cart\u00E3o fora impresso, caso impress\u00E3o em loja, ou a data em que ele fora inclu\u00EDdo no arquivo para impress\u00E3o via gr\u00E1fica.</param>
         /// <param name="NomeArquivoImpressao">Apresenta o nome do arquivo onde o cart\u00E3o fora inclu\u00EDdo para impress\u00E3o por uma gr\u00E1fica, quando houver.</param>
-        /// <param name="DescricaoTipoCartao">Descreve o tipo do cart\u00E3o.</param>
         /// <param name="IdProduto">C\u00F3digo de Identifica\u00E7\u00E3o do Produto a qual o cart\u00E3o pertence.</param>
         /// <param name="NomeImpresso">Apresenta o nome impresso no cart\u00E3o.</param>
-        /// <param name="TipoCartao">Indica o identificador do tipo do cart\u00E3o.</param>
         /// <param name="CodigoDesbloqueio">Apresenta um c\u00F3digo espec\u00EDfico para ser utilizado como vari\u00E1vel no processo de desbloqueio do cart\u00E3o para emissores que querem usar esta funcionalidade.</param>
+        /// <param name="Portador">Apresenta o n\u00FAmero do portador do cart\u00E3o.</param>
+        /// <param name="FlagCartaoMifare">Identifica se o cart\u00E3o cont\u00E9m a tecnologia mifare.</param>
+        /// <param name="IdImagem">Apresenta o identificador da cor do cart\u00E3o.</param>
+        /// <param name="DescricaoTipoCartao">Descreve o tipo do cart\u00E3o.</param>
+        /// <param name="TipoCartao">Indica o identificador do tipo do cart\u00E3o.</param>
+        /// <param name="IdMifare">C\u00F3digo identificador da tecnologia MIFARE.</param>
+        /// <param name="MatriculaMifare">N\u00FAmero da matricula do portador.</param>
 
-        public CartaoDetalheResponse(int? Portador = null, long? Id = null, int? FlagTitular = null, long? IdPessoa = null, int? SequencialCartao = null, long? IdConta = null, long? IdStatus = null, string DataStatus = null, long? IdEstagio = null, string DataEstagio = null, long? NumeroBin = null, string NumeroCartao = null, long? NumeroCartaoHash = null, string NumeroCartaoCriptografado = null, string DataEmissao = null, string DataValidade = null, int? CartaoVirtual = null, int? ImpressaoAvulsa = null, string DataImpressao = null, string NomeArquivoImpressao = null, string DescricaoTipoCartao = null, long? IdProduto = null, string NomeImpresso = null, long? TipoCartao = null, string CodigoDesbloqueio = null)
+        public CartaoDetalheResponse(long? Id = null, int? FlagTitular = null, long? IdPessoa = null, int? SequencialCartao = null, long? IdConta = null, long? IdStatus = null, string DataStatus = null, long? IdEstagio = null, string DataEstagio = null, long? NumeroBin = null, string NumeroCartao = null, long? NumeroCartaoHash = null, string NumeroCartaoCriptografado = null, string DataEmissao = null, string DataValidade = null, int? CartaoVirtual = null, int? ImpressaoAvulsa = null, string DataImpressao = null, string NomeArquivoImpressao = null, long? IdProduto = null, string NomeImpresso = null, string CodigoDesbloqueio = null, int? Portador = null, bool? FlagCartaoMifare = null, long? IdImagem = null, string DescricaoTipoCartao = null, long? TipoCartao = null, long? IdMifare = null, string MatriculaMifare = null)
         {
-            this.Portador = Portador;
             this.Id = Id;
             this.FlagTitular = FlagTitular;
             this.IdPessoa = IdPessoa;
@@ -70,21 +73,19 @@ namespace Conductor.Pier.Model
             this.ImpressaoAvulsa = ImpressaoAvulsa;
             this.DataImpressao = DataImpressao;
             this.NomeArquivoImpressao = NomeArquivoImpressao;
-            this.DescricaoTipoCartao = DescricaoTipoCartao;
             this.IdProduto = IdProduto;
             this.NomeImpresso = NomeImpresso;
-            this.TipoCartao = TipoCartao;
             this.CodigoDesbloqueio = CodigoDesbloqueio;
+            this.Portador = Portador;
+            this.FlagCartaoMifare = FlagCartaoMifare;
+            this.IdImagem = IdImagem;
+            this.DescricaoTipoCartao = DescricaoTipoCartao;
+            this.TipoCartao = TipoCartao;
+            this.IdMifare = IdMifare;
+            this.MatriculaMifare = MatriculaMifare;
             
         }
         
-    
-        /// <summary>
-        /// Apresenta o n\u00FAmero do portador do cart\u00E3o
-        /// </summary>
-        /// <value>Apresenta o n\u00FAmero do portador do cart\u00E3o</value>
-        [DataMember(Name="portador", EmitDefaultValue=false)]
-        public int? Portador { get; set; }
     
         /// <summary>
         /// C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o
@@ -220,13 +221,6 @@ namespace Conductor.Pier.Model
         public string NomeArquivoImpressao { get; set; }
     
         /// <summary>
-        /// Descreve o tipo do cart\u00E3o
-        /// </summary>
-        /// <value>Descreve o tipo do cart\u00E3o</value>
-        [DataMember(Name="descricaoTipoCartao", EmitDefaultValue=false)]
-        public string DescricaoTipoCartao { get; set; }
-    
-        /// <summary>
         /// C\u00F3digo de Identifica\u00E7\u00E3o do Produto a qual o cart\u00E3o pertence
         /// </summary>
         /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do Produto a qual o cart\u00E3o pertence</value>
@@ -241,6 +235,41 @@ namespace Conductor.Pier.Model
         public string NomeImpresso { get; set; }
     
         /// <summary>
+        /// Apresenta um c\u00F3digo espec\u00EDfico para ser utilizado como vari\u00E1vel no processo de desbloqueio do cart\u00E3o para emissores que querem usar esta funcionalidade
+        /// </summary>
+        /// <value>Apresenta um c\u00F3digo espec\u00EDfico para ser utilizado como vari\u00E1vel no processo de desbloqueio do cart\u00E3o para emissores que querem usar esta funcionalidade</value>
+        [DataMember(Name="codigoDesbloqueio", EmitDefaultValue=false)]
+        public string CodigoDesbloqueio { get; set; }
+    
+        /// <summary>
+        /// Apresenta o n\u00FAmero do portador do cart\u00E3o
+        /// </summary>
+        /// <value>Apresenta o n\u00FAmero do portador do cart\u00E3o</value>
+        [DataMember(Name="portador", EmitDefaultValue=false)]
+        public int? Portador { get; set; }
+    
+        /// <summary>
+        /// Identifica se o cart\u00E3o cont\u00E9m a tecnologia mifare
+        /// </summary>
+        /// <value>Identifica se o cart\u00E3o cont\u00E9m a tecnologia mifare</value>
+        [DataMember(Name="flagCartaoMifare", EmitDefaultValue=false)]
+        public bool? FlagCartaoMifare { get; set; }
+    
+        /// <summary>
+        /// Apresenta o identificador da cor do cart\u00E3o
+        /// </summary>
+        /// <value>Apresenta o identificador da cor do cart\u00E3o</value>
+        [DataMember(Name="idImagem", EmitDefaultValue=false)]
+        public long? IdImagem { get; set; }
+    
+        /// <summary>
+        /// Descreve o tipo do cart\u00E3o
+        /// </summary>
+        /// <value>Descreve o tipo do cart\u00E3o</value>
+        [DataMember(Name="descricaoTipoCartao", EmitDefaultValue=false)]
+        public string DescricaoTipoCartao { get; set; }
+    
+        /// <summary>
         /// Indica o identificador do tipo do cart\u00E3o
         /// </summary>
         /// <value>Indica o identificador do tipo do cart\u00E3o</value>
@@ -248,11 +277,18 @@ namespace Conductor.Pier.Model
         public long? TipoCartao { get; set; }
     
         /// <summary>
-        /// Apresenta um c\u00F3digo espec\u00EDfico para ser utilizado como vari\u00E1vel no processo de desbloqueio do cart\u00E3o para emissores que querem usar esta funcionalidade
+        /// C\u00F3digo identificador da tecnologia MIFARE
         /// </summary>
-        /// <value>Apresenta um c\u00F3digo espec\u00EDfico para ser utilizado como vari\u00E1vel no processo de desbloqueio do cart\u00E3o para emissores que querem usar esta funcionalidade</value>
-        [DataMember(Name="codigoDesbloqueio", EmitDefaultValue=false)]
-        public string CodigoDesbloqueio { get; set; }
+        /// <value>C\u00F3digo identificador da tecnologia MIFARE</value>
+        [DataMember(Name="idMifare", EmitDefaultValue=false)]
+        public long? IdMifare { get; set; }
+    
+        /// <summary>
+        /// N\u00FAmero da matricula do portador
+        /// </summary>
+        /// <value>N\u00FAmero da matricula do portador</value>
+        [DataMember(Name="matriculaMifare", EmitDefaultValue=false)]
+        public string MatriculaMifare { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -262,7 +298,6 @@ namespace Conductor.Pier.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CartaoDetalheResponse {\n");
-            sb.Append("  Portador: ").Append(Portador).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  FlagTitular: ").Append(FlagTitular).Append("\n");
             sb.Append("  IdPessoa: ").Append(IdPessoa).Append("\n");
@@ -282,11 +317,16 @@ namespace Conductor.Pier.Model
             sb.Append("  ImpressaoAvulsa: ").Append(ImpressaoAvulsa).Append("\n");
             sb.Append("  DataImpressao: ").Append(DataImpressao).Append("\n");
             sb.Append("  NomeArquivoImpressao: ").Append(NomeArquivoImpressao).Append("\n");
-            sb.Append("  DescricaoTipoCartao: ").Append(DescricaoTipoCartao).Append("\n");
             sb.Append("  IdProduto: ").Append(IdProduto).Append("\n");
             sb.Append("  NomeImpresso: ").Append(NomeImpresso).Append("\n");
-            sb.Append("  TipoCartao: ").Append(TipoCartao).Append("\n");
             sb.Append("  CodigoDesbloqueio: ").Append(CodigoDesbloqueio).Append("\n");
+            sb.Append("  Portador: ").Append(Portador).Append("\n");
+            sb.Append("  FlagCartaoMifare: ").Append(FlagCartaoMifare).Append("\n");
+            sb.Append("  IdImagem: ").Append(IdImagem).Append("\n");
+            sb.Append("  DescricaoTipoCartao: ").Append(DescricaoTipoCartao).Append("\n");
+            sb.Append("  TipoCartao: ").Append(TipoCartao).Append("\n");
+            sb.Append("  IdMifare: ").Append(IdMifare).Append("\n");
+            sb.Append("  MatriculaMifare: ").Append(MatriculaMifare).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -324,11 +364,6 @@ namespace Conductor.Pier.Model
                 return false;
 
             return 
-                (
-                    this.Portador == other.Portador ||
-                    this.Portador != null &&
-                    this.Portador.Equals(other.Portador)
-                ) && 
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
@@ -425,11 +460,6 @@ namespace Conductor.Pier.Model
                     this.NomeArquivoImpressao.Equals(other.NomeArquivoImpressao)
                 ) && 
                 (
-                    this.DescricaoTipoCartao == other.DescricaoTipoCartao ||
-                    this.DescricaoTipoCartao != null &&
-                    this.DescricaoTipoCartao.Equals(other.DescricaoTipoCartao)
-                ) && 
-                (
                     this.IdProduto == other.IdProduto ||
                     this.IdProduto != null &&
                     this.IdProduto.Equals(other.IdProduto)
@@ -440,14 +470,44 @@ namespace Conductor.Pier.Model
                     this.NomeImpresso.Equals(other.NomeImpresso)
                 ) && 
                 (
+                    this.CodigoDesbloqueio == other.CodigoDesbloqueio ||
+                    this.CodigoDesbloqueio != null &&
+                    this.CodigoDesbloqueio.Equals(other.CodigoDesbloqueio)
+                ) && 
+                (
+                    this.Portador == other.Portador ||
+                    this.Portador != null &&
+                    this.Portador.Equals(other.Portador)
+                ) && 
+                (
+                    this.FlagCartaoMifare == other.FlagCartaoMifare ||
+                    this.FlagCartaoMifare != null &&
+                    this.FlagCartaoMifare.Equals(other.FlagCartaoMifare)
+                ) && 
+                (
+                    this.IdImagem == other.IdImagem ||
+                    this.IdImagem != null &&
+                    this.IdImagem.Equals(other.IdImagem)
+                ) && 
+                (
+                    this.DescricaoTipoCartao == other.DescricaoTipoCartao ||
+                    this.DescricaoTipoCartao != null &&
+                    this.DescricaoTipoCartao.Equals(other.DescricaoTipoCartao)
+                ) && 
+                (
                     this.TipoCartao == other.TipoCartao ||
                     this.TipoCartao != null &&
                     this.TipoCartao.Equals(other.TipoCartao)
                 ) && 
                 (
-                    this.CodigoDesbloqueio == other.CodigoDesbloqueio ||
-                    this.CodigoDesbloqueio != null &&
-                    this.CodigoDesbloqueio.Equals(other.CodigoDesbloqueio)
+                    this.IdMifare == other.IdMifare ||
+                    this.IdMifare != null &&
+                    this.IdMifare.Equals(other.IdMifare)
+                ) && 
+                (
+                    this.MatriculaMifare == other.MatriculaMifare ||
+                    this.MatriculaMifare != null &&
+                    this.MatriculaMifare.Equals(other.MatriculaMifare)
                 );
         }
 
@@ -462,9 +522,6 @@ namespace Conductor.Pier.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
-                if (this.Portador != null)
-                    hash = hash * 59 + this.Portador.GetHashCode();
                 
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
@@ -523,20 +580,35 @@ namespace Conductor.Pier.Model
                 if (this.NomeArquivoImpressao != null)
                     hash = hash * 59 + this.NomeArquivoImpressao.GetHashCode();
                 
-                if (this.DescricaoTipoCartao != null)
-                    hash = hash * 59 + this.DescricaoTipoCartao.GetHashCode();
-                
                 if (this.IdProduto != null)
                     hash = hash * 59 + this.IdProduto.GetHashCode();
                 
                 if (this.NomeImpresso != null)
                     hash = hash * 59 + this.NomeImpresso.GetHashCode();
                 
+                if (this.CodigoDesbloqueio != null)
+                    hash = hash * 59 + this.CodigoDesbloqueio.GetHashCode();
+                
+                if (this.Portador != null)
+                    hash = hash * 59 + this.Portador.GetHashCode();
+                
+                if (this.FlagCartaoMifare != null)
+                    hash = hash * 59 + this.FlagCartaoMifare.GetHashCode();
+                
+                if (this.IdImagem != null)
+                    hash = hash * 59 + this.IdImagem.GetHashCode();
+                
+                if (this.DescricaoTipoCartao != null)
+                    hash = hash * 59 + this.DescricaoTipoCartao.GetHashCode();
+                
                 if (this.TipoCartao != null)
                     hash = hash * 59 + this.TipoCartao.GetHashCode();
                 
-                if (this.CodigoDesbloqueio != null)
-                    hash = hash * 59 + this.CodigoDesbloqueio.GetHashCode();
+                if (this.IdMifare != null)
+                    hash = hash * 59 + this.IdMifare.GetHashCode();
+                
+                if (this.MatriculaMifare != null)
+                    hash = hash * 59 + this.MatriculaMifare.GetHashCode();
                 
                 return hash;
             }

@@ -32,9 +32,10 @@ namespace Conductor.Pier.Model
         /// <param name="UnidadeFederativaIdentidade">Unidade Federativa da identidade.</param>
         /// <param name="DataEmissaoIdentidade">Data de emiss\u00E3o do Documento de Identidade do Adicional em formato yyyy-MM-dd.</param>
         /// <param name="IdParentesco">C\u00F3digo de identifica\u00E7\u00E3o do Parentesco do Adicional com o Titular.</param>
+        /// <param name="FlagDeficienteVisual">Flag que identifica uma pessoa como deficiente visual.</param>
         /// <param name="Telefones">Lista de telefones do adicional.</param>
 
-        public AdicionalUpdate(string Nome = null, string NomeImpresso = null, string NumeroReceitaFederal = null, string DataNascimento = null, string Sexo = null, string NumeroIdentidade = null, string OrgaoExpedidorIdentidade = null, string UnidadeFederativaIdentidade = null, string DataEmissaoIdentidade = null, long? IdParentesco = null, List<TelefoneAdicionalUpdate> Telefones = null)
+        public AdicionalUpdate(string Nome = null, string NomeImpresso = null, string NumeroReceitaFederal = null, string DataNascimento = null, string Sexo = null, string NumeroIdentidade = null, string OrgaoExpedidorIdentidade = null, string UnidadeFederativaIdentidade = null, string DataEmissaoIdentidade = null, long? IdParentesco = null, bool? FlagDeficienteVisual = null, List<TelefoneAdicionalUpdate> Telefones = null)
         {
             // to ensure "Nome" is required (not null)
             if (Nome == null)
@@ -62,6 +63,7 @@ namespace Conductor.Pier.Model
             this.UnidadeFederativaIdentidade = UnidadeFederativaIdentidade;
             this.DataEmissaoIdentidade = DataEmissaoIdentidade;
             this.IdParentesco = IdParentesco;
+            this.FlagDeficienteVisual = FlagDeficienteVisual;
             this.Telefones = Telefones;
             
         }
@@ -138,6 +140,13 @@ namespace Conductor.Pier.Model
         public long? IdParentesco { get; set; }
     
         /// <summary>
+        /// Flag que identifica uma pessoa como deficiente visual
+        /// </summary>
+        /// <value>Flag que identifica uma pessoa como deficiente visual</value>
+        [DataMember(Name="flagDeficienteVisual", EmitDefaultValue=false)]
+        public bool? FlagDeficienteVisual { get; set; }
+    
+        /// <summary>
         /// Lista de telefones do adicional
         /// </summary>
         /// <value>Lista de telefones do adicional</value>
@@ -162,6 +171,7 @@ namespace Conductor.Pier.Model
             sb.Append("  UnidadeFederativaIdentidade: ").Append(UnidadeFederativaIdentidade).Append("\n");
             sb.Append("  DataEmissaoIdentidade: ").Append(DataEmissaoIdentidade).Append("\n");
             sb.Append("  IdParentesco: ").Append(IdParentesco).Append("\n");
+            sb.Append("  FlagDeficienteVisual: ").Append(FlagDeficienteVisual).Append("\n");
             sb.Append("  Telefones: ").Append(Telefones).Append("\n");
             
             sb.Append("}\n");
@@ -251,6 +261,11 @@ namespace Conductor.Pier.Model
                     this.IdParentesco.Equals(other.IdParentesco)
                 ) && 
                 (
+                    this.FlagDeficienteVisual == other.FlagDeficienteVisual ||
+                    this.FlagDeficienteVisual != null &&
+                    this.FlagDeficienteVisual.Equals(other.FlagDeficienteVisual)
+                ) && 
+                (
                     this.Telefones == other.Telefones ||
                     this.Telefones != null &&
                     this.Telefones.SequenceEqual(other.Telefones)
@@ -298,6 +313,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.IdParentesco != null)
                     hash = hash * 59 + this.IdParentesco.GetHashCode();
+                
+                if (this.FlagDeficienteVisual != null)
+                    hash = hash * 59 + this.FlagDeficienteVisual.GetHashCode();
                 
                 if (this.Telefones != null)
                     hash = hash * 59 + this.Telefones.GetHashCode();
