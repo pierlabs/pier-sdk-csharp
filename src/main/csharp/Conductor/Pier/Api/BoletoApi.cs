@@ -178,26 +178,28 @@ namespace Conductor.Pier.Api
         ApiResponse<BoletoResponse> RegistrarBoletoWithHttpInfo (long? id);
         
         /// <summary>
-        /// Gera um pdf do boleto
+        /// Gerar boleto de pagamento
         /// </summary>
         /// <remarks>
-        /// Este servi\u00E7o gera um pdf do boleto
+        /// Gera um boleto de pagamento em formato PDF
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Cobranca (id)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do boleto</param>
+        /// <param name="zeraValorCodigoBarras">Indica se o fator de vencimento e valor do documento devem ser zerados na linha digit\u00E1vel (optional)</param>
         /// <returns>Object</returns>
-        Object VisualizarBoleto (long? id);
+        Object VisualizarBoleto (long? id, bool? zeraValorCodigoBarras = null);
   
         /// <summary>
-        /// Gera um pdf do boleto
+        /// Gerar boleto de pagamento
         /// </summary>
         /// <remarks>
-        /// Este servi\u00E7o gera um pdf do boleto
+        /// Gera um boleto de pagamento em formato PDF
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Cobranca (id)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do boleto</param>
+        /// <param name="zeraValorCodigoBarras">Indica se o fator de vencimento e valor do documento devem ser zerados na linha digit\u00E1vel (optional)</param>
         /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> VisualizarBoletoWithHttpInfo (long? id);
+        ApiResponse<Object> VisualizarBoletoWithHttpInfo (long? id, bool? zeraValorCodigoBarras = null);
         
         #endregion Synchronous Operations
         
@@ -364,26 +366,28 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<BoletoResponse>> RegistrarBoletoAsyncWithHttpInfo (long? id);
         
         /// <summary>
-        /// Gera um pdf do boleto
+        /// Gerar boleto de pagamento
         /// </summary>
         /// <remarks>
-        /// Este servi\u00E7o gera um pdf do boleto
+        /// Gera um boleto de pagamento em formato PDF
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Cobranca (id)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do boleto</param>
+        /// <param name="zeraValorCodigoBarras">Indica se o fator de vencimento e valor do documento devem ser zerados na linha digit\u00E1vel (optional)</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> VisualizarBoletoAsync (long? id);
+        System.Threading.Tasks.Task<Object> VisualizarBoletoAsync (long? id, bool? zeraValorCodigoBarras = null);
 
         /// <summary>
-        /// Gera um pdf do boleto
+        /// Gerar boleto de pagamento
         /// </summary>
         /// <remarks>
-        /// Este servi\u00E7o gera um pdf do boleto
+        /// Gera um boleto de pagamento em formato PDF
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Cobranca (id)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do boleto</param>
+        /// <param name="zeraValorCodigoBarras">Indica se o fator de vencimento e valor do documento devem ser zerados na linha digit\u00E1vel (optional)</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> VisualizarBoletoAsyncWithHttpInfo (long? id);
+        System.Threading.Tasks.Task<ApiResponse<Object>> VisualizarBoletoAsyncWithHttpInfo (long? id, bool? zeraValorCodigoBarras = null);
         
         #endregion Asynchronous Operations
         
@@ -1534,24 +1538,26 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Gera um pdf do boleto Este servi\u00E7o gera um pdf do boleto
+        /// Gerar boleto de pagamento Gera um boleto de pagamento em formato PDF
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Cobranca (id)</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do boleto</param> 
+        /// <param name="zeraValorCodigoBarras">Indica se o fator de vencimento e valor do documento devem ser zerados na linha digit\u00E1vel (optional)</param> 
         /// <returns>Object</returns>
-        public Object VisualizarBoleto (long? id)
+        public Object VisualizarBoleto (long? id, bool? zeraValorCodigoBarras = null)
         {
-             ApiResponse<Object> localVarResponse = VisualizarBoletoWithHttpInfo(id);
+             ApiResponse<Object> localVarResponse = VisualizarBoletoWithHttpInfo(id, zeraValorCodigoBarras);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Gera um pdf do boleto Este servi\u00E7o gera um pdf do boleto
+        /// Gerar boleto de pagamento Gera um boleto de pagamento em formato PDF
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Cobranca (id)</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do boleto</param> 
+        /// <param name="zeraValorCodigoBarras">Indica se o fator de vencimento e valor do documento devem ser zerados na linha digit\u00E1vel (optional)</param> 
         /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > VisualizarBoletoWithHttpInfo (long? id)
+        public ApiResponse< Object > VisualizarBoletoWithHttpInfo (long? id, bool? zeraValorCodigoBarras = null)
         {
             
             // verify the required parameter 'id' is set
@@ -1587,6 +1593,7 @@ namespace Conductor.Pier.Api
             localVarPathParams.Add("format", "json");
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             
+            if (zeraValorCodigoBarras != null) localVarQueryParams.Add("zeraValorCodigoBarras", Configuration.ApiClient.ParameterToString(zeraValorCodigoBarras)); // query parameter
             
             
             
@@ -1614,25 +1621,27 @@ namespace Conductor.Pier.Api
 
         
         /// <summary>
-        /// Gera um pdf do boleto Este servi\u00E7o gera um pdf do boleto
+        /// Gerar boleto de pagamento Gera um boleto de pagamento em formato PDF
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Cobranca (id)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do boleto</param>
+        /// <param name="zeraValorCodigoBarras">Indica se o fator de vencimento e valor do documento devem ser zerados na linha digit\u00E1vel (optional)</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> VisualizarBoletoAsync (long? id)
+        public async System.Threading.Tasks.Task<Object> VisualizarBoletoAsync (long? id, bool? zeraValorCodigoBarras = null)
         {
-             ApiResponse<Object> localVarResponse = await VisualizarBoletoAsyncWithHttpInfo(id);
+             ApiResponse<Object> localVarResponse = await VisualizarBoletoAsyncWithHttpInfo(id, zeraValorCodigoBarras);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Gera um pdf do boleto Este servi\u00E7o gera um pdf do boleto
+        /// Gerar boleto de pagamento Gera um boleto de pagamento em formato PDF
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o da Cobranca (id)</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do boleto</param>
+        /// <param name="zeraValorCodigoBarras">Indica se o fator de vencimento e valor do documento devem ser zerados na linha digit\u00E1vel (optional)</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> VisualizarBoletoAsyncWithHttpInfo (long? id)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> VisualizarBoletoAsyncWithHttpInfo (long? id, bool? zeraValorCodigoBarras = null)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling VisualizarBoleto");
@@ -1666,6 +1675,7 @@ namespace Conductor.Pier.Api
             localVarPathParams.Add("format", "json");
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             
+            if (zeraValorCodigoBarras != null) localVarQueryParams.Add("zeraValorCodigoBarras", Configuration.ApiClient.ParameterToString(zeraValorCodigoBarras)); // query parameter
             
             
             

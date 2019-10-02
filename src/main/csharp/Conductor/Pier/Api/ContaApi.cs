@@ -1020,8 +1020,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
         /// <param name="dataValidade">Data de Validade</param>
+        /// <param name="idPessoaFisica">C\u00F3digo de Identifica\u00E7\u00E3o da pessoa a qual o cart\u00E3o ser\u00E1 vinculado (id) (optional)</param>
         /// <returns>CartaoImpressaoResponse</returns>
-        CartaoImpressaoResponse GerarCartaoVirtual (long? id, string dataValidade);
+        CartaoImpressaoResponse GerarCartaoVirtual (long? id, string dataValidade, long? idPessoaFisica = null);
   
         /// <summary>
         /// Realiza a gera\u00E7\u00E3o de um cart\u00E3o virtual
@@ -1032,8 +1033,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
         /// <param name="dataValidade">Data de Validade</param>
+        /// <param name="idPessoaFisica">C\u00F3digo de Identifica\u00E7\u00E3o da pessoa a qual o cart\u00E3o ser\u00E1 vinculado (id) (optional)</param>
         /// <returns>ApiResponse of CartaoImpressaoResponse</returns>
-        ApiResponse<CartaoImpressaoResponse> GerarCartaoVirtualWithHttpInfo (long? id, string dataValidade);
+        ApiResponse<CartaoImpressaoResponse> GerarCartaoVirtualWithHttpInfo (long? id, string dataValidade, long? idPessoaFisica = null);
         
         /// <summary>
         /// Listar uma tarifa de d\u00E9bito para uma conta
@@ -1083,8 +1085,10 @@ namespace Conductor.Pier.Api
         /// <param name="dataCadastro">Apresenta a data em que o cart\u00E3o foi gerado (optional)</param>
         /// <param name="dataUltimaAlteracaoVencimento">Apresenta a data da ultima altera\u00E7\u00E3o de vencimento (optional)</param>
         /// <param name="funcaoAtiva"> (optional)</param>
+        /// <param name="possuiOverLimit">Sinaliza se o OverLimit da conta est\u00E1 ativo (optional)</param>
+        /// <param name="behaviorScore">Apresenta valor de pontua\u00E7\u00E3o de comportamento (behavior score). (optional)</param>
         /// <returns>PageContaResponse</returns>
-        PageContaResponse ListarContas (List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, string dataStatusConta = null, string dataCadastro = null, string dataUltimaAlteracaoVencimento = null, string funcaoAtiva = null);
+        PageContaResponse ListarContas (List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, string dataStatusConta = null, string dataCadastro = null, string dataUltimaAlteracaoVencimento = null, string funcaoAtiva = null, bool? possuiOverLimit = null, int? behaviorScore = null);
   
         /// <summary>
         /// Lista contas existentes na base de dados do Emissor
@@ -1106,8 +1110,10 @@ namespace Conductor.Pier.Api
         /// <param name="dataCadastro">Apresenta a data em que o cart\u00E3o foi gerado (optional)</param>
         /// <param name="dataUltimaAlteracaoVencimento">Apresenta a data da ultima altera\u00E7\u00E3o de vencimento (optional)</param>
         /// <param name="funcaoAtiva"> (optional)</param>
+        /// <param name="possuiOverLimit">Sinaliza se o OverLimit da conta est\u00E1 ativo (optional)</param>
+        /// <param name="behaviorScore">Apresenta valor de pontua\u00E7\u00E3o de comportamento (behavior score). (optional)</param>
         /// <returns>ApiResponse of PageContaResponse</returns>
-        ApiResponse<PageContaResponse> ListarContasWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, string dataStatusConta = null, string dataCadastro = null, string dataUltimaAlteracaoVencimento = null, string funcaoAtiva = null);
+        ApiResponse<PageContaResponse> ListarContasWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, string dataStatusConta = null, string dataCadastro = null, string dataUltimaAlteracaoVencimento = null, string funcaoAtiva = null, bool? possuiOverLimit = null, int? behaviorScore = null);
         
         /// <summary>
         /// Lista os controles de subcontas
@@ -1687,7 +1693,7 @@ namespace Conductor.Pier.Api
         /// <param name="flagAtendimento">Flag para lan\u00E7ar o atendimento (optional)</param>
         /// <param name="mensagemAtendimento">Mensagem enviada no atendimento (optional)</param>
         /// <returns>AjusteFinanceiroResponse</returns>
-        AjusteFinanceiroResponse SalvarAjusteFinanceiroConta (long? id, long? idTipoAjuste, string dataAjuste, double? valorAjuste, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null, bool? flagAtendimento = null, string mensagemAtendimento = null);
+        AjusteFinanceiroResponse SalvarAjusteFinanceiroConta1 (long? id, long? idTipoAjuste, string dataAjuste, double? valorAjuste, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null, bool? flagAtendimento = null, string mensagemAtendimento = null);
   
         /// <summary>
         /// Lan\u00E7a um ajuste para a conta do id informado
@@ -1707,7 +1713,7 @@ namespace Conductor.Pier.Api
         /// <param name="flagAtendimento">Flag para lan\u00E7ar o atendimento (optional)</param>
         /// <param name="mensagemAtendimento">Mensagem enviada no atendimento (optional)</param>
         /// <returns>ApiResponse of AjusteFinanceiroResponse</returns>
-        ApiResponse<AjusteFinanceiroResponse> SalvarAjusteFinanceiroContaWithHttpInfo (long? id, long? idTipoAjuste, string dataAjuste, double? valorAjuste, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null, bool? flagAtendimento = null, string mensagemAtendimento = null);
+        ApiResponse<AjusteFinanceiroResponse> SalvarAjusteFinanceiroConta1WithHttpInfo (long? id, long? idTipoAjuste, string dataAjuste, double? valorAjuste, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null, bool? flagAtendimento = null, string mensagemAtendimento = null);
         
         /// <summary>
         /// Realiza o cadastro de uma nova conta
@@ -2908,8 +2914,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
         /// <param name="dataValidade">Data de Validade</param>
+        /// <param name="idPessoaFisica">C\u00F3digo de Identifica\u00E7\u00E3o da pessoa a qual o cart\u00E3o ser\u00E1 vinculado (id) (optional)</param>
         /// <returns>Task of CartaoImpressaoResponse</returns>
-        System.Threading.Tasks.Task<CartaoImpressaoResponse> GerarCartaoVirtualAsync (long? id, string dataValidade);
+        System.Threading.Tasks.Task<CartaoImpressaoResponse> GerarCartaoVirtualAsync (long? id, string dataValidade, long? idPessoaFisica = null);
 
         /// <summary>
         /// Realiza a gera\u00E7\u00E3o de um cart\u00E3o virtual
@@ -2920,8 +2927,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
         /// <param name="dataValidade">Data de Validade</param>
+        /// <param name="idPessoaFisica">C\u00F3digo de Identifica\u00E7\u00E3o da pessoa a qual o cart\u00E3o ser\u00E1 vinculado (id) (optional)</param>
         /// <returns>Task of ApiResponse (CartaoImpressaoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CartaoImpressaoResponse>> GerarCartaoVirtualAsyncWithHttpInfo (long? id, string dataValidade);
+        System.Threading.Tasks.Task<ApiResponse<CartaoImpressaoResponse>> GerarCartaoVirtualAsyncWithHttpInfo (long? id, string dataValidade, long? idPessoaFisica = null);
         
         /// <summary>
         /// Listar uma tarifa de d\u00E9bito para uma conta
@@ -2971,8 +2979,10 @@ namespace Conductor.Pier.Api
         /// <param name="dataCadastro">Apresenta a data em que o cart\u00E3o foi gerado (optional)</param>
         /// <param name="dataUltimaAlteracaoVencimento">Apresenta a data da ultima altera\u00E7\u00E3o de vencimento (optional)</param>
         /// <param name="funcaoAtiva"> (optional)</param>
+        /// <param name="possuiOverLimit">Sinaliza se o OverLimit da conta est\u00E1 ativo (optional)</param>
+        /// <param name="behaviorScore">Apresenta valor de pontua\u00E7\u00E3o de comportamento (behavior score). (optional)</param>
         /// <returns>Task of PageContaResponse</returns>
-        System.Threading.Tasks.Task<PageContaResponse> ListarContasAsync (List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, string dataStatusConta = null, string dataCadastro = null, string dataUltimaAlteracaoVencimento = null, string funcaoAtiva = null);
+        System.Threading.Tasks.Task<PageContaResponse> ListarContasAsync (List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, string dataStatusConta = null, string dataCadastro = null, string dataUltimaAlteracaoVencimento = null, string funcaoAtiva = null, bool? possuiOverLimit = null, int? behaviorScore = null);
 
         /// <summary>
         /// Lista contas existentes na base de dados do Emissor
@@ -2994,8 +3004,10 @@ namespace Conductor.Pier.Api
         /// <param name="dataCadastro">Apresenta a data em que o cart\u00E3o foi gerado (optional)</param>
         /// <param name="dataUltimaAlteracaoVencimento">Apresenta a data da ultima altera\u00E7\u00E3o de vencimento (optional)</param>
         /// <param name="funcaoAtiva"> (optional)</param>
+        /// <param name="possuiOverLimit">Sinaliza se o OverLimit da conta est\u00E1 ativo (optional)</param>
+        /// <param name="behaviorScore">Apresenta valor de pontua\u00E7\u00E3o de comportamento (behavior score). (optional)</param>
         /// <returns>Task of ApiResponse (PageContaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageContaResponse>> ListarContasAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, string dataStatusConta = null, string dataCadastro = null, string dataUltimaAlteracaoVencimento = null, string funcaoAtiva = null);
+        System.Threading.Tasks.Task<ApiResponse<PageContaResponse>> ListarContasAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, string dataStatusConta = null, string dataCadastro = null, string dataUltimaAlteracaoVencimento = null, string funcaoAtiva = null, bool? possuiOverLimit = null, int? behaviorScore = null);
         
         /// <summary>
         /// Lista os controles de subcontas
@@ -3575,7 +3587,7 @@ namespace Conductor.Pier.Api
         /// <param name="flagAtendimento">Flag para lan\u00E7ar o atendimento (optional)</param>
         /// <param name="mensagemAtendimento">Mensagem enviada no atendimento (optional)</param>
         /// <returns>Task of AjusteFinanceiroResponse</returns>
-        System.Threading.Tasks.Task<AjusteFinanceiroResponse> SalvarAjusteFinanceiroContaAsync (long? id, long? idTipoAjuste, string dataAjuste, double? valorAjuste, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null, bool? flagAtendimento = null, string mensagemAtendimento = null);
+        System.Threading.Tasks.Task<AjusteFinanceiroResponse> SalvarAjusteFinanceiroConta1Async (long? id, long? idTipoAjuste, string dataAjuste, double? valorAjuste, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null, bool? flagAtendimento = null, string mensagemAtendimento = null);
 
         /// <summary>
         /// Lan\u00E7a um ajuste para a conta do id informado
@@ -3595,7 +3607,7 @@ namespace Conductor.Pier.Api
         /// <param name="flagAtendimento">Flag para lan\u00E7ar o atendimento (optional)</param>
         /// <param name="mensagemAtendimento">Mensagem enviada no atendimento (optional)</param>
         /// <returns>Task of ApiResponse (AjusteFinanceiroResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AjusteFinanceiroResponse>> SalvarAjusteFinanceiroContaAsyncWithHttpInfo (long? id, long? idTipoAjuste, string dataAjuste, double? valorAjuste, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null, bool? flagAtendimento = null, string mensagemAtendimento = null);
+        System.Threading.Tasks.Task<ApiResponse<AjusteFinanceiroResponse>> SalvarAjusteFinanceiroConta1AsyncWithHttpInfo (long? id, long? idTipoAjuste, string dataAjuste, double? valorAjuste, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null, bool? flagAtendimento = null, string mensagemAtendimento = null);
         
         /// <summary>
         /// Realiza o cadastro de uma nova conta
@@ -10879,10 +10891,11 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param> 
         /// <param name="dataValidade">Data de Validade</param> 
+        /// <param name="idPessoaFisica">C\u00F3digo de Identifica\u00E7\u00E3o da pessoa a qual o cart\u00E3o ser\u00E1 vinculado (id) (optional)</param> 
         /// <returns>CartaoImpressaoResponse</returns>
-        public CartaoImpressaoResponse GerarCartaoVirtual (long? id, string dataValidade)
+        public CartaoImpressaoResponse GerarCartaoVirtual (long? id, string dataValidade, long? idPessoaFisica = null)
         {
-             ApiResponse<CartaoImpressaoResponse> localVarResponse = GerarCartaoVirtualWithHttpInfo(id, dataValidade);
+             ApiResponse<CartaoImpressaoResponse> localVarResponse = GerarCartaoVirtualWithHttpInfo(id, dataValidade, idPessoaFisica);
              return localVarResponse.Data;
         }
 
@@ -10892,8 +10905,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param> 
         /// <param name="dataValidade">Data de Validade</param> 
+        /// <param name="idPessoaFisica">C\u00F3digo de Identifica\u00E7\u00E3o da pessoa a qual o cart\u00E3o ser\u00E1 vinculado (id) (optional)</param> 
         /// <returns>ApiResponse of CartaoImpressaoResponse</returns>
-        public ApiResponse< CartaoImpressaoResponse > GerarCartaoVirtualWithHttpInfo (long? id, string dataValidade)
+        public ApiResponse< CartaoImpressaoResponse > GerarCartaoVirtualWithHttpInfo (long? id, string dataValidade, long? idPessoaFisica = null)
         {
             
             // verify the required parameter 'id' is set
@@ -10934,6 +10948,7 @@ namespace Conductor.Pier.Api
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             
             if (dataValidade != null) localVarQueryParams.Add("dataValidade", Configuration.ApiClient.ParameterToString(dataValidade)); // query parameter
+            if (idPessoaFisica != null) localVarQueryParams.Add("idPessoaFisica", Configuration.ApiClient.ParameterToString(idPessoaFisica)); // query parameter
             
             
             
@@ -10966,10 +10981,11 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
         /// <param name="dataValidade">Data de Validade</param>
+        /// <param name="idPessoaFisica">C\u00F3digo de Identifica\u00E7\u00E3o da pessoa a qual o cart\u00E3o ser\u00E1 vinculado (id) (optional)</param>
         /// <returns>Task of CartaoImpressaoResponse</returns>
-        public async System.Threading.Tasks.Task<CartaoImpressaoResponse> GerarCartaoVirtualAsync (long? id, string dataValidade)
+        public async System.Threading.Tasks.Task<CartaoImpressaoResponse> GerarCartaoVirtualAsync (long? id, string dataValidade, long? idPessoaFisica = null)
         {
-             ApiResponse<CartaoImpressaoResponse> localVarResponse = await GerarCartaoVirtualAsyncWithHttpInfo(id, dataValidade);
+             ApiResponse<CartaoImpressaoResponse> localVarResponse = await GerarCartaoVirtualAsyncWithHttpInfo(id, dataValidade, idPessoaFisica);
              return localVarResponse.Data;
 
         }
@@ -10980,8 +10996,9 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
         /// <param name="dataValidade">Data de Validade</param>
+        /// <param name="idPessoaFisica">C\u00F3digo de Identifica\u00E7\u00E3o da pessoa a qual o cart\u00E3o ser\u00E1 vinculado (id) (optional)</param>
         /// <returns>Task of ApiResponse (CartaoImpressaoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CartaoImpressaoResponse>> GerarCartaoVirtualAsyncWithHttpInfo (long? id, string dataValidade)
+        public async System.Threading.Tasks.Task<ApiResponse<CartaoImpressaoResponse>> GerarCartaoVirtualAsyncWithHttpInfo (long? id, string dataValidade, long? idPessoaFisica = null)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling GerarCartaoVirtual");
@@ -11018,6 +11035,7 @@ namespace Conductor.Pier.Api
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             
             if (dataValidade != null) localVarQueryParams.Add("dataValidade", Configuration.ApiClient.ParameterToString(dataValidade)); // query parameter
+            if (idPessoaFisica != null) localVarQueryParams.Add("idPessoaFisica", Configuration.ApiClient.ParameterToString(idPessoaFisica)); // query parameter
             
             
             
@@ -11236,10 +11254,12 @@ namespace Conductor.Pier.Api
         /// <param name="dataCadastro">Apresenta a data em que o cart\u00E3o foi gerado (optional)</param> 
         /// <param name="dataUltimaAlteracaoVencimento">Apresenta a data da ultima altera\u00E7\u00E3o de vencimento (optional)</param> 
         /// <param name="funcaoAtiva"> (optional)</param> 
+        /// <param name="possuiOverLimit">Sinaliza se o OverLimit da conta est\u00E1 ativo (optional)</param> 
+        /// <param name="behaviorScore">Apresenta valor de pontua\u00E7\u00E3o de comportamento (behavior score). (optional)</param> 
         /// <returns>PageContaResponse</returns>
-        public PageContaResponse ListarContas (List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, string dataStatusConta = null, string dataCadastro = null, string dataUltimaAlteracaoVencimento = null, string funcaoAtiva = null)
+        public PageContaResponse ListarContas (List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, string dataStatusConta = null, string dataCadastro = null, string dataUltimaAlteracaoVencimento = null, string funcaoAtiva = null, bool? possuiOverLimit = null, int? behaviorScore = null)
         {
-             ApiResponse<PageContaResponse> localVarResponse = ListarContasWithHttpInfo(sort, page, limit, idProduto, idOrigemComercial, idPessoa, idStatusConta, diaVencimento, melhorDiaCompra, dataStatusConta, dataCadastro, dataUltimaAlteracaoVencimento, funcaoAtiva);
+             ApiResponse<PageContaResponse> localVarResponse = ListarContasWithHttpInfo(sort, page, limit, idProduto, idOrigemComercial, idPessoa, idStatusConta, diaVencimento, melhorDiaCompra, dataStatusConta, dataCadastro, dataUltimaAlteracaoVencimento, funcaoAtiva, possuiOverLimit, behaviorScore);
              return localVarResponse.Data;
         }
 
@@ -11260,8 +11280,10 @@ namespace Conductor.Pier.Api
         /// <param name="dataCadastro">Apresenta a data em que o cart\u00E3o foi gerado (optional)</param> 
         /// <param name="dataUltimaAlteracaoVencimento">Apresenta a data da ultima altera\u00E7\u00E3o de vencimento (optional)</param> 
         /// <param name="funcaoAtiva"> (optional)</param> 
+        /// <param name="possuiOverLimit">Sinaliza se o OverLimit da conta est\u00E1 ativo (optional)</param> 
+        /// <param name="behaviorScore">Apresenta valor de pontua\u00E7\u00E3o de comportamento (behavior score). (optional)</param> 
         /// <returns>ApiResponse of PageContaResponse</returns>
-        public ApiResponse< PageContaResponse > ListarContasWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, string dataStatusConta = null, string dataCadastro = null, string dataUltimaAlteracaoVencimento = null, string funcaoAtiva = null)
+        public ApiResponse< PageContaResponse > ListarContasWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, string dataStatusConta = null, string dataCadastro = null, string dataUltimaAlteracaoVencimento = null, string funcaoAtiva = null, bool? possuiOverLimit = null, int? behaviorScore = null)
         {
             
     
@@ -11305,6 +11327,8 @@ namespace Conductor.Pier.Api
             if (dataCadastro != null) localVarQueryParams.Add("dataCadastro", Configuration.ApiClient.ParameterToString(dataCadastro)); // query parameter
             if (dataUltimaAlteracaoVencimento != null) localVarQueryParams.Add("dataUltimaAlteracaoVencimento", Configuration.ApiClient.ParameterToString(dataUltimaAlteracaoVencimento)); // query parameter
             if (funcaoAtiva != null) localVarQueryParams.Add("funcaoAtiva", Configuration.ApiClient.ParameterToString(funcaoAtiva)); // query parameter
+            if (possuiOverLimit != null) localVarQueryParams.Add("possuiOverLimit", Configuration.ApiClient.ParameterToString(possuiOverLimit)); // query parameter
+            if (behaviorScore != null) localVarQueryParams.Add("behaviorScore", Configuration.ApiClient.ParameterToString(behaviorScore)); // query parameter
             
             
             
@@ -11348,10 +11372,12 @@ namespace Conductor.Pier.Api
         /// <param name="dataCadastro">Apresenta a data em que o cart\u00E3o foi gerado (optional)</param>
         /// <param name="dataUltimaAlteracaoVencimento">Apresenta a data da ultima altera\u00E7\u00E3o de vencimento (optional)</param>
         /// <param name="funcaoAtiva"> (optional)</param>
+        /// <param name="possuiOverLimit">Sinaliza se o OverLimit da conta est\u00E1 ativo (optional)</param>
+        /// <param name="behaviorScore">Apresenta valor de pontua\u00E7\u00E3o de comportamento (behavior score). (optional)</param>
         /// <returns>Task of PageContaResponse</returns>
-        public async System.Threading.Tasks.Task<PageContaResponse> ListarContasAsync (List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, string dataStatusConta = null, string dataCadastro = null, string dataUltimaAlteracaoVencimento = null, string funcaoAtiva = null)
+        public async System.Threading.Tasks.Task<PageContaResponse> ListarContasAsync (List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, string dataStatusConta = null, string dataCadastro = null, string dataUltimaAlteracaoVencimento = null, string funcaoAtiva = null, bool? possuiOverLimit = null, int? behaviorScore = null)
         {
-             ApiResponse<PageContaResponse> localVarResponse = await ListarContasAsyncWithHttpInfo(sort, page, limit, idProduto, idOrigemComercial, idPessoa, idStatusConta, diaVencimento, melhorDiaCompra, dataStatusConta, dataCadastro, dataUltimaAlteracaoVencimento, funcaoAtiva);
+             ApiResponse<PageContaResponse> localVarResponse = await ListarContasAsyncWithHttpInfo(sort, page, limit, idProduto, idOrigemComercial, idPessoa, idStatusConta, diaVencimento, melhorDiaCompra, dataStatusConta, dataCadastro, dataUltimaAlteracaoVencimento, funcaoAtiva, possuiOverLimit, behaviorScore);
              return localVarResponse.Data;
 
         }
@@ -11373,8 +11399,10 @@ namespace Conductor.Pier.Api
         /// <param name="dataCadastro">Apresenta a data em que o cart\u00E3o foi gerado (optional)</param>
         /// <param name="dataUltimaAlteracaoVencimento">Apresenta a data da ultima altera\u00E7\u00E3o de vencimento (optional)</param>
         /// <param name="funcaoAtiva"> (optional)</param>
+        /// <param name="possuiOverLimit">Sinaliza se o OverLimit da conta est\u00E1 ativo (optional)</param>
+        /// <param name="behaviorScore">Apresenta valor de pontua\u00E7\u00E3o de comportamento (behavior score). (optional)</param>
         /// <returns>Task of ApiResponse (PageContaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageContaResponse>> ListarContasAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, string dataStatusConta = null, string dataCadastro = null, string dataUltimaAlteracaoVencimento = null, string funcaoAtiva = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageContaResponse>> ListarContasAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idProduto = null, long? idOrigemComercial = null, long? idPessoa = null, long? idStatusConta = null, int? diaVencimento = null, int? melhorDiaCompra = null, string dataStatusConta = null, string dataCadastro = null, string dataUltimaAlteracaoVencimento = null, string funcaoAtiva = null, bool? possuiOverLimit = null, int? behaviorScore = null)
         {
             
     
@@ -11418,6 +11446,8 @@ namespace Conductor.Pier.Api
             if (dataCadastro != null) localVarQueryParams.Add("dataCadastro", Configuration.ApiClient.ParameterToString(dataCadastro)); // query parameter
             if (dataUltimaAlteracaoVencimento != null) localVarQueryParams.Add("dataUltimaAlteracaoVencimento", Configuration.ApiClient.ParameterToString(dataUltimaAlteracaoVencimento)); // query parameter
             if (funcaoAtiva != null) localVarQueryParams.Add("funcaoAtiva", Configuration.ApiClient.ParameterToString(funcaoAtiva)); // query parameter
+            if (possuiOverLimit != null) localVarQueryParams.Add("possuiOverLimit", Configuration.ApiClient.ParameterToString(possuiOverLimit)); // query parameter
+            if (behaviorScore != null) localVarQueryParams.Add("behaviorScore", Configuration.ApiClient.ParameterToString(behaviorScore)); // query parameter
             
             
             
@@ -14794,9 +14824,9 @@ namespace Conductor.Pier.Api
         /// <param name="flagAtendimento">Flag para lan\u00E7ar o atendimento (optional)</param> 
         /// <param name="mensagemAtendimento">Mensagem enviada no atendimento (optional)</param> 
         /// <returns>AjusteFinanceiroResponse</returns>
-        public AjusteFinanceiroResponse SalvarAjusteFinanceiroConta (long? id, long? idTipoAjuste, string dataAjuste, double? valorAjuste, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null, bool? flagAtendimento = null, string mensagemAtendimento = null)
+        public AjusteFinanceiroResponse SalvarAjusteFinanceiroConta1 (long? id, long? idTipoAjuste, string dataAjuste, double? valorAjuste, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null, bool? flagAtendimento = null, string mensagemAtendimento = null)
         {
-             ApiResponse<AjusteFinanceiroResponse> localVarResponse = SalvarAjusteFinanceiroContaWithHttpInfo(id, idTipoAjuste, dataAjuste, valorAjuste, login, identificadorExterno, idTransacaoOriginal, idEstabelecimento, flagAtendimento, mensagemAtendimento);
+             ApiResponse<AjusteFinanceiroResponse> localVarResponse = SalvarAjusteFinanceiroConta1WithHttpInfo(id, idTipoAjuste, dataAjuste, valorAjuste, login, identificadorExterno, idTransacaoOriginal, idEstabelecimento, flagAtendimento, mensagemAtendimento);
              return localVarResponse.Data;
         }
 
@@ -14815,24 +14845,24 @@ namespace Conductor.Pier.Api
         /// <param name="flagAtendimento">Flag para lan\u00E7ar o atendimento (optional)</param> 
         /// <param name="mensagemAtendimento">Mensagem enviada no atendimento (optional)</param> 
         /// <returns>ApiResponse of AjusteFinanceiroResponse</returns>
-        public ApiResponse< AjusteFinanceiroResponse > SalvarAjusteFinanceiroContaWithHttpInfo (long? id, long? idTipoAjuste, string dataAjuste, double? valorAjuste, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null, bool? flagAtendimento = null, string mensagemAtendimento = null)
+        public ApiResponse< AjusteFinanceiroResponse > SalvarAjusteFinanceiroConta1WithHttpInfo (long? id, long? idTipoAjuste, string dataAjuste, double? valorAjuste, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null, bool? flagAtendimento = null, string mensagemAtendimento = null)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->SalvarAjusteFinanceiroConta");
+                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->SalvarAjusteFinanceiroConta1");
             
             // verify the required parameter 'idTipoAjuste' is set
             if (idTipoAjuste == null)
-                throw new ApiException(400, "Missing required parameter 'idTipoAjuste' when calling ContaApi->SalvarAjusteFinanceiroConta");
+                throw new ApiException(400, "Missing required parameter 'idTipoAjuste' when calling ContaApi->SalvarAjusteFinanceiroConta1");
             
             // verify the required parameter 'dataAjuste' is set
             if (dataAjuste == null)
-                throw new ApiException(400, "Missing required parameter 'dataAjuste' when calling ContaApi->SalvarAjusteFinanceiroConta");
+                throw new ApiException(400, "Missing required parameter 'dataAjuste' when calling ContaApi->SalvarAjusteFinanceiroConta1");
             
             // verify the required parameter 'valorAjuste' is set
             if (valorAjuste == null)
-                throw new ApiException(400, "Missing required parameter 'valorAjuste' when calling ContaApi->SalvarAjusteFinanceiroConta");
+                throw new ApiException(400, "Missing required parameter 'valorAjuste' when calling ContaApi->SalvarAjusteFinanceiroConta1");
             
     
             var localVarPath = "/api/contas/{id}/ajustes-financeiros";
@@ -14887,9 +14917,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarAjusteFinanceiroConta: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarAjusteFinanceiroConta1: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarAjusteFinanceiroConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarAjusteFinanceiroConta1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<AjusteFinanceiroResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -14913,9 +14943,9 @@ namespace Conductor.Pier.Api
         /// <param name="flagAtendimento">Flag para lan\u00E7ar o atendimento (optional)</param>
         /// <param name="mensagemAtendimento">Mensagem enviada no atendimento (optional)</param>
         /// <returns>Task of AjusteFinanceiroResponse</returns>
-        public async System.Threading.Tasks.Task<AjusteFinanceiroResponse> SalvarAjusteFinanceiroContaAsync (long? id, long? idTipoAjuste, string dataAjuste, double? valorAjuste, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null, bool? flagAtendimento = null, string mensagemAtendimento = null)
+        public async System.Threading.Tasks.Task<AjusteFinanceiroResponse> SalvarAjusteFinanceiroConta1Async (long? id, long? idTipoAjuste, string dataAjuste, double? valorAjuste, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null, bool? flagAtendimento = null, string mensagemAtendimento = null)
         {
-             ApiResponse<AjusteFinanceiroResponse> localVarResponse = await SalvarAjusteFinanceiroContaAsyncWithHttpInfo(id, idTipoAjuste, dataAjuste, valorAjuste, login, identificadorExterno, idTransacaoOriginal, idEstabelecimento, flagAtendimento, mensagemAtendimento);
+             ApiResponse<AjusteFinanceiroResponse> localVarResponse = await SalvarAjusteFinanceiroConta1AsyncWithHttpInfo(id, idTipoAjuste, dataAjuste, valorAjuste, login, identificadorExterno, idTransacaoOriginal, idEstabelecimento, flagAtendimento, mensagemAtendimento);
              return localVarResponse.Data;
 
         }
@@ -14935,16 +14965,16 @@ namespace Conductor.Pier.Api
         /// <param name="flagAtendimento">Flag para lan\u00E7ar o atendimento (optional)</param>
         /// <param name="mensagemAtendimento">Mensagem enviada no atendimento (optional)</param>
         /// <returns>Task of ApiResponse (AjusteFinanceiroResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AjusteFinanceiroResponse>> SalvarAjusteFinanceiroContaAsyncWithHttpInfo (long? id, long? idTipoAjuste, string dataAjuste, double? valorAjuste, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null, bool? flagAtendimento = null, string mensagemAtendimento = null)
+        public async System.Threading.Tasks.Task<ApiResponse<AjusteFinanceiroResponse>> SalvarAjusteFinanceiroConta1AsyncWithHttpInfo (long? id, long? idTipoAjuste, string dataAjuste, double? valorAjuste, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null, bool? flagAtendimento = null, string mensagemAtendimento = null)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling SalvarAjusteFinanceiroConta");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling SalvarAjusteFinanceiroConta1");
             // verify the required parameter 'idTipoAjuste' is set
-            if (idTipoAjuste == null) throw new ApiException(400, "Missing required parameter 'idTipoAjuste' when calling SalvarAjusteFinanceiroConta");
+            if (idTipoAjuste == null) throw new ApiException(400, "Missing required parameter 'idTipoAjuste' when calling SalvarAjusteFinanceiroConta1");
             // verify the required parameter 'dataAjuste' is set
-            if (dataAjuste == null) throw new ApiException(400, "Missing required parameter 'dataAjuste' when calling SalvarAjusteFinanceiroConta");
+            if (dataAjuste == null) throw new ApiException(400, "Missing required parameter 'dataAjuste' when calling SalvarAjusteFinanceiroConta1");
             // verify the required parameter 'valorAjuste' is set
-            if (valorAjuste == null) throw new ApiException(400, "Missing required parameter 'valorAjuste' when calling SalvarAjusteFinanceiroConta");
+            if (valorAjuste == null) throw new ApiException(400, "Missing required parameter 'valorAjuste' when calling SalvarAjusteFinanceiroConta1");
             
     
             var localVarPath = "/api/contas/{id}/ajustes-financeiros";
@@ -14999,9 +15029,9 @@ namespace Conductor.Pier.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarAjusteFinanceiroConta: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarAjusteFinanceiroConta1: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SalvarAjusteFinanceiroConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SalvarAjusteFinanceiroConta1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<AjusteFinanceiroResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

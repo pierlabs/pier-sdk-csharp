@@ -60,9 +60,10 @@ namespace Conductor.Pier.Model
         /// <param name="ValorRenda">Apresenta o valor da renda comprovada.</param>
         /// <param name="IdProposta">C\u00F3digo identificador da proposta.</param>
         /// <param name="FuncaoAtiva">Fun\u00E7\u00E3o ativa da conta.</param>
-        /// <param name="PossuiOverLimit">Sinaliza se o OverLimit da conta est\uFFFD ativo.</param>
+        /// <param name="PossuiOverLimit">Sinaliza se o OverLimit da conta est\u00E1 ativo.</param>
+        /// <param name="BehaviorScore">Apresenta valor de pontua\u00E7\u00E3o de comportamento (behavior score)..</param>
 
-        public ContaResponse(long? Id = null, long? IdProduto = null, long? IdOrigemComercial = null, long? IdPessoa = null, long? IdStatusConta = null, int? DiaVencimento = null, int? MelhorDiaCompra = null, string DataStatusConta = null, string DataCadastro = null, string DataUltimaAlteracaoVencimento = null, double? ValorRenda = null, long? IdProposta = null, FuncaoAtivaEnum? FuncaoAtiva = null, bool? PossuiOverLimit = null)
+        public ContaResponse(long? Id = null, long? IdProduto = null, long? IdOrigemComercial = null, long? IdPessoa = null, long? IdStatusConta = null, int? DiaVencimento = null, int? MelhorDiaCompra = null, string DataStatusConta = null, string DataCadastro = null, string DataUltimaAlteracaoVencimento = null, double? ValorRenda = null, long? IdProposta = null, FuncaoAtivaEnum? FuncaoAtiva = null, bool? PossuiOverLimit = null, int? BehaviorScore = null)
         {
             this.Id = Id;
             this.IdProduto = IdProduto;
@@ -78,6 +79,7 @@ namespace Conductor.Pier.Model
             this.IdProposta = IdProposta;
             this.FuncaoAtiva = FuncaoAtiva;
             this.PossuiOverLimit = PossuiOverLimit;
+            this.BehaviorScore = BehaviorScore;
             
         }
         
@@ -167,11 +169,18 @@ namespace Conductor.Pier.Model
         public long? IdProposta { get; set; }
     
         /// <summary>
-        /// Sinaliza se o OverLimit da conta est\uFFFD ativo
+        /// Sinaliza se o OverLimit da conta est\u00E1 ativo
         /// </summary>
-        /// <value>Sinaliza se o OverLimit da conta est\uFFFD ativo</value>
+        /// <value>Sinaliza se o OverLimit da conta est\u00E1 ativo</value>
         [DataMember(Name="possuiOverLimit", EmitDefaultValue=false)]
         public bool? PossuiOverLimit { get; set; }
+    
+        /// <summary>
+        /// Apresenta valor de pontua\u00E7\u00E3o de comportamento (behavior score).
+        /// </summary>
+        /// <value>Apresenta valor de pontua\u00E7\u00E3o de comportamento (behavior score).</value>
+        [DataMember(Name="behaviorScore", EmitDefaultValue=false)]
+        public int? BehaviorScore { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -195,6 +204,7 @@ namespace Conductor.Pier.Model
             sb.Append("  IdProposta: ").Append(IdProposta).Append("\n");
             sb.Append("  FuncaoAtiva: ").Append(FuncaoAtiva).Append("\n");
             sb.Append("  PossuiOverLimit: ").Append(PossuiOverLimit).Append("\n");
+            sb.Append("  BehaviorScore: ").Append(BehaviorScore).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -301,6 +311,11 @@ namespace Conductor.Pier.Model
                     this.PossuiOverLimit == other.PossuiOverLimit ||
                     this.PossuiOverLimit != null &&
                     this.PossuiOverLimit.Equals(other.PossuiOverLimit)
+                ) && 
+                (
+                    this.BehaviorScore == other.BehaviorScore ||
+                    this.BehaviorScore != null &&
+                    this.BehaviorScore.Equals(other.BehaviorScore)
                 );
         }
 
@@ -357,6 +372,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.PossuiOverLimit != null)
                     hash = hash * 59 + this.PossuiOverLimit.GetHashCode();
+                
+                if (this.BehaviorScore != null)
+                    hash = hash * 59 + this.BehaviorScore.GetHashCode();
                 
                 return hash;
             }

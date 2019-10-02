@@ -99,8 +99,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)</param>
         /// <param name="idStatus">C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Cart\u00E3o</param>
         /// <param name="observacao">Texto informando uma observa\u00E7\u00E3o sobre o bloqueio</param>
+        /// <param name="usuario">Usu\u00E1rio que realizou a requisi\u00E7\u00E3o (optional)</param>
         /// <returns>CartaoResponse</returns>
-        CartaoResponse BloquearCartao (long? id, long? idStatus, string observacao);
+        CartaoResponse BloquearCartao (long? id, long? idStatus, string observacao, string usuario = null);
   
         /// <summary>
         /// Realiza o bloqueio de um determinado Cart\u00E3o
@@ -112,8 +113,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)</param>
         /// <param name="idStatus">C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Cart\u00E3o</param>
         /// <param name="observacao">Texto informando uma observa\u00E7\u00E3o sobre o bloqueio</param>
+        /// <param name="usuario">Usu\u00E1rio que realizou a requisi\u00E7\u00E3o (optional)</param>
         /// <returns>ApiResponse of CartaoResponse</returns>
-        ApiResponse<CartaoResponse> BloquearCartaoWithHttpInfo (long? id, long? idStatus, string observacao);
+        ApiResponse<CartaoResponse> BloquearCartaoWithHttpInfo (long? id, long? idStatus, string observacao, string usuario = null);
         
         /// <summary>
         /// Realiza o cancelamento de um determinado Cart\u00E3o
@@ -140,6 +142,74 @@ namespace Conductor.Pier.Api
         /// <param name="observacao">Texto informando uma observa\u00E7\u00E3o sobre o cancelamento</param>
         /// <returns>ApiResponse of CartaoResponse</returns>
         ApiResponse<CartaoResponse> CancelarCartaoWithHttpInfo (long? id, long? idStatus, string observacao);
+        
+        /// <summary>
+        /// Consultar CVV2 din\u00E2mico ativo
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite realizar a consulta ao CVV2 din\u00E2mico ativo
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)</param>
+        /// <returns>CvvDinamicoResponse</returns>
+        CvvDinamicoResponse CartaoConsultarCvvDinamico (long? id);
+  
+        /// <summary>
+        /// Consultar CVV2 din\u00E2mico ativo
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite realizar a consulta ao CVV2 din\u00E2mico ativo
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)</param>
+        /// <returns>ApiResponse of CvvDinamicoResponse</returns>
+        ApiResponse<CvvDinamicoResponse> CartaoConsultarCvvDinamicoWithHttpInfo (long? id);
+        
+        /// <summary>
+        /// Expirar um CVV2 din\u00E2mico que estiver ativo
+        /// </summary>
+        /// <remarks>
+        /// Este recurso expira o CVV2 din\u00E2mico que estiver ativo
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)</param>
+        /// <returns>Object</returns>
+        Object CartaoExpirarCvvDinamico (long? id);
+  
+        /// <summary>
+        /// Expirar um CVV2 din\u00E2mico que estiver ativo
+        /// </summary>
+        /// <remarks>
+        /// Este recurso expira o CVV2 din\u00E2mico que estiver ativo
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)</param>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> CartaoExpirarCvvDinamicoWithHttpInfo (long? id);
+        
+        /// <summary>
+        /// Gerar CVV2 de forma din\u00E2mica para cart\u00F5es virtuais
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite gerar CVV2 de forma din\u00E2mica para cart\u00F5es do tipo virtual com par\u00E2metro produto &#39;CVV2DINAMICO&#39; devidamente cadastrado com valor 1
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)</param>
+        /// <param name="cvvDinamicoPersist">Objeto de cria\u00E7\u00E3o para um CVV din\u00E2mico</param>
+        /// <returns>CvvDinamicoResponse</returns>
+        CvvDinamicoResponse CartaoGerarCvvDinamico (long? id, CvvDinamicoPersist cvvDinamicoPersist);
+  
+        /// <summary>
+        /// Gerar CVV2 de forma din\u00E2mica para cart\u00F5es virtuais
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite gerar CVV2 de forma din\u00E2mica para cart\u00F5es do tipo virtual com par\u00E2metro produto &#39;CVV2DINAMICO&#39; devidamente cadastrado com valor 1
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)</param>
+        /// <param name="cvvDinamicoPersist">Objeto de cria\u00E7\u00E3o para um CVV din\u00E2mico</param>
+        /// <returns>ApiResponse of CvvDinamicoResponse</returns>
+        ApiResponse<CvvDinamicoResponse> CartaoGerarCvvDinamicoWithHttpInfo (long? id, CvvDinamicoPersist cvvDinamicoPersist);
         
         /// <summary>
         /// Apresenta os dados de um determinado Cart\u00E3o
@@ -843,8 +913,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)</param>
         /// <param name="idStatus">C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Cart\u00E3o</param>
         /// <param name="observacao">Texto informando uma observa\u00E7\u00E3o sobre o bloqueio</param>
+        /// <param name="usuario">Usu\u00E1rio que realizou a requisi\u00E7\u00E3o (optional)</param>
         /// <returns>Task of CartaoResponse</returns>
-        System.Threading.Tasks.Task<CartaoResponse> BloquearCartaoAsync (long? id, long? idStatus, string observacao);
+        System.Threading.Tasks.Task<CartaoResponse> BloquearCartaoAsync (long? id, long? idStatus, string observacao, string usuario = null);
 
         /// <summary>
         /// Realiza o bloqueio de um determinado Cart\u00E3o
@@ -856,8 +927,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)</param>
         /// <param name="idStatus">C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Cart\u00E3o</param>
         /// <param name="observacao">Texto informando uma observa\u00E7\u00E3o sobre o bloqueio</param>
+        /// <param name="usuario">Usu\u00E1rio que realizou a requisi\u00E7\u00E3o (optional)</param>
         /// <returns>Task of ApiResponse (CartaoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CartaoResponse>> BloquearCartaoAsyncWithHttpInfo (long? id, long? idStatus, string observacao);
+        System.Threading.Tasks.Task<ApiResponse<CartaoResponse>> BloquearCartaoAsyncWithHttpInfo (long? id, long? idStatus, string observacao, string usuario = null);
         
         /// <summary>
         /// Realiza o cancelamento de um determinado Cart\u00E3o
@@ -884,6 +956,74 @@ namespace Conductor.Pier.Api
         /// <param name="observacao">Texto informando uma observa\u00E7\u00E3o sobre o cancelamento</param>
         /// <returns>Task of ApiResponse (CartaoResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<CartaoResponse>> CancelarCartaoAsyncWithHttpInfo (long? id, long? idStatus, string observacao);
+        
+        /// <summary>
+        /// Consultar CVV2 din\u00E2mico ativo
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite realizar a consulta ao CVV2 din\u00E2mico ativo
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)</param>
+        /// <returns>Task of CvvDinamicoResponse</returns>
+        System.Threading.Tasks.Task<CvvDinamicoResponse> CartaoConsultarCvvDinamicoAsync (long? id);
+
+        /// <summary>
+        /// Consultar CVV2 din\u00E2mico ativo
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite realizar a consulta ao CVV2 din\u00E2mico ativo
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)</param>
+        /// <returns>Task of ApiResponse (CvvDinamicoResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CvvDinamicoResponse>> CartaoConsultarCvvDinamicoAsyncWithHttpInfo (long? id);
+        
+        /// <summary>
+        /// Expirar um CVV2 din\u00E2mico que estiver ativo
+        /// </summary>
+        /// <remarks>
+        /// Este recurso expira o CVV2 din\u00E2mico que estiver ativo
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)</param>
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> CartaoExpirarCvvDinamicoAsync (long? id);
+
+        /// <summary>
+        /// Expirar um CVV2 din\u00E2mico que estiver ativo
+        /// </summary>
+        /// <remarks>
+        /// Este recurso expira o CVV2 din\u00E2mico que estiver ativo
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> CartaoExpirarCvvDinamicoAsyncWithHttpInfo (long? id);
+        
+        /// <summary>
+        /// Gerar CVV2 de forma din\u00E2mica para cart\u00F5es virtuais
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite gerar CVV2 de forma din\u00E2mica para cart\u00F5es do tipo virtual com par\u00E2metro produto &#39;CVV2DINAMICO&#39; devidamente cadastrado com valor 1
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)</param>
+        /// <param name="cvvDinamicoPersist">Objeto de cria\u00E7\u00E3o para um CVV din\u00E2mico</param>
+        /// <returns>Task of CvvDinamicoResponse</returns>
+        System.Threading.Tasks.Task<CvvDinamicoResponse> CartaoGerarCvvDinamicoAsync (long? id, CvvDinamicoPersist cvvDinamicoPersist);
+
+        /// <summary>
+        /// Gerar CVV2 de forma din\u00E2mica para cart\u00F5es virtuais
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite gerar CVV2 de forma din\u00E2mica para cart\u00F5es do tipo virtual com par\u00E2metro produto &#39;CVV2DINAMICO&#39; devidamente cadastrado com valor 1
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)</param>
+        /// <param name="cvvDinamicoPersist">Objeto de cria\u00E7\u00E3o para um CVV din\u00E2mico</param>
+        /// <returns>Task of ApiResponse (CvvDinamicoResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CvvDinamicoResponse>> CartaoGerarCvvDinamicoAsyncWithHttpInfo (long? id, CvvDinamicoPersist cvvDinamicoPersist);
         
         /// <summary>
         /// Apresenta os dados de um determinado Cart\u00E3o
@@ -2122,10 +2262,11 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)</param> 
         /// <param name="idStatus">C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Cart\u00E3o</param> 
         /// <param name="observacao">Texto informando uma observa\u00E7\u00E3o sobre o bloqueio</param> 
+        /// <param name="usuario">Usu\u00E1rio que realizou a requisi\u00E7\u00E3o (optional)</param> 
         /// <returns>CartaoResponse</returns>
-        public CartaoResponse BloquearCartao (long? id, long? idStatus, string observacao)
+        public CartaoResponse BloquearCartao (long? id, long? idStatus, string observacao, string usuario = null)
         {
-             ApiResponse<CartaoResponse> localVarResponse = BloquearCartaoWithHttpInfo(id, idStatus, observacao);
+             ApiResponse<CartaoResponse> localVarResponse = BloquearCartaoWithHttpInfo(id, idStatus, observacao, usuario);
              return localVarResponse.Data;
         }
 
@@ -2136,8 +2277,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)</param> 
         /// <param name="idStatus">C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Cart\u00E3o</param> 
         /// <param name="observacao">Texto informando uma observa\u00E7\u00E3o sobre o bloqueio</param> 
+        /// <param name="usuario">Usu\u00E1rio que realizou a requisi\u00E7\u00E3o (optional)</param> 
         /// <returns>ApiResponse of CartaoResponse</returns>
-        public ApiResponse< CartaoResponse > BloquearCartaoWithHttpInfo (long? id, long? idStatus, string observacao)
+        public ApiResponse< CartaoResponse > BloquearCartaoWithHttpInfo (long? id, long? idStatus, string observacao, string usuario = null)
         {
             
             // verify the required parameter 'id' is set
@@ -2183,6 +2325,7 @@ namespace Conductor.Pier.Api
             
             if (idStatus != null) localVarQueryParams.Add("id_status", Configuration.ApiClient.ParameterToString(idStatus)); // query parameter
             if (observacao != null) localVarQueryParams.Add("observacao", Configuration.ApiClient.ParameterToString(observacao)); // query parameter
+            if (usuario != null) localVarQueryParams.Add("usuario", Configuration.ApiClient.ParameterToString(usuario)); // query parameter
             
             
             
@@ -2216,10 +2359,11 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)</param>
         /// <param name="idStatus">C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Cart\u00E3o</param>
         /// <param name="observacao">Texto informando uma observa\u00E7\u00E3o sobre o bloqueio</param>
+        /// <param name="usuario">Usu\u00E1rio que realizou a requisi\u00E7\u00E3o (optional)</param>
         /// <returns>Task of CartaoResponse</returns>
-        public async System.Threading.Tasks.Task<CartaoResponse> BloquearCartaoAsync (long? id, long? idStatus, string observacao)
+        public async System.Threading.Tasks.Task<CartaoResponse> BloquearCartaoAsync (long? id, long? idStatus, string observacao, string usuario = null)
         {
-             ApiResponse<CartaoResponse> localVarResponse = await BloquearCartaoAsyncWithHttpInfo(id, idStatus, observacao);
+             ApiResponse<CartaoResponse> localVarResponse = await BloquearCartaoAsyncWithHttpInfo(id, idStatus, observacao, usuario);
              return localVarResponse.Data;
 
         }
@@ -2231,8 +2375,9 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)</param>
         /// <param name="idStatus">C\u00F3digo de Identifica\u00E7\u00E3o do Novo Status Cart\u00E3o</param>
         /// <param name="observacao">Texto informando uma observa\u00E7\u00E3o sobre o bloqueio</param>
+        /// <param name="usuario">Usu\u00E1rio que realizou a requisi\u00E7\u00E3o (optional)</param>
         /// <returns>Task of ApiResponse (CartaoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CartaoResponse>> BloquearCartaoAsyncWithHttpInfo (long? id, long? idStatus, string observacao)
+        public async System.Threading.Tasks.Task<ApiResponse<CartaoResponse>> BloquearCartaoAsyncWithHttpInfo (long? id, long? idStatus, string observacao, string usuario = null)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling BloquearCartao");
@@ -2272,6 +2417,7 @@ namespace Conductor.Pier.Api
             
             if (idStatus != null) localVarQueryParams.Add("id_status", Configuration.ApiClient.ParameterToString(idStatus)); // query parameter
             if (observacao != null) localVarQueryParams.Add("observacao", Configuration.ApiClient.ParameterToString(observacao)); // query parameter
+            if (usuario != null) localVarQueryParams.Add("usuario", Configuration.ApiClient.ParameterToString(usuario)); // query parameter
             
             
             
@@ -2476,6 +2622,504 @@ namespace Conductor.Pier.Api
             return new ApiResponse<CartaoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (CartaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CartaoResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Consultar CVV2 din\u00E2mico ativo Este recurso permite realizar a consulta ao CVV2 din\u00E2mico ativo
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)</param> 
+        /// <returns>CvvDinamicoResponse</returns>
+        public CvvDinamicoResponse CartaoConsultarCvvDinamico (long? id)
+        {
+             ApiResponse<CvvDinamicoResponse> localVarResponse = CartaoConsultarCvvDinamicoWithHttpInfo(id);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Consultar CVV2 din\u00E2mico ativo Este recurso permite realizar a consulta ao CVV2 din\u00E2mico ativo
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)</param> 
+        /// <returns>ApiResponse of CvvDinamicoResponse</returns>
+        public ApiResponse< CvvDinamicoResponse > CartaoConsultarCvvDinamicoWithHttpInfo (long? id)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling CartaoApi->CartaoConsultarCvvDinamico");
+            
+    
+            var localVarPath = "/api/cartoes/{id}/cvv-dinamico";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling CartaoConsultarCvvDinamico: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling CartaoConsultarCvvDinamico: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<CvvDinamicoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CvvDinamicoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CvvDinamicoResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Consultar CVV2 din\u00E2mico ativo Este recurso permite realizar a consulta ao CVV2 din\u00E2mico ativo
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)</param>
+        /// <returns>Task of CvvDinamicoResponse</returns>
+        public async System.Threading.Tasks.Task<CvvDinamicoResponse> CartaoConsultarCvvDinamicoAsync (long? id)
+        {
+             ApiResponse<CvvDinamicoResponse> localVarResponse = await CartaoConsultarCvvDinamicoAsyncWithHttpInfo(id);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Consultar CVV2 din\u00E2mico ativo Este recurso permite realizar a consulta ao CVV2 din\u00E2mico ativo
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)</param>
+        /// <returns>Task of ApiResponse (CvvDinamicoResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CvvDinamicoResponse>> CartaoConsultarCvvDinamicoAsyncWithHttpInfo (long? id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling CartaoConsultarCvvDinamico");
+            
+    
+            var localVarPath = "/api/cartoes/{id}/cvv-dinamico";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling CartaoConsultarCvvDinamico: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling CartaoConsultarCvvDinamico: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CvvDinamicoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CvvDinamicoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CvvDinamicoResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Expirar um CVV2 din\u00E2mico que estiver ativo Este recurso expira o CVV2 din\u00E2mico que estiver ativo
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)</param> 
+        /// <returns>Object</returns>
+        public Object CartaoExpirarCvvDinamico (long? id)
+        {
+             ApiResponse<Object> localVarResponse = CartaoExpirarCvvDinamicoWithHttpInfo(id);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Expirar um CVV2 din\u00E2mico que estiver ativo Este recurso expira o CVV2 din\u00E2mico que estiver ativo
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)</param> 
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > CartaoExpirarCvvDinamicoWithHttpInfo (long? id)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling CartaoApi->CartaoExpirarCvvDinamico");
+            
+    
+            var localVarPath = "/api/cartoes/{id}/cvv-dinamico";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling CartaoExpirarCvvDinamico: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling CartaoExpirarCvvDinamico: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+            
+        }
+
+        
+        /// <summary>
+        /// Expirar um CVV2 din\u00E2mico que estiver ativo Este recurso expira o CVV2 din\u00E2mico que estiver ativo
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)</param>
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> CartaoExpirarCvvDinamicoAsync (long? id)
+        {
+             ApiResponse<Object> localVarResponse = await CartaoExpirarCvvDinamicoAsyncWithHttpInfo(id);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Expirar um CVV2 din\u00E2mico que estiver ativo Este recurso expira o CVV2 din\u00E2mico que estiver ativo
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> CartaoExpirarCvvDinamicoAsyncWithHttpInfo (long? id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling CartaoExpirarCvvDinamico");
+            
+    
+            var localVarPath = "/api/cartoes/{id}/cvv-dinamico";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling CartaoExpirarCvvDinamico: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling CartaoExpirarCvvDinamico: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+            
+        }
+        
+        /// <summary>
+        /// Gerar CVV2 de forma din\u00E2mica para cart\u00F5es virtuais Este recurso permite gerar CVV2 de forma din\u00E2mica para cart\u00F5es do tipo virtual com par\u00E2metro produto &#39;CVV2DINAMICO&#39; devidamente cadastrado com valor 1
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)</param> 
+        /// <param name="cvvDinamicoPersist">Objeto de cria\u00E7\u00E3o para um CVV din\u00E2mico</param> 
+        /// <returns>CvvDinamicoResponse</returns>
+        public CvvDinamicoResponse CartaoGerarCvvDinamico (long? id, CvvDinamicoPersist cvvDinamicoPersist)
+        {
+             ApiResponse<CvvDinamicoResponse> localVarResponse = CartaoGerarCvvDinamicoWithHttpInfo(id, cvvDinamicoPersist);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Gerar CVV2 de forma din\u00E2mica para cart\u00F5es virtuais Este recurso permite gerar CVV2 de forma din\u00E2mica para cart\u00F5es do tipo virtual com par\u00E2metro produto &#39;CVV2DINAMICO&#39; devidamente cadastrado com valor 1
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)</param> 
+        /// <param name="cvvDinamicoPersist">Objeto de cria\u00E7\u00E3o para um CVV din\u00E2mico</param> 
+        /// <returns>ApiResponse of CvvDinamicoResponse</returns>
+        public ApiResponse< CvvDinamicoResponse > CartaoGerarCvvDinamicoWithHttpInfo (long? id, CvvDinamicoPersist cvvDinamicoPersist)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling CartaoApi->CartaoGerarCvvDinamico");
+            
+            // verify the required parameter 'cvvDinamicoPersist' is set
+            if (cvvDinamicoPersist == null)
+                throw new ApiException(400, "Missing required parameter 'cvvDinamicoPersist' when calling CartaoApi->CartaoGerarCvvDinamico");
+            
+    
+            var localVarPath = "/api/cartoes/{id}/cvv-dinamico";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            if (cvvDinamicoPersist.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(cvvDinamicoPersist); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = cvvDinamicoPersist; // byte array
+            }
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling CartaoGerarCvvDinamico: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling CartaoGerarCvvDinamico: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<CvvDinamicoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CvvDinamicoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CvvDinamicoResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Gerar CVV2 de forma din\u00E2mica para cart\u00F5es virtuais Este recurso permite gerar CVV2 de forma din\u00E2mica para cart\u00F5es do tipo virtual com par\u00E2metro produto &#39;CVV2DINAMICO&#39; devidamente cadastrado com valor 1
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)</param>
+        /// <param name="cvvDinamicoPersist">Objeto de cria\u00E7\u00E3o para um CVV din\u00E2mico</param>
+        /// <returns>Task of CvvDinamicoResponse</returns>
+        public async System.Threading.Tasks.Task<CvvDinamicoResponse> CartaoGerarCvvDinamicoAsync (long? id, CvvDinamicoPersist cvvDinamicoPersist)
+        {
+             ApiResponse<CvvDinamicoResponse> localVarResponse = await CartaoGerarCvvDinamicoAsyncWithHttpInfo(id, cvvDinamicoPersist);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Gerar CVV2 de forma din\u00E2mica para cart\u00F5es virtuais Este recurso permite gerar CVV2 de forma din\u00E2mica para cart\u00F5es do tipo virtual com par\u00E2metro produto &#39;CVV2DINAMICO&#39; devidamente cadastrado com valor 1
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)</param>
+        /// <param name="cvvDinamicoPersist">Objeto de cria\u00E7\u00E3o para um CVV din\u00E2mico</param>
+        /// <returns>Task of ApiResponse (CvvDinamicoResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CvvDinamicoResponse>> CartaoGerarCvvDinamicoAsyncWithHttpInfo (long? id, CvvDinamicoPersist cvvDinamicoPersist)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling CartaoGerarCvvDinamico");
+            // verify the required parameter 'cvvDinamicoPersist' is set
+            if (cvvDinamicoPersist == null) throw new ApiException(400, "Missing required parameter 'cvvDinamicoPersist' when calling CartaoGerarCvvDinamico");
+            
+    
+            var localVarPath = "/api/cartoes/{id}/cvv-dinamico";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            if (cvvDinamicoPersist.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(cvvDinamicoPersist); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = cvvDinamicoPersist; // byte array
+            }
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling CartaoGerarCvvDinamico: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling CartaoGerarCvvDinamico: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CvvDinamicoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CvvDinamicoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CvvDinamicoResponse)));
             
         }
         

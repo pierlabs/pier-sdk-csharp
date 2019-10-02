@@ -138,28 +138,28 @@ namespace Conductor.Pier.Api
         ApiResponse<ConvenioResponse> AlterarConvenioWithHttpInfo (long? id, ConvenioPersist convenioPersist);
         
         /// <summary>
-        /// Atualizar um pacote de tarifas
+        /// atualizar
         /// </summary>
         /// <remarks>
-        /// Atualiza um pacote de tarifas a partir do seu c\u00F3digo de identifica\u00E7\u00E3o
+        /// 
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo identificador do pacote de tarifa</param>
-        /// <param name="update">update</param>
-        /// <returns>PacoteTarifaResponse</returns>
-        PacoteTarifaResponse Atualizar (long? id, PacoteTarifaUpdate update);
+        /// <param name="id">id</param>
+        /// <param name="persist">persist</param>
+        /// <returns>FantasiaBasicaResponse</returns>
+        FantasiaBasicaResponse Atualizar (long? id, FantasiaBasicaPersist persist);
   
         /// <summary>
-        /// Atualizar um pacote de tarifas
+        /// atualizar
         /// </summary>
         /// <remarks>
-        /// Atualiza um pacote de tarifas a partir do seu c\u00F3digo de identifica\u00E7\u00E3o
+        /// 
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo identificador do pacote de tarifa</param>
-        /// <param name="update">update</param>
-        /// <returns>ApiResponse of PacoteTarifaResponse</returns>
-        ApiResponse<PacoteTarifaResponse> AtualizarWithHttpInfo (long? id, PacoteTarifaUpdate update);
+        /// <param name="id">id</param>
+        /// <param name="persist">persist</param>
+        /// <returns>ApiResponse of FantasiaBasicaResponse</returns>
+        ApiResponse<FantasiaBasicaResponse> AtualizarWithHttpInfo (long? id, FantasiaBasicaPersist persist);
         
         /// <summary>
         /// Atualiza\u00E7\u00E3o parcial do Portador
@@ -212,6 +212,52 @@ namespace Conductor.Pier.Api
         ApiResponse<TipoOperacaoResponse> AtualizarParcialmenteTipoOperacaoWithHttpInfo (long? id, TipoOperacaoParcialUpdate tipoOperacaoParcialUpdate);
         
         /// <summary>
+        /// Atualizar um pacote de tarifas
+        /// </summary>
+        /// <remarks>
+        /// Atualiza um pacote de tarifas a partir do seu c\u00F3digo de identifica\u00E7\u00E3o
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo identificador do pacote de tarifa</param>
+        /// <param name="update">update</param>
+        /// <returns>PacoteTarifaResponse</returns>
+        PacoteTarifaResponse Atualizar_0 (long? id, PacoteTarifaUpdate update);
+  
+        /// <summary>
+        /// Atualizar um pacote de tarifas
+        /// </summary>
+        /// <remarks>
+        /// Atualiza um pacote de tarifas a partir do seu c\u00F3digo de identifica\u00E7\u00E3o
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo identificador do pacote de tarifa</param>
+        /// <param name="update">update</param>
+        /// <returns>ApiResponse of PacoteTarifaResponse</returns>
+        ApiResponse<PacoteTarifaResponse> Atualizar_0WithHttpInfo (long? id, PacoteTarifaUpdate update);
+        
+        /// <summary>
+        /// cadastrar
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="persist">persist</param>
+        /// <returns>FantasiaBasicaResponse</returns>
+        FantasiaBasicaResponse Cadastrar (FantasiaBasicaPersist persist);
+  
+        /// <summary>
+        /// cadastrar
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="persist">persist</param>
+        /// <returns>ApiResponse of FantasiaBasicaResponse</returns>
+        ApiResponse<FantasiaBasicaResponse> CadastrarWithHttpInfo (FantasiaBasicaPersist persist);
+        
+        /// <summary>
         /// Configura a Taxa de Antecipa\u00E7\u00E3o de um Produto
         /// </summary>
         /// <remarks>
@@ -236,26 +282,26 @@ namespace Conductor.Pier.Api
         ApiResponse<ParametroProdutoResponse> ConfigurarTaxaAntecipacaoProdutoWithHttpInfo (long? id, TaxaAntecipacaoRequest taxaAntecipacaoRequest);
         
         /// <summary>
-        /// Consultar um pacote de tarifa
+        /// consultar
         /// </summary>
         /// <remarks>
-        /// Consulta o pacote de tarifa a partir do seu c\u00F3digo de identifica\u00E7\u00E3o
+        /// 
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo identificador do pacote de tarifa</param>
-        /// <returns>PacoteTarifaResponse</returns>
-        PacoteTarifaResponse Consultar (long? id);
+        /// <param name="id">id</param>
+        /// <returns>FantasiaBasicaResponse</returns>
+        FantasiaBasicaResponse Consultar (long? id);
   
         /// <summary>
-        /// Consultar um pacote de tarifa
+        /// consultar
         /// </summary>
         /// <remarks>
-        /// Consulta o pacote de tarifa a partir do seu c\u00F3digo de identifica\u00E7\u00E3o
+        /// 
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo identificador do pacote de tarifa</param>
-        /// <returns>ApiResponse of PacoteTarifaResponse</returns>
-        ApiResponse<PacoteTarifaResponse> ConsultarWithHttpInfo (long? id);
+        /// <param name="id">id</param>
+        /// <returns>ApiResponse of FantasiaBasicaResponse</returns>
+        ApiResponse<FantasiaBasicaResponse> ConsultarWithHttpInfo (long? id);
         
         /// <summary>
         /// Apresenta os dados de um determinado Atendimento
@@ -634,6 +680,62 @@ namespace Conductor.Pier.Api
         ApiResponse<TipoTelefoneResponse> ConsultarTipoTelefoneWithHttpInfo (long? id);
         
         /// <summary>
+        /// Consultar um pacote de tarifa
+        /// </summary>
+        /// <remarks>
+        /// Consulta o pacote de tarifa a partir do seu c\u00F3digo de identifica\u00E7\u00E3o
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo identificador do pacote de tarifa</param>
+        /// <returns>PacoteTarifaResponse</returns>
+        PacoteTarifaResponse Consultar_0 (long? id);
+  
+        /// <summary>
+        /// Consultar um pacote de tarifa
+        /// </summary>
+        /// <remarks>
+        /// Consulta o pacote de tarifa a partir do seu c\u00F3digo de identifica\u00E7\u00E3o
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo identificador do pacote de tarifa</param>
+        /// <returns>ApiResponse of PacoteTarifaResponse</returns>
+        ApiResponse<PacoteTarifaResponse> Consultar_0WithHttpInfo (long? id);
+        
+        /// <summary>
+        /// Listar Fantasias B\u00E1sicas
+        /// </summary>
+        /// <remarks>
+        /// Lista as fantasia b\u00E1sicas
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="nome">Nome da fantasia b\u00E1sica (optional)</param>
+        /// <param name="descricao">Descri\u00E7\u00E3o da fantasia b\u00E1sica (optional)</param>
+        /// <param name="descricaoArquivo">Descri\u00E7\u00E3o do arquivo da fantasia b\u00E1sica (optional)</param>
+        /// <param name="quantidadeMaxProposta">Quantidade m\u00E1xima de propostas da fantasia b\u00E1sica (optional)</param>
+        /// <returns>PageFantasiaBasicaResponse</returns>
+        PageFantasiaBasicaResponse Listar (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string descricao = null, string descricaoArquivo = null, int? quantidadeMaxProposta = null);
+  
+        /// <summary>
+        /// Listar Fantasias B\u00E1sicas
+        /// </summary>
+        /// <remarks>
+        /// Lista as fantasia b\u00E1sicas
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="nome">Nome da fantasia b\u00E1sica (optional)</param>
+        /// <param name="descricao">Descri\u00E7\u00E3o da fantasia b\u00E1sica (optional)</param>
+        /// <param name="descricaoArquivo">Descri\u00E7\u00E3o do arquivo da fantasia b\u00E1sica (optional)</param>
+        /// <param name="quantidadeMaxProposta">Quantidade m\u00E1xima de propostas da fantasia b\u00E1sica (optional)</param>
+        /// <returns>ApiResponse of PageFantasiaBasicaResponse</returns>
+        ApiResponse<PageFantasiaBasicaResponse> ListarWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string descricao = null, string descricaoArquivo = null, int? quantidadeMaxProposta = null);
+        
+        /// <summary>
         /// Lista todos os atendimentos
         /// </summary>
         /// <remarks>
@@ -888,32 +990,6 @@ namespace Conductor.Pier.Api
         ApiResponse<PageCampoCodificadoDescricaoResponse> ListarEstadosCivisWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
         
         /// <summary>
-        /// Listar Fantasias B\u00E1sicas
-        /// </summary>
-        /// <remarks>
-        /// Lista as fantasia b\u00E1sicas
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <returns>PageFantasiaBasicaResponse</returns>
-        PageFantasiaBasicaResponse ListarFantasiasBasicas (List<string> sort = null, int? page = null, int? limit = null);
-  
-        /// <summary>
-        /// Listar Fantasias B\u00E1sicas
-        /// </summary>
-        /// <remarks>
-        /// Lista as fantasia b\u00E1sicas
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <returns>ApiResponse of PageFantasiaBasicaResponse</returns>
-        ApiResponse<PageFantasiaBasicaResponse> ListarFantasiasBasicasWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
-        
-        /// <summary>
         /// Lista os Grupos MCCs
         /// </summary>
         /// <remarks>
@@ -944,6 +1020,50 @@ namespace Conductor.Pier.Api
         /// <param name="descricaoExtrato">Descri\u00E7\u00E3o para ser exibida em extratos (optional)</param>
         /// <returns>ApiResponse of PageGrupoMCCResponse</returns>
         ApiResponse<PageGrupoMCCResponse> ListarGruposMCCWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, string descricaoExtrato = null);
+        
+        /// <summary>
+        /// Lista os grupos de transa\u00E7\u00F5es lojistas
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que sejam listados os grupos de transa\u00E7\u00F5es lojistas existentes na base de dados do Emissor
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="id">C\u00F3digo identificador do grupo de transa\u00E7\u00E3o lojista (optional)</param>
+        /// <param name="descricao">Descri\u00E7\u00E3o do request de grupo transa\u00E7\u00E3o lojista (optional)</param>
+        /// <param name="flagCompra">Indica se permite compra (optional)</param>
+        /// <param name="flagSaque">Indica se permite saque (optional)</param>
+        /// <param name="flagComissao">Indica se recebe comiss\u00E3o (optional)</param>
+        /// <param name="flagChargeBack">Indica se permite chargeback (optional)</param>
+        /// <param name="flagOutrosDebitos">Indica se recebe outros d\u00E9bitos (optional)</param>
+        /// <param name="flagPagamento">Indica pagamento (optional)</param>
+        /// <param name="flagOutrosCreditos">Indica se recebe outros cr\u00E9ditos (optional)</param>
+        /// <returns>GrupoTransacaoLojistaResponse</returns>
+        GrupoTransacaoLojistaResponse ListarGruposTransacoesLojistas (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, bool? flagCompra = null, bool? flagSaque = null, bool? flagComissao = null, bool? flagChargeBack = null, bool? flagOutrosDebitos = null, bool? flagPagamento = null, bool? flagOutrosCreditos = null);
+  
+        /// <summary>
+        /// Lista os grupos de transa\u00E7\u00F5es lojistas
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que sejam listados os grupos de transa\u00E7\u00F5es lojistas existentes na base de dados do Emissor
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="id">C\u00F3digo identificador do grupo de transa\u00E7\u00E3o lojista (optional)</param>
+        /// <param name="descricao">Descri\u00E7\u00E3o do request de grupo transa\u00E7\u00E3o lojista (optional)</param>
+        /// <param name="flagCompra">Indica se permite compra (optional)</param>
+        /// <param name="flagSaque">Indica se permite saque (optional)</param>
+        /// <param name="flagComissao">Indica se recebe comiss\u00E3o (optional)</param>
+        /// <param name="flagChargeBack">Indica se permite chargeback (optional)</param>
+        /// <param name="flagOutrosDebitos">Indica se recebe outros d\u00E9bitos (optional)</param>
+        /// <param name="flagPagamento">Indica pagamento (optional)</param>
+        /// <param name="flagOutrosCreditos">Indica se recebe outros cr\u00E9ditos (optional)</param>
+        /// <returns>ApiResponse of GrupoTransacaoLojistaResponse</returns>
+        ApiResponse<GrupoTransacaoLojistaResponse> ListarGruposTransacoesLojistasWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, bool? flagCompra = null, bool? flagSaque = null, bool? flagComissao = null, bool? flagChargeBack = null, bool? flagOutrosDebitos = null, bool? flagPagamento = null, bool? flagOutrosCreditos = null);
         
         /// <summary>
         /// Lista nacionalidades
@@ -1314,6 +1434,28 @@ namespace Conductor.Pier.Api
         ApiResponse<PageControleVencimentoResponse> ListarVencimentosWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataVencimentoFim = null);
         
         /// <summary>
+        /// remover
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <returns></returns>
+        void Remover (long? id);
+  
+        /// <summary>
+        /// remover
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> RemoverWithHttpInfo (long? id);
+        
+        /// <summary>
         /// Cadastrar um pacote de tarifas
         /// </summary>
         /// <remarks>
@@ -1634,28 +1776,28 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<ConvenioResponse>> AlterarConvenioAsyncWithHttpInfo (long? id, ConvenioPersist convenioPersist);
         
         /// <summary>
-        /// Atualizar um pacote de tarifas
+        /// atualizar
         /// </summary>
         /// <remarks>
-        /// Atualiza um pacote de tarifas a partir do seu c\u00F3digo de identifica\u00E7\u00E3o
+        /// 
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo identificador do pacote de tarifa</param>
-        /// <param name="update">update</param>
-        /// <returns>Task of PacoteTarifaResponse</returns>
-        System.Threading.Tasks.Task<PacoteTarifaResponse> AtualizarAsync (long? id, PacoteTarifaUpdate update);
+        /// <param name="id">id</param>
+        /// <param name="persist">persist</param>
+        /// <returns>Task of FantasiaBasicaResponse</returns>
+        System.Threading.Tasks.Task<FantasiaBasicaResponse> AtualizarAsync (long? id, FantasiaBasicaPersist persist);
 
         /// <summary>
-        /// Atualizar um pacote de tarifas
+        /// atualizar
         /// </summary>
         /// <remarks>
-        /// Atualiza um pacote de tarifas a partir do seu c\u00F3digo de identifica\u00E7\u00E3o
+        /// 
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo identificador do pacote de tarifa</param>
-        /// <param name="update">update</param>
-        /// <returns>Task of ApiResponse (PacoteTarifaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PacoteTarifaResponse>> AtualizarAsyncWithHttpInfo (long? id, PacoteTarifaUpdate update);
+        /// <param name="id">id</param>
+        /// <param name="persist">persist</param>
+        /// <returns>Task of ApiResponse (FantasiaBasicaResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<FantasiaBasicaResponse>> AtualizarAsyncWithHttpInfo (long? id, FantasiaBasicaPersist persist);
         
         /// <summary>
         /// Atualiza\u00E7\u00E3o parcial do Portador
@@ -1708,6 +1850,52 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<TipoOperacaoResponse>> AtualizarParcialmenteTipoOperacaoAsyncWithHttpInfo (long? id, TipoOperacaoParcialUpdate tipoOperacaoParcialUpdate);
         
         /// <summary>
+        /// Atualizar um pacote de tarifas
+        /// </summary>
+        /// <remarks>
+        /// Atualiza um pacote de tarifas a partir do seu c\u00F3digo de identifica\u00E7\u00E3o
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo identificador do pacote de tarifa</param>
+        /// <param name="update">update</param>
+        /// <returns>Task of PacoteTarifaResponse</returns>
+        System.Threading.Tasks.Task<PacoteTarifaResponse> Atualizar_0Async (long? id, PacoteTarifaUpdate update);
+
+        /// <summary>
+        /// Atualizar um pacote de tarifas
+        /// </summary>
+        /// <remarks>
+        /// Atualiza um pacote de tarifas a partir do seu c\u00F3digo de identifica\u00E7\u00E3o
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo identificador do pacote de tarifa</param>
+        /// <param name="update">update</param>
+        /// <returns>Task of ApiResponse (PacoteTarifaResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PacoteTarifaResponse>> Atualizar_0AsyncWithHttpInfo (long? id, PacoteTarifaUpdate update);
+        
+        /// <summary>
+        /// cadastrar
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="persist">persist</param>
+        /// <returns>Task of FantasiaBasicaResponse</returns>
+        System.Threading.Tasks.Task<FantasiaBasicaResponse> CadastrarAsync (FantasiaBasicaPersist persist);
+
+        /// <summary>
+        /// cadastrar
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="persist">persist</param>
+        /// <returns>Task of ApiResponse (FantasiaBasicaResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<FantasiaBasicaResponse>> CadastrarAsyncWithHttpInfo (FantasiaBasicaPersist persist);
+        
+        /// <summary>
         /// Configura a Taxa de Antecipa\u00E7\u00E3o de um Produto
         /// </summary>
         /// <remarks>
@@ -1732,26 +1920,26 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<ParametroProdutoResponse>> ConfigurarTaxaAntecipacaoProdutoAsyncWithHttpInfo (long? id, TaxaAntecipacaoRequest taxaAntecipacaoRequest);
         
         /// <summary>
-        /// Consultar um pacote de tarifa
+        /// consultar
         /// </summary>
         /// <remarks>
-        /// Consulta o pacote de tarifa a partir do seu c\u00F3digo de identifica\u00E7\u00E3o
+        /// 
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo identificador do pacote de tarifa</param>
-        /// <returns>Task of PacoteTarifaResponse</returns>
-        System.Threading.Tasks.Task<PacoteTarifaResponse> ConsultarAsync (long? id);
+        /// <param name="id">id</param>
+        /// <returns>Task of FantasiaBasicaResponse</returns>
+        System.Threading.Tasks.Task<FantasiaBasicaResponse> ConsultarAsync (long? id);
 
         /// <summary>
-        /// Consultar um pacote de tarifa
+        /// consultar
         /// </summary>
         /// <remarks>
-        /// Consulta o pacote de tarifa a partir do seu c\u00F3digo de identifica\u00E7\u00E3o
+        /// 
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo identificador do pacote de tarifa</param>
-        /// <returns>Task of ApiResponse (PacoteTarifaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PacoteTarifaResponse>> ConsultarAsyncWithHttpInfo (long? id);
+        /// <param name="id">id</param>
+        /// <returns>Task of ApiResponse (FantasiaBasicaResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<FantasiaBasicaResponse>> ConsultarAsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Apresenta os dados de um determinado Atendimento
@@ -2130,6 +2318,62 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<TipoTelefoneResponse>> ConsultarTipoTelefoneAsyncWithHttpInfo (long? id);
         
         /// <summary>
+        /// Consultar um pacote de tarifa
+        /// </summary>
+        /// <remarks>
+        /// Consulta o pacote de tarifa a partir do seu c\u00F3digo de identifica\u00E7\u00E3o
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo identificador do pacote de tarifa</param>
+        /// <returns>Task of PacoteTarifaResponse</returns>
+        System.Threading.Tasks.Task<PacoteTarifaResponse> Consultar_0Async (long? id);
+
+        /// <summary>
+        /// Consultar um pacote de tarifa
+        /// </summary>
+        /// <remarks>
+        /// Consulta o pacote de tarifa a partir do seu c\u00F3digo de identifica\u00E7\u00E3o
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo identificador do pacote de tarifa</param>
+        /// <returns>Task of ApiResponse (PacoteTarifaResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PacoteTarifaResponse>> Consultar_0AsyncWithHttpInfo (long? id);
+        
+        /// <summary>
+        /// Listar Fantasias B\u00E1sicas
+        /// </summary>
+        /// <remarks>
+        /// Lista as fantasia b\u00E1sicas
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="nome">Nome da fantasia b\u00E1sica (optional)</param>
+        /// <param name="descricao">Descri\u00E7\u00E3o da fantasia b\u00E1sica (optional)</param>
+        /// <param name="descricaoArquivo">Descri\u00E7\u00E3o do arquivo da fantasia b\u00E1sica (optional)</param>
+        /// <param name="quantidadeMaxProposta">Quantidade m\u00E1xima de propostas da fantasia b\u00E1sica (optional)</param>
+        /// <returns>Task of PageFantasiaBasicaResponse</returns>
+        System.Threading.Tasks.Task<PageFantasiaBasicaResponse> ListarAsync (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string descricao = null, string descricaoArquivo = null, int? quantidadeMaxProposta = null);
+
+        /// <summary>
+        /// Listar Fantasias B\u00E1sicas
+        /// </summary>
+        /// <remarks>
+        /// Lista as fantasia b\u00E1sicas
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="nome">Nome da fantasia b\u00E1sica (optional)</param>
+        /// <param name="descricao">Descri\u00E7\u00E3o da fantasia b\u00E1sica (optional)</param>
+        /// <param name="descricaoArquivo">Descri\u00E7\u00E3o do arquivo da fantasia b\u00E1sica (optional)</param>
+        /// <param name="quantidadeMaxProposta">Quantidade m\u00E1xima de propostas da fantasia b\u00E1sica (optional)</param>
+        /// <returns>Task of ApiResponse (PageFantasiaBasicaResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PageFantasiaBasicaResponse>> ListarAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string descricao = null, string descricaoArquivo = null, int? quantidadeMaxProposta = null);
+        
+        /// <summary>
         /// Lista todos os atendimentos
         /// </summary>
         /// <remarks>
@@ -2384,32 +2628,6 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<PageCampoCodificadoDescricaoResponse>> ListarEstadosCivisAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
         
         /// <summary>
-        /// Listar Fantasias B\u00E1sicas
-        /// </summary>
-        /// <remarks>
-        /// Lista as fantasia b\u00E1sicas
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <returns>Task of PageFantasiaBasicaResponse</returns>
-        System.Threading.Tasks.Task<PageFantasiaBasicaResponse> ListarFantasiasBasicasAsync (List<string> sort = null, int? page = null, int? limit = null);
-
-        /// <summary>
-        /// Listar Fantasias B\u00E1sicas
-        /// </summary>
-        /// <remarks>
-        /// Lista as fantasia b\u00E1sicas
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <returns>Task of ApiResponse (PageFantasiaBasicaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageFantasiaBasicaResponse>> ListarFantasiasBasicasAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null);
-        
-        /// <summary>
         /// Lista os Grupos MCCs
         /// </summary>
         /// <remarks>
@@ -2440,6 +2658,50 @@ namespace Conductor.Pier.Api
         /// <param name="descricaoExtrato">Descri\u00E7\u00E3o para ser exibida em extratos (optional)</param>
         /// <returns>Task of ApiResponse (PageGrupoMCCResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<PageGrupoMCCResponse>> ListarGruposMCCAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, string descricaoExtrato = null);
+        
+        /// <summary>
+        /// Lista os grupos de transa\u00E7\u00F5es lojistas
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que sejam listados os grupos de transa\u00E7\u00F5es lojistas existentes na base de dados do Emissor
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="id">C\u00F3digo identificador do grupo de transa\u00E7\u00E3o lojista (optional)</param>
+        /// <param name="descricao">Descri\u00E7\u00E3o do request de grupo transa\u00E7\u00E3o lojista (optional)</param>
+        /// <param name="flagCompra">Indica se permite compra (optional)</param>
+        /// <param name="flagSaque">Indica se permite saque (optional)</param>
+        /// <param name="flagComissao">Indica se recebe comiss\u00E3o (optional)</param>
+        /// <param name="flagChargeBack">Indica se permite chargeback (optional)</param>
+        /// <param name="flagOutrosDebitos">Indica se recebe outros d\u00E9bitos (optional)</param>
+        /// <param name="flagPagamento">Indica pagamento (optional)</param>
+        /// <param name="flagOutrosCreditos">Indica se recebe outros cr\u00E9ditos (optional)</param>
+        /// <returns>Task of GrupoTransacaoLojistaResponse</returns>
+        System.Threading.Tasks.Task<GrupoTransacaoLojistaResponse> ListarGruposTransacoesLojistasAsync (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, bool? flagCompra = null, bool? flagSaque = null, bool? flagComissao = null, bool? flagChargeBack = null, bool? flagOutrosDebitos = null, bool? flagPagamento = null, bool? flagOutrosCreditos = null);
+
+        /// <summary>
+        /// Lista os grupos de transa\u00E7\u00F5es lojistas
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que sejam listados os grupos de transa\u00E7\u00F5es lojistas existentes na base de dados do Emissor
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="id">C\u00F3digo identificador do grupo de transa\u00E7\u00E3o lojista (optional)</param>
+        /// <param name="descricao">Descri\u00E7\u00E3o do request de grupo transa\u00E7\u00E3o lojista (optional)</param>
+        /// <param name="flagCompra">Indica se permite compra (optional)</param>
+        /// <param name="flagSaque">Indica se permite saque (optional)</param>
+        /// <param name="flagComissao">Indica se recebe comiss\u00E3o (optional)</param>
+        /// <param name="flagChargeBack">Indica se permite chargeback (optional)</param>
+        /// <param name="flagOutrosDebitos">Indica se recebe outros d\u00E9bitos (optional)</param>
+        /// <param name="flagPagamento">Indica pagamento (optional)</param>
+        /// <param name="flagOutrosCreditos">Indica se recebe outros cr\u00E9ditos (optional)</param>
+        /// <returns>Task of ApiResponse (GrupoTransacaoLojistaResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<GrupoTransacaoLojistaResponse>> ListarGruposTransacoesLojistasAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, bool? flagCompra = null, bool? flagSaque = null, bool? flagComissao = null, bool? flagChargeBack = null, bool? flagOutrosDebitos = null, bool? flagPagamento = null, bool? flagOutrosCreditos = null);
         
         /// <summary>
         /// Lista nacionalidades
@@ -2808,6 +3070,28 @@ namespace Conductor.Pier.Api
         /// <param name="dataVencimentoFim">Indica a data vencimento final das faturas (optional)</param>
         /// <returns>Task of ApiResponse (PageControleVencimentoResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<PageControleVencimentoResponse>> ListarVencimentosAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string dataVencimento = null, string dataVencimentoFim = null);
+        
+        /// <summary>
+        /// remover
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task RemoverAsync (long? id);
+
+        /// <summary>
+        /// remover
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> RemoverAsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Cadastrar um pacote de tarifas
@@ -4008,38 +4292,38 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Atualizar um pacote de tarifas Atualiza um pacote de tarifas a partir do seu c\u00F3digo de identifica\u00E7\u00E3o
+        /// atualizar 
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo identificador do pacote de tarifa</param> 
-        /// <param name="update">update</param> 
-        /// <returns>PacoteTarifaResponse</returns>
-        public PacoteTarifaResponse Atualizar (long? id, PacoteTarifaUpdate update)
+        /// <param name="id">id</param> 
+        /// <param name="persist">persist</param> 
+        /// <returns>FantasiaBasicaResponse</returns>
+        public FantasiaBasicaResponse Atualizar (long? id, FantasiaBasicaPersist persist)
         {
-             ApiResponse<PacoteTarifaResponse> localVarResponse = AtualizarWithHttpInfo(id, update);
+             ApiResponse<FantasiaBasicaResponse> localVarResponse = AtualizarWithHttpInfo(id, persist);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Atualizar um pacote de tarifas Atualiza um pacote de tarifas a partir do seu c\u00F3digo de identifica\u00E7\u00E3o
+        /// atualizar 
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo identificador do pacote de tarifa</param> 
-        /// <param name="update">update</param> 
-        /// <returns>ApiResponse of PacoteTarifaResponse</returns>
-        public ApiResponse< PacoteTarifaResponse > AtualizarWithHttpInfo (long? id, PacoteTarifaUpdate update)
+        /// <param name="id">id</param> 
+        /// <param name="persist">persist</param> 
+        /// <returns>ApiResponse of FantasiaBasicaResponse</returns>
+        public ApiResponse< FantasiaBasicaResponse > AtualizarWithHttpInfo (long? id, FantasiaBasicaPersist persist)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling CadastroGeralApi->Atualizar");
             
-            // verify the required parameter 'update' is set
-            if (update == null)
-                throw new ApiException(400, "Missing required parameter 'update' when calling CadastroGeralApi->Atualizar");
+            // verify the required parameter 'persist' is set
+            if (persist == null)
+                throw new ApiException(400, "Missing required parameter 'persist' when calling CadastroGeralApi->Atualizar");
             
     
-            var localVarPath = "/api/pacotes-tarifas/{id}";
+            var localVarPath = "/api/fantasias-basicas/{id}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -4070,13 +4354,13 @@ namespace Conductor.Pier.Api
             
             
             
-            if (update.GetType() != typeof(byte[]))
+            if (persist.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(update); // http body (model) parameter
+                localVarPostBody = Configuration.ApiClient.Serialize(persist); // http body (model) parameter
             }
             else
             {
-                localVarPostBody = update; // byte array
+                localVarPostBody = persist; // byte array
             }
 
             
@@ -4093,43 +4377,43 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling Atualizar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<PacoteTarifaResponse>(localVarStatusCode,
+            return new ApiResponse<FantasiaBasicaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PacoteTarifaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PacoteTarifaResponse)));
+                (FantasiaBasicaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FantasiaBasicaResponse)));
             
         }
 
         
         /// <summary>
-        /// Atualizar um pacote de tarifas Atualiza um pacote de tarifas a partir do seu c\u00F3digo de identifica\u00E7\u00E3o
+        /// atualizar 
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo identificador do pacote de tarifa</param>
-        /// <param name="update">update</param>
-        /// <returns>Task of PacoteTarifaResponse</returns>
-        public async System.Threading.Tasks.Task<PacoteTarifaResponse> AtualizarAsync (long? id, PacoteTarifaUpdate update)
+        /// <param name="id">id</param>
+        /// <param name="persist">persist</param>
+        /// <returns>Task of FantasiaBasicaResponse</returns>
+        public async System.Threading.Tasks.Task<FantasiaBasicaResponse> AtualizarAsync (long? id, FantasiaBasicaPersist persist)
         {
-             ApiResponse<PacoteTarifaResponse> localVarResponse = await AtualizarAsyncWithHttpInfo(id, update);
+             ApiResponse<FantasiaBasicaResponse> localVarResponse = await AtualizarAsyncWithHttpInfo(id, persist);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Atualizar um pacote de tarifas Atualiza um pacote de tarifas a partir do seu c\u00F3digo de identifica\u00E7\u00E3o
+        /// atualizar 
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo identificador do pacote de tarifa</param>
-        /// <param name="update">update</param>
-        /// <returns>Task of ApiResponse (PacoteTarifaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PacoteTarifaResponse>> AtualizarAsyncWithHttpInfo (long? id, PacoteTarifaUpdate update)
+        /// <param name="id">id</param>
+        /// <param name="persist">persist</param>
+        /// <returns>Task of ApiResponse (FantasiaBasicaResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<FantasiaBasicaResponse>> AtualizarAsyncWithHttpInfo (long? id, FantasiaBasicaPersist persist)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling Atualizar");
-            // verify the required parameter 'update' is set
-            if (update == null) throw new ApiException(400, "Missing required parameter 'update' when calling Atualizar");
+            // verify the required parameter 'persist' is set
+            if (persist == null) throw new ApiException(400, "Missing required parameter 'persist' when calling Atualizar");
             
     
-            var localVarPath = "/api/pacotes-tarifas/{id}";
+            var localVarPath = "/api/fantasias-basicas/{id}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -4160,13 +4444,13 @@ namespace Conductor.Pier.Api
             
             
             
-            if (update.GetType() != typeof(byte[]))
+            if (persist.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(update); // http body (model) parameter
+                localVarPostBody = Configuration.ApiClient.Serialize(persist); // http body (model) parameter
             }
             else
             {
-                localVarPostBody = update; // byte array
+                localVarPostBody = persist; // byte array
             }
 
             
@@ -4183,9 +4467,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling Atualizar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<PacoteTarifaResponse>(localVarStatusCode,
+            return new ApiResponse<FantasiaBasicaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PacoteTarifaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PacoteTarifaResponse)));
+                (FantasiaBasicaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FantasiaBasicaResponse)));
             
         }
         
@@ -4566,6 +4850,358 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
+        /// Atualizar um pacote de tarifas Atualiza um pacote de tarifas a partir do seu c\u00F3digo de identifica\u00E7\u00E3o
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo identificador do pacote de tarifa</param> 
+        /// <param name="update">update</param> 
+        /// <returns>PacoteTarifaResponse</returns>
+        public PacoteTarifaResponse Atualizar_0 (long? id, PacoteTarifaUpdate update)
+        {
+             ApiResponse<PacoteTarifaResponse> localVarResponse = Atualizar_0WithHttpInfo(id, update);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Atualizar um pacote de tarifas Atualiza um pacote de tarifas a partir do seu c\u00F3digo de identifica\u00E7\u00E3o
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo identificador do pacote de tarifa</param> 
+        /// <param name="update">update</param> 
+        /// <returns>ApiResponse of PacoteTarifaResponse</returns>
+        public ApiResponse< PacoteTarifaResponse > Atualizar_0WithHttpInfo (long? id, PacoteTarifaUpdate update)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling CadastroGeralApi->Atualizar_0");
+            
+            // verify the required parameter 'update' is set
+            if (update == null)
+                throw new ApiException(400, "Missing required parameter 'update' when calling CadastroGeralApi->Atualizar_0");
+            
+    
+            var localVarPath = "/api/pacotes-tarifas/{id}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            if (update.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(update); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = update; // byte array
+            }
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling Atualizar_0: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling Atualizar_0: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<PacoteTarifaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PacoteTarifaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PacoteTarifaResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Atualizar um pacote de tarifas Atualiza um pacote de tarifas a partir do seu c\u00F3digo de identifica\u00E7\u00E3o
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo identificador do pacote de tarifa</param>
+        /// <param name="update">update</param>
+        /// <returns>Task of PacoteTarifaResponse</returns>
+        public async System.Threading.Tasks.Task<PacoteTarifaResponse> Atualizar_0Async (long? id, PacoteTarifaUpdate update)
+        {
+             ApiResponse<PacoteTarifaResponse> localVarResponse = await Atualizar_0AsyncWithHttpInfo(id, update);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Atualizar um pacote de tarifas Atualiza um pacote de tarifas a partir do seu c\u00F3digo de identifica\u00E7\u00E3o
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo identificador do pacote de tarifa</param>
+        /// <param name="update">update</param>
+        /// <returns>Task of ApiResponse (PacoteTarifaResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PacoteTarifaResponse>> Atualizar_0AsyncWithHttpInfo (long? id, PacoteTarifaUpdate update)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling Atualizar_0");
+            // verify the required parameter 'update' is set
+            if (update == null) throw new ApiException(400, "Missing required parameter 'update' when calling Atualizar_0");
+            
+    
+            var localVarPath = "/api/pacotes-tarifas/{id}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            if (update.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(update); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = update; // byte array
+            }
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling Atualizar_0: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling Atualizar_0: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PacoteTarifaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PacoteTarifaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PacoteTarifaResponse)));
+            
+        }
+        
+        /// <summary>
+        /// cadastrar 
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="persist">persist</param> 
+        /// <returns>FantasiaBasicaResponse</returns>
+        public FantasiaBasicaResponse Cadastrar (FantasiaBasicaPersist persist)
+        {
+             ApiResponse<FantasiaBasicaResponse> localVarResponse = CadastrarWithHttpInfo(persist);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// cadastrar 
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="persist">persist</param> 
+        /// <returns>ApiResponse of FantasiaBasicaResponse</returns>
+        public ApiResponse< FantasiaBasicaResponse > CadastrarWithHttpInfo (FantasiaBasicaPersist persist)
+        {
+            
+            // verify the required parameter 'persist' is set
+            if (persist == null)
+                throw new ApiException(400, "Missing required parameter 'persist' when calling CadastroGeralApi->Cadastrar");
+            
+    
+            var localVarPath = "/api/fantasias-basicas";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            if (persist.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(persist); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = persist; // byte array
+            }
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling Cadastrar: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling Cadastrar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<FantasiaBasicaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (FantasiaBasicaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FantasiaBasicaResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// cadastrar 
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="persist">persist</param>
+        /// <returns>Task of FantasiaBasicaResponse</returns>
+        public async System.Threading.Tasks.Task<FantasiaBasicaResponse> CadastrarAsync (FantasiaBasicaPersist persist)
+        {
+             ApiResponse<FantasiaBasicaResponse> localVarResponse = await CadastrarAsyncWithHttpInfo(persist);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// cadastrar 
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="persist">persist</param>
+        /// <returns>Task of ApiResponse (FantasiaBasicaResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<FantasiaBasicaResponse>> CadastrarAsyncWithHttpInfo (FantasiaBasicaPersist persist)
+        {
+            // verify the required parameter 'persist' is set
+            if (persist == null) throw new ApiException(400, "Missing required parameter 'persist' when calling Cadastrar");
+            
+    
+            var localVarPath = "/api/fantasias-basicas";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            if (persist.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(persist); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = persist; // byte array
+            }
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling Cadastrar: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling Cadastrar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<FantasiaBasicaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (FantasiaBasicaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FantasiaBasicaResponse)));
+            
+        }
+        
+        /// <summary>
         /// Configura a Taxa de Antecipa\u00E7\u00E3o de um Produto Este recurso permite configurar a Taxa de Antecipa\u00E7\u00E3o de um Produto, a partir do seu c\u00F3digo de identifica\u00E7\u00E3o (id)
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4748,24 +5384,24 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Consultar um pacote de tarifa Consulta o pacote de tarifa a partir do seu c\u00F3digo de identifica\u00E7\u00E3o
+        /// consultar 
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo identificador do pacote de tarifa</param> 
-        /// <returns>PacoteTarifaResponse</returns>
-        public PacoteTarifaResponse Consultar (long? id)
+        /// <param name="id">id</param> 
+        /// <returns>FantasiaBasicaResponse</returns>
+        public FantasiaBasicaResponse Consultar (long? id)
         {
-             ApiResponse<PacoteTarifaResponse> localVarResponse = ConsultarWithHttpInfo(id);
+             ApiResponse<FantasiaBasicaResponse> localVarResponse = ConsultarWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Consultar um pacote de tarifa Consulta o pacote de tarifa a partir do seu c\u00F3digo de identifica\u00E7\u00E3o
+        /// consultar 
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo identificador do pacote de tarifa</param> 
-        /// <returns>ApiResponse of PacoteTarifaResponse</returns>
-        public ApiResponse< PacoteTarifaResponse > ConsultarWithHttpInfo (long? id)
+        /// <param name="id">id</param> 
+        /// <returns>ApiResponse of FantasiaBasicaResponse</returns>
+        public ApiResponse< FantasiaBasicaResponse > ConsultarWithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
@@ -4773,7 +5409,7 @@ namespace Conductor.Pier.Api
                 throw new ApiException(400, "Missing required parameter 'id' when calling CadastroGeralApi->Consultar");
             
     
-            var localVarPath = "/api/pacotes-tarifas/{id}";
+            var localVarPath = "/api/fantasias-basicas/{id}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -4820,39 +5456,39 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling Consultar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<PacoteTarifaResponse>(localVarStatusCode,
+            return new ApiResponse<FantasiaBasicaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PacoteTarifaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PacoteTarifaResponse)));
+                (FantasiaBasicaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FantasiaBasicaResponse)));
             
         }
 
         
         /// <summary>
-        /// Consultar um pacote de tarifa Consulta o pacote de tarifa a partir do seu c\u00F3digo de identifica\u00E7\u00E3o
+        /// consultar 
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo identificador do pacote de tarifa</param>
-        /// <returns>Task of PacoteTarifaResponse</returns>
-        public async System.Threading.Tasks.Task<PacoteTarifaResponse> ConsultarAsync (long? id)
+        /// <param name="id">id</param>
+        /// <returns>Task of FantasiaBasicaResponse</returns>
+        public async System.Threading.Tasks.Task<FantasiaBasicaResponse> ConsultarAsync (long? id)
         {
-             ApiResponse<PacoteTarifaResponse> localVarResponse = await ConsultarAsyncWithHttpInfo(id);
+             ApiResponse<FantasiaBasicaResponse> localVarResponse = await ConsultarAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Consultar um pacote de tarifa Consulta o pacote de tarifa a partir do seu c\u00F3digo de identifica\u00E7\u00E3o
+        /// consultar 
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo identificador do pacote de tarifa</param>
-        /// <returns>Task of ApiResponse (PacoteTarifaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PacoteTarifaResponse>> ConsultarAsyncWithHttpInfo (long? id)
+        /// <param name="id">id</param>
+        /// <returns>Task of ApiResponse (FantasiaBasicaResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<FantasiaBasicaResponse>> ConsultarAsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling Consultar");
             
     
-            var localVarPath = "/api/pacotes-tarifas/{id}";
+            var localVarPath = "/api/fantasias-basicas/{id}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -4899,9 +5535,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling Consultar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<PacoteTarifaResponse>(localVarStatusCode,
+            return new ApiResponse<FantasiaBasicaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PacoteTarifaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PacoteTarifaResponse)));
+                (FantasiaBasicaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FantasiaBasicaResponse)));
             
         }
         
@@ -7524,6 +8160,352 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
+        /// Consultar um pacote de tarifa Consulta o pacote de tarifa a partir do seu c\u00F3digo de identifica\u00E7\u00E3o
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo identificador do pacote de tarifa</param> 
+        /// <returns>PacoteTarifaResponse</returns>
+        public PacoteTarifaResponse Consultar_0 (long? id)
+        {
+             ApiResponse<PacoteTarifaResponse> localVarResponse = Consultar_0WithHttpInfo(id);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Consultar um pacote de tarifa Consulta o pacote de tarifa a partir do seu c\u00F3digo de identifica\u00E7\u00E3o
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo identificador do pacote de tarifa</param> 
+        /// <returns>ApiResponse of PacoteTarifaResponse</returns>
+        public ApiResponse< PacoteTarifaResponse > Consultar_0WithHttpInfo (long? id)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling CadastroGeralApi->Consultar_0");
+            
+    
+            var localVarPath = "/api/pacotes-tarifas/{id}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling Consultar_0: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling Consultar_0: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<PacoteTarifaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PacoteTarifaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PacoteTarifaResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Consultar um pacote de tarifa Consulta o pacote de tarifa a partir do seu c\u00F3digo de identifica\u00E7\u00E3o
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo identificador do pacote de tarifa</param>
+        /// <returns>Task of PacoteTarifaResponse</returns>
+        public async System.Threading.Tasks.Task<PacoteTarifaResponse> Consultar_0Async (long? id)
+        {
+             ApiResponse<PacoteTarifaResponse> localVarResponse = await Consultar_0AsyncWithHttpInfo(id);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Consultar um pacote de tarifa Consulta o pacote de tarifa a partir do seu c\u00F3digo de identifica\u00E7\u00E3o
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo identificador do pacote de tarifa</param>
+        /// <returns>Task of ApiResponse (PacoteTarifaResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PacoteTarifaResponse>> Consultar_0AsyncWithHttpInfo (long? id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling Consultar_0");
+            
+    
+            var localVarPath = "/api/pacotes-tarifas/{id}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling Consultar_0: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling Consultar_0: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PacoteTarifaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PacoteTarifaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PacoteTarifaResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Listar Fantasias B\u00E1sicas Lista as fantasia b\u00E1sicas
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="page">P\u00E1gina (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <param name="nome">Nome da fantasia b\u00E1sica (optional)</param> 
+        /// <param name="descricao">Descri\u00E7\u00E3o da fantasia b\u00E1sica (optional)</param> 
+        /// <param name="descricaoArquivo">Descri\u00E7\u00E3o do arquivo da fantasia b\u00E1sica (optional)</param> 
+        /// <param name="quantidadeMaxProposta">Quantidade m\u00E1xima de propostas da fantasia b\u00E1sica (optional)</param> 
+        /// <returns>PageFantasiaBasicaResponse</returns>
+        public PageFantasiaBasicaResponse Listar (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string descricao = null, string descricaoArquivo = null, int? quantidadeMaxProposta = null)
+        {
+             ApiResponse<PageFantasiaBasicaResponse> localVarResponse = ListarWithHttpInfo(sort, page, limit, nome, descricao, descricaoArquivo, quantidadeMaxProposta);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Listar Fantasias B\u00E1sicas Lista as fantasia b\u00E1sicas
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="page">P\u00E1gina (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <param name="nome">Nome da fantasia b\u00E1sica (optional)</param> 
+        /// <param name="descricao">Descri\u00E7\u00E3o da fantasia b\u00E1sica (optional)</param> 
+        /// <param name="descricaoArquivo">Descri\u00E7\u00E3o do arquivo da fantasia b\u00E1sica (optional)</param> 
+        /// <param name="quantidadeMaxProposta">Quantidade m\u00E1xima de propostas da fantasia b\u00E1sica (optional)</param> 
+        /// <returns>ApiResponse of PageFantasiaBasicaResponse</returns>
+        public ApiResponse< PageFantasiaBasicaResponse > ListarWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string descricao = null, string descricaoArquivo = null, int? quantidadeMaxProposta = null)
+        {
+            
+    
+            var localVarPath = "/api/fantasias-basicas";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (nome != null) localVarQueryParams.Add("nome", Configuration.ApiClient.ParameterToString(nome)); // query parameter
+            if (descricao != null) localVarQueryParams.Add("descricao", Configuration.ApiClient.ParameterToString(descricao)); // query parameter
+            if (descricaoArquivo != null) localVarQueryParams.Add("descricaoArquivo", Configuration.ApiClient.ParameterToString(descricaoArquivo)); // query parameter
+            if (quantidadeMaxProposta != null) localVarQueryParams.Add("quantidadeMaxProposta", Configuration.ApiClient.ParameterToString(quantidadeMaxProposta)); // query parameter
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling Listar: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling Listar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<PageFantasiaBasicaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageFantasiaBasicaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageFantasiaBasicaResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Listar Fantasias B\u00E1sicas Lista as fantasia b\u00E1sicas
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="nome">Nome da fantasia b\u00E1sica (optional)</param>
+        /// <param name="descricao">Descri\u00E7\u00E3o da fantasia b\u00E1sica (optional)</param>
+        /// <param name="descricaoArquivo">Descri\u00E7\u00E3o do arquivo da fantasia b\u00E1sica (optional)</param>
+        /// <param name="quantidadeMaxProposta">Quantidade m\u00E1xima de propostas da fantasia b\u00E1sica (optional)</param>
+        /// <returns>Task of PageFantasiaBasicaResponse</returns>
+        public async System.Threading.Tasks.Task<PageFantasiaBasicaResponse> ListarAsync (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string descricao = null, string descricaoArquivo = null, int? quantidadeMaxProposta = null)
+        {
+             ApiResponse<PageFantasiaBasicaResponse> localVarResponse = await ListarAsyncWithHttpInfo(sort, page, limit, nome, descricao, descricaoArquivo, quantidadeMaxProposta);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Listar Fantasias B\u00E1sicas Lista as fantasia b\u00E1sicas
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="nome">Nome da fantasia b\u00E1sica (optional)</param>
+        /// <param name="descricao">Descri\u00E7\u00E3o da fantasia b\u00E1sica (optional)</param>
+        /// <param name="descricaoArquivo">Descri\u00E7\u00E3o do arquivo da fantasia b\u00E1sica (optional)</param>
+        /// <param name="quantidadeMaxProposta">Quantidade m\u00E1xima de propostas da fantasia b\u00E1sica (optional)</param>
+        /// <returns>Task of ApiResponse (PageFantasiaBasicaResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PageFantasiaBasicaResponse>> ListarAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null, string descricao = null, string descricaoArquivo = null, int? quantidadeMaxProposta = null)
+        {
+            
+    
+            var localVarPath = "/api/fantasias-basicas";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (nome != null) localVarQueryParams.Add("nome", Configuration.ApiClient.ParameterToString(nome)); // query parameter
+            if (descricao != null) localVarQueryParams.Add("descricao", Configuration.ApiClient.ParameterToString(descricao)); // query parameter
+            if (descricaoArquivo != null) localVarQueryParams.Add("descricaoArquivo", Configuration.ApiClient.ParameterToString(descricaoArquivo)); // query parameter
+            if (quantidadeMaxProposta != null) localVarQueryParams.Add("quantidadeMaxProposta", Configuration.ApiClient.ParameterToString(quantidadeMaxProposta)); // query parameter
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling Listar: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling Listar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PageFantasiaBasicaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageFantasiaBasicaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageFantasiaBasicaResponse)));
+            
+        }
+        
+        /// <summary>
         /// Lista todos os atendimentos Este m\u00E9todo permite que sejam listados todos os Registro de Atendimento, independente do Tipo
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
@@ -8974,170 +9956,6 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Listar Fantasias B\u00E1sicas Lista as fantasia b\u00E1sicas
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
-        /// <param name="page">P\u00E1gina (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
-        /// <returns>PageFantasiaBasicaResponse</returns>
-        public PageFantasiaBasicaResponse ListarFantasiasBasicas (List<string> sort = null, int? page = null, int? limit = null)
-        {
-             ApiResponse<PageFantasiaBasicaResponse> localVarResponse = ListarFantasiasBasicasWithHttpInfo(sort, page, limit);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Listar Fantasias B\u00E1sicas Lista as fantasia b\u00E1sicas
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
-        /// <param name="page">P\u00E1gina (optional)</param> 
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
-        /// <returns>ApiResponse of PageFantasiaBasicaResponse</returns>
-        public ApiResponse< PageFantasiaBasicaResponse > ListarFantasiasBasicasWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
-        {
-            
-    
-            var localVarPath = "/api/fantasias-basicas";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            
-            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
-            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
-            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
-            
-            
-            
-            
-
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarFantasiasBasicas: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarFantasiasBasicas: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<PageFantasiaBasicaResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PageFantasiaBasicaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageFantasiaBasicaResponse)));
-            
-        }
-
-        
-        /// <summary>
-        /// Listar Fantasias B\u00E1sicas Lista as fantasia b\u00E1sicas
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <returns>Task of PageFantasiaBasicaResponse</returns>
-        public async System.Threading.Tasks.Task<PageFantasiaBasicaResponse> ListarFantasiasBasicasAsync (List<string> sort = null, int? page = null, int? limit = null)
-        {
-             ApiResponse<PageFantasiaBasicaResponse> localVarResponse = await ListarFantasiasBasicasAsyncWithHttpInfo(sort, page, limit);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Listar Fantasias B\u00E1sicas Lista as fantasia b\u00E1sicas
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
-        /// <param name="page">P\u00E1gina (optional)</param>
-        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
-        /// <returns>Task of ApiResponse (PageFantasiaBasicaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageFantasiaBasicaResponse>> ListarFantasiasBasicasAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null)
-        {
-            
-    
-            var localVarPath = "/api/fantasias-basicas";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            
-            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
-            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
-            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
-            
-            
-            
-            
-
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarFantasiasBasicas: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarFantasiasBasicas: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<PageFantasiaBasicaResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PageFantasiaBasicaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageFantasiaBasicaResponse)));
-            
-        }
-        
-        /// <summary>
         /// Lista os Grupos MCCs Este m\u00E9todo permite que sejam listados os grupos MCCs existentes na base de dados do Emissor
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
@@ -9316,6 +10134,224 @@ namespace Conductor.Pier.Api
             return new ApiResponse<PageGrupoMCCResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (PageGrupoMCCResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageGrupoMCCResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Lista os grupos de transa\u00E7\u00F5es lojistas Este m\u00E9todo permite que sejam listados os grupos de transa\u00E7\u00F5es lojistas existentes na base de dados do Emissor
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="page">P\u00E1gina (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <param name="id">C\u00F3digo identificador do grupo de transa\u00E7\u00E3o lojista (optional)</param> 
+        /// <param name="descricao">Descri\u00E7\u00E3o do request de grupo transa\u00E7\u00E3o lojista (optional)</param> 
+        /// <param name="flagCompra">Indica se permite compra (optional)</param> 
+        /// <param name="flagSaque">Indica se permite saque (optional)</param> 
+        /// <param name="flagComissao">Indica se recebe comiss\u00E3o (optional)</param> 
+        /// <param name="flagChargeBack">Indica se permite chargeback (optional)</param> 
+        /// <param name="flagOutrosDebitos">Indica se recebe outros d\u00E9bitos (optional)</param> 
+        /// <param name="flagPagamento">Indica pagamento (optional)</param> 
+        /// <param name="flagOutrosCreditos">Indica se recebe outros cr\u00E9ditos (optional)</param> 
+        /// <returns>GrupoTransacaoLojistaResponse</returns>
+        public GrupoTransacaoLojistaResponse ListarGruposTransacoesLojistas (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, bool? flagCompra = null, bool? flagSaque = null, bool? flagComissao = null, bool? flagChargeBack = null, bool? flagOutrosDebitos = null, bool? flagPagamento = null, bool? flagOutrosCreditos = null)
+        {
+             ApiResponse<GrupoTransacaoLojistaResponse> localVarResponse = ListarGruposTransacoesLojistasWithHttpInfo(sort, page, limit, id, descricao, flagCompra, flagSaque, flagComissao, flagChargeBack, flagOutrosDebitos, flagPagamento, flagOutrosCreditos);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Lista os grupos de transa\u00E7\u00F5es lojistas Este m\u00E9todo permite que sejam listados os grupos de transa\u00E7\u00F5es lojistas existentes na base de dados do Emissor
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="page">P\u00E1gina (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <param name="id">C\u00F3digo identificador do grupo de transa\u00E7\u00E3o lojista (optional)</param> 
+        /// <param name="descricao">Descri\u00E7\u00E3o do request de grupo transa\u00E7\u00E3o lojista (optional)</param> 
+        /// <param name="flagCompra">Indica se permite compra (optional)</param> 
+        /// <param name="flagSaque">Indica se permite saque (optional)</param> 
+        /// <param name="flagComissao">Indica se recebe comiss\u00E3o (optional)</param> 
+        /// <param name="flagChargeBack">Indica se permite chargeback (optional)</param> 
+        /// <param name="flagOutrosDebitos">Indica se recebe outros d\u00E9bitos (optional)</param> 
+        /// <param name="flagPagamento">Indica pagamento (optional)</param> 
+        /// <param name="flagOutrosCreditos">Indica se recebe outros cr\u00E9ditos (optional)</param> 
+        /// <returns>ApiResponse of GrupoTransacaoLojistaResponse</returns>
+        public ApiResponse< GrupoTransacaoLojistaResponse > ListarGruposTransacoesLojistasWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, bool? flagCompra = null, bool? flagSaque = null, bool? flagComissao = null, bool? flagChargeBack = null, bool? flagOutrosDebitos = null, bool? flagPagamento = null, bool? flagOutrosCreditos = null)
+        {
+            
+    
+            var localVarPath = "/api/grupos-transacoes-lojistas";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
+            if (descricao != null) localVarQueryParams.Add("descricao", Configuration.ApiClient.ParameterToString(descricao)); // query parameter
+            if (flagCompra != null) localVarQueryParams.Add("flagCompra", Configuration.ApiClient.ParameterToString(flagCompra)); // query parameter
+            if (flagSaque != null) localVarQueryParams.Add("flagSaque", Configuration.ApiClient.ParameterToString(flagSaque)); // query parameter
+            if (flagComissao != null) localVarQueryParams.Add("flagComissao", Configuration.ApiClient.ParameterToString(flagComissao)); // query parameter
+            if (flagChargeBack != null) localVarQueryParams.Add("flagChargeBack", Configuration.ApiClient.ParameterToString(flagChargeBack)); // query parameter
+            if (flagOutrosDebitos != null) localVarQueryParams.Add("flagOutrosDebitos", Configuration.ApiClient.ParameterToString(flagOutrosDebitos)); // query parameter
+            if (flagPagamento != null) localVarQueryParams.Add("flagPagamento", Configuration.ApiClient.ParameterToString(flagPagamento)); // query parameter
+            if (flagOutrosCreditos != null) localVarQueryParams.Add("flagOutrosCreditos", Configuration.ApiClient.ParameterToString(flagOutrosCreditos)); // query parameter
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarGruposTransacoesLojistas: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarGruposTransacoesLojistas: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<GrupoTransacaoLojistaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (GrupoTransacaoLojistaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(GrupoTransacaoLojistaResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Lista os grupos de transa\u00E7\u00F5es lojistas Este m\u00E9todo permite que sejam listados os grupos de transa\u00E7\u00F5es lojistas existentes na base de dados do Emissor
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="id">C\u00F3digo identificador do grupo de transa\u00E7\u00E3o lojista (optional)</param>
+        /// <param name="descricao">Descri\u00E7\u00E3o do request de grupo transa\u00E7\u00E3o lojista (optional)</param>
+        /// <param name="flagCompra">Indica se permite compra (optional)</param>
+        /// <param name="flagSaque">Indica se permite saque (optional)</param>
+        /// <param name="flagComissao">Indica se recebe comiss\u00E3o (optional)</param>
+        /// <param name="flagChargeBack">Indica se permite chargeback (optional)</param>
+        /// <param name="flagOutrosDebitos">Indica se recebe outros d\u00E9bitos (optional)</param>
+        /// <param name="flagPagamento">Indica pagamento (optional)</param>
+        /// <param name="flagOutrosCreditos">Indica se recebe outros cr\u00E9ditos (optional)</param>
+        /// <returns>Task of GrupoTransacaoLojistaResponse</returns>
+        public async System.Threading.Tasks.Task<GrupoTransacaoLojistaResponse> ListarGruposTransacoesLojistasAsync (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, bool? flagCompra = null, bool? flagSaque = null, bool? flagComissao = null, bool? flagChargeBack = null, bool? flagOutrosDebitos = null, bool? flagPagamento = null, bool? flagOutrosCreditos = null)
+        {
+             ApiResponse<GrupoTransacaoLojistaResponse> localVarResponse = await ListarGruposTransacoesLojistasAsyncWithHttpInfo(sort, page, limit, id, descricao, flagCompra, flagSaque, flagComissao, flagChargeBack, flagOutrosDebitos, flagPagamento, flagOutrosCreditos);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Lista os grupos de transa\u00E7\u00F5es lojistas Este m\u00E9todo permite que sejam listados os grupos de transa\u00E7\u00F5es lojistas existentes na base de dados do Emissor
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="id">C\u00F3digo identificador do grupo de transa\u00E7\u00E3o lojista (optional)</param>
+        /// <param name="descricao">Descri\u00E7\u00E3o do request de grupo transa\u00E7\u00E3o lojista (optional)</param>
+        /// <param name="flagCompra">Indica se permite compra (optional)</param>
+        /// <param name="flagSaque">Indica se permite saque (optional)</param>
+        /// <param name="flagComissao">Indica se recebe comiss\u00E3o (optional)</param>
+        /// <param name="flagChargeBack">Indica se permite chargeback (optional)</param>
+        /// <param name="flagOutrosDebitos">Indica se recebe outros d\u00E9bitos (optional)</param>
+        /// <param name="flagPagamento">Indica pagamento (optional)</param>
+        /// <param name="flagOutrosCreditos">Indica se recebe outros cr\u00E9ditos (optional)</param>
+        /// <returns>Task of ApiResponse (GrupoTransacaoLojistaResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<GrupoTransacaoLojistaResponse>> ListarGruposTransacoesLojistasAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string descricao = null, bool? flagCompra = null, bool? flagSaque = null, bool? flagComissao = null, bool? flagChargeBack = null, bool? flagOutrosDebitos = null, bool? flagPagamento = null, bool? flagOutrosCreditos = null)
+        {
+            
+    
+            var localVarPath = "/api/grupos-transacoes-lojistas";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
+            if (descricao != null) localVarQueryParams.Add("descricao", Configuration.ApiClient.ParameterToString(descricao)); // query parameter
+            if (flagCompra != null) localVarQueryParams.Add("flagCompra", Configuration.ApiClient.ParameterToString(flagCompra)); // query parameter
+            if (flagSaque != null) localVarQueryParams.Add("flagSaque", Configuration.ApiClient.ParameterToString(flagSaque)); // query parameter
+            if (flagComissao != null) localVarQueryParams.Add("flagComissao", Configuration.ApiClient.ParameterToString(flagComissao)); // query parameter
+            if (flagChargeBack != null) localVarQueryParams.Add("flagChargeBack", Configuration.ApiClient.ParameterToString(flagChargeBack)); // query parameter
+            if (flagOutrosDebitos != null) localVarQueryParams.Add("flagOutrosDebitos", Configuration.ApiClient.ParameterToString(flagOutrosDebitos)); // query parameter
+            if (flagPagamento != null) localVarQueryParams.Add("flagPagamento", Configuration.ApiClient.ParameterToString(flagPagamento)); // query parameter
+            if (flagOutrosCreditos != null) localVarQueryParams.Add("flagOutrosCreditos", Configuration.ApiClient.ParameterToString(flagOutrosCreditos)); // query parameter
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarGruposTransacoesLojistas: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarGruposTransacoesLojistas: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<GrupoTransacaoLojistaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (GrupoTransacaoLojistaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(GrupoTransacaoLojistaResponse)));
             
         }
         
@@ -11453,6 +12489,162 @@ namespace Conductor.Pier.Api
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (PageControleVencimentoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageControleVencimentoResponse)));
             
+        }
+        
+        /// <summary>
+        /// remover 
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param> 
+        /// <returns></returns>
+        public void Remover (long? id)
+        {
+             RemoverWithHttpInfo(id);
+        }
+
+        /// <summary>
+        /// remover 
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param> 
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> RemoverWithHttpInfo (long? id)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling CadastroGeralApi->Remover");
+            
+    
+            var localVarPath = "/api/fantasias-basicas/{id}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling Remover: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling Remover: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        
+        /// <summary>
+        /// remover 
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task RemoverAsync (long? id)
+        {
+             await RemoverAsyncWithHttpInfo(id);
+
+        }
+
+        /// <summary>
+        /// remover 
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> RemoverAsyncWithHttpInfo (long? id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling Remover");
+            
+    
+            var localVarPath = "/api/fantasias-basicas/{id}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling Remover: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling Remover: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
         }
         
         /// <summary>

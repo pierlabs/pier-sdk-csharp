@@ -26,10 +26,11 @@ namespace Conductor.Pier.Model
         /// <param name="IdContaEmissor">Identificador da conta de controle interno criado pelo emissor.</param>
         /// <param name="DataCadastro">dataCadastro.</param>
         /// <param name="ValorRenda">valorRenda.</param>
-        /// <param name="PossuiOverLimit">Sinaliza se o OverLimit da conta est\uFFFD ativo.</param>
+        /// <param name="PossuiOverLimit">Sinaliza se o OverLimit da conta est\u00E1 ativo.</param>
         /// <param name="UsuarioModificacao">usuarioModificacao.</param>
+        /// <param name="BehaviorScore">Valor da pontua\u00E7\u00E3o de comportamento (behavior score)..</param>
 
-        public ContaPartialUpdate(string FuncaoAtiva = null, long? IdContaEmissor = null, string DataCadastro = null, double? ValorRenda = null, bool? PossuiOverLimit = null, string UsuarioModificacao = null)
+        public ContaPartialUpdate(string FuncaoAtiva = null, long? IdContaEmissor = null, string DataCadastro = null, double? ValorRenda = null, bool? PossuiOverLimit = null, string UsuarioModificacao = null, int? BehaviorScore = null)
         {
             this.FuncaoAtiva = FuncaoAtiva;
             this.IdContaEmissor = IdContaEmissor;
@@ -37,6 +38,7 @@ namespace Conductor.Pier.Model
             this.ValorRenda = ValorRenda;
             this.PossuiOverLimit = PossuiOverLimit;
             this.UsuarioModificacao = UsuarioModificacao;
+            this.BehaviorScore = BehaviorScore;
             
         }
         
@@ -70,9 +72,9 @@ namespace Conductor.Pier.Model
         public double? ValorRenda { get; set; }
     
         /// <summary>
-        /// Sinaliza se o OverLimit da conta est\uFFFD ativo
+        /// Sinaliza se o OverLimit da conta est\u00E1 ativo
         /// </summary>
-        /// <value>Sinaliza se o OverLimit da conta est\uFFFD ativo</value>
+        /// <value>Sinaliza se o OverLimit da conta est\u00E1 ativo</value>
         [DataMember(Name="possuiOverLimit", EmitDefaultValue=false)]
         public bool? PossuiOverLimit { get; set; }
     
@@ -82,6 +84,13 @@ namespace Conductor.Pier.Model
         /// <value>usuarioModificacao</value>
         [DataMember(Name="usuarioModificacao", EmitDefaultValue=false)]
         public string UsuarioModificacao { get; set; }
+    
+        /// <summary>
+        /// Valor da pontua\u00E7\u00E3o de comportamento (behavior score).
+        /// </summary>
+        /// <value>Valor da pontua\u00E7\u00E3o de comportamento (behavior score).</value>
+        [DataMember(Name="behaviorScore", EmitDefaultValue=false)]
+        public int? BehaviorScore { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -97,6 +106,7 @@ namespace Conductor.Pier.Model
             sb.Append("  ValorRenda: ").Append(ValorRenda).Append("\n");
             sb.Append("  PossuiOverLimit: ").Append(PossuiOverLimit).Append("\n");
             sb.Append("  UsuarioModificacao: ").Append(UsuarioModificacao).Append("\n");
+            sb.Append("  BehaviorScore: ").Append(BehaviorScore).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -163,6 +173,11 @@ namespace Conductor.Pier.Model
                     this.UsuarioModificacao == other.UsuarioModificacao ||
                     this.UsuarioModificacao != null &&
                     this.UsuarioModificacao.Equals(other.UsuarioModificacao)
+                ) && 
+                (
+                    this.BehaviorScore == other.BehaviorScore ||
+                    this.BehaviorScore != null &&
+                    this.BehaviorScore.Equals(other.BehaviorScore)
                 );
         }
 
@@ -195,6 +210,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.UsuarioModificacao != null)
                     hash = hash * 59 + this.UsuarioModificacao.GetHashCode();
+                
+                if (this.BehaviorScore != null)
+                    hash = hash * 59 + this.BehaviorScore.GetHashCode();
                 
                 return hash;
             }

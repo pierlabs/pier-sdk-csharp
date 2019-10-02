@@ -40,8 +40,9 @@ namespace Conductor.Pier.Model
         /// <param name="ResponsavelDigitacao">Respons\u00E1vel pela digita\u00E7\u00E3o da proposta.</param>
         /// <param name="IdPromotorVenda">C\u00F3digo identificador do promotor de venda.</param>
         /// <param name="IdStatusConta">Status da conta.</param>
+        /// <param name="BehaviorScore">Apresenta valor de pontua\u00E7\u00E3o de comportamento (behavior score)..</param>
 
-        public ContaPersist(long? IdPessoa = null, long? IdOrigemComercial = null, long? IdProduto = null, int? DiaVencimento = null, double? ValorRenda = null, string CanalEntrada = null, int? ValorPontuacao = null, long? IdEnderecoCorrespondencia = null, double? LimiteGlobal = null, double? LimiteMaximo = null, double? LimiteParcelas = null, double? LimiteConsignado = null, int? FlagFaturaPorEmail = null, string FuncaoAtiva = null, string Matricula = null, string ResponsavelDigitacao = null, int? IdPromotorVenda = null, long? IdStatusConta = null)
+        public ContaPersist(long? IdPessoa = null, long? IdOrigemComercial = null, long? IdProduto = null, int? DiaVencimento = null, double? ValorRenda = null, string CanalEntrada = null, int? ValorPontuacao = null, long? IdEnderecoCorrespondencia = null, double? LimiteGlobal = null, double? LimiteMaximo = null, double? LimiteParcelas = null, double? LimiteConsignado = null, int? FlagFaturaPorEmail = null, string FuncaoAtiva = null, string Matricula = null, string ResponsavelDigitacao = null, int? IdPromotorVenda = null, long? IdStatusConta = null, int? BehaviorScore = null)
         {
             // to ensure "IdPessoa" is required (not null)
             if (IdPessoa == null)
@@ -157,6 +158,7 @@ namespace Conductor.Pier.Model
             this.ResponsavelDigitacao = ResponsavelDigitacao;
             this.IdPromotorVenda = IdPromotorVenda;
             this.IdStatusConta = IdStatusConta;
+            this.BehaviorScore = BehaviorScore;
             
         }
         
@@ -288,6 +290,13 @@ namespace Conductor.Pier.Model
         public long? IdStatusConta { get; set; }
     
         /// <summary>
+        /// Apresenta valor de pontua\u00E7\u00E3o de comportamento (behavior score).
+        /// </summary>
+        /// <value>Apresenta valor de pontua\u00E7\u00E3o de comportamento (behavior score).</value>
+        [DataMember(Name="behaviorScore", EmitDefaultValue=false)]
+        public int? BehaviorScore { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -313,6 +322,7 @@ namespace Conductor.Pier.Model
             sb.Append("  ResponsavelDigitacao: ").Append(ResponsavelDigitacao).Append("\n");
             sb.Append("  IdPromotorVenda: ").Append(IdPromotorVenda).Append("\n");
             sb.Append("  IdStatusConta: ").Append(IdStatusConta).Append("\n");
+            sb.Append("  BehaviorScore: ").Append(BehaviorScore).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -439,6 +449,11 @@ namespace Conductor.Pier.Model
                     this.IdStatusConta == other.IdStatusConta ||
                     this.IdStatusConta != null &&
                     this.IdStatusConta.Equals(other.IdStatusConta)
+                ) && 
+                (
+                    this.BehaviorScore == other.BehaviorScore ||
+                    this.BehaviorScore != null &&
+                    this.BehaviorScore.Equals(other.BehaviorScore)
                 );
         }
 
@@ -507,6 +522,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.IdStatusConta != null)
                     hash = hash * 59 + this.IdStatusConta.GetHashCode();
+                
+                if (this.BehaviorScore != null)
+                    hash = hash * 59 + this.BehaviorScore.GetHashCode();
                 
                 return hash;
             }

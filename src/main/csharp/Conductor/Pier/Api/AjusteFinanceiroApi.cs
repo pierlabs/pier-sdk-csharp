@@ -87,7 +87,7 @@ namespace Conductor.Pier.Api
         /// <param name="valorAjuste">Valor do ajuste</param>
         /// <param name="idConta">C\u00F3digo identificador da conta</param>
         /// <param name="login">login (optional)</param>
-        /// <param name="identificadorExterno">Codigo Hexadecimal (optional)</param>
+        /// <param name="identificadorExterno">Identificador Externo (optional)</param>
         /// <param name="idTransacaoOriginal">Identificador da transa\u00E7\u00E3o original (estorno) (optional)</param>
         /// <param name="idEstabelecimento">Identificador do estabelecimento quando o pagamento for efetuado em loja (optional)</param>
         /// <param name="flagAtendimento">Flag para lan\u00E7ar o atendimento (optional)</param>
@@ -107,13 +107,39 @@ namespace Conductor.Pier.Api
         /// <param name="valorAjuste">Valor do ajuste</param>
         /// <param name="idConta">C\u00F3digo identificador da conta</param>
         /// <param name="login">login (optional)</param>
-        /// <param name="identificadorExterno">Codigo Hexadecimal (optional)</param>
+        /// <param name="identificadorExterno">Identificador Externo (optional)</param>
         /// <param name="idTransacaoOriginal">Identificador da transa\u00E7\u00E3o original (estorno) (optional)</param>
         /// <param name="idEstabelecimento">Identificador do estabelecimento quando o pagamento for efetuado em loja (optional)</param>
         /// <param name="flagAtendimento">Flag para lan\u00E7ar o atendimento (optional)</param>
         /// <param name="mensagemAtendimento">Mensagem enviada no atendimento (optional)</param>
         /// <returns>ApiResponse of AjusteFinanceiroResponse</returns>
         ApiResponse<AjusteFinanceiroResponse> SalvarAjusteFinanceiroWithHttpInfo (long? idTipoAjuste, string dataAjuste, double? valorAjuste, long? idConta, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null, bool? flagAtendimento = null, string mensagemAtendimento = null);
+        
+        /// <summary>
+        /// Este recurso lan\u00E7a um ajuste para a conta do id informado levando em considera\u00E7\u00E3o o saldo
+        /// </summary>
+        /// <remarks>
+        /// Lan\u00E7a um ajuste para a conta do id informado levando em considera\u00E7\u00E3o o saldo
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <param name="ajustePersist">ajustePersist</param>
+        /// <param name="login">login (optional)</param>
+        /// <returns>AjusteFinanceiroResponse</returns>
+        AjusteFinanceiroResponse SalvarAjusteFinanceiroConta (long? id, AjustePersist ajustePersist, string login = null);
+  
+        /// <summary>
+        /// Este recurso lan\u00E7a um ajuste para a conta do id informado levando em considera\u00E7\u00E3o o saldo
+        /// </summary>
+        /// <remarks>
+        /// Lan\u00E7a um ajuste para a conta do id informado levando em considera\u00E7\u00E3o o saldo
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <param name="ajustePersist">ajustePersist</param>
+        /// <param name="login">login (optional)</param>
+        /// <returns>ApiResponse of AjusteFinanceiroResponse</returns>
+        ApiResponse<AjusteFinanceiroResponse> SalvarAjusteFinanceiroContaWithHttpInfo (long? id, AjustePersist ajustePersist, string login = null);
         
         #endregion Synchronous Operations
         
@@ -189,7 +215,7 @@ namespace Conductor.Pier.Api
         /// <param name="valorAjuste">Valor do ajuste</param>
         /// <param name="idConta">C\u00F3digo identificador da conta</param>
         /// <param name="login">login (optional)</param>
-        /// <param name="identificadorExterno">Codigo Hexadecimal (optional)</param>
+        /// <param name="identificadorExterno">Identificador Externo (optional)</param>
         /// <param name="idTransacaoOriginal">Identificador da transa\u00E7\u00E3o original (estorno) (optional)</param>
         /// <param name="idEstabelecimento">Identificador do estabelecimento quando o pagamento for efetuado em loja (optional)</param>
         /// <param name="flagAtendimento">Flag para lan\u00E7ar o atendimento (optional)</param>
@@ -209,13 +235,39 @@ namespace Conductor.Pier.Api
         /// <param name="valorAjuste">Valor do ajuste</param>
         /// <param name="idConta">C\u00F3digo identificador da conta</param>
         /// <param name="login">login (optional)</param>
-        /// <param name="identificadorExterno">Codigo Hexadecimal (optional)</param>
+        /// <param name="identificadorExterno">Identificador Externo (optional)</param>
         /// <param name="idTransacaoOriginal">Identificador da transa\u00E7\u00E3o original (estorno) (optional)</param>
         /// <param name="idEstabelecimento">Identificador do estabelecimento quando o pagamento for efetuado em loja (optional)</param>
         /// <param name="flagAtendimento">Flag para lan\u00E7ar o atendimento (optional)</param>
         /// <param name="mensagemAtendimento">Mensagem enviada no atendimento (optional)</param>
         /// <returns>Task of ApiResponse (AjusteFinanceiroResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<AjusteFinanceiroResponse>> SalvarAjusteFinanceiroAsyncWithHttpInfo (long? idTipoAjuste, string dataAjuste, double? valorAjuste, long? idConta, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null, bool? flagAtendimento = null, string mensagemAtendimento = null);
+        
+        /// <summary>
+        /// Este recurso lan\u00E7a um ajuste para a conta do id informado levando em considera\u00E7\u00E3o o saldo
+        /// </summary>
+        /// <remarks>
+        /// Lan\u00E7a um ajuste para a conta do id informado levando em considera\u00E7\u00E3o o saldo
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <param name="ajustePersist">ajustePersist</param>
+        /// <param name="login">login (optional)</param>
+        /// <returns>Task of AjusteFinanceiroResponse</returns>
+        System.Threading.Tasks.Task<AjusteFinanceiroResponse> SalvarAjusteFinanceiroContaAsync (long? id, AjustePersist ajustePersist, string login = null);
+
+        /// <summary>
+        /// Este recurso lan\u00E7a um ajuste para a conta do id informado levando em considera\u00E7\u00E3o o saldo
+        /// </summary>
+        /// <remarks>
+        /// Lan\u00E7a um ajuste para a conta do id informado levando em considera\u00E7\u00E3o o saldo
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <param name="ajustePersist">ajustePersist</param>
+        /// <param name="login">login (optional)</param>
+        /// <returns>Task of ApiResponse (AjusteFinanceiroResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AjusteFinanceiroResponse>> SalvarAjusteFinanceiroContaAsyncWithHttpInfo (long? id, AjustePersist ajustePersist, string login = null);
         
         #endregion Asynchronous Operations
         
@@ -670,7 +722,7 @@ namespace Conductor.Pier.Api
         /// <param name="valorAjuste">Valor do ajuste</param> 
         /// <param name="idConta">C\u00F3digo identificador da conta</param> 
         /// <param name="login">login (optional)</param> 
-        /// <param name="identificadorExterno">Codigo Hexadecimal (optional)</param> 
+        /// <param name="identificadorExterno">Identificador Externo (optional)</param> 
         /// <param name="idTransacaoOriginal">Identificador da transa\u00E7\u00E3o original (estorno) (optional)</param> 
         /// <param name="idEstabelecimento">Identificador do estabelecimento quando o pagamento for efetuado em loja (optional)</param> 
         /// <param name="flagAtendimento">Flag para lan\u00E7ar o atendimento (optional)</param> 
@@ -691,7 +743,7 @@ namespace Conductor.Pier.Api
         /// <param name="valorAjuste">Valor do ajuste</param> 
         /// <param name="idConta">C\u00F3digo identificador da conta</param> 
         /// <param name="login">login (optional)</param> 
-        /// <param name="identificadorExterno">Codigo Hexadecimal (optional)</param> 
+        /// <param name="identificadorExterno">Identificador Externo (optional)</param> 
         /// <param name="idTransacaoOriginal">Identificador da transa\u00E7\u00E3o original (estorno) (optional)</param> 
         /// <param name="idEstabelecimento">Identificador do estabelecimento quando o pagamento for efetuado em loja (optional)</param> 
         /// <param name="flagAtendimento">Flag para lan\u00E7ar o atendimento (optional)</param> 
@@ -748,11 +800,11 @@ namespace Conductor.Pier.Api
             if (dataAjuste != null) localVarQueryParams.Add("dataAjuste", Configuration.ApiClient.ParameterToString(dataAjuste)); // query parameter
             if (valorAjuste != null) localVarQueryParams.Add("valorAjuste", Configuration.ApiClient.ParameterToString(valorAjuste)); // query parameter
             if (identificadorExterno != null) localVarQueryParams.Add("identificadorExterno", Configuration.ApiClient.ParameterToString(identificadorExterno)); // query parameter
-            if (idConta != null) localVarQueryParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // query parameter
             if (idTransacaoOriginal != null) localVarQueryParams.Add("idTransacaoOriginal", Configuration.ApiClient.ParameterToString(idTransacaoOriginal)); // query parameter
             if (idEstabelecimento != null) localVarQueryParams.Add("idEstabelecimento", Configuration.ApiClient.ParameterToString(idEstabelecimento)); // query parameter
             if (flagAtendimento != null) localVarQueryParams.Add("flagAtendimento", Configuration.ApiClient.ParameterToString(flagAtendimento)); // query parameter
             if (mensagemAtendimento != null) localVarQueryParams.Add("mensagemAtendimento", Configuration.ApiClient.ParameterToString(mensagemAtendimento)); // query parameter
+            if (idConta != null) localVarQueryParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // query parameter
             
             if (login != null) localVarHeaderParams.Add("login", Configuration.ApiClient.ParameterToString(login)); // header parameter
             
@@ -789,7 +841,7 @@ namespace Conductor.Pier.Api
         /// <param name="valorAjuste">Valor do ajuste</param>
         /// <param name="idConta">C\u00F3digo identificador da conta</param>
         /// <param name="login">login (optional)</param>
-        /// <param name="identificadorExterno">Codigo Hexadecimal (optional)</param>
+        /// <param name="identificadorExterno">Identificador Externo (optional)</param>
         /// <param name="idTransacaoOriginal">Identificador da transa\u00E7\u00E3o original (estorno) (optional)</param>
         /// <param name="idEstabelecimento">Identificador do estabelecimento quando o pagamento for efetuado em loja (optional)</param>
         /// <param name="flagAtendimento">Flag para lan\u00E7ar o atendimento (optional)</param>
@@ -811,7 +863,7 @@ namespace Conductor.Pier.Api
         /// <param name="valorAjuste">Valor do ajuste</param>
         /// <param name="idConta">C\u00F3digo identificador da conta</param>
         /// <param name="login">login (optional)</param>
-        /// <param name="identificadorExterno">Codigo Hexadecimal (optional)</param>
+        /// <param name="identificadorExterno">Identificador Externo (optional)</param>
         /// <param name="idTransacaoOriginal">Identificador da transa\u00E7\u00E3o original (estorno) (optional)</param>
         /// <param name="idEstabelecimento">Identificador do estabelecimento quando o pagamento for efetuado em loja (optional)</param>
         /// <param name="flagAtendimento">Flag para lan\u00E7ar o atendimento (optional)</param>
@@ -860,11 +912,11 @@ namespace Conductor.Pier.Api
             if (dataAjuste != null) localVarQueryParams.Add("dataAjuste", Configuration.ApiClient.ParameterToString(dataAjuste)); // query parameter
             if (valorAjuste != null) localVarQueryParams.Add("valorAjuste", Configuration.ApiClient.ParameterToString(valorAjuste)); // query parameter
             if (identificadorExterno != null) localVarQueryParams.Add("identificadorExterno", Configuration.ApiClient.ParameterToString(identificadorExterno)); // query parameter
-            if (idConta != null) localVarQueryParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // query parameter
             if (idTransacaoOriginal != null) localVarQueryParams.Add("idTransacaoOriginal", Configuration.ApiClient.ParameterToString(idTransacaoOriginal)); // query parameter
             if (idEstabelecimento != null) localVarQueryParams.Add("idEstabelecimento", Configuration.ApiClient.ParameterToString(idEstabelecimento)); // query parameter
             if (flagAtendimento != null) localVarQueryParams.Add("flagAtendimento", Configuration.ApiClient.ParameterToString(flagAtendimento)); // query parameter
             if (mensagemAtendimento != null) localVarQueryParams.Add("mensagemAtendimento", Configuration.ApiClient.ParameterToString(mensagemAtendimento)); // query parameter
+            if (idConta != null) localVarQueryParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // query parameter
             
             if (login != null) localVarHeaderParams.Add("login", Configuration.ApiClient.ParameterToString(login)); // header parameter
             
@@ -884,6 +936,194 @@ namespace Conductor.Pier.Api
                 throw new ApiException (localVarStatusCode, "Error calling SalvarAjusteFinanceiro: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling SalvarAjusteFinanceiro: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AjusteFinanceiroResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AjusteFinanceiroResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AjusteFinanceiroResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Este recurso lan\u00E7a um ajuste para a conta do id informado levando em considera\u00E7\u00E3o o saldo Lan\u00E7a um ajuste para a conta do id informado levando em considera\u00E7\u00E3o o saldo
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param> 
+        /// <param name="ajustePersist">ajustePersist</param> 
+        /// <param name="login">login (optional)</param> 
+        /// <returns>AjusteFinanceiroResponse</returns>
+        public AjusteFinanceiroResponse SalvarAjusteFinanceiroConta (long? id, AjustePersist ajustePersist, string login = null)
+        {
+             ApiResponse<AjusteFinanceiroResponse> localVarResponse = SalvarAjusteFinanceiroContaWithHttpInfo(id, ajustePersist, login);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Este recurso lan\u00E7a um ajuste para a conta do id informado levando em considera\u00E7\u00E3o o saldo Lan\u00E7a um ajuste para a conta do id informado levando em considera\u00E7\u00E3o o saldo
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param> 
+        /// <param name="ajustePersist">ajustePersist</param> 
+        /// <param name="login">login (optional)</param> 
+        /// <returns>ApiResponse of AjusteFinanceiroResponse</returns>
+        public ApiResponse< AjusteFinanceiroResponse > SalvarAjusteFinanceiroContaWithHttpInfo (long? id, AjustePersist ajustePersist, string login = null)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling AjusteFinanceiroApi->SalvarAjusteFinanceiroConta");
+            
+            // verify the required parameter 'ajustePersist' is set
+            if (ajustePersist == null)
+                throw new ApiException(400, "Missing required parameter 'ajustePersist' when calling AjusteFinanceiroApi->SalvarAjusteFinanceiroConta");
+            
+    
+            var localVarPath = "/api/contas/{id}/ajustes/financeiros";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            if (login != null) localVarHeaderParams.Add("login", Configuration.ApiClient.ParameterToString(login)); // header parameter
+            
+            
+            if (ajustePersist.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(ajustePersist); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = ajustePersist; // byte array
+            }
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarAjusteFinanceiroConta: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarAjusteFinanceiroConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<AjusteFinanceiroResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AjusteFinanceiroResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AjusteFinanceiroResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Este recurso lan\u00E7a um ajuste para a conta do id informado levando em considera\u00E7\u00E3o o saldo Lan\u00E7a um ajuste para a conta do id informado levando em considera\u00E7\u00E3o o saldo
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <param name="ajustePersist">ajustePersist</param>
+        /// <param name="login">login (optional)</param>
+        /// <returns>Task of AjusteFinanceiroResponse</returns>
+        public async System.Threading.Tasks.Task<AjusteFinanceiroResponse> SalvarAjusteFinanceiroContaAsync (long? id, AjustePersist ajustePersist, string login = null)
+        {
+             ApiResponse<AjusteFinanceiroResponse> localVarResponse = await SalvarAjusteFinanceiroContaAsyncWithHttpInfo(id, ajustePersist, login);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Este recurso lan\u00E7a um ajuste para a conta do id informado levando em considera\u00E7\u00E3o o saldo Lan\u00E7a um ajuste para a conta do id informado levando em considera\u00E7\u00E3o o saldo
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <param name="ajustePersist">ajustePersist</param>
+        /// <param name="login">login (optional)</param>
+        /// <returns>Task of ApiResponse (AjusteFinanceiroResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AjusteFinanceiroResponse>> SalvarAjusteFinanceiroContaAsyncWithHttpInfo (long? id, AjustePersist ajustePersist, string login = null)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling SalvarAjusteFinanceiroConta");
+            // verify the required parameter 'ajustePersist' is set
+            if (ajustePersist == null) throw new ApiException(400, "Missing required parameter 'ajustePersist' when calling SalvarAjusteFinanceiroConta");
+            
+    
+            var localVarPath = "/api/contas/{id}/ajustes/financeiros";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            if (login != null) localVarHeaderParams.Add("login", Configuration.ApiClient.ParameterToString(login)); // header parameter
+            
+            
+            if (ajustePersist.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(ajustePersist); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = ajustePersist; // byte array
+            }
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarAjusteFinanceiroConta: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarAjusteFinanceiroConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<AjusteFinanceiroResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

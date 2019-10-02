@@ -12,65 +12,52 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Representa\u00E7\u00E3o da resposta do recurso de operadora telef\u00F4nica
+    /// 
     /// </summary>
     [DataContract]
-    public partial class FantasiaBasicaResponse :  IEquatable<FantasiaBasicaResponse>
+    public partial class FantasiaBasicaPersist :  IEquatable<FantasiaBasicaPersist>
     { 
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="FantasiaBasicaResponse" /> class.
-        /// Initializes a new instance of the <see cref="FantasiaBasicaResponse" />class.
+        /// Initializes a new instance of the <see cref="FantasiaBasicaPersist" /> class.
+        /// Initializes a new instance of the <see cref="FantasiaBasicaPersist" />class.
         /// </summary>
-        /// <param name="Id">Identificador da fantasia b\u00E1sica.</param>
-        /// <param name="Nome">Nome da fantasia b\u00E1sica.</param>
-        /// <param name="Descricao">Descri\u00E7\u00E3o da fantasia b\u00E1sica.</param>
-        /// <param name="DescricaoArquivo">Descri\u00E7\u00E3o do arquivo da fantasia b\u00E1sica.</param>
-        /// <param name="QuantidadeMaxProposta">Quantidade m\u00E1xima de propostas da fantasia b\u00E1sica.</param>
+        /// <param name="Descricao">Descricao.</param>
+        /// <param name="DescricaoArquivo">DescricaoArquivo.</param>
+        /// <param name="Nome">Nome.</param>
+        /// <param name="QuantidadeMaxProposta">QuantidadeMaxProposta.</param>
 
-        public FantasiaBasicaResponse(long? Id = null, string Nome = null, string Descricao = null, string DescricaoArquivo = null, int? QuantidadeMaxProposta = null)
+        public FantasiaBasicaPersist(string Descricao = null, string DescricaoArquivo = null, string Nome = null, int? QuantidadeMaxProposta = null)
         {
-            this.Id = Id;
-            this.Nome = Nome;
             this.Descricao = Descricao;
             this.DescricaoArquivo = DescricaoArquivo;
+            this.Nome = Nome;
             this.QuantidadeMaxProposta = QuantidadeMaxProposta;
             
         }
         
     
         /// <summary>
-        /// Identificador da fantasia b\u00E1sica
+        /// Gets or Sets Descricao
         /// </summary>
-        /// <value>Identificador da fantasia b\u00E1sica</value>
-        [DataMember(Name="id", EmitDefaultValue=false)]
-        public long? Id { get; set; }
-    
-        /// <summary>
-        /// Nome da fantasia b\u00E1sica
-        /// </summary>
-        /// <value>Nome da fantasia b\u00E1sica</value>
-        [DataMember(Name="nome", EmitDefaultValue=false)]
-        public string Nome { get; set; }
-    
-        /// <summary>
-        /// Descri\u00E7\u00E3o da fantasia b\u00E1sica
-        /// </summary>
-        /// <value>Descri\u00E7\u00E3o da fantasia b\u00E1sica</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     
         /// <summary>
-        /// Descri\u00E7\u00E3o do arquivo da fantasia b\u00E1sica
+        /// Gets or Sets DescricaoArquivo
         /// </summary>
-        /// <value>Descri\u00E7\u00E3o do arquivo da fantasia b\u00E1sica</value>
         [DataMember(Name="descricaoArquivo", EmitDefaultValue=false)]
         public string DescricaoArquivo { get; set; }
     
         /// <summary>
-        /// Quantidade m\u00E1xima de propostas da fantasia b\u00E1sica
+        /// Gets or Sets Nome
         /// </summary>
-        /// <value>Quantidade m\u00E1xima de propostas da fantasia b\u00E1sica</value>
+        [DataMember(Name="nome", EmitDefaultValue=false)]
+        public string Nome { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets QuantidadeMaxProposta
+        /// </summary>
         [DataMember(Name="quantidadeMaxProposta", EmitDefaultValue=false)]
         public int? QuantidadeMaxProposta { get; set; }
     
@@ -81,11 +68,10 @@ namespace Conductor.Pier.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class FantasiaBasicaResponse {\n");
-            sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  Nome: ").Append(Nome).Append("\n");
+            sb.Append("class FantasiaBasicaPersist {\n");
             sb.Append("  Descricao: ").Append(Descricao).Append("\n");
             sb.Append("  DescricaoArquivo: ").Append(DescricaoArquivo).Append("\n");
+            sb.Append("  Nome: ").Append(Nome).Append("\n");
             sb.Append("  QuantidadeMaxProposta: ").Append(QuantidadeMaxProposta).Append("\n");
             
             sb.Append("}\n");
@@ -109,31 +95,21 @@ namespace Conductor.Pier.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as FantasiaBasicaResponse);
+            return this.Equals(obj as FantasiaBasicaPersist);
         }
 
         /// <summary>
-        /// Returns true if FantasiaBasicaResponse instances are equal
+        /// Returns true if FantasiaBasicaPersist instances are equal
         /// </summary>
-        /// <param name="other">Instance of FantasiaBasicaResponse to be compared</param>
+        /// <param name="other">Instance of FantasiaBasicaPersist to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(FantasiaBasicaResponse other)
+        public bool Equals(FantasiaBasicaPersist other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
                 return false;
 
             return 
-                (
-                    this.Id == other.Id ||
-                    this.Id != null &&
-                    this.Id.Equals(other.Id)
-                ) && 
-                (
-                    this.Nome == other.Nome ||
-                    this.Nome != null &&
-                    this.Nome.Equals(other.Nome)
-                ) && 
                 (
                     this.Descricao == other.Descricao ||
                     this.Descricao != null &&
@@ -143,6 +119,11 @@ namespace Conductor.Pier.Model
                     this.DescricaoArquivo == other.DescricaoArquivo ||
                     this.DescricaoArquivo != null &&
                     this.DescricaoArquivo.Equals(other.DescricaoArquivo)
+                ) && 
+                (
+                    this.Nome == other.Nome ||
+                    this.Nome != null &&
+                    this.Nome.Equals(other.Nome)
                 ) && 
                 (
                     this.QuantidadeMaxProposta == other.QuantidadeMaxProposta ||
@@ -163,17 +144,14 @@ namespace Conductor.Pier.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.Id != null)
-                    hash = hash * 59 + this.Id.GetHashCode();
-                
-                if (this.Nome != null)
-                    hash = hash * 59 + this.Nome.GetHashCode();
-                
                 if (this.Descricao != null)
                     hash = hash * 59 + this.Descricao.GetHashCode();
                 
                 if (this.DescricaoArquivo != null)
                     hash = hash * 59 + this.DescricaoArquivo.GetHashCode();
+                
+                if (this.Nome != null)
+                    hash = hash * 59 + this.Nome.GetHashCode();
                 
                 if (this.QuantidadeMaxProposta != null)
                     hash = hash * 59 + this.QuantidadeMaxProposta.GetHashCode();

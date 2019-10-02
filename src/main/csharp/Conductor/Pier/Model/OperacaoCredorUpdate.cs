@@ -25,6 +25,9 @@ namespace Conductor.Pier.Model
         [JsonConverter(typeof(StringEnumConverter))]
         public enum PeriodicidadeEnum {
             
+            [EnumMember(Value = "NENHUM")]
+            Nenhum,
+            
             [EnumMember(Value = "DIARIO")]
             Diario,
             
