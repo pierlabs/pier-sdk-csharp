@@ -139,8 +139,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do acordo (id).</param>
-        /// <returns>List&lt;ByteArray&gt;</returns>
-        List<ByteArray> GerarTermoAcordo (long? id);
+        /// <returns>Object</returns>
+        Object GerarTermoAcordo (long? id);
   
         /// <summary>
         /// Gerar arquivo do termo de acordo
@@ -150,8 +150,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do acordo (id).</param>
-        /// <returns>ApiResponse of List&lt;ByteArray&gt;</returns>
-        ApiResponse<List<ByteArray>> GerarTermoAcordoWithHttpInfo (long? id);
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> GerarTermoAcordoWithHttpInfo (long? id);
         
         /// <summary>
         /// Insere um novo acordo.
@@ -435,8 +435,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do acordo (id).</param>
-        /// <returns>Task of List&lt;ByteArray&gt;</returns>
-        System.Threading.Tasks.Task<List<ByteArray>> GerarTermoAcordoAsync (long? id);
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> GerarTermoAcordoAsync (long? id);
 
         /// <summary>
         /// Gerar arquivo do termo de acordo
@@ -446,8 +446,8 @@ namespace Conductor.Pier.Api
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do acordo (id).</param>
-        /// <returns>Task of ApiResponse (List&lt;ByteArray&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<ByteArray>>> GerarTermoAcordoAsyncWithHttpInfo (long? id);
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> GerarTermoAcordoAsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Insere um novo acordo.
@@ -1534,10 +1534,10 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do acordo (id).</param> 
-        /// <returns>List&lt;ByteArray&gt;</returns>
-        public List<ByteArray> GerarTermoAcordo (long? id)
+        /// <returns>Object</returns>
+        public Object GerarTermoAcordo (long? id)
         {
-             ApiResponse<List<ByteArray>> localVarResponse = GerarTermoAcordoWithHttpInfo(id);
+             ApiResponse<Object> localVarResponse = GerarTermoAcordoWithHttpInfo(id);
              return localVarResponse.Data;
         }
 
@@ -1546,8 +1546,8 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do acordo (id).</param> 
-        /// <returns>ApiResponse of List&lt;ByteArray&gt;</returns>
-        public ApiResponse< List<ByteArray> > GerarTermoAcordoWithHttpInfo (long? id)
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > GerarTermoAcordoWithHttpInfo (long? id)
         {
             
             // verify the required parameter 'id' is set
@@ -1602,9 +1602,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GerarTermoAcordo: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<List<ByteArray>>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<ByteArray>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<ByteArray>)));
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
             
         }
 
@@ -1614,10 +1614,10 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do acordo (id).</param>
-        /// <returns>Task of List&lt;ByteArray&gt;</returns>
-        public async System.Threading.Tasks.Task<List<ByteArray>> GerarTermoAcordoAsync (long? id)
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> GerarTermoAcordoAsync (long? id)
         {
-             ApiResponse<List<ByteArray>> localVarResponse = await GerarTermoAcordoAsyncWithHttpInfo(id);
+             ApiResponse<Object> localVarResponse = await GerarTermoAcordoAsyncWithHttpInfo(id);
              return localVarResponse.Data;
 
         }
@@ -1627,8 +1627,8 @@ namespace Conductor.Pier.Api
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do acordo (id).</param>
-        /// <returns>Task of ApiResponse (List&lt;ByteArray&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<ByteArray>>> GerarTermoAcordoAsyncWithHttpInfo (long? id)
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GerarTermoAcordoAsyncWithHttpInfo (long? id)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling GerarTermoAcordo");
@@ -1681,9 +1681,9 @@ namespace Conductor.Pier.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GerarTermoAcordo: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<List<ByteArray>>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<ByteArray>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<ByteArray>)));
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
             
         }
         
