@@ -26,8 +26,9 @@ namespace Conductor.Pier.Model
         /// <param name="Nome">Descri\u00E7\u00E3o do Nome do Produto (required).</param>
         /// <param name="Status">Representa o Status do Produto, onde: (&#39;0&#39;: Inativo), (&#39;1&#39;: Ativo) (required).</param>
         /// <param name="IdFantasiaBasica">C\u00F3digo de Identifica\u00E7\u00E3o da Fantasia B\u00E1sica (id) a qual o produto pertence.</param>
+        /// <param name="IdBandeira">C\u00F3digo de identifica\u00E7\u00E3o da bandeira.</param>
 
-        public ProdutoResponse(long? Id = null, string Nome = null, int? Status = null, long? IdFantasiaBasica = null)
+        public ProdutoResponse(long? Id = null, string Nome = null, int? Status = null, long? IdFantasiaBasica = null, long? IdBandeira = null)
         {
             // to ensure "Id" is required (not null)
             if (Id == null)
@@ -57,6 +58,7 @@ namespace Conductor.Pier.Model
                 this.Status = Status;
             }
             this.IdFantasiaBasica = IdFantasiaBasica;
+            this.IdBandeira = IdBandeira;
             
         }
         
@@ -90,6 +92,13 @@ namespace Conductor.Pier.Model
         public long? IdFantasiaBasica { get; set; }
     
         /// <summary>
+        /// C\u00F3digo de identifica\u00E7\u00E3o da bandeira
+        /// </summary>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o da bandeira</value>
+        [DataMember(Name="idBandeira", EmitDefaultValue=false)]
+        public long? IdBandeira { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -101,6 +110,7 @@ namespace Conductor.Pier.Model
             sb.Append("  Nome: ").Append(Nome).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  IdFantasiaBasica: ").Append(IdFantasiaBasica).Append("\n");
+            sb.Append("  IdBandeira: ").Append(IdBandeira).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -157,6 +167,11 @@ namespace Conductor.Pier.Model
                     this.IdFantasiaBasica == other.IdFantasiaBasica ||
                     this.IdFantasiaBasica != null &&
                     this.IdFantasiaBasica.Equals(other.IdFantasiaBasica)
+                ) && 
+                (
+                    this.IdBandeira == other.IdBandeira ||
+                    this.IdBandeira != null &&
+                    this.IdBandeira.Equals(other.IdBandeira)
                 );
         }
 
@@ -183,6 +198,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.IdFantasiaBasica != null)
                     hash = hash * 59 + this.IdFantasiaBasica.GetHashCode();
+                
+                if (this.IdBandeira != null)
+                    hash = hash * 59 + this.IdBandeira.GetHashCode();
                 
                 return hash;
             }

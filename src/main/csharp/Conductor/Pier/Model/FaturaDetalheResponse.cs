@@ -59,8 +59,9 @@ namespace Conductor.Pier.Model
         /// <param name="SaldoAnterior">Valor do saldo anterior.</param>
         /// <param name="IdBoleto">C\u00F3digo de identifica\u00E7\u00E3o do boleto.</param>
         /// <param name="FlagEmiteExtrato">Flag de emite extrato..</param>
+        /// <param name="LinhaDigitavel">Linha digit\u00E1vel da fatura.</param>
 
-        public FaturaDetalheResponse(long? IdConta = null, SituacaoProcessamentoEnum? SituacaoProcessamento = null, bool? PagamentoEfetuado = null, string DataVencimentoFatura = null, string DataVencimentoReal = null, string DataFechamento = null, double? ValorTotal = null, double? ValorPagamentoMinimo = null, List<LancamentoFaturaResponse> LancamentosFaturaResponse = null, double? SaldoAnterior = null, long? IdBoleto = null, bool? FlagEmiteExtrato = null)
+        public FaturaDetalheResponse(long? IdConta = null, SituacaoProcessamentoEnum? SituacaoProcessamento = null, bool? PagamentoEfetuado = null, string DataVencimentoFatura = null, string DataVencimentoReal = null, string DataFechamento = null, double? ValorTotal = null, double? ValorPagamentoMinimo = null, List<LancamentoFaturaResponse> LancamentosFaturaResponse = null, double? SaldoAnterior = null, long? IdBoleto = null, bool? FlagEmiteExtrato = null, string LinhaDigitavel = null)
         {
             this.IdConta = IdConta;
             this.SituacaoProcessamento = SituacaoProcessamento;
@@ -74,6 +75,7 @@ namespace Conductor.Pier.Model
             this.SaldoAnterior = SaldoAnterior;
             this.IdBoleto = IdBoleto;
             this.FlagEmiteExtrato = FlagEmiteExtrato;
+            this.LinhaDigitavel = LinhaDigitavel;
             
         }
         
@@ -156,6 +158,13 @@ namespace Conductor.Pier.Model
         public bool? FlagEmiteExtrato { get; set; }
     
         /// <summary>
+        /// Linha digit\u00E1vel da fatura
+        /// </summary>
+        /// <value>Linha digit\u00E1vel da fatura</value>
+        [DataMember(Name="linhaDigitavel", EmitDefaultValue=false)]
+        public string LinhaDigitavel { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -175,6 +184,7 @@ namespace Conductor.Pier.Model
             sb.Append("  SaldoAnterior: ").Append(SaldoAnterior).Append("\n");
             sb.Append("  IdBoleto: ").Append(IdBoleto).Append("\n");
             sb.Append("  FlagEmiteExtrato: ").Append(FlagEmiteExtrato).Append("\n");
+            sb.Append("  LinhaDigitavel: ").Append(LinhaDigitavel).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -271,6 +281,11 @@ namespace Conductor.Pier.Model
                     this.FlagEmiteExtrato == other.FlagEmiteExtrato ||
                     this.FlagEmiteExtrato != null &&
                     this.FlagEmiteExtrato.Equals(other.FlagEmiteExtrato)
+                ) && 
+                (
+                    this.LinhaDigitavel == other.LinhaDigitavel ||
+                    this.LinhaDigitavel != null &&
+                    this.LinhaDigitavel.Equals(other.LinhaDigitavel)
                 );
         }
 
@@ -321,6 +336,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.FlagEmiteExtrato != null)
                     hash = hash * 59 + this.FlagEmiteExtrato.GetHashCode();
+                
+                if (this.LinhaDigitavel != null)
+                    hash = hash * 59 + this.LinhaDigitavel.GetHashCode();
                 
                 return hash;
             }

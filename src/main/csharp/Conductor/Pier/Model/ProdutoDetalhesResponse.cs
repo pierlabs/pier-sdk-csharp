@@ -27,9 +27,10 @@ namespace Conductor.Pier.Model
         /// <param name="Status">Representa o Status do Produto, onde: (&#39;0&#39;: Inativo), (&#39;1&#39;: Ativo) (required).</param>
         /// <param name="IdFantasiaBasica">C\u00F3digo de Identifica\u00E7\u00E3o da Fantasia B\u00E1sica (id) a qual o produto pertence.</param>
         /// <param name="FantasiaBasica">Descri\u00E7\u00E3o da Fantasia B\u00E1sica a qual o produto pertence.</param>
+        /// <param name="IdBandeira">C\u00F3digo de identifica\u00E7\u00E3o da bandeira.</param>
         /// <param name="UsoExterior">Par\u00E2metro que indica se o produto est\u00E1 habilitado para compras no exterior.</param>
 
-        public ProdutoDetalhesResponse(long? Id = null, string Nome = null, int? Status = null, long? IdFantasiaBasica = null, string FantasiaBasica = null, bool? UsoExterior = null)
+        public ProdutoDetalhesResponse(long? Id = null, string Nome = null, int? Status = null, long? IdFantasiaBasica = null, string FantasiaBasica = null, long? IdBandeira = null, bool? UsoExterior = null)
         {
             // to ensure "Id" is required (not null)
             if (Id == null)
@@ -60,6 +61,7 @@ namespace Conductor.Pier.Model
             }
             this.IdFantasiaBasica = IdFantasiaBasica;
             this.FantasiaBasica = FantasiaBasica;
+            this.IdBandeira = IdBandeira;
             this.UsoExterior = UsoExterior;
             
         }
@@ -101,6 +103,13 @@ namespace Conductor.Pier.Model
         public string FantasiaBasica { get; set; }
     
         /// <summary>
+        /// C\u00F3digo de identifica\u00E7\u00E3o da bandeira
+        /// </summary>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o da bandeira</value>
+        [DataMember(Name="idBandeira", EmitDefaultValue=false)]
+        public long? IdBandeira { get; set; }
+    
+        /// <summary>
         /// Par\u00E2metro que indica se o produto est\u00E1 habilitado para compras no exterior
         /// </summary>
         /// <value>Par\u00E2metro que indica se o produto est\u00E1 habilitado para compras no exterior</value>
@@ -120,6 +129,7 @@ namespace Conductor.Pier.Model
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  IdFantasiaBasica: ").Append(IdFantasiaBasica).Append("\n");
             sb.Append("  FantasiaBasica: ").Append(FantasiaBasica).Append("\n");
+            sb.Append("  IdBandeira: ").Append(IdBandeira).Append("\n");
             sb.Append("  UsoExterior: ").Append(UsoExterior).Append("\n");
             
             sb.Append("}\n");
@@ -184,6 +194,11 @@ namespace Conductor.Pier.Model
                     this.FantasiaBasica.Equals(other.FantasiaBasica)
                 ) && 
                 (
+                    this.IdBandeira == other.IdBandeira ||
+                    this.IdBandeira != null &&
+                    this.IdBandeira.Equals(other.IdBandeira)
+                ) && 
+                (
                     this.UsoExterior == other.UsoExterior ||
                     this.UsoExterior != null &&
                     this.UsoExterior.Equals(other.UsoExterior)
@@ -216,6 +231,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.FantasiaBasica != null)
                     hash = hash * 59 + this.FantasiaBasica.GetHashCode();
+                
+                if (this.IdBandeira != null)
+                    hash = hash * 59 + this.IdBandeira.GetHashCode();
                 
                 if (this.UsoExterior != null)
                     hash = hash * 59 + this.UsoExterior.GetHashCode();

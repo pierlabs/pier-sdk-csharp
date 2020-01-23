@@ -29,8 +29,10 @@ namespace Conductor.Pier.Model
         /// <param name="PermiteWallet">Flag para autoriza\u00E7\u00E3o de transa\u00E7\u00F5es por wallet.</param>
         /// <param name="PermiteControleMCC">Indica se o cart\u00E3o est\u00E1 ativo para controle por grupos de MCCs.</param>
         /// <param name="PermiteCompraInternacional">Indica se o cart\u00E3o est\u00E1 habilitado/desabilitado para transa\u00E7\u00F5es internacionais.</param>
+        /// <param name="PermiteTarjaMagnetica">Indica se o cart\u00E3o est\u00E1 habilitado/desabilitado para transa\u00E7\u00F5es por tarja magnetica.</param>
+        /// <param name="PermiteContactless">Indica se o cart\u00E3o est\u00E1 habilitado/desabilitado para transa\u00E7\u00F5es via contactless.</param>
 
-        public ConfiguracaoControleCartaoResponse(long? Id = null, long? IdCartao = null, bool? PermiteEcommerce = null, bool? PermiteSaque = null, bool? PermiteWallet = null, bool? PermiteControleMCC = null, bool? PermiteCompraInternacional = null)
+        public ConfiguracaoControleCartaoResponse(long? Id = null, long? IdCartao = null, bool? PermiteEcommerce = null, bool? PermiteSaque = null, bool? PermiteWallet = null, bool? PermiteControleMCC = null, bool? PermiteCompraInternacional = null, bool? PermiteTarjaMagnetica = null, bool? PermiteContactless = null)
         {
             this.Id = Id;
             this.IdCartao = IdCartao;
@@ -39,6 +41,8 @@ namespace Conductor.Pier.Model
             this.PermiteWallet = PermiteWallet;
             this.PermiteControleMCC = PermiteControleMCC;
             this.PermiteCompraInternacional = PermiteCompraInternacional;
+            this.PermiteTarjaMagnetica = PermiteTarjaMagnetica;
+            this.PermiteContactless = PermiteContactless;
             
         }
         
@@ -93,6 +97,20 @@ namespace Conductor.Pier.Model
         public bool? PermiteCompraInternacional { get; set; }
     
         /// <summary>
+        /// Indica se o cart\u00E3o est\u00E1 habilitado/desabilitado para transa\u00E7\u00F5es por tarja magnetica
+        /// </summary>
+        /// <value>Indica se o cart\u00E3o est\u00E1 habilitado/desabilitado para transa\u00E7\u00F5es por tarja magnetica</value>
+        [DataMember(Name="permiteTarjaMagnetica", EmitDefaultValue=false)]
+        public bool? PermiteTarjaMagnetica { get; set; }
+    
+        /// <summary>
+        /// Indica se o cart\u00E3o est\u00E1 habilitado/desabilitado para transa\u00E7\u00F5es via contactless
+        /// </summary>
+        /// <value>Indica se o cart\u00E3o est\u00E1 habilitado/desabilitado para transa\u00E7\u00F5es via contactless</value>
+        [DataMember(Name="permiteContactless", EmitDefaultValue=false)]
+        public bool? PermiteContactless { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -107,6 +125,8 @@ namespace Conductor.Pier.Model
             sb.Append("  PermiteWallet: ").Append(PermiteWallet).Append("\n");
             sb.Append("  PermiteControleMCC: ").Append(PermiteControleMCC).Append("\n");
             sb.Append("  PermiteCompraInternacional: ").Append(PermiteCompraInternacional).Append("\n");
+            sb.Append("  PermiteTarjaMagnetica: ").Append(PermiteTarjaMagnetica).Append("\n");
+            sb.Append("  PermiteContactless: ").Append(PermiteContactless).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -178,6 +198,16 @@ namespace Conductor.Pier.Model
                     this.PermiteCompraInternacional == other.PermiteCompraInternacional ||
                     this.PermiteCompraInternacional != null &&
                     this.PermiteCompraInternacional.Equals(other.PermiteCompraInternacional)
+                ) && 
+                (
+                    this.PermiteTarjaMagnetica == other.PermiteTarjaMagnetica ||
+                    this.PermiteTarjaMagnetica != null &&
+                    this.PermiteTarjaMagnetica.Equals(other.PermiteTarjaMagnetica)
+                ) && 
+                (
+                    this.PermiteContactless == other.PermiteContactless ||
+                    this.PermiteContactless != null &&
+                    this.PermiteContactless.Equals(other.PermiteContactless)
                 );
         }
 
@@ -213,6 +243,12 @@ namespace Conductor.Pier.Model
                 
                 if (this.PermiteCompraInternacional != null)
                     hash = hash * 59 + this.PermiteCompraInternacional.GetHashCode();
+                
+                if (this.PermiteTarjaMagnetica != null)
+                    hash = hash * 59 + this.PermiteTarjaMagnetica.GetHashCode();
+                
+                if (this.PermiteContactless != null)
+                    hash = hash * 59 + this.PermiteContactless.GetHashCode();
                 
                 return hash;
             }

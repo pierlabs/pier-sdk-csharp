@@ -24,18 +24,24 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <param name="DataHoraExpiracao">Data e hora de expira\u00E7\u00E3o do registro de cobran\u00E7a.</param>
         /// <param name="DataHoraFimCobranca">Data e hora do fim da cobran\u00E7a.</param>
+        /// <param name="DataHoraInclusaoDebito">Data e hota da inclus\u00E3o do d\u00E9bito.</param>
         /// <param name="Id">Identificador do registro.</param>
+        /// <param name="IdAjuste">C\u00F3digo identificador do ajuste .</param>
         /// <param name="IdConta">Identificador da conta.</param>
+        /// <param name="IdTarifaExtrato">Identificador do extrato da tarifa.</param>
         /// <param name="PercentualDesconto">Percentual de desconto.</param>
         /// <param name="Valor">Valor da tarifa com desconto.</param>
         /// <param name="ValorOriginal">Valor original da tarifa.</param>
 
-        public ContaDebitoTarifaResponse(string DataHoraExpiracao = null, string DataHoraFimCobranca = null, long? Id = null, long? IdConta = null, double? PercentualDesconto = null, double? Valor = null, double? ValorOriginal = null)
+        public ContaDebitoTarifaResponse(string DataHoraExpiracao = null, string DataHoraFimCobranca = null, string DataHoraInclusaoDebito = null, long? Id = null, long? IdAjuste = null, long? IdConta = null, long? IdTarifaExtrato = null, double? PercentualDesconto = null, double? Valor = null, double? ValorOriginal = null)
         {
             this.DataHoraExpiracao = DataHoraExpiracao;
             this.DataHoraFimCobranca = DataHoraFimCobranca;
+            this.DataHoraInclusaoDebito = DataHoraInclusaoDebito;
             this.Id = Id;
+            this.IdAjuste = IdAjuste;
             this.IdConta = IdConta;
+            this.IdTarifaExtrato = IdTarifaExtrato;
             this.PercentualDesconto = PercentualDesconto;
             this.Valor = Valor;
             this.ValorOriginal = ValorOriginal;
@@ -58,6 +64,13 @@ namespace Conductor.Pier.Model
         public string DataHoraFimCobranca { get; set; }
     
         /// <summary>
+        /// Data e hota da inclus\u00E3o do d\u00E9bito
+        /// </summary>
+        /// <value>Data e hota da inclus\u00E3o do d\u00E9bito</value>
+        [DataMember(Name="dataHoraInclusaoDebito", EmitDefaultValue=false)]
+        public string DataHoraInclusaoDebito { get; set; }
+    
+        /// <summary>
         /// Identificador do registro
         /// </summary>
         /// <value>Identificador do registro</value>
@@ -65,11 +78,25 @@ namespace Conductor.Pier.Model
         public long? Id { get; set; }
     
         /// <summary>
+        /// C\u00F3digo identificador do ajuste 
+        /// </summary>
+        /// <value>C\u00F3digo identificador do ajuste </value>
+        [DataMember(Name="idAjuste", EmitDefaultValue=false)]
+        public long? IdAjuste { get; set; }
+    
+        /// <summary>
         /// Identificador da conta
         /// </summary>
         /// <value>Identificador da conta</value>
         [DataMember(Name="idConta", EmitDefaultValue=false)]
         public long? IdConta { get; set; }
+    
+        /// <summary>
+        /// Identificador do extrato da tarifa
+        /// </summary>
+        /// <value>Identificador do extrato da tarifa</value>
+        [DataMember(Name="idTarifaExtrato", EmitDefaultValue=false)]
+        public long? IdTarifaExtrato { get; set; }
     
         /// <summary>
         /// Percentual de desconto
@@ -102,8 +129,11 @@ namespace Conductor.Pier.Model
             sb.Append("class ContaDebitoTarifaResponse {\n");
             sb.Append("  DataHoraExpiracao: ").Append(DataHoraExpiracao).Append("\n");
             sb.Append("  DataHoraFimCobranca: ").Append(DataHoraFimCobranca).Append("\n");
+            sb.Append("  DataHoraInclusaoDebito: ").Append(DataHoraInclusaoDebito).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  IdAjuste: ").Append(IdAjuste).Append("\n");
             sb.Append("  IdConta: ").Append(IdConta).Append("\n");
+            sb.Append("  IdTarifaExtrato: ").Append(IdTarifaExtrato).Append("\n");
             sb.Append("  PercentualDesconto: ").Append(PercentualDesconto).Append("\n");
             sb.Append("  Valor: ").Append(Valor).Append("\n");
             sb.Append("  ValorOriginal: ").Append(ValorOriginal).Append("\n");
@@ -155,14 +185,29 @@ namespace Conductor.Pier.Model
                     this.DataHoraFimCobranca.Equals(other.DataHoraFimCobranca)
                 ) && 
                 (
+                    this.DataHoraInclusaoDebito == other.DataHoraInclusaoDebito ||
+                    this.DataHoraInclusaoDebito != null &&
+                    this.DataHoraInclusaoDebito.Equals(other.DataHoraInclusaoDebito)
+                ) && 
+                (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
                 ) && 
                 (
+                    this.IdAjuste == other.IdAjuste ||
+                    this.IdAjuste != null &&
+                    this.IdAjuste.Equals(other.IdAjuste)
+                ) && 
+                (
                     this.IdConta == other.IdConta ||
                     this.IdConta != null &&
                     this.IdConta.Equals(other.IdConta)
+                ) && 
+                (
+                    this.IdTarifaExtrato == other.IdTarifaExtrato ||
+                    this.IdTarifaExtrato != null &&
+                    this.IdTarifaExtrato.Equals(other.IdTarifaExtrato)
                 ) && 
                 (
                     this.PercentualDesconto == other.PercentualDesconto ||
@@ -199,11 +244,20 @@ namespace Conductor.Pier.Model
                 if (this.DataHoraFimCobranca != null)
                     hash = hash * 59 + this.DataHoraFimCobranca.GetHashCode();
                 
+                if (this.DataHoraInclusaoDebito != null)
+                    hash = hash * 59 + this.DataHoraInclusaoDebito.GetHashCode();
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
                 
+                if (this.IdAjuste != null)
+                    hash = hash * 59 + this.IdAjuste.GetHashCode();
+                
                 if (this.IdConta != null)
                     hash = hash * 59 + this.IdConta.GetHashCode();
+                
+                if (this.IdTarifaExtrato != null)
+                    hash = hash * 59 + this.IdTarifaExtrato.GetHashCode();
                 
                 if (this.PercentualDesconto != null)
                     hash = hash * 59 + this.PercentualDesconto.GetHashCode();

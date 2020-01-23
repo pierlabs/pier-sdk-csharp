@@ -219,6 +219,54 @@ namespace Conductor.Pier.Api
         /// <returns>ApiResponse of TransacaoOnUsResponse</returns>
         ApiResponse<TransacaoOnUsResponse> SimularTransacaoWithHttpInfo (TransacaoOnUsRequest transacoesRequest);
         
+        /// <summary>
+        /// Simula planos de transa\u00E7\u00F5es a partir do idCartao
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que seja simulada um plano de transa\u00E7\u00F5es a partir do idCartao
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <param name="transacaoOnUsPorIdCartaoRequest">transacaoOnUsPorIdCartaoRequest</param>
+        /// <returns>TransacaoOnUsResponse</returns>
+        TransacaoOnUsResponse SimularTransacaoPorCartao (long? id, TransacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest);
+  
+        /// <summary>
+        /// Simula planos de transa\u00E7\u00F5es a partir do idCartao
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que seja simulada um plano de transa\u00E7\u00F5es a partir do idCartao
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <param name="transacaoOnUsPorIdCartaoRequest">transacaoOnUsPorIdCartaoRequest</param>
+        /// <returns>ApiResponse of TransacaoOnUsResponse</returns>
+        ApiResponse<TransacaoOnUsResponse> SimularTransacaoPorCartaoWithHttpInfo (long? id, TransacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest);
+        
+        /// <summary>
+        /// Simula planos de transa\u00E7\u00F5es a partir do idConta
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que seja simulada um plano de transa\u00E7\u00F5es a partir do idConta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <param name="transacaoOnUsPorIdCartaoRequest">transacaoOnUsPorIdCartaoRequest</param>
+        /// <returns>TransacaoOnUsResponse</returns>
+        TransacaoOnUsResponse SimularTransacaoPorConta (long? id, TransacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest);
+  
+        /// <summary>
+        /// Simula planos de transa\u00E7\u00F5es a partir do idConta
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que seja simulada um plano de transa\u00E7\u00F5es a partir do idConta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <param name="transacaoOnUsPorIdCartaoRequest">transacaoOnUsPorIdCartaoRequest</param>
+        /// <returns>ApiResponse of TransacaoOnUsResponse</returns>
+        ApiResponse<TransacaoOnUsResponse> SimularTransacaoPorContaWithHttpInfo (long? id, TransacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest);
+        
         #endregion Synchronous Operations
         
         #region Asynchronous Operations
@@ -424,6 +472,54 @@ namespace Conductor.Pier.Api
         /// <param name="transacoesRequest">transacoesRequest</param>
         /// <returns>Task of ApiResponse (TransacaoOnUsResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<TransacaoOnUsResponse>> SimularTransacaoAsyncWithHttpInfo (TransacaoOnUsRequest transacoesRequest);
+        
+        /// <summary>
+        /// Simula planos de transa\u00E7\u00F5es a partir do idCartao
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que seja simulada um plano de transa\u00E7\u00F5es a partir do idCartao
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <param name="transacaoOnUsPorIdCartaoRequest">transacaoOnUsPorIdCartaoRequest</param>
+        /// <returns>Task of TransacaoOnUsResponse</returns>
+        System.Threading.Tasks.Task<TransacaoOnUsResponse> SimularTransacaoPorCartaoAsync (long? id, TransacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest);
+
+        /// <summary>
+        /// Simula planos de transa\u00E7\u00F5es a partir do idCartao
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que seja simulada um plano de transa\u00E7\u00F5es a partir do idCartao
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <param name="transacaoOnUsPorIdCartaoRequest">transacaoOnUsPorIdCartaoRequest</param>
+        /// <returns>Task of ApiResponse (TransacaoOnUsResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TransacaoOnUsResponse>> SimularTransacaoPorCartaoAsyncWithHttpInfo (long? id, TransacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest);
+        
+        /// <summary>
+        /// Simula planos de transa\u00E7\u00F5es a partir do idConta
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que seja simulada um plano de transa\u00E7\u00F5es a partir do idConta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <param name="transacaoOnUsPorIdCartaoRequest">transacaoOnUsPorIdCartaoRequest</param>
+        /// <returns>Task of TransacaoOnUsResponse</returns>
+        System.Threading.Tasks.Task<TransacaoOnUsResponse> SimularTransacaoPorContaAsync (long? id, TransacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest);
+
+        /// <summary>
+        /// Simula planos de transa\u00E7\u00F5es a partir do idConta
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite que seja simulada um plano de transa\u00E7\u00F5es a partir do idConta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <param name="transacaoOnUsPorIdCartaoRequest">transacaoOnUsPorIdCartaoRequest</param>
+        /// <returns>Task of ApiResponse (TransacaoOnUsResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TransacaoOnUsResponse>> SimularTransacaoPorContaAsyncWithHttpInfo (long? id, TransacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest);
         
         #endregion Asynchronous Operations
         
@@ -2040,6 +2136,370 @@ namespace Conductor.Pier.Api
                 throw new ApiException (localVarStatusCode, "Error calling SimularTransacao: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling SimularTransacao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TransacaoOnUsResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (TransacaoOnUsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TransacaoOnUsResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Simula planos de transa\u00E7\u00F5es a partir do idCartao Este m\u00E9todo permite que seja simulada um plano de transa\u00E7\u00F5es a partir do idCartao
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param> 
+        /// <param name="transacaoOnUsPorIdCartaoRequest">transacaoOnUsPorIdCartaoRequest</param> 
+        /// <returns>TransacaoOnUsResponse</returns>
+        public TransacaoOnUsResponse SimularTransacaoPorCartao (long? id, TransacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest)
+        {
+             ApiResponse<TransacaoOnUsResponse> localVarResponse = SimularTransacaoPorCartaoWithHttpInfo(id, transacaoOnUsPorIdCartaoRequest);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Simula planos de transa\u00E7\u00F5es a partir do idCartao Este m\u00E9todo permite que seja simulada um plano de transa\u00E7\u00F5es a partir do idCartao
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param> 
+        /// <param name="transacaoOnUsPorIdCartaoRequest">transacaoOnUsPorIdCartaoRequest</param> 
+        /// <returns>ApiResponse of TransacaoOnUsResponse</returns>
+        public ApiResponse< TransacaoOnUsResponse > SimularTransacaoPorCartaoWithHttpInfo (long? id, TransacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling AutorizacaoApi->SimularTransacaoPorCartao");
+            
+            // verify the required parameter 'transacaoOnUsPorIdCartaoRequest' is set
+            if (transacaoOnUsPorIdCartaoRequest == null)
+                throw new ApiException(400, "Missing required parameter 'transacaoOnUsPorIdCartaoRequest' when calling AutorizacaoApi->SimularTransacaoPorCartao");
+            
+    
+            var localVarPath = "/api/cartoes/{id}/simular-transacao";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            if (transacaoOnUsPorIdCartaoRequest.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(transacaoOnUsPorIdCartaoRequest); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = transacaoOnUsPorIdCartaoRequest; // byte array
+            }
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling SimularTransacaoPorCartao: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling SimularTransacaoPorCartao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<TransacaoOnUsResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (TransacaoOnUsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TransacaoOnUsResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Simula planos de transa\u00E7\u00F5es a partir do idCartao Este m\u00E9todo permite que seja simulada um plano de transa\u00E7\u00F5es a partir do idCartao
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <param name="transacaoOnUsPorIdCartaoRequest">transacaoOnUsPorIdCartaoRequest</param>
+        /// <returns>Task of TransacaoOnUsResponse</returns>
+        public async System.Threading.Tasks.Task<TransacaoOnUsResponse> SimularTransacaoPorCartaoAsync (long? id, TransacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest)
+        {
+             ApiResponse<TransacaoOnUsResponse> localVarResponse = await SimularTransacaoPorCartaoAsyncWithHttpInfo(id, transacaoOnUsPorIdCartaoRequest);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Simula planos de transa\u00E7\u00F5es a partir do idCartao Este m\u00E9todo permite que seja simulada um plano de transa\u00E7\u00F5es a partir do idCartao
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <param name="transacaoOnUsPorIdCartaoRequest">transacaoOnUsPorIdCartaoRequest</param>
+        /// <returns>Task of ApiResponse (TransacaoOnUsResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<TransacaoOnUsResponse>> SimularTransacaoPorCartaoAsyncWithHttpInfo (long? id, TransacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling SimularTransacaoPorCartao");
+            // verify the required parameter 'transacaoOnUsPorIdCartaoRequest' is set
+            if (transacaoOnUsPorIdCartaoRequest == null) throw new ApiException(400, "Missing required parameter 'transacaoOnUsPorIdCartaoRequest' when calling SimularTransacaoPorCartao");
+            
+    
+            var localVarPath = "/api/cartoes/{id}/simular-transacao";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            if (transacaoOnUsPorIdCartaoRequest.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(transacaoOnUsPorIdCartaoRequest); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = transacaoOnUsPorIdCartaoRequest; // byte array
+            }
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling SimularTransacaoPorCartao: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling SimularTransacaoPorCartao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TransacaoOnUsResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (TransacaoOnUsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TransacaoOnUsResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Simula planos de transa\u00E7\u00F5es a partir do idConta Este m\u00E9todo permite que seja simulada um plano de transa\u00E7\u00F5es a partir do idConta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param> 
+        /// <param name="transacaoOnUsPorIdCartaoRequest">transacaoOnUsPorIdCartaoRequest</param> 
+        /// <returns>TransacaoOnUsResponse</returns>
+        public TransacaoOnUsResponse SimularTransacaoPorConta (long? id, TransacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest)
+        {
+             ApiResponse<TransacaoOnUsResponse> localVarResponse = SimularTransacaoPorContaWithHttpInfo(id, transacaoOnUsPorIdCartaoRequest);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Simula planos de transa\u00E7\u00F5es a partir do idConta Este m\u00E9todo permite que seja simulada um plano de transa\u00E7\u00F5es a partir do idConta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param> 
+        /// <param name="transacaoOnUsPorIdCartaoRequest">transacaoOnUsPorIdCartaoRequest</param> 
+        /// <returns>ApiResponse of TransacaoOnUsResponse</returns>
+        public ApiResponse< TransacaoOnUsResponse > SimularTransacaoPorContaWithHttpInfo (long? id, TransacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling AutorizacaoApi->SimularTransacaoPorConta");
+            
+            // verify the required parameter 'transacaoOnUsPorIdCartaoRequest' is set
+            if (transacaoOnUsPorIdCartaoRequest == null)
+                throw new ApiException(400, "Missing required parameter 'transacaoOnUsPorIdCartaoRequest' when calling AutorizacaoApi->SimularTransacaoPorConta");
+            
+    
+            var localVarPath = "/api/contas/{id}/simular-transacao";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            if (transacaoOnUsPorIdCartaoRequest.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(transacaoOnUsPorIdCartaoRequest); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = transacaoOnUsPorIdCartaoRequest; // byte array
+            }
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling SimularTransacaoPorConta: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling SimularTransacaoPorConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<TransacaoOnUsResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (TransacaoOnUsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TransacaoOnUsResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Simula planos de transa\u00E7\u00F5es a partir do idConta Este m\u00E9todo permite que seja simulada um plano de transa\u00E7\u00F5es a partir do idConta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <param name="transacaoOnUsPorIdCartaoRequest">transacaoOnUsPorIdCartaoRequest</param>
+        /// <returns>Task of TransacaoOnUsResponse</returns>
+        public async System.Threading.Tasks.Task<TransacaoOnUsResponse> SimularTransacaoPorContaAsync (long? id, TransacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest)
+        {
+             ApiResponse<TransacaoOnUsResponse> localVarResponse = await SimularTransacaoPorContaAsyncWithHttpInfo(id, transacaoOnUsPorIdCartaoRequest);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Simula planos de transa\u00E7\u00F5es a partir do idConta Este m\u00E9todo permite que seja simulada um plano de transa\u00E7\u00F5es a partir do idConta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <param name="transacaoOnUsPorIdCartaoRequest">transacaoOnUsPorIdCartaoRequest</param>
+        /// <returns>Task of ApiResponse (TransacaoOnUsResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<TransacaoOnUsResponse>> SimularTransacaoPorContaAsyncWithHttpInfo (long? id, TransacaoOnUsPorIdCartaoRequest transacaoOnUsPorIdCartaoRequest)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling SimularTransacaoPorConta");
+            // verify the required parameter 'transacaoOnUsPorIdCartaoRequest' is set
+            if (transacaoOnUsPorIdCartaoRequest == null) throw new ApiException(400, "Missing required parameter 'transacaoOnUsPorIdCartaoRequest' when calling SimularTransacaoPorConta");
+            
+    
+            var localVarPath = "/api/contas/{id}/simular-transacao";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            if (transacaoOnUsPorIdCartaoRequest.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(transacaoOnUsPorIdCartaoRequest); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = transacaoOnUsPorIdCartaoRequest; // byte array
+            }
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling SimularTransacaoPorConta: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling SimularTransacaoPorConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<TransacaoOnUsResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

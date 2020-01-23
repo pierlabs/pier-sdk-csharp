@@ -24,11 +24,15 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <param name="Id">C\u00F3digo de Identifica\u00E7\u00E3o do MCC (id).</param>
         /// <param name="Descricao">descricao do MCC.</param>
+        /// <param name="GrupoMCCId">C\u00F3digo de indentifica\u00E7\u00E3o do grupo MCC.</param>
+        /// <param name="GrupoMCCDescricao">Descri\u00E7\u00E3o do grupo MCC.</param>
 
-        public MCCResponse(long? Id = null, string Descricao = null)
+        public MCCResponse(long? Id = null, string Descricao = null, long? GrupoMCCId = null, string GrupoMCCDescricao = null)
         {
             this.Id = Id;
             this.Descricao = Descricao;
+            this.GrupoMCCId = GrupoMCCId;
+            this.GrupoMCCDescricao = GrupoMCCDescricao;
             
         }
         
@@ -48,6 +52,20 @@ namespace Conductor.Pier.Model
         public string Descricao { get; set; }
     
         /// <summary>
+        /// C\u00F3digo de indentifica\u00E7\u00E3o do grupo MCC
+        /// </summary>
+        /// <value>C\u00F3digo de indentifica\u00E7\u00E3o do grupo MCC</value>
+        [DataMember(Name="grupoMCCId", EmitDefaultValue=false)]
+        public long? GrupoMCCId { get; set; }
+    
+        /// <summary>
+        /// Descri\u00E7\u00E3o do grupo MCC
+        /// </summary>
+        /// <value>Descri\u00E7\u00E3o do grupo MCC</value>
+        [DataMember(Name="grupoMCCDescricao", EmitDefaultValue=false)]
+        public string GrupoMCCDescricao { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -57,6 +75,8 @@ namespace Conductor.Pier.Model
             sb.Append("class MCCResponse {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Descricao: ").Append(Descricao).Append("\n");
+            sb.Append("  GrupoMCCId: ").Append(GrupoMCCId).Append("\n");
+            sb.Append("  GrupoMCCDescricao: ").Append(GrupoMCCDescricao).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -103,6 +123,16 @@ namespace Conductor.Pier.Model
                     this.Descricao == other.Descricao ||
                     this.Descricao != null &&
                     this.Descricao.Equals(other.Descricao)
+                ) && 
+                (
+                    this.GrupoMCCId == other.GrupoMCCId ||
+                    this.GrupoMCCId != null &&
+                    this.GrupoMCCId.Equals(other.GrupoMCCId)
+                ) && 
+                (
+                    this.GrupoMCCDescricao == other.GrupoMCCDescricao ||
+                    this.GrupoMCCDescricao != null &&
+                    this.GrupoMCCDescricao.Equals(other.GrupoMCCDescricao)
                 );
         }
 
@@ -123,6 +153,12 @@ namespace Conductor.Pier.Model
                 
                 if (this.Descricao != null)
                     hash = hash * 59 + this.Descricao.GetHashCode();
+                
+                if (this.GrupoMCCId != null)
+                    hash = hash * 59 + this.GrupoMCCId.GetHashCode();
+                
+                if (this.GrupoMCCDescricao != null)
+                    hash = hash * 59 + this.GrupoMCCDescricao.GetHashCode();
                 
                 return hash;
             }

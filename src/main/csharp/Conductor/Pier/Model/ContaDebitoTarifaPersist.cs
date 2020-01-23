@@ -27,14 +27,20 @@ namespace Conductor.Pier.Model
         /// <param name="PercentualDesconto">Percentual de desconto.</param>
         /// <param name="DataHoraFimCobranca">Data e hora do fim da cobran\u00E7a.</param>
         /// <param name="DataHoraExpiracao">Data e hora de expira\u00E7\u00E3o do registro de cobran\u00E7a.</param>
+        /// <param name="IdAjuste">Valor do c\u00F3digo identificador do ajuste .</param>
+        /// <param name="IdTarifaExtrato">Valor do identificador do extrato da tarifa.</param>
+        /// <param name="DataHoraInclusaoDebito">Data e hota da inclus\u00E3o do d\u00E9bito.</param>
 
-        public ContaDebitoTarifaPersist(double? Valor = null, double? ValorOriginal = null, double? PercentualDesconto = null, string DataHoraFimCobranca = null, string DataHoraExpiracao = null)
+        public ContaDebitoTarifaPersist(double? Valor = null, double? ValorOriginal = null, double? PercentualDesconto = null, string DataHoraFimCobranca = null, string DataHoraExpiracao = null, long? IdAjuste = null, long? IdTarifaExtrato = null, string DataHoraInclusaoDebito = null)
         {
             this.Valor = Valor;
             this.ValorOriginal = ValorOriginal;
             this.PercentualDesconto = PercentualDesconto;
             this.DataHoraFimCobranca = DataHoraFimCobranca;
             this.DataHoraExpiracao = DataHoraExpiracao;
+            this.IdAjuste = IdAjuste;
+            this.IdTarifaExtrato = IdTarifaExtrato;
+            this.DataHoraInclusaoDebito = DataHoraInclusaoDebito;
             
         }
         
@@ -75,6 +81,27 @@ namespace Conductor.Pier.Model
         public string DataHoraExpiracao { get; set; }
     
         /// <summary>
+        /// Valor do c\u00F3digo identificador do ajuste 
+        /// </summary>
+        /// <value>Valor do c\u00F3digo identificador do ajuste </value>
+        [DataMember(Name="idAjuste", EmitDefaultValue=false)]
+        public long? IdAjuste { get; set; }
+    
+        /// <summary>
+        /// Valor do identificador do extrato da tarifa
+        /// </summary>
+        /// <value>Valor do identificador do extrato da tarifa</value>
+        [DataMember(Name="idTarifaExtrato", EmitDefaultValue=false)]
+        public long? IdTarifaExtrato { get; set; }
+    
+        /// <summary>
+        /// Data e hota da inclus\u00E3o do d\u00E9bito
+        /// </summary>
+        /// <value>Data e hota da inclus\u00E3o do d\u00E9bito</value>
+        [DataMember(Name="dataHoraInclusaoDebito", EmitDefaultValue=false)]
+        public string DataHoraInclusaoDebito { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -87,6 +114,9 @@ namespace Conductor.Pier.Model
             sb.Append("  PercentualDesconto: ").Append(PercentualDesconto).Append("\n");
             sb.Append("  DataHoraFimCobranca: ").Append(DataHoraFimCobranca).Append("\n");
             sb.Append("  DataHoraExpiracao: ").Append(DataHoraExpiracao).Append("\n");
+            sb.Append("  IdAjuste: ").Append(IdAjuste).Append("\n");
+            sb.Append("  IdTarifaExtrato: ").Append(IdTarifaExtrato).Append("\n");
+            sb.Append("  DataHoraInclusaoDebito: ").Append(DataHoraInclusaoDebito).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -148,6 +178,21 @@ namespace Conductor.Pier.Model
                     this.DataHoraExpiracao == other.DataHoraExpiracao ||
                     this.DataHoraExpiracao != null &&
                     this.DataHoraExpiracao.Equals(other.DataHoraExpiracao)
+                ) && 
+                (
+                    this.IdAjuste == other.IdAjuste ||
+                    this.IdAjuste != null &&
+                    this.IdAjuste.Equals(other.IdAjuste)
+                ) && 
+                (
+                    this.IdTarifaExtrato == other.IdTarifaExtrato ||
+                    this.IdTarifaExtrato != null &&
+                    this.IdTarifaExtrato.Equals(other.IdTarifaExtrato)
+                ) && 
+                (
+                    this.DataHoraInclusaoDebito == other.DataHoraInclusaoDebito ||
+                    this.DataHoraInclusaoDebito != null &&
+                    this.DataHoraInclusaoDebito.Equals(other.DataHoraInclusaoDebito)
                 );
         }
 
@@ -177,6 +222,15 @@ namespace Conductor.Pier.Model
                 
                 if (this.DataHoraExpiracao != null)
                     hash = hash * 59 + this.DataHoraExpiracao.GetHashCode();
+                
+                if (this.IdAjuste != null)
+                    hash = hash * 59 + this.IdAjuste.GetHashCode();
+                
+                if (this.IdTarifaExtrato != null)
+                    hash = hash * 59 + this.IdTarifaExtrato.GetHashCode();
+                
+                if (this.DataHoraInclusaoDebito != null)
+                    hash = hash * 59 + this.DataHoraInclusaoDebito.GetHashCode();
                 
                 return hash;
             }

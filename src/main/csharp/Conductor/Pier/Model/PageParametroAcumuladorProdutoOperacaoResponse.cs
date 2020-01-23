@@ -12,15 +12,15 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Lista dos riscos de fraudes
+    /// Objeto de pagina\u00E7\u00E3o de um par\u00E2metro acumulador de produto/opera\u00E7\u00E3o
     /// </summary>
     [DataContract]
-    public partial class PageRiscoFraudeResponse :  IEquatable<PageRiscoFraudeResponse>
+    public partial class PageParametroAcumuladorProdutoOperacaoResponse :  IEquatable<PageParametroAcumuladorProdutoOperacaoResponse>
     { 
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="PageRiscoFraudeResponse" /> class.
-        /// Initializes a new instance of the <see cref="PageRiscoFraudeResponse" />class.
+        /// Initializes a new instance of the <see cref="PageParametroAcumuladorProdutoOperacaoResponse" /> class.
+        /// Initializes a new instance of the <see cref="PageParametroAcumuladorProdutoOperacaoResponse" />class.
         /// </summary>
         /// <param name="Content">Content.</param>
         /// <param name="First">First.</param>
@@ -37,7 +37,7 @@ namespace Conductor.Pier.Model
         /// <param name="TotalElements">TotalElements.</param>
         /// <param name="TotalPages">TotalPages.</param>
 
-        public PageRiscoFraudeResponse(List<RiscoFraudeResponse> Content = null, bool? First = null, bool? FirstPage = null, bool? HasContent = null, bool? HasNextPage = null, bool? HasPreviousPage = null, bool? Last = null, int? NextPage = null, int? Number = null, int? NumberOfElements = null, int? PreviousPage = null, int? Size = null, long? TotalElements = null, int? TotalPages = null)
+        public PageParametroAcumuladorProdutoOperacaoResponse(List<ParametroAcumuladorProdutoOperacaoResponse> Content = null, bool? First = null, bool? FirstPage = null, bool? HasContent = null, bool? HasNextPage = null, bool? HasPreviousPage = null, bool? Last = null, int? NextPage = null, int? Number = null, int? NumberOfElements = null, int? PreviousPage = null, int? Size = null, long? TotalElements = null, int? TotalPages = null)
         {
             this.Content = Content;
             this.First = First;
@@ -61,7 +61,7 @@ namespace Conductor.Pier.Model
         /// Gets or Sets Content
         /// </summary>
         [DataMember(Name="content", EmitDefaultValue=false)]
-        public List<RiscoFraudeResponse> Content { get; set; }
+        public List<ParametroAcumuladorProdutoOperacaoResponse> Content { get; set; }
     
         /// <summary>
         /// Gets or Sets First
@@ -148,7 +148,7 @@ namespace Conductor.Pier.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class PageRiscoFraudeResponse {\n");
+            sb.Append("class PageParametroAcumuladorProdutoOperacaoResponse {\n");
             sb.Append("  Content: ").Append(Content).Append("\n");
             sb.Append("  First: ").Append(First).Append("\n");
             sb.Append("  FirstPage: ").Append(FirstPage).Append("\n");
@@ -185,15 +185,15 @@ namespace Conductor.Pier.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as PageRiscoFraudeResponse);
+            return this.Equals(obj as PageParametroAcumuladorProdutoOperacaoResponse);
         }
 
         /// <summary>
-        /// Returns true if PageRiscoFraudeResponse instances are equal
+        /// Returns true if PageParametroAcumuladorProdutoOperacaoResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of PageRiscoFraudeResponse to be compared</param>
+        /// <param name="other">Instance of PageParametroAcumuladorProdutoOperacaoResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(PageRiscoFraudeResponse other)
+        public bool Equals(PageParametroAcumuladorProdutoOperacaoResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

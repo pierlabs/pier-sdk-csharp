@@ -44,6 +44,30 @@ namespace Conductor.Pier.Api
         ApiResponse<AdicionalDetalheResponse> AlterarAdicionalContaWithHttpInfo (long? id, long? idPessoa, AdicionalUpdate adicionalUpdate);
         
         /// <summary>
+        /// Altera um benef\u00EDcio existente
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite a altera\u00E7\u00E3o de um benef\u00EDcio ativo existente em uma conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador do benef\u00EDcio</param>
+        /// <param name="beneficioUpdate">beneficioUpdate</param>
+        /// <returns>BeneficioResponse</returns>
+        BeneficioResponse AlterarBeneficio (long? id, BeneficioUpdate beneficioUpdate);
+  
+        /// <summary>
+        /// Altera um benef\u00EDcio existente
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite a altera\u00E7\u00E3o de um benef\u00EDcio ativo existente em uma conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador do benef\u00EDcio</param>
+        /// <param name="beneficioUpdate">beneficioUpdate</param>
+        /// <returns>ApiResponse of BeneficioResponse</returns>
+        ApiResponse<BeneficioResponse> AlterarBeneficioWithHttpInfo (long? id, BeneficioUpdate beneficioUpdate);
+        
+        /// <summary>
         /// Atualiza os dados de um determinado Endere\u00E7o
         /// </summary>
         /// <remarks>
@@ -366,6 +390,30 @@ namespace Conductor.Pier.Api
         ApiResponse<IntegracaoEmissorResponse> AtualizarRegistroIntegracaoContaWithHttpInfo (long? id, IntegracaoEmissorPersist body = null);
         
         /// <summary>
+        /// Cadastra um benef\u00EDcio em uma conta espec\u00EDfica
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite cadastrar um benef\u00EDcio de uma pessoa em uma conta espec\u00EDfica, com cardinalidade n para n
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta</param>
+        /// <param name="beneficioPersist">beneficioPersist</param>
+        /// <returns>BeneficioResponse</returns>
+        BeneficioResponse CadastrarBeneficio (long? id, BeneficioPersist beneficioPersist);
+  
+        /// <summary>
+        /// Cadastra um benef\u00EDcio em uma conta espec\u00EDfica
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite cadastrar um benef\u00EDcio de uma pessoa em uma conta espec\u00EDfica, com cardinalidade n para n
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta</param>
+        /// <param name="beneficioPersist">beneficioPersist</param>
+        /// <returns>ApiResponse of BeneficioResponse</returns>
+        ApiResponse<BeneficioResponse> CadastrarBeneficioWithHttpInfo (long? id, BeneficioPersist beneficioPersist);
+        
+        /// <summary>
         /// Cadastra uma indica\u00E7\u00E3o de amigo
         /// </summary>
         /// <remarks>
@@ -410,6 +458,28 @@ namespace Conductor.Pier.Api
         /// <param name="persistencia">persistencia</param>
         /// <returns>ApiResponse of CelularRecargaProgramadaResponse</returns>
         ApiResponse<CelularRecargaProgramadaResponse> CadastrarRecargaProgramadaCelularWithHttpInfo (CelularRecargaProgramadaPersist persistencia);
+        
+        /// <summary>
+        /// Consulta um benef\u00EDcio
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite consultar um benef\u00EDcio espec\u00EDfico
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador do benef\u00EDcio</param>
+        /// <returns>BeneficioResponse</returns>
+        BeneficioResponse ConsultarBeneficio (long? id);
+  
+        /// <summary>
+        /// Consulta um benef\u00EDcio
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite consultar um benef\u00EDcio espec\u00EDfico
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador do benef\u00EDcio</param>
+        /// <returns>ApiResponse of BeneficioResponse</returns>
+        ApiResponse<BeneficioResponse> ConsultarBeneficioWithHttpInfo (long? id);
         
         /// <summary>
         /// Apresenta os dados de um determinado Endere\u00E7o
@@ -524,6 +594,28 @@ namespace Conductor.Pier.Api
         ApiResponse<TelefoneResponse> ConsultarTelefoneWithHttpInfo (long? id);
         
         /// <summary>
+        /// Consulta um tipo de benef\u00EDcio
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite consultar um tipo de benef\u00EDcio
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador do tipo de benef\u00EDcio</param>
+        /// <returns>TipoBeneficioResponse</returns>
+        TipoBeneficioResponse ConsultarTipoBeneficio (long? id);
+  
+        /// <summary>
+        /// Consulta um tipo de benef\u00EDcio
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite consultar um tipo de benef\u00EDcio
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador do tipo de benef\u00EDcio</param>
+        /// <returns>ApiResponse of TipoBeneficioResponse</returns>
+        ApiResponse<TipoBeneficioResponse> ConsultarTipoBeneficioWithHttpInfo (long? id);
+        
+        /// <summary>
         /// Inativa Adicional de uma Conta
         /// </summary>
         /// <remarks>
@@ -574,6 +666,42 @@ namespace Conductor.Pier.Api
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
         /// <returns>ApiResponse of AdicionalResponse</returns>
         ApiResponse<AdicionalResponse> ListarAdicionaisContaWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null);
+        
+        /// <summary>
+        /// Lista os benef\u00EDcios existentes
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite listar os benef\u00EDcios existentes
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idConta">Identificador da conta (optional)</param>
+        /// <param name="tipoBeneficio">Tipo do benef\u00EDcio (optional)</param>
+        /// <param name="numeroBeneficio">N\u00FAmero do benef\u00EDcio (optional)</param>
+        /// <param name="mesProvaVida">M\u00EAs de prova de vida do benefici\u00E1rio (optional)</param>
+        /// <param name="status">Status do benef\u00EDcio(1 = ATIVO, 0 = INATIVO) (optional)</param>
+        /// <returns>PageBeneficioResponse</returns>
+        PageBeneficioResponse ListarBeneficios (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, string tipoBeneficio = null, string numeroBeneficio = null, int? mesProvaVida = null, bool? status = null);
+  
+        /// <summary>
+        /// Lista os benef\u00EDcios existentes
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite listar os benef\u00EDcios existentes
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idConta">Identificador da conta (optional)</param>
+        /// <param name="tipoBeneficio">Tipo do benef\u00EDcio (optional)</param>
+        /// <param name="numeroBeneficio">N\u00FAmero do benef\u00EDcio (optional)</param>
+        /// <param name="mesProvaVida">M\u00EAs de prova de vida do benefici\u00E1rio (optional)</param>
+        /// <param name="status">Status do benef\u00EDcio(1 = ATIVO, 0 = INATIVO) (optional)</param>
+        /// <returns>ApiResponse of PageBeneficioResponse</returns>
+        ApiResponse<PageBeneficioResponse> ListarBeneficiosWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, string tipoBeneficio = null, string numeroBeneficio = null, int? mesProvaVida = null, bool? status = null);
         
         /// <summary>
         /// Lista as contas da pessoa
@@ -950,6 +1078,56 @@ namespace Conductor.Pier.Api
         ApiResponse<PageTelefoneResponse> ListarTelefonesWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idTipoTelefone = null, long? idPessoa = null, string ddd = null, string telefone = null, string ramal = null, int? status = null);
         
         /// <summary>
+        /// Lista os tipos de benef\u00EDcios existentes
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite listar os tipos de benef\u00EDcios existentes
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="descricao">Descri\u00E7\u00E3o do tipo do benef\u00EDcio (optional)</param>
+        /// <returns>PageTipoBeneficioResponse</returns>
+        PageTipoBeneficioResponse ListarTiposBeneficios (List<string> sort = null, int? page = null, int? limit = null, string descricao = null);
+  
+        /// <summary>
+        /// Lista os tipos de benef\u00EDcios existentes
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite listar os tipos de benef\u00EDcios existentes
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="descricao">Descri\u00E7\u00E3o do tipo do benef\u00EDcio (optional)</param>
+        /// <returns>ApiResponse of PageTipoBeneficioResponse</returns>
+        ApiResponse<PageTipoBeneficioResponse> ListarTiposBeneficiosWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string descricao = null);
+        
+        /// <summary>
+        /// Desativa um benef\u00EDcio
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite a desativa\u00E7\u00E3o de um benef\u00EDcio, tornando seu status = 0
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador do benef\u00EDcio</param>
+        /// <returns>BeneficioResponse</returns>
+        BeneficioResponse RemoverBeneficio (long? id);
+  
+        /// <summary>
+        /// Desativa um benef\u00EDcio
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite a desativa\u00E7\u00E3o de um benef\u00EDcio, tornando seu status = 0
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador do benef\u00EDcio</param>
+        /// <returns>ApiResponse of BeneficioResponse</returns>
+        ApiResponse<BeneficioResponse> RemoverBeneficioWithHttpInfo (long? id);
+        
+        /// <summary>
         /// Realiza o cadastro de Adicionais para uma Conta
         /// </summary>
         /// <remarks>
@@ -1318,6 +1496,30 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<AdicionalDetalheResponse>> AlterarAdicionalContaAsyncWithHttpInfo (long? id, long? idPessoa, AdicionalUpdate adicionalUpdate);
         
         /// <summary>
+        /// Altera um benef\u00EDcio existente
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite a altera\u00E7\u00E3o de um benef\u00EDcio ativo existente em uma conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador do benef\u00EDcio</param>
+        /// <param name="beneficioUpdate">beneficioUpdate</param>
+        /// <returns>Task of BeneficioResponse</returns>
+        System.Threading.Tasks.Task<BeneficioResponse> AlterarBeneficioAsync (long? id, BeneficioUpdate beneficioUpdate);
+
+        /// <summary>
+        /// Altera um benef\u00EDcio existente
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite a altera\u00E7\u00E3o de um benef\u00EDcio ativo existente em uma conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador do benef\u00EDcio</param>
+        /// <param name="beneficioUpdate">beneficioUpdate</param>
+        /// <returns>Task of ApiResponse (BeneficioResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<BeneficioResponse>> AlterarBeneficioAsyncWithHttpInfo (long? id, BeneficioUpdate beneficioUpdate);
+        
+        /// <summary>
         /// Atualiza os dados de um determinado Endere\u00E7o
         /// </summary>
         /// <remarks>
@@ -1640,6 +1842,30 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<IntegracaoEmissorResponse>> AtualizarRegistroIntegracaoContaAsyncWithHttpInfo (long? id, IntegracaoEmissorPersist body = null);
         
         /// <summary>
+        /// Cadastra um benef\u00EDcio em uma conta espec\u00EDfica
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite cadastrar um benef\u00EDcio de uma pessoa em uma conta espec\u00EDfica, com cardinalidade n para n
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta</param>
+        /// <param name="beneficioPersist">beneficioPersist</param>
+        /// <returns>Task of BeneficioResponse</returns>
+        System.Threading.Tasks.Task<BeneficioResponse> CadastrarBeneficioAsync (long? id, BeneficioPersist beneficioPersist);
+
+        /// <summary>
+        /// Cadastra um benef\u00EDcio em uma conta espec\u00EDfica
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite cadastrar um benef\u00EDcio de uma pessoa em uma conta espec\u00EDfica, com cardinalidade n para n
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta</param>
+        /// <param name="beneficioPersist">beneficioPersist</param>
+        /// <returns>Task of ApiResponse (BeneficioResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<BeneficioResponse>> CadastrarBeneficioAsyncWithHttpInfo (long? id, BeneficioPersist beneficioPersist);
+        
+        /// <summary>
         /// Cadastra uma indica\u00E7\u00E3o de amigo
         /// </summary>
         /// <remarks>
@@ -1684,6 +1910,28 @@ namespace Conductor.Pier.Api
         /// <param name="persistencia">persistencia</param>
         /// <returns>Task of ApiResponse (CelularRecargaProgramadaResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<CelularRecargaProgramadaResponse>> CadastrarRecargaProgramadaCelularAsyncWithHttpInfo (CelularRecargaProgramadaPersist persistencia);
+        
+        /// <summary>
+        /// Consulta um benef\u00EDcio
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite consultar um benef\u00EDcio espec\u00EDfico
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador do benef\u00EDcio</param>
+        /// <returns>Task of BeneficioResponse</returns>
+        System.Threading.Tasks.Task<BeneficioResponse> ConsultarBeneficioAsync (long? id);
+
+        /// <summary>
+        /// Consulta um benef\u00EDcio
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite consultar um benef\u00EDcio espec\u00EDfico
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador do benef\u00EDcio</param>
+        /// <returns>Task of ApiResponse (BeneficioResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<BeneficioResponse>> ConsultarBeneficioAsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Apresenta os dados de um determinado Endere\u00E7o
@@ -1798,6 +2046,28 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<TelefoneResponse>> ConsultarTelefoneAsyncWithHttpInfo (long? id);
         
         /// <summary>
+        /// Consulta um tipo de benef\u00EDcio
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite consultar um tipo de benef\u00EDcio
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador do tipo de benef\u00EDcio</param>
+        /// <returns>Task of TipoBeneficioResponse</returns>
+        System.Threading.Tasks.Task<TipoBeneficioResponse> ConsultarTipoBeneficioAsync (long? id);
+
+        /// <summary>
+        /// Consulta um tipo de benef\u00EDcio
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite consultar um tipo de benef\u00EDcio
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador do tipo de benef\u00EDcio</param>
+        /// <returns>Task of ApiResponse (TipoBeneficioResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TipoBeneficioResponse>> ConsultarTipoBeneficioAsyncWithHttpInfo (long? id);
+        
+        /// <summary>
         /// Inativa Adicional de uma Conta
         /// </summary>
         /// <remarks>
@@ -1848,6 +2118,42 @@ namespace Conductor.Pier.Api
         /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
         /// <returns>Task of ApiResponse (AdicionalResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<AdicionalResponse>> ListarAdicionaisContaAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null);
+        
+        /// <summary>
+        /// Lista os benef\u00EDcios existentes
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite listar os benef\u00EDcios existentes
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idConta">Identificador da conta (optional)</param>
+        /// <param name="tipoBeneficio">Tipo do benef\u00EDcio (optional)</param>
+        /// <param name="numeroBeneficio">N\u00FAmero do benef\u00EDcio (optional)</param>
+        /// <param name="mesProvaVida">M\u00EAs de prova de vida do benefici\u00E1rio (optional)</param>
+        /// <param name="status">Status do benef\u00EDcio(1 = ATIVO, 0 = INATIVO) (optional)</param>
+        /// <returns>Task of PageBeneficioResponse</returns>
+        System.Threading.Tasks.Task<PageBeneficioResponse> ListarBeneficiosAsync (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, string tipoBeneficio = null, string numeroBeneficio = null, int? mesProvaVida = null, bool? status = null);
+
+        /// <summary>
+        /// Lista os benef\u00EDcios existentes
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite listar os benef\u00EDcios existentes
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idConta">Identificador da conta (optional)</param>
+        /// <param name="tipoBeneficio">Tipo do benef\u00EDcio (optional)</param>
+        /// <param name="numeroBeneficio">N\u00FAmero do benef\u00EDcio (optional)</param>
+        /// <param name="mesProvaVida">M\u00EAs de prova de vida do benefici\u00E1rio (optional)</param>
+        /// <param name="status">Status do benef\u00EDcio(1 = ATIVO, 0 = INATIVO) (optional)</param>
+        /// <returns>Task of ApiResponse (PageBeneficioResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PageBeneficioResponse>> ListarBeneficiosAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, string tipoBeneficio = null, string numeroBeneficio = null, int? mesProvaVida = null, bool? status = null);
         
         /// <summary>
         /// Lista as contas da pessoa
@@ -2222,6 +2528,56 @@ namespace Conductor.Pier.Api
         /// <param name="status">Apresenta o Status do Telefone, onde: &#39;0&#39;: Inativo e &#39;1&#39;: Ativo (optional)</param>
         /// <returns>Task of ApiResponse (PageTelefoneResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<PageTelefoneResponse>> ListarTelefonesAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, long? idTipoTelefone = null, long? idPessoa = null, string ddd = null, string telefone = null, string ramal = null, int? status = null);
+        
+        /// <summary>
+        /// Lista os tipos de benef\u00EDcios existentes
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite listar os tipos de benef\u00EDcios existentes
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="descricao">Descri\u00E7\u00E3o do tipo do benef\u00EDcio (optional)</param>
+        /// <returns>Task of PageTipoBeneficioResponse</returns>
+        System.Threading.Tasks.Task<PageTipoBeneficioResponse> ListarTiposBeneficiosAsync (List<string> sort = null, int? page = null, int? limit = null, string descricao = null);
+
+        /// <summary>
+        /// Lista os tipos de benef\u00EDcios existentes
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite listar os tipos de benef\u00EDcios existentes
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="descricao">Descri\u00E7\u00E3o do tipo do benef\u00EDcio (optional)</param>
+        /// <returns>Task of ApiResponse (PageTipoBeneficioResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PageTipoBeneficioResponse>> ListarTiposBeneficiosAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string descricao = null);
+        
+        /// <summary>
+        /// Desativa um benef\u00EDcio
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite a desativa\u00E7\u00E3o de um benef\u00EDcio, tornando seu status = 0
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador do benef\u00EDcio</param>
+        /// <returns>Task of BeneficioResponse</returns>
+        System.Threading.Tasks.Task<BeneficioResponse> RemoverBeneficioAsync (long? id);
+
+        /// <summary>
+        /// Desativa um benef\u00EDcio
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite a desativa\u00E7\u00E3o de um benef\u00EDcio, tornando seu status = 0
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador do benef\u00EDcio</param>
+        /// <returns>Task of ApiResponse (BeneficioResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<BeneficioResponse>> RemoverBeneficioAsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Realiza o cadastro de Adicionais para uma Conta
@@ -2844,6 +3200,188 @@ namespace Conductor.Pier.Api
             return new ApiResponse<AdicionalDetalheResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (AdicionalDetalheResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AdicionalDetalheResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Altera um benef\u00EDcio existente Este recurso permite a altera\u00E7\u00E3o de um benef\u00EDcio ativo existente em uma conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador do benef\u00EDcio</param> 
+        /// <param name="beneficioUpdate">beneficioUpdate</param> 
+        /// <returns>BeneficioResponse</returns>
+        public BeneficioResponse AlterarBeneficio (long? id, BeneficioUpdate beneficioUpdate)
+        {
+             ApiResponse<BeneficioResponse> localVarResponse = AlterarBeneficioWithHttpInfo(id, beneficioUpdate);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Altera um benef\u00EDcio existente Este recurso permite a altera\u00E7\u00E3o de um benef\u00EDcio ativo existente em uma conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador do benef\u00EDcio</param> 
+        /// <param name="beneficioUpdate">beneficioUpdate</param> 
+        /// <returns>ApiResponse of BeneficioResponse</returns>
+        public ApiResponse< BeneficioResponse > AlterarBeneficioWithHttpInfo (long? id, BeneficioUpdate beneficioUpdate)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling CadastroClienteApi->AlterarBeneficio");
+            
+            // verify the required parameter 'beneficioUpdate' is set
+            if (beneficioUpdate == null)
+                throw new ApiException(400, "Missing required parameter 'beneficioUpdate' when calling CadastroClienteApi->AlterarBeneficio");
+            
+    
+            var localVarPath = "/api/contas/beneficios/{id}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            if (beneficioUpdate.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(beneficioUpdate); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = beneficioUpdate; // byte array
+            }
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling AlterarBeneficio: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling AlterarBeneficio: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<BeneficioResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (BeneficioResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(BeneficioResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Altera um benef\u00EDcio existente Este recurso permite a altera\u00E7\u00E3o de um benef\u00EDcio ativo existente em uma conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador do benef\u00EDcio</param>
+        /// <param name="beneficioUpdate">beneficioUpdate</param>
+        /// <returns>Task of BeneficioResponse</returns>
+        public async System.Threading.Tasks.Task<BeneficioResponse> AlterarBeneficioAsync (long? id, BeneficioUpdate beneficioUpdate)
+        {
+             ApiResponse<BeneficioResponse> localVarResponse = await AlterarBeneficioAsyncWithHttpInfo(id, beneficioUpdate);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Altera um benef\u00EDcio existente Este recurso permite a altera\u00E7\u00E3o de um benef\u00EDcio ativo existente em uma conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador do benef\u00EDcio</param>
+        /// <param name="beneficioUpdate">beneficioUpdate</param>
+        /// <returns>Task of ApiResponse (BeneficioResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<BeneficioResponse>> AlterarBeneficioAsyncWithHttpInfo (long? id, BeneficioUpdate beneficioUpdate)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AlterarBeneficio");
+            // verify the required parameter 'beneficioUpdate' is set
+            if (beneficioUpdate == null) throw new ApiException(400, "Missing required parameter 'beneficioUpdate' when calling AlterarBeneficio");
+            
+    
+            var localVarPath = "/api/contas/beneficios/{id}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            if (beneficioUpdate.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(beneficioUpdate); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = beneficioUpdate; // byte array
+            }
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling AlterarBeneficio: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling AlterarBeneficio: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BeneficioResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (BeneficioResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(BeneficioResponse)));
             
         }
         
@@ -4738,6 +5276,188 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
+        /// Cadastra um benef\u00EDcio em uma conta espec\u00EDfica Este recurso permite cadastrar um benef\u00EDcio de uma pessoa em uma conta espec\u00EDfica, com cardinalidade n para n
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta</param> 
+        /// <param name="beneficioPersist">beneficioPersist</param> 
+        /// <returns>BeneficioResponse</returns>
+        public BeneficioResponse CadastrarBeneficio (long? id, BeneficioPersist beneficioPersist)
+        {
+             ApiResponse<BeneficioResponse> localVarResponse = CadastrarBeneficioWithHttpInfo(id, beneficioPersist);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Cadastra um benef\u00EDcio em uma conta espec\u00EDfica Este recurso permite cadastrar um benef\u00EDcio de uma pessoa em uma conta espec\u00EDfica, com cardinalidade n para n
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta</param> 
+        /// <param name="beneficioPersist">beneficioPersist</param> 
+        /// <returns>ApiResponse of BeneficioResponse</returns>
+        public ApiResponse< BeneficioResponse > CadastrarBeneficioWithHttpInfo (long? id, BeneficioPersist beneficioPersist)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling CadastroClienteApi->CadastrarBeneficio");
+            
+            // verify the required parameter 'beneficioPersist' is set
+            if (beneficioPersist == null)
+                throw new ApiException(400, "Missing required parameter 'beneficioPersist' when calling CadastroClienteApi->CadastrarBeneficio");
+            
+    
+            var localVarPath = "/api/contas/{id}/beneficios";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            if (beneficioPersist.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(beneficioPersist); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = beneficioPersist; // byte array
+            }
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling CadastrarBeneficio: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling CadastrarBeneficio: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<BeneficioResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (BeneficioResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(BeneficioResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Cadastra um benef\u00EDcio em uma conta espec\u00EDfica Este recurso permite cadastrar um benef\u00EDcio de uma pessoa em uma conta espec\u00EDfica, com cardinalidade n para n
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta</param>
+        /// <param name="beneficioPersist">beneficioPersist</param>
+        /// <returns>Task of BeneficioResponse</returns>
+        public async System.Threading.Tasks.Task<BeneficioResponse> CadastrarBeneficioAsync (long? id, BeneficioPersist beneficioPersist)
+        {
+             ApiResponse<BeneficioResponse> localVarResponse = await CadastrarBeneficioAsyncWithHttpInfo(id, beneficioPersist);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Cadastra um benef\u00EDcio em uma conta espec\u00EDfica Este recurso permite cadastrar um benef\u00EDcio de uma pessoa em uma conta espec\u00EDfica, com cardinalidade n para n
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta</param>
+        /// <param name="beneficioPersist">beneficioPersist</param>
+        /// <returns>Task of ApiResponse (BeneficioResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<BeneficioResponse>> CadastrarBeneficioAsyncWithHttpInfo (long? id, BeneficioPersist beneficioPersist)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling CadastrarBeneficio");
+            // verify the required parameter 'beneficioPersist' is set
+            if (beneficioPersist == null) throw new ApiException(400, "Missing required parameter 'beneficioPersist' when calling CadastrarBeneficio");
+            
+    
+            var localVarPath = "/api/contas/{id}/beneficios";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            if (beneficioPersist.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(beneficioPersist); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = beneficioPersist; // byte array
+            }
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling CadastrarBeneficio: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling CadastrarBeneficio: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BeneficioResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (BeneficioResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(BeneficioResponse)));
+            
+        }
+        
+        /// <summary>
         /// Cadastra uma indica\u00E7\u00E3o de amigo Cadastra uma indica\u00E7\u00E3o de amigo
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5086,6 +5806,164 @@ namespace Conductor.Pier.Api
             return new ApiResponse<CelularRecargaProgramadaResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (CelularRecargaProgramadaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CelularRecargaProgramadaResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Consulta um benef\u00EDcio Este recurso permite consultar um benef\u00EDcio espec\u00EDfico
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador do benef\u00EDcio</param> 
+        /// <returns>BeneficioResponse</returns>
+        public BeneficioResponse ConsultarBeneficio (long? id)
+        {
+             ApiResponse<BeneficioResponse> localVarResponse = ConsultarBeneficioWithHttpInfo(id);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Consulta um benef\u00EDcio Este recurso permite consultar um benef\u00EDcio espec\u00EDfico
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador do benef\u00EDcio</param> 
+        /// <returns>ApiResponse of BeneficioResponse</returns>
+        public ApiResponse< BeneficioResponse > ConsultarBeneficioWithHttpInfo (long? id)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling CadastroClienteApi->ConsultarBeneficio");
+            
+    
+            var localVarPath = "/api/contas/beneficios/{id}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarBeneficio: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarBeneficio: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<BeneficioResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (BeneficioResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(BeneficioResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Consulta um benef\u00EDcio Este recurso permite consultar um benef\u00EDcio espec\u00EDfico
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador do benef\u00EDcio</param>
+        /// <returns>Task of BeneficioResponse</returns>
+        public async System.Threading.Tasks.Task<BeneficioResponse> ConsultarBeneficioAsync (long? id)
+        {
+             ApiResponse<BeneficioResponse> localVarResponse = await ConsultarBeneficioAsyncWithHttpInfo(id);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Consulta um benef\u00EDcio Este recurso permite consultar um benef\u00EDcio espec\u00EDfico
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador do benef\u00EDcio</param>
+        /// <returns>Task of ApiResponse (BeneficioResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<BeneficioResponse>> ConsultarBeneficioAsyncWithHttpInfo (long? id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarBeneficio");
+            
+    
+            var localVarPath = "/api/contas/beneficios/{id}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarBeneficio: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarBeneficio: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BeneficioResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (BeneficioResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(BeneficioResponse)));
             
         }
         
@@ -5892,6 +6770,164 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
+        /// Consulta um tipo de benef\u00EDcio Este recurso permite consultar um tipo de benef\u00EDcio
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador do tipo de benef\u00EDcio</param> 
+        /// <returns>TipoBeneficioResponse</returns>
+        public TipoBeneficioResponse ConsultarTipoBeneficio (long? id)
+        {
+             ApiResponse<TipoBeneficioResponse> localVarResponse = ConsultarTipoBeneficioWithHttpInfo(id);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Consulta um tipo de benef\u00EDcio Este recurso permite consultar um tipo de benef\u00EDcio
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador do tipo de benef\u00EDcio</param> 
+        /// <returns>ApiResponse of TipoBeneficioResponse</returns>
+        public ApiResponse< TipoBeneficioResponse > ConsultarTipoBeneficioWithHttpInfo (long? id)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling CadastroClienteApi->ConsultarTipoBeneficio");
+            
+    
+            var localVarPath = "/api/contas/beneficios/tipos/{id}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarTipoBeneficio: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarTipoBeneficio: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<TipoBeneficioResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (TipoBeneficioResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TipoBeneficioResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Consulta um tipo de benef\u00EDcio Este recurso permite consultar um tipo de benef\u00EDcio
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador do tipo de benef\u00EDcio</param>
+        /// <returns>Task of TipoBeneficioResponse</returns>
+        public async System.Threading.Tasks.Task<TipoBeneficioResponse> ConsultarTipoBeneficioAsync (long? id)
+        {
+             ApiResponse<TipoBeneficioResponse> localVarResponse = await ConsultarTipoBeneficioAsyncWithHttpInfo(id);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Consulta um tipo de benef\u00EDcio Este recurso permite consultar um tipo de benef\u00EDcio
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador do tipo de benef\u00EDcio</param>
+        /// <returns>Task of ApiResponse (TipoBeneficioResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<TipoBeneficioResponse>> ConsultarTipoBeneficioAsyncWithHttpInfo (long? id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarTipoBeneficio");
+            
+    
+            var localVarPath = "/api/contas/beneficios/tipos/{id}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarTipoBeneficio: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarTipoBeneficio: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TipoBeneficioResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (TipoBeneficioResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TipoBeneficioResponse)));
+            
+        }
+        
+        /// <summary>
         /// Inativa Adicional de uma Conta Este m\u00E9todo permite que seja inativado um portador Adicional de uma determinada Conta
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
@@ -6234,6 +7270,200 @@ namespace Conductor.Pier.Api
             return new ApiResponse<AdicionalResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (AdicionalResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AdicionalResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Lista os benef\u00EDcios existentes Este recurso permite listar os benef\u00EDcios existentes
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="page">P\u00E1gina (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <param name="idConta">Identificador da conta (optional)</param> 
+        /// <param name="tipoBeneficio">Tipo do benef\u00EDcio (optional)</param> 
+        /// <param name="numeroBeneficio">N\u00FAmero do benef\u00EDcio (optional)</param> 
+        /// <param name="mesProvaVida">M\u00EAs de prova de vida do benefici\u00E1rio (optional)</param> 
+        /// <param name="status">Status do benef\u00EDcio(1 = ATIVO, 0 = INATIVO) (optional)</param> 
+        /// <returns>PageBeneficioResponse</returns>
+        public PageBeneficioResponse ListarBeneficios (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, string tipoBeneficio = null, string numeroBeneficio = null, int? mesProvaVida = null, bool? status = null)
+        {
+             ApiResponse<PageBeneficioResponse> localVarResponse = ListarBeneficiosWithHttpInfo(sort, page, limit, idConta, tipoBeneficio, numeroBeneficio, mesProvaVida, status);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Lista os benef\u00EDcios existentes Este recurso permite listar os benef\u00EDcios existentes
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="page">P\u00E1gina (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <param name="idConta">Identificador da conta (optional)</param> 
+        /// <param name="tipoBeneficio">Tipo do benef\u00EDcio (optional)</param> 
+        /// <param name="numeroBeneficio">N\u00FAmero do benef\u00EDcio (optional)</param> 
+        /// <param name="mesProvaVida">M\u00EAs de prova de vida do benefici\u00E1rio (optional)</param> 
+        /// <param name="status">Status do benef\u00EDcio(1 = ATIVO, 0 = INATIVO) (optional)</param> 
+        /// <returns>ApiResponse of PageBeneficioResponse</returns>
+        public ApiResponse< PageBeneficioResponse > ListarBeneficiosWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, string tipoBeneficio = null, string numeroBeneficio = null, int? mesProvaVida = null, bool? status = null)
+        {
+            
+    
+            var localVarPath = "/api/contas/beneficios";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (idConta != null) localVarQueryParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // query parameter
+            if (tipoBeneficio != null) localVarQueryParams.Add("tipoBeneficio", Configuration.ApiClient.ParameterToString(tipoBeneficio)); // query parameter
+            if (numeroBeneficio != null) localVarQueryParams.Add("numeroBeneficio", Configuration.ApiClient.ParameterToString(numeroBeneficio)); // query parameter
+            if (mesProvaVida != null) localVarQueryParams.Add("mesProvaVida", Configuration.ApiClient.ParameterToString(mesProvaVida)); // query parameter
+            if (status != null) localVarQueryParams.Add("status", Configuration.ApiClient.ParameterToString(status)); // query parameter
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarBeneficios: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarBeneficios: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<PageBeneficioResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageBeneficioResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageBeneficioResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Lista os benef\u00EDcios existentes Este recurso permite listar os benef\u00EDcios existentes
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idConta">Identificador da conta (optional)</param>
+        /// <param name="tipoBeneficio">Tipo do benef\u00EDcio (optional)</param>
+        /// <param name="numeroBeneficio">N\u00FAmero do benef\u00EDcio (optional)</param>
+        /// <param name="mesProvaVida">M\u00EAs de prova de vida do benefici\u00E1rio (optional)</param>
+        /// <param name="status">Status do benef\u00EDcio(1 = ATIVO, 0 = INATIVO) (optional)</param>
+        /// <returns>Task of PageBeneficioResponse</returns>
+        public async System.Threading.Tasks.Task<PageBeneficioResponse> ListarBeneficiosAsync (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, string tipoBeneficio = null, string numeroBeneficio = null, int? mesProvaVida = null, bool? status = null)
+        {
+             ApiResponse<PageBeneficioResponse> localVarResponse = await ListarBeneficiosAsyncWithHttpInfo(sort, page, limit, idConta, tipoBeneficio, numeroBeneficio, mesProvaVida, status);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Lista os benef\u00EDcios existentes Este recurso permite listar os benef\u00EDcios existentes
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idConta">Identificador da conta (optional)</param>
+        /// <param name="tipoBeneficio">Tipo do benef\u00EDcio (optional)</param>
+        /// <param name="numeroBeneficio">N\u00FAmero do benef\u00EDcio (optional)</param>
+        /// <param name="mesProvaVida">M\u00EAs de prova de vida do benefici\u00E1rio (optional)</param>
+        /// <param name="status">Status do benef\u00EDcio(1 = ATIVO, 0 = INATIVO) (optional)</param>
+        /// <returns>Task of ApiResponse (PageBeneficioResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PageBeneficioResponse>> ListarBeneficiosAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idConta = null, string tipoBeneficio = null, string numeroBeneficio = null, int? mesProvaVida = null, bool? status = null)
+        {
+            
+    
+            var localVarPath = "/api/contas/beneficios";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (idConta != null) localVarQueryParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // query parameter
+            if (tipoBeneficio != null) localVarQueryParams.Add("tipoBeneficio", Configuration.ApiClient.ParameterToString(tipoBeneficio)); // query parameter
+            if (numeroBeneficio != null) localVarQueryParams.Add("numeroBeneficio", Configuration.ApiClient.ParameterToString(numeroBeneficio)); // query parameter
+            if (mesProvaVida != null) localVarQueryParams.Add("mesProvaVida", Configuration.ApiClient.ParameterToString(mesProvaVida)); // query parameter
+            if (status != null) localVarQueryParams.Add("status", Configuration.ApiClient.ParameterToString(status)); // query parameter
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarBeneficios: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarBeneficios: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PageBeneficioResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageBeneficioResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageBeneficioResponse)));
             
         }
         
@@ -8148,6 +9378,334 @@ namespace Conductor.Pier.Api
             return new ApiResponse<PageTelefoneResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (PageTelefoneResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageTelefoneResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Lista os tipos de benef\u00EDcios existentes Este recurso permite listar os tipos de benef\u00EDcios existentes
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="page">P\u00E1gina (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <param name="descricao">Descri\u00E7\u00E3o do tipo do benef\u00EDcio (optional)</param> 
+        /// <returns>PageTipoBeneficioResponse</returns>
+        public PageTipoBeneficioResponse ListarTiposBeneficios (List<string> sort = null, int? page = null, int? limit = null, string descricao = null)
+        {
+             ApiResponse<PageTipoBeneficioResponse> localVarResponse = ListarTiposBeneficiosWithHttpInfo(sort, page, limit, descricao);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Lista os tipos de benef\u00EDcios existentes Este recurso permite listar os tipos de benef\u00EDcios existentes
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="page">P\u00E1gina (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <param name="descricao">Descri\u00E7\u00E3o do tipo do benef\u00EDcio (optional)</param> 
+        /// <returns>ApiResponse of PageTipoBeneficioResponse</returns>
+        public ApiResponse< PageTipoBeneficioResponse > ListarTiposBeneficiosWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string descricao = null)
+        {
+            
+    
+            var localVarPath = "/api/contas/beneficios/tipos";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (descricao != null) localVarQueryParams.Add("descricao", Configuration.ApiClient.ParameterToString(descricao)); // query parameter
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarTiposBeneficios: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarTiposBeneficios: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<PageTipoBeneficioResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageTipoBeneficioResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageTipoBeneficioResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Lista os tipos de benef\u00EDcios existentes Este recurso permite listar os tipos de benef\u00EDcios existentes
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="descricao">Descri\u00E7\u00E3o do tipo do benef\u00EDcio (optional)</param>
+        /// <returns>Task of PageTipoBeneficioResponse</returns>
+        public async System.Threading.Tasks.Task<PageTipoBeneficioResponse> ListarTiposBeneficiosAsync (List<string> sort = null, int? page = null, int? limit = null, string descricao = null)
+        {
+             ApiResponse<PageTipoBeneficioResponse> localVarResponse = await ListarTiposBeneficiosAsyncWithHttpInfo(sort, page, limit, descricao);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Lista os tipos de benef\u00EDcios existentes Este recurso permite listar os tipos de benef\u00EDcios existentes
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="descricao">Descri\u00E7\u00E3o do tipo do benef\u00EDcio (optional)</param>
+        /// <returns>Task of ApiResponse (PageTipoBeneficioResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PageTipoBeneficioResponse>> ListarTiposBeneficiosAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string descricao = null)
+        {
+            
+    
+            var localVarPath = "/api/contas/beneficios/tipos";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (descricao != null) localVarQueryParams.Add("descricao", Configuration.ApiClient.ParameterToString(descricao)); // query parameter
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarTiposBeneficios: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarTiposBeneficios: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PageTipoBeneficioResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageTipoBeneficioResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageTipoBeneficioResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Desativa um benef\u00EDcio Este recurso permite a desativa\u00E7\u00E3o de um benef\u00EDcio, tornando seu status = 0
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador do benef\u00EDcio</param> 
+        /// <returns>BeneficioResponse</returns>
+        public BeneficioResponse RemoverBeneficio (long? id)
+        {
+             ApiResponse<BeneficioResponse> localVarResponse = RemoverBeneficioWithHttpInfo(id);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Desativa um benef\u00EDcio Este recurso permite a desativa\u00E7\u00E3o de um benef\u00EDcio, tornando seu status = 0
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador do benef\u00EDcio</param> 
+        /// <returns>ApiResponse of BeneficioResponse</returns>
+        public ApiResponse< BeneficioResponse > RemoverBeneficioWithHttpInfo (long? id)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling CadastroClienteApi->RemoverBeneficio");
+            
+    
+            var localVarPath = "/api/contas/beneficios/{id}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling RemoverBeneficio: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling RemoverBeneficio: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<BeneficioResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (BeneficioResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(BeneficioResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Desativa um benef\u00EDcio Este recurso permite a desativa\u00E7\u00E3o de um benef\u00EDcio, tornando seu status = 0
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador do benef\u00EDcio</param>
+        /// <returns>Task of BeneficioResponse</returns>
+        public async System.Threading.Tasks.Task<BeneficioResponse> RemoverBeneficioAsync (long? id)
+        {
+             ApiResponse<BeneficioResponse> localVarResponse = await RemoverBeneficioAsyncWithHttpInfo(id);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Desativa um benef\u00EDcio Este recurso permite a desativa\u00E7\u00E3o de um benef\u00EDcio, tornando seu status = 0
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador do benef\u00EDcio</param>
+        /// <returns>Task of ApiResponse (BeneficioResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<BeneficioResponse>> RemoverBeneficioAsyncWithHttpInfo (long? id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling RemoverBeneficio");
+            
+    
+            var localVarPath = "/api/contas/beneficios/{id}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling RemoverBeneficio: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling RemoverBeneficio: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BeneficioResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (BeneficioResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(BeneficioResponse)));
             
         }
         

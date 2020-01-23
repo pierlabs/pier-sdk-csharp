@@ -840,6 +840,32 @@ namespace Conductor.Pier.Api
         ApiResponse<PageMaquinetaResponse> ListarMaquinetasWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idEstabelecimento = null);
         
         /// <summary>
+        /// Lista os mccs vinculados a opera\u00E7\u00E3o, produto e estabelecimento
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite listar os Mccs vinculados a opera\u00E7\u00E3o, produto e estabelcimento
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id)</param>
+        /// <param name="idOperacao">C\u00F3digo de Identifica\u00E7\u00E3o da opera\u00E7\u00E3o (id)</param>
+        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do produto (id)</param>
+        /// <returns>Object</returns>
+        Object ListarMccVinculoProdutoOperacao (long? idEstabelecimento, long? idOperacao, long? idProduto);
+  
+        /// <summary>
+        /// Lista os mccs vinculados a opera\u00E7\u00E3o, produto e estabelecimento
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite listar os Mccs vinculados a opera\u00E7\u00E3o, produto e estabelcimento
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id)</param>
+        /// <param name="idOperacao">C\u00F3digo de Identifica\u00E7\u00E3o da opera\u00E7\u00E3o (id)</param>
+        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do produto (id)</param>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> ListarMccVinculoProdutoOperacaoWithHttpInfo (long? idEstabelecimento, long? idOperacao, long? idProduto);
+        
+        /// <summary>
         /// Lista os tipos de moedas do emissor
         /// </summary>
         /// <remarks>
@@ -1280,6 +1306,30 @@ namespace Conductor.Pier.Api
         ApiResponse<PageTipoTerminalTransacoesResponse> ListarTransacoesPorTipoTerminalEstabelecimentoWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataTransacao = null, string codigoProcessamento = null, int? nsuEmissor = null, int? nsuOrigem = null, int? statusConta = null, double? valorTransacao = null);
         
         /// <summary>
+        /// Lista todas as opera\u00E7\u00F5es vinculadas a um estabelecimento e produto
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo listar todas as opera\u00E7\u00F5es vinculadas a um estabelecimento e produto
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id)</param>
+        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do produto (id)</param>
+        /// <returns>VinculoOperacaoResponse</returns>
+        VinculoOperacaoResponse ListarVinculoOperacoesProdutoEstabelecimento (long? idEstabelecimento, long? idProduto);
+  
+        /// <summary>
+        /// Lista todas as opera\u00E7\u00F5es vinculadas a um estabelecimento e produto
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo listar todas as opera\u00E7\u00F5es vinculadas a um estabelecimento e produto
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id)</param>
+        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do produto (id)</param>
+        /// <returns>ApiResponse of VinculoOperacaoResponse</returns>
+        ApiResponse<VinculoOperacaoResponse> ListarVinculoOperacoesProdutoEstabelecimentoWithHttpInfo (long? idEstabelecimento, long? idProduto);
+        
+        /// <summary>
         /// Lista os V\u00EDnculos dos estabelecimento com os adquirentes
         /// </summary>
         /// <remarks>
@@ -1486,6 +1536,60 @@ namespace Conductor.Pier.Api
         /// <param name="vinculoEstabelecimentoAdquirentePersist">vinculoEstabelecimentoAdquirentePersist</param>
         /// <returns>ApiResponse of VinculoEstabelecimentoAdquirenteResponse</returns>
         ApiResponse<VinculoEstabelecimentoAdquirenteResponse> SalvarVinculoEstabelecimentoAdquirenteWithHttpInfo (VinculoEstabelecimentoAdquirentePersist vinculoEstabelecimentoAdquirentePersist);
+        
+        /// <summary>
+        /// Vincula as opera\u00E7\u00F5es ao estabelecimento e ao produto
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite vincular as opera\u00E7\u00F5es ao estabelecimento e ao produto
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id)</param>
+        /// <param name="idOperacao">C\u00F3digo de Identifica\u00E7\u00E3o da opera\u00E7\u00E3o (id)</param>
+        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do produto (id)</param>
+        /// <param name="mcc">C\u00F3digo de Identifica\u00E7\u00E3o do mcc</param>
+        /// <returns>ResponseEntity</returns>
+        ResponseEntity VinculoOperacoesProdutoEstabelecimento (long? idEstabelecimento, long? idOperacao, long? idProduto, List<int?> mcc);
+  
+        /// <summary>
+        /// Vincula as opera\u00E7\u00F5es ao estabelecimento e ao produto
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite vincular as opera\u00E7\u00F5es ao estabelecimento e ao produto
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id)</param>
+        /// <param name="idOperacao">C\u00F3digo de Identifica\u00E7\u00E3o da opera\u00E7\u00E3o (id)</param>
+        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do produto (id)</param>
+        /// <param name="mcc">C\u00F3digo de Identifica\u00E7\u00E3o do mcc</param>
+        /// <returns>ApiResponse of ResponseEntity</returns>
+        ApiResponse<ResponseEntity> VinculoOperacoesProdutoEstabelecimentoWithHttpInfo (long? idEstabelecimento, long? idOperacao, long? idProduto, List<int?> mcc);
+        
+        /// <summary>
+        /// Remove os v\u00EDnculos das opera\u00E7\u00F5es atrelado ao estabelecimento e ao produto
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite remover os v\u00EDnculos das opera\u00E7\u00F5es atrelado ao estabelecimento e ao produto
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id)</param>
+        /// <param name="idOperacao">C\u00F3digo de Identifica\u00E7\u00E3o da opera\u00E7\u00E3o (id)</param>
+        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do produto (id)</param>
+        /// <returns>ResponseEntity</returns>
+        ResponseEntity VinculoOperacoesProdutoEstabelecimentoRemove (long? idEstabelecimento, long? idOperacao, long? idProduto);
+  
+        /// <summary>
+        /// Remove os v\u00EDnculos das opera\u00E7\u00F5es atrelado ao estabelecimento e ao produto
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite remover os v\u00EDnculos das opera\u00E7\u00F5es atrelado ao estabelecimento e ao produto
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id)</param>
+        /// <param name="idOperacao">C\u00F3digo de Identifica\u00E7\u00E3o da opera\u00E7\u00E3o (id)</param>
+        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do produto (id)</param>
+        /// <returns>ApiResponse of ResponseEntity</returns>
+        ApiResponse<ResponseEntity> VinculoOperacoesProdutoEstabelecimentoRemoveWithHttpInfo (long? idEstabelecimento, long? idOperacao, long? idProduto);
         
         #endregion Synchronous Operations
         
@@ -2314,6 +2418,32 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<PageMaquinetaResponse>> ListarMaquinetasAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idEstabelecimento = null);
         
         /// <summary>
+        /// Lista os mccs vinculados a opera\u00E7\u00E3o, produto e estabelecimento
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite listar os Mccs vinculados a opera\u00E7\u00E3o, produto e estabelcimento
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id)</param>
+        /// <param name="idOperacao">C\u00F3digo de Identifica\u00E7\u00E3o da opera\u00E7\u00E3o (id)</param>
+        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do produto (id)</param>
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> ListarMccVinculoProdutoOperacaoAsync (long? idEstabelecimento, long? idOperacao, long? idProduto);
+
+        /// <summary>
+        /// Lista os mccs vinculados a opera\u00E7\u00E3o, produto e estabelecimento
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite listar os Mccs vinculados a opera\u00E7\u00E3o, produto e estabelcimento
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id)</param>
+        /// <param name="idOperacao">C\u00F3digo de Identifica\u00E7\u00E3o da opera\u00E7\u00E3o (id)</param>
+        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do produto (id)</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> ListarMccVinculoProdutoOperacaoAsyncWithHttpInfo (long? idEstabelecimento, long? idOperacao, long? idProduto);
+        
+        /// <summary>
         /// Lista os tipos de moedas do emissor
         /// </summary>
         /// <remarks>
@@ -2754,6 +2884,30 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<PageTipoTerminalTransacoesResponse>> ListarTransacoesPorTipoTerminalEstabelecimentoAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, string dataTransacao = null, string codigoProcessamento = null, int? nsuEmissor = null, int? nsuOrigem = null, int? statusConta = null, double? valorTransacao = null);
         
         /// <summary>
+        /// Lista todas as opera\u00E7\u00F5es vinculadas a um estabelecimento e produto
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo listar todas as opera\u00E7\u00F5es vinculadas a um estabelecimento e produto
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id)</param>
+        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do produto (id)</param>
+        /// <returns>Task of VinculoOperacaoResponse</returns>
+        System.Threading.Tasks.Task<VinculoOperacaoResponse> ListarVinculoOperacoesProdutoEstabelecimentoAsync (long? idEstabelecimento, long? idProduto);
+
+        /// <summary>
+        /// Lista todas as opera\u00E7\u00F5es vinculadas a um estabelecimento e produto
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo listar todas as opera\u00E7\u00F5es vinculadas a um estabelecimento e produto
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id)</param>
+        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do produto (id)</param>
+        /// <returns>Task of ApiResponse (VinculoOperacaoResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<VinculoOperacaoResponse>> ListarVinculoOperacoesProdutoEstabelecimentoAsyncWithHttpInfo (long? idEstabelecimento, long? idProduto);
+        
+        /// <summary>
         /// Lista os V\u00EDnculos dos estabelecimento com os adquirentes
         /// </summary>
         /// <remarks>
@@ -2960,6 +3114,60 @@ namespace Conductor.Pier.Api
         /// <param name="vinculoEstabelecimentoAdquirentePersist">vinculoEstabelecimentoAdquirentePersist</param>
         /// <returns>Task of ApiResponse (VinculoEstabelecimentoAdquirenteResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<VinculoEstabelecimentoAdquirenteResponse>> SalvarVinculoEstabelecimentoAdquirenteAsyncWithHttpInfo (VinculoEstabelecimentoAdquirentePersist vinculoEstabelecimentoAdquirentePersist);
+        
+        /// <summary>
+        /// Vincula as opera\u00E7\u00F5es ao estabelecimento e ao produto
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite vincular as opera\u00E7\u00F5es ao estabelecimento e ao produto
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id)</param>
+        /// <param name="idOperacao">C\u00F3digo de Identifica\u00E7\u00E3o da opera\u00E7\u00E3o (id)</param>
+        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do produto (id)</param>
+        /// <param name="mcc">C\u00F3digo de Identifica\u00E7\u00E3o do mcc</param>
+        /// <returns>Task of ResponseEntity</returns>
+        System.Threading.Tasks.Task<ResponseEntity> VinculoOperacoesProdutoEstabelecimentoAsync (long? idEstabelecimento, long? idOperacao, long? idProduto, List<int?> mcc);
+
+        /// <summary>
+        /// Vincula as opera\u00E7\u00F5es ao estabelecimento e ao produto
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite vincular as opera\u00E7\u00F5es ao estabelecimento e ao produto
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id)</param>
+        /// <param name="idOperacao">C\u00F3digo de Identifica\u00E7\u00E3o da opera\u00E7\u00E3o (id)</param>
+        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do produto (id)</param>
+        /// <param name="mcc">C\u00F3digo de Identifica\u00E7\u00E3o do mcc</param>
+        /// <returns>Task of ApiResponse (ResponseEntity)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ResponseEntity>> VinculoOperacoesProdutoEstabelecimentoAsyncWithHttpInfo (long? idEstabelecimento, long? idOperacao, long? idProduto, List<int?> mcc);
+        
+        /// <summary>
+        /// Remove os v\u00EDnculos das opera\u00E7\u00F5es atrelado ao estabelecimento e ao produto
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite remover os v\u00EDnculos das opera\u00E7\u00F5es atrelado ao estabelecimento e ao produto
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id)</param>
+        /// <param name="idOperacao">C\u00F3digo de Identifica\u00E7\u00E3o da opera\u00E7\u00E3o (id)</param>
+        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do produto (id)</param>
+        /// <returns>Task of ResponseEntity</returns>
+        System.Threading.Tasks.Task<ResponseEntity> VinculoOperacoesProdutoEstabelecimentoRemoveAsync (long? idEstabelecimento, long? idOperacao, long? idProduto);
+
+        /// <summary>
+        /// Remove os v\u00EDnculos das opera\u00E7\u00F5es atrelado ao estabelecimento e ao produto
+        /// </summary>
+        /// <remarks>
+        /// Este m\u00E9todo permite remover os v\u00EDnculos das opera\u00E7\u00F5es atrelado ao estabelecimento e ao produto
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id)</param>
+        /// <param name="idOperacao">C\u00F3digo de Identifica\u00E7\u00E3o da opera\u00E7\u00E3o (id)</param>
+        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do produto (id)</param>
+        /// <returns>Task of ApiResponse (ResponseEntity)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ResponseEntity>> VinculoOperacoesProdutoEstabelecimentoRemoveAsyncWithHttpInfo (long? idEstabelecimento, long? idOperacao, long? idProduto);
         
         #endregion Asynchronous Operations
         
@@ -8344,6 +8552,188 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
+        /// Lista os mccs vinculados a opera\u00E7\u00E3o, produto e estabelecimento Este m\u00E9todo permite listar os Mccs vinculados a opera\u00E7\u00E3o, produto e estabelcimento
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id)</param> 
+        /// <param name="idOperacao">C\u00F3digo de Identifica\u00E7\u00E3o da opera\u00E7\u00E3o (id)</param> 
+        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do produto (id)</param> 
+        /// <returns>Object</returns>
+        public Object ListarMccVinculoProdutoOperacao (long? idEstabelecimento, long? idOperacao, long? idProduto)
+        {
+             ApiResponse<Object> localVarResponse = ListarMccVinculoProdutoOperacaoWithHttpInfo(idEstabelecimento, idOperacao, idProduto);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Lista os mccs vinculados a opera\u00E7\u00E3o, produto e estabelecimento Este m\u00E9todo permite listar os Mccs vinculados a opera\u00E7\u00E3o, produto e estabelcimento
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id)</param> 
+        /// <param name="idOperacao">C\u00F3digo de Identifica\u00E7\u00E3o da opera\u00E7\u00E3o (id)</param> 
+        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do produto (id)</param> 
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > ListarMccVinculoProdutoOperacaoWithHttpInfo (long? idEstabelecimento, long? idOperacao, long? idProduto)
+        {
+            
+            // verify the required parameter 'idEstabelecimento' is set
+            if (idEstabelecimento == null)
+                throw new ApiException(400, "Missing required parameter 'idEstabelecimento' when calling EstabelecimentoApi->ListarMccVinculoProdutoOperacao");
+            
+            // verify the required parameter 'idOperacao' is set
+            if (idOperacao == null)
+                throw new ApiException(400, "Missing required parameter 'idOperacao' when calling EstabelecimentoApi->ListarMccVinculoProdutoOperacao");
+            
+            // verify the required parameter 'idProduto' is set
+            if (idProduto == null)
+                throw new ApiException(400, "Missing required parameter 'idProduto' when calling EstabelecimentoApi->ListarMccVinculoProdutoOperacao");
+            
+    
+            var localVarPath = "/api/estabelecimentos/{idEstabelecimento}/produtos/{idProduto}/operacoes/{idOperacao}/codigosMCC";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (idEstabelecimento != null) localVarPathParams.Add("idEstabelecimento", Configuration.ApiClient.ParameterToString(idEstabelecimento)); // path parameter
+            if (idOperacao != null) localVarPathParams.Add("idOperacao", Configuration.ApiClient.ParameterToString(idOperacao)); // path parameter
+            if (idProduto != null) localVarPathParams.Add("idProduto", Configuration.ApiClient.ParameterToString(idProduto)); // path parameter
+            
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarMccVinculoProdutoOperacao: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarMccVinculoProdutoOperacao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+            
+        }
+
+        
+        /// <summary>
+        /// Lista os mccs vinculados a opera\u00E7\u00E3o, produto e estabelecimento Este m\u00E9todo permite listar os Mccs vinculados a opera\u00E7\u00E3o, produto e estabelcimento
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id)</param>
+        /// <param name="idOperacao">C\u00F3digo de Identifica\u00E7\u00E3o da opera\u00E7\u00E3o (id)</param>
+        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do produto (id)</param>
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> ListarMccVinculoProdutoOperacaoAsync (long? idEstabelecimento, long? idOperacao, long? idProduto)
+        {
+             ApiResponse<Object> localVarResponse = await ListarMccVinculoProdutoOperacaoAsyncWithHttpInfo(idEstabelecimento, idOperacao, idProduto);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Lista os mccs vinculados a opera\u00E7\u00E3o, produto e estabelecimento Este m\u00E9todo permite listar os Mccs vinculados a opera\u00E7\u00E3o, produto e estabelcimento
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id)</param>
+        /// <param name="idOperacao">C\u00F3digo de Identifica\u00E7\u00E3o da opera\u00E7\u00E3o (id)</param>
+        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do produto (id)</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> ListarMccVinculoProdutoOperacaoAsyncWithHttpInfo (long? idEstabelecimento, long? idOperacao, long? idProduto)
+        {
+            // verify the required parameter 'idEstabelecimento' is set
+            if (idEstabelecimento == null) throw new ApiException(400, "Missing required parameter 'idEstabelecimento' when calling ListarMccVinculoProdutoOperacao");
+            // verify the required parameter 'idOperacao' is set
+            if (idOperacao == null) throw new ApiException(400, "Missing required parameter 'idOperacao' when calling ListarMccVinculoProdutoOperacao");
+            // verify the required parameter 'idProduto' is set
+            if (idProduto == null) throw new ApiException(400, "Missing required parameter 'idProduto' when calling ListarMccVinculoProdutoOperacao");
+            
+    
+            var localVarPath = "/api/estabelecimentos/{idEstabelecimento}/produtos/{idProduto}/operacoes/{idOperacao}/codigosMCC";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (idEstabelecimento != null) localVarPathParams.Add("idEstabelecimento", Configuration.ApiClient.ParameterToString(idEstabelecimento)); // path parameter
+            if (idOperacao != null) localVarPathParams.Add("idOperacao", Configuration.ApiClient.ParameterToString(idOperacao)); // path parameter
+            if (idProduto != null) localVarPathParams.Add("idProduto", Configuration.ApiClient.ParameterToString(idProduto)); // path parameter
+            
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarMccVinculoProdutoOperacao: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarMccVinculoProdutoOperacao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+            
+        }
+        
+        /// <summary>
         /// Lista os tipos de moedas do emissor Este recurso permite que sejam listados os tipos de moedas existentes na base de dados do emissor
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
@@ -10794,6 +11184,176 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
+        /// Lista todas as opera\u00E7\u00F5es vinculadas a um estabelecimento e produto Este m\u00E9todo listar todas as opera\u00E7\u00F5es vinculadas a um estabelecimento e produto
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id)</param> 
+        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do produto (id)</param> 
+        /// <returns>VinculoOperacaoResponse</returns>
+        public VinculoOperacaoResponse ListarVinculoOperacoesProdutoEstabelecimento (long? idEstabelecimento, long? idProduto)
+        {
+             ApiResponse<VinculoOperacaoResponse> localVarResponse = ListarVinculoOperacoesProdutoEstabelecimentoWithHttpInfo(idEstabelecimento, idProduto);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Lista todas as opera\u00E7\u00F5es vinculadas a um estabelecimento e produto Este m\u00E9todo listar todas as opera\u00E7\u00F5es vinculadas a um estabelecimento e produto
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id)</param> 
+        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do produto (id)</param> 
+        /// <returns>ApiResponse of VinculoOperacaoResponse</returns>
+        public ApiResponse< VinculoOperacaoResponse > ListarVinculoOperacoesProdutoEstabelecimentoWithHttpInfo (long? idEstabelecimento, long? idProduto)
+        {
+            
+            // verify the required parameter 'idEstabelecimento' is set
+            if (idEstabelecimento == null)
+                throw new ApiException(400, "Missing required parameter 'idEstabelecimento' when calling EstabelecimentoApi->ListarVinculoOperacoesProdutoEstabelecimento");
+            
+            // verify the required parameter 'idProduto' is set
+            if (idProduto == null)
+                throw new ApiException(400, "Missing required parameter 'idProduto' when calling EstabelecimentoApi->ListarVinculoOperacoesProdutoEstabelecimento");
+            
+    
+            var localVarPath = "/api/estabelecimentos/{idEstabelecimento}/produtos/{idProduto}/operacoes";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (idEstabelecimento != null) localVarPathParams.Add("idEstabelecimento", Configuration.ApiClient.ParameterToString(idEstabelecimento)); // path parameter
+            if (idProduto != null) localVarPathParams.Add("idProduto", Configuration.ApiClient.ParameterToString(idProduto)); // path parameter
+            
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarVinculoOperacoesProdutoEstabelecimento: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarVinculoOperacoesProdutoEstabelecimento: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<VinculoOperacaoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (VinculoOperacaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(VinculoOperacaoResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Lista todas as opera\u00E7\u00F5es vinculadas a um estabelecimento e produto Este m\u00E9todo listar todas as opera\u00E7\u00F5es vinculadas a um estabelecimento e produto
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id)</param>
+        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do produto (id)</param>
+        /// <returns>Task of VinculoOperacaoResponse</returns>
+        public async System.Threading.Tasks.Task<VinculoOperacaoResponse> ListarVinculoOperacoesProdutoEstabelecimentoAsync (long? idEstabelecimento, long? idProduto)
+        {
+             ApiResponse<VinculoOperacaoResponse> localVarResponse = await ListarVinculoOperacoesProdutoEstabelecimentoAsyncWithHttpInfo(idEstabelecimento, idProduto);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Lista todas as opera\u00E7\u00F5es vinculadas a um estabelecimento e produto Este m\u00E9todo listar todas as opera\u00E7\u00F5es vinculadas a um estabelecimento e produto
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id)</param>
+        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do produto (id)</param>
+        /// <returns>Task of ApiResponse (VinculoOperacaoResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<VinculoOperacaoResponse>> ListarVinculoOperacoesProdutoEstabelecimentoAsyncWithHttpInfo (long? idEstabelecimento, long? idProduto)
+        {
+            // verify the required parameter 'idEstabelecimento' is set
+            if (idEstabelecimento == null) throw new ApiException(400, "Missing required parameter 'idEstabelecimento' when calling ListarVinculoOperacoesProdutoEstabelecimento");
+            // verify the required parameter 'idProduto' is set
+            if (idProduto == null) throw new ApiException(400, "Missing required parameter 'idProduto' when calling ListarVinculoOperacoesProdutoEstabelecimento");
+            
+    
+            var localVarPath = "/api/estabelecimentos/{idEstabelecimento}/produtos/{idProduto}/operacoes";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (idEstabelecimento != null) localVarPathParams.Add("idEstabelecimento", Configuration.ApiClient.ParameterToString(idEstabelecimento)); // path parameter
+            if (idProduto != null) localVarPathParams.Add("idProduto", Configuration.ApiClient.ParameterToString(idProduto)); // path parameter
+            
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarVinculoOperacoesProdutoEstabelecimento: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarVinculoOperacoesProdutoEstabelecimento: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<VinculoOperacaoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (VinculoOperacaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(VinculoOperacaoResponse)));
+            
+        }
+        
+        /// <summary>
         /// Lista os V\u00EDnculos dos estabelecimento com os adquirentes Este m\u00E9todo permite que sejam listados os V\u00EDnculos dos estabelecimento com os adquirentes
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
@@ -12332,6 +12892,394 @@ namespace Conductor.Pier.Api
             return new ApiResponse<VinculoEstabelecimentoAdquirenteResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (VinculoEstabelecimentoAdquirenteResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(VinculoEstabelecimentoAdquirenteResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Vincula as opera\u00E7\u00F5es ao estabelecimento e ao produto Este m\u00E9todo permite vincular as opera\u00E7\u00F5es ao estabelecimento e ao produto
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id)</param> 
+        /// <param name="idOperacao">C\u00F3digo de Identifica\u00E7\u00E3o da opera\u00E7\u00E3o (id)</param> 
+        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do produto (id)</param> 
+        /// <param name="mcc">C\u00F3digo de Identifica\u00E7\u00E3o do mcc</param> 
+        /// <returns>ResponseEntity</returns>
+        public ResponseEntity VinculoOperacoesProdutoEstabelecimento (long? idEstabelecimento, long? idOperacao, long? idProduto, List<int?> mcc)
+        {
+             ApiResponse<ResponseEntity> localVarResponse = VinculoOperacoesProdutoEstabelecimentoWithHttpInfo(idEstabelecimento, idOperacao, idProduto, mcc);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Vincula as opera\u00E7\u00F5es ao estabelecimento e ao produto Este m\u00E9todo permite vincular as opera\u00E7\u00F5es ao estabelecimento e ao produto
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id)</param> 
+        /// <param name="idOperacao">C\u00F3digo de Identifica\u00E7\u00E3o da opera\u00E7\u00E3o (id)</param> 
+        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do produto (id)</param> 
+        /// <param name="mcc">C\u00F3digo de Identifica\u00E7\u00E3o do mcc</param> 
+        /// <returns>ApiResponse of ResponseEntity</returns>
+        public ApiResponse< ResponseEntity > VinculoOperacoesProdutoEstabelecimentoWithHttpInfo (long? idEstabelecimento, long? idOperacao, long? idProduto, List<int?> mcc)
+        {
+            
+            // verify the required parameter 'idEstabelecimento' is set
+            if (idEstabelecimento == null)
+                throw new ApiException(400, "Missing required parameter 'idEstabelecimento' when calling EstabelecimentoApi->VinculoOperacoesProdutoEstabelecimento");
+            
+            // verify the required parameter 'idOperacao' is set
+            if (idOperacao == null)
+                throw new ApiException(400, "Missing required parameter 'idOperacao' when calling EstabelecimentoApi->VinculoOperacoesProdutoEstabelecimento");
+            
+            // verify the required parameter 'idProduto' is set
+            if (idProduto == null)
+                throw new ApiException(400, "Missing required parameter 'idProduto' when calling EstabelecimentoApi->VinculoOperacoesProdutoEstabelecimento");
+            
+            // verify the required parameter 'mcc' is set
+            if (mcc == null)
+                throw new ApiException(400, "Missing required parameter 'mcc' when calling EstabelecimentoApi->VinculoOperacoesProdutoEstabelecimento");
+            
+    
+            var localVarPath = "/api/estabelecimentos/{idEstabelecimento}/produtos/{idProduto}/operacoes/{idOperacao}/vinculos";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (idEstabelecimento != null) localVarPathParams.Add("idEstabelecimento", Configuration.ApiClient.ParameterToString(idEstabelecimento)); // path parameter
+            if (idOperacao != null) localVarPathParams.Add("idOperacao", Configuration.ApiClient.ParameterToString(idOperacao)); // path parameter
+            if (idProduto != null) localVarPathParams.Add("idProduto", Configuration.ApiClient.ParameterToString(idProduto)); // path parameter
+            
+            
+            
+            
+            if (mcc.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(mcc); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = mcc; // byte array
+            }
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling VinculoOperacoesProdutoEstabelecimento: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling VinculoOperacoesProdutoEstabelecimento: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<ResponseEntity>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ResponseEntity) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseEntity)));
+            
+        }
+
+        
+        /// <summary>
+        /// Vincula as opera\u00E7\u00F5es ao estabelecimento e ao produto Este m\u00E9todo permite vincular as opera\u00E7\u00F5es ao estabelecimento e ao produto
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id)</param>
+        /// <param name="idOperacao">C\u00F3digo de Identifica\u00E7\u00E3o da opera\u00E7\u00E3o (id)</param>
+        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do produto (id)</param>
+        /// <param name="mcc">C\u00F3digo de Identifica\u00E7\u00E3o do mcc</param>
+        /// <returns>Task of ResponseEntity</returns>
+        public async System.Threading.Tasks.Task<ResponseEntity> VinculoOperacoesProdutoEstabelecimentoAsync (long? idEstabelecimento, long? idOperacao, long? idProduto, List<int?> mcc)
+        {
+             ApiResponse<ResponseEntity> localVarResponse = await VinculoOperacoesProdutoEstabelecimentoAsyncWithHttpInfo(idEstabelecimento, idOperacao, idProduto, mcc);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Vincula as opera\u00E7\u00F5es ao estabelecimento e ao produto Este m\u00E9todo permite vincular as opera\u00E7\u00F5es ao estabelecimento e ao produto
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id)</param>
+        /// <param name="idOperacao">C\u00F3digo de Identifica\u00E7\u00E3o da opera\u00E7\u00E3o (id)</param>
+        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do produto (id)</param>
+        /// <param name="mcc">C\u00F3digo de Identifica\u00E7\u00E3o do mcc</param>
+        /// <returns>Task of ApiResponse (ResponseEntity)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ResponseEntity>> VinculoOperacoesProdutoEstabelecimentoAsyncWithHttpInfo (long? idEstabelecimento, long? idOperacao, long? idProduto, List<int?> mcc)
+        {
+            // verify the required parameter 'idEstabelecimento' is set
+            if (idEstabelecimento == null) throw new ApiException(400, "Missing required parameter 'idEstabelecimento' when calling VinculoOperacoesProdutoEstabelecimento");
+            // verify the required parameter 'idOperacao' is set
+            if (idOperacao == null) throw new ApiException(400, "Missing required parameter 'idOperacao' when calling VinculoOperacoesProdutoEstabelecimento");
+            // verify the required parameter 'idProduto' is set
+            if (idProduto == null) throw new ApiException(400, "Missing required parameter 'idProduto' when calling VinculoOperacoesProdutoEstabelecimento");
+            // verify the required parameter 'mcc' is set
+            if (mcc == null) throw new ApiException(400, "Missing required parameter 'mcc' when calling VinculoOperacoesProdutoEstabelecimento");
+            
+    
+            var localVarPath = "/api/estabelecimentos/{idEstabelecimento}/produtos/{idProduto}/operacoes/{idOperacao}/vinculos";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (idEstabelecimento != null) localVarPathParams.Add("idEstabelecimento", Configuration.ApiClient.ParameterToString(idEstabelecimento)); // path parameter
+            if (idOperacao != null) localVarPathParams.Add("idOperacao", Configuration.ApiClient.ParameterToString(idOperacao)); // path parameter
+            if (idProduto != null) localVarPathParams.Add("idProduto", Configuration.ApiClient.ParameterToString(idProduto)); // path parameter
+            
+            
+            
+            
+            if (mcc.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(mcc); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = mcc; // byte array
+            }
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling VinculoOperacoesProdutoEstabelecimento: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling VinculoOperacoesProdutoEstabelecimento: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ResponseEntity>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ResponseEntity) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseEntity)));
+            
+        }
+        
+        /// <summary>
+        /// Remove os v\u00EDnculos das opera\u00E7\u00F5es atrelado ao estabelecimento e ao produto Este m\u00E9todo permite remover os v\u00EDnculos das opera\u00E7\u00F5es atrelado ao estabelecimento e ao produto
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id)</param> 
+        /// <param name="idOperacao">C\u00F3digo de Identifica\u00E7\u00E3o da opera\u00E7\u00E3o (id)</param> 
+        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do produto (id)</param> 
+        /// <returns>ResponseEntity</returns>
+        public ResponseEntity VinculoOperacoesProdutoEstabelecimentoRemove (long? idEstabelecimento, long? idOperacao, long? idProduto)
+        {
+             ApiResponse<ResponseEntity> localVarResponse = VinculoOperacoesProdutoEstabelecimentoRemoveWithHttpInfo(idEstabelecimento, idOperacao, idProduto);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Remove os v\u00EDnculos das opera\u00E7\u00F5es atrelado ao estabelecimento e ao produto Este m\u00E9todo permite remover os v\u00EDnculos das opera\u00E7\u00F5es atrelado ao estabelecimento e ao produto
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id)</param> 
+        /// <param name="idOperacao">C\u00F3digo de Identifica\u00E7\u00E3o da opera\u00E7\u00E3o (id)</param> 
+        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do produto (id)</param> 
+        /// <returns>ApiResponse of ResponseEntity</returns>
+        public ApiResponse< ResponseEntity > VinculoOperacoesProdutoEstabelecimentoRemoveWithHttpInfo (long? idEstabelecimento, long? idOperacao, long? idProduto)
+        {
+            
+            // verify the required parameter 'idEstabelecimento' is set
+            if (idEstabelecimento == null)
+                throw new ApiException(400, "Missing required parameter 'idEstabelecimento' when calling EstabelecimentoApi->VinculoOperacoesProdutoEstabelecimentoRemove");
+            
+            // verify the required parameter 'idOperacao' is set
+            if (idOperacao == null)
+                throw new ApiException(400, "Missing required parameter 'idOperacao' when calling EstabelecimentoApi->VinculoOperacoesProdutoEstabelecimentoRemove");
+            
+            // verify the required parameter 'idProduto' is set
+            if (idProduto == null)
+                throw new ApiException(400, "Missing required parameter 'idProduto' when calling EstabelecimentoApi->VinculoOperacoesProdutoEstabelecimentoRemove");
+            
+    
+            var localVarPath = "/api/estabelecimentos/{idEstabelecimento}/produtos/{idProduto}/operacoes/{idOperacao}/vinculos";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (idEstabelecimento != null) localVarPathParams.Add("idEstabelecimento", Configuration.ApiClient.ParameterToString(idEstabelecimento)); // path parameter
+            if (idOperacao != null) localVarPathParams.Add("idOperacao", Configuration.ApiClient.ParameterToString(idOperacao)); // path parameter
+            if (idProduto != null) localVarPathParams.Add("idProduto", Configuration.ApiClient.ParameterToString(idProduto)); // path parameter
+            
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling VinculoOperacoesProdutoEstabelecimentoRemove: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling VinculoOperacoesProdutoEstabelecimentoRemove: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<ResponseEntity>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ResponseEntity) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseEntity)));
+            
+        }
+
+        
+        /// <summary>
+        /// Remove os v\u00EDnculos das opera\u00E7\u00F5es atrelado ao estabelecimento e ao produto Este m\u00E9todo permite remover os v\u00EDnculos das opera\u00E7\u00F5es atrelado ao estabelecimento e ao produto
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id)</param>
+        /// <param name="idOperacao">C\u00F3digo de Identifica\u00E7\u00E3o da opera\u00E7\u00E3o (id)</param>
+        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do produto (id)</param>
+        /// <returns>Task of ResponseEntity</returns>
+        public async System.Threading.Tasks.Task<ResponseEntity> VinculoOperacoesProdutoEstabelecimentoRemoveAsync (long? idEstabelecimento, long? idOperacao, long? idProduto)
+        {
+             ApiResponse<ResponseEntity> localVarResponse = await VinculoOperacoesProdutoEstabelecimentoRemoveAsyncWithHttpInfo(idEstabelecimento, idOperacao, idProduto);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Remove os v\u00EDnculos das opera\u00E7\u00F5es atrelado ao estabelecimento e ao produto Este m\u00E9todo permite remover os v\u00EDnculos das opera\u00E7\u00F5es atrelado ao estabelecimento e ao produto
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id)</param>
+        /// <param name="idOperacao">C\u00F3digo de Identifica\u00E7\u00E3o da opera\u00E7\u00E3o (id)</param>
+        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do produto (id)</param>
+        /// <returns>Task of ApiResponse (ResponseEntity)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ResponseEntity>> VinculoOperacoesProdutoEstabelecimentoRemoveAsyncWithHttpInfo (long? idEstabelecimento, long? idOperacao, long? idProduto)
+        {
+            // verify the required parameter 'idEstabelecimento' is set
+            if (idEstabelecimento == null) throw new ApiException(400, "Missing required parameter 'idEstabelecimento' when calling VinculoOperacoesProdutoEstabelecimentoRemove");
+            // verify the required parameter 'idOperacao' is set
+            if (idOperacao == null) throw new ApiException(400, "Missing required parameter 'idOperacao' when calling VinculoOperacoesProdutoEstabelecimentoRemove");
+            // verify the required parameter 'idProduto' is set
+            if (idProduto == null) throw new ApiException(400, "Missing required parameter 'idProduto' when calling VinculoOperacoesProdutoEstabelecimentoRemove");
+            
+    
+            var localVarPath = "/api/estabelecimentos/{idEstabelecimento}/produtos/{idProduto}/operacoes/{idOperacao}/vinculos";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (idEstabelecimento != null) localVarPathParams.Add("idEstabelecimento", Configuration.ApiClient.ParameterToString(idEstabelecimento)); // path parameter
+            if (idOperacao != null) localVarPathParams.Add("idOperacao", Configuration.ApiClient.ParameterToString(idOperacao)); // path parameter
+            if (idProduto != null) localVarPathParams.Add("idProduto", Configuration.ApiClient.ParameterToString(idProduto)); // path parameter
+            
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling VinculoOperacoesProdutoEstabelecimentoRemove: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling VinculoOperacoesProdutoEstabelecimentoRemove: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ResponseEntity>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ResponseEntity) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseEntity)));
             
         }
         

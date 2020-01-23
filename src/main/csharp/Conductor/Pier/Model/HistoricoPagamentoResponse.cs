@@ -31,8 +31,9 @@ namespace Conductor.Pier.Model
         /// <param name="DataHoraPagamento">Data e Hora da realiza\u00E7\u00E3o do Pagamento. Quando feito em Institui\u00E7\u00E3o Banc\u00E1ria, o hor\u00E1rio do pagamento \u00E9 exibido com valor zero.</param>
         /// <param name="DataHoraEntradaPagamento">Data e Hora em que o registro do Pagamento foi cadastrado.</param>
         /// <param name="Status">C\u00F3digo de Identifica\u00E7\u00E3o do Status do Pagamento.</param>
+        /// <param name="NossoNumero">C\u00F3digo de Identifica\u00E7\u00E3o do nosso n\u00FAmero.</param>
 
-        public HistoricoPagamentoResponse(long? IdConta = null, long? IdPagamento = null, long? IdEstabelecimento = null, long? IdBanco = null, long? IdCartao = null, double? ValorPagamento = null, string DataHoraPagamento = null, string DataHoraEntradaPagamento = null, long? Status = null)
+        public HistoricoPagamentoResponse(long? IdConta = null, long? IdPagamento = null, long? IdEstabelecimento = null, long? IdBanco = null, long? IdCartao = null, double? ValorPagamento = null, string DataHoraPagamento = null, string DataHoraEntradaPagamento = null, long? Status = null, long? NossoNumero = null)
         {
             this.IdConta = IdConta;
             this.IdPagamento = IdPagamento;
@@ -43,6 +44,7 @@ namespace Conductor.Pier.Model
             this.DataHoraPagamento = DataHoraPagamento;
             this.DataHoraEntradaPagamento = DataHoraEntradaPagamento;
             this.Status = Status;
+            this.NossoNumero = NossoNumero;
             
         }
         
@@ -111,6 +113,13 @@ namespace Conductor.Pier.Model
         public long? Status { get; set; }
     
         /// <summary>
+        /// C\u00F3digo de Identifica\u00E7\u00E3o do nosso n\u00FAmero
+        /// </summary>
+        /// <value>C\u00F3digo de Identifica\u00E7\u00E3o do nosso n\u00FAmero</value>
+        [DataMember(Name="nossoNumero", EmitDefaultValue=false)]
+        public long? NossoNumero { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -127,6 +136,7 @@ namespace Conductor.Pier.Model
             sb.Append("  DataHoraPagamento: ").Append(DataHoraPagamento).Append("\n");
             sb.Append("  DataHoraEntradaPagamento: ").Append(DataHoraEntradaPagamento).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
+            sb.Append("  NossoNumero: ").Append(NossoNumero).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -208,6 +218,11 @@ namespace Conductor.Pier.Model
                     this.Status == other.Status ||
                     this.Status != null &&
                     this.Status.Equals(other.Status)
+                ) && 
+                (
+                    this.NossoNumero == other.NossoNumero ||
+                    this.NossoNumero != null &&
+                    this.NossoNumero.Equals(other.NossoNumero)
                 );
         }
 
@@ -249,6 +264,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
+                
+                if (this.NossoNumero != null)
+                    hash = hash * 59 + this.NossoNumero.GetHashCode();
                 
                 return hash;
             }

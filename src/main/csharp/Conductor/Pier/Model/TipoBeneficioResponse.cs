@@ -12,20 +12,20 @@ using Newtonsoft.Json.Converters;
 namespace Conductor.Pier.Model
 {
     /// <summary>
-    /// Objeto de resposta de Tipo Resolu\u00E7\u00E3o
+    /// Objeto de resposta do tipo de benef\u00EDcio
     /// </summary>
     [DataContract]
-    public partial class TipoResolucaoResponse :  IEquatable<TipoResolucaoResponse>
+    public partial class TipoBeneficioResponse :  IEquatable<TipoBeneficioResponse>
     { 
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="TipoResolucaoResponse" /> class.
-        /// Initializes a new instance of the <see cref="TipoResolucaoResponse" />class.
+        /// Initializes a new instance of the <see cref="TipoBeneficioResponse" /> class.
+        /// Initializes a new instance of the <see cref="TipoBeneficioResponse" />class.
         /// </summary>
-        /// <param name="Id">C\u00F3digo de identifica\u00E7\u00E3o do tipo de resolu\u00E7\u00E3o.</param>
-        /// <param name="Descricao">Descri\u00E7\u00E3o do tipo de resolu\u00E7\u00E3o.</param>
+        /// <param name="Id">Identificador do tipo de benef\u00EDcio.</param>
+        /// <param name="Descricao">Descri\u00E7\u00E3o do tipo de benef\u00EDcio.</param>
 
-        public TipoResolucaoResponse(long? Id = null, string Descricao = null)
+        public TipoBeneficioResponse(long? Id = null, string Descricao = null)
         {
             this.Id = Id;
             this.Descricao = Descricao;
@@ -34,16 +34,16 @@ namespace Conductor.Pier.Model
         
     
         /// <summary>
-        /// C\u00F3digo de identifica\u00E7\u00E3o do tipo de resolu\u00E7\u00E3o
+        /// Identificador do tipo de benef\u00EDcio
         /// </summary>
-        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do tipo de resolu\u00E7\u00E3o</value>
+        /// <value>Identificador do tipo de benef\u00EDcio</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public long? Id { get; set; }
     
         /// <summary>
-        /// Descri\u00E7\u00E3o do tipo de resolu\u00E7\u00E3o
+        /// Descri\u00E7\u00E3o do tipo de benef\u00EDcio
         /// </summary>
-        /// <value>Descri\u00E7\u00E3o do tipo de resolu\u00E7\u00E3o</value>
+        /// <value>Descri\u00E7\u00E3o do tipo de benef\u00EDcio</value>
         [DataMember(Name="descricao", EmitDefaultValue=false)]
         public string Descricao { get; set; }
     
@@ -54,7 +54,7 @@ namespace Conductor.Pier.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TipoResolucaoResponse {\n");
+            sb.Append("class TipoBeneficioResponse {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Descricao: ").Append(Descricao).Append("\n");
             
@@ -79,15 +79,15 @@ namespace Conductor.Pier.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TipoResolucaoResponse);
+            return this.Equals(obj as TipoBeneficioResponse);
         }
 
         /// <summary>
-        /// Returns true if TipoResolucaoResponse instances are equal
+        /// Returns true if TipoBeneficioResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of TipoResolucaoResponse to be compared</param>
+        /// <param name="other">Instance of TipoBeneficioResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TipoResolucaoResponse other)
+        public bool Equals(TipoBeneficioResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
