@@ -28,7 +28,7 @@ namespace Conductor.Pier.Model
         /// <param name="Id">C\u00F3digo identificador do tipo de opera\u00E7\u00E3o banc\u00E1ria.</param>
         /// <param name="IdTipoTemplate">C\u00F3digo identificador do tipo do template.</param>
 
-        public TipoOperacaoBancariaResponse(string Descricao = null, LocalTime HorarioMaximo = null, LocalTime HorarioMinimo = null, long? Id = null, long? IdTipoTemplate = null)
+        public TipoOperacaoBancariaResponse(string Descricao = null, string HorarioMaximo = null, string HorarioMinimo = null, long? Id = null, long? IdTipoTemplate = null)
         {
             this.Descricao = Descricao;
             this.HorarioMaximo = HorarioMaximo;
@@ -51,14 +51,14 @@ namespace Conductor.Pier.Model
         /// </summary>
         /// <value>Hor\u00E1rio m\u00E1ximo que pode ser realizada uma opera\u00E7\u00E3o</value>
         [DataMember(Name="horarioMaximo", EmitDefaultValue=false)]
-        public LocalTime HorarioMaximo { get; set; }
+        public string HorarioMaximo { get; set; }
     
         /// <summary>
         /// Hor\u00E1rio m\u00EDnimo que pode ser realizada uma opera\u00E7\u00E3o
         /// </summary>
         /// <value>Hor\u00E1rio m\u00EDnimo que pode ser realizada uma opera\u00E7\u00E3o</value>
         [DataMember(Name="horarioMinimo", EmitDefaultValue=false)]
-        public LocalTime HorarioMinimo { get; set; }
+        public string HorarioMinimo { get; set; }
     
         /// <summary>
         /// C\u00F3digo identificador do tipo de opera\u00E7\u00E3o banc\u00E1ria
