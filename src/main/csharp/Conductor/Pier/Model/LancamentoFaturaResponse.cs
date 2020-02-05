@@ -47,8 +47,11 @@ namespace Conductor.Pier.Model
         /// <param name="FlagSolicitouContestacao">Flag que indica se o cliente solicitou contesta\u00E7\u00E3o da transa\u00E7\u00E3o.</param>
         /// <param name="ValorTaxaEmbarque">Valor da taxa de embarque.</param>
         /// <param name="DescricaoAbreviada">Descri\u00E7\u00E3o abreviada da transa\u00E7\u00E3o.</param>
+        /// <param name="MoedaEstrangeira">S\u00EDmbolo da moeda estrangeira da compra.</param>
+        /// <param name="ValorCompraMoedaEstrangeira">Valor da compra em moeda estrangeira.</param>
+        /// <param name="CotacaoDolarCompra">Taxa de convers\u00E3o do d\u00F3lar para reais na data da compra.</param>
 
-        public LancamentoFaturaResponse(long? IdTransacao = null, string DescricaoTipoTransacao = null, long? IdTipoEvento = null, string DescricaoTipoEvento = null, long? IdEvento = null, long? IdConta = null, string Complemento = null, double? ValorBRL = null, double? ValorUSD = null, int? NumeroParcela = null, int? QuantidadeParcelas = null, string DataHoraTransacao = null, string NomeEstabelecimento = null, string DescricaoEstabelecimento = null, string NomeFantasiaEstabelecimento = null, bool? FlagCredito = null, long? IdMCC = null, long? IdGrupoMCC = null, string DescricaoGrupoMCC = null, bool? Titular = null, string NomePortador = null, string NumeroCartaoMascarado = null, bool? FlagSolicitouContestacao = null, double? ValorTaxaEmbarque = null, string DescricaoAbreviada = null)
+        public LancamentoFaturaResponse(long? IdTransacao = null, string DescricaoTipoTransacao = null, long? IdTipoEvento = null, string DescricaoTipoEvento = null, long? IdEvento = null, long? IdConta = null, string Complemento = null, double? ValorBRL = null, double? ValorUSD = null, int? NumeroParcela = null, int? QuantidadeParcelas = null, string DataHoraTransacao = null, string NomeEstabelecimento = null, string DescricaoEstabelecimento = null, string NomeFantasiaEstabelecimento = null, bool? FlagCredito = null, long? IdMCC = null, long? IdGrupoMCC = null, string DescricaoGrupoMCC = null, bool? Titular = null, string NomePortador = null, string NumeroCartaoMascarado = null, bool? FlagSolicitouContestacao = null, double? ValorTaxaEmbarque = null, string DescricaoAbreviada = null, string MoedaEstrangeira = null, double? ValorCompraMoedaEstrangeira = null, double? CotacaoDolarCompra = null)
         {
             this.IdTransacao = IdTransacao;
             this.DescricaoTipoTransacao = DescricaoTipoTransacao;
@@ -75,6 +78,9 @@ namespace Conductor.Pier.Model
             this.FlagSolicitouContestacao = FlagSolicitouContestacao;
             this.ValorTaxaEmbarque = ValorTaxaEmbarque;
             this.DescricaoAbreviada = DescricaoAbreviada;
+            this.MoedaEstrangeira = MoedaEstrangeira;
+            this.ValorCompraMoedaEstrangeira = ValorCompraMoedaEstrangeira;
+            this.CotacaoDolarCompra = CotacaoDolarCompra;
             
         }
         
@@ -255,6 +261,27 @@ namespace Conductor.Pier.Model
         public string DescricaoAbreviada { get; set; }
     
         /// <summary>
+        /// S\u00EDmbolo da moeda estrangeira da compra
+        /// </summary>
+        /// <value>S\u00EDmbolo da moeda estrangeira da compra</value>
+        [DataMember(Name="moedaEstrangeira", EmitDefaultValue=false)]
+        public string MoedaEstrangeira { get; set; }
+    
+        /// <summary>
+        /// Valor da compra em moeda estrangeira
+        /// </summary>
+        /// <value>Valor da compra em moeda estrangeira</value>
+        [DataMember(Name="valorCompraMoedaEstrangeira", EmitDefaultValue=false)]
+        public double? ValorCompraMoedaEstrangeira { get; set; }
+    
+        /// <summary>
+        /// Taxa de convers\u00E3o do d\u00F3lar para reais na data da compra
+        /// </summary>
+        /// <value>Taxa de convers\u00E3o do d\u00F3lar para reais na data da compra</value>
+        [DataMember(Name="cotacaoDolarCompra", EmitDefaultValue=false)]
+        public double? CotacaoDolarCompra { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -287,6 +314,9 @@ namespace Conductor.Pier.Model
             sb.Append("  FlagSolicitouContestacao: ").Append(FlagSolicitouContestacao).Append("\n");
             sb.Append("  ValorTaxaEmbarque: ").Append(ValorTaxaEmbarque).Append("\n");
             sb.Append("  DescricaoAbreviada: ").Append(DescricaoAbreviada).Append("\n");
+            sb.Append("  MoedaEstrangeira: ").Append(MoedaEstrangeira).Append("\n");
+            sb.Append("  ValorCompraMoedaEstrangeira: ").Append(ValorCompraMoedaEstrangeira).Append("\n");
+            sb.Append("  CotacaoDolarCompra: ").Append(CotacaoDolarCompra).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -448,6 +478,21 @@ namespace Conductor.Pier.Model
                     this.DescricaoAbreviada == other.DescricaoAbreviada ||
                     this.DescricaoAbreviada != null &&
                     this.DescricaoAbreviada.Equals(other.DescricaoAbreviada)
+                ) && 
+                (
+                    this.MoedaEstrangeira == other.MoedaEstrangeira ||
+                    this.MoedaEstrangeira != null &&
+                    this.MoedaEstrangeira.Equals(other.MoedaEstrangeira)
+                ) && 
+                (
+                    this.ValorCompraMoedaEstrangeira == other.ValorCompraMoedaEstrangeira ||
+                    this.ValorCompraMoedaEstrangeira != null &&
+                    this.ValorCompraMoedaEstrangeira.Equals(other.ValorCompraMoedaEstrangeira)
+                ) && 
+                (
+                    this.CotacaoDolarCompra == other.CotacaoDolarCompra ||
+                    this.CotacaoDolarCompra != null &&
+                    this.CotacaoDolarCompra.Equals(other.CotacaoDolarCompra)
                 );
         }
 
@@ -537,6 +582,15 @@ namespace Conductor.Pier.Model
                 
                 if (this.DescricaoAbreviada != null)
                     hash = hash * 59 + this.DescricaoAbreviada.GetHashCode();
+                
+                if (this.MoedaEstrangeira != null)
+                    hash = hash * 59 + this.MoedaEstrangeira.GetHashCode();
+                
+                if (this.ValorCompraMoedaEstrangeira != null)
+                    hash = hash * 59 + this.ValorCompraMoedaEstrangeira.GetHashCode();
+                
+                if (this.CotacaoDolarCompra != null)
+                    hash = hash * 59 + this.CotacaoDolarCompra.GetHashCode();
                 
                 return hash;
             }

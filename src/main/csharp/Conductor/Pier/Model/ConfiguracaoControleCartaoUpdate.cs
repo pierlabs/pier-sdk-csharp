@@ -29,8 +29,9 @@ namespace Conductor.Pier.Model
         /// <param name="PermiteCompraInternacional">Indica se o cart\u00E3o est\u00E1 habilitado/desabilitado para transa\u00E7\u00F5es internacionais.</param>
         /// <param name="PermiteTarjaMagnetica">Indica se o cart\u00E3o est\u00E1 habilitado/desabilitado para transa\u00E7\u00F5es por tarja magnetica.</param>
         /// <param name="PermiteContactless">Indica se o cart\u00E3o est\u00E1 habilitado/desabilitado para transa\u00E7\u00F5es via contactless.</param>
+        /// <param name="LimiteContactlessSemSenha">Indica o limite usado em transa\u00E7\u00F5es com a fun\u00E7\u00E3o contactless sem senha. O valor m\u00E1ximo \u00E9 50 e o m\u00EDnimo \u00E9 1..</param>
 
-        public ConfiguracaoControleCartaoUpdate(bool? PermiteEcommerce = null, bool? PermiteSaque = null, bool? PermiteWallet = null, bool? PermiteControleMCC = null, bool? PermiteCompraInternacional = null, bool? PermiteTarjaMagnetica = null, bool? PermiteContactless = null)
+        public ConfiguracaoControleCartaoUpdate(bool? PermiteEcommerce = null, bool? PermiteSaque = null, bool? PermiteWallet = null, bool? PermiteControleMCC = null, bool? PermiteCompraInternacional = null, bool? PermiteTarjaMagnetica = null, bool? PermiteContactless = null, double? LimiteContactlessSemSenha = null)
         {
             this.PermiteEcommerce = PermiteEcommerce;
             this.PermiteSaque = PermiteSaque;
@@ -39,6 +40,7 @@ namespace Conductor.Pier.Model
             this.PermiteCompraInternacional = PermiteCompraInternacional;
             this.PermiteTarjaMagnetica = PermiteTarjaMagnetica;
             this.PermiteContactless = PermiteContactless;
+            this.LimiteContactlessSemSenha = LimiteContactlessSemSenha;
             
         }
         
@@ -93,6 +95,13 @@ namespace Conductor.Pier.Model
         public bool? PermiteContactless { get; set; }
     
         /// <summary>
+        /// Indica o limite usado em transa\u00E7\u00F5es com a fun\u00E7\u00E3o contactless sem senha. O valor m\u00E1ximo \u00E9 50 e o m\u00EDnimo \u00E9 1.
+        /// </summary>
+        /// <value>Indica o limite usado em transa\u00E7\u00F5es com a fun\u00E7\u00E3o contactless sem senha. O valor m\u00E1ximo \u00E9 50 e o m\u00EDnimo \u00E9 1.</value>
+        [DataMember(Name="limiteContactlessSemSenha", EmitDefaultValue=false)]
+        public double? LimiteContactlessSemSenha { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -107,6 +116,7 @@ namespace Conductor.Pier.Model
             sb.Append("  PermiteCompraInternacional: ").Append(PermiteCompraInternacional).Append("\n");
             sb.Append("  PermiteTarjaMagnetica: ").Append(PermiteTarjaMagnetica).Append("\n");
             sb.Append("  PermiteContactless: ").Append(PermiteContactless).Append("\n");
+            sb.Append("  LimiteContactlessSemSenha: ").Append(LimiteContactlessSemSenha).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -178,6 +188,11 @@ namespace Conductor.Pier.Model
                     this.PermiteContactless == other.PermiteContactless ||
                     this.PermiteContactless != null &&
                     this.PermiteContactless.Equals(other.PermiteContactless)
+                ) && 
+                (
+                    this.LimiteContactlessSemSenha == other.LimiteContactlessSemSenha ||
+                    this.LimiteContactlessSemSenha != null &&
+                    this.LimiteContactlessSemSenha.Equals(other.LimiteContactlessSemSenha)
                 );
         }
 
@@ -213,6 +228,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.PermiteContactless != null)
                     hash = hash * 59 + this.PermiteContactless.GetHashCode();
+                
+                if (this.LimiteContactlessSemSenha != null)
+                    hash = hash * 59 + this.LimiteContactlessSemSenha.GetHashCode();
                 
                 return hash;
             }

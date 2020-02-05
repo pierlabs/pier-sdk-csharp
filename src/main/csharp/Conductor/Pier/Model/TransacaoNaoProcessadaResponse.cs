@@ -47,6 +47,7 @@ namespace Conductor.Pier.Model
         /// <param name="IdTransacaoEstorno">C\u00F3digo de Identifica\u00E7\u00E3o da Transa\u00E7\u00E3o (id) que gerou o estorno.</param>
         /// <param name="LocalidadeEstabelecimento">Localidade do Estabelecimento.</param>
         /// <param name="ModoEntradaTransacao">Descreve o modo utilizado para realizar a leitura dos dados do cart\u00E3o para realizar a Transa\u00E7\u00E3o.</param>
+        /// <param name="MoedaEstrangeira">S\u00EDmbolo da moeda estrangeira.</param>
         /// <param name="NomeEstabelecimento">Nome do Estabelecimento.</param>
         /// <param name="NomeFantasiaEstabelecimento">Nome Fantasia do Estabelecimento.</param>
         /// <param name="NomePortador">Nome completo do Portador do Cart\u00E3o.</param>
@@ -55,12 +56,13 @@ namespace Conductor.Pier.Model
         /// <param name="Status">Atributo que representa o c\u00F3digo identificador do status da transa\u00E7\u00E3o.</param>
         /// <param name="TaxaEmbarque">Valor da Taxa de Embarque em Real (BRL) quando a transa\u00E7\u00E3o for relacionada a Compra de Passagens A\u00E9reas.</param>
         /// <param name="ValorBRL">Valor da Transa\u00E7\u00E3o em Real (BRL).</param>
+        /// <param name="ValorCompraMoedaEstrangeira">Valor da compra em moeda estrangeira.</param>
         /// <param name="ValorEntrada">Valor da Entrada em Real (BRL) quando a transa\u00E7\u00E3o for do tipo Parcelada com o pagamento de um valor de Entrada.</param>
         /// <param name="ValorIOF">Valor do IOF.</param>
         /// <param name="ValorTAC">Valor da TAC.</param>
         /// <param name="ValorUSD">Valor da Transa\u00E7\u00E3o em D\u00F3lar Americano (USD).</param>
 
-        public TransacaoNaoProcessadaResponse(string CartaoMascarado = null, string CodigoAutorizacao = null, long? CodigoMCC = null, string CodigoMoedaDestino = null, string CodigoMoedaOrigem = null, string CodigoReferencia = null, string CodigoTerminal = null, double? CotacaoUSD = null, string DataCotacaoUSD = null, string DataFaturamento = null, string DataOrigem = null, string DataVencimentoReal = null, string DescricaoAbreviada = null, string DescricaoTipoTransacaoNaoProcessada = null, string DetalhesTransacao = null, int? FlagCredito = null, int? FlagFaturado = null, string GrupoDescricaoMCC = null, long? GrupoMCC = null, long? IdConta = null, long? IdEstabelecimento = null, long? IdTipoTransacaoNaoProcessada = null, long? IdTransacaoEstorno = null, string LocalidadeEstabelecimento = null, string ModoEntradaTransacao = null, string NomeEstabelecimento = null, string NomeFantasiaEstabelecimento = null, string NomePortador = null, long? Parcela = null, long? Plano = null, int? Status = null, double? TaxaEmbarque = null, double? ValorBRL = null, double? ValorEntrada = null, double? ValorIOF = null, double? ValorTAC = null, double? ValorUSD = null)
+        public TransacaoNaoProcessadaResponse(string CartaoMascarado = null, string CodigoAutorizacao = null, long? CodigoMCC = null, string CodigoMoedaDestino = null, string CodigoMoedaOrigem = null, string CodigoReferencia = null, string CodigoTerminal = null, double? CotacaoUSD = null, string DataCotacaoUSD = null, string DataFaturamento = null, string DataOrigem = null, string DataVencimentoReal = null, string DescricaoAbreviada = null, string DescricaoTipoTransacaoNaoProcessada = null, string DetalhesTransacao = null, int? FlagCredito = null, int? FlagFaturado = null, string GrupoDescricaoMCC = null, long? GrupoMCC = null, long? IdConta = null, long? IdEstabelecimento = null, long? IdTipoTransacaoNaoProcessada = null, long? IdTransacaoEstorno = null, string LocalidadeEstabelecimento = null, string ModoEntradaTransacao = null, string MoedaEstrangeira = null, string NomeEstabelecimento = null, string NomeFantasiaEstabelecimento = null, string NomePortador = null, long? Parcela = null, long? Plano = null, int? Status = null, double? TaxaEmbarque = null, double? ValorBRL = null, double? ValorCompraMoedaEstrangeira = null, double? ValorEntrada = null, double? ValorIOF = null, double? ValorTAC = null, double? ValorUSD = null)
         {
             this.CartaoMascarado = CartaoMascarado;
             this.CodigoAutorizacao = CodigoAutorizacao;
@@ -87,6 +89,7 @@ namespace Conductor.Pier.Model
             this.IdTransacaoEstorno = IdTransacaoEstorno;
             this.LocalidadeEstabelecimento = LocalidadeEstabelecimento;
             this.ModoEntradaTransacao = ModoEntradaTransacao;
+            this.MoedaEstrangeira = MoedaEstrangeira;
             this.NomeEstabelecimento = NomeEstabelecimento;
             this.NomeFantasiaEstabelecimento = NomeFantasiaEstabelecimento;
             this.NomePortador = NomePortador;
@@ -95,6 +98,7 @@ namespace Conductor.Pier.Model
             this.Status = Status;
             this.TaxaEmbarque = TaxaEmbarque;
             this.ValorBRL = ValorBRL;
+            this.ValorCompraMoedaEstrangeira = ValorCompraMoedaEstrangeira;
             this.ValorEntrada = ValorEntrada;
             this.ValorIOF = ValorIOF;
             this.ValorTAC = ValorTAC;
@@ -279,6 +283,13 @@ namespace Conductor.Pier.Model
         public string ModoEntradaTransacao { get; set; }
     
         /// <summary>
+        /// S\u00EDmbolo da moeda estrangeira
+        /// </summary>
+        /// <value>S\u00EDmbolo da moeda estrangeira</value>
+        [DataMember(Name="moedaEstrangeira", EmitDefaultValue=false)]
+        public string MoedaEstrangeira { get; set; }
+    
+        /// <summary>
         /// Nome do Estabelecimento
         /// </summary>
         /// <value>Nome do Estabelecimento</value>
@@ -333,6 +344,13 @@ namespace Conductor.Pier.Model
         /// <value>Valor da Transa\u00E7\u00E3o em Real (BRL)</value>
         [DataMember(Name="valorBRL", EmitDefaultValue=false)]
         public double? ValorBRL { get; set; }
+    
+        /// <summary>
+        /// Valor da compra em moeda estrangeira
+        /// </summary>
+        /// <value>Valor da compra em moeda estrangeira</value>
+        [DataMember(Name="valorCompraMoedaEstrangeira", EmitDefaultValue=false)]
+        public double? ValorCompraMoedaEstrangeira { get; set; }
     
         /// <summary>
         /// Valor da Entrada em Real (BRL) quando a transa\u00E7\u00E3o for do tipo Parcelada com o pagamento de um valor de Entrada
@@ -395,6 +413,7 @@ namespace Conductor.Pier.Model
             sb.Append("  IdTransacaoEstorno: ").Append(IdTransacaoEstorno).Append("\n");
             sb.Append("  LocalidadeEstabelecimento: ").Append(LocalidadeEstabelecimento).Append("\n");
             sb.Append("  ModoEntradaTransacao: ").Append(ModoEntradaTransacao).Append("\n");
+            sb.Append("  MoedaEstrangeira: ").Append(MoedaEstrangeira).Append("\n");
             sb.Append("  NomeEstabelecimento: ").Append(NomeEstabelecimento).Append("\n");
             sb.Append("  NomeFantasiaEstabelecimento: ").Append(NomeFantasiaEstabelecimento).Append("\n");
             sb.Append("  NomePortador: ").Append(NomePortador).Append("\n");
@@ -403,6 +422,7 @@ namespace Conductor.Pier.Model
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  TaxaEmbarque: ").Append(TaxaEmbarque).Append("\n");
             sb.Append("  ValorBRL: ").Append(ValorBRL).Append("\n");
+            sb.Append("  ValorCompraMoedaEstrangeira: ").Append(ValorCompraMoedaEstrangeira).Append("\n");
             sb.Append("  ValorEntrada: ").Append(ValorEntrada).Append("\n");
             sb.Append("  ValorIOF: ").Append(ValorIOF).Append("\n");
             sb.Append("  ValorTAC: ").Append(ValorTAC).Append("\n");
@@ -570,6 +590,11 @@ namespace Conductor.Pier.Model
                     this.ModoEntradaTransacao.Equals(other.ModoEntradaTransacao)
                 ) && 
                 (
+                    this.MoedaEstrangeira == other.MoedaEstrangeira ||
+                    this.MoedaEstrangeira != null &&
+                    this.MoedaEstrangeira.Equals(other.MoedaEstrangeira)
+                ) && 
+                (
                     this.NomeEstabelecimento == other.NomeEstabelecimento ||
                     this.NomeEstabelecimento != null &&
                     this.NomeEstabelecimento.Equals(other.NomeEstabelecimento)
@@ -608,6 +633,11 @@ namespace Conductor.Pier.Model
                     this.ValorBRL == other.ValorBRL ||
                     this.ValorBRL != null &&
                     this.ValorBRL.Equals(other.ValorBRL)
+                ) && 
+                (
+                    this.ValorCompraMoedaEstrangeira == other.ValorCompraMoedaEstrangeira ||
+                    this.ValorCompraMoedaEstrangeira != null &&
+                    this.ValorCompraMoedaEstrangeira.Equals(other.ValorCompraMoedaEstrangeira)
                 ) && 
                 (
                     this.ValorEntrada == other.ValorEntrada ||
@@ -718,6 +748,9 @@ namespace Conductor.Pier.Model
                 if (this.ModoEntradaTransacao != null)
                     hash = hash * 59 + this.ModoEntradaTransacao.GetHashCode();
                 
+                if (this.MoedaEstrangeira != null)
+                    hash = hash * 59 + this.MoedaEstrangeira.GetHashCode();
+                
                 if (this.NomeEstabelecimento != null)
                     hash = hash * 59 + this.NomeEstabelecimento.GetHashCode();
                 
@@ -741,6 +774,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.ValorBRL != null)
                     hash = hash * 59 + this.ValorBRL.GetHashCode();
+                
+                if (this.ValorCompraMoedaEstrangeira != null)
+                    hash = hash * 59 + this.ValorCompraMoedaEstrangeira.GetHashCode();
                 
                 if (this.ValorEntrada != null)
                     hash = hash * 59 + this.ValorEntrada.GetHashCode();

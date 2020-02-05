@@ -926,6 +926,36 @@ namespace Conductor.Pier.Api
         ApiResponse<PageConvenioResponse> ListarConveniosWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? banco = null, long? agencia = null, string contaCorrente = null, double? numeroConvenio = null);
         
         /// <summary>
+        /// Lista as cota\u00E7\u00F5es Dolar no per\u00EDodo de data informado. 
+        /// </summary>
+        /// <remarks>
+        /// Lista as cota\u00E7\u00F5es Dolar no per\u00EDodo de data informado. 
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="dataInicio">Filtro data inicial do fechamento (optional)</param>
+        /// <param name="dataFim">Filtro data final do fechamento (optional)</param>
+        /// <returns>PageCotacaoDolarResponse</returns>
+        PageCotacaoDolarResponse ListarCotacaoDolar (List<string> sort = null, int? page = null, int? limit = null, string dataInicio = null, string dataFim = null);
+  
+        /// <summary>
+        /// Lista as cota\u00E7\u00F5es Dolar no per\u00EDodo de data informado. 
+        /// </summary>
+        /// <remarks>
+        /// Lista as cota\u00E7\u00F5es Dolar no per\u00EDodo de data informado. 
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="dataInicio">Filtro data inicial do fechamento (optional)</param>
+        /// <param name="dataFim">Filtro data final do fechamento (optional)</param>
+        /// <returns>ApiResponse of PageCotacaoDolarResponse</returns>
+        ApiResponse<PageCotacaoDolarResponse> ListarCotacaoDolarWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string dataInicio = null, string dataFim = null);
+        
+        /// <summary>
         /// Lista os MCCs
         /// </summary>
         /// <remarks>
@@ -2562,6 +2592,36 @@ namespace Conductor.Pier.Api
         /// <param name="numeroConvenio">C\u00F3digo de identifica\u00E7\u00E3o do conv\u00EAnio (optional)</param>
         /// <returns>Task of ApiResponse (PageConvenioResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<PageConvenioResponse>> ListarConveniosAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? banco = null, long? agencia = null, string contaCorrente = null, double? numeroConvenio = null);
+        
+        /// <summary>
+        /// Lista as cota\u00E7\u00F5es Dolar no per\u00EDodo de data informado. 
+        /// </summary>
+        /// <remarks>
+        /// Lista as cota\u00E7\u00F5es Dolar no per\u00EDodo de data informado. 
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="dataInicio">Filtro data inicial do fechamento (optional)</param>
+        /// <param name="dataFim">Filtro data final do fechamento (optional)</param>
+        /// <returns>Task of PageCotacaoDolarResponse</returns>
+        System.Threading.Tasks.Task<PageCotacaoDolarResponse> ListarCotacaoDolarAsync (List<string> sort = null, int? page = null, int? limit = null, string dataInicio = null, string dataFim = null);
+
+        /// <summary>
+        /// Lista as cota\u00E7\u00F5es Dolar no per\u00EDodo de data informado. 
+        /// </summary>
+        /// <remarks>
+        /// Lista as cota\u00E7\u00F5es Dolar no per\u00EDodo de data informado. 
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="dataInicio">Filtro data inicial do fechamento (optional)</param>
+        /// <param name="dataFim">Filtro data final do fechamento (optional)</param>
+        /// <returns>Task of ApiResponse (PageCotacaoDolarResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PageCotacaoDolarResponse>> ListarCotacaoDolarAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string dataInicio = null, string dataFim = null);
         
         /// <summary>
         /// Lista os MCCs
@@ -9588,6 +9648,182 @@ namespace Conductor.Pier.Api
             return new ApiResponse<PageConvenioResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (PageConvenioResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageConvenioResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Lista as cota\u00E7\u00F5es Dolar no per\u00EDodo de data informado.  Lista as cota\u00E7\u00F5es Dolar no per\u00EDodo de data informado. 
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="page">P\u00E1gina (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <param name="dataInicio">Filtro data inicial do fechamento (optional)</param> 
+        /// <param name="dataFim">Filtro data final do fechamento (optional)</param> 
+        /// <returns>PageCotacaoDolarResponse</returns>
+        public PageCotacaoDolarResponse ListarCotacaoDolar (List<string> sort = null, int? page = null, int? limit = null, string dataInicio = null, string dataFim = null)
+        {
+             ApiResponse<PageCotacaoDolarResponse> localVarResponse = ListarCotacaoDolarWithHttpInfo(sort, page, limit, dataInicio, dataFim);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Lista as cota\u00E7\u00F5es Dolar no per\u00EDodo de data informado.  Lista as cota\u00E7\u00F5es Dolar no per\u00EDodo de data informado. 
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="page">P\u00E1gina (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <param name="dataInicio">Filtro data inicial do fechamento (optional)</param> 
+        /// <param name="dataFim">Filtro data final do fechamento (optional)</param> 
+        /// <returns>ApiResponse of PageCotacaoDolarResponse</returns>
+        public ApiResponse< PageCotacaoDolarResponse > ListarCotacaoDolarWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string dataInicio = null, string dataFim = null)
+        {
+            
+    
+            var localVarPath = "/api/cotacoes/dolar";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (dataInicio != null) localVarQueryParams.Add("dataInicio", Configuration.ApiClient.ParameterToString(dataInicio)); // query parameter
+            if (dataFim != null) localVarQueryParams.Add("dataFim", Configuration.ApiClient.ParameterToString(dataFim)); // query parameter
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarCotacaoDolar: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarCotacaoDolar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<PageCotacaoDolarResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageCotacaoDolarResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageCotacaoDolarResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Lista as cota\u00E7\u00F5es Dolar no per\u00EDodo de data informado.  Lista as cota\u00E7\u00F5es Dolar no per\u00EDodo de data informado. 
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="dataInicio">Filtro data inicial do fechamento (optional)</param>
+        /// <param name="dataFim">Filtro data final do fechamento (optional)</param>
+        /// <returns>Task of PageCotacaoDolarResponse</returns>
+        public async System.Threading.Tasks.Task<PageCotacaoDolarResponse> ListarCotacaoDolarAsync (List<string> sort = null, int? page = null, int? limit = null, string dataInicio = null, string dataFim = null)
+        {
+             ApiResponse<PageCotacaoDolarResponse> localVarResponse = await ListarCotacaoDolarAsyncWithHttpInfo(sort, page, limit, dataInicio, dataFim);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Lista as cota\u00E7\u00F5es Dolar no per\u00EDodo de data informado.  Lista as cota\u00E7\u00F5es Dolar no per\u00EDodo de data informado. 
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="dataInicio">Filtro data inicial do fechamento (optional)</param>
+        /// <param name="dataFim">Filtro data final do fechamento (optional)</param>
+        /// <returns>Task of ApiResponse (PageCotacaoDolarResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PageCotacaoDolarResponse>> ListarCotacaoDolarAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string dataInicio = null, string dataFim = null)
+        {
+            
+    
+            var localVarPath = "/api/cotacoes/dolar";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (dataInicio != null) localVarQueryParams.Add("dataInicio", Configuration.ApiClient.ParameterToString(dataInicio)); // query parameter
+            if (dataFim != null) localVarQueryParams.Add("dataFim", Configuration.ApiClient.ParameterToString(dataFim)); // query parameter
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarCotacaoDolar: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarCotacaoDolar: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PageCotacaoDolarResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageCotacaoDolarResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageCotacaoDolarResponse)));
             
         }
         

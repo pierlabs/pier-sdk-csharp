@@ -90,6 +90,30 @@ namespace Conductor.Pier.Api
         ApiResponse<GrupoEstabelecimentoResponse> AlterarGrupoEstabelecimentosWithHttpInfo (long? id, GrupoEstabelecimentoUpdate grupoEstabelecimentoUpdate);
         
         /// <summary>
+        /// alterarInstituicaoPagamento
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <param name="request">request</param>
+        /// <returns>InstituicaoPagamentoResponse</returns>
+        InstituicaoPagamentoResponse AlterarInstituicaoPagamento (long? id, InstituicaoPagamentoPersist request);
+  
+        /// <summary>
+        /// alterarInstituicaoPagamento
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <param name="request">request</param>
+        /// <returns>ApiResponse of InstituicaoPagamentoResponse</returns>
+        ApiResponse<InstituicaoPagamentoResponse> AlterarInstituicaoPagamentoWithHttpInfo (long? id, InstituicaoPagamentoPersist request);
+        
+        /// <summary>
         /// Altera uma Maquineta
         /// </summary>
         /// <remarks>
@@ -210,6 +234,28 @@ namespace Conductor.Pier.Api
         ApiResponse<TerminalResponse> AlterarTerminalWithHttpInfo (long? id, TerminalUpdate terminalUpdate);
         
         /// <summary>
+        /// cadastrarInstituicaoPagamento
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">request</param>
+        /// <returns>InstituicaoPagamentoResponse</returns>
+        InstituicaoPagamentoResponse CadastrarInstituicaoPagamento (InstituicaoPagamentoPersist request);
+  
+        /// <summary>
+        /// cadastrarInstituicaoPagamento
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">request</param>
+        /// <returns>ApiResponse of InstituicaoPagamentoResponse</returns>
+        ApiResponse<InstituicaoPagamentoResponse> CadastrarInstituicaoPagamentoWithHttpInfo (InstituicaoPagamentoPersist request);
+        
+        /// <summary>
         /// Cadastrar Origem Comercial
         /// </summary>
         /// <remarks>
@@ -296,6 +342,28 @@ namespace Conductor.Pier.Api
         /// <param name="id">id</param>
         /// <returns>ApiResponse of GrupoEstabelecimentoResponse</returns>
         ApiResponse<GrupoEstabelecimentoResponse> ConsultarGrupoEstabelecimentosWithHttpInfo (long? id);
+        
+        /// <summary>
+        /// consultarInstituicaoPagamento
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <returns>InstituicaoPagamentoResponse</returns>
+        InstituicaoPagamentoResponse ConsultarInstituicaoPagamento (long? id);
+  
+        /// <summary>
+        /// consultarInstituicaoPagamento
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <returns>ApiResponse of InstituicaoPagamentoResponse</returns>
+        ApiResponse<InstituicaoPagamentoResponse> ConsultarInstituicaoPagamentoWithHttpInfo (long? id);
         
         /// <summary>
         /// Apresenta os dados de uma determinada maquineta
@@ -450,6 +518,28 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do V\u00EDnculo (id)</param>
         /// <returns>ApiResponse of VinculoEstabelecimentoAdquirenteResponse</returns>
         ApiResponse<VinculoEstabelecimentoAdquirenteResponse> ConsultarVinculoEstabelecimentoAdquirenteWithHttpInfo (long? id);
+        
+        /// <summary>
+        /// deletarInstituicaoPagamento
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <returns>Object</returns>
+        Object DeletarInstituicaoPagamento (long? id);
+  
+        /// <summary>
+        /// deletarInstituicaoPagamento
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> DeletarInstituicaoPagamentoWithHttpInfo (long? id);
         
         /// <summary>
         /// Desabilitar um v\u00EDnculo opera\u00E7\u00E3o
@@ -810,6 +900,56 @@ namespace Conductor.Pier.Api
         /// <param name="nome">Nome do grupo de origem comercial (optional)</param>
         /// <returns>ApiResponse of PageGrupoOrigemComercialResponse</returns>
         ApiResponse<PageGrupoOrigemComercialResponse> ListarGruposOrigensComerciaisWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null);
+        
+        /// <summary>
+        /// listarInstituicoesPagamento
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="id"> (optional)</param>
+        /// <param name="ufFisco"> (optional)</param>
+        /// <param name="cnpj"> (optional)</param>
+        /// <param name="nome"> (optional)</param>
+        /// <param name="nomeFantasia"> (optional)</param>
+        /// <param name="endereco"> (optional)</param>
+        /// <param name="cep"> (optional)</param>
+        /// <param name="codigoMunicipio"> (optional)</param>
+        /// <param name="uf"> (optional)</param>
+        /// <param name="nomeResponsavel"> (optional)</param>
+        /// <param name="fone"> (optional)</param>
+        /// <param name="email"> (optional)</param>
+        /// <returns>PageInstituicoesPagamentoResponse</returns>
+        PageInstituicoesPagamentoResponse ListarInstituicoesPagamento (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string ufFisco = null, string cnpj = null, string nome = null, string nomeFantasia = null, string endereco = null, string cep = null, string codigoMunicipio = null, string uf = null, string nomeResponsavel = null, string fone = null, string email = null);
+  
+        /// <summary>
+        /// listarInstituicoesPagamento
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="id"> (optional)</param>
+        /// <param name="ufFisco"> (optional)</param>
+        /// <param name="cnpj"> (optional)</param>
+        /// <param name="nome"> (optional)</param>
+        /// <param name="nomeFantasia"> (optional)</param>
+        /// <param name="endereco"> (optional)</param>
+        /// <param name="cep"> (optional)</param>
+        /// <param name="codigoMunicipio"> (optional)</param>
+        /// <param name="uf"> (optional)</param>
+        /// <param name="nomeResponsavel"> (optional)</param>
+        /// <param name="fone"> (optional)</param>
+        /// <param name="email"> (optional)</param>
+        /// <returns>ApiResponse of PageInstituicoesPagamentoResponse</returns>
+        ApiResponse<PageInstituicoesPagamentoResponse> ListarInstituicoesPagamentoWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string ufFisco = null, string cnpj = null, string nome = null, string nomeFantasia = null, string endereco = null, string cep = null, string codigoMunicipio = null, string uf = null, string nomeResponsavel = null, string fone = null, string email = null);
         
         /// <summary>
         /// Lista as Maquinetas
@@ -1537,60 +1677,6 @@ namespace Conductor.Pier.Api
         /// <returns>ApiResponse of VinculoEstabelecimentoAdquirenteResponse</returns>
         ApiResponse<VinculoEstabelecimentoAdquirenteResponse> SalvarVinculoEstabelecimentoAdquirenteWithHttpInfo (VinculoEstabelecimentoAdquirentePersist vinculoEstabelecimentoAdquirentePersist);
         
-        /// <summary>
-        /// Vincula as opera\u00E7\u00F5es ao estabelecimento e ao produto
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite vincular as opera\u00E7\u00F5es ao estabelecimento e ao produto
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id)</param>
-        /// <param name="idOperacao">C\u00F3digo de Identifica\u00E7\u00E3o da opera\u00E7\u00E3o (id)</param>
-        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do produto (id)</param>
-        /// <param name="mcc">C\u00F3digo de Identifica\u00E7\u00E3o do mcc</param>
-        /// <returns>ResponseEntity</returns>
-        ResponseEntity VinculoOperacoesProdutoEstabelecimento (long? idEstabelecimento, long? idOperacao, long? idProduto, List<int?> mcc);
-  
-        /// <summary>
-        /// Vincula as opera\u00E7\u00F5es ao estabelecimento e ao produto
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite vincular as opera\u00E7\u00F5es ao estabelecimento e ao produto
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id)</param>
-        /// <param name="idOperacao">C\u00F3digo de Identifica\u00E7\u00E3o da opera\u00E7\u00E3o (id)</param>
-        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do produto (id)</param>
-        /// <param name="mcc">C\u00F3digo de Identifica\u00E7\u00E3o do mcc</param>
-        /// <returns>ApiResponse of ResponseEntity</returns>
-        ApiResponse<ResponseEntity> VinculoOperacoesProdutoEstabelecimentoWithHttpInfo (long? idEstabelecimento, long? idOperacao, long? idProduto, List<int?> mcc);
-        
-        /// <summary>
-        /// Remove os v\u00EDnculos das opera\u00E7\u00F5es atrelado ao estabelecimento e ao produto
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite remover os v\u00EDnculos das opera\u00E7\u00F5es atrelado ao estabelecimento e ao produto
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id)</param>
-        /// <param name="idOperacao">C\u00F3digo de Identifica\u00E7\u00E3o da opera\u00E7\u00E3o (id)</param>
-        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do produto (id)</param>
-        /// <returns>ResponseEntity</returns>
-        ResponseEntity VinculoOperacoesProdutoEstabelecimentoRemove (long? idEstabelecimento, long? idOperacao, long? idProduto);
-  
-        /// <summary>
-        /// Remove os v\u00EDnculos das opera\u00E7\u00F5es atrelado ao estabelecimento e ao produto
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite remover os v\u00EDnculos das opera\u00E7\u00F5es atrelado ao estabelecimento e ao produto
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id)</param>
-        /// <param name="idOperacao">C\u00F3digo de Identifica\u00E7\u00E3o da opera\u00E7\u00E3o (id)</param>
-        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do produto (id)</param>
-        /// <returns>ApiResponse of ResponseEntity</returns>
-        ApiResponse<ResponseEntity> VinculoOperacoesProdutoEstabelecimentoRemoveWithHttpInfo (long? idEstabelecimento, long? idOperacao, long? idProduto);
-        
         #endregion Synchronous Operations
         
         #region Asynchronous Operations
@@ -1666,6 +1752,30 @@ namespace Conductor.Pier.Api
         /// <param name="grupoEstabelecimentoUpdate">grupoEstabelecimentoUpdate</param>
         /// <returns>Task of ApiResponse (GrupoEstabelecimentoResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GrupoEstabelecimentoResponse>> AlterarGrupoEstabelecimentosAsyncWithHttpInfo (long? id, GrupoEstabelecimentoUpdate grupoEstabelecimentoUpdate);
+        
+        /// <summary>
+        /// alterarInstituicaoPagamento
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <param name="request">request</param>
+        /// <returns>Task of InstituicaoPagamentoResponse</returns>
+        System.Threading.Tasks.Task<InstituicaoPagamentoResponse> AlterarInstituicaoPagamentoAsync (long? id, InstituicaoPagamentoPersist request);
+
+        /// <summary>
+        /// alterarInstituicaoPagamento
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <param name="request">request</param>
+        /// <returns>Task of ApiResponse (InstituicaoPagamentoResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<InstituicaoPagamentoResponse>> AlterarInstituicaoPagamentoAsyncWithHttpInfo (long? id, InstituicaoPagamentoPersist request);
         
         /// <summary>
         /// Altera uma Maquineta
@@ -1788,6 +1898,28 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<TerminalResponse>> AlterarTerminalAsyncWithHttpInfo (long? id, TerminalUpdate terminalUpdate);
         
         /// <summary>
+        /// cadastrarInstituicaoPagamento
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">request</param>
+        /// <returns>Task of InstituicaoPagamentoResponse</returns>
+        System.Threading.Tasks.Task<InstituicaoPagamentoResponse> CadastrarInstituicaoPagamentoAsync (InstituicaoPagamentoPersist request);
+
+        /// <summary>
+        /// cadastrarInstituicaoPagamento
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">request</param>
+        /// <returns>Task of ApiResponse (InstituicaoPagamentoResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<InstituicaoPagamentoResponse>> CadastrarInstituicaoPagamentoAsyncWithHttpInfo (InstituicaoPagamentoPersist request);
+        
+        /// <summary>
         /// Cadastrar Origem Comercial
         /// </summary>
         /// <remarks>
@@ -1874,6 +2006,28 @@ namespace Conductor.Pier.Api
         /// <param name="id">id</param>
         /// <returns>Task of ApiResponse (GrupoEstabelecimentoResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GrupoEstabelecimentoResponse>> ConsultarGrupoEstabelecimentosAsyncWithHttpInfo (long? id);
+        
+        /// <summary>
+        /// consultarInstituicaoPagamento
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <returns>Task of InstituicaoPagamentoResponse</returns>
+        System.Threading.Tasks.Task<InstituicaoPagamentoResponse> ConsultarInstituicaoPagamentoAsync (long? id);
+
+        /// <summary>
+        /// consultarInstituicaoPagamento
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <returns>Task of ApiResponse (InstituicaoPagamentoResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<InstituicaoPagamentoResponse>> ConsultarInstituicaoPagamentoAsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Apresenta os dados de uma determinada maquineta
@@ -2028,6 +2182,28 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do V\u00EDnculo (id)</param>
         /// <returns>Task of ApiResponse (VinculoEstabelecimentoAdquirenteResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<VinculoEstabelecimentoAdquirenteResponse>> ConsultarVinculoEstabelecimentoAdquirenteAsyncWithHttpInfo (long? id);
+        
+        /// <summary>
+        /// deletarInstituicaoPagamento
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> DeletarInstituicaoPagamentoAsync (long? id);
+
+        /// <summary>
+        /// deletarInstituicaoPagamento
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeletarInstituicaoPagamentoAsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Desabilitar um v\u00EDnculo opera\u00E7\u00E3o
@@ -2388,6 +2564,56 @@ namespace Conductor.Pier.Api
         /// <param name="nome">Nome do grupo de origem comercial (optional)</param>
         /// <returns>Task of ApiResponse (PageGrupoOrigemComercialResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<PageGrupoOrigemComercialResponse>> ListarGruposOrigensComerciaisAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string nome = null);
+        
+        /// <summary>
+        /// listarInstituicoesPagamento
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="id"> (optional)</param>
+        /// <param name="ufFisco"> (optional)</param>
+        /// <param name="cnpj"> (optional)</param>
+        /// <param name="nome"> (optional)</param>
+        /// <param name="nomeFantasia"> (optional)</param>
+        /// <param name="endereco"> (optional)</param>
+        /// <param name="cep"> (optional)</param>
+        /// <param name="codigoMunicipio"> (optional)</param>
+        /// <param name="uf"> (optional)</param>
+        /// <param name="nomeResponsavel"> (optional)</param>
+        /// <param name="fone"> (optional)</param>
+        /// <param name="email"> (optional)</param>
+        /// <returns>Task of PageInstituicoesPagamentoResponse</returns>
+        System.Threading.Tasks.Task<PageInstituicoesPagamentoResponse> ListarInstituicoesPagamentoAsync (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string ufFisco = null, string cnpj = null, string nome = null, string nomeFantasia = null, string endereco = null, string cep = null, string codigoMunicipio = null, string uf = null, string nomeResponsavel = null, string fone = null, string email = null);
+
+        /// <summary>
+        /// listarInstituicoesPagamento
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="id"> (optional)</param>
+        /// <param name="ufFisco"> (optional)</param>
+        /// <param name="cnpj"> (optional)</param>
+        /// <param name="nome"> (optional)</param>
+        /// <param name="nomeFantasia"> (optional)</param>
+        /// <param name="endereco"> (optional)</param>
+        /// <param name="cep"> (optional)</param>
+        /// <param name="codigoMunicipio"> (optional)</param>
+        /// <param name="uf"> (optional)</param>
+        /// <param name="nomeResponsavel"> (optional)</param>
+        /// <param name="fone"> (optional)</param>
+        /// <param name="email"> (optional)</param>
+        /// <returns>Task of ApiResponse (PageInstituicoesPagamentoResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PageInstituicoesPagamentoResponse>> ListarInstituicoesPagamentoAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string ufFisco = null, string cnpj = null, string nome = null, string nomeFantasia = null, string endereco = null, string cep = null, string codigoMunicipio = null, string uf = null, string nomeResponsavel = null, string fone = null, string email = null);
         
         /// <summary>
         /// Lista as Maquinetas
@@ -3115,60 +3341,6 @@ namespace Conductor.Pier.Api
         /// <returns>Task of ApiResponse (VinculoEstabelecimentoAdquirenteResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<VinculoEstabelecimentoAdquirenteResponse>> SalvarVinculoEstabelecimentoAdquirenteAsyncWithHttpInfo (VinculoEstabelecimentoAdquirentePersist vinculoEstabelecimentoAdquirentePersist);
         
-        /// <summary>
-        /// Vincula as opera\u00E7\u00F5es ao estabelecimento e ao produto
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite vincular as opera\u00E7\u00F5es ao estabelecimento e ao produto
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id)</param>
-        /// <param name="idOperacao">C\u00F3digo de Identifica\u00E7\u00E3o da opera\u00E7\u00E3o (id)</param>
-        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do produto (id)</param>
-        /// <param name="mcc">C\u00F3digo de Identifica\u00E7\u00E3o do mcc</param>
-        /// <returns>Task of ResponseEntity</returns>
-        System.Threading.Tasks.Task<ResponseEntity> VinculoOperacoesProdutoEstabelecimentoAsync (long? idEstabelecimento, long? idOperacao, long? idProduto, List<int?> mcc);
-
-        /// <summary>
-        /// Vincula as opera\u00E7\u00F5es ao estabelecimento e ao produto
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite vincular as opera\u00E7\u00F5es ao estabelecimento e ao produto
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id)</param>
-        /// <param name="idOperacao">C\u00F3digo de Identifica\u00E7\u00E3o da opera\u00E7\u00E3o (id)</param>
-        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do produto (id)</param>
-        /// <param name="mcc">C\u00F3digo de Identifica\u00E7\u00E3o do mcc</param>
-        /// <returns>Task of ApiResponse (ResponseEntity)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResponseEntity>> VinculoOperacoesProdutoEstabelecimentoAsyncWithHttpInfo (long? idEstabelecimento, long? idOperacao, long? idProduto, List<int?> mcc);
-        
-        /// <summary>
-        /// Remove os v\u00EDnculos das opera\u00E7\u00F5es atrelado ao estabelecimento e ao produto
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite remover os v\u00EDnculos das opera\u00E7\u00F5es atrelado ao estabelecimento e ao produto
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id)</param>
-        /// <param name="idOperacao">C\u00F3digo de Identifica\u00E7\u00E3o da opera\u00E7\u00E3o (id)</param>
-        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do produto (id)</param>
-        /// <returns>Task of ResponseEntity</returns>
-        System.Threading.Tasks.Task<ResponseEntity> VinculoOperacoesProdutoEstabelecimentoRemoveAsync (long? idEstabelecimento, long? idOperacao, long? idProduto);
-
-        /// <summary>
-        /// Remove os v\u00EDnculos das opera\u00E7\u00F5es atrelado ao estabelecimento e ao produto
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite remover os v\u00EDnculos das opera\u00E7\u00F5es atrelado ao estabelecimento e ao produto
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id)</param>
-        /// <param name="idOperacao">C\u00F3digo de Identifica\u00E7\u00E3o da opera\u00E7\u00E3o (id)</param>
-        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do produto (id)</param>
-        /// <returns>Task of ApiResponse (ResponseEntity)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResponseEntity>> VinculoOperacoesProdutoEstabelecimentoRemoveAsyncWithHttpInfo (long? idEstabelecimento, long? idOperacao, long? idProduto);
-        
         #endregion Asynchronous Operations
         
     }
@@ -3804,6 +3976,188 @@ namespace Conductor.Pier.Api
             return new ApiResponse<GrupoEstabelecimentoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (GrupoEstabelecimentoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(GrupoEstabelecimentoResponse)));
+            
+        }
+        
+        /// <summary>
+        /// alterarInstituicaoPagamento 
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param> 
+        /// <param name="request">request</param> 
+        /// <returns>InstituicaoPagamentoResponse</returns>
+        public InstituicaoPagamentoResponse AlterarInstituicaoPagamento (long? id, InstituicaoPagamentoPersist request)
+        {
+             ApiResponse<InstituicaoPagamentoResponse> localVarResponse = AlterarInstituicaoPagamentoWithHttpInfo(id, request);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// alterarInstituicaoPagamento 
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param> 
+        /// <param name="request">request</param> 
+        /// <returns>ApiResponse of InstituicaoPagamentoResponse</returns>
+        public ApiResponse< InstituicaoPagamentoResponse > AlterarInstituicaoPagamentoWithHttpInfo (long? id, InstituicaoPagamentoPersist request)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling EstabelecimentoApi->AlterarInstituicaoPagamento");
+            
+            // verify the required parameter 'request' is set
+            if (request == null)
+                throw new ApiException(400, "Missing required parameter 'request' when calling EstabelecimentoApi->AlterarInstituicaoPagamento");
+            
+    
+            var localVarPath = "/api/instituicoes/pagamentos/{id}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            if (request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = request; // byte array
+            }
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling AlterarInstituicaoPagamento: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling AlterarInstituicaoPagamento: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<InstituicaoPagamentoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (InstituicaoPagamentoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InstituicaoPagamentoResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// alterarInstituicaoPagamento 
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <param name="request">request</param>
+        /// <returns>Task of InstituicaoPagamentoResponse</returns>
+        public async System.Threading.Tasks.Task<InstituicaoPagamentoResponse> AlterarInstituicaoPagamentoAsync (long? id, InstituicaoPagamentoPersist request)
+        {
+             ApiResponse<InstituicaoPagamentoResponse> localVarResponse = await AlterarInstituicaoPagamentoAsyncWithHttpInfo(id, request);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// alterarInstituicaoPagamento 
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <param name="request">request</param>
+        /// <returns>Task of ApiResponse (InstituicaoPagamentoResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<InstituicaoPagamentoResponse>> AlterarInstituicaoPagamentoAsyncWithHttpInfo (long? id, InstituicaoPagamentoPersist request)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AlterarInstituicaoPagamento");
+            // verify the required parameter 'request' is set
+            if (request == null) throw new ApiException(400, "Missing required parameter 'request' when calling AlterarInstituicaoPagamento");
+            
+    
+            var localVarPath = "/api/instituicoes/pagamentos/{id}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            if (request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = request; // byte array
+            }
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling AlterarInstituicaoPagamento: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling AlterarInstituicaoPagamento: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<InstituicaoPagamentoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (InstituicaoPagamentoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InstituicaoPagamentoResponse)));
             
         }
         
@@ -4718,6 +5072,176 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
+        /// cadastrarInstituicaoPagamento 
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">request</param> 
+        /// <returns>InstituicaoPagamentoResponse</returns>
+        public InstituicaoPagamentoResponse CadastrarInstituicaoPagamento (InstituicaoPagamentoPersist request)
+        {
+             ApiResponse<InstituicaoPagamentoResponse> localVarResponse = CadastrarInstituicaoPagamentoWithHttpInfo(request);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// cadastrarInstituicaoPagamento 
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">request</param> 
+        /// <returns>ApiResponse of InstituicaoPagamentoResponse</returns>
+        public ApiResponse< InstituicaoPagamentoResponse > CadastrarInstituicaoPagamentoWithHttpInfo (InstituicaoPagamentoPersist request)
+        {
+            
+            // verify the required parameter 'request' is set
+            if (request == null)
+                throw new ApiException(400, "Missing required parameter 'request' when calling EstabelecimentoApi->CadastrarInstituicaoPagamento");
+            
+    
+            var localVarPath = "/api/instituicoes/pagamentos";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            if (request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = request; // byte array
+            }
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling CadastrarInstituicaoPagamento: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling CadastrarInstituicaoPagamento: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<InstituicaoPagamentoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (InstituicaoPagamentoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InstituicaoPagamentoResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// cadastrarInstituicaoPagamento 
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">request</param>
+        /// <returns>Task of InstituicaoPagamentoResponse</returns>
+        public async System.Threading.Tasks.Task<InstituicaoPagamentoResponse> CadastrarInstituicaoPagamentoAsync (InstituicaoPagamentoPersist request)
+        {
+             ApiResponse<InstituicaoPagamentoResponse> localVarResponse = await CadastrarInstituicaoPagamentoAsyncWithHttpInfo(request);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// cadastrarInstituicaoPagamento 
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">request</param>
+        /// <returns>Task of ApiResponse (InstituicaoPagamentoResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<InstituicaoPagamentoResponse>> CadastrarInstituicaoPagamentoAsyncWithHttpInfo (InstituicaoPagamentoPersist request)
+        {
+            // verify the required parameter 'request' is set
+            if (request == null) throw new ApiException(400, "Missing required parameter 'request' when calling CadastrarInstituicaoPagamento");
+            
+    
+            var localVarPath = "/api/instituicoes/pagamentos";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            if (request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = request; // byte array
+            }
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling CadastrarInstituicaoPagamento: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling CadastrarInstituicaoPagamento: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<InstituicaoPagamentoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (InstituicaoPagamentoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InstituicaoPagamentoResponse)));
+            
+        }
+        
+        /// <summary>
         /// Cadastrar Origem Comercial Cadastra uma origem comercial
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5358,6 +5882,164 @@ namespace Conductor.Pier.Api
             return new ApiResponse<GrupoEstabelecimentoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (GrupoEstabelecimentoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(GrupoEstabelecimentoResponse)));
+            
+        }
+        
+        /// <summary>
+        /// consultarInstituicaoPagamento 
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param> 
+        /// <returns>InstituicaoPagamentoResponse</returns>
+        public InstituicaoPagamentoResponse ConsultarInstituicaoPagamento (long? id)
+        {
+             ApiResponse<InstituicaoPagamentoResponse> localVarResponse = ConsultarInstituicaoPagamentoWithHttpInfo(id);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// consultarInstituicaoPagamento 
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param> 
+        /// <returns>ApiResponse of InstituicaoPagamentoResponse</returns>
+        public ApiResponse< InstituicaoPagamentoResponse > ConsultarInstituicaoPagamentoWithHttpInfo (long? id)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling EstabelecimentoApi->ConsultarInstituicaoPagamento");
+            
+    
+            var localVarPath = "/api/instituicoes/pagamentos/{id}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarInstituicaoPagamento: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarInstituicaoPagamento: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<InstituicaoPagamentoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (InstituicaoPagamentoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InstituicaoPagamentoResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// consultarInstituicaoPagamento 
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <returns>Task of InstituicaoPagamentoResponse</returns>
+        public async System.Threading.Tasks.Task<InstituicaoPagamentoResponse> ConsultarInstituicaoPagamentoAsync (long? id)
+        {
+             ApiResponse<InstituicaoPagamentoResponse> localVarResponse = await ConsultarInstituicaoPagamentoAsyncWithHttpInfo(id);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// consultarInstituicaoPagamento 
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <returns>Task of ApiResponse (InstituicaoPagamentoResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<InstituicaoPagamentoResponse>> ConsultarInstituicaoPagamentoAsyncWithHttpInfo (long? id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarInstituicaoPagamento");
+            
+    
+            var localVarPath = "/api/instituicoes/pagamentos/{id}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarInstituicaoPagamento: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarInstituicaoPagamento: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<InstituicaoPagamentoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (InstituicaoPagamentoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InstituicaoPagamentoResponse)));
             
         }
         
@@ -6464,6 +7146,164 @@ namespace Conductor.Pier.Api
             return new ApiResponse<VinculoEstabelecimentoAdquirenteResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (VinculoEstabelecimentoAdquirenteResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(VinculoEstabelecimentoAdquirenteResponse)));
+            
+        }
+        
+        /// <summary>
+        /// deletarInstituicaoPagamento 
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param> 
+        /// <returns>Object</returns>
+        public Object DeletarInstituicaoPagamento (long? id)
+        {
+             ApiResponse<Object> localVarResponse = DeletarInstituicaoPagamentoWithHttpInfo(id);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// deletarInstituicaoPagamento 
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param> 
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > DeletarInstituicaoPagamentoWithHttpInfo (long? id)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling EstabelecimentoApi->DeletarInstituicaoPagamento");
+            
+    
+            var localVarPath = "/api/instituicoes/pagamentos/{id}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeletarInstituicaoPagamento: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeletarInstituicaoPagamento: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+            
+        }
+
+        
+        /// <summary>
+        /// deletarInstituicaoPagamento 
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> DeletarInstituicaoPagamentoAsync (long? id)
+        {
+             ApiResponse<Object> localVarResponse = await DeletarInstituicaoPagamentoAsyncWithHttpInfo(id);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// deletarInstituicaoPagamento 
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">id</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeletarInstituicaoPagamentoAsyncWithHttpInfo (long? id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling DeletarInstituicaoPagamento");
+            
+    
+            var localVarPath = "/api/instituicoes/pagamentos/{id}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeletarInstituicaoPagamento: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeletarInstituicaoPagamento: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
             
         }
         
@@ -8378,6 +9218,242 @@ namespace Conductor.Pier.Api
             return new ApiResponse<PageGrupoOrigemComercialResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (PageGrupoOrigemComercialResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageGrupoOrigemComercialResponse)));
+            
+        }
+        
+        /// <summary>
+        /// listarInstituicoesPagamento 
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="page">P\u00E1gina (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <param name="id"> (optional)</param> 
+        /// <param name="ufFisco"> (optional)</param> 
+        /// <param name="cnpj"> (optional)</param> 
+        /// <param name="nome"> (optional)</param> 
+        /// <param name="nomeFantasia"> (optional)</param> 
+        /// <param name="endereco"> (optional)</param> 
+        /// <param name="cep"> (optional)</param> 
+        /// <param name="codigoMunicipio"> (optional)</param> 
+        /// <param name="uf"> (optional)</param> 
+        /// <param name="nomeResponsavel"> (optional)</param> 
+        /// <param name="fone"> (optional)</param> 
+        /// <param name="email"> (optional)</param> 
+        /// <returns>PageInstituicoesPagamentoResponse</returns>
+        public PageInstituicoesPagamentoResponse ListarInstituicoesPagamento (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string ufFisco = null, string cnpj = null, string nome = null, string nomeFantasia = null, string endereco = null, string cep = null, string codigoMunicipio = null, string uf = null, string nomeResponsavel = null, string fone = null, string email = null)
+        {
+             ApiResponse<PageInstituicoesPagamentoResponse> localVarResponse = ListarInstituicoesPagamentoWithHttpInfo(sort, page, limit, id, ufFisco, cnpj, nome, nomeFantasia, endereco, cep, codigoMunicipio, uf, nomeResponsavel, fone, email);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// listarInstituicoesPagamento 
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="page">P\u00E1gina (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <param name="id"> (optional)</param> 
+        /// <param name="ufFisco"> (optional)</param> 
+        /// <param name="cnpj"> (optional)</param> 
+        /// <param name="nome"> (optional)</param> 
+        /// <param name="nomeFantasia"> (optional)</param> 
+        /// <param name="endereco"> (optional)</param> 
+        /// <param name="cep"> (optional)</param> 
+        /// <param name="codigoMunicipio"> (optional)</param> 
+        /// <param name="uf"> (optional)</param> 
+        /// <param name="nomeResponsavel"> (optional)</param> 
+        /// <param name="fone"> (optional)</param> 
+        /// <param name="email"> (optional)</param> 
+        /// <returns>ApiResponse of PageInstituicoesPagamentoResponse</returns>
+        public ApiResponse< PageInstituicoesPagamentoResponse > ListarInstituicoesPagamentoWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string ufFisco = null, string cnpj = null, string nome = null, string nomeFantasia = null, string endereco = null, string cep = null, string codigoMunicipio = null, string uf = null, string nomeResponsavel = null, string fone = null, string email = null)
+        {
+            
+    
+            var localVarPath = "/api/instituicoes/pagamentos";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
+            if (ufFisco != null) localVarQueryParams.Add("ufFisco", Configuration.ApiClient.ParameterToString(ufFisco)); // query parameter
+            if (cnpj != null) localVarQueryParams.Add("cnpj", Configuration.ApiClient.ParameterToString(cnpj)); // query parameter
+            if (nome != null) localVarQueryParams.Add("nome", Configuration.ApiClient.ParameterToString(nome)); // query parameter
+            if (nomeFantasia != null) localVarQueryParams.Add("nomeFantasia", Configuration.ApiClient.ParameterToString(nomeFantasia)); // query parameter
+            if (endereco != null) localVarQueryParams.Add("endereco", Configuration.ApiClient.ParameterToString(endereco)); // query parameter
+            if (cep != null) localVarQueryParams.Add("cep", Configuration.ApiClient.ParameterToString(cep)); // query parameter
+            if (codigoMunicipio != null) localVarQueryParams.Add("codigoMunicipio", Configuration.ApiClient.ParameterToString(codigoMunicipio)); // query parameter
+            if (uf != null) localVarQueryParams.Add("uf", Configuration.ApiClient.ParameterToString(uf)); // query parameter
+            if (nomeResponsavel != null) localVarQueryParams.Add("nomeResponsavel", Configuration.ApiClient.ParameterToString(nomeResponsavel)); // query parameter
+            if (fone != null) localVarQueryParams.Add("fone", Configuration.ApiClient.ParameterToString(fone)); // query parameter
+            if (email != null) localVarQueryParams.Add("email", Configuration.ApiClient.ParameterToString(email)); // query parameter
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarInstituicoesPagamento: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarInstituicoesPagamento: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<PageInstituicoesPagamentoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageInstituicoesPagamentoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageInstituicoesPagamentoResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// listarInstituicoesPagamento 
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="id"> (optional)</param>
+        /// <param name="ufFisco"> (optional)</param>
+        /// <param name="cnpj"> (optional)</param>
+        /// <param name="nome"> (optional)</param>
+        /// <param name="nomeFantasia"> (optional)</param>
+        /// <param name="endereco"> (optional)</param>
+        /// <param name="cep"> (optional)</param>
+        /// <param name="codigoMunicipio"> (optional)</param>
+        /// <param name="uf"> (optional)</param>
+        /// <param name="nomeResponsavel"> (optional)</param>
+        /// <param name="fone"> (optional)</param>
+        /// <param name="email"> (optional)</param>
+        /// <returns>Task of PageInstituicoesPagamentoResponse</returns>
+        public async System.Threading.Tasks.Task<PageInstituicoesPagamentoResponse> ListarInstituicoesPagamentoAsync (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string ufFisco = null, string cnpj = null, string nome = null, string nomeFantasia = null, string endereco = null, string cep = null, string codigoMunicipio = null, string uf = null, string nomeResponsavel = null, string fone = null, string email = null)
+        {
+             ApiResponse<PageInstituicoesPagamentoResponse> localVarResponse = await ListarInstituicoesPagamentoAsyncWithHttpInfo(sort, page, limit, id, ufFisco, cnpj, nome, nomeFantasia, endereco, cep, codigoMunicipio, uf, nomeResponsavel, fone, email);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// listarInstituicoesPagamento 
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="id"> (optional)</param>
+        /// <param name="ufFisco"> (optional)</param>
+        /// <param name="cnpj"> (optional)</param>
+        /// <param name="nome"> (optional)</param>
+        /// <param name="nomeFantasia"> (optional)</param>
+        /// <param name="endereco"> (optional)</param>
+        /// <param name="cep"> (optional)</param>
+        /// <param name="codigoMunicipio"> (optional)</param>
+        /// <param name="uf"> (optional)</param>
+        /// <param name="nomeResponsavel"> (optional)</param>
+        /// <param name="fone"> (optional)</param>
+        /// <param name="email"> (optional)</param>
+        /// <returns>Task of ApiResponse (PageInstituicoesPagamentoResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PageInstituicoesPagamentoResponse>> ListarInstituicoesPagamentoAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? id = null, string ufFisco = null, string cnpj = null, string nome = null, string nomeFantasia = null, string endereco = null, string cep = null, string codigoMunicipio = null, string uf = null, string nomeResponsavel = null, string fone = null, string email = null)
+        {
+            
+    
+            var localVarPath = "/api/instituicoes/pagamentos";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
+            if (ufFisco != null) localVarQueryParams.Add("ufFisco", Configuration.ApiClient.ParameterToString(ufFisco)); // query parameter
+            if (cnpj != null) localVarQueryParams.Add("cnpj", Configuration.ApiClient.ParameterToString(cnpj)); // query parameter
+            if (nome != null) localVarQueryParams.Add("nome", Configuration.ApiClient.ParameterToString(nome)); // query parameter
+            if (nomeFantasia != null) localVarQueryParams.Add("nomeFantasia", Configuration.ApiClient.ParameterToString(nomeFantasia)); // query parameter
+            if (endereco != null) localVarQueryParams.Add("endereco", Configuration.ApiClient.ParameterToString(endereco)); // query parameter
+            if (cep != null) localVarQueryParams.Add("cep", Configuration.ApiClient.ParameterToString(cep)); // query parameter
+            if (codigoMunicipio != null) localVarQueryParams.Add("codigoMunicipio", Configuration.ApiClient.ParameterToString(codigoMunicipio)); // query parameter
+            if (uf != null) localVarQueryParams.Add("uf", Configuration.ApiClient.ParameterToString(uf)); // query parameter
+            if (nomeResponsavel != null) localVarQueryParams.Add("nomeResponsavel", Configuration.ApiClient.ParameterToString(nomeResponsavel)); // query parameter
+            if (fone != null) localVarQueryParams.Add("fone", Configuration.ApiClient.ParameterToString(fone)); // query parameter
+            if (email != null) localVarQueryParams.Add("email", Configuration.ApiClient.ParameterToString(email)); // query parameter
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarInstituicoesPagamento: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarInstituicoesPagamento: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PageInstituicoesPagamentoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageInstituicoesPagamentoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageInstituicoesPagamentoResponse)));
             
         }
         
@@ -12892,394 +13968,6 @@ namespace Conductor.Pier.Api
             return new ApiResponse<VinculoEstabelecimentoAdquirenteResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (VinculoEstabelecimentoAdquirenteResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(VinculoEstabelecimentoAdquirenteResponse)));
-            
-        }
-        
-        /// <summary>
-        /// Vincula as opera\u00E7\u00F5es ao estabelecimento e ao produto Este m\u00E9todo permite vincular as opera\u00E7\u00F5es ao estabelecimento e ao produto
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id)</param> 
-        /// <param name="idOperacao">C\u00F3digo de Identifica\u00E7\u00E3o da opera\u00E7\u00E3o (id)</param> 
-        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do produto (id)</param> 
-        /// <param name="mcc">C\u00F3digo de Identifica\u00E7\u00E3o do mcc</param> 
-        /// <returns>ResponseEntity</returns>
-        public ResponseEntity VinculoOperacoesProdutoEstabelecimento (long? idEstabelecimento, long? idOperacao, long? idProduto, List<int?> mcc)
-        {
-             ApiResponse<ResponseEntity> localVarResponse = VinculoOperacoesProdutoEstabelecimentoWithHttpInfo(idEstabelecimento, idOperacao, idProduto, mcc);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Vincula as opera\u00E7\u00F5es ao estabelecimento e ao produto Este m\u00E9todo permite vincular as opera\u00E7\u00F5es ao estabelecimento e ao produto
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id)</param> 
-        /// <param name="idOperacao">C\u00F3digo de Identifica\u00E7\u00E3o da opera\u00E7\u00E3o (id)</param> 
-        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do produto (id)</param> 
-        /// <param name="mcc">C\u00F3digo de Identifica\u00E7\u00E3o do mcc</param> 
-        /// <returns>ApiResponse of ResponseEntity</returns>
-        public ApiResponse< ResponseEntity > VinculoOperacoesProdutoEstabelecimentoWithHttpInfo (long? idEstabelecimento, long? idOperacao, long? idProduto, List<int?> mcc)
-        {
-            
-            // verify the required parameter 'idEstabelecimento' is set
-            if (idEstabelecimento == null)
-                throw new ApiException(400, "Missing required parameter 'idEstabelecimento' when calling EstabelecimentoApi->VinculoOperacoesProdutoEstabelecimento");
-            
-            // verify the required parameter 'idOperacao' is set
-            if (idOperacao == null)
-                throw new ApiException(400, "Missing required parameter 'idOperacao' when calling EstabelecimentoApi->VinculoOperacoesProdutoEstabelecimento");
-            
-            // verify the required parameter 'idProduto' is set
-            if (idProduto == null)
-                throw new ApiException(400, "Missing required parameter 'idProduto' when calling EstabelecimentoApi->VinculoOperacoesProdutoEstabelecimento");
-            
-            // verify the required parameter 'mcc' is set
-            if (mcc == null)
-                throw new ApiException(400, "Missing required parameter 'mcc' when calling EstabelecimentoApi->VinculoOperacoesProdutoEstabelecimento");
-            
-    
-            var localVarPath = "/api/estabelecimentos/{idEstabelecimento}/produtos/{idProduto}/operacoes/{idOperacao}/vinculos";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (idEstabelecimento != null) localVarPathParams.Add("idEstabelecimento", Configuration.ApiClient.ParameterToString(idEstabelecimento)); // path parameter
-            if (idOperacao != null) localVarPathParams.Add("idOperacao", Configuration.ApiClient.ParameterToString(idOperacao)); // path parameter
-            if (idProduto != null) localVarPathParams.Add("idProduto", Configuration.ApiClient.ParameterToString(idProduto)); // path parameter
-            
-            
-            
-            
-            if (mcc.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(mcc); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = mcc; // byte array
-            }
-
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling VinculoOperacoesProdutoEstabelecimento: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling VinculoOperacoesProdutoEstabelecimento: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<ResponseEntity>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ResponseEntity) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseEntity)));
-            
-        }
-
-        
-        /// <summary>
-        /// Vincula as opera\u00E7\u00F5es ao estabelecimento e ao produto Este m\u00E9todo permite vincular as opera\u00E7\u00F5es ao estabelecimento e ao produto
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id)</param>
-        /// <param name="idOperacao">C\u00F3digo de Identifica\u00E7\u00E3o da opera\u00E7\u00E3o (id)</param>
-        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do produto (id)</param>
-        /// <param name="mcc">C\u00F3digo de Identifica\u00E7\u00E3o do mcc</param>
-        /// <returns>Task of ResponseEntity</returns>
-        public async System.Threading.Tasks.Task<ResponseEntity> VinculoOperacoesProdutoEstabelecimentoAsync (long? idEstabelecimento, long? idOperacao, long? idProduto, List<int?> mcc)
-        {
-             ApiResponse<ResponseEntity> localVarResponse = await VinculoOperacoesProdutoEstabelecimentoAsyncWithHttpInfo(idEstabelecimento, idOperacao, idProduto, mcc);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Vincula as opera\u00E7\u00F5es ao estabelecimento e ao produto Este m\u00E9todo permite vincular as opera\u00E7\u00F5es ao estabelecimento e ao produto
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id)</param>
-        /// <param name="idOperacao">C\u00F3digo de Identifica\u00E7\u00E3o da opera\u00E7\u00E3o (id)</param>
-        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do produto (id)</param>
-        /// <param name="mcc">C\u00F3digo de Identifica\u00E7\u00E3o do mcc</param>
-        /// <returns>Task of ApiResponse (ResponseEntity)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ResponseEntity>> VinculoOperacoesProdutoEstabelecimentoAsyncWithHttpInfo (long? idEstabelecimento, long? idOperacao, long? idProduto, List<int?> mcc)
-        {
-            // verify the required parameter 'idEstabelecimento' is set
-            if (idEstabelecimento == null) throw new ApiException(400, "Missing required parameter 'idEstabelecimento' when calling VinculoOperacoesProdutoEstabelecimento");
-            // verify the required parameter 'idOperacao' is set
-            if (idOperacao == null) throw new ApiException(400, "Missing required parameter 'idOperacao' when calling VinculoOperacoesProdutoEstabelecimento");
-            // verify the required parameter 'idProduto' is set
-            if (idProduto == null) throw new ApiException(400, "Missing required parameter 'idProduto' when calling VinculoOperacoesProdutoEstabelecimento");
-            // verify the required parameter 'mcc' is set
-            if (mcc == null) throw new ApiException(400, "Missing required parameter 'mcc' when calling VinculoOperacoesProdutoEstabelecimento");
-            
-    
-            var localVarPath = "/api/estabelecimentos/{idEstabelecimento}/produtos/{idProduto}/operacoes/{idOperacao}/vinculos";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (idEstabelecimento != null) localVarPathParams.Add("idEstabelecimento", Configuration.ApiClient.ParameterToString(idEstabelecimento)); // path parameter
-            if (idOperacao != null) localVarPathParams.Add("idOperacao", Configuration.ApiClient.ParameterToString(idOperacao)); // path parameter
-            if (idProduto != null) localVarPathParams.Add("idProduto", Configuration.ApiClient.ParameterToString(idProduto)); // path parameter
-            
-            
-            
-            
-            if (mcc.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(mcc); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = mcc; // byte array
-            }
-
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling VinculoOperacoesProdutoEstabelecimento: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling VinculoOperacoesProdutoEstabelecimento: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<ResponseEntity>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ResponseEntity) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseEntity)));
-            
-        }
-        
-        /// <summary>
-        /// Remove os v\u00EDnculos das opera\u00E7\u00F5es atrelado ao estabelecimento e ao produto Este m\u00E9todo permite remover os v\u00EDnculos das opera\u00E7\u00F5es atrelado ao estabelecimento e ao produto
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id)</param> 
-        /// <param name="idOperacao">C\u00F3digo de Identifica\u00E7\u00E3o da opera\u00E7\u00E3o (id)</param> 
-        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do produto (id)</param> 
-        /// <returns>ResponseEntity</returns>
-        public ResponseEntity VinculoOperacoesProdutoEstabelecimentoRemove (long? idEstabelecimento, long? idOperacao, long? idProduto)
-        {
-             ApiResponse<ResponseEntity> localVarResponse = VinculoOperacoesProdutoEstabelecimentoRemoveWithHttpInfo(idEstabelecimento, idOperacao, idProduto);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Remove os v\u00EDnculos das opera\u00E7\u00F5es atrelado ao estabelecimento e ao produto Este m\u00E9todo permite remover os v\u00EDnculos das opera\u00E7\u00F5es atrelado ao estabelecimento e ao produto
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id)</param> 
-        /// <param name="idOperacao">C\u00F3digo de Identifica\u00E7\u00E3o da opera\u00E7\u00E3o (id)</param> 
-        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do produto (id)</param> 
-        /// <returns>ApiResponse of ResponseEntity</returns>
-        public ApiResponse< ResponseEntity > VinculoOperacoesProdutoEstabelecimentoRemoveWithHttpInfo (long? idEstabelecimento, long? idOperacao, long? idProduto)
-        {
-            
-            // verify the required parameter 'idEstabelecimento' is set
-            if (idEstabelecimento == null)
-                throw new ApiException(400, "Missing required parameter 'idEstabelecimento' when calling EstabelecimentoApi->VinculoOperacoesProdutoEstabelecimentoRemove");
-            
-            // verify the required parameter 'idOperacao' is set
-            if (idOperacao == null)
-                throw new ApiException(400, "Missing required parameter 'idOperacao' when calling EstabelecimentoApi->VinculoOperacoesProdutoEstabelecimentoRemove");
-            
-            // verify the required parameter 'idProduto' is set
-            if (idProduto == null)
-                throw new ApiException(400, "Missing required parameter 'idProduto' when calling EstabelecimentoApi->VinculoOperacoesProdutoEstabelecimentoRemove");
-            
-    
-            var localVarPath = "/api/estabelecimentos/{idEstabelecimento}/produtos/{idProduto}/operacoes/{idOperacao}/vinculos";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (idEstabelecimento != null) localVarPathParams.Add("idEstabelecimento", Configuration.ApiClient.ParameterToString(idEstabelecimento)); // path parameter
-            if (idOperacao != null) localVarPathParams.Add("idOperacao", Configuration.ApiClient.ParameterToString(idOperacao)); // path parameter
-            if (idProduto != null) localVarPathParams.Add("idProduto", Configuration.ApiClient.ParameterToString(idProduto)); // path parameter
-            
-            
-            
-            
-            
-
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling VinculoOperacoesProdutoEstabelecimentoRemove: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling VinculoOperacoesProdutoEstabelecimentoRemove: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<ResponseEntity>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ResponseEntity) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseEntity)));
-            
-        }
-
-        
-        /// <summary>
-        /// Remove os v\u00EDnculos das opera\u00E7\u00F5es atrelado ao estabelecimento e ao produto Este m\u00E9todo permite remover os v\u00EDnculos das opera\u00E7\u00F5es atrelado ao estabelecimento e ao produto
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id)</param>
-        /// <param name="idOperacao">C\u00F3digo de Identifica\u00E7\u00E3o da opera\u00E7\u00E3o (id)</param>
-        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do produto (id)</param>
-        /// <returns>Task of ResponseEntity</returns>
-        public async System.Threading.Tasks.Task<ResponseEntity> VinculoOperacoesProdutoEstabelecimentoRemoveAsync (long? idEstabelecimento, long? idOperacao, long? idProduto)
-        {
-             ApiResponse<ResponseEntity> localVarResponse = await VinculoOperacoesProdutoEstabelecimentoRemoveAsyncWithHttpInfo(idEstabelecimento, idOperacao, idProduto);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Remove os v\u00EDnculos das opera\u00E7\u00F5es atrelado ao estabelecimento e ao produto Este m\u00E9todo permite remover os v\u00EDnculos das opera\u00E7\u00F5es atrelado ao estabelecimento e ao produto
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="idEstabelecimento">C\u00F3digo de Identifica\u00E7\u00E3o do estabelecimento (id)</param>
-        /// <param name="idOperacao">C\u00F3digo de Identifica\u00E7\u00E3o da opera\u00E7\u00E3o (id)</param>
-        /// <param name="idProduto">C\u00F3digo de Identifica\u00E7\u00E3o do produto (id)</param>
-        /// <returns>Task of ApiResponse (ResponseEntity)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ResponseEntity>> VinculoOperacoesProdutoEstabelecimentoRemoveAsyncWithHttpInfo (long? idEstabelecimento, long? idOperacao, long? idProduto)
-        {
-            // verify the required parameter 'idEstabelecimento' is set
-            if (idEstabelecimento == null) throw new ApiException(400, "Missing required parameter 'idEstabelecimento' when calling VinculoOperacoesProdutoEstabelecimentoRemove");
-            // verify the required parameter 'idOperacao' is set
-            if (idOperacao == null) throw new ApiException(400, "Missing required parameter 'idOperacao' when calling VinculoOperacoesProdutoEstabelecimentoRemove");
-            // verify the required parameter 'idProduto' is set
-            if (idProduto == null) throw new ApiException(400, "Missing required parameter 'idProduto' when calling VinculoOperacoesProdutoEstabelecimentoRemove");
-            
-    
-            var localVarPath = "/api/estabelecimentos/{idEstabelecimento}/produtos/{idProduto}/operacoes/{idOperacao}/vinculos";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (idEstabelecimento != null) localVarPathParams.Add("idEstabelecimento", Configuration.ApiClient.ParameterToString(idEstabelecimento)); // path parameter
-            if (idOperacao != null) localVarPathParams.Add("idOperacao", Configuration.ApiClient.ParameterToString(idOperacao)); // path parameter
-            if (idProduto != null) localVarPathParams.Add("idProduto", Configuration.ApiClient.ParameterToString(idProduto)); // path parameter
-            
-            
-            
-            
-            
-
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling VinculoOperacoesProdutoEstabelecimentoRemove: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling VinculoOperacoesProdutoEstabelecimentoRemove: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<ResponseEntity>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ResponseEntity) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ResponseEntity)));
             
         }
         

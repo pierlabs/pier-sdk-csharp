@@ -60,8 +60,10 @@ namespace Conductor.Pier.Model
         /// <param name="FlagFaturado">Quando ativa, indica que a Transa\u00E7\u00E3o foi consolidada em uma Fatura.</param>
         /// <param name="FlagEstorno">Quando ativa, indica que a Transa\u00E7\u00E3o foi estornada.</param>
         /// <param name="IdTransacaoEstorno">C\u00F3digo de Identifica\u00E7\u00E3o da Transa\u00E7\u00E3o (id) que gerou o estorno.</param>
+        /// <param name="ValorCompraMoedaEstrangeira">Valor da compra em moeda estrangeira.</param>
+        /// <param name="MoedaEstrangeira">S\u00EDmbolo da moeda estrangeira.</param>
 
-        public TransacoesCorrentesResponse(long? Id = null, long? IdTipoTransacao = null, string DescricaoAbreviada = null, string StatusTransacao = null, long? IdEvento = null, string TipoEvento = null, long? IdConta = null, string CartaoMascarado = null, string NomePortador = null, string DataTransacao = null, string DataFaturamento = null, string DataVencimento = null, string ModoEntradaTransacao = null, double? ValorTaxaEmbarque = null, double? ValorEntrada = null, double? ValorBRL = null, double? ValorUSD = null, double? CotacaoUSD = null, string DataCotacaoUSD = null, string CodigoMoedaOrigem = null, string CodigoMoedaDestino = null, string CodigoAutorizacao = null, string CodigoReferencia = null, string CodigoTerminal = null, long? CodigoMCC = null, long? GrupoMCC = null, string GrupoDescricaoMCC = null, long? IdEstabelecimento = null, string NomeEstabelecimento = null, string NomeFantasiaEstabelecimento = null, string LocalidadeEstabelecimento = null, long? PlanoParcelamento = null, long? NumeroParcela = null, string DetalhesTransacao = null, int? FlagCredito = null, int? FlagFaturado = null, int? FlagEstorno = null, long? IdTransacaoEstorno = null)
+        public TransacoesCorrentesResponse(long? Id = null, long? IdTipoTransacao = null, string DescricaoAbreviada = null, string StatusTransacao = null, long? IdEvento = null, string TipoEvento = null, long? IdConta = null, string CartaoMascarado = null, string NomePortador = null, string DataTransacao = null, string DataFaturamento = null, string DataVencimento = null, string ModoEntradaTransacao = null, double? ValorTaxaEmbarque = null, double? ValorEntrada = null, double? ValorBRL = null, double? ValorUSD = null, double? CotacaoUSD = null, string DataCotacaoUSD = null, string CodigoMoedaOrigem = null, string CodigoMoedaDestino = null, string CodigoAutorizacao = null, string CodigoReferencia = null, string CodigoTerminal = null, long? CodigoMCC = null, long? GrupoMCC = null, string GrupoDescricaoMCC = null, long? IdEstabelecimento = null, string NomeEstabelecimento = null, string NomeFantasiaEstabelecimento = null, string LocalidadeEstabelecimento = null, long? PlanoParcelamento = null, long? NumeroParcela = null, string DetalhesTransacao = null, int? FlagCredito = null, int? FlagFaturado = null, int? FlagEstorno = null, long? IdTransacaoEstorno = null, double? ValorCompraMoedaEstrangeira = null, string MoedaEstrangeira = null)
         {
             this.Id = Id;
             this.IdTipoTransacao = IdTipoTransacao;
@@ -101,6 +103,8 @@ namespace Conductor.Pier.Model
             this.FlagFaturado = FlagFaturado;
             this.FlagEstorno = FlagEstorno;
             this.IdTransacaoEstorno = IdTransacaoEstorno;
+            this.ValorCompraMoedaEstrangeira = ValorCompraMoedaEstrangeira;
+            this.MoedaEstrangeira = MoedaEstrangeira;
             
         }
         
@@ -372,6 +376,20 @@ namespace Conductor.Pier.Model
         public long? IdTransacaoEstorno { get; set; }
     
         /// <summary>
+        /// Valor da compra em moeda estrangeira
+        /// </summary>
+        /// <value>Valor da compra em moeda estrangeira</value>
+        [DataMember(Name="valorCompraMoedaEstrangeira", EmitDefaultValue=false)]
+        public double? ValorCompraMoedaEstrangeira { get; set; }
+    
+        /// <summary>
+        /// S\u00EDmbolo da moeda estrangeira
+        /// </summary>
+        /// <value>S\u00EDmbolo da moeda estrangeira</value>
+        [DataMember(Name="moedaEstrangeira", EmitDefaultValue=false)]
+        public string MoedaEstrangeira { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -417,6 +435,8 @@ namespace Conductor.Pier.Model
             sb.Append("  FlagFaturado: ").Append(FlagFaturado).Append("\n");
             sb.Append("  FlagEstorno: ").Append(FlagEstorno).Append("\n");
             sb.Append("  IdTransacaoEstorno: ").Append(IdTransacaoEstorno).Append("\n");
+            sb.Append("  ValorCompraMoedaEstrangeira: ").Append(ValorCompraMoedaEstrangeira).Append("\n");
+            sb.Append("  MoedaEstrangeira: ").Append(MoedaEstrangeira).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -643,6 +663,16 @@ namespace Conductor.Pier.Model
                     this.IdTransacaoEstorno == other.IdTransacaoEstorno ||
                     this.IdTransacaoEstorno != null &&
                     this.IdTransacaoEstorno.Equals(other.IdTransacaoEstorno)
+                ) && 
+                (
+                    this.ValorCompraMoedaEstrangeira == other.ValorCompraMoedaEstrangeira ||
+                    this.ValorCompraMoedaEstrangeira != null &&
+                    this.ValorCompraMoedaEstrangeira.Equals(other.ValorCompraMoedaEstrangeira)
+                ) && 
+                (
+                    this.MoedaEstrangeira == other.MoedaEstrangeira ||
+                    this.MoedaEstrangeira != null &&
+                    this.MoedaEstrangeira.Equals(other.MoedaEstrangeira)
                 );
         }
 
@@ -771,6 +801,12 @@ namespace Conductor.Pier.Model
                 
                 if (this.IdTransacaoEstorno != null)
                     hash = hash * 59 + this.IdTransacaoEstorno.GetHashCode();
+                
+                if (this.ValorCompraMoedaEstrangeira != null)
+                    hash = hash * 59 + this.ValorCompraMoedaEstrangeira.GetHashCode();
+                
+                if (this.MoedaEstrangeira != null)
+                    hash = hash * 59 + this.MoedaEstrangeira.GetHashCode();
                 
                 return hash;
             }

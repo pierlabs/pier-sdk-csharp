@@ -255,8 +255,9 @@ namespace Conductor.Pier.Api
         /// <param name="permiteCompraInternacional">Indica se o cart\u00E3o est\u00E1 habilitado/desabilitado para transa\u00E7\u00F5es internacionais (optional)</param>
         /// <param name="permiteTarjaMagnetica">Indica se o cart\u00E3o est\u00E1 habilitado/desabilitado para transa\u00E7\u00F5es por tarja magnetica (optional)</param>
         /// <param name="permiteContactless">Indica se o cart\u00E3o est\u00E1 habilitado/desabilitado para transa\u00E7\u00F5es via contactless (optional)</param>
+        /// <param name="limiteContactlessSemSenha">Indica o limite usado em transa\u00E7\u00F5es com a fun\u00E7\u00E3o contactless sem senha (optional)</param>
         /// <returns>PageConfiguracaoControleCartaoResponse</returns>
-        PageConfiguracaoControleCartaoResponse ListarConfiguracaoControleCartao (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, bool? permiteEcommerce = null, bool? permiteSaque = null, bool? permiteWallet = null, bool? permiteControleMCC = null, bool? permiteCompraInternacional = null, bool? permiteTarjaMagnetica = null, bool? permiteContactless = null);
+        PageConfiguracaoControleCartaoResponse ListarConfiguracaoControleCartao (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, bool? permiteEcommerce = null, bool? permiteSaque = null, bool? permiteWallet = null, bool? permiteControleMCC = null, bool? permiteCompraInternacional = null, bool? permiteTarjaMagnetica = null, bool? permiteContactless = null, double? limiteContactlessSemSenha = null);
   
         /// <summary>
         /// Lista os cart\u00F5es configurados pelo remetente
@@ -276,8 +277,9 @@ namespace Conductor.Pier.Api
         /// <param name="permiteCompraInternacional">Indica se o cart\u00E3o est\u00E1 habilitado/desabilitado para transa\u00E7\u00F5es internacionais (optional)</param>
         /// <param name="permiteTarjaMagnetica">Indica se o cart\u00E3o est\u00E1 habilitado/desabilitado para transa\u00E7\u00F5es por tarja magnetica (optional)</param>
         /// <param name="permiteContactless">Indica se o cart\u00E3o est\u00E1 habilitado/desabilitado para transa\u00E7\u00F5es via contactless (optional)</param>
+        /// <param name="limiteContactlessSemSenha">Indica o limite usado em transa\u00E7\u00F5es com a fun\u00E7\u00E3o contactless sem senha (optional)</param>
         /// <returns>ApiResponse of PageConfiguracaoControleCartaoResponse</returns>
-        ApiResponse<PageConfiguracaoControleCartaoResponse> ListarConfiguracaoControleCartaoWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, bool? permiteEcommerce = null, bool? permiteSaque = null, bool? permiteWallet = null, bool? permiteControleMCC = null, bool? permiteCompraInternacional = null, bool? permiteTarjaMagnetica = null, bool? permiteContactless = null);
+        ApiResponse<PageConfiguracaoControleCartaoResponse> ListarConfiguracaoControleCartaoWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, bool? permiteEcommerce = null, bool? permiteSaque = null, bool? permiteWallet = null, bool? permiteControleMCC = null, bool? permiteCompraInternacional = null, bool? permiteTarjaMagnetica = null, bool? permiteContactless = null, double? limiteContactlessSemSenha = null);
         
         /// <summary>
         /// Lista os cart\u00F5es vinculados aos estabelecimentos.
@@ -651,8 +653,9 @@ namespace Conductor.Pier.Api
         /// <param name="permiteCompraInternacional">Indica se o cart\u00E3o est\u00E1 habilitado/desabilitado para transa\u00E7\u00F5es internacionais (optional)</param>
         /// <param name="permiteTarjaMagnetica">Indica se o cart\u00E3o est\u00E1 habilitado/desabilitado para transa\u00E7\u00F5es por tarja magnetica (optional)</param>
         /// <param name="permiteContactless">Indica se o cart\u00E3o est\u00E1 habilitado/desabilitado para transa\u00E7\u00F5es via contactless (optional)</param>
+        /// <param name="limiteContactlessSemSenha">Indica o limite usado em transa\u00E7\u00F5es com a fun\u00E7\u00E3o contactless sem senha (optional)</param>
         /// <returns>Task of PageConfiguracaoControleCartaoResponse</returns>
-        System.Threading.Tasks.Task<PageConfiguracaoControleCartaoResponse> ListarConfiguracaoControleCartaoAsync (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, bool? permiteEcommerce = null, bool? permiteSaque = null, bool? permiteWallet = null, bool? permiteControleMCC = null, bool? permiteCompraInternacional = null, bool? permiteTarjaMagnetica = null, bool? permiteContactless = null);
+        System.Threading.Tasks.Task<PageConfiguracaoControleCartaoResponse> ListarConfiguracaoControleCartaoAsync (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, bool? permiteEcommerce = null, bool? permiteSaque = null, bool? permiteWallet = null, bool? permiteControleMCC = null, bool? permiteCompraInternacional = null, bool? permiteTarjaMagnetica = null, bool? permiteContactless = null, double? limiteContactlessSemSenha = null);
 
         /// <summary>
         /// Lista os cart\u00F5es configurados pelo remetente
@@ -672,8 +675,9 @@ namespace Conductor.Pier.Api
         /// <param name="permiteCompraInternacional">Indica se o cart\u00E3o est\u00E1 habilitado/desabilitado para transa\u00E7\u00F5es internacionais (optional)</param>
         /// <param name="permiteTarjaMagnetica">Indica se o cart\u00E3o est\u00E1 habilitado/desabilitado para transa\u00E7\u00F5es por tarja magnetica (optional)</param>
         /// <param name="permiteContactless">Indica se o cart\u00E3o est\u00E1 habilitado/desabilitado para transa\u00E7\u00F5es via contactless (optional)</param>
+        /// <param name="limiteContactlessSemSenha">Indica o limite usado em transa\u00E7\u00F5es com a fun\u00E7\u00E3o contactless sem senha (optional)</param>
         /// <returns>Task of ApiResponse (PageConfiguracaoControleCartaoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageConfiguracaoControleCartaoResponse>> ListarConfiguracaoControleCartaoAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, bool? permiteEcommerce = null, bool? permiteSaque = null, bool? permiteWallet = null, bool? permiteControleMCC = null, bool? permiteCompraInternacional = null, bool? permiteTarjaMagnetica = null, bool? permiteContactless = null);
+        System.Threading.Tasks.Task<ApiResponse<PageConfiguracaoControleCartaoResponse>> ListarConfiguracaoControleCartaoAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, bool? permiteEcommerce = null, bool? permiteSaque = null, bool? permiteWallet = null, bool? permiteControleMCC = null, bool? permiteCompraInternacional = null, bool? permiteTarjaMagnetica = null, bool? permiteContactless = null, double? limiteContactlessSemSenha = null);
         
         /// <summary>
         /// Lista os cart\u00F5es vinculados aos estabelecimentos.
@@ -2490,10 +2494,11 @@ namespace Conductor.Pier.Api
         /// <param name="permiteCompraInternacional">Indica se o cart\u00E3o est\u00E1 habilitado/desabilitado para transa\u00E7\u00F5es internacionais (optional)</param> 
         /// <param name="permiteTarjaMagnetica">Indica se o cart\u00E3o est\u00E1 habilitado/desabilitado para transa\u00E7\u00F5es por tarja magnetica (optional)</param> 
         /// <param name="permiteContactless">Indica se o cart\u00E3o est\u00E1 habilitado/desabilitado para transa\u00E7\u00F5es via contactless (optional)</param> 
+        /// <param name="limiteContactlessSemSenha">Indica o limite usado em transa\u00E7\u00F5es com a fun\u00E7\u00E3o contactless sem senha (optional)</param> 
         /// <returns>PageConfiguracaoControleCartaoResponse</returns>
-        public PageConfiguracaoControleCartaoResponse ListarConfiguracaoControleCartao (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, bool? permiteEcommerce = null, bool? permiteSaque = null, bool? permiteWallet = null, bool? permiteControleMCC = null, bool? permiteCompraInternacional = null, bool? permiteTarjaMagnetica = null, bool? permiteContactless = null)
+        public PageConfiguracaoControleCartaoResponse ListarConfiguracaoControleCartao (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, bool? permiteEcommerce = null, bool? permiteSaque = null, bool? permiteWallet = null, bool? permiteControleMCC = null, bool? permiteCompraInternacional = null, bool? permiteTarjaMagnetica = null, bool? permiteContactless = null, double? limiteContactlessSemSenha = null)
         {
-             ApiResponse<PageConfiguracaoControleCartaoResponse> localVarResponse = ListarConfiguracaoControleCartaoWithHttpInfo(sort, page, limit, idCartao, permiteEcommerce, permiteSaque, permiteWallet, permiteControleMCC, permiteCompraInternacional, permiteTarjaMagnetica, permiteContactless);
+             ApiResponse<PageConfiguracaoControleCartaoResponse> localVarResponse = ListarConfiguracaoControleCartaoWithHttpInfo(sort, page, limit, idCartao, permiteEcommerce, permiteSaque, permiteWallet, permiteControleMCC, permiteCompraInternacional, permiteTarjaMagnetica, permiteContactless, limiteContactlessSemSenha);
              return localVarResponse.Data;
         }
 
@@ -2512,8 +2517,9 @@ namespace Conductor.Pier.Api
         /// <param name="permiteCompraInternacional">Indica se o cart\u00E3o est\u00E1 habilitado/desabilitado para transa\u00E7\u00F5es internacionais (optional)</param> 
         /// <param name="permiteTarjaMagnetica">Indica se o cart\u00E3o est\u00E1 habilitado/desabilitado para transa\u00E7\u00F5es por tarja magnetica (optional)</param> 
         /// <param name="permiteContactless">Indica se o cart\u00E3o est\u00E1 habilitado/desabilitado para transa\u00E7\u00F5es via contactless (optional)</param> 
+        /// <param name="limiteContactlessSemSenha">Indica o limite usado em transa\u00E7\u00F5es com a fun\u00E7\u00E3o contactless sem senha (optional)</param> 
         /// <returns>ApiResponse of PageConfiguracaoControleCartaoResponse</returns>
-        public ApiResponse< PageConfiguracaoControleCartaoResponse > ListarConfiguracaoControleCartaoWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, bool? permiteEcommerce = null, bool? permiteSaque = null, bool? permiteWallet = null, bool? permiteControleMCC = null, bool? permiteCompraInternacional = null, bool? permiteTarjaMagnetica = null, bool? permiteContactless = null)
+        public ApiResponse< PageConfiguracaoControleCartaoResponse > ListarConfiguracaoControleCartaoWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, bool? permiteEcommerce = null, bool? permiteSaque = null, bool? permiteWallet = null, bool? permiteControleMCC = null, bool? permiteCompraInternacional = null, bool? permiteTarjaMagnetica = null, bool? permiteContactless = null, double? limiteContactlessSemSenha = null)
         {
             
     
@@ -2555,6 +2561,7 @@ namespace Conductor.Pier.Api
             if (permiteCompraInternacional != null) localVarQueryParams.Add("permiteCompraInternacional", Configuration.ApiClient.ParameterToString(permiteCompraInternacional)); // query parameter
             if (permiteTarjaMagnetica != null) localVarQueryParams.Add("permiteTarjaMagnetica", Configuration.ApiClient.ParameterToString(permiteTarjaMagnetica)); // query parameter
             if (permiteContactless != null) localVarQueryParams.Add("permiteContactless", Configuration.ApiClient.ParameterToString(permiteContactless)); // query parameter
+            if (limiteContactlessSemSenha != null) localVarQueryParams.Add("limiteContactlessSemSenha", Configuration.ApiClient.ParameterToString(limiteContactlessSemSenha)); // query parameter
             
             
             
@@ -2596,10 +2603,11 @@ namespace Conductor.Pier.Api
         /// <param name="permiteCompraInternacional">Indica se o cart\u00E3o est\u00E1 habilitado/desabilitado para transa\u00E7\u00F5es internacionais (optional)</param>
         /// <param name="permiteTarjaMagnetica">Indica se o cart\u00E3o est\u00E1 habilitado/desabilitado para transa\u00E7\u00F5es por tarja magnetica (optional)</param>
         /// <param name="permiteContactless">Indica se o cart\u00E3o est\u00E1 habilitado/desabilitado para transa\u00E7\u00F5es via contactless (optional)</param>
+        /// <param name="limiteContactlessSemSenha">Indica o limite usado em transa\u00E7\u00F5es com a fun\u00E7\u00E3o contactless sem senha (optional)</param>
         /// <returns>Task of PageConfiguracaoControleCartaoResponse</returns>
-        public async System.Threading.Tasks.Task<PageConfiguracaoControleCartaoResponse> ListarConfiguracaoControleCartaoAsync (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, bool? permiteEcommerce = null, bool? permiteSaque = null, bool? permiteWallet = null, bool? permiteControleMCC = null, bool? permiteCompraInternacional = null, bool? permiteTarjaMagnetica = null, bool? permiteContactless = null)
+        public async System.Threading.Tasks.Task<PageConfiguracaoControleCartaoResponse> ListarConfiguracaoControleCartaoAsync (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, bool? permiteEcommerce = null, bool? permiteSaque = null, bool? permiteWallet = null, bool? permiteControleMCC = null, bool? permiteCompraInternacional = null, bool? permiteTarjaMagnetica = null, bool? permiteContactless = null, double? limiteContactlessSemSenha = null)
         {
-             ApiResponse<PageConfiguracaoControleCartaoResponse> localVarResponse = await ListarConfiguracaoControleCartaoAsyncWithHttpInfo(sort, page, limit, idCartao, permiteEcommerce, permiteSaque, permiteWallet, permiteControleMCC, permiteCompraInternacional, permiteTarjaMagnetica, permiteContactless);
+             ApiResponse<PageConfiguracaoControleCartaoResponse> localVarResponse = await ListarConfiguracaoControleCartaoAsyncWithHttpInfo(sort, page, limit, idCartao, permiteEcommerce, permiteSaque, permiteWallet, permiteControleMCC, permiteCompraInternacional, permiteTarjaMagnetica, permiteContactless, limiteContactlessSemSenha);
              return localVarResponse.Data;
 
         }
@@ -2619,8 +2627,9 @@ namespace Conductor.Pier.Api
         /// <param name="permiteCompraInternacional">Indica se o cart\u00E3o est\u00E1 habilitado/desabilitado para transa\u00E7\u00F5es internacionais (optional)</param>
         /// <param name="permiteTarjaMagnetica">Indica se o cart\u00E3o est\u00E1 habilitado/desabilitado para transa\u00E7\u00F5es por tarja magnetica (optional)</param>
         /// <param name="permiteContactless">Indica se o cart\u00E3o est\u00E1 habilitado/desabilitado para transa\u00E7\u00F5es via contactless (optional)</param>
+        /// <param name="limiteContactlessSemSenha">Indica o limite usado em transa\u00E7\u00F5es com a fun\u00E7\u00E3o contactless sem senha (optional)</param>
         /// <returns>Task of ApiResponse (PageConfiguracaoControleCartaoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageConfiguracaoControleCartaoResponse>> ListarConfiguracaoControleCartaoAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, bool? permiteEcommerce = null, bool? permiteSaque = null, bool? permiteWallet = null, bool? permiteControleMCC = null, bool? permiteCompraInternacional = null, bool? permiteTarjaMagnetica = null, bool? permiteContactless = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageConfiguracaoControleCartaoResponse>> ListarConfiguracaoControleCartaoAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, bool? permiteEcommerce = null, bool? permiteSaque = null, bool? permiteWallet = null, bool? permiteControleMCC = null, bool? permiteCompraInternacional = null, bool? permiteTarjaMagnetica = null, bool? permiteContactless = null, double? limiteContactlessSemSenha = null)
         {
             
     
@@ -2662,6 +2671,7 @@ namespace Conductor.Pier.Api
             if (permiteCompraInternacional != null) localVarQueryParams.Add("permiteCompraInternacional", Configuration.ApiClient.ParameterToString(permiteCompraInternacional)); // query parameter
             if (permiteTarjaMagnetica != null) localVarQueryParams.Add("permiteTarjaMagnetica", Configuration.ApiClient.ParameterToString(permiteTarjaMagnetica)); // query parameter
             if (permiteContactless != null) localVarQueryParams.Add("permiteContactless", Configuration.ApiClient.ParameterToString(permiteContactless)); // query parameter
+            if (limiteContactlessSemSenha != null) localVarQueryParams.Add("limiteContactlessSemSenha", Configuration.ApiClient.ParameterToString(limiteContactlessSemSenha)); // query parameter
             
             
             
