@@ -38,8 +38,11 @@ namespace Conductor.Pier.Model
         /// <param name="IdDescricao">C\u00F3digo da mensagem de transa\u00E7\u00E3o.</param>
         /// <param name="DescricaoAplicativo">Mensagem de transa\u00E7\u00E3o do Aplicativo.</param>
         /// <param name="DescricaoTerminal">Mensagem de transa\u00E7\u00E3o do Terminal.</param>
+        /// <param name="MoedaEstrangeira">S\u00EDmbolo da moeda estrangeira.</param>
+        /// <param name="ValorCompraMoedaEstrangeira">Valor da transa\u00E7\u00E3o em moeda estrangeira.</param>
+        /// <param name="CotacaoDolar">Valor da cota\u00E7\u00E3o do d\u00F3lar no dia da transa\u00E7ao.</param>
 
-        public TransacaoNegadaResponse(long? Id = null, long? IdProduto = null, long? IdCartao = null, string NumeroCartao = null, string CodigoProcessamento = null, string CodigoProcessamentoDescricao = null, double? Valor = null, int? Parcelas = null, string NomeEstabelecimento = null, string DataHoraEntrada = null, string DataHoraSaida = null, string CodigoResposta = null, string RespostaAutorizador = null, long? IdDescricao = null, string DescricaoAplicativo = null, string DescricaoTerminal = null)
+        public TransacaoNegadaResponse(long? Id = null, long? IdProduto = null, long? IdCartao = null, string NumeroCartao = null, string CodigoProcessamento = null, string CodigoProcessamentoDescricao = null, double? Valor = null, int? Parcelas = null, string NomeEstabelecimento = null, string DataHoraEntrada = null, string DataHoraSaida = null, string CodigoResposta = null, string RespostaAutorizador = null, long? IdDescricao = null, string DescricaoAplicativo = null, string DescricaoTerminal = null, string MoedaEstrangeira = null, double? ValorCompraMoedaEstrangeira = null, double? CotacaoDolar = null)
         {
             this.Id = Id;
             this.IdProduto = IdProduto;
@@ -57,6 +60,9 @@ namespace Conductor.Pier.Model
             this.IdDescricao = IdDescricao;
             this.DescricaoAplicativo = DescricaoAplicativo;
             this.DescricaoTerminal = DescricaoTerminal;
+            this.MoedaEstrangeira = MoedaEstrangeira;
+            this.ValorCompraMoedaEstrangeira = ValorCompraMoedaEstrangeira;
+            this.CotacaoDolar = CotacaoDolar;
             
         }
         
@@ -174,6 +180,27 @@ namespace Conductor.Pier.Model
         public string DescricaoTerminal { get; set; }
     
         /// <summary>
+        /// S\u00EDmbolo da moeda estrangeira
+        /// </summary>
+        /// <value>S\u00EDmbolo da moeda estrangeira</value>
+        [DataMember(Name="moedaEstrangeira", EmitDefaultValue=false)]
+        public string MoedaEstrangeira { get; set; }
+    
+        /// <summary>
+        /// Valor da transa\u00E7\u00E3o em moeda estrangeira
+        /// </summary>
+        /// <value>Valor da transa\u00E7\u00E3o em moeda estrangeira</value>
+        [DataMember(Name="valorCompraMoedaEstrangeira", EmitDefaultValue=false)]
+        public double? ValorCompraMoedaEstrangeira { get; set; }
+    
+        /// <summary>
+        /// Valor da cota\u00E7\u00E3o do d\u00F3lar no dia da transa\u00E7ao
+        /// </summary>
+        /// <value>Valor da cota\u00E7\u00E3o do d\u00F3lar no dia da transa\u00E7ao</value>
+        [DataMember(Name="cotacaoDolar", EmitDefaultValue=false)]
+        public double? CotacaoDolar { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -197,6 +224,9 @@ namespace Conductor.Pier.Model
             sb.Append("  IdDescricao: ").Append(IdDescricao).Append("\n");
             sb.Append("  DescricaoAplicativo: ").Append(DescricaoAplicativo).Append("\n");
             sb.Append("  DescricaoTerminal: ").Append(DescricaoTerminal).Append("\n");
+            sb.Append("  MoedaEstrangeira: ").Append(MoedaEstrangeira).Append("\n");
+            sb.Append("  ValorCompraMoedaEstrangeira: ").Append(ValorCompraMoedaEstrangeira).Append("\n");
+            sb.Append("  CotacaoDolar: ").Append(CotacaoDolar).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -313,6 +343,21 @@ namespace Conductor.Pier.Model
                     this.DescricaoTerminal == other.DescricaoTerminal ||
                     this.DescricaoTerminal != null &&
                     this.DescricaoTerminal.Equals(other.DescricaoTerminal)
+                ) && 
+                (
+                    this.MoedaEstrangeira == other.MoedaEstrangeira ||
+                    this.MoedaEstrangeira != null &&
+                    this.MoedaEstrangeira.Equals(other.MoedaEstrangeira)
+                ) && 
+                (
+                    this.ValorCompraMoedaEstrangeira == other.ValorCompraMoedaEstrangeira ||
+                    this.ValorCompraMoedaEstrangeira != null &&
+                    this.ValorCompraMoedaEstrangeira.Equals(other.ValorCompraMoedaEstrangeira)
+                ) && 
+                (
+                    this.CotacaoDolar == other.CotacaoDolar ||
+                    this.CotacaoDolar != null &&
+                    this.CotacaoDolar.Equals(other.CotacaoDolar)
                 );
         }
 
@@ -375,6 +420,15 @@ namespace Conductor.Pier.Model
                 
                 if (this.DescricaoTerminal != null)
                     hash = hash * 59 + this.DescricaoTerminal.GetHashCode();
+                
+                if (this.MoedaEstrangeira != null)
+                    hash = hash * 59 + this.MoedaEstrangeira.GetHashCode();
+                
+                if (this.ValorCompraMoedaEstrangeira != null)
+                    hash = hash * 59 + this.ValorCompraMoedaEstrangeira.GetHashCode();
+                
+                if (this.CotacaoDolar != null)
+                    hash = hash * 59 + this.CotacaoDolar.GetHashCode();
                 
                 return hash;
             }
