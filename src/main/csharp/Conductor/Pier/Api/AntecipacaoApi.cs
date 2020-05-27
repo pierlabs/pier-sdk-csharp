@@ -76,8 +76,10 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do evento</param>
         /// <param name="quantidadeParcelas">Quantidade de parcelas para serem antecipadas</param>
         /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param>
+        /// <param name="juros">Indica o tipo de evento pesquisado: 0 = Sem juros, 1 = Com juros, 2 = ambos. O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 0 (sem juros) (optional)</param>
+        /// <param name="parcelado">Indica se o evento pesquisado deve ser parcelado. 0 = Sem ser parcelado, 1 = parcelado, 2 = ambos.  O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 1 (parcelado) (optional)</param>
         /// <returns>AntecipacaoResponse</returns>
-        AntecipacaoResponse EfetivarAntecipacaoCompra (long? idConta, long? id, long? quantidadeParcelas, string complemento = null);
+        AntecipacaoResponse EfetivarAntecipacaoCompra (long? idConta, long? id, long? quantidadeParcelas, string complemento = null, int? juros = null, int? parcelado = null);
   
         /// <summary>
         /// Faz a efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o
@@ -90,20 +92,56 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do evento</param>
         /// <param name="quantidadeParcelas">Quantidade de parcelas para serem antecipadas</param>
         /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param>
+        /// <param name="juros">Indica o tipo de evento pesquisado: 0 = Sem juros, 1 = Com juros, 2 = ambos. O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 0 (sem juros) (optional)</param>
+        /// <param name="parcelado">Indica se o evento pesquisado deve ser parcelado. 0 = Sem ser parcelado, 1 = parcelado, 2 = ambos.  O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 1 (parcelado) (optional)</param>
         /// <returns>ApiResponse of AntecipacaoResponse</returns>
-        ApiResponse<AntecipacaoResponse> EfetivarAntecipacaoCompraWithHttpInfo (long? idConta, long? id, long? quantidadeParcelas, string complemento = null);
+        ApiResponse<AntecipacaoResponse> EfetivarAntecipacaoCompraWithHttpInfo (long? idConta, long? id, long? quantidadeParcelas, string complemento = null, int? juros = null, int? parcelado = null);
         
         /// <summary>
         /// Faz a efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o
         /// </summary>
         /// <remarks>
-        /// M\u00E9todo responsavel pela efetiva\u00E7\u00E3o de todas as compras antecip\u00E1veis com todas as parcelas de uma conta
+        /// M\u00E9todo responsavel pela efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o, cujo desconto \u00E9 calculado baseado na data da \u00FAltima parcela em aberto
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">C\u00F3digo de Identifica\u00E7\u00E3o da Conta</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do evento</param>
+        /// <param name="quantidadeParcelas">Quantidade de parcelas para serem antecipadas</param>
         /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param>
+        /// <param name="juros">Indica o tipo de evento pesquisado: 0 = Sem juros, 1 = Com juros, 2 = ambos. O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 0 (sem juros) (optional)</param>
+        /// <param name="parcelado">Indica se o evento pesquisado deve ser parcelado. 0 = Sem ser parcelado, 1 = parcelado, 2 = ambos.  O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 1 (parcelado) (optional)</param>
         /// <returns>AntecipacaoResponse</returns>
-        AntecipacaoResponse EfetivarAntecipacoesEmLotes (long? idConta, string complemento = null);
+        AntecipacaoResponse EfetivarAntecipacaoCompra1 (long? idConta, long? id, long? quantidadeParcelas, string complemento = null, int? juros = null, int? parcelado = null);
+  
+        /// <summary>
+        /// Faz a efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o
+        /// </summary>
+        /// <remarks>
+        /// M\u00E9todo responsavel pela efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o, cujo desconto \u00E9 calculado baseado na data da \u00FAltima parcela em aberto
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">C\u00F3digo de Identifica\u00E7\u00E3o da Conta</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do evento</param>
+        /// <param name="quantidadeParcelas">Quantidade de parcelas para serem antecipadas</param>
+        /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param>
+        /// <param name="juros">Indica o tipo de evento pesquisado: 0 = Sem juros, 1 = Com juros, 2 = ambos. O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 0 (sem juros) (optional)</param>
+        /// <param name="parcelado">Indica se o evento pesquisado deve ser parcelado. 0 = Sem ser parcelado, 1 = parcelado, 2 = ambos.  O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 1 (parcelado) (optional)</param>
+        /// <returns>ApiResponse of AntecipacaoResponse</returns>
+        ApiResponse<AntecipacaoResponse> EfetivarAntecipacaoCompra1WithHttpInfo (long? idConta, long? id, long? quantidadeParcelas, string complemento = null, int? juros = null, int? parcelado = null);
+        
+        /// <summary>
+        /// Faz a efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o
+        /// </summary>
+        /// <remarks>
+        /// M\u00E9todo responsavel pela efetiva\u00E7\u00E3o de todas as compras antecip\u00E1veis com todas as parcelas de uma conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">C\u00F3digo de Identifica\u00E7\u00E3o da Conta</param>
+        /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param>
+        /// <param name="juros">Indica o tipo de evento pesquisado: 0 = Sem juros, 1 = Com juros, 2 = ambos. O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 0 (sem juros) (optional)</param>
+        /// <param name="parcelado">Indica se o evento pesquisado deve ser parcelado. 0 = Sem ser parcelado, 1 = parcelado, 2 = ambos.  O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 1 (parcelado) (optional)</param>
+        /// <returns>AntecipacaoResponse</returns>
+        AntecipacaoResponse EfetivarAntecipacoesEmLotes (long? idConta, string complemento = null, int? juros = null, int? parcelado = null);
   
         /// <summary>
         /// Faz a efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o
@@ -114,8 +152,38 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">C\u00F3digo de Identifica\u00E7\u00E3o da Conta</param>
         /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param>
+        /// <param name="juros">Indica o tipo de evento pesquisado: 0 = Sem juros, 1 = Com juros, 2 = ambos. O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 0 (sem juros) (optional)</param>
+        /// <param name="parcelado">Indica se o evento pesquisado deve ser parcelado. 0 = Sem ser parcelado, 1 = parcelado, 2 = ambos.  O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 1 (parcelado) (optional)</param>
         /// <returns>ApiResponse of AntecipacaoResponse</returns>
-        ApiResponse<AntecipacaoResponse> EfetivarAntecipacoesEmLotesWithHttpInfo (long? idConta, string complemento = null);
+        ApiResponse<AntecipacaoResponse> EfetivarAntecipacoesEmLotesWithHttpInfo (long? idConta, string complemento = null, int? juros = null, int? parcelado = null);
+        
+        /// <summary>
+        /// Faz a efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o
+        /// </summary>
+        /// <remarks>
+        /// M\u00E9todo responsavel pela efetiva\u00E7\u00E3o de todas os saques antecip\u00E1veis com todas as parcelas de uma conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">C\u00F3digo de Identifica\u00E7\u00E3o da Conta</param>
+        /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param>
+        /// <param name="juros">Indica o tipo de evento pesquisado: 0 = Sem juros, 1 = Com juros, 2 = ambos. O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 0 (sem juros) (optional)</param>
+        /// <param name="parcelado">Indica se o evento pesquisado deve ser parcelado. 0 = Sem ser parcelado, 1 = parcelado, 2 = ambos.  O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 1 (parcelado) (optional)</param>
+        /// <returns>AntecipacaoResponse</returns>
+        AntecipacaoResponse EfetivarAntecipacoesEmLotes1 (long? idConta, string complemento = null, int? juros = null, int? parcelado = null);
+  
+        /// <summary>
+        /// Faz a efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o
+        /// </summary>
+        /// <remarks>
+        /// M\u00E9todo responsavel pela efetiva\u00E7\u00E3o de todas os saques antecip\u00E1veis com todas as parcelas de uma conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">C\u00F3digo de Identifica\u00E7\u00E3o da Conta</param>
+        /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param>
+        /// <param name="juros">Indica o tipo de evento pesquisado: 0 = Sem juros, 1 = Com juros, 2 = ambos. O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 0 (sem juros) (optional)</param>
+        /// <param name="parcelado">Indica se o evento pesquisado deve ser parcelado. 0 = Sem ser parcelado, 1 = parcelado, 2 = ambos.  O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 1 (parcelado) (optional)</param>
+        /// <returns>ApiResponse of AntecipacaoResponse</returns>
+        ApiResponse<AntecipacaoResponse> EfetivarAntecipacoesEmLotes1WithHttpInfo (long? idConta, string complemento = null, int? juros = null, int? parcelado = null);
         
         /// <summary>
         /// Listar compras com parcelas antecip\u00E1veis
@@ -132,8 +200,10 @@ namespace Conductor.Pier.Api
         /// <param name="parcelada">Indica se a compra \u00E9 parcelada (optional)</param>
         /// <param name="juros">Indica se a compra \u00E9 com ou sem juros (optional)</param>
         /// <param name="tipoOrigemTransacao">Indica se a compra \u00E9 ON-US ou OFF-US (optional)</param>
+        /// <param name="dataCompraInicio">Data de compra(in\u00EDcio) (optional)</param>
+        /// <param name="dataCompraFim">Data de compra(fim) (optional)</param>
         /// <returns>PageCompraResponse</returns>
-        PageCompraResponse ListarComprasAntecipaveis (long? idConta, List<string> sort = null, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null);
+        PageCompraResponse ListarComprasAntecipaveis (long? idConta, List<string> sort = null, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null, string dataCompraInicio = null, string dataCompraFim = null);
   
         /// <summary>
         /// Listar compras com parcelas antecip\u00E1veis
@@ -150,8 +220,50 @@ namespace Conductor.Pier.Api
         /// <param name="parcelada">Indica se a compra \u00E9 parcelada (optional)</param>
         /// <param name="juros">Indica se a compra \u00E9 com ou sem juros (optional)</param>
         /// <param name="tipoOrigemTransacao">Indica se a compra \u00E9 ON-US ou OFF-US (optional)</param>
+        /// <param name="dataCompraInicio">Data de compra(in\u00EDcio) (optional)</param>
+        /// <param name="dataCompraFim">Data de compra(fim) (optional)</param>
         /// <returns>ApiResponse of PageCompraResponse</returns>
-        ApiResponse<PageCompraResponse> ListarComprasAntecipaveisWithHttpInfo (long? idConta, List<string> sort = null, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null);
+        ApiResponse<PageCompraResponse> ListarComprasAntecipaveisWithHttpInfo (long? idConta, List<string> sort = null, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null, string dataCompraInicio = null, string dataCompraFim = null);
+        
+        /// <summary>
+        /// Listar saques com parcelas antecip\u00E1veis
+        /// </summary>
+        /// <remarks>
+        /// Lista os saques antecip\u00E1veis de uma conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">C\u00F3digo identificador da conta da Compra</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idCompra">C\u00F3digo identificador da Compra (optional)</param>
+        /// <param name="parcelada">Indica se a compra \u00E9 parcelada (optional)</param>
+        /// <param name="juros">Indica se a compra \u00E9 com ou sem juros (optional)</param>
+        /// <param name="tipoOrigemTransacao">Indica se a compra \u00E9 ON-US ou OFF-US (optional)</param>
+        /// <param name="dataCompraInicio">Data de compra(in\u00EDcio) (optional)</param>
+        /// <param name="dataCompraFim">Data de compra(fim) (optional)</param>
+        /// <returns>PageCompraResponse</returns>
+        PageCompraResponse ListarComprasAntecipaveis1 (long? idConta, List<string> sort = null, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null, string dataCompraInicio = null, string dataCompraFim = null);
+  
+        /// <summary>
+        /// Listar saques com parcelas antecip\u00E1veis
+        /// </summary>
+        /// <remarks>
+        /// Lista os saques antecip\u00E1veis de uma conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">C\u00F3digo identificador da conta da Compra</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idCompra">C\u00F3digo identificador da Compra (optional)</param>
+        /// <param name="parcelada">Indica se a compra \u00E9 parcelada (optional)</param>
+        /// <param name="juros">Indica se a compra \u00E9 com ou sem juros (optional)</param>
+        /// <param name="tipoOrigemTransacao">Indica se a compra \u00E9 ON-US ou OFF-US (optional)</param>
+        /// <param name="dataCompraInicio">Data de compra(in\u00EDcio) (optional)</param>
+        /// <param name="dataCompraFim">Data de compra(fim) (optional)</param>
+        /// <returns>ApiResponse of PageCompraResponse</returns>
+        ApiResponse<PageCompraResponse> ListarComprasAntecipaveis1WithHttpInfo (long? idConta, List<string> sort = null, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null, string dataCompraInicio = null, string dataCompraFim = null);
         
         /// <summary>
         /// Simular antecipa\u00E7\u00E3o de parcelas
@@ -163,8 +275,10 @@ namespace Conductor.Pier.Api
         /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta</param>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do evento</param>
         /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param>
+        /// <param name="juros">Indica o tipo de evento pesquisado: 0 = Sem juros, 1 = Com juros, 2 = ambos. O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 0 (sem juros) (optional)</param>
+        /// <param name="parcelado">Indica se o evento pesquisado deve ser parcelado. 0 = Sem ser parcelado, 1 = parcelado, 2 = ambos.  O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 1 (parcelado) (optional)</param>
         /// <returns>AntecipacaoSimuladaResponse</returns>
-        AntecipacaoSimuladaResponse SimularAntecipacaoCompra (long? idConta, long? id, string complemento = null);
+        AntecipacaoSimuladaResponse SimularAntecipacaoCompra (long? idConta, long? id, string complemento = null, int? juros = null, int? parcelado = null);
   
         /// <summary>
         /// Simular antecipa\u00E7\u00E3o de parcelas
@@ -176,8 +290,40 @@ namespace Conductor.Pier.Api
         /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta</param>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do evento</param>
         /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param>
+        /// <param name="juros">Indica o tipo de evento pesquisado: 0 = Sem juros, 1 = Com juros, 2 = ambos. O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 0 (sem juros) (optional)</param>
+        /// <param name="parcelado">Indica se o evento pesquisado deve ser parcelado. 0 = Sem ser parcelado, 1 = parcelado, 2 = ambos.  O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 1 (parcelado) (optional)</param>
         /// <returns>ApiResponse of AntecipacaoSimuladaResponse</returns>
-        ApiResponse<AntecipacaoSimuladaResponse> SimularAntecipacaoCompraWithHttpInfo (long? idConta, long? id, string complemento = null);
+        ApiResponse<AntecipacaoSimuladaResponse> SimularAntecipacaoCompraWithHttpInfo (long? idConta, long? id, string complemento = null, int? juros = null, int? parcelado = null);
+        
+        /// <summary>
+        /// Simular antecipa\u00E7\u00E3o de parcelas
+        /// </summary>
+        /// <remarks>
+        /// Simula a antecipa\u00E7\u00E3o de parcelas de um evento, listando todos os planos de parcelamento dispon\u00EDveis, cujo desconto \u00E9 calculado baseado na data da \u00FAltima parcela em aberto
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do evento</param>
+        /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param>
+        /// <param name="juros">Indica o tipo de evento pesquisado: 0 = Sem juros, 1 = Com juros, 2 = ambos. O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 0 (sem juros) (optional)</param>
+        /// <param name="parcelado">Indica se o evento pesquisado deve ser parcelado. 0 = Sem ser parcelado, 1 = parcelado, 2 = ambos.  O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 1 (parcelado) (optional)</param>
+        /// <returns>AntecipacaoSimuladaResponse</returns>
+        AntecipacaoSimuladaResponse SimularAntecipacaoCompra1 (long? idConta, long? id, string complemento = null, int? juros = null, int? parcelado = null);
+  
+        /// <summary>
+        /// Simular antecipa\u00E7\u00E3o de parcelas
+        /// </summary>
+        /// <remarks>
+        /// Simula a antecipa\u00E7\u00E3o de parcelas de um evento, listando todos os planos de parcelamento dispon\u00EDveis, cujo desconto \u00E9 calculado baseado na data da \u00FAltima parcela em aberto
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do evento</param>
+        /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param>
+        /// <param name="juros">Indica o tipo de evento pesquisado: 0 = Sem juros, 1 = Com juros, 2 = ambos. O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 0 (sem juros) (optional)</param>
+        /// <param name="parcelado">Indica se o evento pesquisado deve ser parcelado. 0 = Sem ser parcelado, 1 = parcelado, 2 = ambos.  O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 1 (parcelado) (optional)</param>
+        /// <returns>ApiResponse of AntecipacaoSimuladaResponse</returns>
+        ApiResponse<AntecipacaoSimuladaResponse> SimularAntecipacaoCompra1WithHttpInfo (long? idConta, long? id, string complemento = null, int? juros = null, int? parcelado = null);
         
         /// <summary>
         /// Simular antecipa\u00E7\u00E3o de todas as parcelas antecip\u00E1veis
@@ -188,8 +334,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta</param>
         /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param>
+        /// <param name="juros">Indica o tipo de evento pesquisado: 0 = Sem juros, 1 = Com juros, 2 = ambos. O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 0 (sem juros) (optional)</param>
+        /// <param name="parcelado">Indica se o evento pesquisado deve ser parcelado. 0 = Sem ser parcelado, 1 = parcelado, 2 = ambos.  O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 1 (parcelado) (optional)</param>
         /// <returns>AntecipacaoSimuladaLoteResponse</returns>
-        AntecipacaoSimuladaLoteResponse SimularAntecipacoesEmLote (long? idConta, string complemento = null);
+        AntecipacaoSimuladaLoteResponse SimularAntecipacoesEmLote (long? idConta, string complemento = null, int? juros = null, int? parcelado = null);
   
         /// <summary>
         /// Simular antecipa\u00E7\u00E3o de todas as parcelas antecip\u00E1veis
@@ -200,8 +348,38 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta</param>
         /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param>
+        /// <param name="juros">Indica o tipo de evento pesquisado: 0 = Sem juros, 1 = Com juros, 2 = ambos. O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 0 (sem juros) (optional)</param>
+        /// <param name="parcelado">Indica se o evento pesquisado deve ser parcelado. 0 = Sem ser parcelado, 1 = parcelado, 2 = ambos.  O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 1 (parcelado) (optional)</param>
         /// <returns>ApiResponse of AntecipacaoSimuladaLoteResponse</returns>
-        ApiResponse<AntecipacaoSimuladaLoteResponse> SimularAntecipacoesEmLoteWithHttpInfo (long? idConta, string complemento = null);
+        ApiResponse<AntecipacaoSimuladaLoteResponse> SimularAntecipacoesEmLoteWithHttpInfo (long? idConta, string complemento = null, int? juros = null, int? parcelado = null);
+        
+        /// <summary>
+        /// Simular antecipa\u00E7\u00E3o de todas as parcelas antecip\u00E1veis
+        /// </summary>
+        /// <remarks>
+        /// O recurso permite realizar a simula\u00E7\u00E3o da antecipa\u00E7\u00E3o de todas os saques antecip\u00E1veis de todas as parcelas de uma determinada conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta</param>
+        /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param>
+        /// <param name="juros">Indica o tipo de evento pesquisado: 0 = Sem juros, 1 = Com juros, 2 = ambos. O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 0 (sem juros) (optional)</param>
+        /// <param name="parcelado">Indica se o evento pesquisado deve ser parcelado. 0 = Sem ser parcelado, 1 = parcelado, 2 = ambos.  O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 1 (parcelado) (optional)</param>
+        /// <returns>AntecipacaoSimuladaLoteResponse</returns>
+        AntecipacaoSimuladaLoteResponse SimularAntecipacoesEmLote1 (long? idConta, string complemento = null, int? juros = null, int? parcelado = null);
+  
+        /// <summary>
+        /// Simular antecipa\u00E7\u00E3o de todas as parcelas antecip\u00E1veis
+        /// </summary>
+        /// <remarks>
+        /// O recurso permite realizar a simula\u00E7\u00E3o da antecipa\u00E7\u00E3o de todas os saques antecip\u00E1veis de todas as parcelas de uma determinada conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta</param>
+        /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param>
+        /// <param name="juros">Indica o tipo de evento pesquisado: 0 = Sem juros, 1 = Com juros, 2 = ambos. O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 0 (sem juros) (optional)</param>
+        /// <param name="parcelado">Indica se o evento pesquisado deve ser parcelado. 0 = Sem ser parcelado, 1 = parcelado, 2 = ambos.  O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 1 (parcelado) (optional)</param>
+        /// <returns>ApiResponse of AntecipacaoSimuladaLoteResponse</returns>
+        ApiResponse<AntecipacaoSimuladaLoteResponse> SimularAntecipacoesEmLote1WithHttpInfo (long? idConta, string complemento = null, int? juros = null, int? parcelado = null);
         
         #endregion Synchronous Operations
         
@@ -266,8 +444,10 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do evento</param>
         /// <param name="quantidadeParcelas">Quantidade de parcelas para serem antecipadas</param>
         /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param>
+        /// <param name="juros">Indica o tipo de evento pesquisado: 0 = Sem juros, 1 = Com juros, 2 = ambos. O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 0 (sem juros) (optional)</param>
+        /// <param name="parcelado">Indica se o evento pesquisado deve ser parcelado. 0 = Sem ser parcelado, 1 = parcelado, 2 = ambos.  O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 1 (parcelado) (optional)</param>
         /// <returns>Task of AntecipacaoResponse</returns>
-        System.Threading.Tasks.Task<AntecipacaoResponse> EfetivarAntecipacaoCompraAsync (long? idConta, long? id, long? quantidadeParcelas, string complemento = null);
+        System.Threading.Tasks.Task<AntecipacaoResponse> EfetivarAntecipacaoCompraAsync (long? idConta, long? id, long? quantidadeParcelas, string complemento = null, int? juros = null, int? parcelado = null);
 
         /// <summary>
         /// Faz a efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o
@@ -280,20 +460,56 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do evento</param>
         /// <param name="quantidadeParcelas">Quantidade de parcelas para serem antecipadas</param>
         /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param>
+        /// <param name="juros">Indica o tipo de evento pesquisado: 0 = Sem juros, 1 = Com juros, 2 = ambos. O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 0 (sem juros) (optional)</param>
+        /// <param name="parcelado">Indica se o evento pesquisado deve ser parcelado. 0 = Sem ser parcelado, 1 = parcelado, 2 = ambos.  O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 1 (parcelado) (optional)</param>
         /// <returns>Task of ApiResponse (AntecipacaoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AntecipacaoResponse>> EfetivarAntecipacaoCompraAsyncWithHttpInfo (long? idConta, long? id, long? quantidadeParcelas, string complemento = null);
+        System.Threading.Tasks.Task<ApiResponse<AntecipacaoResponse>> EfetivarAntecipacaoCompraAsyncWithHttpInfo (long? idConta, long? id, long? quantidadeParcelas, string complemento = null, int? juros = null, int? parcelado = null);
         
         /// <summary>
         /// Faz a efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o
         /// </summary>
         /// <remarks>
-        /// M\u00E9todo responsavel pela efetiva\u00E7\u00E3o de todas as compras antecip\u00E1veis com todas as parcelas de uma conta
+        /// M\u00E9todo responsavel pela efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o, cujo desconto \u00E9 calculado baseado na data da \u00FAltima parcela em aberto
         /// </remarks>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">C\u00F3digo de Identifica\u00E7\u00E3o da Conta</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do evento</param>
+        /// <param name="quantidadeParcelas">Quantidade de parcelas para serem antecipadas</param>
         /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param>
+        /// <param name="juros">Indica o tipo de evento pesquisado: 0 = Sem juros, 1 = Com juros, 2 = ambos. O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 0 (sem juros) (optional)</param>
+        /// <param name="parcelado">Indica se o evento pesquisado deve ser parcelado. 0 = Sem ser parcelado, 1 = parcelado, 2 = ambos.  O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 1 (parcelado) (optional)</param>
         /// <returns>Task of AntecipacaoResponse</returns>
-        System.Threading.Tasks.Task<AntecipacaoResponse> EfetivarAntecipacoesEmLotesAsync (long? idConta, string complemento = null);
+        System.Threading.Tasks.Task<AntecipacaoResponse> EfetivarAntecipacaoCompra1Async (long? idConta, long? id, long? quantidadeParcelas, string complemento = null, int? juros = null, int? parcelado = null);
+
+        /// <summary>
+        /// Faz a efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o
+        /// </summary>
+        /// <remarks>
+        /// M\u00E9todo responsavel pela efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o, cujo desconto \u00E9 calculado baseado na data da \u00FAltima parcela em aberto
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">C\u00F3digo de Identifica\u00E7\u00E3o da Conta</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do evento</param>
+        /// <param name="quantidadeParcelas">Quantidade de parcelas para serem antecipadas</param>
+        /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param>
+        /// <param name="juros">Indica o tipo de evento pesquisado: 0 = Sem juros, 1 = Com juros, 2 = ambos. O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 0 (sem juros) (optional)</param>
+        /// <param name="parcelado">Indica se o evento pesquisado deve ser parcelado. 0 = Sem ser parcelado, 1 = parcelado, 2 = ambos.  O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 1 (parcelado) (optional)</param>
+        /// <returns>Task of ApiResponse (AntecipacaoResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AntecipacaoResponse>> EfetivarAntecipacaoCompra1AsyncWithHttpInfo (long? idConta, long? id, long? quantidadeParcelas, string complemento = null, int? juros = null, int? parcelado = null);
+        
+        /// <summary>
+        /// Faz a efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o
+        /// </summary>
+        /// <remarks>
+        /// M\u00E9todo responsavel pela efetiva\u00E7\u00E3o de todas as compras antecip\u00E1veis com todas as parcelas de uma conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">C\u00F3digo de Identifica\u00E7\u00E3o da Conta</param>
+        /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param>
+        /// <param name="juros">Indica o tipo de evento pesquisado: 0 = Sem juros, 1 = Com juros, 2 = ambos. O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 0 (sem juros) (optional)</param>
+        /// <param name="parcelado">Indica se o evento pesquisado deve ser parcelado. 0 = Sem ser parcelado, 1 = parcelado, 2 = ambos.  O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 1 (parcelado) (optional)</param>
+        /// <returns>Task of AntecipacaoResponse</returns>
+        System.Threading.Tasks.Task<AntecipacaoResponse> EfetivarAntecipacoesEmLotesAsync (long? idConta, string complemento = null, int? juros = null, int? parcelado = null);
 
         /// <summary>
         /// Faz a efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o
@@ -304,8 +520,38 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">C\u00F3digo de Identifica\u00E7\u00E3o da Conta</param>
         /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param>
+        /// <param name="juros">Indica o tipo de evento pesquisado: 0 = Sem juros, 1 = Com juros, 2 = ambos. O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 0 (sem juros) (optional)</param>
+        /// <param name="parcelado">Indica se o evento pesquisado deve ser parcelado. 0 = Sem ser parcelado, 1 = parcelado, 2 = ambos.  O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 1 (parcelado) (optional)</param>
         /// <returns>Task of ApiResponse (AntecipacaoResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AntecipacaoResponse>> EfetivarAntecipacoesEmLotesAsyncWithHttpInfo (long? idConta, string complemento = null);
+        System.Threading.Tasks.Task<ApiResponse<AntecipacaoResponse>> EfetivarAntecipacoesEmLotesAsyncWithHttpInfo (long? idConta, string complemento = null, int? juros = null, int? parcelado = null);
+        
+        /// <summary>
+        /// Faz a efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o
+        /// </summary>
+        /// <remarks>
+        /// M\u00E9todo responsavel pela efetiva\u00E7\u00E3o de todas os saques antecip\u00E1veis com todas as parcelas de uma conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">C\u00F3digo de Identifica\u00E7\u00E3o da Conta</param>
+        /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param>
+        /// <param name="juros">Indica o tipo de evento pesquisado: 0 = Sem juros, 1 = Com juros, 2 = ambos. O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 0 (sem juros) (optional)</param>
+        /// <param name="parcelado">Indica se o evento pesquisado deve ser parcelado. 0 = Sem ser parcelado, 1 = parcelado, 2 = ambos.  O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 1 (parcelado) (optional)</param>
+        /// <returns>Task of AntecipacaoResponse</returns>
+        System.Threading.Tasks.Task<AntecipacaoResponse> EfetivarAntecipacoesEmLotes1Async (long? idConta, string complemento = null, int? juros = null, int? parcelado = null);
+
+        /// <summary>
+        /// Faz a efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o
+        /// </summary>
+        /// <remarks>
+        /// M\u00E9todo responsavel pela efetiva\u00E7\u00E3o de todas os saques antecip\u00E1veis com todas as parcelas de uma conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">C\u00F3digo de Identifica\u00E7\u00E3o da Conta</param>
+        /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param>
+        /// <param name="juros">Indica o tipo de evento pesquisado: 0 = Sem juros, 1 = Com juros, 2 = ambos. O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 0 (sem juros) (optional)</param>
+        /// <param name="parcelado">Indica se o evento pesquisado deve ser parcelado. 0 = Sem ser parcelado, 1 = parcelado, 2 = ambos.  O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 1 (parcelado) (optional)</param>
+        /// <returns>Task of ApiResponse (AntecipacaoResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AntecipacaoResponse>> EfetivarAntecipacoesEmLotes1AsyncWithHttpInfo (long? idConta, string complemento = null, int? juros = null, int? parcelado = null);
         
         /// <summary>
         /// Listar compras com parcelas antecip\u00E1veis
@@ -322,8 +568,10 @@ namespace Conductor.Pier.Api
         /// <param name="parcelada">Indica se a compra \u00E9 parcelada (optional)</param>
         /// <param name="juros">Indica se a compra \u00E9 com ou sem juros (optional)</param>
         /// <param name="tipoOrigemTransacao">Indica se a compra \u00E9 ON-US ou OFF-US (optional)</param>
+        /// <param name="dataCompraInicio">Data de compra(in\u00EDcio) (optional)</param>
+        /// <param name="dataCompraFim">Data de compra(fim) (optional)</param>
         /// <returns>Task of PageCompraResponse</returns>
-        System.Threading.Tasks.Task<PageCompraResponse> ListarComprasAntecipaveisAsync (long? idConta, List<string> sort = null, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null);
+        System.Threading.Tasks.Task<PageCompraResponse> ListarComprasAntecipaveisAsync (long? idConta, List<string> sort = null, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null, string dataCompraInicio = null, string dataCompraFim = null);
 
         /// <summary>
         /// Listar compras com parcelas antecip\u00E1veis
@@ -340,8 +588,50 @@ namespace Conductor.Pier.Api
         /// <param name="parcelada">Indica se a compra \u00E9 parcelada (optional)</param>
         /// <param name="juros">Indica se a compra \u00E9 com ou sem juros (optional)</param>
         /// <param name="tipoOrigemTransacao">Indica se a compra \u00E9 ON-US ou OFF-US (optional)</param>
+        /// <param name="dataCompraInicio">Data de compra(in\u00EDcio) (optional)</param>
+        /// <param name="dataCompraFim">Data de compra(fim) (optional)</param>
         /// <returns>Task of ApiResponse (PageCompraResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageCompraResponse>> ListarComprasAntecipaveisAsyncWithHttpInfo (long? idConta, List<string> sort = null, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null);
+        System.Threading.Tasks.Task<ApiResponse<PageCompraResponse>> ListarComprasAntecipaveisAsyncWithHttpInfo (long? idConta, List<string> sort = null, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null, string dataCompraInicio = null, string dataCompraFim = null);
+        
+        /// <summary>
+        /// Listar saques com parcelas antecip\u00E1veis
+        /// </summary>
+        /// <remarks>
+        /// Lista os saques antecip\u00E1veis de uma conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">C\u00F3digo identificador da conta da Compra</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idCompra">C\u00F3digo identificador da Compra (optional)</param>
+        /// <param name="parcelada">Indica se a compra \u00E9 parcelada (optional)</param>
+        /// <param name="juros">Indica se a compra \u00E9 com ou sem juros (optional)</param>
+        /// <param name="tipoOrigemTransacao">Indica se a compra \u00E9 ON-US ou OFF-US (optional)</param>
+        /// <param name="dataCompraInicio">Data de compra(in\u00EDcio) (optional)</param>
+        /// <param name="dataCompraFim">Data de compra(fim) (optional)</param>
+        /// <returns>Task of PageCompraResponse</returns>
+        System.Threading.Tasks.Task<PageCompraResponse> ListarComprasAntecipaveis1Async (long? idConta, List<string> sort = null, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null, string dataCompraInicio = null, string dataCompraFim = null);
+
+        /// <summary>
+        /// Listar saques com parcelas antecip\u00E1veis
+        /// </summary>
+        /// <remarks>
+        /// Lista os saques antecip\u00E1veis de uma conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">C\u00F3digo identificador da conta da Compra</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idCompra">C\u00F3digo identificador da Compra (optional)</param>
+        /// <param name="parcelada">Indica se a compra \u00E9 parcelada (optional)</param>
+        /// <param name="juros">Indica se a compra \u00E9 com ou sem juros (optional)</param>
+        /// <param name="tipoOrigemTransacao">Indica se a compra \u00E9 ON-US ou OFF-US (optional)</param>
+        /// <param name="dataCompraInicio">Data de compra(in\u00EDcio) (optional)</param>
+        /// <param name="dataCompraFim">Data de compra(fim) (optional)</param>
+        /// <returns>Task of ApiResponse (PageCompraResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PageCompraResponse>> ListarComprasAntecipaveis1AsyncWithHttpInfo (long? idConta, List<string> sort = null, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null, string dataCompraInicio = null, string dataCompraFim = null);
         
         /// <summary>
         /// Simular antecipa\u00E7\u00E3o de parcelas
@@ -353,8 +643,10 @@ namespace Conductor.Pier.Api
         /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta</param>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do evento</param>
         /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param>
+        /// <param name="juros">Indica o tipo de evento pesquisado: 0 = Sem juros, 1 = Com juros, 2 = ambos. O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 0 (sem juros) (optional)</param>
+        /// <param name="parcelado">Indica se o evento pesquisado deve ser parcelado. 0 = Sem ser parcelado, 1 = parcelado, 2 = ambos.  O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 1 (parcelado) (optional)</param>
         /// <returns>Task of AntecipacaoSimuladaResponse</returns>
-        System.Threading.Tasks.Task<AntecipacaoSimuladaResponse> SimularAntecipacaoCompraAsync (long? idConta, long? id, string complemento = null);
+        System.Threading.Tasks.Task<AntecipacaoSimuladaResponse> SimularAntecipacaoCompraAsync (long? idConta, long? id, string complemento = null, int? juros = null, int? parcelado = null);
 
         /// <summary>
         /// Simular antecipa\u00E7\u00E3o de parcelas
@@ -366,8 +658,40 @@ namespace Conductor.Pier.Api
         /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta</param>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do evento</param>
         /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param>
+        /// <param name="juros">Indica o tipo de evento pesquisado: 0 = Sem juros, 1 = Com juros, 2 = ambos. O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 0 (sem juros) (optional)</param>
+        /// <param name="parcelado">Indica se o evento pesquisado deve ser parcelado. 0 = Sem ser parcelado, 1 = parcelado, 2 = ambos.  O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 1 (parcelado) (optional)</param>
         /// <returns>Task of ApiResponse (AntecipacaoSimuladaResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AntecipacaoSimuladaResponse>> SimularAntecipacaoCompraAsyncWithHttpInfo (long? idConta, long? id, string complemento = null);
+        System.Threading.Tasks.Task<ApiResponse<AntecipacaoSimuladaResponse>> SimularAntecipacaoCompraAsyncWithHttpInfo (long? idConta, long? id, string complemento = null, int? juros = null, int? parcelado = null);
+        
+        /// <summary>
+        /// Simular antecipa\u00E7\u00E3o de parcelas
+        /// </summary>
+        /// <remarks>
+        /// Simula a antecipa\u00E7\u00E3o de parcelas de um evento, listando todos os planos de parcelamento dispon\u00EDveis, cujo desconto \u00E9 calculado baseado na data da \u00FAltima parcela em aberto
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do evento</param>
+        /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param>
+        /// <param name="juros">Indica o tipo de evento pesquisado: 0 = Sem juros, 1 = Com juros, 2 = ambos. O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 0 (sem juros) (optional)</param>
+        /// <param name="parcelado">Indica se o evento pesquisado deve ser parcelado. 0 = Sem ser parcelado, 1 = parcelado, 2 = ambos.  O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 1 (parcelado) (optional)</param>
+        /// <returns>Task of AntecipacaoSimuladaResponse</returns>
+        System.Threading.Tasks.Task<AntecipacaoSimuladaResponse> SimularAntecipacaoCompra1Async (long? idConta, long? id, string complemento = null, int? juros = null, int? parcelado = null);
+
+        /// <summary>
+        /// Simular antecipa\u00E7\u00E3o de parcelas
+        /// </summary>
+        /// <remarks>
+        /// Simula a antecipa\u00E7\u00E3o de parcelas de um evento, listando todos os planos de parcelamento dispon\u00EDveis, cujo desconto \u00E9 calculado baseado na data da \u00FAltima parcela em aberto
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do evento</param>
+        /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param>
+        /// <param name="juros">Indica o tipo de evento pesquisado: 0 = Sem juros, 1 = Com juros, 2 = ambos. O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 0 (sem juros) (optional)</param>
+        /// <param name="parcelado">Indica se o evento pesquisado deve ser parcelado. 0 = Sem ser parcelado, 1 = parcelado, 2 = ambos.  O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 1 (parcelado) (optional)</param>
+        /// <returns>Task of ApiResponse (AntecipacaoSimuladaResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AntecipacaoSimuladaResponse>> SimularAntecipacaoCompra1AsyncWithHttpInfo (long? idConta, long? id, string complemento = null, int? juros = null, int? parcelado = null);
         
         /// <summary>
         /// Simular antecipa\u00E7\u00E3o de todas as parcelas antecip\u00E1veis
@@ -378,8 +702,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta</param>
         /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param>
+        /// <param name="juros">Indica o tipo de evento pesquisado: 0 = Sem juros, 1 = Com juros, 2 = ambos. O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 0 (sem juros) (optional)</param>
+        /// <param name="parcelado">Indica se o evento pesquisado deve ser parcelado. 0 = Sem ser parcelado, 1 = parcelado, 2 = ambos.  O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 1 (parcelado) (optional)</param>
         /// <returns>Task of AntecipacaoSimuladaLoteResponse</returns>
-        System.Threading.Tasks.Task<AntecipacaoSimuladaLoteResponse> SimularAntecipacoesEmLoteAsync (long? idConta, string complemento = null);
+        System.Threading.Tasks.Task<AntecipacaoSimuladaLoteResponse> SimularAntecipacoesEmLoteAsync (long? idConta, string complemento = null, int? juros = null, int? parcelado = null);
 
         /// <summary>
         /// Simular antecipa\u00E7\u00E3o de todas as parcelas antecip\u00E1veis
@@ -390,8 +716,38 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta</param>
         /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param>
+        /// <param name="juros">Indica o tipo de evento pesquisado: 0 = Sem juros, 1 = Com juros, 2 = ambos. O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 0 (sem juros) (optional)</param>
+        /// <param name="parcelado">Indica se o evento pesquisado deve ser parcelado. 0 = Sem ser parcelado, 1 = parcelado, 2 = ambos.  O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 1 (parcelado) (optional)</param>
         /// <returns>Task of ApiResponse (AntecipacaoSimuladaLoteResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AntecipacaoSimuladaLoteResponse>> SimularAntecipacoesEmLoteAsyncWithHttpInfo (long? idConta, string complemento = null);
+        System.Threading.Tasks.Task<ApiResponse<AntecipacaoSimuladaLoteResponse>> SimularAntecipacoesEmLoteAsyncWithHttpInfo (long? idConta, string complemento = null, int? juros = null, int? parcelado = null);
+        
+        /// <summary>
+        /// Simular antecipa\u00E7\u00E3o de todas as parcelas antecip\u00E1veis
+        /// </summary>
+        /// <remarks>
+        /// O recurso permite realizar a simula\u00E7\u00E3o da antecipa\u00E7\u00E3o de todas os saques antecip\u00E1veis de todas as parcelas de uma determinada conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta</param>
+        /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param>
+        /// <param name="juros">Indica o tipo de evento pesquisado: 0 = Sem juros, 1 = Com juros, 2 = ambos. O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 0 (sem juros) (optional)</param>
+        /// <param name="parcelado">Indica se o evento pesquisado deve ser parcelado. 0 = Sem ser parcelado, 1 = parcelado, 2 = ambos.  O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 1 (parcelado) (optional)</param>
+        /// <returns>Task of AntecipacaoSimuladaLoteResponse</returns>
+        System.Threading.Tasks.Task<AntecipacaoSimuladaLoteResponse> SimularAntecipacoesEmLote1Async (long? idConta, string complemento = null, int? juros = null, int? parcelado = null);
+
+        /// <summary>
+        /// Simular antecipa\u00E7\u00E3o de todas as parcelas antecip\u00E1veis
+        /// </summary>
+        /// <remarks>
+        /// O recurso permite realizar a simula\u00E7\u00E3o da antecipa\u00E7\u00E3o de todas os saques antecip\u00E1veis de todas as parcelas de uma determinada conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta</param>
+        /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param>
+        /// <param name="juros">Indica o tipo de evento pesquisado: 0 = Sem juros, 1 = Com juros, 2 = ambos. O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 0 (sem juros) (optional)</param>
+        /// <param name="parcelado">Indica se o evento pesquisado deve ser parcelado. 0 = Sem ser parcelado, 1 = parcelado, 2 = ambos.  O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 1 (parcelado) (optional)</param>
+        /// <returns>Task of ApiResponse (AntecipacaoSimuladaLoteResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AntecipacaoSimuladaLoteResponse>> SimularAntecipacoesEmLote1AsyncWithHttpInfo (long? idConta, string complemento = null, int? juros = null, int? parcelado = null);
         
         #endregion Asynchronous Operations
         
@@ -845,10 +1201,12 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do evento</param> 
         /// <param name="quantidadeParcelas">Quantidade de parcelas para serem antecipadas</param> 
         /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param> 
+        /// <param name="juros">Indica o tipo de evento pesquisado: 0 = Sem juros, 1 = Com juros, 2 = ambos. O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 0 (sem juros) (optional)</param> 
+        /// <param name="parcelado">Indica se o evento pesquisado deve ser parcelado. 0 = Sem ser parcelado, 1 = parcelado, 2 = ambos.  O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 1 (parcelado) (optional)</param> 
         /// <returns>AntecipacaoResponse</returns>
-        public AntecipacaoResponse EfetivarAntecipacaoCompra (long? idConta, long? id, long? quantidadeParcelas, string complemento = null)
+        public AntecipacaoResponse EfetivarAntecipacaoCompra (long? idConta, long? id, long? quantidadeParcelas, string complemento = null, int? juros = null, int? parcelado = null)
         {
-             ApiResponse<AntecipacaoResponse> localVarResponse = EfetivarAntecipacaoCompraWithHttpInfo(idConta, id, quantidadeParcelas, complemento);
+             ApiResponse<AntecipacaoResponse> localVarResponse = EfetivarAntecipacaoCompraWithHttpInfo(idConta, id, quantidadeParcelas, complemento, juros, parcelado);
              return localVarResponse.Data;
         }
 
@@ -860,8 +1218,10 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do evento</param> 
         /// <param name="quantidadeParcelas">Quantidade de parcelas para serem antecipadas</param> 
         /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param> 
+        /// <param name="juros">Indica o tipo de evento pesquisado: 0 = Sem juros, 1 = Com juros, 2 = ambos. O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 0 (sem juros) (optional)</param> 
+        /// <param name="parcelado">Indica se o evento pesquisado deve ser parcelado. 0 = Sem ser parcelado, 1 = parcelado, 2 = ambos.  O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 1 (parcelado) (optional)</param> 
         /// <returns>ApiResponse of AntecipacaoResponse</returns>
-        public ApiResponse< AntecipacaoResponse > EfetivarAntecipacaoCompraWithHttpInfo (long? idConta, long? id, long? quantidadeParcelas, string complemento = null)
+        public ApiResponse< AntecipacaoResponse > EfetivarAntecipacaoCompraWithHttpInfo (long? idConta, long? id, long? quantidadeParcelas, string complemento = null, int? juros = null, int? parcelado = null)
         {
             
             // verify the required parameter 'idConta' is set
@@ -908,6 +1268,8 @@ namespace Conductor.Pier.Api
             if (idConta != null) localVarQueryParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // query parameter
             if (quantidadeParcelas != null) localVarQueryParams.Add("quantidadeParcelas", Configuration.ApiClient.ParameterToString(quantidadeParcelas)); // query parameter
             if (complemento != null) localVarQueryParams.Add("complemento", Configuration.ApiClient.ParameterToString(complemento)); // query parameter
+            if (juros != null) localVarQueryParams.Add("juros", Configuration.ApiClient.ParameterToString(juros)); // query parameter
+            if (parcelado != null) localVarQueryParams.Add("parcelado", Configuration.ApiClient.ParameterToString(parcelado)); // query parameter
             
             
             
@@ -942,10 +1304,12 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do evento</param>
         /// <param name="quantidadeParcelas">Quantidade de parcelas para serem antecipadas</param>
         /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param>
+        /// <param name="juros">Indica o tipo de evento pesquisado: 0 = Sem juros, 1 = Com juros, 2 = ambos. O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 0 (sem juros) (optional)</param>
+        /// <param name="parcelado">Indica se o evento pesquisado deve ser parcelado. 0 = Sem ser parcelado, 1 = parcelado, 2 = ambos.  O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 1 (parcelado) (optional)</param>
         /// <returns>Task of AntecipacaoResponse</returns>
-        public async System.Threading.Tasks.Task<AntecipacaoResponse> EfetivarAntecipacaoCompraAsync (long? idConta, long? id, long? quantidadeParcelas, string complemento = null)
+        public async System.Threading.Tasks.Task<AntecipacaoResponse> EfetivarAntecipacaoCompraAsync (long? idConta, long? id, long? quantidadeParcelas, string complemento = null, int? juros = null, int? parcelado = null)
         {
-             ApiResponse<AntecipacaoResponse> localVarResponse = await EfetivarAntecipacaoCompraAsyncWithHttpInfo(idConta, id, quantidadeParcelas, complemento);
+             ApiResponse<AntecipacaoResponse> localVarResponse = await EfetivarAntecipacaoCompraAsyncWithHttpInfo(idConta, id, quantidadeParcelas, complemento, juros, parcelado);
              return localVarResponse.Data;
 
         }
@@ -958,8 +1322,10 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do evento</param>
         /// <param name="quantidadeParcelas">Quantidade de parcelas para serem antecipadas</param>
         /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param>
+        /// <param name="juros">Indica o tipo de evento pesquisado: 0 = Sem juros, 1 = Com juros, 2 = ambos. O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 0 (sem juros) (optional)</param>
+        /// <param name="parcelado">Indica se o evento pesquisado deve ser parcelado. 0 = Sem ser parcelado, 1 = parcelado, 2 = ambos.  O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 1 (parcelado) (optional)</param>
         /// <returns>Task of ApiResponse (AntecipacaoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AntecipacaoResponse>> EfetivarAntecipacaoCompraAsyncWithHttpInfo (long? idConta, long? id, long? quantidadeParcelas, string complemento = null)
+        public async System.Threading.Tasks.Task<ApiResponse<AntecipacaoResponse>> EfetivarAntecipacaoCompraAsyncWithHttpInfo (long? idConta, long? id, long? quantidadeParcelas, string complemento = null, int? juros = null, int? parcelado = null)
         {
             // verify the required parameter 'idConta' is set
             if (idConta == null) throw new ApiException(400, "Missing required parameter 'idConta' when calling EfetivarAntecipacaoCompra");
@@ -1000,6 +1366,8 @@ namespace Conductor.Pier.Api
             if (idConta != null) localVarQueryParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // query parameter
             if (quantidadeParcelas != null) localVarQueryParams.Add("quantidadeParcelas", Configuration.ApiClient.ParameterToString(quantidadeParcelas)); // query parameter
             if (complemento != null) localVarQueryParams.Add("complemento", Configuration.ApiClient.ParameterToString(complemento)); // query parameter
+            if (juros != null) localVarQueryParams.Add("juros", Configuration.ApiClient.ParameterToString(juros)); // query parameter
+            if (parcelado != null) localVarQueryParams.Add("parcelado", Configuration.ApiClient.ParameterToString(parcelado)); // query parameter
             
             
             
@@ -1026,15 +1394,217 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
+        /// Faz a efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o M\u00E9todo responsavel pela efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o, cujo desconto \u00E9 calculado baseado na data da \u00FAltima parcela em aberto
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">C\u00F3digo de Identifica\u00E7\u00E3o da Conta</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do evento</param> 
+        /// <param name="quantidadeParcelas">Quantidade de parcelas para serem antecipadas</param> 
+        /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param> 
+        /// <param name="juros">Indica o tipo de evento pesquisado: 0 = Sem juros, 1 = Com juros, 2 = ambos. O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 0 (sem juros) (optional)</param> 
+        /// <param name="parcelado">Indica se o evento pesquisado deve ser parcelado. 0 = Sem ser parcelado, 1 = parcelado, 2 = ambos.  O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 1 (parcelado) (optional)</param> 
+        /// <returns>AntecipacaoResponse</returns>
+        public AntecipacaoResponse EfetivarAntecipacaoCompra1 (long? idConta, long? id, long? quantidadeParcelas, string complemento = null, int? juros = null, int? parcelado = null)
+        {
+             ApiResponse<AntecipacaoResponse> localVarResponse = EfetivarAntecipacaoCompra1WithHttpInfo(idConta, id, quantidadeParcelas, complemento, juros, parcelado);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Faz a efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o M\u00E9todo responsavel pela efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o, cujo desconto \u00E9 calculado baseado na data da \u00FAltima parcela em aberto
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">C\u00F3digo de Identifica\u00E7\u00E3o da Conta</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do evento</param> 
+        /// <param name="quantidadeParcelas">Quantidade de parcelas para serem antecipadas</param> 
+        /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param> 
+        /// <param name="juros">Indica o tipo de evento pesquisado: 0 = Sem juros, 1 = Com juros, 2 = ambos. O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 0 (sem juros) (optional)</param> 
+        /// <param name="parcelado">Indica se o evento pesquisado deve ser parcelado. 0 = Sem ser parcelado, 1 = parcelado, 2 = ambos.  O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 1 (parcelado) (optional)</param> 
+        /// <returns>ApiResponse of AntecipacaoResponse</returns>
+        public ApiResponse< AntecipacaoResponse > EfetivarAntecipacaoCompra1WithHttpInfo (long? idConta, long? id, long? quantidadeParcelas, string complemento = null, int? juros = null, int? parcelado = null)
+        {
+            
+            // verify the required parameter 'idConta' is set
+            if (idConta == null)
+                throw new ApiException(400, "Missing required parameter 'idConta' when calling AntecipacaoApi->EfetivarAntecipacaoCompra1");
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling AntecipacaoApi->EfetivarAntecipacaoCompra1");
+            
+            // verify the required parameter 'quantidadeParcelas' is set
+            if (quantidadeParcelas == null)
+                throw new ApiException(400, "Missing required parameter 'quantidadeParcelas' when calling AntecipacaoApi->EfetivarAntecipacaoCompra1");
+            
+    
+            var localVarPath = "/api/saques-antecipaveis/{id}/efetivar-antecipacao";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            if (idConta != null) localVarQueryParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // query parameter
+            if (quantidadeParcelas != null) localVarQueryParams.Add("quantidadeParcelas", Configuration.ApiClient.ParameterToString(quantidadeParcelas)); // query parameter
+            if (complemento != null) localVarQueryParams.Add("complemento", Configuration.ApiClient.ParameterToString(complemento)); // query parameter
+            if (juros != null) localVarQueryParams.Add("juros", Configuration.ApiClient.ParameterToString(juros)); // query parameter
+            if (parcelado != null) localVarQueryParams.Add("parcelado", Configuration.ApiClient.ParameterToString(parcelado)); // query parameter
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling EfetivarAntecipacaoCompra1: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling EfetivarAntecipacaoCompra1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<AntecipacaoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AntecipacaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AntecipacaoResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Faz a efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o M\u00E9todo responsavel pela efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o, cujo desconto \u00E9 calculado baseado na data da \u00FAltima parcela em aberto
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">C\u00F3digo de Identifica\u00E7\u00E3o da Conta</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do evento</param>
+        /// <param name="quantidadeParcelas">Quantidade de parcelas para serem antecipadas</param>
+        /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param>
+        /// <param name="juros">Indica o tipo de evento pesquisado: 0 = Sem juros, 1 = Com juros, 2 = ambos. O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 0 (sem juros) (optional)</param>
+        /// <param name="parcelado">Indica se o evento pesquisado deve ser parcelado. 0 = Sem ser parcelado, 1 = parcelado, 2 = ambos.  O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 1 (parcelado) (optional)</param>
+        /// <returns>Task of AntecipacaoResponse</returns>
+        public async System.Threading.Tasks.Task<AntecipacaoResponse> EfetivarAntecipacaoCompra1Async (long? idConta, long? id, long? quantidadeParcelas, string complemento = null, int? juros = null, int? parcelado = null)
+        {
+             ApiResponse<AntecipacaoResponse> localVarResponse = await EfetivarAntecipacaoCompra1AsyncWithHttpInfo(idConta, id, quantidadeParcelas, complemento, juros, parcelado);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Faz a efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o M\u00E9todo responsavel pela efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o, cujo desconto \u00E9 calculado baseado na data da \u00FAltima parcela em aberto
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">C\u00F3digo de Identifica\u00E7\u00E3o da Conta</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do evento</param>
+        /// <param name="quantidadeParcelas">Quantidade de parcelas para serem antecipadas</param>
+        /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param>
+        /// <param name="juros">Indica o tipo de evento pesquisado: 0 = Sem juros, 1 = Com juros, 2 = ambos. O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 0 (sem juros) (optional)</param>
+        /// <param name="parcelado">Indica se o evento pesquisado deve ser parcelado. 0 = Sem ser parcelado, 1 = parcelado, 2 = ambos.  O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 1 (parcelado) (optional)</param>
+        /// <returns>Task of ApiResponse (AntecipacaoResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AntecipacaoResponse>> EfetivarAntecipacaoCompra1AsyncWithHttpInfo (long? idConta, long? id, long? quantidadeParcelas, string complemento = null, int? juros = null, int? parcelado = null)
+        {
+            // verify the required parameter 'idConta' is set
+            if (idConta == null) throw new ApiException(400, "Missing required parameter 'idConta' when calling EfetivarAntecipacaoCompra1");
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling EfetivarAntecipacaoCompra1");
+            // verify the required parameter 'quantidadeParcelas' is set
+            if (quantidadeParcelas == null) throw new ApiException(400, "Missing required parameter 'quantidadeParcelas' when calling EfetivarAntecipacaoCompra1");
+            
+    
+            var localVarPath = "/api/saques-antecipaveis/{id}/efetivar-antecipacao";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            if (idConta != null) localVarQueryParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // query parameter
+            if (quantidadeParcelas != null) localVarQueryParams.Add("quantidadeParcelas", Configuration.ApiClient.ParameterToString(quantidadeParcelas)); // query parameter
+            if (complemento != null) localVarQueryParams.Add("complemento", Configuration.ApiClient.ParameterToString(complemento)); // query parameter
+            if (juros != null) localVarQueryParams.Add("juros", Configuration.ApiClient.ParameterToString(juros)); // query parameter
+            if (parcelado != null) localVarQueryParams.Add("parcelado", Configuration.ApiClient.ParameterToString(parcelado)); // query parameter
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling EfetivarAntecipacaoCompra1: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling EfetivarAntecipacaoCompra1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AntecipacaoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AntecipacaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AntecipacaoResponse)));
+            
+        }
+        
+        /// <summary>
         /// Faz a efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o M\u00E9todo responsavel pela efetiva\u00E7\u00E3o de todas as compras antecip\u00E1veis com todas as parcelas de uma conta
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">C\u00F3digo de Identifica\u00E7\u00E3o da Conta</param> 
         /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param> 
+        /// <param name="juros">Indica o tipo de evento pesquisado: 0 = Sem juros, 1 = Com juros, 2 = ambos. O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 0 (sem juros) (optional)</param> 
+        /// <param name="parcelado">Indica se o evento pesquisado deve ser parcelado. 0 = Sem ser parcelado, 1 = parcelado, 2 = ambos.  O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 1 (parcelado) (optional)</param> 
         /// <returns>AntecipacaoResponse</returns>
-        public AntecipacaoResponse EfetivarAntecipacoesEmLotes (long? idConta, string complemento = null)
+        public AntecipacaoResponse EfetivarAntecipacoesEmLotes (long? idConta, string complemento = null, int? juros = null, int? parcelado = null)
         {
-             ApiResponse<AntecipacaoResponse> localVarResponse = EfetivarAntecipacoesEmLotesWithHttpInfo(idConta, complemento);
+             ApiResponse<AntecipacaoResponse> localVarResponse = EfetivarAntecipacoesEmLotesWithHttpInfo(idConta, complemento, juros, parcelado);
              return localVarResponse.Data;
         }
 
@@ -1044,8 +1614,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">C\u00F3digo de Identifica\u00E7\u00E3o da Conta</param> 
         /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param> 
+        /// <param name="juros">Indica o tipo de evento pesquisado: 0 = Sem juros, 1 = Com juros, 2 = ambos. O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 0 (sem juros) (optional)</param> 
+        /// <param name="parcelado">Indica se o evento pesquisado deve ser parcelado. 0 = Sem ser parcelado, 1 = parcelado, 2 = ambos.  O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 1 (parcelado) (optional)</param> 
         /// <returns>ApiResponse of AntecipacaoResponse</returns>
-        public ApiResponse< AntecipacaoResponse > EfetivarAntecipacoesEmLotesWithHttpInfo (long? idConta, string complemento = null)
+        public ApiResponse< AntecipacaoResponse > EfetivarAntecipacoesEmLotesWithHttpInfo (long? idConta, string complemento = null, int? juros = null, int? parcelado = null)
         {
             
             // verify the required parameter 'idConta' is set
@@ -1082,6 +1654,8 @@ namespace Conductor.Pier.Api
             
             if (idConta != null) localVarQueryParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // query parameter
             if (complemento != null) localVarQueryParams.Add("complemento", Configuration.ApiClient.ParameterToString(complemento)); // query parameter
+            if (juros != null) localVarQueryParams.Add("juros", Configuration.ApiClient.ParameterToString(juros)); // query parameter
+            if (parcelado != null) localVarQueryParams.Add("parcelado", Configuration.ApiClient.ParameterToString(parcelado)); // query parameter
             
             
             
@@ -1114,10 +1688,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">C\u00F3digo de Identifica\u00E7\u00E3o da Conta</param>
         /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param>
+        /// <param name="juros">Indica o tipo de evento pesquisado: 0 = Sem juros, 1 = Com juros, 2 = ambos. O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 0 (sem juros) (optional)</param>
+        /// <param name="parcelado">Indica se o evento pesquisado deve ser parcelado. 0 = Sem ser parcelado, 1 = parcelado, 2 = ambos.  O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 1 (parcelado) (optional)</param>
         /// <returns>Task of AntecipacaoResponse</returns>
-        public async System.Threading.Tasks.Task<AntecipacaoResponse> EfetivarAntecipacoesEmLotesAsync (long? idConta, string complemento = null)
+        public async System.Threading.Tasks.Task<AntecipacaoResponse> EfetivarAntecipacoesEmLotesAsync (long? idConta, string complemento = null, int? juros = null, int? parcelado = null)
         {
-             ApiResponse<AntecipacaoResponse> localVarResponse = await EfetivarAntecipacoesEmLotesAsyncWithHttpInfo(idConta, complemento);
+             ApiResponse<AntecipacaoResponse> localVarResponse = await EfetivarAntecipacoesEmLotesAsyncWithHttpInfo(idConta, complemento, juros, parcelado);
              return localVarResponse.Data;
 
         }
@@ -1128,8 +1704,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">C\u00F3digo de Identifica\u00E7\u00E3o da Conta</param>
         /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param>
+        /// <param name="juros">Indica o tipo de evento pesquisado: 0 = Sem juros, 1 = Com juros, 2 = ambos. O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 0 (sem juros) (optional)</param>
+        /// <param name="parcelado">Indica se o evento pesquisado deve ser parcelado. 0 = Sem ser parcelado, 1 = parcelado, 2 = ambos.  O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 1 (parcelado) (optional)</param>
         /// <returns>Task of ApiResponse (AntecipacaoResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AntecipacaoResponse>> EfetivarAntecipacoesEmLotesAsyncWithHttpInfo (long? idConta, string complemento = null)
+        public async System.Threading.Tasks.Task<ApiResponse<AntecipacaoResponse>> EfetivarAntecipacoesEmLotesAsyncWithHttpInfo (long? idConta, string complemento = null, int? juros = null, int? parcelado = null)
         {
             // verify the required parameter 'idConta' is set
             if (idConta == null) throw new ApiException(400, "Missing required parameter 'idConta' when calling EfetivarAntecipacoesEmLotes");
@@ -1164,6 +1742,8 @@ namespace Conductor.Pier.Api
             
             if (idConta != null) localVarQueryParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // query parameter
             if (complemento != null) localVarQueryParams.Add("complemento", Configuration.ApiClient.ParameterToString(complemento)); // query parameter
+            if (juros != null) localVarQueryParams.Add("juros", Configuration.ApiClient.ParameterToString(juros)); // query parameter
+            if (parcelado != null) localVarQueryParams.Add("parcelado", Configuration.ApiClient.ParameterToString(parcelado)); // query parameter
             
             
             
@@ -1190,6 +1770,182 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
+        /// Faz a efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o M\u00E9todo responsavel pela efetiva\u00E7\u00E3o de todas os saques antecip\u00E1veis com todas as parcelas de uma conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">C\u00F3digo de Identifica\u00E7\u00E3o da Conta</param> 
+        /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param> 
+        /// <param name="juros">Indica o tipo de evento pesquisado: 0 = Sem juros, 1 = Com juros, 2 = ambos. O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 0 (sem juros) (optional)</param> 
+        /// <param name="parcelado">Indica se o evento pesquisado deve ser parcelado. 0 = Sem ser parcelado, 1 = parcelado, 2 = ambos.  O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 1 (parcelado) (optional)</param> 
+        /// <returns>AntecipacaoResponse</returns>
+        public AntecipacaoResponse EfetivarAntecipacoesEmLotes1 (long? idConta, string complemento = null, int? juros = null, int? parcelado = null)
+        {
+             ApiResponse<AntecipacaoResponse> localVarResponse = EfetivarAntecipacoesEmLotes1WithHttpInfo(idConta, complemento, juros, parcelado);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Faz a efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o M\u00E9todo responsavel pela efetiva\u00E7\u00E3o de todas os saques antecip\u00E1veis com todas as parcelas de uma conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">C\u00F3digo de Identifica\u00E7\u00E3o da Conta</param> 
+        /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param> 
+        /// <param name="juros">Indica o tipo de evento pesquisado: 0 = Sem juros, 1 = Com juros, 2 = ambos. O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 0 (sem juros) (optional)</param> 
+        /// <param name="parcelado">Indica se o evento pesquisado deve ser parcelado. 0 = Sem ser parcelado, 1 = parcelado, 2 = ambos.  O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 1 (parcelado) (optional)</param> 
+        /// <returns>ApiResponse of AntecipacaoResponse</returns>
+        public ApiResponse< AntecipacaoResponse > EfetivarAntecipacoesEmLotes1WithHttpInfo (long? idConta, string complemento = null, int? juros = null, int? parcelado = null)
+        {
+            
+            // verify the required parameter 'idConta' is set
+            if (idConta == null)
+                throw new ApiException(400, "Missing required parameter 'idConta' when calling AntecipacaoApi->EfetivarAntecipacoesEmLotes1");
+            
+    
+            var localVarPath = "/api/saques-antecipaveis/efetivar-antecipacao";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (idConta != null) localVarQueryParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // query parameter
+            if (complemento != null) localVarQueryParams.Add("complemento", Configuration.ApiClient.ParameterToString(complemento)); // query parameter
+            if (juros != null) localVarQueryParams.Add("juros", Configuration.ApiClient.ParameterToString(juros)); // query parameter
+            if (parcelado != null) localVarQueryParams.Add("parcelado", Configuration.ApiClient.ParameterToString(parcelado)); // query parameter
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling EfetivarAntecipacoesEmLotes1: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling EfetivarAntecipacoesEmLotes1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<AntecipacaoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AntecipacaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AntecipacaoResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Faz a efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o M\u00E9todo responsavel pela efetiva\u00E7\u00E3o de todas os saques antecip\u00E1veis com todas as parcelas de uma conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">C\u00F3digo de Identifica\u00E7\u00E3o da Conta</param>
+        /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param>
+        /// <param name="juros">Indica o tipo de evento pesquisado: 0 = Sem juros, 1 = Com juros, 2 = ambos. O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 0 (sem juros) (optional)</param>
+        /// <param name="parcelado">Indica se o evento pesquisado deve ser parcelado. 0 = Sem ser parcelado, 1 = parcelado, 2 = ambos.  O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 1 (parcelado) (optional)</param>
+        /// <returns>Task of AntecipacaoResponse</returns>
+        public async System.Threading.Tasks.Task<AntecipacaoResponse> EfetivarAntecipacoesEmLotes1Async (long? idConta, string complemento = null, int? juros = null, int? parcelado = null)
+        {
+             ApiResponse<AntecipacaoResponse> localVarResponse = await EfetivarAntecipacoesEmLotes1AsyncWithHttpInfo(idConta, complemento, juros, parcelado);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Faz a efetiva\u00E7\u00E3o da antecipa\u00E7\u00E3o M\u00E9todo responsavel pela efetiva\u00E7\u00E3o de todas os saques antecip\u00E1veis com todas as parcelas de uma conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">C\u00F3digo de Identifica\u00E7\u00E3o da Conta</param>
+        /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param>
+        /// <param name="juros">Indica o tipo de evento pesquisado: 0 = Sem juros, 1 = Com juros, 2 = ambos. O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 0 (sem juros) (optional)</param>
+        /// <param name="parcelado">Indica se o evento pesquisado deve ser parcelado. 0 = Sem ser parcelado, 1 = parcelado, 2 = ambos.  O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 1 (parcelado) (optional)</param>
+        /// <returns>Task of ApiResponse (AntecipacaoResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AntecipacaoResponse>> EfetivarAntecipacoesEmLotes1AsyncWithHttpInfo (long? idConta, string complemento = null, int? juros = null, int? parcelado = null)
+        {
+            // verify the required parameter 'idConta' is set
+            if (idConta == null) throw new ApiException(400, "Missing required parameter 'idConta' when calling EfetivarAntecipacoesEmLotes1");
+            
+    
+            var localVarPath = "/api/saques-antecipaveis/efetivar-antecipacao";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (idConta != null) localVarQueryParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // query parameter
+            if (complemento != null) localVarQueryParams.Add("complemento", Configuration.ApiClient.ParameterToString(complemento)); // query parameter
+            if (juros != null) localVarQueryParams.Add("juros", Configuration.ApiClient.ParameterToString(juros)); // query parameter
+            if (parcelado != null) localVarQueryParams.Add("parcelado", Configuration.ApiClient.ParameterToString(parcelado)); // query parameter
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling EfetivarAntecipacoesEmLotes1: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling EfetivarAntecipacoesEmLotes1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AntecipacaoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AntecipacaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AntecipacaoResponse)));
+            
+        }
+        
+        /// <summary>
         /// Listar compras com parcelas antecip\u00E1veis Lista as compras antecip\u00E1veis de uma conta
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1201,10 +1957,12 @@ namespace Conductor.Pier.Api
         /// <param name="parcelada">Indica se a compra \u00E9 parcelada (optional)</param> 
         /// <param name="juros">Indica se a compra \u00E9 com ou sem juros (optional)</param> 
         /// <param name="tipoOrigemTransacao">Indica se a compra \u00E9 ON-US ou OFF-US (optional)</param> 
+        /// <param name="dataCompraInicio">Data de compra(in\u00EDcio) (optional)</param> 
+        /// <param name="dataCompraFim">Data de compra(fim) (optional)</param> 
         /// <returns>PageCompraResponse</returns>
-        public PageCompraResponse ListarComprasAntecipaveis (long? idConta, List<string> sort = null, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null)
+        public PageCompraResponse ListarComprasAntecipaveis (long? idConta, List<string> sort = null, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null, string dataCompraInicio = null, string dataCompraFim = null)
         {
-             ApiResponse<PageCompraResponse> localVarResponse = ListarComprasAntecipaveisWithHttpInfo(idConta, sort, page, limit, idCompra, parcelada, juros, tipoOrigemTransacao);
+             ApiResponse<PageCompraResponse> localVarResponse = ListarComprasAntecipaveisWithHttpInfo(idConta, sort, page, limit, idCompra, parcelada, juros, tipoOrigemTransacao, dataCompraInicio, dataCompraFim);
              return localVarResponse.Data;
         }
 
@@ -1220,8 +1978,10 @@ namespace Conductor.Pier.Api
         /// <param name="parcelada">Indica se a compra \u00E9 parcelada (optional)</param> 
         /// <param name="juros">Indica se a compra \u00E9 com ou sem juros (optional)</param> 
         /// <param name="tipoOrigemTransacao">Indica se a compra \u00E9 ON-US ou OFF-US (optional)</param> 
+        /// <param name="dataCompraInicio">Data de compra(in\u00EDcio) (optional)</param> 
+        /// <param name="dataCompraFim">Data de compra(fim) (optional)</param> 
         /// <returns>ApiResponse of PageCompraResponse</returns>
-        public ApiResponse< PageCompraResponse > ListarComprasAntecipaveisWithHttpInfo (long? idConta, List<string> sort = null, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null)
+        public ApiResponse< PageCompraResponse > ListarComprasAntecipaveisWithHttpInfo (long? idConta, List<string> sort = null, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null, string dataCompraInicio = null, string dataCompraFim = null)
         {
             
             // verify the required parameter 'idConta' is set
@@ -1264,6 +2024,8 @@ namespace Conductor.Pier.Api
             if (parcelada != null) localVarQueryParams.Add("parcelada", Configuration.ApiClient.ParameterToString(parcelada)); // query parameter
             if (juros != null) localVarQueryParams.Add("juros", Configuration.ApiClient.ParameterToString(juros)); // query parameter
             if (tipoOrigemTransacao != null) localVarQueryParams.Add("tipoOrigemTransacao", Configuration.ApiClient.ParameterToString(tipoOrigemTransacao)); // query parameter
+            if (dataCompraInicio != null) localVarQueryParams.Add("dataCompraInicio", Configuration.ApiClient.ParameterToString(dataCompraInicio)); // query parameter
+            if (dataCompraFim != null) localVarQueryParams.Add("dataCompraFim", Configuration.ApiClient.ParameterToString(dataCompraFim)); // query parameter
             
             
             
@@ -1302,10 +2064,12 @@ namespace Conductor.Pier.Api
         /// <param name="parcelada">Indica se a compra \u00E9 parcelada (optional)</param>
         /// <param name="juros">Indica se a compra \u00E9 com ou sem juros (optional)</param>
         /// <param name="tipoOrigemTransacao">Indica se a compra \u00E9 ON-US ou OFF-US (optional)</param>
+        /// <param name="dataCompraInicio">Data de compra(in\u00EDcio) (optional)</param>
+        /// <param name="dataCompraFim">Data de compra(fim) (optional)</param>
         /// <returns>Task of PageCompraResponse</returns>
-        public async System.Threading.Tasks.Task<PageCompraResponse> ListarComprasAntecipaveisAsync (long? idConta, List<string> sort = null, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null)
+        public async System.Threading.Tasks.Task<PageCompraResponse> ListarComprasAntecipaveisAsync (long? idConta, List<string> sort = null, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null, string dataCompraInicio = null, string dataCompraFim = null)
         {
-             ApiResponse<PageCompraResponse> localVarResponse = await ListarComprasAntecipaveisAsyncWithHttpInfo(idConta, sort, page, limit, idCompra, parcelada, juros, tipoOrigemTransacao);
+             ApiResponse<PageCompraResponse> localVarResponse = await ListarComprasAntecipaveisAsyncWithHttpInfo(idConta, sort, page, limit, idCompra, parcelada, juros, tipoOrigemTransacao, dataCompraInicio, dataCompraFim);
              return localVarResponse.Data;
 
         }
@@ -1322,8 +2086,10 @@ namespace Conductor.Pier.Api
         /// <param name="parcelada">Indica se a compra \u00E9 parcelada (optional)</param>
         /// <param name="juros">Indica se a compra \u00E9 com ou sem juros (optional)</param>
         /// <param name="tipoOrigemTransacao">Indica se a compra \u00E9 ON-US ou OFF-US (optional)</param>
+        /// <param name="dataCompraInicio">Data de compra(in\u00EDcio) (optional)</param>
+        /// <param name="dataCompraFim">Data de compra(fim) (optional)</param>
         /// <returns>Task of ApiResponse (PageCompraResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageCompraResponse>> ListarComprasAntecipaveisAsyncWithHttpInfo (long? idConta, List<string> sort = null, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageCompraResponse>> ListarComprasAntecipaveisAsyncWithHttpInfo (long? idConta, List<string> sort = null, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null, string dataCompraInicio = null, string dataCompraFim = null)
         {
             // verify the required parameter 'idConta' is set
             if (idConta == null) throw new ApiException(400, "Missing required parameter 'idConta' when calling ListarComprasAntecipaveis");
@@ -1364,6 +2130,8 @@ namespace Conductor.Pier.Api
             if (parcelada != null) localVarQueryParams.Add("parcelada", Configuration.ApiClient.ParameterToString(parcelada)); // query parameter
             if (juros != null) localVarQueryParams.Add("juros", Configuration.ApiClient.ParameterToString(juros)); // query parameter
             if (tipoOrigemTransacao != null) localVarQueryParams.Add("tipoOrigemTransacao", Configuration.ApiClient.ParameterToString(tipoOrigemTransacao)); // query parameter
+            if (dataCompraInicio != null) localVarQueryParams.Add("dataCompraInicio", Configuration.ApiClient.ParameterToString(dataCompraInicio)); // query parameter
+            if (dataCompraFim != null) localVarQueryParams.Add("dataCompraFim", Configuration.ApiClient.ParameterToString(dataCompraFim)); // query parameter
             
             
             
@@ -1390,16 +2158,230 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
+        /// Listar saques com parcelas antecip\u00E1veis Lista os saques antecip\u00E1veis de uma conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">C\u00F3digo identificador da conta da Compra</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="page">P\u00E1gina (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <param name="idCompra">C\u00F3digo identificador da Compra (optional)</param> 
+        /// <param name="parcelada">Indica se a compra \u00E9 parcelada (optional)</param> 
+        /// <param name="juros">Indica se a compra \u00E9 com ou sem juros (optional)</param> 
+        /// <param name="tipoOrigemTransacao">Indica se a compra \u00E9 ON-US ou OFF-US (optional)</param> 
+        /// <param name="dataCompraInicio">Data de compra(in\u00EDcio) (optional)</param> 
+        /// <param name="dataCompraFim">Data de compra(fim) (optional)</param> 
+        /// <returns>PageCompraResponse</returns>
+        public PageCompraResponse ListarComprasAntecipaveis1 (long? idConta, List<string> sort = null, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null, string dataCompraInicio = null, string dataCompraFim = null)
+        {
+             ApiResponse<PageCompraResponse> localVarResponse = ListarComprasAntecipaveis1WithHttpInfo(idConta, sort, page, limit, idCompra, parcelada, juros, tipoOrigemTransacao, dataCompraInicio, dataCompraFim);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Listar saques com parcelas antecip\u00E1veis Lista os saques antecip\u00E1veis de uma conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">C\u00F3digo identificador da conta da Compra</param> 
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="page">P\u00E1gina (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <param name="idCompra">C\u00F3digo identificador da Compra (optional)</param> 
+        /// <param name="parcelada">Indica se a compra \u00E9 parcelada (optional)</param> 
+        /// <param name="juros">Indica se a compra \u00E9 com ou sem juros (optional)</param> 
+        /// <param name="tipoOrigemTransacao">Indica se a compra \u00E9 ON-US ou OFF-US (optional)</param> 
+        /// <param name="dataCompraInicio">Data de compra(in\u00EDcio) (optional)</param> 
+        /// <param name="dataCompraFim">Data de compra(fim) (optional)</param> 
+        /// <returns>ApiResponse of PageCompraResponse</returns>
+        public ApiResponse< PageCompraResponse > ListarComprasAntecipaveis1WithHttpInfo (long? idConta, List<string> sort = null, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null, string dataCompraInicio = null, string dataCompraFim = null)
+        {
+            
+            // verify the required parameter 'idConta' is set
+            if (idConta == null)
+                throw new ApiException(400, "Missing required parameter 'idConta' when calling AntecipacaoApi->ListarComprasAntecipaveis1");
+            
+    
+            var localVarPath = "/api/saques-antecipaveis";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (idCompra != null) localVarQueryParams.Add("idCompra", Configuration.ApiClient.ParameterToString(idCompra)); // query parameter
+            if (idConta != null) localVarQueryParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // query parameter
+            if (parcelada != null) localVarQueryParams.Add("parcelada", Configuration.ApiClient.ParameterToString(parcelada)); // query parameter
+            if (juros != null) localVarQueryParams.Add("juros", Configuration.ApiClient.ParameterToString(juros)); // query parameter
+            if (tipoOrigemTransacao != null) localVarQueryParams.Add("tipoOrigemTransacao", Configuration.ApiClient.ParameterToString(tipoOrigemTransacao)); // query parameter
+            if (dataCompraInicio != null) localVarQueryParams.Add("dataCompraInicio", Configuration.ApiClient.ParameterToString(dataCompraInicio)); // query parameter
+            if (dataCompraFim != null) localVarQueryParams.Add("dataCompraFim", Configuration.ApiClient.ParameterToString(dataCompraFim)); // query parameter
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarComprasAntecipaveis1: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarComprasAntecipaveis1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<PageCompraResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageCompraResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageCompraResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Listar saques com parcelas antecip\u00E1veis Lista os saques antecip\u00E1veis de uma conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">C\u00F3digo identificador da conta da Compra</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idCompra">C\u00F3digo identificador da Compra (optional)</param>
+        /// <param name="parcelada">Indica se a compra \u00E9 parcelada (optional)</param>
+        /// <param name="juros">Indica se a compra \u00E9 com ou sem juros (optional)</param>
+        /// <param name="tipoOrigemTransacao">Indica se a compra \u00E9 ON-US ou OFF-US (optional)</param>
+        /// <param name="dataCompraInicio">Data de compra(in\u00EDcio) (optional)</param>
+        /// <param name="dataCompraFim">Data de compra(fim) (optional)</param>
+        /// <returns>Task of PageCompraResponse</returns>
+        public async System.Threading.Tasks.Task<PageCompraResponse> ListarComprasAntecipaveis1Async (long? idConta, List<string> sort = null, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null, string dataCompraInicio = null, string dataCompraFim = null)
+        {
+             ApiResponse<PageCompraResponse> localVarResponse = await ListarComprasAntecipaveis1AsyncWithHttpInfo(idConta, sort, page, limit, idCompra, parcelada, juros, tipoOrigemTransacao, dataCompraInicio, dataCompraFim);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Listar saques com parcelas antecip\u00E1veis Lista os saques antecip\u00E1veis de uma conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">C\u00F3digo identificador da conta da Compra</param>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idCompra">C\u00F3digo identificador da Compra (optional)</param>
+        /// <param name="parcelada">Indica se a compra \u00E9 parcelada (optional)</param>
+        /// <param name="juros">Indica se a compra \u00E9 com ou sem juros (optional)</param>
+        /// <param name="tipoOrigemTransacao">Indica se a compra \u00E9 ON-US ou OFF-US (optional)</param>
+        /// <param name="dataCompraInicio">Data de compra(in\u00EDcio) (optional)</param>
+        /// <param name="dataCompraFim">Data de compra(fim) (optional)</param>
+        /// <returns>Task of ApiResponse (PageCompraResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PageCompraResponse>> ListarComprasAntecipaveis1AsyncWithHttpInfo (long? idConta, List<string> sort = null, int? page = null, int? limit = null, long? idCompra = null, bool? parcelada = null, bool? juros = null, string tipoOrigemTransacao = null, string dataCompraInicio = null, string dataCompraFim = null)
+        {
+            // verify the required parameter 'idConta' is set
+            if (idConta == null) throw new ApiException(400, "Missing required parameter 'idConta' when calling ListarComprasAntecipaveis1");
+            
+    
+            var localVarPath = "/api/saques-antecipaveis";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (idCompra != null) localVarQueryParams.Add("idCompra", Configuration.ApiClient.ParameterToString(idCompra)); // query parameter
+            if (idConta != null) localVarQueryParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // query parameter
+            if (parcelada != null) localVarQueryParams.Add("parcelada", Configuration.ApiClient.ParameterToString(parcelada)); // query parameter
+            if (juros != null) localVarQueryParams.Add("juros", Configuration.ApiClient.ParameterToString(juros)); // query parameter
+            if (tipoOrigemTransacao != null) localVarQueryParams.Add("tipoOrigemTransacao", Configuration.ApiClient.ParameterToString(tipoOrigemTransacao)); // query parameter
+            if (dataCompraInicio != null) localVarQueryParams.Add("dataCompraInicio", Configuration.ApiClient.ParameterToString(dataCompraInicio)); // query parameter
+            if (dataCompraFim != null) localVarQueryParams.Add("dataCompraFim", Configuration.ApiClient.ParameterToString(dataCompraFim)); // query parameter
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarComprasAntecipaveis1: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarComprasAntecipaveis1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PageCompraResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageCompraResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageCompraResponse)));
+            
+        }
+        
+        /// <summary>
         /// Simular antecipa\u00E7\u00E3o de parcelas Simula a antecipa\u00E7\u00E3o de parcelas de um evento, listando todos os planos de parcelamento dispon\u00EDveis, cujo desconto \u00E9 calculado baseado na data da \u00FAltima parcela em aberto
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta</param> 
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do evento</param> 
         /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param> 
+        /// <param name="juros">Indica o tipo de evento pesquisado: 0 = Sem juros, 1 = Com juros, 2 = ambos. O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 0 (sem juros) (optional)</param> 
+        /// <param name="parcelado">Indica se o evento pesquisado deve ser parcelado. 0 = Sem ser parcelado, 1 = parcelado, 2 = ambos.  O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 1 (parcelado) (optional)</param> 
         /// <returns>AntecipacaoSimuladaResponse</returns>
-        public AntecipacaoSimuladaResponse SimularAntecipacaoCompra (long? idConta, long? id, string complemento = null)
+        public AntecipacaoSimuladaResponse SimularAntecipacaoCompra (long? idConta, long? id, string complemento = null, int? juros = null, int? parcelado = null)
         {
-             ApiResponse<AntecipacaoSimuladaResponse> localVarResponse = SimularAntecipacaoCompraWithHttpInfo(idConta, id, complemento);
+             ApiResponse<AntecipacaoSimuladaResponse> localVarResponse = SimularAntecipacaoCompraWithHttpInfo(idConta, id, complemento, juros, parcelado);
              return localVarResponse.Data;
         }
 
@@ -1410,8 +2392,10 @@ namespace Conductor.Pier.Api
         /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta</param> 
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do evento</param> 
         /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param> 
+        /// <param name="juros">Indica o tipo de evento pesquisado: 0 = Sem juros, 1 = Com juros, 2 = ambos. O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 0 (sem juros) (optional)</param> 
+        /// <param name="parcelado">Indica se o evento pesquisado deve ser parcelado. 0 = Sem ser parcelado, 1 = parcelado, 2 = ambos.  O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 1 (parcelado) (optional)</param> 
         /// <returns>ApiResponse of AntecipacaoSimuladaResponse</returns>
-        public ApiResponse< AntecipacaoSimuladaResponse > SimularAntecipacaoCompraWithHttpInfo (long? idConta, long? id, string complemento = null)
+        public ApiResponse< AntecipacaoSimuladaResponse > SimularAntecipacaoCompraWithHttpInfo (long? idConta, long? id, string complemento = null, int? juros = null, int? parcelado = null)
         {
             
             // verify the required parameter 'idConta' is set
@@ -1453,6 +2437,8 @@ namespace Conductor.Pier.Api
             
             if (idConta != null) localVarQueryParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // query parameter
             if (complemento != null) localVarQueryParams.Add("complemento", Configuration.ApiClient.ParameterToString(complemento)); // query parameter
+            if (juros != null) localVarQueryParams.Add("juros", Configuration.ApiClient.ParameterToString(juros)); // query parameter
+            if (parcelado != null) localVarQueryParams.Add("parcelado", Configuration.ApiClient.ParameterToString(parcelado)); // query parameter
             
             
             
@@ -1486,10 +2472,12 @@ namespace Conductor.Pier.Api
         /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta</param>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do evento</param>
         /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param>
+        /// <param name="juros">Indica o tipo de evento pesquisado: 0 = Sem juros, 1 = Com juros, 2 = ambos. O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 0 (sem juros) (optional)</param>
+        /// <param name="parcelado">Indica se o evento pesquisado deve ser parcelado. 0 = Sem ser parcelado, 1 = parcelado, 2 = ambos.  O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 1 (parcelado) (optional)</param>
         /// <returns>Task of AntecipacaoSimuladaResponse</returns>
-        public async System.Threading.Tasks.Task<AntecipacaoSimuladaResponse> SimularAntecipacaoCompraAsync (long? idConta, long? id, string complemento = null)
+        public async System.Threading.Tasks.Task<AntecipacaoSimuladaResponse> SimularAntecipacaoCompraAsync (long? idConta, long? id, string complemento = null, int? juros = null, int? parcelado = null)
         {
-             ApiResponse<AntecipacaoSimuladaResponse> localVarResponse = await SimularAntecipacaoCompraAsyncWithHttpInfo(idConta, id, complemento);
+             ApiResponse<AntecipacaoSimuladaResponse> localVarResponse = await SimularAntecipacaoCompraAsyncWithHttpInfo(idConta, id, complemento, juros, parcelado);
              return localVarResponse.Data;
 
         }
@@ -1501,8 +2489,10 @@ namespace Conductor.Pier.Api
         /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta</param>
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do evento</param>
         /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param>
+        /// <param name="juros">Indica o tipo de evento pesquisado: 0 = Sem juros, 1 = Com juros, 2 = ambos. O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 0 (sem juros) (optional)</param>
+        /// <param name="parcelado">Indica se o evento pesquisado deve ser parcelado. 0 = Sem ser parcelado, 1 = parcelado, 2 = ambos.  O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 1 (parcelado) (optional)</param>
         /// <returns>Task of ApiResponse (AntecipacaoSimuladaResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AntecipacaoSimuladaResponse>> SimularAntecipacaoCompraAsyncWithHttpInfo (long? idConta, long? id, string complemento = null)
+        public async System.Threading.Tasks.Task<ApiResponse<AntecipacaoSimuladaResponse>> SimularAntecipacaoCompraAsyncWithHttpInfo (long? idConta, long? id, string complemento = null, int? juros = null, int? parcelado = null)
         {
             // verify the required parameter 'idConta' is set
             if (idConta == null) throw new ApiException(400, "Missing required parameter 'idConta' when calling SimularAntecipacaoCompra");
@@ -1540,6 +2530,8 @@ namespace Conductor.Pier.Api
             
             if (idConta != null) localVarQueryParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // query parameter
             if (complemento != null) localVarQueryParams.Add("complemento", Configuration.ApiClient.ParameterToString(complemento)); // query parameter
+            if (juros != null) localVarQueryParams.Add("juros", Configuration.ApiClient.ParameterToString(juros)); // query parameter
+            if (parcelado != null) localVarQueryParams.Add("parcelado", Configuration.ApiClient.ParameterToString(parcelado)); // query parameter
             
             
             
@@ -1566,15 +2558,205 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
+        /// Simular antecipa\u00E7\u00E3o de parcelas Simula a antecipa\u00E7\u00E3o de parcelas de um evento, listando todos os planos de parcelamento dispon\u00EDveis, cujo desconto \u00E9 calculado baseado na data da \u00FAltima parcela em aberto
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do evento</param> 
+        /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param> 
+        /// <param name="juros">Indica o tipo de evento pesquisado: 0 = Sem juros, 1 = Com juros, 2 = ambos. O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 0 (sem juros) (optional)</param> 
+        /// <param name="parcelado">Indica se o evento pesquisado deve ser parcelado. 0 = Sem ser parcelado, 1 = parcelado, 2 = ambos.  O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 1 (parcelado) (optional)</param> 
+        /// <returns>AntecipacaoSimuladaResponse</returns>
+        public AntecipacaoSimuladaResponse SimularAntecipacaoCompra1 (long? idConta, long? id, string complemento = null, int? juros = null, int? parcelado = null)
+        {
+             ApiResponse<AntecipacaoSimuladaResponse> localVarResponse = SimularAntecipacaoCompra1WithHttpInfo(idConta, id, complemento, juros, parcelado);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Simular antecipa\u00E7\u00E3o de parcelas Simula a antecipa\u00E7\u00E3o de parcelas de um evento, listando todos os planos de parcelamento dispon\u00EDveis, cujo desconto \u00E9 calculado baseado na data da \u00FAltima parcela em aberto
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta</param> 
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do evento</param> 
+        /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param> 
+        /// <param name="juros">Indica o tipo de evento pesquisado: 0 = Sem juros, 1 = Com juros, 2 = ambos. O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 0 (sem juros) (optional)</param> 
+        /// <param name="parcelado">Indica se o evento pesquisado deve ser parcelado. 0 = Sem ser parcelado, 1 = parcelado, 2 = ambos.  O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 1 (parcelado) (optional)</param> 
+        /// <returns>ApiResponse of AntecipacaoSimuladaResponse</returns>
+        public ApiResponse< AntecipacaoSimuladaResponse > SimularAntecipacaoCompra1WithHttpInfo (long? idConta, long? id, string complemento = null, int? juros = null, int? parcelado = null)
+        {
+            
+            // verify the required parameter 'idConta' is set
+            if (idConta == null)
+                throw new ApiException(400, "Missing required parameter 'idConta' when calling AntecipacaoApi->SimularAntecipacaoCompra1");
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling AntecipacaoApi->SimularAntecipacaoCompra1");
+            
+    
+            var localVarPath = "/api/saques-antecipaveis/{id}/simular-antecipacao";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            if (idConta != null) localVarQueryParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // query parameter
+            if (complemento != null) localVarQueryParams.Add("complemento", Configuration.ApiClient.ParameterToString(complemento)); // query parameter
+            if (juros != null) localVarQueryParams.Add("juros", Configuration.ApiClient.ParameterToString(juros)); // query parameter
+            if (parcelado != null) localVarQueryParams.Add("parcelado", Configuration.ApiClient.ParameterToString(parcelado)); // query parameter
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling SimularAntecipacaoCompra1: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling SimularAntecipacaoCompra1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<AntecipacaoSimuladaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AntecipacaoSimuladaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AntecipacaoSimuladaResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Simular antecipa\u00E7\u00E3o de parcelas Simula a antecipa\u00E7\u00E3o de parcelas de um evento, listando todos os planos de parcelamento dispon\u00EDveis, cujo desconto \u00E9 calculado baseado na data da \u00FAltima parcela em aberto
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do evento</param>
+        /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param>
+        /// <param name="juros">Indica o tipo de evento pesquisado: 0 = Sem juros, 1 = Com juros, 2 = ambos. O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 0 (sem juros) (optional)</param>
+        /// <param name="parcelado">Indica se o evento pesquisado deve ser parcelado. 0 = Sem ser parcelado, 1 = parcelado, 2 = ambos.  O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 1 (parcelado) (optional)</param>
+        /// <returns>Task of AntecipacaoSimuladaResponse</returns>
+        public async System.Threading.Tasks.Task<AntecipacaoSimuladaResponse> SimularAntecipacaoCompra1Async (long? idConta, long? id, string complemento = null, int? juros = null, int? parcelado = null)
+        {
+             ApiResponse<AntecipacaoSimuladaResponse> localVarResponse = await SimularAntecipacaoCompra1AsyncWithHttpInfo(idConta, id, complemento, juros, parcelado);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Simular antecipa\u00E7\u00E3o de parcelas Simula a antecipa\u00E7\u00E3o de parcelas de um evento, listando todos os planos de parcelamento dispon\u00EDveis, cujo desconto \u00E9 calculado baseado na data da \u00FAltima parcela em aberto
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta</param>
+        /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do evento</param>
+        /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param>
+        /// <param name="juros">Indica o tipo de evento pesquisado: 0 = Sem juros, 1 = Com juros, 2 = ambos. O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 0 (sem juros) (optional)</param>
+        /// <param name="parcelado">Indica se o evento pesquisado deve ser parcelado. 0 = Sem ser parcelado, 1 = parcelado, 2 = ambos.  O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 1 (parcelado) (optional)</param>
+        /// <returns>Task of ApiResponse (AntecipacaoSimuladaResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AntecipacaoSimuladaResponse>> SimularAntecipacaoCompra1AsyncWithHttpInfo (long? idConta, long? id, string complemento = null, int? juros = null, int? parcelado = null)
+        {
+            // verify the required parameter 'idConta' is set
+            if (idConta == null) throw new ApiException(400, "Missing required parameter 'idConta' when calling SimularAntecipacaoCompra1");
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling SimularAntecipacaoCompra1");
+            
+    
+            var localVarPath = "/api/saques-antecipaveis/{id}/simular-antecipacao";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            if (idConta != null) localVarQueryParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // query parameter
+            if (complemento != null) localVarQueryParams.Add("complemento", Configuration.ApiClient.ParameterToString(complemento)); // query parameter
+            if (juros != null) localVarQueryParams.Add("juros", Configuration.ApiClient.ParameterToString(juros)); // query parameter
+            if (parcelado != null) localVarQueryParams.Add("parcelado", Configuration.ApiClient.ParameterToString(parcelado)); // query parameter
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling SimularAntecipacaoCompra1: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling SimularAntecipacaoCompra1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AntecipacaoSimuladaResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AntecipacaoSimuladaResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AntecipacaoSimuladaResponse)));
+            
+        }
+        
+        /// <summary>
         /// Simular antecipa\u00E7\u00E3o de todas as parcelas antecip\u00E1veis O recurso permite realizar a simula\u00E7\u00E3o da antecipa\u00E7\u00E3o de todas as compras antecip\u00E1veis de todas as parcelas de uma determinada conta
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta</param> 
         /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param> 
+        /// <param name="juros">Indica o tipo de evento pesquisado: 0 = Sem juros, 1 = Com juros, 2 = ambos. O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 0 (sem juros) (optional)</param> 
+        /// <param name="parcelado">Indica se o evento pesquisado deve ser parcelado. 0 = Sem ser parcelado, 1 = parcelado, 2 = ambos.  O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 1 (parcelado) (optional)</param> 
         /// <returns>AntecipacaoSimuladaLoteResponse</returns>
-        public AntecipacaoSimuladaLoteResponse SimularAntecipacoesEmLote (long? idConta, string complemento = null)
+        public AntecipacaoSimuladaLoteResponse SimularAntecipacoesEmLote (long? idConta, string complemento = null, int? juros = null, int? parcelado = null)
         {
-             ApiResponse<AntecipacaoSimuladaLoteResponse> localVarResponse = SimularAntecipacoesEmLoteWithHttpInfo(idConta, complemento);
+             ApiResponse<AntecipacaoSimuladaLoteResponse> localVarResponse = SimularAntecipacoesEmLoteWithHttpInfo(idConta, complemento, juros, parcelado);
              return localVarResponse.Data;
         }
 
@@ -1584,8 +2766,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta</param> 
         /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param> 
+        /// <param name="juros">Indica o tipo de evento pesquisado: 0 = Sem juros, 1 = Com juros, 2 = ambos. O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 0 (sem juros) (optional)</param> 
+        /// <param name="parcelado">Indica se o evento pesquisado deve ser parcelado. 0 = Sem ser parcelado, 1 = parcelado, 2 = ambos.  O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 1 (parcelado) (optional)</param> 
         /// <returns>ApiResponse of AntecipacaoSimuladaLoteResponse</returns>
-        public ApiResponse< AntecipacaoSimuladaLoteResponse > SimularAntecipacoesEmLoteWithHttpInfo (long? idConta, string complemento = null)
+        public ApiResponse< AntecipacaoSimuladaLoteResponse > SimularAntecipacoesEmLoteWithHttpInfo (long? idConta, string complemento = null, int? juros = null, int? parcelado = null)
         {
             
             // verify the required parameter 'idConta' is set
@@ -1622,6 +2806,8 @@ namespace Conductor.Pier.Api
             
             if (idConta != null) localVarQueryParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // query parameter
             if (complemento != null) localVarQueryParams.Add("complemento", Configuration.ApiClient.ParameterToString(complemento)); // query parameter
+            if (juros != null) localVarQueryParams.Add("juros", Configuration.ApiClient.ParameterToString(juros)); // query parameter
+            if (parcelado != null) localVarQueryParams.Add("parcelado", Configuration.ApiClient.ParameterToString(parcelado)); // query parameter
             
             
             
@@ -1654,10 +2840,12 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta</param>
         /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param>
+        /// <param name="juros">Indica o tipo de evento pesquisado: 0 = Sem juros, 1 = Com juros, 2 = ambos. O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 0 (sem juros) (optional)</param>
+        /// <param name="parcelado">Indica se o evento pesquisado deve ser parcelado. 0 = Sem ser parcelado, 1 = parcelado, 2 = ambos.  O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 1 (parcelado) (optional)</param>
         /// <returns>Task of AntecipacaoSimuladaLoteResponse</returns>
-        public async System.Threading.Tasks.Task<AntecipacaoSimuladaLoteResponse> SimularAntecipacoesEmLoteAsync (long? idConta, string complemento = null)
+        public async System.Threading.Tasks.Task<AntecipacaoSimuladaLoteResponse> SimularAntecipacoesEmLoteAsync (long? idConta, string complemento = null, int? juros = null, int? parcelado = null)
         {
-             ApiResponse<AntecipacaoSimuladaLoteResponse> localVarResponse = await SimularAntecipacoesEmLoteAsyncWithHttpInfo(idConta, complemento);
+             ApiResponse<AntecipacaoSimuladaLoteResponse> localVarResponse = await SimularAntecipacoesEmLoteAsyncWithHttpInfo(idConta, complemento, juros, parcelado);
              return localVarResponse.Data;
 
         }
@@ -1668,8 +2856,10 @@ namespace Conductor.Pier.Api
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta</param>
         /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param>
+        /// <param name="juros">Indica o tipo de evento pesquisado: 0 = Sem juros, 1 = Com juros, 2 = ambos. O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 0 (sem juros) (optional)</param>
+        /// <param name="parcelado">Indica se o evento pesquisado deve ser parcelado. 0 = Sem ser parcelado, 1 = parcelado, 2 = ambos.  O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 1 (parcelado) (optional)</param>
         /// <returns>Task of ApiResponse (AntecipacaoSimuladaLoteResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AntecipacaoSimuladaLoteResponse>> SimularAntecipacoesEmLoteAsyncWithHttpInfo (long? idConta, string complemento = null)
+        public async System.Threading.Tasks.Task<ApiResponse<AntecipacaoSimuladaLoteResponse>> SimularAntecipacoesEmLoteAsyncWithHttpInfo (long? idConta, string complemento = null, int? juros = null, int? parcelado = null)
         {
             // verify the required parameter 'idConta' is set
             if (idConta == null) throw new ApiException(400, "Missing required parameter 'idConta' when calling SimularAntecipacoesEmLote");
@@ -1704,6 +2894,8 @@ namespace Conductor.Pier.Api
             
             if (idConta != null) localVarQueryParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // query parameter
             if (complemento != null) localVarQueryParams.Add("complemento", Configuration.ApiClient.ParameterToString(complemento)); // query parameter
+            if (juros != null) localVarQueryParams.Add("juros", Configuration.ApiClient.ParameterToString(juros)); // query parameter
+            if (parcelado != null) localVarQueryParams.Add("parcelado", Configuration.ApiClient.ParameterToString(parcelado)); // query parameter
             
             
             
@@ -1722,6 +2914,182 @@ namespace Conductor.Pier.Api
                 throw new ApiException (localVarStatusCode, "Error calling SimularAntecipacoesEmLote: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling SimularAntecipacoesEmLote: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AntecipacaoSimuladaLoteResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AntecipacaoSimuladaLoteResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AntecipacaoSimuladaLoteResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Simular antecipa\u00E7\u00E3o de todas as parcelas antecip\u00E1veis O recurso permite realizar a simula\u00E7\u00E3o da antecipa\u00E7\u00E3o de todas os saques antecip\u00E1veis de todas as parcelas de uma determinada conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta</param> 
+        /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param> 
+        /// <param name="juros">Indica o tipo de evento pesquisado: 0 = Sem juros, 1 = Com juros, 2 = ambos. O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 0 (sem juros) (optional)</param> 
+        /// <param name="parcelado">Indica se o evento pesquisado deve ser parcelado. 0 = Sem ser parcelado, 1 = parcelado, 2 = ambos.  O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 1 (parcelado) (optional)</param> 
+        /// <returns>AntecipacaoSimuladaLoteResponse</returns>
+        public AntecipacaoSimuladaLoteResponse SimularAntecipacoesEmLote1 (long? idConta, string complemento = null, int? juros = null, int? parcelado = null)
+        {
+             ApiResponse<AntecipacaoSimuladaLoteResponse> localVarResponse = SimularAntecipacoesEmLote1WithHttpInfo(idConta, complemento, juros, parcelado);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Simular antecipa\u00E7\u00E3o de todas as parcelas antecip\u00E1veis O recurso permite realizar a simula\u00E7\u00E3o da antecipa\u00E7\u00E3o de todas os saques antecip\u00E1veis de todas as parcelas de uma determinada conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta</param> 
+        /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param> 
+        /// <param name="juros">Indica o tipo de evento pesquisado: 0 = Sem juros, 1 = Com juros, 2 = ambos. O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 0 (sem juros) (optional)</param> 
+        /// <param name="parcelado">Indica se o evento pesquisado deve ser parcelado. 0 = Sem ser parcelado, 1 = parcelado, 2 = ambos.  O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 1 (parcelado) (optional)</param> 
+        /// <returns>ApiResponse of AntecipacaoSimuladaLoteResponse</returns>
+        public ApiResponse< AntecipacaoSimuladaLoteResponse > SimularAntecipacoesEmLote1WithHttpInfo (long? idConta, string complemento = null, int? juros = null, int? parcelado = null)
+        {
+            
+            // verify the required parameter 'idConta' is set
+            if (idConta == null)
+                throw new ApiException(400, "Missing required parameter 'idConta' when calling AntecipacaoApi->SimularAntecipacoesEmLote1");
+            
+    
+            var localVarPath = "/api/saques-antecipaveis/simular-antecipacao";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (idConta != null) localVarQueryParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // query parameter
+            if (complemento != null) localVarQueryParams.Add("complemento", Configuration.ApiClient.ParameterToString(complemento)); // query parameter
+            if (juros != null) localVarQueryParams.Add("juros", Configuration.ApiClient.ParameterToString(juros)); // query parameter
+            if (parcelado != null) localVarQueryParams.Add("parcelado", Configuration.ApiClient.ParameterToString(parcelado)); // query parameter
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling SimularAntecipacoesEmLote1: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling SimularAntecipacoesEmLote1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<AntecipacaoSimuladaLoteResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AntecipacaoSimuladaLoteResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AntecipacaoSimuladaLoteResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Simular antecipa\u00E7\u00E3o de todas as parcelas antecip\u00E1veis O recurso permite realizar a simula\u00E7\u00E3o da antecipa\u00E7\u00E3o de todas os saques antecip\u00E1veis de todas as parcelas de uma determinada conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta</param>
+        /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param>
+        /// <param name="juros">Indica o tipo de evento pesquisado: 0 = Sem juros, 1 = Com juros, 2 = ambos. O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 0 (sem juros) (optional)</param>
+        /// <param name="parcelado">Indica se o evento pesquisado deve ser parcelado. 0 = Sem ser parcelado, 1 = parcelado, 2 = ambos.  O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 1 (parcelado) (optional)</param>
+        /// <returns>Task of AntecipacaoSimuladaLoteResponse</returns>
+        public async System.Threading.Tasks.Task<AntecipacaoSimuladaLoteResponse> SimularAntecipacoesEmLote1Async (long? idConta, string complemento = null, int? juros = null, int? parcelado = null)
+        {
+             ApiResponse<AntecipacaoSimuladaLoteResponse> localVarResponse = await SimularAntecipacoesEmLote1AsyncWithHttpInfo(idConta, complemento, juros, parcelado);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Simular antecipa\u00E7\u00E3o de todas as parcelas antecip\u00E1veis O recurso permite realizar a simula\u00E7\u00E3o da antecipa\u00E7\u00E3o de todas os saques antecip\u00E1veis de todas as parcelas de uma determinada conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta</param>
+        /// <param name="complemento">Dados complementares sobre a realiza\u00E7\u00E3o da transa\u00E7\u00E3o (optional)</param>
+        /// <param name="juros">Indica o tipo de evento pesquisado: 0 = Sem juros, 1 = Com juros, 2 = ambos. O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 0 (sem juros) (optional)</param>
+        /// <param name="parcelado">Indica se o evento pesquisado deve ser parcelado. 0 = Sem ser parcelado, 1 = parcelado, 2 = ambos.  O valor padr\u00E3o para caso o campo n\u00E3o for informado \u00E9 1 (parcelado) (optional)</param>
+        /// <returns>Task of ApiResponse (AntecipacaoSimuladaLoteResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AntecipacaoSimuladaLoteResponse>> SimularAntecipacoesEmLote1AsyncWithHttpInfo (long? idConta, string complemento = null, int? juros = null, int? parcelado = null)
+        {
+            // verify the required parameter 'idConta' is set
+            if (idConta == null) throw new ApiException(400, "Missing required parameter 'idConta' when calling SimularAntecipacoesEmLote1");
+            
+    
+            var localVarPath = "/api/saques-antecipaveis/simular-antecipacao";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (idConta != null) localVarQueryParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // query parameter
+            if (complemento != null) localVarQueryParams.Add("complemento", Configuration.ApiClient.ParameterToString(complemento)); // query parameter
+            if (juros != null) localVarQueryParams.Add("juros", Configuration.ApiClient.ParameterToString(juros)); // query parameter
+            if (parcelado != null) localVarQueryParams.Add("parcelado", Configuration.ApiClient.ParameterToString(parcelado)); // query parameter
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling SimularAntecipacoesEmLote1: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling SimularAntecipacoesEmLote1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<AntecipacaoSimuladaLoteResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

@@ -92,8 +92,9 @@ namespace Conductor.Pier.Api
         /// <param name="idEstabelecimento">Identificador do estabelecimento quando o pagamento for efetuado em loja (optional)</param>
         /// <param name="flagAtendimento">Flag para lan\u00E7ar o atendimento (optional)</param>
         /// <param name="mensagemAtendimento">Mensagem enviada no atendimento (optional)</param>
+        /// <param name="descricaoEstabelecimentoExterno">Descri\u00E7\u00E3o externa do estabelecimento (optional)</param>
         /// <returns>AjusteFinanceiroResponse</returns>
-        AjusteFinanceiroResponse SalvarAjusteFinanceiro (long? idTipoAjuste, string dataAjuste, double? valorAjuste, long? idConta, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null, bool? flagAtendimento = null, string mensagemAtendimento = null);
+        AjusteFinanceiroResponse SalvarAjusteFinanceiro (long? idTipoAjuste, string dataAjuste, double? valorAjuste, long? idConta, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null, bool? flagAtendimento = null, string mensagemAtendimento = null, string descricaoEstabelecimentoExterno = null);
   
         /// <summary>
         /// Lan\u00E7a um ajuste para a conta informada
@@ -112,8 +113,9 @@ namespace Conductor.Pier.Api
         /// <param name="idEstabelecimento">Identificador do estabelecimento quando o pagamento for efetuado em loja (optional)</param>
         /// <param name="flagAtendimento">Flag para lan\u00E7ar o atendimento (optional)</param>
         /// <param name="mensagemAtendimento">Mensagem enviada no atendimento (optional)</param>
+        /// <param name="descricaoEstabelecimentoExterno">Descri\u00E7\u00E3o externa do estabelecimento (optional)</param>
         /// <returns>ApiResponse of AjusteFinanceiroResponse</returns>
-        ApiResponse<AjusteFinanceiroResponse> SalvarAjusteFinanceiroWithHttpInfo (long? idTipoAjuste, string dataAjuste, double? valorAjuste, long? idConta, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null, bool? flagAtendimento = null, string mensagemAtendimento = null);
+        ApiResponse<AjusteFinanceiroResponse> SalvarAjusteFinanceiroWithHttpInfo (long? idTipoAjuste, string dataAjuste, double? valorAjuste, long? idConta, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null, bool? flagAtendimento = null, string mensagemAtendimento = null, string descricaoEstabelecimentoExterno = null);
         
         /// <summary>
         /// Este recurso lan\u00E7a um ajuste para a conta do id informado levando em considera\u00E7\u00E3o o saldo
@@ -220,8 +222,9 @@ namespace Conductor.Pier.Api
         /// <param name="idEstabelecimento">Identificador do estabelecimento quando o pagamento for efetuado em loja (optional)</param>
         /// <param name="flagAtendimento">Flag para lan\u00E7ar o atendimento (optional)</param>
         /// <param name="mensagemAtendimento">Mensagem enviada no atendimento (optional)</param>
+        /// <param name="descricaoEstabelecimentoExterno">Descri\u00E7\u00E3o externa do estabelecimento (optional)</param>
         /// <returns>Task of AjusteFinanceiroResponse</returns>
-        System.Threading.Tasks.Task<AjusteFinanceiroResponse> SalvarAjusteFinanceiroAsync (long? idTipoAjuste, string dataAjuste, double? valorAjuste, long? idConta, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null, bool? flagAtendimento = null, string mensagemAtendimento = null);
+        System.Threading.Tasks.Task<AjusteFinanceiroResponse> SalvarAjusteFinanceiroAsync (long? idTipoAjuste, string dataAjuste, double? valorAjuste, long? idConta, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null, bool? flagAtendimento = null, string mensagemAtendimento = null, string descricaoEstabelecimentoExterno = null);
 
         /// <summary>
         /// Lan\u00E7a um ajuste para a conta informada
@@ -240,8 +243,9 @@ namespace Conductor.Pier.Api
         /// <param name="idEstabelecimento">Identificador do estabelecimento quando o pagamento for efetuado em loja (optional)</param>
         /// <param name="flagAtendimento">Flag para lan\u00E7ar o atendimento (optional)</param>
         /// <param name="mensagemAtendimento">Mensagem enviada no atendimento (optional)</param>
+        /// <param name="descricaoEstabelecimentoExterno">Descri\u00E7\u00E3o externa do estabelecimento (optional)</param>
         /// <returns>Task of ApiResponse (AjusteFinanceiroResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AjusteFinanceiroResponse>> SalvarAjusteFinanceiroAsyncWithHttpInfo (long? idTipoAjuste, string dataAjuste, double? valorAjuste, long? idConta, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null, bool? flagAtendimento = null, string mensagemAtendimento = null);
+        System.Threading.Tasks.Task<ApiResponse<AjusteFinanceiroResponse>> SalvarAjusteFinanceiroAsyncWithHttpInfo (long? idTipoAjuste, string dataAjuste, double? valorAjuste, long? idConta, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null, bool? flagAtendimento = null, string mensagemAtendimento = null, string descricaoEstabelecimentoExterno = null);
         
         /// <summary>
         /// Este recurso lan\u00E7a um ajuste para a conta do id informado levando em considera\u00E7\u00E3o o saldo
@@ -727,10 +731,11 @@ namespace Conductor.Pier.Api
         /// <param name="idEstabelecimento">Identificador do estabelecimento quando o pagamento for efetuado em loja (optional)</param> 
         /// <param name="flagAtendimento">Flag para lan\u00E7ar o atendimento (optional)</param> 
         /// <param name="mensagemAtendimento">Mensagem enviada no atendimento (optional)</param> 
+        /// <param name="descricaoEstabelecimentoExterno">Descri\u00E7\u00E3o externa do estabelecimento (optional)</param> 
         /// <returns>AjusteFinanceiroResponse</returns>
-        public AjusteFinanceiroResponse SalvarAjusteFinanceiro (long? idTipoAjuste, string dataAjuste, double? valorAjuste, long? idConta, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null, bool? flagAtendimento = null, string mensagemAtendimento = null)
+        public AjusteFinanceiroResponse SalvarAjusteFinanceiro (long? idTipoAjuste, string dataAjuste, double? valorAjuste, long? idConta, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null, bool? flagAtendimento = null, string mensagemAtendimento = null, string descricaoEstabelecimentoExterno = null)
         {
-             ApiResponse<AjusteFinanceiroResponse> localVarResponse = SalvarAjusteFinanceiroWithHttpInfo(idTipoAjuste, dataAjuste, valorAjuste, idConta, login, identificadorExterno, idTransacaoOriginal, idEstabelecimento, flagAtendimento, mensagemAtendimento);
+             ApiResponse<AjusteFinanceiroResponse> localVarResponse = SalvarAjusteFinanceiroWithHttpInfo(idTipoAjuste, dataAjuste, valorAjuste, idConta, login, identificadorExterno, idTransacaoOriginal, idEstabelecimento, flagAtendimento, mensagemAtendimento, descricaoEstabelecimentoExterno);
              return localVarResponse.Data;
         }
 
@@ -748,8 +753,9 @@ namespace Conductor.Pier.Api
         /// <param name="idEstabelecimento">Identificador do estabelecimento quando o pagamento for efetuado em loja (optional)</param> 
         /// <param name="flagAtendimento">Flag para lan\u00E7ar o atendimento (optional)</param> 
         /// <param name="mensagemAtendimento">Mensagem enviada no atendimento (optional)</param> 
+        /// <param name="descricaoEstabelecimentoExterno">Descri\u00E7\u00E3o externa do estabelecimento (optional)</param> 
         /// <returns>ApiResponse of AjusteFinanceiroResponse</returns>
-        public ApiResponse< AjusteFinanceiroResponse > SalvarAjusteFinanceiroWithHttpInfo (long? idTipoAjuste, string dataAjuste, double? valorAjuste, long? idConta, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null, bool? flagAtendimento = null, string mensagemAtendimento = null)
+        public ApiResponse< AjusteFinanceiroResponse > SalvarAjusteFinanceiroWithHttpInfo (long? idTipoAjuste, string dataAjuste, double? valorAjuste, long? idConta, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null, bool? flagAtendimento = null, string mensagemAtendimento = null, string descricaoEstabelecimentoExterno = null)
         {
             
             // verify the required parameter 'idTipoAjuste' is set
@@ -804,6 +810,7 @@ namespace Conductor.Pier.Api
             if (idEstabelecimento != null) localVarQueryParams.Add("idEstabelecimento", Configuration.ApiClient.ParameterToString(idEstabelecimento)); // query parameter
             if (flagAtendimento != null) localVarQueryParams.Add("flagAtendimento", Configuration.ApiClient.ParameterToString(flagAtendimento)); // query parameter
             if (mensagemAtendimento != null) localVarQueryParams.Add("mensagemAtendimento", Configuration.ApiClient.ParameterToString(mensagemAtendimento)); // query parameter
+            if (descricaoEstabelecimentoExterno != null) localVarQueryParams.Add("descricaoEstabelecimentoExterno", Configuration.ApiClient.ParameterToString(descricaoEstabelecimentoExterno)); // query parameter
             if (idConta != null) localVarQueryParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // query parameter
             
             if (login != null) localVarHeaderParams.Add("login", Configuration.ApiClient.ParameterToString(login)); // header parameter
@@ -846,10 +853,11 @@ namespace Conductor.Pier.Api
         /// <param name="idEstabelecimento">Identificador do estabelecimento quando o pagamento for efetuado em loja (optional)</param>
         /// <param name="flagAtendimento">Flag para lan\u00E7ar o atendimento (optional)</param>
         /// <param name="mensagemAtendimento">Mensagem enviada no atendimento (optional)</param>
+        /// <param name="descricaoEstabelecimentoExterno">Descri\u00E7\u00E3o externa do estabelecimento (optional)</param>
         /// <returns>Task of AjusteFinanceiroResponse</returns>
-        public async System.Threading.Tasks.Task<AjusteFinanceiroResponse> SalvarAjusteFinanceiroAsync (long? idTipoAjuste, string dataAjuste, double? valorAjuste, long? idConta, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null, bool? flagAtendimento = null, string mensagemAtendimento = null)
+        public async System.Threading.Tasks.Task<AjusteFinanceiroResponse> SalvarAjusteFinanceiroAsync (long? idTipoAjuste, string dataAjuste, double? valorAjuste, long? idConta, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null, bool? flagAtendimento = null, string mensagemAtendimento = null, string descricaoEstabelecimentoExterno = null)
         {
-             ApiResponse<AjusteFinanceiroResponse> localVarResponse = await SalvarAjusteFinanceiroAsyncWithHttpInfo(idTipoAjuste, dataAjuste, valorAjuste, idConta, login, identificadorExterno, idTransacaoOriginal, idEstabelecimento, flagAtendimento, mensagemAtendimento);
+             ApiResponse<AjusteFinanceiroResponse> localVarResponse = await SalvarAjusteFinanceiroAsyncWithHttpInfo(idTipoAjuste, dataAjuste, valorAjuste, idConta, login, identificadorExterno, idTransacaoOriginal, idEstabelecimento, flagAtendimento, mensagemAtendimento, descricaoEstabelecimentoExterno);
              return localVarResponse.Data;
 
         }
@@ -868,8 +876,9 @@ namespace Conductor.Pier.Api
         /// <param name="idEstabelecimento">Identificador do estabelecimento quando o pagamento for efetuado em loja (optional)</param>
         /// <param name="flagAtendimento">Flag para lan\u00E7ar o atendimento (optional)</param>
         /// <param name="mensagemAtendimento">Mensagem enviada no atendimento (optional)</param>
+        /// <param name="descricaoEstabelecimentoExterno">Descri\u00E7\u00E3o externa do estabelecimento (optional)</param>
         /// <returns>Task of ApiResponse (AjusteFinanceiroResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AjusteFinanceiroResponse>> SalvarAjusteFinanceiroAsyncWithHttpInfo (long? idTipoAjuste, string dataAjuste, double? valorAjuste, long? idConta, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null, bool? flagAtendimento = null, string mensagemAtendimento = null)
+        public async System.Threading.Tasks.Task<ApiResponse<AjusteFinanceiroResponse>> SalvarAjusteFinanceiroAsyncWithHttpInfo (long? idTipoAjuste, string dataAjuste, double? valorAjuste, long? idConta, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null, bool? flagAtendimento = null, string mensagemAtendimento = null, string descricaoEstabelecimentoExterno = null)
         {
             // verify the required parameter 'idTipoAjuste' is set
             if (idTipoAjuste == null) throw new ApiException(400, "Missing required parameter 'idTipoAjuste' when calling SalvarAjusteFinanceiro");
@@ -916,6 +925,7 @@ namespace Conductor.Pier.Api
             if (idEstabelecimento != null) localVarQueryParams.Add("idEstabelecimento", Configuration.ApiClient.ParameterToString(idEstabelecimento)); // query parameter
             if (flagAtendimento != null) localVarQueryParams.Add("flagAtendimento", Configuration.ApiClient.ParameterToString(flagAtendimento)); // query parameter
             if (mensagemAtendimento != null) localVarQueryParams.Add("mensagemAtendimento", Configuration.ApiClient.ParameterToString(mensagemAtendimento)); // query parameter
+            if (descricaoEstabelecimentoExterno != null) localVarQueryParams.Add("descricaoEstabelecimentoExterno", Configuration.ApiClient.ParameterToString(descricaoEstabelecimentoExterno)); // query parameter
             if (idConta != null) localVarQueryParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // query parameter
             
             if (login != null) localVarHeaderParams.Add("login", Configuration.ApiClient.ParameterToString(login)); // header parameter

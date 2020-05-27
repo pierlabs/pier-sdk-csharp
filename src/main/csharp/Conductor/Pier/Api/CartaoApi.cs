@@ -344,6 +344,28 @@ namespace Conductor.Pier.Api
         ApiResponse<PortadorResponse> ConsultarPortadorWithHttpInfo (long? id);
         
         /// <summary>
+        /// Consulta a senha real de um cart\u00E3o
+        /// </summary>
+        /// <remarks>
+        /// Esse recurso permite consultar a senha real de um cart\u00E3o
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o</param>
+        /// <returns>ConsultarSenhaCartaoResponse</returns>
+        ConsultarSenhaCartaoResponse ConsultarSenhaCartao (long? id);
+  
+        /// <summary>
+        /// Consulta a senha real de um cart\u00E3o
+        /// </summary>
+        /// <remarks>
+        /// Esse recurso permite consultar a senha real de um cart\u00E3o
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o</param>
+        /// <returns>ApiResponse of ConsultarSenhaCartaoResponse</returns>
+        ApiResponse<ConsultarSenhaCartaoResponse> ConsultarSenhaCartaoWithHttpInfo (long? id);
+        
+        /// <summary>
         /// Cadastrar cart\u00F5es MultiApp
         /// </summary>
         /// <remarks>
@@ -1156,6 +1178,28 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de Identifica\u00E7\u00E3o do Cart\u00E3o (id)</param>
         /// <returns>Task of ApiResponse (PortadorResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<PortadorResponse>> ConsultarPortadorAsyncWithHttpInfo (long? id);
+        
+        /// <summary>
+        /// Consulta a senha real de um cart\u00E3o
+        /// </summary>
+        /// <remarks>
+        /// Esse recurso permite consultar a senha real de um cart\u00E3o
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o</param>
+        /// <returns>Task of ConsultarSenhaCartaoResponse</returns>
+        System.Threading.Tasks.Task<ConsultarSenhaCartaoResponse> ConsultarSenhaCartaoAsync (long? id);
+
+        /// <summary>
+        /// Consulta a senha real de um cart\u00E3o
+        /// </summary>
+        /// <remarks>
+        /// Esse recurso permite consultar a senha real de um cart\u00E3o
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o</param>
+        /// <returns>Task of ApiResponse (ConsultarSenhaCartaoResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ConsultarSenhaCartaoResponse>> ConsultarSenhaCartaoAsyncWithHttpInfo (long? id);
         
         /// <summary>
         /// Cadastrar cart\u00F5es MultiApp
@@ -4068,6 +4112,164 @@ namespace Conductor.Pier.Api
             return new ApiResponse<PortadorResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (PortadorResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PortadorResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Consulta a senha real de um cart\u00E3o Esse recurso permite consultar a senha real de um cart\u00E3o
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o</param> 
+        /// <returns>ConsultarSenhaCartaoResponse</returns>
+        public ConsultarSenhaCartaoResponse ConsultarSenhaCartao (long? id)
+        {
+             ApiResponse<ConsultarSenhaCartaoResponse> localVarResponse = ConsultarSenhaCartaoWithHttpInfo(id);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Consulta a senha real de um cart\u00E3o Esse recurso permite consultar a senha real de um cart\u00E3o
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o</param> 
+        /// <returns>ApiResponse of ConsultarSenhaCartaoResponse</returns>
+        public ApiResponse< ConsultarSenhaCartaoResponse > ConsultarSenhaCartaoWithHttpInfo (long? id)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling CartaoApi->ConsultarSenhaCartao");
+            
+    
+            var localVarPath = "/api/cartoes/{id}/senhas";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarSenhaCartao: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarSenhaCartao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<ConsultarSenhaCartaoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ConsultarSenhaCartaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConsultarSenhaCartaoResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Consulta a senha real de um cart\u00E3o Esse recurso permite consultar a senha real de um cart\u00E3o
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o</param>
+        /// <returns>Task of ConsultarSenhaCartaoResponse</returns>
+        public async System.Threading.Tasks.Task<ConsultarSenhaCartaoResponse> ConsultarSenhaCartaoAsync (long? id)
+        {
+             ApiResponse<ConsultarSenhaCartaoResponse> localVarResponse = await ConsultarSenhaCartaoAsyncWithHttpInfo(id);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Consulta a senha real de um cart\u00E3o Esse recurso permite consultar a senha real de um cart\u00E3o
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o</param>
+        /// <returns>Task of ApiResponse (ConsultarSenhaCartaoResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ConsultarSenhaCartaoResponse>> ConsultarSenhaCartaoAsyncWithHttpInfo (long? id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarSenhaCartao");
+            
+    
+            var localVarPath = "/api/cartoes/{id}/senhas";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarSenhaCartao: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarSenhaCartao: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ConsultarSenhaCartaoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ConsultarSenhaCartaoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConsultarSenhaCartaoResponse)));
             
         }
         

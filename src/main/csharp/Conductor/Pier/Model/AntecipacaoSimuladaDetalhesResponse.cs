@@ -26,13 +26,15 @@ namespace Conductor.Pier.Model
         /// <param name="ValorParcelas">Valor total das parcelas do plano de parcelamento.</param>
         /// <param name="ValorDesconto">Valor do desconto para o plano de parcelamento.</param>
         /// <param name="ValorParcelasDesconto">Valor total da parcela ap\u00F3s a aplica\u00E7\u00E3o do desconto.</param>
+        /// <param name="ValorAbatimentoJuros">Valor do abatimento de juros.</param>
 
-        public AntecipacaoSimuladaDetalhesResponse(int? QuantidadeParcelas = null, double? ValorParcelas = null, double? ValorDesconto = null, double? ValorParcelasDesconto = null)
+        public AntecipacaoSimuladaDetalhesResponse(int? QuantidadeParcelas = null, double? ValorParcelas = null, double? ValorDesconto = null, double? ValorParcelasDesconto = null, double? ValorAbatimentoJuros = null)
         {
             this.QuantidadeParcelas = QuantidadeParcelas;
             this.ValorParcelas = ValorParcelas;
             this.ValorDesconto = ValorDesconto;
             this.ValorParcelasDesconto = ValorParcelasDesconto;
+            this.ValorAbatimentoJuros = ValorAbatimentoJuros;
             
         }
         
@@ -66,6 +68,13 @@ namespace Conductor.Pier.Model
         public double? ValorParcelasDesconto { get; set; }
     
         /// <summary>
+        /// Valor do abatimento de juros
+        /// </summary>
+        /// <value>Valor do abatimento de juros</value>
+        [DataMember(Name="valorAbatimentoJuros", EmitDefaultValue=false)]
+        public double? ValorAbatimentoJuros { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -77,6 +86,7 @@ namespace Conductor.Pier.Model
             sb.Append("  ValorParcelas: ").Append(ValorParcelas).Append("\n");
             sb.Append("  ValorDesconto: ").Append(ValorDesconto).Append("\n");
             sb.Append("  ValorParcelasDesconto: ").Append(ValorParcelasDesconto).Append("\n");
+            sb.Append("  ValorAbatimentoJuros: ").Append(ValorAbatimentoJuros).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -133,6 +143,11 @@ namespace Conductor.Pier.Model
                     this.ValorParcelasDesconto == other.ValorParcelasDesconto ||
                     this.ValorParcelasDesconto != null &&
                     this.ValorParcelasDesconto.Equals(other.ValorParcelasDesconto)
+                ) && 
+                (
+                    this.ValorAbatimentoJuros == other.ValorAbatimentoJuros ||
+                    this.ValorAbatimentoJuros != null &&
+                    this.ValorAbatimentoJuros.Equals(other.ValorAbatimentoJuros)
                 );
         }
 
@@ -159,6 +174,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.ValorParcelasDesconto != null)
                     hash = hash * 59 + this.ValorParcelasDesconto.GetHashCode();
+                
+                if (this.ValorAbatimentoJuros != null)
+                    hash = hash * 59 + this.ValorAbatimentoJuros.GetHashCode();
                 
                 return hash;
             }

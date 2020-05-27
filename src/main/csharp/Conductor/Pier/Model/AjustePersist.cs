@@ -30,8 +30,9 @@ namespace Conductor.Pier.Model
         /// <param name="IdEstabelecimento">Identificador do estabelecimento quando o pagamento for efetuado em loja.</param>
         /// <param name="FlagAtendimento">Flag para lan\u00E7ar o atendimento.</param>
         /// <param name="MensagemAtendimento">Mensagem enviada no atendimento.</param>
+        /// <param name="DescricaoEstabelecimentoExterno">Descri\u00E7\u00E3o externa do estabelecimento.</param>
 
-        public AjustePersist(long? IdTipoAjuste = null, string DataAjuste = null, double? ValorAjuste = null, string IdentificadorExterno = null, long? IdTransacaoOriginal = null, long? IdEstabelecimento = null, bool? FlagAtendimento = null, string MensagemAtendimento = null)
+        public AjustePersist(long? IdTipoAjuste = null, string DataAjuste = null, double? ValorAjuste = null, string IdentificadorExterno = null, long? IdTransacaoOriginal = null, long? IdEstabelecimento = null, bool? FlagAtendimento = null, string MensagemAtendimento = null, string DescricaoEstabelecimentoExterno = null)
         {
             // to ensure "IdTipoAjuste" is required (not null)
             if (IdTipoAjuste == null)
@@ -65,6 +66,7 @@ namespace Conductor.Pier.Model
             this.IdEstabelecimento = IdEstabelecimento;
             this.FlagAtendimento = FlagAtendimento;
             this.MensagemAtendimento = MensagemAtendimento;
+            this.DescricaoEstabelecimentoExterno = DescricaoEstabelecimentoExterno;
             
         }
         
@@ -126,6 +128,13 @@ namespace Conductor.Pier.Model
         public string MensagemAtendimento { get; set; }
     
         /// <summary>
+        /// Descri\u00E7\u00E3o externa do estabelecimento
+        /// </summary>
+        /// <value>Descri\u00E7\u00E3o externa do estabelecimento</value>
+        [DataMember(Name="descricaoEstabelecimentoExterno", EmitDefaultValue=false)]
+        public string DescricaoEstabelecimentoExterno { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -141,6 +150,7 @@ namespace Conductor.Pier.Model
             sb.Append("  IdEstabelecimento: ").Append(IdEstabelecimento).Append("\n");
             sb.Append("  FlagAtendimento: ").Append(FlagAtendimento).Append("\n");
             sb.Append("  MensagemAtendimento: ").Append(MensagemAtendimento).Append("\n");
+            sb.Append("  DescricaoEstabelecimentoExterno: ").Append(DescricaoEstabelecimentoExterno).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -217,6 +227,11 @@ namespace Conductor.Pier.Model
                     this.MensagemAtendimento == other.MensagemAtendimento ||
                     this.MensagemAtendimento != null &&
                     this.MensagemAtendimento.Equals(other.MensagemAtendimento)
+                ) && 
+                (
+                    this.DescricaoEstabelecimentoExterno == other.DescricaoEstabelecimentoExterno ||
+                    this.DescricaoEstabelecimentoExterno != null &&
+                    this.DescricaoEstabelecimentoExterno.Equals(other.DescricaoEstabelecimentoExterno)
                 );
         }
 
@@ -255,6 +270,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.MensagemAtendimento != null)
                     hash = hash * 59 + this.MensagemAtendimento.GetHashCode();
+                
+                if (this.DescricaoEstabelecimentoExterno != null)
+                    hash = hash * 59 + this.DescricaoEstabelecimentoExterno.GetHashCode();
                 
                 return hash;
             }

@@ -40,8 +40,9 @@ namespace Conductor.Pier.Model
         /// <param name="TipoExcedentePermitido">Tipo excedente permitido.</param>
         /// <param name="ValorTAC">Valor da TAC.</param>
         /// <param name="PercentualTac">Percentual da TAC.</param>
+        /// <param name="FlagIOFApartado">Flag que indica se o IOF \u00E9 apartado.</param>
 
-        public TipoOperacaoParcialUpdate(bool? FlagManterTaxaJurosNoRotativo = null, string Nome = null, string Descricao = null, int? IdEmissor = null, long? IdTabela = null, long? ValorParcela = null, bool? FlagCobraProRata = null, bool? FlagCobraJuros = null, int? PlanoMinimo = null, int? PlanoMaximo = null, double? ValorMinimo = null, double? ValorMaximo = null, long? IdTabelaJuros = null, int? FlagPosProximoVencimento = null, double? ExcedentePermitido = null, string TipoExcedentePermitido = null, double? ValorTAC = null, double? PercentualTac = null)
+        public TipoOperacaoParcialUpdate(bool? FlagManterTaxaJurosNoRotativo = null, string Nome = null, string Descricao = null, int? IdEmissor = null, long? IdTabela = null, long? ValorParcela = null, bool? FlagCobraProRata = null, bool? FlagCobraJuros = null, int? PlanoMinimo = null, int? PlanoMaximo = null, double? ValorMinimo = null, double? ValorMaximo = null, long? IdTabelaJuros = null, int? FlagPosProximoVencimento = null, double? ExcedentePermitido = null, string TipoExcedentePermitido = null, double? ValorTAC = null, double? PercentualTac = null, bool? FlagIOFApartado = null)
         {
             this.FlagManterTaxaJurosNoRotativo = FlagManterTaxaJurosNoRotativo;
             this.Nome = Nome;
@@ -61,6 +62,7 @@ namespace Conductor.Pier.Model
             this.TipoExcedentePermitido = TipoExcedentePermitido;
             this.ValorTAC = ValorTAC;
             this.PercentualTac = PercentualTac;
+            this.FlagIOFApartado = FlagIOFApartado;
             
         }
         
@@ -192,6 +194,13 @@ namespace Conductor.Pier.Model
         public double? PercentualTac { get; set; }
     
         /// <summary>
+        /// Flag que indica se o IOF \u00E9 apartado
+        /// </summary>
+        /// <value>Flag que indica se o IOF \u00E9 apartado</value>
+        [DataMember(Name="flagIOFApartado", EmitDefaultValue=false)]
+        public bool? FlagIOFApartado { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -217,6 +226,7 @@ namespace Conductor.Pier.Model
             sb.Append("  TipoExcedentePermitido: ").Append(TipoExcedentePermitido).Append("\n");
             sb.Append("  ValorTAC: ").Append(ValorTAC).Append("\n");
             sb.Append("  PercentualTac: ").Append(PercentualTac).Append("\n");
+            sb.Append("  FlagIOFApartado: ").Append(FlagIOFApartado).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -343,6 +353,11 @@ namespace Conductor.Pier.Model
                     this.PercentualTac == other.PercentualTac ||
                     this.PercentualTac != null &&
                     this.PercentualTac.Equals(other.PercentualTac)
+                ) && 
+                (
+                    this.FlagIOFApartado == other.FlagIOFApartado ||
+                    this.FlagIOFApartado != null &&
+                    this.FlagIOFApartado.Equals(other.FlagIOFApartado)
                 );
         }
 
@@ -411,6 +426,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.PercentualTac != null)
                     hash = hash * 59 + this.PercentualTac.GetHashCode();
+                
+                if (this.FlagIOFApartado != null)
+                    hash = hash * 59 + this.FlagIOFApartado.GetHashCode();
                 
                 return hash;
             }

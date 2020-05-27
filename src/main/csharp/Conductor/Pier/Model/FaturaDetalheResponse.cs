@@ -60,8 +60,10 @@ namespace Conductor.Pier.Model
         /// <param name="IdBoleto">C\u00F3digo de identifica\u00E7\u00E3o do boleto.</param>
         /// <param name="FlagEmiteExtrato">Flag de emite extrato..</param>
         /// <param name="LinhaDigitavel">Linha digit\u00E1vel da fatura.</param>
+        /// <param name="CetMensal">Valor do CET (Custo efetivo total) mensal..</param>
+        /// <param name="CetAnual">Valor do CET (Custo efetivo total) anual..</param>
 
-        public FaturaDetalheResponse(long? IdConta = null, SituacaoProcessamentoEnum? SituacaoProcessamento = null, bool? PagamentoEfetuado = null, string DataVencimentoFatura = null, string DataVencimentoReal = null, string DataFechamento = null, double? ValorTotal = null, double? ValorPagamentoMinimo = null, List<LancamentoFaturaResponse> LancamentosFaturaResponse = null, double? SaldoAnterior = null, long? IdBoleto = null, bool? FlagEmiteExtrato = null, string LinhaDigitavel = null)
+        public FaturaDetalheResponse(long? IdConta = null, SituacaoProcessamentoEnum? SituacaoProcessamento = null, bool? PagamentoEfetuado = null, string DataVencimentoFatura = null, string DataVencimentoReal = null, string DataFechamento = null, double? ValorTotal = null, double? ValorPagamentoMinimo = null, List<LancamentoFaturaResponse> LancamentosFaturaResponse = null, double? SaldoAnterior = null, long? IdBoleto = null, bool? FlagEmiteExtrato = null, string LinhaDigitavel = null, double? CetMensal = null, double? CetAnual = null)
         {
             this.IdConta = IdConta;
             this.SituacaoProcessamento = SituacaoProcessamento;
@@ -76,6 +78,8 @@ namespace Conductor.Pier.Model
             this.IdBoleto = IdBoleto;
             this.FlagEmiteExtrato = FlagEmiteExtrato;
             this.LinhaDigitavel = LinhaDigitavel;
+            this.CetMensal = CetMensal;
+            this.CetAnual = CetAnual;
             
         }
         
@@ -165,6 +169,20 @@ namespace Conductor.Pier.Model
         public string LinhaDigitavel { get; set; }
     
         /// <summary>
+        /// Valor do CET (Custo efetivo total) mensal.
+        /// </summary>
+        /// <value>Valor do CET (Custo efetivo total) mensal.</value>
+        [DataMember(Name="cetMensal", EmitDefaultValue=false)]
+        public double? CetMensal { get; set; }
+    
+        /// <summary>
+        /// Valor do CET (Custo efetivo total) anual.
+        /// </summary>
+        /// <value>Valor do CET (Custo efetivo total) anual.</value>
+        [DataMember(Name="cetAnual", EmitDefaultValue=false)]
+        public double? CetAnual { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -185,6 +203,8 @@ namespace Conductor.Pier.Model
             sb.Append("  IdBoleto: ").Append(IdBoleto).Append("\n");
             sb.Append("  FlagEmiteExtrato: ").Append(FlagEmiteExtrato).Append("\n");
             sb.Append("  LinhaDigitavel: ").Append(LinhaDigitavel).Append("\n");
+            sb.Append("  CetMensal: ").Append(CetMensal).Append("\n");
+            sb.Append("  CetAnual: ").Append(CetAnual).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -286,6 +306,16 @@ namespace Conductor.Pier.Model
                     this.LinhaDigitavel == other.LinhaDigitavel ||
                     this.LinhaDigitavel != null &&
                     this.LinhaDigitavel.Equals(other.LinhaDigitavel)
+                ) && 
+                (
+                    this.CetMensal == other.CetMensal ||
+                    this.CetMensal != null &&
+                    this.CetMensal.Equals(other.CetMensal)
+                ) && 
+                (
+                    this.CetAnual == other.CetAnual ||
+                    this.CetAnual != null &&
+                    this.CetAnual.Equals(other.CetAnual)
                 );
         }
 
@@ -339,6 +369,12 @@ namespace Conductor.Pier.Model
                 
                 if (this.LinhaDigitavel != null)
                     hash = hash * 59 + this.LinhaDigitavel.GetHashCode();
+                
+                if (this.CetMensal != null)
+                    hash = hash * 59 + this.CetMensal.GetHashCode();
+                
+                if (this.CetAnual != null)
+                    hash = hash * 59 + this.CetAnual.GetHashCode();
                 
                 return hash;
             }

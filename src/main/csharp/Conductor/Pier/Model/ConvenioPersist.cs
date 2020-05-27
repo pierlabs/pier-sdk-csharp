@@ -38,8 +38,9 @@ namespace Conductor.Pier.Model
         /// <param name="EnderecoCobrancaEmissor">Endere\u00E7o de cobran\u00E7a do emissor.</param>
         /// <param name="NomeBeneficiario">Nome do benefici\u00E1rio/cedente da cobran\u00E7a.</param>
         /// <param name="CnpjBeneficiario">CNPJ do benefici\u00E1rio/cedente da cobran\u00E7a.</param>
+        /// <param name="ComplementoCarteira">Complemento registro de boleto.</param>
 
-        public ConvenioPersist(long? Banco = null, long? Agencia = null, string ContaCorrente = null, string Especie = null, double? NumeroConvenio = null, long? Carteira = null, string CodigoCedente = null, string EspecieTipo = null, string EspecieDocumento = null, bool? Aceite = null, string Instrucoes = null, string LocalPagamento1 = null, string LocalPagamento2 = null, string EnderecoCobrancaEmissor = null, string NomeBeneficiario = null, string CnpjBeneficiario = null)
+        public ConvenioPersist(long? Banco = null, long? Agencia = null, string ContaCorrente = null, string Especie = null, double? NumeroConvenio = null, long? Carteira = null, string CodigoCedente = null, string EspecieTipo = null, string EspecieDocumento = null, bool? Aceite = null, string Instrucoes = null, string LocalPagamento1 = null, string LocalPagamento2 = null, string EnderecoCobrancaEmissor = null, string NomeBeneficiario = null, string CnpjBeneficiario = null, double? ComplementoCarteira = null)
         {
             // to ensure "Banco" is required (not null)
             if (Banco == null)
@@ -81,6 +82,7 @@ namespace Conductor.Pier.Model
             this.EnderecoCobrancaEmissor = EnderecoCobrancaEmissor;
             this.NomeBeneficiario = NomeBeneficiario;
             this.CnpjBeneficiario = CnpjBeneficiario;
+            this.ComplementoCarteira = ComplementoCarteira;
             
         }
         
@@ -198,6 +200,13 @@ namespace Conductor.Pier.Model
         public string CnpjBeneficiario { get; set; }
     
         /// <summary>
+        /// Complemento registro de boleto
+        /// </summary>
+        /// <value>Complemento registro de boleto</value>
+        [DataMember(Name="complementoCarteira", EmitDefaultValue=false)]
+        public double? ComplementoCarteira { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -221,6 +230,7 @@ namespace Conductor.Pier.Model
             sb.Append("  EnderecoCobrancaEmissor: ").Append(EnderecoCobrancaEmissor).Append("\n");
             sb.Append("  NomeBeneficiario: ").Append(NomeBeneficiario).Append("\n");
             sb.Append("  CnpjBeneficiario: ").Append(CnpjBeneficiario).Append("\n");
+            sb.Append("  ComplementoCarteira: ").Append(ComplementoCarteira).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -337,6 +347,11 @@ namespace Conductor.Pier.Model
                     this.CnpjBeneficiario == other.CnpjBeneficiario ||
                     this.CnpjBeneficiario != null &&
                     this.CnpjBeneficiario.Equals(other.CnpjBeneficiario)
+                ) && 
+                (
+                    this.ComplementoCarteira == other.ComplementoCarteira ||
+                    this.ComplementoCarteira != null &&
+                    this.ComplementoCarteira.Equals(other.ComplementoCarteira)
                 );
         }
 
@@ -399,6 +414,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.CnpjBeneficiario != null)
                     hash = hash * 59 + this.CnpjBeneficiario.GetHashCode();
+                
+                if (this.ComplementoCarteira != null)
+                    hash = hash * 59 + this.ComplementoCarteira.GetHashCode();
                 
                 return hash;
             }

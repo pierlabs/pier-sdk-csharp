@@ -39,8 +39,9 @@ namespace Conductor.Pier.Model
         /// <param name="IdEscritorioCobranca">C\u00F3digo de identifica\u00E7\u00E3o do escrit\u00F3rio de cobran\u00E7a.</param>
         /// <param name="NomeEscritorioCobranca">Nome do escrit\u00F3rio de cobran\u00E7a.</param>
         /// <param name="EmailPessoaConta">Email do devedor.</param>
+        /// <param name="DataEntradaCreliq">Data de entrada em creliq.</param>
 
-        public DividaClienteResponse(long? Id = null, string DataVencimentoFaturaAtraso = null, long? QuantidadeDiasAtraso = null, string DataVencimentoAcordo = null, long? QuantidadeDiasAtrasoCorrigido = null, double? ValorSaldoDevedor = null, double? TaxaCorrecao = null, double? ValorCorrecao = null, double? ValorIOF = null, double? ValorSaldoCorrigido = null, long? IdStatusConta = null, string DescricaoStatusConta = null, long? IdStatusAcordo = null, string DescricaoStatusAcordo = null, long? IdEscritorioCobranca = null, string NomeEscritorioCobranca = null, string EmailPessoaConta = null)
+        public DividaClienteResponse(long? Id = null, string DataVencimentoFaturaAtraso = null, long? QuantidadeDiasAtraso = null, string DataVencimentoAcordo = null, long? QuantidadeDiasAtrasoCorrigido = null, double? ValorSaldoDevedor = null, double? TaxaCorrecao = null, double? ValorCorrecao = null, double? ValorIOF = null, double? ValorSaldoCorrigido = null, long? IdStatusConta = null, string DescricaoStatusConta = null, long? IdStatusAcordo = null, string DescricaoStatusAcordo = null, long? IdEscritorioCobranca = null, string NomeEscritorioCobranca = null, string EmailPessoaConta = null, string DataEntradaCreliq = null)
         {
             this.Id = Id;
             this.DataVencimentoFaturaAtraso = DataVencimentoFaturaAtraso;
@@ -59,6 +60,7 @@ namespace Conductor.Pier.Model
             this.IdEscritorioCobranca = IdEscritorioCobranca;
             this.NomeEscritorioCobranca = NomeEscritorioCobranca;
             this.EmailPessoaConta = EmailPessoaConta;
+            this.DataEntradaCreliq = DataEntradaCreliq;
             
         }
         
@@ -183,6 +185,13 @@ namespace Conductor.Pier.Model
         public string EmailPessoaConta { get; set; }
     
         /// <summary>
+        /// Data de entrada em creliq
+        /// </summary>
+        /// <value>Data de entrada em creliq</value>
+        [DataMember(Name="dataEntradaCreliq", EmitDefaultValue=false)]
+        public string DataEntradaCreliq { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -207,6 +216,7 @@ namespace Conductor.Pier.Model
             sb.Append("  IdEscritorioCobranca: ").Append(IdEscritorioCobranca).Append("\n");
             sb.Append("  NomeEscritorioCobranca: ").Append(NomeEscritorioCobranca).Append("\n");
             sb.Append("  EmailPessoaConta: ").Append(EmailPessoaConta).Append("\n");
+            sb.Append("  DataEntradaCreliq: ").Append(DataEntradaCreliq).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -328,6 +338,11 @@ namespace Conductor.Pier.Model
                     this.EmailPessoaConta == other.EmailPessoaConta ||
                     this.EmailPessoaConta != null &&
                     this.EmailPessoaConta.Equals(other.EmailPessoaConta)
+                ) && 
+                (
+                    this.DataEntradaCreliq == other.DataEntradaCreliq ||
+                    this.DataEntradaCreliq != null &&
+                    this.DataEntradaCreliq.Equals(other.DataEntradaCreliq)
                 );
         }
 
@@ -393,6 +408,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.EmailPessoaConta != null)
                     hash = hash * 59 + this.EmailPessoaConta.GetHashCode();
+                
+                if (this.DataEntradaCreliq != null)
+                    hash = hash * 59 + this.DataEntradaCreliq.GetHashCode();
                 
                 return hash;
             }

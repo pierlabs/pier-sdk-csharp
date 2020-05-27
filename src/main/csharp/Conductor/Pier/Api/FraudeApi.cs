@@ -42,6 +42,30 @@ namespace Conductor.Pier.Api
         ApiResponse<MotivoFraudeResponse> AlterarMotivoFraudeWithHttpInfo (long? id, MotivoFraudeUpdate motivoFraudeUpdate);
         
         /// <summary>
+        /// Altera suspeita de fraude
+        /// </summary>
+        /// <remarks>
+        /// Recurso para alterar uma suspeita de fraude
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da Suspeita de Fraude</param>
+        /// <param name="suspeitaFraudeUpdate">suspeitaFraudeUpdate</param>
+        /// <returns>SuspeitaFraudeResponse</returns>
+        SuspeitaFraudeResponse AlterarSuspeitaFraude (long? id, SuspeitaFraudeUpdate suspeitaFraudeUpdate);
+  
+        /// <summary>
+        /// Altera suspeita de fraude
+        /// </summary>
+        /// <remarks>
+        /// Recurso para alterar uma suspeita de fraude
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da Suspeita de Fraude</param>
+        /// <param name="suspeitaFraudeUpdate">suspeitaFraudeUpdate</param>
+        /// <returns>ApiResponse of SuspeitaFraudeResponse</returns>
+        ApiResponse<SuspeitaFraudeResponse> AlterarSuspeitaFraudeWithHttpInfo (long? id, SuspeitaFraudeUpdate suspeitaFraudeUpdate);
+        
+        /// <summary>
         /// Cadastra motivo fraude
         /// </summary>
         /// <remarks>
@@ -86,6 +110,28 @@ namespace Conductor.Pier.Api
         ApiResponse<MotivoFraudeResponse> ConsultarMotivoFraudeWithHttpInfo (long? id);
         
         /// <summary>
+        /// Consulta suspeita de fraude
+        /// </summary>
+        /// <remarks>
+        /// Recurso para consultar suspeitas de fraude
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da Suspeita de Fraude</param>
+        /// <returns>SuspeitaFraudeResponse</returns>
+        SuspeitaFraudeResponse ConsultarSuspeitaFraude (long? id);
+  
+        /// <summary>
+        /// Consulta suspeita de fraude
+        /// </summary>
+        /// <remarks>
+        /// Recurso para consultar suspeitas de fraude
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da Suspeita de Fraude</param>
+        /// <returns>ApiResponse of SuspeitaFraudeResponse</returns>
+        ApiResponse<SuspeitaFraudeResponse> ConsultarSuspeitaFraudeWithHttpInfo (long? id);
+        
+        /// <summary>
         /// Lista motivo fraude
         /// </summary>
         /// <remarks>
@@ -112,6 +158,62 @@ namespace Conductor.Pier.Api
         /// <param name="descricao">Descri\u00E7\u00E3o motivo fraude (optional)</param>
         /// <returns>ApiResponse of PageMotivoFraudeResponse</returns>
         ApiResponse<PageMotivoFraudeResponse> ListarMotivoFraudeWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string descricao = null);
+        
+        /// <summary>
+        /// Lista suspeitas de fraude
+        /// </summary>
+        /// <remarks>
+        /// Recursos para listagens das suspeitas de fraude
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idMotivoFraude">C\u00F3digo de identifica\u00E7\u00E3o do motivo da suspeita de fraude (optional)</param>
+        /// <param name="idPessoa">C\u00F3digo de identifica\u00E7\u00E3o da pessoa com suspeita de fraude (optional)</param>
+        /// <param name="dataSuspeitaFraudeInicial">Data in\u00EDcio do per\u00EDodo da consulta (optional)</param>
+        /// <param name="dataSuspeitaFraudeFinal">Data fim do per\u00EDodo da consulta (optional)</param>
+        /// <returns>PageSuspeitaFraudeResponse</returns>
+        PageSuspeitaFraudeResponse ListarSuspeitaFraude (List<string> sort = null, int? page = null, int? limit = null, long? idMotivoFraude = null, long? idPessoa = null, string dataSuspeitaFraudeInicial = null, string dataSuspeitaFraudeFinal = null);
+  
+        /// <summary>
+        /// Lista suspeitas de fraude
+        /// </summary>
+        /// <remarks>
+        /// Recursos para listagens das suspeitas de fraude
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idMotivoFraude">C\u00F3digo de identifica\u00E7\u00E3o do motivo da suspeita de fraude (optional)</param>
+        /// <param name="idPessoa">C\u00F3digo de identifica\u00E7\u00E3o da pessoa com suspeita de fraude (optional)</param>
+        /// <param name="dataSuspeitaFraudeInicial">Data in\u00EDcio do per\u00EDodo da consulta (optional)</param>
+        /// <param name="dataSuspeitaFraudeFinal">Data fim do per\u00EDodo da consulta (optional)</param>
+        /// <returns>ApiResponse of PageSuspeitaFraudeResponse</returns>
+        ApiResponse<PageSuspeitaFraudeResponse> ListarSuspeitaFraudeWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idMotivoFraude = null, long? idPessoa = null, string dataSuspeitaFraudeInicial = null, string dataSuspeitaFraudeFinal = null);
+        
+        /// <summary>
+        /// Cadastra suspeita de fraude
+        /// </summary>
+        /// <remarks>
+        /// Recurso para cadastrar as suspeitas de fraude
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="suspeitaFraudePersist">suspeitaFraudePersist</param>
+        /// <returns>SuspeitaFraudeResponse</returns>
+        SuspeitaFraudeResponse SalvarSuspeitaFraude (SuspeitaFraudePersist suspeitaFraudePersist);
+  
+        /// <summary>
+        /// Cadastra suspeita de fraude
+        /// </summary>
+        /// <remarks>
+        /// Recurso para cadastrar as suspeitas de fraude
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="suspeitaFraudePersist">suspeitaFraudePersist</param>
+        /// <returns>ApiResponse of SuspeitaFraudeResponse</returns>
+        ApiResponse<SuspeitaFraudeResponse> SalvarSuspeitaFraudeWithHttpInfo (SuspeitaFraudePersist suspeitaFraudePersist);
         
         #endregion Synchronous Operations
         
@@ -140,6 +242,30 @@ namespace Conductor.Pier.Api
         /// <param name="motivoFraudeUpdate">motivoFraudeUpdate</param>
         /// <returns>Task of ApiResponse (MotivoFraudeResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<MotivoFraudeResponse>> AlterarMotivoFraudeAsyncWithHttpInfo (long? id, MotivoFraudeUpdate motivoFraudeUpdate);
+        
+        /// <summary>
+        /// Altera suspeita de fraude
+        /// </summary>
+        /// <remarks>
+        /// Recurso para alterar uma suspeita de fraude
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da Suspeita de Fraude</param>
+        /// <param name="suspeitaFraudeUpdate">suspeitaFraudeUpdate</param>
+        /// <returns>Task of SuspeitaFraudeResponse</returns>
+        System.Threading.Tasks.Task<SuspeitaFraudeResponse> AlterarSuspeitaFraudeAsync (long? id, SuspeitaFraudeUpdate suspeitaFraudeUpdate);
+
+        /// <summary>
+        /// Altera suspeita de fraude
+        /// </summary>
+        /// <remarks>
+        /// Recurso para alterar uma suspeita de fraude
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da Suspeita de Fraude</param>
+        /// <param name="suspeitaFraudeUpdate">suspeitaFraudeUpdate</param>
+        /// <returns>Task of ApiResponse (SuspeitaFraudeResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SuspeitaFraudeResponse>> AlterarSuspeitaFraudeAsyncWithHttpInfo (long? id, SuspeitaFraudeUpdate suspeitaFraudeUpdate);
         
         /// <summary>
         /// Cadastra motivo fraude
@@ -186,6 +312,28 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<MotivoFraudeResponse>> ConsultarMotivoFraudeAsyncWithHttpInfo (long? id);
         
         /// <summary>
+        /// Consulta suspeita de fraude
+        /// </summary>
+        /// <remarks>
+        /// Recurso para consultar suspeitas de fraude
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da Suspeita de Fraude</param>
+        /// <returns>Task of SuspeitaFraudeResponse</returns>
+        System.Threading.Tasks.Task<SuspeitaFraudeResponse> ConsultarSuspeitaFraudeAsync (long? id);
+
+        /// <summary>
+        /// Consulta suspeita de fraude
+        /// </summary>
+        /// <remarks>
+        /// Recurso para consultar suspeitas de fraude
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da Suspeita de Fraude</param>
+        /// <returns>Task of ApiResponse (SuspeitaFraudeResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SuspeitaFraudeResponse>> ConsultarSuspeitaFraudeAsyncWithHttpInfo (long? id);
+        
+        /// <summary>
         /// Lista motivo fraude
         /// </summary>
         /// <remarks>
@@ -212,6 +360,62 @@ namespace Conductor.Pier.Api
         /// <param name="descricao">Descri\u00E7\u00E3o motivo fraude (optional)</param>
         /// <returns>Task of ApiResponse (PageMotivoFraudeResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<PageMotivoFraudeResponse>> ListarMotivoFraudeAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, string descricao = null);
+        
+        /// <summary>
+        /// Lista suspeitas de fraude
+        /// </summary>
+        /// <remarks>
+        /// Recursos para listagens das suspeitas de fraude
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idMotivoFraude">C\u00F3digo de identifica\u00E7\u00E3o do motivo da suspeita de fraude (optional)</param>
+        /// <param name="idPessoa">C\u00F3digo de identifica\u00E7\u00E3o da pessoa com suspeita de fraude (optional)</param>
+        /// <param name="dataSuspeitaFraudeInicial">Data in\u00EDcio do per\u00EDodo da consulta (optional)</param>
+        /// <param name="dataSuspeitaFraudeFinal">Data fim do per\u00EDodo da consulta (optional)</param>
+        /// <returns>Task of PageSuspeitaFraudeResponse</returns>
+        System.Threading.Tasks.Task<PageSuspeitaFraudeResponse> ListarSuspeitaFraudeAsync (List<string> sort = null, int? page = null, int? limit = null, long? idMotivoFraude = null, long? idPessoa = null, string dataSuspeitaFraudeInicial = null, string dataSuspeitaFraudeFinal = null);
+
+        /// <summary>
+        /// Lista suspeitas de fraude
+        /// </summary>
+        /// <remarks>
+        /// Recursos para listagens das suspeitas de fraude
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idMotivoFraude">C\u00F3digo de identifica\u00E7\u00E3o do motivo da suspeita de fraude (optional)</param>
+        /// <param name="idPessoa">C\u00F3digo de identifica\u00E7\u00E3o da pessoa com suspeita de fraude (optional)</param>
+        /// <param name="dataSuspeitaFraudeInicial">Data in\u00EDcio do per\u00EDodo da consulta (optional)</param>
+        /// <param name="dataSuspeitaFraudeFinal">Data fim do per\u00EDodo da consulta (optional)</param>
+        /// <returns>Task of ApiResponse (PageSuspeitaFraudeResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PageSuspeitaFraudeResponse>> ListarSuspeitaFraudeAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idMotivoFraude = null, long? idPessoa = null, string dataSuspeitaFraudeInicial = null, string dataSuspeitaFraudeFinal = null);
+        
+        /// <summary>
+        /// Cadastra suspeita de fraude
+        /// </summary>
+        /// <remarks>
+        /// Recurso para cadastrar as suspeitas de fraude
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="suspeitaFraudePersist">suspeitaFraudePersist</param>
+        /// <returns>Task of SuspeitaFraudeResponse</returns>
+        System.Threading.Tasks.Task<SuspeitaFraudeResponse> SalvarSuspeitaFraudeAsync (SuspeitaFraudePersist suspeitaFraudePersist);
+
+        /// <summary>
+        /// Cadastra suspeita de fraude
+        /// </summary>
+        /// <remarks>
+        /// Recurso para cadastrar as suspeitas de fraude
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="suspeitaFraudePersist">suspeitaFraudePersist</param>
+        /// <returns>Task of ApiResponse (SuspeitaFraudeResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SuspeitaFraudeResponse>> SalvarSuspeitaFraudeAsyncWithHttpInfo (SuspeitaFraudePersist suspeitaFraudePersist);
         
         #endregion Asynchronous Operations
         
@@ -484,6 +688,188 @@ namespace Conductor.Pier.Api
             return new ApiResponse<MotivoFraudeResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (MotivoFraudeResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(MotivoFraudeResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Altera suspeita de fraude Recurso para alterar uma suspeita de fraude
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da Suspeita de Fraude</param> 
+        /// <param name="suspeitaFraudeUpdate">suspeitaFraudeUpdate</param> 
+        /// <returns>SuspeitaFraudeResponse</returns>
+        public SuspeitaFraudeResponse AlterarSuspeitaFraude (long? id, SuspeitaFraudeUpdate suspeitaFraudeUpdate)
+        {
+             ApiResponse<SuspeitaFraudeResponse> localVarResponse = AlterarSuspeitaFraudeWithHttpInfo(id, suspeitaFraudeUpdate);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Altera suspeita de fraude Recurso para alterar uma suspeita de fraude
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da Suspeita de Fraude</param> 
+        /// <param name="suspeitaFraudeUpdate">suspeitaFraudeUpdate</param> 
+        /// <returns>ApiResponse of SuspeitaFraudeResponse</returns>
+        public ApiResponse< SuspeitaFraudeResponse > AlterarSuspeitaFraudeWithHttpInfo (long? id, SuspeitaFraudeUpdate suspeitaFraudeUpdate)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling FraudeApi->AlterarSuspeitaFraude");
+            
+            // verify the required parameter 'suspeitaFraudeUpdate' is set
+            if (suspeitaFraudeUpdate == null)
+                throw new ApiException(400, "Missing required parameter 'suspeitaFraudeUpdate' when calling FraudeApi->AlterarSuspeitaFraude");
+            
+    
+            var localVarPath = "/api/fraudes/suspeitas/{id}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            if (suspeitaFraudeUpdate.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(suspeitaFraudeUpdate); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = suspeitaFraudeUpdate; // byte array
+            }
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling AlterarSuspeitaFraude: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling AlterarSuspeitaFraude: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<SuspeitaFraudeResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (SuspeitaFraudeResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SuspeitaFraudeResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Altera suspeita de fraude Recurso para alterar uma suspeita de fraude
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da Suspeita de Fraude</param>
+        /// <param name="suspeitaFraudeUpdate">suspeitaFraudeUpdate</param>
+        /// <returns>Task of SuspeitaFraudeResponse</returns>
+        public async System.Threading.Tasks.Task<SuspeitaFraudeResponse> AlterarSuspeitaFraudeAsync (long? id, SuspeitaFraudeUpdate suspeitaFraudeUpdate)
+        {
+             ApiResponse<SuspeitaFraudeResponse> localVarResponse = await AlterarSuspeitaFraudeAsyncWithHttpInfo(id, suspeitaFraudeUpdate);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Altera suspeita de fraude Recurso para alterar uma suspeita de fraude
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da Suspeita de Fraude</param>
+        /// <param name="suspeitaFraudeUpdate">suspeitaFraudeUpdate</param>
+        /// <returns>Task of ApiResponse (SuspeitaFraudeResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SuspeitaFraudeResponse>> AlterarSuspeitaFraudeAsyncWithHttpInfo (long? id, SuspeitaFraudeUpdate suspeitaFraudeUpdate)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AlterarSuspeitaFraude");
+            // verify the required parameter 'suspeitaFraudeUpdate' is set
+            if (suspeitaFraudeUpdate == null) throw new ApiException(400, "Missing required parameter 'suspeitaFraudeUpdate' when calling AlterarSuspeitaFraude");
+            
+    
+            var localVarPath = "/api/fraudes/suspeitas/{id}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            if (suspeitaFraudeUpdate.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(suspeitaFraudeUpdate); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = suspeitaFraudeUpdate; // byte array
+            }
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling AlterarSuspeitaFraude: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling AlterarSuspeitaFraude: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SuspeitaFraudeResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (SuspeitaFraudeResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SuspeitaFraudeResponse)));
             
         }
         
@@ -816,6 +1202,164 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
+        /// Consulta suspeita de fraude Recurso para consultar suspeitas de fraude
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da Suspeita de Fraude</param> 
+        /// <returns>SuspeitaFraudeResponse</returns>
+        public SuspeitaFraudeResponse ConsultarSuspeitaFraude (long? id)
+        {
+             ApiResponse<SuspeitaFraudeResponse> localVarResponse = ConsultarSuspeitaFraudeWithHttpInfo(id);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Consulta suspeita de fraude Recurso para consultar suspeitas de fraude
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da Suspeita de Fraude</param> 
+        /// <returns>ApiResponse of SuspeitaFraudeResponse</returns>
+        public ApiResponse< SuspeitaFraudeResponse > ConsultarSuspeitaFraudeWithHttpInfo (long? id)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling FraudeApi->ConsultarSuspeitaFraude");
+            
+    
+            var localVarPath = "/api/fraudes/suspeitas/{id}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarSuspeitaFraude: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarSuspeitaFraude: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<SuspeitaFraudeResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (SuspeitaFraudeResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SuspeitaFraudeResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Consulta suspeita de fraude Recurso para consultar suspeitas de fraude
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da Suspeita de Fraude</param>
+        /// <returns>Task of SuspeitaFraudeResponse</returns>
+        public async System.Threading.Tasks.Task<SuspeitaFraudeResponse> ConsultarSuspeitaFraudeAsync (long? id)
+        {
+             ApiResponse<SuspeitaFraudeResponse> localVarResponse = await ConsultarSuspeitaFraudeAsyncWithHttpInfo(id);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Consulta suspeita de fraude Recurso para consultar suspeitas de fraude
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da Suspeita de Fraude</param>
+        /// <returns>Task of ApiResponse (SuspeitaFraudeResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SuspeitaFraudeResponse>> ConsultarSuspeitaFraudeAsyncWithHttpInfo (long? id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarSuspeitaFraude");
+            
+    
+            var localVarPath = "/api/fraudes/suspeitas/{id}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarSuspeitaFraude: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarSuspeitaFraude: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SuspeitaFraudeResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (SuspeitaFraudeResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SuspeitaFraudeResponse)));
+            
+        }
+        
+        /// <summary>
         /// Lista motivo fraude Recurso que lista os motivos fraude
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
@@ -982,6 +1526,364 @@ namespace Conductor.Pier.Api
             return new ApiResponse<PageMotivoFraudeResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (PageMotivoFraudeResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageMotivoFraudeResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Lista suspeitas de fraude Recursos para listagens das suspeitas de fraude
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="page">P\u00E1gina (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <param name="idMotivoFraude">C\u00F3digo de identifica\u00E7\u00E3o do motivo da suspeita de fraude (optional)</param> 
+        /// <param name="idPessoa">C\u00F3digo de identifica\u00E7\u00E3o da pessoa com suspeita de fraude (optional)</param> 
+        /// <param name="dataSuspeitaFraudeInicial">Data in\u00EDcio do per\u00EDodo da consulta (optional)</param> 
+        /// <param name="dataSuspeitaFraudeFinal">Data fim do per\u00EDodo da consulta (optional)</param> 
+        /// <returns>PageSuspeitaFraudeResponse</returns>
+        public PageSuspeitaFraudeResponse ListarSuspeitaFraude (List<string> sort = null, int? page = null, int? limit = null, long? idMotivoFraude = null, long? idPessoa = null, string dataSuspeitaFraudeInicial = null, string dataSuspeitaFraudeFinal = null)
+        {
+             ApiResponse<PageSuspeitaFraudeResponse> localVarResponse = ListarSuspeitaFraudeWithHttpInfo(sort, page, limit, idMotivoFraude, idPessoa, dataSuspeitaFraudeInicial, dataSuspeitaFraudeFinal);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Lista suspeitas de fraude Recursos para listagens das suspeitas de fraude
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="page">P\u00E1gina (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <param name="idMotivoFraude">C\u00F3digo de identifica\u00E7\u00E3o do motivo da suspeita de fraude (optional)</param> 
+        /// <param name="idPessoa">C\u00F3digo de identifica\u00E7\u00E3o da pessoa com suspeita de fraude (optional)</param> 
+        /// <param name="dataSuspeitaFraudeInicial">Data in\u00EDcio do per\u00EDodo da consulta (optional)</param> 
+        /// <param name="dataSuspeitaFraudeFinal">Data fim do per\u00EDodo da consulta (optional)</param> 
+        /// <returns>ApiResponse of PageSuspeitaFraudeResponse</returns>
+        public ApiResponse< PageSuspeitaFraudeResponse > ListarSuspeitaFraudeWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idMotivoFraude = null, long? idPessoa = null, string dataSuspeitaFraudeInicial = null, string dataSuspeitaFraudeFinal = null)
+        {
+            
+    
+            var localVarPath = "/api/fraudes/suspeitas";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (idMotivoFraude != null) localVarQueryParams.Add("idMotivoFraude", Configuration.ApiClient.ParameterToString(idMotivoFraude)); // query parameter
+            if (idPessoa != null) localVarQueryParams.Add("idPessoa", Configuration.ApiClient.ParameterToString(idPessoa)); // query parameter
+            if (dataSuspeitaFraudeInicial != null) localVarQueryParams.Add("dataSuspeitaFraudeInicial", Configuration.ApiClient.ParameterToString(dataSuspeitaFraudeInicial)); // query parameter
+            if (dataSuspeitaFraudeFinal != null) localVarQueryParams.Add("dataSuspeitaFraudeFinal", Configuration.ApiClient.ParameterToString(dataSuspeitaFraudeFinal)); // query parameter
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarSuspeitaFraude: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarSuspeitaFraude: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<PageSuspeitaFraudeResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageSuspeitaFraudeResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageSuspeitaFraudeResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Lista suspeitas de fraude Recursos para listagens das suspeitas de fraude
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idMotivoFraude">C\u00F3digo de identifica\u00E7\u00E3o do motivo da suspeita de fraude (optional)</param>
+        /// <param name="idPessoa">C\u00F3digo de identifica\u00E7\u00E3o da pessoa com suspeita de fraude (optional)</param>
+        /// <param name="dataSuspeitaFraudeInicial">Data in\u00EDcio do per\u00EDodo da consulta (optional)</param>
+        /// <param name="dataSuspeitaFraudeFinal">Data fim do per\u00EDodo da consulta (optional)</param>
+        /// <returns>Task of PageSuspeitaFraudeResponse</returns>
+        public async System.Threading.Tasks.Task<PageSuspeitaFraudeResponse> ListarSuspeitaFraudeAsync (List<string> sort = null, int? page = null, int? limit = null, long? idMotivoFraude = null, long? idPessoa = null, string dataSuspeitaFraudeInicial = null, string dataSuspeitaFraudeFinal = null)
+        {
+             ApiResponse<PageSuspeitaFraudeResponse> localVarResponse = await ListarSuspeitaFraudeAsyncWithHttpInfo(sort, page, limit, idMotivoFraude, idPessoa, dataSuspeitaFraudeInicial, dataSuspeitaFraudeFinal);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Lista suspeitas de fraude Recursos para listagens das suspeitas de fraude
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idMotivoFraude">C\u00F3digo de identifica\u00E7\u00E3o do motivo da suspeita de fraude (optional)</param>
+        /// <param name="idPessoa">C\u00F3digo de identifica\u00E7\u00E3o da pessoa com suspeita de fraude (optional)</param>
+        /// <param name="dataSuspeitaFraudeInicial">Data in\u00EDcio do per\u00EDodo da consulta (optional)</param>
+        /// <param name="dataSuspeitaFraudeFinal">Data fim do per\u00EDodo da consulta (optional)</param>
+        /// <returns>Task of ApiResponse (PageSuspeitaFraudeResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PageSuspeitaFraudeResponse>> ListarSuspeitaFraudeAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idMotivoFraude = null, long? idPessoa = null, string dataSuspeitaFraudeInicial = null, string dataSuspeitaFraudeFinal = null)
+        {
+            
+    
+            var localVarPath = "/api/fraudes/suspeitas";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (idMotivoFraude != null) localVarQueryParams.Add("idMotivoFraude", Configuration.ApiClient.ParameterToString(idMotivoFraude)); // query parameter
+            if (idPessoa != null) localVarQueryParams.Add("idPessoa", Configuration.ApiClient.ParameterToString(idPessoa)); // query parameter
+            if (dataSuspeitaFraudeInicial != null) localVarQueryParams.Add("dataSuspeitaFraudeInicial", Configuration.ApiClient.ParameterToString(dataSuspeitaFraudeInicial)); // query parameter
+            if (dataSuspeitaFraudeFinal != null) localVarQueryParams.Add("dataSuspeitaFraudeFinal", Configuration.ApiClient.ParameterToString(dataSuspeitaFraudeFinal)); // query parameter
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarSuspeitaFraude: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarSuspeitaFraude: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PageSuspeitaFraudeResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageSuspeitaFraudeResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageSuspeitaFraudeResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Cadastra suspeita de fraude Recurso para cadastrar as suspeitas de fraude
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="suspeitaFraudePersist">suspeitaFraudePersist</param> 
+        /// <returns>SuspeitaFraudeResponse</returns>
+        public SuspeitaFraudeResponse SalvarSuspeitaFraude (SuspeitaFraudePersist suspeitaFraudePersist)
+        {
+             ApiResponse<SuspeitaFraudeResponse> localVarResponse = SalvarSuspeitaFraudeWithHttpInfo(suspeitaFraudePersist);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Cadastra suspeita de fraude Recurso para cadastrar as suspeitas de fraude
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="suspeitaFraudePersist">suspeitaFraudePersist</param> 
+        /// <returns>ApiResponse of SuspeitaFraudeResponse</returns>
+        public ApiResponse< SuspeitaFraudeResponse > SalvarSuspeitaFraudeWithHttpInfo (SuspeitaFraudePersist suspeitaFraudePersist)
+        {
+            
+            // verify the required parameter 'suspeitaFraudePersist' is set
+            if (suspeitaFraudePersist == null)
+                throw new ApiException(400, "Missing required parameter 'suspeitaFraudePersist' when calling FraudeApi->SalvarSuspeitaFraude");
+            
+    
+            var localVarPath = "/api/fraudes/suspeitas";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            if (suspeitaFraudePersist.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(suspeitaFraudePersist); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = suspeitaFraudePersist; // byte array
+            }
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarSuspeitaFraude: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarSuspeitaFraude: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<SuspeitaFraudeResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (SuspeitaFraudeResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SuspeitaFraudeResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Cadastra suspeita de fraude Recurso para cadastrar as suspeitas de fraude
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="suspeitaFraudePersist">suspeitaFraudePersist</param>
+        /// <returns>Task of SuspeitaFraudeResponse</returns>
+        public async System.Threading.Tasks.Task<SuspeitaFraudeResponse> SalvarSuspeitaFraudeAsync (SuspeitaFraudePersist suspeitaFraudePersist)
+        {
+             ApiResponse<SuspeitaFraudeResponse> localVarResponse = await SalvarSuspeitaFraudeAsyncWithHttpInfo(suspeitaFraudePersist);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Cadastra suspeita de fraude Recurso para cadastrar as suspeitas de fraude
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="suspeitaFraudePersist">suspeitaFraudePersist</param>
+        /// <returns>Task of ApiResponse (SuspeitaFraudeResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SuspeitaFraudeResponse>> SalvarSuspeitaFraudeAsyncWithHttpInfo (SuspeitaFraudePersist suspeitaFraudePersist)
+        {
+            // verify the required parameter 'suspeitaFraudePersist' is set
+            if (suspeitaFraudePersist == null) throw new ApiException(400, "Missing required parameter 'suspeitaFraudePersist' when calling SalvarSuspeitaFraude");
+            
+    
+            var localVarPath = "/api/fraudes/suspeitas";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            if (suspeitaFraudePersist.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(suspeitaFraudePersist); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = suspeitaFraudePersist; // byte array
+            }
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarSuspeitaFraude: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling SalvarSuspeitaFraude: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SuspeitaFraudeResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (SuspeitaFraudeResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SuspeitaFraudeResponse)));
             
         }
         

@@ -176,6 +176,32 @@ namespace Conductor.Pier.Api
         ApiResponse<Object> AtribuirAnuidadeWithHttpInfo (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null, string colaborador = null);
         
         /// <summary>
+        /// Atribuir um cart\u00E3o a uma conta
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite atribuir um cart\u00E3o a uma conta, podendo atribuir o cart\u00E3o a outra pessoa que tamb\u00E9m seja portadora da mesma conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta</param>
+        /// <param name="idCartao">Identificador do cart\u00E3o</param>
+        /// <param name="request">request</param>
+        /// <returns>string</returns>
+        string AtribuirCartaoConta (long? id, long? idCartao, AtribuirCartaoPessoaRequest request);
+  
+        /// <summary>
+        /// Atribuir um cart\u00E3o a uma conta
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite atribuir um cart\u00E3o a uma conta, podendo atribuir o cart\u00E3o a outra pessoa que tamb\u00E9m seja portadora da mesma conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta</param>
+        /// <param name="idCartao">Identificador do cart\u00E3o</param>
+        /// <param name="request">request</param>
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> AtribuirCartaoContaWithHttpInfo (long? id, long? idCartao, AtribuirCartaoPessoaRequest request);
+        
+        /// <summary>
         /// Realiza a atribui\u00E7\u00E3o de um cart\u00E3o pr\u00E9-pago a uma conta
         /// </summary>
         /// <remarks>
@@ -198,6 +224,30 @@ namespace Conductor.Pier.Api
         /// <param name="contaAtribuirCartaoRequest">contaAtribuirCartaoRequest</param>
         /// <returns>ApiResponse of string</returns>
         ApiResponse<string> AtribuirCartaoPrePagoWithHttpInfo (long? id, ContaAtribuirCartaoPrePagoRequest contaAtribuirCartaoRequest);
+        
+        /// <summary>
+        /// Atribuir uma pessoa a uma conta
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite a atribui\u00E7\u00E3o de uma pessoa a uma conta normal ou multiApp
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta a ser atribu\u00EDda</param>
+        /// <param name="idPessoa">Identificador da pessoa a ser atribu\u00EDda</param>
+        /// <returns>string</returns>
+        string AtribuirPessoaConta (long? id, long? idPessoa);
+  
+        /// <summary>
+        /// Atribuir uma pessoa a uma conta
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite a atribui\u00E7\u00E3o de uma pessoa a uma conta normal ou multiApp
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta a ser atribu\u00EDda</param>
+        /// <param name="idPessoa">Identificador da pessoa a ser atribu\u00EDda</param>
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> AtribuirPessoaContaWithHttpInfo (long? id, long? idPessoa);
         
         /// <summary>
         /// Realiza uma atualiza\u00E7\u00E3o parcial da ades\u00E3o do servi\u00E7o
@@ -648,28 +698,6 @@ namespace Conductor.Pier.Api
         /// <param name="ano">Ano base para gera\u00E7\u00E3o do extrato de tarifas</param>
         /// <returns>ApiResponse of ExtratoTarifasResponse</returns>
         ApiResponse<ExtratoTarifasResponse> ConsultarExtratoTarifasAnualWithHttpInfo (long? id, int? ano);
-        
-        /// <summary>
-        /// Apresenta dados de um determinado tipo de fun\u00E7\u00E3o para contas
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite consultar dados de um determinado tipo de fun\u00E7\u00E3o para contas a partir de seu codigo de identifica\u00E7\u00E3o (id)
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do tipo de fun\u00E7\u00E3o para contas (id)</param>
-        /// <returns>string</returns>
-        string ConsultarFuncaoConta (int? id);
-  
-        /// <summary>
-        /// Apresenta dados de um determinado tipo de fun\u00E7\u00E3o para contas
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite consultar dados de um determinado tipo de fun\u00E7\u00E3o para contas a partir de seu codigo de identifica\u00E7\u00E3o (id)
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do tipo de fun\u00E7\u00E3o para contas (id)</param>
-        /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> ConsultarFuncaoContaWithHttpInfo (int? id);
         
         /// <summary>
         /// Consulta a quita\u00E7\u00E3o de d\u00E9bitos do portador no ano referente
@@ -1190,26 +1218,6 @@ namespace Conductor.Pier.Api
         ApiResponse<PageRecargaCelularFavoritoResponse> ListarFavoritosRecargasCelularWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, string dddCelular = null, string numeroCelular = null, string nome = null, bool? ativo = null, string descricaoOperadora = null);
         
         /// <summary>
-        /// Lista os tipos de fun\u00E7\u00F5es para contas do Emissor
-        /// </summary>
-        /// <remarks>
-        /// Este recurso permite listar os tipos de fun\u00E7\u00F5es para as contas do Emissor
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>string</returns>
-        string ListarFuncoesContas ();
-  
-        /// <summary>
-        /// Lista os tipos de fun\u00E7\u00F5es para contas do Emissor
-        /// </summary>
-        /// <remarks>
-        /// Este recurso permite listar os tipos de fun\u00E7\u00F5es para as contas do Emissor
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> ListarFuncoesContasWithHttpInfo ();
-        
-        /// <summary>
         /// Lista o hist\u00F3rico de altera\u00E7\u00F5es de limites da conta
         /// </summary>
         /// <remarks>
@@ -1692,8 +1700,9 @@ namespace Conductor.Pier.Api
         /// <param name="idEstabelecimento">Identificador do estabelecimento quando o pagamento for efetuado em loja (optional)</param>
         /// <param name="flagAtendimento">Flag para lan\u00E7ar o atendimento (optional)</param>
         /// <param name="mensagemAtendimento">Mensagem enviada no atendimento (optional)</param>
+        /// <param name="descricaoEstabelecimentoExterno">Descri\u00E7\u00E3o externa do estabelecimento (optional)</param>
         /// <returns>AjusteFinanceiroResponse</returns>
-        AjusteFinanceiroResponse SalvarAjusteFinanceiroConta1 (long? id, long? idTipoAjuste, string dataAjuste, double? valorAjuste, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null, bool? flagAtendimento = null, string mensagemAtendimento = null);
+        AjusteFinanceiroResponse SalvarAjusteFinanceiroConta1 (long? id, long? idTipoAjuste, string dataAjuste, double? valorAjuste, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null, bool? flagAtendimento = null, string mensagemAtendimento = null, string descricaoEstabelecimentoExterno = null);
   
         /// <summary>
         /// Lan\u00E7a um ajuste para a conta do id informado
@@ -1712,8 +1721,9 @@ namespace Conductor.Pier.Api
         /// <param name="idEstabelecimento">Identificador do estabelecimento quando o pagamento for efetuado em loja (optional)</param>
         /// <param name="flagAtendimento">Flag para lan\u00E7ar o atendimento (optional)</param>
         /// <param name="mensagemAtendimento">Mensagem enviada no atendimento (optional)</param>
+        /// <param name="descricaoEstabelecimentoExterno">Descri\u00E7\u00E3o externa do estabelecimento (optional)</param>
         /// <returns>ApiResponse of AjusteFinanceiroResponse</returns>
-        ApiResponse<AjusteFinanceiroResponse> SalvarAjusteFinanceiroConta1WithHttpInfo (long? id, long? idTipoAjuste, string dataAjuste, double? valorAjuste, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null, bool? flagAtendimento = null, string mensagemAtendimento = null);
+        ApiResponse<AjusteFinanceiroResponse> SalvarAjusteFinanceiroConta1WithHttpInfo (long? id, long? idTipoAjuste, string dataAjuste, double? valorAjuste, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null, bool? flagAtendimento = null, string mensagemAtendimento = null, string descricaoEstabelecimentoExterno = null);
         
         /// <summary>
         /// Realiza o cadastro de uma nova conta
@@ -2070,6 +2080,32 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<Object>> AtribuirAnuidadeAsyncWithHttpInfo (long? id, long? idAnuidade, List<string> sort = null, int? page = null, int? limit = null, string DDD = null, string celular = null, long? idOperadora = null, long? idOrigemComercial = null, string colaborador = null);
         
         /// <summary>
+        /// Atribuir um cart\u00E3o a uma conta
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite atribuir um cart\u00E3o a uma conta, podendo atribuir o cart\u00E3o a outra pessoa que tamb\u00E9m seja portadora da mesma conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta</param>
+        /// <param name="idCartao">Identificador do cart\u00E3o</param>
+        /// <param name="request">request</param>
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> AtribuirCartaoContaAsync (long? id, long? idCartao, AtribuirCartaoPessoaRequest request);
+
+        /// <summary>
+        /// Atribuir um cart\u00E3o a uma conta
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite atribuir um cart\u00E3o a uma conta, podendo atribuir o cart\u00E3o a outra pessoa que tamb\u00E9m seja portadora da mesma conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta</param>
+        /// <param name="idCartao">Identificador do cart\u00E3o</param>
+        /// <param name="request">request</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> AtribuirCartaoContaAsyncWithHttpInfo (long? id, long? idCartao, AtribuirCartaoPessoaRequest request);
+        
+        /// <summary>
         /// Realiza a atribui\u00E7\u00E3o de um cart\u00E3o pr\u00E9-pago a uma conta
         /// </summary>
         /// <remarks>
@@ -2092,6 +2128,30 @@ namespace Conductor.Pier.Api
         /// <param name="contaAtribuirCartaoRequest">contaAtribuirCartaoRequest</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> AtribuirCartaoPrePagoAsyncWithHttpInfo (long? id, ContaAtribuirCartaoPrePagoRequest contaAtribuirCartaoRequest);
+        
+        /// <summary>
+        /// Atribuir uma pessoa a uma conta
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite a atribui\u00E7\u00E3o de uma pessoa a uma conta normal ou multiApp
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta a ser atribu\u00EDda</param>
+        /// <param name="idPessoa">Identificador da pessoa a ser atribu\u00EDda</param>
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> AtribuirPessoaContaAsync (long? id, long? idPessoa);
+
+        /// <summary>
+        /// Atribuir uma pessoa a uma conta
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite a atribui\u00E7\u00E3o de uma pessoa a uma conta normal ou multiApp
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta a ser atribu\u00EDda</param>
+        /// <param name="idPessoa">Identificador da pessoa a ser atribu\u00EDda</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> AtribuirPessoaContaAsyncWithHttpInfo (long? id, long? idPessoa);
         
         /// <summary>
         /// Realiza uma atualiza\u00E7\u00E3o parcial da ades\u00E3o do servi\u00E7o
@@ -2542,28 +2602,6 @@ namespace Conductor.Pier.Api
         /// <param name="ano">Ano base para gera\u00E7\u00E3o do extrato de tarifas</param>
         /// <returns>Task of ApiResponse (ExtratoTarifasResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<ExtratoTarifasResponse>> ConsultarExtratoTarifasAnualAsyncWithHttpInfo (long? id, int? ano);
-        
-        /// <summary>
-        /// Apresenta dados de um determinado tipo de fun\u00E7\u00E3o para contas
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite consultar dados de um determinado tipo de fun\u00E7\u00E3o para contas a partir de seu codigo de identifica\u00E7\u00E3o (id)
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do tipo de fun\u00E7\u00E3o para contas (id)</param>
-        /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> ConsultarFuncaoContaAsync (int? id);
-
-        /// <summary>
-        /// Apresenta dados de um determinado tipo de fun\u00E7\u00E3o para contas
-        /// </summary>
-        /// <remarks>
-        /// Este m\u00E9todo permite consultar dados de um determinado tipo de fun\u00E7\u00E3o para contas a partir de seu codigo de identifica\u00E7\u00E3o (id)
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do tipo de fun\u00E7\u00E3o para contas (id)</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> ConsultarFuncaoContaAsyncWithHttpInfo (int? id);
         
         /// <summary>
         /// Consulta a quita\u00E7\u00E3o de d\u00E9bitos do portador no ano referente
@@ -3084,26 +3122,6 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<PageRecargaCelularFavoritoResponse>> ListarFavoritosRecargasCelularAsyncWithHttpInfo (long? id, List<string> sort = null, int? page = null, int? limit = null, string dddCelular = null, string numeroCelular = null, string nome = null, bool? ativo = null, string descricaoOperadora = null);
         
         /// <summary>
-        /// Lista os tipos de fun\u00E7\u00F5es para contas do Emissor
-        /// </summary>
-        /// <remarks>
-        /// Este recurso permite listar os tipos de fun\u00E7\u00F5es para as contas do Emissor
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> ListarFuncoesContasAsync ();
-
-        /// <summary>
-        /// Lista os tipos de fun\u00E7\u00F5es para contas do Emissor
-        /// </summary>
-        /// <remarks>
-        /// Este recurso permite listar os tipos de fun\u00E7\u00F5es para as contas do Emissor
-        /// </remarks>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> ListarFuncoesContasAsyncWithHttpInfo ();
-        
-        /// <summary>
         /// Lista o hist\u00F3rico de altera\u00E7\u00F5es de limites da conta
         /// </summary>
         /// <remarks>
@@ -3586,8 +3604,9 @@ namespace Conductor.Pier.Api
         /// <param name="idEstabelecimento">Identificador do estabelecimento quando o pagamento for efetuado em loja (optional)</param>
         /// <param name="flagAtendimento">Flag para lan\u00E7ar o atendimento (optional)</param>
         /// <param name="mensagemAtendimento">Mensagem enviada no atendimento (optional)</param>
+        /// <param name="descricaoEstabelecimentoExterno">Descri\u00E7\u00E3o externa do estabelecimento (optional)</param>
         /// <returns>Task of AjusteFinanceiroResponse</returns>
-        System.Threading.Tasks.Task<AjusteFinanceiroResponse> SalvarAjusteFinanceiroConta1Async (long? id, long? idTipoAjuste, string dataAjuste, double? valorAjuste, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null, bool? flagAtendimento = null, string mensagemAtendimento = null);
+        System.Threading.Tasks.Task<AjusteFinanceiroResponse> SalvarAjusteFinanceiroConta1Async (long? id, long? idTipoAjuste, string dataAjuste, double? valorAjuste, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null, bool? flagAtendimento = null, string mensagemAtendimento = null, string descricaoEstabelecimentoExterno = null);
 
         /// <summary>
         /// Lan\u00E7a um ajuste para a conta do id informado
@@ -3606,8 +3625,9 @@ namespace Conductor.Pier.Api
         /// <param name="idEstabelecimento">Identificador do estabelecimento quando o pagamento for efetuado em loja (optional)</param>
         /// <param name="flagAtendimento">Flag para lan\u00E7ar o atendimento (optional)</param>
         /// <param name="mensagemAtendimento">Mensagem enviada no atendimento (optional)</param>
+        /// <param name="descricaoEstabelecimentoExterno">Descri\u00E7\u00E3o externa do estabelecimento (optional)</param>
         /// <returns>Task of ApiResponse (AjusteFinanceiroResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AjusteFinanceiroResponse>> SalvarAjusteFinanceiroConta1AsyncWithHttpInfo (long? id, long? idTipoAjuste, string dataAjuste, double? valorAjuste, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null, bool? flagAtendimento = null, string mensagemAtendimento = null);
+        System.Threading.Tasks.Task<ApiResponse<AjusteFinanceiroResponse>> SalvarAjusteFinanceiroConta1AsyncWithHttpInfo (long? id, long? idTipoAjuste, string dataAjuste, double? valorAjuste, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null, bool? flagAtendimento = null, string mensagemAtendimento = null, string descricaoEstabelecimentoExterno = null);
         
         /// <summary>
         /// Realiza o cadastro de uma nova conta
@@ -4974,6 +4994,200 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
+        /// Atribuir um cart\u00E3o a uma conta Este recurso permite atribuir um cart\u00E3o a uma conta, podendo atribuir o cart\u00E3o a outra pessoa que tamb\u00E9m seja portadora da mesma conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta</param> 
+        /// <param name="idCartao">Identificador do cart\u00E3o</param> 
+        /// <param name="request">request</param> 
+        /// <returns>string</returns>
+        public string AtribuirCartaoConta (long? id, long? idCartao, AtribuirCartaoPessoaRequest request)
+        {
+             ApiResponse<string> localVarResponse = AtribuirCartaoContaWithHttpInfo(id, idCartao, request);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Atribuir um cart\u00E3o a uma conta Este recurso permite atribuir um cart\u00E3o a uma conta, podendo atribuir o cart\u00E3o a outra pessoa que tamb\u00E9m seja portadora da mesma conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta</param> 
+        /// <param name="idCartao">Identificador do cart\u00E3o</param> 
+        /// <param name="request">request</param> 
+        /// <returns>ApiResponse of string</returns>
+        public ApiResponse< string > AtribuirCartaoContaWithHttpInfo (long? id, long? idCartao, AtribuirCartaoPessoaRequest request)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->AtribuirCartaoConta");
+            
+            // verify the required parameter 'idCartao' is set
+            if (idCartao == null)
+                throw new ApiException(400, "Missing required parameter 'idCartao' when calling ContaApi->AtribuirCartaoConta");
+            
+            // verify the required parameter 'request' is set
+            if (request == null)
+                throw new ApiException(400, "Missing required parameter 'request' when calling ContaApi->AtribuirCartaoConta");
+            
+    
+            var localVarPath = "/api/contas/{id}/cartoes/{idCartao}/atribuir";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (idCartao != null) localVarPathParams.Add("idCartao", Configuration.ApiClient.ParameterToString(idCartao)); // path parameter
+            
+            
+            
+            
+            if (request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = request; // byte array
+            }
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling AtribuirCartaoConta: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling AtribuirCartaoConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+            
+        }
+
+        
+        /// <summary>
+        /// Atribuir um cart\u00E3o a uma conta Este recurso permite atribuir um cart\u00E3o a uma conta, podendo atribuir o cart\u00E3o a outra pessoa que tamb\u00E9m seja portadora da mesma conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta</param>
+        /// <param name="idCartao">Identificador do cart\u00E3o</param>
+        /// <param name="request">request</param>
+        /// <returns>Task of string</returns>
+        public async System.Threading.Tasks.Task<string> AtribuirCartaoContaAsync (long? id, long? idCartao, AtribuirCartaoPessoaRequest request)
+        {
+             ApiResponse<string> localVarResponse = await AtribuirCartaoContaAsyncWithHttpInfo(id, idCartao, request);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Atribuir um cart\u00E3o a uma conta Este recurso permite atribuir um cart\u00E3o a uma conta, podendo atribuir o cart\u00E3o a outra pessoa que tamb\u00E9m seja portadora da mesma conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta</param>
+        /// <param name="idCartao">Identificador do cart\u00E3o</param>
+        /// <param name="request">request</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<string>> AtribuirCartaoContaAsyncWithHttpInfo (long? id, long? idCartao, AtribuirCartaoPessoaRequest request)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AtribuirCartaoConta");
+            // verify the required parameter 'idCartao' is set
+            if (idCartao == null) throw new ApiException(400, "Missing required parameter 'idCartao' when calling AtribuirCartaoConta");
+            // verify the required parameter 'request' is set
+            if (request == null) throw new ApiException(400, "Missing required parameter 'request' when calling AtribuirCartaoConta");
+            
+    
+            var localVarPath = "/api/contas/{id}/cartoes/{idCartao}/atribuir";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (idCartao != null) localVarPathParams.Add("idCartao", Configuration.ApiClient.ParameterToString(idCartao)); // path parameter
+            
+            
+            
+            
+            if (request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = request; // byte array
+            }
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling AtribuirCartaoConta: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling AtribuirCartaoConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+            
+        }
+        
+        /// <summary>
         /// Realiza a atribui\u00E7\u00E3o de um cart\u00E3o pr\u00E9-pago a uma conta Este m\u00E9todo permite que um cart\u00E3o pr\u00E9-pago impresso de forma avulsa e an\u00F4nimo seja atribu\u00EDdo a uma conta, tornando-a portadora dele.
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5148,6 +5362,176 @@ namespace Conductor.Pier.Api
                 throw new ApiException (localVarStatusCode, "Error calling AtribuirCartaoPrePago: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling AtribuirCartaoPrePago: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+            
+        }
+        
+        /// <summary>
+        /// Atribuir uma pessoa a uma conta Este recurso permite a atribui\u00E7\u00E3o de uma pessoa a uma conta normal ou multiApp
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta a ser atribu\u00EDda</param> 
+        /// <param name="idPessoa">Identificador da pessoa a ser atribu\u00EDda</param> 
+        /// <returns>string</returns>
+        public string AtribuirPessoaConta (long? id, long? idPessoa)
+        {
+             ApiResponse<string> localVarResponse = AtribuirPessoaContaWithHttpInfo(id, idPessoa);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Atribuir uma pessoa a uma conta Este recurso permite a atribui\u00E7\u00E3o de uma pessoa a uma conta normal ou multiApp
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta a ser atribu\u00EDda</param> 
+        /// <param name="idPessoa">Identificador da pessoa a ser atribu\u00EDda</param> 
+        /// <returns>ApiResponse of string</returns>
+        public ApiResponse< string > AtribuirPessoaContaWithHttpInfo (long? id, long? idPessoa)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->AtribuirPessoaConta");
+            
+            // verify the required parameter 'idPessoa' is set
+            if (idPessoa == null)
+                throw new ApiException(400, "Missing required parameter 'idPessoa' when calling ContaApi->AtribuirPessoaConta");
+            
+    
+            var localVarPath = "/api/contas/{id}/pessoas/{idPessoa}/atribuir";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (idPessoa != null) localVarPathParams.Add("idPessoa", Configuration.ApiClient.ParameterToString(idPessoa)); // path parameter
+            
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling AtribuirPessoaConta: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling AtribuirPessoaConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+            
+        }
+
+        
+        /// <summary>
+        /// Atribuir uma pessoa a uma conta Este recurso permite a atribui\u00E7\u00E3o de uma pessoa a uma conta normal ou multiApp
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta a ser atribu\u00EDda</param>
+        /// <param name="idPessoa">Identificador da pessoa a ser atribu\u00EDda</param>
+        /// <returns>Task of string</returns>
+        public async System.Threading.Tasks.Task<string> AtribuirPessoaContaAsync (long? id, long? idPessoa)
+        {
+             ApiResponse<string> localVarResponse = await AtribuirPessoaContaAsyncWithHttpInfo(id, idPessoa);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Atribuir uma pessoa a uma conta Este recurso permite a atribui\u00E7\u00E3o de uma pessoa a uma conta normal ou multiApp
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">Identificador da conta a ser atribu\u00EDda</param>
+        /// <param name="idPessoa">Identificador da pessoa a ser atribu\u00EDda</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<string>> AtribuirPessoaContaAsyncWithHttpInfo (long? id, long? idPessoa)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AtribuirPessoaConta");
+            // verify the required parameter 'idPessoa' is set
+            if (idPessoa == null) throw new ApiException(400, "Missing required parameter 'idPessoa' when calling AtribuirPessoaConta");
+            
+    
+            var localVarPath = "/api/contas/{id}/pessoas/{idPessoa}/atribuir";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (idPessoa != null) localVarPathParams.Add("idPessoa", Configuration.ApiClient.ParameterToString(idPessoa)); // path parameter
+            
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling AtribuirPessoaConta: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling AtribuirPessoaConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -8326,164 +8710,6 @@ namespace Conductor.Pier.Api
             return new ApiResponse<ExtratoTarifasResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ExtratoTarifasResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExtratoTarifasResponse)));
-            
-        }
-        
-        /// <summary>
-        /// Apresenta dados de um determinado tipo de fun\u00E7\u00E3o para contas Este m\u00E9todo permite consultar dados de um determinado tipo de fun\u00E7\u00E3o para contas a partir de seu codigo de identifica\u00E7\u00E3o (id)
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do tipo de fun\u00E7\u00E3o para contas (id)</param> 
-        /// <returns>string</returns>
-        public string ConsultarFuncaoConta (int? id)
-        {
-             ApiResponse<string> localVarResponse = ConsultarFuncaoContaWithHttpInfo(id);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Apresenta dados de um determinado tipo de fun\u00E7\u00E3o para contas Este m\u00E9todo permite consultar dados de um determinado tipo de fun\u00E7\u00E3o para contas a partir de seu codigo de identifica\u00E7\u00E3o (id)
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do tipo de fun\u00E7\u00E3o para contas (id)</param> 
-        /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > ConsultarFuncaoContaWithHttpInfo (int? id)
-        {
-            
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling ContaApi->ConsultarFuncaoConta");
-            
-    
-            var localVarPath = "/api/contas/tipos-funcoes/{id}";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            
-            
-            
-            
-            
-
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarFuncaoConta: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarFuncaoConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
-            
-        }
-
-        
-        /// <summary>
-        /// Apresenta dados de um determinado tipo de fun\u00E7\u00E3o para contas Este m\u00E9todo permite consultar dados de um determinado tipo de fun\u00E7\u00E3o para contas a partir de seu codigo de identifica\u00E7\u00E3o (id)
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do tipo de fun\u00E7\u00E3o para contas (id)</param>
-        /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> ConsultarFuncaoContaAsync (int? id)
-        {
-             ApiResponse<string> localVarResponse = await ConsultarFuncaoContaAsyncWithHttpInfo(id);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Apresenta dados de um determinado tipo de fun\u00E7\u00E3o para contas Este m\u00E9todo permite consultar dados de um determinado tipo de fun\u00E7\u00E3o para contas a partir de seu codigo de identifica\u00E7\u00E3o (id)
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o do tipo de fun\u00E7\u00E3o para contas (id)</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> ConsultarFuncaoContaAsyncWithHttpInfo (int? id)
-        {
-            // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConsultarFuncaoConta");
-            
-    
-            var localVarPath = "/api/contas/tipos-funcoes/{id}";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
-            
-            
-            
-            
-            
-
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarFuncaoConta: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ConsultarFuncaoConta: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
         }
         
@@ -11874,152 +12100,6 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
-        /// Lista os tipos de fun\u00E7\u00F5es para contas do Emissor Este recurso permite listar os tipos de fun\u00E7\u00F5es para as contas do Emissor
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>string</returns>
-        public string ListarFuncoesContas ()
-        {
-             ApiResponse<string> localVarResponse = ListarFuncoesContasWithHttpInfo();
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Lista os tipos de fun\u00E7\u00F5es para contas do Emissor Este recurso permite listar os tipos de fun\u00E7\u00F5es para as contas do Emissor
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > ListarFuncoesContasWithHttpInfo ()
-        {
-            
-    
-            var localVarPath = "/api/contas/tipos-funcoes";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            
-            
-            
-            
-            
-
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarFuncoesContas: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarFuncoesContas: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
-            
-        }
-
-        
-        /// <summary>
-        /// Lista os tipos de fun\u00E7\u00F5es para contas do Emissor Este recurso permite listar os tipos de fun\u00E7\u00F5es para as contas do Emissor
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> ListarFuncoesContasAsync ()
-        {
-             ApiResponse<string> localVarResponse = await ListarFuncoesContasAsyncWithHttpInfo();
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Lista os tipos de fun\u00E7\u00F5es para contas do Emissor Este recurso permite listar os tipos de fun\u00E7\u00F5es para as contas do Emissor
-        /// </summary>
-        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> ListarFuncoesContasAsyncWithHttpInfo ()
-        {
-            
-    
-            var localVarPath = "/api/contas/tipos-funcoes";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            
-            
-            
-            
-            
-
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ListarFuncoesContas: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ListarFuncoesContas: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
-            
-        }
-        
-        /// <summary>
         /// Lista o hist\u00F3rico de altera\u00E7\u00F5es de limites da conta Este recurso consulta o hist\u00F3rico com as altera\u00E7\u00F5es de limites da conta informada
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
@@ -14823,10 +14903,11 @@ namespace Conductor.Pier.Api
         /// <param name="idEstabelecimento">Identificador do estabelecimento quando o pagamento for efetuado em loja (optional)</param> 
         /// <param name="flagAtendimento">Flag para lan\u00E7ar o atendimento (optional)</param> 
         /// <param name="mensagemAtendimento">Mensagem enviada no atendimento (optional)</param> 
+        /// <param name="descricaoEstabelecimentoExterno">Descri\u00E7\u00E3o externa do estabelecimento (optional)</param> 
         /// <returns>AjusteFinanceiroResponse</returns>
-        public AjusteFinanceiroResponse SalvarAjusteFinanceiroConta1 (long? id, long? idTipoAjuste, string dataAjuste, double? valorAjuste, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null, bool? flagAtendimento = null, string mensagemAtendimento = null)
+        public AjusteFinanceiroResponse SalvarAjusteFinanceiroConta1 (long? id, long? idTipoAjuste, string dataAjuste, double? valorAjuste, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null, bool? flagAtendimento = null, string mensagemAtendimento = null, string descricaoEstabelecimentoExterno = null)
         {
-             ApiResponse<AjusteFinanceiroResponse> localVarResponse = SalvarAjusteFinanceiroConta1WithHttpInfo(id, idTipoAjuste, dataAjuste, valorAjuste, login, identificadorExterno, idTransacaoOriginal, idEstabelecimento, flagAtendimento, mensagemAtendimento);
+             ApiResponse<AjusteFinanceiroResponse> localVarResponse = SalvarAjusteFinanceiroConta1WithHttpInfo(id, idTipoAjuste, dataAjuste, valorAjuste, login, identificadorExterno, idTransacaoOriginal, idEstabelecimento, flagAtendimento, mensagemAtendimento, descricaoEstabelecimentoExterno);
              return localVarResponse.Data;
         }
 
@@ -14844,8 +14925,9 @@ namespace Conductor.Pier.Api
         /// <param name="idEstabelecimento">Identificador do estabelecimento quando o pagamento for efetuado em loja (optional)</param> 
         /// <param name="flagAtendimento">Flag para lan\u00E7ar o atendimento (optional)</param> 
         /// <param name="mensagemAtendimento">Mensagem enviada no atendimento (optional)</param> 
+        /// <param name="descricaoEstabelecimentoExterno">Descri\u00E7\u00E3o externa do estabelecimento (optional)</param> 
         /// <returns>ApiResponse of AjusteFinanceiroResponse</returns>
-        public ApiResponse< AjusteFinanceiroResponse > SalvarAjusteFinanceiroConta1WithHttpInfo (long? id, long? idTipoAjuste, string dataAjuste, double? valorAjuste, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null, bool? flagAtendimento = null, string mensagemAtendimento = null)
+        public ApiResponse< AjusteFinanceiroResponse > SalvarAjusteFinanceiroConta1WithHttpInfo (long? id, long? idTipoAjuste, string dataAjuste, double? valorAjuste, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null, bool? flagAtendimento = null, string mensagemAtendimento = null, string descricaoEstabelecimentoExterno = null)
         {
             
             // verify the required parameter 'id' is set
@@ -14901,6 +14983,7 @@ namespace Conductor.Pier.Api
             if (idEstabelecimento != null) localVarQueryParams.Add("idEstabelecimento", Configuration.ApiClient.ParameterToString(idEstabelecimento)); // query parameter
             if (flagAtendimento != null) localVarQueryParams.Add("flagAtendimento", Configuration.ApiClient.ParameterToString(flagAtendimento)); // query parameter
             if (mensagemAtendimento != null) localVarQueryParams.Add("mensagemAtendimento", Configuration.ApiClient.ParameterToString(mensagemAtendimento)); // query parameter
+            if (descricaoEstabelecimentoExterno != null) localVarQueryParams.Add("descricaoEstabelecimentoExterno", Configuration.ApiClient.ParameterToString(descricaoEstabelecimentoExterno)); // query parameter
             
             if (login != null) localVarHeaderParams.Add("login", Configuration.ApiClient.ParameterToString(login)); // header parameter
             
@@ -14942,10 +15025,11 @@ namespace Conductor.Pier.Api
         /// <param name="idEstabelecimento">Identificador do estabelecimento quando o pagamento for efetuado em loja (optional)</param>
         /// <param name="flagAtendimento">Flag para lan\u00E7ar o atendimento (optional)</param>
         /// <param name="mensagemAtendimento">Mensagem enviada no atendimento (optional)</param>
+        /// <param name="descricaoEstabelecimentoExterno">Descri\u00E7\u00E3o externa do estabelecimento (optional)</param>
         /// <returns>Task of AjusteFinanceiroResponse</returns>
-        public async System.Threading.Tasks.Task<AjusteFinanceiroResponse> SalvarAjusteFinanceiroConta1Async (long? id, long? idTipoAjuste, string dataAjuste, double? valorAjuste, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null, bool? flagAtendimento = null, string mensagemAtendimento = null)
+        public async System.Threading.Tasks.Task<AjusteFinanceiroResponse> SalvarAjusteFinanceiroConta1Async (long? id, long? idTipoAjuste, string dataAjuste, double? valorAjuste, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null, bool? flagAtendimento = null, string mensagemAtendimento = null, string descricaoEstabelecimentoExterno = null)
         {
-             ApiResponse<AjusteFinanceiroResponse> localVarResponse = await SalvarAjusteFinanceiroConta1AsyncWithHttpInfo(id, idTipoAjuste, dataAjuste, valorAjuste, login, identificadorExterno, idTransacaoOriginal, idEstabelecimento, flagAtendimento, mensagemAtendimento);
+             ApiResponse<AjusteFinanceiroResponse> localVarResponse = await SalvarAjusteFinanceiroConta1AsyncWithHttpInfo(id, idTipoAjuste, dataAjuste, valorAjuste, login, identificadorExterno, idTransacaoOriginal, idEstabelecimento, flagAtendimento, mensagemAtendimento, descricaoEstabelecimentoExterno);
              return localVarResponse.Data;
 
         }
@@ -14964,8 +15048,9 @@ namespace Conductor.Pier.Api
         /// <param name="idEstabelecimento">Identificador do estabelecimento quando o pagamento for efetuado em loja (optional)</param>
         /// <param name="flagAtendimento">Flag para lan\u00E7ar o atendimento (optional)</param>
         /// <param name="mensagemAtendimento">Mensagem enviada no atendimento (optional)</param>
+        /// <param name="descricaoEstabelecimentoExterno">Descri\u00E7\u00E3o externa do estabelecimento (optional)</param>
         /// <returns>Task of ApiResponse (AjusteFinanceiroResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AjusteFinanceiroResponse>> SalvarAjusteFinanceiroConta1AsyncWithHttpInfo (long? id, long? idTipoAjuste, string dataAjuste, double? valorAjuste, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null, bool? flagAtendimento = null, string mensagemAtendimento = null)
+        public async System.Threading.Tasks.Task<ApiResponse<AjusteFinanceiroResponse>> SalvarAjusteFinanceiroConta1AsyncWithHttpInfo (long? id, long? idTipoAjuste, string dataAjuste, double? valorAjuste, string login = null, string identificadorExterno = null, long? idTransacaoOriginal = null, long? idEstabelecimento = null, bool? flagAtendimento = null, string mensagemAtendimento = null, string descricaoEstabelecimentoExterno = null)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling SalvarAjusteFinanceiroConta1");
@@ -15013,6 +15098,7 @@ namespace Conductor.Pier.Api
             if (idEstabelecimento != null) localVarQueryParams.Add("idEstabelecimento", Configuration.ApiClient.ParameterToString(idEstabelecimento)); // query parameter
             if (flagAtendimento != null) localVarQueryParams.Add("flagAtendimento", Configuration.ApiClient.ParameterToString(flagAtendimento)); // query parameter
             if (mensagemAtendimento != null) localVarQueryParams.Add("mensagemAtendimento", Configuration.ApiClient.ParameterToString(mensagemAtendimento)); // query parameter
+            if (descricaoEstabelecimentoExterno != null) localVarQueryParams.Add("descricaoEstabelecimentoExterno", Configuration.ApiClient.ParameterToString(descricaoEstabelecimentoExterno)); // query parameter
             
             if (login != null) localVarHeaderParams.Add("login", Configuration.ApiClient.ParameterToString(login)); // header parameter
             

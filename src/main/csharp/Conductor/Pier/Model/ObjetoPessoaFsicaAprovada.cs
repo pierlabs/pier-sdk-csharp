@@ -69,8 +69,9 @@ namespace Conductor.Pier.Model
         /// <param name="Matricula">N\u00FAmero da matr\u00EDcula.</param>
         /// <param name="ResponsavelDigitacao">Respons\u00E1vel pela digita\u00E7\u00E3o da proposta.</param>
         /// <param name="IdPromotorVenda">C\u00F3digo identificador do promotor de venda.</param>
+        /// <param name="LimiteParcelado">Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para realizar transa\u00E7\u00F5es de compras parceladas.</param>
 
-        public ObjetoPessoaFsicaAprovada(string Nome = null, string NomeMae = null, string DataNascimento = null, string Sexo = null, string Cpf = null, string NumeroIdentidade = null, string OrgaoExpedidorIdentidade = null, string UnidadeFederativaIdentidade = null, string DataEmissaoIdentidade = null, bool? FlagDeficienteVisual = null, long? IdEstadoCivil = null, string IdProfissao = null, long? IdNaturezaOcupacao = null, long? IdNacionalidade = null, long? IdOrigemComercial = null, long? IdProduto = null, int? NumeroAgencia = null, string NumeroContaCorrente = null, string Email = null, int? DiaVencimento = null, string NomeImpresso = null, string NomeEmpresa = null, double? ValorRenda = null, string CanalEntrada = null, int? ValorPontuacao = null, List<TelefonePessoaAprovadaPersist> Telefones = null, List<EnderecoAprovadoPersist> Enderecos = null, double? LimiteGlobal = null, double? LimiteMaximo = null, double? LimiteParcelas = null, double? LimiteConsignado = null, string NomeReferencia1 = null, string EnderecoReferencia1 = null, string NomeReferencia2 = null, string EnderecoReferencia2 = null, bool? ImpedidoFinanciamento = null, string FuncaoAtiva = null, string NaturalidadeCidade = null, string NaturalidadeEstado = null, int? GrauInstrucao = null, int? NumeroDependentes = null, string NomePai = null, int? ChequeEspecial = null, int? NumeroBanco = null, string Matricula = null, string ResponsavelDigitacao = null, int? IdPromotorVenda = null)
+        public ObjetoPessoaFsicaAprovada(string Nome = null, string NomeMae = null, string DataNascimento = null, string Sexo = null, string Cpf = null, string NumeroIdentidade = null, string OrgaoExpedidorIdentidade = null, string UnidadeFederativaIdentidade = null, string DataEmissaoIdentidade = null, bool? FlagDeficienteVisual = null, long? IdEstadoCivil = null, string IdProfissao = null, long? IdNaturezaOcupacao = null, long? IdNacionalidade = null, long? IdOrigemComercial = null, long? IdProduto = null, int? NumeroAgencia = null, string NumeroContaCorrente = null, string Email = null, int? DiaVencimento = null, string NomeImpresso = null, string NomeEmpresa = null, double? ValorRenda = null, string CanalEntrada = null, int? ValorPontuacao = null, List<TelefonePessoaAprovadaPersist> Telefones = null, List<EnderecoAprovadoPersist> Enderecos = null, double? LimiteGlobal = null, double? LimiteMaximo = null, double? LimiteParcelas = null, double? LimiteConsignado = null, string NomeReferencia1 = null, string EnderecoReferencia1 = null, string NomeReferencia2 = null, string EnderecoReferencia2 = null, bool? ImpedidoFinanciamento = null, string FuncaoAtiva = null, string NaturalidadeCidade = null, string NaturalidadeEstado = null, int? GrauInstrucao = null, int? NumeroDependentes = null, string NomePai = null, int? ChequeEspecial = null, int? NumeroBanco = null, string Matricula = null, string ResponsavelDigitacao = null, int? IdPromotorVenda = null, double? LimiteParcelado = null)
         {
             // to ensure "Nome" is required (not null)
             if (Nome == null)
@@ -199,6 +200,7 @@ namespace Conductor.Pier.Model
             this.Matricula = Matricula;
             this.ResponsavelDigitacao = ResponsavelDigitacao;
             this.IdPromotorVenda = IdPromotorVenda;
+            this.LimiteParcelado = LimiteParcelado;
             
         }
         
@@ -533,6 +535,13 @@ namespace Conductor.Pier.Model
         public int? IdPromotorVenda { get; set; }
     
         /// <summary>
+        /// Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para realizar transa\u00E7\u00F5es de compras parceladas
+        /// </summary>
+        /// <value>Quando utilizado pelo emissor, este campo apresenta o valor do limite de cr\u00E9dito que o portador possui para realizar transa\u00E7\u00F5es de compras parceladas</value>
+        [DataMember(Name="limiteParcelado", EmitDefaultValue=false)]
+        public double? LimiteParcelado { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -587,6 +596,7 @@ namespace Conductor.Pier.Model
             sb.Append("  Matricula: ").Append(Matricula).Append("\n");
             sb.Append("  ResponsavelDigitacao: ").Append(ResponsavelDigitacao).Append("\n");
             sb.Append("  IdPromotorVenda: ").Append(IdPromotorVenda).Append("\n");
+            sb.Append("  LimiteParcelado: ").Append(LimiteParcelado).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -858,6 +868,11 @@ namespace Conductor.Pier.Model
                     this.IdPromotorVenda == other.IdPromotorVenda ||
                     this.IdPromotorVenda != null &&
                     this.IdPromotorVenda.Equals(other.IdPromotorVenda)
+                ) && 
+                (
+                    this.LimiteParcelado == other.LimiteParcelado ||
+                    this.LimiteParcelado != null &&
+                    this.LimiteParcelado.Equals(other.LimiteParcelado)
                 );
         }
 
@@ -1013,6 +1028,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.IdPromotorVenda != null)
                     hash = hash * 59 + this.IdPromotorVenda.GetHashCode();
+                
+                if (this.LimiteParcelado != null)
+                    hash = hash * 59 + this.LimiteParcelado.GetHashCode();
                 
                 return hash;
             }

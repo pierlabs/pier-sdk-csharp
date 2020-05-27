@@ -32,8 +32,9 @@ namespace Conductor.Pier.Model
         /// <param name="PermiteTarjaMagnetica">Indica se o cart\u00E3o est\u00E1 habilitado/desabilitado para transa\u00E7\u00F5es por tarja magnetica.</param>
         /// <param name="PermiteContactless">Indica se o cart\u00E3o est\u00E1 habilitado/desabilitado para transa\u00E7\u00F5es via contactless.</param>
         /// <param name="LimiteContactlessSemSenha">Indica o limite usado em transa\u00E7\u00F5es com a fun\u00E7\u00E3o contactless sem senha. O valor m\u00E1ximo \u00E9 50 e o m\u00EDnimo \u00E9 1..</param>
+        /// <param name="FuncaoAtiva">Indica o tipo de fun\u00E7\u00E3o ativa..</param>
 
-        public ConfiguracaoControleCartaoResponse(long? Id = null, long? IdCartao = null, bool? PermiteEcommerce = null, bool? PermiteSaque = null, bool? PermiteWallet = null, bool? PermiteControleMCC = null, bool? PermiteCompraInternacional = null, bool? PermiteTarjaMagnetica = null, bool? PermiteContactless = null, double? LimiteContactlessSemSenha = null)
+        public ConfiguracaoControleCartaoResponse(long? Id = null, long? IdCartao = null, bool? PermiteEcommerce = null, bool? PermiteSaque = null, bool? PermiteWallet = null, bool? PermiteControleMCC = null, bool? PermiteCompraInternacional = null, bool? PermiteTarjaMagnetica = null, bool? PermiteContactless = null, double? LimiteContactlessSemSenha = null, string FuncaoAtiva = null)
         {
             this.Id = Id;
             this.IdCartao = IdCartao;
@@ -45,6 +46,7 @@ namespace Conductor.Pier.Model
             this.PermiteTarjaMagnetica = PermiteTarjaMagnetica;
             this.PermiteContactless = PermiteContactless;
             this.LimiteContactlessSemSenha = LimiteContactlessSemSenha;
+            this.FuncaoAtiva = FuncaoAtiva;
             
         }
         
@@ -120,6 +122,13 @@ namespace Conductor.Pier.Model
         public double? LimiteContactlessSemSenha { get; set; }
     
         /// <summary>
+        /// Indica o tipo de fun\u00E7\u00E3o ativa.
+        /// </summary>
+        /// <value>Indica o tipo de fun\u00E7\u00E3o ativa.</value>
+        [DataMember(Name="funcaoAtiva", EmitDefaultValue=false)]
+        public string FuncaoAtiva { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -137,6 +146,7 @@ namespace Conductor.Pier.Model
             sb.Append("  PermiteTarjaMagnetica: ").Append(PermiteTarjaMagnetica).Append("\n");
             sb.Append("  PermiteContactless: ").Append(PermiteContactless).Append("\n");
             sb.Append("  LimiteContactlessSemSenha: ").Append(LimiteContactlessSemSenha).Append("\n");
+            sb.Append("  FuncaoAtiva: ").Append(FuncaoAtiva).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -223,6 +233,11 @@ namespace Conductor.Pier.Model
                     this.LimiteContactlessSemSenha == other.LimiteContactlessSemSenha ||
                     this.LimiteContactlessSemSenha != null &&
                     this.LimiteContactlessSemSenha.Equals(other.LimiteContactlessSemSenha)
+                ) && 
+                (
+                    this.FuncaoAtiva == other.FuncaoAtiva ||
+                    this.FuncaoAtiva != null &&
+                    this.FuncaoAtiva.Equals(other.FuncaoAtiva)
                 );
         }
 
@@ -267,6 +282,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.LimiteContactlessSemSenha != null)
                     hash = hash * 59 + this.LimiteContactlessSemSenha.GetHashCode();
+                
+                if (this.FuncaoAtiva != null)
+                    hash = hash * 59 + this.FuncaoAtiva.GetHashCode();
                 
                 return hash;
             }

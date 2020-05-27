@@ -25,13 +25,15 @@ namespace Conductor.Pier.Model
         /// <param name="ValorTotalAntecipado">Valor total antecipado.</param>
         /// <param name="ValorTotalDesconto">Valor total do desconto.</param>
         /// <param name="ValorTotalComDesconto">Valor total antecipado com o desconto.</param>
+        /// <param name="ValorTotalAbatimentoJuros">Valor total do abatimento de juros.</param>
         /// <param name="AntecipacoesSimuladas">Antecipa\u00E7\u00F5es Simuladas.</param>
 
-        public AntecipacaoSimuladaLoteResponse(double? ValorTotalAntecipado = null, double? ValorTotalDesconto = null, double? ValorTotalComDesconto = null, List<AntecipacaoSimuladaResponse> AntecipacoesSimuladas = null)
+        public AntecipacaoSimuladaLoteResponse(double? ValorTotalAntecipado = null, double? ValorTotalDesconto = null, double? ValorTotalComDesconto = null, double? ValorTotalAbatimentoJuros = null, List<AntecipacaoSimuladaResponse> AntecipacoesSimuladas = null)
         {
             this.ValorTotalAntecipado = ValorTotalAntecipado;
             this.ValorTotalDesconto = ValorTotalDesconto;
             this.ValorTotalComDesconto = ValorTotalComDesconto;
+            this.ValorTotalAbatimentoJuros = ValorTotalAbatimentoJuros;
             this.AntecipacoesSimuladas = AntecipacoesSimuladas;
             
         }
@@ -59,6 +61,13 @@ namespace Conductor.Pier.Model
         public double? ValorTotalComDesconto { get; set; }
     
         /// <summary>
+        /// Valor total do abatimento de juros
+        /// </summary>
+        /// <value>Valor total do abatimento de juros</value>
+        [DataMember(Name="valorTotalAbatimentoJuros", EmitDefaultValue=false)]
+        public double? ValorTotalAbatimentoJuros { get; set; }
+    
+        /// <summary>
         /// Antecipa\u00E7\u00F5es Simuladas
         /// </summary>
         /// <value>Antecipa\u00E7\u00F5es Simuladas</value>
@@ -76,6 +85,7 @@ namespace Conductor.Pier.Model
             sb.Append("  ValorTotalAntecipado: ").Append(ValorTotalAntecipado).Append("\n");
             sb.Append("  ValorTotalDesconto: ").Append(ValorTotalDesconto).Append("\n");
             sb.Append("  ValorTotalComDesconto: ").Append(ValorTotalComDesconto).Append("\n");
+            sb.Append("  ValorTotalAbatimentoJuros: ").Append(ValorTotalAbatimentoJuros).Append("\n");
             sb.Append("  AntecipacoesSimuladas: ").Append(AntecipacoesSimuladas).Append("\n");
             
             sb.Append("}\n");
@@ -130,6 +140,11 @@ namespace Conductor.Pier.Model
                     this.ValorTotalComDesconto.Equals(other.ValorTotalComDesconto)
                 ) && 
                 (
+                    this.ValorTotalAbatimentoJuros == other.ValorTotalAbatimentoJuros ||
+                    this.ValorTotalAbatimentoJuros != null &&
+                    this.ValorTotalAbatimentoJuros.Equals(other.ValorTotalAbatimentoJuros)
+                ) && 
+                (
                     this.AntecipacoesSimuladas == other.AntecipacoesSimuladas ||
                     this.AntecipacoesSimuladas != null &&
                     this.AntecipacoesSimuladas.SequenceEqual(other.AntecipacoesSimuladas)
@@ -156,6 +171,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.ValorTotalComDesconto != null)
                     hash = hash * 59 + this.ValorTotalComDesconto.GetHashCode();
+                
+                if (this.ValorTotalAbatimentoJuros != null)
+                    hash = hash * 59 + this.ValorTotalAbatimentoJuros.GetHashCode();
                 
                 if (this.AntecipacoesSimuladas != null)
                     hash = hash * 59 + this.AntecipacoesSimuladas.GetHashCode();

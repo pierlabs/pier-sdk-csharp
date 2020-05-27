@@ -28,8 +28,9 @@ namespace Conductor.Pier.Model
         /// <param name="DataVencimento">Data de vencimento da cobran\u00E7a (required).</param>
         /// <param name="IdConvenio">C\u00F3digo de identifica\u00E7\u00E3o do conv\u00EAnio para onde o boleto deve ser gerado.</param>
         /// <param name="IdPessoafontePagadora">C\u00F3digo de identifica\u00E7\u00E3o da pessoa que ser\u00E1 a fonte pagadora do boleto.</param>
+        /// <param name="TipoPagamento">C\u00F3digo de identifica\u00E7\u00E3o do tipo de pagamento.</param>
 
-        public BoletoRequest(long? IdConta = null, long? TipoBoleto = null, double? Valor = null, string DataVencimento = null, long? IdConvenio = null, long? IdPessoafontePagadora = null)
+        public BoletoRequest(long? IdConta = null, long? TipoBoleto = null, double? Valor = null, string DataVencimento = null, long? IdConvenio = null, long? IdPessoafontePagadora = null, int? TipoPagamento = null)
         {
             // to ensure "IdConta" is required (not null)
             if (IdConta == null)
@@ -69,6 +70,7 @@ namespace Conductor.Pier.Model
             }
             this.IdConvenio = IdConvenio;
             this.IdPessoafontePagadora = IdPessoafontePagadora;
+            this.TipoPagamento = TipoPagamento;
             
         }
         
@@ -116,6 +118,13 @@ namespace Conductor.Pier.Model
         public long? IdPessoafontePagadora { get; set; }
     
         /// <summary>
+        /// C\u00F3digo de identifica\u00E7\u00E3o do tipo de pagamento
+        /// </summary>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do tipo de pagamento</value>
+        [DataMember(Name="tipoPagamento", EmitDefaultValue=false)]
+        public int? TipoPagamento { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -129,6 +138,7 @@ namespace Conductor.Pier.Model
             sb.Append("  DataVencimento: ").Append(DataVencimento).Append("\n");
             sb.Append("  IdConvenio: ").Append(IdConvenio).Append("\n");
             sb.Append("  IdPessoafontePagadora: ").Append(IdPessoafontePagadora).Append("\n");
+            sb.Append("  TipoPagamento: ").Append(TipoPagamento).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -195,6 +205,11 @@ namespace Conductor.Pier.Model
                     this.IdPessoafontePagadora == other.IdPessoafontePagadora ||
                     this.IdPessoafontePagadora != null &&
                     this.IdPessoafontePagadora.Equals(other.IdPessoafontePagadora)
+                ) && 
+                (
+                    this.TipoPagamento == other.TipoPagamento ||
+                    this.TipoPagamento != null &&
+                    this.TipoPagamento.Equals(other.TipoPagamento)
                 );
         }
 
@@ -227,6 +242,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.IdPessoafontePagadora != null)
                     hash = hash * 59 + this.IdPessoafontePagadora.GetHashCode();
+                
+                if (this.TipoPagamento != null)
+                    hash = hash * 59 + this.TipoPagamento.GetHashCode();
                 
                 return hash;
             }

@@ -46,9 +46,10 @@ namespace Conductor.Pier.Model
         /// <param name="DescricaoProduto">Descri\u00E7\u00E3o do produto da compra.</param>
         /// <param name="DescricaoEstabelecimento">Descri\u00E7\u00E3o do estabelecimento da compra.</param>
         /// <param name="NomeFantasiaEstabelecimento">Nome fantasia do estabelecimento da compra.</param>
+        /// <param name="TipoEvento">Tipo do evento.</param>
         /// <param name="Detalhes">Detalhes da simula\u00E7\u00E3o.</param>
 
-        public AntecipacaoSimuladaResponse(long? Mcc = null, string Uf = null, long? IdAntecipacaoSimulada = null, long? IdConta = null, long? IdCompra = null, long? IdTipoTransacao = null, int? QuantidadeParcelasAntecipaveis = null, double? ValorParcela = null, string DataHoraSimulacao = null, double? TaxaAntecipacaoAno = null, string NomeEstabelecimento = null, string Status = null, string DataCompra = null, string TipoOrigemTransacao = null, string Cidade = null, string Pais = null, string Latitude = null, string Longitude = null, long? IdGrupoMCC = null, string DescricaoGrupoMCC = null, long? IdProduto = null, string DescricaoProduto = null, string DescricaoEstabelecimento = null, string NomeFantasiaEstabelecimento = null, List<AntecipacaoSimuladaDetalhesResponse> Detalhes = null)
+        public AntecipacaoSimuladaResponse(long? Mcc = null, string Uf = null, long? IdAntecipacaoSimulada = null, long? IdConta = null, long? IdCompra = null, long? IdTipoTransacao = null, int? QuantidadeParcelasAntecipaveis = null, double? ValorParcela = null, string DataHoraSimulacao = null, double? TaxaAntecipacaoAno = null, string NomeEstabelecimento = null, string Status = null, string DataCompra = null, string TipoOrigemTransacao = null, string Cidade = null, string Pais = null, string Latitude = null, string Longitude = null, long? IdGrupoMCC = null, string DescricaoGrupoMCC = null, long? IdProduto = null, string DescricaoProduto = null, string DescricaoEstabelecimento = null, string NomeFantasiaEstabelecimento = null, string TipoEvento = null, List<AntecipacaoSimuladaDetalhesResponse> Detalhes = null)
         {
             this.Mcc = Mcc;
             this.Uf = Uf;
@@ -74,6 +75,7 @@ namespace Conductor.Pier.Model
             this.DescricaoProduto = DescricaoProduto;
             this.DescricaoEstabelecimento = DescricaoEstabelecimento;
             this.NomeFantasiaEstabelecimento = NomeFantasiaEstabelecimento;
+            this.TipoEvento = TipoEvento;
             this.Detalhes = Detalhes;
             
         }
@@ -246,6 +248,13 @@ namespace Conductor.Pier.Model
         public string NomeFantasiaEstabelecimento { get; set; }
     
         /// <summary>
+        /// Tipo do evento
+        /// </summary>
+        /// <value>Tipo do evento</value>
+        [DataMember(Name="tipoEvento", EmitDefaultValue=false)]
+        public string TipoEvento { get; set; }
+    
+        /// <summary>
         /// Detalhes da simula\u00E7\u00E3o
         /// </summary>
         /// <value>Detalhes da simula\u00E7\u00E3o</value>
@@ -284,6 +293,7 @@ namespace Conductor.Pier.Model
             sb.Append("  DescricaoProduto: ").Append(DescricaoProduto).Append("\n");
             sb.Append("  DescricaoEstabelecimento: ").Append(DescricaoEstabelecimento).Append("\n");
             sb.Append("  NomeFantasiaEstabelecimento: ").Append(NomeFantasiaEstabelecimento).Append("\n");
+            sb.Append("  TipoEvento: ").Append(TipoEvento).Append("\n");
             sb.Append("  Detalhes: ").Append(Detalhes).Append("\n");
             
             sb.Append("}\n");
@@ -443,6 +453,11 @@ namespace Conductor.Pier.Model
                     this.NomeFantasiaEstabelecimento.Equals(other.NomeFantasiaEstabelecimento)
                 ) && 
                 (
+                    this.TipoEvento == other.TipoEvento ||
+                    this.TipoEvento != null &&
+                    this.TipoEvento.Equals(other.TipoEvento)
+                ) && 
+                (
                     this.Detalhes == other.Detalhes ||
                     this.Detalhes != null &&
                     this.Detalhes.SequenceEqual(other.Detalhes)
@@ -532,6 +547,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.NomeFantasiaEstabelecimento != null)
                     hash = hash * 59 + this.NomeFantasiaEstabelecimento.GetHashCode();
+                
+                if (this.TipoEvento != null)
+                    hash = hash * 59 + this.TipoEvento.GetHashCode();
                 
                 if (this.Detalhes != null)
                     hash = hash * 59 + this.Detalhes.GetHashCode();

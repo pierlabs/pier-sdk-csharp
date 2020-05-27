@@ -48,8 +48,9 @@ namespace Conductor.Pier.Model
         /// <param name="FlagCobraProRata">Flag indicativa de cobrar juros.</param>
         /// <param name="IdTabelaJuros">C\u00F3digo identificador da tabela de juros.</param>
         /// <param name="TipoExcedentePermitido">Tipo excedente permitido.</param>
+        /// <param name="FlagIOFApartado">Flag que indica se o IOF \u00E9 apartado.</param>
 
-        public DetalheOperacaoResponse(long? IdOperacao = null, string CodigoProcessamento = null, string CodigoProcessamentoCancelamento = null, string NomeOperacao = null, string DescricaoOperacao = null, int? PlanoMinimo = null, int? PlanoMaximo = null, double? ValorMinimo = null, double? ValorMaximo = null, bool? FlagCobraJuros = null, double? TaxaJuros = null, bool? FlagCobraTarifa = null, double? TaxaTarifa = null, double? ValorTac = null, double? PercentualTac = null, double? ValorOperacao = null, int? Carencia = null, double? ExcedentePermitido = null, bool? FlagPermitirParcelamento = null, bool? FlagManterTaxaJurosNoRotativo = null, int? IdEmissor = null, long? IdTabela = null, long? ValorParcela = null, bool? FlagCobraProRata = null, long? IdTabelaJuros = null, string TipoExcedentePermitido = null)
+        public DetalheOperacaoResponse(long? IdOperacao = null, string CodigoProcessamento = null, string CodigoProcessamentoCancelamento = null, string NomeOperacao = null, string DescricaoOperacao = null, int? PlanoMinimo = null, int? PlanoMaximo = null, double? ValorMinimo = null, double? ValorMaximo = null, bool? FlagCobraJuros = null, double? TaxaJuros = null, bool? FlagCobraTarifa = null, double? TaxaTarifa = null, double? ValorTac = null, double? PercentualTac = null, double? ValorOperacao = null, int? Carencia = null, double? ExcedentePermitido = null, bool? FlagPermitirParcelamento = null, bool? FlagManterTaxaJurosNoRotativo = null, int? IdEmissor = null, long? IdTabela = null, long? ValorParcela = null, bool? FlagCobraProRata = null, long? IdTabelaJuros = null, string TipoExcedentePermitido = null, bool? FlagIOFApartado = null)
         {
             this.IdOperacao = IdOperacao;
             this.CodigoProcessamento = CodigoProcessamento;
@@ -77,6 +78,7 @@ namespace Conductor.Pier.Model
             this.FlagCobraProRata = FlagCobraProRata;
             this.IdTabelaJuros = IdTabelaJuros;
             this.TipoExcedentePermitido = TipoExcedentePermitido;
+            this.FlagIOFApartado = FlagIOFApartado;
             
         }
         
@@ -264,6 +266,13 @@ namespace Conductor.Pier.Model
         public string TipoExcedentePermitido { get; set; }
     
         /// <summary>
+        /// Flag que indica se o IOF \u00E9 apartado
+        /// </summary>
+        /// <value>Flag que indica se o IOF \u00E9 apartado</value>
+        [DataMember(Name="flagIOFApartado", EmitDefaultValue=false)]
+        public bool? FlagIOFApartado { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -297,6 +306,7 @@ namespace Conductor.Pier.Model
             sb.Append("  FlagCobraProRata: ").Append(FlagCobraProRata).Append("\n");
             sb.Append("  IdTabelaJuros: ").Append(IdTabelaJuros).Append("\n");
             sb.Append("  TipoExcedentePermitido: ").Append(TipoExcedentePermitido).Append("\n");
+            sb.Append("  FlagIOFApartado: ").Append(FlagIOFApartado).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -463,6 +473,11 @@ namespace Conductor.Pier.Model
                     this.TipoExcedentePermitido == other.TipoExcedentePermitido ||
                     this.TipoExcedentePermitido != null &&
                     this.TipoExcedentePermitido.Equals(other.TipoExcedentePermitido)
+                ) && 
+                (
+                    this.FlagIOFApartado == other.FlagIOFApartado ||
+                    this.FlagIOFApartado != null &&
+                    this.FlagIOFApartado.Equals(other.FlagIOFApartado)
                 );
         }
 
@@ -555,6 +570,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.TipoExcedentePermitido != null)
                     hash = hash * 59 + this.TipoExcedentePermitido.GetHashCode();
+                
+                if (this.FlagIOFApartado != null)
+                    hash = hash * 59 + this.FlagIOFApartado.GetHashCode();
                 
                 return hash;
             }

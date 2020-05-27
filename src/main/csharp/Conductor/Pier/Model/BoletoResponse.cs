@@ -58,8 +58,9 @@ namespace Conductor.Pier.Model
         /// <param name="Status">Status.</param>
         /// <param name="BoletoRegistrado">Boleto Registrado.</param>
         /// <param name="FontePagadora">Fonte pagadora do boleto.</param>
+        /// <param name="TipoPagamento">C\u00F3digo de identifica\u00E7\u00E3o do tipo de pagamento.</param>
 
-        public BoletoResponse(string NumeroDoDocumento = null, string DataProcessamento = null, string DataDocumento = null, string DataVencimento = null, string DataFechamento = null, double? ValorBoleto = null, string NomeBeneficiario = null, string DocumentoBeneficiario = null, string Agencia = null, string CodigoBeneficiario = null, string NumeroConvenio = null, string DigitoCodigoBeneficiario = null, string Carteira = null, string NossoNumero = null, string DigitoNossoNumero = null, string Banco = null, bool? Aceite = null, string EspecieDoDocumento = null, string Especie = null, List<string> Instrucoes = null, List<string> LocaisDePagamento = null, string NomePagador = null, string DocumentoPagador = null, string LogradouroPagador = null, string BairroPagador = null, string CepPagador = null, string CidadePagador = null, string UfPagador = null, string CodigoDeBarras = null, string LinhaDigitavel = null, long? Id = null, long? IdConta = null, string EnderecoCobrancaBeneficiario = null, long? Status = null, bool? BoletoRegistrado = null, string FontePagadora = null)
+        public BoletoResponse(string NumeroDoDocumento = null, string DataProcessamento = null, string DataDocumento = null, string DataVencimento = null, string DataFechamento = null, double? ValorBoleto = null, string NomeBeneficiario = null, string DocumentoBeneficiario = null, string Agencia = null, string CodigoBeneficiario = null, string NumeroConvenio = null, string DigitoCodigoBeneficiario = null, string Carteira = null, string NossoNumero = null, string DigitoNossoNumero = null, string Banco = null, bool? Aceite = null, string EspecieDoDocumento = null, string Especie = null, List<string> Instrucoes = null, List<string> LocaisDePagamento = null, string NomePagador = null, string DocumentoPagador = null, string LogradouroPagador = null, string BairroPagador = null, string CepPagador = null, string CidadePagador = null, string UfPagador = null, string CodigoDeBarras = null, string LinhaDigitavel = null, long? Id = null, long? IdConta = null, string EnderecoCobrancaBeneficiario = null, long? Status = null, bool? BoletoRegistrado = null, string FontePagadora = null, int? TipoPagamento = null)
         {
             this.NumeroDoDocumento = NumeroDoDocumento;
             this.DataProcessamento = DataProcessamento;
@@ -97,6 +98,7 @@ namespace Conductor.Pier.Model
             this.Status = Status;
             this.BoletoRegistrado = BoletoRegistrado;
             this.FontePagadora = FontePagadora;
+            this.TipoPagamento = TipoPagamento;
             
         }
         
@@ -354,6 +356,13 @@ namespace Conductor.Pier.Model
         public string FontePagadora { get; set; }
     
         /// <summary>
+        /// C\u00F3digo de identifica\u00E7\u00E3o do tipo de pagamento
+        /// </summary>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do tipo de pagamento</value>
+        [DataMember(Name="tipoPagamento", EmitDefaultValue=false)]
+        public int? TipoPagamento { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -397,6 +406,7 @@ namespace Conductor.Pier.Model
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  BoletoRegistrado: ").Append(BoletoRegistrado).Append("\n");
             sb.Append("  FontePagadora: ").Append(FontePagadora).Append("\n");
+            sb.Append("  TipoPagamento: ").Append(TipoPagamento).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -613,6 +623,11 @@ namespace Conductor.Pier.Model
                     this.FontePagadora == other.FontePagadora ||
                     this.FontePagadora != null &&
                     this.FontePagadora.Equals(other.FontePagadora)
+                ) && 
+                (
+                    this.TipoPagamento == other.TipoPagamento ||
+                    this.TipoPagamento != null &&
+                    this.TipoPagamento.Equals(other.TipoPagamento)
                 );
         }
 
@@ -735,6 +750,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.FontePagadora != null)
                     hash = hash * 59 + this.FontePagadora.GetHashCode();
+                
+                if (this.TipoPagamento != null)
+                    hash = hash * 59 + this.TipoPagamento.GetHashCode();
                 
                 return hash;
             }

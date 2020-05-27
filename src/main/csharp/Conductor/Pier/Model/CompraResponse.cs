@@ -45,8 +45,9 @@ namespace Conductor.Pier.Model
         /// <param name="DescricaoProduto">Descri\u00E7\u00E3o do produto da compra.</param>
         /// <param name="Cartao">N\u00FAmero do cart\u00E3o da compra.</param>
         /// <param name="NomePortadorCartao">Nome do portador do cart\u00E3o da compra.</param>
+        /// <param name="TipoEvento">Tipo do evento.</param>
 
-        public CompraResponse(long? Mcc = null, string Uf = null, long? IdCompra = null, string Status = null, string DataCompra = null, double? ValorTotalCompra = null, double? ValorParcela = null, double? PrimeiraParcela = null, int? NumeroParcelas = null, int? NumeroParcelasAntecipaveis = null, string NomeEstabelecimento = null, string TipoOrigemTransacao = null, string Cidade = null, string Pais = null, string Latitude = null, string Longitude = null, long? IdGrupoMCC = null, string DescricaoGrupoMCC = null, long? IdConta = null, long? IdProduto = null, string DescricaoProduto = null, string Cartao = null, string NomePortadorCartao = null)
+        public CompraResponse(long? Mcc = null, string Uf = null, long? IdCompra = null, string Status = null, string DataCompra = null, double? ValorTotalCompra = null, double? ValorParcela = null, double? PrimeiraParcela = null, int? NumeroParcelas = null, int? NumeroParcelasAntecipaveis = null, string NomeEstabelecimento = null, string TipoOrigemTransacao = null, string Cidade = null, string Pais = null, string Latitude = null, string Longitude = null, long? IdGrupoMCC = null, string DescricaoGrupoMCC = null, long? IdConta = null, long? IdProduto = null, string DescricaoProduto = null, string Cartao = null, string NomePortadorCartao = null, string TipoEvento = null)
         {
             this.Mcc = Mcc;
             this.Uf = Uf;
@@ -71,6 +72,7 @@ namespace Conductor.Pier.Model
             this.DescricaoProduto = DescricaoProduto;
             this.Cartao = Cartao;
             this.NomePortadorCartao = NomePortadorCartao;
+            this.TipoEvento = TipoEvento;
             
         }
         
@@ -235,6 +237,13 @@ namespace Conductor.Pier.Model
         public string NomePortadorCartao { get; set; }
     
         /// <summary>
+        /// Tipo do evento
+        /// </summary>
+        /// <value>Tipo do evento</value>
+        [DataMember(Name="tipoEvento", EmitDefaultValue=false)]
+        public string TipoEvento { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -265,6 +274,7 @@ namespace Conductor.Pier.Model
             sb.Append("  DescricaoProduto: ").Append(DescricaoProduto).Append("\n");
             sb.Append("  Cartao: ").Append(Cartao).Append("\n");
             sb.Append("  NomePortadorCartao: ").Append(NomePortadorCartao).Append("\n");
+            sb.Append("  TipoEvento: ").Append(TipoEvento).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -416,6 +426,11 @@ namespace Conductor.Pier.Model
                     this.NomePortadorCartao == other.NomePortadorCartao ||
                     this.NomePortadorCartao != null &&
                     this.NomePortadorCartao.Equals(other.NomePortadorCartao)
+                ) && 
+                (
+                    this.TipoEvento == other.TipoEvento ||
+                    this.TipoEvento != null &&
+                    this.TipoEvento.Equals(other.TipoEvento)
                 );
         }
 
@@ -499,6 +514,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.NomePortadorCartao != null)
                     hash = hash * 59 + this.NomePortadorCartao.GetHashCode();
+                
+                if (this.TipoEvento != null)
+                    hash = hash * 59 + this.TipoEvento.GetHashCode();
                 
                 return hash;
             }

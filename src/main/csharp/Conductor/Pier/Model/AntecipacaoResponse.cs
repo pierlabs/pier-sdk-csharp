@@ -33,6 +33,7 @@ namespace Conductor.Pier.Model
         /// <param name="ValorDescontoTotal">Apresenta o valor total do desconto.</param>
         /// <param name="ValorTotalComDesconto">Apresenta o valor total com desconto.</param>
         /// <param name="TaxaDesconto">Apresenta a taxa de desconto.</param>
+        /// <param name="ValorAbatimentoJuros">Apresenta o valor de abatimento de juros.</param>
         /// <param name="DataCompra">Data da compra.</param>
         /// <param name="Status">Descri\u00E7\u00E3o do status da autoriza\u00E7\u00E3o da compra.</param>
         /// <param name="NomeEstabelecimento">Nome do estabelecimento da compra.</param>
@@ -48,7 +49,7 @@ namespace Conductor.Pier.Model
         /// <param name="DescricaoEstabelecimento">Descri\u00E7\u00E3o do estabelecimento da compra.</param>
         /// <param name="NomeFantasiaEstabelecimento">Nome fantasia do estabelecimento da compra.</param>
 
-        public AntecipacaoResponse(long? Mcc = null, string Uf = null, long? Id = null, long? IdConta = null, long? IdCompra = null, long? QuantidadeParcelasTotal = null, long? QuantidadeParcelasAntecipadas = null, double? ValorParcela = null, double? ValorDescontoTotal = null, double? ValorTotalComDesconto = null, double? TaxaDesconto = null, string DataCompra = null, string Status = null, string NomeEstabelecimento = null, string TipoOrigemTransacao = null, string Cidade = null, string Pais = null, string Latitude = null, string Longitude = null, long? IdGrupoMCC = null, string DescricaoGrupoMCC = null, long? IdProduto = null, string DescricaoProduto = null, string DescricaoEstabelecimento = null, string NomeFantasiaEstabelecimento = null)
+        public AntecipacaoResponse(long? Mcc = null, string Uf = null, long? Id = null, long? IdConta = null, long? IdCompra = null, long? QuantidadeParcelasTotal = null, long? QuantidadeParcelasAntecipadas = null, double? ValorParcela = null, double? ValorDescontoTotal = null, double? ValorTotalComDesconto = null, double? TaxaDesconto = null, double? ValorAbatimentoJuros = null, string DataCompra = null, string Status = null, string NomeEstabelecimento = null, string TipoOrigemTransacao = null, string Cidade = null, string Pais = null, string Latitude = null, string Longitude = null, long? IdGrupoMCC = null, string DescricaoGrupoMCC = null, long? IdProduto = null, string DescricaoProduto = null, string DescricaoEstabelecimento = null, string NomeFantasiaEstabelecimento = null)
         {
             this.Mcc = Mcc;
             this.Uf = Uf;
@@ -61,6 +62,7 @@ namespace Conductor.Pier.Model
             this.ValorDescontoTotal = ValorDescontoTotal;
             this.ValorTotalComDesconto = ValorTotalComDesconto;
             this.TaxaDesconto = TaxaDesconto;
+            this.ValorAbatimentoJuros = ValorAbatimentoJuros;
             this.DataCompra = DataCompra;
             this.Status = Status;
             this.NomeEstabelecimento = NomeEstabelecimento;
@@ -153,6 +155,13 @@ namespace Conductor.Pier.Model
         /// <value>Apresenta a taxa de desconto</value>
         [DataMember(Name="taxaDesconto", EmitDefaultValue=false)]
         public double? TaxaDesconto { get; set; }
+    
+        /// <summary>
+        /// Apresenta o valor de abatimento de juros
+        /// </summary>
+        /// <value>Apresenta o valor de abatimento de juros</value>
+        [DataMember(Name="valorAbatimentoJuros", EmitDefaultValue=false)]
+        public double? ValorAbatimentoJuros { get; set; }
     
         /// <summary>
         /// Data da compra
@@ -271,6 +280,7 @@ namespace Conductor.Pier.Model
             sb.Append("  ValorDescontoTotal: ").Append(ValorDescontoTotal).Append("\n");
             sb.Append("  ValorTotalComDesconto: ").Append(ValorTotalComDesconto).Append("\n");
             sb.Append("  TaxaDesconto: ").Append(TaxaDesconto).Append("\n");
+            sb.Append("  ValorAbatimentoJuros: ").Append(ValorAbatimentoJuros).Append("\n");
             sb.Append("  DataCompra: ").Append(DataCompra).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  NomeEstabelecimento: ").Append(NomeEstabelecimento).Append("\n");
@@ -376,6 +386,11 @@ namespace Conductor.Pier.Model
                     this.TaxaDesconto == other.TaxaDesconto ||
                     this.TaxaDesconto != null &&
                     this.TaxaDesconto.Equals(other.TaxaDesconto)
+                ) && 
+                (
+                    this.ValorAbatimentoJuros == other.ValorAbatimentoJuros ||
+                    this.ValorAbatimentoJuros != null &&
+                    this.ValorAbatimentoJuros.Equals(other.ValorAbatimentoJuros)
                 ) && 
                 (
                     this.DataCompra == other.DataCompra ||
@@ -493,6 +508,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.TaxaDesconto != null)
                     hash = hash * 59 + this.TaxaDesconto.GetHashCode();
+                
+                if (this.ValorAbatimentoJuros != null)
+                    hash = hash * 59 + this.ValorAbatimentoJuros.GetHashCode();
                 
                 if (this.DataCompra != null)
                     hash = hash * 59 + this.DataCompra.GetHashCode();

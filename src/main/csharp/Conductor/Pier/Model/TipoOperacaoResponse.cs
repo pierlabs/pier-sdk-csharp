@@ -47,8 +47,9 @@ namespace Conductor.Pier.Model
         /// <param name="PercentualTAC">Valor TAC.</param>
         /// <param name="IdTabelaJuros">C\u00F3digo identificador da tabela de juros.</param>
         /// <param name="CodigoProcessamento">C\u00F3digo identificador de opera\u00E7\u00E3o.</param>
+        /// <param name="FlagIOFApartado">Flag IOF Apartado.</param>
 
-        public TipoOperacaoResponse(long? Id = null, string TipoOperacao = null, string Nome = null, string Descricao = null, double? ExcedentePermitido = null, string TipoExcedentePermitido = null, double? ValorMinimo = null, double? ValorMaximo = null, double? ValorTAC = null, int? FlagTiraTac = null, long? IdProduto = null, long? IdEstabelecimento = null, double? Tarifa = null, double? RemuneracaoEmissor = null, int? PlanoMaximo = null, int? PlanoMinimo = null, int? IdEmissor = null, int? IdTabela = null, int? ValorParcela = null, int? FlagCobraProRata = null, int? FlagCobraJuros = null, int? FlagPosProximoVencimento = null, int? PercentualTAC = null, int? IdTabelaJuros = null, string CodigoProcessamento = null)
+        public TipoOperacaoResponse(long? Id = null, string TipoOperacao = null, string Nome = null, string Descricao = null, double? ExcedentePermitido = null, string TipoExcedentePermitido = null, double? ValorMinimo = null, double? ValorMaximo = null, double? ValorTAC = null, int? FlagTiraTac = null, long? IdProduto = null, long? IdEstabelecimento = null, double? Tarifa = null, double? RemuneracaoEmissor = null, int? PlanoMaximo = null, int? PlanoMinimo = null, int? IdEmissor = null, int? IdTabela = null, int? ValorParcela = null, int? FlagCobraProRata = null, int? FlagCobraJuros = null, int? FlagPosProximoVencimento = null, int? PercentualTAC = null, int? IdTabelaJuros = null, string CodigoProcessamento = null, int? FlagIOFApartado = null)
         {
             // to ensure "Id" is required (not null)
             if (Id == null)
@@ -147,6 +148,7 @@ namespace Conductor.Pier.Model
             this.PercentualTAC = PercentualTAC;
             this.IdTabelaJuros = IdTabelaJuros;
             this.CodigoProcessamento = CodigoProcessamento;
+            this.FlagIOFApartado = FlagIOFApartado;
             
         }
         
@@ -327,6 +329,13 @@ namespace Conductor.Pier.Model
         public string CodigoProcessamento { get; set; }
     
         /// <summary>
+        /// Flag IOF Apartado
+        /// </summary>
+        /// <value>Flag IOF Apartado</value>
+        [DataMember(Name="flagIOFApartado", EmitDefaultValue=false)]
+        public int? FlagIOFApartado { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -359,6 +368,7 @@ namespace Conductor.Pier.Model
             sb.Append("  PercentualTAC: ").Append(PercentualTAC).Append("\n");
             sb.Append("  IdTabelaJuros: ").Append(IdTabelaJuros).Append("\n");
             sb.Append("  CodigoProcessamento: ").Append(CodigoProcessamento).Append("\n");
+            sb.Append("  FlagIOFApartado: ").Append(FlagIOFApartado).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -520,6 +530,11 @@ namespace Conductor.Pier.Model
                     this.CodigoProcessamento == other.CodigoProcessamento ||
                     this.CodigoProcessamento != null &&
                     this.CodigoProcessamento.Equals(other.CodigoProcessamento)
+                ) && 
+                (
+                    this.FlagIOFApartado == other.FlagIOFApartado ||
+                    this.FlagIOFApartado != null &&
+                    this.FlagIOFApartado.Equals(other.FlagIOFApartado)
                 );
         }
 
@@ -609,6 +624,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.CodigoProcessamento != null)
                     hash = hash * 59 + this.CodigoProcessamento.GetHashCode();
+                
+                if (this.FlagIOFApartado != null)
+                    hash = hash * 59 + this.FlagIOFApartado.GetHashCode();
                 
                 return hash;
             }

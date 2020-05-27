@@ -96,8 +96,9 @@ namespace Conductor.Pier.Model
         /// <param name="NomePai">Apresenta o nome do pai da pessoa f\u00EDsica.</param>
         /// <param name="ChequeEspecial">Indica se pessoa f\u00EDsica aderir ao cheque especial.</param>
         /// <param name="NumeroBanco">N\u00FAmero do Banco.</param>
+        /// <param name="LimiteParcelado">Valor do limite de cr\u00E9dito para transa\u00E7\u00F5es de compras parceladas.</param>
 
-        public ObjetoPessoaFsicaAprovadaResponse(long? Id = null, string Nome = null, string NomeMae = null, string DataNascimento = null, string Sexo = null, string Cpf = null, string NumeroIdentidade = null, string OrgaoExpedidorIdentidade = null, string UnidadeFederativaIdentidade = null, string DataEmissaoIdentidade = null, bool? FlagDeficienteVisual = null, long? IdEstadoCivil = null, string IdProfissao = null, long? IdNaturezaOcupacao = null, long? IdNacionalidade = null, long? IdOrigemComercial = null, long? IdProduto = null, int? NumeroAgencia = null, string NumeroContaCorrente = null, string Email = null, int? DiaVencimento = null, string NomeImpresso = null, string NomeEmpresa = null, long? IdConta = null, long? IdProposta = null, string CanalEntrada = null, int? ValorPontuacao = null, List<TelefonePessoaAprovadaResponse> Telefones = null, List<EnderecoAprovadoResponse> Enderecos = null, double? LimiteGlobal = null, double? LimiteMaximo = null, double? LimiteParcelas = null, double? LimiteConsignado = null, bool? ImpedidoFinanciamento = null, string NomeReferencia1 = null, string EnderecoReferencia1 = null, string NomeReferencia2 = null, string EnderecoReferencia2 = null, FuncaoAtivaEnum? FuncaoAtiva = null, string Matricula = null, string ResponsavelDigitacao = null, int? IdPromotorVenda = null, string NaturalidadeCidade = null, string NaturalidadeEstado = null, int? GrauInstrucao = null, int? NumeroDependentes = null, string NomePai = null, int? ChequeEspecial = null, int? NumeroBanco = null)
+        public ObjetoPessoaFsicaAprovadaResponse(long? Id = null, string Nome = null, string NomeMae = null, string DataNascimento = null, string Sexo = null, string Cpf = null, string NumeroIdentidade = null, string OrgaoExpedidorIdentidade = null, string UnidadeFederativaIdentidade = null, string DataEmissaoIdentidade = null, bool? FlagDeficienteVisual = null, long? IdEstadoCivil = null, string IdProfissao = null, long? IdNaturezaOcupacao = null, long? IdNacionalidade = null, long? IdOrigemComercial = null, long? IdProduto = null, int? NumeroAgencia = null, string NumeroContaCorrente = null, string Email = null, int? DiaVencimento = null, string NomeImpresso = null, string NomeEmpresa = null, long? IdConta = null, long? IdProposta = null, string CanalEntrada = null, int? ValorPontuacao = null, List<TelefonePessoaAprovadaResponse> Telefones = null, List<EnderecoAprovadoResponse> Enderecos = null, double? LimiteGlobal = null, double? LimiteMaximo = null, double? LimiteParcelas = null, double? LimiteConsignado = null, bool? ImpedidoFinanciamento = null, string NomeReferencia1 = null, string EnderecoReferencia1 = null, string NomeReferencia2 = null, string EnderecoReferencia2 = null, FuncaoAtivaEnum? FuncaoAtiva = null, string Matricula = null, string ResponsavelDigitacao = null, int? IdPromotorVenda = null, string NaturalidadeCidade = null, string NaturalidadeEstado = null, int? GrauInstrucao = null, int? NumeroDependentes = null, string NomePai = null, int? ChequeEspecial = null, int? NumeroBanco = null, double? LimiteParcelado = null)
         {
             // to ensure "Nome" is required (not null)
             if (Nome == null)
@@ -228,6 +229,7 @@ namespace Conductor.Pier.Model
             this.NomePai = NomePai;
             this.ChequeEspecial = ChequeEspecial;
             this.NumeroBanco = NumeroBanco;
+            this.LimiteParcelado = LimiteParcelado;
             
         }
         
@@ -569,6 +571,13 @@ namespace Conductor.Pier.Model
         public int? NumeroBanco { get; set; }
     
         /// <summary>
+        /// Valor do limite de cr\u00E9dito para transa\u00E7\u00F5es de compras parceladas
+        /// </summary>
+        /// <value>Valor do limite de cr\u00E9dito para transa\u00E7\u00F5es de compras parceladas</value>
+        [DataMember(Name="limiteParcelado", EmitDefaultValue=false)]
+        public double? LimiteParcelado { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -625,6 +634,7 @@ namespace Conductor.Pier.Model
             sb.Append("  NomePai: ").Append(NomePai).Append("\n");
             sb.Append("  ChequeEspecial: ").Append(ChequeEspecial).Append("\n");
             sb.Append("  NumeroBanco: ").Append(NumeroBanco).Append("\n");
+            sb.Append("  LimiteParcelado: ").Append(LimiteParcelado).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -906,6 +916,11 @@ namespace Conductor.Pier.Model
                     this.NumeroBanco == other.NumeroBanco ||
                     this.NumeroBanco != null &&
                     this.NumeroBanco.Equals(other.NumeroBanco)
+                ) && 
+                (
+                    this.LimiteParcelado == other.LimiteParcelado ||
+                    this.LimiteParcelado != null &&
+                    this.LimiteParcelado.Equals(other.LimiteParcelado)
                 );
         }
 
@@ -1067,6 +1082,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.NumeroBanco != null)
                     hash = hash * 59 + this.NumeroBanco.GetHashCode();
+                
+                if (this.LimiteParcelado != null)
+                    hash = hash * 59 + this.LimiteParcelado.GetHashCode();
                 
                 return hash;
             }

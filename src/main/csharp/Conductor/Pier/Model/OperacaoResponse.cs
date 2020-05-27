@@ -31,8 +31,9 @@ namespace Conductor.Pier.Model
         /// <param name="Carencia">Quantidade de meses para car\u00EAncia.</param>
         /// <param name="FlagPermitirParcelamento">Permitir transa\u00E7\u00F5es parceladas.</param>
         /// <param name="FlagManterTaxaJurosNoRotativo">Flag que indica que a opera\u00E7\u00E3o deve utilizar a taxa da compra como taxa do rotativo para transa\u00E7\u00F5es desse tipo opera\u00E7\u00E3o.</param>
+        /// <param name="FlagIOFApartado">Flag que indica se o IOF \u00E9 apartado.</param>
 
-        public OperacaoResponse(long? IdOperacao = null, string CodigoProcessamento = null, string CodigoProcessamentoCancelamento = null, string NomeOperacao = null, bool? FlagCobraJuros = null, bool? FlagCobraTarifa = null, int? Carencia = null, bool? FlagPermitirParcelamento = null, bool? FlagManterTaxaJurosNoRotativo = null)
+        public OperacaoResponse(long? IdOperacao = null, string CodigoProcessamento = null, string CodigoProcessamentoCancelamento = null, string NomeOperacao = null, bool? FlagCobraJuros = null, bool? FlagCobraTarifa = null, int? Carencia = null, bool? FlagPermitirParcelamento = null, bool? FlagManterTaxaJurosNoRotativo = null, bool? FlagIOFApartado = null)
         {
             this.IdOperacao = IdOperacao;
             this.CodigoProcessamento = CodigoProcessamento;
@@ -43,6 +44,7 @@ namespace Conductor.Pier.Model
             this.Carencia = Carencia;
             this.FlagPermitirParcelamento = FlagPermitirParcelamento;
             this.FlagManterTaxaJurosNoRotativo = FlagManterTaxaJurosNoRotativo;
+            this.FlagIOFApartado = FlagIOFApartado;
             
         }
         
@@ -111,6 +113,13 @@ namespace Conductor.Pier.Model
         public bool? FlagManterTaxaJurosNoRotativo { get; set; }
     
         /// <summary>
+        /// Flag que indica se o IOF \u00E9 apartado
+        /// </summary>
+        /// <value>Flag que indica se o IOF \u00E9 apartado</value>
+        [DataMember(Name="flagIOFApartado", EmitDefaultValue=false)]
+        public bool? FlagIOFApartado { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -127,6 +136,7 @@ namespace Conductor.Pier.Model
             sb.Append("  Carencia: ").Append(Carencia).Append("\n");
             sb.Append("  FlagPermitirParcelamento: ").Append(FlagPermitirParcelamento).Append("\n");
             sb.Append("  FlagManterTaxaJurosNoRotativo: ").Append(FlagManterTaxaJurosNoRotativo).Append("\n");
+            sb.Append("  FlagIOFApartado: ").Append(FlagIOFApartado).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -208,6 +218,11 @@ namespace Conductor.Pier.Model
                     this.FlagManterTaxaJurosNoRotativo == other.FlagManterTaxaJurosNoRotativo ||
                     this.FlagManterTaxaJurosNoRotativo != null &&
                     this.FlagManterTaxaJurosNoRotativo.Equals(other.FlagManterTaxaJurosNoRotativo)
+                ) && 
+                (
+                    this.FlagIOFApartado == other.FlagIOFApartado ||
+                    this.FlagIOFApartado != null &&
+                    this.FlagIOFApartado.Equals(other.FlagIOFApartado)
                 );
         }
 
@@ -249,6 +264,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.FlagManterTaxaJurosNoRotativo != null)
                     hash = hash * 59 + this.FlagManterTaxaJurosNoRotativo.GetHashCode();
+                
+                if (this.FlagIOFApartado != null)
+                    hash = hash * 59 + this.FlagIOFApartado.GetHashCode();
                 
                 return hash;
             }

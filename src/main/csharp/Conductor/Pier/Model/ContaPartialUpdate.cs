@@ -29,8 +29,10 @@ namespace Conductor.Pier.Model
         /// <param name="PossuiOverLimit">Sinaliza se o OverLimit da conta est\u00E1 ativo.</param>
         /// <param name="UsuarioModificacao">usuarioModificacao.</param>
         /// <param name="BehaviorScore">Valor da pontua\u00E7\u00E3o de comportamento (behavior score)..</param>
+        /// <param name="Banco">C\u00F3digo de identifica\u00E7\u00E3o do banco.</param>
+        /// <param name="Agencia">C\u00F3digo de identifica\u00E7\u00E3o da ag\u00EAncia.</param>
 
-        public ContaPartialUpdate(string FuncaoAtiva = null, long? IdContaEmissor = null, string DataCadastro = null, double? ValorRenda = null, bool? PossuiOverLimit = null, string UsuarioModificacao = null, int? BehaviorScore = null)
+        public ContaPartialUpdate(string FuncaoAtiva = null, long? IdContaEmissor = null, string DataCadastro = null, double? ValorRenda = null, bool? PossuiOverLimit = null, string UsuarioModificacao = null, int? BehaviorScore = null, long? Banco = null, long? Agencia = null)
         {
             this.FuncaoAtiva = FuncaoAtiva;
             this.IdContaEmissor = IdContaEmissor;
@@ -39,6 +41,8 @@ namespace Conductor.Pier.Model
             this.PossuiOverLimit = PossuiOverLimit;
             this.UsuarioModificacao = UsuarioModificacao;
             this.BehaviorScore = BehaviorScore;
+            this.Banco = Banco;
+            this.Agencia = Agencia;
             
         }
         
@@ -93,6 +97,20 @@ namespace Conductor.Pier.Model
         public int? BehaviorScore { get; set; }
     
         /// <summary>
+        /// C\u00F3digo de identifica\u00E7\u00E3o do banco
+        /// </summary>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o do banco</value>
+        [DataMember(Name="banco", EmitDefaultValue=false)]
+        public long? Banco { get; set; }
+    
+        /// <summary>
+        /// C\u00F3digo de identifica\u00E7\u00E3o da ag\u00EAncia
+        /// </summary>
+        /// <value>C\u00F3digo de identifica\u00E7\u00E3o da ag\u00EAncia</value>
+        [DataMember(Name="agencia", EmitDefaultValue=false)]
+        public long? Agencia { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -107,6 +125,8 @@ namespace Conductor.Pier.Model
             sb.Append("  PossuiOverLimit: ").Append(PossuiOverLimit).Append("\n");
             sb.Append("  UsuarioModificacao: ").Append(UsuarioModificacao).Append("\n");
             sb.Append("  BehaviorScore: ").Append(BehaviorScore).Append("\n");
+            sb.Append("  Banco: ").Append(Banco).Append("\n");
+            sb.Append("  Agencia: ").Append(Agencia).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -178,6 +198,16 @@ namespace Conductor.Pier.Model
                     this.BehaviorScore == other.BehaviorScore ||
                     this.BehaviorScore != null &&
                     this.BehaviorScore.Equals(other.BehaviorScore)
+                ) && 
+                (
+                    this.Banco == other.Banco ||
+                    this.Banco != null &&
+                    this.Banco.Equals(other.Banco)
+                ) && 
+                (
+                    this.Agencia == other.Agencia ||
+                    this.Agencia != null &&
+                    this.Agencia.Equals(other.Agencia)
                 );
         }
 
@@ -213,6 +243,12 @@ namespace Conductor.Pier.Model
                 
                 if (this.BehaviorScore != null)
                     hash = hash * 59 + this.BehaviorScore.GetHashCode();
+                
+                if (this.Banco != null)
+                    hash = hash * 59 + this.Banco.GetHashCode();
+                
+                if (this.Agencia != null)
+                    hash = hash * 59 + this.Agencia.GetHashCode();
                 
                 return hash;
             }

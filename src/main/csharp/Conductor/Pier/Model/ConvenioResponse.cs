@@ -42,8 +42,9 @@ namespace Conductor.Pier.Model
         /// <param name="Operador">Usu\u00E1rio responsavel pelo cadastro e/ou altera\u00E7\u00E3o do conv\u00EAnio.</param>
         /// <param name="Data">Data de cadastro/altera\u00E7\u00E3o do conv\u00EAnio.</param>
         /// <param name="Maquina">M\u00E1quina pela qual foi realizado o cadastro ou altera\u00E7\u00E3o.</param>
+        /// <param name="ComplementoCarteira">Complemento registro de boleto.</param>
 
-        public ConvenioResponse(long? Id = null, long? Banco = null, long? Agencia = null, string ContaCorrente = null, string Especie = null, double? NumeroConvenio = null, long? Carteira = null, string CodigoCedente = null, string EspecieTipo = null, string EspecieDocumento = null, string Aceite = null, string Instrucoes = null, string LocalPagamento1 = null, string LocalPagamento2 = null, string EnderecoCobrancaEmissor = null, string NomeBeneficiario = null, string CnpjBeneficiario = null, string Operador = null, string Data = null, string Maquina = null)
+        public ConvenioResponse(long? Id = null, long? Banco = null, long? Agencia = null, string ContaCorrente = null, string Especie = null, double? NumeroConvenio = null, long? Carteira = null, string CodigoCedente = null, string EspecieTipo = null, string EspecieDocumento = null, string Aceite = null, string Instrucoes = null, string LocalPagamento1 = null, string LocalPagamento2 = null, string EnderecoCobrancaEmissor = null, string NomeBeneficiario = null, string CnpjBeneficiario = null, string Operador = null, string Data = null, string Maquina = null, double? ComplementoCarteira = null)
         {
             this.Id = Id;
             this.Banco = Banco;
@@ -65,6 +66,7 @@ namespace Conductor.Pier.Model
             this.Operador = Operador;
             this.Data = Data;
             this.Maquina = Maquina;
+            this.ComplementoCarteira = ComplementoCarteira;
             
         }
         
@@ -210,6 +212,13 @@ namespace Conductor.Pier.Model
         public string Maquina { get; set; }
     
         /// <summary>
+        /// Complemento registro de boleto
+        /// </summary>
+        /// <value>Complemento registro de boleto</value>
+        [DataMember(Name="complementoCarteira", EmitDefaultValue=false)]
+        public double? ComplementoCarteira { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -237,6 +246,7 @@ namespace Conductor.Pier.Model
             sb.Append("  Operador: ").Append(Operador).Append("\n");
             sb.Append("  Data: ").Append(Data).Append("\n");
             sb.Append("  Maquina: ").Append(Maquina).Append("\n");
+            sb.Append("  ComplementoCarteira: ").Append(ComplementoCarteira).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -373,6 +383,11 @@ namespace Conductor.Pier.Model
                     this.Maquina == other.Maquina ||
                     this.Maquina != null &&
                     this.Maquina.Equals(other.Maquina)
+                ) && 
+                (
+                    this.ComplementoCarteira == other.ComplementoCarteira ||
+                    this.ComplementoCarteira != null &&
+                    this.ComplementoCarteira.Equals(other.ComplementoCarteira)
                 );
         }
 
@@ -447,6 +462,9 @@ namespace Conductor.Pier.Model
                 
                 if (this.Maquina != null)
                     hash = hash * 59 + this.Maquina.GetHashCode();
+                
+                if (this.ComplementoCarteira != null)
+                    hash = hash * 59 + this.ComplementoCarteira.GetHashCode();
                 
                 return hash;
             }

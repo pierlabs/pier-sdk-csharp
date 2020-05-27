@@ -86,6 +86,38 @@ namespace Conductor.Pier.Api
         ApiResponse<Object> DeletarLotesCartoesWithHttpInfo (long? id);
         
         /// <summary>
+        /// Lista os identificadores de lotes e cart\u00F5es
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite listar os identificadores de lotes e de cart\u00F5es Noname cadastrados
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idCartao">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (optional)</param>
+        /// <param name="idLote">C\u00F3digo de identifica\u00E7\u00E3o do lote (optional)</param>
+        /// <param name="idCartaoPai">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o pai (optional)</param>
+        /// <returns>PageCartaoLoteResponse</returns>
+        PageCartaoLoteResponse ListarIdentificadoresCartoesLotes (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, long? idLote = null, long? idCartaoPai = null);
+  
+        /// <summary>
+        /// Lista os identificadores de lotes e cart\u00F5es
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite listar os identificadores de lotes e de cart\u00F5es Noname cadastrados
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idCartao">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (optional)</param>
+        /// <param name="idLote">C\u00F3digo de identifica\u00E7\u00E3o do lote (optional)</param>
+        /// <param name="idCartaoPai">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o pai (optional)</param>
+        /// <returns>ApiResponse of PageCartaoLoteResponse</returns>
+        ApiResponse<PageCartaoLoteResponse> ListarIdentificadoresCartoesLotesWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, long? idLote = null, long? idCartaoPai = null);
+        
+        /// <summary>
         /// Lista os lotes de cart\u00F5es Noname cadastrados
         /// </summary>
         /// <remarks>
@@ -226,6 +258,38 @@ namespace Conductor.Pier.Api
         /// <param name="id">id</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeletarLotesCartoesAsyncWithHttpInfo (long? id);
+        
+        /// <summary>
+        /// Lista os identificadores de lotes e cart\u00F5es
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite listar os identificadores de lotes e de cart\u00F5es Noname cadastrados
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idCartao">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (optional)</param>
+        /// <param name="idLote">C\u00F3digo de identifica\u00E7\u00E3o do lote (optional)</param>
+        /// <param name="idCartaoPai">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o pai (optional)</param>
+        /// <returns>Task of PageCartaoLoteResponse</returns>
+        System.Threading.Tasks.Task<PageCartaoLoteResponse> ListarIdentificadoresCartoesLotesAsync (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, long? idLote = null, long? idCartaoPai = null);
+
+        /// <summary>
+        /// Lista os identificadores de lotes e cart\u00F5es
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite listar os identificadores de lotes e de cart\u00F5es Noname cadastrados
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idCartao">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (optional)</param>
+        /// <param name="idLote">C\u00F3digo de identifica\u00E7\u00E3o do lote (optional)</param>
+        /// <param name="idCartaoPai">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o pai (optional)</param>
+        /// <returns>Task of ApiResponse (PageCartaoLoteResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PageCartaoLoteResponse>> ListarIdentificadoresCartoesLotesAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, long? idLote = null, long? idCartaoPai = null);
         
         /// <summary>
         /// Lista os lotes de cart\u00F5es Noname cadastrados
@@ -884,6 +948,188 @@ namespace Conductor.Pier.Api
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+            
+        }
+        
+        /// <summary>
+        /// Lista os identificadores de lotes e cart\u00F5es Este recurso permite listar os identificadores de lotes e de cart\u00F5es Noname cadastrados
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="page">P\u00E1gina (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <param name="idCartao">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (optional)</param> 
+        /// <param name="idLote">C\u00F3digo de identifica\u00E7\u00E3o do lote (optional)</param> 
+        /// <param name="idCartaoPai">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o pai (optional)</param> 
+        /// <returns>PageCartaoLoteResponse</returns>
+        public PageCartaoLoteResponse ListarIdentificadoresCartoesLotes (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, long? idLote = null, long? idCartaoPai = null)
+        {
+             ApiResponse<PageCartaoLoteResponse> localVarResponse = ListarIdentificadoresCartoesLotesWithHttpInfo(sort, page, limit, idCartao, idLote, idCartaoPai);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Lista os identificadores de lotes e cart\u00F5es Este recurso permite listar os identificadores de lotes e de cart\u00F5es Noname cadastrados
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param> 
+        /// <param name="page">P\u00E1gina (optional)</param> 
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param> 
+        /// <param name="idCartao">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (optional)</param> 
+        /// <param name="idLote">C\u00F3digo de identifica\u00E7\u00E3o do lote (optional)</param> 
+        /// <param name="idCartaoPai">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o pai (optional)</param> 
+        /// <returns>ApiResponse of PageCartaoLoteResponse</returns>
+        public ApiResponse< PageCartaoLoteResponse > ListarIdentificadoresCartoesLotesWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, long? idLote = null, long? idCartaoPai = null)
+        {
+            
+    
+            var localVarPath = "/api/lotes/cartoes/identificadores";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (idCartao != null) localVarQueryParams.Add("idCartao", Configuration.ApiClient.ParameterToString(idCartao)); // query parameter
+            if (idLote != null) localVarQueryParams.Add("idLote", Configuration.ApiClient.ParameterToString(idLote)); // query parameter
+            if (idCartaoPai != null) localVarQueryParams.Add("idCartaoPai", Configuration.ApiClient.ParameterToString(idCartaoPai)); // query parameter
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarIdentificadoresCartoesLotes: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarIdentificadoresCartoesLotes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<PageCartaoLoteResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageCartaoLoteResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageCartaoLoteResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Lista os identificadores de lotes e cart\u00F5es Este recurso permite listar os identificadores de lotes e de cart\u00F5es Noname cadastrados
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idCartao">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (optional)</param>
+        /// <param name="idLote">C\u00F3digo de identifica\u00E7\u00E3o do lote (optional)</param>
+        /// <param name="idCartaoPai">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o pai (optional)</param>
+        /// <returns>Task of PageCartaoLoteResponse</returns>
+        public async System.Threading.Tasks.Task<PageCartaoLoteResponse> ListarIdentificadoresCartoesLotesAsync (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, long? idLote = null, long? idCartaoPai = null)
+        {
+             ApiResponse<PageCartaoLoteResponse> localVarResponse = await ListarIdentificadoresCartoesLotesAsyncWithHttpInfo(sort, page, limit, idCartao, idLote, idCartaoPai);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Lista os identificadores de lotes e cart\u00F5es Este recurso permite listar os identificadores de lotes e de cart\u00F5es Noname cadastrados
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="sort">Tipo de ordena\u00E7\u00E3o dos registros (optional)</param>
+        /// <param name="page">P\u00E1gina (optional)</param>
+        /// <param name="limit">Limite de elementos por solicita\u00E7\u00E3o (Default =50, Max =50) (optional)</param>
+        /// <param name="idCartao">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o (optional)</param>
+        /// <param name="idLote">C\u00F3digo de identifica\u00E7\u00E3o do lote (optional)</param>
+        /// <param name="idCartaoPai">C\u00F3digo de identifica\u00E7\u00E3o do cart\u00E3o pai (optional)</param>
+        /// <returns>Task of ApiResponse (PageCartaoLoteResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PageCartaoLoteResponse>> ListarIdentificadoresCartoesLotesAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idCartao = null, long? idLote = null, long? idCartaoPai = null)
+        {
+            
+    
+            var localVarPath = "/api/lotes/cartoes/identificadores";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (sort != null) localVarQueryParams.Add("sort", Configuration.ApiClient.ParameterToString(sort)); // query parameter
+            if (page != null) localVarQueryParams.Add("page", Configuration.ApiClient.ParameterToString(page)); // query parameter
+            if (limit != null) localVarQueryParams.Add("limit", Configuration.ApiClient.ParameterToString(limit)); // query parameter
+            if (idCartao != null) localVarQueryParams.Add("idCartao", Configuration.ApiClient.ParameterToString(idCartao)); // query parameter
+            if (idLote != null) localVarQueryParams.Add("idLote", Configuration.ApiClient.ParameterToString(idLote)); // query parameter
+            if (idCartaoPai != null) localVarQueryParams.Add("idCartaoPai", Configuration.ApiClient.ParameterToString(idCartaoPai)); // query parameter
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ListarIdentificadoresCartoesLotes: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ListarIdentificadoresCartoesLotes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PageCartaoLoteResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageCartaoLoteResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageCartaoLoteResponse)));
             
         }
         
