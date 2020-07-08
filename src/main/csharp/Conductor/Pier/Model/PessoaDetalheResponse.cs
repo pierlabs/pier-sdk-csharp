@@ -49,8 +49,11 @@ namespace Conductor.Pier.Model
         /// <param name="PessoaPoliticamenteExposta">Flag para identificar se a pessoa \u00E9 politicamente exposta.</param>
         /// <param name="PatrimonioTotal">Patrim\u00F4nio total da pessoa.</param>
         /// <param name="NomeConjuge">Nome do c\u00F4njuge da pessoa.</param>
+        /// <param name="FlagNomePaiNaoInformado">Flag que indica se a pessoa informou nome do pai.</param>
+        /// <param name="FlagSemEnderecoComercialFixo">Flag que indica se a pessoa possui endere\u00E7o comercial fixo.</param>
+        /// <param name="DataEmissaoCnh">Data emiss\u00E3o CNH.</param>
 
-        public PessoaDetalheResponse(long? IdPessoa = null, string NomeMae = null, long? IdEstadoCivil = null, string IdProfissao = null, long? IdNaturezaOcupacao = null, long? IdNacionalidade = null, int? NumeroBanco = null, int? NumeroAgencia = null, string NumeroContaCorrente = null, string Email = null, string NomeEmpresa = null, string NomeReferencia1 = null, string EnderecoReferencia1 = null, string NomeReferencia2 = null, string EnderecoReferencia2 = null, double? Salario = null, bool? ImpedidoFinanciamento = null, string NaturalidadeCidade = null, string NaturalidadeEstado = null, int? GrauInstrucao = null, int? NumeroDependentes = null, string NomePai = null, int? ChequeEspecial = null, string NumeroCnh = null, bool? PessoaPoliticamenteExposta = null, double? PatrimonioTotal = null, string NomeConjuge = null)
+        public PessoaDetalheResponse(long? IdPessoa = null, string NomeMae = null, long? IdEstadoCivil = null, string IdProfissao = null, long? IdNaturezaOcupacao = null, long? IdNacionalidade = null, int? NumeroBanco = null, int? NumeroAgencia = null, string NumeroContaCorrente = null, string Email = null, string NomeEmpresa = null, string NomeReferencia1 = null, string EnderecoReferencia1 = null, string NomeReferencia2 = null, string EnderecoReferencia2 = null, double? Salario = null, bool? ImpedidoFinanciamento = null, string NaturalidadeCidade = null, string NaturalidadeEstado = null, int? GrauInstrucao = null, int? NumeroDependentes = null, string NomePai = null, int? ChequeEspecial = null, string NumeroCnh = null, bool? PessoaPoliticamenteExposta = null, double? PatrimonioTotal = null, string NomeConjuge = null, bool? FlagNomePaiNaoInformado = null, bool? FlagSemEnderecoComercialFixo = null, string DataEmissaoCnh = null)
         {
             this.IdPessoa = IdPessoa;
             this.NomeMae = NomeMae;
@@ -79,6 +82,9 @@ namespace Conductor.Pier.Model
             this.PessoaPoliticamenteExposta = PessoaPoliticamenteExposta;
             this.PatrimonioTotal = PatrimonioTotal;
             this.NomeConjuge = NomeConjuge;
+            this.FlagNomePaiNaoInformado = FlagNomePaiNaoInformado;
+            this.FlagSemEnderecoComercialFixo = FlagSemEnderecoComercialFixo;
+            this.DataEmissaoCnh = DataEmissaoCnh;
             
         }
         
@@ -273,6 +279,27 @@ namespace Conductor.Pier.Model
         public string NomeConjuge { get; set; }
     
         /// <summary>
+        /// Flag que indica se a pessoa informou nome do pai
+        /// </summary>
+        /// <value>Flag que indica se a pessoa informou nome do pai</value>
+        [DataMember(Name="flagNomePaiNaoInformado", EmitDefaultValue=false)]
+        public bool? FlagNomePaiNaoInformado { get; set; }
+    
+        /// <summary>
+        /// Flag que indica se a pessoa possui endere\u00E7o comercial fixo
+        /// </summary>
+        /// <value>Flag que indica se a pessoa possui endere\u00E7o comercial fixo</value>
+        [DataMember(Name="flagSemEnderecoComercialFixo", EmitDefaultValue=false)]
+        public bool? FlagSemEnderecoComercialFixo { get; set; }
+    
+        /// <summary>
+        /// Data emiss\u00E3o CNH
+        /// </summary>
+        /// <value>Data emiss\u00E3o CNH</value>
+        [DataMember(Name="dataEmissaoCnh", EmitDefaultValue=false)]
+        public string DataEmissaoCnh { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -307,6 +334,9 @@ namespace Conductor.Pier.Model
             sb.Append("  PessoaPoliticamenteExposta: ").Append(PessoaPoliticamenteExposta).Append("\n");
             sb.Append("  PatrimonioTotal: ").Append(PatrimonioTotal).Append("\n");
             sb.Append("  NomeConjuge: ").Append(NomeConjuge).Append("\n");
+            sb.Append("  FlagNomePaiNaoInformado: ").Append(FlagNomePaiNaoInformado).Append("\n");
+            sb.Append("  FlagSemEnderecoComercialFixo: ").Append(FlagSemEnderecoComercialFixo).Append("\n");
+            sb.Append("  DataEmissaoCnh: ").Append(DataEmissaoCnh).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -478,6 +508,21 @@ namespace Conductor.Pier.Model
                     this.NomeConjuge == other.NomeConjuge ||
                     this.NomeConjuge != null &&
                     this.NomeConjuge.Equals(other.NomeConjuge)
+                ) && 
+                (
+                    this.FlagNomePaiNaoInformado == other.FlagNomePaiNaoInformado ||
+                    this.FlagNomePaiNaoInformado != null &&
+                    this.FlagNomePaiNaoInformado.Equals(other.FlagNomePaiNaoInformado)
+                ) && 
+                (
+                    this.FlagSemEnderecoComercialFixo == other.FlagSemEnderecoComercialFixo ||
+                    this.FlagSemEnderecoComercialFixo != null &&
+                    this.FlagSemEnderecoComercialFixo.Equals(other.FlagSemEnderecoComercialFixo)
+                ) && 
+                (
+                    this.DataEmissaoCnh == other.DataEmissaoCnh ||
+                    this.DataEmissaoCnh != null &&
+                    this.DataEmissaoCnh.Equals(other.DataEmissaoCnh)
                 );
         }
 
@@ -573,6 +618,15 @@ namespace Conductor.Pier.Model
                 
                 if (this.NomeConjuge != null)
                     hash = hash * 59 + this.NomeConjuge.GetHashCode();
+                
+                if (this.FlagNomePaiNaoInformado != null)
+                    hash = hash * 59 + this.FlagNomePaiNaoInformado.GetHashCode();
+                
+                if (this.FlagSemEnderecoComercialFixo != null)
+                    hash = hash * 59 + this.FlagSemEnderecoComercialFixo.GetHashCode();
+                
+                if (this.DataEmissaoCnh != null)
+                    hash = hash * 59 + this.DataEmissaoCnh.GetHashCode();
                 
                 return hash;
             }

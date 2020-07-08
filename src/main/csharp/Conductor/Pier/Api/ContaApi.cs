@@ -850,6 +850,28 @@ namespace Conductor.Pier.Api
         ApiResponse<TransferenciaDetalheResponse> ConsultarTransferenciaDeCreditoEntreCartoesWithHttpInfo (long? id, long? idTransferencia);
         
         /// <summary>
+        /// Consulta uma personaliza\u00E7\u00E3o de parcelamento a partir da conta
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite consultar a configura\u00E7\u00E3o de um parcelamento personalizado vinculado \u00E0 conta informada
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">idConta</param>
+        /// <returns>PersonalizacaoParcelamentoResponse</returns>
+        PersonalizacaoParcelamentoResponse ConsultarVinculoPersonalizacaoDeParcelamento (long? idConta);
+  
+        /// <summary>
+        /// Consulta uma personaliza\u00E7\u00E3o de parcelamento a partir da conta
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite consultar a configura\u00E7\u00E3o de um parcelamento personalizado vinculado \u00E0 conta informada
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">idConta</param>
+        /// <returns>ApiResponse of PersonalizacaoParcelamentoResponse</returns>
+        ApiResponse<PersonalizacaoParcelamentoResponse> ConsultarVinculoPersonalizacaoDeParcelamentoWithHttpInfo (long? idConta);
+        
+        /// <summary>
         /// Cadastrar contas MultiApp
         /// </summary>
         /// <remarks>
@@ -936,6 +958,28 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> DesativarEnvioFaturaEmailWithHttpInfo (long? id);
+        
+        /// <summary>
+        /// Exclui o v\u00EDnculo de personaliza\u00E7\u00E3o de parcelamento a uma conta
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite desvincular a configura\u00E7\u00E3o de parcelamento personalizado previamente vinculado \u00E0 conta informada
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta</param>
+        /// <returns>Object</returns>
+        Object ExcluirVinculoPersonalizacaoParcelamento (long? idConta);
+  
+        /// <summary>
+        /// Exclui o v\u00EDnculo de personaliza\u00E7\u00E3o de parcelamento a uma conta
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite desvincular a configura\u00E7\u00E3o de parcelamento personalizado previamente vinculado \u00E0 conta informada
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta</param>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> ExcluirVinculoPersonalizacaoParcelamentoWithHttpInfo (long? idConta);
         
         /// <summary>
         /// Gera um boleto de recarga
@@ -1917,6 +1961,28 @@ namespace Conductor.Pier.Api
         /// <returns>ApiResponse of TransferenciaPortadoresResponse</returns>
         ApiResponse<TransferenciaPortadoresResponse> TransferirCreditoEntrePortadoresWithHttpInfo (long? id, TransferenciaPortadoresPersist transferencia);
         
+        /// <summary>
+        /// Vincula uma conta a uma personaliza\u00E7\u00E3o de parcelamento
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite realizar o v\u00EDnculo de uma configura\u00E7\u00E3o de parcelamento personalizado a uma conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="persist">Objeto de cria\u00E7\u00E3o de um v\u00EDnculo entre uma conta e um parcelamento personalizado</param>
+        /// <returns>Object</returns>
+        Object VincularPersonalizacaoDeParcelamento (VinculoPersonalizacaoParcelamentoPersist persist);
+  
+        /// <summary>
+        /// Vincula uma conta a uma personaliza\u00E7\u00E3o de parcelamento
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite realizar o v\u00EDnculo de uma configura\u00E7\u00E3o de parcelamento personalizado a uma conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="persist">Objeto de cria\u00E7\u00E3o de um v\u00EDnculo entre uma conta e um parcelamento personalizado</param>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> VincularPersonalizacaoDeParcelamentoWithHttpInfo (VinculoPersonalizacaoParcelamentoPersist persist);
+        
         #endregion Synchronous Operations
         
         #region Asynchronous Operations
@@ -2754,6 +2820,28 @@ namespace Conductor.Pier.Api
         System.Threading.Tasks.Task<ApiResponse<TransferenciaDetalheResponse>> ConsultarTransferenciaDeCreditoEntreCartoesAsyncWithHttpInfo (long? id, long? idTransferencia);
         
         /// <summary>
+        /// Consulta uma personaliza\u00E7\u00E3o de parcelamento a partir da conta
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite consultar a configura\u00E7\u00E3o de um parcelamento personalizado vinculado \u00E0 conta informada
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">idConta</param>
+        /// <returns>Task of PersonalizacaoParcelamentoResponse</returns>
+        System.Threading.Tasks.Task<PersonalizacaoParcelamentoResponse> ConsultarVinculoPersonalizacaoDeParcelamentoAsync (long? idConta);
+
+        /// <summary>
+        /// Consulta uma personaliza\u00E7\u00E3o de parcelamento a partir da conta
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite consultar a configura\u00E7\u00E3o de um parcelamento personalizado vinculado \u00E0 conta informada
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">idConta</param>
+        /// <returns>Task of ApiResponse (PersonalizacaoParcelamentoResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PersonalizacaoParcelamentoResponse>> ConsultarVinculoPersonalizacaoDeParcelamentoAsyncWithHttpInfo (long? idConta);
+        
+        /// <summary>
         /// Cadastrar contas MultiApp
         /// </summary>
         /// <remarks>
@@ -2840,6 +2928,28 @@ namespace Conductor.Pier.Api
         /// <param name="id">C\u00F3digo de identifica\u00E7\u00E3o da conta (id)</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DesativarEnvioFaturaEmailAsyncWithHttpInfo (long? id);
+        
+        /// <summary>
+        /// Exclui o v\u00EDnculo de personaliza\u00E7\u00E3o de parcelamento a uma conta
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite desvincular a configura\u00E7\u00E3o de parcelamento personalizado previamente vinculado \u00E0 conta informada
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta</param>
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> ExcluirVinculoPersonalizacaoParcelamentoAsync (long? idConta);
+
+        /// <summary>
+        /// Exclui o v\u00EDnculo de personaliza\u00E7\u00E3o de parcelamento a uma conta
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite desvincular a configura\u00E7\u00E3o de parcelamento personalizado previamente vinculado \u00E0 conta informada
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> ExcluirVinculoPersonalizacaoParcelamentoAsyncWithHttpInfo (long? idConta);
         
         /// <summary>
         /// Gera um boleto de recarga
@@ -3820,6 +3930,28 @@ namespace Conductor.Pier.Api
         /// <param name="transferencia">transferencia</param>
         /// <returns>Task of ApiResponse (TransferenciaPortadoresResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<TransferenciaPortadoresResponse>> TransferirCreditoEntrePortadoresAsyncWithHttpInfo (long? id, TransferenciaPortadoresPersist transferencia);
+        
+        /// <summary>
+        /// Vincula uma conta a uma personaliza\u00E7\u00E3o de parcelamento
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite realizar o v\u00EDnculo de uma configura\u00E7\u00E3o de parcelamento personalizado a uma conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="persist">Objeto de cria\u00E7\u00E3o de um v\u00EDnculo entre uma conta e um parcelamento personalizado</param>
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> VincularPersonalizacaoDeParcelamentoAsync (VinculoPersonalizacaoParcelamentoPersist persist);
+
+        /// <summary>
+        /// Vincula uma conta a uma personaliza\u00E7\u00E3o de parcelamento
+        /// </summary>
+        /// <remarks>
+        /// Este recurso permite realizar o v\u00EDnculo de uma configura\u00E7\u00E3o de parcelamento personalizado a uma conta
+        /// </remarks>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="persist">Objeto de cria\u00E7\u00E3o de um v\u00EDnculo entre uma conta e um parcelamento personalizado</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> VincularPersonalizacaoDeParcelamentoAsyncWithHttpInfo (VinculoPersonalizacaoParcelamentoPersist persist);
         
         #endregion Asynchronous Operations
         
@@ -9734,6 +9866,164 @@ namespace Conductor.Pier.Api
         }
         
         /// <summary>
+        /// Consulta uma personaliza\u00E7\u00E3o de parcelamento a partir da conta Este recurso permite consultar a configura\u00E7\u00E3o de um parcelamento personalizado vinculado \u00E0 conta informada
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">idConta</param> 
+        /// <returns>PersonalizacaoParcelamentoResponse</returns>
+        public PersonalizacaoParcelamentoResponse ConsultarVinculoPersonalizacaoDeParcelamento (long? idConta)
+        {
+             ApiResponse<PersonalizacaoParcelamentoResponse> localVarResponse = ConsultarVinculoPersonalizacaoDeParcelamentoWithHttpInfo(idConta);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Consulta uma personaliza\u00E7\u00E3o de parcelamento a partir da conta Este recurso permite consultar a configura\u00E7\u00E3o de um parcelamento personalizado vinculado \u00E0 conta informada
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">idConta</param> 
+        /// <returns>ApiResponse of PersonalizacaoParcelamentoResponse</returns>
+        public ApiResponse< PersonalizacaoParcelamentoResponse > ConsultarVinculoPersonalizacaoDeParcelamentoWithHttpInfo (long? idConta)
+        {
+            
+            // verify the required parameter 'idConta' is set
+            if (idConta == null)
+                throw new ApiException(400, "Missing required parameter 'idConta' when calling ContaApi->ConsultarVinculoPersonalizacaoDeParcelamento");
+            
+    
+            var localVarPath = "/api/contas/{idConta}/personalizacoes-parcelamento/vinculos";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (idConta != null) localVarPathParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // path parameter
+            
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarVinculoPersonalizacaoDeParcelamento: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarVinculoPersonalizacaoDeParcelamento: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<PersonalizacaoParcelamentoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PersonalizacaoParcelamentoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PersonalizacaoParcelamentoResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Consulta uma personaliza\u00E7\u00E3o de parcelamento a partir da conta Este recurso permite consultar a configura\u00E7\u00E3o de um parcelamento personalizado vinculado \u00E0 conta informada
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">idConta</param>
+        /// <returns>Task of PersonalizacaoParcelamentoResponse</returns>
+        public async System.Threading.Tasks.Task<PersonalizacaoParcelamentoResponse> ConsultarVinculoPersonalizacaoDeParcelamentoAsync (long? idConta)
+        {
+             ApiResponse<PersonalizacaoParcelamentoResponse> localVarResponse = await ConsultarVinculoPersonalizacaoDeParcelamentoAsyncWithHttpInfo(idConta);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Consulta uma personaliza\u00E7\u00E3o de parcelamento a partir da conta Este recurso permite consultar a configura\u00E7\u00E3o de um parcelamento personalizado vinculado \u00E0 conta informada
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">idConta</param>
+        /// <returns>Task of ApiResponse (PersonalizacaoParcelamentoResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PersonalizacaoParcelamentoResponse>> ConsultarVinculoPersonalizacaoDeParcelamentoAsyncWithHttpInfo (long? idConta)
+        {
+            // verify the required parameter 'idConta' is set
+            if (idConta == null) throw new ApiException(400, "Missing required parameter 'idConta' when calling ConsultarVinculoPersonalizacaoDeParcelamento");
+            
+    
+            var localVarPath = "/api/contas/{idConta}/personalizacoes-parcelamento/vinculos";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (idConta != null) localVarPathParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // path parameter
+            
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarVinculoPersonalizacaoDeParcelamento: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ConsultarVinculoPersonalizacaoDeParcelamento: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<PersonalizacaoParcelamentoResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PersonalizacaoParcelamentoResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PersonalizacaoParcelamentoResponse)));
+            
+        }
+        
+        /// <summary>
         /// Cadastrar contas MultiApp Este recurso permite o cadastro de contas MultiApp
         /// </summary>
         /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
@@ -10370,6 +10660,164 @@ namespace Conductor.Pier.Api
                 throw new ApiException (localVarStatusCode, "Error calling DesativarEnvioFaturaEmail: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DesativarEnvioFaturaEmail: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+            
+        }
+        
+        /// <summary>
+        /// Exclui o v\u00EDnculo de personaliza\u00E7\u00E3o de parcelamento a uma conta Este recurso permite desvincular a configura\u00E7\u00E3o de parcelamento personalizado previamente vinculado \u00E0 conta informada
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta</param> 
+        /// <returns>Object</returns>
+        public Object ExcluirVinculoPersonalizacaoParcelamento (long? idConta)
+        {
+             ApiResponse<Object> localVarResponse = ExcluirVinculoPersonalizacaoParcelamentoWithHttpInfo(idConta);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Exclui o v\u00EDnculo de personaliza\u00E7\u00E3o de parcelamento a uma conta Este recurso permite desvincular a configura\u00E7\u00E3o de parcelamento personalizado previamente vinculado \u00E0 conta informada
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta</param> 
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > ExcluirVinculoPersonalizacaoParcelamentoWithHttpInfo (long? idConta)
+        {
+            
+            // verify the required parameter 'idConta' is set
+            if (idConta == null)
+                throw new ApiException(400, "Missing required parameter 'idConta' when calling ContaApi->ExcluirVinculoPersonalizacaoParcelamento");
+            
+    
+            var localVarPath = "/api/contas/{idConta}/personalizacoes-parcelamento/vinculos";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (idConta != null) localVarPathParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // path parameter
+            
+            
+            
+            
+            
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ExcluirVinculoPersonalizacaoParcelamento: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ExcluirVinculoPersonalizacaoParcelamento: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+            
+        }
+
+        
+        /// <summary>
+        /// Exclui o v\u00EDnculo de personaliza\u00E7\u00E3o de parcelamento a uma conta Este recurso permite desvincular a configura\u00E7\u00E3o de parcelamento personalizado previamente vinculado \u00E0 conta informada
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta</param>
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> ExcluirVinculoPersonalizacaoParcelamentoAsync (long? idConta)
+        {
+             ApiResponse<Object> localVarResponse = await ExcluirVinculoPersonalizacaoParcelamentoAsyncWithHttpInfo(idConta);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Exclui o v\u00EDnculo de personaliza\u00E7\u00E3o de parcelamento a uma conta Este recurso permite desvincular a configura\u00E7\u00E3o de parcelamento personalizado previamente vinculado \u00E0 conta informada
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="idConta">C\u00F3digo de identifica\u00E7\u00E3o da conta</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> ExcluirVinculoPersonalizacaoParcelamentoAsyncWithHttpInfo (long? idConta)
+        {
+            // verify the required parameter 'idConta' is set
+            if (idConta == null) throw new ApiException(400, "Missing required parameter 'idConta' when calling ExcluirVinculoPersonalizacaoParcelamento");
+            
+    
+            var localVarPath = "/api/contas/{idConta}/personalizacoes-parcelamento/vinculos";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (idConta != null) localVarPathParams.Add("idConta", Configuration.ApiClient.ParameterToString(idConta)); // path parameter
+            
+            
+            
+            
+            
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ExcluirVinculoPersonalizacaoParcelamento: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ExcluirVinculoPersonalizacaoParcelamento: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -16566,6 +17014,176 @@ namespace Conductor.Pier.Api
             return new ApiResponse<TransferenciaPortadoresResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (TransferenciaPortadoresResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TransferenciaPortadoresResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Vincula uma conta a uma personaliza\u00E7\u00E3o de parcelamento Este recurso permite realizar o v\u00EDnculo de uma configura\u00E7\u00E3o de parcelamento personalizado a uma conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="persist">Objeto de cria\u00E7\u00E3o de um v\u00EDnculo entre uma conta e um parcelamento personalizado</param> 
+        /// <returns>Object</returns>
+        public Object VincularPersonalizacaoDeParcelamento (VinculoPersonalizacaoParcelamentoPersist persist)
+        {
+             ApiResponse<Object> localVarResponse = VincularPersonalizacaoDeParcelamentoWithHttpInfo(persist);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Vincula uma conta a uma personaliza\u00E7\u00E3o de parcelamento Este recurso permite realizar o v\u00EDnculo de uma configura\u00E7\u00E3o de parcelamento personalizado a uma conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="persist">Objeto de cria\u00E7\u00E3o de um v\u00EDnculo entre uma conta e um parcelamento personalizado</param> 
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > VincularPersonalizacaoDeParcelamentoWithHttpInfo (VinculoPersonalizacaoParcelamentoPersist persist)
+        {
+            
+            // verify the required parameter 'persist' is set
+            if (persist == null)
+                throw new ApiException(400, "Missing required parameter 'persist' when calling ContaApi->VincularPersonalizacaoDeParcelamento");
+            
+    
+            var localVarPath = "/api/contas/personalizacoes-parcelamento/vinculos";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            if (persist.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(persist); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = persist; // byte array
+            }
+
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling VincularPersonalizacaoDeParcelamento: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling VincularPersonalizacaoDeParcelamento: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+            
+        }
+
+        
+        /// <summary>
+        /// Vincula uma conta a uma personaliza\u00E7\u00E3o de parcelamento Este recurso permite realizar o v\u00EDnculo de uma configura\u00E7\u00E3o de parcelamento personalizado a uma conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="persist">Objeto de cria\u00E7\u00E3o de um v\u00EDnculo entre uma conta e um parcelamento personalizado</param>
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> VincularPersonalizacaoDeParcelamentoAsync (VinculoPersonalizacaoParcelamentoPersist persist)
+        {
+             ApiResponse<Object> localVarResponse = await VincularPersonalizacaoDeParcelamentoAsyncWithHttpInfo(persist);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Vincula uma conta a uma personaliza\u00E7\u00E3o de parcelamento Este recurso permite realizar o v\u00EDnculo de uma configura\u00E7\u00E3o de parcelamento personalizado a uma conta
+        /// </summary>
+        /// <exception cref="Conductor.Pier.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="persist">Objeto de cria\u00E7\u00E3o de um v\u00EDnculo entre uma conta e um parcelamento personalizado</param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> VincularPersonalizacaoDeParcelamentoAsyncWithHttpInfo (VinculoPersonalizacaoParcelamentoPersist persist)
+        {
+            // verify the required parameter 'persist' is set
+            if (persist == null) throw new ApiException(400, "Missing required parameter 'persist' when calling VincularPersonalizacaoDeParcelamento");
+            
+    
+            var localVarPath = "/api/contas/personalizacoes-parcelamento/vinculos";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            if (persist.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(persist); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = persist; // byte array
+            }
+
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling VincularPersonalizacaoDeParcelamento: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling VincularPersonalizacaoDeParcelamento: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
             
         }
         

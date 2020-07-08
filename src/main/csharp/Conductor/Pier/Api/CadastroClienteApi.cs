@@ -197,8 +197,11 @@ namespace Conductor.Pier.Api
         /// <param name="numeroCnh">N\u00FAmero da CNH da pessoa (optional)</param>
         /// <param name="pessoaPoliticamenteExposta">Flag para identificar se a pessoa \u00E9 politicamente exposta (optional)</param>
         /// <param name="usuarioAlteracao">Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o (optional)</param>
+        /// <param name="flagNomePaiNaoInformado">Flag que indica se a pessoa informou nome do pai (optional)</param>
+        /// <param name="flagSemEnderecoComercialFixo">Flag que indica se a pessoa possui endere\u00E7o comercial fixo (optional)</param>
+        /// <param name="dataEmissaoCnh">Data emiss\u00E3o CNH  (optional)</param>
         /// <returns>PessoaDetalheResponse</returns>
-        PessoaDetalheResponse AlterarPessoaDetalhe (long? id, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string nomeReferencia1 = null, string enderecoReferencia1 = null, string nomeReferencia2 = null, string enderecoReferencia2 = null, bool? impedidoFinanciamento = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, string numeroCnh = null, bool? pessoaPoliticamenteExposta = null, string usuarioAlteracao = null);
+        PessoaDetalheResponse AlterarPessoaDetalhe (long? id, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string nomeReferencia1 = null, string enderecoReferencia1 = null, string nomeReferencia2 = null, string enderecoReferencia2 = null, bool? impedidoFinanciamento = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, string numeroCnh = null, bool? pessoaPoliticamenteExposta = null, string usuarioAlteracao = null, bool? flagNomePaiNaoInformado = null, bool? flagSemEnderecoComercialFixo = null, string dataEmissaoCnh = null);
   
         /// <summary>
         /// Atualiza os detalhes de uma determinada Pessoa
@@ -232,8 +235,11 @@ namespace Conductor.Pier.Api
         /// <param name="numeroCnh">N\u00FAmero da CNH da pessoa (optional)</param>
         /// <param name="pessoaPoliticamenteExposta">Flag para identificar se a pessoa \u00E9 politicamente exposta (optional)</param>
         /// <param name="usuarioAlteracao">Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o (optional)</param>
+        /// <param name="flagNomePaiNaoInformado">Flag que indica se a pessoa informou nome do pai (optional)</param>
+        /// <param name="flagSemEnderecoComercialFixo">Flag que indica se a pessoa possui endere\u00E7o comercial fixo (optional)</param>
+        /// <param name="dataEmissaoCnh">Data emiss\u00E3o CNH  (optional)</param>
         /// <returns>ApiResponse of PessoaDetalheResponse</returns>
-        ApiResponse<PessoaDetalheResponse> AlterarPessoaDetalheWithHttpInfo (long? id, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string nomeReferencia1 = null, string enderecoReferencia1 = null, string nomeReferencia2 = null, string enderecoReferencia2 = null, bool? impedidoFinanciamento = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, string numeroCnh = null, bool? pessoaPoliticamenteExposta = null, string usuarioAlteracao = null);
+        ApiResponse<PessoaDetalheResponse> AlterarPessoaDetalheWithHttpInfo (long? id, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string nomeReferencia1 = null, string enderecoReferencia1 = null, string nomeReferencia2 = null, string enderecoReferencia2 = null, bool? impedidoFinanciamento = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, string numeroCnh = null, bool? pessoaPoliticamenteExposta = null, string usuarioAlteracao = null, bool? flagNomePaiNaoInformado = null, bool? flagSemEnderecoComercialFixo = null, string dataEmissaoCnh = null);
         
         /// <summary>
         /// Realiza a altera\u00E7\u00E3o de um determinado Telefone
@@ -971,8 +977,11 @@ namespace Conductor.Pier.Api
         /// <param name="patrimonioTotal">Patrim\u00F4nio total da pessoa (optional)</param>
         /// <param name="salario">Sal\u00E1rio da pessoa (optional)</param>
         /// <param name="nomeConjuge">Nome do c\u00F4njuge da pessoa (optional)</param>
+        /// <param name="flagNomePaiNaoInformado">Flag que indica se a pessoa informou nome do pai (optional)</param>
+        /// <param name="flagSemEnderecoComercialFixo">Flag que indica se a pessoa possui endere\u00E7o comercial fixo (optional)</param>
+        /// <param name="dataEmissaoCnh">Data emiss\u00E3o CNH  (optional)</param>
         /// <returns>PagePessoaDetalheResponse</returns>
-        PagePessoaDetalheResponse ListarPessoasDetalhes (List<string> sort = null, int? page = null, int? limit = null, long? idPessoa = null, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null, string numeroCnh = null, double? patrimonioTotal = null, double? salario = null, string nomeConjuge = null);
+        PagePessoaDetalheResponse ListarPessoasDetalhes (List<string> sort = null, int? page = null, int? limit = null, long? idPessoa = null, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null, string numeroCnh = null, double? patrimonioTotal = null, double? salario = null, string nomeConjuge = null, bool? flagNomePaiNaoInformado = null, bool? flagSemEnderecoComercialFixo = null, string dataEmissaoCnh = null);
   
         /// <summary>
         /// Lista os Detalhes das Pessoas cadastradas no Emissor
@@ -1006,8 +1015,11 @@ namespace Conductor.Pier.Api
         /// <param name="patrimonioTotal">Patrim\u00F4nio total da pessoa (optional)</param>
         /// <param name="salario">Sal\u00E1rio da pessoa (optional)</param>
         /// <param name="nomeConjuge">Nome do c\u00F4njuge da pessoa (optional)</param>
+        /// <param name="flagNomePaiNaoInformado">Flag que indica se a pessoa informou nome do pai (optional)</param>
+        /// <param name="flagSemEnderecoComercialFixo">Flag que indica se a pessoa possui endere\u00E7o comercial fixo (optional)</param>
+        /// <param name="dataEmissaoCnh">Data emiss\u00E3o CNH  (optional)</param>
         /// <returns>ApiResponse of PagePessoaDetalheResponse</returns>
-        ApiResponse<PagePessoaDetalheResponse> ListarPessoasDetalhesWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idPessoa = null, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null, string numeroCnh = null, double? patrimonioTotal = null, double? salario = null, string nomeConjuge = null);
+        ApiResponse<PagePessoaDetalheResponse> ListarPessoasDetalhesWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idPessoa = null, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null, string numeroCnh = null, double? patrimonioTotal = null, double? salario = null, string nomeConjuge = null, bool? flagNomePaiNaoInformado = null, bool? flagSemEnderecoComercialFixo = null, string dataEmissaoCnh = null);
         
         /// <summary>
         /// Listar s\u00F3cios de uma pessoa jur\u00EDdica
@@ -1279,8 +1291,11 @@ namespace Conductor.Pier.Api
         /// <param name="patrimonioTotal">Patrim\u00F4nio total da pessoa (optional)</param>
         /// <param name="salario">Sal\u00E1rio da pessoa (optional)</param>
         /// <param name="nomeConjuge">Nome do c\u00F4njuge da pessoa (optional)</param>
+        /// <param name="flagNomePaiNaoInformado">Flag que indica se a pessoa informou nome do pai (optional)</param>
+        /// <param name="flagSemEnderecoComercialFixo">Flag que indica se a pessoa possui endere\u00E7o comercial fixo (optional)</param>
+        /// <param name="dataEmissaoCnh">Data emiss\u00E3o CNH (optional)</param>
         /// <returns>PessoaDetalheResponse</returns>
-        PessoaDetalheResponse SalvarPessoaDetalhe (long? idPessoa, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string nomeReferencia1 = null, string enderecoReferencia1 = null, string nomeReferencia2 = null, string enderecoReferencia2 = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null, string numeroCnh = null, bool? pessoaPoliticamenteExposta = null, double? patrimonioTotal = null, double? salario = null, string nomeConjuge = null);
+        PessoaDetalheResponse SalvarPessoaDetalhe (long? idPessoa, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string nomeReferencia1 = null, string enderecoReferencia1 = null, string nomeReferencia2 = null, string enderecoReferencia2 = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null, string numeroCnh = null, bool? pessoaPoliticamenteExposta = null, double? patrimonioTotal = null, double? salario = null, string nomeConjuge = null, bool? flagNomePaiNaoInformado = null, bool? flagSemEnderecoComercialFixo = null, string dataEmissaoCnh = null);
   
         /// <summary>
         /// Salvar os detalhes de uma determinada Pessoa
@@ -1316,8 +1331,11 @@ namespace Conductor.Pier.Api
         /// <param name="patrimonioTotal">Patrim\u00F4nio total da pessoa (optional)</param>
         /// <param name="salario">Sal\u00E1rio da pessoa (optional)</param>
         /// <param name="nomeConjuge">Nome do c\u00F4njuge da pessoa (optional)</param>
+        /// <param name="flagNomePaiNaoInformado">Flag que indica se a pessoa informou nome do pai (optional)</param>
+        /// <param name="flagSemEnderecoComercialFixo">Flag que indica se a pessoa possui endere\u00E7o comercial fixo (optional)</param>
+        /// <param name="dataEmissaoCnh">Data emiss\u00E3o CNH (optional)</param>
         /// <returns>ApiResponse of PessoaDetalheResponse</returns>
-        ApiResponse<PessoaDetalheResponse> SalvarPessoaDetalheWithHttpInfo (long? idPessoa, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string nomeReferencia1 = null, string enderecoReferencia1 = null, string nomeReferencia2 = null, string enderecoReferencia2 = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null, string numeroCnh = null, bool? pessoaPoliticamenteExposta = null, double? patrimonioTotal = null, double? salario = null, string nomeConjuge = null);
+        ApiResponse<PessoaDetalheResponse> SalvarPessoaDetalheWithHttpInfo (long? idPessoa, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string nomeReferencia1 = null, string enderecoReferencia1 = null, string nomeReferencia2 = null, string enderecoReferencia2 = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null, string numeroCnh = null, bool? pessoaPoliticamenteExposta = null, double? patrimonioTotal = null, double? salario = null, string nomeConjuge = null, bool? flagNomePaiNaoInformado = null, bool? flagSemEnderecoComercialFixo = null, string dataEmissaoCnh = null);
         
         /// <summary>
         /// Cadastro de Conta e Pessoa Fisica
@@ -1649,8 +1667,11 @@ namespace Conductor.Pier.Api
         /// <param name="numeroCnh">N\u00FAmero da CNH da pessoa (optional)</param>
         /// <param name="pessoaPoliticamenteExposta">Flag para identificar se a pessoa \u00E9 politicamente exposta (optional)</param>
         /// <param name="usuarioAlteracao">Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o (optional)</param>
+        /// <param name="flagNomePaiNaoInformado">Flag que indica se a pessoa informou nome do pai (optional)</param>
+        /// <param name="flagSemEnderecoComercialFixo">Flag que indica se a pessoa possui endere\u00E7o comercial fixo (optional)</param>
+        /// <param name="dataEmissaoCnh">Data emiss\u00E3o CNH  (optional)</param>
         /// <returns>Task of PessoaDetalheResponse</returns>
-        System.Threading.Tasks.Task<PessoaDetalheResponse> AlterarPessoaDetalheAsync (long? id, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string nomeReferencia1 = null, string enderecoReferencia1 = null, string nomeReferencia2 = null, string enderecoReferencia2 = null, bool? impedidoFinanciamento = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, string numeroCnh = null, bool? pessoaPoliticamenteExposta = null, string usuarioAlteracao = null);
+        System.Threading.Tasks.Task<PessoaDetalheResponse> AlterarPessoaDetalheAsync (long? id, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string nomeReferencia1 = null, string enderecoReferencia1 = null, string nomeReferencia2 = null, string enderecoReferencia2 = null, bool? impedidoFinanciamento = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, string numeroCnh = null, bool? pessoaPoliticamenteExposta = null, string usuarioAlteracao = null, bool? flagNomePaiNaoInformado = null, bool? flagSemEnderecoComercialFixo = null, string dataEmissaoCnh = null);
 
         /// <summary>
         /// Atualiza os detalhes de uma determinada Pessoa
@@ -1684,8 +1705,11 @@ namespace Conductor.Pier.Api
         /// <param name="numeroCnh">N\u00FAmero da CNH da pessoa (optional)</param>
         /// <param name="pessoaPoliticamenteExposta">Flag para identificar se a pessoa \u00E9 politicamente exposta (optional)</param>
         /// <param name="usuarioAlteracao">Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o (optional)</param>
+        /// <param name="flagNomePaiNaoInformado">Flag que indica se a pessoa informou nome do pai (optional)</param>
+        /// <param name="flagSemEnderecoComercialFixo">Flag que indica se a pessoa possui endere\u00E7o comercial fixo (optional)</param>
+        /// <param name="dataEmissaoCnh">Data emiss\u00E3o CNH  (optional)</param>
         /// <returns>Task of ApiResponse (PessoaDetalheResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PessoaDetalheResponse>> AlterarPessoaDetalheAsyncWithHttpInfo (long? id, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string nomeReferencia1 = null, string enderecoReferencia1 = null, string nomeReferencia2 = null, string enderecoReferencia2 = null, bool? impedidoFinanciamento = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, string numeroCnh = null, bool? pessoaPoliticamenteExposta = null, string usuarioAlteracao = null);
+        System.Threading.Tasks.Task<ApiResponse<PessoaDetalheResponse>> AlterarPessoaDetalheAsyncWithHttpInfo (long? id, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string nomeReferencia1 = null, string enderecoReferencia1 = null, string nomeReferencia2 = null, string enderecoReferencia2 = null, bool? impedidoFinanciamento = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, string numeroCnh = null, bool? pessoaPoliticamenteExposta = null, string usuarioAlteracao = null, bool? flagNomePaiNaoInformado = null, bool? flagSemEnderecoComercialFixo = null, string dataEmissaoCnh = null);
         
         /// <summary>
         /// Realiza a altera\u00E7\u00E3o de um determinado Telefone
@@ -2423,8 +2447,11 @@ namespace Conductor.Pier.Api
         /// <param name="patrimonioTotal">Patrim\u00F4nio total da pessoa (optional)</param>
         /// <param name="salario">Sal\u00E1rio da pessoa (optional)</param>
         /// <param name="nomeConjuge">Nome do c\u00F4njuge da pessoa (optional)</param>
+        /// <param name="flagNomePaiNaoInformado">Flag que indica se a pessoa informou nome do pai (optional)</param>
+        /// <param name="flagSemEnderecoComercialFixo">Flag que indica se a pessoa possui endere\u00E7o comercial fixo (optional)</param>
+        /// <param name="dataEmissaoCnh">Data emiss\u00E3o CNH  (optional)</param>
         /// <returns>Task of PagePessoaDetalheResponse</returns>
-        System.Threading.Tasks.Task<PagePessoaDetalheResponse> ListarPessoasDetalhesAsync (List<string> sort = null, int? page = null, int? limit = null, long? idPessoa = null, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null, string numeroCnh = null, double? patrimonioTotal = null, double? salario = null, string nomeConjuge = null);
+        System.Threading.Tasks.Task<PagePessoaDetalheResponse> ListarPessoasDetalhesAsync (List<string> sort = null, int? page = null, int? limit = null, long? idPessoa = null, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null, string numeroCnh = null, double? patrimonioTotal = null, double? salario = null, string nomeConjuge = null, bool? flagNomePaiNaoInformado = null, bool? flagSemEnderecoComercialFixo = null, string dataEmissaoCnh = null);
 
         /// <summary>
         /// Lista os Detalhes das Pessoas cadastradas no Emissor
@@ -2458,8 +2485,11 @@ namespace Conductor.Pier.Api
         /// <param name="patrimonioTotal">Patrim\u00F4nio total da pessoa (optional)</param>
         /// <param name="salario">Sal\u00E1rio da pessoa (optional)</param>
         /// <param name="nomeConjuge">Nome do c\u00F4njuge da pessoa (optional)</param>
+        /// <param name="flagNomePaiNaoInformado">Flag que indica se a pessoa informou nome do pai (optional)</param>
+        /// <param name="flagSemEnderecoComercialFixo">Flag que indica se a pessoa possui endere\u00E7o comercial fixo (optional)</param>
+        /// <param name="dataEmissaoCnh">Data emiss\u00E3o CNH  (optional)</param>
         /// <returns>Task of ApiResponse (PagePessoaDetalheResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PagePessoaDetalheResponse>> ListarPessoasDetalhesAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idPessoa = null, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null, string numeroCnh = null, double? patrimonioTotal = null, double? salario = null, string nomeConjuge = null);
+        System.Threading.Tasks.Task<ApiResponse<PagePessoaDetalheResponse>> ListarPessoasDetalhesAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idPessoa = null, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null, string numeroCnh = null, double? patrimonioTotal = null, double? salario = null, string nomeConjuge = null, bool? flagNomePaiNaoInformado = null, bool? flagSemEnderecoComercialFixo = null, string dataEmissaoCnh = null);
         
         /// <summary>
         /// Listar s\u00F3cios de uma pessoa jur\u00EDdica
@@ -2731,8 +2761,11 @@ namespace Conductor.Pier.Api
         /// <param name="patrimonioTotal">Patrim\u00F4nio total da pessoa (optional)</param>
         /// <param name="salario">Sal\u00E1rio da pessoa (optional)</param>
         /// <param name="nomeConjuge">Nome do c\u00F4njuge da pessoa (optional)</param>
+        /// <param name="flagNomePaiNaoInformado">Flag que indica se a pessoa informou nome do pai (optional)</param>
+        /// <param name="flagSemEnderecoComercialFixo">Flag que indica se a pessoa possui endere\u00E7o comercial fixo (optional)</param>
+        /// <param name="dataEmissaoCnh">Data emiss\u00E3o CNH (optional)</param>
         /// <returns>Task of PessoaDetalheResponse</returns>
-        System.Threading.Tasks.Task<PessoaDetalheResponse> SalvarPessoaDetalheAsync (long? idPessoa, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string nomeReferencia1 = null, string enderecoReferencia1 = null, string nomeReferencia2 = null, string enderecoReferencia2 = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null, string numeroCnh = null, bool? pessoaPoliticamenteExposta = null, double? patrimonioTotal = null, double? salario = null, string nomeConjuge = null);
+        System.Threading.Tasks.Task<PessoaDetalheResponse> SalvarPessoaDetalheAsync (long? idPessoa, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string nomeReferencia1 = null, string enderecoReferencia1 = null, string nomeReferencia2 = null, string enderecoReferencia2 = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null, string numeroCnh = null, bool? pessoaPoliticamenteExposta = null, double? patrimonioTotal = null, double? salario = null, string nomeConjuge = null, bool? flagNomePaiNaoInformado = null, bool? flagSemEnderecoComercialFixo = null, string dataEmissaoCnh = null);
 
         /// <summary>
         /// Salvar os detalhes de uma determinada Pessoa
@@ -2768,8 +2801,11 @@ namespace Conductor.Pier.Api
         /// <param name="patrimonioTotal">Patrim\u00F4nio total da pessoa (optional)</param>
         /// <param name="salario">Sal\u00E1rio da pessoa (optional)</param>
         /// <param name="nomeConjuge">Nome do c\u00F4njuge da pessoa (optional)</param>
+        /// <param name="flagNomePaiNaoInformado">Flag que indica se a pessoa informou nome do pai (optional)</param>
+        /// <param name="flagSemEnderecoComercialFixo">Flag que indica se a pessoa possui endere\u00E7o comercial fixo (optional)</param>
+        /// <param name="dataEmissaoCnh">Data emiss\u00E3o CNH (optional)</param>
         /// <returns>Task of ApiResponse (PessoaDetalheResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PessoaDetalheResponse>> SalvarPessoaDetalheAsyncWithHttpInfo (long? idPessoa, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string nomeReferencia1 = null, string enderecoReferencia1 = null, string nomeReferencia2 = null, string enderecoReferencia2 = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null, string numeroCnh = null, bool? pessoaPoliticamenteExposta = null, double? patrimonioTotal = null, double? salario = null, string nomeConjuge = null);
+        System.Threading.Tasks.Task<ApiResponse<PessoaDetalheResponse>> SalvarPessoaDetalheAsyncWithHttpInfo (long? idPessoa, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string nomeReferencia1 = null, string enderecoReferencia1 = null, string nomeReferencia2 = null, string enderecoReferencia2 = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null, string numeroCnh = null, bool? pessoaPoliticamenteExposta = null, double? patrimonioTotal = null, double? salario = null, string nomeConjuge = null, bool? flagNomePaiNaoInformado = null, bool? flagSemEnderecoComercialFixo = null, string dataEmissaoCnh = null);
         
         /// <summary>
         /// Cadastro de Conta e Pessoa Fisica
@@ -3910,10 +3946,13 @@ namespace Conductor.Pier.Api
         /// <param name="numeroCnh">N\u00FAmero da CNH da pessoa (optional)</param> 
         /// <param name="pessoaPoliticamenteExposta">Flag para identificar se a pessoa \u00E9 politicamente exposta (optional)</param> 
         /// <param name="usuarioAlteracao">Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o (optional)</param> 
+        /// <param name="flagNomePaiNaoInformado">Flag que indica se a pessoa informou nome do pai (optional)</param> 
+        /// <param name="flagSemEnderecoComercialFixo">Flag que indica se a pessoa possui endere\u00E7o comercial fixo (optional)</param> 
+        /// <param name="dataEmissaoCnh">Data emiss\u00E3o CNH  (optional)</param> 
         /// <returns>PessoaDetalheResponse</returns>
-        public PessoaDetalheResponse AlterarPessoaDetalhe (long? id, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string nomeReferencia1 = null, string enderecoReferencia1 = null, string nomeReferencia2 = null, string enderecoReferencia2 = null, bool? impedidoFinanciamento = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, string numeroCnh = null, bool? pessoaPoliticamenteExposta = null, string usuarioAlteracao = null)
+        public PessoaDetalheResponse AlterarPessoaDetalhe (long? id, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string nomeReferencia1 = null, string enderecoReferencia1 = null, string nomeReferencia2 = null, string enderecoReferencia2 = null, bool? impedidoFinanciamento = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, string numeroCnh = null, bool? pessoaPoliticamenteExposta = null, string usuarioAlteracao = null, bool? flagNomePaiNaoInformado = null, bool? flagSemEnderecoComercialFixo = null, string dataEmissaoCnh = null)
         {
-             ApiResponse<PessoaDetalheResponse> localVarResponse = AlterarPessoaDetalheWithHttpInfo(id, nomeMae, idEstadoCivil, idProfissao, idNaturezaOcupacao, idNacionalidade, numeroBanco, numeroAgencia, numeroContaCorrente, email, nomeEmpresa, nomeReferencia1, enderecoReferencia1, nomeReferencia2, enderecoReferencia2, impedidoFinanciamento, naturalidadeCidade, naturalidadeEstado, grauInstrucao, numeroDependentes, nomePai, chequeEspecial, numeroCnh, pessoaPoliticamenteExposta, usuarioAlteracao);
+             ApiResponse<PessoaDetalheResponse> localVarResponse = AlterarPessoaDetalheWithHttpInfo(id, nomeMae, idEstadoCivil, idProfissao, idNaturezaOcupacao, idNacionalidade, numeroBanco, numeroAgencia, numeroContaCorrente, email, nomeEmpresa, nomeReferencia1, enderecoReferencia1, nomeReferencia2, enderecoReferencia2, impedidoFinanciamento, naturalidadeCidade, naturalidadeEstado, grauInstrucao, numeroDependentes, nomePai, chequeEspecial, numeroCnh, pessoaPoliticamenteExposta, usuarioAlteracao, flagNomePaiNaoInformado, flagSemEnderecoComercialFixo, dataEmissaoCnh);
              return localVarResponse.Data;
         }
 
@@ -3946,8 +3985,11 @@ namespace Conductor.Pier.Api
         /// <param name="numeroCnh">N\u00FAmero da CNH da pessoa (optional)</param> 
         /// <param name="pessoaPoliticamenteExposta">Flag para identificar se a pessoa \u00E9 politicamente exposta (optional)</param> 
         /// <param name="usuarioAlteracao">Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o (optional)</param> 
+        /// <param name="flagNomePaiNaoInformado">Flag que indica se a pessoa informou nome do pai (optional)</param> 
+        /// <param name="flagSemEnderecoComercialFixo">Flag que indica se a pessoa possui endere\u00E7o comercial fixo (optional)</param> 
+        /// <param name="dataEmissaoCnh">Data emiss\u00E3o CNH  (optional)</param> 
         /// <returns>ApiResponse of PessoaDetalheResponse</returns>
-        public ApiResponse< PessoaDetalheResponse > AlterarPessoaDetalheWithHttpInfo (long? id, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string nomeReferencia1 = null, string enderecoReferencia1 = null, string nomeReferencia2 = null, string enderecoReferencia2 = null, bool? impedidoFinanciamento = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, string numeroCnh = null, bool? pessoaPoliticamenteExposta = null, string usuarioAlteracao = null)
+        public ApiResponse< PessoaDetalheResponse > AlterarPessoaDetalheWithHttpInfo (long? id, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string nomeReferencia1 = null, string enderecoReferencia1 = null, string nomeReferencia2 = null, string enderecoReferencia2 = null, bool? impedidoFinanciamento = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, string numeroCnh = null, bool? pessoaPoliticamenteExposta = null, string usuarioAlteracao = null, bool? flagNomePaiNaoInformado = null, bool? flagSemEnderecoComercialFixo = null, string dataEmissaoCnh = null)
         {
             
             // verify the required parameter 'id' is set
@@ -4007,6 +4049,9 @@ namespace Conductor.Pier.Api
             if (numeroCnh != null) localVarQueryParams.Add("numeroCnh", Configuration.ApiClient.ParameterToString(numeroCnh)); // query parameter
             if (pessoaPoliticamenteExposta != null) localVarQueryParams.Add("pessoaPoliticamenteExposta", Configuration.ApiClient.ParameterToString(pessoaPoliticamenteExposta)); // query parameter
             if (usuarioAlteracao != null) localVarQueryParams.Add("usuarioAlteracao", Configuration.ApiClient.ParameterToString(usuarioAlteracao)); // query parameter
+            if (flagNomePaiNaoInformado != null) localVarQueryParams.Add("flagNomePaiNaoInformado", Configuration.ApiClient.ParameterToString(flagNomePaiNaoInformado)); // query parameter
+            if (flagSemEnderecoComercialFixo != null) localVarQueryParams.Add("flagSemEnderecoComercialFixo", Configuration.ApiClient.ParameterToString(flagSemEnderecoComercialFixo)); // query parameter
+            if (dataEmissaoCnh != null) localVarQueryParams.Add("dataEmissaoCnh", Configuration.ApiClient.ParameterToString(dataEmissaoCnh)); // query parameter
             
             
             
@@ -4062,10 +4107,13 @@ namespace Conductor.Pier.Api
         /// <param name="numeroCnh">N\u00FAmero da CNH da pessoa (optional)</param>
         /// <param name="pessoaPoliticamenteExposta">Flag para identificar se a pessoa \u00E9 politicamente exposta (optional)</param>
         /// <param name="usuarioAlteracao">Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o (optional)</param>
+        /// <param name="flagNomePaiNaoInformado">Flag que indica se a pessoa informou nome do pai (optional)</param>
+        /// <param name="flagSemEnderecoComercialFixo">Flag que indica se a pessoa possui endere\u00E7o comercial fixo (optional)</param>
+        /// <param name="dataEmissaoCnh">Data emiss\u00E3o CNH  (optional)</param>
         /// <returns>Task of PessoaDetalheResponse</returns>
-        public async System.Threading.Tasks.Task<PessoaDetalheResponse> AlterarPessoaDetalheAsync (long? id, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string nomeReferencia1 = null, string enderecoReferencia1 = null, string nomeReferencia2 = null, string enderecoReferencia2 = null, bool? impedidoFinanciamento = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, string numeroCnh = null, bool? pessoaPoliticamenteExposta = null, string usuarioAlteracao = null)
+        public async System.Threading.Tasks.Task<PessoaDetalheResponse> AlterarPessoaDetalheAsync (long? id, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string nomeReferencia1 = null, string enderecoReferencia1 = null, string nomeReferencia2 = null, string enderecoReferencia2 = null, bool? impedidoFinanciamento = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, string numeroCnh = null, bool? pessoaPoliticamenteExposta = null, string usuarioAlteracao = null, bool? flagNomePaiNaoInformado = null, bool? flagSemEnderecoComercialFixo = null, string dataEmissaoCnh = null)
         {
-             ApiResponse<PessoaDetalheResponse> localVarResponse = await AlterarPessoaDetalheAsyncWithHttpInfo(id, nomeMae, idEstadoCivil, idProfissao, idNaturezaOcupacao, idNacionalidade, numeroBanco, numeroAgencia, numeroContaCorrente, email, nomeEmpresa, nomeReferencia1, enderecoReferencia1, nomeReferencia2, enderecoReferencia2, impedidoFinanciamento, naturalidadeCidade, naturalidadeEstado, grauInstrucao, numeroDependentes, nomePai, chequeEspecial, numeroCnh, pessoaPoliticamenteExposta, usuarioAlteracao);
+             ApiResponse<PessoaDetalheResponse> localVarResponse = await AlterarPessoaDetalheAsyncWithHttpInfo(id, nomeMae, idEstadoCivil, idProfissao, idNaturezaOcupacao, idNacionalidade, numeroBanco, numeroAgencia, numeroContaCorrente, email, nomeEmpresa, nomeReferencia1, enderecoReferencia1, nomeReferencia2, enderecoReferencia2, impedidoFinanciamento, naturalidadeCidade, naturalidadeEstado, grauInstrucao, numeroDependentes, nomePai, chequeEspecial, numeroCnh, pessoaPoliticamenteExposta, usuarioAlteracao, flagNomePaiNaoInformado, flagSemEnderecoComercialFixo, dataEmissaoCnh);
              return localVarResponse.Data;
 
         }
@@ -4099,8 +4147,11 @@ namespace Conductor.Pier.Api
         /// <param name="numeroCnh">N\u00FAmero da CNH da pessoa (optional)</param>
         /// <param name="pessoaPoliticamenteExposta">Flag para identificar se a pessoa \u00E9 politicamente exposta (optional)</param>
         /// <param name="usuarioAlteracao">Usu\u00E1rio respons\u00E1vel pela altera\u00E7\u00E3o (optional)</param>
+        /// <param name="flagNomePaiNaoInformado">Flag que indica se a pessoa informou nome do pai (optional)</param>
+        /// <param name="flagSemEnderecoComercialFixo">Flag que indica se a pessoa possui endere\u00E7o comercial fixo (optional)</param>
+        /// <param name="dataEmissaoCnh">Data emiss\u00E3o CNH  (optional)</param>
         /// <returns>Task of ApiResponse (PessoaDetalheResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PessoaDetalheResponse>> AlterarPessoaDetalheAsyncWithHttpInfo (long? id, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string nomeReferencia1 = null, string enderecoReferencia1 = null, string nomeReferencia2 = null, string enderecoReferencia2 = null, bool? impedidoFinanciamento = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, string numeroCnh = null, bool? pessoaPoliticamenteExposta = null, string usuarioAlteracao = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PessoaDetalheResponse>> AlterarPessoaDetalheAsyncWithHttpInfo (long? id, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string nomeReferencia1 = null, string enderecoReferencia1 = null, string nomeReferencia2 = null, string enderecoReferencia2 = null, bool? impedidoFinanciamento = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, string numeroCnh = null, bool? pessoaPoliticamenteExposta = null, string usuarioAlteracao = null, bool? flagNomePaiNaoInformado = null, bool? flagSemEnderecoComercialFixo = null, string dataEmissaoCnh = null)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling AlterarPessoaDetalhe");
@@ -4158,6 +4209,9 @@ namespace Conductor.Pier.Api
             if (numeroCnh != null) localVarQueryParams.Add("numeroCnh", Configuration.ApiClient.ParameterToString(numeroCnh)); // query parameter
             if (pessoaPoliticamenteExposta != null) localVarQueryParams.Add("pessoaPoliticamenteExposta", Configuration.ApiClient.ParameterToString(pessoaPoliticamenteExposta)); // query parameter
             if (usuarioAlteracao != null) localVarQueryParams.Add("usuarioAlteracao", Configuration.ApiClient.ParameterToString(usuarioAlteracao)); // query parameter
+            if (flagNomePaiNaoInformado != null) localVarQueryParams.Add("flagNomePaiNaoInformado", Configuration.ApiClient.ParameterToString(flagNomePaiNaoInformado)); // query parameter
+            if (flagSemEnderecoComercialFixo != null) localVarQueryParams.Add("flagSemEnderecoComercialFixo", Configuration.ApiClient.ParameterToString(flagSemEnderecoComercialFixo)); // query parameter
+            if (dataEmissaoCnh != null) localVarQueryParams.Add("dataEmissaoCnh", Configuration.ApiClient.ParameterToString(dataEmissaoCnh)); // query parameter
             
             
             
@@ -8732,10 +8786,13 @@ namespace Conductor.Pier.Api
         /// <param name="patrimonioTotal">Patrim\u00F4nio total da pessoa (optional)</param> 
         /// <param name="salario">Sal\u00E1rio da pessoa (optional)</param> 
         /// <param name="nomeConjuge">Nome do c\u00F4njuge da pessoa (optional)</param> 
+        /// <param name="flagNomePaiNaoInformado">Flag que indica se a pessoa informou nome do pai (optional)</param> 
+        /// <param name="flagSemEnderecoComercialFixo">Flag que indica se a pessoa possui endere\u00E7o comercial fixo (optional)</param> 
+        /// <param name="dataEmissaoCnh">Data emiss\u00E3o CNH  (optional)</param> 
         /// <returns>PagePessoaDetalheResponse</returns>
-        public PagePessoaDetalheResponse ListarPessoasDetalhes (List<string> sort = null, int? page = null, int? limit = null, long? idPessoa = null, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null, string numeroCnh = null, double? patrimonioTotal = null, double? salario = null, string nomeConjuge = null)
+        public PagePessoaDetalheResponse ListarPessoasDetalhes (List<string> sort = null, int? page = null, int? limit = null, long? idPessoa = null, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null, string numeroCnh = null, double? patrimonioTotal = null, double? salario = null, string nomeConjuge = null, bool? flagNomePaiNaoInformado = null, bool? flagSemEnderecoComercialFixo = null, string dataEmissaoCnh = null)
         {
-             ApiResponse<PagePessoaDetalheResponse> localVarResponse = ListarPessoasDetalhesWithHttpInfo(sort, page, limit, idPessoa, nomeMae, idEstadoCivil, idProfissao, idNaturezaOcupacao, idNacionalidade, numeroBanco, numeroAgencia, numeroContaCorrente, email, nomeEmpresa, naturalidadeCidade, naturalidadeEstado, grauInstrucao, numeroDependentes, nomePai, chequeEspecial, impedidoFinanciamento, numeroCnh, patrimonioTotal, salario, nomeConjuge);
+             ApiResponse<PagePessoaDetalheResponse> localVarResponse = ListarPessoasDetalhesWithHttpInfo(sort, page, limit, idPessoa, nomeMae, idEstadoCivil, idProfissao, idNaturezaOcupacao, idNacionalidade, numeroBanco, numeroAgencia, numeroContaCorrente, email, nomeEmpresa, naturalidadeCidade, naturalidadeEstado, grauInstrucao, numeroDependentes, nomePai, chequeEspecial, impedidoFinanciamento, numeroCnh, patrimonioTotal, salario, nomeConjuge, flagNomePaiNaoInformado, flagSemEnderecoComercialFixo, dataEmissaoCnh);
              return localVarResponse.Data;
         }
 
@@ -8768,8 +8825,11 @@ namespace Conductor.Pier.Api
         /// <param name="patrimonioTotal">Patrim\u00F4nio total da pessoa (optional)</param> 
         /// <param name="salario">Sal\u00E1rio da pessoa (optional)</param> 
         /// <param name="nomeConjuge">Nome do c\u00F4njuge da pessoa (optional)</param> 
+        /// <param name="flagNomePaiNaoInformado">Flag que indica se a pessoa informou nome do pai (optional)</param> 
+        /// <param name="flagSemEnderecoComercialFixo">Flag que indica se a pessoa possui endere\u00E7o comercial fixo (optional)</param> 
+        /// <param name="dataEmissaoCnh">Data emiss\u00E3o CNH  (optional)</param> 
         /// <returns>ApiResponse of PagePessoaDetalheResponse</returns>
-        public ApiResponse< PagePessoaDetalheResponse > ListarPessoasDetalhesWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idPessoa = null, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null, string numeroCnh = null, double? patrimonioTotal = null, double? salario = null, string nomeConjuge = null)
+        public ApiResponse< PagePessoaDetalheResponse > ListarPessoasDetalhesWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idPessoa = null, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null, string numeroCnh = null, double? patrimonioTotal = null, double? salario = null, string nomeConjuge = null, bool? flagNomePaiNaoInformado = null, bool? flagSemEnderecoComercialFixo = null, string dataEmissaoCnh = null)
         {
             
     
@@ -8825,6 +8885,9 @@ namespace Conductor.Pier.Api
             if (patrimonioTotal != null) localVarQueryParams.Add("patrimonioTotal", Configuration.ApiClient.ParameterToString(patrimonioTotal)); // query parameter
             if (salario != null) localVarQueryParams.Add("salario", Configuration.ApiClient.ParameterToString(salario)); // query parameter
             if (nomeConjuge != null) localVarQueryParams.Add("nomeConjuge", Configuration.ApiClient.ParameterToString(nomeConjuge)); // query parameter
+            if (flagNomePaiNaoInformado != null) localVarQueryParams.Add("flagNomePaiNaoInformado", Configuration.ApiClient.ParameterToString(flagNomePaiNaoInformado)); // query parameter
+            if (flagSemEnderecoComercialFixo != null) localVarQueryParams.Add("flagSemEnderecoComercialFixo", Configuration.ApiClient.ParameterToString(flagSemEnderecoComercialFixo)); // query parameter
+            if (dataEmissaoCnh != null) localVarQueryParams.Add("dataEmissaoCnh", Configuration.ApiClient.ParameterToString(dataEmissaoCnh)); // query parameter
             
             
             
@@ -8880,10 +8943,13 @@ namespace Conductor.Pier.Api
         /// <param name="patrimonioTotal">Patrim\u00F4nio total da pessoa (optional)</param>
         /// <param name="salario">Sal\u00E1rio da pessoa (optional)</param>
         /// <param name="nomeConjuge">Nome do c\u00F4njuge da pessoa (optional)</param>
+        /// <param name="flagNomePaiNaoInformado">Flag que indica se a pessoa informou nome do pai (optional)</param>
+        /// <param name="flagSemEnderecoComercialFixo">Flag que indica se a pessoa possui endere\u00E7o comercial fixo (optional)</param>
+        /// <param name="dataEmissaoCnh">Data emiss\u00E3o CNH  (optional)</param>
         /// <returns>Task of PagePessoaDetalheResponse</returns>
-        public async System.Threading.Tasks.Task<PagePessoaDetalheResponse> ListarPessoasDetalhesAsync (List<string> sort = null, int? page = null, int? limit = null, long? idPessoa = null, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null, string numeroCnh = null, double? patrimonioTotal = null, double? salario = null, string nomeConjuge = null)
+        public async System.Threading.Tasks.Task<PagePessoaDetalheResponse> ListarPessoasDetalhesAsync (List<string> sort = null, int? page = null, int? limit = null, long? idPessoa = null, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null, string numeroCnh = null, double? patrimonioTotal = null, double? salario = null, string nomeConjuge = null, bool? flagNomePaiNaoInformado = null, bool? flagSemEnderecoComercialFixo = null, string dataEmissaoCnh = null)
         {
-             ApiResponse<PagePessoaDetalheResponse> localVarResponse = await ListarPessoasDetalhesAsyncWithHttpInfo(sort, page, limit, idPessoa, nomeMae, idEstadoCivil, idProfissao, idNaturezaOcupacao, idNacionalidade, numeroBanco, numeroAgencia, numeroContaCorrente, email, nomeEmpresa, naturalidadeCidade, naturalidadeEstado, grauInstrucao, numeroDependentes, nomePai, chequeEspecial, impedidoFinanciamento, numeroCnh, patrimonioTotal, salario, nomeConjuge);
+             ApiResponse<PagePessoaDetalheResponse> localVarResponse = await ListarPessoasDetalhesAsyncWithHttpInfo(sort, page, limit, idPessoa, nomeMae, idEstadoCivil, idProfissao, idNaturezaOcupacao, idNacionalidade, numeroBanco, numeroAgencia, numeroContaCorrente, email, nomeEmpresa, naturalidadeCidade, naturalidadeEstado, grauInstrucao, numeroDependentes, nomePai, chequeEspecial, impedidoFinanciamento, numeroCnh, patrimonioTotal, salario, nomeConjuge, flagNomePaiNaoInformado, flagSemEnderecoComercialFixo, dataEmissaoCnh);
              return localVarResponse.Data;
 
         }
@@ -8917,8 +8983,11 @@ namespace Conductor.Pier.Api
         /// <param name="patrimonioTotal">Patrim\u00F4nio total da pessoa (optional)</param>
         /// <param name="salario">Sal\u00E1rio da pessoa (optional)</param>
         /// <param name="nomeConjuge">Nome do c\u00F4njuge da pessoa (optional)</param>
+        /// <param name="flagNomePaiNaoInformado">Flag que indica se a pessoa informou nome do pai (optional)</param>
+        /// <param name="flagSemEnderecoComercialFixo">Flag que indica se a pessoa possui endere\u00E7o comercial fixo (optional)</param>
+        /// <param name="dataEmissaoCnh">Data emiss\u00E3o CNH  (optional)</param>
         /// <returns>Task of ApiResponse (PagePessoaDetalheResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PagePessoaDetalheResponse>> ListarPessoasDetalhesAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idPessoa = null, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null, string numeroCnh = null, double? patrimonioTotal = null, double? salario = null, string nomeConjuge = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PagePessoaDetalheResponse>> ListarPessoasDetalhesAsyncWithHttpInfo (List<string> sort = null, int? page = null, int? limit = null, long? idPessoa = null, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null, string numeroCnh = null, double? patrimonioTotal = null, double? salario = null, string nomeConjuge = null, bool? flagNomePaiNaoInformado = null, bool? flagSemEnderecoComercialFixo = null, string dataEmissaoCnh = null)
         {
             
     
@@ -8974,6 +9043,9 @@ namespace Conductor.Pier.Api
             if (patrimonioTotal != null) localVarQueryParams.Add("patrimonioTotal", Configuration.ApiClient.ParameterToString(patrimonioTotal)); // query parameter
             if (salario != null) localVarQueryParams.Add("salario", Configuration.ApiClient.ParameterToString(salario)); // query parameter
             if (nomeConjuge != null) localVarQueryParams.Add("nomeConjuge", Configuration.ApiClient.ParameterToString(nomeConjuge)); // query parameter
+            if (flagNomePaiNaoInformado != null) localVarQueryParams.Add("flagNomePaiNaoInformado", Configuration.ApiClient.ParameterToString(flagNomePaiNaoInformado)); // query parameter
+            if (flagSemEnderecoComercialFixo != null) localVarQueryParams.Add("flagSemEnderecoComercialFixo", Configuration.ApiClient.ParameterToString(flagSemEnderecoComercialFixo)); // query parameter
+            if (dataEmissaoCnh != null) localVarQueryParams.Add("dataEmissaoCnh", Configuration.ApiClient.ParameterToString(dataEmissaoCnh)); // query parameter
             
             
             
@@ -10394,10 +10466,13 @@ namespace Conductor.Pier.Api
         /// <param name="patrimonioTotal">Patrim\u00F4nio total da pessoa (optional)</param> 
         /// <param name="salario">Sal\u00E1rio da pessoa (optional)</param> 
         /// <param name="nomeConjuge">Nome do c\u00F4njuge da pessoa (optional)</param> 
+        /// <param name="flagNomePaiNaoInformado">Flag que indica se a pessoa informou nome do pai (optional)</param> 
+        /// <param name="flagSemEnderecoComercialFixo">Flag que indica se a pessoa possui endere\u00E7o comercial fixo (optional)</param> 
+        /// <param name="dataEmissaoCnh">Data emiss\u00E3o CNH (optional)</param> 
         /// <returns>PessoaDetalheResponse</returns>
-        public PessoaDetalheResponse SalvarPessoaDetalhe (long? idPessoa, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string nomeReferencia1 = null, string enderecoReferencia1 = null, string nomeReferencia2 = null, string enderecoReferencia2 = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null, string numeroCnh = null, bool? pessoaPoliticamenteExposta = null, double? patrimonioTotal = null, double? salario = null, string nomeConjuge = null)
+        public PessoaDetalheResponse SalvarPessoaDetalhe (long? idPessoa, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string nomeReferencia1 = null, string enderecoReferencia1 = null, string nomeReferencia2 = null, string enderecoReferencia2 = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null, string numeroCnh = null, bool? pessoaPoliticamenteExposta = null, double? patrimonioTotal = null, double? salario = null, string nomeConjuge = null, bool? flagNomePaiNaoInformado = null, bool? flagSemEnderecoComercialFixo = null, string dataEmissaoCnh = null)
         {
-             ApiResponse<PessoaDetalheResponse> localVarResponse = SalvarPessoaDetalheWithHttpInfo(idPessoa, nomeMae, idEstadoCivil, idProfissao, idNaturezaOcupacao, idNacionalidade, numeroBanco, numeroAgencia, numeroContaCorrente, email, nomeEmpresa, nomeReferencia1, enderecoReferencia1, nomeReferencia2, enderecoReferencia2, naturalidadeCidade, naturalidadeEstado, grauInstrucao, numeroDependentes, nomePai, chequeEspecial, impedidoFinanciamento, numeroCnh, pessoaPoliticamenteExposta, patrimonioTotal, salario, nomeConjuge);
+             ApiResponse<PessoaDetalheResponse> localVarResponse = SalvarPessoaDetalheWithHttpInfo(idPessoa, nomeMae, idEstadoCivil, idProfissao, idNaturezaOcupacao, idNacionalidade, numeroBanco, numeroAgencia, numeroContaCorrente, email, nomeEmpresa, nomeReferencia1, enderecoReferencia1, nomeReferencia2, enderecoReferencia2, naturalidadeCidade, naturalidadeEstado, grauInstrucao, numeroDependentes, nomePai, chequeEspecial, impedidoFinanciamento, numeroCnh, pessoaPoliticamenteExposta, patrimonioTotal, salario, nomeConjuge, flagNomePaiNaoInformado, flagSemEnderecoComercialFixo, dataEmissaoCnh);
              return localVarResponse.Data;
         }
 
@@ -10432,8 +10507,11 @@ namespace Conductor.Pier.Api
         /// <param name="patrimonioTotal">Patrim\u00F4nio total da pessoa (optional)</param> 
         /// <param name="salario">Sal\u00E1rio da pessoa (optional)</param> 
         /// <param name="nomeConjuge">Nome do c\u00F4njuge da pessoa (optional)</param> 
+        /// <param name="flagNomePaiNaoInformado">Flag que indica se a pessoa informou nome do pai (optional)</param> 
+        /// <param name="flagSemEnderecoComercialFixo">Flag que indica se a pessoa possui endere\u00E7o comercial fixo (optional)</param> 
+        /// <param name="dataEmissaoCnh">Data emiss\u00E3o CNH (optional)</param> 
         /// <returns>ApiResponse of PessoaDetalheResponse</returns>
-        public ApiResponse< PessoaDetalheResponse > SalvarPessoaDetalheWithHttpInfo (long? idPessoa, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string nomeReferencia1 = null, string enderecoReferencia1 = null, string nomeReferencia2 = null, string enderecoReferencia2 = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null, string numeroCnh = null, bool? pessoaPoliticamenteExposta = null, double? patrimonioTotal = null, double? salario = null, string nomeConjuge = null)
+        public ApiResponse< PessoaDetalheResponse > SalvarPessoaDetalheWithHttpInfo (long? idPessoa, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string nomeReferencia1 = null, string enderecoReferencia1 = null, string nomeReferencia2 = null, string enderecoReferencia2 = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null, string numeroCnh = null, bool? pessoaPoliticamenteExposta = null, double? patrimonioTotal = null, double? salario = null, string nomeConjuge = null, bool? flagNomePaiNaoInformado = null, bool? flagSemEnderecoComercialFixo = null, string dataEmissaoCnh = null)
         {
             
             // verify the required parameter 'idPessoa' is set
@@ -10495,6 +10573,9 @@ namespace Conductor.Pier.Api
             if (patrimonioTotal != null) localVarQueryParams.Add("patrimonioTotal", Configuration.ApiClient.ParameterToString(patrimonioTotal)); // query parameter
             if (salario != null) localVarQueryParams.Add("salario", Configuration.ApiClient.ParameterToString(salario)); // query parameter
             if (nomeConjuge != null) localVarQueryParams.Add("nomeConjuge", Configuration.ApiClient.ParameterToString(nomeConjuge)); // query parameter
+            if (flagNomePaiNaoInformado != null) localVarQueryParams.Add("flagNomePaiNaoInformado", Configuration.ApiClient.ParameterToString(flagNomePaiNaoInformado)); // query parameter
+            if (flagSemEnderecoComercialFixo != null) localVarQueryParams.Add("flagSemEnderecoComercialFixo", Configuration.ApiClient.ParameterToString(flagSemEnderecoComercialFixo)); // query parameter
+            if (dataEmissaoCnh != null) localVarQueryParams.Add("dataEmissaoCnh", Configuration.ApiClient.ParameterToString(dataEmissaoCnh)); // query parameter
             
             
             
@@ -10552,10 +10633,13 @@ namespace Conductor.Pier.Api
         /// <param name="patrimonioTotal">Patrim\u00F4nio total da pessoa (optional)</param>
         /// <param name="salario">Sal\u00E1rio da pessoa (optional)</param>
         /// <param name="nomeConjuge">Nome do c\u00F4njuge da pessoa (optional)</param>
+        /// <param name="flagNomePaiNaoInformado">Flag que indica se a pessoa informou nome do pai (optional)</param>
+        /// <param name="flagSemEnderecoComercialFixo">Flag que indica se a pessoa possui endere\u00E7o comercial fixo (optional)</param>
+        /// <param name="dataEmissaoCnh">Data emiss\u00E3o CNH (optional)</param>
         /// <returns>Task of PessoaDetalheResponse</returns>
-        public async System.Threading.Tasks.Task<PessoaDetalheResponse> SalvarPessoaDetalheAsync (long? idPessoa, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string nomeReferencia1 = null, string enderecoReferencia1 = null, string nomeReferencia2 = null, string enderecoReferencia2 = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null, string numeroCnh = null, bool? pessoaPoliticamenteExposta = null, double? patrimonioTotal = null, double? salario = null, string nomeConjuge = null)
+        public async System.Threading.Tasks.Task<PessoaDetalheResponse> SalvarPessoaDetalheAsync (long? idPessoa, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string nomeReferencia1 = null, string enderecoReferencia1 = null, string nomeReferencia2 = null, string enderecoReferencia2 = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null, string numeroCnh = null, bool? pessoaPoliticamenteExposta = null, double? patrimonioTotal = null, double? salario = null, string nomeConjuge = null, bool? flagNomePaiNaoInformado = null, bool? flagSemEnderecoComercialFixo = null, string dataEmissaoCnh = null)
         {
-             ApiResponse<PessoaDetalheResponse> localVarResponse = await SalvarPessoaDetalheAsyncWithHttpInfo(idPessoa, nomeMae, idEstadoCivil, idProfissao, idNaturezaOcupacao, idNacionalidade, numeroBanco, numeroAgencia, numeroContaCorrente, email, nomeEmpresa, nomeReferencia1, enderecoReferencia1, nomeReferencia2, enderecoReferencia2, naturalidadeCidade, naturalidadeEstado, grauInstrucao, numeroDependentes, nomePai, chequeEspecial, impedidoFinanciamento, numeroCnh, pessoaPoliticamenteExposta, patrimonioTotal, salario, nomeConjuge);
+             ApiResponse<PessoaDetalheResponse> localVarResponse = await SalvarPessoaDetalheAsyncWithHttpInfo(idPessoa, nomeMae, idEstadoCivil, idProfissao, idNaturezaOcupacao, idNacionalidade, numeroBanco, numeroAgencia, numeroContaCorrente, email, nomeEmpresa, nomeReferencia1, enderecoReferencia1, nomeReferencia2, enderecoReferencia2, naturalidadeCidade, naturalidadeEstado, grauInstrucao, numeroDependentes, nomePai, chequeEspecial, impedidoFinanciamento, numeroCnh, pessoaPoliticamenteExposta, patrimonioTotal, salario, nomeConjuge, flagNomePaiNaoInformado, flagSemEnderecoComercialFixo, dataEmissaoCnh);
              return localVarResponse.Data;
 
         }
@@ -10591,8 +10675,11 @@ namespace Conductor.Pier.Api
         /// <param name="patrimonioTotal">Patrim\u00F4nio total da pessoa (optional)</param>
         /// <param name="salario">Sal\u00E1rio da pessoa (optional)</param>
         /// <param name="nomeConjuge">Nome do c\u00F4njuge da pessoa (optional)</param>
+        /// <param name="flagNomePaiNaoInformado">Flag que indica se a pessoa informou nome do pai (optional)</param>
+        /// <param name="flagSemEnderecoComercialFixo">Flag que indica se a pessoa possui endere\u00E7o comercial fixo (optional)</param>
+        /// <param name="dataEmissaoCnh">Data emiss\u00E3o CNH (optional)</param>
         /// <returns>Task of ApiResponse (PessoaDetalheResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PessoaDetalheResponse>> SalvarPessoaDetalheAsyncWithHttpInfo (long? idPessoa, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string nomeReferencia1 = null, string enderecoReferencia1 = null, string nomeReferencia2 = null, string enderecoReferencia2 = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null, string numeroCnh = null, bool? pessoaPoliticamenteExposta = null, double? patrimonioTotal = null, double? salario = null, string nomeConjuge = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PessoaDetalheResponse>> SalvarPessoaDetalheAsyncWithHttpInfo (long? idPessoa, string nomeMae = null, long? idEstadoCivil = null, string idProfissao = null, long? idNaturezaOcupacao = null, long? idNacionalidade = null, int? numeroBanco = null, int? numeroAgencia = null, string numeroContaCorrente = null, string email = null, string nomeEmpresa = null, string nomeReferencia1 = null, string enderecoReferencia1 = null, string nomeReferencia2 = null, string enderecoReferencia2 = null, string naturalidadeCidade = null, string naturalidadeEstado = null, int? grauInstrucao = null, int? numeroDependentes = null, string nomePai = null, int? chequeEspecial = null, bool? impedidoFinanciamento = null, string numeroCnh = null, bool? pessoaPoliticamenteExposta = null, double? patrimonioTotal = null, double? salario = null, string nomeConjuge = null, bool? flagNomePaiNaoInformado = null, bool? flagSemEnderecoComercialFixo = null, string dataEmissaoCnh = null)
         {
             // verify the required parameter 'idPessoa' is set
             if (idPessoa == null) throw new ApiException(400, "Missing required parameter 'idPessoa' when calling SalvarPessoaDetalhe");
@@ -10652,6 +10739,9 @@ namespace Conductor.Pier.Api
             if (patrimonioTotal != null) localVarQueryParams.Add("patrimonioTotal", Configuration.ApiClient.ParameterToString(patrimonioTotal)); // query parameter
             if (salario != null) localVarQueryParams.Add("salario", Configuration.ApiClient.ParameterToString(salario)); // query parameter
             if (nomeConjuge != null) localVarQueryParams.Add("nomeConjuge", Configuration.ApiClient.ParameterToString(nomeConjuge)); // query parameter
+            if (flagNomePaiNaoInformado != null) localVarQueryParams.Add("flagNomePaiNaoInformado", Configuration.ApiClient.ParameterToString(flagNomePaiNaoInformado)); // query parameter
+            if (flagSemEnderecoComercialFixo != null) localVarQueryParams.Add("flagSemEnderecoComercialFixo", Configuration.ApiClient.ParameterToString(flagSemEnderecoComercialFixo)); // query parameter
+            if (dataEmissaoCnh != null) localVarQueryParams.Add("dataEmissaoCnh", Configuration.ApiClient.ParameterToString(dataEmissaoCnh)); // query parameter
             
             
             
